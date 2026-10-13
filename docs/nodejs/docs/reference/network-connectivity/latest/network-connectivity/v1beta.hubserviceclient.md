@@ -1,0 +1,6202 @@
+---
+url: https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/v1beta.hubserviceclient
+title: Class v1beta.HubServiceClient (5.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T18:12:12.147203+00:00
+---
+
+# Class v1beta.HubServiceClient (5.1.1)  |  Node.js client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/v1beta.hubserviceclient
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Node.js ](https://docs.cloud.google.com/nodejs/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/nodejs/docs/reference)
+
+
+
+Send feedback 
+
+#  Class v1beta.HubServiceClient (5.1.1) Stay organized with collections  Save and categorize content based on your preferences. 
+
+5.1.1 (latest)  4.6.0  4.2.0  3.6.0  3.2.0  2.3.3  2.2.0  2.1.2  1.5.0  1.4.2  1.3.0  1.2.1  1.1.6 
+
+Network Connectivity Center is a hub-and-spoke abstraction for network connectivity management in Google Cloud. It reduces operational complexity through a simple, centralized connectivity management model. v1beta
+
+## Package
+
+[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)
+
+## Constructors 
+
+### (constructor)(opts, gaxInstance)
+    
+    
+    constructor(opts?: ClientOptions, gaxInstance?: typeof gax | typeof gax.fallback);
+
+Construct an instance of HubServiceClient.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`opts` |  `ClientOptions`   
+  
+`gaxInstance` |  `typeof gax | typeof fallback`   
+: loaded instance of `google-gax`. Useful if you need to avoid loading the default gRPC version and want to use the fallback HTTP implementation. Load only fallback version and pass it to the constructor: ``` const gax = require('google-gax/build/src/fallback'); // avoids loading google-gax with gRPC const client = new HubServiceClient({fallback: true}, gax); ```  
+  
+## Properties 
+
+### apiEndpoint
+    
+    
+    get apiEndpoint(): string;
+
+The DNS address for this API service.
+
+### apiEndpoint
+    
+    
+    static get apiEndpoint(): string;
+
+The DNS address for this API service - same as servicePath.
+
+### auth
+    
+    
+    auth: gax.GoogleAuth;
+
+### descriptors
+    
+    
+    descriptors: Descriptors;
+
+### hubServiceStub
+    
+    
+    hubServiceStub?: Promise<{
+            [name: string]: Function;
+        }>;
+
+### iamClient
+    
+    
+    iamClient: IamClient;
+
+### innerApiCalls
+    
+    
+    innerApiCalls: {
+            [name: string]: Function;
+        };
+
+### locationsClient
+    
+    
+    locationsClient: LocationsClient;
+
+### operationsClient
+    
+    
+    operationsClient: gax.OperationsClient;
+
+### pathTemplates
+    
+    
+    pathTemplates: {
+            [name: string]: gax.PathTemplate;
+        };
+
+### port
+    
+    
+    static get port(): number;
+
+The port for this API service.
+
+### scopes
+    
+    
+    static get scopes(): string[];
+
+The scopes needed to make gRPC calls for every method defined in this service.
+
+### servicePath
+    
+    
+    static get servicePath(): string;
+
+The DNS address for this API service.
+
+### universeDomain
+    
+    
+    get universeDomain(): string;
+
+### warn
+    
+    
+    warn: (code: string, message: string, warnType?: string) => void;
+
+## Methods 
+
+### acceptHubSpoke(request, options)
+    
+    
+    acceptHubSpoke(request?: protos.google.cloud.networkconnectivity.v1beta.IAcceptHubSpokeRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.networkconnectivity.v1beta.IAcceptHubSpokeResponse, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Accepts a proposal to attach a Network Connectivity Center spoke to a hub.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IAcceptHubSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iaccepthubspokerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.networkconnectivity.v1beta.IAcceptHubSpokeResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iaccepthubspokeresponse), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the hub into which to accept the spoke.
+       */
+      // const name = 'abc123'
+      /**
+       *  Required. The URI of the spoke to accept into the hub.
+       */
+      // const spokeUri = 'abc123'
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callAcceptHubSpoke() {
+        // Construct request
+        const request = {
+          name,
+          spokeUri,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.acceptHubSpoke(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callAcceptHubSpoke();
+    
+    
+
+### acceptHubSpoke(request, options, callback)
+    
+    
+    acceptHubSpoke(request: protos.google.cloud.networkconnectivity.v1beta.IAcceptHubSpokeRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IAcceptHubSpokeResponse, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IAcceptHubSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iaccepthubspokerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IAcceptHubSpokeResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iaccepthubspokeresponse), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### acceptHubSpoke(request, callback)
+    
+    
+    acceptHubSpoke(request: protos.google.cloud.networkconnectivity.v1beta.IAcceptHubSpokeRequest, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IAcceptHubSpokeResponse, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IAcceptHubSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iaccepthubspokerequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IAcceptHubSpokeResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iaccepthubspokeresponse), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### acceptSpokeUpdate(request, options)
+    
+    
+    acceptSpokeUpdate(request?: protos.google.cloud.networkconnectivity.v1beta.IAcceptSpokeUpdateRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.networkconnectivity.v1beta.IAcceptSpokeUpdateResponse, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IAcceptSpokeUpdateRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iacceptspokeupdaterequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.networkconnectivity.v1beta.IAcceptSpokeUpdateResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iacceptspokeupdateresponse), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the hub to accept spoke update.
+       */
+      // const name = 'abc123'
+      /**
+       *  Required. The URI of the spoke to accept update.
+       */
+      // const spokeUri = 'abc123'
+      /**
+       *  Required. The etag of the spoke to accept update.
+       */
+      // const spokeEtag = 'abc123'
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callAcceptSpokeUpdate() {
+        // Construct request
+        const request = {
+          name,
+          spokeUri,
+          spokeEtag,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.acceptSpokeUpdate(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callAcceptSpokeUpdate();
+    
+    
+
+### acceptSpokeUpdate(request, options, callback)
+    
+    
+    acceptSpokeUpdate(request: protos.google.cloud.networkconnectivity.v1beta.IAcceptSpokeUpdateRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IAcceptSpokeUpdateResponse, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IAcceptSpokeUpdateRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iacceptspokeupdaterequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IAcceptSpokeUpdateResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iacceptspokeupdateresponse), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### acceptSpokeUpdate(request, callback)
+    
+    
+    acceptSpokeUpdate(request: protos.google.cloud.networkconnectivity.v1beta.IAcceptSpokeUpdateRequest, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IAcceptSpokeUpdateResponse, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IAcceptSpokeUpdateRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iacceptspokeupdaterequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IAcceptSpokeUpdateResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iacceptspokeupdateresponse), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### cancelOperation(request, optionsOrCallback, callback)
+    
+    
+    cancelOperation(request: protos.google.longrunning.CancelOperationRequest, optionsOrCallback?: gax.CallOptions | Callback<protos.google.longrunning.CancelOperationRequest, protos.google.protobuf.Empty, {} | undefined | null>, callback?: Callback<protos.google.longrunning.CancelOperationRequest, protos.google.protobuf.Empty, {} | undefined | null>): Promise<protos.google.protobuf.Empty>;
+
+Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an value with a of 1, corresponding to `Code.CANCELLED`.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[CancelOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.canceloperationrequest)`   
+The request object that will be sent.  
+`optionsOrCallback` |  `CallOptions | Callback<[protos.google.longrunning.CancelOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.canceloperationrequest), [protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.empty), {} | undefined | null>`   
+  
+`callback` |  `Callback<[protos.google.longrunning.CancelOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.canceloperationrequest), [protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.empty), {} | undefined | null>`   
+The function which will be called with the result of the API call. {Promise} - The promise which resolves when API call finishes. The promise has a method named "cancel" which cancels the ongoing API call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.empty)>` |   
+**Example**
+    
+    
+    const client = longrunning.operationsClient();
+    await client.cancelOperation({name: ''});
+    
+
+### checkAcceptHubSpokeProgress(name)
+    
+    
+    checkAcceptHubSpokeProgress(name: string): Promise<LROperation<protos.google.cloud.networkconnectivity.v1beta.AcceptHubSpokeResponse, protos.google.cloud.networkconnectivity.v1beta.OperationMetadata>>;
+
+Check the status of the long running operation returned by `acceptHubSpoke()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.networkconnectivity.v1beta.AcceptHubSpokeResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.accepthubspokeresponse), [protos.google.cloud.networkconnectivity.v1beta.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the hub into which to accept the spoke.
+       */
+      // const name = 'abc123'
+      /**
+       *  Required. The URI of the spoke to accept into the hub.
+       */
+      // const spokeUri = 'abc123'
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callAcceptHubSpoke() {
+        // Construct request
+        const request = {
+          name,
+          spokeUri,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.acceptHubSpoke(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callAcceptHubSpoke();
+    
+    
+
+### checkAcceptSpokeUpdateProgress(name)
+    
+    
+    checkAcceptSpokeUpdateProgress(name: string): Promise<LROperation<protos.google.cloud.networkconnectivity.v1beta.AcceptSpokeUpdateResponse, protos.google.cloud.networkconnectivity.v1beta.OperationMetadata>>;
+
+Check the status of the long running operation returned by `acceptSpokeUpdate()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.networkconnectivity.v1beta.AcceptSpokeUpdateResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.acceptspokeupdateresponse), [protos.google.cloud.networkconnectivity.v1beta.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the hub to accept spoke update.
+       */
+      // const name = 'abc123'
+      /**
+       *  Required. The URI of the spoke to accept update.
+       */
+      // const spokeUri = 'abc123'
+      /**
+       *  Required. The etag of the spoke to accept update.
+       */
+      // const spokeEtag = 'abc123'
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callAcceptSpokeUpdate() {
+        // Construct request
+        const request = {
+          name,
+          spokeUri,
+          spokeEtag,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.acceptSpokeUpdate(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callAcceptSpokeUpdate();
+    
+    
+
+### checkCreateGatewayAdvertisedRouteProgress(name)
+    
+    
+    checkCreateGatewayAdvertisedRouteProgress(name: string): Promise<LROperation<protos.google.cloud.networkconnectivity.v1beta.GatewayAdvertisedRoute, protos.google.cloud.networkconnectivity.v1beta.OperationMetadata>>;
+
+Check the status of the long running operation returned by `createGatewayAdvertisedRoute()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.networkconnectivity.v1beta.GatewayAdvertisedRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.gatewayadvertisedroute-class), [protos.google.cloud.networkconnectivity.v1beta.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The parent resource.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. Unique id for the route to create.
+       */
+      // const gatewayAdvertisedRouteId = 'abc123'
+      /**
+       *  Required. Initial values for the new gateway advertised route.
+       */
+      // const gatewayAdvertisedRoute = {}
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callCreateGatewayAdvertisedRoute() {
+        // Construct request
+        const request = {
+          parent,
+          gatewayAdvertisedRouteId,
+          gatewayAdvertisedRoute,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.createGatewayAdvertisedRoute(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callCreateGatewayAdvertisedRoute();
+    
+    
+
+### checkCreateHubProgress(name)
+    
+    
+    checkCreateHubProgress(name: string): Promise<LROperation<protos.google.cloud.networkconnectivity.v1beta.Hub, protos.google.cloud.networkconnectivity.v1beta.OperationMetadata>>;
+
+Check the status of the long running operation returned by `createHub()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.networkconnectivity.v1beta.Hub](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.hub-class), [protos.google.cloud.networkconnectivity.v1beta.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The parent resource.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. A unique identifier for the hub.
+       */
+      // const hubId = 'abc123'
+      /**
+       *  Required. The initial values for a new hub.
+       */
+      // const hub = {}
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callCreateHub() {
+        // Construct request
+        const request = {
+          parent,
+          hubId,
+          hub,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.createHub(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callCreateHub();
+    
+    
+
+### checkCreateSpokeProgress(name)
+    
+    
+    checkCreateSpokeProgress(name: string): Promise<LROperation<protos.google.cloud.networkconnectivity.v1beta.Spoke, protos.google.cloud.networkconnectivity.v1beta.OperationMetadata>>;
+
+Check the status of the long running operation returned by `createSpoke()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.networkconnectivity.v1beta.Spoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.spoke-class), [protos.google.cloud.networkconnectivity.v1beta.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The parent resource.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. Unique id for the spoke to create.
+       */
+      // const spokeId = 'abc123'
+      /**
+       *  Required. The initial values for a new spoke.
+       */
+      // const spoke = {}
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callCreateSpoke() {
+        // Construct request
+        const request = {
+          parent,
+          spokeId,
+          spoke,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.createSpoke(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callCreateSpoke();
+    
+    
+
+### checkDeleteGatewayAdvertisedRouteProgress(name)
+    
+    
+    checkDeleteGatewayAdvertisedRouteProgress(name: string): Promise<LROperation<protos.google.protobuf.Empty, protos.google.cloud.networkconnectivity.v1beta.OperationMetadata>>;
+
+Check the status of the long running operation returned by `deleteGatewayAdvertisedRoute()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.empty), [protos.google.cloud.networkconnectivity.v1beta.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the gateway advertised route to delete.
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callDeleteGatewayAdvertisedRoute() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.deleteGatewayAdvertisedRoute(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callDeleteGatewayAdvertisedRoute();
+    
+    
+
+### checkDeleteHubProgress(name)
+    
+    
+    checkDeleteHubProgress(name: string): Promise<LROperation<protos.google.protobuf.Empty, protos.google.cloud.networkconnectivity.v1beta.OperationMetadata>>;
+
+Check the status of the long running operation returned by `deleteHub()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.empty), [protos.google.cloud.networkconnectivity.v1beta.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the hub to delete.
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callDeleteHub() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.deleteHub(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callDeleteHub();
+    
+    
+
+### checkDeleteSpokeProgress(name)
+    
+    
+    checkDeleteSpokeProgress(name: string): Promise<LROperation<protos.google.protobuf.Empty, protos.google.cloud.networkconnectivity.v1beta.OperationMetadata>>;
+
+Check the status of the long running operation returned by `deleteSpoke()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.empty), [protos.google.cloud.networkconnectivity.v1beta.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the spoke to delete.
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callDeleteSpoke() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.deleteSpoke(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callDeleteSpoke();
+    
+    
+
+### checkRejectHubSpokeProgress(name)
+    
+    
+    checkRejectHubSpokeProgress(name: string): Promise<LROperation<protos.google.cloud.networkconnectivity.v1beta.RejectHubSpokeResponse, protos.google.cloud.networkconnectivity.v1beta.OperationMetadata>>;
+
+Check the status of the long running operation returned by `rejectHubSpoke()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.networkconnectivity.v1beta.RejectHubSpokeResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.rejecthubspokeresponse), [protos.google.cloud.networkconnectivity.v1beta.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the hub from which to reject the spoke.
+       */
+      // const name = 'abc123'
+      /**
+       *  Required. The URI of the spoke to reject from the hub.
+       */
+      // const spokeUri = 'abc123'
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+      /**
+       *  Optional. Additional information provided by the hub administrator.
+       */
+      // const details = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callRejectHubSpoke() {
+        // Construct request
+        const request = {
+          name,
+          spokeUri,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.rejectHubSpoke(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callRejectHubSpoke();
+    
+    
+
+### checkRejectSpokeUpdateProgress(name)
+    
+    
+    checkRejectSpokeUpdateProgress(name: string): Promise<LROperation<protos.google.cloud.networkconnectivity.v1beta.RejectSpokeUpdateResponse, protos.google.cloud.networkconnectivity.v1beta.OperationMetadata>>;
+
+Check the status of the long running operation returned by `rejectSpokeUpdate()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.networkconnectivity.v1beta.RejectSpokeUpdateResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.rejectspokeupdateresponse), [protos.google.cloud.networkconnectivity.v1beta.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the hub to reject spoke update.
+       */
+      // const name = 'abc123'
+      /**
+       *  Required. The URI of the spoke to reject update.
+       */
+      // const spokeUri = 'abc123'
+      /**
+       *  Required. The etag of the spoke to reject update.
+       */
+      // const spokeEtag = 'abc123'
+      /**
+       *  Optional. Additional information provided by the hub administrator.
+       */
+      // const details = 'abc123'
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callRejectSpokeUpdate() {
+        // Construct request
+        const request = {
+          name,
+          spokeUri,
+          spokeEtag,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.rejectSpokeUpdate(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callRejectSpokeUpdate();
+    
+    
+
+### checkUpdateGatewayAdvertisedRouteProgress(name)
+    
+    
+    checkUpdateGatewayAdvertisedRouteProgress(name: string): Promise<LROperation<protos.google.cloud.networkconnectivity.v1beta.GatewayAdvertisedRoute, protos.google.cloud.networkconnectivity.v1beta.OperationMetadata>>;
+
+Check the status of the long running operation returned by `updateGatewayAdvertisedRoute()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.networkconnectivity.v1beta.GatewayAdvertisedRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.gatewayadvertisedroute-class), [protos.google.cloud.networkconnectivity.v1beta.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Optional. In the case of an update to an existing group, field mask is used
+       *  to specify the fields to be overwritten. The fields specified in the
+       *  update_mask are relative to the resource, not the full request. A field is
+       *  overwritten if it is in the mask. If the user does not provide a mask, then
+       *  all fields are overwritten.
+       */
+      // const updateMask = {}
+      /**
+       *  Required. The gateway advertised route to update.
+       *  The gateway advertised route's `name` field is used to identify the gateway
+       *  advertised route to update. Format:
+       *  `projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gatewayAdvertisedRoute}`
+       */
+      // const gatewayAdvertisedRoute = {}
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callUpdateGatewayAdvertisedRoute() {
+        // Construct request
+        const request = {
+          gatewayAdvertisedRoute,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.updateGatewayAdvertisedRoute(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callUpdateGatewayAdvertisedRoute();
+    
+    
+
+### checkUpdateGroupProgress(name)
+    
+    
+    checkUpdateGroupProgress(name: string): Promise<LROperation<protos.google.cloud.networkconnectivity.v1beta.Group, protos.google.cloud.networkconnectivity.v1beta.OperationMetadata>>;
+
+Check the status of the long running operation returned by `updateGroup()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.networkconnectivity.v1beta.Group](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.group), [protos.google.cloud.networkconnectivity.v1beta.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Optional. In the case of an update to an existing group, field mask is used
+       *  to specify the fields to be overwritten. The fields specified in the
+       *  update_mask are relative to the resource, not the full request. A field is
+       *  overwritten if it is in the mask. If the user does not provide a mask, then
+       *  all fields are overwritten.
+       */
+      // const updateMask = {}
+      /**
+       *  Required. The state that the group should be in after the update.
+       */
+      // const group = {}
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callUpdateGroup() {
+        // Construct request
+        const request = {
+          group,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.updateGroup(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callUpdateGroup();
+    
+    
+
+### checkUpdateHubProgress(name)
+    
+    
+    checkUpdateHubProgress(name: string): Promise<LROperation<protos.google.cloud.networkconnectivity.v1beta.Hub, protos.google.cloud.networkconnectivity.v1beta.OperationMetadata>>;
+
+Check the status of the long running operation returned by `updateHub()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.networkconnectivity.v1beta.Hub](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.hub-class), [protos.google.cloud.networkconnectivity.v1beta.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Optional. In the case of an update to an existing hub, field mask is used
+       *  to specify the fields to be overwritten. The fields specified in the
+       *  update_mask are relative to the resource, not the full request. A field is
+       *  overwritten if it is in the mask. If the user does not provide a mask, then
+       *  all fields are overwritten.
+       */
+      // const updateMask = {}
+      /**
+       *  Required. The state that the hub should be in after the update.
+       */
+      // const hub = {}
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callUpdateHub() {
+        // Construct request
+        const request = {
+          hub,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.updateHub(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callUpdateHub();
+    
+    
+
+### checkUpdateSpokeProgress(name)
+    
+    
+    checkUpdateSpokeProgress(name: string): Promise<LROperation<protos.google.cloud.networkconnectivity.v1beta.Spoke, protos.google.cloud.networkconnectivity.v1beta.OperationMetadata>>;
+
+Check the status of the long running operation returned by `updateSpoke()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.networkconnectivity.v1beta.Spoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.spoke-class), [protos.google.cloud.networkconnectivity.v1beta.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Optional. In the case of an update to an existing spoke, field mask is used
+       *  to specify the fields to be overwritten. The fields specified in the
+       *  update_mask are relative to the resource, not the full request. A field is
+       *  overwritten if it is in the mask. If the user does not provide a mask, then
+       *  all fields are overwritten.
+       */
+      // const updateMask = {}
+      /**
+       *  Required. The state that the spoke should be in after the update.
+       */
+      // const spoke = {}
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callUpdateSpoke() {
+        // Construct request
+        const request = {
+          spoke,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.updateSpoke(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callUpdateSpoke();
+    
+    
+
+### close()
+    
+    
+    close(): Promise<void>;
+
+Terminate the gRPC channel and close the client.
+
+The client will no longer be usable and all future behavior is undefined.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<void>` | {Promise} A promise that resolves when the client is closed.  
+  
+### createGatewayAdvertisedRoute(request, options)
+    
+    
+    createGatewayAdvertisedRoute(request?: protos.google.cloud.networkconnectivity.v1beta.ICreateGatewayAdvertisedRouteRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Create a GatewayAdvertisedRoute
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateGatewayAdvertisedRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.icreategatewayadvertisedrouterequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igatewayadvertisedroute), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The parent resource.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. Unique id for the route to create.
+       */
+      // const gatewayAdvertisedRouteId = 'abc123'
+      /**
+       *  Required. Initial values for the new gateway advertised route.
+       */
+      // const gatewayAdvertisedRoute = {}
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callCreateGatewayAdvertisedRoute() {
+        // Construct request
+        const request = {
+          parent,
+          gatewayAdvertisedRouteId,
+          gatewayAdvertisedRoute,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.createGatewayAdvertisedRoute(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callCreateGatewayAdvertisedRoute();
+    
+    
+
+### createGatewayAdvertisedRoute(request, options, callback)
+    
+    
+    createGatewayAdvertisedRoute(request: protos.google.cloud.networkconnectivity.v1beta.ICreateGatewayAdvertisedRouteRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateGatewayAdvertisedRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.icreategatewayadvertisedrouterequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igatewayadvertisedroute), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### createGatewayAdvertisedRoute(request, callback)
+    
+    
+    createGatewayAdvertisedRoute(request: protos.google.cloud.networkconnectivity.v1beta.ICreateGatewayAdvertisedRouteRequest, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateGatewayAdvertisedRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.icreategatewayadvertisedrouterequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igatewayadvertisedroute), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### createHub(request, options)
+    
+    
+    createHub(request?: protos.google.cloud.networkconnectivity.v1beta.ICreateHubRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.networkconnectivity.v1beta.IHub, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Creates a new Network Connectivity Center hub in the specified project.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateHubRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.icreatehubrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.networkconnectivity.v1beta.IHub](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihub), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The parent resource.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. A unique identifier for the hub.
+       */
+      // const hubId = 'abc123'
+      /**
+       *  Required. The initial values for a new hub.
+       */
+      // const hub = {}
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callCreateHub() {
+        // Construct request
+        const request = {
+          parent,
+          hubId,
+          hub,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.createHub(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callCreateHub();
+    
+    
+
+### createHub(request, options, callback)
+    
+    
+    createHub(request: protos.google.cloud.networkconnectivity.v1beta.ICreateHubRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IHub, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateHubRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.icreatehubrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IHub](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihub), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### createHub(request, callback)
+    
+    
+    createHub(request: protos.google.cloud.networkconnectivity.v1beta.ICreateHubRequest, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IHub, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateHubRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.icreatehubrequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IHub](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihub), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### createSpoke(request, options)
+    
+    
+    createSpoke(request?: protos.google.cloud.networkconnectivity.v1beta.ICreateSpokeRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.networkconnectivity.v1beta.ISpoke, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Creates a Network Connectivity Center spoke.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.icreatespokerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The parent resource.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. Unique id for the spoke to create.
+       */
+      // const spokeId = 'abc123'
+      /**
+       *  Required. The initial values for a new spoke.
+       */
+      // const spoke = {}
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callCreateSpoke() {
+        // Construct request
+        const request = {
+          parent,
+          spokeId,
+          spoke,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.createSpoke(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callCreateSpoke();
+    
+    
+
+### createSpoke(request, options, callback)
+    
+    
+    createSpoke(request: protos.google.cloud.networkconnectivity.v1beta.ICreateSpokeRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.ISpoke, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.icreatespokerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### createSpoke(request, callback)
+    
+    
+    createSpoke(request: protos.google.cloud.networkconnectivity.v1beta.ICreateSpokeRequest, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.ISpoke, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.icreatespokerequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### deleteGatewayAdvertisedRoute(request, options)
+    
+    
+    deleteGatewayAdvertisedRoute(request?: protos.google.cloud.networkconnectivity.v1beta.IDeleteGatewayAdvertisedRouteRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Delete a GatewayAdvertisedRoute
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteGatewayAdvertisedRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ideletegatewayadvertisedrouterequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.iempty), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the gateway advertised route to delete.
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callDeleteGatewayAdvertisedRoute() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.deleteGatewayAdvertisedRoute(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callDeleteGatewayAdvertisedRoute();
+    
+    
+
+### deleteGatewayAdvertisedRoute(request, options, callback)
+    
+    
+    deleteGatewayAdvertisedRoute(request: protos.google.cloud.networkconnectivity.v1beta.IDeleteGatewayAdvertisedRouteRequest, options: CallOptions, callback: Callback<LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteGatewayAdvertisedRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ideletegatewayadvertisedrouterequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.iempty), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### deleteGatewayAdvertisedRoute(request, callback)
+    
+    
+    deleteGatewayAdvertisedRoute(request: protos.google.cloud.networkconnectivity.v1beta.IDeleteGatewayAdvertisedRouteRequest, callback: Callback<LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteGatewayAdvertisedRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ideletegatewayadvertisedrouterequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.iempty), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### deleteHub(request, options)
+    
+    
+    deleteHub(request?: protos.google.cloud.networkconnectivity.v1beta.IDeleteHubRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Deletes a Network Connectivity Center hub.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteHubRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ideletehubrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.iempty), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the hub to delete.
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callDeleteHub() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.deleteHub(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callDeleteHub();
+    
+    
+
+### deleteHub(request, options, callback)
+    
+    
+    deleteHub(request: protos.google.cloud.networkconnectivity.v1beta.IDeleteHubRequest, options: CallOptions, callback: Callback<LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteHubRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ideletehubrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.iempty), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### deleteHub(request, callback)
+    
+    
+    deleteHub(request: protos.google.cloud.networkconnectivity.v1beta.IDeleteHubRequest, callback: Callback<LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteHubRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ideletehubrequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.iempty), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### deleteOperation(request, optionsOrCallback, callback)
+    
+    
+    deleteOperation(request: protos.google.longrunning.DeleteOperationRequest, optionsOrCallback?: gax.CallOptions | Callback<protos.google.protobuf.Empty, protos.google.longrunning.DeleteOperationRequest, {} | null | undefined>, callback?: Callback<protos.google.protobuf.Empty, protos.google.longrunning.DeleteOperationRequest, {} | null | undefined>): Promise<protos.google.protobuf.Empty>;
+
+Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[DeleteOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.deleteoperationrequest)`   
+The request object that will be sent.  
+`optionsOrCallback` |  `CallOptions | Callback<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.empty), [protos.google.longrunning.DeleteOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.deleteoperationrequest), {} | null | undefined>`   
+  
+`callback` |  `Callback<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.empty), [protos.google.longrunning.DeleteOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.deleteoperationrequest), {} | null | undefined>`   
+The function which will be called with the result of the API call. {Promise} - The promise which resolves when API call finishes. The promise has a method named "cancel" which cancels the ongoing API call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.empty)>` |   
+**Example**
+    
+    
+    const client = longrunning.operationsClient();
+    await client.deleteOperation({name: ''});
+    
+
+### deleteSpoke(request, options)
+    
+    
+    deleteSpoke(request?: protos.google.cloud.networkconnectivity.v1beta.IDeleteSpokeRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Deletes a Network Connectivity Center spoke.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ideletespokerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.iempty), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the spoke to delete.
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callDeleteSpoke() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.deleteSpoke(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callDeleteSpoke();
+    
+    
+
+### deleteSpoke(request, options, callback)
+    
+    
+    deleteSpoke(request: protos.google.cloud.networkconnectivity.v1beta.IDeleteSpokeRequest, options: CallOptions, callback: Callback<LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ideletespokerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.iempty), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### deleteSpoke(request, callback)
+    
+    
+    deleteSpoke(request: protos.google.cloud.networkconnectivity.v1beta.IDeleteSpokeRequest, callback: Callback<LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ideletespokerequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.protobuf.iempty), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### destinationPath(project, location, multicloudDataTransferConfig, destination)
+    
+    
+    destinationPath(project: string, location: string, multicloudDataTransferConfig: string, destination: string): string;
+
+Return a fully-qualified destination resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`multicloudDataTransferConfig` |  `string`   
+  
+`destination` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### gatewayAdvertisedRoutePath(project, location, spoke, gatewayAdvertisedRoute)
+    
+    
+    gatewayAdvertisedRoutePath(project: string, location: string, spoke: string, gatewayAdvertisedRoute: string): string;
+
+Return a fully-qualified gatewayAdvertisedRoute resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`spoke` |  `string`   
+  
+`gatewayAdvertisedRoute` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### getGatewayAdvertisedRoute(request, options)
+    
+    
+    getGatewayAdvertisedRoute(request?: protos.google.cloud.networkconnectivity.v1beta.IGetGatewayAdvertisedRouteRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute,
+            (protos.google.cloud.networkconnectivity.v1beta.IGetGatewayAdvertisedRouteRequest | undefined),
+            {} | undefined
+        ]>;
+
+Get a GatewayAdvertisedRoute
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetGatewayAdvertisedRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetgatewayadvertisedrouterequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igatewayadvertisedroute), ([protos.google.cloud.networkconnectivity.v1beta.IGetGatewayAdvertisedRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetgatewayadvertisedrouterequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing . Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the gateway advertised route to get.
+       */
+      // const name = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callGetGatewayAdvertisedRoute() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await networkconnectivityClient.getGatewayAdvertisedRoute(request);
+        console.log(response);
+      }
+    
+      callGetGatewayAdvertisedRoute();
+    
+    
+
+### getGatewayAdvertisedRoute(request, options, callback)
+    
+    
+    getGatewayAdvertisedRoute(request: protos.google.cloud.networkconnectivity.v1beta.IGetGatewayAdvertisedRouteRequest, options: CallOptions, callback: Callback<protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute, protos.google.cloud.networkconnectivity.v1beta.IGetGatewayAdvertisedRouteRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetGatewayAdvertisedRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetgatewayadvertisedrouterequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igatewayadvertisedroute), [protos.google.cloud.networkconnectivity.v1beta.IGetGatewayAdvertisedRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetgatewayadvertisedrouterequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getGatewayAdvertisedRoute(request, callback)
+    
+    
+    getGatewayAdvertisedRoute(request: protos.google.cloud.networkconnectivity.v1beta.IGetGatewayAdvertisedRouteRequest, callback: Callback<protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute, protos.google.cloud.networkconnectivity.v1beta.IGetGatewayAdvertisedRouteRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetGatewayAdvertisedRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetgatewayadvertisedrouterequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igatewayadvertisedroute), [protos.google.cloud.networkconnectivity.v1beta.IGetGatewayAdvertisedRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetgatewayadvertisedrouterequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getGroup(request, options)
+    
+    
+    getGroup(request?: protos.google.cloud.networkconnectivity.v1beta.IGetGroupRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.networkconnectivity.v1beta.IGroup,
+            (protos.google.cloud.networkconnectivity.v1beta.IGetGroupRequest | undefined),
+            {} | undefined
+        ]>;
+
+Gets details about a Network Connectivity Center group.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetgrouprequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.networkconnectivity.v1beta.IGroup](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igroup), ([protos.google.cloud.networkconnectivity.v1beta.IGetGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetgrouprequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [Group](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.group). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the route table resource.
+       */
+      // const name = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callGetGroup() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await networkconnectivityClient.getGroup(request);
+        console.log(response);
+      }
+    
+      callGetGroup();
+    
+    
+
+### getGroup(request, options, callback)
+    
+    
+    getGroup(request: protos.google.cloud.networkconnectivity.v1beta.IGetGroupRequest, options: CallOptions, callback: Callback<protos.google.cloud.networkconnectivity.v1beta.IGroup, protos.google.cloud.networkconnectivity.v1beta.IGetGroupRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetgrouprequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.networkconnectivity.v1beta.IGroup](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igroup), [protos.google.cloud.networkconnectivity.v1beta.IGetGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetgrouprequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getGroup(request, callback)
+    
+    
+    getGroup(request: protos.google.cloud.networkconnectivity.v1beta.IGetGroupRequest, callback: Callback<protos.google.cloud.networkconnectivity.v1beta.IGroup, protos.google.cloud.networkconnectivity.v1beta.IGetGroupRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetgrouprequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.networkconnectivity.v1beta.IGroup](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igroup), [protos.google.cloud.networkconnectivity.v1beta.IGetGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetgrouprequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getHub(request, options)
+    
+    
+    getHub(request?: protos.google.cloud.networkconnectivity.v1beta.IGetHubRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.networkconnectivity.v1beta.IHub,
+            protos.google.cloud.networkconnectivity.v1beta.IGetHubRequest | undefined,
+            {} | undefined
+        ]>;
+
+Gets details about a Network Connectivity Center hub.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetHubRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igethubrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.networkconnectivity.v1beta.IHub](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihub), [protos.google.cloud.networkconnectivity.v1beta.IGetHubRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igethubrequest) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing . Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the hub resource to get.
+       */
+      // const name = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callGetHub() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await networkconnectivityClient.getHub(request);
+        console.log(response);
+      }
+    
+      callGetHub();
+    
+    
+
+### getHub(request, options, callback)
+    
+    
+    getHub(request: protos.google.cloud.networkconnectivity.v1beta.IGetHubRequest, options: CallOptions, callback: Callback<protos.google.cloud.networkconnectivity.v1beta.IHub, protos.google.cloud.networkconnectivity.v1beta.IGetHubRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetHubRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igethubrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.networkconnectivity.v1beta.IHub](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihub), [protos.google.cloud.networkconnectivity.v1beta.IGetHubRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igethubrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getHub(request, callback)
+    
+    
+    getHub(request: protos.google.cloud.networkconnectivity.v1beta.IGetHubRequest, callback: Callback<protos.google.cloud.networkconnectivity.v1beta.IHub, protos.google.cloud.networkconnectivity.v1beta.IGetHubRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetHubRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igethubrequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.networkconnectivity.v1beta.IHub](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihub), [protos.google.cloud.networkconnectivity.v1beta.IGetHubRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igethubrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getIamPolicy(request, options, callback)
+    
+    
+    getIamPolicy(request: IamProtos.google.iam.v1.GetIamPolicyRequest, options?: gax.CallOptions | Callback<IamProtos.google.iam.v1.Policy, IamProtos.google.iam.v1.GetIamPolicyRequest | null | undefined, {} | null | undefined>, callback?: Callback<IamProtos.google.iam.v1.Policy, IamProtos.google.iam.v1.GetIamPolicyRequest | null | undefined, {} | null | undefined>): Promise<[IamProtos.google.iam.v1.Policy]>;
+
+Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `IamProtos.google.iam.v1.GetIamPolicyRequest`   
+The request object that will be sent.  
+`options` |  `CallOptions | Callback<google.iam.v1.Policy, google.iam.v1.GetIamPolicyRequest | null | undefined, {} | null | undefined>`   
+Optional parameters. You can override the default settings for this call, e.g, timeout, retries, paginations, etc. See [gax.CallOptions](https://googleapis.github.io/gax-nodejs/interfaces/CallOptions.html) for the details.  
+`callback` |  `Callback<google.iam.v1.Policy, google.iam.v1.GetIamPolicyRequest | null | undefined, {} | null | undefined>`   
+The function which will be called with the result of the API call. The second parameter to the callback is an object representing .  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[google.iam.v1.Policy]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing . The promise has a method named "cancel" which cancels the ongoing API call.  
+  
+### getLocation(request, options, callback)
+    
+    
+    getLocation(request: LocationProtos.google.cloud.location.IGetLocationRequest, options?: gax.CallOptions | Callback<LocationProtos.google.cloud.location.ILocation, LocationProtos.google.cloud.location.IGetLocationRequest | null | undefined, {} | null | undefined>, callback?: Callback<LocationProtos.google.cloud.location.ILocation, LocationProtos.google.cloud.location.IGetLocationRequest | null | undefined, {} | null | undefined>): Promise<LocationProtos.google.cloud.location.ILocation>;
+
+Gets information about a location.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `LocationProtos.google.cloud.location.IGetLocationRequest`   
+The request object that will be sent.  
+`options` |  `CallOptions | Callback<google.cloud.location.ILocation, google.cloud.location.IGetLocationRequest | null | undefined, {} | null | undefined>`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+`callback` |  `Callback<google.cloud.location.ILocation, google.cloud.location.IGetLocationRequest | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<google.cloud.location.ILocation>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing . Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+    const [response] = await client.getLocation(request);
+    
+
+### getOperation(request, optionsOrCallback, callback)
+    
+    
+    getOperation(request: protos.google.longrunning.GetOperationRequest, optionsOrCallback?: gax.CallOptions | Callback<protos.google.longrunning.Operation, protos.google.longrunning.GetOperationRequest, {} | null | undefined>, callback?: Callback<protos.google.longrunning.Operation, protos.google.longrunning.GetOperationRequest, {} | null | undefined>): Promise<[protos.google.longrunning.Operation]>;
+
+Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[GetOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.getoperationrequest)`   
+The request object that will be sent.  
+`optionsOrCallback` |  `CallOptions | Callback<[protos.google.longrunning.Operation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.operation), [protos.google.longrunning.GetOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.getoperationrequest), {} | null | undefined>`   
+  
+`callback` |  `Callback<[protos.google.longrunning.Operation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.operation), [protos.google.longrunning.GetOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.getoperationrequest), {} | null | undefined>`   
+The function which will be called with the result of the API call. The second parameter to the callback is an object representing . {Promise} - The promise which resolves to an array. The first element of the array is an object representing . The promise has a method named "cancel" which cancels the ongoing API call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[[protos.google.longrunning.Operation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.operation)]>` |   
+**Example**
+    
+    
+    const client = longrunning.operationsClient();
+    const name = '';
+    const [response] = await client.getOperation({name});
+    // doThingsWith(response)
+    
+
+### getProjectId()
+    
+    
+    getProjectId(): Promise<string>;
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<string>` |   
+  
+### getProjectId(callback)
+    
+    
+    getProjectId(callback: Callback<string, undefined, undefined>): void;
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`callback` |  `Callback<string, undefined, undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getRoute(request, options)
+    
+    
+    getRoute(request?: protos.google.cloud.networkconnectivity.v1beta.IGetRouteRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.networkconnectivity.v1beta.IRoute,
+            (protos.google.cloud.networkconnectivity.v1beta.IGetRouteRequest | undefined),
+            {} | undefined
+        ]>;
+
+Gets details about the specified route.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetrouterequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.networkconnectivity.v1beta.IRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iroute), ([protos.google.cloud.networkconnectivity.v1beta.IGetRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetrouterequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [Route](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.route). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the route resource.
+       */
+      // const name = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callGetRoute() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await networkconnectivityClient.getRoute(request);
+        console.log(response);
+      }
+    
+      callGetRoute();
+    
+    
+
+### getRoute(request, options, callback)
+    
+    
+    getRoute(request: protos.google.cloud.networkconnectivity.v1beta.IGetRouteRequest, options: CallOptions, callback: Callback<protos.google.cloud.networkconnectivity.v1beta.IRoute, protos.google.cloud.networkconnectivity.v1beta.IGetRouteRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetrouterequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.networkconnectivity.v1beta.IRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iroute), [protos.google.cloud.networkconnectivity.v1beta.IGetRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetrouterequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getRoute(request, callback)
+    
+    
+    getRoute(request: protos.google.cloud.networkconnectivity.v1beta.IGetRouteRequest, callback: Callback<protos.google.cloud.networkconnectivity.v1beta.IRoute, protos.google.cloud.networkconnectivity.v1beta.IGetRouteRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetrouterequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.networkconnectivity.v1beta.IRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iroute), [protos.google.cloud.networkconnectivity.v1beta.IGetRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetrouterequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getRouteTable(request, options)
+    
+    
+    getRouteTable(request?: protos.google.cloud.networkconnectivity.v1beta.IGetRouteTableRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.networkconnectivity.v1beta.IRouteTable,
+            (protos.google.cloud.networkconnectivity.v1beta.IGetRouteTableRequest | undefined),
+            {} | undefined
+        ]>;
+
+Gets details about a Network Connectivity Center route table.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetRouteTableRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetroutetablerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.networkconnectivity.v1beta.IRouteTable](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iroutetable), ([protos.google.cloud.networkconnectivity.v1beta.IGetRouteTableRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetroutetablerequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [RouteTable](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.routetable). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the route table resource.
+       */
+      // const name = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callGetRouteTable() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await networkconnectivityClient.getRouteTable(request);
+        console.log(response);
+      }
+    
+      callGetRouteTable();
+    
+    
+
+### getRouteTable(request, options, callback)
+    
+    
+    getRouteTable(request: protos.google.cloud.networkconnectivity.v1beta.IGetRouteTableRequest, options: CallOptions, callback: Callback<protos.google.cloud.networkconnectivity.v1beta.IRouteTable, protos.google.cloud.networkconnectivity.v1beta.IGetRouteTableRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetRouteTableRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetroutetablerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.networkconnectivity.v1beta.IRouteTable](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iroutetable), [protos.google.cloud.networkconnectivity.v1beta.IGetRouteTableRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetroutetablerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getRouteTable(request, callback)
+    
+    
+    getRouteTable(request: protos.google.cloud.networkconnectivity.v1beta.IGetRouteTableRequest, callback: Callback<protos.google.cloud.networkconnectivity.v1beta.IRouteTable, protos.google.cloud.networkconnectivity.v1beta.IGetRouteTableRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetRouteTableRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetroutetablerequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.networkconnectivity.v1beta.IRouteTable](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iroutetable), [protos.google.cloud.networkconnectivity.v1beta.IGetRouteTableRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetroutetablerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getSpoke(request, options)
+    
+    
+    getSpoke(request?: protos.google.cloud.networkconnectivity.v1beta.IGetSpokeRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.networkconnectivity.v1beta.ISpoke,
+            (protos.google.cloud.networkconnectivity.v1beta.IGetSpokeRequest | undefined),
+            {} | undefined
+        ]>;
+
+Gets details about a Network Connectivity Center spoke.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetspokerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke), ([protos.google.cloud.networkconnectivity.v1beta.IGetSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetspokerequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing . Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the spoke resource.
+       */
+      // const name = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callGetSpoke() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await networkconnectivityClient.getSpoke(request);
+        console.log(response);
+      }
+    
+      callGetSpoke();
+    
+    
+
+### getSpoke(request, options, callback)
+    
+    
+    getSpoke(request: protos.google.cloud.networkconnectivity.v1beta.IGetSpokeRequest, options: CallOptions, callback: Callback<protos.google.cloud.networkconnectivity.v1beta.ISpoke, protos.google.cloud.networkconnectivity.v1beta.IGetSpokeRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetspokerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke), [protos.google.cloud.networkconnectivity.v1beta.IGetSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetspokerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getSpoke(request, callback)
+    
+    
+    getSpoke(request: protos.google.cloud.networkconnectivity.v1beta.IGetSpokeRequest, callback: Callback<protos.google.cloud.networkconnectivity.v1beta.ISpoke, protos.google.cloud.networkconnectivity.v1beta.IGetSpokeRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetspokerequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke), [protos.google.cloud.networkconnectivity.v1beta.IGetSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igetspokerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### groupPath(project, hub, group)
+    
+    
+    groupPath(project: string, hub: string, group: string): string;
+
+Return a fully-qualified group resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`hub` |  `string`   
+  
+`group` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### hubPath(project, hub)
+    
+    
+    hubPath(project: string, hub: string): string;
+
+Return a fully-qualified hub resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`hub` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### hubRoutePath(project, hub, routeTable, route)
+    
+    
+    hubRoutePath(project: string, hub: string, routeTable: string, route: string): string;
+
+Return a fully-qualified hubRoute resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`hub` |  `string`   
+  
+`routeTable` |  `string`   
+  
+`route` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### initialize()
+    
+    
+    initialize(): Promise<{
+            [name: string]: Function;
+        }>;
+
+Initialize the client. Performs asynchronous operations (such as authentication) and prepares the client. This function will be called automatically when any class method is called for the first time, but if you need to initialize it before calling an actual method, feel free to call initialize() directly.
+
+You can await on this method if you want to make sure the client is initialized.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<{ [name: string]: Function; }>` | {Promise} A promise that resolves to an authenticated service stub.  
+  
+### instancePath(project, zone, instance)
+    
+    
+    instancePath(project: string, zone: string, instance: string): string;
+
+Return a fully-qualified instance resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`zone` |  `string`   
+  
+`instance` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### interconnectAttachmentPath(project, region, resourceId)
+    
+    
+    interconnectAttachmentPath(project: string, region: string, resourceId: string): string;
+
+Return a fully-qualified interconnectAttachment resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`region` |  `string`   
+  
+`resourceId` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### listGatewayAdvertisedRoutes(request, options)
+    
+    
+    listGatewayAdvertisedRoutes(request?: protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute[],
+            protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesRequest | null,
+            protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesResponse
+        ]>;
+
+List GatewayAdvertisedRoutes
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListGatewayAdvertisedRoutesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgatewayadvertisedroutesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igatewayadvertisedroute)[], [protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgatewayadvertisedroutesrequest) | null, [protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgatewayadvertisedroutesresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of . The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listGatewayAdvertisedRoutesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listGatewayAdvertisedRoutes(request, options, callback)
+    
+    
+    listGatewayAdvertisedRoutes(request: protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesRequest, options: CallOptions, callback: PaginationCallback<protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesRequest, protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesResponse | null | undefined, protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListGatewayAdvertisedRoutesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgatewayadvertisedroutesrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgatewayadvertisedroutesrequest), [protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgatewayadvertisedroutesresponse) | null | undefined, [protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igatewayadvertisedroute)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listGatewayAdvertisedRoutes(request, callback)
+    
+    
+    listGatewayAdvertisedRoutes(request: protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesRequest, callback: PaginationCallback<protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesRequest, protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesResponse | null | undefined, protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListGatewayAdvertisedRoutesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgatewayadvertisedroutesrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgatewayadvertisedroutesrequest), [protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgatewayadvertisedroutesresponse) | null | undefined, [protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igatewayadvertisedroute)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listGatewayAdvertisedRoutesAsync(request, options)
+    
+    
+    listGatewayAdvertisedRoutesAsync(request?: protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesRequest, options?: CallOptions): AsyncIterable<protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute>;
+
+Equivalent to `listGatewayAdvertisedRoutes`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListGatewayAdvertisedRoutesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgatewayadvertisedroutesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igatewayadvertisedroute)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing . The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The parent resource's name.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Optional. The maximum number of results per page that should be returned.
+       */
+      // const pageSize = 1234
+      /**
+       *  Optional. A page token, received from a previous
+       *  `ListGatewayAdvertisedRoutes` call. Provide this to retrieve the subsequent
+       *  page.
+       *  When paginating, all other parameters provided to
+       *  `ListGatewayAdvertisedRoutes` must match the call that provided the page
+       *  token.
+       */
+      // const pageToken = 'abc123'
+      /**
+       *  An expression that filters the list of results.
+       */
+      // const filter = 'abc123'
+      /**
+       *  Sort the results by a certain order.
+       */
+      // const orderBy = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callListGatewayAdvertisedRoutes() {
+        // Construct request
+        const request = {
+          parent,
+        };
+    
+        // Run request
+        const iterable = networkconnectivityClient.[listGatewayAdvertisedRoutesAsync](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/v1beta.hubserviceclient.html)(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callListGatewayAdvertisedRoutes();
+    
+    
+
+### listGatewayAdvertisedRoutesStream(request, options)
+    
+    
+    listGatewayAdvertisedRoutesStream(request?: protos.google.cloud.networkconnectivity.v1beta.IListGatewayAdvertisedRoutesRequest, options?: CallOptions): Transform;
+
+Equivalent to `listGatewayAdvertisedRoutes`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListGatewayAdvertisedRoutesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgatewayadvertisedroutesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listGatewayAdvertisedRoutesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listGroups(request, options)
+    
+    
+    listGroups(request?: protos.google.cloud.networkconnectivity.v1beta.IListGroupsRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.networkconnectivity.v1beta.IGroup[],
+            protos.google.cloud.networkconnectivity.v1beta.IListGroupsRequest | null,
+            protos.google.cloud.networkconnectivity.v1beta.IListGroupsResponse
+        ]>;
+
+Lists groups in a given hub.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgroupsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.networkconnectivity.v1beta.IGroup](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igroup)[], [protos.google.cloud.networkconnectivity.v1beta.IListGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgroupsrequest) | null, [protos.google.cloud.networkconnectivity.v1beta.IListGroupsResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgroupsresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of [Group](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.group). The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listGroupsAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listGroups(request, options, callback)
+    
+    
+    listGroups(request: protos.google.cloud.networkconnectivity.v1beta.IListGroupsRequest, options: CallOptions, callback: PaginationCallback<protos.google.cloud.networkconnectivity.v1beta.IListGroupsRequest, protos.google.cloud.networkconnectivity.v1beta.IListGroupsResponse | null | undefined, protos.google.cloud.networkconnectivity.v1beta.IGroup>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgroupsrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.networkconnectivity.v1beta.IListGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgroupsrequest), [protos.google.cloud.networkconnectivity.v1beta.IListGroupsResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgroupsresponse) | null | undefined, [protos.google.cloud.networkconnectivity.v1beta.IGroup](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igroup)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listGroups(request, callback)
+    
+    
+    listGroups(request: protos.google.cloud.networkconnectivity.v1beta.IListGroupsRequest, callback: PaginationCallback<protos.google.cloud.networkconnectivity.v1beta.IListGroupsRequest, protos.google.cloud.networkconnectivity.v1beta.IListGroupsResponse | null | undefined, protos.google.cloud.networkconnectivity.v1beta.IGroup>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgroupsrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.networkconnectivity.v1beta.IListGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgroupsrequest), [protos.google.cloud.networkconnectivity.v1beta.IListGroupsResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgroupsresponse) | null | undefined, [protos.google.cloud.networkconnectivity.v1beta.IGroup](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igroup)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listGroupsAsync(request, options)
+    
+    
+    listGroupsAsync(request?: protos.google.cloud.networkconnectivity.v1beta.IListGroupsRequest, options?: CallOptions): AsyncIterable<protos.google.cloud.networkconnectivity.v1beta.IGroup>;
+
+Equivalent to `listGroups`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgroupsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.cloud.networkconnectivity.v1beta.IGroup](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igroup)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing [Group](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.group). The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The parent resource's name.
+       */
+      // const parent = 'abc123'
+      /**
+       *  The maximum number of results to return per page.
+       */
+      // const pageSize = 1234
+      /**
+       *  The page token.
+       */
+      // const pageToken = 'abc123'
+      /**
+       *  An expression that filters the list of results.
+       */
+      // const filter = 'abc123'
+      /**
+       *  Sort the results by a certain order.
+       */
+      // const orderBy = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callListGroups() {
+        // Construct request
+        const request = {
+          parent,
+        };
+    
+        // Run request
+        const iterable = networkconnectivityClient.listGroupsAsync(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callListGroups();
+    
+    
+
+### listGroupsStream(request, options)
+    
+    
+    listGroupsStream(request?: protos.google.cloud.networkconnectivity.v1beta.IListGroupsRequest, options?: CallOptions): Transform;
+
+Equivalent to `listGroups`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistgroupsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing [Group](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.group) on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listGroupsAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listHubs(request, options)
+    
+    
+    listHubs(request?: protos.google.cloud.networkconnectivity.v1beta.IListHubsRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.networkconnectivity.v1beta.IHub[],
+            protos.google.cloud.networkconnectivity.v1beta.IListHubsRequest | null,
+            protos.google.cloud.networkconnectivity.v1beta.IListHubsResponse
+        ]>;
+
+Lists the Network Connectivity Center hubs associated with a given project.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListHubsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.networkconnectivity.v1beta.IHub](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihub)[], [protos.google.cloud.networkconnectivity.v1beta.IListHubsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubsrequest) | null, [protos.google.cloud.networkconnectivity.v1beta.IListHubsResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubsresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of . The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listHubsAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listHubs(request, options, callback)
+    
+    
+    listHubs(request: protos.google.cloud.networkconnectivity.v1beta.IListHubsRequest, options: CallOptions, callback: PaginationCallback<protos.google.cloud.networkconnectivity.v1beta.IListHubsRequest, protos.google.cloud.networkconnectivity.v1beta.IListHubsResponse | null | undefined, protos.google.cloud.networkconnectivity.v1beta.IHub>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListHubsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubsrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.networkconnectivity.v1beta.IListHubsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubsrequest), [protos.google.cloud.networkconnectivity.v1beta.IListHubsResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubsresponse) | null | undefined, [protos.google.cloud.networkconnectivity.v1beta.IHub](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihub)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listHubs(request, callback)
+    
+    
+    listHubs(request: protos.google.cloud.networkconnectivity.v1beta.IListHubsRequest, callback: PaginationCallback<protos.google.cloud.networkconnectivity.v1beta.IListHubsRequest, protos.google.cloud.networkconnectivity.v1beta.IListHubsResponse | null | undefined, protos.google.cloud.networkconnectivity.v1beta.IHub>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListHubsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubsrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.networkconnectivity.v1beta.IListHubsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubsrequest), [protos.google.cloud.networkconnectivity.v1beta.IListHubsResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubsresponse) | null | undefined, [protos.google.cloud.networkconnectivity.v1beta.IHub](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihub)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listHubsAsync(request, options)
+    
+    
+    listHubsAsync(request?: protos.google.cloud.networkconnectivity.v1beta.IListHubsRequest, options?: CallOptions): AsyncIterable<protos.google.cloud.networkconnectivity.v1beta.IHub>;
+
+Equivalent to `listHubs`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListHubsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.cloud.networkconnectivity.v1beta.IHub](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihub)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing . The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The parent resource's name.
+       */
+      // const parent = 'abc123'
+      /**
+       *  The maximum number of results per page to return.
+       */
+      // const pageSize = 1234
+      /**
+       *  The page token.
+       */
+      // const pageToken = 'abc123'
+      /**
+       *  An expression that filters the list of results.
+       */
+      // const filter = 'abc123'
+      /**
+       *  Sort the results by a certain order.
+       */
+      // const orderBy = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callListHubs() {
+        // Construct request
+        const request = {
+          parent,
+        };
+    
+        // Run request
+        const iterable = networkconnectivityClient.listHubsAsync(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callListHubs();
+    
+    
+
+### listHubSpokes(request, options)
+    
+    
+    listHubSpokes(request?: protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.networkconnectivity.v1beta.ISpoke[],
+            protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesRequest | null,
+            protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesResponse
+        ]>;
+
+Lists the Network Connectivity Center spokes associated with a specified hub and location. The list includes both spokes that are attached to the hub and spokes that have been proposed but not yet accepted.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListHubSpokesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubspokesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke)[], [protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubspokesrequest) | null, [protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubspokesresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of . The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listHubSpokesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listHubSpokes(request, options, callback)
+    
+    
+    listHubSpokes(request: protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesRequest, options: CallOptions, callback: PaginationCallback<protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesRequest, protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesResponse | null | undefined, protos.google.cloud.networkconnectivity.v1beta.ISpoke>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListHubSpokesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubspokesrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubspokesrequest), [protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubspokesresponse) | null | undefined, [protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listHubSpokes(request, callback)
+    
+    
+    listHubSpokes(request: protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesRequest, callback: PaginationCallback<protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesRequest, protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesResponse | null | undefined, protos.google.cloud.networkconnectivity.v1beta.ISpoke>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListHubSpokesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubspokesrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubspokesrequest), [protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubspokesresponse) | null | undefined, [protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listHubSpokesAsync(request, options)
+    
+    
+    listHubSpokesAsync(request?: protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesRequest, options?: CallOptions): AsyncIterable<protos.google.cloud.networkconnectivity.v1beta.ISpoke>;
+
+Equivalent to `listHubSpokes`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListHubSpokesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubspokesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing . The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the hub.
+       */
+      // const name = 'abc123'
+      /**
+       *  A list of locations.
+       *  Specify one of the following: `[global]`, a single region (for
+       *  example, `[us-central1]`), or a combination of
+       *  values (for example, `[global, us-central1, us-west1]`).
+       *  If the spoke_locations field is populated, the list of results
+       *  includes only spokes in the specified location.
+       *  If the spoke_locations field is not populated, the list of results
+       *  includes spokes in all locations.
+       */
+      // const spokeLocations = ['abc','def']
+      /**
+       *  The maximum number of results to return per page.
+       */
+      // const pageSize = 1234
+      /**
+       *  The page token.
+       */
+      // const pageToken = 'abc123'
+      /**
+       *  An expression that filters the list of results.
+       */
+      // const filter = 'abc123'
+      /**
+       *  Sort the results by name or create_time.
+       */
+      // const orderBy = 'abc123'
+      /**
+       *  The view of the spoke to return.
+       *  The view that you use determines which spoke fields are included in the
+       *  response.
+       */
+      // const view = {}
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callListHubSpokes() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const iterable = networkconnectivityClient.listHubSpokesAsync(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callListHubSpokes();
+    
+    
+
+### listHubSpokesStream(request, options)
+    
+    
+    listHubSpokesStream(request?: protos.google.cloud.networkconnectivity.v1beta.IListHubSpokesRequest, options?: CallOptions): Transform;
+
+Equivalent to `listHubSpokes`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListHubSpokesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubspokesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listHubSpokesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listHubsStream(request, options)
+    
+    
+    listHubsStream(request?: protos.google.cloud.networkconnectivity.v1beta.IListHubsRequest, options?: CallOptions): Transform;
+
+Equivalent to `listHubs`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListHubsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilisthubsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listHubsAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listLocationsAsync(request, options)
+    
+    
+    listLocationsAsync(request: LocationProtos.google.cloud.location.IListLocationsRequest, options?: CallOptions): AsyncIterable<LocationProtos.google.cloud.location.ILocation>;
+
+Lists information about the supported locations for this service. Returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `LocationProtos.google.cloud.location.IListLocationsRequest`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<google.cloud.location.ILocation>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing . The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+    const iterable = client.listLocationsAsync(request);
+    for await (const response of iterable) {
+      // process response
+    }
+    
+
+### listOperationsAsync(request, options)
+    
+    
+    listOperationsAsync(request: protos.google.longrunning.ListOperationsRequest, options?: gax.CallOptions): AsyncIterable<protos.google.longrunning.IOperation>;
+
+Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. Returns an iterable object.
+
+For-await-of syntax is used with the iterable to recursively get response element on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ListOperationsRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.listoperationsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Optional parameters. You can override the default settings for this call, e.g, timeout, retries, paginations, etc. See [gax.CallOptions](https://googleapis.github.io/gax-nodejs/global.html#CallOptions) for the details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation)>` | {Object} An iterable Object that conforms to [iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).  
+**Example**
+    
+    
+    const client = longrunning.operationsClient();
+    for await (const response of client.listOperationsAsync(request));
+    // doThingsWith(response)
+    
+
+### listRoutes(request, options)
+    
+    
+    listRoutes(request?: protos.google.cloud.networkconnectivity.v1beta.IListRoutesRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.networkconnectivity.v1beta.IRoute[],
+            protos.google.cloud.networkconnectivity.v1beta.IListRoutesRequest | null,
+            protos.google.cloud.networkconnectivity.v1beta.IListRoutesResponse
+        ]>;
+
+Lists routes in a given route table.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRoutesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.networkconnectivity.v1beta.IRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iroute)[], [protos.google.cloud.networkconnectivity.v1beta.IListRoutesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutesrequest) | null, [protos.google.cloud.networkconnectivity.v1beta.IListRoutesResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutesresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of [Route](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.route). The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listRoutesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listRoutes(request, options, callback)
+    
+    
+    listRoutes(request: protos.google.cloud.networkconnectivity.v1beta.IListRoutesRequest, options: CallOptions, callback: PaginationCallback<protos.google.cloud.networkconnectivity.v1beta.IListRoutesRequest, protos.google.cloud.networkconnectivity.v1beta.IListRoutesResponse | null | undefined, protos.google.cloud.networkconnectivity.v1beta.IRoute>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRoutesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutesrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.networkconnectivity.v1beta.IListRoutesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutesrequest), [protos.google.cloud.networkconnectivity.v1beta.IListRoutesResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutesresponse) | null | undefined, [protos.google.cloud.networkconnectivity.v1beta.IRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iroute)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listRoutes(request, callback)
+    
+    
+    listRoutes(request: protos.google.cloud.networkconnectivity.v1beta.IListRoutesRequest, callback: PaginationCallback<protos.google.cloud.networkconnectivity.v1beta.IListRoutesRequest, protos.google.cloud.networkconnectivity.v1beta.IListRoutesResponse | null | undefined, protos.google.cloud.networkconnectivity.v1beta.IRoute>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRoutesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutesrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.networkconnectivity.v1beta.IListRoutesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutesrequest), [protos.google.cloud.networkconnectivity.v1beta.IListRoutesResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutesresponse) | null | undefined, [protos.google.cloud.networkconnectivity.v1beta.IRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iroute)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listRoutesAsync(request, options)
+    
+    
+    listRoutesAsync(request?: protos.google.cloud.networkconnectivity.v1beta.IListRoutesRequest, options?: CallOptions): AsyncIterable<protos.google.cloud.networkconnectivity.v1beta.IRoute>;
+
+Equivalent to `listRoutes`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRoutesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.cloud.networkconnectivity.v1beta.IRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iroute)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing [Route](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.route). The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The parent resource's name.
+       */
+      // const parent = 'abc123'
+      /**
+       *  The maximum number of results to return per page.
+       */
+      // const pageSize = 1234
+      /**
+       *  The page token.
+       */
+      // const pageToken = 'abc123'
+      /**
+       *  An expression that filters the list of results.
+       */
+      // const filter = 'abc123'
+      /**
+       *  Sort the results by a certain order.
+       */
+      // const orderBy = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callListRoutes() {
+        // Construct request
+        const request = {
+          parent,
+        };
+    
+        // Run request
+        const iterable = networkconnectivityClient.listRoutesAsync(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callListRoutes();
+    
+    
+
+### listRoutesStream(request, options)
+    
+    
+    listRoutesStream(request?: protos.google.cloud.networkconnectivity.v1beta.IListRoutesRequest, options?: CallOptions): Transform;
+
+Equivalent to `listRoutes`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRoutesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing [Route](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.route) on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listRoutesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listRouteTables(request, options)
+    
+    
+    listRouteTables(request?: protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.networkconnectivity.v1beta.IRouteTable[],
+            protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesRequest | null,
+            protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesResponse
+        ]>;
+
+Lists route tables in a given hub.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRouteTablesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutetablesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.networkconnectivity.v1beta.IRouteTable](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iroutetable)[], [protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutetablesrequest) | null, [protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutetablesresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of [RouteTable](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.routetable). The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listRouteTablesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listRouteTables(request, options, callback)
+    
+    
+    listRouteTables(request: protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesRequest, options: CallOptions, callback: PaginationCallback<protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesRequest, protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesResponse | null | undefined, protos.google.cloud.networkconnectivity.v1beta.IRouteTable>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRouteTablesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutetablesrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutetablesrequest), [protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutetablesresponse) | null | undefined, [protos.google.cloud.networkconnectivity.v1beta.IRouteTable](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iroutetable)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listRouteTables(request, callback)
+    
+    
+    listRouteTables(request: protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesRequest, callback: PaginationCallback<protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesRequest, protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesResponse | null | undefined, protos.google.cloud.networkconnectivity.v1beta.IRouteTable>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRouteTablesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutetablesrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutetablesrequest), [protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutetablesresponse) | null | undefined, [protos.google.cloud.networkconnectivity.v1beta.IRouteTable](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iroutetable)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listRouteTablesAsync(request, options)
+    
+    
+    listRouteTablesAsync(request?: protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesRequest, options?: CallOptions): AsyncIterable<protos.google.cloud.networkconnectivity.v1beta.IRouteTable>;
+
+Equivalent to `listRouteTables`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRouteTablesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutetablesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.cloud.networkconnectivity.v1beta.IRouteTable](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iroutetable)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing [RouteTable](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.routetable). The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The parent resource's name.
+       */
+      // const parent = 'abc123'
+      /**
+       *  The maximum number of results to return per page.
+       */
+      // const pageSize = 1234
+      /**
+       *  The page token.
+       */
+      // const pageToken = 'abc123'
+      /**
+       *  An expression that filters the list of results.
+       */
+      // const filter = 'abc123'
+      /**
+       *  Sort the results by a certain order.
+       */
+      // const orderBy = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callListRouteTables() {
+        // Construct request
+        const request = {
+          parent,
+        };
+    
+        // Run request
+        const iterable = networkconnectivityClient.listRouteTablesAsync(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callListRouteTables();
+    
+    
+
+### listRouteTablesStream(request, options)
+    
+    
+    listRouteTablesStream(request?: protos.google.cloud.networkconnectivity.v1beta.IListRouteTablesRequest, options?: CallOptions): Transform;
+
+Equivalent to `listRouteTables`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRouteTablesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistroutetablesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing [RouteTable](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.routetable) on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listRouteTablesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listSpokes(request, options)
+    
+    
+    listSpokes(request?: protos.google.cloud.networkconnectivity.v1beta.IListSpokesRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.networkconnectivity.v1beta.ISpoke[],
+            protos.google.cloud.networkconnectivity.v1beta.IListSpokesRequest | null,
+            protos.google.cloud.networkconnectivity.v1beta.IListSpokesResponse
+        ]>;
+
+Lists the Network Connectivity Center spokes in a specified project and location.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListSpokesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistspokesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke)[], [protos.google.cloud.networkconnectivity.v1beta.IListSpokesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistspokesrequest) | null, [protos.google.cloud.networkconnectivity.v1beta.IListSpokesResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistspokesresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of . The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listSpokesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listSpokes(request, options, callback)
+    
+    
+    listSpokes(request: protos.google.cloud.networkconnectivity.v1beta.IListSpokesRequest, options: CallOptions, callback: PaginationCallback<protos.google.cloud.networkconnectivity.v1beta.IListSpokesRequest, protos.google.cloud.networkconnectivity.v1beta.IListSpokesResponse | null | undefined, protos.google.cloud.networkconnectivity.v1beta.ISpoke>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListSpokesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistspokesrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.networkconnectivity.v1beta.IListSpokesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistspokesrequest), [protos.google.cloud.networkconnectivity.v1beta.IListSpokesResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistspokesresponse) | null | undefined, [protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listSpokes(request, callback)
+    
+    
+    listSpokes(request: protos.google.cloud.networkconnectivity.v1beta.IListSpokesRequest, callback: PaginationCallback<protos.google.cloud.networkconnectivity.v1beta.IListSpokesRequest, protos.google.cloud.networkconnectivity.v1beta.IListSpokesResponse | null | undefined, protos.google.cloud.networkconnectivity.v1beta.ISpoke>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListSpokesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistspokesrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.networkconnectivity.v1beta.IListSpokesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistspokesrequest), [protos.google.cloud.networkconnectivity.v1beta.IListSpokesResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistspokesresponse) | null | undefined, [protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listSpokesAsync(request, options)
+    
+    
+    listSpokesAsync(request?: protos.google.cloud.networkconnectivity.v1beta.IListSpokesRequest, options?: CallOptions): AsyncIterable<protos.google.cloud.networkconnectivity.v1beta.ISpoke>;
+
+Equivalent to `listSpokes`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListSpokesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistspokesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing . The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The parent resource.
+       */
+      // const parent = 'abc123'
+      /**
+       *  The maximum number of results to return per page.
+       */
+      // const pageSize = 1234
+      /**
+       *  The page token.
+       */
+      // const pageToken = 'abc123'
+      /**
+       *  An expression that filters the list of results.
+       */
+      // const filter = 'abc123'
+      /**
+       *  Sort the results by a certain order.
+       */
+      // const orderBy = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callListSpokes() {
+        // Construct request
+        const request = {
+          parent,
+        };
+    
+        // Run request
+        const iterable = networkconnectivityClient.listSpokesAsync(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callListSpokes();
+    
+    
+
+### listSpokesStream(request, options)
+    
+    
+    listSpokesStream(request?: protos.google.cloud.networkconnectivity.v1beta.IListSpokesRequest, options?: CallOptions): Transform;
+
+Equivalent to `listSpokes`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListSpokesRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ilistspokesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listSpokesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### locationPath(project, location)
+    
+    
+    locationPath(project: string, location: string): string;
+
+Return a fully-qualified location resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### matchDestinationFromDestinationName(destinationName)
+    
+    
+    matchDestinationFromDestinationName(destinationName: string): string | number;
+
+Parse the destination from Destination resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`destinationName` |  `string`   
+A fully-qualified path representing Destination resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the destination.  
+  
+### matchGatewayAdvertisedRouteFromGatewayAdvertisedRouteName(gatewayAdvertisedRouteName)
+    
+    
+    matchGatewayAdvertisedRouteFromGatewayAdvertisedRouteName(gatewayAdvertisedRouteName: string): string | number;
+
+Parse the gateway_advertised_route from GatewayAdvertisedRoute resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`gatewayAdvertisedRouteName` |  `string`   
+A fully-qualified path representing GatewayAdvertisedRoute resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the gateway_advertised_route.  
+  
+### matchGroupFromGroupName(groupName)
+    
+    
+    matchGroupFromGroupName(groupName: string): string | number;
+
+Parse the group from Group resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`groupName` |  `string`   
+A fully-qualified path representing Group resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the group.  
+  
+### matchHubFromGroupName(groupName)
+    
+    
+    matchHubFromGroupName(groupName: string): string | number;
+
+Parse the hub from Group resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`groupName` |  `string`   
+A fully-qualified path representing Group resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the hub.  
+  
+### matchHubFromHubName(hubName)
+    
+    
+    matchHubFromHubName(hubName: string): string | number;
+
+Parse the hub from Hub resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`hubName` |  `string`   
+A fully-qualified path representing Hub resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the hub.  
+  
+### matchHubFromHubRouteName(hubRouteName)
+    
+    
+    matchHubFromHubRouteName(hubRouteName: string): string | number;
+
+Parse the hub from HubRoute resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`hubRouteName` |  `string`   
+A fully-qualified path representing HubRoute resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the hub.  
+  
+### matchHubFromRouteTableName(routeTableName)
+    
+    
+    matchHubFromRouteTableName(routeTableName: string): string | number;
+
+Parse the hub from RouteTable resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`routeTableName` |  `string`   
+A fully-qualified path representing RouteTable resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the hub.  
+  
+### matchInstanceFromInstanceName(instanceName)
+    
+    
+    matchInstanceFromInstanceName(instanceName: string): string | number;
+
+Parse the instance from Instance resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`instanceName` |  `string`   
+A fully-qualified path representing Instance resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the instance.  
+  
+### matchLocationFromDestinationName(destinationName)
+    
+    
+    matchLocationFromDestinationName(destinationName: string): string | number;
+
+Parse the location from Destination resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`destinationName` |  `string`   
+A fully-qualified path representing Destination resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromGatewayAdvertisedRouteName(gatewayAdvertisedRouteName)
+    
+    
+    matchLocationFromGatewayAdvertisedRouteName(gatewayAdvertisedRouteName: string): string | number;
+
+Parse the location from GatewayAdvertisedRoute resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`gatewayAdvertisedRouteName` |  `string`   
+A fully-qualified path representing GatewayAdvertisedRoute resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromLocationName(locationName)
+    
+    
+    matchLocationFromLocationName(locationName: string): string | number;
+
+Parse the location from Location resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`locationName` |  `string`   
+A fully-qualified path representing Location resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromMulticloudDataTransferConfigName(multicloudDataTransferConfigName)
+    
+    
+    matchLocationFromMulticloudDataTransferConfigName(multicloudDataTransferConfigName: string): string | number;
+
+Parse the location from MulticloudDataTransferConfig resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`multicloudDataTransferConfigName` |  `string`   
+A fully-qualified path representing MulticloudDataTransferConfig resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromMulticloudDataTransferSupportedServiceName(multicloudDataTransferSupportedServiceName)
+    
+    
+    matchLocationFromMulticloudDataTransferSupportedServiceName(multicloudDataTransferSupportedServiceName: string): string | number;
+
+Parse the location from MulticloudDataTransferSupportedService resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`multicloudDataTransferSupportedServiceName` |  `string`   
+A fully-qualified path representing MulticloudDataTransferSupportedService resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromRemoteTransportProfileName(remoteTransportProfileName)
+    
+    
+    matchLocationFromRemoteTransportProfileName(remoteTransportProfileName: string): string | number;
+
+Parse the location from RemoteTransportProfile resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`remoteTransportProfileName` |  `string`   
+A fully-qualified path representing RemoteTransportProfile resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromSACAttachmentName(sACAttachmentName)
+    
+    
+    matchLocationFromSACAttachmentName(sACAttachmentName: string): string | number;
+
+Parse the location from SACAttachment resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`sACAttachmentName` |  `string`   
+A fully-qualified path representing SACAttachment resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromSpokeName(spokeName)
+    
+    
+    matchLocationFromSpokeName(spokeName: string): string | number;
+
+Parse the location from Spoke resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`spokeName` |  `string`   
+A fully-qualified path representing Spoke resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromTransportName(transportName)
+    
+    
+    matchLocationFromTransportName(transportName: string): string | number;
+
+Parse the location from Transport resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`transportName` |  `string`   
+A fully-qualified path representing Transport resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchMulticloudDataTransferConfigFromDestinationName(destinationName)
+    
+    
+    matchMulticloudDataTransferConfigFromDestinationName(destinationName: string): string | number;
+
+Parse the multicloud_data_transfer_config from Destination resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`destinationName` |  `string`   
+A fully-qualified path representing Destination resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the multicloud_data_transfer_config.  
+  
+### matchMulticloudDataTransferConfigFromMulticloudDataTransferConfigName(multicloudDataTransferConfigName)
+    
+    
+    matchMulticloudDataTransferConfigFromMulticloudDataTransferConfigName(multicloudDataTransferConfigName: string): string | number;
+
+Parse the multicloud_data_transfer_config from MulticloudDataTransferConfig resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`multicloudDataTransferConfigName` |  `string`   
+A fully-qualified path representing MulticloudDataTransferConfig resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the multicloud_data_transfer_config.  
+  
+### matchMulticloudDataTransferSupportedServiceFromMulticloudDataTransferSupportedServiceName(multicloudDataTransferSupportedServiceName)
+    
+    
+    matchMulticloudDataTransferSupportedServiceFromMulticloudDataTransferSupportedServiceName(multicloudDataTransferSupportedServiceName: string): string | number;
+
+Parse the multicloud_data_transfer_supported_service from MulticloudDataTransferSupportedService resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`multicloudDataTransferSupportedServiceName` |  `string`   
+A fully-qualified path representing MulticloudDataTransferSupportedService resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the multicloud_data_transfer_supported_service.  
+  
+### matchPolicyBasedRouteFromPolicyBasedRouteName(policyBasedRouteName)
+    
+    
+    matchPolicyBasedRouteFromPolicyBasedRouteName(policyBasedRouteName: string): string | number;
+
+Parse the policy_based_route from PolicyBasedRoute resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`policyBasedRouteName` |  `string`   
+A fully-qualified path representing PolicyBasedRoute resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the policy_based_route.  
+  
+### matchProjectFromDestinationName(destinationName)
+    
+    
+    matchProjectFromDestinationName(destinationName: string): string | number;
+
+Parse the project from Destination resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`destinationName` |  `string`   
+A fully-qualified path representing Destination resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromGatewayAdvertisedRouteName(gatewayAdvertisedRouteName)
+    
+    
+    matchProjectFromGatewayAdvertisedRouteName(gatewayAdvertisedRouteName: string): string | number;
+
+Parse the project from GatewayAdvertisedRoute resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`gatewayAdvertisedRouteName` |  `string`   
+A fully-qualified path representing GatewayAdvertisedRoute resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromGroupName(groupName)
+    
+    
+    matchProjectFromGroupName(groupName: string): string | number;
+
+Parse the project from Group resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`groupName` |  `string`   
+A fully-qualified path representing Group resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromHubName(hubName)
+    
+    
+    matchProjectFromHubName(hubName: string): string | number;
+
+Parse the project from Hub resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`hubName` |  `string`   
+A fully-qualified path representing Hub resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromHubRouteName(hubRouteName)
+    
+    
+    matchProjectFromHubRouteName(hubRouteName: string): string | number;
+
+Parse the project from HubRoute resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`hubRouteName` |  `string`   
+A fully-qualified path representing HubRoute resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromInstanceName(instanceName)
+    
+    
+    matchProjectFromInstanceName(instanceName: string): string | number;
+
+Parse the project from Instance resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`instanceName` |  `string`   
+A fully-qualified path representing Instance resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromInterconnectAttachmentName(interconnectAttachmentName)
+    
+    
+    matchProjectFromInterconnectAttachmentName(interconnectAttachmentName: string): string | number;
+
+Parse the project from InterconnectAttachment resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`interconnectAttachmentName` |  `string`   
+A fully-qualified path representing InterconnectAttachment resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromLocationName(locationName)
+    
+    
+    matchProjectFromLocationName(locationName: string): string | number;
+
+Parse the project from Location resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`locationName` |  `string`   
+A fully-qualified path representing Location resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromMulticloudDataTransferConfigName(multicloudDataTransferConfigName)
+    
+    
+    matchProjectFromMulticloudDataTransferConfigName(multicloudDataTransferConfigName: string): string | number;
+
+Parse the project from MulticloudDataTransferConfig resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`multicloudDataTransferConfigName` |  `string`   
+A fully-qualified path representing MulticloudDataTransferConfig resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromMulticloudDataTransferSupportedServiceName(multicloudDataTransferSupportedServiceName)
+    
+    
+    matchProjectFromMulticloudDataTransferSupportedServiceName(multicloudDataTransferSupportedServiceName: string): string | number;
+
+Parse the project from MulticloudDataTransferSupportedService resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`multicloudDataTransferSupportedServiceName` |  `string`   
+A fully-qualified path representing MulticloudDataTransferSupportedService resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromNetworkName(networkName)
+    
+    
+    matchProjectFromNetworkName(networkName: string): string | number;
+
+Parse the project from Network resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`networkName` |  `string`   
+A fully-qualified path representing Network resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromPolicyBasedRouteName(policyBasedRouteName)
+    
+    
+    matchProjectFromPolicyBasedRouteName(policyBasedRouteName: string): string | number;
+
+Parse the project from PolicyBasedRoute resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`policyBasedRouteName` |  `string`   
+A fully-qualified path representing PolicyBasedRoute resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromRemoteTransportProfileName(remoteTransportProfileName)
+    
+    
+    matchProjectFromRemoteTransportProfileName(remoteTransportProfileName: string): string | number;
+
+Parse the project from RemoteTransportProfile resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`remoteTransportProfileName` |  `string`   
+A fully-qualified path representing RemoteTransportProfile resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromRouteTableName(routeTableName)
+    
+    
+    matchProjectFromRouteTableName(routeTableName: string): string | number;
+
+Parse the project from RouteTable resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`routeTableName` |  `string`   
+A fully-qualified path representing RouteTable resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromSACAttachmentName(sACAttachmentName)
+    
+    
+    matchProjectFromSACAttachmentName(sACAttachmentName: string): string | number;
+
+Parse the project from SACAttachment resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`sACAttachmentName` |  `string`   
+A fully-qualified path representing SACAttachment resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromSpokeName(spokeName)
+    
+    
+    matchProjectFromSpokeName(spokeName: string): string | number;
+
+Parse the project from Spoke resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`spokeName` |  `string`   
+A fully-qualified path representing Spoke resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromTransportName(transportName)
+    
+    
+    matchProjectFromTransportName(transportName: string): string | number;
+
+Parse the project from Transport resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`transportName` |  `string`   
+A fully-qualified path representing Transport resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromVpnTunnelName(vpnTunnelName)
+    
+    
+    matchProjectFromVpnTunnelName(vpnTunnelName: string): string | number;
+
+Parse the project from VpnTunnel resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`vpnTunnelName` |  `string`   
+A fully-qualified path representing VpnTunnel resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchRegionFromInterconnectAttachmentName(interconnectAttachmentName)
+    
+    
+    matchRegionFromInterconnectAttachmentName(interconnectAttachmentName: string): string | number;
+
+Parse the region from InterconnectAttachment resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`interconnectAttachmentName` |  `string`   
+A fully-qualified path representing InterconnectAttachment resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the region.  
+  
+### matchRegionFromVpnTunnelName(vpnTunnelName)
+    
+    
+    matchRegionFromVpnTunnelName(vpnTunnelName: string): string | number;
+
+Parse the region from VpnTunnel resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`vpnTunnelName` |  `string`   
+A fully-qualified path representing VpnTunnel resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the region.  
+  
+### matchRemoteTransportProfileFromRemoteTransportProfileName(remoteTransportProfileName)
+    
+    
+    matchRemoteTransportProfileFromRemoteTransportProfileName(remoteTransportProfileName: string): string | number;
+
+Parse the remote_transport_profile from RemoteTransportProfile resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`remoteTransportProfileName` |  `string`   
+A fully-qualified path representing RemoteTransportProfile resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the remote_transport_profile.  
+  
+### matchResourceIdFromInterconnectAttachmentName(interconnectAttachmentName)
+    
+    
+    matchResourceIdFromInterconnectAttachmentName(interconnectAttachmentName: string): string | number;
+
+Parse the resource_id from InterconnectAttachment resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`interconnectAttachmentName` |  `string`   
+A fully-qualified path representing InterconnectAttachment resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the resource_id.  
+  
+### matchResourceIdFromNetworkName(networkName)
+    
+    
+    matchResourceIdFromNetworkName(networkName: string): string | number;
+
+Parse the resource_id from Network resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`networkName` |  `string`   
+A fully-qualified path representing Network resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the resource_id.  
+  
+### matchResourceIdFromVpnTunnelName(vpnTunnelName)
+    
+    
+    matchResourceIdFromVpnTunnelName(vpnTunnelName: string): string | number;
+
+Parse the resource_id from VpnTunnel resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`vpnTunnelName` |  `string`   
+A fully-qualified path representing VpnTunnel resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the resource_id.  
+  
+### matchRouteFromHubRouteName(hubRouteName)
+    
+    
+    matchRouteFromHubRouteName(hubRouteName: string): string | number;
+
+Parse the route from HubRoute resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`hubRouteName` |  `string`   
+A fully-qualified path representing HubRoute resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the route.  
+  
+### matchRouteTableFromHubRouteName(hubRouteName)
+    
+    
+    matchRouteTableFromHubRouteName(hubRouteName: string): string | number;
+
+Parse the route_table from HubRoute resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`hubRouteName` |  `string`   
+A fully-qualified path representing HubRoute resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the route_table.  
+  
+### matchRouteTableFromRouteTableName(routeTableName)
+    
+    
+    matchRouteTableFromRouteTableName(routeTableName: string): string | number;
+
+Parse the route_table from RouteTable resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`routeTableName` |  `string`   
+A fully-qualified path representing RouteTable resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the route_table.  
+  
+### matchSacAttachmentFromSACAttachmentName(sACAttachmentName)
+    
+    
+    matchSacAttachmentFromSACAttachmentName(sACAttachmentName: string): string | number;
+
+Parse the sac_attachment from SACAttachment resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`sACAttachmentName` |  `string`   
+A fully-qualified path representing SACAttachment resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the sac_attachment.  
+  
+### matchSpokeFromGatewayAdvertisedRouteName(gatewayAdvertisedRouteName)
+    
+    
+    matchSpokeFromGatewayAdvertisedRouteName(gatewayAdvertisedRouteName: string): string | number;
+
+Parse the spoke from GatewayAdvertisedRoute resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`gatewayAdvertisedRouteName` |  `string`   
+A fully-qualified path representing GatewayAdvertisedRoute resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the spoke.  
+  
+### matchSpokeFromSpokeName(spokeName)
+    
+    
+    matchSpokeFromSpokeName(spokeName: string): string | number;
+
+Parse the spoke from Spoke resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`spokeName` |  `string`   
+A fully-qualified path representing Spoke resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the spoke.  
+  
+### matchTransportFromTransportName(transportName)
+    
+    
+    matchTransportFromTransportName(transportName: string): string | number;
+
+Parse the transport from Transport resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`transportName` |  `string`   
+A fully-qualified path representing Transport resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the transport.  
+  
+### matchZoneFromInstanceName(instanceName)
+    
+    
+    matchZoneFromInstanceName(instanceName: string): string | number;
+
+Parse the zone from Instance resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`instanceName` |  `string`   
+A fully-qualified path representing Instance resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the zone.  
+  
+### multicloudDataTransferConfigPath(project, location, multicloudDataTransferConfig)
+    
+    
+    multicloudDataTransferConfigPath(project: string, location: string, multicloudDataTransferConfig: string): string;
+
+Return a fully-qualified multicloudDataTransferConfig resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`multicloudDataTransferConfig` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### multicloudDataTransferSupportedServicePath(project, location, multicloudDataTransferSupportedService)
+    
+    
+    multicloudDataTransferSupportedServicePath(project: string, location: string, multicloudDataTransferSupportedService: string): string;
+
+Return a fully-qualified multicloudDataTransferSupportedService resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`multicloudDataTransferSupportedService` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### networkPath(project, resourceId)
+    
+    
+    networkPath(project: string, resourceId: string): string;
+
+Return a fully-qualified network resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`resourceId` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### policyBasedRoutePath(project, policyBasedRoute)
+    
+    
+    policyBasedRoutePath(project: string, policyBasedRoute: string): string;
+
+Return a fully-qualified policyBasedRoute resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`policyBasedRoute` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### queryHubStatus(request, options)
+    
+    
+    queryHubStatus(request?: protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.networkconnectivity.v1beta.IHubStatusEntry[],
+            protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusRequest | null,
+            protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusResponse
+        ]>;
+
+Query the Private Service Connect propagation status of a Network Connectivity Center hub.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IQueryHubStatusRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iqueryhubstatusrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.networkconnectivity.v1beta.IHubStatusEntry](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihubstatusentry)[], [protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iqueryhubstatusrequest) | null, [protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iqueryhubstatusresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of [HubStatusEntry](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.hubstatusentry). The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `queryHubStatusAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### queryHubStatus(request, options, callback)
+    
+    
+    queryHubStatus(request: protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusRequest, options: CallOptions, callback: PaginationCallback<protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusRequest, protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusResponse | null | undefined, protos.google.cloud.networkconnectivity.v1beta.IHubStatusEntry>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IQueryHubStatusRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iqueryhubstatusrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iqueryhubstatusrequest), [protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iqueryhubstatusresponse) | null | undefined, [protos.google.cloud.networkconnectivity.v1beta.IHubStatusEntry](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihubstatusentry)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### queryHubStatus(request, callback)
+    
+    
+    queryHubStatus(request: protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusRequest, callback: PaginationCallback<protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusRequest, protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusResponse | null | undefined, protos.google.cloud.networkconnectivity.v1beta.IHubStatusEntry>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IQueryHubStatusRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iqueryhubstatusrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iqueryhubstatusrequest), [protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iqueryhubstatusresponse) | null | undefined, [protos.google.cloud.networkconnectivity.v1beta.IHubStatusEntry](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihubstatusentry)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### queryHubStatusAsync(request, options)
+    
+    
+    queryHubStatusAsync(request?: protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusRequest, options?: CallOptions): AsyncIterable<protos.google.cloud.networkconnectivity.v1beta.IHubStatusEntry>;
+
+Equivalent to `queryHubStatus`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IQueryHubStatusRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iqueryhubstatusrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.cloud.networkconnectivity.v1beta.IHubStatusEntry](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihubstatusentry)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing [HubStatusEntry](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.hubstatusentry). The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the hub.
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. The maximum number of results to return per page.
+       */
+      // const pageSize = 1234
+      /**
+       *  Optional. The page token.
+       */
+      // const pageToken = 'abc123'
+      /**
+       *  Optional. An expression that filters the list of results.
+       *  The filter can be used to filter the results by the following fields:
+       *    * `psc_propagation_status.source_spoke`
+       *    * `psc_propagation_status.source_group`
+       *    * `psc_propagation_status.source_forwarding_rule`
+       *    * `psc_propagation_status.target_spoke`
+       *    * `psc_propagation_status.target_group`
+       *    * `psc_propagation_status.code`
+       *    * `psc_propagation_status.message`
+       */
+      // const filter = 'abc123'
+      /**
+       *  Optional. Sort the results in ascending order by the specified fields.
+       *  A comma-separated list of any of these fields:
+       *    * `psc_propagation_status.source_spoke`
+       *    * `psc_propagation_status.source_group`
+       *    * `psc_propagation_status.source_forwarding_rule`
+       *    * `psc_propagation_status.target_spoke`
+       *    * `psc_propagation_status.target_group`
+       *    * `psc_propagation_status.code`
+       *  If `group_by` is set, the value of the `order_by` field must be the
+       *  same as or a subset of the `group_by` field.
+       */
+      // const orderBy = 'abc123'
+      /**
+       *  Optional. Aggregate the results by the specified fields.
+       *  A comma-separated list of any of these fields:
+       *    * `psc_propagation_status.source_spoke`
+       *    * `psc_propagation_status.source_group`
+       *    * `psc_propagation_status.source_forwarding_rule`
+       *    * `psc_propagation_status.target_spoke`
+       *    * `psc_propagation_status.target_group`
+       *    * `psc_propagation_status.code`
+       */
+      // const groupBy = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callQueryHubStatus() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const iterable = networkconnectivityClient.queryHubStatusAsync(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callQueryHubStatus();
+    
+    
+
+### queryHubStatusStream(request, options)
+    
+    
+    queryHubStatusStream(request?: protos.google.cloud.networkconnectivity.v1beta.IQueryHubStatusRequest, options?: CallOptions): Transform;
+
+Equivalent to `queryHubStatus`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IQueryHubStatusRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iqueryhubstatusrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing [HubStatusEntry](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.hubstatusentry) on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `queryHubStatusAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### rejectHubSpoke(request, options)
+    
+    
+    rejectHubSpoke(request?: protos.google.cloud.networkconnectivity.v1beta.IRejectHubSpokeRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.networkconnectivity.v1beta.IRejectHubSpokeResponse, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Rejects a Network Connectivity Center spoke from being attached to a hub. If the spoke was previously in the `ACTIVE` state, it transitions to the `INACTIVE` state and is no longer able to connect to other spokes that are attached to the hub.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IRejectHubSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.irejecthubspokerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.networkconnectivity.v1beta.IRejectHubSpokeResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.irejecthubspokeresponse), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the hub from which to reject the spoke.
+       */
+      // const name = 'abc123'
+      /**
+       *  Required. The URI of the spoke to reject from the hub.
+       */
+      // const spokeUri = 'abc123'
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+      /**
+       *  Optional. Additional information provided by the hub administrator.
+       */
+      // const details = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callRejectHubSpoke() {
+        // Construct request
+        const request = {
+          name,
+          spokeUri,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.rejectHubSpoke(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callRejectHubSpoke();
+    
+    
+
+### rejectHubSpoke(request, options, callback)
+    
+    
+    rejectHubSpoke(request: protos.google.cloud.networkconnectivity.v1beta.IRejectHubSpokeRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IRejectHubSpokeResponse, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IRejectHubSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.irejecthubspokerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IRejectHubSpokeResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.irejecthubspokeresponse), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### rejectHubSpoke(request, callback)
+    
+    
+    rejectHubSpoke(request: protos.google.cloud.networkconnectivity.v1beta.IRejectHubSpokeRequest, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IRejectHubSpokeResponse, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IRejectHubSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.irejecthubspokerequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IRejectHubSpokeResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.irejecthubspokeresponse), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### rejectSpokeUpdate(request, options)
+    
+    
+    rejectSpokeUpdate(request?: protos.google.cloud.networkconnectivity.v1beta.IRejectSpokeUpdateRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.networkconnectivity.v1beta.IRejectSpokeUpdateResponse, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IRejectSpokeUpdateRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.irejectspokeupdaterequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.networkconnectivity.v1beta.IRejectSpokeUpdateResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.irejectspokeupdateresponse), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the hub to reject spoke update.
+       */
+      // const name = 'abc123'
+      /**
+       *  Required. The URI of the spoke to reject update.
+       */
+      // const spokeUri = 'abc123'
+      /**
+       *  Required. The etag of the spoke to reject update.
+       */
+      // const spokeEtag = 'abc123'
+      /**
+       *  Optional. Additional information provided by the hub administrator.
+       */
+      // const details = 'abc123'
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callRejectSpokeUpdate() {
+        // Construct request
+        const request = {
+          name,
+          spokeUri,
+          spokeEtag,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.rejectSpokeUpdate(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callRejectSpokeUpdate();
+    
+    
+
+### rejectSpokeUpdate(request, options, callback)
+    
+    
+    rejectSpokeUpdate(request: protos.google.cloud.networkconnectivity.v1beta.IRejectSpokeUpdateRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IRejectSpokeUpdateResponse, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IRejectSpokeUpdateRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.irejectspokeupdaterequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IRejectSpokeUpdateResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.irejectspokeupdateresponse), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### rejectSpokeUpdate(request, callback)
+    
+    
+    rejectSpokeUpdate(request: protos.google.cloud.networkconnectivity.v1beta.IRejectSpokeUpdateRequest, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IRejectSpokeUpdateResponse, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IRejectSpokeUpdateRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.irejectspokeupdaterequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IRejectSpokeUpdateResponse](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.irejectspokeupdateresponse), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### remoteTransportProfilePath(project, location, remoteTransportProfile)
+    
+    
+    remoteTransportProfilePath(project: string, location: string, remoteTransportProfile: string): string;
+
+Return a fully-qualified remoteTransportProfile resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`remoteTransportProfile` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### routeTablePath(project, hub, routeTable)
+    
+    
+    routeTablePath(project: string, hub: string, routeTable: string): string;
+
+Return a fully-qualified routeTable resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`hub` |  `string`   
+  
+`routeTable` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### sACAttachmentPath(project, location, sacAttachment)
+    
+    
+    sACAttachmentPath(project: string, location: string, sacAttachment: string): string;
+
+Return a fully-qualified sACAttachment resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`sacAttachment` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### setIamPolicy(request, options, callback)
+    
+    
+    setIamPolicy(request: IamProtos.google.iam.v1.SetIamPolicyRequest, options?: gax.CallOptions | Callback<IamProtos.google.iam.v1.Policy, IamProtos.google.iam.v1.SetIamPolicyRequest | null | undefined, {} | null | undefined>, callback?: Callback<IamProtos.google.iam.v1.Policy, IamProtos.google.iam.v1.SetIamPolicyRequest | null | undefined, {} | null | undefined>): Promise<[IamProtos.google.iam.v1.Policy]>;
+
+Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.
+
+Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `IamProtos.google.iam.v1.SetIamPolicyRequest`   
+The request object that will be sent.  
+`options` |  `CallOptions | Callback<google.iam.v1.Policy, google.iam.v1.SetIamPolicyRequest | null | undefined, {} | null | undefined>`   
+Optional parameters. You can override the default settings for this call, e.g, timeout, retries, paginations, etc. See [gax.CallOptions](https://googleapis.github.io/gax-nodejs/interfaces/CallOptions.html) for the details.  
+`callback` |  `Callback<google.iam.v1.Policy, google.iam.v1.SetIamPolicyRequest | null | undefined, {} | null | undefined>`   
+The function which will be called with the result of the API call. The second parameter to the callback is an object representing .  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[google.iam.v1.Policy]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing . The promise has a method named "cancel" which cancels the ongoing API call.  
+  
+### spokePath(project, location, spoke)
+    
+    
+    spokePath(project: string, location: string, spoke: string): string;
+
+Return a fully-qualified spoke resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`spoke` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### testIamPermissions(request, options, callback)
+    
+    
+    testIamPermissions(request: IamProtos.google.iam.v1.TestIamPermissionsRequest, options?: gax.CallOptions | Callback<IamProtos.google.iam.v1.TestIamPermissionsResponse, IamProtos.google.iam.v1.TestIamPermissionsRequest | null | undefined, {} | null | undefined>, callback?: Callback<IamProtos.google.iam.v1.TestIamPermissionsResponse, IamProtos.google.iam.v1.TestIamPermissionsRequest | null | undefined, {} | null | undefined>): Promise<[IamProtos.google.iam.v1.TestIamPermissionsResponse]>;
+
+Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.
+
+Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `IamProtos.google.iam.v1.TestIamPermissionsRequest`   
+The request object that will be sent.  
+`options` |  `CallOptions | Callback<google.iam.v1.TestIamPermissionsResponse, google.iam.v1.TestIamPermissionsRequest | null | undefined, {} | null | undefined>`   
+Optional parameters. You can override the default settings for this call, e.g, timeout, retries, paginations, etc. See [gax.CallOptions](https://googleapis.github.io/gax-nodejs/interfaces/CallOptions.html) for the details.  
+`callback` |  `Callback<google.iam.v1.TestIamPermissionsResponse, google.iam.v1.TestIamPermissionsRequest | null | undefined, {} | null | undefined>`   
+The function which will be called with the result of the API call. The second parameter to the callback is an object representing .  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[google.iam.v1.TestIamPermissionsResponse]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing . The promise has a method named "cancel" which cancels the ongoing API call.  
+  
+### transportPath(project, location, transport)
+    
+    
+    transportPath(project: string, location: string, transport: string): string;
+
+Return a fully-qualified transport resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`transport` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### updateGatewayAdvertisedRoute(request, options)
+    
+    
+    updateGatewayAdvertisedRoute(request?: protos.google.cloud.networkconnectivity.v1beta.IUpdateGatewayAdvertisedRouteRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Update a GatewayAdvertisedRoute
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateGatewayAdvertisedRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iupdategatewayadvertisedrouterequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igatewayadvertisedroute), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Optional. In the case of an update to an existing group, field mask is used
+       *  to specify the fields to be overwritten. The fields specified in the
+       *  update_mask are relative to the resource, not the full request. A field is
+       *  overwritten if it is in the mask. If the user does not provide a mask, then
+       *  all fields are overwritten.
+       */
+      // const updateMask = {}
+      /**
+       *  Required. The gateway advertised route to update.
+       *  The gateway advertised route's `name` field is used to identify the gateway
+       *  advertised route to update. Format:
+       *  `projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gatewayAdvertisedRoute}`
+       */
+      // const gatewayAdvertisedRoute = {}
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callUpdateGatewayAdvertisedRoute() {
+        // Construct request
+        const request = {
+          gatewayAdvertisedRoute,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.updateGatewayAdvertisedRoute(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callUpdateGatewayAdvertisedRoute();
+    
+    
+
+### updateGatewayAdvertisedRoute(request, options, callback)
+    
+    
+    updateGatewayAdvertisedRoute(request: protos.google.cloud.networkconnectivity.v1beta.IUpdateGatewayAdvertisedRouteRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateGatewayAdvertisedRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iupdategatewayadvertisedrouterequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igatewayadvertisedroute), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateGatewayAdvertisedRoute(request, callback)
+    
+    
+    updateGatewayAdvertisedRoute(request: protos.google.cloud.networkconnectivity.v1beta.IUpdateGatewayAdvertisedRouteRequest, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateGatewayAdvertisedRouteRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iupdategatewayadvertisedrouterequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IGatewayAdvertisedRoute](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igatewayadvertisedroute), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateGroup(request, options)
+    
+    
+    updateGroup(request?: protos.google.cloud.networkconnectivity.v1beta.IUpdateGroupRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.networkconnectivity.v1beta.IGroup, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Updates the parameters of a Network Connectivity Center group.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iupdategrouprequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.networkconnectivity.v1beta.IGroup](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igroup), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Optional. In the case of an update to an existing group, field mask is used
+       *  to specify the fields to be overwritten. The fields specified in the
+       *  update_mask are relative to the resource, not the full request. A field is
+       *  overwritten if it is in the mask. If the user does not provide a mask, then
+       *  all fields are overwritten.
+       */
+      // const updateMask = {}
+      /**
+       *  Required. The state that the group should be in after the update.
+       */
+      // const group = {}
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callUpdateGroup() {
+        // Construct request
+        const request = {
+          group,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.updateGroup(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callUpdateGroup();
+    
+    
+
+### updateGroup(request, options, callback)
+    
+    
+    updateGroup(request: protos.google.cloud.networkconnectivity.v1beta.IUpdateGroupRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IGroup, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iupdategrouprequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IGroup](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igroup), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateGroup(request, callback)
+    
+    
+    updateGroup(request: protos.google.cloud.networkconnectivity.v1beta.IUpdateGroupRequest, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IGroup, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iupdategrouprequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IGroup](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.igroup), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateHub(request, options)
+    
+    
+    updateHub(request?: protos.google.cloud.networkconnectivity.v1beta.IUpdateHubRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.networkconnectivity.v1beta.IHub, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Updates the description and/or labels of a Network Connectivity Center hub.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateHubRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iupdatehubrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.networkconnectivity.v1beta.IHub](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihub), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Optional. In the case of an update to an existing hub, field mask is used
+       *  to specify the fields to be overwritten. The fields specified in the
+       *  update_mask are relative to the resource, not the full request. A field is
+       *  overwritten if it is in the mask. If the user does not provide a mask, then
+       *  all fields are overwritten.
+       */
+      // const updateMask = {}
+      /**
+       *  Required. The state that the hub should be in after the update.
+       */
+      // const hub = {}
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callUpdateHub() {
+        // Construct request
+        const request = {
+          hub,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.updateHub(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callUpdateHub();
+    
+    
+
+### updateHub(request, options, callback)
+    
+    
+    updateHub(request: protos.google.cloud.networkconnectivity.v1beta.IUpdateHubRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IHub, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateHubRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iupdatehubrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IHub](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihub), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateHub(request, callback)
+    
+    
+    updateHub(request: protos.google.cloud.networkconnectivity.v1beta.IUpdateHubRequest, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.IHub, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateHubRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iupdatehubrequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.IHub](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ihub), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateSpoke(request, options)
+    
+    
+    updateSpoke(request?: protos.google.cloud.networkconnectivity.v1beta.IUpdateSpokeRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.networkconnectivity.v1beta.ISpoke, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Updates the parameters of a Network Connectivity Center spoke.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iupdatespokerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Optional. In the case of an update to an existing spoke, field mask is used
+       *  to specify the fields to be overwritten. The fields specified in the
+       *  update_mask are relative to the resource, not the full request. A field is
+       *  overwritten if it is in the mask. If the user does not provide a mask, then
+       *  all fields are overwritten.
+       */
+      // const updateMask = {}
+      /**
+       *  Required. The state that the spoke should be in after the update.
+       */
+      // const spoke = {}
+      /**
+       *  Optional. A request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server knows to ignore the request
+       *  if it has already been completed. The server guarantees that a request
+       *  doesn't result in creation of duplicate commitments for at least 60
+       *  minutes.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same request
+       *  ID, the server can check to see whether the original operation
+       *  was received. If it was, the server ignores the second request. This
+       *  behavior prevents clients from mistakenly creating duplicate commitments.
+       *  The request ID must be a valid UUID, with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Networkconnectivity library
+      const {HubServiceClient} = require('[@google-cloud/network-connectivity](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const networkconnectivityClient = new [HubServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/overview.html)();
+    
+      async function callUpdateSpoke() {
+        // Construct request
+        const request = {
+          spoke,
+        };
+    
+        // Run request
+        const [operation] = await networkconnectivityClient.updateSpoke(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callUpdateSpoke();
+    
+    
+
+### updateSpoke(request, options, callback)
+    
+    
+    updateSpoke(request: protos.google.cloud.networkconnectivity.v1beta.IUpdateSpokeRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.ISpoke, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iupdatespokerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateSpoke(request, callback)
+    
+    
+    updateSpoke(request: protos.google.cloud.networkconnectivity.v1beta.IUpdateSpokeRequest, callback: Callback<LROperation<protos.google.cloud.networkconnectivity.v1beta.ISpoke, protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateSpokeRequest](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.iupdatespokerequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.networkconnectivity.v1beta.ISpoke](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ispoke), [protos.google.cloud.networkconnectivity.v1beta.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.cloud.networkconnectivity.v1beta.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/network-connectivity/latest/network-connectivity/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### vpnTunnelPath(project, region, resourceId)
+    
+    
+    vpnTunnelPath(project: string, region: string, resourceId: string): string;
+
+Return a fully-qualified vpnTunnel resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`region` |  `string`   
+  
+`resourceId` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-02 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-02 UTC."],[],[]] 

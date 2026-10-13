@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/big-query-exfil-to-public-dataset/",
+  "file": "security-command-center/docs/findings/threats/big-query-exfil-to-public-dataset.md",
+  "title": "Exfiltration: Move to Public BigQuery resource \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T17:24:19.484663+00:00"
+}

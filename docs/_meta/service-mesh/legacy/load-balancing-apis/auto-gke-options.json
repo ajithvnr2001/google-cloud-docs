@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/service-mesh/legacy/load-balancing-apis/auto-gke-options/",
+  "file": "service-mesh/legacy/load-balancing-apis/auto-gke-options.md",
+  "title": "Options for Google Kubernetes Engine Pod setup using automatic Envoy injection \u00a0|\u00a0 Cloud Service Mesh \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T16:04:59.422210+00:00"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/bigquery/docs/reference/bigquerydatapolicy/rest/v2beta1/projects.locations.dataPolicies/testIamPermissions/",
+  "file": "bigquery/docs/reference/bigquerydatapolicy/rest/v2beta1/projects.locations.dataPolicies/testIamPermissions.md",
+  "title": "Method: projects.locations.dataPolicies.testIamPermissions \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T19:58:34.568581+00:00"
+}

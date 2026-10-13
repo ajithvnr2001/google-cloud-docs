@@ -1,0 +1,624 @@
+---
+url: https://docs.cloud.google.com/looker/docs/reference/looker-api/4.0/26.16/methods/Look/all_looks/
+title: Get All Looks \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T18:34:16.568902+00:00
+---
+
+# Get All Looks  |  Looker  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/looker/docs/reference/looker-api/4.0/26.16/methods/Look/all_looks/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Data analytics ](https://docs.cloud.google.com/docs/data)
+  * [ Looker ](https://docs.cloud.google.com/looker/docs)
+
+
+
+Send feedback 
+
+#  Get All Looks Stay organized with collections  Save and categorize content based on your preferences. 
+
+Version 4.0.26.16 
+
+**Note:** These docs are for an older version of the API. The API reference is also available for [ the latest version, 4.0.26.20 ](https://docs.cloud.google.com/looker/docs/reference/looker-api/latest). 
+
+### Get information about all active Looks
+
+Returns an array of **abbreviated Look objects** describing all the looks that the caller has access to. Soft-deleted Looks are **not** included.
+
+Get the **full details** of a specific look by id with [look(id)](https://docs.cloud.google.com/looker/docs/reference/looker-api/4.0/26.16/methods/Look/look)
+
+Find **soft-deleted looks** with [search_looks()](https://docs.cloud.google.com/looker/docs/reference/looker-api/4.0/26.16/methods/Look/search_looks)
+
+## Request
+
+GET /looks 
+
+Datatype
+
+Description
+
+Request
+
+HTTP Request 
+
+query
+
+HTTP Query 
+
+Expand HTTP Query definition... 
+
+fields
+
+string 
+
+Requested fields.
+
+## Response
+
+### 200: Look
+
+Datatype
+
+Description
+
+(array)
+
+[Look](https://docs.cloud.google.com/looker/docs/reference/looker-api/4.0/26.16/types/Look)[] 
+
+can
+
+_lock_
+
+object 
+
+Operations the current user is able to perform on this object
+
+content_metadata_id
+
+_lock_
+
+string 
+
+Id of content metadata
+
+id
+
+_lock_
+
+string 
+
+Unique Id
+
+title
+
+string 
+
+Look Title
+
+user_id
+
+string 
+
+User Id
+
+certification_metadata
+
+_lock_
+
+[Certification](https://docs.cloud.google.com/looker/docs/reference/looker-api/4.0/26.16/types/Certification)
+
+Certification metadata
+
+Expand Certification definition... 
+
+certification_status
+
+string 
+
+Certification status: "certified" or "revoked" Valid values are: "certified", "revoked".
+
+ui_status
+
+_lock_
+
+string 
+
+Indicates whether the underlying model is ungoverned
+
+user_name
+
+_lock_
+
+string 
+
+Display name of user who certified the content, derived from user_id
+
+notes
+
+string 
+
+Certification notes
+
+updated_at
+
+_lock_
+
+string 
+
+Timestamp of certification
+
+content_favorite_id
+
+_lock_
+
+string 
+
+Content Favorite Id
+
+created_at
+
+_lock_
+
+string 
+
+Time that the Look was created.
+
+deleted
+
+boolean 
+
+Whether or not a look is 'soft' deleted.
+
+deleted_at
+
+_lock_
+
+string 
+
+Time that the Look was deleted.
+
+deleter_id
+
+_lock_
+
+string 
+
+Id of User that deleted the look.
+
+description
+
+string 
+
+Description
+
+embed_url
+
+_lock_
+
+string 
+
+Embed Url
+
+excel_file_url
+
+_lock_
+
+string 
+
+Excel File Url
+
+favorite_count
+
+_lock_
+
+integer 
+
+Number of times favorited
+
+google_spreadsheet_formula
+
+_lock_
+
+string 
+
+Google Spreadsheet Formula
+
+image_embed_url
+
+_lock_
+
+string 
+
+Image Embed Url
+
+is_run_on_load
+
+boolean 
+
+auto-run query when Look viewed
+
+last_accessed_at
+
+_lock_
+
+string 
+
+Time that the Look was last accessed by any user
+
+last_updater_id
+
+_lock_
+
+string 
+
+Id of User that last updated the look.
+
+last_viewed_at
+
+_lock_
+
+string 
+
+Time last viewed in the Looker web UI
+
+model
+
+_lock_
+
+[LookModel](https://docs.cloud.google.com/looker/docs/reference/looker-api/4.0/26.16/types/LookModel)
+
+Model
+
+Expand LookModel definition... 
+
+id
+
+_lock_
+
+string 
+
+Model Id
+
+label
+
+_lock_
+
+string 
+
+Model Label
+
+public
+
+boolean 
+
+Is Public
+
+public_slug
+
+_lock_
+
+string 
+
+Public Slug
+
+public_url
+
+_lock_
+
+string 
+
+Public Url
+
+query_id
+
+string 
+
+Query Id
+
+short_url
+
+_lock_
+
+string 
+
+Short Url
+
+folder
+
+_lock_
+
+[FolderBase](https://docs.cloud.google.com/looker/docs/reference/looker-api/4.0/26.16/types/FolderBase)
+
+Folder of this Look
+
+Expand FolderBase definition... 
+
+name
+
+string 
+
+Unique Name
+
+parent_id
+
+string 
+
+Id of Parent. If the parent id is null, this is a root-level entry
+
+id
+
+_lock_
+
+string 
+
+Unique Id
+
+content_metadata_id
+
+_lock_
+
+string 
+
+Id of content metadata
+
+created_at
+
+_lock_
+
+string 
+
+Time the folder was created
+
+creator_id
+
+_lock_
+
+string 
+
+User Id of Creator
+
+child_count
+
+_lock_
+
+integer 
+
+Children Count
+
+external_id
+
+_lock_
+
+string 
+
+Embedder's Id if this folder was autogenerated as an embedding shared folder via 'external_group_id' in an SSO embed login
+
+is_embed
+
+_lock_
+
+boolean 
+
+Folder is an embed folder
+
+is_embed_shared_root
+
+_lock_
+
+boolean 
+
+Folder is the root embed shared folder
+
+is_embed_users_root
+
+_lock_
+
+boolean 
+
+Folder is the root embed users folder
+
+is_personal
+
+_lock_
+
+boolean 
+
+Folder is a user's personal folder
+
+is_personal_descendant
+
+_lock_
+
+boolean 
+
+Folder is descendant of a user's personal folder
+
+is_shared_root
+
+_lock_
+
+boolean 
+
+Folder is the root shared folder
+
+is_users_root
+
+_lock_
+
+boolean 
+
+Folder is the root user folder
+
+can
+
+_lock_
+
+object 
+
+Operations the current user is able to perform on this object
+
+folder_id
+
+string 
+
+Folder Id
+
+updated_at
+
+_lock_
+
+string 
+
+Time that the Look was updated.
+
+user_name
+
+_lock_
+
+string 
+
+Name of User that created the look.
+
+view_count
+
+_lock_
+
+integer 
+
+Number of times viewed in the Looker web UI
+
+usage_count
+
+_lock_
+
+integer 
+
+Number of queries executed on this look in the last N days
+
+is_owner_disabled
+
+_lock_
+
+boolean 
+
+Is the owner disabled
+
+### 400: Bad Request
+
+Datatype
+
+Description
+
+(object)
+
+[Error](https://docs.cloud.google.com/looker/docs/reference/looker-api/4.0/26.16/types/Error)
+
+message
+
+_lock_
+
+string 
+
+Error details
+
+documentation_url
+
+_lock_
+
+string 
+
+Documentation link
+
+### 404: Not Found
+
+Datatype
+
+Description
+
+(object)
+
+[Error](https://docs.cloud.google.com/looker/docs/reference/looker-api/4.0/26.16/types/Error)
+
+message
+
+_lock_
+
+string 
+
+Error details
+
+documentation_url
+
+_lock_
+
+string 
+
+Documentation link
+
+### 429: Too Many Requests
+
+Datatype
+
+Description
+
+(object)
+
+[Error](https://docs.cloud.google.com/looker/docs/reference/looker-api/4.0/26.16/types/Error)
+
+message
+
+_lock_
+
+string 
+
+Error details
+
+documentation_url
+
+_lock_
+
+string 
+
+Documentation link
+
+## Examples
+
+### Python
+
+[https://github.com/looker-open-source/sdk-codegen/blob/main/examples/python/lookersdk-flask/app/looker.py ](https://github.com/looker-open-source/sdk-codegen/blob/main/examples/python/lookersdk-flask/app/looker.py#L23 "https://github.com/looker-open-source/sdk-codegen/blob/main/examples/python/lookersdk-flask/app/looker.py")  
+---  
+  
+### Ruby
+
+[https://github.com/looker-open-source/sdk-codegen/blob/main/examples/ruby/delete_unused_content.rb ](https://github.com/looker-open-source/sdk-codegen/blob/main/examples/ruby/delete_unused_content.rb#L14 "https://github.com/looker-open-source/sdk-codegen/blob/main/examples/ruby/delete_unused_content.rb")  
+---  
+  
+### Kotlin
+
+[https://github.com/looker-open-source/sdk-codegen/blob/main/kotlin/src/test/TestAsync.kt ](https://github.com/looker-open-source/sdk-codegen/blob/main/kotlin/src/test/TestAsync.kt#L21 "https://github.com/looker-open-source/sdk-codegen/blob/main/kotlin/src/test/TestAsync.kt")  
+---  
+[https://github.com/looker-open-source/sdk-codegen/blob/main/kotlin/src/test/TestMethods.kt ](https://github.com/looker-open-source/sdk-codegen/blob/main/kotlin/src/test/TestMethods.kt#L75 "https://github.com/looker-open-source/sdk-codegen/blob/main/kotlin/src/test/TestMethods.kt")  
+[https://github.com/looker-open-source/sdk-codegen/blob/main/kotlin/src/test/TestMethods.kt ](https://github.com/looker-open-source/sdk-codegen/blob/main/kotlin/src/test/TestMethods.kt#L397 "https://github.com/looker-open-source/sdk-codegen/blob/main/kotlin/src/test/TestMethods.kt")  
+  
+### TypeScript
+
+[https://github.com/looker-open-source/sdk-codegen/blob/main/packages/sdk-node/test/methods.spec.ts ](https://github.com/looker-open-source/sdk-codegen/blob/main/packages/sdk-node/test/methods.spec.ts#L428 "https://github.com/looker-open-source/sdk-codegen/blob/main/packages/sdk-node/test/methods.spec.ts")  
+---  
+[https://github.com/looker-open-source/sdk-codegen/blob/main/packages/sdk-node/test/sdk.apispec.ts ](https://github.com/looker-open-source/sdk-codegen/blob/main/packages/sdk-node/test/sdk.apispec.ts#L403 "https://github.com/looker-open-source/sdk-codegen/blob/main/packages/sdk-node/test/sdk.apispec.ts")  
+  
+### Swift
+
+[https://github.com/looker-open-source/sdk-codegen/blob/main/swift/looker/Tests/lookerTests/methodsTests.swift ](https://github.com/looker-open-source/sdk-codegen/blob/main/swift/looker/Tests/lookerTests/methodsTests.swift#L119 "https://github.com/looker-open-source/sdk-codegen/blob/main/swift/looker/Tests/lookerTests/methodsTests.swift")  
+---  
+[https://github.com/looker-open-source/sdk-codegen/blob/main/swift/looker/Tests/lookerTests/smokeTests.swift ](https://github.com/looker-open-source/sdk-codegen/blob/main/swift/looker/Tests/lookerTests/smokeTests.swift#L322 "https://github.com/looker-open-source/sdk-codegen/blob/main/swift/looker/Tests/lookerTests/smokeTests.swift")  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

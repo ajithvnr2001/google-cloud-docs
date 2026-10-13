@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-discovery_engine-v1beta/latest/Google-Cloud-DiscoveryEngine-V1beta-SearchResponse-OneBoxResult-OneBoxType/",
+  "file": "ruby/docs/reference/google-cloud-discovery_engine-v1beta/latest/Google-Cloud-DiscoveryEngine-V1beta-SearchResponse-OneBoxResult-OneBoxType.md",
+  "title": "Discovery Engine V1BETA API - Module Google::Cloud::DiscoveryEngine::V1beta::SearchResponse::OneBoxResult::OneBoxType (v0.30.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T16:35:07.190211+00:00"
+}

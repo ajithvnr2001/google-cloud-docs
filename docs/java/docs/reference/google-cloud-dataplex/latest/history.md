@@ -1,0 +1,745 @@
+---
+url: https://docs.cloud.google.com/java/docs/reference/google-cloud-dataplex/latest/history/
+title: Changelog \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T17:32:05.175394+00:00
+---
+
+# Changelog  |  Java client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/java/docs/reference/google-cloud-dataplex/latest/history/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Java ](https://docs.cloud.google.com/java/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/java/docs/reference)
+
+
+
+Send feedback 
+
+#  Changelog Stay organized with collections  Save and categorize content based on your preferences. 
+
+1.97.0 (latest)  1.93.0  1.92.0  1.91.0  1.89.0  1.86.0  1.85.0  1.83.0  1.81.0  1.80.0  1.79.0  1.78.0  1.76.0  1.74.0  1.73.0  1.72.0  1.71.0  1.70.0  1.68.0  1.66.0  1.65.0  1.62.0  1.61.0  1.60.0  1.58.0  1.57.0  1.56.0  1.55.0  1.54.0  1.53.0  1.52.0  1.51.0  1.50.0  1.49.0  1.47.0  1.46.0  1.45.0  1.44.0  1.43.0  1.42.0  1.41.0  1.40.0  1.39.0  1.38.0  1.37.0  1.35.0  1.34.0  1.33.0  1.32.0  1.31.0  1.30.0  1.29.0  1.28.0  1.27.0  1.26.0  1.25.0  1.22.0  1.21.0  1.20.0  1.19.0  1.18.0  1.17.0  1.16.0  1.15.0  1.14.0  1.13.0  1.12.0  1.11.0  1.10.0  1.9.0  1.7.0  1.6.0  1.5.0  1.4.0  1.3.0  1.2.0  1.1.2  1.0.1  0.2.2 
+
+## 1.86.0 (2026-03-20)
+
+### ⚠ BREAKING CHANGES
+
+  * fix(dataplex)!: remove deprecated Explore-related methods and messages from public client libraries Breaking Changes: - Removed ContentService and all associated methods (CreateContent, UpdateContent, DeleteContent, GetContent, ListContent, etc.) and request/response messages. - Removed Environment and Session management methods from DataplexService (CreateEnvironment, UpdateEnvironment, DeleteEnvironment, ListEnvironments, GetEnvironment, ListSessions) and their associated messages. [googleapis/googleapis@69ca7ae](https://github.com/googleapis/googleapis/commit/69ca7ae2e66cd5623cafecc00971ef5397a4b258) ([e29dd99](https://github.com/googleapis/google-cloud-java/commit/e29dd99559b04de62d2f91792a6352b5ce980438))
+
+
+
+### Features
+
+  * feat(dataplex): add DataProductService to manage data products and underlying data assets ([e29dd99](https://github.com/googleapis/google-cloud-java/commit/e29dd99559b04de62d2f91792a6352b5ce980438))
+  * feat(dataplex): add MetadataFeed to CatalogService for tracking metadata changes ([e29dd99](https://github.com/googleapis/google-cloud-java/commit/e29dd99559b04de62d2f91792a6352b5ce980438))
+  * feat(dataplex): add LookupContext to CatalogService for LLM-generated resource context ([e29dd99](https://github.com/googleapis/google-cloud-java/commit/e29dd99559b04de62d2f91792a6352b5ce980438))
+  * feat(dataplex): add support for attaching aspects to EntryLinks ([e29dd99](https://github.com/googleapis/google-cloud-java/commit/e29dd99559b04de62d2f91792a6352b5ce980438))
+  * feat(dataplex): add UpdateEntryLink and LookupEntryLinks methods to CatalogService ([e29dd99](https://github.com/googleapis/google-cloud-java/commit/e29dd99559b04de62d2f91792a6352b5ce980438))
+  * feat(dataplex): support OneTime triggers for DataScan operations ([e29dd99](https://github.com/googleapis/google-cloud-java/commit/e29dd99559b04de62d2f91792a6352b5ce980438))
+  * feat(dataplex): add debug query support to Data Quality rules ([e29dd99](https://github.com/googleapis/google-cloud-java/commit/e29dd99559b04de62d2f91792a6352b5ce980438))
+  * feat(dataplex): allow selective generation scope for Data Documentation scans ([e29dd99](https://github.com/googleapis/google-cloud-java/commit/e29dd99559b04de62d2f91792a6352b5ce980438))
+  * feat(dataplex): add SKIPPED state to DataScan catalog publishing status ([e29dd99](https://github.com/googleapis/google-cloud-java/commit/e29dd99559b04de62d2f91792a6352b5ce980438))
+
+
+
+### Documentation
+
+  * docs(dataplex): remove deprecated metadata change warnings in Dataplex Catalog The DataProductService provides APIs to curate and manage collections of data assets as data products, enabling more organized sharing and usage for specific business cases. MetadataFeeds allow users to monitor metadata changes (CREATE, UPDATE, DELETE) within a specified scope (organization, project, or entry group) and publish them to Pub/Sub. CatalogService now includes a LookupContext API to provide LLM-generated context for resources, and enhanced EntryLink management, including the ability to attach aspects. DataScan operations now support a OneTime trigger for single-run scans, and Data Quality rules support DebugQueries to help investigate rule failures by returning diagnostic values. ([e29dd99](https://github.com/googleapis/google-cloud-java/commit/e29dd99559b04de62d2f91792a6352b5ce980438))
+
+
+
+## 1.85.0 (2026-03-11)
+
+  * No change
+
+
+
+## 1.84.0 (2026-02-25)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.57.0 ([#11956](https://github.com/googleapis/google-cloud-java/issues/11956)) ([62b97e1](https://github.com/googleapis/google-cloud-java/commit/62b97e108eee0f8649c53cef400774f4fca4ffab))
+
+
+
+## 1.81.0 (2026-01-29)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.56.0 ([#11879](https://github.com/googleapis/google-cloud-java/issues/11879)) ([ac1f018](https://github.com/googleapis/google-cloud-java/commit/ac1f0182ac5b405ca164ac867c8c042322736bef))
+
+
+
+## 1.80.0 (2026-01-15)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.55.1 ([#11863](https://github.com/googleapis/google-cloud-java/issues/11863)) ([50cda6e](https://github.com/googleapis/google-cloud-java/commit/50cda6ec7be56bf1900737a6aaf12fc494be20c2))
+
+
+
+## 1.79.0 (2025-12-16)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.54.2 ([#11819](https://github.com/googleapis/google-cloud-java/issues/11819)) ([f32924a](https://github.com/googleapis/google-cloud-java/commit/f32924af0899a0b34646e88ffa8c527163b3bb24))
+
+
+
+## 1.76.0 (2025-10-21)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.53.0 ([#11776](https://github.com/googleapis/google-cloud-java/issues/11776)) ([e4a2892](https://github.com/googleapis/google-cloud-java/commit/e4a2892c8f7d51e3c3bec551f922b42f70a880d8))
+
+
+
+## 1.75.0 (2025-10-13)
+
+  * No change
+
+
+
+## 1.74.0 (2025-10-07)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.52.3 ([#11755](https://github.com/googleapis/google-cloud-java/issues/11755)) ([b117bc3](https://github.com/googleapis/google-cloud-java/commit/b117bc3d8d04ccc3c1f5586b73e1718ff46b23e6))
+
+
+
+## 1.73.0 (2025-09-22)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.52.2 ([#11747](https://github.com/googleapis/google-cloud-java/issues/11747)) ([deb0ed9](https://github.com/googleapis/google-cloud-java/commit/deb0ed92d7c3279e0e26ba8b22463cb77131fa10))
+
+
+
+## 1.72.0 (2025-09-11)
+
+### Features
+
+  * A new service `BusinessGlossaryService` is added ([75896ab](https://github.com/googleapis/google-cloud-java/commit/75896ab07163a97a12a067dab9c255b014285a22))
+
+
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.52.1 ([#11738](https://github.com/googleapis/google-cloud-java/issues/11738)) ([b17cf6d](https://github.com/googleapis/google-cloud-java/commit/b17cf6de63b9cabcd44b6fc21b57c187b321ae8f))
+
+
+
+## 1.71.0 (2025-08-25)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.52.0 ([#11727](https://github.com/googleapis/google-cloud-java/issues/11727)) ([31d8698](https://github.com/googleapis/google-cloud-java/commit/31d86980d0e27e0a948727d778cf46fbcf227239))
+
+
+
+## 1.70.0 (2025-08-13)
+
+  * No change
+
+
+
+## 1.69.0 (2025-08-08)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.51.0 ([#11695](https://github.com/googleapis/google-cloud-java/issues/11695)) ([b82ce00](https://github.com/googleapis/google-cloud-java/commit/b82ce005c30551b8714099b7219b71bda85aa3a5))
+
+
+
+## 1.68.0 (2025-07-30)
+
+  * No change
+
+
+
+## 1.67.0 (2025-07-28)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.50.2 ([#11680](https://github.com/googleapis/google-cloud-java/issues/11680)) ([d1b99a7](https://github.com/googleapis/google-cloud-java/commit/d1b99a706daa10c487b56edbb5170b41530628ca))
+
+
+
+## 1.66.0 (2025-07-11)
+
+### Features
+
+  * A new field `semantic_search` is added to `message.google.cloud.dataplex.v1.SearchEntriesRequest` ([961af18](https://github.com/googleapis/google-cloud-java/commit/961af1881e5332f33a231baef0ba291b3648b038))
+
+
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.50.1 ([#11655](https://github.com/googleapis/google-cloud-java/issues/11655)) ([9b34528](https://github.com/googleapis/google-cloud-java/commit/9b34528f85043049e3349fffc30bb2dbfe01836c))
+
+
+
+## 1.65.0 (2025-06-25)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.50.0 ([#11624](https://github.com/googleapis/google-cloud-java/issues/11624)) ([a19f457](https://github.com/googleapis/google-cloud-java/commit/a19f457d10f15437ac26ce379048ff8b3cc6be5d))
+
+
+
+## 1.63.0 (2025-06-16)
+
+  * No change
+
+
+
+## 1.62.0 (2025-06-04)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.49.0 ([#11603](https://github.com/googleapis/google-cloud-java/issues/11603)) ([3ea506d](https://github.com/googleapis/google-cloud-java/commit/3ea506d86a54fae209e9971af7b4a8aa1f5997b9))
+
+
+
+## 1.60.0 (2025-05-06)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.46.3 ([#11531](https://github.com/googleapis/google-cloud-java/issues/11531)) ([5f9a9e7](https://github.com/googleapis/google-cloud-java/commit/5f9a9e73df5e44ae38a8d18780873b7896d31c04))
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.47.0 ([#11561](https://github.com/googleapis/google-cloud-java/issues/11561)) ([9e84230](https://github.com/googleapis/google-cloud-java/commit/9e842300aa2e3e654785cc929aef0d6bb9a1a0a9))
+
+
+
+## 1.57.0 (2025-02-26)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.44.0 ([#11456](https://github.com/googleapis/google-cloud-java/issues/11456)) ([6b0ad6f](https://github.com/googleapis/google-cloud-java/commit/6b0ad6f8243cc60de7ee608237fa61445f0b0526))
+
+
+
+## 1.56.0 (2025-02-11)
+
+### Features
+
+  * Added value `NONE` to the `SyncMode` enum ([dab28be](https://github.com/googleapis/google-cloud-java/commit/dab28bed1ae8708046774a50765c0d3a00bbf65d))
+
+
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.43.0 ([#11426](https://github.com/googleapis/google-cloud-java/issues/11426)) ([afdc294](https://github.com/googleapis/google-cloud-java/commit/afdc2944304a077ce4cbdd8c7675f1ca707b2be0))
+
+
+
+## 1.55.0 (2025-01-29)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.42.0 ([#11410](https://github.com/googleapis/google-cloud-java/issues/11410)) ([34dfd0d](https://github.com/googleapis/google-cloud-java/commit/34dfd0dc9c5ca042aca0778e8d34b2ca072bfeb1))
+
+
+
+## 1.54.0 (2025-01-09)
+
+### Features
+
+  * A new field `force` is added to message `.google.cloud.dataplex.v1.DeleteDataScanRequest` ([b68c98c](https://github.com/googleapis/google-cloud-java/commit/b68c98c14e4de0d1f5755bc306278ee16d2c55ce))
+
+
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.41.1 ([#11382](https://github.com/googleapis/google-cloud-java/issues/11382)) ([a4fd23c](https://github.com/googleapis/google-cloud-java/commit/a4fd23ce1dfa364959de1e97e3b769996f3c7d0d))
+
+
+
+## 1.53.0 (2024-12-13)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.41.0 ([#11349](https://github.com/googleapis/google-cloud-java/issues/11349)) ([9bb6334](https://github.com/googleapis/google-cloud-java/commit/9bb6334458fdec53ba9fdec501de534d6516f102))
+
+
+
+## 1.52.0 (2024-11-18)
+
+### Features
+
+  * update Go Datastore import path ([bee5fa4](https://github.com/googleapis/google-cloud-java/commit/bee5fa4d897e8a9b6c08ac8511a8503524a88dc0))
+
+
+
+## 1.51.0 (2024-10-28)
+
+  * No change
+
+
+
+## 1.50.0 (2024-10-09)
+
+  * No change
+
+
+
+## 1.48.0 (2024-09-26)
+
+  * No change
+
+
+
+## 1.47.0 (2024-09-11)
+
+  * No change
+
+
+
+## 1.46.0 (2024-08-21)
+
+  * No change
+
+
+
+## 1.45.0 (2024-07-31)
+
+### Features
+
+  * expose data scan execution create time to customers ([f4a2a5a](https://github.com/googleapis/google-cloud-java/commit/f4a2a5ae3f2771343e09af1933ba4a9ee28edcd6))
+
+
+
+## 1.44.0 (2024-06-27)
+
+### Features
+
+  * exposing EntrySource.location field that contains location of a resource in the source system ([666a3ac](https://github.com/googleapis/google-cloud-java/commit/666a3ac8cd0cb45da3555a1bef8dfe3edf57d257))
+
+
+
+## 1.43.0 (None)
+
+  * No change
+
+
+
+## 1.42.0 (2024-05-23)
+
+  * No change
+
+
+
+## 1.41.0 (2024-05-08)
+
+### Features
+
+  * An existing field `entry` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult`
+  * An existing field `display_name` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult`
+  * An existing field `entry_type` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult`
+  * An existing field `modify_time` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult`
+  * An existing field `fully_qualified_name` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult`
+  * An existing field `description` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult`
+  * An existing field `relative_resource` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult`
+  * updated client libraries for Dataplex Catalog: removed deprecated fields, updated comments ([6b1e9fa](https://github.com/googleapis/google-cloud-java/commit/6b1e9fa513ee0674712d117ff12c384c6bc3c959))
+  * An existing field `description` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([6b1e9fa](https://github.com/googleapis/google-cloud-java/commit/6b1e9fa513ee0674712d117ff12c384c6bc3c959))
+  * An existing field `display_name` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([6b1e9fa](https://github.com/googleapis/google-cloud-java/commit/6b1e9fa513ee0674712d117ff12c384c6bc3c959))
+  * An existing field `entry_type` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([6b1e9fa](https://github.com/googleapis/google-cloud-java/commit/6b1e9fa513ee0674712d117ff12c384c6bc3c959))
+  * An existing field `entry` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([6b1e9fa](https://github.com/googleapis/google-cloud-java/commit/6b1e9fa513ee0674712d117ff12c384c6bc3c959))
+  * An existing field `fully_qualified_name` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([6b1e9fa](https://github.com/googleapis/google-cloud-java/commit/6b1e9fa513ee0674712d117ff12c384c6bc3c959))
+  * An existing field `modify_time` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([6b1e9fa](https://github.com/googleapis/google-cloud-java/commit/6b1e9fa513ee0674712d117ff12c384c6bc3c959))
+  * An existing field `relative_resource` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([6b1e9fa](https://github.com/googleapis/google-cloud-java/commit/6b1e9fa513ee0674712d117ff12c384c6bc3c959))
+  * A comment for field `aspects` in message `.google.cloud.dataplex.v1.Entry` is changed ([6b1e9fa](https://github.com/googleapis/google-cloud-java/commit/6b1e9fa513ee0674712d117ff12c384c6bc3c959))
+  * A comment for field `filter` in message `.google.cloud.dataplex.v1.ListEntriesRequest` is changed ([6b1e9fa](https://github.com/googleapis/google-cloud-java/commit/6b1e9fa513ee0674712d117ff12c384c6bc3c959))
+
+
+
+## 1.40.0 (2024-04-25)
+
+  * No change
+
+
+
+## 1.39.0 (2024-04-04)
+
+  * No change
+
+
+
+## 1.37.0 (2024-03-28)
+
+  * No change
+
+
+
+## 1.36.0 (2024-03-22)
+
+### Features
+
+  * added client side library for the followings: ([d514d9a](https://github.com/googleapis/google-cloud-java/commit/d514d9a31c38829bca636af5f1d94e7143e4db5c))
+
+
+
+## 1.35.0 (2024-03-06)
+
+  * No change
+
+
+
+## 1.34.0 (2024-02-20)
+
+  * No change
+
+
+
+## 1.33.0 (2024-02-09)
+
+  * No change
+
+
+
+## 1.32.0 (2024-01-23)
+
+  * No change
+
+
+
+## 1.31.0 (2024-01-10)
+
+### Features
+
+  * Fix the comment for `ignore_null` field to clarify its applicability on data quality rules ([#10162](https://github.com/googleapis/google-cloud-java/issues/10162)) ([e1a95a3](https://github.com/googleapis/google-cloud-java/commit/e1a95a3fd6f6882d893b5f7704126193eaa8de3a))
+
+
+
+## 1.30.0 (2023-12-12)
+
+  * No change
+
+
+
+## 1.29.0 (2023-12-04)
+
+### Features
+
+  * add data quality score to DataQualityResult ([#10108](https://github.com/googleapis/google-cloud-java/issues/10108)) ([fbbbc5c](https://github.com/googleapis/google-cloud-java/commit/fbbbc5c2aaa8fe3e38c4a507db075a65e3d83627))
+  * added DataQualityResult.score, dimension_score, column_score ([#10064](https://github.com/googleapis/google-cloud-java/issues/10064)) ([7a49d63](https://github.com/googleapis/google-cloud-java/commit/7a49d63e7318436ad652bf73475efd9018d83eeb))
+  * updated comments for `DataQualityResult.dimensions` field ([#10044](https://github.com/googleapis/google-cloud-java/issues/10044)) ([404a852](https://github.com/googleapis/google-cloud-java/commit/404a85295344cf2e8b3fe13d9f595279847630fa))
+
+
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.20.0 ([#10093](https://github.com/googleapis/google-cloud-java/issues/10093)) ([91a4e4e](https://github.com/googleapis/google-cloud-java/commit/91a4e4e20252f667b8fc6bda0d9ceaf947348274))
+
+
+
+## 1.28.0 (2023-11-06)
+
+### Features
+
+  * DataQualityDimension is now part of the DataQualityDimensionResult message ([#10010](https://github.com/googleapis/google-cloud-java/issues/10010)) ([95a6f15](https://github.com/googleapis/google-cloud-java/commit/95a6f1585dbafa985788b714ff394cd4cb2d1f5c))
+
+
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-config to v1.6.1 ([#10014](https://github.com/googleapis/google-cloud-java/issues/10014)) ([7b1b742](https://github.com/googleapis/google-cloud-java/commit/7b1b742dab21139398032549fb03e127b1a03841))
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.19.0 ([#10018](https://github.com/googleapis/google-cloud-java/issues/10018)) ([d9b705a](https://github.com/googleapis/google-cloud-java/commit/d9b705aaed8ea4447c7a02d5c54300f8909a30b1))
+
+
+
+## 1.27.0 (2023-10-25)
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-config to v1.6.0 ([#9969](https://github.com/googleapis/google-cloud-java/issues/9969)) ([9e2be39](https://github.com/googleapis/google-cloud-java/commit/9e2be39c5b2d7764421325f65a6d0d06351fcda5))
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.18.0 ([#9984](https://github.com/googleapis/google-cloud-java/issues/9984)) ([9814dc0](https://github.com/googleapis/google-cloud-java/commit/9814dc092ad7edb7b1b21f87fa48d76a2423d731))
+
+
+
+## 1.26.0 (2023-10-11)
+
+### Features
+
+  * DataQualityDimension is now part of the DataQualityDimensionResult message ([#9949](https://github.com/googleapis/google-cloud-java/issues/9949)) ([6557fc8](https://github.com/googleapis/google-cloud-java/commit/6557fc87ab26da76e59aa9297ef98824eba9fa2c))
+
+
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-config to v1.5.8 ([#9941](https://github.com/googleapis/google-cloud-java/issues/9941)) ([f818d26](https://github.com/googleapis/google-cloud-java/commit/f818d26968e1f19d302da1f1ea0145b2cc496ce0))
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.17.0 ([#9942](https://github.com/googleapis/google-cloud-java/issues/9942)) ([2cc7888](https://github.com/googleapis/google-cloud-java/commit/2cc78885d76ae5e7dfc4cc9f3034c25fa22c6cc1))
+
+
+
+## 1.25.0 (2023-09-28)
+
+  * No change
+
+
+
+## 1.23.0 (2023-09-27)
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.16.0 ([#9866](https://github.com/googleapis/google-cloud-java/issues/9866)) ([aa36b2c](https://github.com/googleapis/google-cloud-java/commit/aa36b2c3c31b817052239fd771a21d20108b2c31))
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.16.1 ([#9881](https://github.com/googleapis/google-cloud-java/issues/9881)) ([8a29511](https://github.com/googleapis/google-cloud-java/commit/8a2951166eb0305be040cc0ae38be105c437ba25))
+
+
+
+## 1.22.0 (2023-09-11)
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.15.0 ([#9809](https://github.com/googleapis/google-cloud-java/issues/9809)) ([09dbd85](https://github.com/googleapis/google-cloud-java/commit/09dbd855f683b40a462c4f918511bee4671e0174))
+
+
+
+## 1.21.0 (2023-08-08)
+
+### Features
+
+  * new service DataTaxonomyService and related messages ([#9688](https://github.com/googleapis/google-cloud-java/issues/9688)) ([205f373](https://github.com/googleapis/google-cloud-java/commit/205f373a32667b27a5f57f88adcb3245262a8f99))
+  * remove unused annotation in results_table ([#9739](https://github.com/googleapis/google-cloud-java/issues/9739)) ([037b24a](https://github.com/googleapis/google-cloud-java/commit/037b24a80200ff99089279201fcfe13b7ece4d43))
+
+
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.14.0 ([#9722](https://github.com/googleapis/google-cloud-java/issues/9722)) ([c7011db](https://github.com/googleapis/google-cloud-java/commit/c7011dbd69189330de1c2946b736cd712d5c1f4e))
+
+
+
+## 1.20.0 (2023-07-21)
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-config to v1.5.7 ([#9651](https://github.com/googleapis/google-cloud-java/issues/9651)) ([c88d623](https://github.com/googleapis/google-cloud-java/commit/c88d623d12a4342b74e31d6a6a05cde0debe871f))
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.13.1 ([#9655](https://github.com/googleapis/google-cloud-java/issues/9655)) ([affebee](https://github.com/googleapis/google-cloud-java/commit/affebeeb37b1cf88ad5964684e1f112cababcab7))
+
+
+
+## 1.19.0 (2023-07-11)
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.13.0 ([#9622](https://github.com/googleapis/google-cloud-java/issues/9622)) ([3ac3050](https://github.com/googleapis/google-cloud-java/commit/3ac3050250a706e8f9f2d1e435a4983c3cceab82))
+
+
+
+## 1.18.0 (2023-06-23)
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.12.0 ([#9577](https://github.com/googleapis/google-cloud-java/issues/9577)) ([9e9812a](https://github.com/googleapis/google-cloud-java/commit/9e9812a0ba19e5aa82a34f2a3049bb72892544a6))
+
+
+
+## [1.3.0](https://github.com/googleapis/google-cloud-java/compare/google-cloud-dataplex-v1.2.1-SNAPSHOT...google-cloud-dataplex-v1.3.0) (2022-10-24)
+
+### Features
+
+  * [analyticsdata] add `subject_to_thresholding` field to `ResponseMetadata` type ([#8545](https://github.com/googleapis/google-cloud-java/issues/8545)) ([8fdc6c1](https://github.com/googleapis/google-cloud-java/commit/8fdc6c1f10f88f30f4d1407579d645f75366b4cf))
+  * add `tokens_per_project_per_hour` field to `PropertyQuota` type ([8fdc6c1](https://github.com/googleapis/google-cloud-java/commit/8fdc6c1f10f88f30f4d1407579d645f75366b4cf))
+  * create release please configuration ([41b97e6](https://github.com/googleapis/google-cloud-java/commit/41b97e6d0d38a54fbabf51a3069bf1473c48f730))
+
+
+
+### Bug Fixes
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.2 ([#8325](https://github.com/googleapis/google-cloud-java/issues/8325)) ([01f492b](https://github.com/googleapis/google-cloud-java/commit/01f492be424acdb90edb23ba66656aeff7cf39eb))
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.4 ([#8528](https://github.com/googleapis/google-cloud-java/issues/8528)) ([bd36199](https://github.com/googleapis/google-cloud-java/commit/bd361998ac4eb7c78eef3b3eac39aef31a0cf44e))
+  * owl-bot-staging should not be commited ([#8337](https://github.com/googleapis/google-cloud-java/issues/8337)) ([c9bb4a9](https://github.com/googleapis/google-cloud-java/commit/c9bb4a97aa19032b78c86c951fe9920f24ac4eec))
+  * revert reverting [Many APIs] Update WORKSPACE files for rules_gapic, gax_java, generator_java versions ([#8340](https://github.com/googleapis/google-cloud-java/issues/8340)) ([dedef71](https://github.com/googleapis/google-cloud-java/commit/dedef71f600e85b1c38e7110f5ffd44bf2ba32b4))
+
+
+
+### Dependencies
+
+  * reverting renovate bot pull requests ([#8417](https://github.com/googleapis/google-cloud-java/issues/8417)) ([8f0c60b](https://github.com/googleapis/google-cloud-java/commit/8f0c60bde446acccc665eb7894723632eefc3503))
+
+
+
+## [1.2.0](https://github.com/googleapis/google-cloud-java/compare/google-cloud-dataplex-v1.1.3...google-cloud-dataplex-v1.2.0) (2022-10-17)
+
+### Features
+
+  * [analyticsdata] add `subject_to_thresholding` field to `ResponseMetadata` type ([#8545](https://github.com/googleapis/google-cloud-java/issues/8545)) ([8fdc6c1](https://github.com/googleapis/google-cloud-java/commit/8fdc6c1f10f88f30f4d1407579d645f75366b4cf))
+  * add `tokens_per_project_per_hour` field to `PropertyQuota` type ([8fdc6c1](https://github.com/googleapis/google-cloud-java/commit/8fdc6c1f10f88f30f4d1407579d645f75366b4cf))
+  * create release please configuration ([41b97e6](https://github.com/googleapis/google-cloud-java/commit/41b97e6d0d38a54fbabf51a3069bf1473c48f730))
+
+
+
+### Bug Fixes
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.2 ([#8325](https://github.com/googleapis/google-cloud-java/issues/8325)) ([01f492b](https://github.com/googleapis/google-cloud-java/commit/01f492be424acdb90edb23ba66656aeff7cf39eb))
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.4 ([#8528](https://github.com/googleapis/google-cloud-java/issues/8528)) ([bd36199](https://github.com/googleapis/google-cloud-java/commit/bd361998ac4eb7c78eef3b3eac39aef31a0cf44e))
+  * owl-bot-staging should not be commited ([#8337](https://github.com/googleapis/google-cloud-java/issues/8337)) ([c9bb4a9](https://github.com/googleapis/google-cloud-java/commit/c9bb4a97aa19032b78c86c951fe9920f24ac4eec))
+  * revert reverting [Many APIs] Update WORKSPACE files for rules_gapic, gax_java, generator_java versions ([#8340](https://github.com/googleapis/google-cloud-java/issues/8340)) ([dedef71](https://github.com/googleapis/google-cloud-java/commit/dedef71f600e85b1c38e7110f5ffd44bf2ba32b4))
+
+
+
+### Dependencies
+
+  * reverting renovate bot pull requests ([#8417](https://github.com/googleapis/google-cloud-java/issues/8417)) ([8f0c60b](https://github.com/googleapis/google-cloud-java/commit/8f0c60bde446acccc665eb7894723632eefc3503))
+
+
+
+## [1.1.3](https://github.com/googleapis/java-dataplex/compare/v1.1.2...v1.1.3) (2022-10-03)
+
+### Dependencies
+
+  * Update dependency certifi to v2022.9.24 ([#105](https://github.com/googleapis/java-dataplex/issues/105)) ([9bb8f07](https://github.com/googleapis/java-dataplex/commit/9bb8f0723b7c8d156e686fe2ed5f2336a869d572))
+  * Update dependency charset-normalizer to v2.1.1 ([#110](https://github.com/googleapis/java-dataplex/issues/110)) ([537f9e5](https://github.com/googleapis/java-dataplex/commit/537f9e5bb0efc5b9e540e4115fd5f6b6635a4842))
+  * Update dependency click to v8.1.3 ([#111](https://github.com/googleapis/java-dataplex/issues/111)) ([8a8a153](https://github.com/googleapis/java-dataplex/commit/8a8a153150c1d6f497eb7f2a8260e644e9142d88))
+  * Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.4 ([#129](https://github.com/googleapis/java-dataplex/issues/129)) ([01e6809](https://github.com/googleapis/java-dataplex/commit/01e6809aad11cbae214317eef1d601e15752baf1))
+  * Update dependency gcp-releasetool to v1.8.8 ([#106](https://github.com/googleapis/java-dataplex/issues/106)) ([45fcc10](https://github.com/googleapis/java-dataplex/commit/45fcc1022c0abbd7e8c3d7b58de46ec5bee197aa))
+  * Update dependency google-api-core to v2.10.1 ([#112](https://github.com/googleapis/java-dataplex/issues/112)) ([49cdb75](https://github.com/googleapis/java-dataplex/commit/49cdb75c1c175247a33890d3bbaf751b0d9cd4eb))
+  * Update dependency google-auth to v2.11.1 ([#107](https://github.com/googleapis/java-dataplex/issues/107)) ([24840aa](https://github.com/googleapis/java-dataplex/commit/24840aa4e0814e9745129a45377ada060622a674))
+  * Update dependency google-cloud-core to v2.3.2 ([#108](https://github.com/googleapis/java-dataplex/issues/108)) ([5c58de0](https://github.com/googleapis/java-dataplex/commit/5c58de0349033e0123c12adeda176e2556597751))
+  * Update dependency google-cloud-storage to v2.5.0 ([#113](https://github.com/googleapis/java-dataplex/issues/113)) ([476e17e](https://github.com/googleapis/java-dataplex/commit/476e17e9a3f95cfc13c468048da0b4715b4b9ca2))
+  * Update dependency google-crc32c to v1.5.0 ([#114](https://github.com/googleapis/java-dataplex/issues/114)) ([a4dab3e](https://github.com/googleapis/java-dataplex/commit/a4dab3ed9470eacce79d4ff289ee3224deb24f86))
+  * Update dependency googleapis-common-protos to v1.56.4 ([#109](https://github.com/googleapis/java-dataplex/issues/109)) ([688ef92](https://github.com/googleapis/java-dataplex/commit/688ef9274585fac3c6d4cce2f736dc446b5bef45))
+  * Update dependency importlib-metadata to v4.12.0 ([#124](https://github.com/googleapis/java-dataplex/issues/124)) ([afb5d7c](https://github.com/googleapis/java-dataplex/commit/afb5d7c43e0e822f4240250b644e39ceef4c5868))
+  * Update dependency jeepney to v0.8.0 ([#125](https://github.com/googleapis/java-dataplex/issues/125)) ([1c8bc34](https://github.com/googleapis/java-dataplex/commit/1c8bc341922285d69d4a706d0100498d1ce40214))
+  * Update dependency jinja2 to v3.1.2 ([#126](https://github.com/googleapis/java-dataplex/issues/126)) ([a1fa942](https://github.com/googleapis/java-dataplex/commit/a1fa942a2871c453075939ba2501829121f79e28))
+  * Update dependency keyring to v23.9.3 ([#127](https://github.com/googleapis/java-dataplex/issues/127)) ([641f9ec](https://github.com/googleapis/java-dataplex/commit/641f9ec1edff1b02ace5cbc7ade3725762a1c853))
+  * Update dependency markupsafe to v2.1.1 ([#115](https://github.com/googleapis/java-dataplex/issues/115)) ([b4c7ace](https://github.com/googleapis/java-dataplex/commit/b4c7ace59a20d42b6b846b7e8c30bf28f68f184d))
+  * Update dependency protobuf to v3.20.2 ([#116](https://github.com/googleapis/java-dataplex/issues/116)) ([324f52a](https://github.com/googleapis/java-dataplex/commit/324f52a09931ef277b1f90abae8d5532805779cf))
+  * Update dependency requests to v2.28.1 ([#118](https://github.com/googleapis/java-dataplex/issues/118)) ([d31a5da](https://github.com/googleapis/java-dataplex/commit/d31a5da9bcfb6cbb21a1ba42adeb09303f9ecca5))
+  * Update dependency zipp to v3.8.1 ([#120](https://github.com/googleapis/java-dataplex/issues/120)) ([07b9bee](https://github.com/googleapis/java-dataplex/commit/07b9bee1c87ec2f9e4e772ce9919b99540a1b031))
+
+
+
+## [1.1.2](https://github.com/googleapis/java-dataplex/compare/v1.1.1...v1.1.2) (2022-09-15)
+
+### Dependencies
+
+  * Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.3 ([#99](https://github.com/googleapis/java-dataplex/issues/99)) ([3e09cf5](https://github.com/googleapis/java-dataplex/commit/3e09cf566f19f6982546c2ca18af7ba0696d1713))
+
+
+
+## [1.1.1](https://github.com/googleapis/java-dataplex/compare/v1.1.0...v1.1.1) (2022-09-08)
+
+### Dependencies
+
+  * Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.2 ([#94](https://github.com/googleapis/java-dataplex/issues/94)) ([61b06f9](https://github.com/googleapis/java-dataplex/commit/61b06f968e139c236d3beb7b9367792b41905b29))
+
+
+
+## [1.1.0](https://github.com/googleapis/java-dataplex/compare/v1.0.2...v1.1.0) (2022-08-09)
+
+### Features
+
+  * Add IAM support for Explore content APIs ([#83](https://github.com/googleapis/java-dataplex/issues/83)) ([6939c61](https://github.com/googleapis/java-dataplex/commit/6939c618bcd58694fb129cb98a153cbee8c36e51))
+  * Add support for cross project for Task ([6939c61](https://github.com/googleapis/java-dataplex/commit/6939c618bcd58694fb129cb98a153cbee8c36e51))
+  * Add support for custom container for Task ([6939c61](https://github.com/googleapis/java-dataplex/commit/6939c618bcd58694fb129cb98a153cbee8c36e51))
+  * Add support for custom encryption key to be used for encrypt data on the PDs associated with the VMs in your Dataproc cluster for Task ([6939c61](https://github.com/googleapis/java-dataplex/commit/6939c618bcd58694fb129cb98a153cbee8c36e51))
+  * Add support for Latest job in Task resource ([6939c61](https://github.com/googleapis/java-dataplex/commit/6939c618bcd58694fb129cb98a153cbee8c36e51))
+  * Support logging sampled file paths per partition to Cloud logging for Discovery event ([6939c61](https://github.com/googleapis/java-dataplex/commit/6939c618bcd58694fb129cb98a153cbee8c36e51))
+  * User mode filter in Explore list sessions API ([6939c61](https://github.com/googleapis/java-dataplex/commit/6939c618bcd58694fb129cb98a153cbee8c36e51))
+
+
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v3 ([#86](https://github.com/googleapis/java-dataplex/issues/86)) ([f318056](https://github.com/googleapis/java-dataplex/commit/f31805677a34a084d572ad6b217d57ad3d332bdf))
+
+
+
+## [1.0.2](https://github.com/googleapis/java-dataplex/compare/v1.0.1...v1.0.2) (2022-07-13)
+
+### Bug Fixes
+
+  * enable longpaths support for windows test ([#1485](https://github.com/googleapis/java-dataplex/issues/1485)) ([#79](https://github.com/googleapis/java-dataplex/issues/79)) ([c9a633d](https://github.com/googleapis/java-dataplex/commit/c9a633df5346e08edee985b827ea7c1e5dbc3631))
+
+
+
+## [1.0.1](https://github.com/googleapis/java-dataplex/compare/v1.0.0...v1.0.1) (2022-07-01)
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.13.0 ([#70](https://github.com/googleapis/java-dataplex/issues/70)) ([cf7c340](https://github.com/googleapis/java-dataplex/commit/cf7c340baa1614a4862d0871a5b0816c31d206a3))
+
+
+
+## [1.0.0](https://github.com/googleapis/java-dataplex/compare/v0.2.2...v1.0.0) (2022-05-23)
+
+### Features
+
+  * add build scripts for native image testing in Java 17 ([#1440](https://github.com/googleapis/java-dataplex/issues/1440)) ([#61](https://github.com/googleapis/java-dataplex/issues/61)) ([cb3d87e](https://github.com/googleapis/java-dataplex/commit/cb3d87e5c8c16747ff5e93d6f5a6d0096c703c17))
+  * promote to GA ([#54](https://github.com/googleapis/java-dataplex/issues/54)) ([6943805](https://github.com/googleapis/java-dataplex/commit/69438059c6022c6b22a72735bd9bfb71ded078c0))
+
+
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.11.0 ([#60](https://github.com/googleapis/java-dataplex/issues/60)) ([e46f6ff](https://github.com/googleapis/java-dataplex/commit/e46f6ff142b8ab61373adea6a55090161f148eb5))
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.12.0 ([#62](https://github.com/googleapis/java-dataplex/issues/62)) ([8b78212](https://github.com/googleapis/java-dataplex/commit/8b78212f4be30cdda228328c85df52e5202cb7e3))
+
+
+
+### [0.2.2](https://github.com/googleapis/java-dataplex/compare/v0.2.1...v0.2.2) (2022-04-15)
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.10.0 ([#46](https://github.com/googleapis/java-dataplex/issues/46)) ([fa8605a](https://github.com/googleapis/java-dataplex/commit/fa8605a9d2b5671d4c8240bd88926a965da327b6))
+
+
+
+### [0.2.1](https://github.com/googleapis/java-dataplex/compare/v0.2.0...v0.2.1) (2022-03-29)
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.9.0 ([#41](https://github.com/googleapis/java-dataplex/issues/41)) ([d6b7c8f](https://github.com/googleapis/java-dataplex/commit/d6b7c8f4c2dda317d266146d2055e0a5bcbf8d6d))
+
+
+
+## [0.2.0](https://github.com/googleapis/java-dataplex/compare/v0.1.1...v0.2.0) (2022-03-02)
+
+### Features
+
+  * added client side library for Content APIs. ([66164f8](https://github.com/googleapis/java-dataplex/commit/66164f8d9de4e66417def7ac37957f9a3acf9c77))
+  * added client side library for Create|Update|Delete Metadata APIs (e.g. Entity and/or Partition). ([66164f8](https://github.com/googleapis/java-dataplex/commit/66164f8d9de4e66417def7ac37957f9a3acf9c77))
+
+
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.8.0 ([#33](https://github.com/googleapis/java-dataplex/issues/33)) ([a048485](https://github.com/googleapis/java-dataplex/commit/a048485fc860b019b4e6a246d9c5b38e8c5997d2))
+
+
+
+### [0.1.1](https://github.com/googleapis/java-dataplex/compare/v0.1.0...v0.1.1) (2022-02-15)
+
+### Dependencies
+
+  * update actions/github-script action to v6 ([#19](https://github.com/googleapis/java-dataplex/issues/19)) ([e0e3da2](https://github.com/googleapis/java-dataplex/commit/e0e3da2c76ea7ae332364d8bdc39fad45118befe))
+
+
+
+## 0.1.0 (2022-02-07)
+
+### Features
+
+  * initial generation ([79f395c](https://github.com/googleapis/java-dataplex/commit/79f395cc484344a1a9031f8b3d515fe85ce51cad))
+
+
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.7.0 ([#7](https://github.com/googleapis/java-dataplex/issues/7)) ([e63a770](https://github.com/googleapis/java-dataplex/commit/e63a770bad415c3ba06b3bad01a2bfcea760707f))
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-06 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-06 UTC."],[],[]] 

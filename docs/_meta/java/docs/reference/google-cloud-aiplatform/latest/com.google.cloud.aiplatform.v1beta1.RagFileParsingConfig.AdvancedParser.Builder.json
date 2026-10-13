@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1beta1.RagFileParsingConfig.AdvancedParser.Builder",
+  "file": "java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1beta1.RagFileParsingConfig.AdvancedParser.Builder.md",
+  "title": "Class RagFileParsingConfig.AdvancedParser.Builder (3.100.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T20:01:02.048534+00:00"
+}

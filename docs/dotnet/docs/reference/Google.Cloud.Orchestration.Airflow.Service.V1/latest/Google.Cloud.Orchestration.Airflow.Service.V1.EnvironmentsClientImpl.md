@@ -1,0 +1,1542 @@
+---
+url: https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClientImpl
+title: Cloud Composer v1 API - Class EnvironmentsClientImpl (2.10.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T17:36:22.277736+00:00
+---
+
+# Cloud Composer v1 API - Class EnvironmentsClientImpl (2.10.0)  |  .NET client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClientImpl
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ .NET ](https://docs.cloud.google.com/dotnet/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/dotnet/docs/reference)
+
+
+
+Send feedback 
+
+#  Cloud Composer v1 API - Class EnvironmentsClientImpl (2.10.0) Stay organized with collections  Save and categorize content based on your preferences. 
+
+Version latestkeyboard_arrow_down
+
+  * [ 2.10.0 (latest) ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClientImpl)
+  * [ 2.9.0 ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/2.9.0/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClientImpl)
+  * [ 2.8.0 ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/2.8.0/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClientImpl)
+  * [ 2.7.0 ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/2.7.0/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClientImpl)
+  * [ 2.6.0 ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/2.6.0/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClientImpl)
+  * [ 2.5.0 ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/2.5.0/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClientImpl)
+  * [ 2.4.0 ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/2.4.0/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClientImpl)
+  * [ 2.3.0 ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/2.3.0/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClientImpl)
+  * [ 2.2.0 ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/2.2.0/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClientImpl)
+  * [ 2.1.0 ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/2.1.0/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClientImpl)
+  * [ 2.0.0 ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/2.0.0/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClientImpl)
+  * [ 1.0.0 ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/1.0.0/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClientImpl)
+
+
+    
+    
+    public sealed class EnvironmentsClientImpl : EnvironmentsClient
+
+Reference documentation and code samples for the Cloud Composer v1 API class EnvironmentsClientImpl.
+
+Environments client wrapper implementation, for convenient use.
+
+## Inheritance
+
+[object](https://learn.microsoft.com/dotnet/api/system.object) > [EnvironmentsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient) > EnvironmentsClientImpl
+
+## Inherited Members
+
+[EnvironmentsClient.DefaultEndpoint](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DefaultEndpoint)
+
+[EnvironmentsClient.DefaultScopes](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DefaultScopes)
+
+[EnvironmentsClient.ServiceMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ServiceMetadata)
+
+[EnvironmentsClient.CreateAsync(CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateAsync_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.Create()](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_Create)
+
+[EnvironmentsClient.ShutdownDefaultChannelsAsync()](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ShutdownDefaultChannelsAsync)
+
+[EnvironmentsClient.CreateEnvironmentAsync(CreateEnvironmentRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateEnvironmentAsync_Google_Cloud_Orchestration_Airflow_Service_V1_CreateEnvironmentRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.PollOnceCreateEnvironment(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollOnceCreateEnvironment_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.PollOnceCreateEnvironmentAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollOnceCreateEnvironmentAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.CreateEnvironment(string, Environment, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateEnvironment_System_String_Google_Cloud_Orchestration_Airflow_Service_V1_Environment_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.CreateEnvironmentAsync(string, Environment, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateEnvironmentAsync_System_String_Google_Cloud_Orchestration_Airflow_Service_V1_Environment_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.CreateEnvironmentAsync(string, Environment, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateEnvironmentAsync_System_String_Google_Cloud_Orchestration_Airflow_Service_V1_Environment_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.GetEnvironmentAsync(GetEnvironmentRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetEnvironmentAsync_Google_Cloud_Orchestration_Airflow_Service_V1_GetEnvironmentRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.GetEnvironment(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetEnvironment_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.GetEnvironmentAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetEnvironmentAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.GetEnvironmentAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetEnvironmentAsync_System_String_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.ListEnvironments(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListEnvironments_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.ListEnvironmentsAsync(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListEnvironmentsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.UpdateEnvironmentAsync(UpdateEnvironmentRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateEnvironmentAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UpdateEnvironmentRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.PollOnceUpdateEnvironment(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollOnceUpdateEnvironment_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.PollOnceUpdateEnvironmentAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollOnceUpdateEnvironmentAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.UpdateEnvironment(string, Environment, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateEnvironment_System_String_Google_Cloud_Orchestration_Airflow_Service_V1_Environment_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.UpdateEnvironmentAsync(string, Environment, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateEnvironmentAsync_System_String_Google_Cloud_Orchestration_Airflow_Service_V1_Environment_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.UpdateEnvironmentAsync(string, Environment, FieldMask, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateEnvironmentAsync_System_String_Google_Cloud_Orchestration_Airflow_Service_V1_Environment_Google_Protobuf_WellKnownTypes_FieldMask_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.DeleteEnvironmentAsync(DeleteEnvironmentRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteEnvironmentAsync_Google_Cloud_Orchestration_Airflow_Service_V1_DeleteEnvironmentRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.PollOnceDeleteEnvironment(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollOnceDeleteEnvironment_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.PollOnceDeleteEnvironmentAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollOnceDeleteEnvironmentAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.DeleteEnvironment(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteEnvironment_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.DeleteEnvironmentAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteEnvironmentAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.DeleteEnvironmentAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteEnvironmentAsync_System_String_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.ExecuteAirflowCommandAsync(ExecuteAirflowCommandRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ExecuteAirflowCommandAsync_Google_Cloud_Orchestration_Airflow_Service_V1_ExecuteAirflowCommandRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.StopAirflowCommandAsync(StopAirflowCommandRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_StopAirflowCommandAsync_Google_Cloud_Orchestration_Airflow_Service_V1_StopAirflowCommandRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.PollAirflowCommandAsync(PollAirflowCommandRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollAirflowCommandAsync_Google_Cloud_Orchestration_Airflow_Service_V1_PollAirflowCommandRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.ListWorkloads(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListWorkloads_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.ListWorkloadsAsync(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListWorkloadsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.ListWorkloads(EnvironmentName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListWorkloads_Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.ListWorkloadsAsync(EnvironmentName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListWorkloadsAsync_Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.CheckUpgradeAsync(CheckUpgradeRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CheckUpgradeAsync_Google_Cloud_Orchestration_Airflow_Service_V1_CheckUpgradeRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.PollOnceCheckUpgrade(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollOnceCheckUpgrade_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.PollOnceCheckUpgradeAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollOnceCheckUpgradeAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.CreateUserWorkloadsSecretAsync(CreateUserWorkloadsSecretRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsSecretAsync_Google_Cloud_Orchestration_Airflow_Service_V1_CreateUserWorkloadsSecretRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.CreateUserWorkloadsSecret(string, UserWorkloadsSecret, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsSecret_System_String_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsSecret_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.CreateUserWorkloadsSecretAsync(string, UserWorkloadsSecret, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsSecretAsync_System_String_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsSecret_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.CreateUserWorkloadsSecretAsync(string, UserWorkloadsSecret, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsSecretAsync_System_String_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsSecret_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.CreateUserWorkloadsSecret(EnvironmentName, UserWorkloadsSecret, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsSecret_Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentName_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsSecret_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.CreateUserWorkloadsSecretAsync(EnvironmentName, UserWorkloadsSecret, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsSecretAsync_Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentName_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsSecret_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.CreateUserWorkloadsSecretAsync(EnvironmentName, UserWorkloadsSecret, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsSecretAsync_Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentName_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsSecret_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.GetUserWorkloadsSecretAsync(GetUserWorkloadsSecretRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsSecretAsync_Google_Cloud_Orchestration_Airflow_Service_V1_GetUserWorkloadsSecretRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.GetUserWorkloadsSecret(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsSecret_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.GetUserWorkloadsSecretAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsSecretAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.GetUserWorkloadsSecretAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsSecretAsync_System_String_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.GetUserWorkloadsSecret(UserWorkloadsSecretName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsSecret_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsSecretName_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.GetUserWorkloadsSecretAsync(UserWorkloadsSecretName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsSecretAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsSecretName_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.GetUserWorkloadsSecretAsync(UserWorkloadsSecretName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsSecretAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsSecretName_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.ListUserWorkloadsSecrets(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListUserWorkloadsSecrets_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.ListUserWorkloadsSecretsAsync(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListUserWorkloadsSecretsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.ListUserWorkloadsSecrets(EnvironmentName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListUserWorkloadsSecrets_Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.ListUserWorkloadsSecretsAsync(EnvironmentName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListUserWorkloadsSecretsAsync_Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.UpdateUserWorkloadsSecretAsync(UpdateUserWorkloadsSecretRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateUserWorkloadsSecretAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UpdateUserWorkloadsSecretRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.UpdateUserWorkloadsSecret(UserWorkloadsSecret, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateUserWorkloadsSecret_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsSecret_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.UpdateUserWorkloadsSecretAsync(UserWorkloadsSecret, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateUserWorkloadsSecretAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsSecret_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.UpdateUserWorkloadsSecretAsync(UserWorkloadsSecret, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateUserWorkloadsSecretAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsSecret_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.DeleteUserWorkloadsSecretAsync(DeleteUserWorkloadsSecretRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsSecretAsync_Google_Cloud_Orchestration_Airflow_Service_V1_DeleteUserWorkloadsSecretRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.DeleteUserWorkloadsSecret(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsSecret_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.DeleteUserWorkloadsSecretAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsSecretAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.DeleteUserWorkloadsSecretAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsSecretAsync_System_String_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.DeleteUserWorkloadsSecret(UserWorkloadsSecretName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsSecret_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsSecretName_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.DeleteUserWorkloadsSecretAsync(UserWorkloadsSecretName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsSecretAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsSecretName_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.DeleteUserWorkloadsSecretAsync(UserWorkloadsSecretName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsSecretAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsSecretName_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.CreateUserWorkloadsConfigMapAsync(CreateUserWorkloadsConfigMapRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsConfigMapAsync_Google_Cloud_Orchestration_Airflow_Service_V1_CreateUserWorkloadsConfigMapRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.CreateUserWorkloadsConfigMap(string, UserWorkloadsConfigMap, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsConfigMap_System_String_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsConfigMap_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.CreateUserWorkloadsConfigMapAsync(string, UserWorkloadsConfigMap, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsConfigMapAsync_System_String_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsConfigMap_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.CreateUserWorkloadsConfigMapAsync(string, UserWorkloadsConfigMap, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsConfigMapAsync_System_String_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsConfigMap_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.CreateUserWorkloadsConfigMap(EnvironmentName, UserWorkloadsConfigMap, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsConfigMap_Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentName_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsConfigMap_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.CreateUserWorkloadsConfigMapAsync(EnvironmentName, UserWorkloadsConfigMap, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsConfigMapAsync_Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentName_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsConfigMap_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.CreateUserWorkloadsConfigMapAsync(EnvironmentName, UserWorkloadsConfigMap, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsConfigMapAsync_Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentName_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsConfigMap_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.GetUserWorkloadsConfigMapAsync(GetUserWorkloadsConfigMapRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsConfigMapAsync_Google_Cloud_Orchestration_Airflow_Service_V1_GetUserWorkloadsConfigMapRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.GetUserWorkloadsConfigMap(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsConfigMap_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.GetUserWorkloadsConfigMapAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsConfigMapAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.GetUserWorkloadsConfigMapAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsConfigMapAsync_System_String_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.GetUserWorkloadsConfigMap(UserWorkloadsConfigMapName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsConfigMap_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsConfigMapName_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.GetUserWorkloadsConfigMapAsync(UserWorkloadsConfigMapName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsConfigMapAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsConfigMapName_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.GetUserWorkloadsConfigMapAsync(UserWorkloadsConfigMapName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsConfigMapAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsConfigMapName_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.ListUserWorkloadsConfigMaps(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListUserWorkloadsConfigMaps_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.ListUserWorkloadsConfigMapsAsync(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListUserWorkloadsConfigMapsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.ListUserWorkloadsConfigMaps(EnvironmentName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListUserWorkloadsConfigMaps_Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.ListUserWorkloadsConfigMapsAsync(EnvironmentName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListUserWorkloadsConfigMapsAsync_Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.UpdateUserWorkloadsConfigMapAsync(UpdateUserWorkloadsConfigMapRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateUserWorkloadsConfigMapAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UpdateUserWorkloadsConfigMapRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.UpdateUserWorkloadsConfigMap(UserWorkloadsConfigMap, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateUserWorkloadsConfigMap_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsConfigMap_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.UpdateUserWorkloadsConfigMapAsync(UserWorkloadsConfigMap, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateUserWorkloadsConfigMapAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsConfigMap_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.UpdateUserWorkloadsConfigMapAsync(UserWorkloadsConfigMap, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateUserWorkloadsConfigMapAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsConfigMap_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.DeleteUserWorkloadsConfigMapAsync(DeleteUserWorkloadsConfigMapRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsConfigMapAsync_Google_Cloud_Orchestration_Airflow_Service_V1_DeleteUserWorkloadsConfigMapRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.DeleteUserWorkloadsConfigMap(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsConfigMap_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.DeleteUserWorkloadsConfigMapAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsConfigMapAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.DeleteUserWorkloadsConfigMapAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsConfigMapAsync_System_String_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.DeleteUserWorkloadsConfigMap(UserWorkloadsConfigMapName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsConfigMap_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsConfigMapName_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.DeleteUserWorkloadsConfigMapAsync(UserWorkloadsConfigMapName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsConfigMapAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsConfigMapName_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.DeleteUserWorkloadsConfigMapAsync(UserWorkloadsConfigMapName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsConfigMapAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UserWorkloadsConfigMapName_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.SaveSnapshotAsync(SaveSnapshotRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_SaveSnapshotAsync_Google_Cloud_Orchestration_Airflow_Service_V1_SaveSnapshotRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.PollOnceSaveSnapshot(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollOnceSaveSnapshot_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.PollOnceSaveSnapshotAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollOnceSaveSnapshotAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.LoadSnapshotAsync(LoadSnapshotRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_LoadSnapshotAsync_Google_Cloud_Orchestration_Airflow_Service_V1_LoadSnapshotRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.PollOnceLoadSnapshot(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollOnceLoadSnapshot_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.PollOnceLoadSnapshotAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollOnceLoadSnapshotAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.DatabaseFailoverAsync(DatabaseFailoverRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DatabaseFailoverAsync_Google_Cloud_Orchestration_Airflow_Service_V1_DatabaseFailoverRequest_System_Threading_CancellationToken_)
+
+[EnvironmentsClient.PollOnceDatabaseFailover(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollOnceDatabaseFailover_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.PollOnceDatabaseFailoverAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollOnceDatabaseFailoverAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[EnvironmentsClient.FetchDatabasePropertiesAsync(FetchDatabasePropertiesRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_FetchDatabasePropertiesAsync_Google_Cloud_Orchestration_Airflow_Service_V1_FetchDatabasePropertiesRequest_System_Threading_CancellationToken_)
+
+[object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+
+[object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+
+[object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Namespace
+
+[Google.Cloud.Orchestration.Airflow.Service.V1](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1)
+
+## Assembly
+
+Google.Cloud.Orchestration.Airflow.Service.V1.dll
+
+## Remarks
+
+Managed Apache Airflow Environments.
+
+## Constructors 
+
+### EnvironmentsClientImpl(EnvironmentsClient, EnvironmentsSettings, ILogger)
+    
+    
+    public EnvironmentsClientImpl(Environments.EnvironmentsClient grpcClient, EnvironmentsSettings settings, ILogger logger)
+
+Constructs a client wrapper for the Environments service, with the specified gRPC client and settings.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`grpcClient` | `[Environments](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.Environments)[EnvironmentsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.Environments.EnvironmentsClient)`  
+The underlying gRPC client.  
+`settings` | `[EnvironmentsSettings](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsSettings)`  
+The base [EnvironmentsSettings](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsSettings) used within this client.  
+`logger` | `[ILogger](https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger)`  
+Optional [ILogger](https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger) to use within this client.  
+  
+## Properties 
+
+### CheckUpgradeOperationsClient
+    
+    
+    public override OperationsClient CheckUpgradeOperationsClient { get; }
+
+The long-running operations client for `CheckUpgrade`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[EnvironmentsClient.CheckUpgradeOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CheckUpgradeOperationsClient)
+
+### CreateEnvironmentOperationsClient
+    
+    
+    public override OperationsClient CreateEnvironmentOperationsClient { get; }
+
+The long-running operations client for `CreateEnvironment`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[EnvironmentsClient.CreateEnvironmentOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateEnvironmentOperationsClient)
+
+### DatabaseFailoverOperationsClient
+    
+    
+    public override OperationsClient DatabaseFailoverOperationsClient { get; }
+
+The long-running operations client for `DatabaseFailover`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[EnvironmentsClient.DatabaseFailoverOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DatabaseFailoverOperationsClient)
+
+### DeleteEnvironmentOperationsClient
+    
+    
+    public override OperationsClient DeleteEnvironmentOperationsClient { get; }
+
+The long-running operations client for `DeleteEnvironment`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[EnvironmentsClient.DeleteEnvironmentOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteEnvironmentOperationsClient)
+
+### GrpcClient
+    
+    
+    public override Environments.EnvironmentsClient GrpcClient { get; }
+
+The underlying gRPC Environments client
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[Environments](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.Environments)[EnvironmentsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.Environments.EnvironmentsClient)` |   
+**Overrides**
+
+[EnvironmentsClient.GrpcClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GrpcClient)
+
+### LoadSnapshotOperationsClient
+    
+    
+    public override OperationsClient LoadSnapshotOperationsClient { get; }
+
+The long-running operations client for `LoadSnapshot`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[EnvironmentsClient.LoadSnapshotOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_LoadSnapshotOperationsClient)
+
+### SaveSnapshotOperationsClient
+    
+    
+    public override OperationsClient SaveSnapshotOperationsClient { get; }
+
+The long-running operations client for `SaveSnapshot`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[EnvironmentsClient.SaveSnapshotOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_SaveSnapshotOperationsClient)
+
+### UpdateEnvironmentOperationsClient
+    
+    
+    public override OperationsClient UpdateEnvironmentOperationsClient { get; }
+
+The long-running operations client for `UpdateEnvironment`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[EnvironmentsClient.UpdateEnvironmentOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateEnvironmentOperationsClient)
+
+## Methods 
+
+### CheckUpgrade(CheckUpgradeRequest, CallSettings)
+    
+    
+    public override Operation<CheckUpgradeResponse, OperationMetadata> CheckUpgrade(CheckUpgradeRequest request, CallSettings callSettings = null)
+
+Check if an upgrade operation on the environment will succeed.
+
+In case of problems detailed info can be found in the returned Operation.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CheckUpgradeRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[CheckUpgradeResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeResponse)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.CheckUpgrade(CheckUpgradeRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CheckUpgrade_Google_Cloud_Orchestration_Airflow_Service_V1_CheckUpgradeRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CheckUpgradeAsync(CheckUpgradeRequest, CallSettings)
+    
+    
+    public override Task<Operation<CheckUpgradeResponse, OperationMetadata>> CheckUpgradeAsync(CheckUpgradeRequest request, CallSettings callSettings = null)
+
+Check if an upgrade operation on the environment will succeed.
+
+In case of problems detailed info can be found in the returned Operation.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CheckUpgradeRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[CheckUpgradeResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeResponse)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.CheckUpgradeAsync(CheckUpgradeRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CheckUpgradeAsync_Google_Cloud_Orchestration_Airflow_Service_V1_CheckUpgradeRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateEnvironment(CreateEnvironmentRequest, CallSettings)
+    
+    
+    public override Operation<Environment, OperationMetadata> CreateEnvironment(CreateEnvironmentRequest request, CallSettings callSettings = null)
+
+Create a new environment.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateEnvironmentRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.CreateEnvironmentRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[Environment](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.Environment)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.CreateEnvironment(CreateEnvironmentRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateEnvironment_Google_Cloud_Orchestration_Airflow_Service_V1_CreateEnvironmentRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateEnvironmentAsync(CreateEnvironmentRequest, CallSettings)
+    
+    
+    public override Task<Operation<Environment, OperationMetadata>> CreateEnvironmentAsync(CreateEnvironmentRequest request, CallSettings callSettings = null)
+
+Create a new environment.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateEnvironmentRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.CreateEnvironmentRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[Environment](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.Environment)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.CreateEnvironmentAsync(CreateEnvironmentRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateEnvironmentAsync_Google_Cloud_Orchestration_Airflow_Service_V1_CreateEnvironmentRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateUserWorkloadsConfigMap(CreateUserWorkloadsConfigMapRequest, CallSettings)
+    
+    
+    public override UserWorkloadsConfigMap CreateUserWorkloadsConfigMap(CreateUserWorkloadsConfigMapRequest request, CallSettings callSettings = null)
+
+Creates a user workloads ConfigMap.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateUserWorkloadsConfigMapRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsConfigMapRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UserWorkloadsConfigMap](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.CreateUserWorkloadsConfigMap(CreateUserWorkloadsConfigMapRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsConfigMap_Google_Cloud_Orchestration_Airflow_Service_V1_CreateUserWorkloadsConfigMapRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateUserWorkloadsConfigMapAsync(CreateUserWorkloadsConfigMapRequest, CallSettings)
+    
+    
+    public override Task<UserWorkloadsConfigMap> CreateUserWorkloadsConfigMapAsync(CreateUserWorkloadsConfigMapRequest request, CallSettings callSettings = null)
+
+Creates a user workloads ConfigMap.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateUserWorkloadsConfigMapRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsConfigMapRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[UserWorkloadsConfigMap](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.CreateUserWorkloadsConfigMapAsync(CreateUserWorkloadsConfigMapRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsConfigMapAsync_Google_Cloud_Orchestration_Airflow_Service_V1_CreateUserWorkloadsConfigMapRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateUserWorkloadsSecret(CreateUserWorkloadsSecretRequest, CallSettings)
+    
+    
+    public override UserWorkloadsSecret CreateUserWorkloadsSecret(CreateUserWorkloadsSecretRequest request, CallSettings callSettings = null)
+
+Creates a user workloads Secret.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateUserWorkloadsSecretRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UserWorkloadsSecret](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.CreateUserWorkloadsSecret(CreateUserWorkloadsSecretRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsSecret_Google_Cloud_Orchestration_Airflow_Service_V1_CreateUserWorkloadsSecretRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateUserWorkloadsSecretAsync(CreateUserWorkloadsSecretRequest, CallSettings)
+    
+    
+    public override Task<UserWorkloadsSecret> CreateUserWorkloadsSecretAsync(CreateUserWorkloadsSecretRequest request, CallSettings callSettings = null)
+
+Creates a user workloads Secret.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateUserWorkloadsSecretRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[UserWorkloadsSecret](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.CreateUserWorkloadsSecretAsync(CreateUserWorkloadsSecretRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_CreateUserWorkloadsSecretAsync_Google_Cloud_Orchestration_Airflow_Service_V1_CreateUserWorkloadsSecretRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DatabaseFailover(DatabaseFailoverRequest, CallSettings)
+    
+    
+    public override Operation<DatabaseFailoverResponse, OperationMetadata> DatabaseFailover(DatabaseFailoverRequest request, CallSettings callSettings = null)
+
+Triggers database failover (only for highly resilient environments).
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DatabaseFailoverRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[DatabaseFailoverResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverResponse)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.DatabaseFailover(DatabaseFailoverRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DatabaseFailover_Google_Cloud_Orchestration_Airflow_Service_V1_DatabaseFailoverRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DatabaseFailoverAsync(DatabaseFailoverRequest, CallSettings)
+    
+    
+    public override Task<Operation<DatabaseFailoverResponse, OperationMetadata>> DatabaseFailoverAsync(DatabaseFailoverRequest request, CallSettings callSettings = null)
+
+Triggers database failover (only for highly resilient environments).
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DatabaseFailoverRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[DatabaseFailoverResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverResponse)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.DatabaseFailoverAsync(DatabaseFailoverRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DatabaseFailoverAsync_Google_Cloud_Orchestration_Airflow_Service_V1_DatabaseFailoverRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteEnvironment(DeleteEnvironmentRequest, CallSettings)
+    
+    
+    public override Operation<Empty, OperationMetadata> DeleteEnvironment(DeleteEnvironmentRequest request, CallSettings callSettings = null)
+
+Delete an environment.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteEnvironmentRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.DeleteEnvironmentRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[Empty](https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.WellKnownTypes.Empty.html)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.DeleteEnvironment(DeleteEnvironmentRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteEnvironment_Google_Cloud_Orchestration_Airflow_Service_V1_DeleteEnvironmentRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteEnvironmentAsync(DeleteEnvironmentRequest, CallSettings)
+    
+    
+    public override Task<Operation<Empty, OperationMetadata>> DeleteEnvironmentAsync(DeleteEnvironmentRequest request, CallSettings callSettings = null)
+
+Delete an environment.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteEnvironmentRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.DeleteEnvironmentRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[Empty](https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.WellKnownTypes.Empty.html)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.DeleteEnvironmentAsync(DeleteEnvironmentRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteEnvironmentAsync_Google_Cloud_Orchestration_Airflow_Service_V1_DeleteEnvironmentRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteUserWorkloadsConfigMap(DeleteUserWorkloadsConfigMapRequest, CallSettings)
+    
+    
+    public override void DeleteUserWorkloadsConfigMap(DeleteUserWorkloadsConfigMapRequest request, CallSettings callSettings = null)
+
+Deletes a user workloads ConfigMap.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteUserWorkloadsConfigMapRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsConfigMapRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Overrides**
+
+[EnvironmentsClient.DeleteUserWorkloadsConfigMap(DeleteUserWorkloadsConfigMapRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsConfigMap_Google_Cloud_Orchestration_Airflow_Service_V1_DeleteUserWorkloadsConfigMapRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteUserWorkloadsConfigMapAsync(DeleteUserWorkloadsConfigMapRequest, CallSettings)
+    
+    
+    public override Task DeleteUserWorkloadsConfigMapAsync(DeleteUserWorkloadsConfigMapRequest request, CallSettings callSettings = null)
+
+Deletes a user workloads ConfigMap.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteUserWorkloadsConfigMapRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsConfigMapRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.DeleteUserWorkloadsConfigMapAsync(DeleteUserWorkloadsConfigMapRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsConfigMapAsync_Google_Cloud_Orchestration_Airflow_Service_V1_DeleteUserWorkloadsConfigMapRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteUserWorkloadsSecret(DeleteUserWorkloadsSecretRequest, CallSettings)
+    
+    
+    public override void DeleteUserWorkloadsSecret(DeleteUserWorkloadsSecretRequest request, CallSettings callSettings = null)
+
+Deletes a user workloads Secret.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteUserWorkloadsSecretRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsSecretRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Overrides**
+
+[EnvironmentsClient.DeleteUserWorkloadsSecret(DeleteUserWorkloadsSecretRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsSecret_Google_Cloud_Orchestration_Airflow_Service_V1_DeleteUserWorkloadsSecretRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteUserWorkloadsSecretAsync(DeleteUserWorkloadsSecretRequest, CallSettings)
+    
+    
+    public override Task DeleteUserWorkloadsSecretAsync(DeleteUserWorkloadsSecretRequest request, CallSettings callSettings = null)
+
+Deletes a user workloads Secret.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteUserWorkloadsSecretRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsSecretRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.DeleteUserWorkloadsSecretAsync(DeleteUserWorkloadsSecretRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_DeleteUserWorkloadsSecretAsync_Google_Cloud_Orchestration_Airflow_Service_V1_DeleteUserWorkloadsSecretRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ExecuteAirflowCommand(ExecuteAirflowCommandRequest, CallSettings)
+    
+    
+    public override ExecuteAirflowCommandResponse ExecuteAirflowCommand(ExecuteAirflowCommandRequest request, CallSettings callSettings = null)
+
+Executes Airflow CLI command.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ExecuteAirflowCommandRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[ExecuteAirflowCommandResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandResponse)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.ExecuteAirflowCommand(ExecuteAirflowCommandRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ExecuteAirflowCommand_Google_Cloud_Orchestration_Airflow_Service_V1_ExecuteAirflowCommandRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ExecuteAirflowCommandAsync(ExecuteAirflowCommandRequest, CallSettings)
+    
+    
+    public override Task<ExecuteAirflowCommandResponse> ExecuteAirflowCommandAsync(ExecuteAirflowCommandRequest request, CallSettings callSettings = null)
+
+Executes Airflow CLI command.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ExecuteAirflowCommandRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[ExecuteAirflowCommandResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandResponse)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.ExecuteAirflowCommandAsync(ExecuteAirflowCommandRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ExecuteAirflowCommandAsync_Google_Cloud_Orchestration_Airflow_Service_V1_ExecuteAirflowCommandRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### FetchDatabaseProperties(FetchDatabasePropertiesRequest, CallSettings)
+    
+    
+    public override FetchDatabasePropertiesResponse FetchDatabaseProperties(FetchDatabasePropertiesRequest request, CallSettings callSettings = null)
+
+Fetches database properties.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[FetchDatabasePropertiesRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[FetchDatabasePropertiesResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesResponse)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.FetchDatabaseProperties(FetchDatabasePropertiesRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_FetchDatabaseProperties_Google_Cloud_Orchestration_Airflow_Service_V1_FetchDatabasePropertiesRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### FetchDatabasePropertiesAsync(FetchDatabasePropertiesRequest, CallSettings)
+    
+    
+    public override Task<FetchDatabasePropertiesResponse> FetchDatabasePropertiesAsync(FetchDatabasePropertiesRequest request, CallSettings callSettings = null)
+
+Fetches database properties.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[FetchDatabasePropertiesRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[FetchDatabasePropertiesResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesResponse)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.FetchDatabasePropertiesAsync(FetchDatabasePropertiesRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_FetchDatabasePropertiesAsync_Google_Cloud_Orchestration_Airflow_Service_V1_FetchDatabasePropertiesRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetEnvironment(GetEnvironmentRequest, CallSettings)
+    
+    
+    public override Environment GetEnvironment(GetEnvironmentRequest request, CallSettings callSettings = null)
+
+Get an existing environment.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetEnvironmentRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.GetEnvironmentRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Environment](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.Environment)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.GetEnvironment(GetEnvironmentRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetEnvironment_Google_Cloud_Orchestration_Airflow_Service_V1_GetEnvironmentRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetEnvironmentAsync(GetEnvironmentRequest, CallSettings)
+    
+    
+    public override Task<Environment> GetEnvironmentAsync(GetEnvironmentRequest request, CallSettings callSettings = null)
+
+Get an existing environment.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetEnvironmentRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.GetEnvironmentRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Environment](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.Environment)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.GetEnvironmentAsync(GetEnvironmentRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetEnvironmentAsync_Google_Cloud_Orchestration_Airflow_Service_V1_GetEnvironmentRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetUserWorkloadsConfigMap(GetUserWorkloadsConfigMapRequest, CallSettings)
+    
+    
+    public override UserWorkloadsConfigMap GetUserWorkloadsConfigMap(GetUserWorkloadsConfigMapRequest request, CallSettings callSettings = null)
+
+Gets an existing user workloads ConfigMap.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetUserWorkloadsConfigMapRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsConfigMapRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UserWorkloadsConfigMap](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.GetUserWorkloadsConfigMap(GetUserWorkloadsConfigMapRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsConfigMap_Google_Cloud_Orchestration_Airflow_Service_V1_GetUserWorkloadsConfigMapRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetUserWorkloadsConfigMapAsync(GetUserWorkloadsConfigMapRequest, CallSettings)
+    
+    
+    public override Task<UserWorkloadsConfigMap> GetUserWorkloadsConfigMapAsync(GetUserWorkloadsConfigMapRequest request, CallSettings callSettings = null)
+
+Gets an existing user workloads ConfigMap.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetUserWorkloadsConfigMapRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsConfigMapRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[UserWorkloadsConfigMap](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.GetUserWorkloadsConfigMapAsync(GetUserWorkloadsConfigMapRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsConfigMapAsync_Google_Cloud_Orchestration_Airflow_Service_V1_GetUserWorkloadsConfigMapRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetUserWorkloadsSecret(GetUserWorkloadsSecretRequest, CallSettings)
+    
+    
+    public override UserWorkloadsSecret GetUserWorkloadsSecret(GetUserWorkloadsSecretRequest request, CallSettings callSettings = null)
+
+Gets an existing user workloads Secret. Values of the "data" field in the response are cleared.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetUserWorkloadsSecretRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsSecretRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UserWorkloadsSecret](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.GetUserWorkloadsSecret(GetUserWorkloadsSecretRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsSecret_Google_Cloud_Orchestration_Airflow_Service_V1_GetUserWorkloadsSecretRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetUserWorkloadsSecretAsync(GetUserWorkloadsSecretRequest, CallSettings)
+    
+    
+    public override Task<UserWorkloadsSecret> GetUserWorkloadsSecretAsync(GetUserWorkloadsSecretRequest request, CallSettings callSettings = null)
+
+Gets an existing user workloads Secret. Values of the "data" field in the response are cleared.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetUserWorkloadsSecretRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsSecretRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[UserWorkloadsSecret](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.GetUserWorkloadsSecretAsync(GetUserWorkloadsSecretRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_GetUserWorkloadsSecretAsync_Google_Cloud_Orchestration_Airflow_Service_V1_GetUserWorkloadsSecretRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListEnvironments(ListEnvironmentsRequest, CallSettings)
+    
+    
+    public override PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(ListEnvironmentsRequest request, CallSettings callSettings = null)
+
+List environments.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListEnvironmentsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListEnvironmentsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedEnumerable-2.html)[ListEnvironmentsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListEnvironmentsResponse)[Environment](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.Environment)` | A pageable sequence of [Environment](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.Environment) resources.  
+**Overrides**
+
+[EnvironmentsClient.ListEnvironments(ListEnvironmentsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListEnvironments_Google_Cloud_Orchestration_Airflow_Service_V1_ListEnvironmentsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListEnvironmentsAsync(ListEnvironmentsRequest, CallSettings)
+    
+    
+    public override PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(ListEnvironmentsRequest request, CallSettings callSettings = null)
+
+List environments.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListEnvironmentsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListEnvironmentsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedAsyncEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedAsyncEnumerable-2.html)[ListEnvironmentsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListEnvironmentsResponse)[Environment](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.Environment)` | A pageable asynchronous sequence of [Environment](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.Environment) resources.  
+**Overrides**
+
+[EnvironmentsClient.ListEnvironmentsAsync(ListEnvironmentsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListEnvironmentsAsync_Google_Cloud_Orchestration_Airflow_Service_V1_ListEnvironmentsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListUserWorkloadsConfigMaps(ListUserWorkloadsConfigMapsRequest, CallSettings)
+    
+    
+    public override PagedEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMaps(ListUserWorkloadsConfigMapsRequest request, CallSettings callSettings = null)
+
+Lists user workloads ConfigMaps.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListUserWorkloadsConfigMapsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedEnumerable-2.html)[ListUserWorkloadsConfigMapsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse)[UserWorkloadsConfigMap](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap)` | A pageable sequence of [UserWorkloadsConfigMap](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap) resources.  
+**Overrides**
+
+[EnvironmentsClient.ListUserWorkloadsConfigMaps(ListUserWorkloadsConfigMapsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListUserWorkloadsConfigMaps_Google_Cloud_Orchestration_Airflow_Service_V1_ListUserWorkloadsConfigMapsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListUserWorkloadsConfigMapsAsync(ListUserWorkloadsConfigMapsRequest, CallSettings)
+    
+    
+    public override PagedAsyncEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMapsAsync(ListUserWorkloadsConfigMapsRequest request, CallSettings callSettings = null)
+
+Lists user workloads ConfigMaps.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListUserWorkloadsConfigMapsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedAsyncEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedAsyncEnumerable-2.html)[ListUserWorkloadsConfigMapsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse)[UserWorkloadsConfigMap](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap)` | A pageable asynchronous sequence of [UserWorkloadsConfigMap](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap) resources.  
+**Overrides**
+
+[EnvironmentsClient.ListUserWorkloadsConfigMapsAsync(ListUserWorkloadsConfigMapsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListUserWorkloadsConfigMapsAsync_Google_Cloud_Orchestration_Airflow_Service_V1_ListUserWorkloadsConfigMapsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListUserWorkloadsSecrets(ListUserWorkloadsSecretsRequest, CallSettings)
+    
+    
+    public override PagedEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecrets(ListUserWorkloadsSecretsRequest request, CallSettings callSettings = null)
+
+Lists user workloads Secrets.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListUserWorkloadsSecretsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedEnumerable-2.html)[ListUserWorkloadsSecretsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse)[UserWorkloadsSecret](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret)` | A pageable sequence of [UserWorkloadsSecret](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret) resources.  
+**Overrides**
+
+[EnvironmentsClient.ListUserWorkloadsSecrets(ListUserWorkloadsSecretsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListUserWorkloadsSecrets_Google_Cloud_Orchestration_Airflow_Service_V1_ListUserWorkloadsSecretsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListUserWorkloadsSecretsAsync(ListUserWorkloadsSecretsRequest, CallSettings)
+    
+    
+    public override PagedAsyncEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecretsAsync(ListUserWorkloadsSecretsRequest request, CallSettings callSettings = null)
+
+Lists user workloads Secrets.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListUserWorkloadsSecretsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedAsyncEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedAsyncEnumerable-2.html)[ListUserWorkloadsSecretsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse)[UserWorkloadsSecret](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret)` | A pageable asynchronous sequence of [UserWorkloadsSecret](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret) resources.  
+**Overrides**
+
+[EnvironmentsClient.ListUserWorkloadsSecretsAsync(ListUserWorkloadsSecretsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListUserWorkloadsSecretsAsync_Google_Cloud_Orchestration_Airflow_Service_V1_ListUserWorkloadsSecretsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListWorkloads(ListWorkloadsRequest, CallSettings)
+    
+    
+    public override PagedEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloads(ListWorkloadsRequest request, CallSettings callSettings = null)
+
+Lists workloads in a Cloud Composer environment. Workload is a unit that runs a single Composer component.
+
+This method is supported for Cloud Composer environments in versions composer-2._._ -airflow-_._.* and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListWorkloadsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedEnumerable-2.html)[ListWorkloadsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse)[ListWorkloadsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse)[Types](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse.Types)[ComposerWorkload](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse.Types.ComposerWorkload)` | A pageable sequence of [ListWorkloadsResponse.Types.ComposerWorkload](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse.Types.ComposerWorkload) resources.  
+**Overrides**
+
+[EnvironmentsClient.ListWorkloads(ListWorkloadsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListWorkloads_Google_Cloud_Orchestration_Airflow_Service_V1_ListWorkloadsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListWorkloadsAsync(ListWorkloadsRequest, CallSettings)
+    
+    
+    public override PagedAsyncEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloadsAsync(ListWorkloadsRequest request, CallSettings callSettings = null)
+
+Lists workloads in a Cloud Composer environment. Workload is a unit that runs a single Composer component.
+
+This method is supported for Cloud Composer environments in versions composer-2._._ -airflow-_._.* and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListWorkloadsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedAsyncEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedAsyncEnumerable-2.html)[ListWorkloadsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse)[ListWorkloadsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse)[Types](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse.Types)[ComposerWorkload](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse.Types.ComposerWorkload)` | A pageable asynchronous sequence of [ListWorkloadsResponse.Types.ComposerWorkload](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse.Types.ComposerWorkload) resources.  
+**Overrides**
+
+[EnvironmentsClient.ListWorkloadsAsync(ListWorkloadsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_ListWorkloadsAsync_Google_Cloud_Orchestration_Airflow_Service_V1_ListWorkloadsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### LoadSnapshot(LoadSnapshotRequest, CallSettings)
+    
+    
+    public override Operation<LoadSnapshotResponse, OperationMetadata> LoadSnapshot(LoadSnapshotRequest request, CallSettings callSettings = null)
+
+Loads a snapshot of a Cloud Composer environment.
+
+As a result of this operation, a snapshot of environment's specified in LoadSnapshotRequest is loaded into the environment.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[LoadSnapshotRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[LoadSnapshotResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotResponse)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.LoadSnapshot(LoadSnapshotRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_LoadSnapshot_Google_Cloud_Orchestration_Airflow_Service_V1_LoadSnapshotRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### LoadSnapshotAsync(LoadSnapshotRequest, CallSettings)
+    
+    
+    public override Task<Operation<LoadSnapshotResponse, OperationMetadata>> LoadSnapshotAsync(LoadSnapshotRequest request, CallSettings callSettings = null)
+
+Loads a snapshot of a Cloud Composer environment.
+
+As a result of this operation, a snapshot of environment's specified in LoadSnapshotRequest is loaded into the environment.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[LoadSnapshotRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[LoadSnapshotResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotResponse)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.LoadSnapshotAsync(LoadSnapshotRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_LoadSnapshotAsync_Google_Cloud_Orchestration_Airflow_Service_V1_LoadSnapshotRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### PollAirflowCommand(PollAirflowCommandRequest, CallSettings)
+    
+    
+    public override PollAirflowCommandResponse PollAirflowCommand(PollAirflowCommandRequest request, CallSettings callSettings = null)
+
+Polls Airflow CLI command execution and fetches logs.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[PollAirflowCommandRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PollAirflowCommandResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.PollAirflowCommand(PollAirflowCommandRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollAirflowCommand_Google_Cloud_Orchestration_Airflow_Service_V1_PollAirflowCommandRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### PollAirflowCommandAsync(PollAirflowCommandRequest, CallSettings)
+    
+    
+    public override Task<PollAirflowCommandResponse> PollAirflowCommandAsync(PollAirflowCommandRequest request, CallSettings callSettings = null)
+
+Polls Airflow CLI command execution and fetches logs.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[PollAirflowCommandRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[PollAirflowCommandResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.PollAirflowCommandAsync(PollAirflowCommandRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_PollAirflowCommandAsync_Google_Cloud_Orchestration_Airflow_Service_V1_PollAirflowCommandRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### SaveSnapshot(SaveSnapshotRequest, CallSettings)
+    
+    
+    public override Operation<SaveSnapshotResponse, OperationMetadata> SaveSnapshot(SaveSnapshotRequest request, CallSettings callSettings = null)
+
+Creates a snapshots of a Cloud Composer environment.
+
+As a result of this operation, snapshot of environment's state is stored in a location specified in the SaveSnapshotRequest.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[SaveSnapshotRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[SaveSnapshotResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotResponse)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.SaveSnapshot(SaveSnapshotRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_SaveSnapshot_Google_Cloud_Orchestration_Airflow_Service_V1_SaveSnapshotRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### SaveSnapshotAsync(SaveSnapshotRequest, CallSettings)
+    
+    
+    public override Task<Operation<SaveSnapshotResponse, OperationMetadata>> SaveSnapshotAsync(SaveSnapshotRequest request, CallSettings callSettings = null)
+
+Creates a snapshots of a Cloud Composer environment.
+
+As a result of this operation, snapshot of environment's state is stored in a location specified in the SaveSnapshotRequest.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[SaveSnapshotRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[SaveSnapshotResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotResponse)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.SaveSnapshotAsync(SaveSnapshotRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_SaveSnapshotAsync_Google_Cloud_Orchestration_Airflow_Service_V1_SaveSnapshotRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### StopAirflowCommand(StopAirflowCommandRequest, CallSettings)
+    
+    
+    public override StopAirflowCommandResponse StopAirflowCommand(StopAirflowCommandRequest request, CallSettings callSettings = null)
+
+Stops Airflow CLI command execution.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[StopAirflowCommandRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[StopAirflowCommandResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandResponse)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.StopAirflowCommand(StopAirflowCommandRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_StopAirflowCommand_Google_Cloud_Orchestration_Airflow_Service_V1_StopAirflowCommandRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### StopAirflowCommandAsync(StopAirflowCommandRequest, CallSettings)
+    
+    
+    public override Task<StopAirflowCommandResponse> StopAirflowCommandAsync(StopAirflowCommandRequest request, CallSettings callSettings = null)
+
+Stops Airflow CLI command execution.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[StopAirflowCommandRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[StopAirflowCommandResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandResponse)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.StopAirflowCommandAsync(StopAirflowCommandRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_StopAirflowCommandAsync_Google_Cloud_Orchestration_Airflow_Service_V1_StopAirflowCommandRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateEnvironment(UpdateEnvironmentRequest, CallSettings)
+    
+    
+    public override Operation<Environment, OperationMetadata> UpdateEnvironment(UpdateEnvironmentRequest request, CallSettings callSettings = null)
+
+Update an environment.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateEnvironmentRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UpdateEnvironmentRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[Environment](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.Environment)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.UpdateEnvironment(UpdateEnvironmentRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateEnvironment_Google_Cloud_Orchestration_Airflow_Service_V1_UpdateEnvironmentRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateEnvironmentAsync(UpdateEnvironmentRequest, CallSettings)
+    
+    
+    public override Task<Operation<Environment, OperationMetadata>> UpdateEnvironmentAsync(UpdateEnvironmentRequest request, CallSettings callSettings = null)
+
+Update an environment.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateEnvironmentRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UpdateEnvironmentRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[Environment](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.Environment)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.UpdateEnvironmentAsync(UpdateEnvironmentRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateEnvironmentAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UpdateEnvironmentRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateUserWorkloadsConfigMap(UpdateUserWorkloadsConfigMapRequest, CallSettings)
+    
+    
+    public override UserWorkloadsConfigMap UpdateUserWorkloadsConfigMap(UpdateUserWorkloadsConfigMapRequest request, CallSettings callSettings = null)
+
+Updates a user workloads ConfigMap.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateUserWorkloadsConfigMapRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsConfigMapRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UserWorkloadsConfigMap](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.UpdateUserWorkloadsConfigMap(UpdateUserWorkloadsConfigMapRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateUserWorkloadsConfigMap_Google_Cloud_Orchestration_Airflow_Service_V1_UpdateUserWorkloadsConfigMapRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateUserWorkloadsConfigMapAsync(UpdateUserWorkloadsConfigMapRequest, CallSettings)
+    
+    
+    public override Task<UserWorkloadsConfigMap> UpdateUserWorkloadsConfigMapAsync(UpdateUserWorkloadsConfigMapRequest request, CallSettings callSettings = null)
+
+Updates a user workloads ConfigMap.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateUserWorkloadsConfigMapRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsConfigMapRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[UserWorkloadsConfigMap](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.UpdateUserWorkloadsConfigMapAsync(UpdateUserWorkloadsConfigMapRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateUserWorkloadsConfigMapAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UpdateUserWorkloadsConfigMapRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateUserWorkloadsSecret(UpdateUserWorkloadsSecretRequest, CallSettings)
+    
+    
+    public override UserWorkloadsSecret UpdateUserWorkloadsSecret(UpdateUserWorkloadsSecretRequest request, CallSettings callSettings = null)
+
+Updates a user workloads Secret.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateUserWorkloadsSecretRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsSecretRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UserWorkloadsSecret](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret)` | The RPC response.  
+**Overrides**
+
+[EnvironmentsClient.UpdateUserWorkloadsSecret(UpdateUserWorkloadsSecretRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateUserWorkloadsSecret_Google_Cloud_Orchestration_Airflow_Service_V1_UpdateUserWorkloadsSecretRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateUserWorkloadsSecretAsync(UpdateUserWorkloadsSecretRequest, CallSettings)
+    
+    
+    public override Task<UserWorkloadsSecret> UpdateUserWorkloadsSecretAsync(UpdateUserWorkloadsSecretRequest request, CallSettings callSettings = null)
+
+Updates a user workloads Secret.
+
+This method is supported for Cloud Composer environments in versions composer-3-airflow-_._._-build._ and newer.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateUserWorkloadsSecretRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsSecretRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[UserWorkloadsSecret](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret)` | A Task containing the RPC response.  
+**Overrides**
+
+[EnvironmentsClient.UpdateUserWorkloadsSecretAsync(UpdateUserWorkloadsSecretRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Orchestration.Airflow.Service.V1/latest/Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient#Google_Cloud_Orchestration_Airflow_Service_V1_EnvironmentsClient_UpdateUserWorkloadsSecretAsync_Google_Cloud_Orchestration_Airflow_Service_V1_UpdateUserWorkloadsSecretRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-03-09 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-03-09 UTC."],[],[]] 

@@ -1,0 +1,88 @@
+---
+url: https://docs.cloud.google.com/nodejs/docs/reference/firestore-api/latest/firestore-api/protos.google.firestore.v1.documenttransform.ifieldtransform
+title: Interface protos.google.firestore.v1.DocumentTransform.IFieldTransform (0.2.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T16:51:13.197146+00:00
+---
+
+# Interface protos.google.firestore.v1.DocumentTransform.IFieldTransform (0.2.0)  |  Node.js client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/nodejs/docs/reference/firestore-api/latest/firestore-api/protos.google.firestore.v1.documenttransform.ifieldtransform
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Node.js ](https://docs.cloud.google.com/nodejs/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/nodejs/docs/reference)
+
+
+
+Send feedback 
+
+#  Interface protos.google.firestore.v1.DocumentTransform.IFieldTransform (0.2.0) Stay organized with collections  Save and categorize content based on your preferences. 
+
+Properties of a FieldTransform.
+
+## Package
+
+[@google-cloud/firestore-api](https://docs.cloud.google.com/nodejs/docs/reference/firestore-api/latest/overview.html)
+
+## Properties 
+
+### appendMissingElements
+    
+    
+    appendMissingElements?: (google.firestore.v1.IArrayValue|null);
+
+FieldTransform appendMissingElements
+
+### fieldPath
+    
+    
+    fieldPath?: (string|null);
+
+FieldTransform fieldPath
+
+### increment
+    
+    
+    increment?: (google.firestore.v1.IValue|null);
+
+FieldTransform increment
+
+### maximum
+    
+    
+    maximum?: (google.firestore.v1.IValue|null);
+
+FieldTransform maximum
+
+### minimum
+    
+    
+    minimum?: (google.firestore.v1.IValue|null);
+
+FieldTransform minimum
+
+### removeAllFromArray
+    
+    
+    removeAllFromArray?: (google.firestore.v1.IArrayValue|null);
+
+FieldTransform removeAllFromArray
+
+### setToServerValue
+    
+    
+    setToServerValue?: (google.firestore.v1.DocumentTransform.FieldTransform.ServerValue|keyof typeof google.firestore.v1.DocumentTransform.FieldTransform.ServerValue|null);
+
+FieldTransform setToServerValue
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-07-31 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-07-31 UTC."],[],[]] 

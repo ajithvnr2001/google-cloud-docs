@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-developerconnect/latest/com.google.cloud.developerconnect.v1.InsightsConfigServiceGrpc.InsightsConfigServiceBlockingV2Stub",
+  "file": "java/docs/reference/google-cloud-developerconnect/latest/com.google.cloud.developerconnect.v1.InsightsConfigServiceGrpc.InsightsConfigServiceBlockingV2Stub.md",
+  "title": "Class InsightsConfigServiceGrpc.InsightsConfigServiceBlockingV2Stub (0.56.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T18:40:29.021196+00:00"
+}

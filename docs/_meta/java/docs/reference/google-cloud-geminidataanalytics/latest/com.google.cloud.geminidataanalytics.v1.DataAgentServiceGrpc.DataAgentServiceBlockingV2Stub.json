@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-geminidataanalytics/latest/com.google.cloud.geminidataanalytics.v1.DataAgentServiceGrpc.DataAgentServiceBlockingV2Stub",
+  "file": "java/docs/reference/google-cloud-geminidataanalytics/latest/com.google.cloud.geminidataanalytics.v1.DataAgentServiceGrpc.DataAgentServiceBlockingV2Stub.md",
+  "title": "Class DataAgentServiceGrpc.DataAgentServiceBlockingV2Stub (0.27.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T17:06:31.284088+00:00"
+}

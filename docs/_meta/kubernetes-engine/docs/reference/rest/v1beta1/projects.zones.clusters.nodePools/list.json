@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.zones.clusters.nodePools/list/",
+  "file": "kubernetes-engine/docs/reference/rest/v1beta1/projects.zones.clusters.nodePools/list.md",
+  "title": "Method: projects.zones.clusters.nodePools.list \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T19:04:28.800489+00:00"
+}

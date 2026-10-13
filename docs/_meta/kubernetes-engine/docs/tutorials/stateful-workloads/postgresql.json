@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/stateful-workloads/postgresql/",
+  "file": "kubernetes-engine/docs/tutorials/stateful-workloads/postgresql.md",
+  "title": "Deploy PostgreSQL to GKE using CloudNativePG \u00a0|\u00a0 Kubernetes Engine \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T15:22:32.339097+00:00"
+}

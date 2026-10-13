@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/cloud/context-parsers/gcp-cloud-functions-context/",
+  "file": "chronicle/docs/ingestion/cloud/context-parsers/gcp-cloud-functions-context.md",
+  "title": "Collect Google Cloud Run functions context logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T19:26:39.182708+00:00"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/secret-manager/docs/reference/rest/v1/projects.locations.secrets.versions/enable/",
+  "file": "secret-manager/docs/reference/rest/v1/projects.locations.secrets.versions/enable.md",
+  "title": "Method: projects.locations.secrets.versions.enable \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T20:23:14.557137+00:00"
+}

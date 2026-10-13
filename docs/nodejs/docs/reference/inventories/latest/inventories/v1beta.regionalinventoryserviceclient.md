@@ -1,0 +1,743 @@
+---
+url: https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/v1beta.regionalinventoryserviceclient
+title: Class v1beta.RegionalInventoryServiceClient (0.14.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T18:03:11.025007+00:00
+---
+
+# Class v1beta.RegionalInventoryServiceClient (0.14.1)  |  Node.js client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/v1beta.regionalinventoryserviceclient
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Node.js ](https://docs.cloud.google.com/nodejs/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/nodejs/docs/reference)
+
+
+
+Send feedback 
+
+#  Class v1beta.RegionalInventoryServiceClient (0.14.1) Stay organized with collections  Save and categorize content based on your preferences. 
+
+0.14.1 (latest)  0.12.0  0.7.1  0.5.0  0.4.0 
+
+Service to manage regional inventory for products. There is also separate `regions` resource and API to manage regions definitions. v1beta
+
+## Package
+
+[@google-shopping/inventories](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/overview.html)
+
+## Constructors 
+
+### (constructor)(opts, gaxInstance)
+    
+    
+    constructor(opts?: ClientOptions, gaxInstance?: typeof gax | typeof gax.fallback);
+
+Construct an instance of RegionalInventoryServiceClient.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`opts` |  `ClientOptions`   
+  
+`gaxInstance` |  `typeof gax | typeof fallback`   
+: loaded instance of `google-gax`. Useful if you need to avoid loading the default gRPC version and want to use the fallback HTTP implementation. Load only fallback version and pass it to the constructor: ``` const gax = require('google-gax/build/src/fallback'); // avoids loading google-gax with gRPC const client = new RegionalInventoryServiceClient({fallback: true}, gax); ```  
+  
+## Properties 
+
+### apiEndpoint
+    
+    
+    get apiEndpoint(): string;
+
+The DNS address for this API service.
+
+### apiEndpoint
+    
+    
+    static get apiEndpoint(): string;
+
+The DNS address for this API service - same as servicePath.
+
+### auth
+    
+    
+    auth: gax.GoogleAuth;
+
+### descriptors
+    
+    
+    descriptors: Descriptors;
+
+### innerApiCalls
+    
+    
+    innerApiCalls: {
+            [name: string]: Function;
+        };
+
+### pathTemplates
+    
+    
+    pathTemplates: {
+            [name: string]: gax.PathTemplate;
+        };
+
+### port
+    
+    
+    static get port(): number;
+
+The port for this API service.
+
+### regionalInventoryServiceStub
+    
+    
+    regionalInventoryServiceStub?: Promise<{
+            [name: string]: Function;
+        }>;
+
+### scopes
+    
+    
+    static get scopes(): string[];
+
+The scopes needed to make gRPC calls for every method defined in this service.
+
+### servicePath
+    
+    
+    static get servicePath(): string;
+
+The DNS address for this API service.
+
+### universeDomain
+    
+    
+    get universeDomain(): string;
+
+### warn
+    
+    
+    warn: (code: string, message: string, warnType?: string) => void;
+
+## Methods 
+
+### close()
+    
+    
+    close(): Promise<void>;
+
+Terminate the gRPC channel and close the client.
+
+The client will no longer be usable and all future behavior is undefined.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<void>` | {Promise} A promise that resolves when the client is closed.  
+  
+### deleteRegionalInventory(request, options)
+    
+    
+    deleteRegionalInventory(request?: protos.google.shopping.merchant.inventories.v1beta.IDeleteRegionalInventoryRequest, options?: CallOptions): Promise<[
+            protos.google.protobuf.IEmpty,
+            (protos.google.shopping.merchant.inventories.v1beta.IDeleteRegionalInventoryRequest | undefined),
+            {} | undefined
+        ]>;
+
+Deletes the specified `RegionalInventory` resource from the given product in your merchant account. It might take up to an hour for the `RegionalInventory` to be deleted from the specific product. Once you have received a successful delete response, wait for that period before attempting a delete again.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteRegionalInventoryRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ideleteregionalinventoryrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.protobuf.iempty), ([protos.google.shopping.merchant.inventories.v1beta.IDeleteRegionalInventoryRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ideleteregionalinventoryrequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [Empty](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.protobuf.empty). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the `RegionalInventory` resource to delete.
+       *  Format:
+       *  `accounts/{account}/products/{product}/regionalInventories/{region}`
+       */
+      // const name = 'abc123'
+    
+      // Imports the Inventories library
+      const {RegionalInventoryServiceClient} = require('[@google-shopping/inventories](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const inventoriesClient = new [RegionalInventoryServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/overview.html)();
+    
+      async function callDeleteRegionalInventory() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await inventoriesClient.deleteRegionalInventory(request);
+        console.log(response);
+      }
+    
+      callDeleteRegionalInventory();
+    
+    
+
+### deleteRegionalInventory(request, options, callback)
+    
+    
+    deleteRegionalInventory(request: protos.google.shopping.merchant.inventories.v1beta.IDeleteRegionalInventoryRequest, options: CallOptions, callback: Callback<protos.google.protobuf.IEmpty, protos.google.shopping.merchant.inventories.v1beta.IDeleteRegionalInventoryRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteRegionalInventoryRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ideleteregionalinventoryrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.protobuf.iempty), [protos.google.shopping.merchant.inventories.v1beta.IDeleteRegionalInventoryRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ideleteregionalinventoryrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### deleteRegionalInventory(request, callback)
+    
+    
+    deleteRegionalInventory(request: protos.google.shopping.merchant.inventories.v1beta.IDeleteRegionalInventoryRequest, callback: Callback<protos.google.protobuf.IEmpty, protos.google.shopping.merchant.inventories.v1beta.IDeleteRegionalInventoryRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteRegionalInventoryRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ideleteregionalinventoryrequest)`   
+  
+`callback` |  `Callback<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.protobuf.iempty), [protos.google.shopping.merchant.inventories.v1beta.IDeleteRegionalInventoryRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ideleteregionalinventoryrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getProjectId()
+    
+    
+    getProjectId(): Promise<string>;
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<string>` |   
+  
+### getProjectId(callback)
+    
+    
+    getProjectId(callback: Callback<string, undefined, undefined>): void;
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`callback` |  `Callback<string, undefined, undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### initialize()
+    
+    
+    initialize(): Promise<{
+            [name: string]: Function;
+        }>;
+
+Initialize the client. Performs asynchronous operations (such as authentication) and prepares the client. This function will be called automatically when any class method is called for the first time, but if you need to initialize it before calling an actual method, feel free to call initialize() directly.
+
+You can await on this method if you want to make sure the client is initialized.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<{ [name: string]: Function; }>` | {Promise} A promise that resolves to an authenticated service stub.  
+  
+### insertRegionalInventory(request, options)
+    
+    
+    insertRegionalInventory(request?: protos.google.shopping.merchant.inventories.v1beta.IInsertRegionalInventoryRequest, options?: CallOptions): Promise<[
+            protos.google.shopping.merchant.inventories.v1beta.IRegionalInventory,
+            (protos.google.shopping.merchant.inventories.v1beta.IInsertRegionalInventoryRequest | undefined),
+            {} | undefined
+        ]>;
+
+Inserts a `RegionalInventory` to a given product in your merchant account.
+
+Replaces the full `RegionalInventory` resource if an entry with the same [`region`](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.regionalinventory) already exists for the product.
+
+It might take up to 30 minutes for the new or updated `RegionalInventory` resource to appear in products.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IInsertRegionalInventoryRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.iinsertregionalinventoryrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.shopping.merchant.inventories.v1beta.IRegionalInventory](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.iregionalinventory), ([protos.google.shopping.merchant.inventories.v1beta.IInsertRegionalInventoryRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.iinsertregionalinventoryrequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [RegionalInventory](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.regionalinventory). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The account and product where this inventory will be inserted.
+       *  Format: `accounts/{account}/products/{product}`
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. Regional inventory information to add to the product. If the
+       *  product already has a `RegionalInventory` resource for the same `region`,
+       *  full replacement of the `RegionalInventory` resource is performed.
+       */
+      // const regionalInventory = {}
+    
+      // Imports the Inventories library
+      const {RegionalInventoryServiceClient} = require('[@google-shopping/inventories](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const inventoriesClient = new [RegionalInventoryServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/overview.html)();
+    
+      async function callInsertRegionalInventory() {
+        // Construct request
+        const request = {
+          parent,
+          regionalInventory,
+        };
+    
+        // Run request
+        const response = await inventoriesClient.insertRegionalInventory(request);
+        console.log(response);
+      }
+    
+      callInsertRegionalInventory();
+    
+    
+
+### insertRegionalInventory(request, options, callback)
+    
+    
+    insertRegionalInventory(request: protos.google.shopping.merchant.inventories.v1beta.IInsertRegionalInventoryRequest, options: CallOptions, callback: Callback<protos.google.shopping.merchant.inventories.v1beta.IRegionalInventory, protos.google.shopping.merchant.inventories.v1beta.IInsertRegionalInventoryRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IInsertRegionalInventoryRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.iinsertregionalinventoryrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.shopping.merchant.inventories.v1beta.IRegionalInventory](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.iregionalinventory), [protos.google.shopping.merchant.inventories.v1beta.IInsertRegionalInventoryRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.iinsertregionalinventoryrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### insertRegionalInventory(request, callback)
+    
+    
+    insertRegionalInventory(request: protos.google.shopping.merchant.inventories.v1beta.IInsertRegionalInventoryRequest, callback: Callback<protos.google.shopping.merchant.inventories.v1beta.IRegionalInventory, protos.google.shopping.merchant.inventories.v1beta.IInsertRegionalInventoryRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IInsertRegionalInventoryRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.iinsertregionalinventoryrequest)`   
+  
+`callback` |  `Callback<[protos.google.shopping.merchant.inventories.v1beta.IRegionalInventory](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.iregionalinventory), [protos.google.shopping.merchant.inventories.v1beta.IInsertRegionalInventoryRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.iinsertregionalinventoryrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listRegionalInventories(request, options)
+    
+    
+    listRegionalInventories(request?: protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesRequest, options?: CallOptions): Promise<[
+            protos.google.shopping.merchant.inventories.v1beta.IRegionalInventory[],
+            protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesRequest | null,
+            protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesResponse
+        ]>;
+
+Lists the `RegionalInventory` resources for the given product in your merchant account. The response might contain fewer items than specified by `pageSize`. If `pageToken` was returned in previous request, it can be used to obtain additional results.
+
+`RegionalInventory` resources are listed per product for a given account.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRegionalInventoriesRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ilistregionalinventoriesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.shopping.merchant.inventories.v1beta.IRegionalInventory](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.iregionalinventory)[], [protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ilistregionalinventoriesrequest) | null, [protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesResponse](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ilistregionalinventoriesresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of [RegionalInventory](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.regionalinventory). The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listRegionalInventoriesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listRegionalInventories(request, options, callback)
+    
+    
+    listRegionalInventories(request: protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesRequest, options: CallOptions, callback: PaginationCallback<protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesRequest, protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesResponse | null | undefined, protos.google.shopping.merchant.inventories.v1beta.IRegionalInventory>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRegionalInventoriesRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ilistregionalinventoriesrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ilistregionalinventoriesrequest), [protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesResponse](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ilistregionalinventoriesresponse) | null | undefined, [protos.google.shopping.merchant.inventories.v1beta.IRegionalInventory](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.iregionalinventory)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listRegionalInventories(request, callback)
+    
+    
+    listRegionalInventories(request: protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesRequest, callback: PaginationCallback<protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesRequest, protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesResponse | null | undefined, protos.google.shopping.merchant.inventories.v1beta.IRegionalInventory>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRegionalInventoriesRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ilistregionalinventoriesrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ilistregionalinventoriesrequest), [protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesResponse](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ilistregionalinventoriesresponse) | null | undefined, [protos.google.shopping.merchant.inventories.v1beta.IRegionalInventory](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.iregionalinventory)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listRegionalInventoriesAsync(request, options)
+    
+    
+    listRegionalInventoriesAsync(request?: protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesRequest, options?: CallOptions): AsyncIterable<protos.google.shopping.merchant.inventories.v1beta.IRegionalInventory>;
+
+Equivalent to `listRegionalInventories`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRegionalInventoriesRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ilistregionalinventoriesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.shopping.merchant.inventories.v1beta.IRegionalInventory](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.iregionalinventory)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing [RegionalInventory](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.regionalinventory). The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The `name` of the parent product to list `RegionalInventory`
+       *  resources for. Format: `accounts/{account}/products/{product}`
+       */
+      // const parent = 'abc123'
+      /**
+       *  The maximum number of `RegionalInventory` resources for the given product
+       *  to return. The service returns fewer than this value if the number of
+       *  inventories for the given product is less that than the `pageSize`. The
+       *  default value is 25000. The maximum value is 100000; If a value higher than
+       *  the maximum is specified, then the `pageSize` will default to the maximum.
+       */
+      // const pageSize = 1234
+      /**
+       *  A page token, received from a previous `ListRegionalInventories` call.
+       *  Provide the page token to retrieve the subsequent page.
+       *  When paginating, all other parameters provided to `ListRegionalInventories`
+       *  must match the call that provided the page token. The token returned as
+       *  nextPageToken google.shopping.merchant.inventories.v1beta.ListRegionalInventoriesResponse.next_page_token 
+       *  in the response to the previous request.
+       */
+      // const pageToken = 'abc123'
+    
+      // Imports the Inventories library
+      const {RegionalInventoryServiceClient} = require('[@google-shopping/inventories](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const inventoriesClient = new [RegionalInventoryServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/overview.html)();
+    
+      async function callListRegionalInventories() {
+        // Construct request
+        const request = {
+          parent,
+        };
+    
+        // Run request
+        const iterable = inventoriesClient.listRegionalInventoriesAsync(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callListRegionalInventories();
+    
+    
+
+### listRegionalInventoriesStream(request, options)
+    
+    
+    listRegionalInventoriesStream(request?: protos.google.shopping.merchant.inventories.v1beta.IListRegionalInventoriesRequest, options?: CallOptions): Transform;
+
+Equivalent to `listRegionalInventories`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRegionalInventoriesRequest](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.ilistregionalinventoriesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing [RegionalInventory](https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1beta.regionalinventory) on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listRegionalInventoriesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### localInventoryPath(account, product, storeCode)
+    
+    
+    localInventoryPath(account: string, product: string, storeCode: string): string;
+
+Return a fully-qualified localInventory resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`account` |  `string`   
+  
+`product` |  `string`   
+  
+`storeCode` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### matchAccountFromLocalInventoryName(localInventoryName)
+    
+    
+    matchAccountFromLocalInventoryName(localInventoryName: string): string | number;
+
+Parse the account from LocalInventory resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`localInventoryName` |  `string`   
+A fully-qualified path representing LocalInventory resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the account.  
+  
+### matchAccountFromProductName(productName)
+    
+    
+    matchAccountFromProductName(productName: string): string | number;
+
+Parse the account from Product resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`productName` |  `string`   
+A fully-qualified path representing Product resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the account.  
+  
+### matchAccountFromRegionalInventoryName(regionalInventoryName)
+    
+    
+    matchAccountFromRegionalInventoryName(regionalInventoryName: string): string | number;
+
+Parse the account from RegionalInventory resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`regionalInventoryName` |  `string`   
+A fully-qualified path representing RegionalInventory resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the account.  
+  
+### matchProductFromLocalInventoryName(localInventoryName)
+    
+    
+    matchProductFromLocalInventoryName(localInventoryName: string): string | number;
+
+Parse the product from LocalInventory resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`localInventoryName` |  `string`   
+A fully-qualified path representing LocalInventory resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the product.  
+  
+### matchProductFromProductName(productName)
+    
+    
+    matchProductFromProductName(productName: string): string | number;
+
+Parse the product from Product resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`productName` |  `string`   
+A fully-qualified path representing Product resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the product.  
+  
+### matchProductFromRegionalInventoryName(regionalInventoryName)
+    
+    
+    matchProductFromRegionalInventoryName(regionalInventoryName: string): string | number;
+
+Parse the product from RegionalInventory resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`regionalInventoryName` |  `string`   
+A fully-qualified path representing RegionalInventory resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the product.  
+  
+### matchRegionFromRegionalInventoryName(regionalInventoryName)
+    
+    
+    matchRegionFromRegionalInventoryName(regionalInventoryName: string): string | number;
+
+Parse the region from RegionalInventory resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`regionalInventoryName` |  `string`   
+A fully-qualified path representing RegionalInventory resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the region.  
+  
+### matchStoreCodeFromLocalInventoryName(localInventoryName)
+    
+    
+    matchStoreCodeFromLocalInventoryName(localInventoryName: string): string | number;
+
+Parse the store_code from LocalInventory resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`localInventoryName` |  `string`   
+A fully-qualified path representing LocalInventory resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the store_code.  
+  
+### productPath(account, product)
+    
+    
+    productPath(account: string, product: string): string;
+
+Return a fully-qualified product resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`account` |  `string`   
+  
+`product` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### regionalInventoryPath(account, product, region)
+    
+    
+    regionalInventoryPath(account: string, product: string, region: string): string;
+
+Return a fully-qualified regionalInventory resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`account` |  `string`   
+  
+`product` |  `string`   
+  
+`region` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-02 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-02 UTC."],[],[]] 

@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/ingest-gcp-logs/",
+  "file": "chronicle/docs/ingestion/default-parsers/ingest-gcp-logs.md",
+  "title": "Ingest Google Cloud logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T19:26:19.586250+00:00"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/healthcare-api/docs/reference/rest/v1beta1/projects.locations.datasets.dicomStores.studies/searchForInstances/",
+  "file": "healthcare-api/docs/reference/rest/v1beta1/projects.locations.datasets.dicomStores.studies/searchForInstances.md",
+  "title": "Method: studies.searchForInstances \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T16:42:31.857987+00:00"
+}

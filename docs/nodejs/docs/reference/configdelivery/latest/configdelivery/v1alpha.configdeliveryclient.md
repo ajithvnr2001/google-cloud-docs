@@ -1,0 +1,4943 @@
+---
+url: https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/v1alpha.configdeliveryclient
+title: Class v1alpha.ConfigDeliveryClient (0.3.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T19:22:20.939229+00:00
+---
+
+# Class v1alpha.ConfigDeliveryClient (0.3.1)  |  Node.js client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/v1alpha.configdeliveryclient
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Node.js ](https://docs.cloud.google.com/nodejs/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/nodejs/docs/reference)
+
+
+
+Send feedback 
+
+#  Class v1alpha.ConfigDeliveryClient (0.3.1) Stay organized with collections  Save and categorize content based on your preferences. 
+
+ConfigDelivery service manages the deployment of kubernetes configuration to a fleet of kubernetes clusters. v1alpha
+
+## Package
+
+[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)
+
+## Constructors 
+
+### (constructor)(opts, gaxInstance)
+    
+    
+    constructor(opts?: ClientOptions, gaxInstance?: typeof gax | typeof gax.fallback);
+
+Construct an instance of ConfigDeliveryClient.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`opts` |  `ClientOptions`   
+  
+`gaxInstance` |  `typeof gax | typeof fallback`   
+: loaded instance of `google-gax`. Useful if you need to avoid loading the default gRPC version and want to use the fallback HTTP implementation. Load only fallback version and pass it to the constructor: ``` const gax = require('google-gax/build/src/fallback'); // avoids loading google-gax with gRPC const client = new ConfigDeliveryClient({fallback: true}, gax); ```  
+  
+## Properties 
+
+### apiEndpoint
+    
+    
+    get apiEndpoint(): string;
+
+The DNS address for this API service.
+
+### apiEndpoint
+    
+    
+    static get apiEndpoint(): string;
+
+The DNS address for this API service - same as servicePath.
+
+### auth
+    
+    
+    auth: gax.GoogleAuth;
+
+### configDeliveryStub
+    
+    
+    configDeliveryStub?: Promise<{
+            [name: string]: Function;
+        }>;
+
+### descriptors
+    
+    
+    descriptors: Descriptors;
+
+### innerApiCalls
+    
+    
+    innerApiCalls: {
+            [name: string]: Function;
+        };
+
+### locationsClient
+    
+    
+    locationsClient: LocationsClient;
+
+### operationsClient
+    
+    
+    operationsClient: gax.OperationsClient;
+
+### pathTemplates
+    
+    
+    pathTemplates: {
+            [name: string]: gax.PathTemplate;
+        };
+
+### port
+    
+    
+    static get port(): number;
+
+The port for this API service.
+
+### scopes
+    
+    
+    static get scopes(): string[];
+
+The scopes needed to make gRPC calls for every method defined in this service.
+
+### servicePath
+    
+    
+    static get servicePath(): string;
+
+The DNS address for this API service.
+
+### universeDomain
+    
+    
+    get universeDomain(): string;
+
+### warn
+    
+    
+    warn: (code: string, message: string, warnType?: string) => void;
+
+## Methods 
+
+### abortRollout(request, options)
+    
+    
+    abortRollout(request?: protos.google.cloud.configdelivery.v1alpha.IAbortRolloutRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.configdelivery.v1alpha.IRollout, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Abort a Rollout.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IAbortRolloutRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iabortrolloutrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.configdelivery.v1alpha.IRollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irollout), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the Rollout.
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. Reason for aborting.
+       */
+      // const reason = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callAbortRollout() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.abortRollout(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callAbortRollout();
+    
+    
+
+### abortRollout(request, options, callback)
+    
+    
+    abortRollout(request: protos.google.cloud.configdelivery.v1alpha.IAbortRolloutRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IRollout, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IAbortRolloutRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iabortrolloutrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IRollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irollout), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### abortRollout(request, callback)
+    
+    
+    abortRollout(request: protos.google.cloud.configdelivery.v1alpha.IAbortRolloutRequest, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IRollout, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IAbortRolloutRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iabortrolloutrequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IRollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irollout), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### cancelOperation(request, optionsOrCallback, callback)
+    
+    
+    cancelOperation(request: protos.google.longrunning.CancelOperationRequest, optionsOrCallback?: gax.CallOptions | Callback<protos.google.longrunning.CancelOperationRequest, protos.google.protobuf.Empty, {} | undefined | null>, callback?: Callback<protos.google.longrunning.CancelOperationRequest, protos.google.protobuf.Empty, {} | undefined | null>): Promise<protos.google.protobuf.Empty>;
+
+Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an value with a of 1, corresponding to `Code.CANCELLED`.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[CancelOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.canceloperationrequest)`   
+The request object that will be sent.  
+`optionsOrCallback` |  `CallOptions | Callback<[protos.google.longrunning.CancelOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.canceloperationrequest), [protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.empty), {} | undefined | null>`   
+  
+`callback` |  `Callback<[protos.google.longrunning.CancelOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.canceloperationrequest), [protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.empty), {} | undefined | null>`   
+The function which will be called with the result of the API call. {Promise} - The promise which resolves when API call finishes. The promise has a method named "cancel" which cancels the ongoing API call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.empty)>` |   
+**Example**
+    
+    
+    const client = longrunning.operationsClient();
+    await client.cancelOperation({name: ''});
+    
+
+### checkAbortRolloutProgress(name)
+    
+    
+    checkAbortRolloutProgress(name: string): Promise<LROperation<protos.google.cloud.configdelivery.v1alpha.Rollout, protos.google.cloud.configdelivery.v1alpha.OperationMetadata>>;
+
+Check the status of the long running operation returned by `abortRollout()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.configdelivery.v1alpha.Rollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.rollout), [protos.google.cloud.configdelivery.v1alpha.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the Rollout.
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. Reason for aborting.
+       */
+      // const reason = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callAbortRollout() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.abortRollout(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callAbortRollout();
+    
+    
+
+### checkCreateFleetPackageProgress(name)
+    
+    
+    checkCreateFleetPackageProgress(name: string): Promise<LROperation<protos.google.cloud.configdelivery.v1alpha.FleetPackage, protos.google.cloud.configdelivery.v1alpha.OperationMetadata>>;
+
+Check the status of the long running operation returned by `createFleetPackage()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.configdelivery.v1alpha.FleetPackage](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.fleetpackage-class), [protos.google.cloud.configdelivery.v1alpha.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Value for parent.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. Id of the requesting object
+       *  If auto-generating Id server-side, remove this field and
+       *  fleet_package_id from the method_signature of Create RPC
+       */
+      // const fleetPackageId = 'abc123'
+      /**
+       *  Required. The resource being created.
+       */
+      // const fleetPackage = {}
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes since the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callCreateFleetPackage() {
+        // Construct request
+        const request = {
+          parent,
+          fleetPackageId,
+          fleetPackage,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.createFleetPackage(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callCreateFleetPackage();
+    
+    
+
+### checkCreateReleaseProgress(name)
+    
+    
+    checkCreateReleaseProgress(name: string): Promise<LROperation<protos.google.cloud.configdelivery.v1alpha.Release, protos.google.cloud.configdelivery.v1alpha.OperationMetadata>>;
+
+Check the status of the long running operation returned by `createRelease()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.configdelivery.v1alpha.Release](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.release-class), [protos.google.cloud.configdelivery.v1alpha.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Value for parent.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. Id of the requesting object
+       *  If auto-generating Id server-side, remove this field and
+       *  release_id from the method_signature of Create RPC
+       */
+      // const releaseId = 'abc123'
+      /**
+       *  Required. The resource being created
+       */
+      // const release = {}
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes since the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callCreateRelease() {
+        // Construct request
+        const request = {
+          parent,
+          releaseId,
+          release,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.createRelease(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callCreateRelease();
+    
+    
+
+### checkCreateResourceBundleProgress(name)
+    
+    
+    checkCreateResourceBundleProgress(name: string): Promise<LROperation<protos.google.cloud.configdelivery.v1alpha.ResourceBundle, protos.google.cloud.configdelivery.v1alpha.OperationMetadata>>;
+
+Check the status of the long running operation returned by `createResourceBundle()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.configdelivery.v1alpha.ResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.resourcebundle), [protos.google.cloud.configdelivery.v1alpha.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Value for parent.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. Id of the requesting object
+       *  If auto-generating Id server-side, remove this field and
+       *  resource_bundle_id from the method_signature of Create RPC
+       */
+      // const resourceBundleId = 'abc123'
+      /**
+       *  Required. The resource being created
+       */
+      // const resourceBundle = {}
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes since the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callCreateResourceBundle() {
+        // Construct request
+        const request = {
+          parent,
+          resourceBundleId,
+          resourceBundle,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.createResourceBundle(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callCreateResourceBundle();
+    
+    
+
+### checkCreateVariantProgress(name)
+    
+    
+    checkCreateVariantProgress(name: string): Promise<LROperation<protos.google.cloud.configdelivery.v1alpha.Variant, protos.google.cloud.configdelivery.v1alpha.OperationMetadata>>;
+
+Check the status of the long running operation returned by `createVariant()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.configdelivery.v1alpha.Variant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.variant), [protos.google.cloud.configdelivery.v1alpha.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Value for parent.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. Id of the requesting object
+       */
+      // const variantId = 'abc123'
+      /**
+       *  Required. The resource being created
+       */
+      // const variant = {}
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes since the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callCreateVariant() {
+        // Construct request
+        const request = {
+          parent,
+          variantId,
+          variant,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.createVariant(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callCreateVariant();
+    
+    
+
+### checkDeleteFleetPackageProgress(name)
+    
+    
+    checkDeleteFleetPackageProgress(name: string): Promise<LROperation<protos.google.protobuf.Empty, protos.google.cloud.configdelivery.v1alpha.OperationMetadata>>;
+
+Check the status of the long running operation returned by `deleteFleetPackage()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.empty), [protos.google.cloud.configdelivery.v1alpha.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the resource
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes after the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+      /**
+       *  Optional. If set to true, any rollouts for this FleetPackage will also be
+       *  deleted. (Otherwise, the request will only work if the fleet package has no
+       *  rollouts.)
+       */
+      // const force = true
+      /**
+       *  Optional. If set to true, then deleting an already deleted or non existing
+       *  FleetPackage will succeed.
+       */
+      // const allowMissing = true
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callDeleteFleetPackage() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.deleteFleetPackage(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callDeleteFleetPackage();
+    
+    
+
+### checkDeleteReleaseProgress(name)
+    
+    
+    checkDeleteReleaseProgress(name: string): Promise<LROperation<protos.google.protobuf.Empty, protos.google.cloud.configdelivery.v1alpha.OperationMetadata>>;
+
+Check the status of the long running operation returned by `deleteRelease()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.empty), [protos.google.cloud.configdelivery.v1alpha.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the resource
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes after the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+      /**
+       *  Optional. If set to true, any variants of this release will also be
+       *  deleted. (Otherwise, the request will only work if the release has no
+       *  variants.)
+       */
+      // const force = true
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callDeleteRelease() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.deleteRelease(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callDeleteRelease();
+    
+    
+
+### checkDeleteResourceBundleProgress(name)
+    
+    
+    checkDeleteResourceBundleProgress(name: string): Promise<LROperation<protos.google.protobuf.Empty, protos.google.cloud.configdelivery.v1alpha.OperationMetadata>>;
+
+Check the status of the long running operation returned by `deleteResourceBundle()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.empty), [protos.google.cloud.configdelivery.v1alpha.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the resource
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes after the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+      /**
+       *  Optional. If set to true, any releases of this resource bundle will also be
+       *  deleted. (Otherwise, the request will only work if the resource bundle has
+       *  no releases.)
+       */
+      // const force = true
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callDeleteResourceBundle() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.deleteResourceBundle(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callDeleteResourceBundle();
+    
+    
+
+### checkDeleteVariantProgress(name)
+    
+    
+    checkDeleteVariantProgress(name: string): Promise<LROperation<protos.google.protobuf.Empty, protos.google.cloud.configdelivery.v1alpha.OperationMetadata>>;
+
+Check the status of the long running operation returned by `deleteVariant()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.empty), [protos.google.cloud.configdelivery.v1alpha.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the resource
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes after the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callDeleteVariant() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.deleteVariant(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callDeleteVariant();
+    
+    
+
+### checkResumeRolloutProgress(name)
+    
+    
+    checkResumeRolloutProgress(name: string): Promise<LROperation<protos.google.cloud.configdelivery.v1alpha.Rollout, protos.google.cloud.configdelivery.v1alpha.OperationMetadata>>;
+
+Check the status of the long running operation returned by `resumeRollout()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.configdelivery.v1alpha.Rollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.rollout), [protos.google.cloud.configdelivery.v1alpha.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the Rollout.
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. Reason for resuming the rollout.
+       */
+      // const reason = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callResumeRollout() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.resumeRollout(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callResumeRollout();
+    
+    
+
+### checkSuspendRolloutProgress(name)
+    
+    
+    checkSuspendRolloutProgress(name: string): Promise<LROperation<protos.google.cloud.configdelivery.v1alpha.Rollout, protos.google.cloud.configdelivery.v1alpha.OperationMetadata>>;
+
+Check the status of the long running operation returned by `suspendRollout()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.configdelivery.v1alpha.Rollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.rollout), [protos.google.cloud.configdelivery.v1alpha.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the Rollout.
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. Reason for suspension.
+       */
+      // const reason = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callSuspendRollout() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.suspendRollout(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callSuspendRollout();
+    
+    
+
+### checkUpdateFleetPackageProgress(name)
+    
+    
+    checkUpdateFleetPackageProgress(name: string): Promise<LROperation<protos.google.cloud.configdelivery.v1alpha.FleetPackage, protos.google.cloud.configdelivery.v1alpha.OperationMetadata>>;
+
+Check the status of the long running operation returned by `updateFleetPackage()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.configdelivery.v1alpha.FleetPackage](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.fleetpackage-class), [protos.google.cloud.configdelivery.v1alpha.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Field mask is used to specify the fields to be overwritten in the
+       *  FleetPackage resource by the update.
+       *  The fields specified in the update_mask are relative to the resource, not
+       *  the full request. A field will be overwritten if it is in the mask. If the
+       *  user does not provide a mask then all fields will be overwritten.
+       */
+      // const updateMask = {}
+      /**
+       *  Required. The resource being updated
+       */
+      // const fleetPackage = {}
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes since the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callUpdateFleetPackage() {
+        // Construct request
+        const request = {
+          updateMask,
+          fleetPackage,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.updateFleetPackage(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callUpdateFleetPackage();
+    
+    
+
+### checkUpdateReleaseProgress(name)
+    
+    
+    checkUpdateReleaseProgress(name: string): Promise<LROperation<protos.google.cloud.configdelivery.v1alpha.Release, protos.google.cloud.configdelivery.v1alpha.OperationMetadata>>;
+
+Check the status of the long running operation returned by `updateRelease()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.configdelivery.v1alpha.Release](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.release-class), [protos.google.cloud.configdelivery.v1alpha.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Field mask is used to specify the fields to be overwritten in the
+       *  Release resource by the update.
+       *  The fields specified in the update_mask are relative to the resource, not
+       *  the full request. A field will be overwritten if it is in the mask. If the
+       *  user does not provide a mask then all fields will be overwritten.
+       */
+      // const updateMask = {}
+      /**
+       *  Required. The resource being updated
+       */
+      // const release = {}
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes since the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callUpdateRelease() {
+        // Construct request
+        const request = {
+          updateMask,
+          release,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.updateRelease(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callUpdateRelease();
+    
+    
+
+### checkUpdateResourceBundleProgress(name)
+    
+    
+    checkUpdateResourceBundleProgress(name: string): Promise<LROperation<protos.google.cloud.configdelivery.v1alpha.ResourceBundle, protos.google.cloud.configdelivery.v1alpha.OperationMetadata>>;
+
+Check the status of the long running operation returned by `updateResourceBundle()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.configdelivery.v1alpha.ResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.resourcebundle), [protos.google.cloud.configdelivery.v1alpha.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Field mask is used to specify the fields to be overwritten in the
+       *  ResourceBundle resource by the update.
+       *  The fields specified in the update_mask are relative to the resource, not
+       *  the full request. A field will be overwritten if it is in the mask. If the
+       *  user does not provide a mask then all fields will be overwritten.
+       */
+      // const updateMask = {}
+      /**
+       *  Required. The resource being updated
+       */
+      // const resourceBundle = {}
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes since the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callUpdateResourceBundle() {
+        // Construct request
+        const request = {
+          updateMask,
+          resourceBundle,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.updateResourceBundle(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callUpdateResourceBundle();
+    
+    
+
+### checkUpdateVariantProgress(name)
+    
+    
+    checkUpdateVariantProgress(name: string): Promise<LROperation<protos.google.cloud.configdelivery.v1alpha.Variant, protos.google.cloud.configdelivery.v1alpha.OperationMetadata>>;
+
+Check the status of the long running operation returned by `updateVariant()`.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+The operation name that will be passed.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<LROperation<[protos.google.cloud.configdelivery.v1alpha.Variant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.variant), [protos.google.cloud.configdelivery.v1alpha.OperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.operationmetadata)>>` | {Promise} - The promise which resolves to an object. The decoded operation object has result and metadata field to get information from. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Optional. Field mask is used to specify the fields to be overwritten in the
+       *  Variant resource by the update.
+       *  The fields specified in the update_mask are relative to the resource, not
+       *  the full request. A field will be overwritten if it is in the mask. If the
+       *  user does not provide a mask then all fields will be overwritten.
+       */
+      // const updateMask = {}
+      /**
+       *  Required. The resource being updated
+       */
+      // const variant = {}
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes since the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callUpdateVariant() {
+        // Construct request
+        const request = {
+          variant,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.updateVariant(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callUpdateVariant();
+    
+    
+
+### close()
+    
+    
+    close(): Promise<void>;
+
+Terminate the gRPC channel and close the client.
+
+The client will no longer be usable and all future behavior is undefined.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<void>` | {Promise} A promise that resolves when the client is closed.  
+  
+### createFleetPackage(request, options)
+    
+    
+    createFleetPackage(request?: protos.google.cloud.configdelivery.v1alpha.ICreateFleetPackageRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.configdelivery.v1alpha.IFleetPackage, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Creates a new FleetPackage in a given project and location.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateFleetPackageRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.icreatefleetpackagerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.configdelivery.v1alpha.IFleetPackage](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ifleetpackage), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Value for parent.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. Id of the requesting object
+       *  If auto-generating Id server-side, remove this field and
+       *  fleet_package_id from the method_signature of Create RPC
+       */
+      // const fleetPackageId = 'abc123'
+      /**
+       *  Required. The resource being created.
+       */
+      // const fleetPackage = {}
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes since the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callCreateFleetPackage() {
+        // Construct request
+        const request = {
+          parent,
+          fleetPackageId,
+          fleetPackage,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.createFleetPackage(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callCreateFleetPackage();
+    
+    
+
+### createFleetPackage(request, options, callback)
+    
+    
+    createFleetPackage(request: protos.google.cloud.configdelivery.v1alpha.ICreateFleetPackageRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IFleetPackage, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateFleetPackageRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.icreatefleetpackagerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IFleetPackage](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ifleetpackage), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### createFleetPackage(request, callback)
+    
+    
+    createFleetPackage(request: protos.google.cloud.configdelivery.v1alpha.ICreateFleetPackageRequest, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IFleetPackage, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateFleetPackageRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.icreatefleetpackagerequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IFleetPackage](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ifleetpackage), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### createRelease(request, options)
+    
+    
+    createRelease(request?: protos.google.cloud.configdelivery.v1alpha.ICreateReleaseRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.configdelivery.v1alpha.IRelease, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Creates a new Release in a given project, location and resource bundle.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateReleaseRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.icreatereleaserequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.configdelivery.v1alpha.IRelease](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irelease), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Value for parent.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. Id of the requesting object
+       *  If auto-generating Id server-side, remove this field and
+       *  release_id from the method_signature of Create RPC
+       */
+      // const releaseId = 'abc123'
+      /**
+       *  Required. The resource being created
+       */
+      // const release = {}
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes since the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callCreateRelease() {
+        // Construct request
+        const request = {
+          parent,
+          releaseId,
+          release,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.createRelease(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callCreateRelease();
+    
+    
+
+### createRelease(request, options, callback)
+    
+    
+    createRelease(request: protos.google.cloud.configdelivery.v1alpha.ICreateReleaseRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IRelease, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateReleaseRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.icreatereleaserequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IRelease](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irelease), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### createRelease(request, callback)
+    
+    
+    createRelease(request: protos.google.cloud.configdelivery.v1alpha.ICreateReleaseRequest, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IRelease, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateReleaseRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.icreatereleaserequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IRelease](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irelease), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### createResourceBundle(request, options)
+    
+    
+    createResourceBundle(request?: protos.google.cloud.configdelivery.v1alpha.ICreateResourceBundleRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.configdelivery.v1alpha.IResourceBundle, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Creates a new ResourceBundle in a given project and location.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateResourceBundleRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.icreateresourcebundlerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.configdelivery.v1alpha.IResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iresourcebundle), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Value for parent.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. Id of the requesting object
+       *  If auto-generating Id server-side, remove this field and
+       *  resource_bundle_id from the method_signature of Create RPC
+       */
+      // const resourceBundleId = 'abc123'
+      /**
+       *  Required. The resource being created
+       */
+      // const resourceBundle = {}
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes since the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callCreateResourceBundle() {
+        // Construct request
+        const request = {
+          parent,
+          resourceBundleId,
+          resourceBundle,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.createResourceBundle(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callCreateResourceBundle();
+    
+    
+
+### createResourceBundle(request, options, callback)
+    
+    
+    createResourceBundle(request: protos.google.cloud.configdelivery.v1alpha.ICreateResourceBundleRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IResourceBundle, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateResourceBundleRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.icreateresourcebundlerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iresourcebundle), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### createResourceBundle(request, callback)
+    
+    
+    createResourceBundle(request: protos.google.cloud.configdelivery.v1alpha.ICreateResourceBundleRequest, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IResourceBundle, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateResourceBundleRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.icreateresourcebundlerequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iresourcebundle), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### createVariant(request, options)
+    
+    
+    createVariant(request?: protos.google.cloud.configdelivery.v1alpha.ICreateVariantRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.configdelivery.v1alpha.IVariant, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Creates a new Variant in a given project, location, resource bundle, and release.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateVariantRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.icreatevariantrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.configdelivery.v1alpha.IVariant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ivariant), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Value for parent.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. Id of the requesting object
+       */
+      // const variantId = 'abc123'
+      /**
+       *  Required. The resource being created
+       */
+      // const variant = {}
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes since the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callCreateVariant() {
+        // Construct request
+        const request = {
+          parent,
+          variantId,
+          variant,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.createVariant(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callCreateVariant();
+    
+    
+
+### createVariant(request, options, callback)
+    
+    
+    createVariant(request: protos.google.cloud.configdelivery.v1alpha.ICreateVariantRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IVariant, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateVariantRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.icreatevariantrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IVariant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ivariant), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### createVariant(request, callback)
+    
+    
+    createVariant(request: protos.google.cloud.configdelivery.v1alpha.ICreateVariantRequest, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IVariant, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ICreateVariantRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.icreatevariantrequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IVariant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ivariant), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### deleteFleetPackage(request, options)
+    
+    
+    deleteFleetPackage(request?: protos.google.cloud.configdelivery.v1alpha.IDeleteFleetPackageRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Deletes a single FleetPackage.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteFleetPackageRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ideletefleetpackagerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.iempty), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the resource
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes after the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+      /**
+       *  Optional. If set to true, any rollouts for this FleetPackage will also be
+       *  deleted. (Otherwise, the request will only work if the fleet package has no
+       *  rollouts.)
+       */
+      // const force = true
+      /**
+       *  Optional. If set to true, then deleting an already deleted or non existing
+       *  FleetPackage will succeed.
+       */
+      // const allowMissing = true
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callDeleteFleetPackage() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.deleteFleetPackage(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callDeleteFleetPackage();
+    
+    
+
+### deleteFleetPackage(request, options, callback)
+    
+    
+    deleteFleetPackage(request: protos.google.cloud.configdelivery.v1alpha.IDeleteFleetPackageRequest, options: CallOptions, callback: Callback<LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteFleetPackageRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ideletefleetpackagerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.iempty), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### deleteFleetPackage(request, callback)
+    
+    
+    deleteFleetPackage(request: protos.google.cloud.configdelivery.v1alpha.IDeleteFleetPackageRequest, callback: Callback<LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteFleetPackageRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ideletefleetpackagerequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.iempty), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### deleteOperation(request, optionsOrCallback, callback)
+    
+    
+    deleteOperation(request: protos.google.longrunning.DeleteOperationRequest, optionsOrCallback?: gax.CallOptions | Callback<protos.google.protobuf.Empty, protos.google.longrunning.DeleteOperationRequest, {} | null | undefined>, callback?: Callback<protos.google.protobuf.Empty, protos.google.longrunning.DeleteOperationRequest, {} | null | undefined>): Promise<protos.google.protobuf.Empty>;
+
+Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[DeleteOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.deleteoperationrequest)`   
+The request object that will be sent.  
+`optionsOrCallback` |  `CallOptions | Callback<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.empty), [protos.google.longrunning.DeleteOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.deleteoperationrequest), {} | null | undefined>`   
+  
+`callback` |  `Callback<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.empty), [protos.google.longrunning.DeleteOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.deleteoperationrequest), {} | null | undefined>`   
+The function which will be called with the result of the API call. {Promise} - The promise which resolves when API call finishes. The promise has a method named "cancel" which cancels the ongoing API call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.empty)>` |   
+**Example**
+    
+    
+    const client = longrunning.operationsClient();
+    await client.deleteOperation({name: ''});
+    
+
+### deleteRelease(request, options)
+    
+    
+    deleteRelease(request?: protos.google.cloud.configdelivery.v1alpha.IDeleteReleaseRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Deletes a single Release.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteReleaseRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ideletereleaserequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.iempty), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the resource
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes after the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+      /**
+       *  Optional. If set to true, any variants of this release will also be
+       *  deleted. (Otherwise, the request will only work if the release has no
+       *  variants.)
+       */
+      // const force = true
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callDeleteRelease() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.deleteRelease(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callDeleteRelease();
+    
+    
+
+### deleteRelease(request, options, callback)
+    
+    
+    deleteRelease(request: protos.google.cloud.configdelivery.v1alpha.IDeleteReleaseRequest, options: CallOptions, callback: Callback<LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteReleaseRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ideletereleaserequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.iempty), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### deleteRelease(request, callback)
+    
+    
+    deleteRelease(request: protos.google.cloud.configdelivery.v1alpha.IDeleteReleaseRequest, callback: Callback<LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteReleaseRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ideletereleaserequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.iempty), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### deleteResourceBundle(request, options)
+    
+    
+    deleteResourceBundle(request?: protos.google.cloud.configdelivery.v1alpha.IDeleteResourceBundleRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Deletes a single ResourceBundle.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteResourceBundleRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ideleteresourcebundlerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.iempty), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the resource
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes after the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+      /**
+       *  Optional. If set to true, any releases of this resource bundle will also be
+       *  deleted. (Otherwise, the request will only work if the resource bundle has
+       *  no releases.)
+       */
+      // const force = true
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callDeleteResourceBundle() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.deleteResourceBundle(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callDeleteResourceBundle();
+    
+    
+
+### deleteResourceBundle(request, options, callback)
+    
+    
+    deleteResourceBundle(request: protos.google.cloud.configdelivery.v1alpha.IDeleteResourceBundleRequest, options: CallOptions, callback: Callback<LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteResourceBundleRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ideleteresourcebundlerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.iempty), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### deleteResourceBundle(request, callback)
+    
+    
+    deleteResourceBundle(request: protos.google.cloud.configdelivery.v1alpha.IDeleteResourceBundleRequest, callback: Callback<LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteResourceBundleRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ideleteresourcebundlerequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.iempty), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### deleteVariant(request, options)
+    
+    
+    deleteVariant(request?: protos.google.cloud.configdelivery.v1alpha.IDeleteVariantRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Deletes a single Variant.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteVariantRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ideletevariantrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.iempty), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the resource
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes after the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callDeleteVariant() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.deleteVariant(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callDeleteVariant();
+    
+    
+
+### deleteVariant(request, options, callback)
+    
+    
+    deleteVariant(request: protos.google.cloud.configdelivery.v1alpha.IDeleteVariantRequest, options: CallOptions, callback: Callback<LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteVariantRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ideletevariantrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.iempty), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### deleteVariant(request, callback)
+    
+    
+    deleteVariant(request: protos.google.cloud.configdelivery.v1alpha.IDeleteVariantRequest, callback: Callback<LROperation<protos.google.protobuf.IEmpty, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteVariantRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ideletevariantrequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.protobuf.iempty), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### fleetPackagePath(project, location, fleetPackage)
+    
+    
+    fleetPackagePath(project: string, location: string, fleetPackage: string): string;
+
+Return a fully-qualified fleetPackage resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`fleetPackage` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### getFleetPackage(request, options)
+    
+    
+    getFleetPackage(request?: protos.google.cloud.configdelivery.v1alpha.IGetFleetPackageRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.configdelivery.v1alpha.IFleetPackage,
+            (protos.google.cloud.configdelivery.v1alpha.IGetFleetPackageRequest | undefined),
+            {} | undefined
+        ]>;
+
+Gets details of a single FleetPackage.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetFleetPackageRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetfleetpackagerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.configdelivery.v1alpha.IFleetPackage](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ifleetpackage), ([protos.google.cloud.configdelivery.v1alpha.IGetFleetPackageRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetfleetpackagerequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing . Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the resource
+       */
+      // const name = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callGetFleetPackage() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await configdeliveryClient.getFleetPackage(request);
+        console.log(response);
+      }
+    
+      callGetFleetPackage();
+    
+    
+
+### getFleetPackage(request, options, callback)
+    
+    
+    getFleetPackage(request: protos.google.cloud.configdelivery.v1alpha.IGetFleetPackageRequest, options: CallOptions, callback: Callback<protos.google.cloud.configdelivery.v1alpha.IFleetPackage, protos.google.cloud.configdelivery.v1alpha.IGetFleetPackageRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetFleetPackageRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetfleetpackagerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.configdelivery.v1alpha.IFleetPackage](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ifleetpackage), [protos.google.cloud.configdelivery.v1alpha.IGetFleetPackageRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetfleetpackagerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getFleetPackage(request, callback)
+    
+    
+    getFleetPackage(request: protos.google.cloud.configdelivery.v1alpha.IGetFleetPackageRequest, callback: Callback<protos.google.cloud.configdelivery.v1alpha.IFleetPackage, protos.google.cloud.configdelivery.v1alpha.IGetFleetPackageRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetFleetPackageRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetfleetpackagerequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.configdelivery.v1alpha.IFleetPackage](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ifleetpackage), [protos.google.cloud.configdelivery.v1alpha.IGetFleetPackageRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetfleetpackagerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getLocation(request, options, callback)
+    
+    
+    getLocation(request: LocationProtos.google.cloud.location.IGetLocationRequest, options?: gax.CallOptions | Callback<LocationProtos.google.cloud.location.ILocation, LocationProtos.google.cloud.location.IGetLocationRequest | null | undefined, {} | null | undefined>, callback?: Callback<LocationProtos.google.cloud.location.ILocation, LocationProtos.google.cloud.location.IGetLocationRequest | null | undefined, {} | null | undefined>): Promise<LocationProtos.google.cloud.location.ILocation>;
+
+Gets information about a location.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `LocationProtos.google.cloud.location.IGetLocationRequest`   
+The request object that will be sent.  
+`options` |  `CallOptions | Callback<google.cloud.location.ILocation, google.cloud.location.IGetLocationRequest | null | undefined, {} | null | undefined>`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+`callback` |  `Callback<google.cloud.location.ILocation, google.cloud.location.IGetLocationRequest | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<google.cloud.location.ILocation>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing . Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+    const [response] = await client.getLocation(request);
+    
+
+### getOperation(request, optionsOrCallback, callback)
+    
+    
+    getOperation(request: protos.google.longrunning.GetOperationRequest, optionsOrCallback?: gax.CallOptions | Callback<protos.google.longrunning.Operation, protos.google.longrunning.GetOperationRequest, {} | null | undefined>, callback?: Callback<protos.google.longrunning.Operation, protos.google.longrunning.GetOperationRequest, {} | null | undefined>): Promise<[protos.google.longrunning.Operation]>;
+
+Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[GetOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.getoperationrequest)`   
+The request object that will be sent.  
+`optionsOrCallback` |  `CallOptions | Callback<[protos.google.longrunning.Operation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.operation), [protos.google.longrunning.GetOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.getoperationrequest), {} | null | undefined>`   
+  
+`callback` |  `Callback<[protos.google.longrunning.Operation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.operation), [protos.google.longrunning.GetOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.getoperationrequest), {} | null | undefined>`   
+The function which will be called with the result of the API call. The second parameter to the callback is an object representing . {Promise} - The promise which resolves to an array. The first element of the array is an object representing . The promise has a method named "cancel" which cancels the ongoing API call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[[protos.google.longrunning.Operation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.operation)]>` |   
+**Example**
+    
+    
+    const client = longrunning.operationsClient();
+    const name = '';
+    const [response] = await client.getOperation({name});
+    // doThingsWith(response)
+    
+
+### getProjectId()
+    
+    
+    getProjectId(): Promise<string>;
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<string>` |   
+  
+### getProjectId(callback)
+    
+    
+    getProjectId(callback: Callback<string, undefined, undefined>): void;
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`callback` |  `Callback<string, undefined, undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getRelease(request, options)
+    
+    
+    getRelease(request?: protos.google.cloud.configdelivery.v1alpha.IGetReleaseRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.configdelivery.v1alpha.IRelease,
+            protos.google.cloud.configdelivery.v1alpha.IGetReleaseRequest | undefined,
+            {} | undefined
+        ]>;
+
+Gets details of a single Release.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetReleaseRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetreleaserequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.configdelivery.v1alpha.IRelease](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irelease), [protos.google.cloud.configdelivery.v1alpha.IGetReleaseRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetreleaserequest) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing . Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the resource
+       */
+      // const name = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callGetRelease() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await configdeliveryClient.getRelease(request);
+        console.log(response);
+      }
+    
+      callGetRelease();
+    
+    
+
+### getRelease(request, options, callback)
+    
+    
+    getRelease(request: protos.google.cloud.configdelivery.v1alpha.IGetReleaseRequest, options: CallOptions, callback: Callback<protos.google.cloud.configdelivery.v1alpha.IRelease, protos.google.cloud.configdelivery.v1alpha.IGetReleaseRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetReleaseRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetreleaserequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.configdelivery.v1alpha.IRelease](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irelease), [protos.google.cloud.configdelivery.v1alpha.IGetReleaseRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetreleaserequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getRelease(request, callback)
+    
+    
+    getRelease(request: protos.google.cloud.configdelivery.v1alpha.IGetReleaseRequest, callback: Callback<protos.google.cloud.configdelivery.v1alpha.IRelease, protos.google.cloud.configdelivery.v1alpha.IGetReleaseRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetReleaseRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetreleaserequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.configdelivery.v1alpha.IRelease](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irelease), [protos.google.cloud.configdelivery.v1alpha.IGetReleaseRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetreleaserequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getResourceBundle(request, options)
+    
+    
+    getResourceBundle(request?: protos.google.cloud.configdelivery.v1alpha.IGetResourceBundleRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.configdelivery.v1alpha.IResourceBundle,
+            (protos.google.cloud.configdelivery.v1alpha.IGetResourceBundleRequest | undefined),
+            {} | undefined
+        ]>;
+
+Gets details of a single ResourceBundle.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetResourceBundleRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetresourcebundlerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.configdelivery.v1alpha.IResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iresourcebundle), ([protos.google.cloud.configdelivery.v1alpha.IGetResourceBundleRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetresourcebundlerequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [ResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.resourcebundle). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the resource.
+       */
+      // const name = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callGetResourceBundle() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await configdeliveryClient.getResourceBundle(request);
+        console.log(response);
+      }
+    
+      callGetResourceBundle();
+    
+    
+
+### getResourceBundle(request, options, callback)
+    
+    
+    getResourceBundle(request: protos.google.cloud.configdelivery.v1alpha.IGetResourceBundleRequest, options: CallOptions, callback: Callback<protos.google.cloud.configdelivery.v1alpha.IResourceBundle, protos.google.cloud.configdelivery.v1alpha.IGetResourceBundleRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetResourceBundleRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetresourcebundlerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.configdelivery.v1alpha.IResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iresourcebundle), [protos.google.cloud.configdelivery.v1alpha.IGetResourceBundleRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetresourcebundlerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getResourceBundle(request, callback)
+    
+    
+    getResourceBundle(request: protos.google.cloud.configdelivery.v1alpha.IGetResourceBundleRequest, callback: Callback<protos.google.cloud.configdelivery.v1alpha.IResourceBundle, protos.google.cloud.configdelivery.v1alpha.IGetResourceBundleRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetResourceBundleRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetresourcebundlerequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.configdelivery.v1alpha.IResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iresourcebundle), [protos.google.cloud.configdelivery.v1alpha.IGetResourceBundleRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetresourcebundlerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getRollout(request, options)
+    
+    
+    getRollout(request?: protos.google.cloud.configdelivery.v1alpha.IGetRolloutRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.configdelivery.v1alpha.IRollout,
+            protos.google.cloud.configdelivery.v1alpha.IGetRolloutRequest | undefined,
+            {} | undefined
+        ]>;
+
+Gets details of a single Rollout.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetRolloutRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetrolloutrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.configdelivery.v1alpha.IRollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irollout), [protos.google.cloud.configdelivery.v1alpha.IGetRolloutRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetrolloutrequest) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [Rollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.rollout). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the resource
+       */
+      // const name = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callGetRollout() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await configdeliveryClient.getRollout(request);
+        console.log(response);
+      }
+    
+      callGetRollout();
+    
+    
+
+### getRollout(request, options, callback)
+    
+    
+    getRollout(request: protos.google.cloud.configdelivery.v1alpha.IGetRolloutRequest, options: CallOptions, callback: Callback<protos.google.cloud.configdelivery.v1alpha.IRollout, protos.google.cloud.configdelivery.v1alpha.IGetRolloutRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetRolloutRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetrolloutrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.configdelivery.v1alpha.IRollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irollout), [protos.google.cloud.configdelivery.v1alpha.IGetRolloutRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetrolloutrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getRollout(request, callback)
+    
+    
+    getRollout(request: protos.google.cloud.configdelivery.v1alpha.IGetRolloutRequest, callback: Callback<protos.google.cloud.configdelivery.v1alpha.IRollout, protos.google.cloud.configdelivery.v1alpha.IGetRolloutRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetRolloutRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetrolloutrequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.configdelivery.v1alpha.IRollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irollout), [protos.google.cloud.configdelivery.v1alpha.IGetRolloutRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetrolloutrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getVariant(request, options)
+    
+    
+    getVariant(request?: protos.google.cloud.configdelivery.v1alpha.IGetVariantRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.configdelivery.v1alpha.IVariant,
+            protos.google.cloud.configdelivery.v1alpha.IGetVariantRequest | undefined,
+            {} | undefined
+        ]>;
+
+Gets details of a single Variant.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetVariantRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetvariantrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.configdelivery.v1alpha.IVariant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ivariant), [protos.google.cloud.configdelivery.v1alpha.IGetVariantRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetvariantrequest) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [Variant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.variant). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the resource
+       */
+      // const name = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callGetVariant() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await configdeliveryClient.getVariant(request);
+        console.log(response);
+      }
+    
+      callGetVariant();
+    
+    
+
+### getVariant(request, options, callback)
+    
+    
+    getVariant(request: protos.google.cloud.configdelivery.v1alpha.IGetVariantRequest, options: CallOptions, callback: Callback<protos.google.cloud.configdelivery.v1alpha.IVariant, protos.google.cloud.configdelivery.v1alpha.IGetVariantRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetVariantRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetvariantrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.configdelivery.v1alpha.IVariant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ivariant), [protos.google.cloud.configdelivery.v1alpha.IGetVariantRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetvariantrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getVariant(request, callback)
+    
+    
+    getVariant(request: protos.google.cloud.configdelivery.v1alpha.IGetVariantRequest, callback: Callback<protos.google.cloud.configdelivery.v1alpha.IVariant, protos.google.cloud.configdelivery.v1alpha.IGetVariantRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetVariantRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetvariantrequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.configdelivery.v1alpha.IVariant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ivariant), [protos.google.cloud.configdelivery.v1alpha.IGetVariantRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.igetvariantrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### initialize()
+    
+    
+    initialize(): Promise<{
+            [name: string]: Function;
+        }>;
+
+Initialize the client. Performs asynchronous operations (such as authentication) and prepares the client. This function will be called automatically when any class method is called for the first time, but if you need to initialize it before calling an actual method, feel free to call initialize() directly.
+
+You can await on this method if you want to make sure the client is initialized.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<{ [name: string]: Function; }>` | {Promise} A promise that resolves to an authenticated service stub.  
+  
+### listFleetPackages(request, options)
+    
+    
+    listFleetPackages(request?: protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.configdelivery.v1alpha.IFleetPackage[],
+            protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesRequest | null,
+            protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesResponse
+        ]>;
+
+Lists FleetPackages in a given project and location.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListFleetPackagesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistfleetpackagesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.configdelivery.v1alpha.IFleetPackage](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ifleetpackage)[], [protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistfleetpackagesrequest) | null, [protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesResponse](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistfleetpackagesresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of . The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listFleetPackagesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listFleetPackages(request, options, callback)
+    
+    
+    listFleetPackages(request: protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesRequest, options: CallOptions, callback: PaginationCallback<protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesRequest, protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesResponse | null | undefined, protos.google.cloud.configdelivery.v1alpha.IFleetPackage>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListFleetPackagesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistfleetpackagesrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistfleetpackagesrequest), [protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesResponse](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistfleetpackagesresponse) | null | undefined, [protos.google.cloud.configdelivery.v1alpha.IFleetPackage](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ifleetpackage)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listFleetPackages(request, callback)
+    
+    
+    listFleetPackages(request: protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesRequest, callback: PaginationCallback<protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesRequest, protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesResponse | null | undefined, protos.google.cloud.configdelivery.v1alpha.IFleetPackage>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListFleetPackagesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistfleetpackagesrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistfleetpackagesrequest), [protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesResponse](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistfleetpackagesresponse) | null | undefined, [protos.google.cloud.configdelivery.v1alpha.IFleetPackage](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ifleetpackage)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listFleetPackagesAsync(request, options)
+    
+    
+    listFleetPackagesAsync(request?: protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesRequest, options?: CallOptions): AsyncIterable<protos.google.cloud.configdelivery.v1alpha.IFleetPackage>;
+
+Equivalent to `listFleetPackages`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListFleetPackagesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistfleetpackagesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.cloud.configdelivery.v1alpha.IFleetPackage](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ifleetpackage)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing . The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Parent value for ListFleetPackagesRequest.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Optional. Requested page size. Server may return fewer items than
+       *  requested. If unspecified, server will pick an appropriate default.
+       */
+      // const pageSize = 1234
+      /**
+       *  Optional. A token identifying a page of results the server should return.
+       */
+      // const pageToken = 'abc123'
+      /**
+       *  Optional. Filtering results
+       */
+      // const filter = 'abc123'
+      /**
+       *  Optional. Hint for how to order the results
+       */
+      // const orderBy = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callListFleetPackages() {
+        // Construct request
+        const request = {
+          parent,
+        };
+    
+        // Run request
+        const iterable = configdeliveryClient.listFleetPackagesAsync(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callListFleetPackages();
+    
+    
+
+### listFleetPackagesStream(request, options)
+    
+    
+    listFleetPackagesStream(request?: protos.google.cloud.configdelivery.v1alpha.IListFleetPackagesRequest, options?: CallOptions): Transform;
+
+Equivalent to `listFleetPackages`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListFleetPackagesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistfleetpackagesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listFleetPackagesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listLocationsAsync(request, options)
+    
+    
+    listLocationsAsync(request: LocationProtos.google.cloud.location.IListLocationsRequest, options?: CallOptions): AsyncIterable<LocationProtos.google.cloud.location.ILocation>;
+
+Lists information about the supported locations for this service. Returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `LocationProtos.google.cloud.location.IListLocationsRequest`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<google.cloud.location.ILocation>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing . The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+    const iterable = client.listLocationsAsync(request);
+    for await (const response of iterable) {
+      // process response
+    }
+    
+
+### listOperationsAsync(request, options)
+    
+    
+    listOperationsAsync(request: protos.google.longrunning.ListOperationsRequest, options?: gax.CallOptions): AsyncIterable<protos.google.longrunning.IOperation>;
+
+Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. Returns an iterable object.
+
+For-await-of syntax is used with the iterable to recursively get response element on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ListOperationsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.listoperationsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Optional parameters. You can override the default settings for this call, e.g, timeout, retries, paginations, etc. See [gax.CallOptions](https://googleapis.github.io/gax-nodejs/global.html#CallOptions) for the details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation)>` | {Object} An iterable Object that conforms to [iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).  
+**Example**
+    
+    
+    const client = longrunning.operationsClient();
+    for await (const response of client.listOperationsAsync(request));
+    // doThingsWith(response)
+    
+
+### listReleases(request, options)
+    
+    
+    listReleases(request?: protos.google.cloud.configdelivery.v1alpha.IListReleasesRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.configdelivery.v1alpha.IRelease[],
+            protos.google.cloud.configdelivery.v1alpha.IListReleasesRequest | null,
+            protos.google.cloud.configdelivery.v1alpha.IListReleasesResponse
+        ]>;
+
+Lists Releases in a given project and location.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListReleasesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistreleasesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.configdelivery.v1alpha.IRelease](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irelease)[], [protos.google.cloud.configdelivery.v1alpha.IListReleasesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistreleasesrequest) | null, [protos.google.cloud.configdelivery.v1alpha.IListReleasesResponse](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistreleasesresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of . The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listReleasesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listReleases(request, options, callback)
+    
+    
+    listReleases(request: protos.google.cloud.configdelivery.v1alpha.IListReleasesRequest, options: CallOptions, callback: PaginationCallback<protos.google.cloud.configdelivery.v1alpha.IListReleasesRequest, protos.google.cloud.configdelivery.v1alpha.IListReleasesResponse | null | undefined, protos.google.cloud.configdelivery.v1alpha.IRelease>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListReleasesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistreleasesrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.configdelivery.v1alpha.IListReleasesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistreleasesrequest), [protos.google.cloud.configdelivery.v1alpha.IListReleasesResponse](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistreleasesresponse) | null | undefined, [protos.google.cloud.configdelivery.v1alpha.IRelease](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irelease)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listReleases(request, callback)
+    
+    
+    listReleases(request: protos.google.cloud.configdelivery.v1alpha.IListReleasesRequest, callback: PaginationCallback<protos.google.cloud.configdelivery.v1alpha.IListReleasesRequest, protos.google.cloud.configdelivery.v1alpha.IListReleasesResponse | null | undefined, protos.google.cloud.configdelivery.v1alpha.IRelease>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListReleasesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistreleasesrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.configdelivery.v1alpha.IListReleasesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistreleasesrequest), [protos.google.cloud.configdelivery.v1alpha.IListReleasesResponse](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistreleasesresponse) | null | undefined, [protos.google.cloud.configdelivery.v1alpha.IRelease](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irelease)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listReleasesAsync(request, options)
+    
+    
+    listReleasesAsync(request?: protos.google.cloud.configdelivery.v1alpha.IListReleasesRequest, options?: CallOptions): AsyncIterable<protos.google.cloud.configdelivery.v1alpha.IRelease>;
+
+Equivalent to `listReleases`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListReleasesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistreleasesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.cloud.configdelivery.v1alpha.IRelease](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irelease)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing . The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Parent value for ListReleasesRequest.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Optional. Requested page size. Server may return fewer items than
+       *  requested. If unspecified, server will pick an appropriate default.
+       */
+      // const pageSize = 1234
+      /**
+       *  Optional. A token identifying a page of results the server should return.
+       */
+      // const pageToken = 'abc123'
+      /**
+       *  Optional. Filtering results.
+       */
+      // const filter = 'abc123'
+      /**
+       *  Optional. Hint for how to order the results.
+       */
+      // const orderBy = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callListReleases() {
+        // Construct request
+        const request = {
+          parent,
+        };
+    
+        // Run request
+        const iterable = configdeliveryClient.listReleasesAsync(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callListReleases();
+    
+    
+
+### listReleasesStream(request, options)
+    
+    
+    listReleasesStream(request?: protos.google.cloud.configdelivery.v1alpha.IListReleasesRequest, options?: CallOptions): Transform;
+
+Equivalent to `listReleases`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListReleasesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistreleasesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listReleasesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listResourceBundles(request, options)
+    
+    
+    listResourceBundles(request?: protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.configdelivery.v1alpha.IResourceBundle[],
+            protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesRequest | null,
+            protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesResponse
+        ]>;
+
+Lists ResourceBundles in a given project and location.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListResourceBundlesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistresourcebundlesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.configdelivery.v1alpha.IResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iresourcebundle)[], [protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistresourcebundlesrequest) | null, [protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesResponse](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistresourcebundlesresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of [ResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.resourcebundle). The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listResourceBundlesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listResourceBundles(request, options, callback)
+    
+    
+    listResourceBundles(request: protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesRequest, options: CallOptions, callback: PaginationCallback<protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesRequest, protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesResponse | null | undefined, protos.google.cloud.configdelivery.v1alpha.IResourceBundle>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListResourceBundlesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistresourcebundlesrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistresourcebundlesrequest), [protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesResponse](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistresourcebundlesresponse) | null | undefined, [protos.google.cloud.configdelivery.v1alpha.IResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iresourcebundle)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listResourceBundles(request, callback)
+    
+    
+    listResourceBundles(request: protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesRequest, callback: PaginationCallback<protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesRequest, protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesResponse | null | undefined, protos.google.cloud.configdelivery.v1alpha.IResourceBundle>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListResourceBundlesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistresourcebundlesrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistresourcebundlesrequest), [protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesResponse](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistresourcebundlesresponse) | null | undefined, [protos.google.cloud.configdelivery.v1alpha.IResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iresourcebundle)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listResourceBundlesAsync(request, options)
+    
+    
+    listResourceBundlesAsync(request?: protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesRequest, options?: CallOptions): AsyncIterable<protos.google.cloud.configdelivery.v1alpha.IResourceBundle>;
+
+Equivalent to `listResourceBundles`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListResourceBundlesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistresourcebundlesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.cloud.configdelivery.v1alpha.IResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iresourcebundle)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing [ResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.resourcebundle). The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Parent value for ListResourceBundlesRequest.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Optional. Requested page size. Server may return fewer items than
+       *  requested. If unspecified, server will pick an appropriate default.
+       */
+      // const pageSize = 1234
+      /**
+       *  Optional. A token identifying a page of results the server should return.
+       */
+      // const pageToken = 'abc123'
+      /**
+       *  Optional. Filtering results.
+       */
+      // const filter = 'abc123'
+      /**
+       *  Optional. Hint for how to order the results.
+       */
+      // const orderBy = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callListResourceBundles() {
+        // Construct request
+        const request = {
+          parent,
+        };
+    
+        // Run request
+        const iterable = configdeliveryClient.listResourceBundlesAsync(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callListResourceBundles();
+    
+    
+
+### listResourceBundlesStream(request, options)
+    
+    
+    listResourceBundlesStream(request?: protos.google.cloud.configdelivery.v1alpha.IListResourceBundlesRequest, options?: CallOptions): Transform;
+
+Equivalent to `listResourceBundles`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListResourceBundlesRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistresourcebundlesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing [ResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.resourcebundle) on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listResourceBundlesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listRollouts(request, options)
+    
+    
+    listRollouts(request?: protos.google.cloud.configdelivery.v1alpha.IListRolloutsRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.configdelivery.v1alpha.IRollout[],
+            protos.google.cloud.configdelivery.v1alpha.IListRolloutsRequest | null,
+            protos.google.cloud.configdelivery.v1alpha.IListRolloutsResponse
+        ]>;
+
+Lists Rollouts in a given project, location, and Fleet Package.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRolloutsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistrolloutsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.configdelivery.v1alpha.IRollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irollout)[], [protos.google.cloud.configdelivery.v1alpha.IListRolloutsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistrolloutsrequest) | null, [protos.google.cloud.configdelivery.v1alpha.IListRolloutsResponse](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistrolloutsresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of [Rollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.rollout). The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listRolloutsAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listRollouts(request, options, callback)
+    
+    
+    listRollouts(request: protos.google.cloud.configdelivery.v1alpha.IListRolloutsRequest, options: CallOptions, callback: PaginationCallback<protos.google.cloud.configdelivery.v1alpha.IListRolloutsRequest, protos.google.cloud.configdelivery.v1alpha.IListRolloutsResponse | null | undefined, protos.google.cloud.configdelivery.v1alpha.IRollout>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRolloutsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistrolloutsrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.configdelivery.v1alpha.IListRolloutsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistrolloutsrequest), [protos.google.cloud.configdelivery.v1alpha.IListRolloutsResponse](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistrolloutsresponse) | null | undefined, [protos.google.cloud.configdelivery.v1alpha.IRollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irollout)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listRollouts(request, callback)
+    
+    
+    listRollouts(request: protos.google.cloud.configdelivery.v1alpha.IListRolloutsRequest, callback: PaginationCallback<protos.google.cloud.configdelivery.v1alpha.IListRolloutsRequest, protos.google.cloud.configdelivery.v1alpha.IListRolloutsResponse | null | undefined, protos.google.cloud.configdelivery.v1alpha.IRollout>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRolloutsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistrolloutsrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.configdelivery.v1alpha.IListRolloutsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistrolloutsrequest), [protos.google.cloud.configdelivery.v1alpha.IListRolloutsResponse](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistrolloutsresponse) | null | undefined, [protos.google.cloud.configdelivery.v1alpha.IRollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irollout)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listRolloutsAsync(request, options)
+    
+    
+    listRolloutsAsync(request?: protos.google.cloud.configdelivery.v1alpha.IListRolloutsRequest, options?: CallOptions): AsyncIterable<protos.google.cloud.configdelivery.v1alpha.IRollout>;
+
+Equivalent to `listRollouts`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRolloutsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistrolloutsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.cloud.configdelivery.v1alpha.IRollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irollout)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing [Rollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.rollout). The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Parent value for ListRolloutsRequest
+       */
+      // const parent = 'abc123'
+      /**
+       *  Optional. Requested page size. Server may return fewer items than
+       *  requested. If unspecified, server will pick an appropriate default.
+       */
+      // const pageSize = 1234
+      /**
+       *  Optional. A token identifying a page of results the server should return.
+       */
+      // const pageToken = 'abc123'
+      /**
+       *  Optional. Filtering results
+       */
+      // const filter = 'abc123'
+      /**
+       *  Optional. Hint for how to order the results
+       */
+      // const orderBy = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callListRollouts() {
+        // Construct request
+        const request = {
+          parent,
+        };
+    
+        // Run request
+        const iterable = configdeliveryClient.listRolloutsAsync(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callListRollouts();
+    
+    
+
+### listRolloutsStream(request, options)
+    
+    
+    listRolloutsStream(request?: protos.google.cloud.configdelivery.v1alpha.IListRolloutsRequest, options?: CallOptions): Transform;
+
+Equivalent to `listRollouts`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListRolloutsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistrolloutsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing [Rollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.rollout) on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listRolloutsAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listVariants(request, options)
+    
+    
+    listVariants(request?: protos.google.cloud.configdelivery.v1alpha.IListVariantsRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.configdelivery.v1alpha.IVariant[],
+            protos.google.cloud.configdelivery.v1alpha.IListVariantsRequest | null,
+            protos.google.cloud.configdelivery.v1alpha.IListVariantsResponse
+        ]>;
+
+Lists Variants in a given project and location.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListVariantsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistvariantsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.configdelivery.v1alpha.IVariant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ivariant)[], [protos.google.cloud.configdelivery.v1alpha.IListVariantsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistvariantsrequest) | null, [protos.google.cloud.configdelivery.v1alpha.IListVariantsResponse](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistvariantsresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of [Variant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.variant). The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listVariantsAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listVariants(request, options, callback)
+    
+    
+    listVariants(request: protos.google.cloud.configdelivery.v1alpha.IListVariantsRequest, options: CallOptions, callback: PaginationCallback<protos.google.cloud.configdelivery.v1alpha.IListVariantsRequest, protos.google.cloud.configdelivery.v1alpha.IListVariantsResponse | null | undefined, protos.google.cloud.configdelivery.v1alpha.IVariant>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListVariantsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistvariantsrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.configdelivery.v1alpha.IListVariantsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistvariantsrequest), [protos.google.cloud.configdelivery.v1alpha.IListVariantsResponse](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistvariantsresponse) | null | undefined, [protos.google.cloud.configdelivery.v1alpha.IVariant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ivariant)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listVariants(request, callback)
+    
+    
+    listVariants(request: protos.google.cloud.configdelivery.v1alpha.IListVariantsRequest, callback: PaginationCallback<protos.google.cloud.configdelivery.v1alpha.IListVariantsRequest, protos.google.cloud.configdelivery.v1alpha.IListVariantsResponse | null | undefined, protos.google.cloud.configdelivery.v1alpha.IVariant>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListVariantsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistvariantsrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.configdelivery.v1alpha.IListVariantsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistvariantsrequest), [protos.google.cloud.configdelivery.v1alpha.IListVariantsResponse](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistvariantsresponse) | null | undefined, [protos.google.cloud.configdelivery.v1alpha.IVariant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ivariant)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listVariantsAsync(request, options)
+    
+    
+    listVariantsAsync(request?: protos.google.cloud.configdelivery.v1alpha.IListVariantsRequest, options?: CallOptions): AsyncIterable<protos.google.cloud.configdelivery.v1alpha.IVariant>;
+
+Equivalent to `listVariants`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListVariantsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistvariantsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.cloud.configdelivery.v1alpha.IVariant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ivariant)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing [Variant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.variant). The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Parent value for ListVariantsRequest.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Optional. Requested page size. Server may return fewer items than
+       *  requested. If unspecified, server will pick an appropriate default.
+       */
+      // const pageSize = 1234
+      /**
+       *  Optional. A token identifying a page of results the server should return.
+       */
+      // const pageToken = 'abc123'
+      /**
+       *  Optional. Filtering results.
+       */
+      // const filter = 'abc123'
+      /**
+       *  Optional. Hint for how to order the results.
+       */
+      // const orderBy = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callListVariants() {
+        // Construct request
+        const request = {
+          parent,
+        };
+    
+        // Run request
+        const iterable = configdeliveryClient.listVariantsAsync(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callListVariants();
+    
+    
+
+### listVariantsStream(request, options)
+    
+    
+    listVariantsStream(request?: protos.google.cloud.configdelivery.v1alpha.IListVariantsRequest, options?: CallOptions): Transform;
+
+Equivalent to `listVariants`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListVariantsRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ilistvariantsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing [Variant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.variant) on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listVariantsAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### locationPath(project, location)
+    
+    
+    locationPath(project: string, location: string): string;
+
+Return a fully-qualified location resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### matchFleetPackageFromFleetPackageName(fleetPackageName)
+    
+    
+    matchFleetPackageFromFleetPackageName(fleetPackageName: string): string | number;
+
+Parse the fleet_package from FleetPackage resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`fleetPackageName` |  `string`   
+A fully-qualified path representing FleetPackage resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the fleet_package.  
+  
+### matchFleetPackageFromRolloutName(rolloutName)
+    
+    
+    matchFleetPackageFromRolloutName(rolloutName: string): string | number;
+
+Parse the fleet_package from Rollout resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`rolloutName` |  `string`   
+A fully-qualified path representing Rollout resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the fleet_package.  
+  
+### matchLocationFromFleetPackageName(fleetPackageName)
+    
+    
+    matchLocationFromFleetPackageName(fleetPackageName: string): string | number;
+
+Parse the location from FleetPackage resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`fleetPackageName` |  `string`   
+A fully-qualified path representing FleetPackage resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromLocationName(locationName)
+    
+    
+    matchLocationFromLocationName(locationName: string): string | number;
+
+Parse the location from Location resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`locationName` |  `string`   
+A fully-qualified path representing Location resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromMembershipName(membershipName)
+    
+    
+    matchLocationFromMembershipName(membershipName: string): string | number;
+
+Parse the location from Membership resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`membershipName` |  `string`   
+A fully-qualified path representing Membership resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromReleaseName(releaseName)
+    
+    
+    matchLocationFromReleaseName(releaseName: string): string | number;
+
+Parse the location from Release resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`releaseName` |  `string`   
+A fully-qualified path representing Release resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromResourceBundleName(resourceBundleName)
+    
+    
+    matchLocationFromResourceBundleName(resourceBundleName: string): string | number;
+
+Parse the location from ResourceBundle resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`resourceBundleName` |  `string`   
+A fully-qualified path representing ResourceBundle resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromRolloutName(rolloutName)
+    
+    
+    matchLocationFromRolloutName(rolloutName: string): string | number;
+
+Parse the location from Rollout resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`rolloutName` |  `string`   
+A fully-qualified path representing Rollout resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromVariantName(variantName)
+    
+    
+    matchLocationFromVariantName(variantName: string): string | number;
+
+Parse the location from Variant resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`variantName` |  `string`   
+A fully-qualified path representing Variant resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchMembershipFromMembershipName(membershipName)
+    
+    
+    matchMembershipFromMembershipName(membershipName: string): string | number;
+
+Parse the membership from Membership resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`membershipName` |  `string`   
+A fully-qualified path representing Membership resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the membership.  
+  
+### matchProjectFromFleetPackageName(fleetPackageName)
+    
+    
+    matchProjectFromFleetPackageName(fleetPackageName: string): string | number;
+
+Parse the project from FleetPackage resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`fleetPackageName` |  `string`   
+A fully-qualified path representing FleetPackage resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromLocationName(locationName)
+    
+    
+    matchProjectFromLocationName(locationName: string): string | number;
+
+Parse the project from Location resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`locationName` |  `string`   
+A fully-qualified path representing Location resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromMembershipName(membershipName)
+    
+    
+    matchProjectFromMembershipName(membershipName: string): string | number;
+
+Parse the project from Membership resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`membershipName` |  `string`   
+A fully-qualified path representing Membership resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromProjectName(projectName)
+    
+    
+    matchProjectFromProjectName(projectName: string): string | number;
+
+Parse the project from Project resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`projectName` |  `string`   
+A fully-qualified path representing Project resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromReleaseName(releaseName)
+    
+    
+    matchProjectFromReleaseName(releaseName: string): string | number;
+
+Parse the project from Release resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`releaseName` |  `string`   
+A fully-qualified path representing Release resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromResourceBundleName(resourceBundleName)
+    
+    
+    matchProjectFromResourceBundleName(resourceBundleName: string): string | number;
+
+Parse the project from ResourceBundle resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`resourceBundleName` |  `string`   
+A fully-qualified path representing ResourceBundle resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromRolloutName(rolloutName)
+    
+    
+    matchProjectFromRolloutName(rolloutName: string): string | number;
+
+Parse the project from Rollout resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`rolloutName` |  `string`   
+A fully-qualified path representing Rollout resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromVariantName(variantName)
+    
+    
+    matchProjectFromVariantName(variantName: string): string | number;
+
+Parse the project from Variant resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`variantName` |  `string`   
+A fully-qualified path representing Variant resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchReleaseFromReleaseName(releaseName)
+    
+    
+    matchReleaseFromReleaseName(releaseName: string): string | number;
+
+Parse the release from Release resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`releaseName` |  `string`   
+A fully-qualified path representing Release resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the release.  
+  
+### matchReleaseFromVariantName(variantName)
+    
+    
+    matchReleaseFromVariantName(variantName: string): string | number;
+
+Parse the release from Variant resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`variantName` |  `string`   
+A fully-qualified path representing Variant resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the release.  
+  
+### matchResourceBundleFromReleaseName(releaseName)
+    
+    
+    matchResourceBundleFromReleaseName(releaseName: string): string | number;
+
+Parse the resource_bundle from Release resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`releaseName` |  `string`   
+A fully-qualified path representing Release resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the resource_bundle.  
+  
+### matchResourceBundleFromResourceBundleName(resourceBundleName)
+    
+    
+    matchResourceBundleFromResourceBundleName(resourceBundleName: string): string | number;
+
+Parse the resource_bundle from ResourceBundle resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`resourceBundleName` |  `string`   
+A fully-qualified path representing ResourceBundle resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the resource_bundle.  
+  
+### matchResourceBundleFromVariantName(variantName)
+    
+    
+    matchResourceBundleFromVariantName(variantName: string): string | number;
+
+Parse the resource_bundle from Variant resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`variantName` |  `string`   
+A fully-qualified path representing Variant resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the resource_bundle.  
+  
+### matchRolloutFromRolloutName(rolloutName)
+    
+    
+    matchRolloutFromRolloutName(rolloutName: string): string | number;
+
+Parse the rollout from Rollout resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`rolloutName` |  `string`   
+A fully-qualified path representing Rollout resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the rollout.  
+  
+### matchVariantFromVariantName(variantName)
+    
+    
+    matchVariantFromVariantName(variantName: string): string | number;
+
+Parse the variant from Variant resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`variantName` |  `string`   
+A fully-qualified path representing Variant resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the variant.  
+  
+### membershipPath(project, location, membership)
+    
+    
+    membershipPath(project: string, location: string, membership: string): string;
+
+Return a fully-qualified membership resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`membership` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### projectPath(project)
+    
+    
+    projectPath(project: string): string;
+
+Return a fully-qualified project resource name string.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### releasePath(project, location, resourceBundle, release)
+    
+    
+    releasePath(project: string, location: string, resourceBundle: string, release: string): string;
+
+Return a fully-qualified release resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`resourceBundle` |  `string`   
+  
+`release` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### resourceBundlePath(project, location, resourceBundle)
+    
+    
+    resourceBundlePath(project: string, location: string, resourceBundle: string): string;
+
+Return a fully-qualified resourceBundle resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`resourceBundle` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### resumeRollout(request, options)
+    
+    
+    resumeRollout(request?: protos.google.cloud.configdelivery.v1alpha.IResumeRolloutRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.configdelivery.v1alpha.IRollout, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Resume a Rollout.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IResumeRolloutRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iresumerolloutrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.configdelivery.v1alpha.IRollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irollout), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the Rollout.
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. Reason for resuming the rollout.
+       */
+      // const reason = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callResumeRollout() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.resumeRollout(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callResumeRollout();
+    
+    
+
+### resumeRollout(request, options, callback)
+    
+    
+    resumeRollout(request: protos.google.cloud.configdelivery.v1alpha.IResumeRolloutRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IRollout, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IResumeRolloutRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iresumerolloutrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IRollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irollout), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### resumeRollout(request, callback)
+    
+    
+    resumeRollout(request: protos.google.cloud.configdelivery.v1alpha.IResumeRolloutRequest, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IRollout, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IResumeRolloutRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iresumerolloutrequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IRollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irollout), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### rolloutPath(project, location, fleetPackage, rollout)
+    
+    
+    rolloutPath(project: string, location: string, fleetPackage: string, rollout: string): string;
+
+Return a fully-qualified rollout resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`fleetPackage` |  `string`   
+  
+`rollout` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### suspendRollout(request, options)
+    
+    
+    suspendRollout(request?: protos.google.cloud.configdelivery.v1alpha.ISuspendRolloutRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.configdelivery.v1alpha.IRollout, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Suspend a Rollout.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ISuspendRolloutRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.isuspendrolloutrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.configdelivery.v1alpha.IRollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irollout), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Name of the Rollout.
+       */
+      // const name = 'abc123'
+      /**
+       *  Optional. Reason for suspension.
+       */
+      // const reason = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callSuspendRollout() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.suspendRollout(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callSuspendRollout();
+    
+    
+
+### suspendRollout(request, options, callback)
+    
+    
+    suspendRollout(request: protos.google.cloud.configdelivery.v1alpha.ISuspendRolloutRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IRollout, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ISuspendRolloutRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.isuspendrolloutrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IRollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irollout), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### suspendRollout(request, callback)
+    
+    
+    suspendRollout(request: protos.google.cloud.configdelivery.v1alpha.ISuspendRolloutRequest, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IRollout, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ISuspendRolloutRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.isuspendrolloutrequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IRollout](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irollout), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateFleetPackage(request, options)
+    
+    
+    updateFleetPackage(request?: protos.google.cloud.configdelivery.v1alpha.IUpdateFleetPackageRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.configdelivery.v1alpha.IFleetPackage, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Updates the parameters of a single FleetPackage.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateFleetPackageRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iupdatefleetpackagerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.configdelivery.v1alpha.IFleetPackage](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ifleetpackage), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Field mask is used to specify the fields to be overwritten in the
+       *  FleetPackage resource by the update.
+       *  The fields specified in the update_mask are relative to the resource, not
+       *  the full request. A field will be overwritten if it is in the mask. If the
+       *  user does not provide a mask then all fields will be overwritten.
+       */
+      // const updateMask = {}
+      /**
+       *  Required. The resource being updated
+       */
+      // const fleetPackage = {}
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes since the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callUpdateFleetPackage() {
+        // Construct request
+        const request = {
+          updateMask,
+          fleetPackage,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.updateFleetPackage(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callUpdateFleetPackage();
+    
+    
+
+### updateFleetPackage(request, options, callback)
+    
+    
+    updateFleetPackage(request: protos.google.cloud.configdelivery.v1alpha.IUpdateFleetPackageRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IFleetPackage, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateFleetPackageRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iupdatefleetpackagerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IFleetPackage](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ifleetpackage), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateFleetPackage(request, callback)
+    
+    
+    updateFleetPackage(request: protos.google.cloud.configdelivery.v1alpha.IUpdateFleetPackageRequest, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IFleetPackage, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateFleetPackageRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iupdatefleetpackagerequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IFleetPackage](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ifleetpackage), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateRelease(request, options)
+    
+    
+    updateRelease(request?: protos.google.cloud.configdelivery.v1alpha.IUpdateReleaseRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.configdelivery.v1alpha.IRelease, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Updates the parameters of a single Release.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateReleaseRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iupdatereleaserequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.configdelivery.v1alpha.IRelease](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irelease), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Field mask is used to specify the fields to be overwritten in the
+       *  Release resource by the update.
+       *  The fields specified in the update_mask are relative to the resource, not
+       *  the full request. A field will be overwritten if it is in the mask. If the
+       *  user does not provide a mask then all fields will be overwritten.
+       */
+      // const updateMask = {}
+      /**
+       *  Required. The resource being updated
+       */
+      // const release = {}
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes since the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callUpdateRelease() {
+        // Construct request
+        const request = {
+          updateMask,
+          release,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.updateRelease(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callUpdateRelease();
+    
+    
+
+### updateRelease(request, options, callback)
+    
+    
+    updateRelease(request: protos.google.cloud.configdelivery.v1alpha.IUpdateReleaseRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IRelease, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateReleaseRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iupdatereleaserequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IRelease](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irelease), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateRelease(request, callback)
+    
+    
+    updateRelease(request: protos.google.cloud.configdelivery.v1alpha.IUpdateReleaseRequest, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IRelease, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateReleaseRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iupdatereleaserequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IRelease](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.irelease), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateResourceBundle(request, options)
+    
+    
+    updateResourceBundle(request?: protos.google.cloud.configdelivery.v1alpha.IUpdateResourceBundleRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.configdelivery.v1alpha.IResourceBundle, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Updates the parameters of a single ResourceBundle.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateResourceBundleRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iupdateresourcebundlerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.configdelivery.v1alpha.IResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iresourcebundle), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Field mask is used to specify the fields to be overwritten in the
+       *  ResourceBundle resource by the update.
+       *  The fields specified in the update_mask are relative to the resource, not
+       *  the full request. A field will be overwritten if it is in the mask. If the
+       *  user does not provide a mask then all fields will be overwritten.
+       */
+      // const updateMask = {}
+      /**
+       *  Required. The resource being updated
+       */
+      // const resourceBundle = {}
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes since the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callUpdateResourceBundle() {
+        // Construct request
+        const request = {
+          updateMask,
+          resourceBundle,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.updateResourceBundle(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callUpdateResourceBundle();
+    
+    
+
+### updateResourceBundle(request, options, callback)
+    
+    
+    updateResourceBundle(request: protos.google.cloud.configdelivery.v1alpha.IUpdateResourceBundleRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IResourceBundle, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateResourceBundleRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iupdateresourcebundlerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iresourcebundle), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateResourceBundle(request, callback)
+    
+    
+    updateResourceBundle(request: protos.google.cloud.configdelivery.v1alpha.IUpdateResourceBundleRequest, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IResourceBundle, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateResourceBundleRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iupdateresourcebundlerequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IResourceBundle](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iresourcebundle), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateVariant(request, options)
+    
+    
+    updateVariant(request?: protos.google.cloud.configdelivery.v1alpha.IUpdateVariantRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.configdelivery.v1alpha.IVariant, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>,
+            protos.google.longrunning.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Updates the parameters of a single Variant.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateVariantRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iupdatevariantrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.configdelivery.v1alpha.IVariant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ivariant), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Its `promise()` method returns a promise you can `await` for. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Optional. Field mask is used to specify the fields to be overwritten in the
+       *  Variant resource by the update.
+       *  The fields specified in the update_mask are relative to the resource, not
+       *  the full request. A field will be overwritten if it is in the mask. If the
+       *  user does not provide a mask then all fields will be overwritten.
+       */
+      // const updateMask = {}
+      /**
+       *  Required. The resource being updated
+       */
+      // const variant = {}
+      /**
+       *  Optional. An optional request ID to identify requests. Specify a unique
+       *  request ID so that if you must retry your request, the server will know to
+       *  ignore the request if it has already been completed. The server will
+       *  guarantee that for at least 60 minutes since the first request.
+       *  For example, consider a situation where you make an initial request and the
+       *  request times out. If you make the request again with the same request
+       *  ID, the server can check if original operation with the same request ID
+       *  was received, and if so, will ignore the second request. This prevents
+       *  clients from accidentally creating duplicate commitments.
+       *  The request ID must be a valid UUID with the exception that zero UUID is
+       *  not supported (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+    
+      // Imports the Configdelivery library
+      const {ConfigDeliveryClient} = require('[@google-cloud/configdelivery](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)').v1alpha;
+    
+      // Instantiates a client
+      const configdeliveryClient = new [ConfigDeliveryClient](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/overview.html)();
+    
+      async function callUpdateVariant() {
+        // Construct request
+        const request = {
+          variant,
+        };
+    
+        // Run request
+        const [operation] = await configdeliveryClient.updateVariant(request);
+        const [response] = await operation.promise();
+        console.log(response);
+      }
+    
+      callUpdateVariant();
+    
+    
+
+### updateVariant(request, options, callback)
+    
+    
+    updateVariant(request: protos.google.cloud.configdelivery.v1alpha.IUpdateVariantRequest, options: CallOptions, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IVariant, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateVariantRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iupdatevariantrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IVariant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ivariant), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateVariant(request, callback)
+    
+    
+    updateVariant(request: protos.google.cloud.configdelivery.v1alpha.IUpdateVariantRequest, callback: Callback<LROperation<protos.google.cloud.configdelivery.v1alpha.IVariant, protos.google.cloud.configdelivery.v1alpha.IOperationMetadata>, protos.google.longrunning.IOperation | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateVariantRequest](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.iupdatevariantrequest)`   
+  
+`callback` |  `Callback<LROperation<[protos.google.cloud.configdelivery.v1alpha.IVariant](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ivariant), [protos.google.cloud.configdelivery.v1alpha.IOperationMetadata](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.cloud.configdelivery.v1alpha.ioperationmetadata)>, [protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/configdelivery/latest/configdelivery/protos.google.longrunning.ioperation) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### variantPath(project, location, resourceBundle, release, variant)
+    
+    
+    variantPath(project: string, location: string, resourceBundle: string, release: string, variant: string): string;
+
+Return a fully-qualified variant resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`resourceBundle` |  `string`   
+  
+`release` |  `string`   
+  
+`variant` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-03 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-03 UTC."],[],[]] 

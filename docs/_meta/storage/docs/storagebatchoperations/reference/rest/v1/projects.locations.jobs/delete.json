@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/storage/docs/storagebatchoperations/reference/rest/v1/projects.locations.jobs/delete/",
+  "file": "storage/docs/storagebatchoperations/reference/rest/v1/projects.locations.jobs/delete.md",
+  "title": "Method: projects.locations.jobs.delete \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T18:48:22.598349+00:00"
+}

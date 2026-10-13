@@ -1,0 +1,152 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/preview/compute/disks/snapshot/
+title: gcloud preview compute disks snapshot \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T19:48:52.782861+00:00
+---
+
+# gcloud preview compute disks snapshot  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/preview/compute/disks/snapshot/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud preview compute disks snapshot Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud preview compute disks snapshot - create snapshots of Compute Engine persistent disks 
+SYNOPSIS
+    
+
+`gcloud preview compute disks snapshot` `DISK_NAME` [`DISK_NAME` …] [`--async`] [`--chain-name`=`CHAIN_NAME`] [`--csek-key-file`=`FILE`] [`--description`=`DESCRIPTION`] [`--guest-flush`] [`--labels`=[`KEY`=`VALUE`,…]] [`--snapshot-names`=`SNAPSHOT_NAME`,[…]] [`--storage-location`=`LOCATION`] [`--region`=`REGION` | `--zone`=`ZONE`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(PREVIEW)` `gcloud preview compute disks snapshot` creates snapshots of persistent disks. Snapshots are useful for backing up data, copying a persistent disk, and even, creating a custom image. Snapshots can be created from persistent disks even while they are attached to running instances. Once created, snapshots may be managed (listed, deleted, etc.) via `[gcloud compute snapshots](https://docs.cloud.google.com/sdk/gcloud/reference/compute/snapshots)`. 
+
+Refer to the Snapshot best practices guide. <https://cloud.google.com/compute/docs/disks/snapshot-best-practices>
+
+gcloud preview compute disks snapshot waits until the operation returns a status of `READY` or `FAILED`, or reaches the maximum timeout, and returns the last known details of the snapshot. 
+
+Note: To create snapshots, the following IAM permissions are necessary ``compute.disks.createSnapshot``, ``compute.snapshots.create``, ``compute.snapshots.get``, and ``compute.zoneOperations.get``. 
+
+EXAMPLES
+     To create a snapshot named `snapshot-test` of a persistent disk named `test` in zone `us-central1-a`, run: 
+    
+    
+    gcloud preview compute disks snapshot test --zone=us-central1-a --snapshot-names=snapshot-test --description="This is an example snapshot"
+
+POSITIONAL ARGUMENTS
+    
+
+`DISK_NAME` [`DISK_NAME` …]
+     Names of the disks to operate on. 
+FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--chain-name`=`CHAIN_NAME`
+     Create the new snapshot in the snapshot chain labeled with the specified name. The chain name must be 1-63 characters long and comply with RFC1035. Use this flag only if you are an advanced service owner who needs to create separate snapshot chains, for example, for chargeback tracking. When you describe your snapshot resource, this field is visible only if it has a non-empty value. 
+`--csek-key-file`=`FILE`
+     (DEPRECATED) Path to a Customer-Supplied Encryption Key (CSEK) key file that maps Compute Engine resources to user managed keys to be used when creating, mounting, or taking snapshots of disks. 
+    
+    
+    If you pass `-` as value of the flag, the CSEK is read from stdin.
+    See <https://cloud.google.com/compute/docs/disks/customer-supplied-encryption> for more details.
+
+The --csek-key-file flag is deprecated. 
+
+`--description`=`DESCRIPTION`
+     Text to describe the snapshots being created. 
+`--guest-flush`
+     Create an application-consistent snapshot by informing the OS to prepare for the snapshot process. 
+`--labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to add. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+`--snapshot-names`=`SNAPSHOT_NAME`,[…]
+     Names to assign to the created snapshots. Without this option, the name of each snapshot will be a random 12-character alphanumeric string that starts with a letter. The values of this option run parallel to the disks specified. For example, 
+    
+    
+    gcloud preview compute disks snapshot my-disk-1 my-disk-2 my-disk-3 --snapshot-names snapshot-1,snapshot-2,snapshot-3
+
+will result in `my-disk-1` being snapshotted as `snapshot-1`, `my-disk-2` as `snapshot-2`, and so on. The name must match the `(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?)` regular expression, which means it must start with an alphabetic character followed by one or more alphanumeric characters or dashes. The name must not exceed 63 characters and must not contain special symbols. All characters must be lowercase. 
+
+`--storage-location`=`LOCATION`
+     Google Cloud Storage location, either regional or multi-regional, where snapshot content is to be stored. If absent, a nearby regional or multi-regional location is chosen automatically. 
+At most one of these can be specified: 
+
+`--region`=`REGION`
+     Region of the disks to operate on. If not specified, you might be prompted to select a region (interactive mode only). 
+
+To avoid prompting when this flag is omitted, you can set the ``compute/region`` property: 
+    
+    
+    [gcloud config set](https://docs.cloud.google.com/sdk/gcloud/reference/config/set) compute/region REGION
+
+A list of regions can be fetched by running: 
+    
+    
+    [gcloud compute regions list](https://docs.cloud.google.com/sdk/gcloud/reference/compute/regions/list)
+
+To unset the property, run: 
+    
+    
+    [gcloud config unset](https://docs.cloud.google.com/sdk/gcloud/reference/config/unset) compute/region
+
+Alternatively, the region can be stored in the environment variable ``CLOUDSDK_COMPUTE_REGION``. 
+
+`--zone`=`ZONE`
+     Zone of the disks to operate on. If not specified and the ``compute/zone`` property isn't set, you might be prompted to select a zone (interactive mode only). 
+
+To avoid prompting when this flag is omitted, you can set the ``compute/zone`` property: 
+    
+    
+    [gcloud config set](https://docs.cloud.google.com/sdk/gcloud/reference/config/set) compute/zone ZONE
+
+A list of zones can be fetched by running: 
+    
+    
+    [gcloud compute zones list](https://docs.cloud.google.com/sdk/gcloud/reference/compute/zones/list)
+
+To unset the property, run: 
+    
+    
+    [gcloud config unset](https://docs.cloud.google.com/sdk/gcloud/reference/config/unset) compute/zone
+
+Alternatively, the zone can be stored in the environment variable ``CLOUDSDK_COMPUTE_ZONE``. 
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in DEVELOPER PREVIEW and may change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. These variants are also available: 
+    
+    
+    [gcloud compute disks snapshot](https://docs.cloud.google.com/sdk/gcloud/reference/compute/disks/snapshot)
+    
+    
+    [gcloud alpha compute disks snapshot](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/disks/snapshot)
+    
+    
+    [gcloud beta compute disks snapshot](https://docs.cloud.google.com/sdk/gcloud/reference/beta/compute/disks/snapshot)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-07-21 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-07-21 UTC."],[],[]] 

@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-errorreporting/latest/com.google.devtools.clouderrorreporting.v1beta1.ReportErrorsServiceGrpc.ReportErrorsServiceBlockingStub",
+  "file": "java/docs/reference/google-cloud-errorreporting/latest/com.google.devtools.clouderrorreporting.v1beta1.ReportErrorsServiceGrpc.ReportErrorsServiceBlockingStub.md",
+  "title": "Class ReportErrorsServiceGrpc.ReportErrorsServiceBlockingStub (0.220.0-beta) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T16:33:07.225935+00:00"
+}

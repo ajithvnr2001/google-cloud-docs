@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/chronicle/docs/reference/rest/v1alpha/projects.locations.instances.integrations.connectors.connectorInstances/setLogsCollection/",
+  "file": "chronicle/docs/reference/rest/v1alpha/projects.locations.instances.integrations.connectors.connectorInstances/setLogsCollection.md",
+  "title": "Method: connectorInstances.setLogsCollection \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T15:12:37.649266+00:00"
+}

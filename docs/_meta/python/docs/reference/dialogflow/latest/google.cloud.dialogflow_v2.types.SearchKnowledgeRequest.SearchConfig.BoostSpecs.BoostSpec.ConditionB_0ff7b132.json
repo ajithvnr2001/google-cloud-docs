@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/python/docs/reference/dialogflow/latest/google.cloud.dialogflow_v2.types.SearchKnowledgeRequest.SearchConfig.BoostSpecs.BoostSpec.ConditionBoostSpec.BoostControlSpec.InterpolationType",
+  "file": "python/docs/reference/dialogflow/latest/google.cloud.dialogflow_v2.types.SearchKnowledgeRequest.SearchConfig.BoostSpecs.BoostSpec.ConditionB_0ff7b132.md",
+  "title": "Class InterpolationType (2.52.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T20:08:26.990546+00:00"
+}

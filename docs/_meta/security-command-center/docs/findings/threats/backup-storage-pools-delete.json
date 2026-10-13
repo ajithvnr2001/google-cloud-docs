@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/backup-storage-pools-delete/",
+  "file": "security-command-center/docs/findings/threats/backup-storage-pools-delete.md",
+  "title": "Impact: Google Cloud Backup and DR delete storage pool \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T17:24:15.476319+00:00"
+}

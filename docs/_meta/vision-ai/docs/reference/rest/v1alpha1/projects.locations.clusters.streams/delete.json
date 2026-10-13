@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/vision-ai/docs/reference/rest/v1alpha1/projects.locations.clusters.streams/delete/",
+  "file": "vision-ai/docs/reference/rest/v1alpha1/projects.locations.clusters.streams/delete.md",
+  "title": "Method: projects.locations.clusters.streams.delete \u00a0|\u00a0 Agent Platform Vision \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T20:16:56.618936+00:00"
+}

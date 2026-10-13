@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/cloud-db-login-succeeded-anon-ip/",
+  "file": "security-command-center/docs/findings/threats/cloud-db-login-succeeded-anon-ip.md",
+  "title": "Initial Access: CloudDB Successful login from Anonymizing Proxy IP \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T17:24:41.161681+00:00"
+}

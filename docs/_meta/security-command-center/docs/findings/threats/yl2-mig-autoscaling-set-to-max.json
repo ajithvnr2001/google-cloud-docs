@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/yl2-mig-autoscaling-set-to-max/",
+  "file": "security-command-center/docs/findings/threats/yl2-mig-autoscaling-set-to-max.md",
+  "title": "Impact: Managed Instance Group Autoscaling Set To Maximum \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T17:24:37.213462+00:00"
+}

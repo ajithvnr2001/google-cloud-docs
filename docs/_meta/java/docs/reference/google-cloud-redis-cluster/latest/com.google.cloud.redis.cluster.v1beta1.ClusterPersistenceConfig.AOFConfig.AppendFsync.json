@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-redis-cluster/latest/com.google.cloud.redis.cluster.v1beta1.ClusterPersistenceConfig.AOFConfig.AppendFsync",
+  "file": "java/docs/reference/google-cloud-redis-cluster/latest/com.google.cloud.redis.cluster.v1beta1.ClusterPersistenceConfig.AOFConfig.AppendFsync.md",
+  "title": "Enum ClusterPersistenceConfig.AOFConfig.AppendFsync (0.71.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T18:31:30.891449+00:00"
+}

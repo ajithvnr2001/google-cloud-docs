@@ -1,0 +1,204 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/preview/compute/commitments/create/
+title: gcloud preview compute commitments create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T19:48:46.091382+00:00
+---
+
+# gcloud preview compute commitments create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/preview/compute/commitments/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud preview compute commitments create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud preview compute commitments create - create Compute Engine commitments 
+SYNOPSIS
+    
+
+`gcloud preview compute commitments create` `COMMITMENT` `--plan`=`PLAN` (`--resources`=[`local-ssd`=`LOCAL-SSD`],[`memory`=`MEMORY`],[`vcpu`=`VCPU`] `--resources-accelerator`=[`count`=`COUNT`],[`type`=`TYPE`]) [`--auto-renew`] [`--custom-end-time`=`CUSTOM_END_TIME`] [`--merge-source-commitments`=`MERGE_SOURCE_COMMITMENTS`] [`--region`=`REGION`] [`--resource-manager-tags`=[`KEY`=`VALUE`,…]] [`--split-source-commitment`=`SPLIT_SOURCE_COMMITMENT`] [`--type`=`TYPE`; default="general-purpose"] [`--existing-reservation`=[`name`=`NAME`],[`zone`=`ZONE`] | `--reservations-from-file`=`PATH_TO_FILE` | [`--reservation`=`RESERVATION` : `--reservation-zone`=`RESERVATION_ZONE` `--accelerator`=[`count`=`COUNT`],[`type`=`TYPE`] `--local-ssd`=[`interface`=`INTERFACE`],[`size`=`SIZE`] `--machine-type`=`MACHINE_TYPE` `--min-cpu-platform`=`MIN_CPU_PLATFORM` `--require-specific-reservation` `--resource-policies`=[`KEY`=`VALUE`,…] `--vm-count`=`VM_COUNT` `--share-setting`=`SHARE_SETTING` `--share-with`=`SHARE_WITH`,[`SHARE_WITH`,…]]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(PREVIEW)` Create Compute Engine commitments. 
+EXAMPLES
+     To create a commitment called ``commitment-1`` in the ``us-central1`` region, with a ``12-month`` plan, ``9GB`` of memory and 4 vcpu cores, run: 
+    
+    
+    gcloud preview compute commitments create commitment-1 --plan=12-month --resources=memory=9GB,vcpu=4 --region=us-central1
+
+POSITIONAL ARGUMENTS
+    
+
+`COMMITMENT`
+     Name of the commitment to create. 
+REQUIRED FLAGS
+    
+
+`--plan`=`PLAN`
+     Duration of the commitment. `PLAN` must be one of: `12-month`, `36-month`. 
+Manage the commitment for particular resources. 
+
+At least one of these must be specified: 
+
+`--resources`=[`local-ssd`=`LOCAL-SSD`],[`memory`=`MEMORY`],[`vcpu`=`VCPU`]
+     Resources to be included in the commitment. For details and examples of valid specifications, refer to the [custom machine type guide](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#specifications). 
+
+`memory`
+     The size of the memory, should include units (e.g. 3072MB or 9GB). If no units are specified, GB is assumed. 
+`vcpu`
+     The number of the vCPU cores. 
+`local-ssd`
+     The size of local SSD. 
+`--resources-accelerator`=[`count`=`COUNT`],[`type`=`TYPE`]
+     Manage the configuration of the type and number of accelerator cards to include in the commitment. 
+
+`count`
+     The number of accelerators to include. 
+`type`
+     The specific type (e.g. nvidia-tesla-k80 for NVIDIA Tesla K80) of the accelerator. Use `[gcloud compute accelerator-types list](https://docs.cloud.google.com/sdk/gcloud/reference/compute/accelerator-types/list)` to learn about all available accelerator types. 
+OPTIONAL FLAGS
+    
+
+`--auto-renew`
+     Enable auto renewal for the commitment. 
+`--custom-end-time`=`CUSTOM_END_TIME`
+     Specifies a custom future end date and extends the commitment's ongoing term. 
+`--merge-source-commitments`=`MERGE_SOURCE_COMMITMENTS`
+     Creates the new commitment by merging the specified source commitments and combining their resources. 
+`--region`=`REGION`
+     Region of the commitment to create. If not specified, you might be prompted to select a region (interactive mode only). 
+
+To avoid prompting when this flag is omitted, you can set the ``compute/region`` property: 
+    
+    
+    [gcloud config set](https://docs.cloud.google.com/sdk/gcloud/reference/config/set) compute/region REGION
+
+A list of regions can be fetched by running: 
+    
+    
+    [gcloud compute regions list](https://docs.cloud.google.com/sdk/gcloud/reference/compute/regions/list)
+
+To unset the property, run: 
+    
+    
+    [gcloud config unset](https://docs.cloud.google.com/sdk/gcloud/reference/config/unset) compute/region
+
+Alternatively, the region can be stored in the environment variable ``CLOUDSDK_COMPUTE_REGION``. 
+
+`--resource-manager-tags`=[`KEY`=`VALUE`,…]
+     Resource manager tags to be bound to the commitment. 
+`--split-source-commitment`=`SPLIT_SOURCE_COMMITMENT`
+     Creates the new commitment by splitting the specified source commitment and redistributing the specified resources. 
+`--type`=`TYPE`; default="general-purpose"
+     Type of commitment. `memory-optimized` indicates that the commitment is for memory-optimized VMs. `TYPE` must be one of: `accelerator-optimized`, `accelerator-optimized-a3`, `accelerator-optimized-a3-mega`, `accelerator-optimized-a3-ultra`, `accelerator-optimized-a4`, `compute-optimized`, `compute-optimized-c2d`, `compute-optimized-c3`, `compute-optimized-c3d`, `compute-optimized-h3`, `compute-optimized-h4d`, `compute-optimized-h4d-3tb`, `general-purpose`, `general-purpose-c4`, `general-purpose-c4a`, `general-purpose-c4d`, `general-purpose-e2`, `general-purpose-n2`, `general-purpose-n2d`, `general-purpose-n4`, `general-purpose-n4a`, `general-purpose-n4d`, `general-purpose-t2d`, `graphics-optimized`, `graphics-optimized-g4`, `graphics-optimized-g4-vgpu`, `memory-optimized`, `memory-optimized-m3`, `memory-optimized-m4`, `memory-optimized-m4-6tb`, `memory-optimized-x4-1440-24t`, `memory-optimized-x4-16tb`, `memory-optimized-x4-1920-32t`, `memory-optimized-x4-24tb`, `memory-optimized-x4-32tb`, `memory-optimized-x4-480-6t`, `memory-optimized-x4-480-8t`, `memory-optimized-x4-960-12t`, `memory-optimized-x4-960-16t`, `network-optimized-c4n`, `network-optimized-u4c`, `network-optimized-u4p`, `network-optimized-u4s`, `storage-optimized-z3`, `storage-optimized-z4d4t`, `storage-optimized-z4dh`, `storage-optimized-z4ds`, `storage-optimized-z4m`. 
+Manage the reservations to be created with the commitment. 
+
+At most one of these can be specified: 
+
+`--existing-reservation`=[`name`=`NAME`],[`zone`=`ZONE`]
+     Details of the existing on-demand reservation or auto-created future reservation that you want to attach to your commitment. Specify a new instance of this flag for every existing reservation that you want to attach. The reservations must be in the same region as the commitment. 
+
+`name`
+     The name of the reservation. 
+`zone`
+     The zone of the reservation. For example, to attach an existing reservation named reservation-name in the zone reservation-zone, use the following text: \--existing-reservation=name=reservation-name,zone=reservation-zone 
+`--reservations-from-file`=`PATH_TO_FILE`
+     Path to a YAML file of multiple reservations' configuration. Use a full or relative path to a local file containing the value of reservations. 
+Or at least one of these can be specified: 
+
+Manage the reservation to be created with the commitment. 
+`--reservation`=`RESERVATION`
+     Name of the reservation to operate on. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--reservation-zone`=`RESERVATION_ZONE`
+     Zone of the reservation to operate on. If not specified and the ``compute/zone`` property isn't set, you might be prompted to select a zone (interactive mode only). 
+
+To avoid prompting when this flag is omitted, you can set the ``compute/zone`` property: 
+    
+    
+    [gcloud config set](https://docs.cloud.google.com/sdk/gcloud/reference/config/set) compute/zone ZONE
+
+A list of zones can be fetched by running: 
+    
+    
+    [gcloud compute zones list](https://docs.cloud.google.com/sdk/gcloud/reference/compute/zones/list)
+
+To unset the property, run: 
+    
+    
+    [gcloud config unset](https://docs.cloud.google.com/sdk/gcloud/reference/config/unset) compute/zone
+
+Alternatively, the zone can be stored in the environment variable ``CLOUDSDK_COMPUTE_ZONE``. 
+
+Manage the specific SKU reservation properties to create. 
+`--accelerator`=[`count`=`COUNT`],[`type`=`TYPE`]
+     Manage the configuration of the type and number of accelerator cards attached. 
+
+`count`
+     The number of accelerators to attach to each instance in the reservation. 
+`type`
+     The specific type (e.g. `nvidia-tesla-k80` for nVidia Tesla K80) of accelerator to attach to instances in the reservation. Use `[gcloud compute accelerator-types list](https://docs.cloud.google.com/sdk/gcloud/reference/compute/accelerator-types/list)` to learn about all available accelerator types. 
+`--local-ssd`=[`interface`=`INTERFACE`],[`size`=`SIZE`]
+     Manage the size and the interface of local SSD to use. See <https://cloud.google.com/compute/docs/disks/local-ssd> for more information. 
+
+`interface`
+     The kind of disk interface exposed to the VM for this SSD. Valid values are `scsi` and `nvme`. SCSI is the default and is supported by more guest operating systems. NVME may provide higher performance. 
+`size`
+     The size of the local SSD in base-2 GB. 
+`--machine-type`=`MACHINE_TYPE`
+     The type of machine (name only) that has a fixed number of vCPUs and a fixed amount of memory. You can also specify a custom machine type by using the pattern `custom-number_of_CPUs-amount_of_memory`-for example, `custom-32-29440`. 
+`--min-cpu-platform`=`MIN_CPU_PLATFORM`
+     Optional minimum CPU platform of the reservation to create. 
+`--require-specific-reservation`
+     Indicates whether the reservation can be consumed by VMs with "any reservation" defined. If enabled, then only VMs that target this reservation by name using `--reservation-affinity=specific` can consume from this reservation. 
+`--resource-policies`=[`KEY`=`VALUE`,…]
+     The resource policies to include in this reservation. If you omit this flag, no resource policies are added. You can specify any string as the key, and specify the name of a resource policy as the value. 
+`--vm-count`=`VM_COUNT`
+     The number of VM instances that are allocated to this reservation. The value of this field must be an int in the range [1, 1000]. 
+Manage the properties of a shared reservation to create 
+`--share-setting`=`SHARE_SETTING`
+     The projects that can use the reservation. `SHARE_SETTING` must be one of: 
+
+`local`
+     Only your project can use the reservation. This is the default value. 
+`projects`
+     Your project and up to 100 other projects within your project's organization can use the reservation. If you specify this value, then you must also include the \--share-with flag in the command. 
+`--share-with`=`SHARE_WITH`,[`SHARE_WITH`,…]
+     If this reservation is shared (--share-setting=projects), then specify a comma-separated list of projects to share the reservation with. List projects using project IDs or project numbers. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in DEVELOPER PREVIEW and may change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. These variants are also available: 
+    
+    
+    [gcloud compute commitments create](https://docs.cloud.google.com/sdk/gcloud/reference/compute/commitments/create)
+    
+    
+    [gcloud alpha compute commitments create](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/commitments/create)
+    
+    
+    [gcloud beta compute commitments create](https://docs.cloud.google.com/sdk/gcloud/reference/beta/compute/commitments/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-06 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-06 UTC."],[],[]] 

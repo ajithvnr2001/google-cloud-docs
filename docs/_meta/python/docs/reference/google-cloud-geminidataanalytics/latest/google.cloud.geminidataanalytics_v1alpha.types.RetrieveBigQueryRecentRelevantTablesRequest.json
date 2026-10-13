@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest/google.cloud.geminidataanalytics_v1alpha.types.RetrieveBigQueryRecentRelevantTablesRequest",
+  "file": "python/docs/reference/google-cloud-geminidataanalytics/latest/google.cloud.geminidataanalytics_v1alpha.types.RetrieveBigQueryRecentRelevantTablesRequest.md",
+  "title": "Class RetrieveBigQueryRecentRelevantTablesRequest (0.3.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T15:04:37.283496+00:00"
+}

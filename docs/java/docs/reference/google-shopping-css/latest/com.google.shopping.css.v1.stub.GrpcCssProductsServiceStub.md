@@ -1,0 +1,282 @@
+---
+url: https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.GrpcCssProductsServiceStub
+title: Class GrpcCssProductsServiceStub (0.67.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T20:01:30.105213+00:00
+---
+
+# Class GrpcCssProductsServiceStub (0.67.0)  |  Java client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.GrpcCssProductsServiceStub
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Java ](https://docs.cloud.google.com/java/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/java/docs/reference)
+
+
+
+Send feedback 
+
+#  Class GrpcCssProductsServiceStub (0.67.0) Stay organized with collections  Save and categorize content based on your preferences. 
+
+0.67.0 (latest)  0.63.0  0.62.0  0.61.0  0.59.0  0.56.0  0.55.0  0.53.0  0.51.0  0.50.0  0.48.0  0.46.0  0.44.0  0.43.0  0.42.0  0.41.0  0.40.0  0.38.0  0.36.0  0.35.0  0.32.0  0.31.0  0.30.0  0.28.0  0.27.0  0.26.0  0.25.0  0.24.0  0.23.0  0.22.0  0.21.0  0.20.0  0.19.0  0.17.0  0.16.0  0.15.0  0.14.0  0.13.0  0.12.0  0.11.0  0.10.0  0.9.0  0.8.0  0.7.0  0.5.0  0.4.0  0.3.0  0.2.0  0.1.0 
+    
+    
+    public class GrpcCssProductsServiceStub extends CssProductsServiceStub
+
+gRPC stub implementation for the CssProductsService service API.
+
+This class is for advanced usage and reflects the underlying API directly.
+
+## Inheritance
+
+[java.lang.Object](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html) > [CssProductsServiceStub](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.CssProductsServiceStub) > GrpcCssProductsServiceStub
+
+## Inherited Members
+
+[CssProductsServiceStub.close()](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.CssProductsServiceStub#com_google_shopping_css_v1_stub_CssProductsServiceStub_close__)
+
+[CssProductsServiceStub.getCssProductCallable()](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.CssProductsServiceStub#com_google_shopping_css_v1_stub_CssProductsServiceStub_getCssProductCallable__)
+
+[CssProductsServiceStub.listCssProductsCallable()](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.CssProductsServiceStub#com_google_shopping_css_v1_stub_CssProductsServiceStub_listCssProductsCallable__)
+
+[CssProductsServiceStub.listCssProductsPagedCallable()](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.CssProductsServiceStub#com_google_shopping_css_v1_stub_CssProductsServiceStub_listCssProductsPagedCallable__)
+
+[Object.clone()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--)
+
+[Object.equals(Object)](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-)
+
+[Object.finalize()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--)
+
+[Object.getClass()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--)
+
+[Object.hashCode()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--)
+
+[Object.notify()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--)
+
+[Object.notifyAll()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--)
+
+[Object.toString()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--)
+
+[Object.wait()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--)
+
+[Object.wait(long)](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-)
+
+[Object.wait(long,int)](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-)
+
+## Static Methods 
+
+### create(ClientContext clientContext)
+    
+    
+    public static final GrpcCssProductsServiceStub create(ClientContext clientContext)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`clientContext` | `[ClientContext](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.ClientContext.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[GrpcCssProductsServiceStub](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.GrpcCssProductsServiceStub)` |   
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[IOException](https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html)` |   
+  
+### create(ClientContext clientContext, GrpcStubCallableFactory callableFactory)
+    
+    
+    public static final GrpcCssProductsServiceStub create(ClientContext clientContext, GrpcStubCallableFactory callableFactory)
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`clientContext` | `[ClientContext](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.ClientContext.html)`  
+  
+`callableFactory` | `[GrpcStubCallableFactory](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.grpc.GrpcStubCallableFactory.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[GrpcCssProductsServiceStub](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.GrpcCssProductsServiceStub)` |   
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[IOException](https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html)` |   
+  
+### create(CssProductsServiceStubSettings settings)
+    
+    
+    public static final GrpcCssProductsServiceStub create(CssProductsServiceStubSettings settings)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`settings` | `[CssProductsServiceStubSettings](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.CssProductsServiceStubSettings)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[GrpcCssProductsServiceStub](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.GrpcCssProductsServiceStub)` |   
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[IOException](https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html)` |   
+  
+## Constructors 
+
+### GrpcCssProductsServiceStub(CssProductsServiceStubSettings settings, ClientContext clientContext)
+    
+    
+    protected GrpcCssProductsServiceStub(CssProductsServiceStubSettings settings, ClientContext clientContext)
+
+Constructs an instance of GrpcCssProductsServiceStub, using the given settings. This is protected so that it is easy to make a subclass, but otherwise, the static factory methods should be preferred.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`settings` | `[CssProductsServiceStubSettings](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.CssProductsServiceStubSettings)`  
+  
+`clientContext` | `[ClientContext](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.ClientContext.html)`  
+  
+  
+### GrpcCssProductsServiceStub(CssProductsServiceStubSettings settings, ClientContext clientContext, GrpcStubCallableFactory callableFactory)
+    
+    
+    protected GrpcCssProductsServiceStub(CssProductsServiceStubSettings settings, ClientContext clientContext, GrpcStubCallableFactory callableFactory)
+
+Constructs an instance of GrpcCssProductsServiceStub, using the given settings. This is protected so that it is easy to make a subclass, but otherwise, the static factory methods should be preferred.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`settings` | `[CssProductsServiceStubSettings](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.CssProductsServiceStubSettings)`  
+  
+`clientContext` | `[ClientContext](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.ClientContext.html)`  
+  
+`callableFactory` | `[GrpcStubCallableFactory](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.grpc.GrpcStubCallableFactory.html)`  
+  
+  
+## Methods 
+
+### awaitTermination(long duration, TimeUnit unit)
+    
+    
+    public boolean awaitTermination(long duration, TimeUnit unit)
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`duration` | `[long](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+  
+`unit` | `[TimeUnit](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/TimeUnit.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` |   
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[InterruptedException](https://docs.oracle.com/javase/8/docs/api/java/lang/InterruptedException.html)` |   
+  
+### close()
+    
+    
+    public final void close()
+
+**Overrides**
+
+[CssProductsServiceStub.close()](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.CssProductsServiceStub#com_google_shopping_css_v1_stub_CssProductsServiceStub_close__)
+
+### getCssProductCallable()
+    
+    
+    public UnaryCallable<GetCssProductRequest,CssProduct> getCssProductCallable()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[UnaryCallable](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.UnaryCallable.html)<[GetCssProductRequest](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.GetCssProductRequest),[CssProduct](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.CssProduct)>` |   
+**Overrides**
+
+[CssProductsServiceStub.getCssProductCallable()](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.CssProductsServiceStub#com_google_shopping_css_v1_stub_CssProductsServiceStub_getCssProductCallable__)
+
+### getOperationsStub()
+    
+    
+    public GrpcOperationsStub getOperationsStub()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[GrpcOperationsStub](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.longrunning.stub.GrpcOperationsStub.html)` |   
+  
+### isShutdown()
+    
+    
+    public boolean isShutdown()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` |   
+  
+### isTerminated()
+    
+    
+    public boolean isTerminated()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` |   
+  
+### listCssProductsCallable()
+    
+    
+    public UnaryCallable<ListCssProductsRequest,ListCssProductsResponse> listCssProductsCallable()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[UnaryCallable](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.UnaryCallable.html)<[ListCssProductsRequest](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.ListCssProductsRequest),[ListCssProductsResponse](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.ListCssProductsResponse)>` |   
+**Overrides**
+
+[CssProductsServiceStub.listCssProductsCallable()](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.CssProductsServiceStub#com_google_shopping_css_v1_stub_CssProductsServiceStub_listCssProductsCallable__)
+
+### listCssProductsPagedCallable()
+    
+    
+    public UnaryCallable<ListCssProductsRequest,CssProductsServiceClient.ListCssProductsPagedResponse> listCssProductsPagedCallable()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[UnaryCallable](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.UnaryCallable.html)<[ListCssProductsRequest](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.ListCssProductsRequest),[ListCssProductsPagedResponse](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.CssProductsServiceClient.ListCssProductsPagedResponse)>` |   
+**Overrides**
+
+[CssProductsServiceStub.listCssProductsPagedCallable()](https://docs.cloud.google.com/java/docs/reference/google-shopping-css/latest/com.google.shopping.css.v1.stub.CssProductsServiceStub#com_google_shopping_css_v1_stub_CssProductsServiceStub_listCssProductsPagedCallable__)
+
+### shutdown()
+    
+    
+    public void shutdown()
+
+### shutdownNow()
+    
+    
+    public void shutdownNow()
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-07 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-07 UTC."],[],[]] 

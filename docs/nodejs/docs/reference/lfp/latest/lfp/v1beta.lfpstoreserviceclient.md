@@ -1,0 +1,939 @@
+---
+url: https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/v1beta.lfpstoreserviceclient
+title: Class v1beta.LfpStoreServiceClient (0.11.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T17:38:17.820518+00:00
+---
+
+# Class v1beta.LfpStoreServiceClient (0.11.1)  |  Node.js client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/v1beta.lfpstoreserviceclient
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Node.js ](https://docs.cloud.google.com/nodejs/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/nodejs/docs/reference)
+
+
+
+Send feedback 
+
+#  Class v1beta.LfpStoreServiceClient (0.11.1) Stay organized with collections  Save and categorize content based on your preferences. 
+
+0.11.1 (latest)  0.10.0  0.4.1  0.2.0  0.1.0 
+
+Service for a [LFP partner](<https://support.google.com/merchants/answer/7676652>) to submit local stores for a merchant. v1beta
+
+## Package
+
+[@google-shopping/lfp](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/overview.html)
+
+## Constructors 
+
+### (constructor)(opts, gaxInstance)
+    
+    
+    constructor(opts?: ClientOptions, gaxInstance?: typeof gax | typeof gax.fallback);
+
+Construct an instance of LfpStoreServiceClient.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`opts` |  `ClientOptions`   
+  
+`gaxInstance` |  `typeof gax | typeof fallback`   
+: loaded instance of `google-gax`. Useful if you need to avoid loading the default gRPC version and want to use the fallback HTTP implementation. Load only fallback version and pass it to the constructor: ``` const gax = require('google-gax/build/src/fallback'); // avoids loading google-gax with gRPC const client = new LfpStoreServiceClient({fallback: true}, gax); ```  
+  
+## Properties 
+
+### apiEndpoint
+    
+    
+    get apiEndpoint(): string;
+
+The DNS address for this API service.
+
+### apiEndpoint
+    
+    
+    static get apiEndpoint(): string;
+
+The DNS address for this API service - same as servicePath.
+
+### auth
+    
+    
+    auth: gax.GoogleAuth;
+
+### descriptors
+    
+    
+    descriptors: Descriptors;
+
+### innerApiCalls
+    
+    
+    innerApiCalls: {
+            [name: string]: Function;
+        };
+
+### lfpStoreServiceStub
+    
+    
+    lfpStoreServiceStub?: Promise<{
+            [name: string]: Function;
+        }>;
+
+### pathTemplates
+    
+    
+    pathTemplates: {
+            [name: string]: gax.PathTemplate;
+        };
+
+### port
+    
+    
+    static get port(): number;
+
+The port for this API service.
+
+### scopes
+    
+    
+    static get scopes(): string[];
+
+The scopes needed to make gRPC calls for every method defined in this service.
+
+### servicePath
+    
+    
+    static get servicePath(): string;
+
+The DNS address for this API service.
+
+### universeDomain
+    
+    
+    get universeDomain(): string;
+
+### warn
+    
+    
+    warn: (code: string, message: string, warnType?: string) => void;
+
+## Methods 
+
+### accountPath(account)
+    
+    
+    accountPath(account: string): string;
+
+Return a fully-qualified account resource name string.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`account` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### close()
+    
+    
+    close(): Promise<void>;
+
+Terminate the gRPC channel and close the client.
+
+The client will no longer be usable and all future behavior is undefined.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<void>` | {Promise} A promise that resolves when the client is closed.  
+  
+### deleteLfpStore(request, options)
+    
+    
+    deleteLfpStore(request?: protos.google.shopping.merchant.lfp.v1beta.IDeleteLfpStoreRequest, options?: CallOptions): Promise<[
+            protos.google.protobuf.IEmpty,
+            (protos.google.shopping.merchant.lfp.v1beta.IDeleteLfpStoreRequest | undefined),
+            {} | undefined
+        ]>;
+
+Deletes a store for a target merchant.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ideletelfpstorerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.protobuf.iempty), ([protos.google.shopping.merchant.lfp.v1beta.IDeleteLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ideletelfpstorerequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [Empty](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.protobuf.empty). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the store to delete for the target merchant account.
+       *  Format: `accounts/{account}/lfpStores/{target_merchant}~{store_code}`
+       */
+      // const name = 'abc123'
+    
+      // Imports the Lfp library
+      const {LfpStoreServiceClient} = require('[@google-shopping/lfp](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const lfpClient = new [LfpStoreServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/overview.html)();
+    
+      async function callDeleteLfpStore() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await lfpClient.deleteLfpStore(request);
+        console.log(response);
+      }
+    
+      callDeleteLfpStore();
+    
+    
+
+### deleteLfpStore(request, options, callback)
+    
+    
+    deleteLfpStore(request: protos.google.shopping.merchant.lfp.v1beta.IDeleteLfpStoreRequest, options: CallOptions, callback: Callback<protos.google.protobuf.IEmpty, protos.google.shopping.merchant.lfp.v1beta.IDeleteLfpStoreRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ideletelfpstorerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.protobuf.iempty), [protos.google.shopping.merchant.lfp.v1beta.IDeleteLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ideletelfpstorerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### deleteLfpStore(request, callback)
+    
+    
+    deleteLfpStore(request: protos.google.shopping.merchant.lfp.v1beta.IDeleteLfpStoreRequest, callback: Callback<protos.google.protobuf.IEmpty, protos.google.shopping.merchant.lfp.v1beta.IDeleteLfpStoreRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ideletelfpstorerequest)`   
+  
+`callback` |  `Callback<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.protobuf.iempty), [protos.google.shopping.merchant.lfp.v1beta.IDeleteLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ideletelfpstorerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getLfpStore(request, options)
+    
+    
+    getLfpStore(request?: protos.google.shopping.merchant.lfp.v1beta.IGetLfpStoreRequest, options?: CallOptions): Promise<[
+            protos.google.shopping.merchant.lfp.v1beta.ILfpStore,
+            (protos.google.shopping.merchant.lfp.v1beta.IGetLfpStoreRequest | undefined),
+            {} | undefined
+        ]>;
+
+Retrieves information about a store.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.igetlfpstorerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.shopping.merchant.lfp.v1beta.ILfpStore](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilfpstore), ([protos.google.shopping.merchant.lfp.v1beta.IGetLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.igetlfpstorerequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing . Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the store to retrieve.
+       *  Format: `accounts/{account}/lfpStores/{target_merchant}~{store_code}`
+       */
+      // const name = 'abc123'
+    
+      // Imports the Lfp library
+      const {LfpStoreServiceClient} = require('[@google-shopping/lfp](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const lfpClient = new [LfpStoreServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/overview.html)();
+    
+      async function callGetLfpStore() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await lfpClient.getLfpStore(request);
+        console.log(response);
+      }
+    
+      callGetLfpStore();
+    
+    
+
+### getLfpStore(request, options, callback)
+    
+    
+    getLfpStore(request: protos.google.shopping.merchant.lfp.v1beta.IGetLfpStoreRequest, options: CallOptions, callback: Callback<protos.google.shopping.merchant.lfp.v1beta.ILfpStore, protos.google.shopping.merchant.lfp.v1beta.IGetLfpStoreRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.igetlfpstorerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.shopping.merchant.lfp.v1beta.ILfpStore](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilfpstore), [protos.google.shopping.merchant.lfp.v1beta.IGetLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.igetlfpstorerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getLfpStore(request, callback)
+    
+    
+    getLfpStore(request: protos.google.shopping.merchant.lfp.v1beta.IGetLfpStoreRequest, callback: Callback<protos.google.shopping.merchant.lfp.v1beta.ILfpStore, protos.google.shopping.merchant.lfp.v1beta.IGetLfpStoreRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.igetlfpstorerequest)`   
+  
+`callback` |  `Callback<[protos.google.shopping.merchant.lfp.v1beta.ILfpStore](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilfpstore), [protos.google.shopping.merchant.lfp.v1beta.IGetLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.igetlfpstorerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getProjectId()
+    
+    
+    getProjectId(): Promise<string>;
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<string>` |   
+  
+### getProjectId(callback)
+    
+    
+    getProjectId(callback: Callback<string, undefined, undefined>): void;
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`callback` |  `Callback<string, undefined, undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### initialize()
+    
+    
+    initialize(): Promise<{
+            [name: string]: Function;
+        }>;
+
+Initialize the client. Performs asynchronous operations (such as authentication) and prepares the client. This function will be called automatically when any class method is called for the first time, but if you need to initialize it before calling an actual method, feel free to call initialize() directly.
+
+You can await on this method if you want to make sure the client is initialized.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<{ [name: string]: Function; }>` | {Promise} A promise that resolves to an authenticated service stub.  
+  
+### insertLfpStore(request, options)
+    
+    
+    insertLfpStore(request?: protos.google.shopping.merchant.lfp.v1beta.IInsertLfpStoreRequest, options?: CallOptions): Promise<[
+            protos.google.shopping.merchant.lfp.v1beta.ILfpStore,
+            (protos.google.shopping.merchant.lfp.v1beta.IInsertLfpStoreRequest | undefined),
+            {} | undefined
+        ]>;
+
+Inserts a store for the target merchant. If the store with the same store code already exists, it will be replaced.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IInsertLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.iinsertlfpstorerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.shopping.merchant.lfp.v1beta.ILfpStore](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilfpstore), ([protos.google.shopping.merchant.lfp.v1beta.IInsertLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.iinsertlfpstorerequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing . Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The LFP provider account
+       *  Format: `accounts/{account}`
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. The store to insert.
+       */
+      // const lfpStore = {}
+    
+      // Imports the Lfp library
+      const {LfpStoreServiceClient} = require('[@google-shopping/lfp](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const lfpClient = new [LfpStoreServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/overview.html)();
+    
+      async function callInsertLfpStore() {
+        // Construct request
+        const request = {
+          parent,
+          lfpStore,
+        };
+    
+        // Run request
+        const response = await lfpClient.insertLfpStore(request);
+        console.log(response);
+      }
+    
+      callInsertLfpStore();
+    
+    
+
+### insertLfpStore(request, options, callback)
+    
+    
+    insertLfpStore(request: protos.google.shopping.merchant.lfp.v1beta.IInsertLfpStoreRequest, options: CallOptions, callback: Callback<protos.google.shopping.merchant.lfp.v1beta.ILfpStore, protos.google.shopping.merchant.lfp.v1beta.IInsertLfpStoreRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IInsertLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.iinsertlfpstorerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.shopping.merchant.lfp.v1beta.ILfpStore](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilfpstore), [protos.google.shopping.merchant.lfp.v1beta.IInsertLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.iinsertlfpstorerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### insertLfpStore(request, callback)
+    
+    
+    insertLfpStore(request: protos.google.shopping.merchant.lfp.v1beta.IInsertLfpStoreRequest, callback: Callback<protos.google.shopping.merchant.lfp.v1beta.ILfpStore, protos.google.shopping.merchant.lfp.v1beta.IInsertLfpStoreRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IInsertLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.iinsertlfpstorerequest)`   
+  
+`callback` |  `Callback<[protos.google.shopping.merchant.lfp.v1beta.ILfpStore](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilfpstore), [protos.google.shopping.merchant.lfp.v1beta.IInsertLfpStoreRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.iinsertlfpstorerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### lfpInventoryPath(account, targetMerchant, storeCode, offer)
+    
+    
+    lfpInventoryPath(account: string, targetMerchant: string, storeCode: string, offer: string): string;
+
+Return a fully-qualified lfpInventory resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`account` |  `string`   
+  
+`targetMerchant` |  `string`   
+  
+`storeCode` |  `string`   
+  
+`offer` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### lfpMerchantStatePath(account, lfpMerchantState)
+    
+    
+    lfpMerchantStatePath(account: string, lfpMerchantState: string): string;
+
+Return a fully-qualified lfpMerchantState resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`account` |  `string`   
+  
+`lfpMerchantState` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### lfpSalePath(account, sale)
+    
+    
+    lfpSalePath(account: string, sale: string): string;
+
+Return a fully-qualified lfpSale resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`account` |  `string`   
+  
+`sale` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### lfpStorePath(account, targetMerchant, storeCode)
+    
+    
+    lfpStorePath(account: string, targetMerchant: string, storeCode: string): string;
+
+Return a fully-qualified lfpStore resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`account` |  `string`   
+  
+`targetMerchant` |  `string`   
+  
+`storeCode` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### listLfpStores(request, options)
+    
+    
+    listLfpStores(request?: protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresRequest, options?: CallOptions): Promise<[
+            protos.google.shopping.merchant.lfp.v1beta.ILfpStore[],
+            protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresRequest | null,
+            protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresResponse
+        ]>;
+
+Lists the stores of the target merchant, specified by the filter in `ListLfpStoresRequest`.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListLfpStoresRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilistlfpstoresrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.shopping.merchant.lfp.v1beta.ILfpStore](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilfpstore)[], [protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilistlfpstoresrequest) | null, [protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresResponse](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilistlfpstoresresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of . The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listLfpStoresAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listLfpStores(request, options, callback)
+    
+    
+    listLfpStores(request: protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresRequest, options: CallOptions, callback: PaginationCallback<protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresRequest, protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresResponse | null | undefined, protos.google.shopping.merchant.lfp.v1beta.ILfpStore>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListLfpStoresRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilistlfpstoresrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilistlfpstoresrequest), [protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresResponse](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilistlfpstoresresponse) | null | undefined, [protos.google.shopping.merchant.lfp.v1beta.ILfpStore](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilfpstore)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listLfpStores(request, callback)
+    
+    
+    listLfpStores(request: protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresRequest, callback: PaginationCallback<protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresRequest, protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresResponse | null | undefined, protos.google.shopping.merchant.lfp.v1beta.ILfpStore>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListLfpStoresRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilistlfpstoresrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilistlfpstoresrequest), [protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresResponse](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilistlfpstoresresponse) | null | undefined, [protos.google.shopping.merchant.lfp.v1beta.ILfpStore](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilfpstore)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listLfpStoresAsync(request, options)
+    
+    
+    listLfpStoresAsync(request?: protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresRequest, options?: CallOptions): AsyncIterable<protos.google.shopping.merchant.lfp.v1beta.ILfpStore>;
+
+Equivalent to `listLfpStores`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListLfpStoresRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilistlfpstoresrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.shopping.merchant.lfp.v1beta.ILfpStore](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilfpstore)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing . The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The LFP partner.
+       *  Format: `accounts/{account}`
+       */
+      // const parent = 'abc123'
+      /**
+       *  Required. The Merchant Center id of the merchant to list stores for.
+       */
+      // const targetAccount = 1234
+      /**
+       *  Optional. The maximum number of `LfpStore` resources for the given account
+       *  to return. The service returns fewer than this value if the number of
+       *  stores for the given account is less than the `pageSize`. The default value
+       *  is 250. The maximum value is 1000; If a value higher than the maximum is
+       *  specified, then the `pageSize` will default to the maximum.
+       */
+      // const pageSize = 1234
+      /**
+       *  Optional. A page token, received from a previous `ListLfpStoresRequest`
+       *  call. Provide the page token to retrieve the subsequent page. When
+       *  paginating, all other parameters provided to `ListLfpStoresRequest` must
+       *  match the call that provided the page token. The token returned as
+       *  nextPageToken google.shopping.merchant.lfp.v1beta.ListLfpStoresResponse.next_page_token 
+       *  in the response to the previous request.
+       */
+      // const pageToken = 'abc123'
+    
+      // Imports the Lfp library
+      const {LfpStoreServiceClient} = require('[@google-shopping/lfp](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const lfpClient = new [LfpStoreServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/overview.html)();
+    
+      async function callListLfpStores() {
+        // Construct request
+        const request = {
+          parent,
+          targetAccount,
+        };
+    
+        // Run request
+        const iterable = lfpClient.listLfpStoresAsync(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callListLfpStores();
+    
+    
+
+### listLfpStoresStream(request, options)
+    
+    
+    listLfpStoresStream(request?: protos.google.shopping.merchant.lfp.v1beta.IListLfpStoresRequest, options?: CallOptions): Transform;
+
+Equivalent to `listLfpStores`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListLfpStoresRequest](https://docs.cloud.google.com/nodejs/docs/reference/lfp/latest/lfp/protos.google.shopping.merchant.lfp.v1beta.ilistlfpstoresrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listLfpStoresAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### matchAccountFromAccountName(accountName)
+    
+    
+    matchAccountFromAccountName(accountName: string): string | number;
+
+Parse the account from Account resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`accountName` |  `string`   
+A fully-qualified path representing Account resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the account.  
+  
+### matchAccountFromLfpInventoryName(lfpInventoryName)
+    
+    
+    matchAccountFromLfpInventoryName(lfpInventoryName: string): string | number;
+
+Parse the account from LfpInventory resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`lfpInventoryName` |  `string`   
+A fully-qualified path representing LfpInventory resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the account.  
+  
+### matchAccountFromLfpMerchantStateName(lfpMerchantStateName)
+    
+    
+    matchAccountFromLfpMerchantStateName(lfpMerchantStateName: string): string | number;
+
+Parse the account from LfpMerchantState resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`lfpMerchantStateName` |  `string`   
+A fully-qualified path representing LfpMerchantState resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the account.  
+  
+### matchAccountFromLfpSaleName(lfpSaleName)
+    
+    
+    matchAccountFromLfpSaleName(lfpSaleName: string): string | number;
+
+Parse the account from LfpSale resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`lfpSaleName` |  `string`   
+A fully-qualified path representing LfpSale resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the account.  
+  
+### matchAccountFromLfpStoreName(lfpStoreName)
+    
+    
+    matchAccountFromLfpStoreName(lfpStoreName: string): string | number;
+
+Parse the account from LfpStore resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`lfpStoreName` |  `string`   
+A fully-qualified path representing LfpStore resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the account.  
+  
+### matchLfpMerchantStateFromLfpMerchantStateName(lfpMerchantStateName)
+    
+    
+    matchLfpMerchantStateFromLfpMerchantStateName(lfpMerchantStateName: string): string | number;
+
+Parse the lfp_merchant_state from LfpMerchantState resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`lfpMerchantStateName` |  `string`   
+A fully-qualified path representing LfpMerchantState resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the lfp_merchant_state.  
+  
+### matchOfferFromLfpInventoryName(lfpInventoryName)
+    
+    
+    matchOfferFromLfpInventoryName(lfpInventoryName: string): string | number;
+
+Parse the offer from LfpInventory resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`lfpInventoryName` |  `string`   
+A fully-qualified path representing LfpInventory resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the offer.  
+  
+### matchSaleFromLfpSaleName(lfpSaleName)
+    
+    
+    matchSaleFromLfpSaleName(lfpSaleName: string): string | number;
+
+Parse the sale from LfpSale resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`lfpSaleName` |  `string`   
+A fully-qualified path representing LfpSale resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the sale.  
+  
+### matchStoreCodeFromLfpInventoryName(lfpInventoryName)
+    
+    
+    matchStoreCodeFromLfpInventoryName(lfpInventoryName: string): string | number;
+
+Parse the store_code from LfpInventory resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`lfpInventoryName` |  `string`   
+A fully-qualified path representing LfpInventory resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the store_code.  
+  
+### matchStoreCodeFromLfpStoreName(lfpStoreName)
+    
+    
+    matchStoreCodeFromLfpStoreName(lfpStoreName: string): string | number;
+
+Parse the store_code from LfpStore resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`lfpStoreName` |  `string`   
+A fully-qualified path representing LfpStore resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the store_code.  
+  
+### matchTargetMerchantFromLfpInventoryName(lfpInventoryName)
+    
+    
+    matchTargetMerchantFromLfpInventoryName(lfpInventoryName: string): string | number;
+
+Parse the target_merchant from LfpInventory resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`lfpInventoryName` |  `string`   
+A fully-qualified path representing LfpInventory resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the target_merchant.  
+  
+### matchTargetMerchantFromLfpStoreName(lfpStoreName)
+    
+    
+    matchTargetMerchantFromLfpStoreName(lfpStoreName: string): string | number;
+
+Parse the target_merchant from LfpStore resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`lfpStoreName` |  `string`   
+A fully-qualified path representing LfpStore resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the target_merchant.  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-02 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-02 UTC."],[],[]] 

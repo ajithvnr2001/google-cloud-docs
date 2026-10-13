@@ -1,0 +1,2439 @@
+---
+url: https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClientImpl
+title: Cloud Storage v2 API - Class StorageControlClientImpl (1.11.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T15:23:47.011501+00:00
+---
+
+# Cloud Storage v2 API - Class StorageControlClientImpl (1.11.0)  |  .NET client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClientImpl
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ .NET ](https://docs.cloud.google.com/dotnet/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/dotnet/docs/reference)
+
+
+
+Send feedback 
+
+#  Cloud Storage v2 API - Class StorageControlClientImpl (1.11.0) Stay organized with collections  Save and categorize content based on your preferences. 
+
+1.11.0 (latest)  1.10.0  1.9.0  1.8.0  1.7.0  1.6.0  1.5.0  1.4.0  1.3.0  1.2.0  1.1.0  1.0.1 
+    
+    
+    public sealed class StorageControlClientImpl : StorageControlClient
+
+Reference documentation and code samples for the Cloud Storage v2 API class StorageControlClientImpl.
+
+StorageControl client wrapper implementation, for convenient use.
+
+## Inheritance
+
+[object](https://learn.microsoft.com/dotnet/api/system.object) > [StorageControlClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient) > StorageControlClientImpl
+
+## Inherited Members
+
+[StorageControlClient.DefaultEndpoint](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DefaultEndpoint)
+
+[StorageControlClient.DefaultScopes](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DefaultScopes)
+
+[StorageControlClient.ServiceMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ServiceMetadata)
+
+[StorageControlClient.CreateAsync(CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateAsync_System_Threading_CancellationToken_)
+
+[StorageControlClient.Create()](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_Create)
+
+[StorageControlClient.ShutdownDefaultChannelsAsync()](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ShutdownDefaultChannelsAsync)
+
+[StorageControlClient.CreateFolderAsync(CreateFolderRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateFolderAsync_Google_Cloud_Storage_Control_V2_CreateFolderRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.CreateFolder(string, Folder, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateFolder_System_String_Google_Cloud_Storage_Control_V2_Folder_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateFolderAsync(string, Folder, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateFolderAsync_System_String_Google_Cloud_Storage_Control_V2_Folder_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateFolderAsync(string, Folder, string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateFolderAsync_System_String_Google_Cloud_Storage_Control_V2_Folder_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.CreateFolder(BucketName, Folder, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateFolder_Google_Cloud_Storage_Control_V2_BucketName_Google_Cloud_Storage_Control_V2_Folder_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateFolderAsync(BucketName, Folder, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateFolderAsync_Google_Cloud_Storage_Control_V2_BucketName_Google_Cloud_Storage_Control_V2_Folder_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateFolderAsync(BucketName, Folder, string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateFolderAsync_Google_Cloud_Storage_Control_V2_BucketName_Google_Cloud_Storage_Control_V2_Folder_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.DeleteFolderAsync(DeleteFolderRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolderAsync_Google_Cloud_Storage_Control_V2_DeleteFolderRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.DeleteFolder(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolder_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DeleteFolderAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolderAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DeleteFolderAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolderAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.DeleteFolder(FolderName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolder_Google_Cloud_Storage_Control_V2_FolderName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DeleteFolderAsync(FolderName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolderAsync_Google_Cloud_Storage_Control_V2_FolderName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DeleteFolderAsync(FolderName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolderAsync_Google_Cloud_Storage_Control_V2_FolderName_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetFolderAsync(GetFolderRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolderAsync_Google_Cloud_Storage_Control_V2_GetFolderRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetFolder(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolder_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetFolderAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolderAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetFolderAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolderAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetFolder(FolderName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolder_Google_Cloud_Storage_Control_V2_FolderName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetFolderAsync(FolderName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolderAsync_Google_Cloud_Storage_Control_V2_FolderName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetFolderAsync(FolderName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolderAsync_Google_Cloud_Storage_Control_V2_FolderName_System_Threading_CancellationToken_)
+
+[StorageControlClient.ListFolders(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListFolders_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListFoldersAsync(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListFoldersAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListFolders(BucketName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListFolders_Google_Cloud_Storage_Control_V2_BucketName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListFoldersAsync(BucketName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListFoldersAsync_Google_Cloud_Storage_Control_V2_BucketName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.RenameFolderAsync(RenameFolderRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_RenameFolderAsync_Google_Cloud_Storage_Control_V2_RenameFolderRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.PollOnceRenameFolder(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PollOnceRenameFolder_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.PollOnceRenameFolderAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PollOnceRenameFolderAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.RenameFolder(string, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_RenameFolder_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.RenameFolderAsync(string, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_RenameFolderAsync_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.RenameFolderAsync(string, string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_RenameFolderAsync_System_String_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.RenameFolder(FolderName, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_RenameFolder_Google_Cloud_Storage_Control_V2_FolderName_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.RenameFolderAsync(FolderName, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_RenameFolderAsync_Google_Cloud_Storage_Control_V2_FolderName_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.RenameFolderAsync(FolderName, string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_RenameFolderAsync_Google_Cloud_Storage_Control_V2_FolderName_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.DeleteFolderRecursiveAsync(DeleteFolderRecursiveRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolderRecursiveAsync_Google_Cloud_Storage_Control_V2_DeleteFolderRecursiveRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.PollOnceDeleteFolderRecursive(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PollOnceDeleteFolderRecursive_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.PollOnceDeleteFolderRecursiveAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PollOnceDeleteFolderRecursiveAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DeleteFolderRecursive(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolderRecursive_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DeleteFolderRecursiveAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolderRecursiveAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DeleteFolderRecursiveAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolderRecursiveAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.DeleteFolderRecursive(FolderName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolderRecursive_Google_Cloud_Storage_Control_V2_FolderName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DeleteFolderRecursiveAsync(FolderName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolderRecursiveAsync_Google_Cloud_Storage_Control_V2_FolderName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DeleteFolderRecursiveAsync(FolderName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolderRecursiveAsync_Google_Cloud_Storage_Control_V2_FolderName_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetStorageLayoutAsync(GetStorageLayoutRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetStorageLayoutAsync_Google_Cloud_Storage_Control_V2_GetStorageLayoutRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetStorageLayout(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetStorageLayout_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetStorageLayoutAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetStorageLayoutAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetStorageLayoutAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetStorageLayoutAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetStorageLayout(StorageLayoutName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetStorageLayout_Google_Cloud_Storage_Control_V2_StorageLayoutName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetStorageLayoutAsync(StorageLayoutName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetStorageLayoutAsync_Google_Cloud_Storage_Control_V2_StorageLayoutName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetStorageLayoutAsync(StorageLayoutName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetStorageLayoutAsync_Google_Cloud_Storage_Control_V2_StorageLayoutName_System_Threading_CancellationToken_)
+
+[StorageControlClient.CreateManagedFolderAsync(CreateManagedFolderRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateManagedFolderAsync_Google_Cloud_Storage_Control_V2_CreateManagedFolderRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.CreateManagedFolder(string, ManagedFolder, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateManagedFolder_System_String_Google_Cloud_Storage_Control_V2_ManagedFolder_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateManagedFolderAsync(string, ManagedFolder, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateManagedFolderAsync_System_String_Google_Cloud_Storage_Control_V2_ManagedFolder_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateManagedFolderAsync(string, ManagedFolder, string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateManagedFolderAsync_System_String_Google_Cloud_Storage_Control_V2_ManagedFolder_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.CreateManagedFolder(BucketName, ManagedFolder, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateManagedFolder_Google_Cloud_Storage_Control_V2_BucketName_Google_Cloud_Storage_Control_V2_ManagedFolder_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateManagedFolderAsync(BucketName, ManagedFolder, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateManagedFolderAsync_Google_Cloud_Storage_Control_V2_BucketName_Google_Cloud_Storage_Control_V2_ManagedFolder_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateManagedFolderAsync(BucketName, ManagedFolder, string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateManagedFolderAsync_Google_Cloud_Storage_Control_V2_BucketName_Google_Cloud_Storage_Control_V2_ManagedFolder_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.DeleteManagedFolderAsync(DeleteManagedFolderRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteManagedFolderAsync_Google_Cloud_Storage_Control_V2_DeleteManagedFolderRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.DeleteManagedFolder(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteManagedFolder_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DeleteManagedFolderAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteManagedFolderAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DeleteManagedFolderAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteManagedFolderAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.DeleteManagedFolder(ManagedFolderName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteManagedFolder_Google_Cloud_Storage_Control_V2_ManagedFolderName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DeleteManagedFolderAsync(ManagedFolderName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteManagedFolderAsync_Google_Cloud_Storage_Control_V2_ManagedFolderName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DeleteManagedFolderAsync(ManagedFolderName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteManagedFolderAsync_Google_Cloud_Storage_Control_V2_ManagedFolderName_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetManagedFolderAsync(GetManagedFolderRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetManagedFolderAsync_Google_Cloud_Storage_Control_V2_GetManagedFolderRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetManagedFolder(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetManagedFolder_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetManagedFolderAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetManagedFolderAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetManagedFolderAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetManagedFolderAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetManagedFolder(ManagedFolderName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetManagedFolder_Google_Cloud_Storage_Control_V2_ManagedFolderName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetManagedFolderAsync(ManagedFolderName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetManagedFolderAsync_Google_Cloud_Storage_Control_V2_ManagedFolderName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetManagedFolderAsync(ManagedFolderName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetManagedFolderAsync_Google_Cloud_Storage_Control_V2_ManagedFolderName_System_Threading_CancellationToken_)
+
+[StorageControlClient.ListManagedFolders(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListManagedFolders_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListManagedFoldersAsync(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListManagedFoldersAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListManagedFolders(BucketName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListManagedFolders_Google_Cloud_Storage_Control_V2_BucketName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListManagedFoldersAsync(BucketName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListManagedFoldersAsync_Google_Cloud_Storage_Control_V2_BucketName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.UpdateManagedFolderAsync(UpdateManagedFolderRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateManagedFolderAsync_Google_Cloud_Storage_Control_V2_UpdateManagedFolderRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.UpdateManagedFolder(ManagedFolder, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateManagedFolder_Google_Cloud_Storage_Control_V2_ManagedFolder_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.UpdateManagedFolderAsync(ManagedFolder, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateManagedFolderAsync_Google_Cloud_Storage_Control_V2_ManagedFolder_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.UpdateManagedFolderAsync(ManagedFolder, FieldMask, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateManagedFolderAsync_Google_Cloud_Storage_Control_V2_ManagedFolder_Google_Protobuf_WellKnownTypes_FieldMask_System_Threading_CancellationToken_)
+
+[StorageControlClient.CreateAnywhereCacheAsync(CreateAnywhereCacheRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_CreateAnywhereCacheRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.PollOnceCreateAnywhereCache(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PollOnceCreateAnywhereCache_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.PollOnceCreateAnywhereCacheAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PollOnceCreateAnywhereCacheAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateAnywhereCache(string, AnywhereCache, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateAnywhereCache_System_String_Google_Cloud_Storage_Control_V2_AnywhereCache_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateAnywhereCacheAsync(string, AnywhereCache, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateAnywhereCacheAsync_System_String_Google_Cloud_Storage_Control_V2_AnywhereCache_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateAnywhereCacheAsync(string, AnywhereCache, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateAnywhereCacheAsync_System_String_Google_Cloud_Storage_Control_V2_AnywhereCache_System_Threading_CancellationToken_)
+
+[StorageControlClient.CreateAnywhereCache(BucketName, AnywhereCache, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateAnywhereCache_Google_Cloud_Storage_Control_V2_BucketName_Google_Cloud_Storage_Control_V2_AnywhereCache_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateAnywhereCacheAsync(BucketName, AnywhereCache, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_BucketName_Google_Cloud_Storage_Control_V2_AnywhereCache_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateAnywhereCacheAsync(BucketName, AnywhereCache, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_BucketName_Google_Cloud_Storage_Control_V2_AnywhereCache_System_Threading_CancellationToken_)
+
+[StorageControlClient.UpdateAnywhereCacheAsync(UpdateAnywhereCacheRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_UpdateAnywhereCacheRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.PollOnceUpdateAnywhereCache(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PollOnceUpdateAnywhereCache_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.PollOnceUpdateAnywhereCacheAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PollOnceUpdateAnywhereCacheAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.UpdateAnywhereCache(AnywhereCache, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateAnywhereCache_Google_Cloud_Storage_Control_V2_AnywhereCache_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.UpdateAnywhereCacheAsync(AnywhereCache, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_AnywhereCache_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.UpdateAnywhereCacheAsync(AnywhereCache, FieldMask, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_AnywhereCache_Google_Protobuf_WellKnownTypes_FieldMask_System_Threading_CancellationToken_)
+
+[StorageControlClient.DisableAnywhereCacheAsync(DisableAnywhereCacheRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_DisableAnywhereCacheRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.DisableAnywhereCache(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableAnywhereCache_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DisableAnywhereCacheAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableAnywhereCacheAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DisableAnywhereCacheAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableAnywhereCacheAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.DisableAnywhereCache(AnywhereCacheName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableAnywhereCache_Google_Cloud_Storage_Control_V2_AnywhereCacheName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DisableAnywhereCacheAsync(AnywhereCacheName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_AnywhereCacheName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DisableAnywhereCacheAsync(AnywhereCacheName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_AnywhereCacheName_System_Threading_CancellationToken_)
+
+[StorageControlClient.PauseAnywhereCacheAsync(PauseAnywhereCacheRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PauseAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_PauseAnywhereCacheRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.PauseAnywhereCache(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PauseAnywhereCache_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.PauseAnywhereCacheAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PauseAnywhereCacheAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.PauseAnywhereCacheAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PauseAnywhereCacheAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.PauseAnywhereCache(AnywhereCacheName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PauseAnywhereCache_Google_Cloud_Storage_Control_V2_AnywhereCacheName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.PauseAnywhereCacheAsync(AnywhereCacheName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PauseAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_AnywhereCacheName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.PauseAnywhereCacheAsync(AnywhereCacheName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PauseAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_AnywhereCacheName_System_Threading_CancellationToken_)
+
+[StorageControlClient.ResumeAnywhereCacheAsync(ResumeAnywhereCacheRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ResumeAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_ResumeAnywhereCacheRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.ResumeAnywhereCache(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ResumeAnywhereCache_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ResumeAnywhereCacheAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ResumeAnywhereCacheAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ResumeAnywhereCacheAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ResumeAnywhereCacheAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.ResumeAnywhereCache(AnywhereCacheName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ResumeAnywhereCache_Google_Cloud_Storage_Control_V2_AnywhereCacheName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ResumeAnywhereCacheAsync(AnywhereCacheName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ResumeAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_AnywhereCacheName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ResumeAnywhereCacheAsync(AnywhereCacheName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ResumeAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_AnywhereCacheName_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetAnywhereCacheAsync(GetAnywhereCacheRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_GetAnywhereCacheRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetAnywhereCache(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetAnywhereCache_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetAnywhereCacheAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetAnywhereCacheAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetAnywhereCacheAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetAnywhereCacheAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetAnywhereCache(AnywhereCacheName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetAnywhereCache_Google_Cloud_Storage_Control_V2_AnywhereCacheName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetAnywhereCacheAsync(AnywhereCacheName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_AnywhereCacheName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetAnywhereCacheAsync(AnywhereCacheName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_AnywhereCacheName_System_Threading_CancellationToken_)
+
+[StorageControlClient.ListAnywhereCaches(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListAnywhereCaches_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListAnywhereCachesAsync(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListAnywhereCachesAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListAnywhereCaches(BucketName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListAnywhereCaches_Google_Cloud_Storage_Control_V2_BucketName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListAnywhereCachesAsync(BucketName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListAnywhereCachesAsync_Google_Cloud_Storage_Control_V2_BucketName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateRapidCacheAsync(CreateRapidCacheRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateRapidCacheAsync_Google_Cloud_Storage_Control_V2_CreateRapidCacheRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.PollOnceCreateRapidCache(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PollOnceCreateRapidCache_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.PollOnceCreateRapidCacheAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PollOnceCreateRapidCacheAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateRapidCache(string, RapidCache, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateRapidCache_System_String_Google_Cloud_Storage_Control_V2_RapidCache_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateRapidCacheAsync(string, RapidCache, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateRapidCacheAsync_System_String_Google_Cloud_Storage_Control_V2_RapidCache_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateRapidCacheAsync(string, RapidCache, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateRapidCacheAsync_System_String_Google_Cloud_Storage_Control_V2_RapidCache_System_Threading_CancellationToken_)
+
+[StorageControlClient.CreateRapidCache(BucketName, RapidCache, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateRapidCache_Google_Cloud_Storage_Control_V2_BucketName_Google_Cloud_Storage_Control_V2_RapidCache_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateRapidCacheAsync(BucketName, RapidCache, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateRapidCacheAsync_Google_Cloud_Storage_Control_V2_BucketName_Google_Cloud_Storage_Control_V2_RapidCache_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.CreateRapidCacheAsync(BucketName, RapidCache, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateRapidCacheAsync_Google_Cloud_Storage_Control_V2_BucketName_Google_Cloud_Storage_Control_V2_RapidCache_System_Threading_CancellationToken_)
+
+[StorageControlClient.UpdateRapidCacheAsync(UpdateRapidCacheRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateRapidCacheAsync_Google_Cloud_Storage_Control_V2_UpdateRapidCacheRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.PollOnceUpdateRapidCache(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PollOnceUpdateRapidCache_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.PollOnceUpdateRapidCacheAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PollOnceUpdateRapidCacheAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.UpdateRapidCache(RapidCache, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateRapidCache_Google_Cloud_Storage_Control_V2_RapidCache_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.UpdateRapidCacheAsync(RapidCache, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateRapidCacheAsync_Google_Cloud_Storage_Control_V2_RapidCache_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.UpdateRapidCacheAsync(RapidCache, FieldMask, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateRapidCacheAsync_Google_Cloud_Storage_Control_V2_RapidCache_Google_Protobuf_WellKnownTypes_FieldMask_System_Threading_CancellationToken_)
+
+[StorageControlClient.DisableRapidCacheAsync(DisableRapidCacheRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableRapidCacheAsync_Google_Cloud_Storage_Control_V2_DisableRapidCacheRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.PollOnceDisableRapidCache(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PollOnceDisableRapidCache_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.PollOnceDisableRapidCacheAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PollOnceDisableRapidCacheAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DisableRapidCache(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableRapidCache_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DisableRapidCacheAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableRapidCacheAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DisableRapidCacheAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableRapidCacheAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.DisableRapidCache(RapidCacheName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableRapidCache_Google_Cloud_Storage_Control_V2_RapidCacheName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DisableRapidCacheAsync(RapidCacheName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableRapidCacheAsync_Google_Cloud_Storage_Control_V2_RapidCacheName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.DisableRapidCacheAsync(RapidCacheName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableRapidCacheAsync_Google_Cloud_Storage_Control_V2_RapidCacheName_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetRapidCacheAsync(GetRapidCacheRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetRapidCacheAsync_Google_Cloud_Storage_Control_V2_GetRapidCacheRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetRapidCache(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetRapidCache_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetRapidCacheAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetRapidCacheAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetRapidCacheAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetRapidCacheAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetRapidCache(RapidCacheName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetRapidCache_Google_Cloud_Storage_Control_V2_RapidCacheName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetRapidCacheAsync(RapidCacheName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetRapidCacheAsync_Google_Cloud_Storage_Control_V2_RapidCacheName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetRapidCacheAsync(RapidCacheName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetRapidCacheAsync_Google_Cloud_Storage_Control_V2_RapidCacheName_System_Threading_CancellationToken_)
+
+[StorageControlClient.ListRapidCaches(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListRapidCaches_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListRapidCachesAsync(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListRapidCachesAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListRapidCaches(BucketName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListRapidCaches_Google_Cloud_Storage_Control_V2_BucketName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListRapidCachesAsync(BucketName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListRapidCachesAsync_Google_Cloud_Storage_Control_V2_BucketName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetProjectIntelligenceConfigAsync(GetProjectIntelligenceConfigRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetProjectIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_GetProjectIntelligenceConfigRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetProjectIntelligenceConfig(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetProjectIntelligenceConfig_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetProjectIntelligenceConfigAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetProjectIntelligenceConfigAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetProjectIntelligenceConfigAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetProjectIntelligenceConfigAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetProjectIntelligenceConfig(IntelligenceConfigName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetProjectIntelligenceConfig_Google_Cloud_Storage_Control_V2_IntelligenceConfigName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetProjectIntelligenceConfigAsync(IntelligenceConfigName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetProjectIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_IntelligenceConfigName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetProjectIntelligenceConfigAsync(IntelligenceConfigName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetProjectIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_IntelligenceConfigName_System_Threading_CancellationToken_)
+
+[StorageControlClient.UpdateProjectIntelligenceConfigAsync(UpdateProjectIntelligenceConfigRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateProjectIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_UpdateProjectIntelligenceConfigRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.UpdateProjectIntelligenceConfig(IntelligenceConfig, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateProjectIntelligenceConfig_Google_Cloud_Storage_Control_V2_IntelligenceConfig_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.UpdateProjectIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateProjectIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_IntelligenceConfig_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.UpdateProjectIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateProjectIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_IntelligenceConfig_Google_Protobuf_WellKnownTypes_FieldMask_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetFolderIntelligenceConfigAsync(GetFolderIntelligenceConfigRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolderIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_GetFolderIntelligenceConfigRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetFolderIntelligenceConfig(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolderIntelligenceConfig_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetFolderIntelligenceConfigAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolderIntelligenceConfigAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetFolderIntelligenceConfigAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolderIntelligenceConfigAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetFolderIntelligenceConfig(IntelligenceConfigName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolderIntelligenceConfig_Google_Cloud_Storage_Control_V2_IntelligenceConfigName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetFolderIntelligenceConfigAsync(IntelligenceConfigName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolderIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_IntelligenceConfigName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetFolderIntelligenceConfigAsync(IntelligenceConfigName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolderIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_IntelligenceConfigName_System_Threading_CancellationToken_)
+
+[StorageControlClient.UpdateFolderIntelligenceConfigAsync(UpdateFolderIntelligenceConfigRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateFolderIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_UpdateFolderIntelligenceConfigRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.UpdateFolderIntelligenceConfig(IntelligenceConfig, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateFolderIntelligenceConfig_Google_Cloud_Storage_Control_V2_IntelligenceConfig_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.UpdateFolderIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateFolderIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_IntelligenceConfig_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.UpdateFolderIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateFolderIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_IntelligenceConfig_Google_Protobuf_WellKnownTypes_FieldMask_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetOrganizationIntelligenceConfigAsync(GetOrganizationIntelligenceConfigRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetOrganizationIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_GetOrganizationIntelligenceConfigRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetOrganizationIntelligenceConfig(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetOrganizationIntelligenceConfig_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetOrganizationIntelligenceConfigAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetOrganizationIntelligenceConfigAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetOrganizationIntelligenceConfigAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetOrganizationIntelligenceConfigAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetOrganizationIntelligenceConfig(IntelligenceConfigName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetOrganizationIntelligenceConfig_Google_Cloud_Storage_Control_V2_IntelligenceConfigName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetOrganizationIntelligenceConfigAsync(IntelligenceConfigName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetOrganizationIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_IntelligenceConfigName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetOrganizationIntelligenceConfigAsync(IntelligenceConfigName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetOrganizationIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_IntelligenceConfigName_System_Threading_CancellationToken_)
+
+[StorageControlClient.UpdateOrganizationIntelligenceConfigAsync(UpdateOrganizationIntelligenceConfigRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateOrganizationIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_UpdateOrganizationIntelligenceConfigRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.UpdateOrganizationIntelligenceConfig(IntelligenceConfig, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateOrganizationIntelligenceConfig_Google_Cloud_Storage_Control_V2_IntelligenceConfig_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.UpdateOrganizationIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateOrganizationIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_IntelligenceConfig_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.UpdateOrganizationIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateOrganizationIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_IntelligenceConfig_Google_Protobuf_WellKnownTypes_FieldMask_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIamPolicyAsync_Google_Cloud_Iam_V1_GetIamPolicyRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetIamPolicy(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIamPolicy_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetIamPolicyAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIamPolicyAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetIamPolicyAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIamPolicyAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetIamPolicy(IResourceName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIamPolicy_Google_Api_Gax_IResourceName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetIamPolicyAsync(IResourceName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIamPolicyAsync_Google_Api_Gax_IResourceName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetIamPolicyAsync(IResourceName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIamPolicyAsync_Google_Api_Gax_IResourceName_System_Threading_CancellationToken_)
+
+[StorageControlClient.SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_SetIamPolicyAsync_Google_Cloud_Iam_V1_SetIamPolicyRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.SetIamPolicy(string, Policy, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_SetIamPolicy_System_String_Google_Cloud_Iam_V1_Policy_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.SetIamPolicyAsync(string, Policy, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_SetIamPolicyAsync_System_String_Google_Cloud_Iam_V1_Policy_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.SetIamPolicyAsync(string, Policy, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_SetIamPolicyAsync_System_String_Google_Cloud_Iam_V1_Policy_System_Threading_CancellationToken_)
+
+[StorageControlClient.SetIamPolicy(IResourceName, Policy, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_SetIamPolicy_Google_Api_Gax_IResourceName_Google_Cloud_Iam_V1_Policy_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.SetIamPolicyAsync(IResourceName, Policy, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_SetIamPolicyAsync_Google_Api_Gax_IResourceName_Google_Cloud_Iam_V1_Policy_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.SetIamPolicyAsync(IResourceName, Policy, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_SetIamPolicyAsync_Google_Api_Gax_IResourceName_Google_Cloud_Iam_V1_Policy_System_Threading_CancellationToken_)
+
+[StorageControlClient.TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_TestIamPermissionsAsync_Google_Cloud_Iam_V1_TestIamPermissionsRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.TestIamPermissions(string, IEnumerable<string>, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_TestIamPermissions_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.TestIamPermissionsAsync(string, IEnumerable<string>, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_TestIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.TestIamPermissionsAsync(string, IEnumerable<string>, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_TestIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_)
+
+[StorageControlClient.TestIamPermissions(IResourceName, IEnumerable<string>, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_TestIamPermissions_Google_Api_Gax_IResourceName_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_TestIamPermissionsAsync_Google_Api_Gax_IResourceName_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_TestIamPermissionsAsync_Google_Api_Gax_IResourceName_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_)
+
+[StorageControlClient.GetIntelligenceFindingAsync(GetIntelligenceFindingRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFindingAsync_Google_Cloud_Storage_Control_V2_GetIntelligenceFindingRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetIntelligenceFinding(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFinding_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetIntelligenceFindingAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFindingAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetIntelligenceFindingAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFindingAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetIntelligenceFinding(IntelligenceFindingName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFinding_Google_Cloud_Storage_Control_V2_IntelligenceFindingName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetIntelligenceFindingAsync(IntelligenceFindingName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFindingAsync_Google_Cloud_Storage_Control_V2_IntelligenceFindingName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetIntelligenceFindingAsync(IntelligenceFindingName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFindingAsync_Google_Cloud_Storage_Control_V2_IntelligenceFindingName_System_Threading_CancellationToken_)
+
+[StorageControlClient.ListIntelligenceFindings(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListIntelligenceFindings_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListIntelligenceFindingsAsync(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListIntelligenceFindingsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListIntelligenceFindings(LocationName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListIntelligenceFindings_Google_Api_Gax_ResourceNames_LocationName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListIntelligenceFindingsAsync(LocationName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListIntelligenceFindingsAsync_Google_Api_Gax_ResourceNames_LocationName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.SummarizeIntelligenceFindings(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_SummarizeIntelligenceFindings_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.SummarizeIntelligenceFindingsAsync(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_SummarizeIntelligenceFindingsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetIntelligenceFindingRevisionAsync(GetIntelligenceFindingRevisionRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFindingRevisionAsync_Google_Cloud_Storage_Control_V2_GetIntelligenceFindingRevisionRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetIntelligenceFindingRevision(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFindingRevision_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetIntelligenceFindingRevisionAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFindingRevisionAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetIntelligenceFindingRevisionAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFindingRevisionAsync_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.GetIntelligenceFindingRevision(IntelligenceFindingRevisionName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFindingRevision_Google_Cloud_Storage_Control_V2_IntelligenceFindingRevisionName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetIntelligenceFindingRevisionAsync(IntelligenceFindingRevisionName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFindingRevisionAsync_Google_Cloud_Storage_Control_V2_IntelligenceFindingRevisionName_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.GetIntelligenceFindingRevisionAsync(IntelligenceFindingRevisionName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFindingRevisionAsync_Google_Cloud_Storage_Control_V2_IntelligenceFindingRevisionName_System_Threading_CancellationToken_)
+
+[StorageControlClient.ListIntelligenceFindingRevisions(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListIntelligenceFindingRevisions_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListIntelligenceFindingRevisionsAsync(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListIntelligenceFindingRevisionsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListIntelligenceFindingRevisions(IntelligenceFindingName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListIntelligenceFindingRevisions_Google_Cloud_Storage_Control_V2_IntelligenceFindingName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ListIntelligenceFindingRevisionsAsync(IntelligenceFindingName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListIntelligenceFindingRevisionsAsync_Google_Cloud_Storage_Control_V2_IntelligenceFindingName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ViewObjectFullContextAsync(ViewObjectFullContextRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ViewObjectFullContextAsync_Google_Cloud_Storage_Control_V2_ViewObjectFullContextRequest_System_Threading_CancellationToken_)
+
+[StorageControlClient.ViewObjectFullContext(string, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ViewObjectFullContext_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ViewObjectFullContextAsync(string, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ViewObjectFullContextAsync_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ViewObjectFullContextAsync(string, string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ViewObjectFullContextAsync_System_String_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.ViewObjectFullContext(ObjectName, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ViewObjectFullContext_Google_Cloud_Storage_Control_V2_ObjectName_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ViewObjectFullContextAsync(ObjectName, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ViewObjectFullContextAsync_Google_Cloud_Storage_Control_V2_ObjectName_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ViewObjectFullContextAsync(ObjectName, string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ViewObjectFullContextAsync_Google_Cloud_Storage_Control_V2_ObjectName_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.ViewObjectFullContext(string, long, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ViewObjectFullContext_System_String_System_Int64_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ViewObjectFullContextAsync(string, long, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ViewObjectFullContextAsync_System_String_System_Int64_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ViewObjectFullContextAsync(string, long, string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ViewObjectFullContextAsync_System_String_System_Int64_System_String_System_Threading_CancellationToken_)
+
+[StorageControlClient.ViewObjectFullContext(ObjectName, long, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ViewObjectFullContext_Google_Cloud_Storage_Control_V2_ObjectName_System_Int64_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ViewObjectFullContextAsync(ObjectName, long, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ViewObjectFullContextAsync_Google_Cloud_Storage_Control_V2_ObjectName_System_Int64_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[StorageControlClient.ViewObjectFullContextAsync(ObjectName, long, string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ViewObjectFullContextAsync_Google_Cloud_Storage_Control_V2_ObjectName_System_Int64_System_String_System_Threading_CancellationToken_)
+
+[object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+
+[object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+
+[object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Namespace
+
+[Google.Cloud.Storage.Control.V2](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2)
+
+## Assembly
+
+Google.Cloud.Storage.Control.V2.dll
+
+## Remarks
+
+StorageControl service includes selected control plane operations.
+
+## Constructors 
+
+### StorageControlClientImpl(StorageControlClient, StorageControlSettings, ILogger)
+    
+    
+    public StorageControlClientImpl(StorageControl.StorageControlClient grpcClient, StorageControlSettings settings, ILogger logger)
+
+Constructs a client wrapper for the StorageControl service, with the specified gRPC client and settings.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`grpcClient` | `[StorageControl](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControl)[StorageControlClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControl.StorageControlClient)`  
+The underlying gRPC client.  
+`settings` | `[StorageControlSettings](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlSettings)`  
+The base [StorageControlSettings](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlSettings) used within this client.  
+`logger` | `[ILogger](https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger)`  
+Optional [ILogger](https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger) to use within this client.  
+  
+## Properties 
+
+### CreateAnywhereCacheOperationsClient
+    
+    
+    public override OperationsClient CreateAnywhereCacheOperationsClient { get; }
+
+The long-running operations client for `CreateAnywhereCache`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[StorageControlClient.CreateAnywhereCacheOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateAnywhereCacheOperationsClient)
+
+### CreateRapidCacheOperationsClient
+    
+    
+    public override OperationsClient CreateRapidCacheOperationsClient { get; }
+
+The long-running operations client for `CreateRapidCache`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[StorageControlClient.CreateRapidCacheOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateRapidCacheOperationsClient)
+
+### DeleteFolderRecursiveOperationsClient
+    
+    
+    public override OperationsClient DeleteFolderRecursiveOperationsClient { get; }
+
+The long-running operations client for `DeleteFolderRecursive`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[StorageControlClient.DeleteFolderRecursiveOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolderRecursiveOperationsClient)
+
+### DisableRapidCacheOperationsClient
+    
+    
+    public override OperationsClient DisableRapidCacheOperationsClient { get; }
+
+The long-running operations client for `DisableRapidCache`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[StorageControlClient.DisableRapidCacheOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableRapidCacheOperationsClient)
+
+### GrpcClient
+    
+    
+    public override StorageControl.StorageControlClient GrpcClient { get; }
+
+The underlying gRPC StorageControl client
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[StorageControl](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControl)[StorageControlClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControl.StorageControlClient)` |   
+**Overrides**
+
+[StorageControlClient.GrpcClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GrpcClient)
+
+### RenameFolderOperationsClient
+    
+    
+    public override OperationsClient RenameFolderOperationsClient { get; }
+
+The long-running operations client for `RenameFolder`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[StorageControlClient.RenameFolderOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_RenameFolderOperationsClient)
+
+### UpdateAnywhereCacheOperationsClient
+    
+    
+    public override OperationsClient UpdateAnywhereCacheOperationsClient { get; }
+
+The long-running operations client for `UpdateAnywhereCache`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[StorageControlClient.UpdateAnywhereCacheOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateAnywhereCacheOperationsClient)
+
+### UpdateRapidCacheOperationsClient
+    
+    
+    public override OperationsClient UpdateRapidCacheOperationsClient { get; }
+
+The long-running operations client for `UpdateRapidCache`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[StorageControlClient.UpdateRapidCacheOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateRapidCacheOperationsClient)
+
+## Methods 
+
+### CreateAnywhereCache(CreateAnywhereCacheRequest, CallSettings)
+    
+    
+    public override Operation<AnywhereCache, CreateAnywhereCacheMetadata> CreateAnywhereCache(CreateAnywhereCacheRequest request, CallSettings callSettings = null)
+
+Creates an Anywhere Cache instance.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateAnywhereCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.CreateAnywhereCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[AnywhereCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.AnywhereCache)[CreateAnywhereCacheMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.CreateAnywhereCacheMetadata)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.CreateAnywhereCache(CreateAnywhereCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateAnywhereCache_Google_Cloud_Storage_Control_V2_CreateAnywhereCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateAnywhereCacheAsync(CreateAnywhereCacheRequest, CallSettings)
+    
+    
+    public override Task<Operation<AnywhereCache, CreateAnywhereCacheMetadata>> CreateAnywhereCacheAsync(CreateAnywhereCacheRequest request, CallSettings callSettings = null)
+
+Creates an Anywhere Cache instance.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateAnywhereCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.CreateAnywhereCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[AnywhereCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.AnywhereCache)[CreateAnywhereCacheMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.CreateAnywhereCacheMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.CreateAnywhereCacheAsync(CreateAnywhereCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_CreateAnywhereCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateFolder(CreateFolderRequest, CallSettings)
+    
+    
+    public override Folder CreateFolder(CreateFolderRequest request, CallSettings callSettings = null)
+
+Creates a new folder. This operation is only applicable to a hierarchical namespace enabled bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateFolderRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.CreateFolderRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Folder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.Folder)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.CreateFolder(CreateFolderRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateFolder_Google_Cloud_Storage_Control_V2_CreateFolderRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateFolderAsync(CreateFolderRequest, CallSettings)
+    
+    
+    public override Task<Folder> CreateFolderAsync(CreateFolderRequest request, CallSettings callSettings = null)
+
+Creates a new folder. This operation is only applicable to a hierarchical namespace enabled bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateFolderRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.CreateFolderRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Folder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.Folder)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.CreateFolderAsync(CreateFolderRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateFolderAsync_Google_Cloud_Storage_Control_V2_CreateFolderRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateManagedFolder(CreateManagedFolderRequest, CallSettings)
+    
+    
+    public override ManagedFolder CreateManagedFolder(CreateManagedFolderRequest request, CallSettings callSettings = null)
+
+Creates a new managed folder.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateManagedFolderRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[ManagedFolder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ManagedFolder)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.CreateManagedFolder(CreateManagedFolderRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateManagedFolder_Google_Cloud_Storage_Control_V2_CreateManagedFolderRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateManagedFolderAsync(CreateManagedFolderRequest, CallSettings)
+    
+    
+    public override Task<ManagedFolder> CreateManagedFolderAsync(CreateManagedFolderRequest request, CallSettings callSettings = null)
+
+Creates a new managed folder.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateManagedFolderRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[ManagedFolder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ManagedFolder)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.CreateManagedFolderAsync(CreateManagedFolderRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateManagedFolderAsync_Google_Cloud_Storage_Control_V2_CreateManagedFolderRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateRapidCache(CreateRapidCacheRequest, CallSettings)
+    
+    
+    public override Operation<RapidCache, CreateRapidCacheMetadata> CreateRapidCache(CreateRapidCacheRequest request, CallSettings callSettings = null)
+
+Creates a Rapid Cache instance.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateRapidCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.CreateRapidCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[RapidCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.RapidCache)[CreateRapidCacheMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.CreateRapidCacheMetadata)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.CreateRapidCache(CreateRapidCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateRapidCache_Google_Cloud_Storage_Control_V2_CreateRapidCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateRapidCacheAsync(CreateRapidCacheRequest, CallSettings)
+    
+    
+    public override Task<Operation<RapidCache, CreateRapidCacheMetadata>> CreateRapidCacheAsync(CreateRapidCacheRequest request, CallSettings callSettings = null)
+
+Creates a Rapid Cache instance.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateRapidCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.CreateRapidCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[RapidCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.RapidCache)[CreateRapidCacheMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.CreateRapidCacheMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.CreateRapidCacheAsync(CreateRapidCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_CreateRapidCacheAsync_Google_Cloud_Storage_Control_V2_CreateRapidCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteFolder(DeleteFolderRequest, CallSettings)
+    
+    
+    public override void DeleteFolder(DeleteFolderRequest request, CallSettings callSettings = null)
+
+Permanently deletes an empty folder. This operation is only applicable to a hierarchical namespace enabled bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteFolderRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.DeleteFolderRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Overrides**
+
+[StorageControlClient.DeleteFolder(DeleteFolderRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolder_Google_Cloud_Storage_Control_V2_DeleteFolderRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteFolderAsync(DeleteFolderRequest, CallSettings)
+    
+    
+    public override Task DeleteFolderAsync(DeleteFolderRequest request, CallSettings callSettings = null)
+
+Permanently deletes an empty folder. This operation is only applicable to a hierarchical namespace enabled bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteFolderRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.DeleteFolderRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.DeleteFolderAsync(DeleteFolderRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolderAsync_Google_Cloud_Storage_Control_V2_DeleteFolderRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteFolderRecursive(DeleteFolderRecursiveRequest, CallSettings)
+    
+    
+    public override Operation<Empty, DeleteFolderRecursiveMetadata> DeleteFolderRecursive(DeleteFolderRecursiveRequest request, CallSettings callSettings = null)
+
+Deletes a folder recursively. This operation is only applicable to a hierarchical namespace enabled bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteFolderRecursiveRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[Empty](https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.WellKnownTypes.Empty.html)[DeleteFolderRecursiveMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveMetadata)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.DeleteFolderRecursive(DeleteFolderRecursiveRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolderRecursive_Google_Cloud_Storage_Control_V2_DeleteFolderRecursiveRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteFolderRecursiveAsync(DeleteFolderRecursiveRequest, CallSettings)
+    
+    
+    public override Task<Operation<Empty, DeleteFolderRecursiveMetadata>> DeleteFolderRecursiveAsync(DeleteFolderRecursiveRequest request, CallSettings callSettings = null)
+
+Deletes a folder recursively. This operation is only applicable to a hierarchical namespace enabled bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteFolderRecursiveRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[Empty](https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.WellKnownTypes.Empty.html)[DeleteFolderRecursiveMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.DeleteFolderRecursiveAsync(DeleteFolderRecursiveRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteFolderRecursiveAsync_Google_Cloud_Storage_Control_V2_DeleteFolderRecursiveRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteManagedFolder(DeleteManagedFolderRequest, CallSettings)
+    
+    
+    public override void DeleteManagedFolder(DeleteManagedFolderRequest request, CallSettings callSettings = null)
+
+Permanently deletes an empty managed folder.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteManagedFolderRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Overrides**
+
+[StorageControlClient.DeleteManagedFolder(DeleteManagedFolderRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteManagedFolder_Google_Cloud_Storage_Control_V2_DeleteManagedFolderRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteManagedFolderAsync(DeleteManagedFolderRequest, CallSettings)
+    
+    
+    public override Task DeleteManagedFolderAsync(DeleteManagedFolderRequest request, CallSettings callSettings = null)
+
+Permanently deletes an empty managed folder.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteManagedFolderRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.DeleteManagedFolderAsync(DeleteManagedFolderRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DeleteManagedFolderAsync_Google_Cloud_Storage_Control_V2_DeleteManagedFolderRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DisableAnywhereCache(DisableAnywhereCacheRequest, CallSettings)
+    
+    
+    public override AnywhereCache DisableAnywhereCache(DisableAnywhereCacheRequest request, CallSettings callSettings = null)
+
+Disables an Anywhere Cache instance. A disabled instance is read-only. The disablement could be revoked by calling ResumeAnywhereCache. The cache instance will be deleted automatically if it remains in the disabled state for at least one hour.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DisableAnywhereCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.DisableAnywhereCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[AnywhereCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.AnywhereCache)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.DisableAnywhereCache(DisableAnywhereCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableAnywhereCache_Google_Cloud_Storage_Control_V2_DisableAnywhereCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DisableAnywhereCacheAsync(DisableAnywhereCacheRequest, CallSettings)
+    
+    
+    public override Task<AnywhereCache> DisableAnywhereCacheAsync(DisableAnywhereCacheRequest request, CallSettings callSettings = null)
+
+Disables an Anywhere Cache instance. A disabled instance is read-only. The disablement could be revoked by calling ResumeAnywhereCache. The cache instance will be deleted automatically if it remains in the disabled state for at least one hour.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DisableAnywhereCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.DisableAnywhereCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[AnywhereCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.AnywhereCache)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.DisableAnywhereCacheAsync(DisableAnywhereCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_DisableAnywhereCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DisableRapidCache(DisableRapidCacheRequest, CallSettings)
+    
+    
+    public override Operation<RapidCache, DisableRapidCacheMetadata> DisableRapidCache(DisableRapidCacheRequest request, CallSettings callSettings = null)
+
+Disables a Rapid Cache instance.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DisableRapidCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.DisableRapidCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[RapidCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.RapidCache)[DisableRapidCacheMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.DisableRapidCacheMetadata)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.DisableRapidCache(DisableRapidCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableRapidCache_Google_Cloud_Storage_Control_V2_DisableRapidCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DisableRapidCacheAsync(DisableRapidCacheRequest, CallSettings)
+    
+    
+    public override Task<Operation<RapidCache, DisableRapidCacheMetadata>> DisableRapidCacheAsync(DisableRapidCacheRequest request, CallSettings callSettings = null)
+
+Disables a Rapid Cache instance.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DisableRapidCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.DisableRapidCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[RapidCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.RapidCache)[DisableRapidCacheMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.DisableRapidCacheMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.DisableRapidCacheAsync(DisableRapidCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_DisableRapidCacheAsync_Google_Cloud_Storage_Control_V2_DisableRapidCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetAnywhereCache(GetAnywhereCacheRequest, CallSettings)
+    
+    
+    public override AnywhereCache GetAnywhereCache(GetAnywhereCacheRequest request, CallSettings callSettings = null)
+
+Gets an Anywhere Cache instance.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetAnywhereCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetAnywhereCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[AnywhereCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.AnywhereCache)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.GetAnywhereCache(GetAnywhereCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetAnywhereCache_Google_Cloud_Storage_Control_V2_GetAnywhereCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetAnywhereCacheAsync(GetAnywhereCacheRequest, CallSettings)
+    
+    
+    public override Task<AnywhereCache> GetAnywhereCacheAsync(GetAnywhereCacheRequest request, CallSettings callSettings = null)
+
+Gets an Anywhere Cache instance.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetAnywhereCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetAnywhereCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[AnywhereCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.AnywhereCache)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.GetAnywhereCacheAsync(GetAnywhereCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_GetAnywhereCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetFolder(GetFolderRequest, CallSettings)
+    
+    
+    public override Folder GetFolder(GetFolderRequest request, CallSettings callSettings = null)
+
+Returns metadata for the specified folder. This operation is only applicable to a hierarchical namespace enabled bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetFolderRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetFolderRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Folder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.Folder)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.GetFolder(GetFolderRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolder_Google_Cloud_Storage_Control_V2_GetFolderRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetFolderAsync(GetFolderRequest, CallSettings)
+    
+    
+    public override Task<Folder> GetFolderAsync(GetFolderRequest request, CallSettings callSettings = null)
+
+Returns metadata for the specified folder. This operation is only applicable to a hierarchical namespace enabled bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetFolderRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetFolderRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Folder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.Folder)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.GetFolderAsync(GetFolderRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolderAsync_Google_Cloud_Storage_Control_V2_GetFolderRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetFolderIntelligenceConfig(GetFolderIntelligenceConfigRequest, CallSettings)
+    
+    
+    public override IntelligenceConfig GetFolderIntelligenceConfig(GetFolderIntelligenceConfigRequest request, CallSettings callSettings = null)
+
+Returns the Folder scoped singleton IntelligenceConfig resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetFolderIntelligenceConfigRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetFolderIntelligenceConfigRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[IntelligenceConfig](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceConfig)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.GetFolderIntelligenceConfig(GetFolderIntelligenceConfigRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolderIntelligenceConfig_Google_Cloud_Storage_Control_V2_GetFolderIntelligenceConfigRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetFolderIntelligenceConfigAsync(GetFolderIntelligenceConfigRequest, CallSettings)
+    
+    
+    public override Task<IntelligenceConfig> GetFolderIntelligenceConfigAsync(GetFolderIntelligenceConfigRequest request, CallSettings callSettings = null)
+
+Returns the Folder scoped singleton IntelligenceConfig resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetFolderIntelligenceConfigRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetFolderIntelligenceConfigRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[IntelligenceConfig](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceConfig)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.GetFolderIntelligenceConfigAsync(GetFolderIntelligenceConfigRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetFolderIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_GetFolderIntelligenceConfigRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetIamPolicy(GetIamPolicyRequest, CallSettings)
+    
+    
+    public override Policy GetIamPolicy(GetIamPolicyRequest request, CallSettings callSettings = null)
+
+Gets the IAM policy for a specified bucket. The `resource` field in the request should be `projects/_/buckets/{bucket}` for a bucket, or `projects/_/buckets/{bucket}/managedFolders/{managedFolder}` for a managed folder.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetIamPolicyRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Iam.V1/latest/Google.Cloud.Iam.V1.GetIamPolicyRequest.html)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Policy](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Iam.V1/latest/Google.Cloud.Iam.V1.Policy.html)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.GetIamPolicy(GetIamPolicyRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
+    
+    
+    public override Task<Policy> GetIamPolicyAsync(GetIamPolicyRequest request, CallSettings callSettings = null)
+
+Gets the IAM policy for a specified bucket. The `resource` field in the request should be `projects/_/buckets/{bucket}` for a bucket, or `projects/_/buckets/{bucket}/managedFolders/{managedFolder}` for a managed folder.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetIamPolicyRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Iam.V1/latest/Google.Cloud.Iam.V1.GetIamPolicyRequest.html)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Policy](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Iam.V1/latest/Google.Cloud.Iam.V1.Policy.html)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIamPolicyAsync_Google_Cloud_Iam_V1_GetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetIntelligenceFinding(GetIntelligenceFindingRequest, CallSettings)
+    
+    
+    public override IntelligenceFinding GetIntelligenceFinding(GetIntelligenceFindingRequest request, CallSettings callSettings = null)
+
+Gets the `IntelligenceFinding` for a project.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetIntelligenceFindingRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[IntelligenceFinding](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceFinding)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.GetIntelligenceFinding(GetIntelligenceFindingRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFinding_Google_Cloud_Storage_Control_V2_GetIntelligenceFindingRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetIntelligenceFindingAsync(GetIntelligenceFindingRequest, CallSettings)
+    
+    
+    public override Task<IntelligenceFinding> GetIntelligenceFindingAsync(GetIntelligenceFindingRequest request, CallSettings callSettings = null)
+
+Gets the `IntelligenceFinding` for a project.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetIntelligenceFindingRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[IntelligenceFinding](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceFinding)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.GetIntelligenceFindingAsync(GetIntelligenceFindingRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFindingAsync_Google_Cloud_Storage_Control_V2_GetIntelligenceFindingRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetIntelligenceFindingRevision(GetIntelligenceFindingRevisionRequest, CallSettings)
+    
+    
+    public override IntelligenceFindingRevision GetIntelligenceFindingRevision(GetIntelligenceFindingRevisionRequest request, CallSettings callSettings = null)
+
+Gets the `IntelligenceFindingRevision` resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetIntelligenceFindingRevisionRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRevisionRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[IntelligenceFindingRevision](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.GetIntelligenceFindingRevision(GetIntelligenceFindingRevisionRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFindingRevision_Google_Cloud_Storage_Control_V2_GetIntelligenceFindingRevisionRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetIntelligenceFindingRevisionAsync(GetIntelligenceFindingRevisionRequest, CallSettings)
+    
+    
+    public override Task<IntelligenceFindingRevision> GetIntelligenceFindingRevisionAsync(GetIntelligenceFindingRevisionRequest request, CallSettings callSettings = null)
+
+Gets the `IntelligenceFindingRevision` resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetIntelligenceFindingRevisionRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRevisionRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[IntelligenceFindingRevision](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.GetIntelligenceFindingRevisionAsync(GetIntelligenceFindingRevisionRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetIntelligenceFindingRevisionAsync_Google_Cloud_Storage_Control_V2_GetIntelligenceFindingRevisionRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetManagedFolder(GetManagedFolderRequest, CallSettings)
+    
+    
+    public override ManagedFolder GetManagedFolder(GetManagedFolderRequest request, CallSettings callSettings = null)
+
+Returns metadata for the specified managed folder.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetManagedFolderRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetManagedFolderRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[ManagedFolder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ManagedFolder)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.GetManagedFolder(GetManagedFolderRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetManagedFolder_Google_Cloud_Storage_Control_V2_GetManagedFolderRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetManagedFolderAsync(GetManagedFolderRequest, CallSettings)
+    
+    
+    public override Task<ManagedFolder> GetManagedFolderAsync(GetManagedFolderRequest request, CallSettings callSettings = null)
+
+Returns metadata for the specified managed folder.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetManagedFolderRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetManagedFolderRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[ManagedFolder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ManagedFolder)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.GetManagedFolderAsync(GetManagedFolderRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetManagedFolderAsync_Google_Cloud_Storage_Control_V2_GetManagedFolderRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetOrganizationIntelligenceConfig(GetOrganizationIntelligenceConfigRequest, CallSettings)
+    
+    
+    public override IntelligenceConfig GetOrganizationIntelligenceConfig(GetOrganizationIntelligenceConfigRequest request, CallSettings callSettings = null)
+
+Returns the Organization scoped singleton IntelligenceConfig resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetOrganizationIntelligenceConfigRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetOrganizationIntelligenceConfigRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[IntelligenceConfig](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceConfig)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.GetOrganizationIntelligenceConfig(GetOrganizationIntelligenceConfigRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetOrganizationIntelligenceConfig_Google_Cloud_Storage_Control_V2_GetOrganizationIntelligenceConfigRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetOrganizationIntelligenceConfigAsync(GetOrganizationIntelligenceConfigRequest, CallSettings)
+    
+    
+    public override Task<IntelligenceConfig> GetOrganizationIntelligenceConfigAsync(GetOrganizationIntelligenceConfigRequest request, CallSettings callSettings = null)
+
+Returns the Organization scoped singleton IntelligenceConfig resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetOrganizationIntelligenceConfigRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetOrganizationIntelligenceConfigRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[IntelligenceConfig](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceConfig)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.GetOrganizationIntelligenceConfigAsync(GetOrganizationIntelligenceConfigRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetOrganizationIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_GetOrganizationIntelligenceConfigRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetProjectIntelligenceConfig(GetProjectIntelligenceConfigRequest, CallSettings)
+    
+    
+    public override IntelligenceConfig GetProjectIntelligenceConfig(GetProjectIntelligenceConfigRequest request, CallSettings callSettings = null)
+
+Returns the Project scoped singleton IntelligenceConfig resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetProjectIntelligenceConfigRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetProjectIntelligenceConfigRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[IntelligenceConfig](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceConfig)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.GetProjectIntelligenceConfig(GetProjectIntelligenceConfigRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetProjectIntelligenceConfig_Google_Cloud_Storage_Control_V2_GetProjectIntelligenceConfigRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetProjectIntelligenceConfigAsync(GetProjectIntelligenceConfigRequest, CallSettings)
+    
+    
+    public override Task<IntelligenceConfig> GetProjectIntelligenceConfigAsync(GetProjectIntelligenceConfigRequest request, CallSettings callSettings = null)
+
+Returns the Project scoped singleton IntelligenceConfig resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetProjectIntelligenceConfigRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetProjectIntelligenceConfigRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[IntelligenceConfig](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceConfig)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.GetProjectIntelligenceConfigAsync(GetProjectIntelligenceConfigRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetProjectIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_GetProjectIntelligenceConfigRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetRapidCache(GetRapidCacheRequest, CallSettings)
+    
+    
+    public override RapidCache GetRapidCache(GetRapidCacheRequest request, CallSettings callSettings = null)
+
+Gets a Rapid Cache instance.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetRapidCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetRapidCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[RapidCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.RapidCache)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.GetRapidCache(GetRapidCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetRapidCache_Google_Cloud_Storage_Control_V2_GetRapidCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetRapidCacheAsync(GetRapidCacheRequest, CallSettings)
+    
+    
+    public override Task<RapidCache> GetRapidCacheAsync(GetRapidCacheRequest request, CallSettings callSettings = null)
+
+Gets a Rapid Cache instance.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetRapidCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetRapidCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[RapidCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.RapidCache)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.GetRapidCacheAsync(GetRapidCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetRapidCacheAsync_Google_Cloud_Storage_Control_V2_GetRapidCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetStorageLayout(GetStorageLayoutRequest, CallSettings)
+    
+    
+    public override StorageLayout GetStorageLayout(GetStorageLayoutRequest request, CallSettings callSettings = null)
+
+Returns the storage layout configuration for a given bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetStorageLayoutRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetStorageLayoutRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[StorageLayout](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageLayout)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.GetStorageLayout(GetStorageLayoutRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetStorageLayout_Google_Cloud_Storage_Control_V2_GetStorageLayoutRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetStorageLayoutAsync(GetStorageLayoutRequest, CallSettings)
+    
+    
+    public override Task<StorageLayout> GetStorageLayoutAsync(GetStorageLayoutRequest request, CallSettings callSettings = null)
+
+Returns the storage layout configuration for a given bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetStorageLayoutRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.GetStorageLayoutRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[StorageLayout](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageLayout)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.GetStorageLayoutAsync(GetStorageLayoutRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_GetStorageLayoutAsync_Google_Cloud_Storage_Control_V2_GetStorageLayoutRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListAnywhereCaches(ListAnywhereCachesRequest, CallSettings)
+    
+    
+    public override PagedEnumerable<ListAnywhereCachesResponse, AnywhereCache> ListAnywhereCaches(ListAnywhereCachesRequest request, CallSettings callSettings = null)
+
+Lists Anywhere Cache instances for a given bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListAnywhereCachesRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedEnumerable-2.html)[ListAnywhereCachesResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse)[AnywhereCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.AnywhereCache)` | A pageable sequence of [AnywhereCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.AnywhereCache) resources.  
+**Overrides**
+
+[StorageControlClient.ListAnywhereCaches(ListAnywhereCachesRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListAnywhereCaches_Google_Cloud_Storage_Control_V2_ListAnywhereCachesRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListAnywhereCachesAsync(ListAnywhereCachesRequest, CallSettings)
+    
+    
+    public override PagedAsyncEnumerable<ListAnywhereCachesResponse, AnywhereCache> ListAnywhereCachesAsync(ListAnywhereCachesRequest request, CallSettings callSettings = null)
+
+Lists Anywhere Cache instances for a given bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListAnywhereCachesRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedAsyncEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedAsyncEnumerable-2.html)[ListAnywhereCachesResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse)[AnywhereCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.AnywhereCache)` | A pageable asynchronous sequence of [AnywhereCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.AnywhereCache) resources.  
+**Overrides**
+
+[StorageControlClient.ListAnywhereCachesAsync(ListAnywhereCachesRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListAnywhereCachesAsync_Google_Cloud_Storage_Control_V2_ListAnywhereCachesRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListFolders(ListFoldersRequest, CallSettings)
+    
+    
+    public override PagedEnumerable<ListFoldersResponse, Folder> ListFolders(ListFoldersRequest request, CallSettings callSettings = null)
+
+Retrieves a list of folders. This operation is only applicable to a hierarchical namespace enabled bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListFoldersRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListFoldersRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedEnumerable-2.html)[ListFoldersResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListFoldersResponse)[Folder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.Folder)` | A pageable sequence of [Folder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.Folder) resources.  
+**Overrides**
+
+[StorageControlClient.ListFolders(ListFoldersRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListFolders_Google_Cloud_Storage_Control_V2_ListFoldersRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListFoldersAsync(ListFoldersRequest, CallSettings)
+    
+    
+    public override PagedAsyncEnumerable<ListFoldersResponse, Folder> ListFoldersAsync(ListFoldersRequest request, CallSettings callSettings = null)
+
+Retrieves a list of folders. This operation is only applicable to a hierarchical namespace enabled bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListFoldersRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListFoldersRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedAsyncEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedAsyncEnumerable-2.html)[ListFoldersResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListFoldersResponse)[Folder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.Folder)` | A pageable asynchronous sequence of [Folder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.Folder) resources.  
+**Overrides**
+
+[StorageControlClient.ListFoldersAsync(ListFoldersRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListFoldersAsync_Google_Cloud_Storage_Control_V2_ListFoldersRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListIntelligenceFindingRevisions(ListIntelligenceFindingRevisionsRequest, CallSettings)
+    
+    
+    public override PagedEnumerable<ListIntelligenceFindingRevisionsResponse, IntelligenceFindingRevision> ListIntelligenceFindingRevisions(ListIntelligenceFindingRevisionsRequest request, CallSettings callSettings = null)
+
+Lists all the revisions of an `IntelligenceFinding` resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListIntelligenceFindingRevisionsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedEnumerable-2.html)[ListIntelligenceFindingRevisionsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse)[IntelligenceFindingRevision](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision)` | A pageable sequence of [IntelligenceFindingRevision](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision) resources.  
+**Overrides**
+
+[StorageControlClient.ListIntelligenceFindingRevisions(ListIntelligenceFindingRevisionsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListIntelligenceFindingRevisions_Google_Cloud_Storage_Control_V2_ListIntelligenceFindingRevisionsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListIntelligenceFindingRevisionsAsync(ListIntelligenceFindingRevisionsRequest, CallSettings)
+    
+    
+    public override PagedAsyncEnumerable<ListIntelligenceFindingRevisionsResponse, IntelligenceFindingRevision> ListIntelligenceFindingRevisionsAsync(ListIntelligenceFindingRevisionsRequest request, CallSettings callSettings = null)
+
+Lists all the revisions of an `IntelligenceFinding` resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListIntelligenceFindingRevisionsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedAsyncEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedAsyncEnumerable-2.html)[ListIntelligenceFindingRevisionsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse)[IntelligenceFindingRevision](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision)` | A pageable asynchronous sequence of [IntelligenceFindingRevision](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision) resources.  
+**Overrides**
+
+[StorageControlClient.ListIntelligenceFindingRevisionsAsync(ListIntelligenceFindingRevisionsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListIntelligenceFindingRevisionsAsync_Google_Cloud_Storage_Control_V2_ListIntelligenceFindingRevisionsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListIntelligenceFindings(ListIntelligenceFindingsRequest, CallSettings)
+    
+    
+    public override PagedEnumerable<ListIntelligenceFindingsResponse, IntelligenceFinding> ListIntelligenceFindings(ListIntelligenceFindingsRequest request, CallSettings callSettings = null)
+
+Lists the `IntelligenceFinding` resources for the specified the project.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListIntelligenceFindingsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedEnumerable-2.html)[ListIntelligenceFindingsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse)[IntelligenceFinding](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceFinding)` | A pageable sequence of [IntelligenceFinding](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceFinding) resources.  
+**Overrides**
+
+[StorageControlClient.ListIntelligenceFindings(ListIntelligenceFindingsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListIntelligenceFindings_Google_Cloud_Storage_Control_V2_ListIntelligenceFindingsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListIntelligenceFindingsAsync(ListIntelligenceFindingsRequest, CallSettings)
+    
+    
+    public override PagedAsyncEnumerable<ListIntelligenceFindingsResponse, IntelligenceFinding> ListIntelligenceFindingsAsync(ListIntelligenceFindingsRequest request, CallSettings callSettings = null)
+
+Lists the `IntelligenceFinding` resources for the specified the project.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListIntelligenceFindingsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedAsyncEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedAsyncEnumerable-2.html)[ListIntelligenceFindingsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse)[IntelligenceFinding](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceFinding)` | A pageable asynchronous sequence of [IntelligenceFinding](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceFinding) resources.  
+**Overrides**
+
+[StorageControlClient.ListIntelligenceFindingsAsync(ListIntelligenceFindingsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListIntelligenceFindingsAsync_Google_Cloud_Storage_Control_V2_ListIntelligenceFindingsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListManagedFolders(ListManagedFoldersRequest, CallSettings)
+    
+    
+    public override PagedEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFolders(ListManagedFoldersRequest request, CallSettings callSettings = null)
+
+Retrieves a list of managed folders for a given bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListManagedFoldersRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedEnumerable-2.html)[ListManagedFoldersResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse)[ManagedFolder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ManagedFolder)` | A pageable sequence of [ManagedFolder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ManagedFolder) resources.  
+**Overrides**
+
+[StorageControlClient.ListManagedFolders(ListManagedFoldersRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListManagedFolders_Google_Cloud_Storage_Control_V2_ListManagedFoldersRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListManagedFoldersAsync(ListManagedFoldersRequest, CallSettings)
+    
+    
+    public override PagedAsyncEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFoldersAsync(ListManagedFoldersRequest request, CallSettings callSettings = null)
+
+Retrieves a list of managed folders for a given bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListManagedFoldersRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedAsyncEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedAsyncEnumerable-2.html)[ListManagedFoldersResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse)[ManagedFolder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ManagedFolder)` | A pageable asynchronous sequence of [ManagedFolder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ManagedFolder) resources.  
+**Overrides**
+
+[StorageControlClient.ListManagedFoldersAsync(ListManagedFoldersRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListManagedFoldersAsync_Google_Cloud_Storage_Control_V2_ListManagedFoldersRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListRapidCaches(ListRapidCachesRequest, CallSettings)
+    
+    
+    public override PagedEnumerable<ListRapidCachesResponse, RapidCache> ListRapidCaches(ListRapidCachesRequest request, CallSettings callSettings = null)
+
+Lists Rapid Cache instances for a given bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListRapidCachesRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListRapidCachesRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedEnumerable-2.html)[ListRapidCachesResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListRapidCachesResponse)[RapidCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.RapidCache)` | A pageable sequence of [RapidCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.RapidCache) resources.  
+**Overrides**
+
+[StorageControlClient.ListRapidCaches(ListRapidCachesRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListRapidCaches_Google_Cloud_Storage_Control_V2_ListRapidCachesRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListRapidCachesAsync(ListRapidCachesRequest, CallSettings)
+    
+    
+    public override PagedAsyncEnumerable<ListRapidCachesResponse, RapidCache> ListRapidCachesAsync(ListRapidCachesRequest request, CallSettings callSettings = null)
+
+Lists Rapid Cache instances for a given bucket.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListRapidCachesRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListRapidCachesRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedAsyncEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedAsyncEnumerable-2.html)[ListRapidCachesResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ListRapidCachesResponse)[RapidCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.RapidCache)` | A pageable asynchronous sequence of [RapidCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.RapidCache) resources.  
+**Overrides**
+
+[StorageControlClient.ListRapidCachesAsync(ListRapidCachesRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ListRapidCachesAsync_Google_Cloud_Storage_Control_V2_ListRapidCachesRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### PauseAnywhereCache(PauseAnywhereCacheRequest, CallSettings)
+    
+    
+    public override AnywhereCache PauseAnywhereCache(PauseAnywhereCacheRequest request, CallSettings callSettings = null)
+
+Pauses an Anywhere Cache instance.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[PauseAnywhereCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.PauseAnywhereCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[AnywhereCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.AnywhereCache)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.PauseAnywhereCache(PauseAnywhereCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PauseAnywhereCache_Google_Cloud_Storage_Control_V2_PauseAnywhereCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### PauseAnywhereCacheAsync(PauseAnywhereCacheRequest, CallSettings)
+    
+    
+    public override Task<AnywhereCache> PauseAnywhereCacheAsync(PauseAnywhereCacheRequest request, CallSettings callSettings = null)
+
+Pauses an Anywhere Cache instance.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[PauseAnywhereCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.PauseAnywhereCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[AnywhereCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.AnywhereCache)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.PauseAnywhereCacheAsync(PauseAnywhereCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_PauseAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_PauseAnywhereCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### RenameFolder(RenameFolderRequest, CallSettings)
+    
+    
+    public override Operation<Folder, RenameFolderMetadata> RenameFolder(RenameFolderRequest request, CallSettings callSettings = null)
+
+Renames a source folder to a destination folder. This operation is only applicable to a hierarchical namespace enabled bucket. During a rename, the source and destination folders are locked until the long running operation completes.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[RenameFolderRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.RenameFolderRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[Folder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.Folder)[RenameFolderMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.RenameFolderMetadata)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.RenameFolder(RenameFolderRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_RenameFolder_Google_Cloud_Storage_Control_V2_RenameFolderRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### RenameFolderAsync(RenameFolderRequest, CallSettings)
+    
+    
+    public override Task<Operation<Folder, RenameFolderMetadata>> RenameFolderAsync(RenameFolderRequest request, CallSettings callSettings = null)
+
+Renames a source folder to a destination folder. This operation is only applicable to a hierarchical namespace enabled bucket. During a rename, the source and destination folders are locked until the long running operation completes.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[RenameFolderRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.RenameFolderRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[Folder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.Folder)[RenameFolderMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.RenameFolderMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.RenameFolderAsync(RenameFolderRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_RenameFolderAsync_Google_Cloud_Storage_Control_V2_RenameFolderRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ResumeAnywhereCache(ResumeAnywhereCacheRequest, CallSettings)
+    
+    
+    public override AnywhereCache ResumeAnywhereCache(ResumeAnywhereCacheRequest request, CallSettings callSettings = null)
+
+Resumes a disabled or paused Anywhere Cache instance.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ResumeAnywhereCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ResumeAnywhereCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[AnywhereCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.AnywhereCache)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.ResumeAnywhereCache(ResumeAnywhereCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ResumeAnywhereCache_Google_Cloud_Storage_Control_V2_ResumeAnywhereCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ResumeAnywhereCacheAsync(ResumeAnywhereCacheRequest, CallSettings)
+    
+    
+    public override Task<AnywhereCache> ResumeAnywhereCacheAsync(ResumeAnywhereCacheRequest request, CallSettings callSettings = null)
+
+Resumes a disabled or paused Anywhere Cache instance.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ResumeAnywhereCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ResumeAnywhereCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[AnywhereCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.AnywhereCache)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.ResumeAnywhereCacheAsync(ResumeAnywhereCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ResumeAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_ResumeAnywhereCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### SetIamPolicy(SetIamPolicyRequest, CallSettings)
+    
+    
+    public override Policy SetIamPolicy(SetIamPolicyRequest request, CallSettings callSettings = null)
+
+Updates an IAM policy for the specified bucket. The `resource` field in the request should be `projects/_/buckets/{bucket}` for a bucket, or `projects/_/buckets/{bucket}/managedFolders/{managedFolder}` for a managed folder.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[SetIamPolicyRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Iam.V1/latest/Google.Cloud.Iam.V1.SetIamPolicyRequest.html)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Policy](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Iam.V1/latest/Google.Cloud.Iam.V1.Policy.html)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.SetIamPolicy(SetIamPolicyRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
+    
+    
+    public override Task<Policy> SetIamPolicyAsync(SetIamPolicyRequest request, CallSettings callSettings = null)
+
+Updates an IAM policy for the specified bucket. The `resource` field in the request should be `projects/_/buckets/{bucket}` for a bucket, or `projects/_/buckets/{bucket}/managedFolders/{managedFolder}` for a managed folder.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[SetIamPolicyRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Iam.V1/latest/Google.Cloud.Iam.V1.SetIamPolicyRequest.html)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Policy](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Iam.V1/latest/Google.Cloud.Iam.V1.Policy.html)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_SetIamPolicyAsync_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### SummarizeIntelligenceFindings(SummarizeIntelligenceFindingsRequest, CallSettings)
+    
+    
+    public override PagedEnumerable<SummarizeIntelligenceFindingsResponse, FindingSummary> SummarizeIntelligenceFindings(SummarizeIntelligenceFindingsRequest request, CallSettings callSettings = null)
+
+Summarizes the intelligence findings for the specified scope (organization, folder or project).
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[SummarizeIntelligenceFindingsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedEnumerable-2.html)[SummarizeIntelligenceFindingsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse)[FindingSummary](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.FindingSummary)` | A pageable sequence of [FindingSummary](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.FindingSummary) resources.  
+**Overrides**
+
+[StorageControlClient.SummarizeIntelligenceFindings(SummarizeIntelligenceFindingsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_SummarizeIntelligenceFindings_Google_Cloud_Storage_Control_V2_SummarizeIntelligenceFindingsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### SummarizeIntelligenceFindingsAsync(SummarizeIntelligenceFindingsRequest, CallSettings)
+    
+    
+    public override PagedAsyncEnumerable<SummarizeIntelligenceFindingsResponse, FindingSummary> SummarizeIntelligenceFindingsAsync(SummarizeIntelligenceFindingsRequest request, CallSettings callSettings = null)
+
+Summarizes the intelligence findings for the specified scope (organization, folder or project).
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[SummarizeIntelligenceFindingsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedAsyncEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedAsyncEnumerable-2.html)[SummarizeIntelligenceFindingsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse)[FindingSummary](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.FindingSummary)` | A pageable asynchronous sequence of [FindingSummary](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.FindingSummary) resources.  
+**Overrides**
+
+[StorageControlClient.SummarizeIntelligenceFindingsAsync(SummarizeIntelligenceFindingsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_SummarizeIntelligenceFindingsAsync_Google_Cloud_Storage_Control_V2_SummarizeIntelligenceFindingsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### TestIamPermissions(TestIamPermissionsRequest, CallSettings)
+    
+    
+    public override TestIamPermissionsResponse TestIamPermissions(TestIamPermissionsRequest request, CallSettings callSettings = null)
+
+Tests a set of permissions on the given bucket, object, or managed folder to see which, if any, are held by the caller. The `resource` field in the request should be `projects/_/buckets/{bucket}` for a bucket, `projects/_/buckets/{bucket}/objects/{object}` for an object, or `projects/_/buckets/{bucket}/managedFolders/{managedFolder}` for a managed folder.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[TestIamPermissionsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Iam.V1/latest/Google.Cloud.Iam.V1.TestIamPermissionsRequest.html)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[TestIamPermissionsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Iam.V1/latest/Google.Cloud.Iam.V1.TestIamPermissionsResponse.html)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.TestIamPermissions(TestIamPermissionsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
+    
+    
+    public override Task<TestIamPermissionsResponse> TestIamPermissionsAsync(TestIamPermissionsRequest request, CallSettings callSettings = null)
+
+Tests a set of permissions on the given bucket, object, or managed folder to see which, if any, are held by the caller. The `resource` field in the request should be `projects/_/buckets/{bucket}` for a bucket, `projects/_/buckets/{bucket}/objects/{object}` for an object, or `projects/_/buckets/{bucket}/managedFolders/{managedFolder}` for a managed folder.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[TestIamPermissionsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Iam.V1/latest/Google.Cloud.Iam.V1.TestIamPermissionsRequest.html)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[TestIamPermissionsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Iam.V1/latest/Google.Cloud.Iam.V1.TestIamPermissionsResponse.html)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_TestIamPermissionsAsync_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateAnywhereCache(UpdateAnywhereCacheRequest, CallSettings)
+    
+    
+    public override Operation<AnywhereCache, UpdateAnywhereCacheMetadata> UpdateAnywhereCache(UpdateAnywhereCacheRequest request, CallSettings callSettings = null)
+
+Updates an Anywhere Cache instance. Mutable fields include `ttl` and `admission_policy`.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateAnywhereCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[AnywhereCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.AnywhereCache)[UpdateAnywhereCacheMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheMetadata)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.UpdateAnywhereCache(UpdateAnywhereCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateAnywhereCache_Google_Cloud_Storage_Control_V2_UpdateAnywhereCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateAnywhereCacheAsync(UpdateAnywhereCacheRequest, CallSettings)
+    
+    
+    public override Task<Operation<AnywhereCache, UpdateAnywhereCacheMetadata>> UpdateAnywhereCacheAsync(UpdateAnywhereCacheRequest request, CallSettings callSettings = null)
+
+Updates an Anywhere Cache instance. Mutable fields include `ttl` and `admission_policy`.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateAnywhereCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[AnywhereCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.AnywhereCache)[UpdateAnywhereCacheMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.UpdateAnywhereCacheAsync(UpdateAnywhereCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateAnywhereCacheAsync_Google_Cloud_Storage_Control_V2_UpdateAnywhereCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateFolderIntelligenceConfig(UpdateFolderIntelligenceConfigRequest, CallSettings)
+    
+    
+    public override IntelligenceConfig UpdateFolderIntelligenceConfig(UpdateFolderIntelligenceConfigRequest request, CallSettings callSettings = null)
+
+Updates the Folder scoped singleton IntelligenceConfig resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateFolderIntelligenceConfigRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.UpdateFolderIntelligenceConfigRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[IntelligenceConfig](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceConfig)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.UpdateFolderIntelligenceConfig(UpdateFolderIntelligenceConfigRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateFolderIntelligenceConfig_Google_Cloud_Storage_Control_V2_UpdateFolderIntelligenceConfigRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateFolderIntelligenceConfigAsync(UpdateFolderIntelligenceConfigRequest, CallSettings)
+    
+    
+    public override Task<IntelligenceConfig> UpdateFolderIntelligenceConfigAsync(UpdateFolderIntelligenceConfigRequest request, CallSettings callSettings = null)
+
+Updates the Folder scoped singleton IntelligenceConfig resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateFolderIntelligenceConfigRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.UpdateFolderIntelligenceConfigRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[IntelligenceConfig](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceConfig)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.UpdateFolderIntelligenceConfigAsync(UpdateFolderIntelligenceConfigRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateFolderIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_UpdateFolderIntelligenceConfigRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateManagedFolder(UpdateManagedFolderRequest, CallSettings)
+    
+    
+    public override ManagedFolder UpdateManagedFolder(UpdateManagedFolderRequest request, CallSettings callSettings = null)
+
+Updates a managed folder. Currently, this RPC only supports updating the `rapid_cache_config` field.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateManagedFolderRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.UpdateManagedFolderRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[ManagedFolder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ManagedFolder)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.UpdateManagedFolder(UpdateManagedFolderRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateManagedFolder_Google_Cloud_Storage_Control_V2_UpdateManagedFolderRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateManagedFolderAsync(UpdateManagedFolderRequest, CallSettings)
+    
+    
+    public override Task<ManagedFolder> UpdateManagedFolderAsync(UpdateManagedFolderRequest request, CallSettings callSettings = null)
+
+Updates a managed folder. Currently, this RPC only supports updating the `rapid_cache_config` field.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateManagedFolderRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.UpdateManagedFolderRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[ManagedFolder](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ManagedFolder)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.UpdateManagedFolderAsync(UpdateManagedFolderRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateManagedFolderAsync_Google_Cloud_Storage_Control_V2_UpdateManagedFolderRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateOrganizationIntelligenceConfig(UpdateOrganizationIntelligenceConfigRequest, CallSettings)
+    
+    
+    public override IntelligenceConfig UpdateOrganizationIntelligenceConfig(UpdateOrganizationIntelligenceConfigRequest request, CallSettings callSettings = null)
+
+Updates the Organization scoped singleton IntelligenceConfig resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateOrganizationIntelligenceConfigRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.UpdateOrganizationIntelligenceConfigRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[IntelligenceConfig](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceConfig)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.UpdateOrganizationIntelligenceConfig(UpdateOrganizationIntelligenceConfigRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateOrganizationIntelligenceConfig_Google_Cloud_Storage_Control_V2_UpdateOrganizationIntelligenceConfigRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateOrganizationIntelligenceConfigAsync(UpdateOrganizationIntelligenceConfigRequest, CallSettings)
+    
+    
+    public override Task<IntelligenceConfig> UpdateOrganizationIntelligenceConfigAsync(UpdateOrganizationIntelligenceConfigRequest request, CallSettings callSettings = null)
+
+Updates the Organization scoped singleton IntelligenceConfig resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateOrganizationIntelligenceConfigRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.UpdateOrganizationIntelligenceConfigRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[IntelligenceConfig](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceConfig)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.UpdateOrganizationIntelligenceConfigAsync(UpdateOrganizationIntelligenceConfigRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateOrganizationIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_UpdateOrganizationIntelligenceConfigRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateProjectIntelligenceConfig(UpdateProjectIntelligenceConfigRequest, CallSettings)
+    
+    
+    public override IntelligenceConfig UpdateProjectIntelligenceConfig(UpdateProjectIntelligenceConfigRequest request, CallSettings callSettings = null)
+
+Updates the Project scoped singleton IntelligenceConfig resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateProjectIntelligenceConfigRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.UpdateProjectIntelligenceConfigRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[IntelligenceConfig](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceConfig)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.UpdateProjectIntelligenceConfig(UpdateProjectIntelligenceConfigRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateProjectIntelligenceConfig_Google_Cloud_Storage_Control_V2_UpdateProjectIntelligenceConfigRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateProjectIntelligenceConfigAsync(UpdateProjectIntelligenceConfigRequest, CallSettings)
+    
+    
+    public override Task<IntelligenceConfig> UpdateProjectIntelligenceConfigAsync(UpdateProjectIntelligenceConfigRequest request, CallSettings callSettings = null)
+
+Updates the Project scoped singleton IntelligenceConfig resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateProjectIntelligenceConfigRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.UpdateProjectIntelligenceConfigRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[IntelligenceConfig](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.IntelligenceConfig)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.UpdateProjectIntelligenceConfigAsync(UpdateProjectIntelligenceConfigRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateProjectIntelligenceConfigAsync_Google_Cloud_Storage_Control_V2_UpdateProjectIntelligenceConfigRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateRapidCache(UpdateRapidCacheRequest, CallSettings)
+    
+    
+    public override Operation<RapidCache, UpdateRapidCacheMetadata> UpdateRapidCache(UpdateRapidCacheRequest request, CallSettings callSettings = null)
+
+Updates a Rapid Cache instance.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateRapidCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.UpdateRapidCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[RapidCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.RapidCache)[UpdateRapidCacheMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.UpdateRapidCacheMetadata)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.UpdateRapidCache(UpdateRapidCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateRapidCache_Google_Cloud_Storage_Control_V2_UpdateRapidCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateRapidCacheAsync(UpdateRapidCacheRequest, CallSettings)
+    
+    
+    public override Task<Operation<RapidCache, UpdateRapidCacheMetadata>> UpdateRapidCacheAsync(UpdateRapidCacheRequest request, CallSettings callSettings = null)
+
+Updates a Rapid Cache instance.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateRapidCacheRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.UpdateRapidCacheRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[RapidCache](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.RapidCache)[UpdateRapidCacheMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.UpdateRapidCacheMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.UpdateRapidCacheAsync(UpdateRapidCacheRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_UpdateRapidCacheAsync_Google_Cloud_Storage_Control_V2_UpdateRapidCacheRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ViewObjectFullContext(ViewObjectFullContextRequest, CallSettings)
+    
+    
+    public override ObjectFullContext ViewObjectFullContext(ViewObjectFullContextRequest request, CallSettings callSettings = null)
+
+Retrieves the full content of an object context, including its key, value, and any associated extended data for a given context key.
+
+Object contexts can optionally contain extended data. If an object context contains extended data, the metadata payload structure will contain only its type URL. To retrieve the full extended data, call this method.
+
+Returns the complete representation of the context as an [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ViewObjectFullContextRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ViewObjectFullContextRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[ObjectFullContext](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ObjectFullContext)` | The RPC response.  
+**Overrides**
+
+[StorageControlClient.ViewObjectFullContext(ViewObjectFullContextRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ViewObjectFullContext_Google_Cloud_Storage_Control_V2_ViewObjectFullContextRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ViewObjectFullContextAsync(ViewObjectFullContextRequest, CallSettings)
+    
+    
+    public override Task<ObjectFullContext> ViewObjectFullContextAsync(ViewObjectFullContextRequest request, CallSettings callSettings = null)
+
+Retrieves the full content of an object context, including its key, value, and any associated extended data for a given context key.
+
+Object contexts can optionally contain extended data. If an object context contains extended data, the metadata payload structure will contain only its type URL. To retrieve the full extended data, call this method.
+
+Returns the complete representation of the context as an [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ViewObjectFullContextRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ViewObjectFullContextRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[ObjectFullContext](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.ObjectFullContext)` | A Task containing the RPC response.  
+**Overrides**
+
+[StorageControlClient.ViewObjectFullContextAsync(ViewObjectFullContextRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/Google.Cloud.Storage.Control.V2.StorageControlClient#Google_Cloud_Storage_Control_V2_StorageControlClient_ViewObjectFullContextAsync_Google_Cloud_Storage_Control_V2_ViewObjectFullContextRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-08-24 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-24 UTC."],[],[]] 

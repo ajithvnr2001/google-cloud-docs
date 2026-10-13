@@ -1,0 +1,187 @@
+---
+url: https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-BatchPredictionJob-OutputConfig/
+title: Vertex AI V1 API - Class Google::Cloud::AIPlatform::V1::BatchPredictionJob::OutputConfig (v1.49.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T16:07:55.401554+00:00
+---
+
+# Vertex AI V1 API - Class Google::Cloud::AIPlatform::V1::BatchPredictionJob::OutputConfig (v1.49.0)  |  Ruby client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-BatchPredictionJob-OutputConfig/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Ruby ](https://docs.cloud.google.com/ruby/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/ruby/docs/reference)
+
+
+
+Send feedback 
+
+#  Vertex AI V1 API - Class Google::Cloud::AIPlatform::V1::BatchPredictionJob::OutputConfig (v1.49.0) Stay organized with collections  Save and categorize content based on your preferences. 
+
+1.49.0 (latest)  1.48.0  1.47.1  1.46.0  1.45.0  1.44.0  1.43.0  1.42.0  1.41.0  1.40.0  1.39.0  1.38.0  1.37.0  1.36.0  1.35.0  1.34.0  1.33.0  1.32.0  1.31.0  1.30.1  1.29.0  1.28.0  1.27.0  1.26.0  1.25.0  1.24.0  1.23.1  1.22.0  1.21.0  1.20.0  1.19.0  1.18.0  1.17.0  1.16.0  1.15.0  1.14.0  1.13.0  1.12.0  1.11.0  1.10.0  1.9.0  1.8.0  1.7.0  1.6.0  1.5.0  1.4.0  1.3.0  1.2.0  1.1.0  1.0.0  0.64.0  0.63.0  0.62.0  0.61.0  0.60.0  0.59.0  0.58.0  0.57.0  0.56.0  0.55.0  0.54.0  0.53.0  0.52.0  0.51.0  0.50.0  0.49.0  0.48.0  0.47.0  0.46.0  0.45.0  0.44.0  0.43.0  0.42.0  0.41.0  0.40.0  0.39.0  0.38.0  0.37.0  0.36.0  0.35.0  0.34.0  0.33.0  0.32.0  0.31.0  0.30.0  0.29.0  0.28.0  0.27.0  0.26.0  0.25.0  0.24.0  0.23.0  0.22.0  0.21.0  0.20.0  0.19.0  0.18.0  0.17.0  0.16.0  0.15.0  0.14.0  0.13.0  0.12.0  0.11.0  0.10.0  0.9.1  0.8.0  0.7.0  0.6.0  0.5.0  0.4.0  0.3.0  0.2.0  0.1.0 
+
+Reference documentation and code samples for the Vertex AI V1 API class Google::Cloud::AIPlatform::V1::BatchPredictionJob::OutputConfig.
+
+Configures the output of [BatchPredictionJob](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-BatchPredictionJob "Google::Cloud::AIPlatform::V1::BatchPredictionJob \(class\)"). See [Model.supported_output_storage_formats](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-Model#Google__Cloud__AIPlatform__V1__Model_supported_output_storage_formats_instance_ "Google::Cloud::AIPlatform::V1::Model#supported_output_storage_formats \(method\)") for supported output formats, and how predictions are expressed via any of them.
+
+## Inherits
+
+  * Object 
+
+
+
+## Extended By
+
+  * Google::Protobuf::MessageExts::ClassMethods 
+
+
+
+## Includes
+
+  * Google::Protobuf::MessageExts 
+
+
+
+## Methods 
+
+### #bigquery_destination
+    
+    
+    def bigquery_destination() -> ::Google::Cloud::AIPlatform::V1::BigQueryDestination
+
+**Returns**
+
+  * ([::Google::Cloud::AIPlatform::V1::BigQueryDestination](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-BigQueryDestination)) — The BigQuery project or dataset location where the output is to be written to. If project is provided, a new dataset is created with name `prediction_<model-display-name>_<job-create-time>` where 
+
+
+
+### #bigquery_destination=
+    
+    
+    def bigquery_destination=(value) -> ::Google::Cloud::AIPlatform::V1::BigQueryDestination
+
+**Parameter**
+
+  * **value** ([::Google::Cloud::AIPlatform::V1::BigQueryDestination](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-BigQueryDestination)) — The BigQuery project or dataset location where the output is to be written to. If project is provided, a new dataset is created with name `prediction_<model-display-name>_<job-create-time>` where 
+
+
+
+**Returns**
+
+  * ([::Google::Cloud::AIPlatform::V1::BigQueryDestination](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-BigQueryDestination)) — The BigQuery project or dataset location where the output is to be written to. If project is provided, a new dataset is created with name `prediction_<model-display-name>_<job-create-time>` where 
+
+
+
+### #gcs_destination
+    
+    
+    def gcs_destination() -> ::Google::Cloud::AIPlatform::V1::GcsDestination
+
+**Returns**
+
+  * ([::Google::Cloud::AIPlatform::V1::GcsDestination](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-GcsDestination)) — The Cloud Storage location of the directory where the output is to be written to. In the given directory a new directory is created. Its name is `prediction-<model-display-name>-<job-create-time>`, where timestamp is in YYYY-MM-DDThh:mm:ss.sssZ ISO-8601 format. Inside of it files `predictions_0001.<extension>`, `predictions_0002.<extension>`, ..., `predictions_N.<extension>` are created where `<extension>` depends on chosen [predictions_format](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-BatchPredictionJob-OutputConfig#Google__Cloud__AIPlatform__V1__BatchPredictionJob__OutputConfig_predictions_format_instance_ "Google::Cloud::AIPlatform::V1::BatchPredictionJob::OutputConfig#predictions_format \(method\)"), and N may equal 0001 and depends on the total number of successfully predicted instances. If the Model has both [instance](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-PredictSchemata#Google__Cloud__AIPlatform__V1__PredictSchemata_instance_schema_uri_instance_ "Google::Cloud::AIPlatform::V1::PredictSchemata#instance_schema_uri \(method\)") and [prediction](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-PredictSchemata#Google__Cloud__AIPlatform__V1__PredictSchemata_parameters_schema_uri_instance_ "Google::Cloud::AIPlatform::V1::PredictSchemata#parameters_schema_uri \(method\)") schemata defined then each such file contains predictions as per the [predictions_format](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-BatchPredictionJob-OutputConfig#Google__Cloud__AIPlatform__V1__BatchPredictionJob__OutputConfig_predictions_format_instance_ "Google::Cloud::AIPlatform::V1::BatchPredictionJob::OutputConfig#predictions_format \(method\)"). If prediction for any instance failed (partially or completely), then an additional `errors_0001.<extension>`, `errors_0002.<extension>`,..., `errors_N.<extension>` files are created (N depends on total number of failed predictions). These files contain the failed instances, as per their schema, followed by an additional `error` field which as value has [google.rpc.Status](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Rpc-Status "Google::Rpc::Status \(class\)") containing only `code` and `message` fields.
+
+Note: The following fields are mutually exclusive: `gcs_destination`, `bigquery_destination`, `vertex_multimodal_dataset_destination`. If a field in that set is populated, all other fields in the set will automatically be cleared. 
+
+
+
+
+### #gcs_destination=
+    
+    
+    def gcs_destination=(value) -> ::Google::Cloud::AIPlatform::V1::GcsDestination
+
+**Parameter**
+
+  * **value** ([::Google::Cloud::AIPlatform::V1::GcsDestination](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-GcsDestination)) — The Cloud Storage location of the directory where the output is to be written to. In the given directory a new directory is created. Its name is `prediction-<model-display-name>-<job-create-time>`, where timestamp is in YYYY-MM-DDThh:mm:ss.sssZ ISO-8601 format. Inside of it files `predictions_0001.<extension>`, `predictions_0002.<extension>`, ..., `predictions_N.<extension>` are created where `<extension>` depends on chosen [predictions_format](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-BatchPredictionJob-OutputConfig#Google__Cloud__AIPlatform__V1__BatchPredictionJob__OutputConfig_predictions_format_instance_ "Google::Cloud::AIPlatform::V1::BatchPredictionJob::OutputConfig#predictions_format \(method\)"), and N may equal 0001 and depends on the total number of successfully predicted instances. If the Model has both [instance](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-PredictSchemata#Google__Cloud__AIPlatform__V1__PredictSchemata_instance_schema_uri_instance_ "Google::Cloud::AIPlatform::V1::PredictSchemata#instance_schema_uri \(method\)") and [prediction](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-PredictSchemata#Google__Cloud__AIPlatform__V1__PredictSchemata_parameters_schema_uri_instance_ "Google::Cloud::AIPlatform::V1::PredictSchemata#parameters_schema_uri \(method\)") schemata defined then each such file contains predictions as per the [predictions_format](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-BatchPredictionJob-OutputConfig#Google__Cloud__AIPlatform__V1__BatchPredictionJob__OutputConfig_predictions_format_instance_ "Google::Cloud::AIPlatform::V1::BatchPredictionJob::OutputConfig#predictions_format \(method\)"). If prediction for any instance failed (partially or completely), then an additional `errors_0001.<extension>`, `errors_0002.<extension>`,..., `errors_N.<extension>` files are created (N depends on total number of failed predictions). These files contain the failed instances, as per their schema, followed by an additional `error` field which as value has [google.rpc.Status](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Rpc-Status "Google::Rpc::Status \(class\)") containing only `code` and `message` fields.
+
+Note: The following fields are mutually exclusive: `gcs_destination`, `bigquery_destination`, `vertex_multimodal_dataset_destination`. If a field in that set is populated, all other fields in the set will automatically be cleared. 
+
+
+
+
+**Returns**
+
+  * ([::Google::Cloud::AIPlatform::V1::GcsDestination](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-GcsDestination)) — The Cloud Storage location of the directory where the output is to be written to. In the given directory a new directory is created. Its name is `prediction-<model-display-name>-<job-create-time>`, where timestamp is in YYYY-MM-DDThh:mm:ss.sssZ ISO-8601 format. Inside of it files `predictions_0001.<extension>`, `predictions_0002.<extension>`, ..., `predictions_N.<extension>` are created where `<extension>` depends on chosen [predictions_format](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-BatchPredictionJob-OutputConfig#Google__Cloud__AIPlatform__V1__BatchPredictionJob__OutputConfig_predictions_format_instance_ "Google::Cloud::AIPlatform::V1::BatchPredictionJob::OutputConfig#predictions_format \(method\)"), and N may equal 0001 and depends on the total number of successfully predicted instances. If the Model has both [instance](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-PredictSchemata#Google__Cloud__AIPlatform__V1__PredictSchemata_instance_schema_uri_instance_ "Google::Cloud::AIPlatform::V1::PredictSchemata#instance_schema_uri \(method\)") and [prediction](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-PredictSchemata#Google__Cloud__AIPlatform__V1__PredictSchemata_parameters_schema_uri_instance_ "Google::Cloud::AIPlatform::V1::PredictSchemata#parameters_schema_uri \(method\)") schemata defined then each such file contains predictions as per the [predictions_format](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-BatchPredictionJob-OutputConfig#Google__Cloud__AIPlatform__V1__BatchPredictionJob__OutputConfig_predictions_format_instance_ "Google::Cloud::AIPlatform::V1::BatchPredictionJob::OutputConfig#predictions_format \(method\)"). If prediction for any instance failed (partially or completely), then an additional `errors_0001.<extension>`, `errors_0002.<extension>`,..., `errors_N.<extension>` files are created (N depends on total number of failed predictions). These files contain the failed instances, as per their schema, followed by an additional `error` field which as value has [google.rpc.Status](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Rpc-Status "Google::Rpc::Status \(class\)") containing only `code` and `message` fields.
+
+Note: The following fields are mutually exclusive: `gcs_destination`, `bigquery_destination`, `vertex_multimodal_dataset_destination`. If a field in that set is populated, all other fields in the set will automatically be cleared. 
+
+
+
+
+### #predictions_format
+    
+    
+    def predictions_format() -> ::String
+
+**Returns**
+
+  * (::String) — Required. The format in which Vertex AI gives the predictions, must be one of the [Model's][google.cloud.aiplatform.v1.BatchPredictionJob.model] [supported_output_storage_formats](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-Model#Google__Cloud__AIPlatform__V1__Model_supported_output_storage_formats_instance_ "Google::Cloud::AIPlatform::V1::Model#supported_output_storage_formats \(method\)"). 
+
+
+
+### #predictions_format=
+    
+    
+    def predictions_format=(value) -> ::String
+
+**Parameter**
+
+  * **value** (::String) — Required. The format in which Vertex AI gives the predictions, must be one of the [Model's][google.cloud.aiplatform.v1.BatchPredictionJob.model] [supported_output_storage_formats](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-Model#Google__Cloud__AIPlatform__V1__Model_supported_output_storage_formats_instance_ "Google::Cloud::AIPlatform::V1::Model#supported_output_storage_formats \(method\)"). 
+
+
+
+**Returns**
+
+  * (::String) — Required. The format in which Vertex AI gives the predictions, must be one of the [Model's][google.cloud.aiplatform.v1.BatchPredictionJob.model] [supported_output_storage_formats](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-Model#Google__Cloud__AIPlatform__V1__Model_supported_output_storage_formats_instance_ "Google::Cloud::AIPlatform::V1::Model#supported_output_storage_formats \(method\)"). 
+
+
+
+### #vertex_multimodal_dataset_destination
+    
+    
+    def vertex_multimodal_dataset_destination() -> ::Google::Cloud::AIPlatform::V1::VertexMultimodalDatasetDestination
+
+**Returns**
+
+  * ([::Google::Cloud::AIPlatform::V1::VertexMultimodalDatasetDestination](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-VertexMultimodalDatasetDestination)) — The details for a Vertex Multimodal Dataset that will be created for the output.
+
+Note: The following fields are mutually exclusive: `vertex_multimodal_dataset_destination`, `gcs_destination`, `bigquery_destination`. If a field in that set is populated, all other fields in the set will automatically be cleared. 
+
+
+
+
+### #vertex_multimodal_dataset_destination=
+    
+    
+    def vertex_multimodal_dataset_destination=(value) -> ::Google::Cloud::AIPlatform::V1::VertexMultimodalDatasetDestination
+
+**Parameter**
+
+  * **value** ([::Google::Cloud::AIPlatform::V1::VertexMultimodalDatasetDestination](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-VertexMultimodalDatasetDestination)) — The details for a Vertex Multimodal Dataset that will be created for the output.
+
+Note: The following fields are mutually exclusive: `vertex_multimodal_dataset_destination`, `gcs_destination`, `bigquery_destination`. If a field in that set is populated, all other fields in the set will automatically be cleared. 
+
+
+
+
+**Returns**
+
+  * ([::Google::Cloud::AIPlatform::V1::VertexMultimodalDatasetDestination](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-VertexMultimodalDatasetDestination)) — The details for a Vertex Multimodal Dataset that will be created for the output.
+
+Note: The following fields are mutually exclusive: `vertex_multimodal_dataset_destination`, `gcs_destination`, `bigquery_destination`. If a field in that set is populated, all other fields in the set will automatically be cleared. 
+
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-03 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-03 UTC."],[],[]] 

@@ -1,0 +1,345 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/oracle-database/cloud-vm-clusters/create/
+title: gcloud oracle-database cloud-vm-clusters create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T19:59:02.388306+00:00
+---
+
+# gcloud oracle-database cloud-vm-clusters create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/oracle-database/cloud-vm-clusters/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud oracle-database cloud-vm-clusters create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud oracle-database cloud-vm-clusters create - create a new CloudVmCluster 
+SYNOPSIS
+    
+
+`gcloud oracle-database cloud-vm-clusters create` `CLOUD_VM_CLUSTER` `--exadata-infrastructure`=`EXADATA_INFRASTRUCTURE` [`--async`] [`--backup-odb-subnet`=`BACKUP_ODB_SUBNET`] [`--backup-subnet-cidr`=`BACKUP_SUBNET_CIDR`] [`--cidr`=`CIDR`] [`--display-name`=`DISPLAY_NAME`] [`--exascale-db-storage-vault`=`EXASCALE_DB_STORAGE_VAULT`] [`--labels`=[`LABELS`,…]] [`--location`=`LOCATION`] [`--network`=`NETWORK`] [`--odb-network`=`ODB_NETWORK`] [`--odb-subnet`=`ODB_SUBNET`] [`--request-id`=`REQUEST_ID`] [[`--properties-cpu-core-count`=`PROPERTIES_CPU_CORE_COUNT` `--properties-license-type`=`PROPERTIES_LICENSE_TYPE` : `--properties-cluster-name`=`PROPERTIES_CLUSTER_NAME` `--properties-data-storage-size-tb`=`PROPERTIES_DATA_STORAGE_SIZE_TB` `--properties-db-node-storage-size-gb`=`PROPERTIES_DB_NODE_STORAGE_SIZE_GB` `--properties-db-server-ocids`=[`PROPERTIES_DB_SERVER_OCIDS`,…] `--properties-disk-redundancy`=`PROPERTIES_DISK_REDUNDANCY` `--properties-gi-version`=`PROPERTIES_GI_VERSION` `--properties-hostname-prefix`=`PROPERTIES_HOSTNAME_PREFIX` `--properties-local-backup-enabled` `--properties-memory-size-gb`=`PROPERTIES_MEMORY_SIZE_GB` `--properties-node-count`=`PROPERTIES_NODE_COUNT` `--properties-ocpu-count`=`PROPERTIES_OCPU_COUNT` `--properties-scan-listener-port-tcp`=`PROPERTIES_SCAN_LISTENER_PORT_TCP` `--properties-scan-listener-port-tcp-ssl`=`PROPERTIES_SCAN_LISTENER_PORT_TCP_SSL` `--properties-sparse-diskgroup-enabled` `--properties-ssh-public-keys`=[`PROPERTIES_SSH_PUBLIC_KEYS`,…] `--properties-system-version`=`PROPERTIES_SYSTEM_VERSION` `--properties-vm-backup-storage-type`=`PROPERTIES_VM_BACKUP_STORAGE_TYPE` `--properties-vm-file-system-storage-type`=`PROPERTIES_VM_FILE_SYSTEM_STORAGE_TYPE` `--diagnostics-data-collection-options-events-enabled` `--diagnostics-data-collection-options-health-monitoring-enabled` `--diagnostics-data-collection-options-incident-logs-enabled` `--time-zone-id`=`TIME_ZONE_ID` `--time-zone-version`=`TIME_ZONE_VERSION`]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     Create a new CloudVmCluster. 
+EXAMPLES
+     Choose an available gi-versions in your location by running `gcloud oracle-database db-system-shapes list --location=us-east4`. To create CloudVmCluster instance with id `my-instance` in the location `us-east4` with display-name `my instance`, odb-network `projects/network-project/locations/us-east4/odbNetworks/my-odbnetwork`, odb-subnet `projects/network-project/locations/us-east4/odbNetworks/my-odbnetwork/odbSubnets/my-odbsubnet`, backup-odb-subnet `projects/network-project/locations/us-east4/odbNetworks/my-odbnetwork/odbSubnets/my-backup-odbsubnet`, cidr `10.1.0.0/24`, network `projects/my-project/locations/global/networks/default`, backup-subnet-cidr `10.2.0.0/24`, license-type `LICENSE_INCLUDED`, ssh-public-keys `VtTxzlPJtIivthmLOmWdRDFy5l27pKUTwLp02`, hostname-prefix `hostname1`, cpu-core-count `4` and choosen gi-version `xx.0.0.0`, run: 
+
+To set the network configuration use one of the following options: 
+
+ODBNetwork based configuration(This is the recommended way): 
+    
+    
+    gcloud oracle-database cloud-vm-clusters create my-instance --location=us-east4 --display-name="my instance" --odb-network=projects/network-project/locations/us-east4/odbNetworks/my-odbnetwork --odb-subnet=projects/network-project/locations/us-east4/odbNetworks/my-odbnetwork/odbSubnets/my-odbsubnet --backup-odb-subnet=projects/network-project/locations/us-east4/odbNetworks/my-odbnetwork/odbSubnets/my-backup-odbsubnet --properties-license-type=LICENSE_INCLUDED --properties-ssh-public-keys="VtTxzlPJtIivthmLOmWdRDFy5l27pKUTwLp02" --properties-gi-version=xx.0.0.0 --properties-hostname-prefix=hostname1 --properties-cpu-core-count=4
+
+Network and CIDR based configuration: 
+    
+    
+    gcloud oracle-database cloud-vm-clusters create my-instance --location=us-east4 --display-name="my instance" --cidr=10.1.0.0/24 --network=projects/my-project/locations/global/networks/default --backup-subnet-cidr=10.2.0.0/24 --properties-license-type=LICENSE_INCLUDED --properties-ssh-public-keys="VtTxzlPJtIivthmLOmWdRDFy5l27pKUTwLp02" --properties-gi-version=xx.0.0.0 --properties-hostname-prefix=hostname1 --properties-cpu-core-count=4
+
+POSITIONAL ARGUMENTS
+    
+
+CloudVmCluster resource - Identifier. The name of the VM Cluster resource with the format: projects/{project}/locations/{region}/cloudVmClusters/{cloud_vm_cluster} This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `cloud_vm_cluster` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `location` attribute: 
+
+  * provide the argument `cloud_vm_cluster` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line. 
+
+
+
+This must be specified. 
+
+`CLOUD_VM_CLUSTER`
+     ID of the cloudVmCluster or fully qualified identifier for the cloudVmCluster. 
+
+To set the `cloud_vm_cluster` attribute: 
+
+  * provide the argument `cloud_vm_cluster` on the command line. 
+
+
+REQUIRED FLAGS
+    
+
+CloudExadataInfrastructure resource - The name of the Exadata Infrastructure resource on which VM cluster resource is created, in the following format: projects/{project}/locations/{region}/cloudExadataInfrastuctures/{cloud_extradata_infrastructure} This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--exadata-infrastructure` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `location` attribute: 
+
+  * provide the argument `--exadata-infrastructure` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line. 
+
+
+
+This must be specified. 
+
+`--exadata-infrastructure`=`EXADATA_INFRASTRUCTURE`
+     ID of the cloudExadataInfrastructure or fully qualified identifier for the cloudExadataInfrastructure. 
+
+To set the `cloud-exadata-infrastructure` attribute: 
+
+  * provide the argument `--exadata-infrastructure` on the command line. 
+
+
+OPTIONAL FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+OdbSubnet resource - The name of the backup OdbSubnet associated with the VM Cluster. Format: projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet} This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--backup-odb-subnet` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `location` attribute: 
+
+  * provide the argument `--backup-odb-subnet` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line. 
+
+
+
+To set the `odb-network` attribute: 
+
+  * provide the argument `--backup-odb-subnet` on the command line with a fully specified name; 
+  * provide the argument `--odb-network` on the command line. 
+
+
+`--backup-odb-subnet`=`BACKUP_ODB_SUBNET`
+     ID of the odbSubnet or fully qualified identifier for the odbSubnet. 
+
+To set the `odb-subnet` attribute: 
+
+  * provide the argument `--backup-odb-subnet` on the command line. 
+
+
+`--backup-subnet-cidr`=`BACKUP_SUBNET_CIDR`
+     CIDR range of the backup subnet. 
+`--cidr`=`CIDR`
+     Network settings. CIDR to use for cluster IP allocation. 
+`--display-name`=`DISPLAY_NAME`
+     User friendly name for this resource. 
+ExascaleDbStorageVault resource - The name of ExascaleDbStorageVault associated with the VM Cluster. Format: projects/{project}/locations/{location}/exascaleDbStorageVaults/{exascale_db_storage_vault} This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--exascale-db-storage-vault` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `location` attribute: 
+
+  * provide the argument `--exascale-db-storage-vault` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line. 
+
+
+`--exascale-db-storage-vault`=`EXASCALE_DB_STORAGE_VAULT`
+     ID of the exascaleDbStorageVault or fully qualified identifier for the exascaleDbStorageVault. 
+
+To set the `exascale-db-storage-vault` attribute: 
+
+  * provide the argument `--exascale-db-storage-vault` on the command line. 
+
+
+`--labels`=[`LABELS`,…]
+     Labels or tags associated with the VM Cluster. 
+
+`KEY`
+     Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+`VALUE`
+     Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+`Shorthand Example:`
+    
+    
+    --labels=string=string
+
+`JSON Example:`
+    
+    
+    --labels='{"string": "string"}'
+
+`File Example:`
+    
+    
+    --labels=path_to_file.(yaml|json)
+
+`--location`=`LOCATION`
+     For resources [backup-odb-subnet, cloud_vm_cluster, exadata-infrastructure, exascale-db-storage-vault, odb-network, odb-subnet], provides fallback value for resource location attribute. When the resource's full URI path is not provided, location will fallback to this flag value. 
+Network resource - The name of the VPC network. Format: projects/{project}/global/networks/{network} This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--network` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+`--network`=`NETWORK`
+     ID of the network or fully qualified identifier for the network. 
+
+To set the `network` attribute: 
+
+  * provide the argument `--network` on the command line. 
+
+
+`--odb-network`=`ODB_NETWORK`
+     For resources [backup-odb-subnet, odb-network, odb-subnet], provides fallback value for resource odb-network attribute. When the resource's full URI path is not provided, odb-network will fallback to this flag value. 
+OdbSubnet resource - The name of the OdbSubnet associated with the VM Cluster for IP allocation. Format: projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet} This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--odb-subnet` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `location` attribute: 
+
+  * provide the argument `--odb-subnet` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line. 
+
+
+
+To set the `odb-network` attribute: 
+
+  * provide the argument `--odb-subnet` on the command line with a fully specified name; 
+  * provide the argument `--odb-network` on the command line. 
+
+
+`--odb-subnet`=`ODB_SUBNET`
+     ID of the odbSubnet or fully qualified identifier for the odbSubnet. 
+
+To set the `odb-subnet` attribute: 
+
+  * provide the argument `--odb-subnet` on the command line. 
+
+
+`--request-id`=`REQUEST_ID`
+     An optional ID to identify the request. This value is used to identify duplicate requests. If you make a request with the same request ID and the original request is still in progress or completed, the server ignores the second request. This prevents clients from accidentally creating duplicate commitments. 
+
+The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000). 
+
+Various properties and settings associated with Exadata VM cluster. 
+`--properties-cpu-core-count`=`PROPERTIES_CPU_CORE_COUNT`
+     Number of enabled CPU cores. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--properties-license-type`=`PROPERTIES_LICENSE_TYPE`
+     License type of VM Cluster. `PROPERTIES_LICENSE_TYPE` must be one of: 
+
+`bring-your-own-license`
+     Bring your own license 
+`license-included`
+     License included part of offer 
+This flag argument must be specified if any of the other arguments in this group are specified. 
+`--properties-cluster-name`=`PROPERTIES_CLUSTER_NAME`
+     OCI Cluster name. 
+`--properties-data-storage-size-tb`=`PROPERTIES_DATA_STORAGE_SIZE_TB`
+     The data disk group size to be allocated in TBs. 
+`--properties-db-node-storage-size-gb`=`PROPERTIES_DB_NODE_STORAGE_SIZE_GB`
+     Local storage per VM. 
+`--properties-db-server-ocids`=[`PROPERTIES_DB_SERVER_OCIDS`,…]
+     OCID of database servers. 
+`--properties-disk-redundancy`=`PROPERTIES_DISK_REDUNDANCY`
+     The type of redundancy. `PROPERTIES_DISK_REDUNDANCY` must be one of: 
+
+`high`
+     High - 3 way mirror. 
+`normal`
+     Normal - 2 way mirror. 
+`--properties-gi-version`=`PROPERTIES_GI_VERSION`
+     Grid Infrastructure Version. 
+`--properties-hostname-prefix`=`PROPERTIES_HOSTNAME_PREFIX`
+     Prefix for VM cluster host names. 
+`--properties-local-backup-enabled`
+     Use local backup. 
+`--properties-memory-size-gb`=`PROPERTIES_MEMORY_SIZE_GB`
+     Memory allocated in GBs. 
+`--properties-node-count`=`PROPERTIES_NODE_COUNT`
+     Number of database servers. 
+`--properties-ocpu-count`=`PROPERTIES_OCPU_COUNT`
+     OCPU count per VM. Minimum is 0.1. 
+`--properties-scan-listener-port-tcp`=`PROPERTIES_SCAN_LISTENER_PORT_TCP`
+     SCAN listener port - TCP 
+`--properties-scan-listener-port-tcp-ssl`=`PROPERTIES_SCAN_LISTENER_PORT_TCP_SSL`
+     SCAN listener port - TLS 
+`--properties-sparse-diskgroup-enabled`
+     Use exadata sparse snapshots. 
+`--properties-ssh-public-keys`=[`PROPERTIES_SSH_PUBLIC_KEYS`,…]
+     SSH public keys to be stored with cluster. 
+`--properties-system-version`=`PROPERTIES_SYSTEM_VERSION`
+     Operating system version of the image. 
+`--properties-vm-backup-storage-type`=`PROPERTIES_VM_BACKUP_STORAGE_TYPE`
+     Specifies whether VM backups are stored on local DB server storage or Exascale storage. `PROPERTIES_VM_BACKUP_STORAGE_TYPE` must be one of: 
+
+`vm-backup-storage-type-exascale`
+     Exascale storage. 
+`vm-backup-storage-type-local`
+     Local DB server storage. 
+`--properties-vm-file-system-storage-type`=`PROPERTIES_VM_FILE_SYSTEM_STORAGE_TYPE`
+     Specifies whether VM file system storage / VM images are stored on local DB server storage or Exascale storage. `PROPERTIES_VM_FILE_SYSTEM_STORAGE_TYPE` must be one of: 
+
+`vm-file-system-storage-type-exascale`
+     Exascale storage. 
+`vm-file-system-storage-type-local`
+     Local DB server storage. 
+Data collection options for diagnostics. 
+`--diagnostics-data-collection-options-events-enabled`
+     Indicates whether diagnostic collection is enabled for the VM cluster 
+`--diagnostics-data-collection-options-health-monitoring-enabled`
+     Indicates whether health monitoring is enabled for the VM cluster 
+`--diagnostics-data-collection-options-incident-logs-enabled`
+     Indicates whether incident logs and trace collection are enabled for the VM cluster 
+Represents a time zone from the [IANA Time Zone Database](https://www.iana.org/time-zones). 
+`--time-zone-id`=`TIME_ZONE_ID`
+     IANA Time Zone Database time zone. For example "America/New_York". 
+`--time-zone-version`=`TIME_ZONE_VERSION`
+     IANA Time Zone Database version number. For example "2019a". 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `oracledatabase/v1` API. The full documentation for this API can be found at: <https://cloud.google.com/oracle/database/docs>
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-08-18 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-18 UTC."],[],[]] 

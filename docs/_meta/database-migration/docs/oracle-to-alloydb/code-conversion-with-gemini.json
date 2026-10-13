@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/database-migration/docs/oracle-to-alloydb/code-conversion-with-gemini/",
+  "file": "database-migration/docs/oracle-to-alloydb/code-conversion-with-gemini.md",
+  "title": "Convert Oracle code and schema with Gemini assistance \u00a0|\u00a0 Database Migration Service for heterogeneous Oracle to AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T20:18:52.730917+00:00"
+}

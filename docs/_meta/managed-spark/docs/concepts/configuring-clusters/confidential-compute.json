@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/managed-spark/docs/concepts/configuring-clusters/confidential-compute/",
+  "file": "managed-spark/docs/concepts/configuring-clusters/confidential-compute.md",
+  "title": "Encrypt memory with Confidential VM clusters \u00a0|\u00a0 Managed Service for Apache Spark \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T20:04:38.559276+00:00"
+}

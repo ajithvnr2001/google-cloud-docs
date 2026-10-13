@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/aks/reference/versions/v1.24.0-gke.2/metrics/",
+  "file": "kubernetes-engine/multi-cloud/docs/attached/aks/reference/versions/v1.24.0-gke.2/metrics.md",
+  "title": "Metrics available in 1.24.0-gke.2 \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T16:22:44.293925+00:00"
+}

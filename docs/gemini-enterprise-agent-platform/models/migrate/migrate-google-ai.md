@@ -1,0 +1,160 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate/migrate-google-ai/
+title: Migrate from Google AI Studio to Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T16:40:51.353060+00:00
+---
+
+# Migrate from Google AI Studio to Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate/migrate-google-ai/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Migrate from Google AI Studio to Gemini Enterprise Agent Platform Stay organized with collections  Save and categorize content based on your preferences. 
+
+As your [Gemini API](https://ai.google.dev/gemini-api/docs) applications mature, you might find that you need a more expansive platform for building and deploying generative AI applications and solutions end-to-end. Gemini Enterprise Agent Platform provides a comprehensive ecosystem of tools to enable developers to harness the power of generative AI, from the initial stages of app development to app deployment, app hosting, and managing complex data at scale.
+
+With Gemini Enterprise Agent Platform, you get access to a suite of Machine Learning Operations (MLOps) tools to streamline usage, deployment, and monitoring of AI models for efficiency and reliability. Additionally, integrations with databases, Development Operations (DevOps) tools, logging, monitoring, and IAM offer a comprehensive approach to managing the entire generative AI lifecycle.
+
+## Differences between using the Gemini API on its own and Gemini Enterprise Agent Platform
+
+The following table summarizes the main differences between the Gemini API and Gemini Enterprise Agent Platform to help you decide which option is right for your use case:
+
+**Feature** | **Gemini API** | **Gemini Enterprise Agent Platform**  
+---|---|---  
+Endpoint names | `generativelanguage.googleapis.com` | `aiplatform.googleapis.com`  
+Sign up | Google Account | Google Cloud account (with terms agreement and billing)  
+Authentication | API Key or [OAuth](https://ai.google.dev/gemini-api/docs/oauth) (if connected to Google Cloud project) | Google Cloud service account  
+User interface playground | Google AI Studio | Agent Studio on Gemini Enterprise Agent Platform   
+API & SDK |  Server and mobile/web client SDKs 
+
+  * Server: Python, JavaScript/TypeScript, Go, Java, C#, ABAP
+  * Mobile/Web client (via [Firebase AI Logic](https://firebase.google.com/docs/ai-logic)): Android (Kotlin/Java), Swift, Web, Flutter, and Unity
+
+|  Server and mobile/web client SDKs 
+
+  * Server: Python, JavaScript/TypeScript, Go, Java, C#, ABAP
+  * Mobile/Web client (via [Firebase AI Logic](https://firebase.google.com/docs/ai-logic)): Android (Kotlin/Java), Swift, Web, Flutter, and Unity
+
+  
+No-cost usage of API & SDK | Yes, [where applicable](https://ai.google.dev/gemini-api/docs/billing#is-Gemini-free-in-EEA-UK-CH) | $300 Google Cloud credit for new users  
+Quota (requests per minute) | Varies based on model and pricing plan (see [detailed information](https://ai.google.dev/pricing))  | Varies based on model and region (see [detailed information](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/quotas))   
+Commercial terms | Standard Terms of Service. Doesn't count toward Google Cloud commitments. All customers pay the same price. | Enterprise-ready terms for data processing, security, and privacy. Counts toward Google Cloud commitments. Custom contracts and discounts available for large volume workloads (contact sales).  
+Enterprise support and SLA | No enterprise-level support or Service Level Agreements (SLAs). | 24/7 enterprise-level support and SLAs for service availability.  
+Compliance and governance | No compliance certifications (for example, HIPAA, SOC2). Regulated customers should use Gemini Enterprise Agent Platform instead. | Supports compliance with certifications like HIPAA and SOC2. Provides data residency, customer-managed encryption keys, and Access Transparency.  
+Security | API key authentication. | Authentication using IAM (service accounts, OAuth) for increased security. Enhanced security through Virtual Private Cloud.  
+Infrastructure | Global endpoint. | Global endpoint and regional endpoints.  
+Dedicated capacity | No access to dedicated capacity. | Access to Provisioned Throughput for dedicated capacity.  
+Model access | Access to Google's models. | Access to a broad selection of Google and third-party models in the Model Garden.  
+Google model improvement | 
+
+  * **Free tier** : Your prompts and responses may be used to improve Google products.
+  * **Paid tier** : Your prompts, responses, and data are never used to improve Google products.
+
+| Your prompts, responses, and data are never used to improve Google products.  
+Advanced features | Standard feature set. | Full support for features like model tuning and a wider variety of embedding models.  
+MLOps | No | Full MLOps on Gemini Enterprise Agent Platform (examples: model evaluation, Model Monitoring, Model Registry)  
+  
+## Enable APIs
+
+To use Gemini Enterprise Agent Platform, you must enable the Gemini Enterprise Agent Platform API in your Google Cloud project:
+
+[Enable the Gemini Enterprise Agent Platform API](https://console.cloud.google.com/apis/library/aiplatform.googleapis.com)
+
+Additionally, to build and deploy agents using features like Agent Runtime on Gemini Enterprise Agent Platform or Agent Studio on Gemini Enterprise Agent Platform, you might need to enable the following APIs:
+
+  * [Cloud Storage API](https://console.cloud.google.com/apis/library/storage.googleapis.com)
+  * [Cloud Logging API](https://console.cloud.google.com/apis/library/logging.googleapis.com)
+  * [Cloud Monitoring API](https://console.cloud.google.com/apis/library/monitoring.googleapis.com)
+  * [Cloud Trace API](https://console.cloud.google.com/apis/library/cloudtrace.googleapis.com)
+  * [Cloud Resource Manager API](https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com)
+  * [Artifact Registry API](https://console.cloud.google.com/apis/library/artifactregistry.googleapis.com)
+
+
+
+Other features, such as Agent Gateway or integrations with other Google services like Google Workspace, might require enabling additional APIs. To enable other APIs, visit the [API Library](https://console.cloud.google.com/apis/library) in the Google Cloud console.
+
+## Migration steps
+
+The following sections cover the steps required to migrate your Gemini API code to Gemini Enterprise Agent Platform. These steps assume you have prompt data from Google AI Studio saved in Google Drive.
+
+When migrating to Gemini Enterprise Agent Platform:
+
+  * You can use your existing Google Cloud project (the same one you used to generate your Gemini API key) or you can create a new [ Google Cloud project](https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects).
+  * Supported regions might differ between the Gemini API and Gemini Enterprise Agent Platform. See the list of [supported regions for generative AI on Google Cloud](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations).
+  * Any models you created in Google AI Studio need to be retrained in Gemini Enterprise Agent Platform.
+
+
+
+### 1\. Migrate your prompts to Agent Studio
+
+Your Google AI Studio prompt data is saved in a Google Drive folder. This section shows how to migrate your prompts to Agent Studio.
+
+  1. Open [Google Drive](https://drive.google.com).
+  2. Navigate to the **AI_Studio** folder where the prompts are stored. ![Location of prompts in Google Drive](https://docs.cloud.google.com/static/gemini-enterprise-agent-platform/models/migrate/images/ai-studio-drive.png)
+  3. Download your prompts from Google Drive to a local directory.
+
+**Note:** Prompts downloaded from Google Drive are in the text (`txt`) format. Before you upload them to Agent Studio, change the file extensions from `.txt` to `.json` to convert them to JSON files.
+  4. Open [Agent Studio](https://console.cloud.google.com/agent-platform/generative) in the Google Cloud console.
+
+  5. In the **Gemini Enterprise Agent Platform** menu, click **Recents > View all** to open the **Prompt management** menu.
+
+  6. Click download**Import prompt**.
+
+  7. Next to the **Prompt file** field, click **Browse** and select a prompt from your local directory.
+
+To upload prompts in bulk, you must manually combine your prompts into a single JSON file.
+
+  8. Click **Upload**.
+
+
+
+
+### 2\. Upload training data to Agent Studio
+
+To migrate your training data to Gemini Enterprise Agent Platform, you need to upload your data to a Cloud Storage bucket. For more information, see [Introduction to tuning ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/tune-models).
+
+### 3\. Delete unused API Keys
+
+If you no longer need to use your Gemini API key, then follow security best practices and delete it.
+
+To delete an API key:
+
+  1. Open the [Google Cloud API Credentials](https://console.cloud.google.com/apis/credentials) page.
+
+  2. Find the API key that you want to delete and click the **Actions** icon.
+
+  3. Select **Delete API key**.
+
+  4. In the **Delete credential** modal, select **Delete**.
+
+Deleting an API key takes a few minutes to propagate. After propagation completes, any traffic using the deleted API key is rejected.
+
+
+**Important:** If you delete a key that's still used in production and need to recover it, see [`gcloud beta services api-keys undelete`](https://docs.cloud.google.com/sdk/gcloud/reference/beta/services/api-keys/undelete).
+
+## What's next
+
+  * Try a quickstart tutorial using [Agent Studio](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agent-studio/quickstart)
+
+  * [Connect to the Knowledge MCP server](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/quickstart-sdk).
+
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

@@ -1,0 +1,144 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/ml/speech/recognize-long-running/
+title: gcloud ml speech recognize-long-running \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T19:54:02.395267+00:00
+---
+
+# gcloud ml speech recognize-long-running  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/ml/speech/recognize-long-running/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud ml speech recognize-long-running Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud ml speech recognize-long-running - get transcripts of longer audio from an audio file 
+SYNOPSIS
+    
+
+`gcloud ml speech recognize-long-running` `AUDIO` `--language-code`=`LANGUAGE_CODE` [`--async`] [`--enable-automatic-punctuation`] [`--encoding`=`ENCODING`; default="encoding-unspecified"] [`--filter-profanity`] [`--hints`=[`HINT`,…]] [`--include-word-time-offsets`] [`--max-alternatives`=`MAX_ALTERNATIVES`; default=1] [`--model`=`MODEL`] [`--output-uri`=`OUTPUT_URI`] [`--sample-rate`=`SAMPLE_RATE`] [`--audio-channel-count`=`AUDIO_CHANNEL_COUNT` `--separate-channel-recognition`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     Get a transcript of audio up to 80 minutes in length. If the audio is under 60 seconds, you may also use `[gcloud ml speech recognize](https://docs.cloud.google.com/sdk/gcloud/reference/ml/speech/recognize)` to analyze it. 
+EXAMPLES
+     To block the command from completing until analysis is finished, run: 
+    
+    
+    gcloud ml speech recognize-long-running AUDIO_FILE --language-code=LANGUAGE_CODE --sample-rate=SAMPLE_RATE
+
+You can also receive an operation as the result of the command by running: 
+    
+    
+    gcloud ml speech recognize-long-running AUDIO_FILE --language-code=LANGUAGE_CODE --sample-rate=SAMPLE_RATE --async
+
+This will return information about an operation. To get information about the operation, run: 
+    
+    
+    [gcloud ml speech operations describe](https://docs.cloud.google.com/sdk/gcloud/reference/ml/speech/operations/describe) OPERATION_ID
+
+To poll the operation until it's complete, run: 
+    
+    
+    [gcloud ml speech operations wait](https://docs.cloud.google.com/sdk/gcloud/reference/ml/speech/operations/wait) OPERATION_ID
+
+POSITIONAL ARGUMENTS
+    
+
+`AUDIO`
+     The location of the audio file to transcribe. Must be a local path or a Google Cloud Storage URL (in the format gs://bucket/object). 
+REQUIRED FLAGS
+    
+
+`--language-code`=`LANGUAGE_CODE`
+     The language of the supplied audio as a BCP-47 (https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US". See <https://cloud.google.com/speech/docs/languages> for a list of the currently supported language codes. 
+OPTIONAL FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--enable-automatic-punctuation`
+     Adds punctuation to recognition result hypotheses. 
+`--encoding`=`ENCODING`; default="encoding-unspecified"
+     The type of encoding of the file. Required if the file format is not WAV or FLAC. `ENCODING` must be one of: `alaw`, `amr`, `amr-wb`, `encoding-unspecified`, `flac`, `linear16`, `mp3`, `mulaw`, `ogg-opus`, `speex-with-header-byte`, `webm-opus`. 
+`--filter-profanity`
+     If True, the server will attempt to filter out profanities, replacing all but the initial character in each filtered word with asterisks, e.g. `f***`. 
+`--hints`=[`HINT`,…]
+     A list of strings containing word and phrase "hints" so that the speech recognition is more likely to recognize them. This can be used to improve the accuracy for specific words and phrases, for example, if specific commands are typically spoken by the user. This can also be used to add additional words to the vocabulary of the recognizer. See <https://cloud.google.com/speech/limits#content>. 
+`--include-word-time-offsets`
+     If True, the top result includes a list of words with the start and end time offsets (timestamps) for those words. If False, no word-level time offset information is returned. 
+`--max-alternatives`=`MAX_ALTERNATIVES`; default=1
+     Maximum number of recognition hypotheses to be returned. The server may return fewer than max_alternatives. Valid values are 0-30. A value of 0 or 1 will return a maximum of one. 
+`--model`=`MODEL`
+     Select the model best suited to your domain to get best results. If you do not explicitly specify a model, Speech-to-Text will auto-select a model based on your other specified parameters. Some models are premium and cost more than standard models (although you can reduce the price by opting into https://cloud.google.com/speech-to-text/docs/data-logging). `MODEL` must be one of: 
+
+`command_and_search`
+     short queries such as voice commands or voice search. 
+`default`
+     audio that is not one of the specific audio models. For example, long-form audio. Ideally the audio is high-fidelity, recorded at a 16khz or greater sampling rate. 
+`latest_long`
+     Use this model for any kind of long form content such as media or spontaneous speech and conversations. Consider using this model in place of the video model, especially if the video model is not available in your target language. You can also use this in place of the default model. 
+`latest_short`
+     Use this model for short utterances that are a few seconds in length. It is useful for trying to capture commands or other single shot directed speech use cases. Consider using this model instead of the command and search model. 
+`medical_conversation`
+     Best for audio that originated from a conversation between a medical provider and patient. 
+`medical_dictation`
+     Best for audio that originated from dictation notes by a medical provider. 
+`phone_call`
+     audio that originated from a phone call (typically recorded at an 8khz sampling rate). 
+`phone_call_enhanced`
+     audio that originated from a phone call (typically recorded at an 8khz sampling rate). This is a premium model and can produce better results but costs more than the standard rate. 
+`telephony`
+     Improved version of the "phone_call" model, best for audio that originated from a phone call, typically recorded at an 8kHz sampling rate. 
+`telephony_short`
+     Dedicated version of the modern "telephony" model for short or even single-word utterances for audio that originated from a phone call, typically recorded at an 8kHz sampling rate. 
+`video_enhanced`
+     audio that originated from video or includes multiple speakers. Ideally the audio is recorded at a 16khz or greater sampling rate. This is a premium model that costs more than the standard rate. 
+`--output-uri`=`OUTPUT_URI`
+     Location to which the results should be written. Must be a Google Cloud Storage URI. 
+`--sample-rate`=`SAMPLE_RATE`
+     The sample rate in Hertz. For best results, set the sampling rate of the audio source to 16000 Hz. If that's not possible, use the native sample rate of the audio source (instead of re-sampling). 
+Audio channel settings. 
+`--audio-channel-count`=`AUDIO_CHANNEL_COUNT`
+     The number of channels in the input audio data. Set this for separate-channel-recognition. Valid values are: 1)LINEAR16 and FLAC are 1-8 2)OGG_OPUS are 1-254 3) MULAW, AMR, AMR_WB and SPEEX_WITH_HEADER_BYTE is only `1`. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--separate-channel-recognition`
+     Recognition result will contain a `channel_tag` field to state which channel that result belongs to. If this is not true, only the first channel will be recognized. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the speech/v1 API. The full documentation for this API can be found at: <https://cloud.google.com/speech-to-text/docs/quickstart-protocol>
+NOTES
+     These variants are also available: 
+    
+    
+    [gcloud alpha ml speech recognize-long-running](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/ml/speech/recognize-long-running)
+    
+    
+    [gcloud beta ml speech recognize-long-running](https://docs.cloud.google.com/sdk/gcloud/reference/beta/ml/speech/recognize-long-running)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

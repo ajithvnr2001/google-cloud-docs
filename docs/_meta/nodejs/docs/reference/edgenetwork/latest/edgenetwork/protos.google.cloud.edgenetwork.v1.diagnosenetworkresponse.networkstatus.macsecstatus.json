@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/nodejs/docs/reference/edgenetwork/latest/edgenetwork/protos.google.cloud.edgenetwork.v1.diagnosenetworkresponse.networkstatus.macsecstatus",
+  "file": "nodejs/docs/reference/edgenetwork/latest/edgenetwork/protos.google.cloud.edgenetwork.v1.diagnosenetworkresponse.networkstatus.macsecstatus.md",
+  "title": "Enum protos.google.cloud.edgenetwork.v1.DiagnoseNetworkResponse.NetworkStatus.MacsecStatus (0.13.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T15:21:26.946558+00:00"
+}

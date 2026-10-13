@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/deploy/docs/api/reference/rest/v1/projects.locations.deliveryPipelines.automationRuns/cancel/",
+  "file": "deploy/docs/api/reference/rest/v1/projects.locations.deliveryPipelines.automationRuns/cancel.md",
+  "title": "Method: projects.locations.deliveryPipelines.automationRuns.cancel \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T17:14:24.771780+00:00"
+}

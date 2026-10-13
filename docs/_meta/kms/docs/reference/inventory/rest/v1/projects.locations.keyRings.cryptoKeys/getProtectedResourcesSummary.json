@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/kms/docs/reference/inventory/rest/v1/projects.locations.keyRings.cryptoKeys/getProtectedResourcesSummary/",
+  "file": "kms/docs/reference/inventory/rest/v1/projects.locations.keyRings.cryptoKeys/getProtectedResourcesSummary.md",
+  "title": "Method: projects.locations.keyRings.cryptoKeys.getProtectedResourcesSummary \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T18:30:24.522729+00:00"
+}

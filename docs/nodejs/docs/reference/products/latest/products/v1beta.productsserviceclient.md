@@ -1,0 +1,583 @@
+---
+url: https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/v1beta.productsserviceclient
+title: Class v1beta.ProductsServiceClient (0.11.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T17:21:15.844353+00:00
+---
+
+# Class v1beta.ProductsServiceClient (0.11.1)  |  Node.js client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/v1beta.productsserviceclient
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Node.js ](https://docs.cloud.google.com/nodejs/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/nodejs/docs/reference)
+
+
+
+Send feedback 
+
+#  Class v1beta.ProductsServiceClient (0.11.1) Stay organized with collections  Save and categorize content based on your preferences. 
+
+0.11.1 (latest)  0.1.1 
+
+Service to use Product resource. v1beta
+
+## Package
+
+[@google-shopping/products](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/overview.html)
+
+## Constructors 
+
+### (constructor)(opts, gaxInstance)
+    
+    
+    constructor(opts?: ClientOptions, gaxInstance?: typeof gax | typeof gax.fallback);
+
+Construct an instance of ProductsServiceClient.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`opts` |  `ClientOptions`   
+  
+`gaxInstance` |  `typeof gax | typeof fallback`   
+: loaded instance of `google-gax`. Useful if you need to avoid loading the default gRPC version and want to use the fallback HTTP implementation. Load only fallback version and pass it to the constructor: ``` const gax = require('google-gax/build/src/fallback'); // avoids loading google-gax with gRPC const client = new ProductsServiceClient({fallback: true}, gax); ```  
+  
+## Properties 
+
+### apiEndpoint
+    
+    
+    get apiEndpoint(): string;
+
+The DNS address for this API service.
+
+### apiEndpoint
+    
+    
+    static get apiEndpoint(): string;
+
+The DNS address for this API service - same as servicePath.
+
+### auth
+    
+    
+    auth: gax.GoogleAuth;
+
+### descriptors
+    
+    
+    descriptors: Descriptors;
+
+### innerApiCalls
+    
+    
+    innerApiCalls: {
+            [name: string]: Function;
+        };
+
+### pathTemplates
+    
+    
+    pathTemplates: {
+            [name: string]: gax.PathTemplate;
+        };
+
+### port
+    
+    
+    static get port(): number;
+
+The port for this API service.
+
+### productsServiceStub
+    
+    
+    productsServiceStub?: Promise<{
+            [name: string]: Function;
+        }>;
+
+### scopes
+    
+    
+    static get scopes(): string[];
+
+The scopes needed to make gRPC calls for every method defined in this service.
+
+### servicePath
+    
+    
+    static get servicePath(): string;
+
+The DNS address for this API service.
+
+### universeDomain
+    
+    
+    get universeDomain(): string;
+
+### warn
+    
+    
+    warn: (code: string, message: string, warnType?: string) => void;
+
+## Methods 
+
+### accountPath(account)
+    
+    
+    accountPath(account: string): string;
+
+Return a fully-qualified account resource name string.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`account` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### close()
+    
+    
+    close(): Promise<void>;
+
+Terminate the gRPC channel and close the client.
+
+The client will no longer be usable and all future behavior is undefined.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<void>` | {Promise} A promise that resolves when the client is closed.  
+  
+### getProduct(request, options)
+    
+    
+    getProduct(request?: protos.google.shopping.merchant.products.v1beta.IGetProductRequest, options?: CallOptions): Promise<[
+            protos.google.shopping.merchant.products.v1beta.IProduct,
+            (protos.google.shopping.merchant.products.v1beta.IGetProductRequest | undefined),
+            {} | undefined
+        ]>;
+
+Retrieves the processed product from your Merchant Center account.
+
+After inserting, updating, or deleting a product input, it may take several minutes before the updated final product can be retrieved.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetProductRequest](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.igetproductrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.shopping.merchant.products.v1beta.IProduct](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.iproduct), ([protos.google.shopping.merchant.products.v1beta.IGetProductRequest](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.igetproductrequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [Product](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.product). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The name of the product to retrieve.
+       *  Format: `accounts/{account}/products/{product}`
+       *  where the last section `product` consists of 4 parts:
+       *  `channel~content_language~feed_label~offer_id`
+       *  example for product name is
+       *  `accounts/123/products/online~en~US~sku123`
+       */
+      // const name = 'abc123'
+    
+      // Imports the Products library
+      const {ProductsServiceClient} = require('[@google-shopping/products](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const productsClient = new [ProductsServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/overview.html)();
+    
+      async function callGetProduct() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await productsClient.getProduct(request);
+        console.log(response);
+      }
+    
+      callGetProduct();
+    
+    
+
+### getProduct(request, options, callback)
+    
+    
+    getProduct(request: protos.google.shopping.merchant.products.v1beta.IGetProductRequest, options: CallOptions, callback: Callback<protos.google.shopping.merchant.products.v1beta.IProduct, protos.google.shopping.merchant.products.v1beta.IGetProductRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetProductRequest](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.igetproductrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.shopping.merchant.products.v1beta.IProduct](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.iproduct), [protos.google.shopping.merchant.products.v1beta.IGetProductRequest](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.igetproductrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getProduct(request, callback)
+    
+    
+    getProduct(request: protos.google.shopping.merchant.products.v1beta.IGetProductRequest, callback: Callback<protos.google.shopping.merchant.products.v1beta.IProduct, protos.google.shopping.merchant.products.v1beta.IGetProductRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetProductRequest](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.igetproductrequest)`   
+  
+`callback` |  `Callback<[protos.google.shopping.merchant.products.v1beta.IProduct](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.iproduct), [protos.google.shopping.merchant.products.v1beta.IGetProductRequest](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.igetproductrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getProjectId()
+    
+    
+    getProjectId(): Promise<string>;
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<string>` |   
+  
+### getProjectId(callback)
+    
+    
+    getProjectId(callback: Callback<string, undefined, undefined>): void;
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`callback` |  `Callback<string, undefined, undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### initialize()
+    
+    
+    initialize(): Promise<{
+            [name: string]: Function;
+        }>;
+
+Initialize the client. Performs asynchronous operations (such as authentication) and prepares the client. This function will be called automatically when any class method is called for the first time, but if you need to initialize it before calling an actual method, feel free to call initialize() directly.
+
+You can await on this method if you want to make sure the client is initialized.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<{ [name: string]: Function; }>` | {Promise} A promise that resolves to an authenticated service stub.  
+  
+### listProducts(request, options)
+    
+    
+    listProducts(request?: protos.google.shopping.merchant.products.v1beta.IListProductsRequest, options?: CallOptions): Promise<[
+            protos.google.shopping.merchant.products.v1beta.IProduct[],
+            protos.google.shopping.merchant.products.v1beta.IListProductsRequest | null,
+            protos.google.shopping.merchant.products.v1beta.IListProductsResponse
+        ]>;
+
+Lists the processed products in your Merchant Center account. The response might contain fewer items than specified by `pageSize`. Rely on `pageToken` to determine if there are more items to be requested.
+
+After inserting, updating, or deleting a product input, it may take several minutes before the updated processed product can be retrieved.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListProductsRequest](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.ilistproductsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.shopping.merchant.products.v1beta.IProduct](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.iproduct)[], [protos.google.shopping.merchant.products.v1beta.IListProductsRequest](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.ilistproductsrequest) | null, [protos.google.shopping.merchant.products.v1beta.IListProductsResponse](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.ilistproductsresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of [Product](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.product). The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listProductsAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listProducts(request, options, callback)
+    
+    
+    listProducts(request: protos.google.shopping.merchant.products.v1beta.IListProductsRequest, options: CallOptions, callback: PaginationCallback<protos.google.shopping.merchant.products.v1beta.IListProductsRequest, protos.google.shopping.merchant.products.v1beta.IListProductsResponse | null | undefined, protos.google.shopping.merchant.products.v1beta.IProduct>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListProductsRequest](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.ilistproductsrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.shopping.merchant.products.v1beta.IListProductsRequest](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.ilistproductsrequest), [protos.google.shopping.merchant.products.v1beta.IListProductsResponse](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.ilistproductsresponse) | null | undefined, [protos.google.shopping.merchant.products.v1beta.IProduct](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.iproduct)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listProducts(request, callback)
+    
+    
+    listProducts(request: protos.google.shopping.merchant.products.v1beta.IListProductsRequest, callback: PaginationCallback<protos.google.shopping.merchant.products.v1beta.IListProductsRequest, protos.google.shopping.merchant.products.v1beta.IListProductsResponse | null | undefined, protos.google.shopping.merchant.products.v1beta.IProduct>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListProductsRequest](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.ilistproductsrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.shopping.merchant.products.v1beta.IListProductsRequest](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.ilistproductsrequest), [protos.google.shopping.merchant.products.v1beta.IListProductsResponse](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.ilistproductsresponse) | null | undefined, [protos.google.shopping.merchant.products.v1beta.IProduct](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.iproduct)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listProductsAsync(request, options)
+    
+    
+    listProductsAsync(request?: protos.google.shopping.merchant.products.v1beta.IListProductsRequest, options?: CallOptions): AsyncIterable<protos.google.shopping.merchant.products.v1beta.IProduct>;
+
+Equivalent to `listProducts`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListProductsRequest](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.ilistproductsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.shopping.merchant.products.v1beta.IProduct](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.iproduct)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing [Product](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.product). The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The account to list processed products for.
+       *  Format: `accounts/{account}`
+       */
+      // const parent = 'abc123'
+      /**
+       *  The maximum number of products to return. The service may return fewer than
+       *  this value.
+       *  The maximum value is 1000; values above 1000 will be coerced to 1000.
+       *  If unspecified, the maximum number of products will be returned.
+       */
+      // const pageSize = 1234
+      /**
+       *  A page token, received from a previous `ListProducts` call.
+       *  Provide this to retrieve the subsequent page.
+       *  When paginating, all other parameters provided to `ListProducts` must
+       *  match the call that provided the page token.
+       */
+      // const pageToken = 'abc123'
+    
+      // Imports the Products library
+      const {ProductsServiceClient} = require('[@google-shopping/products](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const productsClient = new [ProductsServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/overview.html)();
+    
+      async function callListProducts() {
+        // Construct request
+        const request = {
+          parent,
+        };
+    
+        // Run request
+        const iterable = productsClient.listProductsAsync(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callListProducts();
+    
+    
+
+### listProductsStream(request, options)
+    
+    
+    listProductsStream(request?: protos.google.shopping.merchant.products.v1beta.IListProductsRequest, options?: CallOptions): Transform;
+
+Equivalent to `listProducts`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListProductsRequest](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.ilistproductsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing [Product](https://docs.cloud.google.com/nodejs/docs/reference/products/latest/products/protos.google.shopping.merchant.products.v1beta.product) on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listProductsAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### matchAccountFromAccountName(accountName)
+    
+    
+    matchAccountFromAccountName(accountName: string): string | number;
+
+Parse the account from Account resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`accountName` |  `string`   
+A fully-qualified path representing Account resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the account.  
+  
+### matchAccountFromProductInputName(productInputName)
+    
+    
+    matchAccountFromProductInputName(productInputName: string): string | number;
+
+Parse the account from ProductInput resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`productInputName` |  `string`   
+A fully-qualified path representing ProductInput resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the account.  
+  
+### matchAccountFromProductName(productName)
+    
+    
+    matchAccountFromProductName(productName: string): string | number;
+
+Parse the account from Product resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`productName` |  `string`   
+A fully-qualified path representing Product resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the account.  
+  
+### matchProductFromProductName(productName)
+    
+    
+    matchProductFromProductName(productName: string): string | number;
+
+Parse the product from Product resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`productName` |  `string`   
+A fully-qualified path representing Product resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the product.  
+  
+### matchProductinputFromProductInputName(productInputName)
+    
+    
+    matchProductinputFromProductInputName(productInputName: string): string | number;
+
+Parse the productinput from ProductInput resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`productInputName` |  `string`   
+A fully-qualified path representing ProductInput resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the productinput.  
+  
+### productInputPath(account, productinput)
+    
+    
+    productInputPath(account: string, productinput: string): string;
+
+Return a fully-qualified productInput resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`account` |  `string`   
+  
+`productinput` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### productPath(account, product)
+    
+    
+    productPath(account: string, product: string): string;
+
+Return a fully-qualified product resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`account` |  `string`   
+  
+`product` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-02 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-02 UTC."],[],[]] 

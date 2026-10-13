@@ -1,0 +1,819 @@
+---
+url: https://docs.cloud.google.com/java/docs/reference/google-cloud-dms/latest/history/
+title: Changelog \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T19:38:12.473504+00:00
+---
+
+# Changelog  |  Java client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/java/docs/reference/google-cloud-dms/latest/history/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Java ](https://docs.cloud.google.com/java/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/java/docs/reference)
+
+
+
+Send feedback 
+
+#  Changelog Stay organized with collections  Save and categorize content based on your preferences. 
+
+2.98.0 (latest)  2.94.0  2.93.0  2.92.0  2.90.0  2.87.0  2.86.0  2.84.0  2.82.0  2.81.0  2.80.0  2.79.0  2.77.0  2.75.0  2.74.0  2.73.0  2.72.0  2.71.0  2.69.0  2.67.0  2.66.0  2.63.0  2.62.0  2.61.0  2.59.0  2.58.0  2.57.0  2.56.0  2.55.0  2.54.0  2.53.0  2.52.0  2.51.0  2.50.0  2.48.0  2.47.0  2.46.0  2.45.0  2.44.0  2.43.0  2.42.0  2.41.0  2.40.0  2.39.0  2.38.0  2.36.0  2.35.0  2.34.0  2.33.0  2.32.0  2.31.0  2.30.0  2.29.0  2.28.0  2.27.0  2.26.0  2.23.0  2.22.0  2.21.0  2.20.0  2.19.0  2.18.0  2.17.0  2.16.0  2.15.0  2.14.0  2.13.0  2.12.0  2.11.0  2.10.0  2.8.0  2.7.0  2.6.0  2.5.0  2.4.0  2.3.0  2.2.8  2.1.9 
+
+## 2.87.0 (None)
+
+  * No change
+
+
+
+## 2.86.0 (2026-03-11)
+
+  * No change
+
+
+
+## 2.85.0 (2026-02-25)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.57.0 ([#11956](https://github.com/googleapis/google-cloud-java/issues/11956)) ([62b97e1](https://github.com/googleapis/google-cloud-java/commit/62b97e108eee0f8649c53cef400774f4fca4ffab))
+
+
+
+## 2.82.0 (2026-01-29)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.56.0 ([#11879](https://github.com/googleapis/google-cloud-java/issues/11879)) ([ac1f018](https://github.com/googleapis/google-cloud-java/commit/ac1f0182ac5b405ca164ac867c8c042322736bef))
+
+
+
+## 2.81.0 (2026-01-15)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.55.1 ([#11863](https://github.com/googleapis/google-cloud-java/issues/11863)) ([50cda6e](https://github.com/googleapis/google-cloud-java/commit/50cda6ec7be56bf1900737a6aaf12fc494be20c2))
+
+
+
+## 2.80.0 (2025-12-16)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.54.2 ([#11819](https://github.com/googleapis/google-cloud-java/issues/11819)) ([f32924a](https://github.com/googleapis/google-cloud-java/commit/f32924af0899a0b34646e88ffa8c527163b3bb24))
+
+
+
+## 2.77.0 (2025-10-21)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.53.0 ([#11776](https://github.com/googleapis/google-cloud-java/issues/11776)) ([e4a2892](https://github.com/googleapis/google-cloud-java/commit/e4a2892c8f7d51e3c3bec551f922b42f70a880d8))
+
+
+
+## 2.76.0 (2025-10-13)
+
+  * No change
+
+
+
+## 2.75.0 (2025-10-07)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.52.3 ([#11755](https://github.com/googleapis/google-cloud-java/issues/11755)) ([b117bc3](https://github.com/googleapis/google-cloud-java/commit/b117bc3d8d04ccc3c1f5586b73e1718ff46b23e6))
+
+
+
+## 2.74.0 (2025-09-22)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.52.2 ([#11747](https://github.com/googleapis/google-cloud-java/issues/11747)) ([deb0ed9](https://github.com/googleapis/google-cloud-java/commit/deb0ed92d7c3279e0e26ba8b22463cb77131fa10))
+
+
+
+## 2.73.0 (2025-09-11)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.52.1 ([#11738](https://github.com/googleapis/google-cloud-java/issues/11738)) ([b17cf6d](https://github.com/googleapis/google-cloud-java/commit/b17cf6de63b9cabcd44b6fc21b57c187b321ae8f))
+
+
+
+## 2.72.0 (2025-08-25)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.52.0 ([#11727](https://github.com/googleapis/google-cloud-java/issues/11727)) ([31d8698](https://github.com/googleapis/google-cloud-java/commit/31d86980d0e27e0a948727d778cf46fbcf227239))
+
+
+
+## 2.71.0 (2025-08-13)
+
+  * No change
+
+
+
+## 2.70.0 (2025-08-08)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.51.0 ([#11695](https://github.com/googleapis/google-cloud-java/issues/11695)) ([b82ce00](https://github.com/googleapis/google-cloud-java/commit/b82ce005c30551b8714099b7219b71bda85aa3a5))
+
+
+
+## 2.69.0 (2025-07-30)
+
+  * No change
+
+
+
+## 2.68.0 (2025-07-28)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.50.2 ([#11680](https://github.com/googleapis/google-cloud-java/issues/11680)) ([d1b99a7](https://github.com/googleapis/google-cloud-java/commit/d1b99a706daa10c487b56edbb5170b41530628ca))
+
+
+
+## 2.67.0 (2025-07-11)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.50.1 ([#11655](https://github.com/googleapis/google-cloud-java/issues/11655)) ([9b34528](https://github.com/googleapis/google-cloud-java/commit/9b34528f85043049e3349fffc30bb2dbfe01836c))
+
+
+
+## 2.66.0 (2025-06-25)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.50.0 ([#11624](https://github.com/googleapis/google-cloud-java/issues/11624)) ([a19f457](https://github.com/googleapis/google-cloud-java/commit/a19f457d10f15437ac26ce379048ff8b3cc6be5d))
+
+
+
+## 2.64.0 (2025-06-16)
+
+  * No change
+
+
+
+## 2.63.0 (2025-06-04)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.49.0 ([#11603](https://github.com/googleapis/google-cloud-java/issues/11603)) ([3ea506d](https://github.com/googleapis/google-cloud-java/commit/3ea506d86a54fae209e9971af7b4a8aa1f5997b9))
+
+
+
+## 2.61.0 (2025-05-06)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.46.3 ([#11531](https://github.com/googleapis/google-cloud-java/issues/11531)) ([5f9a9e7](https://github.com/googleapis/google-cloud-java/commit/5f9a9e73df5e44ae38a8d18780873b7896d31c04))
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.47.0 ([#11561](https://github.com/googleapis/google-cloud-java/issues/11561)) ([9e84230](https://github.com/googleapis/google-cloud-java/commit/9e842300aa2e3e654785cc929aef0d6bb9a1a0a9))
+
+
+
+## 2.58.0 (2025-02-26)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.44.0 ([#11456](https://github.com/googleapis/google-cloud-java/issues/11456)) ([6b0ad6f](https://github.com/googleapis/google-cloud-java/commit/6b0ad6f8243cc60de7ee608237fa61445f0b0526))
+
+
+
+## 2.57.0 (2025-02-11)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.43.0 ([#11426](https://github.com/googleapis/google-cloud-java/issues/11426)) ([afdc294](https://github.com/googleapis/google-cloud-java/commit/afdc2944304a077ce4cbdd8c7675f1ca707b2be0))
+
+
+
+## 2.56.0 (2025-01-29)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.42.0 ([#11410](https://github.com/googleapis/google-cloud-java/issues/11410)) ([34dfd0d](https://github.com/googleapis/google-cloud-java/commit/34dfd0dc9c5ca042aca0778e8d34b2ca072bfeb1))
+
+
+
+## 2.55.0 (2025-01-09)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.41.1 ([#11382](https://github.com/googleapis/google-cloud-java/issues/11382)) ([a4fd23c](https://github.com/googleapis/google-cloud-java/commit/a4fd23ce1dfa364959de1e97e3b769996f3c7d0d))
+
+
+
+## 2.54.0 (2024-12-13)
+
+### Dependencies
+
+  * update dependency com.google.cloud:sdk-platform-java-config to v3.41.0 ([#11349](https://github.com/googleapis/google-cloud-java/issues/11349)) ([9bb6334](https://github.com/googleapis/google-cloud-java/commit/9bb6334458fdec53ba9fdec501de534d6516f102))
+
+
+
+## 2.53.0 (2024-11-18)
+
+  * No change
+
+
+
+## 2.52.0 (2024-10-28)
+
+  * No change
+
+
+
+## 2.51.0 (2024-10-09)
+
+  * No change
+
+
+
+## 2.49.0 (2024-09-26)
+
+  * No change
+
+
+
+## 2.48.0 (2024-09-11)
+
+  * No change
+
+
+
+## 2.47.0 (2024-08-21)
+
+  * No change
+
+
+
+## 2.46.0 (2024-07-31)
+
+  * No change
+
+
+
+## 2.45.0 (2024-06-27)
+
+  * No change
+
+
+
+## 2.44.0 (None)
+
+  * No change
+
+
+
+## 2.43.0 (2024-05-23)
+
+  * No change
+
+
+
+## 2.42.0 (2024-05-08)
+
+  * No change
+
+
+
+## 2.41.0 (2024-04-25)
+
+  * No change
+
+
+
+## 2.40.0 (2024-04-04)
+
+  * No change
+
+
+
+## 2.38.0 (2024-03-28)
+
+  * No change
+
+
+
+## 2.37.0 (2024-03-22)
+
+  * No change
+
+
+
+## 2.36.0 (2024-03-06)
+
+  * No change
+
+
+
+## 2.35.0 (2024-02-20)
+
+  * No change
+
+
+
+## 2.34.0 (2024-02-09)
+
+  * No change
+
+
+
+## 2.33.0 (2024-01-23)
+
+  * No change
+
+
+
+## 2.32.0 (2024-01-10)
+
+  * No change
+
+
+
+## 2.31.0 (2023-12-12)
+
+  * No change
+
+
+
+## 2.30.0 (2023-12-04)
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.20.0 ([#10093](https://github.com/googleapis/google-cloud-java/issues/10093)) ([91a4e4e](https://github.com/googleapis/google-cloud-java/commit/91a4e4e20252f667b8fc6bda0d9ceaf947348274))
+
+
+
+## 2.29.0 (2023-11-06)
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-config to v1.6.1 ([#10014](https://github.com/googleapis/google-cloud-java/issues/10014)) ([7b1b742](https://github.com/googleapis/google-cloud-java/commit/7b1b742dab21139398032549fb03e127b1a03841))
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.19.0 ([#10018](https://github.com/googleapis/google-cloud-java/issues/10018)) ([d9b705a](https://github.com/googleapis/google-cloud-java/commit/d9b705aaed8ea4447c7a02d5c54300f8909a30b1))
+
+
+
+## 2.28.0 (2023-10-25)
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-config to v1.6.0 ([#9969](https://github.com/googleapis/google-cloud-java/issues/9969)) ([9e2be39](https://github.com/googleapis/google-cloud-java/commit/9e2be39c5b2d7764421325f65a6d0d06351fcda5))
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.18.0 ([#9984](https://github.com/googleapis/google-cloud-java/issues/9984)) ([9814dc0](https://github.com/googleapis/google-cloud-java/commit/9814dc092ad7edb7b1b21f87fa48d76a2423d731))
+
+
+
+## 2.27.0 (2023-10-11)
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-config to v1.5.8 ([#9941](https://github.com/googleapis/google-cloud-java/issues/9941)) ([f818d26](https://github.com/googleapis/google-cloud-java/commit/f818d26968e1f19d302da1f1ea0145b2cc496ce0))
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.17.0 ([#9942](https://github.com/googleapis/google-cloud-java/issues/9942)) ([2cc7888](https://github.com/googleapis/google-cloud-java/commit/2cc78885d76ae5e7dfc4cc9f3034c25fa22c6cc1))
+
+
+
+## 2.26.0 (2023-09-28)
+
+  * No change
+
+
+
+## 2.24.0 (2023-09-27)
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.16.0 ([#9866](https://github.com/googleapis/google-cloud-java/issues/9866)) ([aa36b2c](https://github.com/googleapis/google-cloud-java/commit/aa36b2c3c31b817052239fd771a21d20108b2c31))
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.16.1 ([#9881](https://github.com/googleapis/google-cloud-java/issues/9881)) ([8a29511](https://github.com/googleapis/google-cloud-java/commit/8a2951166eb0305be040cc0ae38be105c437ba25))
+
+
+
+## 2.23.0 (2023-09-11)
+
+### Features
+
+  * Adding GenerateTcpProxyScript API ([#9799](https://github.com/googleapis/google-cloud-java/issues/9799)) ([8c2aacb](https://github.com/googleapis/google-cloud-java/commit/8c2aacb739e635b270b4cb970e0aae4104671b4e))
+
+
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.15.0 ([#9809](https://github.com/googleapis/google-cloud-java/issues/9809)) ([09dbd85](https://github.com/googleapis/google-cloud-java/commit/09dbd855f683b40a462c4f918511bee4671e0174))
+
+
+
+## 2.22.0 (2023-08-08)
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.14.0 ([#9722](https://github.com/googleapis/google-cloud-java/issues/9722)) ([c7011db](https://github.com/googleapis/google-cloud-java/commit/c7011dbd69189330de1c2946b736cd712d5c1f4e))
+
+
+
+## 2.21.0 (2023-07-21)
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-config to v1.5.7 ([#9651](https://github.com/googleapis/google-cloud-java/issues/9651)) ([c88d623](https://github.com/googleapis/google-cloud-java/commit/c88d623d12a4342b74e31d6a6a05cde0debe871f))
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.13.1 ([#9655](https://github.com/googleapis/google-cloud-java/issues/9655)) ([affebee](https://github.com/googleapis/google-cloud-java/commit/affebeeb37b1cf88ad5964684e1f112cababcab7))
+
+
+
+## 2.20.0 (2023-07-11)
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.13.0 ([#9622](https://github.com/googleapis/google-cloud-java/issues/9622)) ([3ac3050](https://github.com/googleapis/google-cloud-java/commit/3ac3050250a706e8f9f2d1e435a4983c3cceab82))
+
+
+
+## 2.19.0 (2023-06-23)
+
+### Dependencies
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.12.0 ([#9577](https://github.com/googleapis/google-cloud-java/issues/9577)) ([9e9812a](https://github.com/googleapis/google-cloud-java/commit/9e9812a0ba19e5aa82a34f2a3049bb72892544a6))
+
+
+
+## [2.4.0](https://github.com/googleapis/google-cloud-java/compare/google-cloud-dms-v2.3.1-SNAPSHOT...google-cloud-dms-v2.4.0) (2022-10-24)
+
+### Features
+
+  * [analyticsdata] add `subject_to_thresholding` field to `ResponseMetadata` type ([#8545](https://github.com/googleapis/google-cloud-java/issues/8545)) ([8fdc6c1](https://github.com/googleapis/google-cloud-java/commit/8fdc6c1f10f88f30f4d1407579d645f75366b4cf))
+  * add `tokens_per_project_per_hour` field to `PropertyQuota` type ([8fdc6c1](https://github.com/googleapis/google-cloud-java/commit/8fdc6c1f10f88f30f4d1407579d645f75366b4cf))
+
+
+
+### Bug Fixes
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.2 ([#8325](https://github.com/googleapis/google-cloud-java/issues/8325)) ([01f492b](https://github.com/googleapis/google-cloud-java/commit/01f492be424acdb90edb23ba66656aeff7cf39eb))
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.4 ([#8528](https://github.com/googleapis/google-cloud-java/issues/8528)) ([bd36199](https://github.com/googleapis/google-cloud-java/commit/bd361998ac4eb7c78eef3b3eac39aef31a0cf44e))
+  * owl-bot-staging should not be commited ([#8337](https://github.com/googleapis/google-cloud-java/issues/8337)) ([c9bb4a9](https://github.com/googleapis/google-cloud-java/commit/c9bb4a97aa19032b78c86c951fe9920f24ac4eec))
+
+
+
+### Dependencies
+
+  * reverting renovate bot pull requests ([#8417](https://github.com/googleapis/google-cloud-java/issues/8417)) ([8f0c60b](https://github.com/googleapis/google-cloud-java/commit/8f0c60bde446acccc665eb7894723632eefc3503))
+
+
+
+## [2.3.0](https://github.com/googleapis/google-cloud-java/compare/google-cloud-dms-v2.2.8...google-cloud-dms-v2.3.0) (2022-10-17)
+
+### Features
+
+  * [analyticsdata] add `subject_to_thresholding` field to `ResponseMetadata` type ([#8545](https://github.com/googleapis/google-cloud-java/issues/8545)) ([8fdc6c1](https://github.com/googleapis/google-cloud-java/commit/8fdc6c1f10f88f30f4d1407579d645f75366b4cf))
+  * add `tokens_per_project_per_hour` field to `PropertyQuota` type ([8fdc6c1](https://github.com/googleapis/google-cloud-java/commit/8fdc6c1f10f88f30f4d1407579d645f75366b4cf))
+
+
+
+### Bug Fixes
+
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.2 ([#8325](https://github.com/googleapis/google-cloud-java/issues/8325)) ([01f492b](https://github.com/googleapis/google-cloud-java/commit/01f492be424acdb90edb23ba66656aeff7cf39eb))
+  * **deps:** update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.4 ([#8528](https://github.com/googleapis/google-cloud-java/issues/8528)) ([bd36199](https://github.com/googleapis/google-cloud-java/commit/bd361998ac4eb7c78eef3b3eac39aef31a0cf44e))
+  * owl-bot-staging should not be commited ([#8337](https://github.com/googleapis/google-cloud-java/issues/8337)) ([c9bb4a9](https://github.com/googleapis/google-cloud-java/commit/c9bb4a97aa19032b78c86c951fe9920f24ac4eec))
+
+
+
+### Dependencies
+
+  * reverting renovate bot pull requests ([#8417](https://github.com/googleapis/google-cloud-java/issues/8417)) ([8f0c60b](https://github.com/googleapis/google-cloud-java/commit/8f0c60bde446acccc665eb7894723632eefc3503))
+
+
+
+## [2.2.8](https://github.com/googleapis/java-dms/compare/v2.2.7...v2.2.8) (2022-10-05)
+
+### Bug Fixes
+
+  * update protobuf to v3.21.7 ([89f7092](https://github.com/googleapis/java-dms/commit/89f7092967434d6f61d12c53666d44ce39c74f22))
+
+
+
+## [2.2.7](https://github.com/googleapis/java-dms/compare/v2.2.6...v2.2.7) (2022-10-03)
+
+### Dependencies
+
+  * Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.4 ([#295](https://github.com/googleapis/java-dms/issues/295)) ([546d822](https://github.com/googleapis/java-dms/commit/546d822e260d02a27efe4036fc07365ea4123bd0))
+
+
+
+## [2.2.6](https://github.com/googleapis/java-dms/compare/v2.2.5...v2.2.6) (2022-09-29)
+
+### Dependencies
+
+  * Update dependency cachetools to v5 ([#288](https://github.com/googleapis/java-dms/issues/288)) ([ea294bc](https://github.com/googleapis/java-dms/commit/ea294bc6d6ee4b6283d28d81c484a2a7767fbad0))
+  * Update dependency certifi to v2022.9.24 ([#268](https://github.com/googleapis/java-dms/issues/268)) ([546061b](https://github.com/googleapis/java-dms/commit/546061be261a22b76dd045e8cb49900cb8d08c8a))
+  * Update dependency charset-normalizer to v2.1.1 ([#272](https://github.com/googleapis/java-dms/issues/272)) ([5e0edab](https://github.com/googleapis/java-dms/commit/5e0edabb23e626894b64e091832b16e7c91fcf6c))
+  * Update dependency click to v8.1.3 ([#273](https://github.com/googleapis/java-dms/issues/273)) ([7c342df](https://github.com/googleapis/java-dms/commit/7c342df1ccd41b30c79f35491c1cdc4cfeb95741))
+  * Update dependency gcp-releasetool to v1.8.8 ([#269](https://github.com/googleapis/java-dms/issues/269)) ([fd4c2b5](https://github.com/googleapis/java-dms/commit/fd4c2b58b67d8b98a86992b70a693031c5b53d6d))
+  * Update dependency google-api-core to v2.10.1 ([#274](https://github.com/googleapis/java-dms/issues/274)) ([8690c7f](https://github.com/googleapis/java-dms/commit/8690c7f98a56e01a142c736cf1ba1135447e826c))
+  * Update dependency google-auth to v2.12.0 ([#275](https://github.com/googleapis/java-dms/issues/275)) ([5bbc97e](https://github.com/googleapis/java-dms/commit/5bbc97eb0f6d1bc6e02fb639528e84e9286ae601))
+  * Update dependency google-cloud-core to v2.3.2 ([#270](https://github.com/googleapis/java-dms/issues/270)) ([1f12b1b](https://github.com/googleapis/java-dms/commit/1f12b1bd41f00f8fd3800886a19bc1d82370a906))
+  * Update dependency google-cloud-storage to v2.5.0 ([#276](https://github.com/googleapis/java-dms/issues/276)) ([790b427](https://github.com/googleapis/java-dms/commit/790b427810c8a847a4a07cafc7f81c3b2eeda89b))
+  * Update dependency google-crc32c to v1.5.0 ([#277](https://github.com/googleapis/java-dms/issues/277)) ([08e6c8c](https://github.com/googleapis/java-dms/commit/08e6c8c8f258a6705179cb2a8a94bd3d3f7278fd))
+  * Update dependency googleapis-common-protos to v1.56.4 ([#271](https://github.com/googleapis/java-dms/issues/271)) ([6ca60ec](https://github.com/googleapis/java-dms/commit/6ca60ec814fdc63ee8a20070b80bc1594bf1ecde))
+  * Update dependency importlib-metadata to v4.12.0 ([#278](https://github.com/googleapis/java-dms/issues/278)) ([adc8bc2](https://github.com/googleapis/java-dms/commit/adc8bc2f4d35fb91590b6510c7d56df32f476c7f))
+  * Update dependency jeepney to v0.8.0 ([#279](https://github.com/googleapis/java-dms/issues/279)) ([27aa7c9](https://github.com/googleapis/java-dms/commit/27aa7c9dd929574d5a4be979bd036826459fb905))
+  * Update dependency jinja2 to v3.1.2 ([#280](https://github.com/googleapis/java-dms/issues/280)) ([217d80a](https://github.com/googleapis/java-dms/commit/217d80aa65d1de9a9e1883a04d6535823b76f54a))
+  * Update dependency keyring to v23.9.3 ([#281](https://github.com/googleapis/java-dms/issues/281)) ([821d0b6](https://github.com/googleapis/java-dms/commit/821d0b6de0209448c820605b2e2754ae201bbe84))
+  * Update dependency markupsafe to v2.1.1 ([#282](https://github.com/googleapis/java-dms/issues/282)) ([275421a](https://github.com/googleapis/java-dms/commit/275421a7ca73fd5a9a11a5020973124a81055436))
+  * Update dependency protobuf to v3.20.2 ([#283](https://github.com/googleapis/java-dms/issues/283)) ([9cb80eb](https://github.com/googleapis/java-dms/commit/9cb80eb7f600d964041c0f2dd4dd9441f933f5b6))
+  * Update dependency protobuf to v4 ([#289](https://github.com/googleapis/java-dms/issues/289)) ([0a6562f](https://github.com/googleapis/java-dms/commit/0a6562fd6a4cd2be3064bfa7914c7e6e2ec0f7f5))
+  * Update dependency pyjwt to v2.5.0 ([#284](https://github.com/googleapis/java-dms/issues/284)) ([0abb724](https://github.com/googleapis/java-dms/commit/0abb7241e69ceab08dbf1d515d09dd934cabeaf1))
+  * Update dependency requests to v2.28.1 ([#285](https://github.com/googleapis/java-dms/issues/285)) ([df1fe8d](https://github.com/googleapis/java-dms/commit/df1fe8df53de2a301986f242a372b4b09163fa89))
+  * Update dependency typing-extensions to v4.3.0 ([#286](https://github.com/googleapis/java-dms/issues/286)) ([4259a65](https://github.com/googleapis/java-dms/commit/4259a6544882dd2d021414fb84e8b775d1cca024))
+  * Update dependency zipp to v3.8.1 ([#287](https://github.com/googleapis/java-dms/issues/287)) ([f554ce7](https://github.com/googleapis/java-dms/commit/f554ce7de8c1266ace476a752ef5c7cabd9eb209))
+
+
+
+## [2.2.5](https://github.com/googleapis/java-dms/compare/v2.2.4...v2.2.5) (2022-09-15)
+
+### Dependencies
+
+  * Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.3 ([#262](https://github.com/googleapis/java-dms/issues/262)) ([c7c79d8](https://github.com/googleapis/java-dms/commit/c7c79d80bfba43ffb6f57a2c3a01993a7343165a))
+
+
+
+## [2.2.4](https://github.com/googleapis/java-dms/compare/v2.2.3...v2.2.4) (2022-09-09)
+
+### Dependencies
+
+  * Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.2 ([#258](https://github.com/googleapis/java-dms/issues/258)) ([da927bf](https://github.com/googleapis/java-dms/commit/da927bf96d5c0c419e48e60eea2a18490a61d11c))
+
+
+
+## [2.2.3](https://github.com/googleapis/java-dms/compare/v2.2.2...v2.2.3) (2022-08-09)
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v3 ([#250](https://github.com/googleapis/java-dms/issues/250)) ([60401e8](https://github.com/googleapis/java-dms/commit/60401e832fadc8cc1d406eb1511737c79a41e3f3))
+
+
+
+## [2.2.2](https://github.com/googleapis/java-dms/compare/v2.2.1...v2.2.2) (2022-07-13)
+
+### Bug Fixes
+
+  * enable longpaths support for windows test ([#1485](https://github.com/googleapis/java-dms/issues/1485)) ([#242](https://github.com/googleapis/java-dms/issues/242)) ([c401b2d](https://github.com/googleapis/java-dms/commit/c401b2da4c5e27f33a294a646d9fd93218611b61))
+
+
+
+## [2.2.1](https://github.com/googleapis/java-dms/compare/v2.2.0...v2.2.1) (2022-06-23)
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.13.0 ([#232](https://github.com/googleapis/java-dms/issues/232)) ([158cb2b](https://github.com/googleapis/java-dms/commit/158cb2b3636c42bb9a5d7a491c146a5503b3357b))
+
+
+
+## [2.2.0](https://github.com/googleapis/java-dms/compare/v2.1.10...v2.2.0) (2022-05-24)
+
+### Features
+
+  * add build scripts for native image testing in Java 17 ([#1440](https://github.com/googleapis/java-dms/issues/1440)) ([#224](https://github.com/googleapis/java-dms/issues/224)) ([c5a5559](https://github.com/googleapis/java-dms/commit/c5a555903ca7cf774b592669c347ce77a7014449))
+
+
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.12.0 ([#223](https://github.com/googleapis/java-dms/issues/223)) ([b97b7d3](https://github.com/googleapis/java-dms/commit/b97b7d35edacc0f09afe6cb127037f530b682be3))
+
+
+
+### [2.1.10](https://github.com/googleapis/java-dms/compare/v2.1.9...v2.1.10) (2022-04-15)
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.10.0 ([#211](https://github.com/googleapis/java-dms/issues/211)) ([7d3fb5f](https://github.com/googleapis/java-dms/commit/7d3fb5f807ead09358220df0b745c67a753dfee1))
+
+
+
+### [2.1.9](https://github.com/googleapis/java-dms/compare/v2.1.8...v2.1.9) (2022-03-29)
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.9.0 ([#202](https://github.com/googleapis/java-dms/issues/202)) ([a766397](https://github.com/googleapis/java-dms/commit/a7663971a0362d6fe2394aa2ce6c2ca7e74d0f54))
+
+
+
+### [2.1.8](https://github.com/googleapis/java-dms/compare/v2.1.7...v2.1.8) (2022-03-02)
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.8.0 ([#194](https://github.com/googleapis/java-dms/issues/194)) ([d8b7cd6](https://github.com/googleapis/java-dms/commit/d8b7cd6c0f4afdffa9bb4cdd8cac2a6cf0f671ab))
+
+
+
+### [2.1.7](https://github.com/googleapis/java-dms/compare/v2.1.6...v2.1.7) (2022-02-11)
+
+### Dependencies
+
+  * update actions/github-script action to v6 ([#182](https://github.com/googleapis/java-dms/issues/182)) ([2e0d5a8](https://github.com/googleapis/java-dms/commit/2e0d5a8ceb9a494ab2c5a67849a2e98215939e27))
+
+
+
+### [2.1.6](https://github.com/googleapis/java-dms/compare/v2.1.5...v2.1.6) (2022-02-03)
+
+### Dependencies
+
+  * **java:** update actions/github-script action to v5 ([#1339](https://github.com/googleapis/java-dms/issues/1339)) ([#169](https://github.com/googleapis/java-dms/issues/169)) ([c10ff32](https://github.com/googleapis/java-dms/commit/c10ff3211a454cb38ae15fa04aecb40ea6018763))
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.7.0 ([#172](https://github.com/googleapis/java-dms/issues/172)) ([cc44ad5](https://github.com/googleapis/java-dms/commit/cc44ad5b73289cbb0b14c2e3007b100f46780f76))
+
+
+
+### [2.1.5](https://www.github.com/googleapis/java-dms/compare/v2.1.4...v2.1.5) (2022-01-07)
+
+### Bug Fixes
+
+  * **java:** add -ntp flag to native image testing command ([#1299](https://www.github.com/googleapis/java-dms/issues/1299)) ([#149](https://www.github.com/googleapis/java-dms/issues/149)) ([e66b356](https://www.github.com/googleapis/java-dms/commit/e66b356120fadc8e8c6a051644c81ea2b9c4e58c))
+
+
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.6.0 ([#156](https://www.github.com/googleapis/java-dms/issues/156)) ([9fa5437](https://www.github.com/googleapis/java-dms/commit/9fa5437d0550a3b7349d18bc9d39f7de94337f06))
+
+
+
+### [2.1.4](https://www.github.com/googleapis/java-dms/compare/v2.1.3...v2.1.4) (2021-12-03)
+
+### Bug Fixes
+
+  * **java:** java 17 dependency arguments ([#1266](https://www.github.com/googleapis/java-dms/issues/1266)) ([#132](https://www.github.com/googleapis/java-dms/issues/132)) ([f131648](https://www.github.com/googleapis/java-dms/commit/f131648baca434e2f9f35b267919f70c5be6d78a))
+
+
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.5.0 ([#141](https://www.github.com/googleapis/java-dms/issues/141)) ([18d3170](https://www.github.com/googleapis/java-dms/commit/18d3170f0087f87fdbb26fa63ba33c93ae5d70bb))
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.5.1 ([#146](https://www.github.com/googleapis/java-dms/issues/146)) ([4fc4674](https://www.github.com/googleapis/java-dms/commit/4fc4674fad1f2f228d2001802927db84d163402a))
+
+
+
+### [2.1.3](https://www.github.com/googleapis/java-dms/compare/v2.1.2...v2.1.3) (2021-10-19)
+
+### Documentation
+
+  * Fix NOT_STARTED state documentation in MigrationJob resource ([#123](https://www.github.com/googleapis/java-dms/issues/123)) ([6f42d60](https://www.github.com/googleapis/java-dms/commit/6f42d60f2352551f01265471702cd8df7050e52c))
+
+
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.4.0 ([#128](https://www.github.com/googleapis/java-dms/issues/128)) ([9223e35](https://www.github.com/googleapis/java-dms/commit/9223e35942c33d1997ff580705f20e4c1bf81cfc))
+
+
+
+### [2.1.2](https://www.github.com/googleapis/java-dms/compare/v2.1.1...v2.1.2) (2021-09-22)
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.3.0 ([#113](https://www.github.com/googleapis/java-dms/issues/113)) ([e88c73a](https://www.github.com/googleapis/java-dms/commit/e88c73a743625cc413eff6d92bafb896230018b0))
+
+
+
+### [2.1.1](https://www.github.com/googleapis/java-dms/compare/v2.1.0...v2.1.1) (2021-09-14)
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.2.1 ([#106](https://www.github.com/googleapis/java-dms/issues/106)) ([e0ad3f5](https://www.github.com/googleapis/java-dms/commit/e0ad3f56a4545dfc4e3be9f092fb5594e5081bc3))
+
+
+
+## [2.1.0](https://www.github.com/googleapis/java-dms/compare/v2.0.2...v2.1.0) (2021-09-01)
+
+### Features
+
+  * Remove use of deprecated gradle command in java README ([#1196](https://www.github.com/googleapis/java-dms/issues/1196)) ([#92](https://www.github.com/googleapis/java-dms/issues/92)) ([e7ddc21](https://www.github.com/googleapis/java-dms/commit/e7ddc216f7e98b922c1984b1dc0955756b306a82))
+
+
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.2.0 ([#95](https://www.github.com/googleapis/java-dms/issues/95)) ([edf2fb0](https://www.github.com/googleapis/java-dms/commit/edf2fb0e8f1725d91eed8793c4b6224dc6e179a5))
+
+
+
+### [2.0.2](https://www.github.com/googleapis/java-dms/compare/v2.0.1...v2.0.2) (2021-08-23)
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.1.0 ([#86](https://www.github.com/googleapis/java-dms/issues/86)) ([227b7e3](https://www.github.com/googleapis/java-dms/commit/227b7e3e7dcc9de5e7a6758e840a151d282551cb))
+
+
+
+### [2.0.1](https://www.github.com/googleapis/java-dms/compare/v2.0.0...v2.0.1) (2021-08-12)
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2.0.1 ([#79](https://www.github.com/googleapis/java-dms/issues/79)) ([35ddf8a](https://www.github.com/googleapis/java-dms/commit/35ddf8a37cdf22c15ef5178ab2c3be148fcac0a9))
+
+
+
+## [2.0.0](https://www.github.com/googleapis/java-dms/compare/v1.0.0...v2.0.0) (2021-08-09)
+
+### ⚠ BREAKING CHANGES
+
+  * release gapic-generator-java v2.0.0 (#74)
+
+
+
+### Features
+
+  * release gapic-generator-java v2.0.0 ([#74](https://www.github.com/googleapis/java-dms/issues/74)) ([fe4563c](https://www.github.com/googleapis/java-dms/commit/fe4563c2bda378e449670aa8d7b5b9316ef15e45))
+
+
+
+### Bug Fixes
+
+  * owlbot post-processor should generate README ([#1154](https://www.github.com/googleapis/java-dms/issues/1154)) ([#59](https://www.github.com/googleapis/java-dms/issues/59)) ([26704fc](https://www.github.com/googleapis/java-dms/commit/26704fccc5e9f3fbfc226f80b37118b730302d9a)), closes [#1146](https://www.github.com/googleapis/java-dms/issues/1146) [#1147](https://www.github.com/googleapis/java-dms/issues/1147)
+
+
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v2 ([#75](https://www.github.com/googleapis/java-dms/issues/75)) ([cf68a56](https://www.github.com/googleapis/java-dms/commit/cf68a56e8a51e2561b43395bf48672dc62291709))
+
+
+
+## [1.0.0](https://www.github.com/googleapis/java-dms/compare/v0.1.3...v1.0.0) (2021-07-02)
+
+### Features
+
+  * promote to 1.0.0 ([#54](https://www.github.com/googleapis/java-dms/issues/54)) ([2c32958](https://www.github.com/googleapis/java-dms/commit/2c32958da2a947d9afa53660975bdb0bcb9b7abd))
+
+
+
+### Bug Fixes
+
+  * Add `shopt -s nullglob` to dependencies script ([#1130](https://www.github.com/googleapis/java-dms/issues/1130)) ([#52](https://www.github.com/googleapis/java-dms/issues/52)) ([68b2f3b](https://www.github.com/googleapis/java-dms/commit/68b2f3b624ca730c0db2827aa697653a4b95876b))
+
+
+
+### Documentation
+
+  * update link in comments ([#45](https://www.github.com/googleapis/java-dms/issues/45)) ([c6f17f8](https://www.github.com/googleapis/java-dms/commit/c6f17f8b81c04cd8518410a0589df1084b1c6972))
+
+
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v1.4.0 ([#53](https://www.github.com/googleapis/java-dms/issues/53)) ([e0b2899](https://www.github.com/googleapis/java-dms/commit/e0b2899474b9d205ca11ec352365e5184cdde9ea))
+
+
+
+### [0.1.3](https://www.github.com/googleapis/java-dms/compare/v0.1.2...v0.1.3) (2021-06-04)
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v1.3.0 ([#37](https://www.github.com/googleapis/java-dms/issues/37)) ([22a828c](https://www.github.com/googleapis/java-dms/commit/22a828c7c7e4c52aae2e591bbf3ae7183bed7aa0))
+
+
+
+### [0.1.2](https://www.github.com/googleapis/java-dms/compare/v0.1.1...v0.1.2) (2021-06-03)
+
+### Dependencies
+
+  * update dependency com.google.cloud:google-cloud-shared-dependencies to v1 ([#30](https://www.github.com/googleapis/java-dms/issues/30)) ([1ca5094](https://www.github.com/googleapis/java-dms/commit/1ca50941d8a240c6eaed646cfdcb9d68a6c4c182))
+
+
+
+### [0.1.1](https://www.github.com/googleapis/java-dms/compare/v0.1.0...v0.1.1) (2021-05-31)
+
+### Dependencies
+
+  * update shared-config ([#17](https://www.github.com/googleapis/java-dms/issues/17)) ([03fadb8](https://www.github.com/googleapis/java-dms/commit/03fadb828255d7c134ddbd3982c338188a9e9b9c))
+
+
+
+## 0.1.0 (2021-05-12)
+
+### Features
+
+  * initial generation ([9492b30](https://www.github.com/googleapis/java-dms/commit/9492b3021f019c501291a47311dd7433b5d7ec99))
+  * initial generation ([9db56bd](https://www.github.com/googleapis/java-dms/commit/9db56bdf775d6e7ed753918fe90225fe29358619))
+
+
+
+### Bug Fixes
+
+  * Fixing PHP, Ruby and C# package names for the CloudDMS API ([#4](https://www.github.com/googleapis/java-dms/issues/4)) ([6c7744a](https://www.github.com/googleapis/java-dms/commit/6c7744a4ce225fd9ab40d63b88fb319748fd0e29))
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-06 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-06 UTC."],[],[]] 

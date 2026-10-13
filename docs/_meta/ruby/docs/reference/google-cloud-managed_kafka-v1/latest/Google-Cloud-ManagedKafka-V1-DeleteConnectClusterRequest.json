@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-managed_kafka-v1/latest/Google-Cloud-ManagedKafka-V1-DeleteConnectClusterRequest/",
+  "file": "ruby/docs/reference/google-cloud-managed_kafka-v1/latest/Google-Cloud-ManagedKafka-V1-DeleteConnectClusterRequest.md",
+  "title": "Managed Service for Apache Kafka V1 API - Class Google::Cloud::ManagedKafka::V1::DeleteConnectClusterRequest (v1.9.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T18:52:35.418481+00:00"
+}

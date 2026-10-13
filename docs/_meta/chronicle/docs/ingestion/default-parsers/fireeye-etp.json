@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/fireeye-etp/",
+  "file": "chronicle/docs/ingestion/default-parsers/fireeye-etp.md",
+  "title": "Collect Trellix Email Security Cloud (formerly FireEye ETP) logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T15:23:38.304819+00:00"
+}

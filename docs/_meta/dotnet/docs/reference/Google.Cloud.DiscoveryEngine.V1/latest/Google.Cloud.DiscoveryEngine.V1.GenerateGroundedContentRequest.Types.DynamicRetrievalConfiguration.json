@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.DiscoveryEngine.V1/latest/Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest.Types.DynamicRetrievalConfiguration",
+  "file": "dotnet/docs/reference/Google.Cloud.DiscoveryEngine.V1/latest/Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest.Types.DynamicRetrievalConfiguration.md",
+  "title": "Discovery Engine v1 API - Class GenerateGroundedContentRequest.Types.DynamicRetrievalConfiguration (1.16.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T15:29:11.553761+00:00"
+}

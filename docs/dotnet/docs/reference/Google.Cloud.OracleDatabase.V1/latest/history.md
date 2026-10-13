@@ -1,0 +1,153 @@
+---
+url: https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OracleDatabase.V1/latest/history/
+title: Version history \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T18:06:25.556384+00:00
+---
+
+# Version history  |  .NET client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OracleDatabase.V1/latest/history/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ .NET ](https://docs.cloud.google.com/dotnet/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/dotnet/docs/reference)
+
+
+
+Send feedback 
+
+#  Version history Stay organized with collections  Save and categorize content based on your preferences. 
+
+1.8.0 (latest)  1.7.0  1.6.0  1.5.0  1.4.0  1.3.0  1.2.0  1.1.0  1.0.0 
+
+## Version 1.8.0, released 2026-08-17
+
+### New features
+
+  * Expand Oracle Database v1 API to add support for Exascale CMEK, VM Storage options
+
+
+
+### Documentation improvements
+
+  * A comment for enum value `OCPU` in enum `ComputeModel` is changed
+  * A comment for field `memory_size_gb` in message `.google.cloud.oracledatabase.v1.DbSystemProperties` is changed
+  * A comment for field `data_storage_size_gb` in message `.google.cloud.oracledatabase.v1.DbSystemProperties` is changed
+  * A comment for field `reco_storage_size_gb` in message `.google.cloud.oracledatabase.v1.DbSystemProperties` is changed
+  * A comment for field `node_count` in message `.google.cloud.oracledatabase.v1.DbSystemProperties` is changed
+  * A comment for field `database_server_type` in message `.google.cloud.oracledatabase.v1.CloudExadataInfrastructureProperties` is changed
+  * A comment for field `storage_server_type` in message `.google.cloud.oracledatabase.v1.CloudExadataInfrastructureProperties` is changed
+  * A comment for field `filter` in message `.google.cloud.oracledatabase.v1.ListMinorVersionsRequest` is changed
+  * A comment for field `filter` in message `.google.cloud.oracledatabase.v1.ListGiVersionsRequest` is changed
+  * A comment for field `filter` in message `.google.cloud.oracledatabase.v1.ListDbSystemShapesRequest` is changed
+
+
+
+## Version 1.7.0, released 2026-06-22
+
+### New features
+
+  * Expand Oracle Database v1 API to add support for Exascale on Dedicated Infrastructure
+
+
+
+### Bug fixes
+
+  * Remove unsupported Get APIs support
+
+
+
+## Version 1.6.0, released 2026-06-15
+
+### New features
+
+  * Add v1 client libraries for Oracle Database Goldengate
+
+
+
+## Version 1.5.0, released 2025-11-06
+
+### New features
+
+  * Update dependencies
+
+
+
+## Version 1.4.0, released 2025-10-21
+
+### New features
+
+  * Expand Oracle Database v1 API to add support for Exadata Exascale (`ExadbVmCluster`, `ExascaleDbStorageVault`), Base Database (`DbSystem`, `Database`, `PluggableDatabase`), and Networking (`OdbNetwork`, `OdbSubnet`). Adds enhancements for Autonomous Database, including Update, Switchover, and Failover operations, CMEK support, and improved disaster recovery fields. Also includes new helper resources for versions and configurations
+
+
+
+### Documentation improvements
+
+  * Updated comments for clarity and fixed typos
+
+
+
+## Version 1.3.0, released 2025-04-14
+
+### New features
+
+  * Add new AutonomousDatabase RPCs ([commit 408e3de](https://github.com/googleapis/google-cloud-dotnet/commit/408e3de85d24ad530b6e7f4d2fb83c33f4557603))
+
+
+
+### Documentation improvements
+
+  * The network and cidr fields of AutonomousDatabase are now marked optional ([commit 31b7812](https://github.com/googleapis/google-cloud-dotnet/commit/31b78129e6076c0eb20683cb9a767f2133053a0e))
+
+
+
+## Version 1.2.0, released 2025-03-17
+
+### New features
+
+  * Add enum value `State::NOT_APPROVED_IN_PRIVATE_MARKETPLACE` ([commit 662d70f](https://github.com/googleapis/google-cloud-dotnet/commit/662d70f41d8e256ad63071869e26b04557aadae4))
+
+
+
+### Documentation improvements
+
+  * Update comment for field `MaintenanceWindow.patching_mode` ([commit 662d70f](https://github.com/googleapis/google-cloud-dotnet/commit/662d70f41d8e256ad63071869e26b04557aadae4))
+
+
+
+## Version 1.1.0, released 2025-01-13
+
+### New features
+
+  * A new value `ACCOUNT_SUSPENDED` is added to enum `State` ([commit d17c3dd](https://github.com/googleapis/google-cloud-dotnet/commit/d17c3dd20ebb85dbb81ceb293857c9a017b4e37f))
+
+
+
+### Documentation improvements
+
+  * The CloudVmClusterProperties.system_version field is no longer labeled as output only ([commit 09e1093](https://github.com/googleapis/google-cloud-dotnet/commit/09e109367f4ed3a8021ab1a8477150ea6da602d3))
+  * A comment for field `cpu_count` in message `.google.cloud.oracledatabase.v1.CloudExadataInfrastructureProperties` is changed ([commit 69fcadb](https://github.com/googleapis/google-cloud-dotnet/commit/69fcadbc650080094c60295a606bcf8ea46500b8))
+  * A comment for field `memory_size_gb` in message `.google.cloud.oracledatabase.v1.CloudExadataInfrastructureProperties` is changed ([commit 69fcadb](https://github.com/googleapis/google-cloud-dotnet/commit/69fcadbc650080094c60295a606bcf8ea46500b8))
+  * A comment for field `db_node_storage_size_gb` in message `.google.cloud.oracledatabase.v1.CloudExadataInfrastructureProperties` is changed ([commit 69fcadb](https://github.com/googleapis/google-cloud-dotnet/commit/69fcadbc650080094c60295a606bcf8ea46500b8))
+
+
+
+## Version 1.0.0, released 2024-12-05
+
+No API surface changes; just dependency updates and promotion to GA.
+
+## Version 1.0.0-beta01, released 2024-09-17
+
+Initial release.
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-08-18 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-18 UTC."],[],[]] 

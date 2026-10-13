@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.DiscoveryEngine.V1Beta/latest/Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec.Types.UserDefinedClassifierSpec",
+  "file": "dotnet/docs/reference/Google.Cloud.DiscoveryEngine.V1Beta/latest/Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec.Types.UserDefinedClassifierSpec.md",
+  "title": "Discovery Engine v1beta API - Class AnswerGenerationSpec.Types.UserDefinedClassifierSpec (1.0.0-beta25) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T19:24:46.002532+00:00"
+}

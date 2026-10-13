@@ -1,0 +1,210 @@
+---
+url: https://docs.cloud.google.com/java/docs/reference/admin/latest/com.google.ads.marketingplatform.admin.v1alpha.ReportPropertyUsageResponse.BillInfoOrBuilder
+title: Interface ReportPropertyUsageResponse.BillInfoOrBuilder (0.48.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T19:29:24.198011+00:00
+---
+
+# Interface ReportPropertyUsageResponse.BillInfoOrBuilder (0.48.0)  |  Java client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/java/docs/reference/admin/latest/com.google.ads.marketingplatform.admin.v1alpha.ReportPropertyUsageResponse.BillInfoOrBuilder
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Java ](https://docs.cloud.google.com/java/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/java/docs/reference)
+
+
+
+Send feedback 
+
+#  Interface ReportPropertyUsageResponse.BillInfoOrBuilder (0.48.0) Stay organized with collections  Save and categorize content based on your preferences. 
+
+0.48.0 (latest)  0.44.0  0.43.0  0.42.0  0.40.0  0.37.0  0.36.0  0.34.0  0.32.0  0.31.0  0.30.0  0.29.0  0.27.0  0.25.0  0.24.0  0.23.0  0.22.0  0.21.0  0.19.0  0.17.0  0.16.0  0.13.0  0.12.0  0.11.0  0.9.0  0.8.0  0.7.0  0.6.0  0.5.0  0.4.0  0.3.0  0.2.0  0.1.0 
+    
+    
+    public static interface ReportPropertyUsageResponse.BillInfoOrBuilder extends MessageOrBuilder
+
+## Implements
+
+[MessageOrBuilder](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.MessageOrBuilder.html)
+
+## Methods 
+
+### getBaseFee()
+    
+    
+    public abstract Money getBaseFee()
+
+The amount of the monthly base fee.
+
+`.google.type.Money base_fee = 1;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`com.google.type.Money` | The baseFee.  
+  
+### getBaseFeeOrBuilder()
+    
+    
+    public abstract MoneyOrBuilder getBaseFeeOrBuilder()
+
+The amount of the monthly base fee.
+
+`.google.type.Money base_fee = 1;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`com.google.type.MoneyOrBuilder` |   
+  
+### getEventFee()
+    
+    
+    public abstract Money getEventFee()
+
+The amount of the event fee.
+
+`.google.type.Money event_fee = 2;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`com.google.type.Money` | The eventFee.  
+  
+### getEventFeeOrBuilder()
+    
+    
+    public abstract MoneyOrBuilder getEventFeeOrBuilder()
+
+The amount of the event fee.
+
+`.google.type.Money event_fee = 2;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`com.google.type.MoneyOrBuilder` |   
+  
+### getPriceProtectionCredit()
+    
+    
+    public abstract Money getPriceProtectionCredit()
+
+The amount of the price protection credit, this is only available for eligible customers.
+
+`.google.type.Money price_protection_credit = 3;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`com.google.type.Money` | The priceProtectionCredit.  
+  
+### getPriceProtectionCreditOrBuilder()
+    
+    
+    public abstract MoneyOrBuilder getPriceProtectionCreditOrBuilder()
+
+The amount of the price protection credit, this is only available for eligible customers.
+
+`.google.type.Money price_protection_credit = 3;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`com.google.type.MoneyOrBuilder` |   
+  
+### getTotal()
+    
+    
+    public abstract Money getTotal()
+
+The total amount of the bill.
+
+`.google.type.Money total = 4;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`com.google.type.Money` | The total.  
+  
+### getTotalOrBuilder()
+    
+    
+    public abstract MoneyOrBuilder getTotalOrBuilder()
+
+The total amount of the bill.
+
+`.google.type.Money total = 4;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`com.google.type.MoneyOrBuilder` |   
+  
+### hasBaseFee()
+    
+    
+    public abstract boolean hasBaseFee()
+
+The amount of the monthly base fee.
+
+`.google.type.Money base_fee = 1;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | Whether the baseFee field is set.  
+  
+### hasEventFee()
+    
+    
+    public abstract boolean hasEventFee()
+
+The amount of the event fee.
+
+`.google.type.Money event_fee = 2;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | Whether the eventFee field is set.  
+  
+### hasPriceProtectionCredit()
+    
+    
+    public abstract boolean hasPriceProtectionCredit()
+
+The amount of the price protection credit, this is only available for eligible customers.
+
+`.google.type.Money price_protection_credit = 3;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | Whether the priceProtectionCredit field is set.  
+  
+### hasTotal()
+    
+    
+    public abstract boolean hasTotal()
+
+The total amount of the bill.
+
+`.google.type.Money total = 4;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | Whether the total field is set.  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-06 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-06 UTC."],[],[]] 

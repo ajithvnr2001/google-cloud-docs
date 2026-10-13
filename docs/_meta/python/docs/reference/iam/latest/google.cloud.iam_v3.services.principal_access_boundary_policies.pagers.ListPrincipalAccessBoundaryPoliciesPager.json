@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/python/docs/reference/iam/latest/google.cloud.iam_v3.services.principal_access_boundary_policies.pagers.ListPrincipalAccessBoundaryPoliciesPager",
+  "file": "python/docs/reference/iam/latest/google.cloud.iam_v3.services.principal_access_boundary_policies.pagers.ListPrincipalAccessBoundaryPoliciesPager.md",
+  "title": "Class ListPrincipalAccessBoundaryPoliciesPager (2.26.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T17:01:00.408097+00:00"
+}

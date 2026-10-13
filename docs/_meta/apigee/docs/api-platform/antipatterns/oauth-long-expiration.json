@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/oauth-long-expiration/",
+  "file": "apigee/docs/api-platform/antipatterns/oauth-long-expiration.md",
+  "title": "Antipattern: Set a long expiration time for OAuth tokens \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T18:56:12.696627+00:00"
+}

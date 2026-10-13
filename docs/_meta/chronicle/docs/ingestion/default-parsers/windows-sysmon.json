@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/windows-sysmon/",
+  "file": "chronicle/docs/ingestion/default-parsers/windows-sysmon.md",
+  "title": "Collect Microsoft Windows Sysmon logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T19:27:00.333875+00:00"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/ai-agent-token-generation-cross-project-openid/",
+  "file": "security-command-center/docs/findings/threats/ai-agent-token-generation-cross-project-openid.md",
+  "title": "Privilege Escalation: AI Agent Cross-Project OpenID Token Generation \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T17:24:08.995783+00:00"
+}

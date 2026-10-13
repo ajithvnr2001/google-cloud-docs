@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/cloudsql-exfil-restore-backup-to-external-instance/",
+  "file": "security-command-center/docs/findings/threats/cloudsql-exfil-restore-backup-to-external-instance.md",
+  "title": "Exfiltration: Cloud SQL Restore Backup to External Organization \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T17:24:41.403110+00:00"
+}

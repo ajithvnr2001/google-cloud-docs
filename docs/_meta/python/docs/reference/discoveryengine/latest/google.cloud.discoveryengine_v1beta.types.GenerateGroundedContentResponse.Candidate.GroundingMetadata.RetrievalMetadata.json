@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/python/docs/reference/discoveryengine/latest/google.cloud.discoveryengine_v1beta.types.GenerateGroundedContentResponse.Candidate.GroundingMetadata.RetrievalMetadata",
+  "file": "python/docs/reference/discoveryengine/latest/google.cloud.discoveryengine_v1beta.types.GenerateGroundedContentResponse.Candidate.GroundingMetadata.RetrievalMetadata.md",
+  "title": "Class RetrievalMetadata (0.20.5) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T20:07:43.161801+00:00"
+}

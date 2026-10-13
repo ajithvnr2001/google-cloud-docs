@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/firewall/docs/reference/network-security/rest/v1beta1/projects.locations.firewallEndpoints.wildfireVerdictChangeRequests/get/",
+  "file": "firewall/docs/reference/network-security/rest/v1beta1/projects.locations.firewallEndpoints.wildfireVerdictChangeRequests/get.md",
+  "title": "Method: projects.locations.firewallEndpoints.wildfireVerdictChangeRequests.get \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T19:56:16.171540+00:00"
+}

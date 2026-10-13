@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security-private_ca-v1/latest/Google-Cloud-Security-PrivateCA-V1-GetCertificateRevocationListRequest/",
+  "file": "ruby/docs/reference/google-cloud-security-private_ca-v1/latest/Google-Cloud-Security-PrivateCA-V1-GetCertificateRevocationListRequest.md",
+  "title": "Certificate Authority Service V1 API - Class Google::Cloud::Security::PrivateCA::V1::GetCertificateRevocationListRequest (v2.8.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T19:15:34.537366+00:00"
+}

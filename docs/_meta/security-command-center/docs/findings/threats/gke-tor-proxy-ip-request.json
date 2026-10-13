@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/gke-tor-proxy-ip-request/",
+  "file": "security-command-center/docs/findings/threats/gke-tor-proxy-ip-request.md",
+  "title": "Initial Access: Successful API call made from a TOR proxy IP \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T17:25:01.401010+00:00"
+}

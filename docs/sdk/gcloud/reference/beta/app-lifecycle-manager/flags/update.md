@@ -1,0 +1,425 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/app-lifecycle-manager/flags/update/
+title: gcloud beta app-lifecycle-manager flags update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T16:40:12.033120+00:00
+---
+
+# gcloud beta app-lifecycle-manager flags update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/app-lifecycle-manager/flags/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta app-lifecycle-manager flags update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta app-lifecycle-manager flags update - update Flag 
+SYNOPSIS
+    
+
+`gcloud beta app-lifecycle-manager flags update` (`FLAG` : `--location`=`LOCATION`) [`--evaluation-spec`=[`allocations`=`ALLOCATIONS`],[`attributes`=`ATTRIBUTES`],[`defaultDynamicAllocation`=`DEFAULTDYNAMICALLOCATION`],[`defaultTarget`=`DEFAULTTARGET`],[`dynamicAllocations`=`DYNAMICALLOCATIONS`],[`rules`=`RULES`]] [`--state`=`STATE`] [`--variants`=[`booleanValue`=`BOOLEANVALUE`],[`description`=`DESCRIPTION`],[`doubleValue`=`DOUBLEVALUE`],[`id`=`ID`],[`integerValue`=`INTEGERVALUE`],[`stringValue`=`STRINGVALUE`]] [`--annotations`=[`ANNOTATIONS`,…] | `--update-annotations`=[`UPDATE_ANNOTATIONS`,…] `--clear-annotations` | `--remove-annotations`=`REMOVE_ANNOTATIONS`] [`--clear-description` | `--description`=`DESCRIPTION`] [`--clear-flag-set` | `--flag-set`=`FLAG_SET`] [`--labels`=[`LABELS`,…] | `--update-labels`=[`UPDATE_LABELS`,…] `--clear-labels` | `--remove-labels`=`REMOVE_LABELS`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` Update the definition of a feature flag. This command modifies the flag's configuration such as variants, evaluation logic, or metadata within its parent UnitKind. 
+
+Feature flags follow a lifecycle managed through their state: 
+
+The `in-development` state is the initial state for a feature flag. It indicates that the flag is currently being defined, variants are being added, and evaluation logic is being refined. Flags in this state are typically used for initial setup and testing and are not yet intended for production rollouts. 
+
+The `active` state is the default state for a feature flag. It signifies that the flag is in use, authorized for production rollouts, and actively being evaluated by application services. Active flags are included in configuration manifests and release snapshots for the fleet. 
+
+The `sunsetting` state indicates that a feature flag is being phased out. It serves as a signal to engineering teams that the code associated with the flag should be removed. While still functional, sunsetting flags should not be used for new feature logic and are candidates for future cleanup. 
+
+When a flag is no longer needed, its state can be updated to `cleanup`. Performing a rollout with a flag in this state will remove all its revisions from the Units. This is a mandatory step in the flag deletion flow. 
+
+Note that updating a flag definition does not immediately change the flag's value in production units. To apply these changes to your fleet, you must subsequently create a new FlagRelease and initiate a Rollout. This architecture enables the decoupling of feature releases from code deployments, facilitating safe, progressive rollouts and instant rollbacks. 
+
+EXAMPLES
+     To initialize a flag in the in-development state for testing, run: 
+    
+    
+    gcloud beta app-lifecycle-manager flags update my-flag --location=global --state=in-development
+
+To guarantee a flag is active for a new production rollout, run: 
+    
+    
+    gcloud beta app-lifecycle-manager flags update my-flag --location=global --state=active
+
+To update the variants of a boolean flag, run: 
+    
+    
+    gcloud beta app-lifecycle-manager flags update my-flag --location=global --variants='[{"id": "Enabled", "booleanValue": true}, {"id":
+    "Disabled", "booleanValue": false}]'
+
+To mark a flag as sunsetting to signal code removal, run: 
+    
+    
+    gcloud beta app-lifecycle-manager flags update my-flag --location=global --state=sunsetting --description="Feature fully launched. Starting code removal."
+
+To mark a flag for cleanup (remove from Units in the next rollout), run: 
+    
+    
+    gcloud beta app-lifecycle-manager flags update my-flag --location=global --state=cleanup --description="Ready for permanent deletion."
+
+To update which flag set a flag is associated with, run: 
+    
+    
+    gcloud beta app-lifecycle-manager flags update my-flag --location=global --flag-set=new-flag-set
+
+To update a percentage rollout (50% Enabled) using a userID attribute, run: 
+    
+    
+    gcloud beta app-lifecycle-manager flags update my-flag --location=global --evaluation-spec='{"allocations": [{"id": "p10",
+    "randomizedOn": "userID", "slots": [{"variant": "Disabled",
+    "weight": 50}, {"variant": "Enabled", "weight": 50}]}],
+    "defaultTarget": "p10", "attributes":
+    ["projects/my-project/locations/global/flagAttributes/id-attr"]}'
+
+To update a flag with progressive rollout using dynamic allocations, run: 
+    
+    
+    gcloud beta app-lifecycle-manager flags update my-flag --location=global --evaluation-spec='{"dynamicAllocations": [{"id": "p10",
+    "randomizedOn": "userID", "initialVariant": "Disabled",
+    "finalVariant": "Enabled"}], "defaultDynamicAllocation": "p10"}'
+
+To add labels to a flag, run: 
+    
+    
+    gcloud beta app-lifecycle-manager flags update my-flag --location=global --labels=environment=prod,team=frontend
+
+To clear optional fields, run: 
+    
+    
+    gcloud beta app-lifecycle-manager flags update my-flag --location=global --clear-description --clear-flag-set --clear-labels --clear-annotations
+
+POSITIONAL ARGUMENTS
+    
+
+Flag resource - ID of the Flag: 
+    
+    
+    "projects/{project}/locations/{location}/flags/{flag_id}"
+
+This follows the standard Google Cloud naming scheme (URI). The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `flag` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`FLAG`
+     ID of the flag or fully qualified identifier for the flag. 
+
+To set the `flag` attribute: 
+
+  * provide the argument `flag` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     Location ID 
+
+To set the `location` attribute: 
+
+  * provide the argument `flag` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line. 
+
+
+FLAGS
+    
+
+`--evaluation-spec`=[`allocations`=`ALLOCATIONS`],[`attributes`=`ATTRIBUTES`],[`defaultDynamicAllocation`=`DEFAULTDYNAMICALLOCATION`],[`defaultTarget`=`DEFAULTTARGET`],[`dynamicAllocations`=`DYNAMICALLOCATIONS`],[`rules`=`RULES`]
+     Specification of how the Flag value should be evaluated. 
+
+`allocations`
+     A list of allocations. 
+
+`description`
+     A description of the allocation. Max length: 500 bytes. 
+`id`
+     Id of the allocation. Max length: 128 bytes. 
+`randomizedOn`
+     Key of the context attribute that is used for traffic splitting. 
+`slots`
+     Slots defines the weighted distribution of variants. 
+
+`variant`
+     Variant of the allocation slot. 
+`weight`
+     Weight defines the proportion of traffic to allocate to the variant, relative to other slots in the same allocation. 
+`attributes`
+     Names of the context attributes that are used in the evaluation rules and allocations. 
+`defaultDynamicAllocation`
+     The ID of a dynamic allocation to use as the default. 
+`defaultTarget`
+     Default variant for the flag. 
+`dynamicAllocations`
+     A list of dynamic allocations. 
+
+`description`
+     A description of the dynamic allocation. Max length: 500 bytes. 
+`finalVariant`
+     Final variant to return for this allocation when fully rolled out. 
+`id`
+     Id of the dynamic allocation. Max length: 128 bytes. 
+`initialVariant`
+     Initial variant to return for this allocation when not fully rolled out. 
+`randomizedOn`
+     Key of the context attribute that is used for traffic splitting. 
+`salt`
+     Salt for hash generation. 
+`rules`
+     Define the logic for evaluating the flag against a given context. The rules are evaluated sequentially in their specified order. 
+
+`condition`
+     A Common Expression Language (CEL cel.dev) expression evaluated against the evaluation context. For example: `plan == "premium" && country == "DE"`. 
+`id`
+     A unique identifier for the rule. 
+`target`
+     The ID of the variant to return if the condition evaluates to true. 
+`Shorthand Example:`
+    
+    
+    --evaluation-spec=allocations=[{description=string,id=string,randomizedOn=string,slots=[{variant=string,weight=int}]}],attributes=[string],defaultDynamicAllocation=string,defaultTarget=string,dynamicAllocations=[{description=string,finalVariant=string,id=string,initialVariant=string,randomizedOn=string,salt=string}],rules=[{condition=string,id=string,target=string}]
+
+`JSON Example:`
+    
+    
+    --evaluation-spec='{"allocations": [{"description": "string", "id": "string", "randomizedOn": "string", "slots": [{"variant": "string", "weight": int}]}], "attributes": ["string"], "defaultDynamicAllocation": "string", "defaultTarget": "string", "dynamicAllocations": [{"description": "string", "finalVariant": "string", "id": "string", "initialVariant": "string", "randomizedOn": "string", "salt": "string"}], "rules": [{"condition": "string", "id": "string", "target": "string"}]}'
+
+`File Example:`
+    
+    
+    --evaluation-spec=path_to_file.(yaml|json)
+
+`--state`=`STATE`
+     Current state of the flag. `STATE` must be one of: 
+
+`active`
+     The flag is in the active state. 
+`cleanup`
+     The flag is in the cleanup state and ready to be deleted. 
+`in-development`
+     The flag is currently in the in-development state. 
+`sunsetting`
+     The flag is in the sunsetting state, indicating it is being phased out. 
+`--variants`=[`booleanValue`=`BOOLEANVALUE`],[`description`=`DESCRIPTION`],[`doubleValue`=`DOUBLEVALUE`],[`id`=`ID`],[`integerValue`=`INTEGERVALUE`],[`stringValue`=`STRINGVALUE`]
+     A list of variants. Variant is an identifier for a value (name assigned to a value). 
+
+`booleanValue`
+     Value is a single boolean flag value for the variant. 
+`description`
+     A description of the variant. Max length: 500 bytes. 
+`doubleValue`
+     Value is a single double flag value for the variant. 
+`id`
+     Id of the variant. Max length: 128 bytes. 
+`integerValue`
+     Value is a single integer flag value for the variant. 
+`stringValue`
+     Value is a single string flag value for the variant. Max length: 500 bytes. 
+`Shorthand Example:`
+    
+    
+    --variants=booleanValue=boolean,description=string,doubleValue=float,id=string,integerValue=int,stringValue=string --variants=booleanValue=boolean,description=string,doubleValue=float,id=string,integerValue=int,stringValue=string
+
+`JSON Example:`
+    
+    
+    --variants='[{"booleanValue": boolean, "description": "string", "doubleValue": float, "id": "string", "integerValue": int, "stringValue": "string"}]'
+
+`File Example:`
+    
+    
+    --variants=path_to_file.(yaml|json)
+
+Update annotations. 
+
+At most one of these can be specified: 
+
+`--annotations`=[`ANNOTATIONS`,…]
+     Set annotations to new value. Unstructured key-value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. Annotations are not queryable and should be preserved when modifying objects. 
+
+`KEY`
+     Sets `KEY` value. 
+`VALUE`
+     Sets `VALUE` value. 
+`Shorthand Example:`
+    
+    
+    --annotations=string=string
+
+`JSON Example:`
+    
+    
+    --annotations='{"string": "string"}'
+
+`File Example:`
+    
+    
+    --annotations=path_to_file.(yaml|json)
+
+Or at least one of these can be specified: 
+
+`--update-annotations`=[`UPDATE_ANNOTATIONS`,…]
+     Update annotations value or add key value pair. Unstructured key-value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. Annotations are not queryable and should be preserved when modifying objects. 
+
+`KEY`
+     Sets `KEY` value. 
+`VALUE`
+     Sets `VALUE` value. 
+`Shorthand Example:`
+    
+    
+    --update-annotations=string=string
+
+`JSON Example:`
+    
+    
+    --update-annotations='{"string": "string"}'
+
+`File Example:`
+    
+    
+    --update-annotations=path_to_file.(yaml|json)
+
+At most one of these can be specified: 
+
+`--clear-annotations`
+     Clear annotations value and set to empty map. 
+`--remove-annotations`=`REMOVE_ANNOTATIONS`
+     Remove existing value from map annotations. Sets `remove_annotations` value. `Shorthand Example:`
+    
+    
+    --remove-annotations=string,string
+
+`JSON Example:`
+    
+    
+    --remove-annotations=["string"]
+
+`File Example:`
+    
+    
+    --remove-annotations=path_to_file.(yaml|json)
+
+Update description. 
+
+At most one of these can be specified: 
+
+`--clear-description`
+     Clear description value and set to null. 
+`--description`=`DESCRIPTION`
+     Set description to new value. 
+Update flag_set. 
+
+At most one of these can be specified: 
+
+`--clear-flag-set`
+     Clear flag_set value and set to null. 
+`--flag-set`=`FLAG_SET`
+     Set flag_set to new value. 
+Update labels. 
+
+At most one of these can be specified: 
+
+`--labels`=[`LABELS`,…]
+     Set labels to new value. The labels on the resource, which can be used for categorization. 
+
+`KEY`
+     Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+`VALUE`
+     Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+`Shorthand Example:`
+    
+    
+    --labels=string=string
+
+`JSON Example:`
+    
+    
+    --labels='{"string": "string"}'
+
+`File Example:`
+    
+    
+    --labels=path_to_file.(yaml|json)
+
+Or at least one of these can be specified: 
+
+`--update-labels`=[`UPDATE_LABELS`,…]
+     Update labels value or add key value pair. The labels on the resource, which can be used for categorization. 
+
+`KEY`
+     Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+`VALUE`
+     Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+`Shorthand Example:`
+    
+    
+    --update-labels=string=string
+
+`JSON Example:`
+    
+    
+    --update-labels='{"string": "string"}'
+
+`File Example:`
+    
+    
+    --update-labels=path_to_file.(yaml|json)
+
+At most one of these can be specified: 
+
+`--clear-labels`
+     Clear labels value and set to empty map. 
+`--remove-labels`=`REMOVE_LABELS`
+     Remove existing value from map labels. Sets `remove_labels` value. `Shorthand Example:`
+    
+    
+    --remove-labels=string,string
+
+`JSON Example:`
+    
+    
+    --remove-labels=["string"]
+
+`File Example:`
+    
+    
+    --remove-labels=path_to_file.(yaml|json)
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `saasservicemgmt/v1beta1` API. The full documentation for this API can be found at: <https://cloud.google.com/saas-runtime/docs>
+NOTES
+     This command is currently in beta and might change without notice. 
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-08-26 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-26 UTC."],[],[]] 

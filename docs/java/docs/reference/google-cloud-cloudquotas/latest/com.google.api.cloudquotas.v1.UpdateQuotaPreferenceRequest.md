@@ -1,0 +1,881 @@
+---
+url: https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest
+title: Class UpdateQuotaPreferenceRequest (0.67.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T16:10:02.146672+00:00
+---
+
+# Class UpdateQuotaPreferenceRequest (0.67.0)  |  Java client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Java ](https://docs.cloud.google.com/java/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/java/docs/reference)
+
+
+
+Send feedback 
+
+#  Class UpdateQuotaPreferenceRequest (0.67.0) Stay organized with collections  Save and categorize content based on your preferences. 
+
+0.67.0 (latest)  0.63.0  0.62.0  0.61.0  0.59.0  0.56.0  0.55.0  0.53.0  0.51.0  0.50.0  0.49.0  0.48.0  0.46.0  0.44.0  0.43.0  0.42.0  0.41.0  0.40.0  0.38.0  0.36.0  0.35.0  0.32.0  0.31.0  0.30.0  0.28.0  0.27.0  0.26.0  0.25.0  0.24.0  0.23.0  0.22.0  0.21.0  0.20.0  0.19.0  0.17.0  0.16.0  0.15.0  0.14.0  0.13.0  0.12.0  0.11.0  0.10.0  0.9.0  0.8.0  0.7.0  0.5.0  0.4.0  0.3.0  0.2.0  0.1.0 
+    
+    
+    public final class UpdateQuotaPreferenceRequest extends GeneratedMessage implements UpdateQuotaPreferenceRequestOrBuilder
+
+Message for updating a QuotaPreference
+
+Protobuf type `google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest`
+
+## Inheritance
+
+[Object](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html) > [AbstractMessageLite<MessageType,BuilderType>](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessageLite.html) > [AbstractMessage](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.html) > [GeneratedMessage](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html) > UpdateQuotaPreferenceRequest
+
+## Implements
+
+[UpdateQuotaPreferenceRequestOrBuilder](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequestOrBuilder)
+
+## Inherited Members
+
+[AbstractMessage.equals(Object)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.html#com_google_protobuf_AbstractMessage_equals_java_lang_Object_)
+
+[AbstractMessage.findInitializationErrors()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.html#com_google_protobuf_AbstractMessage_findInitializationErrors__)
+
+[AbstractMessage.getInitializationErrorString()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.html#com_google_protobuf_AbstractMessage_getInitializationErrorString__)
+
+[AbstractMessage.hashCode()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.html#com_google_protobuf_AbstractMessage_hashCode__)
+
+[AbstractMessage.hashFields(int,Map<Descriptors.FieldDescriptor,Object>)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.html#com_google_protobuf_AbstractMessage_hashFields_int_java_util_Map_com_google_protobuf_Descriptors_FieldDescriptor_java_lang_Object__)
+
+[AbstractMessage.newBuilderForType(AbstractMessage.BuilderParent)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.html#com_google_protobuf_AbstractMessage_newBuilderForType_com_google_protobuf_AbstractMessage_BuilderParent_)
+
+[AbstractMessage.toString()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.html#com_google_protobuf_AbstractMessage_toString__)
+
+[AbstractMessageLite.<T>addAll(Iterable<T>,List<? super T>)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessageLite.html#com_google_protobuf_AbstractMessageLite__T_addAll_java_lang_Iterable_T__java_util_List___super_T__)
+
+[AbstractMessageLite.checkByteStringIsUtf8(ByteString)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessageLite.html#com_google_protobuf_AbstractMessageLite_checkByteStringIsUtf8_com_google_protobuf_ByteString_)
+
+[AbstractMessageLite.toByteArray()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessageLite.html#com_google_protobuf_AbstractMessageLite_toByteArray__)
+
+[AbstractMessageLite.toByteString()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessageLite.html#com_google_protobuf_AbstractMessageLite_toByteString__)
+
+[AbstractMessageLite.writeDelimitedTo(OutputStream)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessageLite.html#com_google_protobuf_AbstractMessageLite_writeDelimitedTo_java_io_OutputStream_)
+
+[AbstractMessageLite.writeTo(OutputStream)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessageLite.html#com_google_protobuf_AbstractMessageLite_writeTo_java_io_OutputStream_)
+
+com.google.protobuf.GeneratedMessage.<ContainingT,T>newFileScopedGeneratedExtension(java.lang.Class<?>,com.google.protobuf.Message)
+
+com.google.protobuf.GeneratedMessage.<ContainingT,T>newMessageScopedGeneratedExtension(com.google.protobuf.Message,int,java.lang.Class<?>,com.google.protobuf.Message)
+
+com.google.protobuf.GeneratedMessage.<ListT>makeMutableCopy(ListT)
+
+com.google.protobuf.GeneratedMessage.<ListT>makeMutableCopy(ListT,int)
+
+[GeneratedMessage.<M>parseDelimitedWithIOException(Parser<M>,InputStream)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage__M_parseDelimitedWithIOException_com_google_protobuf_Parser_M__java_io_InputStream_)
+
+[GeneratedMessage.<M>parseDelimitedWithIOException(Parser<M>,InputStream,ExtensionRegistryLite)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage__M_parseDelimitedWithIOException_com_google_protobuf_Parser_M__java_io_InputStream_com_google_protobuf_ExtensionRegistryLite_)
+
+[GeneratedMessage.<M>parseWithIOException(Parser<M>,CodedInputStream)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage__M_parseWithIOException_com_google_protobuf_Parser_M__com_google_protobuf_CodedInputStream_)
+
+[GeneratedMessage.<M>parseWithIOException(Parser<M>,CodedInputStream,ExtensionRegistryLite)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage__M_parseWithIOException_com_google_protobuf_Parser_M__com_google_protobuf_CodedInputStream_com_google_protobuf_ExtensionRegistryLite_)
+
+[GeneratedMessage.<M>parseWithIOException(Parser<M>,InputStream)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage__M_parseWithIOException_com_google_protobuf_Parser_M__java_io_InputStream_)
+
+[GeneratedMessage.<M>parseWithIOException(Parser<M>,InputStream,ExtensionRegistryLite)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage__M_parseWithIOException_com_google_protobuf_Parser_M__java_io_InputStream_com_google_protobuf_ExtensionRegistryLite_)
+
+com.google.protobuf.GeneratedMessage.<T>emptyList(java.lang.Class<T>)
+
+com.google.protobuf.GeneratedMessage.<V>serializeBooleanMapTo(com.google.protobuf.CodedOutputStream,com.google.protobuf.MapField<java.lang.Boolean,V>,com.google.protobuf.MapEntry<java.lang.Boolean,V>,int)
+
+com.google.protobuf.GeneratedMessage.<V>serializeIntegerMapTo(com.google.protobuf.CodedOutputStream,com.google.protobuf.MapField<java.lang.Integer,V>,com.google.protobuf.MapEntry<java.lang.Integer,V>,int)
+
+com.google.protobuf.GeneratedMessage.<V>serializeLongMapTo(com.google.protobuf.CodedOutputStream,com.google.protobuf.MapField<java.lang.Long,V>,com.google.protobuf.MapEntry<java.lang.Long,V>,int)
+
+com.google.protobuf.GeneratedMessage.<V>serializeStringMapTo(com.google.protobuf.CodedOutputStream,com.google.protobuf.MapField<java.lang.String,V>,com.google.protobuf.MapEntry<java.lang.String,V>,int)
+
+com.google.protobuf.GeneratedMessage.canUseUnsafe()
+
+[GeneratedMessage.computeStringSize(int,Object)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_computeStringSize_int_java_lang_Object_)
+
+[GeneratedMessage.computeStringSizeNoTag(Object)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_computeStringSizeNoTag_java_lang_Object_)
+
+com.google.protobuf.GeneratedMessage.emptyBooleanList()
+
+com.google.protobuf.GeneratedMessage.emptyDoubleList()
+
+com.google.protobuf.GeneratedMessage.emptyFloatList()
+
+com.google.protobuf.GeneratedMessage.emptyIntList()
+
+com.google.protobuf.GeneratedMessage.emptyLongList()
+
+[GeneratedMessage.getAllFields()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_getAllFields__)
+
+[GeneratedMessage.getDescriptorForType()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_getDescriptorForType__)
+
+[GeneratedMessage.getField(Descriptors.FieldDescriptor)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_getField_com_google_protobuf_Descriptors_FieldDescriptor_)
+
+[GeneratedMessage.getOneofFieldDescriptor(Descriptors.OneofDescriptor)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_getOneofFieldDescriptor_com_google_protobuf_Descriptors_OneofDescriptor_)
+
+[GeneratedMessage.getParserForType()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_getParserForType__)
+
+[GeneratedMessage.getRepeatedField(Descriptors.FieldDescriptor,int)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_getRepeatedField_com_google_protobuf_Descriptors_FieldDescriptor_int_)
+
+[GeneratedMessage.getRepeatedFieldCount(Descriptors.FieldDescriptor)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_getRepeatedFieldCount_com_google_protobuf_Descriptors_FieldDescriptor_)
+
+[GeneratedMessage.getSerializedSize()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_getSerializedSize__)
+
+[GeneratedMessage.getUnknownFields()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_getUnknownFields__)
+
+[GeneratedMessage.hasField(Descriptors.FieldDescriptor)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_hasField_com_google_protobuf_Descriptors_FieldDescriptor_)
+
+[GeneratedMessage.hasOneof(Descriptors.OneofDescriptor)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_hasOneof_com_google_protobuf_Descriptors_OneofDescriptor_)
+
+[GeneratedMessage.internalGetFieldAccessorTable()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_internalGetFieldAccessorTable__)
+
+[GeneratedMessage.internalGetMapField(int)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_internalGetMapField_int_)
+
+com.google.protobuf.GeneratedMessage.internalGetMapFieldReflection(int)
+
+[GeneratedMessage.isInitialized()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_isInitialized__)
+
+com.google.protobuf.GeneratedMessage.isStringEmpty(java.lang.Object)
+
+[GeneratedMessage.makeExtensionsImmutable()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_makeExtensionsImmutable__)
+
+com.google.protobuf.GeneratedMessage.mergeFromAndMakeImmutableInternal(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)
+
+com.google.protobuf.GeneratedMessage.newInstance(com.google.protobuf.GeneratedMessage.UnusedPrivateParameter)
+
+[GeneratedMessage.parseUnknownField(CodedInputStream,UnknownFieldSet.Builder,ExtensionRegistryLite,int)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_parseUnknownField_com_google_protobuf_CodedInputStream_com_google_protobuf_UnknownFieldSet_Builder_com_google_protobuf_ExtensionRegistryLite_int_)
+
+com.google.protobuf.GeneratedMessage.parseUnknownFieldProto3(com.google.protobuf.CodedInputStream,com.google.protobuf.UnknownFieldSet.Builder,com.google.protobuf.ExtensionRegistryLite,int)
+
+[GeneratedMessage.writeReplace()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_writeReplace__)
+
+[GeneratedMessage.writeString(CodedOutputStream,int,Object)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_writeString_com_google_protobuf_CodedOutputStream_int_java_lang_Object_)
+
+[GeneratedMessage.writeStringNoTag(CodedOutputStream,Object)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_writeStringNoTag_com_google_protobuf_CodedOutputStream_java_lang_Object_)
+
+[GeneratedMessage.writeTo(CodedOutputStream)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_writeTo_com_google_protobuf_CodedOutputStream_)
+
+[Object.clone()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--)
+
+[Object.finalize()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--)
+
+[Object.getClass()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--)
+
+[Object.notify()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--)
+
+[Object.notifyAll()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--)
+
+[Object.wait()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--)
+
+[Object.wait(long)](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-)
+
+[Object.wait(long,int)](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-)
+
+## Static Fields 
+
+### ALLOW_MISSING_FIELD_NUMBER
+    
+    
+    public static final int ALLOW_MISSING_FIELD_NUMBER
+
+**Field Value**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` |   
+  
+### IGNORE_SAFETY_CHECKS_FIELD_NUMBER
+    
+    
+    public static final int IGNORE_SAFETY_CHECKS_FIELD_NUMBER
+
+**Field Value**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` |   
+  
+### QUOTA_PREFERENCE_FIELD_NUMBER
+    
+    
+    public static final int QUOTA_PREFERENCE_FIELD_NUMBER
+
+**Field Value**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` |   
+  
+### UPDATE_MASK_FIELD_NUMBER
+    
+    
+    public static final int UPDATE_MASK_FIELD_NUMBER
+
+**Field Value**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` |   
+  
+### VALIDATE_ONLY_FIELD_NUMBER
+    
+    
+    public static final int VALIDATE_ONLY_FIELD_NUMBER
+
+**Field Value**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` |   
+  
+## Static Methods 
+
+### getDefaultInstance()
+    
+    
+    public static UpdateQuotaPreferenceRequest getDefaultInstance()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)` |   
+  
+### getDescriptor()
+    
+    
+    public static final Descriptors.Descriptor getDescriptor()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[Descriptor](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Descriptors.Descriptor.html)` |   
+  
+### newBuilder()
+    
+    
+    public static UpdateQuotaPreferenceRequest.Builder newBuilder()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest.Builder)` |   
+  
+### newBuilder(UpdateQuotaPreferenceRequest prototype)
+    
+    
+    public static UpdateQuotaPreferenceRequest.Builder newBuilder(UpdateQuotaPreferenceRequest prototype)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`prototype` | `[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest.Builder)` |   
+  
+### parseDelimitedFrom(InputStream input)
+    
+    
+    public static UpdateQuotaPreferenceRequest parseDelimitedFrom(InputStream input)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`input` | `[InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)` |   
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[IOException](https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html)` |   
+  
+### parseDelimitedFrom(InputStream input, ExtensionRegistryLite extensionRegistry)
+    
+    
+    public static UpdateQuotaPreferenceRequest parseDelimitedFrom(InputStream input, ExtensionRegistryLite extensionRegistry)
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`input` | `[InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)`  
+  
+`extensionRegistry` | `[ExtensionRegistryLite](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ExtensionRegistryLite.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)` |   
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[IOException](https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html)` |   
+  
+### parseFrom(byte[] data)
+    
+    
+    public static UpdateQuotaPreferenceRequest parseFrom(byte[] data)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`data` | `byte[]`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)` |   
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[InvalidProtocolBufferException](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.InvalidProtocolBufferException.html)` |   
+  
+### parseFrom(byte[] data, ExtensionRegistryLite extensionRegistry)
+    
+    
+    public static UpdateQuotaPreferenceRequest parseFrom(byte[] data, ExtensionRegistryLite extensionRegistry)
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`data` | `byte[]`  
+  
+`extensionRegistry` | `[ExtensionRegistryLite](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ExtensionRegistryLite.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)` |   
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[InvalidProtocolBufferException](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.InvalidProtocolBufferException.html)` |   
+  
+### parseFrom(ByteString data)
+    
+    
+    public static UpdateQuotaPreferenceRequest parseFrom(ByteString data)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`data` | `[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)` |   
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[InvalidProtocolBufferException](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.InvalidProtocolBufferException.html)` |   
+  
+### parseFrom(ByteString data, ExtensionRegistryLite extensionRegistry)
+    
+    
+    public static UpdateQuotaPreferenceRequest parseFrom(ByteString data, ExtensionRegistryLite extensionRegistry)
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`data` | `[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)`  
+  
+`extensionRegistry` | `[ExtensionRegistryLite](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ExtensionRegistryLite.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)` |   
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[InvalidProtocolBufferException](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.InvalidProtocolBufferException.html)` |   
+  
+### parseFrom(CodedInputStream input)
+    
+    
+    public static UpdateQuotaPreferenceRequest parseFrom(CodedInputStream input)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`input` | `[CodedInputStream](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.CodedInputStream.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)` |   
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[IOException](https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html)` |   
+  
+### parseFrom(CodedInputStream input, ExtensionRegistryLite extensionRegistry)
+    
+    
+    public static UpdateQuotaPreferenceRequest parseFrom(CodedInputStream input, ExtensionRegistryLite extensionRegistry)
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`input` | `[CodedInputStream](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.CodedInputStream.html)`  
+  
+`extensionRegistry` | `[ExtensionRegistryLite](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ExtensionRegistryLite.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)` |   
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[IOException](https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html)` |   
+  
+### parseFrom(InputStream input)
+    
+    
+    public static UpdateQuotaPreferenceRequest parseFrom(InputStream input)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`input` | `[InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)` |   
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[IOException](https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html)` |   
+  
+### parseFrom(InputStream input, ExtensionRegistryLite extensionRegistry)
+    
+    
+    public static UpdateQuotaPreferenceRequest parseFrom(InputStream input, ExtensionRegistryLite extensionRegistry)
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`input` | `[InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)`  
+  
+`extensionRegistry` | `[ExtensionRegistryLite](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ExtensionRegistryLite.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)` |   
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[IOException](https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html)` |   
+  
+### parseFrom(ByteBuffer data)
+    
+    
+    public static UpdateQuotaPreferenceRequest parseFrom(ByteBuffer data)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`data` | `[ByteBuffer](https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)` |   
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[InvalidProtocolBufferException](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.InvalidProtocolBufferException.html)` |   
+  
+### parseFrom(ByteBuffer data, ExtensionRegistryLite extensionRegistry)
+    
+    
+    public static UpdateQuotaPreferenceRequest parseFrom(ByteBuffer data, ExtensionRegistryLite extensionRegistry)
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`data` | `[ByteBuffer](https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html)`  
+  
+`extensionRegistry` | `[ExtensionRegistryLite](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ExtensionRegistryLite.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)` |   
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[InvalidProtocolBufferException](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.InvalidProtocolBufferException.html)` |   
+  
+### parser()
+    
+    
+    public static Parser<UpdateQuotaPreferenceRequest> parser()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[Parser](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Parser.html)<[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)>` |   
+  
+## Methods 
+
+### equals(Object obj)
+    
+    
+    public boolean equals(Object obj)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`obj` | `[Object](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` |   
+**Overrides**
+
+[AbstractMessage.equals(Object other)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.html#com_google_protobuf_AbstractMessage_equals_java_lang_Object_)
+
+### getAllowMissing()
+    
+    
+    public boolean getAllowMissing()
+
+Optional. If set to true, and the quota preference is not found, a new one will be created. In this situation, `update_mask` is ignored.
+
+`bool allow_missing = 3 [(.google.api.field_behavior) = OPTIONAL];`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | The allowMissing.  
+  
+### getDefaultInstanceForType()
+    
+    
+    public UpdateQuotaPreferenceRequest getDefaultInstanceForType()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)` |   
+  
+### getIgnoreSafetyChecks(int index)
+    
+    
+    public QuotaSafetyCheck getIgnoreSafetyChecks(int index)
+
+The list of quota safety checks to be ignored.
+
+`repeated .google.api.cloudquotas.v1.QuotaSafetyCheck ignore_safety_checks = 5;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The index of the element to return.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[QuotaSafetyCheck](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.QuotaSafetyCheck)` | The ignoreSafetyChecks at the given index.  
+  
+### getIgnoreSafetyChecksCount()
+    
+    
+    public int getIgnoreSafetyChecksCount()
+
+The list of quota safety checks to be ignored.
+
+`repeated .google.api.cloudquotas.v1.QuotaSafetyCheck ignore_safety_checks = 5;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | The count of ignoreSafetyChecks.  
+  
+### getIgnoreSafetyChecksList()
+    
+    
+    public List<QuotaSafetyCheck> getIgnoreSafetyChecksList()
+
+The list of quota safety checks to be ignored.
+
+`repeated .google.api.cloudquotas.v1.QuotaSafetyCheck ignore_safety_checks = 5;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[QuotaSafetyCheck](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.QuotaSafetyCheck)>` | A list containing the ignoreSafetyChecks.  
+  
+### getIgnoreSafetyChecksValue(int index)
+    
+    
+    public int getIgnoreSafetyChecksValue(int index)
+
+The list of quota safety checks to be ignored.
+
+`repeated .google.api.cloudquotas.v1.QuotaSafetyCheck ignore_safety_checks = 5;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The index of the value to return.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | The enum numeric value on the wire of ignoreSafetyChecks at the given index.  
+  
+### getIgnoreSafetyChecksValueList()
+    
+    
+    public List<Integer> getIgnoreSafetyChecksValueList()
+
+The list of quota safety checks to be ignored.
+
+`repeated .google.api.cloudquotas.v1.QuotaSafetyCheck ignore_safety_checks = 5;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Integer](https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html)>` | A list containing the enum numeric values on the wire for ignoreSafetyChecks.  
+  
+### getParserForType()
+    
+    
+    public Parser<UpdateQuotaPreferenceRequest> getParserForType()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[Parser](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Parser.html)<[UpdateQuotaPreferenceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest)>` |   
+**Overrides**
+
+[GeneratedMessage.getParserForType()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_getParserForType__)
+
+### getQuotaPreference()
+    
+    
+    public QuotaPreference getQuotaPreference()
+
+Required. The resource being updated
+
+` .google.api.cloudquotas.v1.QuotaPreference quota_preference = 2 [(.google.api.field_behavior) = REQUIRED]; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[QuotaPreference](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.QuotaPreference)` | The quotaPreference.  
+  
+### getQuotaPreferenceOrBuilder()
+    
+    
+    public QuotaPreferenceOrBuilder getQuotaPreferenceOrBuilder()
+
+Required. The resource being updated
+
+` .google.api.cloudquotas.v1.QuotaPreference quota_preference = 2 [(.google.api.field_behavior) = REQUIRED]; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[QuotaPreferenceOrBuilder](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.QuotaPreferenceOrBuilder)` |   
+  
+### getSerializedSize()
+    
+    
+    public int getSerializedSize()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` |   
+**Overrides**
+
+[GeneratedMessage.getSerializedSize()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_getSerializedSize__)
+
+### getUpdateMask()
+    
+    
+    public FieldMask getUpdateMask()
+
+Optional. Field mask is used to specify the fields to be overwritten in the QuotaPreference resource by the update. The fields specified in the update_mask are relative to the resource, not the full request. A field will be overwritten if it is in the mask. If the user does not provide a mask then all fields will be overwritten.
+
+`.google.protobuf.FieldMask update_mask = 1 [(.google.api.field_behavior) = OPTIONAL]; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[FieldMask](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.FieldMask.html)` | The updateMask.  
+  
+### getUpdateMaskOrBuilder()
+    
+    
+    public FieldMaskOrBuilder getUpdateMaskOrBuilder()
+
+Optional. Field mask is used to specify the fields to be overwritten in the QuotaPreference resource by the update. The fields specified in the update_mask are relative to the resource, not the full request. A field will be overwritten if it is in the mask. If the user does not provide a mask then all fields will be overwritten.
+
+`.google.protobuf.FieldMask update_mask = 1 [(.google.api.field_behavior) = OPTIONAL]; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[FieldMaskOrBuilder](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.FieldMaskOrBuilder.html)` |   
+  
+### getValidateOnly()
+    
+    
+    public boolean getValidateOnly()
+
+Optional. If set to true, validate the request, but do not actually update. Note that a request being valid does not mean that the request is guaranteed to be fulfilled.
+
+`bool validate_only = 4 [(.google.api.field_behavior) = OPTIONAL];`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | The validateOnly.  
+  
+### hasQuotaPreference()
+    
+    
+    public boolean hasQuotaPreference()
+
+Required. The resource being updated
+
+` .google.api.cloudquotas.v1.QuotaPreference quota_preference = 2 [(.google.api.field_behavior) = REQUIRED]; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | Whether the quotaPreference field is set.  
+  
+### hasUpdateMask()
+    
+    
+    public boolean hasUpdateMask()
+
+Optional. Field mask is used to specify the fields to be overwritten in the QuotaPreference resource by the update. The fields specified in the update_mask are relative to the resource, not the full request. A field will be overwritten if it is in the mask. If the user does not provide a mask then all fields will be overwritten.
+
+`.google.protobuf.FieldMask update_mask = 1 [(.google.api.field_behavior) = OPTIONAL]; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | Whether the updateMask field is set.  
+  
+### hashCode()
+    
+    
+    public int hashCode()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` |   
+**Overrides**
+
+[AbstractMessage.hashCode()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.html#com_google_protobuf_AbstractMessage_hashCode__)
+
+### internalGetFieldAccessorTable()
+    
+    
+    protected GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[FieldAccessorTable](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.FieldAccessorTable.html)` |   
+**Overrides**
+
+[GeneratedMessage.internalGetFieldAccessorTable()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_internalGetFieldAccessorTable__)
+
+### isInitialized()
+    
+    
+    public final boolean isInitialized()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` |   
+**Overrides**
+
+[GeneratedMessage.isInitialized()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_isInitialized__)
+
+### newBuilderForType()
+    
+    
+    public UpdateQuotaPreferenceRequest.Builder newBuilderForType()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest.Builder)` |   
+  
+### newBuilderForType(AbstractMessage.BuilderParent parent)
+    
+    
+    protected UpdateQuotaPreferenceRequest.Builder newBuilderForType(AbstractMessage.BuilderParent parent)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`parent` | `[BuilderParent](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.BuilderParent.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest.Builder)` |   
+**Overrides**
+
+[AbstractMessage.newBuilderForType(AbstractMessage.BuilderParent parent)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.html#com_google_protobuf_AbstractMessage_newBuilderForType_com_google_protobuf_AbstractMessage_BuilderParent_)
+
+### toBuilder()
+    
+    
+    public UpdateQuotaPreferenceRequest.Builder toBuilder()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[UpdateQuotaPreferenceRequest.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudquotas/latest/com.google.api.cloudquotas.v1.UpdateQuotaPreferenceRequest.Builder)` |   
+  
+### writeTo(CodedOutputStream output)
+    
+    
+    public void writeTo(CodedOutputStream output)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`output` | `[CodedOutputStream](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.CodedOutputStream.html)`  
+  
+**Overrides**
+
+[GeneratedMessage.writeTo(CodedOutputStream output)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.html#com_google_protobuf_GeneratedMessage_writeTo_com_google_protobuf_CodedOutputStream_)
+
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[IOException](https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html)` |   
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-05 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-05 UTC."],[],[]] 

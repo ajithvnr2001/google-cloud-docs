@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.backups/getIamPolicy/",
+  "file": "managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.backups/getIamPolicy.md",
+  "title": "Method: backups.getIamPolicy \u00a0|\u00a0 Managed Microsoft AD \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T15:29:38.410985+00:00"
+}

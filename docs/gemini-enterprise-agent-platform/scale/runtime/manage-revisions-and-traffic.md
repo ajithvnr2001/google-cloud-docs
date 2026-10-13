@@ -1,0 +1,747 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/manage-revisions-and-traffic/
+title: Manage revisions and traffic \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T16:52:09.284318+00:00
+---
+
+# Manage revisions and traffic  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/manage-revisions-and-traffic/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Agents ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agents)
+
+
+
+Send feedback 
+
+#  Manage revisions and traffic Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Preview**
+
+This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://cloud.google.com/terms/service-terms#1) Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products#product-launch-stages). 
+
+When you use this feature with AI Agents, the terms applicable to AI Agents in the Agreement apply.
+
+In Gemini Enterprise Agent Platform, you can create immutable versions, or _revisions_ , of an agent. You can then split traffic between the different active revisions. Traffic splitting lets you test and gradually increase traffic to new revisions and split traffic between revisions for other purposes.
+
+The ability to create revisions is always enabled. You don't need to turn on the feature. For information on creating revisions, see Revisions and states.
+
+If you haven't created any revisions yet, you will need to create revisions before you can view revisions and configure traffic between them, as described on this page.
+
+At this time, revisions and traffic splitting are available through the [v1beta1 API](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rpc/google.cloud.aiplatform.v1beta1).
+
+This page describes how to manage agent revisions and traffic splitting.
+
+## Revisions and states
+
+A revision is a snapshot of an agent. When you create an agent or update its versioned fields, an immutable revision of the agent is created. A revision is **Active** when it is available for queries. Note that it might not be receiving any queries, depending on the traffic configuration. When a revision is archived, it is permanently retired from serving traffic and cannot be restored. Archived revisions are retained only for historical reference.
+
+You can identify a revision using its resource name, which can be found by listing the agent revisions.
+
+## Revision limits
+
+**Important:** Gemini Enterprise Agent Platform enforces a maximum of 6,000 revisions per project per region (`aiplatform.googleapis.com/agent_engine_revisions_per_project_per_region`) and 950 revisions per agent (`aiplatform.googleapis.com/agent_engine_revisions_per_agent`). These limits are not adjustable. By default, Gemini Enterprise Agent Platform automatically removes older revisions to help you stay within these limits. However, if there are not enough eligible revisions to delete (for example, if all revisions are serving traffic), attempts to create new revisions fail. You can also manually delete revisions. For more information, see Manage revision cleanup.
+
+Archived revisions stop occupying a revision slot. Changing an Agent Gateway binding archives every pre-existing revision (see Agent Gateway and revisions), so a binding change frees quota rather than consuming it. Archived revisions remain deletable.
+
+## Versioned and unversioned fields
+
+This section lists the fields in a deployed agent's [ReasoningEngineSpec](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.reasoningEngines#ReasoningEngineSpec) definition that you can update to create a revision of the agent.
+
+When you update _versioned fields,_ a new revision is created.
+
+When you update _unversioned fields,_ or fields in an agent's definition other than the _versioned fields_ , the agent is updated across all of its revisions.
+
+These are the _versioned fields_ :
+
+  * [PackageSpec](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.reasoningEngines#PackageSpec)
+    * `pickleObjectGcsUri`
+    * `dependencyFilesGcsUri`
+    * `requirementsGcsUri`
+    * `pythonVersion`
+  * [DeploymentSpec](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.reasoningEngines#DeploymentSpec)
+    * `env[]`
+    * `secretEnv[]`
+    * `firstPartyImageOverride`
+    * `agentServerMode`
+    * `pscInterfaceConfig`
+    * `minInstances`
+    * `maxInstances`
+    * `resourceLimits`
+    * `containerConcurrency`
+  * `classMethods[]`
+  * `agentFramework`
+  * [SourceCodeSpec](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.reasoningEngines#SourceCodeSpec)
+    * `source`
+    * `languageSpec`
+  * `identityType`
+  * `agentCard[]`
+
+
+
+## List agent revisions
+
+You can list all the revisions of a deployed agent.
+
+To find the resource ID for your agent, see [Get the agent resource ID](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/deploy-an-agent#resource-identifier).
+
+###  Console 
+
+  1. In Google Agent Platform, go to **Govern > Deployments**.
+
+[Go to Deployments](https://console.cloud.google.com/agent-platform/runtimes)
+
+  2. Click the name of the agent.
+
+  3. Select the **Revisions** tab.
+
+  4. The top of the page shows this information about the revisions:
+
+     1. **Split mode** : This can be either "Manual" or "Latest". See "Manage traffic to revisions" for more information.
+     2. **Active revisions** : The number of active revisions compared to the total number of revisions.
+     3. **Latest revision** : The name of the latest revision and the percentage of traffic it is receiving.
+     4. **Primary revision** : The name of the primary revision, which receives most of the traffic.
+  5. The list shows all revisions for the agent, and includes this information:
+
+     1. **Name** : The revision name or number.
+     2. **State** : The state of the revision.
+     3. **Traffic** : The percentage of traffic routed to the revision.
+     4. **Created** : The date and time the revision was created.
+
+
+
+###  Agent Platform SDK 
+
+The following code lists the revision history for a specified deployed agent. To list revisions, you must identify your agent's unique [resource ID](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/deploy-an-agent#resource-identifier).
+    
+    
+    import agentplatform
+    
+    client = agentplatform.Client(
+        project="PROJECT_ID",
+        location="LOCATION",
+        http_options={"api_version": "v1beta1"},
+    )
+    
+    revisions = client.runtimes.revisions.list(
+        name="projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID"
+    )
+    
+    for revision in revisions:
+        print(revision)
+    
+
+Replace the following variables in the code: 
+
+  * `PROJECT_ID`: your Google Cloud project ID
+  * `LOCATION`: a supported region
+  * `RESOURCE_ID`: the resource ID of the deployed agent
+
+
+
+###  REST 
+
+Call the [`reasoningEngineRuntimeRevisions.list`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1beta1/projects.locations.reasoningEngines.runtimeRevisions/list) method.
+
+Before using any of the request data, make the following replacements: 
+
+  * `PROJECT_ID`: your Google Cloud project ID
+  * `LOCATION`: a supported region
+  * `RESOURCE_ID`: the resource ID of the deployed agent.
+
+
+
+HTTP method and URL: 
+    
+    
+    GET https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions
+
+To send your request, expand one of these options:
+
+#### curl (Linux, macOS, or Cloud Shell)
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) , or by using [Cloud Shell](https://docs.cloud.google.com/shell/docs), which automatically logs you into the `gcloud` CLI . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Execute the following command: 
+    
+    
+    curl -X GET \  
+         -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
+         "https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions"
+
+#### PowerShell (Windows)
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Execute the following command: 
+    
+    
+    $cred = gcloud auth print-access-token  
+    $headers = @{ "Authorization" = "Bearer $cred" }  
+      
+    Invoke-WebRequest `  
+        -Method GET `  
+        -Headers $headers `  
+        -Uri "https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions" | Select-Object -Expand Content
+
+You should receive a JSON response similar to the following:
+    
+    
+    {
+      "reasoningEngineRuntimeRevisions": [
+          {
+            "name": "projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID",
+            "spec": {
+              // Revision-specific config attributes (e.g., package specs, requirements)
+            },
+            "createTime": "2026-05-01T13:26:01Z",
+            "state": "ACTIVE"
+          }...
+        ]
+    }
+
+## Get the details of a revision
+
+You can retrieve the details for a specific revision.
+
+###  Console 
+
+  1. Go to **Govern > Deployments**.
+
+[Go to Deployments](https://console.cloud.google.com/agent-platform/runtimes)
+
+  2. Click the name of the agent.
+
+  3. Go to the **Revisions** tab.
+
+  4. On the revisions detail page, click the **Revision name**.
+
+  5. This screen shows information about the revision, including the create time and state.
+
+
+
+
+###  Agent Platform SDK 
+
+The following code retrieves resource details for a specified deployed agent revision:
+    
+    
+    import agentplatform
+    
+    client = agentplatform.Client(
+        project="PROJECT_ID",
+        location="LOCATION",
+        http_options={"api_version": "v1beta1"},
+    )
+    
+    revision = client.runtimes.revisions.get(
+        name="projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID"
+    )
+    
+    print(revision)
+    
+
+Replace the following variables in the code: 
+
+  * `PROJECT_ID`: your Google Cloud project ID
+  * `LOCATION`: a supported region
+  * `RESOURCE_ID`: the resource ID of the deployed agent
+  * `REVISION_ID`: the unique ID for a specific runtime revision
+
+
+
+###  REST 
+
+Call the [`reasoningEngineRuntimeRevisions.get` ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1beta1/projects.locations.reasoningEngines.runtimeRevisions/get) method.
+
+Before using any of the request data, make the following replacements: 
+
+  * `PROJECT_ID`: your Google Cloud project ID
+  * `LOCATION`: a supported region
+  * `RESOURCE_ID`: the resource ID of the deployed agent
+  * `REVISION_ID`: the unique ID for a specific runtime revision
+
+
+
+HTTP method and URL: 
+    
+    
+    GET https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID
+
+To send your request, expand one of these options:
+
+#### curl (Linux, macOS, or Cloud Shell)
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) , or by using [Cloud Shell](https://docs.cloud.google.com/shell/docs), which automatically logs you into the `gcloud` CLI . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Execute the following command: 
+    
+    
+    curl -X GET \  
+         -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
+         "https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID"
+
+#### PowerShell (Windows)
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Execute the following command: 
+    
+    
+    $cred = gcloud auth print-access-token  
+    $headers = @{ "Authorization" = "Bearer $cred" }  
+      
+    Invoke-WebRequest `  
+        -Method GET `  
+        -Headers $headers `  
+        -Uri "https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID" | Select-Object -Expand Content
+
+You should receive a JSON response similar to the following:
+    
+    
+    {
+      "name": "projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID",
+      "spec": {
+        // Revision-specific config attributes (e.g., package specs, requirements)
+      },
+      "createTime": "2026-05-06T13:05:24Z",
+      "state": "ACTIVE"
+    }
+
+## Configure traffic distribution between revisions
+
+You can manage how traffic is distributed across active revisions. Note that only queries directed to the root `reasoningEngine` resource undergo traffic splitting. Directing a query at a specific revision resource path explicitly bypasses traffic rules.
+
+Traffic is distributed using one of two methods:
+
+  * **By percentage** : When configuring by percentage, a specified percentage of traffic goes to each agent revision. Each percentage specified must be an integer. The sum of the percentages must equal 100%. Even if there is strictly only 1 revision active, you can still configure traffic splitting (where 100% redirects there).
+  * **To the most recent revision** : All traffic is directed to the latest revision. When a new agent revision is created, traffic is automatically directed to that new revision.
+
+
+
+A manual split can only target Active revisions. Naming an archived revision returns `FAILED_PRECONDITION`:
+    
+    
+    Traffic target revision {revision} is not an active revision of this Agent Engine. Update traffic_config to reference only active revisions.
+    
+
+###  Console 
+
+To configure traffic management:
+
+  1. Go to **Govern > Deployments**.
+
+[Go to Deployments](https://console.cloud.google.com/agent-platform/runtimes)
+
+  2. Click the name of the agent.
+
+  3. Go to the **Revisions** tab.
+
+  4. On the revisions detail page, click **Manage traffic**.
+
+  5. Under **Split mode** , select one of these options:
+
+     1. **Manual** : Specify the percentage of traffic to go to each revision.
+     2. **Always latest** : In this case, 100% of traffic goes to the latest (most recently created) revision.
+  6. Select **Save** to save your changes.
+
+
+
+
+###  Agent Platform SDK 
+
+The following code shows an example of configuring percentage-based traffic distribution.
+    
+    
+    import agentplatform
+    
+    client = agentplatform.Client(
+        project="PROJECT_ID",
+        location="LOCATION",
+        http_options={"api_version": "v1beta1"},
+    )
+    
+    client.runtimes.update(
+        name="projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID",
+        config={
+            "traffic_config": {
+                "trafficSplitManual": {
+                    "targets": [
+                        {
+                            "runtimeRevisionName": "projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID_1",
+                            "percent": 50,
+                        },
+                        {
+                            "runtimeRevisionName": "projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID_2",
+                            "percent": 50,
+                        },
+                    ]
+                }
+            }
+        },
+    )
+    
+
+Replace the following variables in the code: 
+
+  * `PROJECT_ID`: your Google Cloud project ID
+  * `LOCATION`: a supported region
+  * `RESOURCE_ID`: the resource ID of the deployed agent
+  * `REVISION_ID_1`: the revision ID for the first revision
+  * `REVISION_ID_2`: the revision ID for the second revision
+
+
+
+###  REST 
+
+To configure traffic to always go to the latest revision (default), update the `ReasoningEngine` resource with the `traffic_config` field and specify `trafficSplitAlwaysLatest`:
+    
+    
+    {
+      "trafficConfig": {
+        "trafficSplitAlwaysLatest": {}
+      }
+    }
+    
+
+To split traffic between runtime revisions of an agent, update the `ReasoningEngine` resource with the `traffic_config` field and provide a list of traffic targets with their respective percentages. The following shows how to set manual splitting across two revisions.
+
+Before using any of the request data, make the following replacements: 
+
+  * `PROJECT_ID`: your Google Cloud project ID
+  * `LOCATION`: a supported region
+  * `RESOURCE_ID`: the resource ID of the deployed agent
+  * `REVISION_ID_1`: the revision ID for the first revision
+  * `REVISION_ID_2`: the revision ID for the second revision
+  * `TRAFFIC_PERCENTAGE_1`: the percentage traffic flow you want for the first revision
+  * `TRAFFIC_PERCENTAGE_2`: the percentage traffic flow you want for the second revision
+
+
+
+HTTP method and URL: 
+    
+    
+    PATCH https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID?update_mask=traffic_config
+
+Request JSON body: 
+    
+    
+    {
+      "trafficConfig": {
+        "trafficSplitManual": {
+          "targets": [
+              {
+                "runtimeRevisionName": "projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID_1",
+                "percent": TRAFFIC_PERCENTAGE_1
+              },
+              {
+                "runtimeRevisionName": "projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID_2",
+                "percent": TRAFFIC_PERCENTAGE_2
+              }
+            ]
+          }
+        }
+    }
+
+To send your request, expand one of these options:
+
+#### curl (Linux, macOS, or Cloud Shell)
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) , or by using [Cloud Shell](https://docs.cloud.google.com/shell/docs), which automatically logs you into the `gcloud` CLI . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Save the request body in a file named `request.json`, and execute the following command: 
+    
+    
+    curl -X PATCH \  
+         -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
+         -H "Content-Type: application/json; charset=utf-8" \  
+         -d @request.json \  
+         "https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID?update_mask=traffic_config"
+
+#### PowerShell (Windows)
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Save the request body in a file named `request.json`, and execute the following command: 
+    
+    
+    $cred = gcloud auth print-access-token  
+    $headers = @{ "Authorization" = "Bearer $cred" }  
+      
+    Invoke-WebRequest `  
+        -Method PATCH `  
+        -Headers $headers `  
+        -ContentType: "application/json; charset=utf-8" `  
+        -InFile request.json `  
+        -Uri "https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID?update_mask=traffic_config" | Select-Object -Expand Content
+
+This request initiates a long-running operation (LRO). Initially, you'll receive a standard operation response. Once the configuration changes complete, the response shows `done` and repeats your configuration settings. 
+    
+    
+    {
+      "name": "projects/PROJECT_ID/locations/LOCATION/operations/OPERATION_ID",
+      "done": false
+    }
+
+## Query a specific revision
+
+You can query a specific revision through the SDK or the APIs. The revision must be active to query it. Direct queries to a specific revision bypass the traffic distribution rules.
+
+**Note:** Possessing permission to query a specific revision (`reasoningEngineRuntimeRevisions.query`) does not inherently grant permission to query the root agent itself.
+
+###  Agent Platform SDK 
+
+The following code queries a specific active revision:
+    
+    
+    import agentplatform
+    
+    client = agentplatform.Client(
+        project="PROJECT_ID",
+        location="LOCATION",
+        http_options={"api_version": "v1beta1"},
+    )
+    
+    revision = client.runtimes.revisions.get(
+        name="projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID"
+    )
+    
+    response = revision.query(
+        input={"your_input_key": "your_input_value"},
+        config={"class_method": "your_class_method"},
+    )
+    
+    print(response)
+    
+
+Replace the following variables in the code: 
+
+  * `PROJECT_ID`: your Google Cloud project ID
+  * `LOCATION`: a supported region
+  * `RESOURCE_ID`: the resource ID of the deployed agent
+  * `REVISION_ID`: the unique ID for a specific runtime revision
+
+
+
+###  REST 
+
+Call the [`reasoningEngineRuntimeRevisions.query`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1beta1/projects.locations.reasoningEngines.runtimeRevisions/query) method.
+
+Before using any of the request data, make the following replacements: 
+
+  * `PROJECT_ID`: your Google Cloud project ID
+  * `LOCATION`: a supported region
+  * `RESOURCE_ID`: the resource ID of the deployed agent
+  * `REVISION_ID`: the unique ID for a specific runtime revision
+
+
+
+HTTP method and URL: 
+    
+    
+    POST https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID:query
+
+To send your request, expand one of these options:
+
+#### curl (Linux, macOS, or Cloud Shell)
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) , or by using [Cloud Shell](https://docs.cloud.google.com/shell/docs), which automatically logs you into the `gcloud` CLI . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Save the request body in a file named `request.json`, and execute the following command: 
+    
+    
+    curl -X POST \  
+         -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
+         -H "Content-Type: application/json; charset=utf-8" \  
+         -d @request.json \  
+         "https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID:query"
+
+#### PowerShell (Windows)
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Save the request body in a file named `request.json`, and execute the following command: 
+    
+    
+    $cred = gcloud auth print-access-token  
+    $headers = @{ "Authorization" = "Bearer $cred" }  
+      
+    Invoke-WebRequest `  
+        -Method POST `  
+        -Headers $headers `  
+        -ContentType: "application/json; charset=utf-8" `  
+        -InFile request.json `  
+        -Uri "https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID:query" | Select-Object -Expand Content
+
+## Agent Gateway and revisions
+
+Attaching, changing, or detaching an Agent Gateway binding on an agent creates a new revision and **Archives** every revision that existed before the change. Only the new revision remains Active. This is irreversible; archived revisions can't be restored.
+
+Because a binding change archives every existing revision, it is only allowed while all traffic is already on the latest revision. The API rejects the change if any manual split is set, even one that happens to put 100% of traffic on the latest revision. The rejection returns `FAILED_PRECONDITION`:
+    
+    
+    Changing spec.deployment_spec.agent_gateway_config archives every existing runtime revision, so it is only allowed while all traffic is on the latest revision. Set traffic_config.traffic_split_always_latest, or clear traffic_config, before changing the Agent Gateway configuration.
+    
+
+To change the gateway on an agent that uses a manual traffic split:
+
+  1. Switch to always-latest routing by setting `traffic_config.traffic_split_always_latest` (or by clearing `traffic_config`). See Configure traffic distribution between revisions.
+  2. Change `spec.deployment_spec.agent_gateway_config`. This creates the new revision and archives every previous one.
+  3. If you need a manual split again, build it from the revisions created after the binding change.
+
+
+
+Archived revisions remain accessible through the API, and their full [ReasoningEngineSpec](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.reasoningEngines#ReasoningEngineSpec) is preserved. To create a new revision equivalent to an archived one, get the archived revision's details and deploy a new revision with the same versioned fields. Reusing the same container image URI reproduces the same runtime; reusing the same source-code location and class methods reproduces the same behavior.
+
+## Monitor revisions
+
+Monitor revisions for activity and problems by tracking the revision number as metadata in logs. See [Set up logging](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/logging) for information on setting up logging.
+
+## Create a new agent revision
+
+To create a new revision, you update the versioned fields of a deployed agent. See [Update a deployed agent](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/manage-deployed-agents#update) for instructions.
+
+If you update versioned fields, a new revision is automatically created. If you update unversioned fields, the agent is updated across all of its existing revisions without creating a new one.
+
+## Manage revision cleanup
+
+Gemini Enterprise Agent Platform automatically removes old revisions to help you stay within revision limits. You can also manually delete revisions.
+
+### Automatic garbage collection
+
+By default, Gemini Enterprise Agent Platform enables automatic garbage collection for all agents. You cannot disable it. Garbage collection runs only as part of an agent update operation; it does not run as a background job.
+
+  * **When it runs:** If an update operation attempts to exceed the configured revision limit, Gemini Enterprise Agent Platform deletes the oldest eligible revisions in the same operation before creating the new revision. If you lower the limit, Gemini Enterprise Agent Platform immediately deletes enough of the oldest eligible revisions to meet the new limit.
+  * **Eligible revisions:** A revision is eligible for deletion only if it meets all of the following conditions: 
+    * It is in the `ACTIVE` state.
+    * It is not included in the traffic configuration (receives 0% traffic).
+  * **Failures:** If there are not enough eligible revisions to free up space, Gemini Enterprise Agent Platform rejects the update operation with a `FAILED_PRECONDITION` error. It does not delete any revisions or create a new revision. You must remove revisions from the traffic configuration or raise the limit before retrying.
+
+
+
+#### Configure the limit
+
+The limit is defined by the `revision_garbage_collection_strategy.keep_n_latest.max_revisions` field on the agent. You can set this field when you create the agent or change it later with an update request.
+
+  * **Default for new agents:** 100 revisions.
+  * **Default for existing agents:** 950 revisions.
+  * **Allowed range:** 1 to 950. A value of 0 or less is rejected. A value greater than 950 is rejected because 950 is a hard quota that cannot be raised.
+
+**Warning:** Deleted revisions cannot be restored. 
+
+### Manual deletion
+
+You can manually remove an agent revision by deleting it. You can only delete revisions that are not active for traffic management because they are not configured to receive traffic. See Configure traffic distribution between revisions for instructions to configure whether a revision receives traffic.
+
+###  Console 
+
+To delete a revision for an agent:
+
+  1. Go to **Govern > Deployments**.
+
+[Go to Deployments](https://console.cloud.google.com/agent-platform/runtimes)
+
+  2. Click the name of the agent.
+
+  3. Go to the **Revisions** tab.
+
+  4. On the revisions detail page, click the **Revision name**.
+
+  5. Find the row for the revision to remove.
+
+  6. Click the **Delete** (trash) icon.
+
+  7. When prompted, confirm deletion of the revision.
+
+
+
+
+###  Agent Platform SDK 
+
+The following code deletes a specified agent revision:
+    
+    
+    import agentplatform
+    
+    client = agentplatform.Client(
+        project="PROJECT_ID",
+        location="LOCATION",
+        http_options={"api_version": "v1beta1"},
+    )
+    
+    client.runtimes.revisions.delete(
+        name="projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID"
+    )
+    
+
+Replace the following variables in the code: 
+
+  * `PROJECT_ID`: your Google Cloud project ID
+  * `LOCATION`: a supported region
+  * `RESOURCE_ID`: the resource ID of the deployed agent
+  * `REVISION_ID`: the unique ID for a specific runtime revision
+
+
+
+###  REST 
+
+Call the [`reasoningEngineRuntimeRevisions.delete`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1beta1/projects.locations.reasoningEngines.runtimeRevisions/delete) method.
+
+Before using any of the request data, make the following replacements: 
+
+  * `PROJECT_ID`: your Google Cloud project ID
+  * `LOCATION`: a supported region
+  * `RESOURCE_ID`: the resource ID of the deployed agent
+  * `REVISION_ID`: the unique ID for a specific runtime revision
+
+
+
+HTTP method and URL: 
+    
+    
+    DELETE https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID
+
+To send your request, expand one of these options:
+
+#### curl (Linux, macOS, or Cloud Shell)
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) , or by using [Cloud Shell](https://docs.cloud.google.com/shell/docs), which automatically logs you into the `gcloud` CLI . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Save the request body in a file named `request.json`, and execute the following command: 
+    
+    
+    curl -X DELETE \  
+         -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
+         -H "Content-Type: application/json; charset=utf-8" \  
+         -d @request.json \  
+         "https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID"
+
+#### PowerShell (Windows)
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Save the request body in a file named `request.json`, and execute the following command: 
+    
+    
+    $cred = gcloud auth print-access-token  
+    $headers = @{ "Authorization" = "Bearer $cred" }  
+      
+    Invoke-WebRequest `  
+        -Method DELETE `  
+        -Headers $headers `  
+        -ContentType: "application/json; charset=utf-8" `  
+        -InFile request.json `  
+        -Uri "https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID/runtimeRevisions/REVISION_ID" | Select-Object -Expand Content
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

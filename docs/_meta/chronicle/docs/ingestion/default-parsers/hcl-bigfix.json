@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/hcl-bigfix/",
+  "file": "chronicle/docs/ingestion/default-parsers/hcl-bigfix.md",
+  "title": "Collect HCL BigFix logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T15:25:06.632981+00:00"
+}

@@ -1,0 +1,628 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/use-an-adk-agent/
+title: Use an Agent Development Kit agent \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T19:41:37.981762+00:00
+---
+
+# Use an Agent Development Kit agent  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/use-an-adk-agent/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Agents ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agents)
+
+
+
+Send feedback 
+
+#  Use an Agent Development Kit agent Stay organized with collections  Save and categorize content based on your preferences. 
+
+## Before you begin
+
+This tutorial assumes that you have read and followed the instructions in:
+
+  * [Create an Agent Development Kit agent](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/runtime/create-an-adk-agent): to create `agent` as an instance of [`AdkApp`](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/agentplatform.frameworks.AdkApp).
+  * [User authentication](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/runtime/setup#authentication) to authenticate as a user for querying the agent.
+  * [Import and initialize the SDK](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/runtime/setup#sdk-import) to initialize the client for getting a deployed instance (if needed).
+
+
+
+## Get an instance of an agent
+
+To query an [`AdkApp`](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/agentplatform.frameworks.AdkApp), you need to first [create a new instance](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/deploy-an-agent#create-agent-engine) or [get an existing instance](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/manage-deployed-agents#get).
+
+To get the [`AdkApp`](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/agentplatform.frameworks.AdkApp) that corresponds to a specific resource ID:
+
+###  Agent Platform SDK 
+
+Run the following code:
+    
+    
+    import agentplatform
+    
+    client = agentplatform.Client(  # For service interactions via client.runtimes
+        project="PROJECT_ID",
+        location="LOCATION",
+    )
+    
+    adk_app = client.runtimes.get(name="projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID")
+    
+    print(adk_app)
+    
+
+where
+
+  * `PROJECT_ID` is the Google Cloud project ID under which you [create](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/runtime/create-an-agent) and [deploy](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/deploy-an-agent) agents,
+  * `LOCATION` is one of the [supported regions](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/agent-locations), and
+  * `RESOURCE_ID` is the ID of the deployed agent as a [`reasoningEngine` resource](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.reasoningEngines).
+
+
+
+###  Python requests library 
+
+Run the following code:
+    
+    
+    from google import auth as google_auth
+    from google.auth.transport import requests as google_requests
+    import requests
+    
+    def get_identity_token():
+        credentials, _ = google_auth.default()
+        auth_request = google_requests.Request()
+        credentials.refresh(auth_request)
+        return credentials.token
+    
+    response = requests.get(
+    f"https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID",
+        headers={
+            "Content-Type": "application/json; charset=utf-8",
+            "Authorization": f"Bearer {get_identity_token()}",
+        },
+    )
+    
+
+###  REST API 
+    
+    
+    curl \
+    -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+    -H "Content-Type: application/json" \
+    https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID
+
+When using the Agent Platform SDK, the `adk_app` object corresponds to an [`AgentRuntime`](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/agentplatform.types.AgentRuntime) class that contains the following:
+
+  * [`adk_app.api_resource`](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/agentplatform.types.ReasoningEngine) with information about the deployed agent. You can also call `adk_app.operation_schemas()` to return the list of operations that the `adk_app` supports. See Supported operations for details.
+  * [`adk_app.api_client`](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/agentplatform.runtimes.Runtimes) that allows for synchronous service interactions
+  * [`adk_app.async_api_client`](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/agentplatform.runtimes.AsyncRuntimes) that allows for asynchronous service interactions
+
+
+
+The rest of this section assumes that you have an `AgentRuntime` instance, named as `adk_app`.
+
+## Supported operations
+
+The following operations are supported for `AdkApp`:
+
+  * `async_stream_query`: for streaming a response to a query.
+
+  * `async_create_session`: for creating a new session.
+
+  * `async_list_sessions`: for listing the sessions available.
+
+  * `async_get_session`: for retrieving a specific session.
+
+  * `async_delete_session`: for deleting a specific session.
+
+  * `async_add_session_to_memory`: for generating memories of a session.
+
+  * `async_search_memory`: for retrieving memories.
+
+
+
+
+To list all supported operations:
+
+###  Agent Platform SDK 
+
+Run the following code:
+    
+    
+    adk_app.operation_schemas()
+    
+
+###  Python requests library 
+
+Run the following code:
+    
+    
+    import json
+    
+    json.loads(response.content).get("spec").get("classMethods")
+    
+
+###  REST API 
+
+Represented in `spec.class_methods` from the response to the curl request.
+
+## Manage sessions
+
+`AdkApp` uses cloud-based managed sessions after you deploy the agent to Agent Platform. This section describes how to use managed sessions.
+
+**Note:** These instructions assume that you didn't [customize your database](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/runtime/create-an-adk-agent#customize-database) using `session_service_builder` when developing your agent.
+
+### Create a session
+
+To create a session for a user, use the [`AdkApp.async_create_session`](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/agentplatform.frameworks.AdkApp#vertexai_agent_engines_AdkApp_async_create_session) method:
+
+###  Agent Platform SDK 
+    
+    
+    session = await adk_app.async_create_session(user_id="USER_ID")
+    
+    print(session)
+    
+
+###  Python requests library 
+
+Run the following code:
+    
+    
+    from google import auth as google_auth
+    from google.auth.transport import requests as google_requests
+    import requests
+    import json
+    
+    def get_identity_token():
+      credentials, _ = google_auth.default()
+      auth_request = google_requests.Request()
+      credentials.refresh(auth_request)
+      return credentials.token
+    
+    response = requests.post(
+      f"https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID:query",
+      headers={
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": f"Bearer {get_identity_token()}",
+      },
+      data=json.dumps({
+        "class_method": "async_create_session",
+        "input": {"user_id": "USER_ID"},
+      }),
+    )
+    print(response.content)
+    
+
+###  REST API 
+    
+    
+    curl \
+    -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+    -H "Content-Type: application/json" \
+    https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID:query -d '{"class_method": "async_create_session", "input": {"user_id": "USER_ID"},}'
+
+  * USER_ID: Choose your own user ID with a character limit of 128. For example, `user-123`.
+
+
+
+
+The session is created as the dictionary representation of an [ADK session object](https://google.github.io/adk-docs/sessions/session/#the-session-object).
+
+### List sessions
+
+To list the sessions for a user, use the [`AdkApp.async_list_sessions`](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/agentplatform.frameworks.AdkApp#vertexai_agent_engines_AdkApp_async_list_sessions) method:
+
+###  Agent Platform SDK 
+    
+    
+    response = await adk_app.async_list_sessions(user_id="USER_ID"):
+    for session in response.sessions:
+        print(session)
+    
+
+###  Python requests library 
+
+Run the following code:
+    
+    
+    from google import auth as google_auth
+    from google.auth.transport import requests as google_requests
+    import requests
+    import json
+    
+    def get_identity_token():
+      credentials, _ = google_auth.default()
+      auth_request = google_requests.Request()
+      credentials.refresh(auth_request)
+      return credentials.token
+    
+    response = requests.post(
+      f"https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID:query",
+      headers={
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": f"Bearer {get_identity_token()}",
+      },
+      data=json.dumps({
+        "class_method": "async_list_sessions",
+        "input": {"user_id": "USER_ID"},
+      }),
+    )
+    print(response.content)
+    
+
+###  REST API 
+    
+    
+    curl \
+    -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+    -H "Content-Type: application/json" \
+    https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID:query -d '{"class_method": "async_list_sessions", "input": {"user_id": "USER_ID"},}'
+
+where USER_ID is the user ID you defined. For example, `user-123`.
+
+If any sessions are returned, they use the dictionary form of an [ADK session object](https://google.github.io/adk-docs/sessions/session/#the-session-object).
+
+### Get a session
+
+To get a specific session, use the [`AdkApp.async_get_session`](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/agentplatform.frameworks.AdkApp#vertexai_agent_engines_AdkApp_async_get_session) method:
+
+###  Agent Platform SDK 
+    
+    
+    session = await adk_app.async_get_session(user_id="USER_ID", session_id="SESSION_ID")
+    
+    print(session)
+    
+
+###  Python requests library 
+
+Run the following code:
+    
+    
+    from google import auth as google_auth
+    from google.auth.transport import requests as google_requests
+    import requests
+    import json
+    
+    def get_identity_token():
+      credentials, _ = google_auth.default()
+      auth_request = google_requests.Request()
+      credentials.refresh(auth_request)
+      return credentials.token
+    
+    response = requests.post(
+      f"https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID:query",
+      headers={
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": f"Bearer {get_identity_token()}",
+      },
+      data=json.dumps({
+        "class_method": "async_get_session",
+        "input": {"user_id": "USER_ID", "session_id": "SESSION_ID"},
+      }),
+    )
+    print(response.content)
+    
+
+###  REST API 
+    
+    
+    curl \
+    -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+    -H "Content-Type: application/json" \
+    https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID:query -d '{"class_method": "async_get_session", "input": {"user_id": "USER_ID", "session_id": "SESSION_ID"},}'
+
+The `session` is the dictionary representation of an [ADK session object](https://google.github.io/adk-docs/sessions/session/#the-session-object).
+
+### Delete a session
+
+To delete a session, use the [`AdkApp.async_delete_session`](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/agentplatform.frameworks.AdkApp#vertexai_agent_engines_AdkApp_async_delete_session) method:
+
+###  Agent Platform SDK 
+    
+    
+    await adk_app.async_delete_session(user_id="USER_ID", session_id="SESSION_ID")
+    
+
+###  Python requests library 
+
+Run the following code:
+    
+    
+    from google import auth as google_auth
+    from google.auth.transport import requests as google_requests
+    import requests
+    import json
+    
+    def get_identity_token():
+      credentials, _ = google_auth.default()
+      auth_request = google_requests.Request()
+      credentials.refresh(auth_request)
+      return credentials.token
+    
+    response = requests.post(
+      f"https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID:query",
+      headers={
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": f"Bearer {get_identity_token()}",
+      },
+      data=json.dumps({
+        "class_method": "async_delete_session",
+        "input": {"user_id": "USER_ID", "session_id": "SESSION_ID"},
+      }),
+    )
+    print(response.content)
+    
+
+###  REST API 
+    
+    
+    curl \
+    -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+    -H "Content-Type: application/json" \
+    https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID:query -d '{"class_method": "async_delete_session", "input": {"user_id": "USER_ID", "session_id": "SESSION_ID"},}'
+
+## Stream a response to a query
+
+**Note:** The maximum duration for a `streamQuery` request is 10 minutes. For workflows that require longer execution times, use Long-running query jobs instead.
+
+To stream responses from an agent in a session, use the [`AdkApp.async_stream_query`](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/agentplatform.frameworks.AdkApp#vertexai_agent_engines_AdkApp_async_stream_query) method:
+
+###  Agent Platform SDK 
+    
+    
+    async for event in adk_app.async_stream_query(
+        user_id="USER_ID",
+        #session_id="SESSION_ID",  # Optional
+        message="What is the exchange rate from US dollars to SEK today?",
+    ):
+      print(event)
+    
+
+###  Python requests library 
+    
+    
+    from google import auth as google_auth
+    from google.auth.transport import requests as google_requests
+    import requests
+    
+    def get_identity_token():
+        credentials, _ = google_auth.default()
+        auth_request = google_requests.Request()
+        credentials.refresh(auth_request)
+        return credentials.token
+    
+    requests.post(
+        f"https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID:streamQuery",
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {get_identity_token()}",
+        },
+        data=json.dumps({
+            "class_method": "async_stream_query",
+            "input": {
+                "user_id": "USER_ID",
+                #"session_id": "SESSION_ID",
+                "message": "What is the exchange rate from US dollars to SEK today?",
+            },
+        }),
+        stream=True,
+    )
+    
+
+###  REST API 
+    
+    
+    curl \
+    -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+    -H "Content-Type: application/json" \
+    https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID:streamQuery?alt=sse -d '{
+      "class_method": "async_stream_query",
+      "input": {
+        "user_id": "USER_ID",
+        #"session_id": "SESSION_ID",
+        "message": "What is the exchange rate from US dollars to SEK today?",
+      }
+    }'
+
+**Note:** the `session_id=` argument is optional. If it is not specified, a new session is automatically created and used for serving that query. If the provided session ID doesn't exist, an empty response is returned. We recommend you leave this out if you are only checking whether an agent is reachable.
+
+If you are using the Agent Platform SDK, you should receive a continuation of the conversation like the following sequence of dictionaries:
+    
+    
+    {'author': 'currency_exchange_agent',
+     'content': {'parts': [{'function_call': {'args': {'currency_date': '2025-04-03',
+                                                       'currency_from': 'USD',
+                                                       'currency_to': 'SEK'},
+                                              'id': 'adk-2b9230a6-4b92-4a1b-9a65-b708ff6c68b6',
+                                              'name': 'get_exchange_rate'}}],
+                 'role': 'model'},
+     'id': 'bOPHtzji',
+     # ...
+    }
+    {'author': 'currency_exchange_agent',
+     'content': {'parts': [{'function_response': {'id': 'adk-2b9230a6-4b92-4a1b-9a65-b708ff6c68b6',
+                                                  'name': 'get_exchange_rate',
+                                                  'response': {'amount': 1.0,
+                                                               'base': 'USD',
+                                                               'date': '2025-04-03',
+                                                               'rates': {'SEK': 9.6607}}}}],
+                 'role': 'user'},
+     'id': '9AoDFmiL',
+     # ...
+    }
+    {'author': 'currency_exchange_agent',
+     'content': {'parts': [{'text': 'The exchange rate from USD to SEK on '
+                                    '2025-04-03 is 1 USD to 9.6607 SEK.'}],
+                 'role': 'model'},
+     'id': 'hmle7trT',
+     # ...
+    }
+    
+
+## Long-running query jobs
+
+For queries that can take a long time to complete (up to seven days), you can run them as long-running jobs. These jobs run asynchronously. You can check the job status and retrieve results later.
+
+**Note:** You can run long-running jobs only on `reasoningEngine` resources that have been created on April 22, 2026 or later. You cannot update previously created `reasoningEngine` resources to run long-running jobs.
+
+### Deploy an agent for async query
+
+To deploy an agent, follow the general instructions in [Deploy an agent](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/deploy-an-agent). For source-based deployment, set the `deploymentSpec.agentFramework` field to `google-adk`.
+
+If you use a custom API endpoint by building your own container image, you must add the following environment variables when creating the agent using the SDK:
+    
+    
+    "env_vars" = {
+        "API_ENDPOINT_PREFIX": "/api/myendpoint"
+    }
+    
+
+### Start a long-running query job
+
+As a prerequisite, you must grant the service agent `service-PROJECT_NUMBER@gcp-sa-aiplatform-re.iam.gserviceaccount.com` the `roles/storage.objectCreator` role to the storage bucket for output files.
+
+To start a long-running query job:
+
+###  Agent Platform SDK 
+    
+    
+    import agentplatform
+    
+    client = agentplatform.Client(
+        project="PROJECT_ID",
+        location="LOCATION",
+    )
+    
+    response = client.runtimes.run_query_job(
+        name="projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID",
+        config={
+            "query": '{"input":{"user_id":"USER_ID", "message":"What is the exchange rate from US dollars to SEK today?"}}',
+            "output_gcs_uri": "gs://GCS_BUCKET_NAME/OUTPUT_FILE",
+        },
+    )
+    print(response)
+    
+
+With the SDK, `output_gcs_uri` can be a directory or a filename. If it is a filename, the system uses this file to store the response. If it is a directory, the system automatically generates a file for the response. In both cases, the input query is stored in the same directory with the same filename prefix as the output file.
+
+###  REST 
+    
+    
+    curl \
+    -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+    -H "Content-Type: application/json" \
+    https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID:asyncQuery -d \
+    '{
+      "input_gcs_uri": "gs://GCS_BUCKET_NAME/INPUT_FILE",
+      "output_gcs_uri": "gs://GCS_BUCKET_NAME/OUTPUT_FILE"
+    }'
+
+For the REST API call, the `input_gcs_uri` field must point to a file that contains the query. The content of the file must be a JSON object with an `input` field that matches the `input` field of `QueryReasoningEngineRequest` (such as `{ "input": { "user_id": "hello", "message":"$QUERY"} }`). If this input file is in a different bucket from the output location, you must also grant the service agent `service-PROJECT_NUMBER@gcp-sa-aiplatform-re.iam.gserviceaccount.com` the `roles/storage.objectReader` role to the storage bucket where the input files are located.
+
+The `output_gcs_uri` must be a filename.
+
+### Check the status of a long-running query job
+
+To check the status and retrieve the results of a long-running query job:
+
+###  Agent Platform SDK 
+    
+    
+    response = client.runtimes.check_query_job(
+        name="JOB_NAME",
+        config={
+            "retrieve_result": True,
+        },
+    )
+    print(response)
+    
+
+### Cancel a long-running query job
+
+To cancel a long-running query job, you must have the LRO resource name that is returned from the long-running query job.
+
+###  Agent Platform SDK 
+    
+    
+    response = client.runtimes.cancel_query_job(
+        name="projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID",
+        config={
+            "operation_name": "projects/PROJECT_ID/locations/LOCATION/operations/OPERATION_ID",
+        },
+    )
+    
+
+###  REST 
+    
+    
+    curl \
+    -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+    -H "Content-Type: application/json" \
+    https://LOCATION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID:cancelAsyncQuery -d \
+    '{
+      "name": "projects/PROJECT_ID/locations/LOCATION/reasoningEngines/RESOURCE_ID",
+      "operation_name": "projects/PROJECT_ID/locations/LOCATION/operations/OPERATION_ID"
+    }'
+
+Cancellation is asynchronous. The cancel request returns as soon as it's accepted, but the job can keep reporting a status of `RUNNING` from `check_query_job` until work that is already in flight, such as a blocking tool call, finishes.
+
+Once the job is cancelled, its operation completes with an error code of `1` (`CANCELLED`) and the message `Cancelled by user.`. Note that `check_query_job` reports every operation that completed with an error as a status of `FAILED`, so a cancelled job is reported as `FAILED` rather than through a distinct cancelled status. Inspect the error code to tell a cancellation apart from a genuine failure.
+
+## Manage memories
+
+`AdkApp` uses [Memory Bank](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/memory-bank) if you include a `PreloadMemoryTool` in [the agent definition](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/runtime/create-an-adk-agent#manage-memories) and deploy the agent to Agent Platform. This section describes how to use generate and retrieve memories from the agent through the default implementation of the [ADK memory service](https://google.github.io/adk-docs/sessions/memory/#vertex-ai-memory-bank).
+
+### Add session to memory
+
+To retain memory of meaningful information in a session (that can be used in future sessions), use the [`async_add_session_to_memory`](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/agentplatform.frameworks.AdkApp#vertexai_agent_engines_AdkApp_async_add_session_to_memory) method:
+
+###  Agent Platform SDK 
+    
+    
+    await adk_app.async_add_session_to_memory(session="SESSION_DICT")
+    
+
+where `SESSION_DICT` is the dictionary form of an [ADK session object](https://google.github.io/adk-docs/sessions/session/#the-session-object).
+
+### Search for memories
+
+To search through the memories of the agent, you can use the [`async_search_memory`](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/agentplatform.frameworks.AdkApp#vertexai_agent_engines_AdkApp_async_search_memory) method:
+
+###  Agent Platform SDK 
+    
+    
+    response = await adk_app.async_search_memory(
+        user_id="USER_ID",
+        query="QUERY",
+    )
+    print(response)
+    
+
+where
+
+  * `USER_ID` is the scope for relevant memories.
+  * `QUERY` is the query for which to perform similarity search.
+
+
+
+## What's next
+
+  * [Use an agent](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/use-an-agent).
+  * [Evaluate an agent](https://docs.cloud.google.com/gemini-enterprise-agent-platform/optimize/evaluation/agent-evaluation).
+  * [Manage deployed agents](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/manage-deployed-agents).
+  * [Get support](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/agent-support).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

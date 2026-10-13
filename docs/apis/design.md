@@ -1,0 +1,101 @@
+---
+url: https://docs.cloud.google.com/apis/design/
+title: API design guide \u00a0|\u00a0 Cloud API Design Guide \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T19:14:00.419722+00:00
+---
+
+# API design guide  |  Cloud API Design Guide  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/apis/design/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Cloud APIs ](https://docs.cloud.google.com/apis/docs/overview)
+  * [ Cloud API Design Guide ](https://docs.cloud.google.com/apis/design)
+
+
+
+Send feedback 
+
+#  API design guide Stay organized with collections  Save and categorize content based on your preferences. 
+
+[Changelog](https://cloud.google.com/apis/design/changelog)
+
+## Introduction
+
+This is a general design guide for networked APIs. It has been used inside Google since 2014 and is the guide that Google follows when designing [Cloud APIs](https://docs.cloud.google.com/apis/docs/overview) and other [Google APIs](https://github.com/googleapis/googleapis). This design guide is shared here to inform outside developers and to make it easier for us all to work together.
+
+[Cloud Endpoints](https://docs.cloud.google.com/endpoints/docs/grpc) developers may find this guide particularly useful when designing gRPC APIs, and we strongly recommend such developers use these design principles. However, we don't mandate its use. You can use Cloud Endpoints and gRPC without following the guide.
+
+This guide applies to both REST APIs and RPC APIs, with specific focus on gRPC APIs. gRPC APIs use [Protocol Buffers](https://docs.cloud.google.com/apis/design/proto3) to define their API surface and [API Service Configuration](https://github.com/googleapis/googleapis/blob/master/google/api/service.proto) to configure their API services, including HTTP mapping, logging, and monitoring. HTTP mapping features are used by Google APIs and Cloud Endpoints gRPC APIs for JSON/HTTP to Protocol Buffers/RPC [transcoding](https://docs.cloud.google.com/endpoints/docs/transcoding).
+
+This guide is a living document and additions to it will be made over time as new style and design patterns are adopted and approved. In that spirit, it is never going to be complete and there will always be ample room for the art and craft of API design.
+
+## Conventions Used in This Guide
+
+The requirement level keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" used in this document are to be interpreted as described in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt).
+
+In this document, such keywords are highlighted using **bold** font.
+
+## Sections
+
+### Resource-oriented Design
+
+For information about implementing resource-oriented design for RPC and REST APIs, see [AIP-121](https://google.aip.dev/121).
+
+### Resource Names
+
+For information about resource names, see [AIP-122](https://google.aip.dev/122).
+
+### Standard Methods
+
+For general information about methods, see [AIP-130](https://google.aip.dev/130).
+
+For information about standard methods, see the following AIPs:
+
+  * For `Get`, see [AIP-131](https://google.aip.dev/131)
+  * For `List`, see [AIP-132](https://google.aip.dev/132)
+  * For `Create`, see [AIP-133](https://google.aip.dev/133)
+  * For `Update`, see [AIP-134](https://google.aip.dev/134)
+  * For `Delete`, see [AIP-135](https://google.aip.dev/135)
+
+
+
+### Custom Methods
+
+For information about custom methods, see [AIP-136](https://google.aip.dev/136).
+
+### Additional topics
+
+For information about the following topics, see their related AIPs.
+
+  * For **Standard fields** , see [AIP-148](https://google.aip.dev/148)
+  * For **Errors** , see [AIP-193](https://google.aip.dev/193)
+  * For **Design patterns** , see [AIP guidance on design patterns](https://google.aip.dev/general#design-patterns)
+  * For **Inline API documentation** , see [AIP-192](https://google.aip.dev/192)
+  * For **Using proto3** , see [the Syntax section of AIP-191](https://google.aip.dev/191#syntax)
+  * For **Versioning** , see [AIP-185](https://google.aip.dev/185)
+  * For **Backward compatibility** , see [AIP-180](https://google.aip.dev/180)
+  * For **File structure** , see [the File Layout section of AIP-191](https://google.aip.dev/191#file-layout)
+  * For a **Glossary** of terms, see [AIP-9](https://google.aip.dev/9)
+  * For **Naming conventions** , see [AIP-190](https://google.aip.dev/190)
+
+
+
+For information about the following topics, see their related pages in this guide.
+
+  * [Directory Structure](https://cloud.google.com/apis/design/directory_structure)
+
+
+
+[ Next Directory structure  arrow_forward  ](https://docs.cloud.google.com/apis/design/directory_structure)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

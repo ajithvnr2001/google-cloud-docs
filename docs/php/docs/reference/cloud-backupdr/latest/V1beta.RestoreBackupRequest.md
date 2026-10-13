@@ -1,0 +1,301 @@
+---
+url: https://docs.cloud.google.com/php/docs/reference/cloud-backupdr/latest/V1beta.RestoreBackupRequest
+title: Google Cloud Backup Dr V1beta Client - Class RestoreBackupRequest (0.15.1) \u00a0|\u00a0 PHP client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T15:25:19.163728+00:00
+---
+
+# Google Cloud Backup Dr V1beta Client - Class RestoreBackupRequest (0.15.1)  |  PHP client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/php/docs/reference/cloud-backupdr/latest/V1beta.RestoreBackupRequest
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ PHP ](https://docs.cloud.google.com/php/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/php/docs/reference)
+
+
+
+Send feedback 
+
+#  Google Cloud Backup Dr V1beta Client - Class RestoreBackupRequest (0.15.1) Stay organized with collections  Save and categorize content based on your preferences. 
+
+0.15.1 (latest)  0.13.2  0.12.1  0.11.1  0.10.0  0.9.0  0.8.1  0.7.0  0.6.2  0.5.1  0.4.2  0.3.0  0.2.0  0.1.0 
+
+**Beta**
+
+This library is covered by the [Pre-GA Offerings Terms](https://docs.cloud.google.com/terms/service-terms#1) of the Terms of Service. Pre-GA libraries might have limited support, and changes to pre-GA libraries might not be compatible with other pre-GA versions. For more information, see the [launch stage descriptions](https://docs.cloud.google.com/products#product-launch-stages). 
+
+Reference documentation and code samples for the Google Cloud Backup Dr V1beta Client class RestoreBackupRequest.
+
+Request message for restoring from a Backup.
+
+Generated from protobuf message `google.cloud.backupdr.v1beta.RestoreBackupRequest`
+
+## Namespace
+
+Google \ Cloud \ BackupDR \ V1beta
+
+## Methods 
+
+### __construct
+
+Constructor.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`data` |  `mixed`   
+  
+  
+### getComputeInstanceTargetEnvironment
+
+Compute Engine target environment to be used during restore.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[ComputeInstanceTargetEnvironment](https://docs.cloud.google.com/php/docs/reference/cloud-backupdr/latest/V1beta.ComputeInstanceTargetEnvironment)|null` |   
+  
+### hasComputeInstanceTargetEnvironment
+
+### setComputeInstanceTargetEnvironment
+
+Compute Engine target environment to be used during restore.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`var` |  `[ComputeInstanceTargetEnvironment](https://docs.cloud.google.com/php/docs/reference/cloud-backupdr/latest/V1beta.ComputeInstanceTargetEnvironment)`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`$this` |   
+  
+### getDiskTargetEnvironment
+
+Disk target environment to be used during restore.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[DiskTargetEnvironment](https://docs.cloud.google.com/php/docs/reference/cloud-backupdr/latest/V1beta.DiskTargetEnvironment)|null` |   
+  
+### hasDiskTargetEnvironment
+
+### setDiskTargetEnvironment
+
+Disk target environment to be used during restore.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`var` |  `[DiskTargetEnvironment](https://docs.cloud.google.com/php/docs/reference/cloud-backupdr/latest/V1beta.DiskTargetEnvironment)`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`$this` |   
+  
+### getRegionDiskTargetEnvironment
+
+Region disk target environment to be used during restore.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[RegionDiskTargetEnvironment](https://docs.cloud.google.com/php/docs/reference/cloud-backupdr/latest/V1beta.RegionDiskTargetEnvironment)|null` |   
+  
+### hasRegionDiskTargetEnvironment
+
+### setRegionDiskTargetEnvironment
+
+Region disk target environment to be used during restore.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`var` |  `[RegionDiskTargetEnvironment](https://docs.cloud.google.com/php/docs/reference/cloud-backupdr/latest/V1beta.RegionDiskTargetEnvironment)`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`$this` |   
+  
+### getComputeInstanceRestoreProperties
+
+Compute Engine instance properties to be overridden during restore.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[ComputeInstanceRestoreProperties](https://docs.cloud.google.com/php/docs/reference/cloud-backupdr/latest/V1beta.ComputeInstanceRestoreProperties)|null` |   
+  
+### hasComputeInstanceRestoreProperties
+
+### setComputeInstanceRestoreProperties
+
+Compute Engine instance properties to be overridden during restore.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`var` |  `[ComputeInstanceRestoreProperties](https://docs.cloud.google.com/php/docs/reference/cloud-backupdr/latest/V1beta.ComputeInstanceRestoreProperties)`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`$this` |   
+  
+### getDiskRestoreProperties
+
+Disk properties to be overridden during restore.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[DiskRestoreProperties](https://docs.cloud.google.com/php/docs/reference/cloud-backupdr/latest/V1beta.DiskRestoreProperties)|null` |   
+  
+### hasDiskRestoreProperties
+
+### setDiskRestoreProperties
+
+Disk properties to be overridden during restore.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`var` |  `[DiskRestoreProperties](https://docs.cloud.google.com/php/docs/reference/cloud-backupdr/latest/V1beta.DiskRestoreProperties)`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`$this` |   
+  
+### getName
+
+Required. The resource name of the Backup instance, in the format 'projects/_/locations/_ /backupVaults/_/dataSources/_ /backups/'.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`string` |   
+  
+### setName
+
+Required. The resource name of the Backup instance, in the format 'projects/_/locations/_ /backupVaults/_/dataSources/_ /backups/'.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`var` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`$this` |   
+  
+### getRequestId
+
+Optional. An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes after the first request.
+
+For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+
+**Returns**  
+---  
+**Type** | **Description**  
+`string` |   
+  
+### setRequestId
+
+Optional. An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes after the first request.
+
+For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`var` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`$this` |   
+  
+### getClearOverridesFieldMask
+
+Optional. A field mask used to clear server-side default values for fields within the `instance_properties` oneof.
+
+When a field in this mask is cleared, the server will not apply its default logic (like inheriting a value from the source) for that field. The most common current use case is clearing default encryption keys. Examples of field mask paths:
+
+  * Compute Instance Disks: `compute_instance_restore_properties.disks.*.disk_encryption_key`
+  * Single Disk: `disk_restore_properties.disk_encryption_key`
+
+
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Google\Protobuf\FieldMask|null` |   
+  
+### hasClearOverridesFieldMask
+
+### clearClearOverridesFieldMask
+
+### setClearOverridesFieldMask
+
+Optional. A field mask used to clear server-side default values for fields within the `instance_properties` oneof.
+
+When a field in this mask is cleared, the server will not apply its default logic (like inheriting a value from the source) for that field. The most common current use case is clearing default encryption keys. Examples of field mask paths:
+
+  * Compute Instance Disks: `compute_instance_restore_properties.disks.*.disk_encryption_key`
+  * Single Disk: `disk_restore_properties.disk_encryption_key`
+
+
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`var` |  `Google\Protobuf\FieldMask`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`$this` |   
+  
+### getTargetEnvironment
+
+**Returns**  
+---  
+**Type** | **Description**  
+`string` |   
+  
+### getInstanceProperties
+
+**Returns**  
+---  
+**Type** | **Description**  
+`string` |   
+  
+### static::build
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`name` |  `string`   
+Required. The resource name of the Backup instance, in the format 'projects/_/locations/_ /backupVaults/_/dataSources/_ /backups/'. Please see BackupDRClient::backupName() for help formatting this field.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[RestoreBackupRequest](https://docs.cloud.google.com/php/docs/reference/cloud-backupdr/latest/V1beta.RestoreBackupRequest)` |   
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-02 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-02 UTC."],[],[]] 

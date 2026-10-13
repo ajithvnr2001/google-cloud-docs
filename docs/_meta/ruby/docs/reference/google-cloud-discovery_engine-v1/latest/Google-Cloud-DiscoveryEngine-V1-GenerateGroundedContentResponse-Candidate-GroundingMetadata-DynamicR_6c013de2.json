@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-discovery_engine-v1/latest/Google-Cloud-DiscoveryEngine-V1-GenerateGroundedContentResponse-Candidate-GroundingMetadata-DynamicRetrievalPredictorMetadata-Version/",
+  "file": "ruby/docs/reference/google-cloud-discovery_engine-v1/latest/Google-Cloud-DiscoveryEngine-V1-GenerateGroundedContentResponse-Candidate-GroundingMetadata-DynamicR_6c013de2.md",
+  "title": "Discovery Engine V1 API - Module Google::Cloud::DiscoveryEngine::V1::GenerateGroundedContentResponse::Candidate::GroundingMetadata::DynamicRetrievalPredictorMetadata::Version (v2.12.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T18:41:35.682292+00:00"
+}

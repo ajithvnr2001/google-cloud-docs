@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/healthcare-api/docs/reference/rest/v1/projects.locations.datasets.consentStores.attributeDefinitions/create/",
+  "file": "healthcare-api/docs/reference/rest/v1/projects.locations.datasets.consentStores.attributeDefinitions/create.md",
+  "title": "Method: attributeDefinitions.create \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T18:41:02.588873+00:00"
+}

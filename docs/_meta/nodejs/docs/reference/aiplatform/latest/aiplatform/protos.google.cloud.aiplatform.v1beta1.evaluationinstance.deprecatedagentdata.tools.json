@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/nodejs/docs/reference/aiplatform/latest/aiplatform/protos.google.cloud.aiplatform.v1beta1.evaluationinstance.deprecatedagentdata.tools",
+  "file": "nodejs/docs/reference/aiplatform/latest/aiplatform/protos.google.cloud.aiplatform.v1beta1.evaluationinstance.deprecatedagentdata.tools.md",
+  "title": "Class protos.google.cloud.aiplatform.v1beta1.EvaluationInstance.DeprecatedAgentData.Tools (7.4.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T20:18:58.451048+00:00"
+}

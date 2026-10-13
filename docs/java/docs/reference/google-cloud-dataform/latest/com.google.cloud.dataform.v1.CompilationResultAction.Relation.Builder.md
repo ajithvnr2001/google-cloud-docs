@@ -1,0 +1,2467 @@
+---
+url: https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder
+title: Class CompilationResultAction.Relation.Builder (0.98.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T19:21:33.593439+00:00
+---
+
+# Class CompilationResultAction.Relation.Builder (0.98.0)  |  Java client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Java ](https://docs.cloud.google.com/java/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/java/docs/reference)
+
+
+
+Send feedback 
+
+#  Class CompilationResultAction.Relation.Builder (0.98.0) Stay organized with collections  Save and categorize content based on your preferences. 
+
+0.98.0 (latest)  0.94.0  0.93.0  0.92.0  0.90.0  0.87.0  0.86.0  0.84.0  0.82.0  0.81.0  0.80.0  0.79.0  0.77.0  0.75.0  0.74.0  0.73.0  0.72.0  0.71.0  0.69.0  0.67.0  0.66.0  0.63.0  0.62.0  0.61.0  0.59.0  0.58.0  0.57.0  0.56.0  0.55.0  0.54.0  0.53.0  0.52.0  0.51.0  0.50.0  0.48.0  0.47.0  0.46.0  0.45.0  0.44.0  0.43.0  0.42.0  0.41.0  0.40.0  0.39.0  0.38.0  0.36.0  0.35.0  0.34.0  0.33.0  0.32.0  0.31.0  0.30.0  0.29.0  0.28.0  0.27.0  0.26.0  0.23.0  0.22.0  0.21.0  0.20.0  0.19.0  0.18.0  0.17.0  0.16.0  0.15.0  0.14.0  0.13.0  0.12.0  0.11.0  0.10.0  0.8.0  0.7.0  0.6.0  0.5.0  0.4.0  0.3.0  0.2.4 
+    
+    
+    public static final class CompilationResultAction.Relation.Builder extends GeneratedMessage.Builder<CompilationResultAction.Relation.Builder> implements CompilationResultAction.RelationOrBuilder
+
+Represents a database relation.
+
+Protobuf type `google.cloud.dataform.v1.CompilationResultAction.Relation`
+
+## Inheritance
+
+[java.lang.Object](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html) > [AbstractMessageLite.Builder<MessageType,BuilderType>](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessageLite.Builder.html) > [AbstractMessage.Builder<BuilderType>](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html) > [GeneratedMessage.Builder](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html) > CompilationResultAction.Relation.Builder
+
+## Implements
+
+[CompilationResultAction.RelationOrBuilder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.RelationOrBuilder)
+
+## Inherited Members
+
+[AbstractMessage.Builder.findInitializationErrors()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_findInitializationErrors__)
+
+[AbstractMessage.Builder.getInitializationErrorString()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_getInitializationErrorString__)
+
+[AbstractMessage.Builder.internalMergeFrom(AbstractMessageLite)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_internalMergeFrom_com_google_protobuf_AbstractMessageLite_)
+
+[AbstractMessage.Builder.mergeFrom(byte[])](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_mergeFrom_byte___)
+
+[AbstractMessage.Builder.mergeFrom(byte[],ExtensionRegistryLite)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_mergeFrom_byte___com_google_protobuf_ExtensionRegistryLite_)
+
+[AbstractMessage.Builder.mergeFrom(byte[],int,int)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_mergeFrom_byte___int_int_)
+
+[AbstractMessage.Builder.mergeFrom(byte[],int,int,ExtensionRegistryLite)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_mergeFrom_byte___int_int_com_google_protobuf_ExtensionRegistryLite_)
+
+[AbstractMessage.Builder.mergeFrom(ByteString)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_mergeFrom_com_google_protobuf_ByteString_)
+
+[AbstractMessage.Builder.mergeFrom(ByteString,ExtensionRegistryLite)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_mergeFrom_com_google_protobuf_ByteString_com_google_protobuf_ExtensionRegistryLite_)
+
+[AbstractMessage.Builder.mergeFrom(CodedInputStream)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_mergeFrom_com_google_protobuf_CodedInputStream_)
+
+[AbstractMessage.Builder.mergeFrom(CodedInputStream,ExtensionRegistryLite)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_mergeFrom_com_google_protobuf_CodedInputStream_com_google_protobuf_ExtensionRegistryLite_)
+
+[AbstractMessage.Builder.mergeFrom(Message)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_mergeFrom_com_google_protobuf_Message_)
+
+[AbstractMessage.Builder.mergeFrom(InputStream)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_mergeFrom_java_io_InputStream_)
+
+[AbstractMessage.Builder.mergeFrom(InputStream,ExtensionRegistryLite)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_mergeFrom_java_io_InputStream_com_google_protobuf_ExtensionRegistryLite_)
+
+[AbstractMessage.Builder.newUninitializedMessageException(Message)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_newUninitializedMessageException_com_google_protobuf_Message_)
+
+[AbstractMessage.Builder.toString()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_toString__)
+
+[AbstractMessageLite.Builder.<T>addAll(Iterable<T>,Collection<? super T>)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessageLite.Builder.html#com_google_protobuf_AbstractMessageLite_Builder__T_addAll_java_lang_Iterable_T__java_util_Collection___super_T__)
+
+[AbstractMessageLite.Builder.<T>addAll(Iterable<T>,List<? super T>)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessageLite.Builder.html#com_google_protobuf_AbstractMessageLite_Builder__T_addAll_java_lang_Iterable_T__java_util_List___super_T__)
+
+[AbstractMessageLite.Builder.internalMergeFrom(MessageType)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessageLite.Builder.html#com_google_protobuf_AbstractMessageLite_Builder_internalMergeFrom_MessageType_)
+
+[AbstractMessageLite.Builder.mergeDelimitedFrom(InputStream)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessageLite.Builder.html#com_google_protobuf_AbstractMessageLite_Builder_mergeDelimitedFrom_java_io_InputStream_)
+
+[AbstractMessageLite.Builder.mergeDelimitedFrom(InputStream,ExtensionRegistryLite)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessageLite.Builder.html#com_google_protobuf_AbstractMessageLite_Builder_mergeDelimitedFrom_java_io_InputStream_com_google_protobuf_ExtensionRegistryLite_)
+
+[AbstractMessageLite.Builder.mergeFrom(MessageLite)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessageLite.Builder.html#com_google_protobuf_AbstractMessageLite_Builder_mergeFrom_com_google_protobuf_MessageLite_)
+
+[AbstractMessageLite.Builder.newUninitializedMessageException(MessageLite)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessageLite.Builder.html#com_google_protobuf_AbstractMessageLite_Builder_newUninitializedMessageException_com_google_protobuf_MessageLite_)
+
+[GeneratedMessage.Builder.addRepeatedField(Descriptors.FieldDescriptor,Object)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_addRepeatedField_com_google_protobuf_Descriptors_FieldDescriptor_java_lang_Object_)
+
+[GeneratedMessage.Builder.clear()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_clear__)
+
+[GeneratedMessage.Builder.clearField(Descriptors.FieldDescriptor)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_clearField_com_google_protobuf_Descriptors_FieldDescriptor_)
+
+[GeneratedMessage.Builder.clearOneof(Descriptors.OneofDescriptor)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_clearOneof_com_google_protobuf_Descriptors_OneofDescriptor_)
+
+[GeneratedMessage.Builder.clone()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_clone__)
+
+[GeneratedMessage.Builder.getAllFields()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_getAllFields__)
+
+[GeneratedMessage.Builder.getDescriptorForType()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_getDescriptorForType__)
+
+[GeneratedMessage.Builder.getField(Descriptors.FieldDescriptor)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_getField_com_google_protobuf_Descriptors_FieldDescriptor_)
+
+[GeneratedMessage.Builder.getFieldBuilder(Descriptors.FieldDescriptor)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_getFieldBuilder_com_google_protobuf_Descriptors_FieldDescriptor_)
+
+[GeneratedMessage.Builder.getOneofFieldDescriptor(Descriptors.OneofDescriptor)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_getOneofFieldDescriptor_com_google_protobuf_Descriptors_OneofDescriptor_)
+
+[GeneratedMessage.Builder.getParentForChildren()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_getParentForChildren__)
+
+[GeneratedMessage.Builder.getRepeatedField(Descriptors.FieldDescriptor,int)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_getRepeatedField_com_google_protobuf_Descriptors_FieldDescriptor_int_)
+
+[GeneratedMessage.Builder.getRepeatedFieldBuilder(Descriptors.FieldDescriptor,int)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_getRepeatedFieldBuilder_com_google_protobuf_Descriptors_FieldDescriptor_int_)
+
+[GeneratedMessage.Builder.getRepeatedFieldCount(Descriptors.FieldDescriptor)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_getRepeatedFieldCount_com_google_protobuf_Descriptors_FieldDescriptor_)
+
+com.google.protobuf.GeneratedMessage.Builder.getUnknownFieldSetBuilder()
+
+[GeneratedMessage.Builder.getUnknownFields()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_getUnknownFields__)
+
+[GeneratedMessage.Builder.hasField(Descriptors.FieldDescriptor)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_hasField_com_google_protobuf_Descriptors_FieldDescriptor_)
+
+[GeneratedMessage.Builder.hasOneof(Descriptors.OneofDescriptor)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_hasOneof_com_google_protobuf_Descriptors_OneofDescriptor_)
+
+[GeneratedMessage.Builder.internalGetFieldAccessorTable()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_internalGetFieldAccessorTable__)
+
+[GeneratedMessage.Builder.internalGetMapField(int)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_internalGetMapField_int_)
+
+com.google.protobuf.GeneratedMessage.Builder.internalGetMapFieldReflection(int)
+
+[GeneratedMessage.Builder.internalGetMutableMapField(int)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_internalGetMutableMapField_int_)
+
+com.google.protobuf.GeneratedMessage.Builder.internalGetMutableMapFieldReflection(int)
+
+[GeneratedMessage.Builder.isClean()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_isClean__)
+
+[GeneratedMessage.Builder.isInitialized()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_isInitialized__)
+
+[GeneratedMessage.Builder.markClean()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_markClean__)
+
+[GeneratedMessage.Builder.mergeUnknownFields(UnknownFieldSet)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_mergeUnknownFields_com_google_protobuf_UnknownFieldSet_)
+
+com.google.protobuf.GeneratedMessage.Builder.mergeUnknownLengthDelimitedField(int,com.google.protobuf.ByteString)
+
+com.google.protobuf.GeneratedMessage.Builder.mergeUnknownVarintField(int,int)
+
+[GeneratedMessage.Builder.newBuilderForField(Descriptors.FieldDescriptor)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_newBuilderForField_com_google_protobuf_Descriptors_FieldDescriptor_)
+
+[GeneratedMessage.Builder.onBuilt()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_onBuilt__)
+
+[GeneratedMessage.Builder.onChanged()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_onChanged__)
+
+com.google.protobuf.GeneratedMessage.Builder.parseUnknownField(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite,int)
+
+[GeneratedMessage.Builder.setField(Descriptors.FieldDescriptor,Object)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_setField_com_google_protobuf_Descriptors_FieldDescriptor_java_lang_Object_)
+
+[GeneratedMessage.Builder.setRepeatedField(Descriptors.FieldDescriptor,int,Object)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_setRepeatedField_com_google_protobuf_Descriptors_FieldDescriptor_int_java_lang_Object_)
+
+com.google.protobuf.GeneratedMessage.Builder.setUnknownFieldSetBuilder(com.google.protobuf.UnknownFieldSet.Builder)
+
+[GeneratedMessage.Builder.setUnknownFields(UnknownFieldSet)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_setUnknownFields_com_google_protobuf_UnknownFieldSet_)
+
+com.google.protobuf.GeneratedMessage.Builder.setUnknownFieldsProto3(com.google.protobuf.UnknownFieldSet)
+
+[Object.equals(Object)](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-)
+
+[Object.finalize()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--)
+
+[Object.getClass()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--)
+
+[Object.hashCode()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--)
+
+[Object.notify()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--)
+
+[Object.notifyAll()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--)
+
+[Object.wait()](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--)
+
+[Object.wait(long)](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-)
+
+[Object.wait(long,int)](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-)
+
+## Static Methods 
+
+### getDescriptor()
+    
+    
+    public static final Descriptors.Descriptor getDescriptor()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[Descriptor](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Descriptors.Descriptor.html)` |   
+  
+## Methods 
+
+### addAllClusterExpressions(Iterable<String> values)
+    
+    
+    public CompilationResultAction.Relation.Builder addAllClusterExpressions(Iterable<String> values)
+
+A list of columns or SQL expressions used to cluster the table.
+
+`repeated string cluster_expressions = 11;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`values` | `[Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)<[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)>`  
+The clusterExpressions to add.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### addAllDependencyTargets(Iterable<? extends Target> values)
+    
+    
+    public CompilationResultAction.Relation.Builder addAllDependencyTargets(Iterable<? extends Target> values)
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`values` | `[Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)<? extends com.google.cloud.dataform.v1.Target>`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### addAllPostOperations(Iterable<String> values)
+    
+    
+    public CompilationResultAction.Relation.Builder addAllPostOperations(Iterable<String> values)
+
+SQL statements to be executed after creating the relation.
+
+`repeated string post_operations = 8;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`values` | `[Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)<[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)>`  
+The postOperations to add.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### addAllPreOperations(Iterable<String> values)
+    
+    
+    public CompilationResultAction.Relation.Builder addAllPreOperations(Iterable<String> values)
+
+SQL statements to be executed before creating the relation.
+
+`repeated string pre_operations = 7;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`values` | `[Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)<[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)>`  
+The preOperations to add.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### addAllTags(Iterable<String> values)
+    
+    
+    public CompilationResultAction.Relation.Builder addAllTags(Iterable<String> values)
+
+Arbitrary, user-defined tags on this action.
+
+`repeated string tags = 3;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`values` | `[Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)<[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)>`  
+The tags to add.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### addClusterExpressions(String value)
+    
+    
+    public CompilationResultAction.Relation.Builder addClusterExpressions(String value)
+
+A list of columns or SQL expressions used to cluster the table.
+
+`repeated string cluster_expressions = 11;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+The clusterExpressions to add.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### addClusterExpressionsBytes(ByteString value)
+    
+    
+    public CompilationResultAction.Relation.Builder addClusterExpressionsBytes(ByteString value)
+
+A list of columns or SQL expressions used to cluster the table.
+
+`repeated string cluster_expressions = 11;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)`  
+The bytes of the clusterExpressions to add.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### addDependencyTargets(Target value)
+    
+    
+    public CompilationResultAction.Relation.Builder addDependencyTargets(Target value)
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[Target](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.Target)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### addDependencyTargets(Target.Builder builderForValue)
+    
+    
+    public CompilationResultAction.Relation.Builder addDependencyTargets(Target.Builder builderForValue)
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`builderForValue` | `[Target.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.Target.Builder)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### addDependencyTargets(int index, Target value)
+    
+    
+    public CompilationResultAction.Relation.Builder addDependencyTargets(int index, Target value)
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+  
+`value` | `[Target](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.Target)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### addDependencyTargets(int index, Target.Builder builderForValue)
+    
+    
+    public CompilationResultAction.Relation.Builder addDependencyTargets(int index, Target.Builder builderForValue)
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+  
+`builderForValue` | `[Target.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.Target.Builder)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### addDependencyTargetsBuilder()
+    
+    
+    public Target.Builder addDependencyTargetsBuilder()
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[Target.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.Target.Builder)` |   
+  
+### addDependencyTargetsBuilder(int index)
+    
+    
+    public Target.Builder addDependencyTargetsBuilder(int index)
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Target.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.Target.Builder)` |   
+  
+### addPostOperations(String value)
+    
+    
+    public CompilationResultAction.Relation.Builder addPostOperations(String value)
+
+SQL statements to be executed after creating the relation.
+
+`repeated string post_operations = 8;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+The postOperations to add.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### addPostOperationsBytes(ByteString value)
+    
+    
+    public CompilationResultAction.Relation.Builder addPostOperationsBytes(ByteString value)
+
+SQL statements to be executed after creating the relation.
+
+`repeated string post_operations = 8;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)`  
+The bytes of the postOperations to add.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### addPreOperations(String value)
+    
+    
+    public CompilationResultAction.Relation.Builder addPreOperations(String value)
+
+SQL statements to be executed before creating the relation.
+
+`repeated string pre_operations = 7;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+The preOperations to add.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### addPreOperationsBytes(ByteString value)
+    
+    
+    public CompilationResultAction.Relation.Builder addPreOperationsBytes(ByteString value)
+
+SQL statements to be executed before creating the relation.
+
+`repeated string pre_operations = 7;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)`  
+The bytes of the preOperations to add.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### addTags(String value)
+    
+    
+    public CompilationResultAction.Relation.Builder addTags(String value)
+
+Arbitrary, user-defined tags on this action.
+
+`repeated string tags = 3;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+The tags to add.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### addTagsBytes(ByteString value)
+    
+    
+    public CompilationResultAction.Relation.Builder addTagsBytes(ByteString value)
+
+Arbitrary, user-defined tags on this action.
+
+`repeated string tags = 3;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)`  
+The bytes of the tags to add.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### build()
+    
+    
+    public CompilationResultAction.Relation build()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation)` |   
+  
+### buildPartial()
+    
+    
+    public CompilationResultAction.Relation buildPartial()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation)` |   
+  
+### clear()
+    
+    
+    public CompilationResultAction.Relation.Builder clear()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+**Overrides**
+
+[GeneratedMessage.Builder<BuilderType>.clear()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_clear__)
+
+### clearAdditionalOptions()
+    
+    
+    public CompilationResultAction.Relation.Builder clearAdditionalOptions()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### clearClusterExpressions()
+    
+    
+    public CompilationResultAction.Relation.Builder clearClusterExpressions()
+
+A list of columns or SQL expressions used to cluster the table.
+
+`repeated string cluster_expressions = 11;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### clearConnection()
+    
+    
+    public CompilationResultAction.Relation.Builder clearConnection()
+
+Optional. The connection specifying the credentials to be used to read and write to external storage, such as Cloud Storage. The connection can have the form `{project}.{location}.{connection_id}` or `projects/{project}/locations/{location}/connections/{connection_id}`, or be set to DEFAULT.
+
+`string connection = 15 [(.google.api.field_behavior) = OPTIONAL];`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### clearDependencyTargets()
+    
+    
+    public CompilationResultAction.Relation.Builder clearDependencyTargets()
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### clearDisabled()
+    
+    
+    public CompilationResultAction.Relation.Builder clearDisabled()
+
+Whether this action is disabled (i.e. should not be run).
+
+`bool disabled = 2;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### clearFileFormat()
+    
+    
+    public CompilationResultAction.Relation.Builder clearFileFormat()
+
+Optional. The file format for the BigQuery table.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.FileFormat file_format = 17 [(.google.api.field_behavior) = OPTIONAL]; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### clearIncrementalTableConfig()
+    
+    
+    public CompilationResultAction.Relation.Builder clearIncrementalTableConfig()
+
+Configures `INCREMENTAL_TABLE` settings for this relation. Only set if `relation_type` is `INCREMENTAL_TABLE`.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.IncrementalTableConfig incremental_table_config = 9; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### clearPartitionExpirationDays()
+    
+    
+    public CompilationResultAction.Relation.Builder clearPartitionExpirationDays()
+
+Sets the partition expiration in days.
+
+`int32 partition_expiration_days = 12;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### clearPartitionExpression()
+    
+    
+    public CompilationResultAction.Relation.Builder clearPartitionExpression()
+
+The SQL expression used to partition the relation.
+
+`string partition_expression = 10;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### clearPostOperations()
+    
+    
+    public CompilationResultAction.Relation.Builder clearPostOperations()
+
+SQL statements to be executed after creating the relation.
+
+`repeated string post_operations = 8;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### clearPreOperations()
+    
+    
+    public CompilationResultAction.Relation.Builder clearPreOperations()
+
+SQL statements to be executed before creating the relation.
+
+`repeated string pre_operations = 7;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### clearRelationDescriptor()
+    
+    
+    public CompilationResultAction.Relation.Builder clearRelationDescriptor()
+
+Descriptor for the relation and its columns.
+
+`.google.cloud.dataform.v1.RelationDescriptor relation_descriptor = 4;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### clearRelationType()
+    
+    
+    public CompilationResultAction.Relation.Builder clearRelationType()
+
+The type of this relation.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.RelationType relation_type = 5; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### clearRequirePartitionFilter()
+    
+    
+    public CompilationResultAction.Relation.Builder clearRequirePartitionFilter()
+
+Specifies whether queries on this table must include a predicate filter that filters on the partitioning column.
+
+`bool require_partition_filter = 13;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### clearSelectQuery()
+    
+    
+    public CompilationResultAction.Relation.Builder clearSelectQuery()
+
+The SELECT query which returns rows which this relation should contain.
+
+`string select_query = 6;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### clearStorageUri()
+    
+    
+    public CompilationResultAction.Relation.Builder clearStorageUri()
+
+Optional. The fully qualified location prefix of the external folder where table data is stored. The URI should be in the format `gs://bucket/path_to_table/`.
+
+`string storage_uri = 18 [(.google.api.field_behavior) = OPTIONAL];`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### clearTableFormat()
+    
+    
+    public CompilationResultAction.Relation.Builder clearTableFormat()
+
+Optional. The table format for the BigQuery table.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.TableFormat table_format = 16 [(.google.api.field_behavior) = OPTIONAL]; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### clearTags()
+    
+    
+    public CompilationResultAction.Relation.Builder clearTags()
+
+Arbitrary, user-defined tags on this action.
+
+`repeated string tags = 3;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### containsAdditionalOptions(String key)
+    
+    
+    public boolean containsAdditionalOptions(String key)
+
+Additional options that will be provided as key/value pairs into the options clause of a create table/view statement. See <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language> for more information on which options are supported.
+
+`map<string, string> additional_options = 14;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`key` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` |   
+  
+### getAdditionalOptions() (deprecated)
+    
+    
+    public Map<String,String> getAdditionalOptions()
+
+Use [#getAdditionalOptionsMap()](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder#com_google_cloud_dataform_v1_CompilationResultAction_Relation_Builder_getAdditionalOptionsMap__) instead.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html),[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)>` |   
+  
+### getAdditionalOptionsCount()
+    
+    
+    public int getAdditionalOptionsCount()
+
+Additional options that will be provided as key/value pairs into the options clause of a create table/view statement. See <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language> for more information on which options are supported.
+
+`map<string, string> additional_options = 14;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` |   
+  
+### getAdditionalOptionsMap()
+    
+    
+    public Map<String,String> getAdditionalOptionsMap()
+
+Additional options that will be provided as key/value pairs into the options clause of a create table/view statement. See <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language> for more information on which options are supported.
+
+`map<string, string> additional_options = 14;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html),[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)>` |   
+  
+### getAdditionalOptionsOrDefault(String key, String defaultValue)
+    
+    
+    public String getAdditionalOptionsOrDefault(String key, String defaultValue)
+
+Additional options that will be provided as key/value pairs into the options clause of a create table/view statement. See <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language> for more information on which options are supported.
+
+`map<string, string> additional_options = 14;`
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`key` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+  
+`defaultValue` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)` |   
+  
+### getAdditionalOptionsOrThrow(String key)
+    
+    
+    public String getAdditionalOptionsOrThrow(String key)
+
+Additional options that will be provided as key/value pairs into the options clause of a create table/view statement. See <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language> for more information on which options are supported.
+
+`map<string, string> additional_options = 14;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`key` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)` |   
+  
+### getClusterExpressions(int index)
+    
+    
+    public String getClusterExpressions(int index)
+
+A list of columns or SQL expressions used to cluster the table.
+
+`repeated string cluster_expressions = 11;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The index of the element to return.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)` | The clusterExpressions at the given index.  
+  
+### getClusterExpressionsBytes(int index)
+    
+    
+    public ByteString getClusterExpressionsBytes(int index)
+
+A list of columns or SQL expressions used to cluster the table.
+
+`repeated string cluster_expressions = 11;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The index of the value to return.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)` | The bytes of the clusterExpressions at the given index.  
+  
+### getClusterExpressionsCount()
+    
+    
+    public int getClusterExpressionsCount()
+
+A list of columns or SQL expressions used to cluster the table.
+
+`repeated string cluster_expressions = 11;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | The count of clusterExpressions.  
+  
+### getClusterExpressionsList()
+    
+    
+    public ProtocolStringList getClusterExpressionsList()
+
+A list of columns or SQL expressions used to cluster the table.
+
+`repeated string cluster_expressions = 11;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[ProtocolStringList](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ProtocolStringList.html)` | A list containing the clusterExpressions.  
+  
+### getConnection()
+    
+    
+    public String getConnection()
+
+Optional. The connection specifying the credentials to be used to read and write to external storage, such as Cloud Storage. The connection can have the form `{project}.{location}.{connection_id}` or `projects/{project}/locations/{location}/connections/{connection_id}`, or be set to DEFAULT.
+
+`string connection = 15 [(.google.api.field_behavior) = OPTIONAL];`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)` | The connection.  
+  
+### getConnectionBytes()
+    
+    
+    public ByteString getConnectionBytes()
+
+Optional. The connection specifying the credentials to be used to read and write to external storage, such as Cloud Storage. The connection can have the form `{project}.{location}.{connection_id}` or `projects/{project}/locations/{location}/connections/{connection_id}`, or be set to DEFAULT.
+
+`string connection = 15 [(.google.api.field_behavior) = OPTIONAL];`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)` | The bytes for connection.  
+  
+### getDefaultInstanceForType()
+    
+    
+    public CompilationResultAction.Relation getDefaultInstanceForType()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation)` |   
+  
+### getDependencyTargets(int index)
+    
+    
+    public Target getDependencyTargets(int index)
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Target](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.Target)` |   
+  
+### getDependencyTargetsBuilder(int index)
+    
+    
+    public Target.Builder getDependencyTargetsBuilder(int index)
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Target.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.Target.Builder)` |   
+  
+### getDependencyTargetsBuilderList()
+    
+    
+    public List<Target.Builder> getDependencyTargetsBuilderList()
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.Target.Builder)>` |   
+  
+### getDependencyTargetsCount()
+    
+    
+    public int getDependencyTargetsCount()
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` |   
+  
+### getDependencyTargetsList()
+    
+    
+    public List<Target> getDependencyTargetsList()
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Target](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.Target)>` |   
+  
+### getDependencyTargetsOrBuilder(int index)
+    
+    
+    public TargetOrBuilder getDependencyTargetsOrBuilder(int index)
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[TargetOrBuilder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.TargetOrBuilder)` |   
+  
+### getDependencyTargetsOrBuilderList()
+    
+    
+    public List<? extends TargetOrBuilder> getDependencyTargetsOrBuilderList()
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<? extends com.google.cloud.dataform.v1.TargetOrBuilder>` |   
+  
+### getDescriptorForType()
+    
+    
+    public Descriptors.Descriptor getDescriptorForType()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[Descriptor](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Descriptors.Descriptor.html)` |   
+**Overrides**
+
+[GeneratedMessage.Builder<BuilderType>.getDescriptorForType()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_getDescriptorForType__)
+
+### getDisabled()
+    
+    
+    public boolean getDisabled()
+
+Whether this action is disabled (i.e. should not be run).
+
+`bool disabled = 2;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | The disabled.  
+  
+### getFileFormat()
+    
+    
+    public CompilationResultAction.Relation.FileFormat getFileFormat()
+
+Optional. The file format for the BigQuery table.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.FileFormat file_format = 17 [(.google.api.field_behavior) = OPTIONAL]; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.FileFormat](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.FileFormat)` | The fileFormat.  
+  
+### getFileFormatValue()
+    
+    
+    public int getFileFormatValue()
+
+Optional. The file format for the BigQuery table.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.FileFormat file_format = 17 [(.google.api.field_behavior) = OPTIONAL]; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | The enum numeric value on the wire for fileFormat.  
+  
+### getIncrementalTableConfig()
+    
+    
+    public CompilationResultAction.Relation.IncrementalTableConfig getIncrementalTableConfig()
+
+Configures `INCREMENTAL_TABLE` settings for this relation. Only set if `relation_type` is `INCREMENTAL_TABLE`.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.IncrementalTableConfig incremental_table_config = 9; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.IncrementalTableConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.IncrementalTableConfig)` | The incrementalTableConfig.  
+  
+### getIncrementalTableConfigBuilder()
+    
+    
+    public CompilationResultAction.Relation.IncrementalTableConfig.Builder getIncrementalTableConfigBuilder()
+
+Configures `INCREMENTAL_TABLE` settings for this relation. Only set if `relation_type` is `INCREMENTAL_TABLE`.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.IncrementalTableConfig incremental_table_config = 9; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.IncrementalTableConfig.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.IncrementalTableConfig.Builder)` |   
+  
+### getIncrementalTableConfigOrBuilder()
+    
+    
+    public CompilationResultAction.Relation.IncrementalTableConfigOrBuilder getIncrementalTableConfigOrBuilder()
+
+Configures `INCREMENTAL_TABLE` settings for this relation. Only set if `relation_type` is `INCREMENTAL_TABLE`.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.IncrementalTableConfig incremental_table_config = 9; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.IncrementalTableConfigOrBuilder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.IncrementalTableConfigOrBuilder)` |   
+  
+### getMutableAdditionalOptions() (deprecated)
+    
+    
+    public Map<String,String> getMutableAdditionalOptions()
+
+Use alternate mutation accessors instead.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html),[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)>` |   
+  
+### getPartitionExpirationDays()
+    
+    
+    public int getPartitionExpirationDays()
+
+Sets the partition expiration in days.
+
+`int32 partition_expiration_days = 12;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | The partitionExpirationDays.  
+  
+### getPartitionExpression()
+    
+    
+    public String getPartitionExpression()
+
+The SQL expression used to partition the relation.
+
+`string partition_expression = 10;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)` | The partitionExpression.  
+  
+### getPartitionExpressionBytes()
+    
+    
+    public ByteString getPartitionExpressionBytes()
+
+The SQL expression used to partition the relation.
+
+`string partition_expression = 10;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)` | The bytes for partitionExpression.  
+  
+### getPostOperations(int index)
+    
+    
+    public String getPostOperations(int index)
+
+SQL statements to be executed after creating the relation.
+
+`repeated string post_operations = 8;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The index of the element to return.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)` | The postOperations at the given index.  
+  
+### getPostOperationsBytes(int index)
+    
+    
+    public ByteString getPostOperationsBytes(int index)
+
+SQL statements to be executed after creating the relation.
+
+`repeated string post_operations = 8;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The index of the value to return.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)` | The bytes of the postOperations at the given index.  
+  
+### getPostOperationsCount()
+    
+    
+    public int getPostOperationsCount()
+
+SQL statements to be executed after creating the relation.
+
+`repeated string post_operations = 8;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | The count of postOperations.  
+  
+### getPostOperationsList()
+    
+    
+    public ProtocolStringList getPostOperationsList()
+
+SQL statements to be executed after creating the relation.
+
+`repeated string post_operations = 8;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[ProtocolStringList](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ProtocolStringList.html)` | A list containing the postOperations.  
+  
+### getPreOperations(int index)
+    
+    
+    public String getPreOperations(int index)
+
+SQL statements to be executed before creating the relation.
+
+`repeated string pre_operations = 7;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The index of the element to return.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)` | The preOperations at the given index.  
+  
+### getPreOperationsBytes(int index)
+    
+    
+    public ByteString getPreOperationsBytes(int index)
+
+SQL statements to be executed before creating the relation.
+
+`repeated string pre_operations = 7;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The index of the value to return.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)` | The bytes of the preOperations at the given index.  
+  
+### getPreOperationsCount()
+    
+    
+    public int getPreOperationsCount()
+
+SQL statements to be executed before creating the relation.
+
+`repeated string pre_operations = 7;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | The count of preOperations.  
+  
+### getPreOperationsList()
+    
+    
+    public ProtocolStringList getPreOperationsList()
+
+SQL statements to be executed before creating the relation.
+
+`repeated string pre_operations = 7;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[ProtocolStringList](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ProtocolStringList.html)` | A list containing the preOperations.  
+  
+### getRelationDescriptor()
+    
+    
+    public RelationDescriptor getRelationDescriptor()
+
+Descriptor for the relation and its columns.
+
+`.google.cloud.dataform.v1.RelationDescriptor relation_descriptor = 4;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[RelationDescriptor](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.RelationDescriptor)` | The relationDescriptor.  
+  
+### getRelationDescriptorBuilder()
+    
+    
+    public RelationDescriptor.Builder getRelationDescriptorBuilder()
+
+Descriptor for the relation and its columns.
+
+`.google.cloud.dataform.v1.RelationDescriptor relation_descriptor = 4;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[RelationDescriptor.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.RelationDescriptor.Builder)` |   
+  
+### getRelationDescriptorOrBuilder()
+    
+    
+    public RelationDescriptorOrBuilder getRelationDescriptorOrBuilder()
+
+Descriptor for the relation and its columns.
+
+`.google.cloud.dataform.v1.RelationDescriptor relation_descriptor = 4;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[RelationDescriptorOrBuilder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.RelationDescriptorOrBuilder)` |   
+  
+### getRelationType()
+    
+    
+    public CompilationResultAction.Relation.RelationType getRelationType()
+
+The type of this relation.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.RelationType relation_type = 5; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.RelationType](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.RelationType)` | The relationType.  
+  
+### getRelationTypeValue()
+    
+    
+    public int getRelationTypeValue()
+
+The type of this relation.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.RelationType relation_type = 5; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | The enum numeric value on the wire for relationType.  
+  
+### getRequirePartitionFilter()
+    
+    
+    public boolean getRequirePartitionFilter()
+
+Specifies whether queries on this table must include a predicate filter that filters on the partitioning column.
+
+`bool require_partition_filter = 13;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | The requirePartitionFilter.  
+  
+### getSelectQuery()
+    
+    
+    public String getSelectQuery()
+
+The SELECT query which returns rows which this relation should contain.
+
+`string select_query = 6;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)` | The selectQuery.  
+  
+### getSelectQueryBytes()
+    
+    
+    public ByteString getSelectQueryBytes()
+
+The SELECT query which returns rows which this relation should contain.
+
+`string select_query = 6;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)` | The bytes for selectQuery.  
+  
+### getStorageUri()
+    
+    
+    public String getStorageUri()
+
+Optional. The fully qualified location prefix of the external folder where table data is stored. The URI should be in the format `gs://bucket/path_to_table/`.
+
+`string storage_uri = 18 [(.google.api.field_behavior) = OPTIONAL];`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)` | The storageUri.  
+  
+### getStorageUriBytes()
+    
+    
+    public ByteString getStorageUriBytes()
+
+Optional. The fully qualified location prefix of the external folder where table data is stored. The URI should be in the format `gs://bucket/path_to_table/`.
+
+`string storage_uri = 18 [(.google.api.field_behavior) = OPTIONAL];`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)` | The bytes for storageUri.  
+  
+### getTableFormat()
+    
+    
+    public CompilationResultAction.Relation.TableFormat getTableFormat()
+
+Optional. The table format for the BigQuery table.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.TableFormat table_format = 16 [(.google.api.field_behavior) = OPTIONAL]; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.TableFormat](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.TableFormat)` | The tableFormat.  
+  
+### getTableFormatValue()
+    
+    
+    public int getTableFormatValue()
+
+Optional. The table format for the BigQuery table.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.TableFormat table_format = 16 [(.google.api.field_behavior) = OPTIONAL]; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | The enum numeric value on the wire for tableFormat.  
+  
+### getTags(int index)
+    
+    
+    public String getTags(int index)
+
+Arbitrary, user-defined tags on this action.
+
+`repeated string tags = 3;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The index of the element to return.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)` | The tags at the given index.  
+  
+### getTagsBytes(int index)
+    
+    
+    public ByteString getTagsBytes(int index)
+
+Arbitrary, user-defined tags on this action.
+
+`repeated string tags = 3;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The index of the value to return.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)` | The bytes of the tags at the given index.  
+  
+### getTagsCount()
+    
+    
+    public int getTagsCount()
+
+Arbitrary, user-defined tags on this action.
+
+`repeated string tags = 3;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | The count of tags.  
+  
+### getTagsList()
+    
+    
+    public ProtocolStringList getTagsList()
+
+Arbitrary, user-defined tags on this action.
+
+`repeated string tags = 3;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[ProtocolStringList](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ProtocolStringList.html)` | A list containing the tags.  
+  
+### hasIncrementalTableConfig()
+    
+    
+    public boolean hasIncrementalTableConfig()
+
+Configures `INCREMENTAL_TABLE` settings for this relation. Only set if `relation_type` is `INCREMENTAL_TABLE`.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.IncrementalTableConfig incremental_table_config = 9; `
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | Whether the incrementalTableConfig field is set.  
+  
+### hasRelationDescriptor()
+    
+    
+    public boolean hasRelationDescriptor()
+
+Descriptor for the relation and its columns.
+
+`.google.cloud.dataform.v1.RelationDescriptor relation_descriptor = 4;`
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` | Whether the relationDescriptor field is set.  
+  
+### internalGetFieldAccessorTable()
+    
+    
+    protected GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[FieldAccessorTable](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.FieldAccessorTable.html)` |   
+**Overrides**
+
+[GeneratedMessage.Builder<BuilderType>.internalGetFieldAccessorTable()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_internalGetFieldAccessorTable__)
+
+### internalGetMapFieldReflection(int number)
+    
+    
+    protected MapFieldReflectionAccessor internalGetMapFieldReflection(int number)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`number` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`com.google.protobuf.MapFieldReflectionAccessor` |   
+**Overrides**
+
+com.google.protobuf.GeneratedMessage.Builder.internalGetMapFieldReflection(int)
+
+### internalGetMutableMapFieldReflection(int number)
+    
+    
+    protected MapFieldReflectionAccessor internalGetMutableMapFieldReflection(int number)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`number` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`com.google.protobuf.MapFieldReflectionAccessor` |   
+**Overrides**
+
+com.google.protobuf.GeneratedMessage.Builder.internalGetMutableMapFieldReflection(int)
+
+### isInitialized()
+    
+    
+    public final boolean isInitialized()
+
+**Returns**  
+---  
+**Type** | **Description**  
+`[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)` |   
+**Overrides**
+
+[GeneratedMessage.Builder<BuilderType>.isInitialized()](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.GeneratedMessage.Builder.html#com_google_protobuf_GeneratedMessage_Builder_isInitialized__)
+
+### mergeFrom(CompilationResultAction.Relation other)
+    
+    
+    public CompilationResultAction.Relation.Builder mergeFrom(CompilationResultAction.Relation other)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`other` | `[CompilationResultAction.Relation](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### mergeFrom(CodedInputStream input, ExtensionRegistryLite extensionRegistry)
+    
+    
+    public CompilationResultAction.Relation.Builder mergeFrom(CodedInputStream input, ExtensionRegistryLite extensionRegistry)
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`input` | `[CodedInputStream](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.CodedInputStream.html)`  
+  
+`extensionRegistry` | `[ExtensionRegistryLite](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ExtensionRegistryLite.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+**Overrides**
+
+[AbstractMessage.Builder<BuilderType>.mergeFrom(CodedInputStream input, ExtensionRegistryLite extensionRegistry)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_mergeFrom_com_google_protobuf_CodedInputStream_com_google_protobuf_ExtensionRegistryLite_)
+
+**Exceptions**  
+---  
+**Type** | **Description**  
+`[IOException](https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html)` |   
+  
+### mergeFrom(Message other)
+    
+    
+    public CompilationResultAction.Relation.Builder mergeFrom(Message other)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`other` | `[Message](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Message.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+**Overrides**
+
+[AbstractMessage.Builder<BuilderType>.mergeFrom(Message other)](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.AbstractMessage.Builder.html#com_google_protobuf_AbstractMessage_Builder_mergeFrom_com_google_protobuf_Message_)
+
+### mergeIncrementalTableConfig(CompilationResultAction.Relation.IncrementalTableConfig value)
+    
+    
+    public CompilationResultAction.Relation.Builder mergeIncrementalTableConfig(CompilationResultAction.Relation.IncrementalTableConfig value)
+
+Configures `INCREMENTAL_TABLE` settings for this relation. Only set if `relation_type` is `INCREMENTAL_TABLE`.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.IncrementalTableConfig incremental_table_config = 9; `
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[CompilationResultAction.Relation.IncrementalTableConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.IncrementalTableConfig)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### mergeRelationDescriptor(RelationDescriptor value)
+    
+    
+    public CompilationResultAction.Relation.Builder mergeRelationDescriptor(RelationDescriptor value)
+
+Descriptor for the relation and its columns.
+
+`.google.cloud.dataform.v1.RelationDescriptor relation_descriptor = 4;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[RelationDescriptor](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.RelationDescriptor)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### putAdditionalOptions(String key, String value)
+    
+    
+    public CompilationResultAction.Relation.Builder putAdditionalOptions(String key, String value)
+
+Additional options that will be provided as key/value pairs into the options clause of a create table/view statement. See <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language> for more information on which options are supported.
+
+`map<string, string> additional_options = 14;`
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`key` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+  
+`value` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### putAllAdditionalOptions(Map<String,String> values)
+    
+    
+    public CompilationResultAction.Relation.Builder putAllAdditionalOptions(Map<String,String> values)
+
+Additional options that will be provided as key/value pairs into the options clause of a create table/view statement. See <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language> for more information on which options are supported.
+
+`map<string, string> additional_options = 14;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`values` | `[Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html),[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)>`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### removeAdditionalOptions(String key)
+    
+    
+    public CompilationResultAction.Relation.Builder removeAdditionalOptions(String key)
+
+Additional options that will be provided as key/value pairs into the options clause of a create table/view statement. See <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language> for more information on which options are supported.
+
+`map<string, string> additional_options = 14;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`key` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### removeDependencyTargets(int index)
+    
+    
+    public CompilationResultAction.Relation.Builder removeDependencyTargets(int index)
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### setClusterExpressions(int index, String value)
+    
+    
+    public CompilationResultAction.Relation.Builder setClusterExpressions(int index, String value)
+
+A list of columns or SQL expressions used to cluster the table.
+
+`repeated string cluster_expressions = 11;`
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The index to set the value at.  
+`value` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+The clusterExpressions to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setConnection(String value)
+    
+    
+    public CompilationResultAction.Relation.Builder setConnection(String value)
+
+Optional. The connection specifying the credentials to be used to read and write to external storage, such as Cloud Storage. The connection can have the form `{project}.{location}.{connection_id}` or `projects/{project}/locations/{location}/connections/{connection_id}`, or be set to DEFAULT.
+
+`string connection = 15 [(.google.api.field_behavior) = OPTIONAL];`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+The connection to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setConnectionBytes(ByteString value)
+    
+    
+    public CompilationResultAction.Relation.Builder setConnectionBytes(ByteString value)
+
+Optional. The connection specifying the credentials to be used to read and write to external storage, such as Cloud Storage. The connection can have the form `{project}.{location}.{connection_id}` or `projects/{project}/locations/{location}/connections/{connection_id}`, or be set to DEFAULT.
+
+`string connection = 15 [(.google.api.field_behavior) = OPTIONAL];`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)`  
+The bytes for connection to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setDependencyTargets(int index, Target value)
+    
+    
+    public CompilationResultAction.Relation.Builder setDependencyTargets(int index, Target value)
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+  
+`value` | `[Target](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.Target)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### setDependencyTargets(int index, Target.Builder builderForValue)
+    
+    
+    public CompilationResultAction.Relation.Builder setDependencyTargets(int index, Target.Builder builderForValue)
+
+A list of actions that this action depends on.
+
+`repeated .google.cloud.dataform.v1.Target dependency_targets = 1;`
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+  
+`builderForValue` | `[Target.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.Target.Builder)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### setDisabled(boolean value)
+    
+    
+    public CompilationResultAction.Relation.Builder setDisabled(boolean value)
+
+Whether this action is disabled (i.e. should not be run).
+
+`bool disabled = 2;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The disabled to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setFileFormat(CompilationResultAction.Relation.FileFormat value)
+    
+    
+    public CompilationResultAction.Relation.Builder setFileFormat(CompilationResultAction.Relation.FileFormat value)
+
+Optional. The file format for the BigQuery table.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.FileFormat file_format = 17 [(.google.api.field_behavior) = OPTIONAL]; `
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[CompilationResultAction.Relation.FileFormat](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.FileFormat)`  
+The fileFormat to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setFileFormatValue(int value)
+    
+    
+    public CompilationResultAction.Relation.Builder setFileFormatValue(int value)
+
+Optional. The file format for the BigQuery table.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.FileFormat file_format = 17 [(.google.api.field_behavior) = OPTIONAL]; `
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The enum numeric value on the wire for fileFormat to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setIncrementalTableConfig(CompilationResultAction.Relation.IncrementalTableConfig value)
+    
+    
+    public CompilationResultAction.Relation.Builder setIncrementalTableConfig(CompilationResultAction.Relation.IncrementalTableConfig value)
+
+Configures `INCREMENTAL_TABLE` settings for this relation. Only set if `relation_type` is `INCREMENTAL_TABLE`.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.IncrementalTableConfig incremental_table_config = 9; `
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[CompilationResultAction.Relation.IncrementalTableConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.IncrementalTableConfig)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### setIncrementalTableConfig(CompilationResultAction.Relation.IncrementalTableConfig.Builder builderForValue)
+    
+    
+    public CompilationResultAction.Relation.Builder setIncrementalTableConfig(CompilationResultAction.Relation.IncrementalTableConfig.Builder builderForValue)
+
+Configures `INCREMENTAL_TABLE` settings for this relation. Only set if `relation_type` is `INCREMENTAL_TABLE`.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.IncrementalTableConfig incremental_table_config = 9; `
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`builderForValue` | `[CompilationResultAction.Relation.IncrementalTableConfig.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.IncrementalTableConfig.Builder)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### setPartitionExpirationDays(int value)
+    
+    
+    public CompilationResultAction.Relation.Builder setPartitionExpirationDays(int value)
+
+Sets the partition expiration in days.
+
+`int32 partition_expiration_days = 12;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The partitionExpirationDays to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setPartitionExpression(String value)
+    
+    
+    public CompilationResultAction.Relation.Builder setPartitionExpression(String value)
+
+The SQL expression used to partition the relation.
+
+`string partition_expression = 10;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+The partitionExpression to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setPartitionExpressionBytes(ByteString value)
+    
+    
+    public CompilationResultAction.Relation.Builder setPartitionExpressionBytes(ByteString value)
+
+The SQL expression used to partition the relation.
+
+`string partition_expression = 10;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)`  
+The bytes for partitionExpression to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setPostOperations(int index, String value)
+    
+    
+    public CompilationResultAction.Relation.Builder setPostOperations(int index, String value)
+
+SQL statements to be executed after creating the relation.
+
+`repeated string post_operations = 8;`
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The index to set the value at.  
+`value` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+The postOperations to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setPreOperations(int index, String value)
+    
+    
+    public CompilationResultAction.Relation.Builder setPreOperations(int index, String value)
+
+SQL statements to be executed before creating the relation.
+
+`repeated string pre_operations = 7;`
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The index to set the value at.  
+`value` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+The preOperations to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setRelationDescriptor(RelationDescriptor value)
+    
+    
+    public CompilationResultAction.Relation.Builder setRelationDescriptor(RelationDescriptor value)
+
+Descriptor for the relation and its columns.
+
+`.google.cloud.dataform.v1.RelationDescriptor relation_descriptor = 4;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[RelationDescriptor](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.RelationDescriptor)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### setRelationDescriptor(RelationDescriptor.Builder builderForValue)
+    
+    
+    public CompilationResultAction.Relation.Builder setRelationDescriptor(RelationDescriptor.Builder builderForValue)
+
+Descriptor for the relation and its columns.
+
+`.google.cloud.dataform.v1.RelationDescriptor relation_descriptor = 4;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`builderForValue` | `[RelationDescriptor.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.RelationDescriptor.Builder)`  
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` |   
+  
+### setRelationType(CompilationResultAction.Relation.RelationType value)
+    
+    
+    public CompilationResultAction.Relation.Builder setRelationType(CompilationResultAction.Relation.RelationType value)
+
+The type of this relation.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.RelationType relation_type = 5; `
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[CompilationResultAction.Relation.RelationType](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.RelationType)`  
+The relationType to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setRelationTypeValue(int value)
+    
+    
+    public CompilationResultAction.Relation.Builder setRelationTypeValue(int value)
+
+The type of this relation.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.RelationType relation_type = 5; `
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The enum numeric value on the wire for relationType to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setRequirePartitionFilter(boolean value)
+    
+    
+    public CompilationResultAction.Relation.Builder setRequirePartitionFilter(boolean value)
+
+Specifies whether queries on this table must include a predicate filter that filters on the partitioning column.
+
+`bool require_partition_filter = 13;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[boolean](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The requirePartitionFilter to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setSelectQuery(String value)
+    
+    
+    public CompilationResultAction.Relation.Builder setSelectQuery(String value)
+
+The SELECT query which returns rows which this relation should contain.
+
+`string select_query = 6;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+The selectQuery to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setSelectQueryBytes(ByteString value)
+    
+    
+    public CompilationResultAction.Relation.Builder setSelectQueryBytes(ByteString value)
+
+The SELECT query which returns rows which this relation should contain.
+
+`string select_query = 6;`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)`  
+The bytes for selectQuery to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setStorageUri(String value)
+    
+    
+    public CompilationResultAction.Relation.Builder setStorageUri(String value)
+
+Optional. The fully qualified location prefix of the external folder where table data is stored. The URI should be in the format `gs://bucket/path_to_table/`.
+
+`string storage_uri = 18 [(.google.api.field_behavior) = OPTIONAL];`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+The storageUri to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setStorageUriBytes(ByteString value)
+    
+    
+    public CompilationResultAction.Relation.Builder setStorageUriBytes(ByteString value)
+
+Optional. The fully qualified location prefix of the external folder where table data is stored. The URI should be in the format `gs://bucket/path_to_table/`.
+
+`string storage_uri = 18 [(.google.api.field_behavior) = OPTIONAL];`
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[ByteString](https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)`  
+The bytes for storageUri to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setTableFormat(CompilationResultAction.Relation.TableFormat value)
+    
+    
+    public CompilationResultAction.Relation.Builder setTableFormat(CompilationResultAction.Relation.TableFormat value)
+
+Optional. The table format for the BigQuery table.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.TableFormat table_format = 16 [(.google.api.field_behavior) = OPTIONAL]; `
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[CompilationResultAction.Relation.TableFormat](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.TableFormat)`  
+The tableFormat to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setTableFormatValue(int value)
+    
+    
+    public CompilationResultAction.Relation.Builder setTableFormatValue(int value)
+
+Optional. The table format for the BigQuery table.
+
+` .google.cloud.dataform.v1.CompilationResultAction.Relation.TableFormat table_format = 16 [(.google.api.field_behavior) = OPTIONAL]; `
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`value` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The enum numeric value on the wire for tableFormat to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+### setTags(int index, String value)
+    
+    
+    public CompilationResultAction.Relation.Builder setTags(int index, String value)
+
+Arbitrary, user-defined tags on this action.
+
+`repeated string tags = 3;`
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`index` | `[int](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)`  
+The index to set the value at.  
+`value` | `[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)`  
+The tags to set.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[CompilationResultAction.Relation.Builder](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1.CompilationResultAction.Relation.Builder)` | This builder for chaining.  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-06 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-06 UTC."],[],[]] 

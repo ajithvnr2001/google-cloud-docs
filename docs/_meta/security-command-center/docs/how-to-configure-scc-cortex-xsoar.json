@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/security-command-center/docs/how-to-configure-scc-cortex-xsoar/",
+  "file": "security-command-center/docs/how-to-configure-scc-cortex-xsoar.md",
+  "title": "Send Security Command Center data to Cortex XSOAR \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T16:40:23.182504+00:00"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/how-to/migrate-gke-multi-cluster/",
+  "file": "kubernetes-engine/docs/how-to/migrate-gke-multi-cluster.md",
+  "title": "Migrate to multi-cluster networking \u00a0|\u00a0 GKE networking \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T16:43:40.205653+00:00"
+}

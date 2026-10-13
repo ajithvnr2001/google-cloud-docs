@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/spanner/docs/queues/queues-at-most-once/",
+  "file": "spanner/docs/queues/queues-at-most-once.md",
+  "title": "Exactly-once processing and at-most-once acknowledgment \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T15:33:00.767251+00:00"
+}

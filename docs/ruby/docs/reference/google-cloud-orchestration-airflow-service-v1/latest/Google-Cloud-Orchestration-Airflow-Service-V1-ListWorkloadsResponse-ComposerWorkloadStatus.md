@@ -1,0 +1,90 @@
+---
+url: https://docs.cloud.google.com/ruby/docs/reference/google-cloud-orchestration-airflow-service-v1/latest/Google-Cloud-Orchestration-Airflow-Service-V1-ListWorkloadsResponse-ComposerWorkloadStatus/
+title: Cloud Composer V1 API - Class Google::Cloud::Orchestration::Airflow::Service::V1::ListWorkloadsResponse::ComposerWorkloadStatus (v1.9.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T15:12:44.776631+00:00
+---
+
+# Cloud Composer V1 API - Class Google::Cloud::Orchestration::Airflow::Service::V1::ListWorkloadsResponse::ComposerWorkloadStatus (v1.9.0)  |  Ruby client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/ruby/docs/reference/google-cloud-orchestration-airflow-service-v1/latest/Google-Cloud-Orchestration-Airflow-Service-V1-ListWorkloadsResponse-ComposerWorkloadStatus/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Ruby ](https://docs.cloud.google.com/ruby/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/ruby/docs/reference)
+
+
+
+Send feedback 
+
+#  Cloud Composer V1 API - Class Google::Cloud::Orchestration::Airflow::Service::V1::ListWorkloadsResponse::ComposerWorkloadStatus (v1.9.0) Stay organized with collections  Save and categorize content based on your preferences. 
+
+1.9.0 (latest)  1.8.0  1.7.0  1.6.1  1.5.0  1.4.0  1.3.4  1.2.0  1.1.0  1.0.1  0.11.0  0.10.0  0.9.2  0.8.0  0.7.0  0.6.1  0.5.0  0.4.0  0.3.1  0.2.0  0.1.2 
+
+Reference documentation and code samples for the Cloud Composer V1 API class Google::Cloud::Orchestration::Airflow::Service::V1::ListWorkloadsResponse::ComposerWorkloadStatus.
+
+Workload status.
+
+## Inherits
+
+  * Object 
+
+
+
+## Extended By
+
+  * Google::Protobuf::MessageExts::ClassMethods 
+
+
+
+## Includes
+
+  * Google::Protobuf::MessageExts 
+
+
+
+## Methods 
+
+### #detailed_status_message
+    
+    
+    def detailed_status_message() -> ::String
+
+**Returns**
+
+  * (::String) — Output only. Detailed message of the status. 
+
+
+
+### #state
+    
+    
+    def state() -> ::Google::Cloud::Orchestration::Airflow::Service::V1::ListWorkloadsResponse::ComposerWorkloadState
+
+**Returns**
+
+  * ([::Google::Cloud::Orchestration::Airflow::Service::V1::ListWorkloadsResponse::ComposerWorkloadState](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-orchestration-airflow-service-v1/latest/Google-Cloud-Orchestration-Airflow-Service-V1-ListWorkloadsResponse-ComposerWorkloadState)) — Output only. Workload state. 
+
+
+
+### #status_message
+    
+    
+    def status_message() -> ::String
+
+**Returns**
+
+  * (::String) — Output only. Text to provide more descriptive status. 
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-06-11 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-06-11 UTC."],[],[]] 

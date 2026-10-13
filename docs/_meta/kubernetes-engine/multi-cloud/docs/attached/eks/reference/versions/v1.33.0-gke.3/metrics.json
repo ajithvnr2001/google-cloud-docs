@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/eks/reference/versions/v1.33.0-gke.3/metrics/",
+  "file": "kubernetes-engine/multi-cloud/docs/attached/eks/reference/versions/v1.33.0-gke.3/metrics.md",
+  "title": "Metrics available in 1.33.0-gke.3 \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T17:01:11.880202+00:00"
+}

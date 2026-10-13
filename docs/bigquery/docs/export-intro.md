@@ -1,0 +1,101 @@
+---
+url: https://docs.cloud.google.com/bigquery/docs/export-intro/
+title: Introduction to data export \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T16:39:01.310607+00:00
+---
+
+# Introduction to data export  |  BigQuery  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/bigquery/docs/export-intro/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Data analytics ](https://docs.cloud.google.com/docs/data)
+  * [ BigQuery ](https://docs.cloud.google.com/bigquery/docs)
+  * [ Guides ](https://docs.cloud.google.com/bigquery/docs/introduction)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Introduction to data export
+
+This document describes the different ways of exporting data from BigQuery.
+
+For more information about data integrations, see [Introduction to loading, transforming, and exporting data](https://docs.cloud.google.com/bigquery/docs/load-transform-export-intro).
+
+## Export query results
+
+You can export query results to a local file (either as a CSV or JSON file), Google Drive, or Google Sheets. For more information, see [Export query results to a file](https://docs.cloud.google.com/bigquery/docs/export-file).
+
+## Export tables
+
+You can export your BigQuery tables in the following data formats:
+
+Data format | Supported compression types | Supported export methods  
+---|---|---  
+CSV | GZIP | [Export to Cloud Storage](https://docs.cloud.google.com/bigquery/docs/exporting-data)  
+JSON | GZIP | [Export to Cloud Storage](https://docs.cloud.google.com/bigquery/docs/exporting-data)   
+[Read from BigQuery using Dataflow](https://docs.cloud.google.com/dataflow/docs/guides/read-from-bigquery)  
+Avro | DEFLATE, SNAPPY | [Export to Cloud Storage](https://docs.cloud.google.com/bigquery/docs/exporting-data)   
+[Read from BigQuery using Dataflow](https://docs.cloud.google.com/dataflow/docs/guides/read-from-bigquery)  
+Parquet | GZIP, SNAPPY, ZSTD | [Export to Cloud Storage](https://docs.cloud.google.com/bigquery/docs/exporting-data)  
+  
+You can also [export your BigQuery tables as Protobuf columns](https://docs.cloud.google.com/bigquery/docs/protobuf-export) when working with nested data structures that require object type safety, or if you need a wider language support.
+
+### Large table export considerations
+
+When exporting substantial data from BigQuery, consider the following:
+
+  * **Data volume and format** : 
+    * Calculate the volume of data to be exported. Exports can incur substantial costs based on data size, format, method and geographic location. Some resources are charged per GiB, while others are charged per TiB.
+    * Choose a format compatible with analysis tools and structure of your data. For example, CSV doesn't handle nested or repeated fields. Check data type compatibility.
+    * Consider compression formats to reduce size and costs.
+  * **Export cost** : 
+    * Some export methods are free up to a limit, while others always incur costs. For more information, see [Data extraction pricing](https://docs.cloud.google.com/bigquery/pricing#data-extraction-pricing).
+    * Costs can apply if your BigQuery table and destination, such as a Cloud Storage bucket, are in different locations.
+  * **Quotas** : some export methods have daily limits. For more information, see [Extract jobs](https://docs.cloud.google.com/bigquery/quotas#export_jobs).
+  * **Multiple files** : large exports split into multiple files. Consider how you will manage these files downstream.
+  * **Automation** : for recurring exports, use [BigQuery scheduled queries](https://docs.cloud.google.com/bigquery/docs/scheduling-queries) or [Dataflow](https://docs.cloud.google.com/dataflow/docs/overview).
+  * **Retention policies** : determine retention periods in your destination dataset and implement lifecycle rules to optimize storage costs.
+  * **Security and access control** : implement appropriate IAM permissions and encryption.
+
+
+
+As you take these factors into consideration, we recommend performing a test export on a data subset to assess costs, file sizes, counts, and time. You can use a `WHERE` clause in your `EXPORT DATA` SQL statement to limit the test export.
+
+## Export BigQuery code assets
+
+You can download [BigQuery Studio](https://docs.cloud.google.com/bigquery/docs/query-overview#bigquery-studio) code assets, such as [saved queries](https://docs.cloud.google.com/bigquery/docs/saved-queries-introduction) or [notebooks](https://docs.cloud.google.com/bigquery/docs/programmatic-analysis) to maintain a local copy of your assets. For more information on downloading your BigQuery code assets, see the following:
+
+  * [Download saved queries](https://docs.cloud.google.com/bigquery/docs/manage-saved-queries#download_saved_queries)
+  * [Download notebooks](https://docs.cloud.google.com/bigquery/docs/manage-notebooks#download_a_notebook)
+
+
+
+## Export using reverse ETL
+
+You can set up reverse ETL (RETL) workflows to move data from BigQuery to the following databases:
+
+  * [Export to Bigtable](https://docs.cloud.google.com/bigquery/docs/export-to-bigtable)
+  * [Export to Spanner](https://docs.cloud.google.com/bigquery/docs/export-to-spanner)
+  * [Export to Pub/Sub](https://docs.cloud.google.com/bigquery/docs/export-to-pubsub)
+  * [Export to AlloyDB](https://docs.cloud.google.com/bigquery/docs/export-to-alloydb) ([preview](https://cloud.google.com/products#product-launch-stages))
+
+
+
+## What's next
+
+  * Learn about [quotas for extract jobs](https://docs.cloud.google.com/bigquery/quotas#export_jobs).
+  * Learn about [BigQuery storage pricing](https://cloud.google.com/bigquery/pricing#storage).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

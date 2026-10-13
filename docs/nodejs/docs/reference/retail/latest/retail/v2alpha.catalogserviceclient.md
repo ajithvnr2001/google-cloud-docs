@@ -1,0 +1,2603 @@
+---
+url: https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/v2alpha.catalogserviceclient
+title: Class v2alpha.CatalogServiceClient (5.4.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T16:02:30.257786+00:00
+---
+
+# Class v2alpha.CatalogServiceClient (5.4.0)  |  Node.js client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/v2alpha.catalogserviceclient
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Node.js ](https://docs.cloud.google.com/nodejs/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/nodejs/docs/reference)
+
+
+
+Send feedback 
+
+#  Class v2alpha.CatalogServiceClient (5.4.0) Stay organized with collections  Save and categorize content based on your preferences. 
+
+5.4.0 (latest)  5.3.1  5.0.1  4.4.0  4.3.0  3.6.0  3.5.0  3.1.0  2.4.1  2.3.1  2.1.1  2.0.0  1.8.0  1.7.0  1.6.1  1.5.0  1.4.0  1.3.0  1.2.2  1.1.6 
+
+Service for managing catalog configuration. v2alpha
+
+## Package
+
+[@google-cloud/retail](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)
+
+## Constructors 
+
+### (constructor)(opts, gaxInstance)
+    
+    
+    constructor(opts?: ClientOptions, gaxInstance?: typeof gax | typeof gax.fallback);
+
+Construct an instance of CatalogServiceClient.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`opts` |  `ClientOptions`   
+  
+`gaxInstance` |  `typeof gax | typeof fallback`   
+: loaded instance of `google-gax`. Useful if you need to avoid loading the default gRPC version and want to use the fallback HTTP implementation. Load only fallback version and pass it to the constructor: ``` const gax = require('google-gax/build/src/fallback'); // avoids loading google-gax with gRPC const client = new CatalogServiceClient({fallback: true}, gax); ```  
+  
+## Properties 
+
+### apiEndpoint
+    
+    
+    get apiEndpoint(): string;
+
+The DNS address for this API service.
+
+### apiEndpoint
+    
+    
+    static get apiEndpoint(): string;
+
+The DNS address for this API service - same as servicePath.
+
+### auth
+    
+    
+    auth: gax.GoogleAuth;
+
+### catalogServiceStub
+    
+    
+    catalogServiceStub?: Promise<{
+            [name: string]: Function;
+        }>;
+
+### descriptors
+    
+    
+    descriptors: Descriptors;
+
+### innerApiCalls
+    
+    
+    innerApiCalls: {
+            [name: string]: Function;
+        };
+
+### locationsClient
+    
+    
+    locationsClient: LocationsClient;
+
+### operationsClient
+    
+    
+    operationsClient: gax.OperationsClient;
+
+### pathTemplates
+    
+    
+    pathTemplates: {
+            [name: string]: gax.PathTemplate;
+        };
+
+### port
+    
+    
+    static get port(): number;
+
+The port for this API service.
+
+### scopes
+    
+    
+    static get scopes(): string[];
+
+The scopes needed to make gRPC calls for every method defined in this service.
+
+### servicePath
+    
+    
+    static get servicePath(): string;
+
+The DNS address for this API service.
+
+### universeDomain
+    
+    
+    get universeDomain(): string;
+
+### warn
+    
+    
+    warn: (code: string, message: string, warnType?: string) => void;
+
+## Methods 
+
+### addCatalogAttribute(request, options)
+    
+    
+    addCatalogAttribute(request?: protos.google.cloud.retail.v2alpha.IAddCatalogAttributeRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.retail.v2alpha.IAttributesConfig,
+            (protos.google.cloud.retail.v2alpha.IAddCatalogAttributeRequest | undefined),
+            {} | undefined
+        ]>;
+
+Adds the specified to the [AttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.attributesconfig).
+
+If the to add already exists, an ALREADY_EXISTS error is returned.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IAddCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iaddcatalogattributerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.retail.v2alpha.IAttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iattributesconfig), ([protos.google.cloud.retail.v2alpha.IAddCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iaddcatalogattributerequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [AttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.attributesconfig). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Full AttributesConfig resource name. Format:
+       *  `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+       */
+      // const attributesConfig = 'abc123'
+      /**
+       *  Required. The
+       *  CatalogAttribute google.cloud.retail.v2alpha.CatalogAttribute  to add.
+       */
+      // const catalogAttribute = {}
+    
+      // Imports the Retail library
+      const {CatalogServiceClient} = require('[@google-cloud/retail](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)').v2alpha;
+    
+      // Instantiates a client
+      const retailClient = new [CatalogServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)();
+    
+      async function callAddCatalogAttribute() {
+        // Construct request
+        const request = {
+          attributesConfig,
+          catalogAttribute,
+        };
+    
+        // Run request
+        const response = await retailClient.addCatalogAttribute(request);
+        console.log(response);
+      }
+    
+      callAddCatalogAttribute();
+    
+    
+
+### addCatalogAttribute(request, options, callback)
+    
+    
+    addCatalogAttribute(request: protos.google.cloud.retail.v2alpha.IAddCatalogAttributeRequest, options: CallOptions, callback: Callback<protos.google.cloud.retail.v2alpha.IAttributesConfig, protos.google.cloud.retail.v2alpha.IAddCatalogAttributeRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IAddCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iaddcatalogattributerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.IAttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iattributesconfig), [protos.google.cloud.retail.v2alpha.IAddCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iaddcatalogattributerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### addCatalogAttribute(request, callback)
+    
+    
+    addCatalogAttribute(request: protos.google.cloud.retail.v2alpha.IAddCatalogAttributeRequest, callback: Callback<protos.google.cloud.retail.v2alpha.IAttributesConfig, protos.google.cloud.retail.v2alpha.IAddCatalogAttributeRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IAddCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iaddcatalogattributerequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.IAttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iattributesconfig), [protos.google.cloud.retail.v2alpha.IAddCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iaddcatalogattributerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### alertConfigPath(project)
+    
+    
+    alertConfigPath(project: string): string;
+
+Return a fully-qualified alertConfig resource name string.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### attributesConfigPath(project, location, catalog)
+    
+    
+    attributesConfigPath(project: string, location: string, catalog: string): string;
+
+Return a fully-qualified attributesConfig resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`catalog` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### batchRemoveCatalogAttributes(request, options)
+    
+    
+    batchRemoveCatalogAttributes(request?: protos.google.cloud.retail.v2alpha.IBatchRemoveCatalogAttributesRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.retail.v2alpha.IBatchRemoveCatalogAttributesResponse,
+            (protos.google.cloud.retail.v2alpha.IBatchRemoveCatalogAttributesRequest | undefined),
+            {} | undefined
+        ]>;
+
+Removes all specified s from the [AttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.attributesconfig).
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IBatchRemoveCatalogAttributesRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ibatchremovecatalogattributesrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.retail.v2alpha.IBatchRemoveCatalogAttributesResponse](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ibatchremovecatalogattributesresponse), ([protos.google.cloud.retail.v2alpha.IBatchRemoveCatalogAttributesRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ibatchremovecatalogattributesrequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [BatchRemoveCatalogAttributesResponse](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.batchremovecatalogattributesresponse). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The attributes config resource shared by all catalog attributes
+       *  being deleted. Format:
+       *  `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+       */
+      // const attributesConfig = 'abc123'
+      /**
+       *  Required. The attribute name keys of the
+       *  CatalogAttribute google.cloud.retail.v2alpha.CatalogAttribute s to
+       *  delete. A maximum of 1000 catalog attributes can be deleted in a batch.
+       */
+      // const attributeKeys = ['abc','def']
+    
+      // Imports the Retail library
+      const {CatalogServiceClient} = require('[@google-cloud/retail](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)').v2alpha;
+    
+      // Instantiates a client
+      const retailClient = new [CatalogServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)();
+    
+      async function callBatchRemoveCatalogAttributes() {
+        // Construct request
+        const request = {
+          attributesConfig,
+          attributeKeys,
+        };
+    
+        // Run request
+        const response = await retailClient.batchRemoveCatalogAttributes(request);
+        console.log(response);
+      }
+    
+      callBatchRemoveCatalogAttributes();
+    
+    
+
+### batchRemoveCatalogAttributes(request, options, callback)
+    
+    
+    batchRemoveCatalogAttributes(request: protos.google.cloud.retail.v2alpha.IBatchRemoveCatalogAttributesRequest, options: CallOptions, callback: Callback<protos.google.cloud.retail.v2alpha.IBatchRemoveCatalogAttributesResponse, protos.google.cloud.retail.v2alpha.IBatchRemoveCatalogAttributesRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IBatchRemoveCatalogAttributesRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ibatchremovecatalogattributesrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.IBatchRemoveCatalogAttributesResponse](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ibatchremovecatalogattributesresponse), [protos.google.cloud.retail.v2alpha.IBatchRemoveCatalogAttributesRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ibatchremovecatalogattributesrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### batchRemoveCatalogAttributes(request, callback)
+    
+    
+    batchRemoveCatalogAttributes(request: protos.google.cloud.retail.v2alpha.IBatchRemoveCatalogAttributesRequest, callback: Callback<protos.google.cloud.retail.v2alpha.IBatchRemoveCatalogAttributesResponse, protos.google.cloud.retail.v2alpha.IBatchRemoveCatalogAttributesRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IBatchRemoveCatalogAttributesRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ibatchremovecatalogattributesrequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.IBatchRemoveCatalogAttributesResponse](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ibatchremovecatalogattributesresponse), [protos.google.cloud.retail.v2alpha.IBatchRemoveCatalogAttributesRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ibatchremovecatalogattributesrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### branchPath(project, location, catalog, branch)
+    
+    
+    branchPath(project: string, location: string, catalog: string, branch: string): string;
+
+Return a fully-qualified branch resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`catalog` |  `string`   
+  
+`branch` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### cancelOperation(request, optionsOrCallback, callback)
+    
+    
+    cancelOperation(request: protos.google.longrunning.CancelOperationRequest, optionsOrCallback?: gax.CallOptions | Callback<protos.google.longrunning.CancelOperationRequest, protos.google.protobuf.Empty, {} | undefined | null>, callback?: Callback<protos.google.longrunning.CancelOperationRequest, protos.google.protobuf.Empty, {} | undefined | null>): Promise<protos.google.protobuf.Empty>;
+
+Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an value with a of 1, corresponding to `Code.CANCELLED`.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[CancelOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.longrunning.canceloperationrequest)`   
+The request object that will be sent.  
+`optionsOrCallback` |  `CallOptions | Callback<[protos.google.longrunning.CancelOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.longrunning.canceloperationrequest), [protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.protobuf.empty), {} | undefined | null>`   
+  
+`callback` |  `Callback<[protos.google.longrunning.CancelOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.longrunning.canceloperationrequest), [protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.protobuf.empty), {} | undefined | null>`   
+The function which will be called with the result of the API call. {Promise} - The promise which resolves when API call finishes. The promise has a method named "cancel" which cancels the ongoing API call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.protobuf.empty)>` |   
+**Example**
+    
+    
+    const client = longrunning.operationsClient();
+    await client.cancelOperation({name: ''});
+    
+
+### catalogPath(project, location, catalog)
+    
+    
+    catalogPath(project: string, location: string, catalog: string): string;
+
+Return a fully-qualified catalog resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`catalog` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### close()
+    
+    
+    close(): Promise<void>;
+
+Terminate the gRPC channel and close the client.
+
+The client will no longer be usable and all future behavior is undefined.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<void>` | {Promise} A promise that resolves when the client is closed.  
+  
+### completionConfigPath(project, location, catalog)
+    
+    
+    completionConfigPath(project: string, location: string, catalog: string): string;
+
+Return a fully-qualified completionConfig resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`catalog` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### controlPath(project, location, catalog, control)
+    
+    
+    controlPath(project: string, location: string, catalog: string, control: string): string;
+
+Return a fully-qualified control resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`catalog` |  `string`   
+  
+`control` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### deleteOperation(request, optionsOrCallback, callback)
+    
+    
+    deleteOperation(request: protos.google.longrunning.DeleteOperationRequest, optionsOrCallback?: gax.CallOptions | Callback<protos.google.protobuf.Empty, protos.google.longrunning.DeleteOperationRequest, {} | null | undefined>, callback?: Callback<protos.google.protobuf.Empty, protos.google.longrunning.DeleteOperationRequest, {} | null | undefined>): Promise<protos.google.protobuf.Empty>;
+
+Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[DeleteOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.longrunning.deleteoperationrequest)`   
+The request object that will be sent.  
+`optionsOrCallback` |  `CallOptions | Callback<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.protobuf.empty), [protos.google.longrunning.DeleteOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.longrunning.deleteoperationrequest), {} | null | undefined>`   
+  
+`callback` |  `Callback<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.protobuf.empty), [protos.google.longrunning.DeleteOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.longrunning.deleteoperationrequest), {} | null | undefined>`   
+The function which will be called with the result of the API call. {Promise} - The promise which resolves when API call finishes. The promise has a method named "cancel" which cancels the ongoing API call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[protos.google.protobuf.Empty](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.protobuf.empty)>` |   
+**Example**
+    
+    
+    const client = longrunning.operationsClient();
+    await client.deleteOperation({name: ''});
+    
+
+### getAttributesConfig(request, options)
+    
+    
+    getAttributesConfig(request?: protos.google.cloud.retail.v2alpha.IGetAttributesConfigRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.retail.v2alpha.IAttributesConfig,
+            (protos.google.cloud.retail.v2alpha.IGetAttributesConfigRequest | undefined),
+            {} | undefined
+        ]>;
+
+Gets an [AttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.attributesconfig).
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetAttributesConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetattributesconfigrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.retail.v2alpha.IAttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iattributesconfig), ([protos.google.cloud.retail.v2alpha.IGetAttributesConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetattributesconfigrequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [AttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.attributesconfig). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Full AttributesConfig resource name. Format:
+       *  `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+       */
+      // const name = 'abc123'
+    
+      // Imports the Retail library
+      const {CatalogServiceClient} = require('[@google-cloud/retail](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)').v2alpha;
+    
+      // Instantiates a client
+      const retailClient = new [CatalogServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)();
+    
+      async function callGetAttributesConfig() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await retailClient.getAttributesConfig(request);
+        console.log(response);
+      }
+    
+      callGetAttributesConfig();
+    
+    
+
+### getAttributesConfig(request, options, callback)
+    
+    
+    getAttributesConfig(request: protos.google.cloud.retail.v2alpha.IGetAttributesConfigRequest, options: CallOptions, callback: Callback<protos.google.cloud.retail.v2alpha.IAttributesConfig, protos.google.cloud.retail.v2alpha.IGetAttributesConfigRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetAttributesConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetattributesconfigrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.IAttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iattributesconfig), [protos.google.cloud.retail.v2alpha.IGetAttributesConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetattributesconfigrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getAttributesConfig(request, callback)
+    
+    
+    getAttributesConfig(request: protos.google.cloud.retail.v2alpha.IGetAttributesConfigRequest, callback: Callback<protos.google.cloud.retail.v2alpha.IAttributesConfig, protos.google.cloud.retail.v2alpha.IGetAttributesConfigRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetAttributesConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetattributesconfigrequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.IAttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iattributesconfig), [protos.google.cloud.retail.v2alpha.IGetAttributesConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetattributesconfigrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getCompletionConfig(request, options)
+    
+    
+    getCompletionConfig(request?: protos.google.cloud.retail.v2alpha.IGetCompletionConfigRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.retail.v2alpha.ICompletionConfig,
+            (protos.google.cloud.retail.v2alpha.IGetCompletionConfigRequest | undefined),
+            {} | undefined
+        ]>;
+
+Gets a [CompletionConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.completionconfig).
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetCompletionConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetcompletionconfigrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.retail.v2alpha.ICompletionConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.icompletionconfig), ([protos.google.cloud.retail.v2alpha.IGetCompletionConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetcompletionconfigrequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [CompletionConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.completionconfig). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Full CompletionConfig resource name. Format:
+       *  `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig`
+       */
+      // const name = 'abc123'
+    
+      // Imports the Retail library
+      const {CatalogServiceClient} = require('[@google-cloud/retail](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)').v2alpha;
+    
+      // Instantiates a client
+      const retailClient = new [CatalogServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)();
+    
+      async function callGetCompletionConfig() {
+        // Construct request
+        const request = {
+          name,
+        };
+    
+        // Run request
+        const response = await retailClient.getCompletionConfig(request);
+        console.log(response);
+      }
+    
+      callGetCompletionConfig();
+    
+    
+
+### getCompletionConfig(request, options, callback)
+    
+    
+    getCompletionConfig(request: protos.google.cloud.retail.v2alpha.IGetCompletionConfigRequest, options: CallOptions, callback: Callback<protos.google.cloud.retail.v2alpha.ICompletionConfig, protos.google.cloud.retail.v2alpha.IGetCompletionConfigRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetCompletionConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetcompletionconfigrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.ICompletionConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.icompletionconfig), [protos.google.cloud.retail.v2alpha.IGetCompletionConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetcompletionconfigrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getCompletionConfig(request, callback)
+    
+    
+    getCompletionConfig(request: protos.google.cloud.retail.v2alpha.IGetCompletionConfigRequest, callback: Callback<protos.google.cloud.retail.v2alpha.ICompletionConfig, protos.google.cloud.retail.v2alpha.IGetCompletionConfigRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetCompletionConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetcompletionconfigrequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.ICompletionConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.icompletionconfig), [protos.google.cloud.retail.v2alpha.IGetCompletionConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetcompletionconfigrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getDefaultBranch(request, options)
+    
+    
+    getDefaultBranch(request?: protos.google.cloud.retail.v2alpha.IGetDefaultBranchRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.retail.v2alpha.IGetDefaultBranchResponse,
+            protos.google.cloud.retail.v2alpha.IGetDefaultBranchRequest | undefined,
+            {} | undefined
+        ]>;
+
+Get which branch is currently default branch set by method under a specified parent catalog.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetDefaultBranchRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetdefaultbranchrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.retail.v2alpha.IGetDefaultBranchResponse](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetdefaultbranchresponse), [protos.google.cloud.retail.v2alpha.IGetDefaultBranchRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetdefaultbranchrequest) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [GetDefaultBranchResponse](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.getdefaultbranchresponse). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  The parent catalog resource name, such as
+       *  `projects/* /locations/global/catalogs/default_catalog`.
+       */
+      // const catalog = 'abc123'
+    
+      // Imports the Retail library
+      const {CatalogServiceClient} = require('[@google-cloud/retail](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)').v2alpha;
+    
+      // Instantiates a client
+      const retailClient = new [CatalogServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)();
+    
+      async function callGetDefaultBranch() {
+        // Construct request
+        const request = {
+        };
+    
+        // Run request
+        const response = await retailClient.getDefaultBranch(request);
+        console.log(response);
+      }
+    
+      callGetDefaultBranch();
+    
+    
+
+### getDefaultBranch(request, options, callback)
+    
+    
+    getDefaultBranch(request: protos.google.cloud.retail.v2alpha.IGetDefaultBranchRequest, options: CallOptions, callback: Callback<protos.google.cloud.retail.v2alpha.IGetDefaultBranchResponse, protos.google.cloud.retail.v2alpha.IGetDefaultBranchRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetDefaultBranchRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetdefaultbranchrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.IGetDefaultBranchResponse](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetdefaultbranchresponse), [protos.google.cloud.retail.v2alpha.IGetDefaultBranchRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetdefaultbranchrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getDefaultBranch(request, callback)
+    
+    
+    getDefaultBranch(request: protos.google.cloud.retail.v2alpha.IGetDefaultBranchRequest, callback: Callback<protos.google.cloud.retail.v2alpha.IGetDefaultBranchResponse, protos.google.cloud.retail.v2alpha.IGetDefaultBranchRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetDefaultBranchRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetdefaultbranchrequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.IGetDefaultBranchResponse](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetdefaultbranchresponse), [protos.google.cloud.retail.v2alpha.IGetDefaultBranchRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.igetdefaultbranchrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getLocation(request, options, callback)
+    
+    
+    getLocation(request: LocationProtos.google.cloud.location.IGetLocationRequest, options?: gax.CallOptions | Callback<LocationProtos.google.cloud.location.ILocation, LocationProtos.google.cloud.location.IGetLocationRequest | null | undefined, {} | null | undefined>, callback?: Callback<LocationProtos.google.cloud.location.ILocation, LocationProtos.google.cloud.location.IGetLocationRequest | null | undefined, {} | null | undefined>): Promise<LocationProtos.google.cloud.location.ILocation>;
+
+Gets information about a location.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `LocationProtos.google.cloud.location.IGetLocationRequest`   
+The request object that will be sent.  
+`options` |  `CallOptions | Callback<google.cloud.location.ILocation, google.cloud.location.IGetLocationRequest | null | undefined, {} | null | undefined>`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+`callback` |  `Callback<google.cloud.location.ILocation, google.cloud.location.IGetLocationRequest | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<google.cloud.location.ILocation>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing . Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+    const [response] = await client.getLocation(request);
+    
+
+### getOperation(request, optionsOrCallback, callback)
+    
+    
+    getOperation(request: protos.google.longrunning.GetOperationRequest, optionsOrCallback?: gax.CallOptions | Callback<protos.google.longrunning.Operation, protos.google.longrunning.GetOperationRequest, {} | null | undefined>, callback?: Callback<protos.google.longrunning.Operation, protos.google.longrunning.GetOperationRequest, {} | null | undefined>): Promise<[protos.google.longrunning.Operation]>;
+
+Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[GetOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.longrunning.getoperationrequest)`   
+The request object that will be sent.  
+`optionsOrCallback` |  `CallOptions | Callback<[protos.google.longrunning.Operation](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.longrunning.operation), [protos.google.longrunning.GetOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.longrunning.getoperationrequest), {} | null | undefined>`   
+  
+`callback` |  `Callback<[protos.google.longrunning.Operation](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.longrunning.operation), [protos.google.longrunning.GetOperationRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.longrunning.getoperationrequest), {} | null | undefined>`   
+The function which will be called with the result of the API call. The second parameter to the callback is an object representing . {Promise} - The promise which resolves to an array. The first element of the array is an object representing . The promise has a method named "cancel" which cancels the ongoing API call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[[protos.google.longrunning.Operation](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.longrunning.operation)]>` |   
+**Example**
+    
+    
+    const client = longrunning.operationsClient();
+    const name = '';
+    const [response] = await client.getOperation({name});
+    // doThingsWith(response)
+    
+
+### getProjectId()
+    
+    
+    getProjectId(): Promise<string>;
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<string>` |   
+  
+### getProjectId(callback)
+    
+    
+    getProjectId(callback: Callback<string, undefined, undefined>): void;
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`callback` |  `Callback<string, undefined, undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### initialize()
+    
+    
+    initialize(): Promise<{
+            [name: string]: Function;
+        }>;
+
+Initialize the client. Performs asynchronous operations (such as authentication) and prepares the client. This function will be called automatically when any class method is called for the first time, but if you need to initialize it before calling an actual method, feel free to call initialize() directly.
+
+You can await on this method if you want to make sure the client is initialized.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<{ [name: string]: Function; }>` | {Promise} A promise that resolves to an authenticated service stub.  
+  
+### listCatalogs(request, options)
+    
+    
+    listCatalogs(request?: protos.google.cloud.retail.v2alpha.IListCatalogsRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.retail.v2alpha.ICatalog[],
+            protos.google.cloud.retail.v2alpha.IListCatalogsRequest | null,
+            protos.google.cloud.retail.v2alpha.IListCatalogsResponse
+        ]>;
+
+Lists all the [Catalog](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.catalog)s associated with the project.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListCatalogsRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ilistcatalogsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.retail.v2alpha.ICatalog](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.icatalog)[], [protos.google.cloud.retail.v2alpha.IListCatalogsRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ilistcatalogsrequest) | null, [protos.google.cloud.retail.v2alpha.IListCatalogsResponse](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ilistcatalogsresponse) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of [Catalog](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.catalog). The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listCatalogsAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listCatalogs(request, options, callback)
+    
+    
+    listCatalogs(request: protos.google.cloud.retail.v2alpha.IListCatalogsRequest, options: CallOptions, callback: PaginationCallback<protos.google.cloud.retail.v2alpha.IListCatalogsRequest, protos.google.cloud.retail.v2alpha.IListCatalogsResponse | null | undefined, protos.google.cloud.retail.v2alpha.ICatalog>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListCatalogsRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ilistcatalogsrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.retail.v2alpha.IListCatalogsRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ilistcatalogsrequest), [protos.google.cloud.retail.v2alpha.IListCatalogsResponse](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ilistcatalogsresponse) | null | undefined, [protos.google.cloud.retail.v2alpha.ICatalog](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.icatalog)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listCatalogs(request, callback)
+    
+    
+    listCatalogs(request: protos.google.cloud.retail.v2alpha.IListCatalogsRequest, callback: PaginationCallback<protos.google.cloud.retail.v2alpha.IListCatalogsRequest, protos.google.cloud.retail.v2alpha.IListCatalogsResponse | null | undefined, protos.google.cloud.retail.v2alpha.ICatalog>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListCatalogsRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ilistcatalogsrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.retail.v2alpha.IListCatalogsRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ilistcatalogsrequest), [protos.google.cloud.retail.v2alpha.IListCatalogsResponse](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ilistcatalogsresponse) | null | undefined, [protos.google.cloud.retail.v2alpha.ICatalog](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.icatalog)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listCatalogsAsync(request, options)
+    
+    
+    listCatalogsAsync(request?: protos.google.cloud.retail.v2alpha.IListCatalogsRequest, options?: CallOptions): AsyncIterable<protos.google.cloud.retail.v2alpha.ICatalog>;
+
+Equivalent to `listCatalogs`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListCatalogsRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ilistcatalogsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.cloud.retail.v2alpha.ICatalog](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.icatalog)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing [Catalog](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.catalog). The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The account resource name with an associated location.
+       *  If the caller does not have permission to list
+       *  Catalog google.cloud.retail.v2alpha.Catalog s under this location,
+       *  regardless of whether or not this location exists, a PERMISSION_DENIED
+       *  error is returned.
+       */
+      // const parent = 'abc123'
+      /**
+       *  Maximum number of Catalog google.cloud.retail.v2alpha.Catalog s to
+       *  return. If unspecified, defaults to 50. The maximum allowed value is 1000.
+       *  Values above 1000 will be coerced to 1000.
+       *  If this field is negative, an INVALID_ARGUMENT is returned.
+       */
+      // const pageSize = 1234
+      /**
+       *  A page token
+       *  ListCatalogsResponse.next_page_token google.cloud.retail.v2alpha.ListCatalogsResponse.next_page_token,
+       *  received from a previous
+       *  CatalogService.ListCatalogs google.cloud.retail.v2alpha.CatalogService.ListCatalogs 
+       *  call. Provide this to retrieve the subsequent page.
+       *  When paginating, all other parameters provided to
+       *  CatalogService.ListCatalogs google.cloud.retail.v2alpha.CatalogService.ListCatalogs 
+       *  must match the call that provided the page token. Otherwise, an
+       *  INVALID_ARGUMENT error is returned.
+       */
+      // const pageToken = 'abc123'
+    
+      // Imports the Retail library
+      const {CatalogServiceClient} = require('[@google-cloud/retail](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)').v2alpha;
+    
+      // Instantiates a client
+      const retailClient = new [CatalogServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)();
+    
+      async function callListCatalogs() {
+        // Construct request
+        const request = {
+          parent,
+        };
+    
+        // Run request
+        const iterable = retailClient.listCatalogsAsync(request);
+        for await (const response of iterable) {
+            console.log(response);
+        }
+      }
+    
+      callListCatalogs();
+    
+    
+
+### listCatalogsStream(request, options)
+    
+    
+    listCatalogsStream(request?: protos.google.cloud.retail.v2alpha.IListCatalogsRequest, options?: CallOptions): Transform;
+
+Equivalent to `listCatalogs`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListCatalogsRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ilistcatalogsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing [Catalog](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.catalog) on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listCatalogsAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listLocationsAsync(request, options)
+    
+    
+    listLocationsAsync(request: LocationProtos.google.cloud.location.IListLocationsRequest, options?: CallOptions): AsyncIterable<LocationProtos.google.cloud.location.ILocation>;
+
+Lists information about the supported locations for this service. Returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `LocationProtos.google.cloud.location.IListLocationsRequest`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<google.cloud.location.ILocation>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing . The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+    const iterable = client.listLocationsAsync(request);
+    for await (const response of iterable) {
+      // process response
+    }
+    
+
+### listOperationsAsync(request, options)
+    
+    
+    listOperationsAsync(request: protos.google.longrunning.ListOperationsRequest, options?: gax.CallOptions): AsyncIterable<protos.google.longrunning.IOperation>;
+
+Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. Returns an iterable object.
+
+For-await-of syntax is used with the iterable to recursively get response element on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ListOperationsRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.longrunning.listoperationsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Optional parameters. You can override the default settings for this call, e.g, timeout, retries, paginations, etc. See [gax.CallOptions](https://googleapis.github.io/gax-nodejs/global.html#CallOptions) for the details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.longrunning.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.longrunning.ioperation)>` | {Object} An iterable Object that conforms to [iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).  
+**Example**
+    
+    
+    const client = longrunning.operationsClient();
+    for await (const response of client.listOperationsAsync(request));
+    // doThingsWith(response)
+    
+
+### locationPath(project, location)
+    
+    
+    locationPath(project: string, location: string): string;
+
+Return a fully-qualified location resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### loggingConfigPath(project)
+    
+    
+    loggingConfigPath(project: string): string;
+
+Return a fully-qualified loggingConfig resource name string.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### matchBranchFromBranchName(branchName)
+    
+    
+    matchBranchFromBranchName(branchName: string): string | number;
+
+Parse the branch from Branch resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`branchName` |  `string`   
+A fully-qualified path representing Branch resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the branch.  
+  
+### matchBranchFromProductName(productName)
+    
+    
+    matchBranchFromProductName(productName: string): string | number;
+
+Parse the branch from Product resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`productName` |  `string`   
+A fully-qualified path representing Product resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the branch.  
+  
+### matchCatalogFromAttributesConfigName(attributesConfigName)
+    
+    
+    matchCatalogFromAttributesConfigName(attributesConfigName: string): string | number;
+
+Parse the catalog from AttributesConfig resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`attributesConfigName` |  `string`   
+A fully-qualified path representing AttributesConfig resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the catalog.  
+  
+### matchCatalogFromBranchName(branchName)
+    
+    
+    matchCatalogFromBranchName(branchName: string): string | number;
+
+Parse the catalog from Branch resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`branchName` |  `string`   
+A fully-qualified path representing Branch resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the catalog.  
+  
+### matchCatalogFromCatalogName(catalogName)
+    
+    
+    matchCatalogFromCatalogName(catalogName: string): string | number;
+
+Parse the catalog from Catalog resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`catalogName` |  `string`   
+A fully-qualified path representing Catalog resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the catalog.  
+  
+### matchCatalogFromCompletionConfigName(completionConfigName)
+    
+    
+    matchCatalogFromCompletionConfigName(completionConfigName: string): string | number;
+
+Parse the catalog from CompletionConfig resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`completionConfigName` |  `string`   
+A fully-qualified path representing CompletionConfig resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the catalog.  
+  
+### matchCatalogFromControlName(controlName)
+    
+    
+    matchCatalogFromControlName(controlName: string): string | number;
+
+Parse the catalog from Control resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`controlName` |  `string`   
+A fully-qualified path representing Control resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the catalog.  
+  
+### matchCatalogFromMerchantCenterAccountLinkName(merchantCenterAccountLinkName)
+    
+    
+    matchCatalogFromMerchantCenterAccountLinkName(merchantCenterAccountLinkName: string): string | number;
+
+Parse the catalog from MerchantCenterAccountLink resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`merchantCenterAccountLinkName` |  `string`   
+A fully-qualified path representing MerchantCenterAccountLink resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the catalog.  
+  
+### matchCatalogFromModelName(modelName)
+    
+    
+    matchCatalogFromModelName(modelName: string): string | number;
+
+Parse the catalog from Model resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`modelName` |  `string`   
+A fully-qualified path representing Model resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the catalog.  
+  
+### matchCatalogFromProductName(productName)
+    
+    
+    matchCatalogFromProductName(productName: string): string | number;
+
+Parse the catalog from Product resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`productName` |  `string`   
+A fully-qualified path representing Product resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the catalog.  
+  
+### matchCatalogFromServingConfigName(servingConfigName)
+    
+    
+    matchCatalogFromServingConfigName(servingConfigName: string): string | number;
+
+Parse the catalog from ServingConfig resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`servingConfigName` |  `string`   
+A fully-qualified path representing ServingConfig resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the catalog.  
+  
+### matchControlFromControlName(controlName)
+    
+    
+    matchControlFromControlName(controlName: string): string | number;
+
+Parse the control from Control resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`controlName` |  `string`   
+A fully-qualified path representing Control resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the control.  
+  
+### matchLocationFromAttributesConfigName(attributesConfigName)
+    
+    
+    matchLocationFromAttributesConfigName(attributesConfigName: string): string | number;
+
+Parse the location from AttributesConfig resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`attributesConfigName` |  `string`   
+A fully-qualified path representing AttributesConfig resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromBranchName(branchName)
+    
+    
+    matchLocationFromBranchName(branchName: string): string | number;
+
+Parse the location from Branch resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`branchName` |  `string`   
+A fully-qualified path representing Branch resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromCatalogName(catalogName)
+    
+    
+    matchLocationFromCatalogName(catalogName: string): string | number;
+
+Parse the location from Catalog resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`catalogName` |  `string`   
+A fully-qualified path representing Catalog resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromCompletionConfigName(completionConfigName)
+    
+    
+    matchLocationFromCompletionConfigName(completionConfigName: string): string | number;
+
+Parse the location from CompletionConfig resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`completionConfigName` |  `string`   
+A fully-qualified path representing CompletionConfig resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromControlName(controlName)
+    
+    
+    matchLocationFromControlName(controlName: string): string | number;
+
+Parse the location from Control resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`controlName` |  `string`   
+A fully-qualified path representing Control resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromLocationName(locationName)
+    
+    
+    matchLocationFromLocationName(locationName: string): string | number;
+
+Parse the location from Location resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`locationName` |  `string`   
+A fully-qualified path representing Location resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromMerchantCenterAccountLinkName(merchantCenterAccountLinkName)
+    
+    
+    matchLocationFromMerchantCenterAccountLinkName(merchantCenterAccountLinkName: string): string | number;
+
+Parse the location from MerchantCenterAccountLink resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`merchantCenterAccountLinkName` |  `string`   
+A fully-qualified path representing MerchantCenterAccountLink resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromModelName(modelName)
+    
+    
+    matchLocationFromModelName(modelName: string): string | number;
+
+Parse the location from Model resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`modelName` |  `string`   
+A fully-qualified path representing Model resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromProductName(productName)
+    
+    
+    matchLocationFromProductName(productName: string): string | number;
+
+Parse the location from Product resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`productName` |  `string`   
+A fully-qualified path representing Product resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchLocationFromServingConfigName(servingConfigName)
+    
+    
+    matchLocationFromServingConfigName(servingConfigName: string): string | number;
+
+Parse the location from ServingConfig resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`servingConfigName` |  `string`   
+A fully-qualified path representing ServingConfig resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the location.  
+  
+### matchMerchantCenterAccountLinkFromMerchantCenterAccountLinkName(merchantCenterAccountLinkName)
+    
+    
+    matchMerchantCenterAccountLinkFromMerchantCenterAccountLinkName(merchantCenterAccountLinkName: string): string | number;
+
+Parse the merchant_center_account_link from MerchantCenterAccountLink resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`merchantCenterAccountLinkName` |  `string`   
+A fully-qualified path representing MerchantCenterAccountLink resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the merchant_center_account_link.  
+  
+### matchModelFromModelName(modelName)
+    
+    
+    matchModelFromModelName(modelName: string): string | number;
+
+Parse the model from Model resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`modelName` |  `string`   
+A fully-qualified path representing Model resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the model.  
+  
+### matchProductFromProductName(productName)
+    
+    
+    matchProductFromProductName(productName: string): string | number;
+
+Parse the product from Product resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`productName` |  `string`   
+A fully-qualified path representing Product resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the product.  
+  
+### matchProjectFromAlertConfigName(alertConfigName)
+    
+    
+    matchProjectFromAlertConfigName(alertConfigName: string): string | number;
+
+Parse the project from AlertConfig resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`alertConfigName` |  `string`   
+A fully-qualified path representing AlertConfig resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromAttributesConfigName(attributesConfigName)
+    
+    
+    matchProjectFromAttributesConfigName(attributesConfigName: string): string | number;
+
+Parse the project from AttributesConfig resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`attributesConfigName` |  `string`   
+A fully-qualified path representing AttributesConfig resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromBranchName(branchName)
+    
+    
+    matchProjectFromBranchName(branchName: string): string | number;
+
+Parse the project from Branch resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`branchName` |  `string`   
+A fully-qualified path representing Branch resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromCatalogName(catalogName)
+    
+    
+    matchProjectFromCatalogName(catalogName: string): string | number;
+
+Parse the project from Catalog resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`catalogName` |  `string`   
+A fully-qualified path representing Catalog resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromCompletionConfigName(completionConfigName)
+    
+    
+    matchProjectFromCompletionConfigName(completionConfigName: string): string | number;
+
+Parse the project from CompletionConfig resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`completionConfigName` |  `string`   
+A fully-qualified path representing CompletionConfig resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromControlName(controlName)
+    
+    
+    matchProjectFromControlName(controlName: string): string | number;
+
+Parse the project from Control resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`controlName` |  `string`   
+A fully-qualified path representing Control resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromLocationName(locationName)
+    
+    
+    matchProjectFromLocationName(locationName: string): string | number;
+
+Parse the project from Location resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`locationName` |  `string`   
+A fully-qualified path representing Location resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromLoggingConfigName(loggingConfigName)
+    
+    
+    matchProjectFromLoggingConfigName(loggingConfigName: string): string | number;
+
+Parse the project from LoggingConfig resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`loggingConfigName` |  `string`   
+A fully-qualified path representing LoggingConfig resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromMerchantCenterAccountLinkName(merchantCenterAccountLinkName)
+    
+    
+    matchProjectFromMerchantCenterAccountLinkName(merchantCenterAccountLinkName: string): string | number;
+
+Parse the project from MerchantCenterAccountLink resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`merchantCenterAccountLinkName` |  `string`   
+A fully-qualified path representing MerchantCenterAccountLink resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromModelName(modelName)
+    
+    
+    matchProjectFromModelName(modelName: string): string | number;
+
+Parse the project from Model resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`modelName` |  `string`   
+A fully-qualified path representing Model resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromProductName(productName)
+    
+    
+    matchProjectFromProductName(productName: string): string | number;
+
+Parse the project from Product resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`productName` |  `string`   
+A fully-qualified path representing Product resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromRetailProjectName(retailProjectName)
+    
+    
+    matchProjectFromRetailProjectName(retailProjectName: string): string | number;
+
+Parse the project from RetailProject resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`retailProjectName` |  `string`   
+A fully-qualified path representing RetailProject resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchProjectFromServingConfigName(servingConfigName)
+    
+    
+    matchProjectFromServingConfigName(servingConfigName: string): string | number;
+
+Parse the project from ServingConfig resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`servingConfigName` |  `string`   
+A fully-qualified path representing ServingConfig resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the project.  
+  
+### matchServingConfigFromServingConfigName(servingConfigName)
+    
+    
+    matchServingConfigFromServingConfigName(servingConfigName: string): string | number;
+
+Parse the serving_config from ServingConfig resource.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`servingConfigName` |  `string`   
+A fully-qualified path representing ServingConfig resource.  
+**Returns**  
+---  
+**Type** | **Description**  
+`string | number` | {string} A string representing the serving_config.  
+  
+### merchantCenterAccountLinkPath(project, location, catalog, merchantCenterAccountLink)
+    
+    
+    merchantCenterAccountLinkPath(project: string, location: string, catalog: string, merchantCenterAccountLink: string): string;
+
+Return a fully-qualified merchantCenterAccountLink resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`catalog` |  `string`   
+  
+`merchantCenterAccountLink` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### modelPath(project, location, catalog, model)
+    
+    
+    modelPath(project: string, location: string, catalog: string, model: string): string;
+
+Return a fully-qualified model resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`catalog` |  `string`   
+  
+`model` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### productPath(project, location, catalog, branch, product)
+    
+    
+    productPath(project: string, location: string, catalog: string, branch: string, product: string): string;
+
+Return a fully-qualified product resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`catalog` |  `string`   
+  
+`branch` |  `string`   
+  
+`product` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### removeCatalogAttribute(request, options)
+    
+    
+    removeCatalogAttribute(request?: protos.google.cloud.retail.v2alpha.IRemoveCatalogAttributeRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.retail.v2alpha.IAttributesConfig,
+            (protos.google.cloud.retail.v2alpha.IRemoveCatalogAttributeRequest | undefined),
+            {} | undefined
+        ]>;
+
+Removes the specified from the [AttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.attributesconfig).
+
+If the to remove does not exist, a NOT_FOUND error is returned.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IRemoveCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iremovecatalogattributerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.retail.v2alpha.IAttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iattributesconfig), ([protos.google.cloud.retail.v2alpha.IRemoveCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iremovecatalogattributerequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [AttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.attributesconfig). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Full AttributesConfig resource name. Format:
+       *  `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+       */
+      // const attributesConfig = 'abc123'
+      /**
+       *  Required. The attribute name key of the
+       *  CatalogAttribute google.cloud.retail.v2alpha.CatalogAttribute  to remove.
+       */
+      // const key = 'abc123'
+    
+      // Imports the Retail library
+      const {CatalogServiceClient} = require('[@google-cloud/retail](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)').v2alpha;
+    
+      // Instantiates a client
+      const retailClient = new [CatalogServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)();
+    
+      async function callRemoveCatalogAttribute() {
+        // Construct request
+        const request = {
+          attributesConfig,
+          key,
+        };
+    
+        // Run request
+        const response = await retailClient.removeCatalogAttribute(request);
+        console.log(response);
+      }
+    
+      callRemoveCatalogAttribute();
+    
+    
+
+### removeCatalogAttribute(request, options, callback)
+    
+    
+    removeCatalogAttribute(request: protos.google.cloud.retail.v2alpha.IRemoveCatalogAttributeRequest, options: CallOptions, callback: Callback<protos.google.cloud.retail.v2alpha.IAttributesConfig, protos.google.cloud.retail.v2alpha.IRemoveCatalogAttributeRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IRemoveCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iremovecatalogattributerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.IAttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iattributesconfig), [protos.google.cloud.retail.v2alpha.IRemoveCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iremovecatalogattributerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### removeCatalogAttribute(request, callback)
+    
+    
+    removeCatalogAttribute(request: protos.google.cloud.retail.v2alpha.IRemoveCatalogAttributeRequest, callback: Callback<protos.google.cloud.retail.v2alpha.IAttributesConfig, protos.google.cloud.retail.v2alpha.IRemoveCatalogAttributeRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IRemoveCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iremovecatalogattributerequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.IAttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iattributesconfig), [protos.google.cloud.retail.v2alpha.IRemoveCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iremovecatalogattributerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### replaceCatalogAttribute(request, options)
+    
+    
+    replaceCatalogAttribute(request?: protos.google.cloud.retail.v2alpha.IReplaceCatalogAttributeRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.retail.v2alpha.IAttributesConfig,
+            (protos.google.cloud.retail.v2alpha.IReplaceCatalogAttributeRequest | undefined),
+            {} | undefined
+        ]>;
+
+Replaces the specified in the [AttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.attributesconfig) by updating the catalog attribute with the same .
+
+If the to replace does not exist, a NOT_FOUND error is returned.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IReplaceCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ireplacecatalogattributerequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.retail.v2alpha.IAttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iattributesconfig), ([protos.google.cloud.retail.v2alpha.IReplaceCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ireplacecatalogattributerequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [AttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.attributesconfig). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. Full AttributesConfig resource name. Format:
+       *  `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+       */
+      // const attributesConfig = 'abc123'
+      /**
+       *  Required. The updated
+       *  CatalogAttribute google.cloud.retail.v2alpha.CatalogAttribute.
+       */
+      // const catalogAttribute = {}
+      /**
+       *  Indicates which fields in the provided
+       *  CatalogAttribute google.cloud.retail.v2alpha.CatalogAttribute  to update.
+       *  The following are NOT supported:
+       *  * CatalogAttribute.key google.cloud.retail.v2alpha.CatalogAttribute.key 
+       *  If not set, all supported fields are updated.
+       */
+      // const updateMask = {}
+    
+      // Imports the Retail library
+      const {CatalogServiceClient} = require('[@google-cloud/retail](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)').v2alpha;
+    
+      // Instantiates a client
+      const retailClient = new [CatalogServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)();
+    
+      async function callReplaceCatalogAttribute() {
+        // Construct request
+        const request = {
+          attributesConfig,
+          catalogAttribute,
+        };
+    
+        // Run request
+        const response = await retailClient.replaceCatalogAttribute(request);
+        console.log(response);
+      }
+    
+      callReplaceCatalogAttribute();
+    
+    
+
+### replaceCatalogAttribute(request, options, callback)
+    
+    
+    replaceCatalogAttribute(request: protos.google.cloud.retail.v2alpha.IReplaceCatalogAttributeRequest, options: CallOptions, callback: Callback<protos.google.cloud.retail.v2alpha.IAttributesConfig, protos.google.cloud.retail.v2alpha.IReplaceCatalogAttributeRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IReplaceCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ireplacecatalogattributerequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.IAttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iattributesconfig), [protos.google.cloud.retail.v2alpha.IReplaceCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ireplacecatalogattributerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### replaceCatalogAttribute(request, callback)
+    
+    
+    replaceCatalogAttribute(request: protos.google.cloud.retail.v2alpha.IReplaceCatalogAttributeRequest, callback: Callback<protos.google.cloud.retail.v2alpha.IAttributesConfig, protos.google.cloud.retail.v2alpha.IReplaceCatalogAttributeRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IReplaceCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ireplacecatalogattributerequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.IAttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iattributesconfig), [protos.google.cloud.retail.v2alpha.IReplaceCatalogAttributeRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.ireplacecatalogattributerequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### retailProjectPath(project)
+    
+    
+    retailProjectPath(project: string): string;
+
+Return a fully-qualified retailProject resource name string.
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### servingConfigPath(project, location, catalog, servingConfig)
+    
+    
+    servingConfigPath(project: string, location: string, catalog: string, servingConfig: string): string;
+
+Return a fully-qualified servingConfig resource name string.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`project` |  `string`   
+  
+`location` |  `string`   
+  
+`catalog` |  `string`   
+  
+`servingConfig` |  `string`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`string` | {string} Resource name string.  
+  
+### setDefaultBranch(request, options)
+    
+    
+    setDefaultBranch(request?: protos.google.cloud.retail.v2alpha.ISetDefaultBranchRequest, options?: CallOptions): Promise<[
+            protos.google.protobuf.IEmpty,
+            protos.google.cloud.retail.v2alpha.ISetDefaultBranchRequest | undefined,
+            {} | undefined
+        ]>;
+
+Set a specified branch id as default branch. API methods such as , , will treat requests using "default_branch" to the actual branch id set as default.
+
+For example, if `projects/* /locations/* /catalogs/* /branches/1` is set as default, setting to `projects/* /locations/* /catalogs/* /branches/default_branch` is equivalent to setting to `projects/* /locations/* /catalogs/* /branches/1`.
+
+Using multiple branches can be useful when developers would like to have a staging branch to test and verify for future usage. When it becomes ready, developers switch on the staging branch using this API while keeping using `projects/* /locations/* /catalogs/* /branches/default_branch` as to route the traffic to this staging branch.
+
+CAUTION: If you have live predict/search traffic, switching the default branch could potentially cause outages if the ID space of the new branch is very different from the old one.
+
+More specifically:
+
+* PredictionService will only return product IDs from branch {newBranch}. * SearchService will only return product IDs from branch {newBranch} (if branch is not explicitly set). * UserEventService will only join events with products from branch {newBranch}.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ISetDefaultBranchRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.isetdefaultbranchrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.protobuf.iempty), [protos.google.cloud.retail.v2alpha.ISetDefaultBranchRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.isetdefaultbranchrequest) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [Empty](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.protobuf.empty). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Full resource name of the catalog, such as
+       *  `projects/* /locations/global/catalogs/default_catalog`.
+       */
+      // const catalog = 'abc123'
+      /**
+       *  The final component of the resource name of a branch.
+       *  This field must be one of "0", "1" or "2". Otherwise, an INVALID_ARGUMENT
+       *  error is returned.
+       *  If there are no sufficient active products in the targeted branch and
+       *  force google.cloud.retail.v2alpha.SetDefaultBranchRequest.force  is not
+       *  set, a FAILED_PRECONDITION error is returned.
+       */
+      // const branchId = 'abc123'
+      /**
+       *  Some note on this request, this can be retrieved by
+       *  CatalogService.GetDefaultBranch google.cloud.retail.v2alpha.CatalogService.GetDefaultBranch 
+       *  before next valid default branch set occurs.
+       *  This field must be a UTF-8 encoded string with a length limit of 1,000
+       *  characters. Otherwise, an INVALID_ARGUMENT error is returned.
+       */
+      // const note = 'abc123'
+      /**
+       *  If set to true, it permits switching to a branch with
+       *  branch_id google.cloud.retail.v2alpha.SetDefaultBranchRequest.branch_id 
+       *  even if it has no sufficient active products.
+       */
+      // const force = true
+    
+      // Imports the Retail library
+      const {CatalogServiceClient} = require('[@google-cloud/retail](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)').v2alpha;
+    
+      // Instantiates a client
+      const retailClient = new [CatalogServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)();
+    
+      async function callSetDefaultBranch() {
+        // Construct request
+        const request = {
+        };
+    
+        // Run request
+        const response = await retailClient.setDefaultBranch(request);
+        console.log(response);
+      }
+    
+      callSetDefaultBranch();
+    
+    
+
+### setDefaultBranch(request, options, callback)
+    
+    
+    setDefaultBranch(request: protos.google.cloud.retail.v2alpha.ISetDefaultBranchRequest, options: CallOptions, callback: Callback<protos.google.protobuf.IEmpty, protos.google.cloud.retail.v2alpha.ISetDefaultBranchRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ISetDefaultBranchRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.isetdefaultbranchrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.protobuf.iempty), [protos.google.cloud.retail.v2alpha.ISetDefaultBranchRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.isetdefaultbranchrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### setDefaultBranch(request, callback)
+    
+    
+    setDefaultBranch(request: protos.google.cloud.retail.v2alpha.ISetDefaultBranchRequest, callback: Callback<protos.google.protobuf.IEmpty, protos.google.cloud.retail.v2alpha.ISetDefaultBranchRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ISetDefaultBranchRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.isetdefaultbranchrequest)`   
+  
+`callback` |  `Callback<[protos.google.protobuf.IEmpty](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.protobuf.iempty), [protos.google.cloud.retail.v2alpha.ISetDefaultBranchRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.isetdefaultbranchrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateAttributesConfig(request, options)
+    
+    
+    updateAttributesConfig(request?: protos.google.cloud.retail.v2alpha.IUpdateAttributesConfigRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.retail.v2alpha.IAttributesConfig,
+            (protos.google.cloud.retail.v2alpha.IUpdateAttributesConfigRequest | undefined),
+            {} | undefined
+        ]>;
+
+Updates the [AttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.attributesconfig).
+
+The catalog attributes in the request will be updated in the catalog, or inserted if they do not exist. Existing catalog attributes not included in the request will remain unchanged. Attributes that are assigned to products, but do not exist at the catalog level, are always included in the response. The product attribute is assigned default values for missing catalog attribute fields, e.g., searchable and dynamic facetable options.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateAttributesConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdateattributesconfigrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.retail.v2alpha.IAttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iattributesconfig), ([protos.google.cloud.retail.v2alpha.IUpdateAttributesConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdateattributesconfigrequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [AttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.attributesconfig). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The
+       *  AttributesConfig google.cloud.retail.v2alpha.AttributesConfig  to update.
+       */
+      // const attributesConfig = {}
+      /**
+       *  Indicates which fields in the provided
+       *  AttributesConfig google.cloud.retail.v2alpha.AttributesConfig  to update.
+       *  The following is the only supported field:
+       *  * AttributesConfig.catalog_attributes google.cloud.retail.v2alpha.AttributesConfig.catalog_attributes 
+       *  If not set, all supported fields are updated.
+       */
+      // const updateMask = {}
+    
+      // Imports the Retail library
+      const {CatalogServiceClient} = require('[@google-cloud/retail](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)').v2alpha;
+    
+      // Instantiates a client
+      const retailClient = new [CatalogServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)();
+    
+      async function callUpdateAttributesConfig() {
+        // Construct request
+        const request = {
+          attributesConfig,
+        };
+    
+        // Run request
+        const response = await retailClient.updateAttributesConfig(request);
+        console.log(response);
+      }
+    
+      callUpdateAttributesConfig();
+    
+    
+
+### updateAttributesConfig(request, options, callback)
+    
+    
+    updateAttributesConfig(request: protos.google.cloud.retail.v2alpha.IUpdateAttributesConfigRequest, options: CallOptions, callback: Callback<protos.google.cloud.retail.v2alpha.IAttributesConfig, protos.google.cloud.retail.v2alpha.IUpdateAttributesConfigRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateAttributesConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdateattributesconfigrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.IAttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iattributesconfig), [protos.google.cloud.retail.v2alpha.IUpdateAttributesConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdateattributesconfigrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateAttributesConfig(request, callback)
+    
+    
+    updateAttributesConfig(request: protos.google.cloud.retail.v2alpha.IUpdateAttributesConfigRequest, callback: Callback<protos.google.cloud.retail.v2alpha.IAttributesConfig, protos.google.cloud.retail.v2alpha.IUpdateAttributesConfigRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateAttributesConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdateattributesconfigrequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.IAttributesConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iattributesconfig), [protos.google.cloud.retail.v2alpha.IUpdateAttributesConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdateattributesconfigrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateCatalog(request, options)
+    
+    
+    updateCatalog(request?: protos.google.cloud.retail.v2alpha.IUpdateCatalogRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.retail.v2alpha.ICatalog,
+            protos.google.cloud.retail.v2alpha.IUpdateCatalogRequest | undefined,
+            {} | undefined
+        ]>;
+
+Updates the [Catalog](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.catalog)s.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateCatalogRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdatecatalogrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.retail.v2alpha.ICatalog](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.icatalog), [protos.google.cloud.retail.v2alpha.IUpdateCatalogRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdatecatalogrequest) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [Catalog](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.catalog). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The Catalog google.cloud.retail.v2alpha.Catalog  to update.
+       *  If the caller does not have permission to update the
+       *  Catalog google.cloud.retail.v2alpha.Catalog, regardless of whether or
+       *  not it exists, a PERMISSION_DENIED error is returned.
+       *  If the Catalog google.cloud.retail.v2alpha.Catalog  to update does not
+       *  exist, a NOT_FOUND error is returned.
+       */
+      // const catalog = {}
+      /**
+       *  Indicates which fields in the provided
+       *  Catalog google.cloud.retail.v2alpha.Catalog  to update.
+       *  If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
+       *  is returned.
+       */
+      // const updateMask = {}
+    
+      // Imports the Retail library
+      const {CatalogServiceClient} = require('[@google-cloud/retail](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)').v2alpha;
+    
+      // Instantiates a client
+      const retailClient = new [CatalogServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)();
+    
+      async function callUpdateCatalog() {
+        // Construct request
+        const request = {
+          catalog,
+        };
+    
+        // Run request
+        const response = await retailClient.updateCatalog(request);
+        console.log(response);
+      }
+    
+      callUpdateCatalog();
+    
+    
+
+### updateCatalog(request, options, callback)
+    
+    
+    updateCatalog(request: protos.google.cloud.retail.v2alpha.IUpdateCatalogRequest, options: CallOptions, callback: Callback<protos.google.cloud.retail.v2alpha.ICatalog, protos.google.cloud.retail.v2alpha.IUpdateCatalogRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateCatalogRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdatecatalogrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.ICatalog](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.icatalog), [protos.google.cloud.retail.v2alpha.IUpdateCatalogRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdatecatalogrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateCatalog(request, callback)
+    
+    
+    updateCatalog(request: protos.google.cloud.retail.v2alpha.IUpdateCatalogRequest, callback: Callback<protos.google.cloud.retail.v2alpha.ICatalog, protos.google.cloud.retail.v2alpha.IUpdateCatalogRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateCatalogRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdatecatalogrequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.ICatalog](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.icatalog), [protos.google.cloud.retail.v2alpha.IUpdateCatalogRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdatecatalogrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateCompletionConfig(request, options)
+    
+    
+    updateCompletionConfig(request?: protos.google.cloud.retail.v2alpha.IUpdateCompletionConfigRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.retail.v2alpha.ICompletionConfig,
+            (protos.google.cloud.retail.v2alpha.IUpdateCompletionConfigRequest | undefined),
+            {} | undefined
+        ]>;
+
+Updates the [CompletionConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.completionconfig)s.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateCompletionConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdatecompletionconfigrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.retail.v2alpha.ICompletionConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.icompletionconfig), ([protos.google.cloud.retail.v2alpha.IUpdateCompletionConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdatecompletionconfigrequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [CompletionConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.completionconfig). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Required. The
+       *  CompletionConfig google.cloud.retail.v2alpha.CompletionConfig  to update.
+       *  If the caller does not have permission to update the
+       *  CompletionConfig google.cloud.retail.v2alpha.CompletionConfig, then a
+       *  PERMISSION_DENIED error is returned.
+       *  If the CompletionConfig google.cloud.retail.v2alpha.CompletionConfig  to
+       *  update does not exist, a NOT_FOUND error is returned.
+       */
+      // const completionConfig = {}
+      /**
+       *  Indicates which fields in the provided
+       *  CompletionConfig google.cloud.retail.v2alpha.CompletionConfig  to update.
+       *  The following are the only supported fields:
+       *  * CompletionConfig.matching_order google.cloud.retail.v2alpha.CompletionConfig.matching_order 
+       *  * CompletionConfig.max_suggestions google.cloud.retail.v2alpha.CompletionConfig.max_suggestions 
+       *  * CompletionConfig.min_prefix_length google.cloud.retail.v2alpha.CompletionConfig.min_prefix_length 
+       *  * CompletionConfig.auto_learning google.cloud.retail.v2alpha.CompletionConfig.auto_learning 
+       *  If not set, all supported fields are updated.
+       */
+      // const updateMask = {}
+    
+      // Imports the Retail library
+      const {CatalogServiceClient} = require('[@google-cloud/retail](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)').v2alpha;
+    
+      // Instantiates a client
+      const retailClient = new [CatalogServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/overview.html)();
+    
+      async function callUpdateCompletionConfig() {
+        // Construct request
+        const request = {
+          completionConfig,
+        };
+    
+        // Run request
+        const response = await retailClient.updateCompletionConfig(request);
+        console.log(response);
+      }
+    
+      callUpdateCompletionConfig();
+    
+    
+
+### updateCompletionConfig(request, options, callback)
+    
+    
+    updateCompletionConfig(request: protos.google.cloud.retail.v2alpha.IUpdateCompletionConfigRequest, options: CallOptions, callback: Callback<protos.google.cloud.retail.v2alpha.ICompletionConfig, protos.google.cloud.retail.v2alpha.IUpdateCompletionConfigRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateCompletionConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdatecompletionconfigrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.ICompletionConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.icompletionconfig), [protos.google.cloud.retail.v2alpha.IUpdateCompletionConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdatecompletionconfigrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### updateCompletionConfig(request, callback)
+    
+    
+    updateCompletionConfig(request: protos.google.cloud.retail.v2alpha.IUpdateCompletionConfigRequest, callback: Callback<protos.google.cloud.retail.v2alpha.ICompletionConfig, protos.google.cloud.retail.v2alpha.IUpdateCompletionConfigRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IUpdateCompletionConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdatecompletionconfigrequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.retail.v2alpha.ICompletionConfig](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.icompletionconfig), [protos.google.cloud.retail.v2alpha.IUpdateCompletionConfigRequest](https://docs.cloud.google.com/nodejs/docs/reference/retail/latest/retail/protos.google.cloud.retail.v2alpha.iupdatecompletionconfigrequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-02 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-02 UTC."],[],[]] 
