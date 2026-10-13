@@ -1,0 +1,18 @@
+[Unit]
+Description=GCP docs end-to-end crawler (resume-safe)
+Wants=network-online.target
+After=network-online.target
+RequiresMountsFor=/data
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/data/opencode/gcpdocs
+ExecStart=/usr/bin/python3 /data/opencode/gcpdocs/crawl_gcp.py --concurrency 30
+Restart=always
+RestartSec=60
+StandardOutput=append:/data/opencode/gcpdocs/crawl.log
+StandardError=append:/data/opencode/gcpdocs/crawl.log
+
+[Install]
+WantedBy=multi-user.target

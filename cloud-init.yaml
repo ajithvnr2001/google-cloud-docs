@@ -1,0 +1,7 @@
+#cloud-config
+# ONE-TIME: attach this as cloud-init custom-data / user-data on the spot-VM
+# template (Azure: `az vm create --custom-data cloud-init.yaml`). Every new VM
+# then reinstalls + starts the crawler from /data on first boot.
+# (The crawler resumes itself from crawl_state.db — nothing else needed.)
+runcmd:
+  - [bash, /data/opencode/gcpdocs/boot.sh]
