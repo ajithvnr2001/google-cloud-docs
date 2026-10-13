@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/lakehouse/docs/import-iceberg-tables/",
+  "file": "lakehouse/docs/import-iceberg-tables.md",
+  "title": "Import external Iceberg tables into Lakehouse runtime catalog using Dataflow \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T12:19:05.289499+00:00"
+}

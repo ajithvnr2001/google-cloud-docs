@@ -1,0 +1,170 @@
+---
+url: https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource
+title: Google Cloud OS Config v1alpha API - Class OSPolicy.Types.Resource (2.0.0-alpha07) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T14:50:18.240983+00:00
+---
+
+# Google Cloud OS Config v1alpha API - Class OSPolicy.Types.Resource (2.0.0-alpha07)  |  .NET client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ .NET ](https://docs.cloud.google.com/dotnet/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/dotnet/docs/reference)
+
+
+
+Send feedback 
+
+#  Google Cloud OS Config v1alpha API - Class OSPolicy.Types.Resource (2.0.0-alpha07) Stay organized with collections  Save and categorize content based on your preferences. 
+
+Version latestkeyboard_arrow_down
+
+  * [ 2.0.0-alpha07 (latest) ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource)
+  * [ 2.0.0-alpha06 ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/2.0.0-alpha06/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource)
+  * [ 1.0.0-alpha04 ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/1.0.0-alpha04/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource)
+
+
+    
+    
+    public sealed class OSPolicy.Types.Resource : IMessage<OSPolicy.Types.Resource>, IEquatable<OSPolicy.Types.Resource>, IDeepCloneable<OSPolicy.Types.Resource>, IBufferMessage, IMessage
+
+Reference documentation and code samples for the Google Cloud OS Config v1alpha API class OSPolicy.Types.Resource.
+
+An OS policy resource is used to define the desired state configuration and provides a specific functionality like installing/removing packages, executing a script etc.
+
+The system ensures that resources are always in their desired state by taking necessary actions if they have drifted from their desired state.
+
+## Inheritance
+
+[object](https://learn.microsoft.com/dotnet/api/system.object) > OSPolicy.Types.Resource
+
+## Implements
+
+[IMessage](https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.IMessage-1.html)[OSPolicy](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy)[Types](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types)[Resource](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource), [IEquatable](https://learn.microsoft.com/dotnet/api/system.iequatable-1)[OSPolicy](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy)[Types](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types)[Resource](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource), [IDeepCloneable](https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.IDeepCloneable-1.html)[OSPolicy](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy)[Types](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types)[Resource](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource), [IBufferMessage](https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.IBufferMessage.html), [IMessage](https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.IMessage.html)
+
+## Inherited Members
+
+[object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+
+[object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+
+[object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Namespace
+
+[Google.Cloud.OsConfig.V1Alpha](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha)
+
+## Assembly
+
+Google.Cloud.OsConfig.V1Alpha.dll
+
+## Constructors 
+
+### Resource()
+    
+    
+    public Resource()
+
+### Resource(Resource)
+    
+    
+    public Resource(OSPolicy.Types.Resource other)
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`other` | `[OSPolicy](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy)[Types](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types)[Resource](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource)`  
+  
+  
+## Properties 
+
+### Exec
+    
+    
+    public OSPolicy.Types.Resource.Types.ExecResource Exec { get; set; }
+
+Exec resource
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OSPolicy](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy)[Types](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types)[Resource](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource)[Types](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types)[ExecResource](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource)` |   
+  
+### File
+    
+    
+    public OSPolicy.Types.Resource.Types.FileResource File { get; set; }
+
+File resource
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OSPolicy](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy)[Types](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types)[Resource](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource)[Types](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types)[FileResource](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.FileResource)` |   
+  
+### Id
+    
+    
+    public string Id { get; set; }
+
+Required. The id of the resource with the following restrictions:
+
+  * Must contain only lowercase letters, numbers, and hyphens.
+  * Must start with a letter.
+  * Must be between 1-63 characters.
+  * Must end with a number or a letter.
+  * Must be unique within the OS policy.
+
+
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[string](https://learn.microsoft.com/dotnet/api/system.string)` |   
+  
+### Pkg
+    
+    
+    public OSPolicy.Types.Resource.Types.PackageResource Pkg { get; set; }
+
+Package resource
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OSPolicy](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy)[Types](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types)[Resource](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource)[Types](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types)[PackageResource](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.PackageResource)` |   
+  
+### Repository
+    
+    
+    public OSPolicy.Types.Resource.Types.RepositoryResource Repository { get; set; }
+
+Package repository resource
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OSPolicy](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy)[Types](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types)[Resource](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource)[Types](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types)[RepositoryResource](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.RepositoryResource)` |   
+  
+### ResourceTypeCase
+    
+    
+    public OSPolicy.Types.Resource.ResourceTypeOneofCase ResourceTypeCase { get; }
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OSPolicy](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy)[Types](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types)[Resource](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource)[ResourceTypeOneofCase](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.OsConfig.V1Alpha/latest/Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.ResourceTypeOneofCase)` |   
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-03-09 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-03-09 UTC."],[],[]] 

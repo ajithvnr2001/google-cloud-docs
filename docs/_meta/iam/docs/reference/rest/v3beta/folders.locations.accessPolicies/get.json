@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/iam/docs/reference/rest/v3beta/folders.locations.accessPolicies/get/",
+  "file": "iam/docs/reference/rest/v3beta/folders.locations.accessPolicies/get.md",
+  "title": "Method: folders.locations.accessPolicies.get \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T12:53:28.742929+00:00"
+}

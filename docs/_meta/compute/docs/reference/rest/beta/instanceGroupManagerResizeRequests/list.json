@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagerResizeRequests/list/",
+  "file": "compute/docs/reference/rest/beta/instanceGroupManagerResizeRequests/list.md",
+  "title": "Method: instanceGroupManagerResizeRequests.list \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:23:22.155578+00:00"
+}

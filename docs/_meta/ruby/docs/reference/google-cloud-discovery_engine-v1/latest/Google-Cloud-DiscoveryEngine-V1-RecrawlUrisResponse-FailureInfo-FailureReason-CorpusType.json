@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-discovery_engine-v1/latest/Google-Cloud-DiscoveryEngine-V1-RecrawlUrisResponse-FailureInfo-FailureReason-CorpusType/",
+  "file": "ruby/docs/reference/google-cloud-discovery_engine-v1/latest/Google-Cloud-DiscoveryEngine-V1-RecrawlUrisResponse-FailureInfo-FailureReason-CorpusType.md",
+  "title": "Discovery Engine V1 API - Module Google::Cloud::DiscoveryEngine::V1::RecrawlUrisResponse::FailureInfo::FailureReason::CorpusType (v2.12.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:29:15.318186+00:00"
+}

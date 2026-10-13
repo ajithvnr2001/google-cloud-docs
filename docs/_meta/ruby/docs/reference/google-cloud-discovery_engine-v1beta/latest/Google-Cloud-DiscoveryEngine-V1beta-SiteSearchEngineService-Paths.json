@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-discovery_engine-v1beta/latest/Google-Cloud-DiscoveryEngine-V1beta-SiteSearchEngineService-Paths/",
+  "file": "ruby/docs/reference/google-cloud-discovery_engine-v1beta/latest/Google-Cloud-DiscoveryEngine-V1beta-SiteSearchEngineService-Paths.md",
+  "title": "Discovery Engine V1BETA API - Module Google::Cloud::DiscoveryEngine::V1beta::SiteSearchEngineService::Paths (v0.30.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:12:50.173161+00:00"
+}

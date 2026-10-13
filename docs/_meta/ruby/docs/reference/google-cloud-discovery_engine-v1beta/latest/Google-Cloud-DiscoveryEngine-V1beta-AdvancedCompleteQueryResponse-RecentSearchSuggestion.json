@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-discovery_engine-v1beta/latest/Google-Cloud-DiscoveryEngine-V1beta-AdvancedCompleteQueryResponse-RecentSearchSuggestion/",
+  "file": "ruby/docs/reference/google-cloud-discovery_engine-v1beta/latest/Google-Cloud-DiscoveryEngine-V1beta-AdvancedCompleteQueryResponse-RecentSearchSuggestion.md",
+  "title": "Discovery Engine V1BETA API - Class Google::Cloud::DiscoveryEngine::V1beta::AdvancedCompleteQueryResponse::RecentSearchSuggestion (v0.30.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T14:47:00.874712+00:00"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-discovery_engine-v1beta/latest/Google-Cloud-DiscoveryEngine-V1beta-SampleQueryService-Client-Configuration-Rpcs/",
+  "file": "ruby/docs/reference/google-cloud-discovery_engine-v1beta/latest/Google-Cloud-DiscoveryEngine-V1beta-SampleQueryService-Client-Configuration-Rpcs.md",
+  "title": "Discovery Engine V1BETA API - Class Google::Cloud::DiscoveryEngine::V1beta::SampleQueryService::Client::Configuration::Rpcs (v0.30.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T14:47:24.892296+00:00"
+}

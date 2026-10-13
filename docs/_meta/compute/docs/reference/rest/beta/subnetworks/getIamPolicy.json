@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/compute/docs/reference/rest/beta/subnetworks/getIamPolicy/",
+  "file": "compute/docs/reference/rest/beta/subnetworks/getIamPolicy.md",
+  "title": "Method: subnetworks.getIamPolicy \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T14:49:53.580024+00:00"
+}

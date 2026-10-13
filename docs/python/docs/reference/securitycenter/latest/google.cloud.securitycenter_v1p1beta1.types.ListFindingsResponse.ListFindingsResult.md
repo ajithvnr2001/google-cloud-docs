@@ -1,0 +1,67 @@
+---
+url: https://docs.cloud.google.com/python/docs/reference/securitycenter/latest/google.cloud.securitycenter_v1p1beta1.types.ListFindingsResponse.ListFindingsResult
+title: Class ListFindingsResult (1.47.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T13:19:13.902456+00:00
+---
+
+# Class ListFindingsResult (1.47.0)  |  Python client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/python/docs/reference/securitycenter/latest/google.cloud.securitycenter_v1p1beta1.types.ListFindingsResponse.ListFindingsResult
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Python ](https://docs.cloud.google.com/python/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/python/docs/reference)
+
+
+
+Send feedback 
+
+#  Class ListFindingsResult (1.47.0) Stay organized with collections  Save and categorize content based on your preferences. 
+
+1.47.0 (latest)  1.46.0  1.45.0  1.44.0  1.43.0  1.42.0  1.41.0  1.40.0  1.39.0  1.38.0  1.37.0  1.36.0  1.35.1  1.33.1  1.32.1  1.31.0  1.30.1  1.29.0  1.28.0  1.27.0  1.26.1  1.25.0  1.24.1  1.23.2  1.22.0  1.21.0  1.20.0  1.19.1  1.18.2  1.17.0  1.16.2  1.15.0  1.14.0  1.13.0  1.12.0  1.11.1  1.10.0  1.9.0  1.8.0  1.7.0  1.6.0  1.5.2  1.4.0  1.3.1  1.2.0  1.1.0  1.0.0  0.7.3  0.6.0  0.5.0  0.4.0  0.3.0 
+    
+    
+    ListFindingsResult(mapping=None, *, ignore_unknown_fields=False, **kwargs)
+
+Result containing the Finding and its StateChange.
+
+## Attributes  
+  
+---  
+**Name** | **Description**  
+`finding` |  `[google.cloud.securitycenter_v1p1beta1.types.Finding](https://docs.cloud.google.com/python/docs/reference/securitycenter/latest/google.cloud.securitycenter_v1p1beta1.types.Finding)`   
+Finding matching the search request.   
+`state_change` |  `[google.cloud.securitycenter_v1p1beta1.types.ListFindingsResponse.ListFindingsResult.StateChange](https://docs.cloud.google.com/python/docs/reference/securitycenter/latest/google.cloud.securitycenter_v1p1beta1.types.ListFindingsResponse.ListFindingsResult.StateChange)`   
+State change of the finding between the points in time.   
+`resource` |  `[google.cloud.securitycenter_v1p1beta1.types.ListFindingsResponse.ListFindingsResult.Resource](https://docs.cloud.google.com/python/docs/reference/securitycenter/latest/google.cloud.securitycenter_v1p1beta1.types.ListFindingsResponse.ListFindingsResult.Resource)`   
+Output only. Resource that is associated with this finding.   
+  
+## Classes 
+
+### Resource
+    
+    
+    Resource(mapping=None, *, ignore_unknown_fields=False, **kwargs)
+
+Information related to the Google Cloud resource that is associated with this finding.
+
+### StateChange
+    
+    
+    StateChange(value)
+
+The change in state of the finding.
+
+When querying across two points in time this describes the change in the finding between the two points: CHANGED, UNCHANGED, ADDED, or REMOVED. Findings can not be deleted, so REMOVED implies that the finding at timestamp does not match the filter specified, but it did at timestamp - compare_duration. If there was no compare_duration supplied in the request the state change will be: UNUSED
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-03 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-03 UTC."],[],[]] 

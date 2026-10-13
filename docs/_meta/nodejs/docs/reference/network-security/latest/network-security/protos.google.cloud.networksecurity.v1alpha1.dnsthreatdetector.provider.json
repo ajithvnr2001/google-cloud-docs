@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/nodejs/docs/reference/network-security/latest/network-security/protos.google.cloud.networksecurity.v1alpha1.dnsthreatdetector.provider",
+  "file": "nodejs/docs/reference/network-security/latest/network-security/protos.google.cloud.networksecurity.v1alpha1.dnsthreatdetector.provider.md",
+  "title": "Enum protos.google.cloud.networksecurity.v1alpha1.DnsThreatDetector.Provider (4.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:17:51.193080+00:00"
+}

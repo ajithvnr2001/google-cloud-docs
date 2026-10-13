@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Datastream.V1/latest/Google.Cloud.Datastream.V1.BigQueryDestinationConfig.Types.BlmtConfig.Types.FileFormat",
+  "file": "dotnet/docs/reference/Google.Cloud.Datastream.V1/latest/Google.Cloud.Datastream.V1.BigQueryDestinationConfig.Types.BlmtConfig.Types.FileFormat.md",
+  "title": "DataStream v1 API - Enum BigQueryDestinationConfig.Types.BlmtConfig.Types.FileFormat (2.12.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T14:41:17.476885+00:00"
+}

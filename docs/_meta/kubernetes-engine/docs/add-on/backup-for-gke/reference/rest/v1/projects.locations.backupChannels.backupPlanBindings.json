@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke/reference/rest/v1/projects.locations.backupChannels.backupPlanBindings",
+  "file": "kubernetes-engine/docs/add-on/backup-for-gke/reference/rest/v1/projects.locations.backupChannels.backupPlanBindings.md",
+  "title": "REST Resource: projects.locations.backupChannels.backupPlanBindings \u00a0|\u00a0 Backup for GKE \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:41:18.211157+00:00"
+}

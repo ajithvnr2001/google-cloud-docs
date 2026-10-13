@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/database-migration/docs/sqlserver-to-csql-pgsql/configure-source-database/",
+  "file": "database-migration/docs/sqlserver-to-csql-pgsql/configure-source-database.md",
+  "title": "Configure your source SQL Server database for continuous migrations \u00a0|\u00a0 Database Migration Service for heterogeneous SQL Server to Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T12:30:21.696032+00:00"
+}

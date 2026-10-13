@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/bigquery/docs/reference/reservations/rest/v1/projects.locations.reservationGroups/delete/",
+  "file": "bigquery/docs/reference/reservations/rest/v1/projects.locations.reservationGroups/delete.md",
+  "title": "Method: projects.locations.reservationGroups.delete \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:33:36.123239+00:00"
+}

@@ -1,0 +1,179 @@
+---
+url: https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/history/
+title: Version history \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T12:10:05.184888+00:00
+---
+
+# Version history  |  .NET client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.Control.V2/latest/history/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ .NET ](https://docs.cloud.google.com/dotnet/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/dotnet/docs/reference)
+
+
+
+Send feedback 
+
+#  Version history Stay organized with collections  Save and categorize content based on your preferences. 
+
+1.11.0 (latest)  1.10.0  1.9.0  1.8.0  1.7.0  1.6.0  1.5.0  1.4.0  1.3.0  1.2.0  1.1.0  1.0.1 
+
+## Version 1.11.0, released 2026-08-24
+
+### New features
+
+  * Add disable rapid cache operation
+
+
+
+## Version 1.10.0, released 2026-08-17
+
+### New features
+
+  * Add ViewObjectFullContext RPC and RapidCacheInfo in Storage Control v2
+
+
+
+## Version 1.9.0, released 2026-07-28
+
+### New features
+
+  * Add new CreateRapidCache
+  * Add new UpdateRapidCache
+  * Add new GetRapidCache
+  * Add new ListRapidCache
+
+
+
+### Documentation improvements
+
+  * Update reference documentation for the `StorageControl` service, including `IntelligenceFindings`, `AnywhereCache`, and related configuration messages.
+
+
+
+## Version 1.8.0, released 2026-05-30
+
+### New features
+
+  * Add support for GCS Storage Control Intelligence Finding APIs
+
+
+
+## Version 1.7.0, released 2026-02-09
+
+### New features
+
+  * Add a DeleteFolderRecursive API definition
+
+
+
+## Version 1.6.0, released 2025-11-06
+
+### New features
+
+  * Update dependencies
+
+
+
+## Version 1.5.0, released 2025-10-14
+
+### Bug fixes
+
+  * Upgrade gRPC service registration func
+
+
+
+## Version 1.4.0, released 2025-05-15
+
+### New features
+
+  * Add Client Libraries Storage IntelligenceConfig
+
+
+
+## Version 1.3.0, released 2025-05-06
+
+### New features
+
+  * Add Anywhere cache control APIs
+
+
+
+### Documentation improvements
+
+  * Added comments for Anywhere cache messages
+
+
+
+## Version 1.2.0, released 2025-03-17
+
+No API surface changes; no dependency updates. This is a no-op release.
+
+## Version 1.1.0, released 2024-07-22
+
+### Documentation improvements
+
+  * Remove allowlist note from Folders RPCs ([commit a2afefb](https://github.com/googleapis/google-cloud-dotnet/commit/a2afefb2bb16c0b0d5382cd6e2eae4ff81867ee7)) ## Version 1.0.1, released 2024-06-20
+
+
+
+No API surface changes; this release is purely to publish documentation which did not happen in the 1.0.0 release.
+
+## Version 1.0.0, released 2024-06-18
+
+No API surface changes; just dependency updates and promotion to GA.
+
+## Version 1.0.0-beta04, released 2024-05-08
+
+### Bug fixes
+
+  * **BREAKING CHANGE** An existing resource pattern value `projects/{project}/buckets/{bucket}/managedFolders/{managedFolder=**}` to resource definition `storage.googleapis.com/ManagedFolder` is removed ([commit 160d32c](https://github.com/googleapis/google-cloud-dotnet/commit/160d32cd7ff78ae2aeeb9aa6383c8212b27d3b67))
+
+
+
+### New features
+
+  * A new resource pattern value `projects/{project}/buckets/{bucket}/managedFolders/{managed_folder=**}` added to the resource definition `storage.googleapis.com/ManagedFolder` ([commit 160d32c](https://github.com/googleapis/google-cloud-dotnet/commit/160d32cd7ff78ae2aeeb9aa6383c8212b27d3b67))
+  * Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+
+
+## Version 1.0.0-beta03, released 2024-04-19
+
+### New features
+
+  * Make Managed Folders operations public ([commit f904f90](https://github.com/googleapis/google-cloud-dotnet/commit/f904f9043d4f8be15e2cfa0fc14e87c182b32b70))
+
+
+
+### Documentation improvements
+
+  * Update storage control documentation and add PHP for publishing ([commit 412992b](https://github.com/googleapis/google-cloud-dotnet/commit/412992b9d928fa7b111ca7018bf0c3448d6f0809))
+
+
+
+## Version 1.0.0-beta02, released 2024-03-26
+
+### New features
+
+  * Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+
+
+## Version 1.0.0-beta01, released 2024-03-18
+
+Initial release.
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-08-24 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-24 UTC."],[],[]] 

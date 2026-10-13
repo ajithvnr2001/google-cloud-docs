@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/distributed-training-tpu/",
+  "file": "kubernetes-engine/docs/tutorials/distributed-training-tpu.md",
+  "title": "Train an LLM using JAX, Ray Train, and TPU Trillium on GKE \u00a0|\u00a0 GKE AI/ML \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:25:11.665461+00:00"
+}

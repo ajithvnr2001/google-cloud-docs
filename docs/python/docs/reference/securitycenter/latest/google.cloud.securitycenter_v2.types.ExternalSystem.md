@@ -1,0 +1,74 @@
+---
+url: https://docs.cloud.google.com/python/docs/reference/securitycenter/latest/google.cloud.securitycenter_v2.types.ExternalSystem
+title: Class ExternalSystem (1.47.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T13:34:33.824137+00:00
+---
+
+# Class ExternalSystem (1.47.0)  |  Python client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/python/docs/reference/securitycenter/latest/google.cloud.securitycenter_v2.types.ExternalSystem
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Python ](https://docs.cloud.google.com/python/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/python/docs/reference)
+
+
+
+Send feedback 
+
+#  Class ExternalSystem (1.47.0) Stay organized with collections  Save and categorize content based on your preferences. 
+
+1.47.0 (latest)  1.46.0  1.45.0  1.44.0  1.43.0  1.42.0  1.41.0  1.40.0  1.39.0  1.38.0  1.37.0  1.36.0  1.35.1  1.33.1  1.32.1  1.31.0  1.30.1  1.29.0  1.28.0  1.27.0  1.26.1  1.25.0  1.24.1  1.23.2  1.22.0  1.21.0  1.20.0  1.19.1  1.18.2  1.17.0  1.16.2  1.15.0  1.14.0  1.13.0  1.12.0  1.11.1  1.10.0  1.9.0  1.8.0  1.7.0  1.6.0  1.5.2  1.4.0  1.3.1  1.2.0  1.1.0  1.0.0  0.7.3  0.6.0  0.5.0  0.4.0  0.3.0 
+    
+    
+    ExternalSystem(mapping=None, *, ignore_unknown_fields=False, **kwargs)
+
+Representation of third party SIEM/SOAR fields within SCC.
+
+## Attributes  
+  
+---  
+**Name** | **Description**  
+`name` |  `str`   
+Full resource name of the external system. The following list shows some examples: \- `organizations/1234/sources/5678/findings/123456/externalSystems/jira` \- `organizations/1234/sources/5678/locations/us/findings/123456/externalSystems/jira` \- `folders/1234/sources/5678/findings/123456/externalSystems/jira` \- `folders/1234/sources/5678/locations/us/findings/123456/externalSystems/jira` \- `projects/1234/sources/5678/findings/123456/externalSystems/jira` \- `projects/1234/sources/5678/locations/us/findings/123456/externalSystems/jira`  
+`assignees` |  `MutableSequence[str]`   
+References primary/secondary etc assignees in the external system.   
+`external_uid` |  `str`   
+The identifier that's used to track the finding's corresponding case in the external system.   
+`status` |  `str`   
+The most recent status of the finding's corresponding case, as reported by the external system.   
+`external_system_update_time` |  `google.protobuf.timestamp_pb2.Timestamp`   
+The time when the case was last updated, as reported by the external system.   
+`case_uri` |  `str`   
+The link to the finding's corresponding case in the external system.   
+`case_priority` |  `str`   
+The priority of the finding's corresponding case in the external system.   
+`case_sla` |  `google.protobuf.timestamp_pb2.Timestamp`   
+The SLA of the finding's corresponding case in the external system.   
+`case_create_time` |  `google.protobuf.timestamp_pb2.Timestamp`   
+The time when the case was created, as reported by the external system.   
+`case_close_time` |  `google.protobuf.timestamp_pb2.Timestamp`   
+The time when the case was closed, as reported by the external system.   
+`ticket_info` |  `[google.cloud.securitycenter_v2.types.ExternalSystem.TicketInfo](https://docs.cloud.google.com/python/docs/reference/securitycenter/latest/google.cloud.securitycenter_v2.types.ExternalSystem.TicketInfo)`   
+Information about the ticket, if any, that is being used to track the resolution of the issue that is identified by this finding.   
+  
+## Classes 
+
+### TicketInfo
+    
+    
+    TicketInfo(mapping=None, *, ignore_unknown_fields=False, **kwargs)
+
+Information about the ticket, if any, that is being used to track the resolution of the issue that is identified by this finding.
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-03 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-03 UTC."],[],[]] 

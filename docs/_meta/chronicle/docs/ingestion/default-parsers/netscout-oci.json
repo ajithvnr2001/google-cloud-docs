@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/netscout-oci/",
+  "file": "chronicle/docs/ingestion/default-parsers/netscout-oci.md",
+  "title": "Collect Netscout OCI logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T14:48:09.819440+00:00"
+}

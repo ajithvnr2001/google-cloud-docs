@@ -1,0 +1,71 @@
+---
+url: https://docs.cloud.google.com/compute/docs/reference/rest/v1/futureReservations/
+title: REST Resource: futureReservations \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T12:47:24.503380+00:00
+---
+
+# REST Resource: futureReservations  |  Compute Engine  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/compute/docs/reference/rest/v1/futureReservations/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Compute ](https://docs.cloud.google.com/docs/compute-area)
+  * [ Compute Engine ](https://docs.cloud.google.com/compute/docs)
+  * [ APIs & Reference ](https://docs.cloud.google.com/compute/docs/apis)
+
+
+
+Send feedback 
+
+#  REST Resource: futureReservations Stay organized with collections  Save and categorize content based on your preferences. 
+
+  * Resource
+  * Methods
+
+
+
+## Resource
+
+There is no persistent data associated with this resource.
+
+## Methods  
+  
+---  
+  
+### `[aggregatedList](https://docs.cloud.google.com/compute/docs/reference/rest/v1/futureReservations/aggregatedList)`
+
+|  Retrieves an aggregated list of future reservations.  
+  
+### `[cancel](https://docs.cloud.google.com/compute/docs/reference/rest/v1/futureReservations/cancel)`
+
+|  Cancel the specified future reservation.  
+  
+### `[delete](https://docs.cloud.google.com/compute/docs/reference/rest/v1/futureReservations/delete)`
+
+|  Deletes the specified future reservation.  
+  
+### `[get](https://docs.cloud.google.com/compute/docs/reference/rest/v1/futureReservations/get)`
+
+|  Retrieves information about the specified future reservation.  
+  
+### `[insert](https://docs.cloud.google.com/compute/docs/reference/rest/v1/futureReservations/insert)`
+
+|  Creates a new Future Reservation.  
+  
+### `[list](https://docs.cloud.google.com/compute/docs/reference/rest/v1/futureReservations/list)`
+
+|  A list of all the future reservations that have been configured for the specified project in specified zone.  
+  
+### `[update](https://docs.cloud.google.com/compute/docs/reference/rest/v1/futureReservations/update)`
+
+|  Updates the specified future reservation.  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2025-07-28 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2025-07-28 UTC."],[],[]] 

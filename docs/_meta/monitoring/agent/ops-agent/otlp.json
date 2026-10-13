@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/monitoring/agent/ops-agent/otlp/",
+  "file": "monitoring/agent/ops-agent/otlp.md",
+  "title": "Collect OpenTelemetry Protocol (OTLP) metrics and traces \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:22:25.591910+00:00"
+}

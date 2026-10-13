@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/service-mesh/v1.28/docs/migrate-istio-serviceentry-gcpbackend-vm/",
+  "file": "service-mesh/v1.28/docs/migrate-istio-serviceentry-gcpbackend-vm.md",
+  "title": "Migrate Istio ServiceEntry to GCPBackend for Compute Engine VMs \u00a0|\u00a0 Cloud Service Mesh \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T14:31:02.412621+00:00"
+}

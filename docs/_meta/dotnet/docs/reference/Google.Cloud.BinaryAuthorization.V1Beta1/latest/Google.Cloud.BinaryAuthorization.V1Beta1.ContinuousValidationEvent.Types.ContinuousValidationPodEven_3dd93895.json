@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.BinaryAuthorization.V1Beta1/latest/Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType",
+  "file": "dotnet/docs/reference/Google.Cloud.BinaryAuthorization.V1Beta1/latest/Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEven_3dd93895.md",
+  "title": "Binary Authorization v1beta1 API - Enum ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType (2.0.0-beta10) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T14:28:51.790133+00:00"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/python/docs/reference/dataqna/latest/google.cloud.dataqna_v1alpha.types.InterpretError.InterpretAmbiguityDetails",
+  "file": "python/docs/reference/dataqna/latest/google.cloud.dataqna_v1alpha.types.InterpretError.InterpretAmbiguityDetails.md",
+  "title": "Class InterpretAmbiguityDetails (0.14.1) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T14:46:11.111507+00:00"
+}

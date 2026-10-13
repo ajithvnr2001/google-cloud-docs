@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/eks/reference/versions/v1.28.0-gke.6/metrics/",
+  "file": "kubernetes-engine/multi-cloud/docs/attached/eks/reference/versions/v1.28.0-gke.6/metrics.md",
+  "title": "Metrics available in 1.28.0-gke.6 \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:32:02.475886+00:00"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dataplex-v1/latest/Google-Cloud-Dataplex-V1-DataDocumentationResult-SchemaRelationship-Source/",
+  "file": "ruby/docs/reference/google-cloud-dataplex-v1/latest/Google-Cloud-Dataplex-V1-DataDocumentationResult-SchemaRelationship-Source.md",
+  "title": "Dataplex V1 API - Module Google::Cloud::Dataplex::V1::DataDocumentationResult::SchemaRelationship::Source (v2.10.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:29:04.617633+00:00"
+}

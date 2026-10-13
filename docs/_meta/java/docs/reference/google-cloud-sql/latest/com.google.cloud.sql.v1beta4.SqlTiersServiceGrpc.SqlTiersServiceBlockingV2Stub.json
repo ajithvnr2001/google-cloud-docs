@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-sql/latest/com.google.cloud.sql.v1beta4.SqlTiersServiceGrpc.SqlTiersServiceBlockingV2Stub",
+  "file": "java/docs/reference/google-cloud-sql/latest/com.google.cloud.sql.v1beta4.SqlTiersServiceGrpc.SqlTiersServiceBlockingV2Stub.md",
+  "title": "Class SqlTiersServiceGrpc.SqlTiersServiceBlockingV2Stub (0.5.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T12:51:31.343068+00:00"
+}

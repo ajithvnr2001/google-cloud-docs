@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets.versions/list/",
+  "file": "secret-manager/docs/reference/rest/v1/projects.secrets.versions/list.md",
+  "title": "Method: projects.secrets.versions.list \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:17:50.910784+00:00"
+}

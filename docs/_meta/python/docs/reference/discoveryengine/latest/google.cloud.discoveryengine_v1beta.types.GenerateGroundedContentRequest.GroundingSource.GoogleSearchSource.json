@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/python/docs/reference/discoveryengine/latest/google.cloud.discoveryengine_v1beta.types.GenerateGroundedContentRequest.GroundingSource.GoogleSearchSource",
+  "file": "python/docs/reference/discoveryengine/latest/google.cloud.discoveryengine_v1beta.types.GenerateGroundedContentRequest.GroundingSource.GoogleSearchSource.md",
+  "title": "Class GoogleSearchSource (0.20.5) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T14:56:34.052524+00:00"
+}

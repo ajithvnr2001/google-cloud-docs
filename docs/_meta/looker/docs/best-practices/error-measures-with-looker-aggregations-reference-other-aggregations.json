@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/looker/docs/best-practices/error-measures-with-looker-aggregations-reference-other-aggregations/",
+  "file": "looker/docs/best-practices/error-measures-with-looker-aggregations-reference-other-aggregations.md",
+  "title": "Error: Measures with Looker aggregations (sum, average, min, max, list types) may not reference other measures \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T12:20:52.548769+00:00"
+}

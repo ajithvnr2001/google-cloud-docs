@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-data_catalog-lineage-config_management-v1/latest/Google-Cloud-DataCatalog-Lineage-ConfigManagement-V1-Config-Ingestion-IngestionRule-LineageEnablement/",
+  "file": "ruby/docs/reference/google-cloud-data_catalog-lineage-config_management-v1/latest/Google-Cloud-DataCatalog-Lineage-ConfigManagement-V1-Config-Ingestion-IngestionRule-LineageEnablement.md",
+  "title": "Data Lineage V1 API - Class Google::Cloud::DataCatalog::Lineage::ConfigManagement::V1::Config::Ingestion::IngestionRule::LineageEnablement (v0.1.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:22:22.194103+00:00"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/iam/docs/reference/rest/v3beta/organizations.locations.principalAccessBoundaryPolicies/patch/",
+  "file": "iam/docs/reference/rest/v3beta/organizations.locations.principalAccessBoundaryPolicies/patch.md",
+  "title": "Method: organizations.locations.principalAccessBoundaryPolicies.patch \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T12:53:37.646200+00:00"
+}

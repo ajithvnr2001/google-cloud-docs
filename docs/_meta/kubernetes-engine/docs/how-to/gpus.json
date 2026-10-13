@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/how-to/gpus/",
+  "file": "kubernetes-engine/docs/how-to/gpus.md",
+  "title": "Run GPUs in GKE Standard node pools \u00a0|\u00a0 GKE AI/ML \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T12:34:24.627617+00:00"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/netapp/volumes/docs/reference/rest/v1/projects.locations.volumes.snapshots/list/",
+  "file": "netapp/volumes/docs/reference/rest/v1/projects.locations.volumes.snapshots/list.md",
+  "title": "Method: projects.locations.volumes.snapshots.list \u00a0|\u00a0 NetApp Volumes \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:19:35.287376+00:00"
+}

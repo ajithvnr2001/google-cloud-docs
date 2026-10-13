@@ -1,0 +1,1349 @@
+---
+url: https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClientImpl
+title: Managed Service for Apache Kafka API v1 API - Class ManagedKafkaClientImpl (1.0.0-beta08) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T13:06:48.878326+00:00
+---
+
+# Managed Service for Apache Kafka API v1 API - Class ManagedKafkaClientImpl (1.0.0-beta08)  |  .NET client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClientImpl
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ .NET ](https://docs.cloud.google.com/dotnet/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/dotnet/docs/reference)
+
+
+
+Send feedback 
+
+#  Managed Service for Apache Kafka API v1 API - Class ManagedKafkaClientImpl (1.0.0-beta08) Stay organized with collections  Save and categorize content based on your preferences. 
+
+Version latestkeyboard_arrow_down
+
+  * [ 1.0.0-beta08 (latest) ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClientImpl)
+  * [ 1.0.0-beta07 ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/1.0.0-beta07/Google.Cloud.ManagedKafka.V1.ManagedKafkaClientImpl)
+
+
+    
+    
+    public sealed class ManagedKafkaClientImpl : ManagedKafkaClient
+
+Reference documentation and code samples for the Managed Service for Apache Kafka API v1 API class ManagedKafkaClientImpl.
+
+ManagedKafka client wrapper implementation, for convenient use.
+
+## Inheritance
+
+[object](https://learn.microsoft.com/dotnet/api/system.object) > [ManagedKafkaClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient) > ManagedKafkaClientImpl
+
+## Inherited Members
+
+[ManagedKafkaClient.DefaultEndpoint](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DefaultEndpoint)
+
+[ManagedKafkaClient.DefaultScopes](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DefaultScopes)
+
+[ManagedKafkaClient.ServiceMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ServiceMetadata)
+
+[ManagedKafkaClient.CreateAsync(CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateAsync_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.Create()](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_Create)
+
+[ManagedKafkaClient.ShutdownDefaultChannelsAsync()](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ShutdownDefaultChannelsAsync)
+
+[ManagedKafkaClient.ListClusters(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListClusters_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.ListClustersAsync(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListClustersAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.ListClusters(LocationName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListClusters_Google_Api_Gax_ResourceNames_LocationName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.ListClustersAsync(LocationName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListClustersAsync_Google_Api_Gax_ResourceNames_LocationName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetClusterAsync(GetClusterRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetClusterAsync_Google_Cloud_ManagedKafka_V1_GetClusterRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.GetCluster(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetCluster_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetClusterAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetClusterAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetClusterAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetClusterAsync_System_String_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.GetCluster(ClusterName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetCluster_Google_Cloud_ManagedKafka_V1_ClusterName_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetClusterAsync(ClusterName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetClusterAsync_Google_Cloud_ManagedKafka_V1_ClusterName_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetClusterAsync(ClusterName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetClusterAsync_Google_Cloud_ManagedKafka_V1_ClusterName_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.CreateClusterAsync(CreateClusterRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateClusterAsync_Google_Cloud_ManagedKafka_V1_CreateClusterRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.PollOnceCreateCluster(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_PollOnceCreateCluster_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.PollOnceCreateClusterAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_PollOnceCreateClusterAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.CreateCluster(string, Cluster, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateCluster_System_String_Google_Cloud_ManagedKafka_V1_Cluster_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.CreateClusterAsync(string, Cluster, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateClusterAsync_System_String_Google_Cloud_ManagedKafka_V1_Cluster_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.CreateClusterAsync(string, Cluster, string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateClusterAsync_System_String_Google_Cloud_ManagedKafka_V1_Cluster_System_String_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.CreateCluster(LocationName, Cluster, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateCluster_Google_Api_Gax_ResourceNames_LocationName_Google_Cloud_ManagedKafka_V1_Cluster_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.CreateClusterAsync(LocationName, Cluster, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateClusterAsync_Google_Api_Gax_ResourceNames_LocationName_Google_Cloud_ManagedKafka_V1_Cluster_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.CreateClusterAsync(LocationName, Cluster, string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateClusterAsync_Google_Api_Gax_ResourceNames_LocationName_Google_Cloud_ManagedKafka_V1_Cluster_System_String_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.UpdateClusterAsync(UpdateClusterRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateClusterAsync_Google_Cloud_ManagedKafka_V1_UpdateClusterRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.PollOnceUpdateCluster(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_PollOnceUpdateCluster_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.PollOnceUpdateClusterAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_PollOnceUpdateClusterAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.UpdateCluster(Cluster, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateCluster_Google_Cloud_ManagedKafka_V1_Cluster_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.UpdateClusterAsync(Cluster, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateClusterAsync_Google_Cloud_ManagedKafka_V1_Cluster_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.UpdateClusterAsync(Cluster, FieldMask, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateClusterAsync_Google_Cloud_ManagedKafka_V1_Cluster_Google_Protobuf_WellKnownTypes_FieldMask_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.DeleteClusterAsync(DeleteClusterRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteClusterAsync_Google_Cloud_ManagedKafka_V1_DeleteClusterRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.PollOnceDeleteCluster(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_PollOnceDeleteCluster_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.PollOnceDeleteClusterAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_PollOnceDeleteClusterAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteCluster(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteCluster_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteClusterAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteClusterAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteClusterAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteClusterAsync_System_String_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.DeleteCluster(ClusterName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteCluster_Google_Cloud_ManagedKafka_V1_ClusterName_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteClusterAsync(ClusterName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteClusterAsync_Google_Cloud_ManagedKafka_V1_ClusterName_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteClusterAsync(ClusterName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteClusterAsync_Google_Cloud_ManagedKafka_V1_ClusterName_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.ListTopics(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListTopics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.ListTopicsAsync(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListTopicsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.ListTopics(ClusterName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListTopics_Google_Cloud_ManagedKafka_V1_ClusterName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.ListTopicsAsync(ClusterName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListTopicsAsync_Google_Cloud_ManagedKafka_V1_ClusterName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetTopicAsync(GetTopicRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetTopicAsync_Google_Cloud_ManagedKafka_V1_GetTopicRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.GetTopic(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetTopic_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetTopicAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetTopicAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetTopicAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetTopicAsync_System_String_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.GetTopic(TopicName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetTopic_Google_Cloud_ManagedKafka_V1_TopicName_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetTopicAsync(TopicName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetTopicAsync_Google_Cloud_ManagedKafka_V1_TopicName_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetTopicAsync(TopicName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetTopicAsync_Google_Cloud_ManagedKafka_V1_TopicName_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.CreateTopicAsync(CreateTopicRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateTopicAsync_Google_Cloud_ManagedKafka_V1_CreateTopicRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.CreateTopic(string, Topic, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateTopic_System_String_Google_Cloud_ManagedKafka_V1_Topic_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.CreateTopicAsync(string, Topic, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateTopicAsync_System_String_Google_Cloud_ManagedKafka_V1_Topic_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.CreateTopicAsync(string, Topic, string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateTopicAsync_System_String_Google_Cloud_ManagedKafka_V1_Topic_System_String_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.CreateTopic(ClusterName, Topic, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateTopic_Google_Cloud_ManagedKafka_V1_ClusterName_Google_Cloud_ManagedKafka_V1_Topic_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.CreateTopicAsync(ClusterName, Topic, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateTopicAsync_Google_Cloud_ManagedKafka_V1_ClusterName_Google_Cloud_ManagedKafka_V1_Topic_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.CreateTopicAsync(ClusterName, Topic, string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateTopicAsync_Google_Cloud_ManagedKafka_V1_ClusterName_Google_Cloud_ManagedKafka_V1_Topic_System_String_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.UpdateTopicAsync(UpdateTopicRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateTopicAsync_Google_Cloud_ManagedKafka_V1_UpdateTopicRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.UpdateTopic(Topic, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateTopic_Google_Cloud_ManagedKafka_V1_Topic_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.UpdateTopicAsync(Topic, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateTopicAsync_Google_Cloud_ManagedKafka_V1_Topic_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.UpdateTopicAsync(Topic, FieldMask, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateTopicAsync_Google_Cloud_ManagedKafka_V1_Topic_Google_Protobuf_WellKnownTypes_FieldMask_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.DeleteTopicAsync(DeleteTopicRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteTopicAsync_Google_Cloud_ManagedKafka_V1_DeleteTopicRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.DeleteTopic(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteTopic_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteTopicAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteTopicAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteTopicAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteTopicAsync_System_String_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.DeleteTopic(TopicName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteTopic_Google_Cloud_ManagedKafka_V1_TopicName_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteTopicAsync(TopicName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteTopicAsync_Google_Cloud_ManagedKafka_V1_TopicName_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteTopicAsync(TopicName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteTopicAsync_Google_Cloud_ManagedKafka_V1_TopicName_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.ListConsumerGroups(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListConsumerGroups_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.ListConsumerGroupsAsync(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListConsumerGroupsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.ListConsumerGroups(ClusterName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListConsumerGroups_Google_Cloud_ManagedKafka_V1_ClusterName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.ListConsumerGroupsAsync(ClusterName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListConsumerGroupsAsync_Google_Cloud_ManagedKafka_V1_ClusterName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetConsumerGroupAsync(GetConsumerGroupRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetConsumerGroupAsync_Google_Cloud_ManagedKafka_V1_GetConsumerGroupRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.GetConsumerGroup(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetConsumerGroup_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetConsumerGroupAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetConsumerGroupAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetConsumerGroupAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetConsumerGroupAsync_System_String_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.GetConsumerGroup(ConsumerGroupName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetConsumerGroup_Google_Cloud_ManagedKafka_V1_ConsumerGroupName_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetConsumerGroupAsync(ConsumerGroupName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetConsumerGroupAsync_Google_Cloud_ManagedKafka_V1_ConsumerGroupName_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetConsumerGroupAsync(ConsumerGroupName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetConsumerGroupAsync_Google_Cloud_ManagedKafka_V1_ConsumerGroupName_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.UpdateConsumerGroupAsync(UpdateConsumerGroupRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateConsumerGroupAsync_Google_Cloud_ManagedKafka_V1_UpdateConsumerGroupRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.UpdateConsumerGroup(ConsumerGroup, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateConsumerGroup_Google_Cloud_ManagedKafka_V1_ConsumerGroup_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.UpdateConsumerGroupAsync(ConsumerGroup, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateConsumerGroupAsync_Google_Cloud_ManagedKafka_V1_ConsumerGroup_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.UpdateConsumerGroupAsync(ConsumerGroup, FieldMask, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateConsumerGroupAsync_Google_Cloud_ManagedKafka_V1_ConsumerGroup_Google_Protobuf_WellKnownTypes_FieldMask_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.DeleteConsumerGroupAsync(DeleteConsumerGroupRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteConsumerGroupAsync_Google_Cloud_ManagedKafka_V1_DeleteConsumerGroupRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.DeleteConsumerGroup(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteConsumerGroup_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteConsumerGroupAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteConsumerGroupAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteConsumerGroupAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteConsumerGroupAsync_System_String_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.DeleteConsumerGroup(ConsumerGroupName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteConsumerGroup_Google_Cloud_ManagedKafka_V1_ConsumerGroupName_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteConsumerGroupAsync(ConsumerGroupName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteConsumerGroupAsync_Google_Cloud_ManagedKafka_V1_ConsumerGroupName_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteConsumerGroupAsync(ConsumerGroupName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteConsumerGroupAsync_Google_Cloud_ManagedKafka_V1_ConsumerGroupName_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.ListAcls(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListAcls_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.ListAclsAsync(string, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListAclsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.ListAcls(ClusterName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListAcls_Google_Cloud_ManagedKafka_V1_ClusterName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.ListAclsAsync(ClusterName, string, int?, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListAclsAsync_Google_Cloud_ManagedKafka_V1_ClusterName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetAclAsync(GetAclRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetAclAsync_Google_Cloud_ManagedKafka_V1_GetAclRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.GetAcl(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetAcl_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetAclAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetAclAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetAclAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetAclAsync_System_String_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.GetAcl(AclName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetAcl_Google_Cloud_ManagedKafka_V1_AclName_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetAclAsync(AclName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetAclAsync_Google_Cloud_ManagedKafka_V1_AclName_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.GetAclAsync(AclName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetAclAsync_Google_Cloud_ManagedKafka_V1_AclName_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.CreateAclAsync(CreateAclRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateAclAsync_Google_Cloud_ManagedKafka_V1_CreateAclRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.CreateAcl(string, Acl, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateAcl_System_String_Google_Cloud_ManagedKafka_V1_Acl_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.CreateAclAsync(string, Acl, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateAclAsync_System_String_Google_Cloud_ManagedKafka_V1_Acl_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.CreateAclAsync(string, Acl, string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateAclAsync_System_String_Google_Cloud_ManagedKafka_V1_Acl_System_String_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.CreateAcl(ClusterName, Acl, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateAcl_Google_Cloud_ManagedKafka_V1_ClusterName_Google_Cloud_ManagedKafka_V1_Acl_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.CreateAclAsync(ClusterName, Acl, string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateAclAsync_Google_Cloud_ManagedKafka_V1_ClusterName_Google_Cloud_ManagedKafka_V1_Acl_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.CreateAclAsync(ClusterName, Acl, string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateAclAsync_Google_Cloud_ManagedKafka_V1_ClusterName_Google_Cloud_ManagedKafka_V1_Acl_System_String_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.UpdateAclAsync(UpdateAclRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateAclAsync_Google_Cloud_ManagedKafka_V1_UpdateAclRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.UpdateAcl(Acl, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateAcl_Google_Cloud_ManagedKafka_V1_Acl_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.UpdateAclAsync(Acl, FieldMask, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateAclAsync_Google_Cloud_ManagedKafka_V1_Acl_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.UpdateAclAsync(Acl, FieldMask, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateAclAsync_Google_Cloud_ManagedKafka_V1_Acl_Google_Protobuf_WellKnownTypes_FieldMask_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.DeleteAclAsync(DeleteAclRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteAclAsync_Google_Cloud_ManagedKafka_V1_DeleteAclRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.DeleteAcl(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteAcl_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteAclAsync(string, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteAclAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteAclAsync(string, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteAclAsync_System_String_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.DeleteAcl(AclName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteAcl_Google_Cloud_ManagedKafka_V1_AclName_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteAclAsync(AclName, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteAclAsync_Google_Cloud_ManagedKafka_V1_AclName_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.DeleteAclAsync(AclName, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteAclAsync_Google_Cloud_ManagedKafka_V1_AclName_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.AddAclEntryAsync(AddAclEntryRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_AddAclEntryAsync_Google_Cloud_ManagedKafka_V1_AddAclEntryRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.AddAclEntry(string, AclEntry, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_AddAclEntry_System_String_Google_Cloud_ManagedKafka_V1_AclEntry_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.AddAclEntryAsync(string, AclEntry, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_AddAclEntryAsync_System_String_Google_Cloud_ManagedKafka_V1_AclEntry_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.AddAclEntryAsync(string, AclEntry, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_AddAclEntryAsync_System_String_Google_Cloud_ManagedKafka_V1_AclEntry_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.AddAclEntry(AclName, AclEntry, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_AddAclEntry_Google_Cloud_ManagedKafka_V1_AclName_Google_Cloud_ManagedKafka_V1_AclEntry_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.AddAclEntryAsync(AclName, AclEntry, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_AddAclEntryAsync_Google_Cloud_ManagedKafka_V1_AclName_Google_Cloud_ManagedKafka_V1_AclEntry_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.AddAclEntryAsync(AclName, AclEntry, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_AddAclEntryAsync_Google_Cloud_ManagedKafka_V1_AclName_Google_Cloud_ManagedKafka_V1_AclEntry_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.RemoveAclEntryAsync(RemoveAclEntryRequest, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_RemoveAclEntryAsync_Google_Cloud_ManagedKafka_V1_RemoveAclEntryRequest_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.RemoveAclEntry(string, AclEntry, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_RemoveAclEntry_System_String_Google_Cloud_ManagedKafka_V1_AclEntry_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.RemoveAclEntryAsync(string, AclEntry, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_RemoveAclEntryAsync_System_String_Google_Cloud_ManagedKafka_V1_AclEntry_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.RemoveAclEntryAsync(string, AclEntry, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_RemoveAclEntryAsync_System_String_Google_Cloud_ManagedKafka_V1_AclEntry_System_Threading_CancellationToken_)
+
+[ManagedKafkaClient.RemoveAclEntry(AclName, AclEntry, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_RemoveAclEntry_Google_Cloud_ManagedKafka_V1_AclName_Google_Cloud_ManagedKafka_V1_AclEntry_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.RemoveAclEntryAsync(AclName, AclEntry, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_RemoveAclEntryAsync_Google_Cloud_ManagedKafka_V1_AclName_Google_Cloud_ManagedKafka_V1_AclEntry_Google_Api_Gax_Grpc_CallSettings_)
+
+[ManagedKafkaClient.RemoveAclEntryAsync(AclName, AclEntry, CancellationToken)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_RemoveAclEntryAsync_Google_Cloud_ManagedKafka_V1_AclName_Google_Cloud_ManagedKafka_V1_AclEntry_System_Threading_CancellationToken_)
+
+[object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+
+[object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+
+[object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Namespace
+
+[Google.Cloud.ManagedKafka.V1](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1)
+
+## Assembly
+
+Google.Cloud.ManagedKafka.V1.dll
+
+## Remarks
+
+The service that a client application uses to manage Apache Kafka clusters, topics and consumer groups.
+
+## Constructors 
+
+### ManagedKafkaClientImpl(ManagedKafkaClient, ManagedKafkaSettings, ILogger)
+    
+    
+    public ManagedKafkaClientImpl(ManagedKafka.ManagedKafkaClient grpcClient, ManagedKafkaSettings settings, ILogger logger)
+
+Constructs a client wrapper for the ManagedKafka service, with the specified gRPC client and settings.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`grpcClient` | `[ManagedKafka](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafka)[ManagedKafkaClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafka.ManagedKafkaClient)`  
+The underlying gRPC client.  
+`settings` | `[ManagedKafkaSettings](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaSettings)`  
+The base [ManagedKafkaSettings](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaSettings) used within this client.  
+`logger` | `[ILogger](https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger)`  
+Optional [ILogger](https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger) to use within this client.  
+  
+## Properties 
+
+### CreateClusterOperationsClient
+    
+    
+    public override OperationsClient CreateClusterOperationsClient { get; }
+
+The long-running operations client for `CreateCluster`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[ManagedKafkaClient.CreateClusterOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateClusterOperationsClient)
+
+### DeleteClusterOperationsClient
+    
+    
+    public override OperationsClient DeleteClusterOperationsClient { get; }
+
+The long-running operations client for `DeleteCluster`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[ManagedKafkaClient.DeleteClusterOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteClusterOperationsClient)
+
+### GrpcClient
+    
+    
+    public override ManagedKafka.ManagedKafkaClient GrpcClient { get; }
+
+The underlying gRPC ManagedKafka client
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[ManagedKafka](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafka)[ManagedKafkaClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafka.ManagedKafkaClient)` |   
+**Overrides**
+
+[ManagedKafkaClient.GrpcClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GrpcClient)
+
+### LocationsClient
+    
+    
+    public override LocationsClient LocationsClient { get; }
+
+The [LocationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Location/latest/Google.Cloud.Location.LocationsClient.html) associated with this client.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[LocationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Location/latest/Google.Cloud.Location.LocationsClient.html)` |   
+**Overrides**
+
+[ManagedKafkaClient.LocationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_LocationsClient)
+
+### UpdateClusterOperationsClient
+    
+    
+    public override OperationsClient UpdateClusterOperationsClient { get; }
+
+The long-running operations client for `UpdateCluster`.
+
+**Property Value**  
+---  
+**Type** | **Description**  
+`[OperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.OperationsClient.html)` |   
+**Overrides**
+
+[ManagedKafkaClient.UpdateClusterOperationsClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateClusterOperationsClient)
+
+## Methods 
+
+### AddAclEntry(AddAclEntryRequest, CallSettings)
+    
+    
+    public override AddAclEntryResponse AddAclEntry(AddAclEntryRequest request, CallSettings callSettings = null)
+
+Incremental update: Adds an acl entry to an acl. Creates the acl if it does not exist yet.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[AddAclEntryRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.AddAclEntryRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[AddAclEntryResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.AddAclEntryResponse)` | The RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.AddAclEntry(AddAclEntryRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_AddAclEntry_Google_Cloud_ManagedKafka_V1_AddAclEntryRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### AddAclEntryAsync(AddAclEntryRequest, CallSettings)
+    
+    
+    public override Task<AddAclEntryResponse> AddAclEntryAsync(AddAclEntryRequest request, CallSettings callSettings = null)
+
+Incremental update: Adds an acl entry to an acl. Creates the acl if it does not exist yet.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[AddAclEntryRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.AddAclEntryRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[AddAclEntryResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.AddAclEntryResponse)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.AddAclEntryAsync(AddAclEntryRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_AddAclEntryAsync_Google_Cloud_ManagedKafka_V1_AddAclEntryRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateAcl(CreateAclRequest, CallSettings)
+    
+    
+    public override Acl CreateAcl(CreateAclRequest request, CallSettings callSettings = null)
+
+Creates a new acl in the given project, location, and cluster.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateAclRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.CreateAclRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Acl](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Acl)` | The RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.CreateAcl(CreateAclRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateAcl_Google_Cloud_ManagedKafka_V1_CreateAclRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateAclAsync(CreateAclRequest, CallSettings)
+    
+    
+    public override Task<Acl> CreateAclAsync(CreateAclRequest request, CallSettings callSettings = null)
+
+Creates a new acl in the given project, location, and cluster.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateAclRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.CreateAclRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Acl](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Acl)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.CreateAclAsync(CreateAclRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateAclAsync_Google_Cloud_ManagedKafka_V1_CreateAclRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateCluster(CreateClusterRequest, CallSettings)
+    
+    
+    public override Operation<Cluster, OperationMetadata> CreateCluster(CreateClusterRequest request, CallSettings callSettings = null)
+
+Creates a new cluster in a given project and location.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateClusterRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.CreateClusterRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[Cluster](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Cluster)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.OperationMetadata)` | The RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.CreateCluster(CreateClusterRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateCluster_Google_Cloud_ManagedKafka_V1_CreateClusterRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateClusterAsync(CreateClusterRequest, CallSettings)
+    
+    
+    public override Task<Operation<Cluster, OperationMetadata>> CreateClusterAsync(CreateClusterRequest request, CallSettings callSettings = null)
+
+Creates a new cluster in a given project and location.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateClusterRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.CreateClusterRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[Cluster](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Cluster)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.OperationMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.CreateClusterAsync(CreateClusterRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateClusterAsync_Google_Cloud_ManagedKafka_V1_CreateClusterRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateTopic(CreateTopicRequest, CallSettings)
+    
+    
+    public override Topic CreateTopic(CreateTopicRequest request, CallSettings callSettings = null)
+
+Creates a new topic in a given project and location.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateTopicRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.CreateTopicRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Topic](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Topic)` | The RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.CreateTopic(CreateTopicRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateTopic_Google_Cloud_ManagedKafka_V1_CreateTopicRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### CreateTopicAsync(CreateTopicRequest, CallSettings)
+    
+    
+    public override Task<Topic> CreateTopicAsync(CreateTopicRequest request, CallSettings callSettings = null)
+
+Creates a new topic in a given project and location.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[CreateTopicRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.CreateTopicRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Topic](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Topic)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.CreateTopicAsync(CreateTopicRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_CreateTopicAsync_Google_Cloud_ManagedKafka_V1_CreateTopicRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteAcl(DeleteAclRequest, CallSettings)
+    
+    
+    public override void DeleteAcl(DeleteAclRequest request, CallSettings callSettings = null)
+
+Deletes an acl.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteAclRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.DeleteAclRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Overrides**
+
+[ManagedKafkaClient.DeleteAcl(DeleteAclRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteAcl_Google_Cloud_ManagedKafka_V1_DeleteAclRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteAclAsync(DeleteAclRequest, CallSettings)
+    
+    
+    public override Task DeleteAclAsync(DeleteAclRequest request, CallSettings callSettings = null)
+
+Deletes an acl.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteAclRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.DeleteAclRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.DeleteAclAsync(DeleteAclRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteAclAsync_Google_Cloud_ManagedKafka_V1_DeleteAclRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteCluster(DeleteClusterRequest, CallSettings)
+    
+    
+    public override Operation<Empty, OperationMetadata> DeleteCluster(DeleteClusterRequest request, CallSettings callSettings = null)
+
+Deletes a single cluster.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteClusterRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.DeleteClusterRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[Empty](https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.WellKnownTypes.Empty.html)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.OperationMetadata)` | The RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.DeleteCluster(DeleteClusterRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteCluster_Google_Cloud_ManagedKafka_V1_DeleteClusterRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteClusterAsync(DeleteClusterRequest, CallSettings)
+    
+    
+    public override Task<Operation<Empty, OperationMetadata>> DeleteClusterAsync(DeleteClusterRequest request, CallSettings callSettings = null)
+
+Deletes a single cluster.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteClusterRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.DeleteClusterRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[Empty](https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.WellKnownTypes.Empty.html)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.OperationMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.DeleteClusterAsync(DeleteClusterRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteClusterAsync_Google_Cloud_ManagedKafka_V1_DeleteClusterRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteConsumerGroup(DeleteConsumerGroupRequest, CallSettings)
+    
+    
+    public override void DeleteConsumerGroup(DeleteConsumerGroupRequest request, CallSettings callSettings = null)
+
+Deletes a single consumer group.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteConsumerGroupRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.DeleteConsumerGroupRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Overrides**
+
+[ManagedKafkaClient.DeleteConsumerGroup(DeleteConsumerGroupRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteConsumerGroup_Google_Cloud_ManagedKafka_V1_DeleteConsumerGroupRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteConsumerGroupAsync(DeleteConsumerGroupRequest, CallSettings)
+    
+    
+    public override Task DeleteConsumerGroupAsync(DeleteConsumerGroupRequest request, CallSettings callSettings = null)
+
+Deletes a single consumer group.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteConsumerGroupRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.DeleteConsumerGroupRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.DeleteConsumerGroupAsync(DeleteConsumerGroupRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteConsumerGroupAsync_Google_Cloud_ManagedKafka_V1_DeleteConsumerGroupRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteTopic(DeleteTopicRequest, CallSettings)
+    
+    
+    public override void DeleteTopic(DeleteTopicRequest request, CallSettings callSettings = null)
+
+Deletes a single topic.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteTopicRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.DeleteTopicRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Overrides**
+
+[ManagedKafkaClient.DeleteTopic(DeleteTopicRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteTopic_Google_Cloud_ManagedKafka_V1_DeleteTopicRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### DeleteTopicAsync(DeleteTopicRequest, CallSettings)
+    
+    
+    public override Task DeleteTopicAsync(DeleteTopicRequest request, CallSettings callSettings = null)
+
+Deletes a single topic.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[DeleteTopicRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.DeleteTopicRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.DeleteTopicAsync(DeleteTopicRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_DeleteTopicAsync_Google_Cloud_ManagedKafka_V1_DeleteTopicRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetAcl(GetAclRequest, CallSettings)
+    
+    
+    public override Acl GetAcl(GetAclRequest request, CallSettings callSettings = null)
+
+Returns the properties of a single acl.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetAclRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.GetAclRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Acl](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Acl)` | The RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.GetAcl(GetAclRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetAcl_Google_Cloud_ManagedKafka_V1_GetAclRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetAclAsync(GetAclRequest, CallSettings)
+    
+    
+    public override Task<Acl> GetAclAsync(GetAclRequest request, CallSettings callSettings = null)
+
+Returns the properties of a single acl.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetAclRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.GetAclRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Acl](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Acl)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.GetAclAsync(GetAclRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetAclAsync_Google_Cloud_ManagedKafka_V1_GetAclRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetCluster(GetClusterRequest, CallSettings)
+    
+    
+    public override Cluster GetCluster(GetClusterRequest request, CallSettings callSettings = null)
+
+Returns the properties of a single cluster.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetClusterRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.GetClusterRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Cluster](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Cluster)` | The RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.GetCluster(GetClusterRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetCluster_Google_Cloud_ManagedKafka_V1_GetClusterRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetClusterAsync(GetClusterRequest, CallSettings)
+    
+    
+    public override Task<Cluster> GetClusterAsync(GetClusterRequest request, CallSettings callSettings = null)
+
+Returns the properties of a single cluster.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetClusterRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.GetClusterRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Cluster](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Cluster)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.GetClusterAsync(GetClusterRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetClusterAsync_Google_Cloud_ManagedKafka_V1_GetClusterRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetConsumerGroup(GetConsumerGroupRequest, CallSettings)
+    
+    
+    public override ConsumerGroup GetConsumerGroup(GetConsumerGroupRequest request, CallSettings callSettings = null)
+
+Returns the properties of a single consumer group.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetConsumerGroupRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.GetConsumerGroupRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[ConsumerGroup](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ConsumerGroup)` | The RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.GetConsumerGroup(GetConsumerGroupRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetConsumerGroup_Google_Cloud_ManagedKafka_V1_GetConsumerGroupRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetConsumerGroupAsync(GetConsumerGroupRequest, CallSettings)
+    
+    
+    public override Task<ConsumerGroup> GetConsumerGroupAsync(GetConsumerGroupRequest request, CallSettings callSettings = null)
+
+Returns the properties of a single consumer group.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetConsumerGroupRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.GetConsumerGroupRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[ConsumerGroup](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ConsumerGroup)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.GetConsumerGroupAsync(GetConsumerGroupRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetConsumerGroupAsync_Google_Cloud_ManagedKafka_V1_GetConsumerGroupRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetTopic(GetTopicRequest, CallSettings)
+    
+    
+    public override Topic GetTopic(GetTopicRequest request, CallSettings callSettings = null)
+
+Returns the properties of a single topic.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetTopicRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.GetTopicRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Topic](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Topic)` | The RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.GetTopic(GetTopicRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetTopic_Google_Cloud_ManagedKafka_V1_GetTopicRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### GetTopicAsync(GetTopicRequest, CallSettings)
+    
+    
+    public override Task<Topic> GetTopicAsync(GetTopicRequest request, CallSettings callSettings = null)
+
+Returns the properties of a single topic.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[GetTopicRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.GetTopicRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Topic](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Topic)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.GetTopicAsync(GetTopicRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_GetTopicAsync_Google_Cloud_ManagedKafka_V1_GetTopicRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListAcls(ListAclsRequest, CallSettings)
+    
+    
+    public override PagedEnumerable<ListAclsResponse, Acl> ListAcls(ListAclsRequest request, CallSettings callSettings = null)
+
+Lists the acls in a given cluster.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListAclsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ListAclsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedEnumerable-2.html)[ListAclsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ListAclsResponse)[Acl](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Acl)` | A pageable sequence of [Acl](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Acl) resources.  
+**Overrides**
+
+[ManagedKafkaClient.ListAcls(ListAclsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListAcls_Google_Cloud_ManagedKafka_V1_ListAclsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListAclsAsync(ListAclsRequest, CallSettings)
+    
+    
+    public override PagedAsyncEnumerable<ListAclsResponse, Acl> ListAclsAsync(ListAclsRequest request, CallSettings callSettings = null)
+
+Lists the acls in a given cluster.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListAclsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ListAclsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedAsyncEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedAsyncEnumerable-2.html)[ListAclsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ListAclsResponse)[Acl](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Acl)` | A pageable asynchronous sequence of [Acl](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Acl) resources.  
+**Overrides**
+
+[ManagedKafkaClient.ListAclsAsync(ListAclsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListAclsAsync_Google_Cloud_ManagedKafka_V1_ListAclsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListClusters(ListClustersRequest, CallSettings)
+    
+    
+    public override PagedEnumerable<ListClustersResponse, Cluster> ListClusters(ListClustersRequest request, CallSettings callSettings = null)
+
+Lists the clusters in a given project and location.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListClustersRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ListClustersRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedEnumerable-2.html)[ListClustersResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ListClustersResponse)[Cluster](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Cluster)` | A pageable sequence of [Cluster](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Cluster) resources.  
+**Overrides**
+
+[ManagedKafkaClient.ListClusters(ListClustersRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListClusters_Google_Cloud_ManagedKafka_V1_ListClustersRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListClustersAsync(ListClustersRequest, CallSettings)
+    
+    
+    public override PagedAsyncEnumerable<ListClustersResponse, Cluster> ListClustersAsync(ListClustersRequest request, CallSettings callSettings = null)
+
+Lists the clusters in a given project and location.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListClustersRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ListClustersRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedAsyncEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedAsyncEnumerable-2.html)[ListClustersResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ListClustersResponse)[Cluster](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Cluster)` | A pageable asynchronous sequence of [Cluster](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Cluster) resources.  
+**Overrides**
+
+[ManagedKafkaClient.ListClustersAsync(ListClustersRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListClustersAsync_Google_Cloud_ManagedKafka_V1_ListClustersRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListConsumerGroups(ListConsumerGroupsRequest, CallSettings)
+    
+    
+    public override PagedEnumerable<ListConsumerGroupsResponse, ConsumerGroup> ListConsumerGroups(ListConsumerGroupsRequest request, CallSettings callSettings = null)
+
+Lists the consumer groups in a given cluster.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListConsumerGroupsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ListConsumerGroupsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedEnumerable-2.html)[ListConsumerGroupsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ListConsumerGroupsResponse)[ConsumerGroup](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ConsumerGroup)` | A pageable sequence of [ConsumerGroup](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ConsumerGroup) resources.  
+**Overrides**
+
+[ManagedKafkaClient.ListConsumerGroups(ListConsumerGroupsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListConsumerGroups_Google_Cloud_ManagedKafka_V1_ListConsumerGroupsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListConsumerGroupsAsync(ListConsumerGroupsRequest, CallSettings)
+    
+    
+    public override PagedAsyncEnumerable<ListConsumerGroupsResponse, ConsumerGroup> ListConsumerGroupsAsync(ListConsumerGroupsRequest request, CallSettings callSettings = null)
+
+Lists the consumer groups in a given cluster.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListConsumerGroupsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ListConsumerGroupsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedAsyncEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedAsyncEnumerable-2.html)[ListConsumerGroupsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ListConsumerGroupsResponse)[ConsumerGroup](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ConsumerGroup)` | A pageable asynchronous sequence of [ConsumerGroup](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ConsumerGroup) resources.  
+**Overrides**
+
+[ManagedKafkaClient.ListConsumerGroupsAsync(ListConsumerGroupsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListConsumerGroupsAsync_Google_Cloud_ManagedKafka_V1_ListConsumerGroupsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListTopics(ListTopicsRequest, CallSettings)
+    
+    
+    public override PagedEnumerable<ListTopicsResponse, Topic> ListTopics(ListTopicsRequest request, CallSettings callSettings = null)
+
+Lists the topics in a given cluster.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListTopicsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ListTopicsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedEnumerable-2.html)[ListTopicsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ListTopicsResponse)[Topic](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Topic)` | A pageable sequence of [Topic](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Topic) resources.  
+**Overrides**
+
+[ManagedKafkaClient.ListTopics(ListTopicsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListTopics_Google_Cloud_ManagedKafka_V1_ListTopicsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### ListTopicsAsync(ListTopicsRequest, CallSettings)
+    
+    
+    public override PagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(ListTopicsRequest request, CallSettings callSettings = null)
+
+Lists the topics in a given cluster.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[ListTopicsRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ListTopicsRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[PagedAsyncEnumerable](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.PagedAsyncEnumerable-2.html)[ListTopicsResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ListTopicsResponse)[Topic](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Topic)` | A pageable asynchronous sequence of [Topic](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Topic) resources.  
+**Overrides**
+
+[ManagedKafkaClient.ListTopicsAsync(ListTopicsRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_ListTopicsAsync_Google_Cloud_ManagedKafka_V1_ListTopicsRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### RemoveAclEntry(RemoveAclEntryRequest, CallSettings)
+    
+    
+    public override RemoveAclEntryResponse RemoveAclEntry(RemoveAclEntryRequest request, CallSettings callSettings = null)
+
+Incremental update: Removes an acl entry from an acl. Deletes the acl if its acl entries become empty (i.e. if the removed entry was the last one in the acl).
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[RemoveAclEntryRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.RemoveAclEntryRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[RemoveAclEntryResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse)` | The RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.RemoveAclEntry(RemoveAclEntryRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_RemoveAclEntry_Google_Cloud_ManagedKafka_V1_RemoveAclEntryRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### RemoveAclEntryAsync(RemoveAclEntryRequest, CallSettings)
+    
+    
+    public override Task<RemoveAclEntryResponse> RemoveAclEntryAsync(RemoveAclEntryRequest request, CallSettings callSettings = null)
+
+Incremental update: Removes an acl entry from an acl. Deletes the acl if its acl entries become empty (i.e. if the removed entry was the last one in the acl).
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[RemoveAclEntryRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.RemoveAclEntryRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[RemoveAclEntryResponse](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.RemoveAclEntryAsync(RemoveAclEntryRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_RemoveAclEntryAsync_Google_Cloud_ManagedKafka_V1_RemoveAclEntryRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateAcl(UpdateAclRequest, CallSettings)
+    
+    
+    public override Acl UpdateAcl(UpdateAclRequest request, CallSettings callSettings = null)
+
+Updates the properties of a single acl.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateAclRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.UpdateAclRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Acl](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Acl)` | The RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.UpdateAcl(UpdateAclRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateAcl_Google_Cloud_ManagedKafka_V1_UpdateAclRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateAclAsync(UpdateAclRequest, CallSettings)
+    
+    
+    public override Task<Acl> UpdateAclAsync(UpdateAclRequest request, CallSettings callSettings = null)
+
+Updates the properties of a single acl.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateAclRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.UpdateAclRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Acl](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Acl)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.UpdateAclAsync(UpdateAclRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateAclAsync_Google_Cloud_ManagedKafka_V1_UpdateAclRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateCluster(UpdateClusterRequest, CallSettings)
+    
+    
+    public override Operation<Cluster, OperationMetadata> UpdateCluster(UpdateClusterRequest request, CallSettings callSettings = null)
+
+Updates the properties of a single cluster.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateClusterRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.UpdateClusterRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[Cluster](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Cluster)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.OperationMetadata)` | The RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.UpdateCluster(UpdateClusterRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateCluster_Google_Cloud_ManagedKafka_V1_UpdateClusterRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateClusterAsync(UpdateClusterRequest, CallSettings)
+    
+    
+    public override Task<Operation<Cluster, OperationMetadata>> UpdateClusterAsync(UpdateClusterRequest request, CallSettings callSettings = null)
+
+Updates the properties of a single cluster.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateClusterRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.UpdateClusterRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Operation](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.Operation-2.html)[Cluster](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Cluster)[OperationMetadata](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.OperationMetadata)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.UpdateClusterAsync(UpdateClusterRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateClusterAsync_Google_Cloud_ManagedKafka_V1_UpdateClusterRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateConsumerGroup(UpdateConsumerGroupRequest, CallSettings)
+    
+    
+    public override ConsumerGroup UpdateConsumerGroup(UpdateConsumerGroupRequest request, CallSettings callSettings = null)
+
+Updates the properties of a single consumer group.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateConsumerGroupRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.UpdateConsumerGroupRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[ConsumerGroup](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ConsumerGroup)` | The RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.UpdateConsumerGroup(UpdateConsumerGroupRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateConsumerGroup_Google_Cloud_ManagedKafka_V1_UpdateConsumerGroupRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateConsumerGroupAsync(UpdateConsumerGroupRequest, CallSettings)
+    
+    
+    public override Task<ConsumerGroup> UpdateConsumerGroupAsync(UpdateConsumerGroupRequest request, CallSettings callSettings = null)
+
+Updates the properties of a single consumer group.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateConsumerGroupRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.UpdateConsumerGroupRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[ConsumerGroup](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ConsumerGroup)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.UpdateConsumerGroupAsync(UpdateConsumerGroupRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateConsumerGroupAsync_Google_Cloud_ManagedKafka_V1_UpdateConsumerGroupRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateTopic(UpdateTopicRequest, CallSettings)
+    
+    
+    public override Topic UpdateTopic(UpdateTopicRequest request, CallSettings callSettings = null)
+
+Updates the properties of a single topic.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateTopicRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.UpdateTopicRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Topic](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Topic)` | The RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.UpdateTopic(UpdateTopicRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateTopic_Google_Cloud_ManagedKafka_V1_UpdateTopicRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+### UpdateTopicAsync(UpdateTopicRequest, CallSettings)
+    
+    
+    public override Task<Topic> UpdateTopicAsync(UpdateTopicRequest request, CallSettings callSettings = null)
+
+Updates the properties of a single topic.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` | `[UpdateTopicRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.UpdateTopicRequest)`  
+The request object containing all of the parameters for the API call.  
+`callSettings` | `[CallSettings](https://cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.Grpc.CallSettings.html)`  
+If not null, applies overrides to this RPC call.  
+**Returns**  
+---  
+**Type** | **Description**  
+`[Task](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1)[Topic](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.Topic)` | A Task containing the RPC response.  
+**Overrides**
+
+[ManagedKafkaClient.UpdateTopicAsync(UpdateTopicRequest, CallSettings)](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ManagedKafka.V1/latest/Google.Cloud.ManagedKafka.V1.ManagedKafkaClient#Google_Cloud_ManagedKafka_V1_ManagedKafkaClient_UpdateTopicAsync_Google_Cloud_ManagedKafka_V1_UpdateTopicRequest_Google_Api_Gax_Grpc_CallSettings_)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-03-09 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-03-09 UTC."],[],[]] 

@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/venafi-ztpki/",
+  "file": "chronicle/docs/ingestion/default-parsers/venafi-ztpki.md",
+  "title": "Collect CyberArk Machine Identity Security logs (formerly Venafi) \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T12:18:08.826208+00:00"
+}

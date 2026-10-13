@@ -1,0 +1,7 @@
+{
+  "url": "https://cloud.google.com/pricing/",
+  "file": "_subdomains/cloud.google.com/pricing.md",
+  "title": "Pricing Overview | Google Cloud",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:56:52.081970+00:00"
+}

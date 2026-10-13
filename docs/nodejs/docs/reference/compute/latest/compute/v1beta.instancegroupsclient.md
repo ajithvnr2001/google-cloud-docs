@@ -1,0 +1,1539 @@
+---
+url: https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/v1beta.instancegroupsclient
+title: Class v1beta.InstanceGroupsClient (7.6.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T14:13:28.865163+00:00
+---
+
+# Class v1beta.InstanceGroupsClient (7.6.0)  |  Node.js client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/v1beta.instancegroupsclient
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Node.js ](https://docs.cloud.google.com/nodejs/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/nodejs/docs/reference)
+
+
+
+Send feedback 
+
+#  Class v1beta.InstanceGroupsClient (7.6.0) Stay organized with collections  Save and categorize content based on your preferences. 
+
+7.6.0 (latest)  7.5.1  7.2.0  6.14.0  6.13.0  6.12.0  6.11.0  6.9.0  6.7.0  6.5.0  4.11.0  4.10.0  4.9.0  4.8.0  4.6.0  4.5.0  4.3.0  4.1.0  3.9.1  3.8.1  3.6.0  3.5.1  3.1.2  3.0.0 
+
+The InstanceGroups API. v1beta
+
+## Package
+
+[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)
+
+## Constructors 
+
+### (constructor)(opts, gaxInstance)
+    
+    
+    constructor(opts?: ClientOptions, gaxInstance?: typeof gax | typeof gax.fallback);
+
+Construct an instance of InstanceGroupsClient.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`opts` |  `ClientOptions`   
+  
+`gaxInstance` |  `typeof gax | typeof fallback`   
+: loaded instance of `google-gax`. Useful if you need to avoid loading the default gRPC version and want to use the fallback HTTP implementation. Load only fallback version and pass it to the constructor: ``` const gax = require('google-gax/build/src/fallback'); // avoids loading google-gax with gRPC const client = new InstanceGroupsClient({fallback: true}, gax); ```  
+  
+## Properties 
+
+### apiEndpoint
+    
+    
+    get apiEndpoint(): string;
+
+The DNS address for this API service.
+
+### apiEndpoint
+    
+    
+    static get apiEndpoint(): string;
+
+The DNS address for this API service - same as servicePath.
+
+### auth
+    
+    
+    auth: gax.GoogleAuth;
+
+### descriptors
+    
+    
+    descriptors: Descriptors;
+
+### innerApiCalls
+    
+    
+    innerApiCalls: {
+            [name: string]: Function;
+        };
+
+### instanceGroupsStub
+    
+    
+    instanceGroupsStub?: Promise<{
+            [name: string]: Function;
+        }>;
+
+### port
+    
+    
+    static get port(): number;
+
+The port for this API service.
+
+### scopes
+    
+    
+    static get scopes(): string[];
+
+The scopes needed to make gRPC calls for every method defined in this service.
+
+### servicePath
+    
+    
+    static get servicePath(): string;
+
+The DNS address for this API service.
+
+### universeDomain
+    
+    
+    get universeDomain(): string;
+
+### warn
+    
+    
+    warn: (code: string, message: string, warnType?: string) => void;
+
+## Methods 
+
+### addInstances(request, options)
+    
+    
+    addInstances(request?: protos.google.cloud.compute.v1beta.IAddInstancesInstanceGroupRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.compute.v1beta.IOperation, null>,
+            protos.google.cloud.compute.v1beta.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Adds a list of instances to the specified instance group. All of the instances in the instance group must be in the same network/subnetwork. Read Adding instances for more information.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IAddInstancesInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iaddinstancesinstancegrouprequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation), null>, [protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples. This method is considered to be in beta. This means while stable it is still a work-in-progress and under active development, and might get backwards-incompatible changes at any time. `.promise()` is not supported yet.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  The name of the instance group where you are adding instances.
+       */
+      // const instanceGroup = 'abc123'
+      /**
+       *  The body resource for this request
+       */
+      // const instanceGroupsAddInstancesRequestResource = {}
+      /**
+       *  Project ID for this request.
+       */
+      // const project = 'my-project'
+      /**
+       *  An optional request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server will know to ignore the
+       *  request if it has already been completed.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same
+       *  request ID, the server can check if original operation with the same
+       *  request ID was received, and if so, will ignore the second request. This
+       *  prevents clients from accidentally creating duplicate commitments.
+       *  The request ID must be
+       *  a valid UUID with the exception that zero UUID is not supported
+       *  (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+      /**
+       *  The name of the zone
+       *  where the instance group is located.
+       */
+      // const zone = 'abc123'
+    
+      // Imports the Compute library
+      const {InstanceGroupsClient} = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const computeClient = new [InstanceGroupsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+    
+      async function callAddInstances() {
+        // Construct request
+        const request = {
+          instanceGroup,
+          instanceGroupsAddInstancesRequestResource,
+          project,
+          zone,
+        };
+    
+        // Run request
+        const response = await computeClient.addInstances(request);
+        console.log(response);
+      }
+    
+      callAddInstances();
+    
+    
+
+### addInstances(request, options, callback)
+    
+    
+    addInstances(request: protos.google.cloud.compute.v1beta.IAddInstancesInstanceGroupRequest, options: CallOptions, callback: Callback<protos.google.cloud.compute.v1beta.IOperation, protos.google.cloud.compute.v1beta.IAddInstancesInstanceGroupRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IAddInstancesInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iaddinstancesinstancegrouprequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation), [protos.google.cloud.compute.v1beta.IAddInstancesInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iaddinstancesinstancegrouprequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### addInstances(request, callback)
+    
+    
+    addInstances(request: protos.google.cloud.compute.v1beta.IAddInstancesInstanceGroupRequest, callback: Callback<protos.google.cloud.compute.v1beta.IOperation, protos.google.cloud.compute.v1beta.IAddInstancesInstanceGroupRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IAddInstancesInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iaddinstancesinstancegrouprequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation), [protos.google.cloud.compute.v1beta.IAddInstancesInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iaddinstancesinstancegrouprequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### aggregatedListAsync(request, options)
+    
+    
+    aggregatedListAsync(request?: protos.google.cloud.compute.v1beta.IAggregatedListInstanceGroupsRequest, options?: CallOptions): AsyncIterable<[
+            string,
+            protos.google.cloud.compute.v1beta.IInstanceGroupsScopedList
+        ]>;
+
+Retrieves the list of instance groups and sorts them by zone.
+
+To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IAggregatedListInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iaggregatedlistinstancegroupsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[ string, [protos.google.cloud.compute.v1beta.IInstanceGroupsScopedList](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancegroupsscopedlist) ]>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing as tuple [string, [InstanceGroupsScopedList](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.instancegroupsscopedlist)]. The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  A filter expression that filters resources listed in the response. Most
+       *  Compute resources support two types of filter expressions:
+       *  expressions that support regular expressions and expressions that follow
+       *  API improvement proposal AIP-160.
+       *  These two types of filter expressions cannot be mixed in one request.
+       *  If you want to use AIP-160, your expression must specify the field name, an
+       *  operator, and the value that you want to use for filtering. The value
+       *  must be a string, a number, or a boolean. The operator
+       *  must be either `=`, `!=`, `>`, `<`,><=`, `="">=` or `:`.
+       *  For example, if you are filtering Compute Engine instances, you can
+       *  exclude instances named `example-instance` by specifying
+       *  `name != example-instance`.
+       *  The `:*` comparison can be used to test whether a key has been defined.
+       *  For example, to find all objects with `owner` label use:
+       *  
+    
+    
+       *  labels.owner:*
+       *  
+
+`
+
+  * You can also filter nested fields. For example, you could specify
+  * `scheduling.automaticRestart = false` to include instances only
+  * if they are not scheduled for automatic restarts. You can use filtering
+  * on nested fields to filter based onresource labels.
+  * To filter on multiple expressions, provide each separate expression within
+  * parentheses. For example:
+  *   * (scheduling.automaticRestart = true)
+  * (cpuPlatform = "Intel Skylake")
+  *   * By default, each expression is an `AND` expression. However, you
+  * can include `AND` and `OR` expressions explicitly.
+  * For example:
+  *   * (cpuPlatform = "Intel Skylake") OR
+  * (cpuPlatform = "Intel Broadwell") AND
+  * (scheduling.automaticRestart = true)
+  *   * If you want to use a regular expression, use the `eq` (equal) or `ne`
+  * (not equal) operator against a single un-parenthesized expression with or
+  * without quotes or against multiple parenthesized expressions. Examples:
+  * `fieldname eq unquoted literal`
+  * `fieldname eq 'single quoted literal'`
+  * `fieldname eq "double quoted literal"`
+  * `(fieldname1 eq literal) (fieldname2 ne "literal")`
+  * The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
+  * The literal value must match the entire field.
+  * For example, to filter for instances that do not end with name "instance",
+  * you would use `name ne .*instance`.
+  * You cannot combine constraints on multiple fields using regular
+  * expressions. _/ // const filter = 'abc123' /_ *
+  * Indicates whether every visible scope for each scope type (zone, region,
+  * global) should be included in the response. For new resource types added
+  * after this field, the flag has no effect as new resource types will always
+  * include every visible scope for each scope type in response. For resource
+  * types which predate this field, if this flag is omitted or false, only
+  * scopes of the scope types where the resource type is expected to be found
+  * will be included. _/ // const includeAllScopes = true /_ *
+  * The maximum number of results per page that should be returned.
+  * If the number of available results is larger than `maxResults`,
+  * Compute Engine returns a `nextPageToken` that can be used to get
+  * the next page of results in subsequent list requests. Acceptable values are
+  * `0` to `500`, inclusive. (Default: `500`) _/ // const maxResults = 1234 /_ *
+  * Sorts list results by a certain order. By default, results
+  * are returned in alphanumerical order based on the resource name.
+  * You can also sort results in descending order based on the creation
+  * timestamp using `orderBy="creationTimestamp desc"`. This sorts
+  * results based on the `creationTimestamp` field in
+  * reverse chronological order (newest result first). Use this to sort
+  * resources like operations so that the newest operation is returned first.
+  * Currently, only sorting by `name` or
+  * `creationTimestamp desc` is supported. _/ // const orderBy = 'abc123' /_ *
+  * Specifies a page token to use. Set `pageToken` to the
+  * `nextPageToken` returned by a previous list request to get
+  * the next page of results. _/ // const pageToken = 'abc123' /_ *
+  * Project ID for this request. _/ // const project = 'my-project' /_ *
+  * Opt-in for partial success behavior which provides partial results in case
+  * of failure. The default value is false.
+  * For example, when partial success behavior is enabled, aggregatedList for a
+  * single zone scope either returns all resources in the zone or no resources,
+  * with an error code. _/ // const returnPartialSuccess = true /_ *
+  * The Shared VPC service project id or service project number for which
+  * aggregated list request is invoked for subnetworks list-usable api. */ // const serviceProjectNumber = 1234
+
+// Imports the Compute library const {InstanceGroupsClient} = require('@google-cloud/compute').v1beta;
+
+// Instantiates a client const computeClient = new InstanceGroupsClient();
+
+async function callAggregatedList() { // Construct request const request = { project, };
+
+// Run request const iterable = computeClient.aggregatedListAsync(request); for await (const [key, value] of iterable) { console.log(response); } }
+
+callAggregatedList();
+
+
+
+
+` `
+
+### close()
+    
+    
+    close(): Promise<void>;
+
+Terminate the gRPC channel and close the client.
+
+The client will no longer be usable and all future behavior is undefined.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<void>` | {Promise} A promise that resolves when the client is closed.  
+  
+### delete(request, options)
+    
+    
+    delete(request?: protos.google.cloud.compute.v1beta.IDeleteInstanceGroupRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.compute.v1beta.IOperation, null>,
+            protos.google.cloud.compute.v1beta.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Deletes the specified instance group. The instances in the group are not deleted. Note that instance group must not belong to a backend service. Read Deleting an instance group for more information.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ideleteinstancegrouprequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation), null>, [protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples. This method is considered to be in beta. This means while stable it is still a work-in-progress and under active development, and might get backwards-incompatible changes at any time. `.promise()` is not supported yet.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  The name of the instance group to delete.
+       */
+      // const instanceGroup = 'abc123'
+      /**
+       *  Project ID for this request.
+       */
+      // const project = 'my-project'
+      /**
+       *  An optional request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server will know to ignore the
+       *  request if it has already been completed.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same
+       *  request ID, the server can check if original operation with the same
+       *  request ID was received, and if so, will ignore the second request. This
+       *  prevents clients from accidentally creating duplicate commitments.
+       *  The request ID must be
+       *  a valid UUID with the exception that zero UUID is not supported
+       *  (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+      /**
+       *  The name of the zone
+       *  where the instance group is located.
+       */
+      // const zone = 'abc123'
+    
+      // Imports the Compute library
+      const {InstanceGroupsClient} = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const computeClient = new [InstanceGroupsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+    
+      async function callDelete() {
+        // Construct request
+        const request = {
+          instanceGroup,
+          project,
+          zone,
+        };
+    
+        // Run request
+        const response = await computeClient.delete(request);
+        console.log(response);
+      }
+    
+      callDelete();
+    
+    
+
+### delete(request, options, callback)
+    
+    
+    delete(request: protos.google.cloud.compute.v1beta.IDeleteInstanceGroupRequest, options: CallOptions, callback: Callback<protos.google.cloud.compute.v1beta.IOperation, protos.google.cloud.compute.v1beta.IDeleteInstanceGroupRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ideleteinstancegrouprequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation), [protos.google.cloud.compute.v1beta.IDeleteInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ideleteinstancegrouprequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### delete(request, callback)
+    
+    
+    delete(request: protos.google.cloud.compute.v1beta.IDeleteInstanceGroupRequest, callback: Callback<protos.google.cloud.compute.v1beta.IOperation, protos.google.cloud.compute.v1beta.IDeleteInstanceGroupRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IDeleteInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ideleteinstancegrouprequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation), [protos.google.cloud.compute.v1beta.IDeleteInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ideleteinstancegrouprequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### get(request, options)
+    
+    
+    get(request?: protos.google.cloud.compute.v1beta.IGetInstanceGroupRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.compute.v1beta.IInstanceGroup,
+            protos.google.cloud.compute.v1beta.IGetInstanceGroupRequest | undefined,
+            {} | undefined
+        ]>;
+
+Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request.
+
+For managed instance groups, use theinstanceGroupManagers or regionInstanceGroupManagers methods instead.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.igetinstancegrouprequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.compute.v1beta.IInstanceGroup](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancegroup), [protos.google.cloud.compute.v1beta.IGetInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.igetinstancegrouprequest) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [InstanceGroup](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.instancegroup). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  The name of the instance group.
+       */
+      // const instanceGroup = 'abc123'
+      /**
+       *  Project ID for this request.
+       */
+      // const project = 'my-project'
+      /**
+       *  The name of the zone
+       *  where the instance group is located.
+       */
+      // const zone = 'abc123'
+    
+      // Imports the Compute library
+      const {InstanceGroupsClient} = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const computeClient = new [InstanceGroupsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+    
+      async function callGet() {
+        // Construct request
+        const request = {
+          instanceGroup,
+          project,
+          zone,
+        };
+    
+        // Run request
+        const response = await computeClient.get(request);
+        console.log(response);
+      }
+    
+      callGet();
+    
+    
+
+### get(request, options, callback)
+    
+    
+    get(request: protos.google.cloud.compute.v1beta.IGetInstanceGroupRequest, options: CallOptions, callback: Callback<protos.google.cloud.compute.v1beta.IInstanceGroup, protos.google.cloud.compute.v1beta.IGetInstanceGroupRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.igetinstancegrouprequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.compute.v1beta.IInstanceGroup](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancegroup), [protos.google.cloud.compute.v1beta.IGetInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.igetinstancegrouprequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### get(request, callback)
+    
+    
+    get(request: protos.google.cloud.compute.v1beta.IGetInstanceGroupRequest, callback: Callback<protos.google.cloud.compute.v1beta.IInstanceGroup, protos.google.cloud.compute.v1beta.IGetInstanceGroupRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IGetInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.igetinstancegrouprequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.compute.v1beta.IInstanceGroup](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancegroup), [protos.google.cloud.compute.v1beta.IGetInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.igetinstancegrouprequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### getProjectId()
+    
+    
+    getProjectId(): Promise<string>;
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<string>` |   
+  
+### getProjectId(callback)
+    
+    
+    getProjectId(callback: Callback<string, undefined, undefined>): void;
+
+**Parameter**  
+---  
+**Name** | **Description**  
+`callback` |  `Callback<string, undefined, undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### initialize()
+    
+    
+    initialize(): Promise<{
+            [name: string]: Function;
+        }>;
+
+Initialize the client. Performs asynchronous operations (such as authentication) and prepares the client. This function will be called automatically when any class method is called for the first time, but if you need to initialize it before calling an actual method, feel free to call initialize() directly.
+
+You can await on this method if you want to make sure the client is initialized.
+
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<{ [name: string]: Function; }>` | {Promise} A promise that resolves to an authenticated service stub.  
+  
+### insert(request, options)
+    
+    
+    insert(request?: protos.google.cloud.compute.v1beta.IInsertInstanceGroupRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.compute.v1beta.IOperation, null>,
+            protos.google.cloud.compute.v1beta.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Creates an instance group in the specified project using the parameters that are included in the request.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IInsertInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinsertinstancegrouprequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation), null>, [protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples. This method is considered to be in beta. This means while stable it is still a work-in-progress and under active development, and might get backwards-incompatible changes at any time. `.promise()` is not supported yet.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  The body resource for this request
+       */
+      // const instanceGroupResource = {}
+      /**
+       *  Project ID for this request.
+       */
+      // const project = 'my-project'
+      /**
+       *  An optional request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server will know to ignore the
+       *  request if it has already been completed.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same
+       *  request ID, the server can check if original operation with the same
+       *  request ID was received, and if so, will ignore the second request. This
+       *  prevents clients from accidentally creating duplicate commitments.
+       *  The request ID must be
+       *  a valid UUID with the exception that zero UUID is not supported
+       *  (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+      /**
+       *  The name of the zone
+       *  where you want to create the instance group.
+       */
+      // const zone = 'abc123'
+    
+      // Imports the Compute library
+      const {InstanceGroupsClient} = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const computeClient = new [InstanceGroupsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+    
+      async function callInsert() {
+        // Construct request
+        const request = {
+          instanceGroupResource,
+          project,
+          zone,
+        };
+    
+        // Run request
+        const response = await computeClient.insert(request);
+        console.log(response);
+      }
+    
+      callInsert();
+    
+    
+
+### insert(request, options, callback)
+    
+    
+    insert(request: protos.google.cloud.compute.v1beta.IInsertInstanceGroupRequest, options: CallOptions, callback: Callback<protos.google.cloud.compute.v1beta.IOperation, protos.google.cloud.compute.v1beta.IInsertInstanceGroupRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IInsertInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinsertinstancegrouprequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation), [protos.google.cloud.compute.v1beta.IInsertInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinsertinstancegrouprequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### insert(request, callback)
+    
+    
+    insert(request: protos.google.cloud.compute.v1beta.IInsertInstanceGroupRequest, callback: Callback<protos.google.cloud.compute.v1beta.IOperation, protos.google.cloud.compute.v1beta.IInsertInstanceGroupRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IInsertInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinsertinstancegrouprequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation), [protos.google.cloud.compute.v1beta.IInsertInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinsertinstancegrouprequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### list(request, options)
+    
+    
+    list(request?: protos.google.cloud.compute.v1beta.IListInstanceGroupsRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.compute.v1beta.IInstanceGroup[],
+            protos.google.cloud.compute.v1beta.IListInstanceGroupsRequest | null,
+            protos.google.cloud.compute.v1beta.IInstanceGroupList
+        ]>;
+
+Retrieves the list of zonal instance group resources contained within the specified zone.
+
+For managed instance groups, use theinstanceGroupManagers or regionInstanceGroupManagers methods instead.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ilistinstancegroupsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.compute.v1beta.IInstanceGroup](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancegroup)[], [protos.google.cloud.compute.v1beta.IListInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ilistinstancegroupsrequest) | null, [protos.google.cloud.compute.v1beta.IInstanceGroupList](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancegrouplist) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of [InstanceGroup](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.instancegroup). The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### list(request, options, callback)
+    
+    
+    list(request: protos.google.cloud.compute.v1beta.IListInstanceGroupsRequest, options: CallOptions, callback: PaginationCallback<protos.google.cloud.compute.v1beta.IListInstanceGroupsRequest, protos.google.cloud.compute.v1beta.IInstanceGroupList | null | undefined, protos.google.cloud.compute.v1beta.IInstanceGroup>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ilistinstancegroupsrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.compute.v1beta.IListInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ilistinstancegroupsrequest), [protos.google.cloud.compute.v1beta.IInstanceGroupList](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancegrouplist) | null | undefined, [protos.google.cloud.compute.v1beta.IInstanceGroup](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancegroup)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### list(request, callback)
+    
+    
+    list(request: protos.google.cloud.compute.v1beta.IListInstanceGroupsRequest, callback: PaginationCallback<protos.google.cloud.compute.v1beta.IListInstanceGroupsRequest, protos.google.cloud.compute.v1beta.IInstanceGroupList | null | undefined, protos.google.cloud.compute.v1beta.IInstanceGroup>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ilistinstancegroupsrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.compute.v1beta.IListInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ilistinstancegroupsrequest), [protos.google.cloud.compute.v1beta.IInstanceGroupList](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancegrouplist) | null | undefined, [protos.google.cloud.compute.v1beta.IInstanceGroup](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancegroup)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listAsync(request, options)
+    
+    
+    listAsync(request?: protos.google.cloud.compute.v1beta.IListInstanceGroupsRequest, options?: CallOptions): AsyncIterable<protos.google.cloud.compute.v1beta.IInstanceGroup>;
+
+Equivalent to `list`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ilistinstancegroupsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.cloud.compute.v1beta.IInstanceGroup](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancegroup)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing [InstanceGroup](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.instancegroup). The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  A filter expression that filters resources listed in the response. Most
+       *  Compute resources support two types of filter expressions:
+       *  expressions that support regular expressions and expressions that follow
+       *  API improvement proposal AIP-160.
+       *  These two types of filter expressions cannot be mixed in one request.
+       *  If you want to use AIP-160, your expression must specify the field name, an
+       *  operator, and the value that you want to use for filtering. The value
+       *  must be a string, a number, or a boolean. The operator
+       *  must be either `=`, `!=`, `>`, `<`,><=`, `="">=` or `:`.
+       *  For example, if you are filtering Compute Engine instances, you can
+       *  exclude instances named `example-instance` by specifying
+       *  `name != example-instance`.
+       *  The `:*` comparison can be used to test whether a key has been defined.
+       *  For example, to find all objects with `owner` label use:
+       *  
+    
+    
+       *  labels.owner:*
+       *  
+
+`
+
+  * You can also filter nested fields. For example, you could specify
+  * `scheduling.automaticRestart = false` to include instances only
+  * if they are not scheduled for automatic restarts. You can use filtering
+  * on nested fields to filter based onresource labels.
+  * To filter on multiple expressions, provide each separate expression within
+  * parentheses. For example:
+  *   * (scheduling.automaticRestart = true)
+  * (cpuPlatform = "Intel Skylake")
+  *   * By default, each expression is an `AND` expression. However, you
+  * can include `AND` and `OR` expressions explicitly.
+  * For example:
+  *   * (cpuPlatform = "Intel Skylake") OR
+  * (cpuPlatform = "Intel Broadwell") AND
+  * (scheduling.automaticRestart = true)
+  *   * If you want to use a regular expression, use the `eq` (equal) or `ne`
+  * (not equal) operator against a single un-parenthesized expression with or
+  * without quotes or against multiple parenthesized expressions. Examples:
+  * `fieldname eq unquoted literal`
+  * `fieldname eq 'single quoted literal'`
+  * `fieldname eq "double quoted literal"`
+  * `(fieldname1 eq literal) (fieldname2 ne "literal")`
+  * The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
+  * The literal value must match the entire field.
+  * For example, to filter for instances that do not end with name "instance",
+  * you would use `name ne .*instance`.
+  * You cannot combine constraints on multiple fields using regular
+  * expressions. _/ // const filter = 'abc123' /_ *
+  * The maximum number of results per page that should be returned.
+  * If the number of available results is larger than `maxResults`,
+  * Compute Engine returns a `nextPageToken` that can be used to get
+  * the next page of results in subsequent list requests. Acceptable values are
+  * `0` to `500`, inclusive. (Default: `500`) _/ // const maxResults = 1234 /_ *
+  * Sorts list results by a certain order. By default, results
+  * are returned in alphanumerical order based on the resource name.
+  * You can also sort results in descending order based on the creation
+  * timestamp using `orderBy="creationTimestamp desc"`. This sorts
+  * results based on the `creationTimestamp` field in
+  * reverse chronological order (newest result first). Use this to sort
+  * resources like operations so that the newest operation is returned first.
+  * Currently, only sorting by `name` or
+  * `creationTimestamp desc` is supported. _/ // const orderBy = 'abc123' /_ *
+  * Specifies a page token to use. Set `pageToken` to the
+  * `nextPageToken` returned by a previous list request to get
+  * the next page of results. _/ // const pageToken = 'abc123' /_ *
+  * Project ID for this request. _/ // const project = 'my-project' /_ *
+  * Opt-in for partial success behavior which provides partial results in case
+  * of failure. The default value is false.
+  * For example, when partial success behavior is enabled, aggregatedList for a
+  * single zone scope either returns all resources in the zone or no resources,
+  * with an error code. _/ // const returnPartialSuccess = true /_ *
+  * The name of thezone
+  * where the instance group is located. */ // const zone = 'abc123'
+
+// Imports the Compute library const {InstanceGroupsClient} = require('@google-cloud/compute').v1beta;
+
+// Instantiates a client const computeClient = new InstanceGroupsClient();
+
+async function callList() { // Construct request const request = { project, zone, };
+
+// Run request const iterable = computeClient.listAsync(request); for await (const response of iterable) { console.log(response); } }
+
+callList();
+
+
+
+
+` `
+
+### listInstances(request, options)
+    
+    
+    listInstances(request?: protos.google.cloud.compute.v1beta.IListInstancesInstanceGroupsRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.compute.v1beta.IInstanceWithNamedPorts[],
+            protos.google.cloud.compute.v1beta.IListInstancesInstanceGroupsRequest | null,
+            protos.google.cloud.compute.v1beta.IInstanceGroupsListInstances
+        ]>;
+
+Lists the instances in the specified instance group. The orderBy query parameter is not supported. The filter query parameter is supported, but only for expressions that use `eq` (equal) or `ne` (not equal) operators.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListInstancesInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ilistinstancesinstancegroupsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.compute.v1beta.IInstanceWithNamedPorts](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancewithnamedports)[], [protos.google.cloud.compute.v1beta.IListInstancesInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ilistinstancesinstancegroupsrequest) | null, [protos.google.cloud.compute.v1beta.IInstanceGroupsListInstances](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancegroupslistinstances) ]>` | {Promise} - The promise which resolves to an array. The first element of the array is Array of . The client library will perform auto-pagination by default: it will call the API as many times as needed and will merge results from all the pages into this array. Note that it can affect your quota. We recommend using `listInstancesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listInstances(request, options, callback)
+    
+    
+    listInstances(request: protos.google.cloud.compute.v1beta.IListInstancesInstanceGroupsRequest, options: CallOptions, callback: PaginationCallback<protos.google.cloud.compute.v1beta.IListInstancesInstanceGroupsRequest, protos.google.cloud.compute.v1beta.IInstanceGroupsListInstances | null | undefined, protos.google.cloud.compute.v1beta.IInstanceWithNamedPorts>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListInstancesInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ilistinstancesinstancegroupsrequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.compute.v1beta.IListInstancesInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ilistinstancesinstancegroupsrequest), [protos.google.cloud.compute.v1beta.IInstanceGroupsListInstances](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancegroupslistinstances) | null | undefined, [protos.google.cloud.compute.v1beta.IInstanceWithNamedPorts](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancewithnamedports)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listInstances(request, callback)
+    
+    
+    listInstances(request: protos.google.cloud.compute.v1beta.IListInstancesInstanceGroupsRequest, callback: PaginationCallback<protos.google.cloud.compute.v1beta.IListInstancesInstanceGroupsRequest, protos.google.cloud.compute.v1beta.IInstanceGroupsListInstances | null | undefined, protos.google.cloud.compute.v1beta.IInstanceWithNamedPorts>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListInstancesInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ilistinstancesinstancegroupsrequest)`   
+  
+`callback` |  `PaginationCallback<[protos.google.cloud.compute.v1beta.IListInstancesInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ilistinstancesinstancegroupsrequest), [protos.google.cloud.compute.v1beta.IInstanceGroupsListInstances](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancegroupslistinstances) | null | undefined, [protos.google.cloud.compute.v1beta.IInstanceWithNamedPorts](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancewithnamedports)>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### listInstancesAsync(request, options)
+    
+    
+    listInstancesAsync(request?: protos.google.cloud.compute.v1beta.IListInstancesInstanceGroupsRequest, options?: CallOptions): AsyncIterable<protos.google.cloud.compute.v1beta.IInstanceWithNamedPorts>;
+
+Equivalent to `listInstances`, but returns an iterable object.
+
+`for`-`await`-`of` syntax is used with the iterable to get response elements on-demand.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListInstancesInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ilistinstancesinstancegroupsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`AsyncIterable<[protos.google.cloud.compute.v1beta.IInstanceWithNamedPorts](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iinstancewithnamedports)>` | {Object} An iterable Object that allows [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). When you iterate the returned iterable, each element will be an object representing . The API will be called under the hood as needed, once per the page, so you can stop the iteration when you don't need more results. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  A filter expression that filters resources listed in the response. Most
+       *  Compute resources support two types of filter expressions:
+       *  expressions that support regular expressions and expressions that follow
+       *  API improvement proposal AIP-160.
+       *  These two types of filter expressions cannot be mixed in one request.
+       *  If you want to use AIP-160, your expression must specify the field name, an
+       *  operator, and the value that you want to use for filtering. The value
+       *  must be a string, a number, or a boolean. The operator
+       *  must be either `=`, `!=`, `>`, `<`,><=`, `="">=` or `:`.
+       *  For example, if you are filtering Compute Engine instances, you can
+       *  exclude instances named `example-instance` by specifying
+       *  `name != example-instance`.
+       *  The `:*` comparison can be used to test whether a key has been defined.
+       *  For example, to find all objects with `owner` label use:
+       *  
+    
+    
+       *  labels.owner:*
+       *  
+
+`
+
+  * You can also filter nested fields. For example, you could specify
+  * `scheduling.automaticRestart = false` to include instances only
+  * if they are not scheduled for automatic restarts. You can use filtering
+  * on nested fields to filter based onresource labels.
+  * To filter on multiple expressions, provide each separate expression within
+  * parentheses. For example:
+  *   * (scheduling.automaticRestart = true)
+  * (cpuPlatform = "Intel Skylake")
+  *   * By default, each expression is an `AND` expression. However, you
+  * can include `AND` and `OR` expressions explicitly.
+  * For example:
+  *   * (cpuPlatform = "Intel Skylake") OR
+  * (cpuPlatform = "Intel Broadwell") AND
+  * (scheduling.automaticRestart = true)
+  *   * If you want to use a regular expression, use the `eq` (equal) or `ne`
+  * (not equal) operator against a single un-parenthesized expression with or
+  * without quotes or against multiple parenthesized expressions. Examples:
+  * `fieldname eq unquoted literal`
+  * `fieldname eq 'single quoted literal'`
+  * `fieldname eq "double quoted literal"`
+  * `(fieldname1 eq literal) (fieldname2 ne "literal")`
+  * The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
+  * The literal value must match the entire field.
+  * For example, to filter for instances that do not end with name "instance",
+  * you would use `name ne .*instance`.
+  * You cannot combine constraints on multiple fields using regular
+  * expressions. _/ // const filter = 'abc123' /_ *
+  * The name of the instance group from which you want to generate a list
+  * of included instances. _/ // const instanceGroup = 'abc123' /_ *
+  * The body resource for this request _/ // const instanceGroupsListInstancesRequestResource = {} /_ *
+  * The maximum number of results per page that should be returned.
+  * If the number of available results is larger than `maxResults`,
+  * Compute Engine returns a `nextPageToken` that can be used to get
+  * the next page of results in subsequent list requests. Acceptable values are
+  * `0` to `500`, inclusive. (Default: `500`) _/ // const maxResults = 1234 /_ *
+  * Sorts list results by a certain order. By default, results
+  * are returned in alphanumerical order based on the resource name.
+  * You can also sort results in descending order based on the creation
+  * timestamp using `orderBy="creationTimestamp desc"`. This sorts
+  * results based on the `creationTimestamp` field in
+  * reverse chronological order (newest result first). Use this to sort
+  * resources like operations so that the newest operation is returned first.
+  * Currently, only sorting by `name` or
+  * `creationTimestamp desc` is supported. _/ // const orderBy = 'abc123' /_ *
+  * Specifies a page token to use. Set `pageToken` to the
+  * `nextPageToken` returned by a previous list request to get
+  * the next page of results. _/ // const pageToken = 'abc123' /_ *
+  * Project ID for this request. _/ // const project = 'my-project' /_ *
+  * Opt-in for partial success behavior which provides partial results in case
+  * of failure. The default value is false.
+  * For example, when partial success behavior is enabled, aggregatedList for a
+  * single zone scope either returns all resources in the zone or no resources,
+  * with an error code. _/ // const returnPartialSuccess = true /_ *
+  * The name of the zone
+  * where the instance group is located. */ // const zone = 'abc123'
+
+// Imports the Compute library const {InstanceGroupsClient} = require('@google-cloud/compute').v1beta;
+
+// Instantiates a client const computeClient = new InstanceGroupsClient();
+
+async function callListInstances() { // Construct request const request = { instanceGroup, instanceGroupsListInstancesRequestResource, project, zone, };
+
+// Run request const iterable = computeClient.listInstancesAsync(request); for await (const response of iterable) { console.log(response); } }
+
+callListInstances();
+
+
+
+
+` `
+
+### listInstancesStream(request, options)
+    
+    
+    listInstancesStream(request?: protos.google.cloud.compute.v1beta.IListInstancesInstanceGroupsRequest, options?: CallOptions): Transform;
+
+Equivalent to `listInstances`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListInstancesInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ilistinstancesinstancegroupsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listInstancesAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### listStream(request, options)
+    
+    
+    listStream(request?: protos.google.cloud.compute.v1beta.IListInstanceGroupsRequest, options?: CallOptions): Transform;
+
+Equivalent to `list`, but returns a NodeJS Stream object.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IListInstanceGroupsRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ilistinstancegroupsrequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Transform` | {Stream} An object stream which emits an object representing [InstanceGroup](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.instancegroup) on 'data' event. The client library will perform auto-pagination by default: it will call the API as many times as needed. Note that it can affect your quota. We recommend using `listAsync()` method described below for async iteration which you can stop as needed. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination) for more details and examples.  
+  
+### removeInstances(request, options)
+    
+    
+    removeInstances(request?: protos.google.cloud.compute.v1beta.IRemoveInstancesInstanceGroupRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.compute.v1beta.IOperation, null>,
+            protos.google.cloud.compute.v1beta.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Removes one or more instances from the specified instance group, but does not delete those instances.
+
+If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration before the VM instance is removed or deleted.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IRemoveInstancesInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iremoveinstancesinstancegrouprequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation), null>, [protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples. This method is considered to be in beta. This means while stable it is still a work-in-progress and under active development, and might get backwards-incompatible changes at any time. `.promise()` is not supported yet.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  The name of the instance group where the specified instances will be
+       *  removed.
+       */
+      // const instanceGroup = 'abc123'
+      /**
+       *  The body resource for this request
+       */
+      // const instanceGroupsRemoveInstancesRequestResource = {}
+      /**
+       *  Project ID for this request.
+       */
+      // const project = 'my-project'
+      /**
+       *  An optional request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server will know to ignore the
+       *  request if it has already been completed.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same
+       *  request ID, the server can check if original operation with the same
+       *  request ID was received, and if so, will ignore the second request. This
+       *  prevents clients from accidentally creating duplicate commitments.
+       *  The request ID must be
+       *  a valid UUID with the exception that zero UUID is not supported
+       *  (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+      /**
+       *  The name of the zone
+       *  where the instance group is located.
+       */
+      // const zone = 'abc123'
+    
+      // Imports the Compute library
+      const {InstanceGroupsClient} = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const computeClient = new [InstanceGroupsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+    
+      async function callRemoveInstances() {
+        // Construct request
+        const request = {
+          instanceGroup,
+          instanceGroupsRemoveInstancesRequestResource,
+          project,
+          zone,
+        };
+    
+        // Run request
+        const response = await computeClient.removeInstances(request);
+        console.log(response);
+      }
+    
+      callRemoveInstances();
+    
+    
+
+### removeInstances(request, options, callback)
+    
+    
+    removeInstances(request: protos.google.cloud.compute.v1beta.IRemoveInstancesInstanceGroupRequest, options: CallOptions, callback: Callback<protos.google.cloud.compute.v1beta.IOperation, protos.google.cloud.compute.v1beta.IRemoveInstancesInstanceGroupRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IRemoveInstancesInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iremoveinstancesinstancegrouprequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation), [protos.google.cloud.compute.v1beta.IRemoveInstancesInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iremoveinstancesinstancegrouprequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### removeInstances(request, callback)
+    
+    
+    removeInstances(request: protos.google.cloud.compute.v1beta.IRemoveInstancesInstanceGroupRequest, callback: Callback<protos.google.cloud.compute.v1beta.IOperation, protos.google.cloud.compute.v1beta.IRemoveInstancesInstanceGroupRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[IRemoveInstancesInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iremoveinstancesinstancegrouprequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation), [protos.google.cloud.compute.v1beta.IRemoveInstancesInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.iremoveinstancesinstancegrouprequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### setNamedPorts(request, options)
+    
+    
+    setNamedPorts(request?: protos.google.cloud.compute.v1beta.ISetNamedPortsInstanceGroupRequest, options?: CallOptions): Promise<[
+            LROperation<protos.google.cloud.compute.v1beta.IOperation, null>,
+            protos.google.cloud.compute.v1beta.IOperation | undefined,
+            {} | undefined
+        ]>;
+
+Sets the named ports for the specified instance group.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ISetNamedPortsInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.isetnamedportsinstancegrouprequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ LROperation<[protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation), null>, [protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation) | undefined, {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing a long running operation. Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#long-running-operations) for more details and examples. This method is considered to be in beta. This means while stable it is still a work-in-progress and under active development, and might get backwards-incompatible changes at any time. `.promise()` is not supported yet.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  The name of the instance group where the named ports are updated.
+       */
+      // const instanceGroup = 'abc123'
+      /**
+       *  The body resource for this request
+       */
+      // const instanceGroupsSetNamedPortsRequestResource = {}
+      /**
+       *  Project ID for this request.
+       */
+      // const project = 'my-project'
+      /**
+       *  An optional request ID to identify requests. Specify a unique request ID so
+       *  that if you must retry your request, the server will know to ignore the
+       *  request if it has already been completed.
+       *  For example, consider a situation where you make an initial request and
+       *  the request times out. If you make the request again with the same
+       *  request ID, the server can check if original operation with the same
+       *  request ID was received, and if so, will ignore the second request. This
+       *  prevents clients from accidentally creating duplicate commitments.
+       *  The request ID must be
+       *  a valid UUID with the exception that zero UUID is not supported
+       *  (00000000-0000-0000-0000-000000000000).
+       */
+      // const requestId = 'abc123'
+      /**
+       *  The name of the zone
+       *  where the instance group is located.
+       */
+      // const zone = 'abc123'
+    
+      // Imports the Compute library
+      const {InstanceGroupsClient} = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const computeClient = new [InstanceGroupsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+    
+      async function callSetNamedPorts() {
+        // Construct request
+        const request = {
+          instanceGroup,
+          instanceGroupsSetNamedPortsRequestResource,
+          project,
+          zone,
+        };
+    
+        // Run request
+        const response = await computeClient.setNamedPorts(request);
+        console.log(response);
+      }
+    
+      callSetNamedPorts();
+    
+    
+
+### setNamedPorts(request, options, callback)
+    
+    
+    setNamedPorts(request: protos.google.cloud.compute.v1beta.ISetNamedPortsInstanceGroupRequest, options: CallOptions, callback: Callback<protos.google.cloud.compute.v1beta.IOperation, protos.google.cloud.compute.v1beta.ISetNamedPortsInstanceGroupRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ISetNamedPortsInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.isetnamedportsinstancegrouprequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation), [protos.google.cloud.compute.v1beta.ISetNamedPortsInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.isetnamedportsinstancegrouprequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### setNamedPorts(request, callback)
+    
+    
+    setNamedPorts(request: protos.google.cloud.compute.v1beta.ISetNamedPortsInstanceGroupRequest, callback: Callback<protos.google.cloud.compute.v1beta.IOperation, protos.google.cloud.compute.v1beta.ISetNamedPortsInstanceGroupRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ISetNamedPortsInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.isetnamedportsinstancegrouprequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.compute.v1beta.IOperation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.ioperation), [protos.google.cloud.compute.v1beta.ISetNamedPortsInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.isetnamedportsinstancegrouprequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### testIamPermissions(request, options)
+    
+    
+    testIamPermissions(request?: protos.google.cloud.compute.v1beta.ITestIamPermissionsInstanceGroupRequest, options?: CallOptions): Promise<[
+            protos.google.cloud.compute.v1beta.ITestPermissionsResponse,
+            (protos.google.cloud.compute.v1beta.ITestIamPermissionsInstanceGroupRequest | undefined),
+            {} | undefined
+        ]>;
+
+Returns permissions that a caller has on the specified resource.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ITestIamPermissionsInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.itestiampermissionsinstancegrouprequest)`   
+The request object that will be sent.  
+`options` |  `CallOptions`   
+Call options. See [CallOptions](https://googleapis.dev/nodejs/google-gax/latest/interfaces/CallOptions.html) for more details.  
+**Returns**  
+---  
+**Type** | **Description**  
+`Promise<[ [protos.google.cloud.compute.v1beta.ITestPermissionsResponse](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.itestpermissionsresponse), ([protos.google.cloud.compute.v1beta.ITestIamPermissionsInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.itestiampermissionsinstancegrouprequest) | undefined), {} | undefined ]>` | {Promise} - The promise which resolves to an array. The first element of the array is an object representing [TestPermissionsResponse](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.testpermissionsresponse). Please see the [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#regular-methods) for more details and examples.  
+**Example**
+    
+    
+      /**
+       * This snippet has been automatically generated and should be regarded as a code template only.
+       * It will require modifications to work.
+       * It may require correct/in-range values for request initialization.
+       * TODO(developer): Uncomment these variables before running the sample.
+       */
+      /**
+       *  Project ID for this request.
+       */
+      // const project = 'my-project'
+      /**
+       *  Name or id of the resource for this request.
+       */
+      // const resource = 'abc123'
+      /**
+       *  The body resource for this request
+       */
+      // const testPermissionsRequestResource = {}
+      /**
+       *  The name of the zone for this request.
+       */
+      // const zone = 'abc123'
+    
+      // Imports the Compute library
+      const {InstanceGroupsClient} = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)').v1beta;
+    
+      // Instantiates a client
+      const computeClient = new [InstanceGroupsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+    
+      async function callTestIamPermissions() {
+        // Construct request
+        const request = {
+          project,
+          resource,
+          testPermissionsRequestResource,
+          zone,
+        };
+    
+        // Run request
+        const response = await computeClient.testIamPermissions(request);
+        console.log(response);
+      }
+    
+      callTestIamPermissions();
+    
+    
+
+### testIamPermissions(request, options, callback)
+    
+    
+    testIamPermissions(request: protos.google.cloud.compute.v1beta.ITestIamPermissionsInstanceGroupRequest, options: CallOptions, callback: Callback<protos.google.cloud.compute.v1beta.ITestPermissionsResponse, protos.google.cloud.compute.v1beta.ITestIamPermissionsInstanceGroupRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ITestIamPermissionsInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.itestiampermissionsinstancegrouprequest)`   
+  
+`options` |  `CallOptions`   
+  
+`callback` |  `Callback<[protos.google.cloud.compute.v1beta.ITestPermissionsResponse](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.itestpermissionsresponse), [protos.google.cloud.compute.v1beta.ITestIamPermissionsInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.itestiampermissionsinstancegrouprequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+### testIamPermissions(request, callback)
+    
+    
+    testIamPermissions(request: protos.google.cloud.compute.v1beta.ITestIamPermissionsInstanceGroupRequest, callback: Callback<protos.google.cloud.compute.v1beta.ITestPermissionsResponse, protos.google.cloud.compute.v1beta.ITestIamPermissionsInstanceGroupRequest | null | undefined, {} | null | undefined>): void;
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`request` |  `[ITestIamPermissionsInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.itestiampermissionsinstancegrouprequest)`   
+  
+`callback` |  `Callback<[protos.google.cloud.compute.v1beta.ITestPermissionsResponse](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.itestpermissionsresponse), [protos.google.cloud.compute.v1beta.ITestIamPermissionsInstanceGroupRequest](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.itestiampermissionsinstancegrouprequest) | null | undefined, {} | null | undefined>`   
+  
+**Returns**  
+---  
+**Type** | **Description**  
+`void` |   
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-03 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-03 UTC."],[],[]] 

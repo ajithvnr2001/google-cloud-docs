@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries/getIamPolicy/",
+  "file": "data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries/getIamPolicy.md",
+  "title": "Method: projects.locations.entryGroups.entries.getIamPolicy \u00a0|\u00a0 Data Catalog Documentation \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:34:37.488256+00:00"
+}

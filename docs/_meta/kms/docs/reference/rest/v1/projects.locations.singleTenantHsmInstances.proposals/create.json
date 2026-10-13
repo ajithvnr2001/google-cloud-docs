@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/kms/docs/reference/rest/v1/projects.locations.singleTenantHsmInstances.proposals/create/",
+  "file": "kms/docs/reference/rest/v1/projects.locations.singleTenantHsmInstances.proposals/create.md",
+  "title": "Method: proposals.create \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:32:48.420557+00:00"
+}

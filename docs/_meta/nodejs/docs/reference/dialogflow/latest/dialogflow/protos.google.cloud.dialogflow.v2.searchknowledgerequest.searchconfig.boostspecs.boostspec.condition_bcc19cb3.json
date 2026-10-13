@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/nodejs/docs/reference/dialogflow/latest/dialogflow/protos.google.cloud.dialogflow.v2.searchknowledgerequest.searchconfig.boostspecs.boostspec.conditionboostspec.boostcontrolspec.controlpoint",
+  "file": "nodejs/docs/reference/dialogflow/latest/dialogflow/protos.google.cloud.dialogflow.v2.searchknowledgerequest.searchconfig.boostspecs.boostspec.condition_bcc19cb3.md",
+  "title": "Class protos.google.cloud.dialogflow.v2.SearchKnowledgeRequest.SearchConfig.BoostSpecs.BoostSpec.ConditionBoostSpec.BoostControlSpec.ControlPoint (8.2.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:59:34.095004+00:00"
+}

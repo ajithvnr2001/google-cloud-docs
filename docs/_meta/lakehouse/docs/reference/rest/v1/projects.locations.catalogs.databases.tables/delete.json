@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/lakehouse/docs/reference/rest/v1/projects.locations.catalogs.databases.tables/delete/",
+  "file": "lakehouse/docs/reference/rest/v1/projects.locations.catalogs.databases.tables/delete.md",
+  "title": "Method: projects.locations.catalogs.databases.tables.delete \u00a0|\u00a0 BigLake API \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T13:16:11.906164+00:00"
+}

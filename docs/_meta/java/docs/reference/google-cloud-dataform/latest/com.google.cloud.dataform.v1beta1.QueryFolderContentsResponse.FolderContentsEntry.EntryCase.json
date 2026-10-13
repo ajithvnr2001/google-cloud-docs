@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1beta1.QueryFolderContentsResponse.FolderContentsEntry.EntryCase",
+  "file": "java/docs/reference/google-cloud-dataform/latest/com.google.cloud.dataform.v1beta1.QueryFolderContentsResponse.FolderContentsEntry.EntryCase.md",
+  "title": "Enum QueryFolderContentsResponse.FolderContentsEntry.EntryCase (0.98.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T12:35:00.538811+00:00"
+}

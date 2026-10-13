@@ -1,0 +1,66 @@
+---
+url: https://docs.cloud.google.com/python/docs/reference/google-cloud-configdelivery/latest/google.cloud.configdelivery_v1alpha.types.ReleaseInfo
+title: Class ReleaseInfo (0.5.1) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T12:12:58.328176+00:00
+---
+
+# Class ReleaseInfo (0.5.1)  |  Python client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/python/docs/reference/google-cloud-configdelivery/latest/google.cloud.configdelivery_v1alpha.types.ReleaseInfo
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Python ](https://docs.cloud.google.com/python/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/python/docs/reference)
+
+
+
+Send feedback 
+
+#  Class ReleaseInfo (0.5.1) Stay organized with collections  Save and categorize content based on your preferences. 
+
+0.5.1 (latest)  0.5.0  0.4.0  0.3.0  0.2.0  0.1.3 
+    
+    
+    ReleaseInfo(mapping=None, *, ignore_unknown_fields=False, **kwargs)
+
+ReleaseInfo contains extra information about the `ResourceBundle` release e.g., link to an artifact registry OCI image.
+
+## Attributes  
+  
+---  
+**Name** | **Description**  
+`oci_image_path` |  `str`   
+Output only. path to the oci image the service uploads to on a `Release` creation.   
+`variant_oci_image_paths` |  `MutableMapping[str, str]`   
+Output only. per-variant paths to the oci images the service uploads on package release creation   
+  
+## Classes 
+
+### VariantOciImagePathsEntry
+    
+    
+    VariantOciImagePathsEntry(mapping=None, *, ignore_unknown_fields=False, **kwargs)
+
+The abstract base class for a message.
+
+**Parameters**  
+---  
+**Name** | **Description**  
+`kwargs` |  `dict`   
+Keys and values corresponding to the fields of the message.  
+`mapping` |  `Union[dict, `.Message`]`   
+A dictionary or message to be used to determine the values for this message.  
+`ignore_unknown_fields` |  `Optional(bool)`   
+If True, do not raise errors for unknown fields. Only applied if `mapping` is a mapping type or there are keyword parameters.  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-03 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-03 UTC."],[],[]] 

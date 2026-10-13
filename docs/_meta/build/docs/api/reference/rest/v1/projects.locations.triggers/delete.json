@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers/delete/",
+  "file": "build/docs/api/reference/rest/v1/projects.locations.triggers/delete.md",
+  "title": "Method: projects.locations.triggers.delete \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-13T12:15:42.055057+00:00"
+}

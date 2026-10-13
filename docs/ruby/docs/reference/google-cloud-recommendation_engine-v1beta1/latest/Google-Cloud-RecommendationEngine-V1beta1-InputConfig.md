@@ -1,0 +1,168 @@
+---
+url: https://docs.cloud.google.com/ruby/docs/reference/google-cloud-recommendation_engine-v1beta1/latest/Google-Cloud-RecommendationEngine-V1beta1-InputConfig/
+title: Recommendations AI V1beta1 API - Class Google::Cloud::RecommendationEngine::V1beta1::InputConfig (v0.18.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T12:28:22.768351+00:00
+---
+
+# Recommendations AI V1beta1 API - Class Google::Cloud::RecommendationEngine::V1beta1::InputConfig (v0.18.0)  |  Ruby client libraries  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/ruby/docs/reference/google-cloud-recommendation_engine-v1beta1/latest/Google-Cloud-RecommendationEngine-V1beta1-InputConfig/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Ruby ](https://docs.cloud.google.com/ruby/docs)
+  * [ Client libraries ](https://docs.cloud.google.com/ruby/docs/reference)
+
+
+
+Send feedback 
+
+#  Recommendations AI V1beta1 API - Class Google::Cloud::RecommendationEngine::V1beta1::InputConfig (v0.18.0) Stay organized with collections  Save and categorize content based on your preferences. 
+
+0.18.0 (latest)  0.17.1  0.16.0  0.15.1  0.14.0  0.13.0  0.12.1  0.11.0  0.10.0  0.9.2  0.8.2  0.7.0  0.6.1  0.5.0  0.4.1  0.3.7 
+
+Reference documentation and code samples for the Recommendations AI V1beta1 API class Google::Cloud::RecommendationEngine::V1beta1::InputConfig.
+
+The input config source.
+
+## Inherits
+
+  * Object 
+
+
+
+## Extended By
+
+  * Google::Protobuf::MessageExts::ClassMethods 
+
+
+
+## Includes
+
+  * Google::Protobuf::MessageExts 
+
+
+
+## Methods 
+
+### #catalog_inline_source
+    
+    
+    def catalog_inline_source() -> ::Google::Cloud::RecommendationEngine::V1beta1::CatalogInlineSource
+
+**Returns**
+
+  * ([::Google::Cloud::RecommendationEngine::V1beta1::CatalogInlineSource](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-recommendation_engine-v1beta1/latest/Google-Cloud-RecommendationEngine-V1beta1-CatalogInlineSource)) — The Inline source for the input content for Catalog items.
+
+Note: The following fields are mutually exclusive: `catalog_inline_source`, `gcs_source`, `user_event_inline_source`. If a field in that set is populated, all other fields in the set will automatically be cleared. 
+
+
+
+
+### #catalog_inline_source=
+    
+    
+    def catalog_inline_source=(value) -> ::Google::Cloud::RecommendationEngine::V1beta1::CatalogInlineSource
+
+**Parameter**
+
+  * **value** ([::Google::Cloud::RecommendationEngine::V1beta1::CatalogInlineSource](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-recommendation_engine-v1beta1/latest/Google-Cloud-RecommendationEngine-V1beta1-CatalogInlineSource)) — The Inline source for the input content for Catalog items.
+
+Note: The following fields are mutually exclusive: `catalog_inline_source`, `gcs_source`, `user_event_inline_source`. If a field in that set is populated, all other fields in the set will automatically be cleared. 
+
+
+
+
+**Returns**
+
+  * ([::Google::Cloud::RecommendationEngine::V1beta1::CatalogInlineSource](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-recommendation_engine-v1beta1/latest/Google-Cloud-RecommendationEngine-V1beta1-CatalogInlineSource)) — The Inline source for the input content for Catalog items.
+
+Note: The following fields are mutually exclusive: `catalog_inline_source`, `gcs_source`, `user_event_inline_source`. If a field in that set is populated, all other fields in the set will automatically be cleared. 
+
+
+
+
+### #gcs_source
+    
+    
+    def gcs_source() -> ::Google::Cloud::RecommendationEngine::V1beta1::GcsSource
+
+**Returns**
+
+  * ([::Google::Cloud::RecommendationEngine::V1beta1::GcsSource](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-recommendation_engine-v1beta1/latest/Google-Cloud-RecommendationEngine-V1beta1-GcsSource)) — Google Cloud Storage location for the input content.
+
+Note: The following fields are mutually exclusive: `gcs_source`, `catalog_inline_source`, `user_event_inline_source`. If a field in that set is populated, all other fields in the set will automatically be cleared. 
+
+
+
+
+### #gcs_source=
+    
+    
+    def gcs_source=(value) -> ::Google::Cloud::RecommendationEngine::V1beta1::GcsSource
+
+**Parameter**
+
+  * **value** ([::Google::Cloud::RecommendationEngine::V1beta1::GcsSource](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-recommendation_engine-v1beta1/latest/Google-Cloud-RecommendationEngine-V1beta1-GcsSource)) — Google Cloud Storage location for the input content.
+
+Note: The following fields are mutually exclusive: `gcs_source`, `catalog_inline_source`, `user_event_inline_source`. If a field in that set is populated, all other fields in the set will automatically be cleared. 
+
+
+
+
+**Returns**
+
+  * ([::Google::Cloud::RecommendationEngine::V1beta1::GcsSource](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-recommendation_engine-v1beta1/latest/Google-Cloud-RecommendationEngine-V1beta1-GcsSource)) — Google Cloud Storage location for the input content.
+
+Note: The following fields are mutually exclusive: `gcs_source`, `catalog_inline_source`, `user_event_inline_source`. If a field in that set is populated, all other fields in the set will automatically be cleared. 
+
+
+
+
+### #user_event_inline_source
+    
+    
+    def user_event_inline_source() -> ::Google::Cloud::RecommendationEngine::V1beta1::UserEventInlineSource
+
+**Returns**
+
+  * ([::Google::Cloud::RecommendationEngine::V1beta1::UserEventInlineSource](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-recommendation_engine-v1beta1/latest/Google-Cloud-RecommendationEngine-V1beta1-UserEventInlineSource)) — The Inline source for the input content for UserEvents.
+
+Note: The following fields are mutually exclusive: `user_event_inline_source`, `catalog_inline_source`, `gcs_source`. If a field in that set is populated, all other fields in the set will automatically be cleared. 
+
+
+
+
+### #user_event_inline_source=
+    
+    
+    def user_event_inline_source=(value) -> ::Google::Cloud::RecommendationEngine::V1beta1::UserEventInlineSource
+
+**Parameter**
+
+  * **value** ([::Google::Cloud::RecommendationEngine::V1beta1::UserEventInlineSource](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-recommendation_engine-v1beta1/latest/Google-Cloud-RecommendationEngine-V1beta1-UserEventInlineSource)) — The Inline source for the input content for UserEvents.
+
+Note: The following fields are mutually exclusive: `user_event_inline_source`, `catalog_inline_source`, `gcs_source`. If a field in that set is populated, all other fields in the set will automatically be cleared. 
+
+
+
+
+**Returns**
+
+  * ([::Google::Cloud::RecommendationEngine::V1beta1::UserEventInlineSource](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-recommendation_engine-v1beta1/latest/Google-Cloud-RecommendationEngine-V1beta1-UserEventInlineSource)) — The Inline source for the input content for UserEvents.
+
+Note: The following fields are mutually exclusive: `user_event_inline_source`, `catalog_inline_source`, `gcs_source`. If a field in that set is populated, all other fields in the set will automatically be cleared. 
+
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-06-11 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-06-11 UTC."],[],[]] 
