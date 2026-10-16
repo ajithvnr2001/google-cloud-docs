@@ -1,16 +1,11 @@
-# runtime output (too large for git; regenerate / resume via scripts)
-docs/
+*.db
+*.db-journal
 *.log
-crawl_state.json
-crawl_state.db
-STATUS.json
-__pycache__/
 *.pyc
-.venv/
-# regenerable seed mirror (130MB shards + 140MB master list)
-seeds/
-# large optional source clones (reinstall per README)
-tools/
-# secrets / local
-.env
 .api_keys.env
+.env
+.venv/
+__pycache__/
+crawl_state.json
+docs/
+tools/
