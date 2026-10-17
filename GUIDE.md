@@ -93,7 +93,7 @@ Downloaders: `tar -xzf` all four archives into one directory = the full `docs/` 
 1. reads the live sitemap index → all 70 shards + `lastmod` timestamps
 2. canonicalizes via `crawl_gcp.normalize_url` (same dedupe as the original crawl)
 3. **new** = sitemap URLs missing from sqlite `visited` → crawled
-4. **stale** = `lastmod` newer than our `fetched_at` → refreshed newest-first, capped (`--refresh-cap 200/day`; soft-aborts if >5000 so a site overhaul triggers a full redo instead of a hundred-thousand-page run)
+4. **stale** = `lastmod` newer than our `fetched_at` → refreshed newest-first, capped (`--refresh-cap 600/run` default; a >5,000 backlog is logged with guidance — never aborts; >300k backlog = site overhaul warning, schedule a full redo)
 5. saves with the same frontmatter/_meta/_index format; updates sqlite + `STATUS.json`
 6. optional `--publish-delta`: tars only changed pages into `releases/docs-delta-<date>.tar.gz`
 

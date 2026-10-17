@@ -22,7 +22,7 @@ sys.path.insert(0, str(ROOT))
 import crawl_gcp as cg  # normalize_url, url_to_relpath, fetch_one, OUT_ROOT
 
 INDEX_URL = "https://docs.cloud.google.com/sitemap.xml"
-REFRESH_CAP_DEFAULT = 200
+DEFAULT_REFRESH_CAP = 600
 REFRESH_SOFT_CAP = 5000  # safety abort if stale list explodes (site overhaul)
 STATE_LOG = ROOT / "STATUS.log"
 STATUS_JSON = ROOT / "STATUS.json"
@@ -86,7 +86,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check-only", action="store_true")
     ap.add_argument("--concurrency", type=int, default=20)
-    ap.add_argument("--refresh-cap", type=int, default=REFRESH_CAP_DEFAULT)
+    ap.add_argument("--refresh-cap", type=int, default=DEFAULT_REFRESH_CAP)
     ap.add_argument("--publish-delta", action="store_true")
     ap.add_argument("--force", default=None)
     a = ap.parse_args()
@@ -120,11 +120,13 @@ async def run(a):
             pass
     stale.sort(reverse=True)
     glog(f"stale (lastmod > fetched_at): {len(stale)}")
-    if len(stale) > REFRESH_SOFT_CAP:
-        glog(f"ABORT: stale count {len(stale)} > soft cap {REFRESH_SOFT_CAP} — site overhaul; re-run full crawl_gcp.py instead")
-        con.close()
-        return
     refresh = [u for _, u in stale[:a.refresh_cap]]
+    if len(stale) > REFRESH_SOFT_CAP:
+        glog(f"NOTE: big backlog ({len(stale)} > {REFRESH_SOFT_CAP}): crawling all {len(new)} NEW pages now and "
+             f"draining {len(refresh)} newest stale pages (cap {a.refresh_cap}/run; {len(stale)} total backlog). "
+             "For a faster drain run with --refresh-cap 4000 for a few days; for one-shot 100% freshness re-run crawl_gcp.py.")
+        if len(stale) > 300000:
+            glog("SEVERE backlog (>half the corpus): lastmod regeneration suggests a site overhaul — schedule a full crawl_gcp.py redo.")
 
     if a.check_only:
         print("\n-- NEW --")
@@ -184,7 +186,7 @@ async def run(a):
     await asyncio.gather(*(one(u) for u in targets))
     stamp = {"date": datetime.now(timezone.utc).strftime("%F"), "at": datetime.now(timezone.utc).isoformat(),
              "new": len(new), "refreshed": len(refresh), "fetched_ok": ok, "fetched_fail": fail,
-             "stale_total": len(stale), "visited_total": n + len(new)}
+             "stale_total": len(stale), "stale_backlog": len(stale) - len(refresh), "visited_total": n + len(new)}
     write_status(stamp, con)
     con.close()
     glog(f"done ok={ok} fail={fail}")
