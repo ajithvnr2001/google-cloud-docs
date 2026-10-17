@@ -40,9 +40,10 @@ def glog(msg):
 
 
 async def fetch_sitemap_urls(concurrency=8):
-    """Return {normalized_url: lastmod_string}. Discovers shard files live (no /tmp dependency)."""
+    """Return (live_urls_set, lastmod_dict{url: lastmod}). Discovers shard files live (no /tmp dependency).
+    loc and lastmod may be separated by whitespace (GCP shards put lastmod on its own line)."""
     import httpx
-    lastmod = {}
+    live_urls, lastmod = set(), {}
     async with httpx.AsyncClient(follow_redirects=True, timeout=90) as c:
         r = await c.get(INDEX_URL)
         r.raise_for_status()
@@ -56,11 +57,15 @@ async def fetch_sitemap_urls(concurrency=8):
                     try:
                         rr = await c.get(sm, timeout=120)
                         rr.raise_for_status()
-                        for u, d in re.findall(r"<loc>([^<]+)</loc>(?:<lastmod>([^<]+)</lastmod>)?", rr.text):
+                        text = rr.text
+                        for loc in re.findall(r"<loc>([^<]+)</loc>", text):
+                            n = cg.normalize_url(loc)
+                            if n:
+                                live_urls.add(n)
+                        for u, d in re.findall(r"<loc>([^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>", text):
                             n = cg.normalize_url(u)
-                            if n and d:
-                                if n not in lastmod or d > lastmod[n]:
-                                    lastmod[n] = d
+                            if n and (n not in lastmod or d > lastmod[n]):
+                                lastmod[n] = d
                         return
                     except Exception as e:
                         if attempt == 3:
@@ -68,7 +73,7 @@ async def fetch_sitemap_urls(concurrency=8):
                         await asyncio.sleep(5)
 
         await asyncio.gather(*(one(sm) for sm in files))
-    return lastmod
+    return live_urls, lastmod
 
 
 def db_state():
@@ -89,8 +94,8 @@ def main():
 
 
 async def run(a):
-    live = await fetch_sitemap_urls()
-    glog(f"live sitemap urls (normalized): {len(live)}")
+    live, lastmod = await fetch_sitemap_urls()
+    glog(f"live sitemap urls (normalized): {len(live)} (lastmod tracked: {len(lastmod)})")
 
     con = db_state()
     visited = {}
@@ -104,7 +109,7 @@ async def run(a):
     glog(f"new since last state: {len(new)}")
 
     stale = []
-    for u, d in live.items():
+    for u, d in lastmod.items():
         fa = visited.get(u)
         if not fa:
             continue
