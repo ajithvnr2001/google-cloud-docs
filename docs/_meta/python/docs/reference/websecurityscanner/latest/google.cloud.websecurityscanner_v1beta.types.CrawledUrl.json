@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/websecurityscanner/latest/google.cloud.websecurityscanner_v1beta.types.CrawledUrl",
-  "file": "python/docs/reference/websecurityscanner/latest/google.cloud.websecurityscanner_v1beta.types.CrawledUrl.md",
-  "title": "Class CrawledUrl (1.22.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:00:46.643228+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/database-migration/docs/postgresql-to-alloydb/configure-connectivity-tcp-proxy-via-cloud-hosted-vm/",
-  "file": "database-migration/docs/postgresql-to-alloydb/configure-connectivity-tcp-proxy-via-cloud-hosted-vm.md",
-  "title": "Configure connectivity using a TCP proxy through a cloud-hosted VM \u00a0|\u00a0 Database Migration Service for PostgreSQL to AlloyDB \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:11:31.767650+00:00"
-}

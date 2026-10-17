@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/reference/rest/v2/organizations.locations.muteConfigs/get/",
-  "file": "security-command-center/docs/reference/rest/v2/organizations.locations.muteConfigs/get.md",
-  "title": "Method: organizations.locations.muteConfigs.get \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:40:42.331665+00:00"
-}

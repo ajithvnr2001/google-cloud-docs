@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-policysimulator/latest/com.google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewServiceGrpc.OrgPolicyViolationsPreviewServiceBlockingV2Stub",
-  "file": "java/docs/reference/google-cloud-policysimulator/latest/com.google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewServiceGrpc.OrgPolicyViolationsPreview_5530cedd.md",
-  "title": "Class OrgPolicyViolationsPreviewServiceGrpc.OrgPolicyViolationsPreviewServiceBlockingV2Stub (0.78.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:34:37.715280+00:00"
-}

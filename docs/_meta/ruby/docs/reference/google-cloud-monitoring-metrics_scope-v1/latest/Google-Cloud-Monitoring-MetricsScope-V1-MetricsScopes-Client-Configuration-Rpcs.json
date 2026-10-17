@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-metrics_scope-v1/latest/Google-Cloud-Monitoring-MetricsScope-V1-MetricsScopes-Client-Configuration-Rpcs/",
-  "file": "ruby/docs/reference/google-cloud-monitoring-metrics_scope-v1/latest/Google-Cloud-Monitoring-MetricsScope-V1-MetricsScopes-Client-Configuration-Rpcs.md",
-  "title": "Cloud Monitoring Metrics Scopes V1 API - Class Google::Cloud::Monitoring::MetricsScope::V1::MetricsScopes::Client::Configuration::Rpcs (v1.8.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:47:35.488593+00:00"
-}

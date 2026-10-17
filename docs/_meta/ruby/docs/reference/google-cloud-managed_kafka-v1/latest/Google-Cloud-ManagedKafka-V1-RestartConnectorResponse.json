@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-managed_kafka-v1/latest/Google-Cloud-ManagedKafka-V1-RestartConnectorResponse/",
-  "file": "ruby/docs/reference/google-cloud-managed_kafka-v1/latest/Google-Cloud-ManagedKafka-V1-RestartConnectorResponse.md",
-  "title": "Managed Service for Apache Kafka V1 API - Class Google::Cloud::ManagedKafka::V1::RestartConnectorResponse (v1.9.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:44:27.198655+00:00"
-}

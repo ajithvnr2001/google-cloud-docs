@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/connectors/latest/connectors/protos.google.cloud.connectors.v1.extractionrule.isource",
-  "file": "nodejs/docs/reference/connectors/latest/connectors/protos.google.cloud.connectors.v1.extractionrule.isource.md",
-  "title": "Interface protos.google.cloud.connectors.v1.ExtractionRule.ISource (0.7.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:09:08.043690+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/threat-intelligence/reference/rest/v1beta/projects.configurations/list/",
-  "file": "threat-intelligence/reference/rest/v1beta/projects.configurations/list.md",
-  "title": "Method: projects.configurations.list \u00a0|\u00a0 Google Threat Intelligence \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:31:40.359562+00:00"
-}

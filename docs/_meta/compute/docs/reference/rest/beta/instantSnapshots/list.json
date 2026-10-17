@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/compute/docs/reference/rest/beta/instantSnapshots/list/",
-  "file": "compute/docs/reference/rest/beta/instantSnapshots/list.md",
-  "title": "Method: instantSnapshots.list \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:26:22.691254+00:00"
-}

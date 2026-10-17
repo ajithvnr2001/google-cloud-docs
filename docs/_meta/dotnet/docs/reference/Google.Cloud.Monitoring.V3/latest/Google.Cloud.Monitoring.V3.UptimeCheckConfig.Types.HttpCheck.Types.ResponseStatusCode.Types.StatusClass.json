@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Monitoring.V3/latest/Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ResponseStatusCode.Types.StatusClass",
-  "file": "dotnet/docs/reference/Google.Cloud.Monitoring.V3/latest/Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ResponseStatusCode.Types.StatusClass.md",
-  "title": "Google Cloud Monitoring v3 API - Enum UptimeCheckConfig.Types.HttpCheck.Types.ResponseStatusCode.Types.StatusClass (3.16.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:22:28.024971+00:00"
-}

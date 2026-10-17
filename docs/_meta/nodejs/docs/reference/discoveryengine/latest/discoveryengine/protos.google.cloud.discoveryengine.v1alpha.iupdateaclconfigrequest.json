@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/discoveryengine/latest/discoveryengine/protos.google.cloud.discoveryengine.v1alpha.iupdateaclconfigrequest",
-  "file": "nodejs/docs/reference/discoveryengine/latest/discoveryengine/protos.google.cloud.discoveryengine.v1alpha.iupdateaclconfigrequest.md",
-  "title": "Interface protos.google.cloud.discoveryengine.v1alpha.IUpdateAclConfigRequest (3.3.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:18:10.984470+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Dataflow.V1Beta3/latest/Google.Cloud.Dataflow.V1Beta3.GetSnapshotRequest",
-  "file": "dotnet/docs/reference/Google.Cloud.Dataflow.V1Beta3/latest/Google.Cloud.Dataflow.V1Beta3.GetSnapshotRequest.md",
-  "title": "Dataflow v1beta3 API - Class GetSnapshotRequest (2.0.0-beta10) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:02:19.210239+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Dataplex.V1/latest/Google.Cloud.Dataplex.V1.Asset.Types.DiscoveryStatus.Types.State",
-  "file": "dotnet/docs/reference/Google.Cloud.Dataplex.V1/latest/Google.Cloud.Dataplex.V1.Asset.Types.DiscoveryStatus.Types.State.md",
-  "title": "Cloud Dataplex v1 API - Enum Asset.Types.DiscoveryStatus.Types.State (3.15.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:53:52.896320+00:00"
-}

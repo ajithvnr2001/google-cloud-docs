@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/sql/docs/mysql/configure-cmek/",
-  "file": "sql/docs/mysql/configure-cmek.md",
-  "title": "Use customer-managed encryption keys (CMEK) \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:15:04.076652+00:00"
-}

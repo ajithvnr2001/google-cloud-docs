@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-discoveryengine/latest/com.google.cloud.discoveryengine.v1beta.AnswerQueryRequest.QueryUnderstandingSpecOrBuilder",
-  "file": "java/docs/reference/google-cloud-discoveryengine/latest/com.google.cloud.discoveryengine.v1beta.AnswerQueryRequest.QueryUnderstandingSpecOrBuilder.md",
-  "title": "Interface AnswerQueryRequest.QueryUnderstandingSpecOrBuilder (0.95.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:06:47.300538+00:00"
-}

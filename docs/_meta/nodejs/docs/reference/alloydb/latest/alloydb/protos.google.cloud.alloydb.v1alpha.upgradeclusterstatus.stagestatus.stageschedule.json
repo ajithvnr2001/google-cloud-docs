@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/alloydb/latest/alloydb/protos.google.cloud.alloydb.v1alpha.upgradeclusterstatus.stagestatus.stageschedule",
-  "file": "nodejs/docs/reference/alloydb/latest/alloydb/protos.google.cloud.alloydb.v1alpha.upgradeclusterstatus.stagestatus.stageschedule.md",
-  "title": "Class protos.google.cloud.alloydb.v1alpha.UpgradeClusterStatus.StageStatus.StageSchedule (3.3.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:54:41.756717+00:00"
-}

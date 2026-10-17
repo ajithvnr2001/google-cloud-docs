@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1.iinsertlocalinventoryrequest",
-  "file": "nodejs/docs/reference/inventories/latest/inventories/protos.google.shopping.merchant.inventories.v1.iinsertlocalinventoryrequest.md",
-  "title": "Interface protos.google.shopping.merchant.inventories.v1.IInsertLocalInventoryRequest (0.14.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:03:27.441910+00:00"
-}

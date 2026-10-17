@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.notebookRuntimeTemplates/get/",
-  "file": "gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.notebookRuntimeTemplates/get.md",
-  "title": "Method: notebookRuntimeTemplates.get \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:20:20.614877+00:00"
-}

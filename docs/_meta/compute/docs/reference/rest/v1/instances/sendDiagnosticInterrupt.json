@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/compute/docs/reference/rest/v1/instances/sendDiagnosticInterrupt/",
-  "file": "compute/docs/reference/rest/v1/instances/sendDiagnosticInterrupt.md",
-  "title": "Method: instances.sendDiagnosticInterrupt \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:47:43.454004+00:00"
-}

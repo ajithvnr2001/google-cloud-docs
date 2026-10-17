@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.backups/create/",
-  "file": "managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.backups/create.md",
-  "title": "Method: backups.create \u00a0|\u00a0 Managed Microsoft AD \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:42:20.865956+00:00"
-}

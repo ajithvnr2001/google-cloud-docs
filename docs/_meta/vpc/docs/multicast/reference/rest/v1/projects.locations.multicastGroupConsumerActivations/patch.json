@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/vpc/docs/multicast/reference/rest/v1/projects.locations.multicastGroupConsumerActivations/patch/",
-  "file": "vpc/docs/multicast/reference/rest/v1/projects.locations.multicastGroupConsumerActivations/patch.md",
-  "title": "Method: projects.locations.multicastGroupConsumerActivations.patch \u00a0|\u00a0 Virtual Private Cloud \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:37:51.779302+00:00"
-}

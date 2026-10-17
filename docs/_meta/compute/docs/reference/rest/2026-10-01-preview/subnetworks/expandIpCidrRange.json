@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/compute/docs/reference/rest/2026-10-01-preview/subnetworks/expandIpCidrRange/",
-  "file": "compute/docs/reference/rest/2026-10-01-preview/subnetworks/expandIpCidrRange.md",
-  "title": "Method: subnetworks.expandIpCidrRange \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:21:30.983837+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/vision/docs/reference/rest/v1p4beta1/projects.locations.productSets/removeProduct/",
-  "file": "vision/docs/reference/rest/v1p4beta1/projects.locations.productSets/removeProduct.md",
-  "title": "Method: projects.locations.productSets.removeProduct \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:04:49.132152+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/memorystore/docs/cluster/reference/rest/v1alpha1/projects.locations.backupCollections",
-  "file": "memorystore/docs/cluster/reference/rest/v1alpha1/projects.locations.backupCollections.md",
-  "title": "REST Resource: projects.locations.backupCollections \u00a0|\u00a0 Memorystore for Redis Cluster \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:09:19.733590+00:00"
-}

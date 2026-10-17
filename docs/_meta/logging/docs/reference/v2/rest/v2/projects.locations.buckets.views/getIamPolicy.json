@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/logging/docs/reference/v2/rest/v2/projects.locations.buckets.views/getIamPolicy/",
-  "file": "logging/docs/reference/v2/rest/v2/projects.locations.buckets.views/getIamPolicy.md",
-  "title": "Method: projects.locations.buckets.views.getIamPolicy \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:22:25.400490+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/enterprise/knative-serving/docs/triggering/grpc/",
-  "file": "kubernetes-engine/enterprise/knative-serving/docs/triggering/grpc.md",
-  "title": "Invoking with gRPC \u00a0|\u00a0 Knative serving \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:07:56.663345+00:00"
-}

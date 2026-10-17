@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-mesh/v1.29/docs/security/configuring-remote-jwks-request-authentication/",
-  "file": "service-mesh/v1.29/docs/security/configuring-remote-jwks-request-authentication.md",
-  "title": "Configure JWT authentication with remote JWKS \u00a0|\u00a0 Cloud Service Mesh \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:32:55.445451+00:00"
-}

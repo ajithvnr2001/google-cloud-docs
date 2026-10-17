@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/compute/docs/reference/rest/v1/images/delete/",
-  "file": "compute/docs/reference/rest/v1/images/delete.md",
-  "title": "Method: images.delete \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:59:20.681899+00:00"
-}

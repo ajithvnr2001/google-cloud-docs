@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/google-cloud-productregistry/latest/google.cloud.productregistry_v1.services.cloud_product_registry_read_service.CloudProductRegistryReadServiceAsyncClient",
-  "file": "python/docs/reference/google-cloud-productregistry/latest/google.cloud.productregistry_v1.services.cloud_product_registry_read_service.CloudProductRegistryReadServiceAsyncClient.md",
-  "title": "Class CloudProductRegistryReadServiceAsyncClient (0.1.1) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:57:03.770072+00:00"
-}

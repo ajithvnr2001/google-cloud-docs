@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/vision/docs/reference/rest/v1p3beta1/projects.locations.products.referenceImages/delete/",
-  "file": "vision/docs/reference/rest/v1p3beta1/projects.locations.products.referenceImages/delete.md",
-  "title": "Method: projects.locations.products.referenceImages.delete \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:10:57.933541+00:00"
-}

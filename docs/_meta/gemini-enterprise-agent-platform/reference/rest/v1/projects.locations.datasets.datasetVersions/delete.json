@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.datasets.datasetVersions/delete/",
-  "file": "gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.datasets.datasetVersions/delete.md",
-  "title": "Method: datasetVersions.delete \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:20:08.963572+00:00"
-}

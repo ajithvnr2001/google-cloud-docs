@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/security-center/latest/security-center/protos.google.cloud.securitycenter.v2.indicator.processsignature.imemoryhashsignature",
-  "file": "nodejs/docs/reference/security-center/latest/security-center/protos.google.cloud.securitycenter.v2.indicator.processsignature.imemoryhashsignature.md",
-  "title": "Interface protos.google.cloud.securitycenter.v2.Indicator.ProcessSignature.IMemoryHashSignature (10.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:24:38.245130+00:00"
-}

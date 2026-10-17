@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/build/docs/api/reference/rest/v2/projects.locations.connections.repositories/batchCreate/",
-  "file": "build/docs/api/reference/rest/v2/projects.locations.connections.repositories/batchCreate.md",
-  "title": "Method: projects.locations.connections.repositories.batchCreate \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:34:59.798223+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.WebRisk.V1Beta1/latest/Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType",
-  "file": "dotnet/docs/reference/Google.Cloud.WebRisk.V1Beta1/latest/Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType.md",
-  "title": "Google Cloud Web Risk v1beta1 API - Enum ComputeThreatListDiffResponse.Types.ResponseType (3.0.0-beta06) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:51:26.169106+00:00"
-}

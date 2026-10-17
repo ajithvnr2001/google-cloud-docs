@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/bigquery/docs/reference/datatransfer/rest/v1/projects.transferConfigs.runs/list/",
-  "file": "bigquery/docs/reference/datatransfer/rest/v1/projects.transferConfigs.runs/list.md",
-  "title": "Method: runs.list \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:23:08.932852+00:00"
-}

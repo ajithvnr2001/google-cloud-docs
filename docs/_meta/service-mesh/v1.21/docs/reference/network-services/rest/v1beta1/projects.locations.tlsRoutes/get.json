@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-mesh/v1.21/docs/reference/network-services/rest/v1beta1/projects.locations.tlsRoutes/get/",
-  "file": "service-mesh/v1.21/docs/reference/network-services/rest/v1beta1/projects.locations.tlsRoutes/get.md",
-  "title": "Method: projects.locations.tlsRoutes.get \u00a0|\u00a0 Cloud Service Mesh v1.21 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:37:31.508735+00:00"
-}

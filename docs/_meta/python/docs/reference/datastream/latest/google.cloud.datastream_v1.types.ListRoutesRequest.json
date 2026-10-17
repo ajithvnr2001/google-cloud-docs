@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/datastream/latest/google.cloud.datastream_v1.types.ListRoutesRequest",
-  "file": "python/docs/reference/datastream/latest/google.cloud.datastream_v1.types.ListRoutesRequest.md",
-  "title": "Class ListRoutesRequest (1.20.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:08:43.666121+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/spanner/docs/reference/rest/v1/projects.instanceConfigs/delete/",
-  "file": "spanner/docs/reference/rest/v1/projects.instanceConfigs/delete.md",
-  "title": "Method: projects.instanceConfigs.delete \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:29:59.790970+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Kms.V1/latest/Google.Cloud.Kms.V1.DeleteCryptoKeyMetadata",
-  "file": "dotnet/docs/reference/Google.Cloud.Kms.V1/latest/Google.Cloud.Kms.V1.DeleteCryptoKeyMetadata.md",
-  "title": "Google Cloud Key Management Service v1 API - Class DeleteCryptoKeyMetadata (3.27.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:49:02.401996+00:00"
-}

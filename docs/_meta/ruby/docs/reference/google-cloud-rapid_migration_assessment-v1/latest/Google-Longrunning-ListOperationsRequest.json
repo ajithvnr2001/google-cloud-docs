@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-rapid_migration_assessment-v1/latest/Google-Longrunning-ListOperationsRequest/",
-  "file": "ruby/docs/reference/google-cloud-rapid_migration_assessment-v1/latest/Google-Longrunning-ListOperationsRequest.md",
-  "title": "Rapid Migration Assessment V1 API - Class Google::Longrunning::ListOperationsRequest (v2.6.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:49:30.472136+00:00"
-}

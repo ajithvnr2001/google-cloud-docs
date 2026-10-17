@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dlp-v2/latest/Google-Cloud-Dlp-V2-ListInspectTemplatesResponse/",
-  "file": "ruby/docs/reference/google-cloud-dlp-v2/latest/Google-Cloud-Dlp-V2-ListInspectTemplatesResponse.md",
-  "title": "Cloud Data Loss Prevention (DLP) V2 API - Class Google::Cloud::Dlp::V2::ListInspectTemplatesResponse (v1.19.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:38:09.135677+00:00"
-}

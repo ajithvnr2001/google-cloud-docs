@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigtable-admin-v2/latest/Google-Cloud-Bigtable-Admin-V2-UndeleteTableMetadata/",
-  "file": "ruby/docs/reference/google-cloud-bigtable-admin-v2/latest/Google-Cloud-Bigtable-Admin-V2-UndeleteTableMetadata.md",
-  "title": "Cloud Bigtable Admin V2 API - Class Google::Cloud::Bigtable::Admin::V2::UndeleteTableMetadata (v1.22.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:21:27.811449+00:00"
-}

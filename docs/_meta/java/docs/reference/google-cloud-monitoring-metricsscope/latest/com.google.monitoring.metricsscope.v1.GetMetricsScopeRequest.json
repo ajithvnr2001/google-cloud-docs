@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-monitoring-metricsscope/latest/com.google.monitoring.metricsscope.v1.GetMetricsScopeRequest",
-  "file": "java/docs/reference/google-cloud-monitoring-metricsscope/latest/com.google.monitoring.metricsscope.v1.GetMetricsScopeRequest.md",
-  "title": "Class GetMetricsScopeRequest (0.93.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:12:49.513201+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-cloud_dms-v1/latest/Google-Cloud-CloudDMS-V1-MigrationJob-DumpFlag/",
-  "file": "ruby/docs/reference/google-cloud-cloud_dms-v1/latest/Google-Cloud-CloudDMS-V1-MigrationJob-DumpFlag.md",
-  "title": "Cloud Database Migration Service V1 API - Class Google::Cloud::CloudDMS::V1::MigrationJob::DumpFlag (v1.8.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:51:46.008980+00:00"
-}

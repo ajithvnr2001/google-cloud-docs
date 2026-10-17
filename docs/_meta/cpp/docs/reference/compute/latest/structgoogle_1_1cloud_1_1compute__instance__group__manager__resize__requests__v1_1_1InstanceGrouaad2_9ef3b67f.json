@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/cpp/docs/reference/compute/latest/structgoogle_1_1cloud_1_1compute__instance__group__manager__resize__requests__v1_1_1InstanceGrouaad24a78d46f89911e19e02122da4dfb/",
-  "file": "cpp/docs/reference/compute/latest/structgoogle_1_1cloud_1_1compute__instance__group__manager__resize__requests__v1_1_1InstanceGrouaad2_9ef3b67f.md",
-  "title": "Struct InstanceGroupManagerResizeRequestsBackoffPolicyOption (3.13.0-rc) \u00a0|\u00a0 C++ client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:21:26.420992+00:00"
-}

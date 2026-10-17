@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dataproc-v1/latest/Google-Cloud-Dataproc-V1-AutoscalingPolicyService-Paths/",
-  "file": "ruby/docs/reference/google-cloud-dataproc-v1/latest/Google-Cloud-Dataproc-V1-AutoscalingPolicyService-Paths.md",
-  "title": "Cloud Dataproc V1 API - Module Google::Cloud::Dataproc::V1::AutoscalingPolicyService::Paths (v1.17.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:13:24.994527+00:00"
-}

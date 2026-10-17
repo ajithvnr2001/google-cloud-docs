@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-bigqueryconnection/latest/com.google.cloud.bigquery.connection.v1beta1.ConnectionProto.CloudSqlProperties.DatabaseType",
-  "file": "java/docs/reference/google-cloud-bigqueryconnection/latest/com.google.cloud.bigquery.connection.v1beta1.ConnectionProto.CloudSqlProperties.DatabaseType.md",
-  "title": "Enum ConnectionProto.CloudSqlProperties.DatabaseType (2.101.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:15:15.556077+00:00"
-}

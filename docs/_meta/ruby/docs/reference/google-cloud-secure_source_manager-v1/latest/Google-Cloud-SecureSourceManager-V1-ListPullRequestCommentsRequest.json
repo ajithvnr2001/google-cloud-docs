@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-secure_source_manager-v1/latest/Google-Cloud-SecureSourceManager-V1-ListPullRequestCommentsRequest/",
-  "file": "ruby/docs/reference/google-cloud-secure_source_manager-v1/latest/Google-Cloud-SecureSourceManager-V1-ListPullRequestCommentsRequest.md",
-  "title": "Secure Source Manager V1 API - Class Google::Cloud::SecureSourceManager::V1::ListPullRequestCommentsRequest (v2.9.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:37:19.642356+00:00"
-}

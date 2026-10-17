@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-ces/latest/com.google.cloud.ces.v1.DataStoreTool.BoostSpec.ConditionBoostSpec.BoostControlSpec.ControlPoint.Builder",
-  "file": "java/docs/reference/google-cloud-ces/latest/com.google.cloud.ces.v1.DataStoreTool.BoostSpec.ConditionBoostSpec.BoostControlSpec.ControlPoint.Builder.md",
-  "title": "Class DataStoreTool.BoostSpec.ConditionBoostSpec.BoostControlSpec.ControlPoint.Builder (0.15.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:46:07.478281+00:00"
-}

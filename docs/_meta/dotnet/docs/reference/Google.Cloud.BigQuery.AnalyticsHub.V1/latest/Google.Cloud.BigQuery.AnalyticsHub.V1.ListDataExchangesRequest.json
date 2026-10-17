@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.BigQuery.AnalyticsHub.V1/latest/Google.Cloud.BigQuery.AnalyticsHub.V1.ListDataExchangesRequest",
-  "file": "dotnet/docs/reference/Google.Cloud.BigQuery.AnalyticsHub.V1/latest/Google.Cloud.BigQuery.AnalyticsHub.V1.ListDataExchangesRequest.md",
-  "title": "Analytics Hub v1 API - Class ListDataExchangesRequest (1.12.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:40:19.731546+00:00"
-}

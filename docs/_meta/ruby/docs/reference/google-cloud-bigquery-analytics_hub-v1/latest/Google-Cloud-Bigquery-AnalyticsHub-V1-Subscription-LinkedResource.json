@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-analytics_hub-v1/latest/Google-Cloud-Bigquery-AnalyticsHub-V1-Subscription-LinkedResource/",
-  "file": "ruby/docs/reference/google-cloud-bigquery-analytics_hub-v1/latest/Google-Cloud-Bigquery-AnalyticsHub-V1-Subscription-LinkedResource.md",
-  "title": "Analytics Hub V1 API - Class Google::Cloud::Bigquery::AnalyticsHub::V1::Subscription::LinkedResource (v0.20.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:24:40.320421+00:00"
-}

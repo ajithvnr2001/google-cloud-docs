@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/lakehouse/docs/import-parquet-tables/",
-  "file": "lakehouse/docs/import-parquet-tables.md",
-  "title": "Import Parquet files in storage into Lakehouse runtime catalog using Dataflow \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:19:48.318483+00:00"
-}

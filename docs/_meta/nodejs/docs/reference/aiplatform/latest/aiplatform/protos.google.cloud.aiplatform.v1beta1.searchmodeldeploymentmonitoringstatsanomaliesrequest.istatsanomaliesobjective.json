@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/aiplatform/latest/aiplatform/protos.google.cloud.aiplatform.v1beta1.searchmodeldeploymentmonitoringstatsanomaliesrequest.istatsanomaliesobjective",
-  "file": "nodejs/docs/reference/aiplatform/latest/aiplatform/protos.google.cloud.aiplatform.v1beta1.searchmodeldeploymentmonitoringstatsanomaliesrequest.istatsanomaliesobjective.md",
-  "title": "Interface protos.google.cloud.aiplatform.v1beta1.SearchModelDeploymentMonitoringStatsAnomaliesRequest.IStatsAnomaliesObjective (7.4.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:52:48.140656+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Tasks.V2Beta3/latest/Google.Cloud.Tasks.V2Beta3.GetCmekConfigRequest",
-  "file": "dotnet/docs/reference/Google.Cloud.Tasks.V2Beta3/latest/Google.Cloud.Tasks.V2Beta3.GetCmekConfigRequest.md",
-  "title": "Google Cloud Tasks v2beta3 API - Class GetCmekConfigRequest (3.0.0-beta09) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:44:45.990005+00:00"
-}

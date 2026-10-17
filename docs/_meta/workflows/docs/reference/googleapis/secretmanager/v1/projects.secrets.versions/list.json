@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/workflows/docs/reference/googleapis/secretmanager/v1/projects.secrets.versions/list/",
-  "file": "workflows/docs/reference/googleapis/secretmanager/v1/projects.secrets.versions/list.md",
-  "title": "Method: googleapis.secretmanager.v1.projects.secrets.versions.list \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:14:47.043309+00:00"
-}

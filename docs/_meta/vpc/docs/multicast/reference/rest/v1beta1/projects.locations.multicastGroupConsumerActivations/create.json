@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/vpc/docs/multicast/reference/rest/v1beta1/projects.locations.multicastGroupConsumerActivations/create/",
-  "file": "vpc/docs/multicast/reference/rest/v1beta1/projects.locations.multicastGroupConsumerActivations/create.md",
-  "title": "Method: projects.locations.multicastGroupConsumerActivations.create \u00a0|\u00a0 Virtual Private Cloud \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:59:24.296704+00:00"
-}

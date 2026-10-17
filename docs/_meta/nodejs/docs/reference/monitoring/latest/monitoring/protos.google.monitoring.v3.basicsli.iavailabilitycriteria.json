@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/monitoring/latest/monitoring/protos.google.monitoring.v3.basicsli.iavailabilitycriteria",
-  "file": "nodejs/docs/reference/monitoring/latest/monitoring/protos.google.monitoring.v3.basicsli.iavailabilitycriteria.md",
-  "title": "Interface protos.google.monitoring.v3.BasicSli.IAvailabilityCriteria (6.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:36:10.497581+00:00"
-}

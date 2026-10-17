@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/compute/docs/osconfig/rest/v2/projects.locations.global.policyOrchestrators/list/",
-  "file": "compute/docs/osconfig/rest/v2/projects.locations.global.policyOrchestrators/list.md",
-  "title": "Method: projects.locations.global.policyOrchestrators.list \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:24:38.008560+00:00"
-}

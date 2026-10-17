@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/ai-agent-big-query-exfil/",
-  "file": "security-command-center/docs/findings/threats/ai-agent-big-query-exfil.md",
-  "title": "Exfiltration: AI Agent Initiated BigQuery Data Exfiltration to External Table \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:24:03.584827+00:00"
-}

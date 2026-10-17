@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-infrastructure/docs/service-networking/reference/rest/v1/services.projects.global.networks/get/",
-  "file": "service-infrastructure/docs/service-networking/reference/rest/v1/services.projects.global.networks/get.md",
-  "title": "Method: services.projects.global.networks.get \u00a0|\u00a0 Service Infrastructure \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:28:04.922315+00:00"
-}

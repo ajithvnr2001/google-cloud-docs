@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.SecurityCenter.Settings.V1Beta1/latest/Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsRequest",
-  "file": "dotnet/docs/reference/Google.Cloud.SecurityCenter.Settings.V1Beta1/latest/Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsRequest.md",
-  "title": "Google Cloud Security Command Center Settings v1beta1 API - Class BatchGetSettingsRequest (2.0.0-beta05) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:44:35.451491+00:00"
-}

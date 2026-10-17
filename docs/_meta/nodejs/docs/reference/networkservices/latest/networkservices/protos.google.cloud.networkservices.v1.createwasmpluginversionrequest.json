@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/networkservices/latest/networkservices/protos.google.cloud.networkservices.v1.createwasmpluginversionrequest",
-  "file": "nodejs/docs/reference/networkservices/latest/networkservices/protos.google.cloud.networkservices.v1.createwasmpluginversionrequest.md",
-  "title": "Class protos.google.cloud.networkservices.v1.CreateWasmPluginVersionRequest (0.17.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:05:28.615778+00:00"
-}

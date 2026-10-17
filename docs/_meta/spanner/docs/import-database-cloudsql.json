@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/spanner/docs/import-database-cloudsql/",
-  "file": "spanner/docs/import-database-cloudsql.md",
-  "title": "Import from Cloud SQL to Spanner \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:32:40.984439+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/bigquery-reservation/latest/bigquery-reservation/protos.google.cloud.bigquery.reservation.v1.listreservationgroupsrequest",
-  "file": "nodejs/docs/reference/bigquery-reservation/latest/bigquery-reservation/protos.google.cloud.bigquery.reservation.v1.listreservationgroupsrequest.md",
-  "title": "Class protos.google.cloud.bigquery.reservation.v1.ListReservationGroupsRequest (5.3.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:11:07.906181+00:00"
-}

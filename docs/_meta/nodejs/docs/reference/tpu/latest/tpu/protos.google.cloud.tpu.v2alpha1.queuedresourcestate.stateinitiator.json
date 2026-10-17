@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/tpu/latest/tpu/protos.google.cloud.tpu.v2alpha1.queuedresourcestate.stateinitiator",
-  "file": "nodejs/docs/reference/tpu/latest/tpu/protos.google.cloud.tpu.v2alpha1.queuedresourcestate.stateinitiator.md",
-  "title": "Enum protos.google.cloud.tpu.v2alpha1.QueuedResourceState.StateInitiator (5.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:23:57.028515+00:00"
-}

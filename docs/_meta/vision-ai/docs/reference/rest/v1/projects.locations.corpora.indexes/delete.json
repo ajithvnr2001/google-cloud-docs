@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/vision-ai/docs/reference/rest/v1/projects.locations.corpora.indexes/delete/",
-  "file": "vision-ai/docs/reference/rest/v1/projects.locations.corpora.indexes/delete.md",
-  "title": "Method: projects.locations.corpora.indexes.delete \u00a0|\u00a0 Agent Platform Vision \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:23:49.152991+00:00"
-}

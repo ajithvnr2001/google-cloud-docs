@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-discoveryengine/latest/com.google.cloud.discoveryengine.v1beta.stub.GrpcEvaluationServiceCallableFactory",
-  "file": "java/docs/reference/google-cloud-discoveryengine/latest/com.google.cloud.discoveryengine.v1beta.stub.GrpcEvaluationServiceCallableFactory.md",
-  "title": "Class GrpcEvaluationServiceCallableFactory (0.95.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:09:09.294495+00:00"
-}

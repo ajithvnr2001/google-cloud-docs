@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.metadataStores.contexts/removeContextChildren/",
-  "file": "gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.metadataStores.contexts/removeContextChildren.md",
-  "title": "Method: contexts.removeContextChildren \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:26:28.963924+00:00"
-}

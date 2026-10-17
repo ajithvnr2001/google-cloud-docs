@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary/gke/service-networking/",
-  "file": "deploy/docs/deployment-strategies/canary/gke/service-networking.md",
-  "title": "Canary Deployments to GKE and GKE attached clusters using service-based networking \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:37:00.805700+00:00"
-}

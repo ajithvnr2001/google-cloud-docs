@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/pubsub/docs/schemas-valid/",
-  "file": "pubsub/docs/schemas-valid.md",
-  "title": "Parse messages from a topic with a schema \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:49:16.662451+00:00"
-}

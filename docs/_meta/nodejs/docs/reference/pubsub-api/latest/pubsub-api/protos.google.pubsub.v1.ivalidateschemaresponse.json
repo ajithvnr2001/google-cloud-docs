@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/pubsub-api/latest/pubsub-api/protos.google.pubsub.v1.ivalidateschemaresponse",
-  "file": "nodejs/docs/reference/pubsub-api/latest/pubsub-api/protos.google.pubsub.v1.ivalidateschemaresponse.md",
-  "title": "Interface protos.google.pubsub.v1.IValidateSchemaResponse (0.4.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:51:34.547294+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-vector_search-v1/latest/Google-Cloud-VectorSearch-V1-ImportDataObjectsRequest/",
-  "file": "ruby/docs/reference/google-cloud-vector_search-v1/latest/Google-Cloud-VectorSearch-V1-ImportDataObjectsRequest.md",
-  "title": "Vector Search V1 API - Class Google::Cloud::VectorSearch::V1::ImportDataObjectsRequest (v0.3.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:48:15.329617+00:00"
-}

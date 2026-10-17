@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.BackupDR.V1/latest/Google.Cloud.BackupDR.V1.DiskBackupProperties.Types.Architecture",
-  "file": "dotnet/docs/reference/Google.Cloud.BackupDR.V1/latest/Google.Cloud.BackupDR.V1.DiskBackupProperties.Types.Architecture.md",
-  "title": "Backup and DR Service v1 API - Enum DiskBackupProperties.Types.Architecture (2.9.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:05:54.187420+00:00"
-}

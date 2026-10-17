@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/cpp/docs/reference/resourcemanager/latest/resourcemanager_v3_1_1TagValuesClient-retry-snippet/",
-  "file": "cpp/docs/reference/resourcemanager/latest/resourcemanager_v3_1_1TagValuesClient-retry-snippet.md",
-  "title": "Override resourcemanager_v3::TagValuesClient Retry Policies \u00a0|\u00a0 C++ client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:07:54.361958+00:00"
-}

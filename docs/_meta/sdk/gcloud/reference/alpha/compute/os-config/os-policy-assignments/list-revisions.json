@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/os-config/os-policy-assignments/list-revisions/",
-  "file": "sdk/gcloud/reference/alpha/compute/os-config/os-policy-assignments/list-revisions.md",
-  "title": "gcloud alpha compute os-config os-policy-assignments list-revisions \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:22:55.572908+00:00"
-}

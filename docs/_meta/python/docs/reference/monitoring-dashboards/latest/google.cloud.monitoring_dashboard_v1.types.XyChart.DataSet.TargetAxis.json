@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/monitoring-dashboards/latest/google.cloud.monitoring_dashboard_v1.types.XyChart.DataSet.TargetAxis",
-  "file": "python/docs/reference/monitoring-dashboards/latest/google.cloud.monitoring_dashboard_v1.types.XyChart.DataSet.TargetAxis.md",
-  "title": "Class TargetAxis (3.2.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:31:26.901345+00:00"
-}

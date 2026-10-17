@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/compute/docs/reference/rest/beta/futureReservations/cancel/",
-  "file": "compute/docs/reference/rest/beta/futureReservations/cancel.md",
-  "title": "Method: futureReservations.cancel \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:15:08.400225+00:00"
-}

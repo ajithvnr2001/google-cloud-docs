@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/compute/docs/reference/rest/2026-09-01/autoscalers/delete/",
-  "file": "compute/docs/reference/rest/2026-09-01/autoscalers/delete.md",
-  "title": "Method: autoscalers.delete \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:01:47.567803+00:00"
-}

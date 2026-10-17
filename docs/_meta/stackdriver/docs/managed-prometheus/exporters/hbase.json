@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/hbase/",
-  "file": "stackdriver/docs/managed-prometheus/exporters/hbase.md",
-  "title": "Apache HBase \u00a0|\u00a0 Google Cloud Observability \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:12:41.174677+00:00"
-}

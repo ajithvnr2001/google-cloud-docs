@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/alloydb/omni/kubernetes/16.11.0/docs/kubernetes-dr-backup-k8-local/",
-  "file": "alloydb/omni/kubernetes/16.11.0/docs/kubernetes-dr-backup-k8-local.md",
-  "title": "Manually clone a database cluster in Kubernetes using a local backup \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 16.11.0 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:11:00.931855+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/pubsub/lite/docs/reference/rest/v1/admin.projects.locations.subscriptions/delete/",
-  "file": "pubsub/lite/docs/reference/rest/v1/admin.projects.locations.subscriptions/delete.md",
-  "title": "Method: admin.projects.locations.subscriptions.delete \u00a0|\u00a0 Pub/Sub Lite \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:51:47.094567+00:00"
-}

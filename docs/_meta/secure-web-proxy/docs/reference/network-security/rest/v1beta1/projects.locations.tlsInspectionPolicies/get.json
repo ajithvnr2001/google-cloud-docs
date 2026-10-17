@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/secure-web-proxy/docs/reference/network-security/rest/v1beta1/projects.locations.tlsInspectionPolicies/get/",
-  "file": "secure-web-proxy/docs/reference/network-security/rest/v1beta1/projects.locations.tlsInspectionPolicies/get.md",
-  "title": "Method: projects.locations.tlsInspectionPolicies.get \u00a0|\u00a0 Secure Web Proxy \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:29:39.133577+00:00"
-}

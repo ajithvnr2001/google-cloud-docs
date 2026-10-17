@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools/setSize/",
-  "file": "kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools/setSize.md",
-  "title": "Method: projects.locations.clusters.nodePools.setSize \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:31:22.330884+00:00"
-}

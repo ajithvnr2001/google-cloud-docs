@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.DiscoveryEngine.V1Beta/latest/Google.Cloud.DiscoveryEngine.V1Beta.GenerateGroundedContentRequest.Types.GroundingSource.Types.EnterpriseWebRetrievalSource",
-  "file": "dotnet/docs/reference/Google.Cloud.DiscoveryEngine.V1Beta/latest/Google.Cloud.DiscoveryEngine.V1Beta.GenerateGroundedContentRequest.Types.GroundingSource.Types.Enter_1354cd99.md",
-  "title": "Discovery Engine v1beta API - Class GenerateGroundedContentRequest.Types.GroundingSource.Types.EnterpriseWebRetrievalSource (1.0.0-beta25) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:46:16.359810+00:00"
-}

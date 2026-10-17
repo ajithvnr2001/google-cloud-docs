@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.DiscoveryEngine.V1Beta/latest/Google.Cloud.DiscoveryEngine.V1Beta.GroundedGenerationContent.Types.Part.DataOneofCase",
-  "file": "dotnet/docs/reference/Google.Cloud.DiscoveryEngine.V1Beta/latest/Google.Cloud.DiscoveryEngine.V1Beta.GroundedGenerationContent.Types.Part.DataOneofCase.md",
-  "title": "Discovery Engine v1beta API - Enum GroundedGenerationContent.Types.Part.DataOneofCase (1.0.0-beta25) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:14:55.046182+00:00"
-}

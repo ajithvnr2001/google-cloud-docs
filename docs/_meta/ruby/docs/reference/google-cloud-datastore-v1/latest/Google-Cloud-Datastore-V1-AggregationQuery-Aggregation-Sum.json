@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-datastore-v1/latest/Google-Cloud-Datastore-V1-AggregationQuery-Aggregation-Sum/",
-  "file": "ruby/docs/reference/google-cloud-datastore-v1/latest/Google-Cloud-Datastore-V1-AggregationQuery-Aggregation-Sum.md",
-  "title": "Firestore in Datastore mode V1 API - Class Google::Cloud::Datastore::V1::AggregationQuery::Aggregation::Sum (v1.8.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:18:19.244259+00:00"
-}

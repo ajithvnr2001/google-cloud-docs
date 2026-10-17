@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-mesh/v1.21/docs/onboarding/provision-control-plane/",
-  "file": "service-mesh/v1.21/docs/onboarding/provision-control-plane.md",
-  "title": "Provision a managed Cloud Service Mesh control plane on GKE \u00a0|\u00a0 Cloud Service Mesh v1.21 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:33:32.148964+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.BigQuery.DataExchange.V1Beta1/latest/Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubService",
-  "file": "dotnet/docs/reference/Google.Cloud.BigQuery.DataExchange.V1Beta1/latest/Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubService.md",
-  "title": "Analytics Hub v1beta1 API - Class AnalyticsHubService (2.0.0-beta07) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:54:37.345210+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/lakehouse/docs/import-delta-lake-tables/",
-  "file": "lakehouse/docs/import-delta-lake-tables.md",
-  "title": "Import Delta Lake tables into Lakehouse using Dataflow \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:19:47.760183+00:00"
-}

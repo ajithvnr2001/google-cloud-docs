@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/connect-secops-aws/",
-  "file": "security-command-center/docs/connect-secops-aws.md",
-  "title": "Connect to AWS for log data collection \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:13:47.242031+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.DocumentAI.V1Beta3/latest/Google.Cloud.DocumentAI.V1Beta3.BatchDatasetDocuments.Types.IndividualDocumentIds",
-  "file": "dotnet/docs/reference/Google.Cloud.DocumentAI.V1Beta3/latest/Google.Cloud.DocumentAI.V1Beta3.BatchDatasetDocuments.Types.IndividualDocumentIds.md",
-  "title": "Cloud Document AI v1beta3 API - Class BatchDatasetDocuments.Types.IndividualDocumentIds (2.0.0-beta30) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:19:01.809023+00:00"
-}

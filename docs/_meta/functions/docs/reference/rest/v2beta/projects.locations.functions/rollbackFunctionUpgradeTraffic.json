@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/functions/docs/reference/rest/v2beta/projects.locations.functions/rollbackFunctionUpgradeTraffic/",
-  "file": "functions/docs/reference/rest/v2beta/projects.locations.functions/rollbackFunctionUpgradeTraffic.md",
-  "title": "Method: projects.locations.functions.rollbackFunctionUpgradeTraffic \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:17:29.471450+00:00"
-}

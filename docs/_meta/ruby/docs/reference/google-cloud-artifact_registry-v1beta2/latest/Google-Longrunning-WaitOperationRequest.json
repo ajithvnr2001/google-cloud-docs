@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-artifact_registry-v1beta2/latest/Google-Longrunning-WaitOperationRequest/",
-  "file": "ruby/docs/reference/google-cloud-artifact_registry-v1beta2/latest/Google-Longrunning-WaitOperationRequest.md",
-  "title": "Artifact Registry V1beta2 API - Class Google::Longrunning::WaitOperationRequest (v0.20.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:03:07.960234+00:00"
-}

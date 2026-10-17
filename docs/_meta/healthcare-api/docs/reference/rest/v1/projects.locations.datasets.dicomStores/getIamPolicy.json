@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/healthcare-api/docs/reference/rest/v1/projects.locations.datasets.dicomStores/getIamPolicy/",
-  "file": "healthcare-api/docs/reference/rest/v1/projects.locations.datasets.dicomStores/getIamPolicy.md",
-  "title": "Method: dicomStores.getIamPolicy \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:21:14.472796+00:00"
-}

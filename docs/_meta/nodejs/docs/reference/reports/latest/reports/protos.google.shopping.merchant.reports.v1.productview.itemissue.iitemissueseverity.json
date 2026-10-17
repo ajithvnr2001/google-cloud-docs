@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/reports/latest/reports/protos.google.shopping.merchant.reports.v1.productview.itemissue.iitemissueseverity",
-  "file": "nodejs/docs/reference/reports/latest/reports/protos.google.shopping.merchant.reports.v1.productview.itemissue.iitemissueseverity.md",
-  "title": "Interface protos.google.shopping.merchant.reports.v1.ProductView.ItemIssue.IItemIssueSeverity (0.17.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:17:02.299847+00:00"
-}

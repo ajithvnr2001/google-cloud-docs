@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/container/latest/container/protos.google.container.v1beta1.containerdconfig.privateregistryaccessconfig.certificateauthoritydomainconfig.gcpsecretmanagercertificateconfig",
-  "file": "nodejs/docs/reference/container/latest/container/protos.google.container.v1beta1.containerdconfig.privateregistryaccessconfig.certificateauthoritydom_b0d49e7c.md",
-  "title": "Class protos.google.container.v1beta1.ContainerdConfig.PrivateRegistryAccessConfig.CertificateAuthorityDomainConfig.GCPSecretManagerCertificateConfig (7.2.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:48:56.271360+00:00"
-}

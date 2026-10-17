@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/admanager/latest/admanager/protos.google.ads.admanager.v1.batchapproveaudiencesegmentsresponse",
-  "file": "nodejs/docs/reference/admanager/latest/admanager/protos.google.ads.admanager.v1.batchapproveaudiencesegmentsresponse.md",
-  "title": "Class protos.google.ads.admanager.v1.BatchApproveAudienceSegmentsResponse (0.14.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:19:10.493673+00:00"
-}

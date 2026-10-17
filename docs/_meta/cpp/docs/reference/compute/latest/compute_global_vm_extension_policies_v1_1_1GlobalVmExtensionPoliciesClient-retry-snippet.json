@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/cpp/docs/reference/compute/latest/compute_global_vm_extension_policies_v1_1_1GlobalVmExtensionPoliciesClient-retry-snippet/",
-  "file": "cpp/docs/reference/compute/latest/compute_global_vm_extension_policies_v1_1_1GlobalVmExtensionPoliciesClient-retry-snippet.md",
-  "title": "Override compute_global_vm_extension_policies_v1::GlobalVmExtensionPoliciesClient Retry Policies \u00a0|\u00a0 C++ client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:15:47.308740+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/os-config/latest/os-config/protos.google.cloud.osconfig.v1.ospolicy.resource.repositoryresource.yumrepository",
-  "file": "nodejs/docs/reference/os-config/latest/os-config/protos.google.cloud.osconfig.v1.ospolicy.resource.repositoryresource.yumrepository.md",
-  "title": "Class protos.google.cloud.osconfig.v1.OSPolicy.Resource.RepositoryResource.YumRepository (5.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:09:30.992425+00:00"
-}

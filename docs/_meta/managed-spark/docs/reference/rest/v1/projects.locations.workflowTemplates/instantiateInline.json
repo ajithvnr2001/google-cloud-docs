@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/managed-spark/docs/reference/rest/v1/projects.locations.workflowTemplates/instantiateInline/",
-  "file": "managed-spark/docs/reference/rest/v1/projects.locations.workflowTemplates/instantiateInline.md",
-  "title": "Method: projects.locations.workflowTemplates.instantiateInline \u00a0|\u00a0 Managed Service for Apache Spark \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:41:44.421017+00:00"
-}

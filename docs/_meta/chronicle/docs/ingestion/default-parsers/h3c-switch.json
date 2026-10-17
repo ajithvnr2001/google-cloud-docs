@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/h3c-switch/",
-  "file": "chronicle/docs/ingestion/default-parsers/h3c-switch.md",
-  "title": "Collect H3C Comware Platform Switch logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:13:22.723999+00:00"
-}

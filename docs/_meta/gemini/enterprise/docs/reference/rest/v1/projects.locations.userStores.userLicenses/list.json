@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/gemini/enterprise/docs/reference/rest/v1/projects.locations.userStores.userLicenses/list/",
-  "file": "gemini/enterprise/docs/reference/rest/v1/projects.locations.userStores.userLicenses/list.md",
-  "title": "Method: projects.locations.userStores.userLicenses.list \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:27:44.307111+00:00"
-}

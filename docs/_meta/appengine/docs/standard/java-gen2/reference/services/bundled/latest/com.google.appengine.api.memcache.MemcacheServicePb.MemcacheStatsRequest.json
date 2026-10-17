@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/appengine/docs/standard/java-gen2/reference/services/bundled/latest/com.google.appengine.api.memcache.MemcacheServicePb.MemcacheStatsRequest",
-  "file": "appengine/docs/standard/java-gen2/reference/services/bundled/latest/com.google.appengine.api.memcache.MemcacheServicePb.MemcacheStatsRequest.md",
-  "title": "Class MemcacheServicePb.MemcacheStatsRequest (5.0.3) \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:25:48.494514+00:00"
-}

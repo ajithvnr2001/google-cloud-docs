@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2beta1.DataPolicyServiceGrpc.DataPolicyServiceBlockingStub",
-  "file": "java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2beta1.DataPolicyServiceGrpc.DataPolicyServiceBlockingStub.md",
-  "title": "Class DataPolicyServiceGrpc.DataPolicyServiceBlockingStub (0.96.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:32:46.753225+00:00"
-}

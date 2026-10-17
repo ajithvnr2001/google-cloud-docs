@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/spanner/docs/jdbc-session-mgmt-commands-pgcompat/",
-  "file": "spanner/docs/jdbc-session-mgmt-commands-pgcompat.md",
-  "title": "JDBC session management commands (PostgreSQL) \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:29:57.745236+00:00"
-}

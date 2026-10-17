@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-compute-v1/latest/Google-Cloud-Compute-V1-StartInstancesInstanceGroupManagerRequest/",
-  "file": "ruby/docs/reference/google-cloud-compute-v1/latest/Google-Cloud-Compute-V1-StartInstancesInstanceGroupManagerRequest.md",
-  "title": "Google Cloud Compute V1 API - Class Google::Cloud::Compute::V1::StartInstancesInstanceGroupManagerRequest (v4.0.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:56:22.871439+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.AIPlatform.V1Beta1/latest/Google.Cloud.AIPlatform.V1Beta1.Schema.TimeSeriesDatasetMetadata.Types.InputConfig",
-  "file": "dotnet/docs/reference/Google.Cloud.AIPlatform.V1Beta1/latest/Google.Cloud.AIPlatform.V1Beta1.Schema.TimeSeriesDatasetMetadata.Types.InputConfig.md",
-  "title": "Vertex AI v1beta1 API - Class TimeSeriesDatasetMetadata.Types.InputConfig (1.0.0-beta87) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:29:13.180326+00:00"
-}

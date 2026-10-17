@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/health/latest/health/protos.google.devicesandservices.health.v4.datasource.device-class",
-  "file": "nodejs/docs/reference/health/latest/health/protos.google.devicesandservices.health.v4.datasource.device-class.md",
-  "title": "Class protos.google.devicesandservices.health.v4.DataSource.Device (0.8.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:42:43.449499+00:00"
-}

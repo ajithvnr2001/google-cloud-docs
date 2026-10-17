@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/add-on/ray-on-gke/quickstarts/ray-gpu-cluster/",
-  "file": "kubernetes-engine/docs/add-on/ray-on-gke/quickstarts/ray-gpu-cluster.md",
-  "title": "Quickstart: Deploy GPU-accelerated Ray for AI workloads on GKE \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:45:54.865314+00:00"
-}

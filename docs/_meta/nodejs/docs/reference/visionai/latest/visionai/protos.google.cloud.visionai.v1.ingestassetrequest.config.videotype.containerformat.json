@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/visionai/latest/visionai/protos.google.cloud.visionai.v1.ingestassetrequest.config.videotype.containerformat",
-  "file": "nodejs/docs/reference/visionai/latest/visionai/protos.google.cloud.visionai.v1.ingestassetrequest.config.videotype.containerformat.md",
-  "title": "Enum protos.google.cloud.visionai.v1.IngestAssetRequest.Config.VideoType.ContainerFormat (0.4.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:14:40.064971+00:00"
-}

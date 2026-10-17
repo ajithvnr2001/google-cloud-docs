@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/compute/docs/reference/rest/v1/reservations/getIamPolicy/",
-  "file": "compute/docs/reference/rest/v1/reservations/getIamPolicy.md",
-  "title": "Method: reservations.getIamPolicy \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:00:44.240267+00:00"
-}

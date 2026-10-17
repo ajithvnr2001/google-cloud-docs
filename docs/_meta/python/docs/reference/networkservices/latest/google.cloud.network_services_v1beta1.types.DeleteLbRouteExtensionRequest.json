@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/networkservices/latest/google.cloud.network_services_v1beta1.types.DeleteLbRouteExtensionRequest",
-  "file": "python/docs/reference/networkservices/latest/google.cloud.network_services_v1beta1.types.DeleteLbRouteExtensionRequest.md",
-  "title": "Class DeleteLbRouteExtensionRequest (0.10.4) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:50:36.389198+00:00"
-}

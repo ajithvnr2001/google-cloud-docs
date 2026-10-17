@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/deploy/docs/api/reference/rest/v1/projects.locations.deliveryPipelines.releases.rollouts.jobRuns/list/",
-  "file": "deploy/docs/api/reference/rest/v1/projects.locations.deliveryPipelines.releases.rollouts.jobRuns/list.md",
-  "title": "Method: projects.locations.deliveryPipelines.releases.rollouts.jobRuns.list \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:26:50.578774+00:00"
-}

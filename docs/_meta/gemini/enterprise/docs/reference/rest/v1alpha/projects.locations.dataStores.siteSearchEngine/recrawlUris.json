@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/gemini/enterprise/docs/reference/rest/v1alpha/projects.locations.dataStores.siteSearchEngine/recrawlUris/",
-  "file": "gemini/enterprise/docs/reference/rest/v1alpha/projects.locations.dataStores.siteSearchEngine/recrawlUris.md",
-  "title": "Method: projects.locations.dataStores.siteSearchEngine.recrawlUris \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:23:50.582854+00:00"
-}

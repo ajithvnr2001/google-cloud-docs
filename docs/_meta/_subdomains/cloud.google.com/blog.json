@@ -1,7 +1,0 @@
-{
-  "url": "https://cloud.google.com/blog/",
-  "file": "_subdomains/cloud.google.com/blog.md",
-  "title": "Google Cloud Blog | News, Features and Announcements",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:56:52.404739+00:00"
-}

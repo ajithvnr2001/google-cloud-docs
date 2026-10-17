@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/bigquery/docs/write-api-batch-load/",
-  "file": "bigquery/docs/write-api-batch-load.md",
-  "title": "Batch load data using the Storage Write API (gRPC) \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:43:45.785413+00:00"
-}

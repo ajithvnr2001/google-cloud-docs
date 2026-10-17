@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.schema.trainingjob.definition.AutoMlTablesInputs.AdditionalOptimizationObjectiveConfigCase",
-  "file": "java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.schema.trainingjob.definition.AutoMlTablesInputs.AdditionalOptimizati_4788cb8f.md",
-  "title": "Enum AutoMlTablesInputs.AdditionalOptimizationObjectiveConfigCase (3.100.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:34:50.074334+00:00"
-}

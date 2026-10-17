@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/connectors/latest/connectors/protos.google.cloud.connectors.v1.getconnectionschemametadatarequest",
-  "file": "nodejs/docs/reference/connectors/latest/connectors/protos.google.cloud.connectors.v1.getconnectionschemametadatarequest.md",
-  "title": "Class protos.google.cloud.connectors.v1.GetConnectionSchemaMetadataRequest (0.7.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:26:23.307789+00:00"
-}

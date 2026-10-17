@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.ServiceUsage.V1/latest/Google.Cloud.ServiceUsage.V1.DisableServiceRequest.Types.CheckIfServiceHasUsage",
-  "file": "dotnet/docs/reference/Google.Cloud.ServiceUsage.V1/latest/Google.Cloud.ServiceUsage.V1.DisableServiceRequest.Types.CheckIfServiceHasUsage.md",
-  "title": "Service Usage v1 API - Enum DisableServiceRequest.Types.CheckIfServiceHasUsage (2.6.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:50:06.611356+00:00"
-}

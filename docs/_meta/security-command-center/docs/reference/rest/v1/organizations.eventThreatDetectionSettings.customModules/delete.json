@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/reference/rest/v1/organizations.eventThreatDetectionSettings.customModules/delete/",
-  "file": "security-command-center/docs/reference/rest/v1/organizations.eventThreatDetectionSettings.customModules/delete.md",
-  "title": "Method: organizations.eventThreatDetectionSettings.customModules.delete \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:47:11.067612+00:00"
-}

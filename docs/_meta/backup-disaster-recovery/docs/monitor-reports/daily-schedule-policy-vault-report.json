@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/backup-disaster-recovery/docs/monitor-reports/daily-schedule-policy-vault-report/",
-  "file": "backup-disaster-recovery/docs/monitor-reports/daily-schedule-policy-vault-report.md",
-  "title": "View daily schedule compliance reports for vaulted backups in Cloud Logging. \u00a0|\u00a0 Backup and DR \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:25:32.181177+00:00"
-}

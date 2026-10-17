@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/speech/latest/google.cloud.speech_v2.types.BatchRecognizeMetadata.TranscriptionMetadataEntry",
-  "file": "python/docs/reference/speech/latest/google.cloud.speech_v2.types.BatchRecognizeMetadata.TranscriptionMetadataEntry.md",
-  "title": "Class TranscriptionMetadataEntry (2.41.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:28:50.567181+00:00"
-}

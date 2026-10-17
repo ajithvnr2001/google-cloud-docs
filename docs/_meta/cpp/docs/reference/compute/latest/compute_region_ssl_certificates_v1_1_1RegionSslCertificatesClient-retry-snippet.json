@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/cpp/docs/reference/compute/latest/compute_region_ssl_certificates_v1_1_1RegionSslCertificatesClient-retry-snippet/",
-  "file": "cpp/docs/reference/compute/latest/compute_region_ssl_certificates_v1_1_1RegionSslCertificatesClient-retry-snippet.md",
-  "title": "Override compute_region_ssl_certificates_v1::RegionSslCertificatesClient Retry Policies \u00a0|\u00a0 C++ client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:19:06.481608+00:00"
-}

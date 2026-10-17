@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dataplex-v1/latest/Google-Cloud-Dataplex-V1-DataQualityRule-RuleSource/",
-  "file": "ruby/docs/reference/google-cloud-dataplex-v1/latest/Google-Cloud-Dataplex-V1-DataQualityRule-RuleSource.md",
-  "title": "Dataplex V1 API - Class Google::Cloud::Dataplex::V1::DataQualityRule::RuleSource (v2.10.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:04:03.113950+00:00"
-}

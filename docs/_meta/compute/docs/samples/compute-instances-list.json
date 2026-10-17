@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/compute/docs/samples/compute-instances-list/",
-  "file": "compute/docs/samples/compute-instances-list.md",
-  "title": "List VMs in a zone \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:29:15.397967+00:00"
-}

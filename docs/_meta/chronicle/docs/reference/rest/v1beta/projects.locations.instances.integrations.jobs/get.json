@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/reference/rest/v1beta/projects.locations.instances.integrations.jobs/get/",
-  "file": "chronicle/docs/reference/rest/v1beta/projects.locations.instances.integrations.jobs/get.md",
-  "title": "Method: jobs.get \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:23:37.786378+00:00"
-}

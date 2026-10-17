@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/certificate-manager/docs/reference/certificate-manager/rest/v1/projects.locations.certificateMaps.certificateMapEntries/get/",
-  "file": "certificate-manager/docs/reference/certificate-manager/rest/v1/projects.locations.certificateMaps.certificateMapEntries/get.md",
-  "title": "Method: projects.locations.certificateMaps.certificateMapEntries.get \u00a0|\u00a0 Certificate Manager \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:44:32.613118+00:00"
-}

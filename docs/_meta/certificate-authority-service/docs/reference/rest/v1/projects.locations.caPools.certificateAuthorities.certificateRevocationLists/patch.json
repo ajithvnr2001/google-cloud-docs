@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/certificate-authority-service/docs/reference/rest/v1/projects.locations.caPools.certificateAuthorities.certificateRevocationLists/patch/",
-  "file": "certificate-authority-service/docs/reference/rest/v1/projects.locations.caPools.certificateAuthorities.certificateRevocationLists/patch.md",
-  "title": "Method: projects.locations.caPools.certificateAuthorities.certificateRevocationLists.patch \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:03:06.270801+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dataform/reference/rest/v1beta1/projects.locations.folders/getIamPolicy/",
-  "file": "dataform/reference/rest/v1beta1/projects.locations.folders/getIamPolicy.md",
-  "title": "Method: projects.locations.folders.getIamPolicy \u00a0|\u00a0 Dataform \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:18:41.215368+00:00"
-}

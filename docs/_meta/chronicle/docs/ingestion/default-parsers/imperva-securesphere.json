@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/imperva-securesphere/",
-  "file": "chronicle/docs/ingestion/default-parsers/imperva-securesphere.md",
-  "title": "Collect Imperva SecureSphere Management logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:14:52.762360+00:00"
-}

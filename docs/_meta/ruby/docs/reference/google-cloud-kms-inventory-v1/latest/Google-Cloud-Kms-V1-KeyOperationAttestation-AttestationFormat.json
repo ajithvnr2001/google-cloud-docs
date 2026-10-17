@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-kms-inventory-v1/latest/Google-Cloud-Kms-V1-KeyOperationAttestation-AttestationFormat/",
-  "file": "ruby/docs/reference/google-cloud-kms-inventory-v1/latest/Google-Cloud-Kms-V1-KeyOperationAttestation-AttestationFormat.md",
-  "title": "KMS Inventory V1 API - Module Google::Cloud::Kms::V1::KeyOperationAttestation::AttestationFormat (v0.24.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:43:03.846944+00:00"
-}

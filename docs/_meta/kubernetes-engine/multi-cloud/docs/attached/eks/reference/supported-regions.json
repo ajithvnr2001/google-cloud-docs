@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/eks/reference/supported-regions/",
-  "file": "kubernetes-engine/multi-cloud/docs/attached/eks/reference/supported-regions.md",
-  "title": "EKS attached clusters supported regions \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:18:27.246332+00:00"
-}

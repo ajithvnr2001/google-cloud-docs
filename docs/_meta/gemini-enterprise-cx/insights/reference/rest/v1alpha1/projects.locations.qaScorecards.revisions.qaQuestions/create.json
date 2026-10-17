@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/gemini-enterprise-cx/insights/reference/rest/v1alpha1/projects.locations.qaScorecards.revisions.qaQuestions/create/",
-  "file": "gemini-enterprise-cx/insights/reference/rest/v1alpha1/projects.locations.qaScorecards.revisions.qaQuestions/create.md",
-  "title": "Method: projects.locations.qaScorecards.revisions.qaQuestions.create \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:55:22.273596+00:00"
-}

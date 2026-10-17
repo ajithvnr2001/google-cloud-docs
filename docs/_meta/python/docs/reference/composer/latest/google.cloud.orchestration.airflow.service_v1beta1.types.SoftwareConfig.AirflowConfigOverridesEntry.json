@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/composer/latest/google.cloud.orchestration.airflow.service_v1beta1.types.SoftwareConfig.AirflowConfigOverridesEntry",
-  "file": "python/docs/reference/composer/latest/google.cloud.orchestration.airflow.service_v1beta1.types.SoftwareConfig.AirflowConfigOverridesEntry.md",
-  "title": "Class AirflowConfigOverridesEntry (1.23.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:14:42.903540+00:00"
-}

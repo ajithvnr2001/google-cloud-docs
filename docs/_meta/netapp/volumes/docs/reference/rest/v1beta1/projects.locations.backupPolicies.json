@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/netapp/volumes/docs/reference/rest/v1beta1/projects.locations.backupPolicies",
-  "file": "netapp/volumes/docs/reference/rest/v1beta1/projects.locations.backupPolicies.md",
-  "title": "REST Resource: projects.locations.backupPolicies \u00a0|\u00a0 NetApp Volumes \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:07:25.199122+00:00"
-}

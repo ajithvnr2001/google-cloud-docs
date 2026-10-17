@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/gemini/enterprise/docs/reference/rest/v1alpha/projects.locations.collections.engines.sessions.alphaEvolveExperiments.alphaEvolvePrograms/create/",
-  "file": "gemini/enterprise/docs/reference/rest/v1alpha/projects.locations.collections.engines.sessions.alphaEvolveExperiments.alphaEvolvePrograms/create.md",
-  "title": "Method: projects.locations.collections.engines.sessions.alphaEvolveExperiments.alphaEvolvePrograms.create \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:04:23.209706+00:00"
-}

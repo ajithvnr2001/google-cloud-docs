@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/bigtable-api/latest/bigtable-api/protos.google.bigtable.admin.v2.ideleteappprofilerequest",
-  "file": "nodejs/docs/reference/bigtable-api/latest/bigtable-api/protos.google.bigtable.admin.v2.ideleteappprofilerequest.md",
-  "title": "Interface protos.google.bigtable.admin.v2.IDeleteAppProfileRequest (0.9.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:09:20.856561+00:00"
-}

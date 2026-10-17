@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/dialogflow-cx/latest/google.cloud.dialogflowcx_v3.types.Agent.GitIntegrationSettings.GithubSettings",
-  "file": "python/docs/reference/dialogflow-cx/latest/google.cloud.dialogflowcx_v3.types.Agent.GitIntegrationSettings.GithubSettings.md",
-  "title": "Class GithubSettings (2.8.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:49:01.713635+00:00"
-}

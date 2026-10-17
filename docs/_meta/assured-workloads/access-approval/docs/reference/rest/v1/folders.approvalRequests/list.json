@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/assured-workloads/access-approval/docs/reference/rest/v1/folders.approvalRequests/list/",
-  "file": "assured-workloads/access-approval/docs/reference/rest/v1/folders.approvalRequests/list.md",
-  "title": "Method: folders.approvalRequests.list \u00a0|\u00a0 Access Approval \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:06:27.479767+00:00"
-}

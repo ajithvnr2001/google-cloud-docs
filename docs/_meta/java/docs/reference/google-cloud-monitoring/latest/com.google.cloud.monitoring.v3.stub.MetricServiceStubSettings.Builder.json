@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-monitoring/latest/com.google.cloud.monitoring.v3.stub.MetricServiceStubSettings.Builder",
-  "file": "java/docs/reference/google-cloud-monitoring/latest/com.google.cloud.monitoring.v3.stub.MetricServiceStubSettings.Builder.md",
-  "title": "Class MetricServiceStubSettings.Builder (3.100.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:50:26.869075+00:00"
-}

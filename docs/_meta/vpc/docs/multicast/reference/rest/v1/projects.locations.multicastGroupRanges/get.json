@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/vpc/docs/multicast/reference/rest/v1/projects.locations.multicastGroupRanges/get/",
-  "file": "vpc/docs/multicast/reference/rest/v1/projects.locations.multicastGroupRanges/get.md",
-  "title": "Method: projects.locations.multicastGroupRanges.get \u00a0|\u00a0 Virtual Private Cloud \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:42:10.508561+00:00"
-}

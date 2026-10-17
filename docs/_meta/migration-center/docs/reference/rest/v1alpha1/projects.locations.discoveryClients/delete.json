@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/migration-center/docs/reference/rest/v1alpha1/projects.locations.discoveryClients/delete/",
-  "file": "migration-center/docs/reference/rest/v1alpha1/projects.locations.discoveryClients/delete.md",
-  "title": "Method: projects.locations.discoveryClients.delete \u00a0|\u00a0 Migration Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:25:43.297810+00:00"
-}

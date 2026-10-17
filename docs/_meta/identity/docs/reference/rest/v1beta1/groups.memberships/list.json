@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/identity/docs/reference/rest/v1beta1/groups.memberships/list/",
-  "file": "identity/docs/reference/rest/v1beta1/groups.memberships/list.md",
-  "title": "Method: groups.memberships.list \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:38:52.303354+00:00"
-}

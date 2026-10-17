@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-vmware_engine-v1/latest/Google-Cloud-VmwareEngine-V1-CreateExternalAddressRequest/",
-  "file": "ruby/docs/reference/google-cloud-vmware_engine-v1/latest/Google-Cloud-VmwareEngine-V1-CreateExternalAddressRequest.md",
-  "title": "Google Cloud VMware Engine V1 API - Class Google::Cloud::VmwareEngine::V1::CreateExternalAddressRequest (v1.5.2) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:35:49.551646+00:00"
-}

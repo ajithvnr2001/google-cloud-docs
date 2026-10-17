@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/firestore-api/latest/firestore-api/protos.google.firestore.v1beta1.undeliverablefirstgenevent.documentchangetype",
-  "file": "nodejs/docs/reference/firestore-api/latest/firestore-api/protos.google.firestore.v1beta1.undeliverablefirstgenevent.documentchangetype.md",
-  "title": "Enum protos.google.firestore.v1beta1.UndeliverableFirstGenEvent.DocumentChangeType (0.2.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:20:25.847942+00:00"
-}

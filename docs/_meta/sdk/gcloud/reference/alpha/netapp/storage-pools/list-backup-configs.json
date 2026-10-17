@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/sdk/gcloud/reference/alpha/netapp/storage-pools/list-backup-configs/",
-  "file": "sdk/gcloud/reference/alpha/netapp/storage-pools/list-backup-configs.md",
-  "title": "gcloud alpha netapp storage-pools list-backup-configs \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:57:38.949397+00:00"
-}

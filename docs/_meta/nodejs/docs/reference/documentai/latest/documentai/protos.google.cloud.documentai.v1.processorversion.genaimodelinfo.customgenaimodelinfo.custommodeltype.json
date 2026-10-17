@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/documentai/latest/documentai/protos.google.cloud.documentai.v1.processorversion.genaimodelinfo.customgenaimodelinfo.custommodeltype",
-  "file": "nodejs/docs/reference/documentai/latest/documentai/protos.google.cloud.documentai.v1.processorversion.genaimodelinfo.customgenaimodelinfo.custommodeltype.md",
-  "title": "Enum protos.google.cloud.documentai.v1.ProcessorVersion.GenAiModelInfo.CustomGenAiModelInfo.CustomModelType (10.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:29:11.082895+00:00"
-}

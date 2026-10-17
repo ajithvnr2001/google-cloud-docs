@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/google-cloud-storagebatchoperations/latest/google.cloud.storagebatchoperations_v1.services.storage_batch_operations.pagers.ListBucketOperationsPager",
-  "file": "python/docs/reference/google-cloud-storagebatchoperations/latest/google.cloud.storagebatchoperations_v1.services.storage_batch_operations.pagers.ListBucketOperationsPager.md",
-  "title": "Class ListBucketOperationsPager (0.8.1) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:25:16.916013+00:00"
-}

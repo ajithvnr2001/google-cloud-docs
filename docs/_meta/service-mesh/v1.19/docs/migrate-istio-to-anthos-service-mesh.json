@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-mesh/v1.19/docs/migrate-istio-to-anthos-service-mesh/",
-  "file": "service-mesh/v1.19/docs/migrate-istio-to-anthos-service-mesh.md",
-  "title": "Migrate from Istio 1.11 or later to Cloud Service Mesh \u00a0|\u00a0 Cloud Service Mesh v1.19 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:32:32.437278+00:00"
-}

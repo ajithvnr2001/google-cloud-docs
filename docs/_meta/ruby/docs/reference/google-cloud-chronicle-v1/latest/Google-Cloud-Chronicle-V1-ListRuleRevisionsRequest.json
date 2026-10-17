@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-chronicle-v1/latest/Google-Cloud-Chronicle-V1-ListRuleRevisionsRequest/",
-  "file": "ruby/docs/reference/google-cloud-chronicle-v1/latest/Google-Cloud-Chronicle-V1-ListRuleRevisionsRequest.md",
-  "title": "Chronicle V1 API - Class Google::Cloud::Chronicle::V1::ListRuleRevisionsRequest (v1.1.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:59:57.313100+00:00"
-}

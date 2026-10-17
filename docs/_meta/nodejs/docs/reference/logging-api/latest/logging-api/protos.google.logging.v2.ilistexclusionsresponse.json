@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/logging-api/latest/logging-api/protos.google.logging.v2.ilistexclusionsresponse",
-  "file": "nodejs/docs/reference/logging-api/latest/logging-api/protos.google.logging.v2.ilistexclusionsresponse.md",
-  "title": "Interface protos.google.logging.v2.IListExclusionsResponse (0.2.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:44:40.002413+00:00"
-}

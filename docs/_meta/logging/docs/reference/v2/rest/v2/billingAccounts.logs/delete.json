@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.logs/delete/",
-  "file": "logging/docs/reference/v2/rest/v2/billingAccounts.logs/delete.md",
-  "title": "Method: billingAccounts.logs.delete \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:42:46.662082+00:00"
-}

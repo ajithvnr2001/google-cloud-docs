@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/sdk/gcloud/reference/alpha/kms/ekm-connections/remove-iam-policy-binding/",
-  "file": "sdk/gcloud/reference/alpha/kms/ekm-connections/remove-iam-policy-binding.md",
-  "title": "gcloud alpha kms ekm-connections remove-iam-policy-binding \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:00:49.747768+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/aws/how-to/configure-efs/",
-  "file": "kubernetes-engine/multi-cloud/docs/aws/how-to/configure-efs.md",
-  "title": "Provision a Persistent Volume with EFS \u00a0|\u00a0 GKE on AWS \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:49:17.621363+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-apps-events-subscriptions-v1beta/latest/Google-Apps-Events-Subscriptions-V1beta-SubscriptionsService-Rest-Client/",
-  "file": "ruby/docs/reference/google-apps-events-subscriptions-v1beta/latest/Google-Apps-Events-Subscriptions-V1beta-SubscriptionsService-Rest-Client.md",
-  "title": "Google Workspace Events V1BETA API - Class Google::Apps::Events::Subscriptions::V1beta::SubscriptionsService::Rest::Client (v0.6.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:21:34.537056+00:00"
-}

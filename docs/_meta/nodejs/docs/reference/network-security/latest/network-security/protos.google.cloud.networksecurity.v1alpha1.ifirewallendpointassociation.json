@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/network-security/latest/network-security/protos.google.cloud.networksecurity.v1alpha1.ifirewallendpointassociation",
-  "file": "nodejs/docs/reference/network-security/latest/network-security/protos.google.cloud.networksecurity.v1alpha1.ifirewallendpointassociation.md",
-  "title": "Interface protos.google.cloud.networksecurity.v1alpha1.IFirewallEndpointAssociation (4.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:10:45.345130+00:00"
-}

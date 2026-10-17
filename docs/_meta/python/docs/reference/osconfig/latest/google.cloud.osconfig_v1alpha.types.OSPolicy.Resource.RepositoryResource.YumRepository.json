@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/osconfig/latest/google.cloud.osconfig_v1alpha.types.OSPolicy.Resource.RepositoryResource.YumRepository",
-  "file": "python/docs/reference/osconfig/latest/google.cloud.osconfig_v1alpha.types.OSPolicy.Resource.RepositoryResource.YumRepository.md",
-  "title": "Class YumRepository (1.26.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:54:16.230466+00:00"
-}

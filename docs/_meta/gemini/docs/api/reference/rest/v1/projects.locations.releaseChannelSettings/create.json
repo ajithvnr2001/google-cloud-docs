@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/gemini/docs/api/reference/rest/v1/projects.locations.releaseChannelSettings/create/",
-  "file": "gemini/docs/api/reference/rest/v1/projects.locations.releaseChannelSettings/create.md",
-  "title": "Method: projects.locations.releaseChannelSettings.create \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:40:21.399084+00:00"
-}

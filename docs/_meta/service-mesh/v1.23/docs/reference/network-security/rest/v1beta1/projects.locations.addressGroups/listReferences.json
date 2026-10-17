@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-mesh/v1.23/docs/reference/network-security/rest/v1beta1/projects.locations.addressGroups/listReferences/",
-  "file": "service-mesh/v1.23/docs/reference/network-security/rest/v1beta1/projects.locations.addressGroups/listReferences.md",
-  "title": "Method: projects.locations.addressGroups.listReferences \u00a0|\u00a0 Cloud Service Mesh v1.23 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:42:29.924214+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-memorystore-v1beta/latest/Google-Cloud-Memorystore-V1beta-DeleteTokenAuthUserRequest/",
-  "file": "ruby/docs/reference/google-cloud-memorystore-v1beta/latest/Google-Cloud-Memorystore-V1beta-DeleteTokenAuthUserRequest.md",
-  "title": "Memorystore V1BETA API - Class Google::Cloud::Memorystore::V1beta::DeleteTokenAuthUserRequest (v0.14.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:31:59.236037+00:00"
-}

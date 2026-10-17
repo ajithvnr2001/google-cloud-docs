@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-retail/latest/com.google.cloud.retail.v2alpha.GenerativeQuestionServiceGrpc.GenerativeQuestionServiceBlockingStub",
-  "file": "java/docs/reference/google-cloud-retail/latest/com.google.cloud.retail.v2alpha.GenerativeQuestionServiceGrpc.GenerativeQuestionServiceBlockingStub.md",
-  "title": "Class GenerativeQuestionServiceGrpc.GenerativeQuestionServiceBlockingStub (2.101.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:22:07.962371+00:00"
-}

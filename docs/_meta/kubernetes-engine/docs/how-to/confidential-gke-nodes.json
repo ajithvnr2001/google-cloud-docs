@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/how-to/confidential-gke-nodes/",
-  "file": "kubernetes-engine/docs/how-to/confidential-gke-nodes.md",
-  "title": "Encrypt workload data in-use with Confidential GKE Nodes \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:23:16.517713+00:00"
-}

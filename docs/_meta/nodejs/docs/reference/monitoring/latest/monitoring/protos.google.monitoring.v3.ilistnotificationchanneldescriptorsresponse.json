@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/monitoring/latest/monitoring/protos.google.monitoring.v3.ilistnotificationchanneldescriptorsresponse",
-  "file": "nodejs/docs/reference/monitoring/latest/monitoring/protos.google.monitoring.v3.ilistnotificationchanneldescriptorsresponse.md",
-  "title": "Interface protos.google.monitoring.v3.IListNotificationChannelDescriptorsResponse (6.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:21:09.152006+00:00"
-}

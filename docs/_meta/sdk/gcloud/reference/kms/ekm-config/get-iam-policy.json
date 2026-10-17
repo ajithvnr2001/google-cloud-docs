@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/sdk/gcloud/reference/kms/ekm-config/get-iam-policy/",
-  "file": "sdk/gcloud/reference/kms/ekm-config/get-iam-policy.md",
-  "title": "gcloud kms ekm-config get-iam-policy \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:04:51.713152+00:00"
-}

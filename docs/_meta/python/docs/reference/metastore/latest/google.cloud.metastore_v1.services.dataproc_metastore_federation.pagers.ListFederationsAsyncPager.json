@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/metastore/latest/google.cloud.metastore_v1.services.dataproc_metastore_federation.pagers.ListFederationsAsyncPager",
-  "file": "python/docs/reference/metastore/latest/google.cloud.metastore_v1.services.dataproc_metastore_federation.pagers.ListFederationsAsyncPager.md",
-  "title": "Class ListFederationsAsyncPager (1.24.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:33:11.010212+00:00"
-}

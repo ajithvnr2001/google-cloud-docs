@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/looker/docs/best-practices/dry-cookbook-1/",
-  "file": "looker/docs/best-practices/dry-cookbook-1.md",
-  "title": "Maximizing code reusability with DRY LookML: Define fields once, use substitution operators everywhere \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:01:49.246827+00:00"
-}

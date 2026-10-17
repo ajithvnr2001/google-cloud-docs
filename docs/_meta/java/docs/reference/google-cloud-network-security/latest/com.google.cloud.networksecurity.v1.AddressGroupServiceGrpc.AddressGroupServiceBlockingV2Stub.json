@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-network-security/latest/com.google.cloud.networksecurity.v1.AddressGroupServiceGrpc.AddressGroupServiceBlockingV2Stub",
-  "file": "java/docs/reference/google-cloud-network-security/latest/com.google.cloud.networksecurity.v1.AddressGroupServiceGrpc.AddressGroupServiceBlockingV2Stub.md",
-  "title": "Class AddressGroupServiceGrpc.AddressGroupServiceBlockingV2Stub (0.102.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:29:25.048652+00:00"
-}

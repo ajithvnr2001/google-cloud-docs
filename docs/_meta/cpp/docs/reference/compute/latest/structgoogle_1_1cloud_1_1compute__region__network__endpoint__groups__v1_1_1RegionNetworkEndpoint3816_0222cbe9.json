@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/cpp/docs/reference/compute/latest/structgoogle_1_1cloud_1_1compute__region__network__endpoint__groups__v1_1_1RegionNetworkEndpoint381636cd2c06fd387ec06551dfe0b4a6/",
-  "file": "cpp/docs/reference/compute/latest/structgoogle_1_1cloud_1_1compute__region__network__endpoint__groups__v1_1_1RegionNetworkEndpoint3816_0222cbe9.md",
-  "title": "Struct RegionNetworkEndpointGroupsConnectionIdempotencyPolicyOption (3.13.0-rc) \u00a0|\u00a0 C++ client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:55:18.964081+00:00"
-}

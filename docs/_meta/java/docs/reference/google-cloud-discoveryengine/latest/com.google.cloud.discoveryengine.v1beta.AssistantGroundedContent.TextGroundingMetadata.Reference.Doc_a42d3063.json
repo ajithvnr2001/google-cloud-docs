@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-discoveryengine/latest/com.google.cloud.discoveryengine.v1beta.AssistantGroundedContent.TextGroundingMetadata.Reference.DocumentMetadata.Builder",
-  "file": "java/docs/reference/google-cloud-discoveryengine/latest/com.google.cloud.discoveryengine.v1beta.AssistantGroundedContent.TextGroundingMetadata.Reference.Doc_a42d3063.md",
-  "title": "Class AssistantGroundedContent.TextGroundingMetadata.Reference.DocumentMetadata.Builder (0.95.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:21:39.118471+00:00"
-}

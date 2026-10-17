@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-mesh/v1.28/docs/reference/network-services/rest/v1/projects.locations.httpRoutes/setIamPolicy/",
-  "file": "service-mesh/v1.28/docs/reference/network-services/rest/v1/projects.locations.httpRoutes/setIamPolicy.md",
-  "title": "Method: projects.locations.httpRoutes.setIamPolicy \u00a0|\u00a0 Cloud Service Mesh \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:31:26.329043+00:00"
-}

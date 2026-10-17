@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Iam.Admin.V1/latest/Google.Cloud.Iam.Admin.V1.QueryAuditableServicesResponse.Types",
-  "file": "dotnet/docs/reference/Google.Cloud.Iam.Admin.V1/latest/Google.Cloud.Iam.Admin.V1.QueryAuditableServicesResponse.Types.md",
-  "title": "Identity and Access Management (IAM) v1 API - Class QueryAuditableServicesResponse.Types (2.5.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:14:54.008280+00:00"
-}

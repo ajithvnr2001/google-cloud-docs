@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3-AlertPolicy-AlertStrategy-NotificationRateLimit/",
-  "file": "ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3-AlertPolicy-AlertStrategy-NotificationRateLimit.md",
-  "title": "Cloud Monitoring V3 API - Class Google::Cloud::Monitoring::V3::AlertPolicy::AlertStrategy::NotificationRateLimit (v1.10.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:34:16.153019+00:00"
-}

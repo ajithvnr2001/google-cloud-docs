@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/scheduler/docs/reference/rest/v1/projects.locations.jobs/delete/",
-  "file": "scheduler/docs/reference/rest/v1/projects.locations.jobs/delete.md",
-  "title": "Method: projects.locations.jobs.delete \u00a0|\u00a0 Cloud Scheduler \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:10:01.164420+00:00"
-}

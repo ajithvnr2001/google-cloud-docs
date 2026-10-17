@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-artifact_registry-v1beta2/latest/Google-Cloud-ArtifactRegistry-V1beta2-OperationMetadata/",
-  "file": "ruby/docs/reference/google-cloud-artifact_registry-v1beta2/latest/Google-Cloud-ArtifactRegistry-V1beta2-OperationMetadata.md",
-  "title": "Artifact Registry V1beta2 API - Class Google::Cloud::ArtifactRegistry::V1beta2::OperationMetadata (v0.20.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:06:12.315952+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/reference/rest/v1/projects.locations.azureClients/create/",
-  "file": "kubernetes-engine/multi-cloud/docs/reference/rest/v1/projects.locations.azureClients/create.md",
-  "title": "Method: projects.locations.azureClients.create \u00a0|\u00a0 GKE Multi-Cloud \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:42:22.076167+00:00"
-}

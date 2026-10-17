@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/spanner-api/latest/spanner-api/protos.google.spanner.admin.instance.v1.autoscalingconfig.iasymmetricautoscalingoption",
-  "file": "nodejs/docs/reference/spanner-api/latest/spanner-api/protos.google.spanner.admin.instance.v1.autoscalingconfig.iasymmetricautoscalingoption.md",
-  "title": "Interface protos.google.spanner.admin.instance.v1.AutoscalingConfig.IAsymmetricAutoscalingOption (0.2.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:50:24.478820+00:00"
-}

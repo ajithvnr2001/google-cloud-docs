@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/data/latest/data/protos.google.analytics.data.v1alpha.ieventsegmentexclusion",
-  "file": "nodejs/docs/reference/data/latest/data/protos.google.analytics.data.v1alpha.ieventsegmentexclusion.md",
-  "title": "Interface protos.google.analytics.data.v1alpha.IEventSegmentExclusion (7.2.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:16:16.345323+00:00"
-}

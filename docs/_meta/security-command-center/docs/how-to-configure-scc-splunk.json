@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/how-to-configure-scc-splunk/",
-  "file": "security-command-center/docs/how-to-configure-scc-splunk.md",
-  "title": "Send Security Command Center data to Splunk \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:14:15.736183+00:00"
-}

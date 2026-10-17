@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/visionai/latest/visionai/protos.google.cloud.visionai.v1.analyzeassetmetadata.analysisstatus.state",
-  "file": "nodejs/docs/reference/visionai/latest/visionai/protos.google.cloud.visionai.v1.analyzeassetmetadata.analysisstatus.state.md",
-  "title": "Enum protos.google.cloud.visionai.v1.AnalyzeAssetMetadata.AnalysisStatus.State (0.4.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:09:49.601650+00:00"
-}

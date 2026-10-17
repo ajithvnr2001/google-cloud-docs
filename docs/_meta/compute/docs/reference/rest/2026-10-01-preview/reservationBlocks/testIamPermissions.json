@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/compute/docs/reference/rest/2026-10-01-preview/reservationBlocks/testIamPermissions/",
-  "file": "compute/docs/reference/rest/2026-10-01-preview/reservationBlocks/testIamPermissions.md",
-  "title": "Method: reservationBlocks.testIamPermissions \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:51:15.688957+00:00"
-}

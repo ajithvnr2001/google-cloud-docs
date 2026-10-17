@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/iam/docs/reference/rest/v3beta/organizations.locations.principalAccessBoundaryPolicies/delete/",
-  "file": "iam/docs/reference/rest/v3beta/organizations.locations.principalAccessBoundaryPolicies/delete.md",
-  "title": "Method: organizations.locations.principalAccessBoundaryPolicies.delete \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:53:36.916677+00:00"
-}

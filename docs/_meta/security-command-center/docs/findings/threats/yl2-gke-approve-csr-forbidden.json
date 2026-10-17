@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/yl2-gke-approve-csr-forbidden/",
-  "file": "security-command-center/docs/findings/threats/yl2-gke-approve-csr-forbidden.md",
-  "title": "Credential Access: Failed Attempt to Approve Kubernetes Certificate Signing Request (CSR) \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:24:45.217239+00:00"
-}

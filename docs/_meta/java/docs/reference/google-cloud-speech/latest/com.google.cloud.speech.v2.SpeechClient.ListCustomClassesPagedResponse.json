@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.SpeechClient.ListCustomClassesPagedResponse",
-  "file": "java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.SpeechClient.ListCustomClassesPagedResponse.md",
-  "title": "Class SpeechClient.ListCustomClassesPagedResponse (4.94.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:28:53.612713+00:00"
-}

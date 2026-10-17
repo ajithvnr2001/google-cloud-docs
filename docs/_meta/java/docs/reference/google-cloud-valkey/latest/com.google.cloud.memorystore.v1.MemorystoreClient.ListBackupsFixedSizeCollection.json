@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-valkey/latest/com.google.cloud.memorystore.v1.MemorystoreClient.ListBackupsFixedSizeCollection",
-  "file": "java/docs/reference/google-cloud-valkey/latest/com.google.cloud.memorystore.v1.MemorystoreClient.ListBackupsFixedSizeCollection.md",
-  "title": "Class MemorystoreClient.ListBackupsFixedSizeCollection (0.45.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:02:35.968465+00:00"
-}

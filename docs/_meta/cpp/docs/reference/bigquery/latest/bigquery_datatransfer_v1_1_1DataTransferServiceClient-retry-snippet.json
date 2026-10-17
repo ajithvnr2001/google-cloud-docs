@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/cpp/docs/reference/bigquery/latest/bigquery_datatransfer_v1_1_1DataTransferServiceClient-retry-snippet/",
-  "file": "cpp/docs/reference/bigquery/latest/bigquery_datatransfer_v1_1_1DataTransferServiceClient-retry-snippet.md",
-  "title": "Override bigquery_datatransfer_v1::DataTransferServiceClient Retry Policies \u00a0|\u00a0 C++ client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:54:56.915395+00:00"
-}

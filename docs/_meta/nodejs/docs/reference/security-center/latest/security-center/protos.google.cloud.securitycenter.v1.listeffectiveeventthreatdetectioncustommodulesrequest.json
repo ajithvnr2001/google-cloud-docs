@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/security-center/latest/security-center/protos.google.cloud.securitycenter.v1.listeffectiveeventthreatdetectioncustommodulesrequest",
-  "file": "nodejs/docs/reference/security-center/latest/security-center/protos.google.cloud.securitycenter.v1.listeffectiveeventthreatdetectioncustommodulesrequest.md",
-  "title": "Class protos.google.cloud.securitycenter.v1.ListEffectiveEventThreatDetectionCustomModulesRequest (10.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:34:30.239743+00:00"
-}

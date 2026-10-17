@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/proofpoint-web-browser-isolation/",
-  "file": "chronicle/docs/ingestion/default-parsers/proofpoint-web-browser-isolation.md",
-  "title": "Collect Proofpoint Web Browser Isolation logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:16:11.362229+00:00"
-}

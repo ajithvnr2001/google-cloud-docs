@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-workload_identity-v1/latest/Google-Cloud-WorkloadIdentity-V1-GenerateServiceAgentsRequest/",
-  "file": "ruby/docs/reference/google-cloud-workload_identity-v1/latest/Google-Cloud-WorkloadIdentity-V1-GenerateServiceAgentsRequest.md",
-  "title": "Workload Identity V1 API - Class Google::Cloud::WorkloadIdentity::V1::GenerateServiceAgentsRequest (v0.1.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:00:02.654693+00:00"
-}

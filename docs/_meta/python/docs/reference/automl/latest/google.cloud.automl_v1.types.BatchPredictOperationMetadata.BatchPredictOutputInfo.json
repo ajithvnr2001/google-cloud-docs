@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/automl/latest/google.cloud.automl_v1.types.BatchPredictOperationMetadata.BatchPredictOutputInfo",
-  "file": "python/docs/reference/automl/latest/google.cloud.automl_v1.types.BatchPredictOperationMetadata.BatchPredictOutputInfo.md",
-  "title": "Class BatchPredictOutputInfo (2.21.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:57:22.594054+00:00"
-}

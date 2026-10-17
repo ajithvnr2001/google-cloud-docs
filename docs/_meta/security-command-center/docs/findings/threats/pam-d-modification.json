@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/pam-d-modification/",
-  "file": "security-command-center/docs/findings/threats/pam-d-modification.md",
-  "title": "Collection: Pam.d Modification \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:24:43.673816+00:00"
-}

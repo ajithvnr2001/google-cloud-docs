@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-mesh/v1.22/docs/reference/network-security/rest/v1beta1/projects.locations.gatewaySecurityPolicies.rules/delete/",
-  "file": "service-mesh/v1.22/docs/reference/network-security/rest/v1beta1/projects.locations.gatewaySecurityPolicies.rules/delete.md",
-  "title": "Method: projects.locations.gatewaySecurityPolicies.rules.delete \u00a0|\u00a0 Cloud Service Mesh v1.22 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:01:52.629420+00:00"
-}

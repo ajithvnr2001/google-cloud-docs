@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-agentidentity/latest/com.google.cloud.agentidentity.v1.AuthProviderServiceGrpc.AuthProviderServiceBlockingV2Stub",
-  "file": "java/docs/reference/google-cloud-agentidentity/latest/com.google.cloud.agentidentity.v1.AuthProviderServiceGrpc.AuthProviderServiceBlockingV2Stub.md",
-  "title": "Class AuthProviderServiceGrpc.AuthProviderServiceBlockingV2Stub (0.5.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:30:58.808126+00:00"
-}

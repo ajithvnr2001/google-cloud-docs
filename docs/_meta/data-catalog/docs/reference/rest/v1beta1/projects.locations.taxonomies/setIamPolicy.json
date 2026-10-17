@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/data-catalog/docs/reference/rest/v1beta1/projects.locations.taxonomies/setIamPolicy/",
-  "file": "data-catalog/docs/reference/rest/v1beta1/projects.locations.taxonomies/setIamPolicy.md",
-  "title": "Method: projects.locations.taxonomies.setIamPolicy \u00a0|\u00a0 Data Catalog Documentation \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:25:10.471871+00:00"
-}

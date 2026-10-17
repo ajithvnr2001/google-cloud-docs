@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/how-to/vtpms/",
-  "file": "kubernetes-engine/docs/how-to/vtpms.md",
-  "title": "Access vTPMs and attestation information in Confidential GKE Nodes \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:14:15.081724+00:00"
-}

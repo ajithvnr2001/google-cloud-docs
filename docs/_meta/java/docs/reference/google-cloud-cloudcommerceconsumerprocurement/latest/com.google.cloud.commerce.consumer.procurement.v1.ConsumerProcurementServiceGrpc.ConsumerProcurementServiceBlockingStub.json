@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudcommerceconsumerprocurement/latest/com.google.cloud.commerce.consumer.procurement.v1.ConsumerProcurementServiceGrpc.ConsumerProcurementServiceBlockingStub",
-  "file": "java/docs/reference/google-cloud-cloudcommerceconsumerprocurement/latest/com.google.cloud.commerce.consumer.procurement.v1.ConsumerProcurementServiceGrpc.ConsumerProcurementServiceBlockingStub.md",
-  "title": "Class ConsumerProcurementServiceGrpc.ConsumerProcurementServiceBlockingStub (0.97.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:29:48.425127+00:00"
-}

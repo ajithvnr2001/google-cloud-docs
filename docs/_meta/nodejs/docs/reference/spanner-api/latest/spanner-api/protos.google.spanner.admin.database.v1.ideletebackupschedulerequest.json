@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/spanner-api/latest/spanner-api/protos.google.spanner.admin.database.v1.ideletebackupschedulerequest",
-  "file": "nodejs/docs/reference/spanner-api/latest/spanner-api/protos.google.spanner.admin.database.v1.ideletebackupschedulerequest.md",
-  "title": "Interface protos.google.spanner.admin.database.v1.IDeleteBackupScheduleRequest (0.2.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:43:29.703816+00:00"
-}

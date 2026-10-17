@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/mongodb/",
-  "file": "stackdriver/docs/managed-prometheus/exporters/mongodb.md",
-  "title": "MongoDB \u00a0|\u00a0 Google Cloud Observability \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:04:23.897281+00:00"
-}

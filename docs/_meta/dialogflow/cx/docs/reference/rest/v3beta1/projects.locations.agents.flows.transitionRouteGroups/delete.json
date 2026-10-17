@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dialogflow/cx/docs/reference/rest/v3beta1/projects.locations.agents.flows.transitionRouteGroups/delete/",
-  "file": "dialogflow/cx/docs/reference/rest/v3beta1/projects.locations.agents.flows.transitionRouteGroups/delete.md",
-  "title": "Method: projects.locations.agents.flows.transitionRouteGroups.delete \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:35:55.311393+00:00"
-}

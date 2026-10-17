@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/database-migration/docs/postgresql-to-alloydb/migration-src-and-dest/",
-  "file": "database-migration/docs/postgresql-to-alloydb/migration-src-and-dest.md",
-  "title": "Supported source and destination databases \u00a0|\u00a0 Database Migration Service for PostgreSQL to AlloyDB \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:00:22.263386+00:00"
-}

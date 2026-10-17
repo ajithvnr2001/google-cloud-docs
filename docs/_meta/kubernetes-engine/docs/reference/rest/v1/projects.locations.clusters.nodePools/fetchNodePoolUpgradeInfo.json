@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools/fetchNodePoolUpgradeInfo/",
-  "file": "kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools/fetchNodePoolUpgradeInfo.md",
-  "title": "Method: projects.locations.clusters.nodePools.fetchNodePoolUpgradeInfo \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:40:38.184719+00:00"
-}

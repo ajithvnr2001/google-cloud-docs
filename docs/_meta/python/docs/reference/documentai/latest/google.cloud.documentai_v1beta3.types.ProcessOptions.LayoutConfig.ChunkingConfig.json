@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/documentai/latest/google.cloud.documentai_v1beta3.types.ProcessOptions.LayoutConfig.ChunkingConfig",
-  "file": "python/docs/reference/documentai/latest/google.cloud.documentai_v1beta3.types.ProcessOptions.LayoutConfig.ChunkingConfig.md",
-  "title": "Class ChunkingConfig (3.16.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:41:19.270662+00:00"
-}

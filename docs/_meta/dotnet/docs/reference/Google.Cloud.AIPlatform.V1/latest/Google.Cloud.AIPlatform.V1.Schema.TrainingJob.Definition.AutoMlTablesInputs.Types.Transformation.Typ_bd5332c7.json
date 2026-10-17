@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.AIPlatform.V1/latest/Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.TextTransformation",
-  "file": "dotnet/docs/reference/Google.Cloud.AIPlatform.V1/latest/Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Typ_bd5332c7.md",
-  "title": "Vertex AI v1 API - Class AutoMlTablesInputs.Types.Transformation.Types.TextTransformation (3.77.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:35:40.081897+00:00"
-}

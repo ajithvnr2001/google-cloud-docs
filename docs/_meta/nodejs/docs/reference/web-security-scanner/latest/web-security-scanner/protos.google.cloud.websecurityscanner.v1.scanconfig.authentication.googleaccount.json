@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/web-security-scanner/latest/web-security-scanner/protos.google.cloud.websecurityscanner.v1.scanconfig.authentication.googleaccount",
-  "file": "nodejs/docs/reference/web-security-scanner/latest/web-security-scanner/protos.google.cloud.websecurityscanner.v1.scanconfig.authentication.googleaccount.md",
-  "title": "Class protos.google.cloud.websecurityscanner.v1.ScanConfig.Authentication.GoogleAccount (5.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:12:49.730889+00:00"
-}

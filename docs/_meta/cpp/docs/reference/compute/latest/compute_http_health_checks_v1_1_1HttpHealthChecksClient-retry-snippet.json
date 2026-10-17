@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/cpp/docs/reference/compute/latest/compute_http_health_checks_v1_1_1HttpHealthChecksClient-retry-snippet/",
-  "file": "cpp/docs/reference/compute/latest/compute_http_health_checks_v1_1_1HttpHealthChecksClient-retry-snippet.md",
-  "title": "Override compute_http_health_checks_v1::HttpHealthChecksClient Retry Policies \u00a0|\u00a0 C++ client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:15:58.783064+00:00"
-}

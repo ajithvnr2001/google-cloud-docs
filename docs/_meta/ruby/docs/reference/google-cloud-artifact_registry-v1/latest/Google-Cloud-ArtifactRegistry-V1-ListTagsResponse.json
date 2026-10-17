@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-artifact_registry-v1/latest/Google-Cloud-ArtifactRegistry-V1-ListTagsResponse/",
-  "file": "ruby/docs/reference/google-cloud-artifact_registry-v1/latest/Google-Cloud-ArtifactRegistry-V1-ListTagsResponse.md",
-  "title": "Artifact Registry V1 API - Class Google::Cloud::ArtifactRegistry::V1::ListTagsResponse (v1.14.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:45:44.468602+00:00"
-}

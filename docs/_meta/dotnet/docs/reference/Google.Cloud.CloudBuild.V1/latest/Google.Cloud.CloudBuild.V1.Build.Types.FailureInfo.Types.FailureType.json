@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.CloudBuild.V1/latest/Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType",
-  "file": "dotnet/docs/reference/Google.Cloud.CloudBuild.V1/latest/Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType.md",
-  "title": "Cloud Build v1 API - Enum Build.Types.FailureInfo.Types.FailureType (2.21.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:36:12.789857+00:00"
-}

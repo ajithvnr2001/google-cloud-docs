@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/backup-disaster-recovery/docs/concepts/cloud_best_practices/",
-  "file": "backup-disaster-recovery/docs/concepts/cloud_best_practices.md",
-  "title": "Best practices for hourly Compute Engine instance backups \u00a0|\u00a0 Backup and DR \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:56:48.818123+00:00"
-}

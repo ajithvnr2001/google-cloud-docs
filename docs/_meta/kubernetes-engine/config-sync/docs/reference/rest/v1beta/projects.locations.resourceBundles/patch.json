@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/reference/rest/v1beta/projects.locations.resourceBundles/patch/",
-  "file": "kubernetes-engine/config-sync/docs/reference/rest/v1beta/projects.locations.resourceBundles/patch.md",
-  "title": "Method: projects.locations.resourceBundles.patch \u00a0|\u00a0 Config Sync \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:30:34.999396+00:00"
-}

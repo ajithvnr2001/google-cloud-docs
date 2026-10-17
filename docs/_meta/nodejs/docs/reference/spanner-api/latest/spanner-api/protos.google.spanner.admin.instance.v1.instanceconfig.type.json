@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/spanner-api/latest/spanner-api/protos.google.spanner.admin.instance.v1.instanceconfig.type",
-  "file": "nodejs/docs/reference/spanner-api/latest/spanner-api/protos.google.spanner.admin.instance.v1.instanceconfig.type.md",
-  "title": "Enum protos.google.spanner.admin.instance.v1.InstanceConfig.Type (0.2.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:08:34.777176+00:00"
-}

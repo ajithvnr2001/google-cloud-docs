@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloudevent-types/latest/com.google.events.cloud.video.transcoder.v1.PreprocessingConfig.Deinterlace.BwdifConfigOrBuilder",
-  "file": "java/docs/reference/google-cloudevent-types/latest/com.google.events.cloud.video.transcoder.v1.PreprocessingConfig.Deinterlace.BwdifConfigOrBuilder.md",
-  "title": "Interface PreprocessingConfig.Deinterlace.BwdifConfigOrBuilder (0.16.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:44:08.567334+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/gcs-bucket-ip-filtering-modified/",
-  "file": "security-command-center/docs/findings/threats/gcs-bucket-ip-filtering-modified.md",
-  "title": "Defense Evasion: GCS Bucket IP Filtering Modified \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:24:32.546522+00:00"
-}

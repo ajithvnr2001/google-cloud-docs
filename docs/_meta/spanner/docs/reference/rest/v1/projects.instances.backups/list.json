@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.backups/list/",
-  "file": "spanner/docs/reference/rest/v1/projects.instances.backups/list.md",
-  "title": "Method: projects.instances.backups.list \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:30:03.673510+00:00"
-}

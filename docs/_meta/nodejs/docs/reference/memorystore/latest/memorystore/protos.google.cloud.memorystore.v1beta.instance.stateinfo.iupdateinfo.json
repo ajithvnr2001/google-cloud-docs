@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/memorystore/latest/memorystore/protos.google.cloud.memorystore.v1beta.instance.stateinfo.iupdateinfo",
-  "file": "nodejs/docs/reference/memorystore/latest/memorystore/protos.google.cloud.memorystore.v1beta.instance.stateinfo.iupdateinfo.md",
-  "title": "Interface protos.google.cloud.memorystore.v1beta.Instance.StateInfo.IUpdateInfo (0.10.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:19:26.398592+00:00"
-}

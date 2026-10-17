@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center_management-v1/latest/Google-Cloud-SecurityCenterManagement-V1-ListEffectiveEventThreatDetectionCustomModulesResponse/",
-  "file": "ruby/docs/reference/google-cloud-security_center_management-v1/latest/Google-Cloud-SecurityCenterManagement-V1-ListEffectiveEventThreatDetectionCustomModulesResponse.md",
-  "title": "Security Command Center Management V1 API - Class Google::Cloud::SecurityCenterManagement::V1::ListEffectiveEventThreatDetectionCustomModulesResponse (v1.8.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:16:56.230408+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/gkebackup/latest/google.cloud.gke_backup_v1.types.ListVolumeBackupsRequest",
-  "file": "python/docs/reference/gkebackup/latest/google.cloud.gke_backup_v1.types.ListVolumeBackupsRequest.md",
-  "title": "Class ListVolumeBackupsRequest (0.8.2) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:24:30.283509+00:00"
-}

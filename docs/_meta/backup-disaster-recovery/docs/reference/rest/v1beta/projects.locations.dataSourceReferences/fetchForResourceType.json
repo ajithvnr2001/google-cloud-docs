@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/backup-disaster-recovery/docs/reference/rest/v1beta/projects.locations.dataSourceReferences/fetchForResourceType/",
-  "file": "backup-disaster-recovery/docs/reference/rest/v1beta/projects.locations.dataSourceReferences/fetchForResourceType.md",
-  "title": "Method: projects.locations.dataSourceReferences.fetchForResourceType \u00a0|\u00a0 Backup and DR \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:33:01.937130+00:00"
-}

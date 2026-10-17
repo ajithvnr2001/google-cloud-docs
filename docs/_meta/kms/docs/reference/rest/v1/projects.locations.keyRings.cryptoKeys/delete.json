@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys/delete/",
-  "file": "kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys/delete.md",
-  "title": "Method: cryptoKeys.delete \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:32:45.280215+00:00"
-}

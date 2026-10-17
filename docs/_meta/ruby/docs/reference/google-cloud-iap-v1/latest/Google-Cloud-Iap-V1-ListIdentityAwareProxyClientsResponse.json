@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-iap-v1/latest/Google-Cloud-Iap-V1-ListIdentityAwareProxyClientsResponse/",
-  "file": "ruby/docs/reference/google-cloud-iap-v1/latest/Google-Cloud-Iap-V1-ListIdentityAwareProxyClientsResponse.md",
-  "title": "Identity-Aware Proxy V1 API - Class Google::Cloud::Iap::V1::ListIdentityAwareProxyClientsResponse (v1.8.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:08:00.892087+00:00"
-}

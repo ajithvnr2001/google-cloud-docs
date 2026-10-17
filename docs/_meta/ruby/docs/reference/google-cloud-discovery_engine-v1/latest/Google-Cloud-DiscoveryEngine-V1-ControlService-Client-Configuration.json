@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-discovery_engine-v1/latest/Google-Cloud-DiscoveryEngine-V1-ControlService-Client-Configuration/",
-  "file": "ruby/docs/reference/google-cloud-discovery_engine-v1/latest/Google-Cloud-DiscoveryEngine-V1-ControlService-Client-Configuration.md",
-  "title": "Discovery Engine V1 API - Class Google::Cloud::DiscoveryEngine::V1::ControlService::Client::Configuration (v2.12.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:50:50.369260+00:00"
-}

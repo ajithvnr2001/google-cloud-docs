@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts/setIamPolicy/",
-  "file": "iam/docs/reference/rest/v1/projects.serviceAccounts/setIamPolicy.md",
-  "title": "Method: projects.serviceAccounts.setIamPolicy \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:54:07.363029+00:00"
-}

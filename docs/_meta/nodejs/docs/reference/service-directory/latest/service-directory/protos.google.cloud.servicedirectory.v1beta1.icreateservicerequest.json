@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/service-directory/latest/service-directory/protos.google.cloud.servicedirectory.v1beta1.icreateservicerequest",
-  "file": "nodejs/docs/reference/service-directory/latest/service-directory/protos.google.cloud.servicedirectory.v1beta1.icreateservicerequest.md",
-  "title": "Interface protos.google.cloud.servicedirectory.v1beta1.ICreateServiceRequest (7.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:13:44.930959+00:00"
-}

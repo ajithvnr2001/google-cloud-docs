@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/app-lifecycle-manager/reference/rest/v1beta1/projects.locations.saas/list/",
-  "file": "app-lifecycle-manager/reference/rest/v1beta1/projects.locations.saas/list.md",
-  "title": "Method: projects.locations.saas.list \u00a0|\u00a0 App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:52:40.021257+00:00"
-}

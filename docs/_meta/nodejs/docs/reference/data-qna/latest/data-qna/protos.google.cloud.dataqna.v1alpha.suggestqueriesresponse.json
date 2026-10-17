@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/data-qna/latest/data-qna/protos.google.cloud.dataqna.v1alpha.suggestqueriesresponse",
-  "file": "nodejs/docs/reference/data-qna/latest/data-qna/protos.google.cloud.dataqna.v1alpha.suggestqueriesresponse.md",
-  "title": "Class protos.google.cloud.dataqna.v1alpha.SuggestQueriesResponse (5.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:03:15.291350+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/document-ai/docs/reference/rest/v1/projects.locations.processors.processorVersions.evaluations/get/",
-  "file": "document-ai/docs/reference/rest/v1/projects.locations.processors.processorVersions.evaluations/get.md",
-  "title": "Method: evaluations.get \u00a0|\u00a0 Document AI \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:46:48.099711+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/cisco-amp/",
-  "file": "chronicle/docs/ingestion/default-parsers/cisco-amp.md",
-  "title": "Collect Cisco Secure Endpoint logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:52:10.132585+00:00"
-}

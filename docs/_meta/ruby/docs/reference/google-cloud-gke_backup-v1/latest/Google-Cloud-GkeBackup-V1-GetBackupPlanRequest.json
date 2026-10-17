@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-gke_backup-v1/latest/Google-Cloud-GkeBackup-V1-GetBackupPlanRequest/",
-  "file": "ruby/docs/reference/google-cloud-gke_backup-v1/latest/Google-Cloud-GkeBackup-V1-GetBackupPlanRequest.md",
-  "title": "Backup for GKE V1 API - Class Google::Cloud::GkeBackup::V1::GetBackupPlanRequest (v1.8.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:16:21.404945+00:00"
-}

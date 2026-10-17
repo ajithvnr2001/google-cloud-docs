@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/gemini/docs/api/reference/rest/v1/projects.locations.releaseChannelSettings/list/",
-  "file": "gemini/docs/api/reference/rest/v1/projects.locations.releaseChannelSettings/list.md",
-  "title": "Method: projects.locations.releaseChannelSettings.list \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:57:03.527707+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/binary-authorization/docs/reference/rest/v1alpha2/projects.attestors/validateAttestationOccurrence/",
-  "file": "binary-authorization/docs/reference/rest/v1alpha2/projects.attestors/validateAttestationOccurrence.md",
-  "title": "Method: projects.attestors.validateAttestationOccurrence \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:36:45.800810+00:00"
-}

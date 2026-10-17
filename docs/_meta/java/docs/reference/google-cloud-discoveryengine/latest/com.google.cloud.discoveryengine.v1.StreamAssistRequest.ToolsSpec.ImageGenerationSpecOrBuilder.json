@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-discoveryengine/latest/com.google.cloud.discoveryengine.v1.StreamAssistRequest.ToolsSpec.ImageGenerationSpecOrBuilder",
-  "file": "java/docs/reference/google-cloud-discoveryengine/latest/com.google.cloud.discoveryengine.v1.StreamAssistRequest.ToolsSpec.ImageGenerationSpecOrBuilder.md",
-  "title": "Interface StreamAssistRequest.ToolsSpec.ImageGenerationSpecOrBuilder (0.95.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:13:37.881006+00:00"
-}

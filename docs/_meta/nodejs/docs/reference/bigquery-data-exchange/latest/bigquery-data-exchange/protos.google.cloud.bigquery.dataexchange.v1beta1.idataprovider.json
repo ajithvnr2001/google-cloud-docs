@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/bigquery-data-exchange/latest/bigquery-data-exchange/protos.google.cloud.bigquery.dataexchange.v1beta1.idataprovider",
-  "file": "nodejs/docs/reference/bigquery-data-exchange/latest/bigquery-data-exchange/protos.google.cloud.bigquery.dataexchange.v1beta1.idataprovider.md",
-  "title": "Interface protos.google.cloud.bigquery.dataexchange.v1beta1.IDataProvider (3.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:37:19.306775+00:00"
-}

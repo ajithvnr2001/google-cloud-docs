@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-workstations-v1beta/latest/Google-Longrunning-CancelOperationRequest/",
-  "file": "ruby/docs/reference/google-cloud-workstations-v1beta/latest/Google-Longrunning-CancelOperationRequest.md",
-  "title": "Cloud Workstations V1BETA API - Class Google::Longrunning::CancelOperationRequest (v0.10.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:19:08.228682+00:00"
-}

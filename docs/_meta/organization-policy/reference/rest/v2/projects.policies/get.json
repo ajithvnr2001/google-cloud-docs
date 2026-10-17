@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/organization-policy/reference/rest/v2/projects.policies/get/",
-  "file": "organization-policy/reference/rest/v2/projects.policies/get.md",
-  "title": "Method: projects.policies.get \u00a0|\u00a0 Organization Policy \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:00:42.486773+00:00"
-}

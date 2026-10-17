@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/ai-agent-cloudsql-exfil-export-public/",
-  "file": "security-command-center/docs/findings/threats/ai-agent-cloudsql-exfil-export-public.md",
-  "title": "Exfiltration: AI Agent Initiated CloudSQL Exfiltration to Public Bucket \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:24:04.573660+00:00"
-}

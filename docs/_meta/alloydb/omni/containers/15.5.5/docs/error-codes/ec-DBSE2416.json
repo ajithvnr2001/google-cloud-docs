@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/alloydb/omni/containers/15.5.5/docs/error-codes/ec-DBSE2416/",
-  "file": "alloydb/omni/containers/15.5.5/docs/error-codes/ec-DBSE2416.md",
-  "title": "DBSE2416. PostgreSQL: Failed to set synchronous standby names \u00a0|\u00a0 AlloyDB Omni for containers: 15.5.5 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:42:33.764167+00:00"
-}

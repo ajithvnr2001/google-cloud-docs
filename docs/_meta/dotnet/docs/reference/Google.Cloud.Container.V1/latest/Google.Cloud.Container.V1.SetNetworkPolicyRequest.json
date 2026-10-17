@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Container.V1/latest/Google.Cloud.Container.V1.SetNetworkPolicyRequest",
-  "file": "dotnet/docs/reference/Google.Cloud.Container.V1/latest/Google.Cloud.Container.V1.SetNetworkPolicyRequest.md",
-  "title": "Google Kubernetes Engine v1 API - Class SetNetworkPolicyRequest (3.40.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:24:12.082221+00:00"
-}

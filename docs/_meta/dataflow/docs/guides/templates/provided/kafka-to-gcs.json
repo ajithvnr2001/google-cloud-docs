@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dataflow/docs/guides/templates/provided/kafka-to-gcs/",
-  "file": "dataflow/docs/guides/templates/provided/kafka-to-gcs.md",
-  "title": "Apache Kafka to Cloud Storage template \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:50:08.798417+00:00"
-}

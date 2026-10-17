@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/pubsub-api/latest/pubsub-api/protos.google.pubsub.v1.subscription.state",
-  "file": "nodejs/docs/reference/pubsub-api/latest/pubsub-api/protos.google.pubsub.v1.subscription.state.md",
-  "title": "Enum protos.google.pubsub.v1.Subscription.State (0.4.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:43:50.102855+00:00"
-}

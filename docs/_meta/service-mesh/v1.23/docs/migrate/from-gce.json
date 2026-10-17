@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-mesh/v1.23/docs/migrate/from-gce/",
-  "file": "service-mesh/v1.23/docs/migrate/from-gce.md",
-  "title": "Migrate from Traffic Director (GCE workloads) to Google Service Mesh \u00a0|\u00a0 Cloud Service Mesh v1.23 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:17:50.552665+00:00"
-}

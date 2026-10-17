@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/discoveryengine/latest/discoveryengine/protos.google.cloud.discoveryengine.v1alpha.searchrequest.boostspec.conditionboostspec.boostcontrolspec.attributetype",
-  "file": "nodejs/docs/reference/discoveryengine/latest/discoveryengine/protos.google.cloud.discoveryengine.v1alpha.searchrequest.boostspec.conditionboostspec.boostcontrolspec.attributetype.md",
-  "title": "Enum protos.google.cloud.discoveryengine.v1alpha.SearchRequest.BoostSpec.ConditionBoostSpec.BoostControlSpec.AttributeType (3.3.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:33:06.898194+00:00"
-}

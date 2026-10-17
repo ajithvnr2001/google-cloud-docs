@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-workflows-executions-v1beta/latest/Google-Cloud-Workflows-Executions-V1beta-Executions-Client-Configuration-Rpcs/",
-  "file": "ruby/docs/reference/google-cloud-workflows-executions-v1beta/latest/Google-Cloud-Workflows-Executions-V1beta-Executions-Client-Configuration-Rpcs.md",
-  "title": "Workflows Executions V1beta API - Class Google::Cloud::Workflows::Executions::V1beta::Executions::Client::Configuration::Rpcs (v0.14.2) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:01:09.978091+00:00"
-}

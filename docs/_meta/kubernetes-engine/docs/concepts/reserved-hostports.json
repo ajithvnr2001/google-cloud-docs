@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/concepts/reserved-hostports/",
-  "file": "kubernetes-engine/docs/concepts/reserved-hostports.md",
-  "title": "Reserved hostPorts \u00a0|\u00a0 GKE networking \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:30:38.983262+00:00"
-}

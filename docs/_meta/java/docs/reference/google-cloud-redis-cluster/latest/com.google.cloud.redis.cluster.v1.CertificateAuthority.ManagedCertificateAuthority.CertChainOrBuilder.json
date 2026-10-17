@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-redis-cluster/latest/com.google.cloud.redis.cluster.v1.CertificateAuthority.ManagedCertificateAuthority.CertChainOrBuilder",
-  "file": "java/docs/reference/google-cloud-redis-cluster/latest/com.google.cloud.redis.cluster.v1.CertificateAuthority.ManagedCertificateAuthority.CertChainOrBuilder.md",
-  "title": "Interface CertificateAuthority.ManagedCertificateAuthority.CertChainOrBuilder (0.71.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:11:35.615509+00:00"
-}

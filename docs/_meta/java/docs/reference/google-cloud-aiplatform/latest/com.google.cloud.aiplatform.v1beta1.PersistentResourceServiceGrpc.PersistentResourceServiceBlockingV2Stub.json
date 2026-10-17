@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1beta1.PersistentResourceServiceGrpc.PersistentResourceServiceBlockingV2Stub",
-  "file": "java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1beta1.PersistentResourceServiceGrpc.PersistentResourceServiceBlockingV2Stub.md",
-  "title": "Class PersistentResourceServiceGrpc.PersistentResourceServiceBlockingV2Stub (3.100.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:24:53.938475+00:00"
-}

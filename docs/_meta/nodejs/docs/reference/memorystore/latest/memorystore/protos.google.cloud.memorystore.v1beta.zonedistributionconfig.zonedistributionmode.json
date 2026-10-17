@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/memorystore/latest/memorystore/protos.google.cloud.memorystore.v1beta.zonedistributionconfig.zonedistributionmode",
-  "file": "nodejs/docs/reference/memorystore/latest/memorystore/protos.google.cloud.memorystore.v1beta.zonedistributionconfig.zonedistributionmode.md",
-  "title": "Enum protos.google.cloud.memorystore.v1beta.ZoneDistributionConfig.ZoneDistributionMode (0.10.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:17:51.513753+00:00"
-}

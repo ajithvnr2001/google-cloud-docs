@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/api-gateway/docs/reference/rest/v1beta/projects.locations.apis/delete/",
-  "file": "api-gateway/docs/reference/rest/v1beta/projects.locations.apis/delete.md",
-  "title": "Method: projects.locations.apis.delete \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:06:09.185598+00:00"
-}

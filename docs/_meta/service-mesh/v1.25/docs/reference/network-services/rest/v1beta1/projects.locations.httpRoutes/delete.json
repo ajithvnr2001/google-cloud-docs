@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-mesh/v1.25/docs/reference/network-services/rest/v1beta1/projects.locations.httpRoutes/delete/",
-  "file": "service-mesh/v1.25/docs/reference/network-services/rest/v1beta1/projects.locations.httpRoutes/delete.md",
-  "title": "Method: projects.locations.httpRoutes.delete \u00a0|\u00a0 Cloud Service Mesh v1.25 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:14:30.460895+00:00"
-}

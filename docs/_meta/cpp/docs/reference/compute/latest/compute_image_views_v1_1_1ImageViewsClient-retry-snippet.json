@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/cpp/docs/reference/compute/latest/compute_image_views_v1_1_1ImageViewsClient-retry-snippet/",
-  "file": "cpp/docs/reference/compute/latest/compute_image_views_v1_1_1ImageViewsClient-retry-snippet.md",
-  "title": "Override compute_image_views_v1::ImageViewsClient Retry Policies \u00a0|\u00a0 C++ client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:16:04.586355+00:00"
-}

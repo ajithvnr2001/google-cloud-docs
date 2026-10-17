@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dataflow/docs/notebooks/run_inference_huggingface/",
-  "file": "dataflow/docs/notebooks/run_inference_huggingface.md",
-  "title": "Apache Beam RunInference with Hugging Face \u00a0|\u00a0 Dataflow ML \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:54:15.883573+00:00"
-}

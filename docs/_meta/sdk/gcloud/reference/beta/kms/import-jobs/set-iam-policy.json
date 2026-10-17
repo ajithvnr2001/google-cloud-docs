@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/sdk/gcloud/reference/beta/kms/import-jobs/set-iam-policy/",
-  "file": "sdk/gcloud/reference/beta/kms/import-jobs/set-iam-policy.md",
-  "title": "gcloud beta kms import-jobs set-iam-policy \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:33:01.481285+00:00"
-}

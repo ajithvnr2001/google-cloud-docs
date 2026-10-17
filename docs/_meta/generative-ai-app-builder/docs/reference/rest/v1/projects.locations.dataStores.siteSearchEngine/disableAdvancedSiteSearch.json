@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/generative-ai-app-builder/docs/reference/rest/v1/projects.locations.dataStores.siteSearchEngine/disableAdvancedSiteSearch/",
-  "file": "generative-ai-app-builder/docs/reference/rest/v1/projects.locations.dataStores.siteSearchEngine/disableAdvancedSiteSearch.md",
-  "title": "Method: projects.locations.dataStores.siteSearchEngine.disableAdvancedSiteSearch \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:27:27.283990+00:00"
-}

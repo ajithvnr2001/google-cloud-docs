@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/networkconnectivity/latest/google.cloud.networkconnectivity_v1beta.services.policy_based_routing_service.PolicyBasedRoutingServiceClient",
-  "file": "python/docs/reference/networkconnectivity/latest/google.cloud.networkconnectivity_v1beta.services.policy_based_routing_service.PolicyBasedRoutingServiceClient.md",
-  "title": "Class PolicyBasedRoutingServiceClient (2.18.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:57:15.133181+00:00"
-}

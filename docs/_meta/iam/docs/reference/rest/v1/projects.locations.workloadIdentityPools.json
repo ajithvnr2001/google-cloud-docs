@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/iam/docs/reference/rest/v1/projects.locations.workloadIdentityPools",
-  "file": "iam/docs/reference/rest/v1/projects.locations.workloadIdentityPools.md",
-  "title": "REST Resource: projects.locations.workloadIdentityPools \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:53:56.006246+00:00"
-}

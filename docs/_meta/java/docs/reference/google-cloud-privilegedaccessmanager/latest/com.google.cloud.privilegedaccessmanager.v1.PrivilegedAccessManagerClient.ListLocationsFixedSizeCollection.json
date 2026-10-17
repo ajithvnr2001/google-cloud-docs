@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-privilegedaccessmanager/latest/com.google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManagerClient.ListLocationsFixedSizeCollection",
-  "file": "java/docs/reference/google-cloud-privilegedaccessmanager/latest/com.google.cloud.privilegedaccessmanager.v1.PrivilegedAccessManagerClient.ListLocationsFixedSizeCollection.md",
-  "title": "Class PrivilegedAccessManagerClient.ListLocationsFixedSizeCollection (0.53.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:48:48.876508+00:00"
-}

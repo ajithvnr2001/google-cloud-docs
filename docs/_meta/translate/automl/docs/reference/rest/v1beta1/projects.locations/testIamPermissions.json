@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/translate/automl/docs/reference/rest/v1beta1/projects.locations/testIamPermissions/",
-  "file": "translate/automl/docs/reference/rest/v1beta1/projects.locations/testIamPermissions.md",
-  "title": "Method: projects.locations.testIamPermissions \u00a0|\u00a0 AutoML Translation \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:34:32.688891+00:00"
-}

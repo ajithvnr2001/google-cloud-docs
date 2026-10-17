@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/cloud-run-possible-arbitrary-command-execution-through-cups/",
-  "file": "security-command-center/docs/findings/threats/cloud-run-possible-arbitrary-command-execution-through-cups.md",
-  "title": "Execution: Possible Arbitrary Command Execution through CUPS (CVE-2024-47076) \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:24:27.650173+00:00"
-}

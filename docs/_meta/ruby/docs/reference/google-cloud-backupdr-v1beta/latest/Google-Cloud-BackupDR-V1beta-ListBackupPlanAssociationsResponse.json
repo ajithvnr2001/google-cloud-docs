@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-backupdr-v1beta/latest/Google-Cloud-BackupDR-V1beta-ListBackupPlanAssociationsResponse/",
-  "file": "ruby/docs/reference/google-cloud-backupdr-v1beta/latest/Google-Cloud-BackupDR-V1beta-ListBackupPlanAssociationsResponse.md",
-  "title": "Backup and DR Service V1BETA API - Class Google::Cloud::BackupDR::V1beta::ListBackupPlanAssociationsResponse (v0.1.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:52:59.590506+00:00"
-}

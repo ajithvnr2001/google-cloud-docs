@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/api-gateway/docs/reference/rest/v1/projects.locations.gateways/setIamPolicy/",
-  "file": "api-gateway/docs/reference/rest/v1/projects.locations.gateways/setIamPolicy.md",
-  "title": "Method: projects.locations.gateways.setIamPolicy \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:15:57.851408+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/spanner-api/latest/spanner-api/protos.google.spanner.admin.database.v1.copybackuprequest",
-  "file": "nodejs/docs/reference/spanner-api/latest/spanner-api/protos.google.spanner.admin.database.v1.copybackuprequest.md",
-  "title": "Class protos.google.spanner.admin.database.v1.CopyBackupRequest (0.2.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:13:05.101557+00:00"
-}

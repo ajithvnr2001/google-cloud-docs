@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/sdk/gcloud/reference/iam/list-grantable-roles/",
-  "file": "sdk/gcloud/reference/iam/list-grantable-roles.md",
-  "title": "gcloud iam list-grantable-roles \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:10:58.354140+00:00"
-}

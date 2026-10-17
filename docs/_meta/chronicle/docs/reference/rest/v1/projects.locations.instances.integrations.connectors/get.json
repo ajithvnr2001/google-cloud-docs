@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/reference/rest/v1/projects.locations.instances.integrations.connectors/get/",
-  "file": "chronicle/docs/reference/rest/v1/projects.locations.instances.integrations.connectors/get.md",
-  "title": "Method: connectors.get \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:19:21.147937+00:00"
-}

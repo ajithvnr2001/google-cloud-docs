@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-automl/latest/com.google.cloud.automl.v1.ClassificationEvaluationMetrics.ConfusionMatrix.Row",
-  "file": "java/docs/reference/google-cloud-automl/latest/com.google.cloud.automl.v1.ClassificationEvaluationMetrics.ConfusionMatrix.Row.md",
-  "title": "Class ClassificationEvaluationMetrics.ConfusionMatrix.Row (2.95.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:47:24.905208+00:00"
-}

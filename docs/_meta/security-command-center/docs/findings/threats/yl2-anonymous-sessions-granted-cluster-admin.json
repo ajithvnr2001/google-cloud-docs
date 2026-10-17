@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/yl2-anonymous-sessions-granted-cluster-admin/",
-  "file": "security-command-center/docs/findings/threats/yl2-anonymous-sessions-granted-cluster-admin.md",
-  "title": "Defense Evasion: Anonymous Sessions Granted Cluster Admin Access \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:24:46.899246+00:00"
-}

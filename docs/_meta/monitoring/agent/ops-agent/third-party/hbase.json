@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/monitoring/agent/ops-agent/third-party/hbase/",
-  "file": "monitoring/agent/ops-agent/third-party/hbase.md",
-  "title": "Apache HBase \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:05:46.858464+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/connect-scc-to-aws/",
-  "file": "security-command-center/docs/connect-scc-to-aws.md",
-  "title": "Connect to AWS for configuration and resource data collection \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:13:46.827213+00:00"
-}

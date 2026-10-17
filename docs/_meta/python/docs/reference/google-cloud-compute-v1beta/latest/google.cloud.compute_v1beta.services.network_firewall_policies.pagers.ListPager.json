@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/google-cloud-compute-v1beta/latest/google.cloud.compute_v1beta.services.network_firewall_policies.pagers.ListPager",
-  "file": "python/docs/reference/google-cloud-compute-v1beta/latest/google.cloud.compute_v1beta.services.network_firewall_policies.pagers.ListPager.md",
-  "title": "Class ListPager (0.12.7) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:43:17.510053+00:00"
-}

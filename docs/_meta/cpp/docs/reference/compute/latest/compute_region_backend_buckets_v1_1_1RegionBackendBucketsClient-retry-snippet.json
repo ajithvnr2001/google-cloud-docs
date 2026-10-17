@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/cpp/docs/reference/compute/latest/compute_region_backend_buckets_v1_1_1RegionBackendBucketsClient-retry-snippet/",
-  "file": "cpp/docs/reference/compute/latest/compute_region_backend_buckets_v1_1_1RegionBackendBucketsClient-retry-snippet.md",
-  "title": "Override compute_region_backend_buckets_v1::RegionBackendBucketsClient Retry Policies \u00a0|\u00a0 C++ client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:17:52.266783+00:00"
-}

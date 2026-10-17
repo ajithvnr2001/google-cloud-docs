@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/orchestration-airflow/latest/orchestration-airflow/protos.google.cloud.orchestration.airflow.service.v1.ioperationmetadata",
-  "file": "nodejs/docs/reference/orchestration-airflow/latest/orchestration-airflow/protos.google.cloud.orchestration.airflow.service.v1.ioperationmetadata.md",
-  "title": "Interface protos.google.cloud.orchestration.airflow.service.v1.IOperationMetadata (5.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:47:22.105375+00:00"
-}

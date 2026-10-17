@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Monitoring.V3/latest/Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationChannelStrategy",
-  "file": "dotnet/docs/reference/Google.Cloud.Monitoring.V3/latest/Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationChannelStrategy.md",
-  "title": "Google Cloud Monitoring v3 API - Class AlertPolicy.Types.AlertStrategy.Types.NotificationChannelStrategy (3.16.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:20:15.668695+00:00"
-}

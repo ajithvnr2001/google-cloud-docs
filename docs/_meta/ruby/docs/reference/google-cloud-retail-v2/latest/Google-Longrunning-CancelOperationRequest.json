@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-retail-v2/latest/Google-Longrunning-CancelOperationRequest/",
-  "file": "ruby/docs/reference/google-cloud-retail-v2/latest/Google-Longrunning-CancelOperationRequest.md",
-  "title": "Retail V2 API - Class Google::Longrunning::CancelOperationRequest (v2.10.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:29:45.786238+00:00"
-}

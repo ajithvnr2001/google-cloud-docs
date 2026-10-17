@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/alloydb/omni/kubernetes/15.5.5/docs/error-codes/ec-DBSE1080/",
-  "file": "alloydb/omni/kubernetes/15.5.5/docs/error-codes/ec-DBSE1080.md",
-  "title": "DBSE1080. HA: Failed to stop primary database \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 15.5.5 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:35:47.547222+00:00"
-}

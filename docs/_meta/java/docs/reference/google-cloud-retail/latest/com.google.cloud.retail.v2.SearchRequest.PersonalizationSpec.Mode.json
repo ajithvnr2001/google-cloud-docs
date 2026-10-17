@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-retail/latest/com.google.cloud.retail.v2.SearchRequest.PersonalizationSpec.Mode",
-  "file": "java/docs/reference/google-cloud-retail/latest/com.google.cloud.retail.v2.SearchRequest.PersonalizationSpec.Mode.md",
-  "title": "Enum SearchRequest.PersonalizationSpec.Mode (2.101.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:45:25.240506+00:00"
-}

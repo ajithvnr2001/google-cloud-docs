@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kms/docs/reference/rest/v1/projects.locations.operations",
-  "file": "kms/docs/reference/rest/v1/projects.locations.operations.md",
-  "title": "REST Resource: projects.locations.operations \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:54:18.323147+00:00"
-}

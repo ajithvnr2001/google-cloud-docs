@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/vpcsc-separate-perimeters/",
-  "file": "gemini-enterprise-agent-platform/machine-learning/general/vpcsc-separate-perimeters.md",
-  "title": "Allow access to protected resources from private endpoint inside a VPC Service Controls perimeter \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:26:43.252873+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/application-design-center/docs/reference/rest/v1alpha/projects.locations.spaces.applicationTemplates.systemRevisions/list/",
-  "file": "application-design-center/docs/reference/rest/v1alpha/projects.locations.spaces.applicationTemplates.systemRevisions/list.md",
-  "title": "Method: projects.locations.spaces.applicationTemplates.systemRevisions.list \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:30:29.631628+00:00"
-}

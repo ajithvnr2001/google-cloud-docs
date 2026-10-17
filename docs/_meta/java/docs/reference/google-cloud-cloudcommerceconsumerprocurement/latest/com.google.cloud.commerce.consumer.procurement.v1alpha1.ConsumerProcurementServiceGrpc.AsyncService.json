@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudcommerceconsumerprocurement/latest/com.google.cloud.commerce.consumer.procurement.v1alpha1.ConsumerProcurementServiceGrpc.AsyncService",
-  "file": "java/docs/reference/google-cloud-cloudcommerceconsumerprocurement/latest/com.google.cloud.commerce.consumer.procurement.v1alpha1.ConsumerProcurementServiceGrpc.AsyncService.md",
-  "title": "Interface ConsumerProcurementServiceGrpc.AsyncService (0.97.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:30:02.547843+00:00"
-}

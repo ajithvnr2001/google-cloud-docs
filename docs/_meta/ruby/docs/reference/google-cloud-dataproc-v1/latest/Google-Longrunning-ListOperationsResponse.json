@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dataproc-v1/latest/Google-Longrunning-ListOperationsResponse/",
-  "file": "ruby/docs/reference/google-cloud-dataproc-v1/latest/Google-Longrunning-ListOperationsResponse.md",
-  "title": "Cloud Dataproc V1 API - Class Google::Longrunning::ListOperationsResponse (v1.17.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:58:29.725622+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/monitoring/latest/google.cloud.monitoring_v3.types.UptimeCheckConfig.ContentMatcher",
-  "file": "python/docs/reference/monitoring/latest/google.cloud.monitoring_v3.types.UptimeCheckConfig.ContentMatcher.md",
-  "title": "Class ContentMatcher (2.32.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:19:35.080471+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-agent_registry-v1/latest/Google-Cloud-AgentRegistry-V1-DeleteServiceRequest/",
-  "file": "ruby/docs/reference/google-cloud-agent_registry-v1/latest/Google-Cloud-AgentRegistry-V1-DeleteServiceRequest.md",
-  "title": "Agent Registry V1 API - Class Google::Cloud::AgentRegistry::V1::DeleteServiceRequest (v0.2.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:05:59.471953+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/connect-secops-azure/",
-  "file": "security-command-center/docs/connect-secops-azure.md",
-  "title": "Connect to Microsoft Azure for log data collection \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:13:47.181058+00:00"
-}

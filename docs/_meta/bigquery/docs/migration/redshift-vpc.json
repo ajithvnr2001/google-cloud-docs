@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/bigquery/docs/migration/redshift-vpc/",
-  "file": "bigquery/docs/migration/redshift-vpc.md",
-  "title": "Migrating Amazon Redshift data with a VPC network \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:08:00.114983+00:00"
-}

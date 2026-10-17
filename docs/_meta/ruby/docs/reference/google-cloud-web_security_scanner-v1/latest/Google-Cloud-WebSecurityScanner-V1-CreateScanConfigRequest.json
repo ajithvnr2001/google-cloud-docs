@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-web_security_scanner-v1/latest/Google-Cloud-WebSecurityScanner-V1-CreateScanConfigRequest/",
-  "file": "ruby/docs/reference/google-cloud-web_security_scanner-v1/latest/Google-Cloud-WebSecurityScanner-V1-CreateScanConfigRequest.md",
-  "title": "Web Security Scanner V1 API - Class Google::Cloud::WebSecurityScanner::V1::CreateScanConfigRequest (v1.6.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:32:02.264531+00:00"
-}

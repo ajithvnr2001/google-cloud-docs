@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/number-registry/reference/rest/v1alpha/projects.locations.customRanges/list/",
-  "file": "number-registry/reference/rest/v1alpha/projects.locations.customRanges/list.md",
-  "title": "Method: projects.locations.customRanges.list \u00a0|\u00a0 Cloud Number Registry \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:02:30.534467+00:00"
-}

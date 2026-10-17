@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/network-security/latest/network-security/protos.google.cloud.networksecurity.v1.icreatefirewallendpointrequest",
-  "file": "nodejs/docs/reference/network-security/latest/network-security/protos.google.cloud.networksecurity.v1.icreatefirewallendpointrequest.md",
-  "title": "Interface protos.google.cloud.networksecurity.v1.ICreateFirewallEndpointRequest (4.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:44:33.609918+00:00"
-}

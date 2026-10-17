@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dataplex-v1/latest/Google-Cloud-Dataplex-V1-DataDocumentationResult-Query/",
-  "file": "ruby/docs/reference/google-cloud-dataplex-v1/latest/Google-Cloud-Dataplex-V1-DataDocumentationResult-Query.md",
-  "title": "Dataplex V1 API - Class Google::Cloud::Dataplex::V1::DataDocumentationResult::Query (v2.10.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:06:33.125757+00:00"
-}

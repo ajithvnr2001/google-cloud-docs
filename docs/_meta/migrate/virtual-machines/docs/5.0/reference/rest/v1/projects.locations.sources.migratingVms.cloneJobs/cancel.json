@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/migrate/virtual-machines/docs/5.0/reference/rest/v1/projects.locations.sources.migratingVms.cloneJobs/cancel/",
-  "file": "migrate/virtual-machines/docs/5.0/reference/rest/v1/projects.locations.sources.migratingVms.cloneJobs/cancel.md",
-  "title": "Method: projects.locations.sources.migratingVms.cloneJobs.cancel \u00a0|\u00a0 Migrate to Virtual Machines \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:03:42.406629+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/automl/latest/google.cloud.automl_v1.types.ListModelEvaluationsRequest",
-  "file": "python/docs/reference/automl/latest/google.cloud.automl_v1.types.ListModelEvaluationsRequest.md",
-  "title": "Class ListModelEvaluationsRequest (2.21.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:13:06.781256+00:00"
-}

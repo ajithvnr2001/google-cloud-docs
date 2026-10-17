@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/apptopology/latest/apptopology/protos.google.cloud.apptopology.v1.igeneratediscoveredresourcestopologyrequest",
-  "file": "nodejs/docs/reference/apptopology/latest/apptopology/protos.google.cloud.apptopology.v1.igeneratediscoveredresourcestopologyrequest.md",
-  "title": "Interface protos.google.cloud.apptopology.v1.IGenerateDiscoveredResourcesTopologyRequest (0.3.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:01:17.982691+00:00"
-}

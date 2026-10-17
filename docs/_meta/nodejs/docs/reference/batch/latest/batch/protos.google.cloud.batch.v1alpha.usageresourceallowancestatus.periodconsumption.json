@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/batch/latest/batch/protos.google.cloud.batch.v1alpha.usageresourceallowancestatus.periodconsumption",
-  "file": "nodejs/docs/reference/batch/latest/batch/protos.google.cloud.batch.v1alpha.usageresourceallowancestatus.periodconsumption.md",
-  "title": "Class protos.google.cloud.batch.v1alpha.UsageResourceAllowanceStatus.PeriodConsumption (3.2.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:31:03.710618+00:00"
-}

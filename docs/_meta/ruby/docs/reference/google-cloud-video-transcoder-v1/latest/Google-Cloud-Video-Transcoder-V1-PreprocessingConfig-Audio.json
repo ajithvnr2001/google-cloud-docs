@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-video-transcoder-v1/latest/Google-Cloud-Video-Transcoder-V1-PreprocessingConfig-Audio/",
-  "file": "ruby/docs/reference/google-cloud-video-transcoder-v1/latest/Google-Cloud-Video-Transcoder-V1-PreprocessingConfig-Audio.md",
-  "title": "Transcoder V1 API - Class Google::Cloud::Video::Transcoder::V1::PreprocessingConfig::Audio (v2.6.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:26:19.368587+00:00"
-}

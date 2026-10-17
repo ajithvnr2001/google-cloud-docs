@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-vision-v1/latest/Google-Longrunning-GetOperationRequest/",
-  "file": "ruby/docs/reference/google-cloud-vision-v1/latest/Google-Longrunning-GetOperationRequest.md",
-  "title": "Cloud Vision V1 API - Class Google::Longrunning::GetOperationRequest (v1.7.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:15:50.507527+00:00"
-}

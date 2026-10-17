@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-recommender/latest/com.google.cloud.recommender.v1beta1.RecommenderGrpc.AsyncService",
-  "file": "java/docs/reference/google-cloud-recommender/latest/com.google.cloud.recommender.v1beta1.RecommenderGrpc.AsyncService.md",
-  "title": "Interface RecommenderGrpc.AsyncService (2.101.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:01:15.745459+00:00"
-}

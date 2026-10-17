@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/google-cloud-datacatalog-lineage-configmanagement/latest/google.cloud.datacatalog_lineage_configmanagement_v1.types.Config.Ingestion.IngestionRule.IntegrationSelector.Integration",
-  "file": "python/docs/reference/google-cloud-datacatalog-lineage-configmanagement/latest/google.cloud.datacatalog_lineage_configmanagement_v1.types.Config.Ingestion.IngestionRule.Integratio_31d1b0fe.md",
-  "title": "Class Integration (0.3.1) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:59:56.356853+00:00"
-}

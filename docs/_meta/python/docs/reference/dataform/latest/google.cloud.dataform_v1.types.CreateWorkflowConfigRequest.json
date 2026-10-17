@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/dataform/latest/google.cloud.dataform_v1.types.CreateWorkflowConfigRequest",
-  "file": "python/docs/reference/dataform/latest/google.cloud.dataform_v1.types.CreateWorkflowConfigRequest.md",
-  "title": "Class CreateWorkflowConfigRequest (0.11.4) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:22:03.357848+00:00"
-}

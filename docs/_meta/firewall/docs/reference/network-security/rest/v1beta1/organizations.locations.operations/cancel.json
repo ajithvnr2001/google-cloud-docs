@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/firewall/docs/reference/network-security/rest/v1beta1/organizations.locations.operations/cancel/",
-  "file": "firewall/docs/reference/network-security/rest/v1beta1/organizations.locations.operations/cancel.md",
-  "title": "Method: organizations.locations.operations.cancel \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:32:00.585334+00:00"
-}

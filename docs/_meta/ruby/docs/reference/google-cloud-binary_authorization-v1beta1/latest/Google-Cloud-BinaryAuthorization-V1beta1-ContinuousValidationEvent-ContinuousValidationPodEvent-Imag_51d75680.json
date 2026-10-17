@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-binary_authorization-v1beta1/latest/Google-Cloud-BinaryAuthorization-V1beta1-ContinuousValidationEvent-ContinuousValidationPodEvent-ImageDetails-ContainerType/",
-  "file": "ruby/docs/reference/google-cloud-binary_authorization-v1beta1/latest/Google-Cloud-BinaryAuthorization-V1beta1-ContinuousValidationEvent-ContinuousValidationPodEvent-Imag_51d75680.md",
-  "title": "Binary Authorization V1beta1 API - Module Google::Cloud::BinaryAuthorization::V1beta1::ContinuousValidationEvent::ContinuousValidationPodEvent::ImageDetails::ContainerType (v0.20.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:06:26.740877+00:00"
-}

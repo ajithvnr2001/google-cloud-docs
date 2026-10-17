@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/google-cloud-sql/latest/google.cloud.sqladmin_v1.types.BackupRunsListResponse",
-  "file": "python/docs/reference/google-cloud-sql/latest/google.cloud.sqladmin_v1.types.BackupRunsListResponse.md",
-  "title": "Class BackupRunsListResponse (0.1.1) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:31:41.404369+00:00"
-}

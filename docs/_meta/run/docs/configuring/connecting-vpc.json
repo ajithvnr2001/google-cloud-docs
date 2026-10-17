@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/run/docs/configuring/connecting-vpc/",
-  "file": "run/docs/configuring/connecting-vpc.md",
-  "title": "Compare Direct VPC egress and VPC connectors \u00a0|\u00a0 Cloud Run \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:56:44.677828+00:00"
-}

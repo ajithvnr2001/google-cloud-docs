@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/oracle/database/docs/reference/rest/v1/projects.locations.exascaleDbStorageVaults/list/",
-  "file": "oracle/database/docs/reference/rest/v1/projects.locations.exascaleDbStorageVaults/list.md",
-  "title": "Method: projects.locations.exascaleDbStorageVaults.list \u00a0|\u00a0 Oracle Database at Google Cloud \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:08:47.149101+00:00"
-}

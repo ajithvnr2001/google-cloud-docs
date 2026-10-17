@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/tpu/docs/reference/rest/v1alpha1/projects.locations.nodes/delete/",
-  "file": "tpu/docs/reference/rest/v1alpha1/projects.locations.nodes/delete.md",
-  "title": "Method: projects.locations.nodes.delete \u00a0|\u00a0 Cloud TPU \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:12:48.666626+00:00"
-}

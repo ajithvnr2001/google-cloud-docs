@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-secure_source_manager-v1/latest/Google-Longrunning-WaitOperationRequest/",
-  "file": "ruby/docs/reference/google-cloud-secure_source_manager-v1/latest/Google-Longrunning-WaitOperationRequest.md",
-  "title": "Secure Source Manager V1 API - Class Google::Longrunning::WaitOperationRequest (v2.9.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:51:36.185777+00:00"
-}

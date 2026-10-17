@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/secure-web-proxy/docs/reference/network-security/rest/v1beta1/projects.locations.gatewaySecurityPolicies/get/",
-  "file": "secure-web-proxy/docs/reference/network-security/rest/v1beta1/projects.locations.gatewaySecurityPolicies/get.md",
-  "title": "Method: projects.locations.gatewaySecurityPolicies.get \u00a0|\u00a0 Secure Web Proxy \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:00:19.989852+00:00"
-}

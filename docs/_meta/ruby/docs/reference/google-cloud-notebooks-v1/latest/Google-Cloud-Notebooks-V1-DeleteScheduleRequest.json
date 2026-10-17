@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-notebooks-v1/latest/Google-Cloud-Notebooks-V1-DeleteScheduleRequest/",
-  "file": "ruby/docs/reference/google-cloud-notebooks-v1/latest/Google-Cloud-Notebooks-V1-DeleteScheduleRequest.md",
-  "title": "AI Platform Notebooks V1 API - Class Google::Cloud::Notebooks::V1::DeleteScheduleRequest (v1.6.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:12:12.975594+00:00"
-}

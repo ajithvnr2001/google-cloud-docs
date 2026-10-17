@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/artifact-registry/docs/reference/rest/v1/projects.locations.repositories.files/download/",
-  "file": "artifact-registry/docs/reference/rest/v1/projects.locations.repositories.files/download.md",
-  "title": "Method: projects.locations.repositories.files.download \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:49:58.964861+00:00"
-}

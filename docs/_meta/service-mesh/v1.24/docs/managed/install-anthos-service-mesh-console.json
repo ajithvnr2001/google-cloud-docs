@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-mesh/v1.24/docs/managed/install-anthos-service-mesh-console/",
-  "file": "service-mesh/v1.24/docs/managed/install-anthos-service-mesh-console.md",
-  "title": "Quickstart: Provision managed Cloud Service Mesh on a GKE cluster in the Google Cloud console \u00a0|\u00a0 Cloud Service Mesh v1.24 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:24:29.862449+00:00"
-}

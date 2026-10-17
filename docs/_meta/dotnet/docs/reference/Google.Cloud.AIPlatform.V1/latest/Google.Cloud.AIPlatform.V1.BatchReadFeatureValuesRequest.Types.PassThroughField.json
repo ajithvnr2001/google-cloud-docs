@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.AIPlatform.V1/latest/Google.Cloud.AIPlatform.V1.BatchReadFeatureValuesRequest.Types.PassThroughField",
-  "file": "dotnet/docs/reference/Google.Cloud.AIPlatform.V1/latest/Google.Cloud.AIPlatform.V1.BatchReadFeatureValuesRequest.Types.PassThroughField.md",
-  "title": "Vertex AI v1 API - Class BatchReadFeatureValuesRequest.Types.PassThroughField (3.77.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:36:20.906390+00:00"
-}

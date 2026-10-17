@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/reference/rest/v1beta/projects.locations.apps/retrieveToolSchema/",
-  "file": "gemini-enterprise-cx/cx-agent-studio/reference/rest/v1beta/projects.locations.apps/retrieveToolSchema.md",
-  "title": "Method: projects.locations.apps.retrieveToolSchema \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:51:37.270806+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/logging/docs/reference/v2/rest/v2/projects.metrics/delete/",
-  "file": "logging/docs/reference/v2/rest/v2/projects.metrics/delete.md",
-  "title": "Method: projects.metrics.delete \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:26:31.264016+00:00"
-}

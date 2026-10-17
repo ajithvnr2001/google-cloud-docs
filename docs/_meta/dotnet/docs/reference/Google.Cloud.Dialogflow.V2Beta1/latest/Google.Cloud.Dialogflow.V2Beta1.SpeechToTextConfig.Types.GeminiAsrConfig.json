@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Dialogflow.V2Beta1/latest/Google.Cloud.Dialogflow.V2Beta1.SpeechToTextConfig.Types.GeminiAsrConfig",
-  "file": "dotnet/docs/reference/Google.Cloud.Dialogflow.V2Beta1/latest/Google.Cloud.Dialogflow.V2Beta1.SpeechToTextConfig.Types.GeminiAsrConfig.md",
-  "title": "Google Cloud Dialogflow v2beta1 API - Class SpeechToTextConfig.Types.GeminiAsrConfig (1.0.0-beta33) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:13:49.747114+00:00"
-}

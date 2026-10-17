@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/spanner/docs/reference/rest/v1/projects.instanceConfigs/list/",
-  "file": "spanner/docs/reference/rest/v1/projects.instanceConfigs/list.md",
-  "title": "Method: projects.instanceConfigs.list \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:52:52.269035+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-compute-v1/latest/Google-Cloud-Compute-V1-RouterStatusBgpPeerStatus-StatusReason/",
-  "file": "ruby/docs/reference/google-cloud-compute-v1/latest/Google-Cloud-Compute-V1-RouterStatusBgpPeerStatus-StatusReason.md",
-  "title": "Google Cloud Compute V1 API - Module Google::Cloud::Compute::V1::RouterStatusBgpPeerStatus::StatusReason (v4.0.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:21:13.981843+00:00"
-}

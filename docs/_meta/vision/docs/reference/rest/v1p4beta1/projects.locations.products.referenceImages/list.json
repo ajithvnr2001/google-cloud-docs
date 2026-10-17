@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/vision/docs/reference/rest/v1p4beta1/projects.locations.products.referenceImages/list/",
-  "file": "vision/docs/reference/rest/v1p4beta1/projects.locations.products.referenceImages/list.md",
-  "title": "Method: projects.locations.products.referenceImages.list \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:54:27.102330+00:00"
-}

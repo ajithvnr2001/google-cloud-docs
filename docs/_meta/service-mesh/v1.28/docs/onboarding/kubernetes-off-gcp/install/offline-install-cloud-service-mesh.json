@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-mesh/v1.28/docs/onboarding/kubernetes-off-gcp/install/offline-install-cloud-service-mesh/",
-  "file": "service-mesh/v1.28/docs/onboarding/kubernetes-off-gcp/install/offline-install-cloud-service-mesh.md",
-  "title": "Prepare an offline installation of Cloud Service Mesh \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:30:57.488204+00:00"
-}

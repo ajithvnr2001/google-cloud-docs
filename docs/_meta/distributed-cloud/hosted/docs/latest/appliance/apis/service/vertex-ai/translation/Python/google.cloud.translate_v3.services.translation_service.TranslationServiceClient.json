@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/apis/service/vertex-ai/translation/Python/google.cloud.translate_v3.services.translation_service.TranslationServiceClient",
-  "file": "distributed-cloud/hosted/docs/latest/appliance/apis/service/vertex-ai/translation/Python/google.cloud.translate_v3.services.translation_service.TranslationServiceClient.md",
-  "title": "Class TranslationServiceClient (3.12.0) \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:16:13.171373+00:00"
-}

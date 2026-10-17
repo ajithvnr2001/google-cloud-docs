@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/bigquery/docs/reference/analytics-hub/rest/v1/projects.locations.dataExchanges.queryTemplates/submit/",
-  "file": "bigquery/docs/reference/analytics-hub/rest/v1/projects.locations.dataExchanges.queryTemplates/submit.md",
-  "title": "Method: projects.locations.dataExchanges.queryTemplates.submit \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:58:17.570303+00:00"
-}

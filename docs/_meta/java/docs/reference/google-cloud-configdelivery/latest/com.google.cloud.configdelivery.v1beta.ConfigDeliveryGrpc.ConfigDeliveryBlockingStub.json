@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-configdelivery/latest/com.google.cloud.configdelivery.v1beta.ConfigDeliveryGrpc.ConfigDeliveryBlockingStub",
-  "file": "java/docs/reference/google-cloud-configdelivery/latest/com.google.cloud.configdelivery.v1beta.ConfigDeliveryGrpc.ConfigDeliveryBlockingStub.md",
-  "title": "Class ConfigDeliveryGrpc.ConfigDeliveryBlockingStub (0.33.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:17:41.062407+00:00"
-}

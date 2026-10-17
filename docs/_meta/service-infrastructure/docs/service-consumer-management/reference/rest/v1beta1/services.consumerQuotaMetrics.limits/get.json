@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-infrastructure/docs/service-consumer-management/reference/rest/v1beta1/services.consumerQuotaMetrics.limits/get/",
-  "file": "service-infrastructure/docs/service-consumer-management/reference/rest/v1beta1/services.consumerQuotaMetrics.limits/get.md",
-  "title": "Method: services.consumerQuotaMetrics.limits.get \u00a0|\u00a0 Service Infrastructure \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:25:55.255855+00:00"
-}

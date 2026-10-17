@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/integration-connectors/docs/reference/rest/v1/projects.locations.connections/getIamPolicy/",
-  "file": "integration-connectors/docs/reference/rest/v1/projects.locations.connections/getIamPolicy.md",
-  "title": "Method: projects.locations.connections.getIamPolicy \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:45:49.065871+00:00"
-}

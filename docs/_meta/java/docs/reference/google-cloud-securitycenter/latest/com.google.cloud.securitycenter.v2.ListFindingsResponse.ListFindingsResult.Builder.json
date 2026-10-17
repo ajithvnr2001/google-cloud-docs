@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-securitycenter/latest/com.google.cloud.securitycenter.v2.ListFindingsResponse.ListFindingsResult.Builder",
-  "file": "java/docs/reference/google-cloud-securitycenter/latest/com.google.cloud.securitycenter.v2.ListFindingsResponse.ListFindingsResult.Builder.md",
-  "title": "Class ListFindingsResponse.ListFindingsResult.Builder (2.107.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:45:46.048812+00:00"
-}

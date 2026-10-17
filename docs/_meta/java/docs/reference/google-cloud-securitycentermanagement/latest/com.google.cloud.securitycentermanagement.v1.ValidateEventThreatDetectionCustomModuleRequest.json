@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-securitycentermanagement/latest/com.google.cloud.securitycentermanagement.v1.ValidateEventThreatDetectionCustomModuleRequest",
-  "file": "java/docs/reference/google-cloud-securitycentermanagement/latest/com.google.cloud.securitycentermanagement.v1.ValidateEventThreatDetectionCustomModuleRequest.md",
-  "title": "Class ValidateEventThreatDetectionCustomModuleRequest (0.67.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:00:27.507528+00:00"
-}

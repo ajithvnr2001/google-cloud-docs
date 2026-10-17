@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/migrate/virtual-machines/docs/5.0/reference/rest/v1alpha1/projects.locations.targetProjects",
-  "file": "migrate/virtual-machines/docs/5.0/reference/rest/v1alpha1/projects.locations.targetProjects.md",
-  "title": "REST Resource: projects.locations.targetProjects \u00a0|\u00a0 Migrate to Virtual Machines \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:42:03.480656+00:00"
-}

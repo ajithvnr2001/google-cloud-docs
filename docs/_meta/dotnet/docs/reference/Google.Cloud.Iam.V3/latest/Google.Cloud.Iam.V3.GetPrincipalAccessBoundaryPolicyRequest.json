@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Iam.V3/latest/Google.Cloud.Iam.V3.GetPrincipalAccessBoundaryPolicyRequest",
-  "file": "dotnet/docs/reference/Google.Cloud.Iam.V3/latest/Google.Cloud.Iam.V3.GetPrincipalAccessBoundaryPolicyRequest.md",
-  "title": "Identity and Access Management (IAM) v3 API - Class GetPrincipalAccessBoundaryPolicyRequest (1.0.0-beta03) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:29:12.308012+00:00"
-}

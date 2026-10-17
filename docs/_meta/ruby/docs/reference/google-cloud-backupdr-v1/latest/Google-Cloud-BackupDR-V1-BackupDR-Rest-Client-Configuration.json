@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-backupdr-v1/latest/Google-Cloud-BackupDR-V1-BackupDR-Rest-Client-Configuration/",
-  "file": "ruby/docs/reference/google-cloud-backupdr-v1/latest/Google-Cloud-BackupDR-V1-BackupDR-Rest-Client-Configuration.md",
-  "title": "Backup and DR Service V1 API - Class Google::Cloud::BackupDR::V1::BackupDR::Rest::Client::Configuration (v1.11.2) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:47:32.484527+00:00"
-}

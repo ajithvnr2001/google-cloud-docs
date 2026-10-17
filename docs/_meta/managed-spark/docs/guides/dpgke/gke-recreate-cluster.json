@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/managed-spark/docs/guides/dpgke/gke-recreate-cluster/",
-  "file": "managed-spark/docs/guides/dpgke/gke-recreate-cluster.md",
-  "title": "Recreate and update a Google Kubernetes Engine virtual cluster \u00a0|\u00a0 Managed Service for Apache Spark \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:16:24.412756+00:00"
-}

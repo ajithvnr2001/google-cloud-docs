@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/spanner/docs/use-oss-jdbc/",
-  "file": "spanner/docs/use-oss-jdbc.md",
-  "title": "Connect JDBC to a GoogleSQL-dialect database \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:29:56.769362+00:00"
-}

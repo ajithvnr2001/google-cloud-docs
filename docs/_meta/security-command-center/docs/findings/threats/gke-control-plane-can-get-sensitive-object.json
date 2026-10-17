@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/gke-control-plane-can-get-sensitive-object/",
-  "file": "security-command-center/docs/findings/threats/gke-control-plane-can-get-sensitive-object.md",
-  "title": "Discovery: Can get sensitive Kubernetes object check \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:24:50.699345+00:00"
-}

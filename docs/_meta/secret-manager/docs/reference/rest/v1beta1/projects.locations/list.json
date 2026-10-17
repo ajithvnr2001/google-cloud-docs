@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/secret-manager/docs/reference/rest/v1beta1/projects.locations/list/",
-  "file": "secret-manager/docs/reference/rest/v1beta1/projects.locations/list.md",
-  "title": "Method: projects.locations.list \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:48:19.156171+00:00"
-}

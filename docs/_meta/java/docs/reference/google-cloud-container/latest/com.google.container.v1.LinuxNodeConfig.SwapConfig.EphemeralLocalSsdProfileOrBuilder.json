@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-container/latest/com.google.container.v1.LinuxNodeConfig.SwapConfig.EphemeralLocalSsdProfileOrBuilder",
-  "file": "java/docs/reference/google-cloud-container/latest/com.google.container.v1.LinuxNodeConfig.SwapConfig.EphemeralLocalSsdProfileOrBuilder.md",
-  "title": "Interface LinuxNodeConfig.SwapConfig.EphemeralLocalSsdProfileOrBuilder (2.102.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:21:20.239436+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-orchestration-airflow-service-v1/latest/Google-Cloud-Orchestration-Airflow-Service-V1-DatabaseFailoverRequest/",
-  "file": "ruby/docs/reference/google-cloud-orchestration-airflow-service-v1/latest/Google-Cloud-Orchestration-Airflow-Service-V1-DatabaseFailoverRequest.md",
-  "title": "Cloud Composer V1 API - Class Google::Cloud::Orchestration::Airflow::Service::V1::DatabaseFailoverRequest (v1.9.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:15:44.690964+00:00"
-}

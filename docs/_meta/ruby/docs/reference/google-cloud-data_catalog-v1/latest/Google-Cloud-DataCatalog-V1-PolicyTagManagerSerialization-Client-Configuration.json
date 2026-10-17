@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-data_catalog-v1/latest/Google-Cloud-DataCatalog-V1-PolicyTagManagerSerialization-Client-Configuration/",
-  "file": "ruby/docs/reference/google-cloud-data_catalog-v1/latest/Google-Cloud-DataCatalog-V1-PolicyTagManagerSerialization-Client-Configuration.md",
-  "title": "Data Catalog V1 API - Class Google::Cloud::DataCatalog::V1::PolicyTagManagerSerialization::Client::Configuration (v2.8.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:44:00.131771+00:00"
-}

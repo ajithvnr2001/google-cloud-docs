@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.AllocationSpecificSKUAllocationReservedInstanceProperties",
-  "file": "python/docs/reference/compute/latest/google.cloud.compute_v1.types.AllocationSpecificSKUAllocationReservedInstanceProperties.md",
-  "title": "Class AllocationSpecificSKUAllocationReservedInstanceProperties (1.56.0rc1) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:09:23.218864+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/admanager/latest/admanager/protos.google.ads.admanager.v1.batchactivatedaiencodingprofilesresponse",
-  "file": "nodejs/docs/reference/admanager/latest/admanager/protos.google.ads.admanager.v1.batchactivatedaiencodingprofilesresponse.md",
-  "title": "Class protos.google.ads.admanager.v1.BatchActivateDaiEncodingProfilesResponse (0.14.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:20:35.468200+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/billing/docs/reference/pricing-api/rest/v1beta/billingAccounts.skuGroups/list/",
-  "file": "billing/docs/reference/pricing-api/rest/v1beta/billingAccounts.skuGroups/list.md",
-  "title": "Method: billingAccounts.skuGroups.list \u00a0|\u00a0 Cloud Billing \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:02:22.171274+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/cpp/docs/reference/iam/latest/iam_v2_1_1PoliciesClient-retry-snippet/",
-  "file": "cpp/docs/reference/iam/latest/iam_v2_1_1PoliciesClient-retry-snippet.md",
-  "title": "Override iam_v2::PoliciesClient Retry Policies \u00a0|\u00a0 C++ client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:25:47.075795+00:00"
-}

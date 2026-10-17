@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/appengine/docs/standard/java-gen2/reference/services/bundled/latest/com.google.appengine.api.taskqueue.TaskQueuePb.TaskQueueDeleteResponse.Builder",
-  "file": "appengine/docs/standard/java-gen2/reference/services/bundled/latest/com.google.appengine.api.taskqueue.TaskQueuePb.TaskQueueDeleteResponse.Builder.md",
-  "title": "Class TaskQueuePb.TaskQueueDeleteResponse.Builder (3.0.2) \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:14:46.349890+00:00"
-}

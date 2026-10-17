@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/api-gateway/docs/reference/rest/v1beta/projects.locations.apis.configs/create/",
-  "file": "api-gateway/docs/reference/rest/v1beta/projects.locations.apis.configs/create.md",
-  "title": "Method: projects.locations.apis.configs.create \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:31:49.761469+00:00"
-}

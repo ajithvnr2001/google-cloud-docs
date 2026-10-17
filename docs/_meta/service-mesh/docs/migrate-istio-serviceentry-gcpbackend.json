@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-mesh/docs/migrate-istio-serviceentry-gcpbackend/",
-  "file": "service-mesh/docs/migrate-istio-serviceentry-gcpbackend.md",
-  "title": "Migrate Istio ServiceEntry to GCPBackend for Cloud Run \u00a0|\u00a0 Cloud Service Mesh \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:04:51.780482+00:00"
-}

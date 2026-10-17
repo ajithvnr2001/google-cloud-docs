@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-hypercompute_cluster-v1beta/latest/Google-Cloud-HypercomputeCluster-V1beta-NewSpotInstancesConfig/",
-  "file": "ruby/docs/reference/google-cloud-hypercompute_cluster-v1beta/latest/Google-Cloud-HypercomputeCluster-V1beta-NewSpotInstancesConfig.md",
-  "title": "Cluster Director V1BETA API - Class Google::Cloud::HypercomputeCluster::V1beta::NewSpotInstancesConfig (v1.0.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:48:14.683823+00:00"
-}

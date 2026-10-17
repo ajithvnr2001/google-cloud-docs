@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/app-lifecycle-manager/reference/rest/v1/projects.locations.releases/patch/",
-  "file": "app-lifecycle-manager/reference/rest/v1/projects.locations.releases/patch.md",
-  "title": "Method: projects.locations.releases.patch \u00a0|\u00a0 App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:52:46.327249+00:00"
-}

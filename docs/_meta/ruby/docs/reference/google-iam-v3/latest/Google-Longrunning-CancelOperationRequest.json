@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-iam-v3/latest/Google-Longrunning-CancelOperationRequest/",
-  "file": "ruby/docs/reference/google-iam-v3/latest/Google-Longrunning-CancelOperationRequest.md",
-  "title": "Identity and Access Management (IAM) V3 API - Class Google::Longrunning::CancelOperationRequest (v0.6.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:41:57.502551+00:00"
-}

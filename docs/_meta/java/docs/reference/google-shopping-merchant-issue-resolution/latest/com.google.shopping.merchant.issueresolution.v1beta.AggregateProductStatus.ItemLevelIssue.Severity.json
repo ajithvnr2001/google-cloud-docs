@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-shopping-merchant-issue-resolution/latest/com.google.shopping.merchant.issueresolution.v1beta.AggregateProductStatus.ItemLevelIssue.Severity",
-  "file": "java/docs/reference/google-shopping-merchant-issue-resolution/latest/com.google.shopping.merchant.issueresolution.v1beta.AggregateProductStatus.ItemLevelIssue.Severity.md",
-  "title": "Enum AggregateProductStatus.ItemLevelIssue.Severity (1.27.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:36:24.266792+00:00"
-}

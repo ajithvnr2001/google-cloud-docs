@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/compute/docs/reference/rest/2026-10-01-preview/sslPolicies/delete/",
-  "file": "compute/docs/reference/rest/2026-10-01-preview/sslPolicies/delete.md",
-  "title": "Method: sslPolicies.delete \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:18:46.296444+00:00"
-}

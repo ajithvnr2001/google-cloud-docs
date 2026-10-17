@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.DataCatalog.V1/latest/Google.Cloud.DataCatalog.V1.VertexModelSourceInfo.Types.ModelSourceType",
-  "file": "dotnet/docs/reference/Google.Cloud.DataCatalog.V1/latest/Google.Cloud.DataCatalog.V1.VertexModelSourceInfo.Types.ModelSourceType.md",
-  "title": "Data Catalog v1 API - Enum VertexModelSourceInfo.Types.ModelSourceType (2.17.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:50:03.052080+00:00"
-}

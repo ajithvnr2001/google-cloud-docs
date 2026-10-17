@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/modelarmor/latest/modelarmor/protos.google.cloud.modelarmor.v1beta.maliciousurifilterresult.maliciousurimatcheditem",
-  "file": "nodejs/docs/reference/modelarmor/latest/modelarmor/protos.google.cloud.modelarmor.v1beta.maliciousurifilterresult.maliciousurimatcheditem.md",
-  "title": "Class protos.google.cloud.modelarmor.v1beta.MaliciousUriFilterResult.MaliciousUriMatchedItem (0.9.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:11:59.618820+00:00"
-}

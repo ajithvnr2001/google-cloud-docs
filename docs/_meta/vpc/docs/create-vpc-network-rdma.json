@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/vpc/docs/create-vpc-network-rdma/",
-  "file": "vpc/docs/create-vpc-network-rdma.md",
-  "title": "Create a VPC network for RDMA NICs \u00a0|\u00a0 Virtual Private Cloud \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:14:52.847193+00:00"
-}

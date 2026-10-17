@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloudevent-types/latest/com.google.events.cloud.gkebackup.v1.Backup.ClusterMetadata.PlatformVersionCase",
-  "file": "java/docs/reference/google-cloudevent-types/latest/com.google.events.cloud.gkebackup.v1.Backup.ClusterMetadata.PlatformVersionCase.md",
-  "title": "Enum Backup.ClusterMetadata.PlatformVersionCase (0.16.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:48:00.680433+00:00"
-}

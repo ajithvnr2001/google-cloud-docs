@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/application-integration/docs/samples/foreach-loop-send-email/",
-  "file": "application-integration/docs/samples/foreach-loop-send-email.md",
-  "title": "Invoke a sub-integration to send an email \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:13:56.133247+00:00"
-}

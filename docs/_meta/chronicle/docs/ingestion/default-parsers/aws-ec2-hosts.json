@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aws-ec2-hosts/",
-  "file": "chronicle/docs/ingestion/default-parsers/aws-ec2-hosts.md",
-  "title": "Collect AWS EC2 Hosts logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:26:26.230917+00:00"
-}

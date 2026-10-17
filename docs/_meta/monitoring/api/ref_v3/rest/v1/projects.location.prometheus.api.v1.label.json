@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.location.prometheus.api.v1.label",
-  "file": "monitoring/api/ref_v3/rest/v1/projects.location.prometheus.api.v1.label.md",
-  "title": "REST Resource: projects.location.prometheus.api.v1.label \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:03:42.959431+00:00"
-}

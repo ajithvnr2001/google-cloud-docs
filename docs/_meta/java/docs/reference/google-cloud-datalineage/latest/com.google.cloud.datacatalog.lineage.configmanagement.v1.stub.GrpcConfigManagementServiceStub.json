@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-datalineage/latest/com.google.cloud.datacatalog.lineage.configmanagement.v1.stub.GrpcConfigManagementServiceStub",
-  "file": "java/docs/reference/google-cloud-datalineage/latest/com.google.cloud.datacatalog.lineage.configmanagement.v1.stub.GrpcConfigManagementServiceStub.md",
-  "title": "Class GrpcConfigManagementServiceStub (0.91.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:42:08.248093+00:00"
-}

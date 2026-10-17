@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-datastream-v1alpha1/latest/Google-Cloud-Datastream-V1alpha1-Datastream-Operations-Configuration-Rpcs/",
-  "file": "ruby/docs/reference/google-cloud-datastream-v1alpha1/latest/Google-Cloud-Datastream-V1alpha1-Datastream-Operations-Configuration-Rpcs.md",
-  "title": "Datastream V1alpha1 API - Class Google::Cloud::Datastream::V1alpha1::Datastream::Operations::Configuration::Rpcs (v0.15.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:17:53.646362+00:00"
-}

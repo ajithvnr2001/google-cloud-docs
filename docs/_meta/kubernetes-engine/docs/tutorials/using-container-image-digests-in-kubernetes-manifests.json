@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/using-container-image-digests-in-kubernetes-manifests/",
-  "file": "kubernetes-engine/docs/tutorials/using-container-image-digests-in-kubernetes-manifests.md",
-  "title": "Using container image digests in Kubernetes manifests \u00a0|\u00a0 Kubernetes Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:45:47.744261+00:00"
-}

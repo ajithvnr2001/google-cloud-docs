@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/stackdriver/docs/reference/observability/api/rest/v1/projects.locations.traceScopes/create/",
-  "file": "stackdriver/docs/reference/observability/api/rest/v1/projects.locations.traceScopes/create.md",
-  "title": "Method: projects.locations.traceScopes.create \u00a0|\u00a0 Google Cloud Observability \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:24:33.957554+00:00"
-}

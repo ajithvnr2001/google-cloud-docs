@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-chat/latest/com.google.chat.v1.ChatServiceClient.ListSectionItemsPagedResponse",
-  "file": "java/docs/reference/google-cloud-chat/latest/com.google.chat.v1.ChatServiceClient.ListSectionItemsPagedResponse.md",
-  "title": "Class ChatServiceClient.ListSectionItemsPagedResponse (0.63.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:13:00.301782+00:00"
-}

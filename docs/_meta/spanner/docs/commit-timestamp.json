@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/spanner/docs/commit-timestamp/",
-  "file": "spanner/docs/commit-timestamp.md",
-  "title": "Commit timestamps in GoogleSQL-dialect databases \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:32:47.160389+00:00"
-}

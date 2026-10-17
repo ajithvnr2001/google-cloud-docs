@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.v2.ConfigClient.ListSinksPagedResponse",
-  "file": "java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.v2.ConfigClient.ListSinksPagedResponse.md",
-  "title": "Class ConfigClient.ListSinksPagedResponse (3.40.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:21:12.222845+00:00"
-}

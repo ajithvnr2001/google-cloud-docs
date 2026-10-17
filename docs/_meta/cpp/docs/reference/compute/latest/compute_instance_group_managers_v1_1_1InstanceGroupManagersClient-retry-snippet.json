@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/cpp/docs/reference/compute/latest/compute_instance_group_managers_v1_1_1InstanceGroupManagersClient-retry-snippet/",
-  "file": "cpp/docs/reference/compute/latest/compute_instance_group_managers_v1_1_1InstanceGroupManagersClient-retry-snippet.md",
-  "title": "Override compute_instance_group_managers_v1::InstanceGroupManagersClient Retry Policies \u00a0|\u00a0 C++ client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:16:10.838134+00:00"
-}

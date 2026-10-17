@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-notebooks/latest/com.google.cloud.notebooks.v1beta1.NotebookServiceGrpc.AsyncService",
-  "file": "java/docs/reference/google-cloud-notebooks/latest/com.google.cloud.notebooks.v1beta1.NotebookServiceGrpc.AsyncService.md",
-  "title": "Interface NotebookServiceGrpc.AsyncService (1.97.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:09:51.472773+00:00"
-}

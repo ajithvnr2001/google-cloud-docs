@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/local-ssd-raw/",
-  "file": "kubernetes-engine/docs/how-to/persistent-volumes/local-ssd-raw.md",
-  "title": "Provision and use Local SSD-backed raw block storage \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:22:43.101928+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudsecuritycompliance/latest/com.google.cloud.cloudsecuritycompliance.v1.GenerateFrameworkAuditScopeReportRequest.Builder",
-  "file": "java/docs/reference/google-cloud-cloudsecuritycompliance/latest/com.google.cloud.cloudsecuritycompliance.v1.GenerateFrameworkAuditScopeReportRequest.Builder.md",
-  "title": "Class GenerateFrameworkAuditScopeReportRequest.Builder (0.26.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:48:25.941158+00:00"
-}

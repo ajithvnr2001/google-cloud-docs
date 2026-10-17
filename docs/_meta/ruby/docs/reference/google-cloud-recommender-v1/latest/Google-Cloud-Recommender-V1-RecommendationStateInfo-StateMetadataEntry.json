@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-recommender-v1/latest/Google-Cloud-Recommender-V1-RecommendationStateInfo-StateMetadataEntry/",
-  "file": "ruby/docs/reference/google-cloud-recommender-v1/latest/Google-Cloud-Recommender-V1-RecommendationStateInfo-StateMetadataEntry.md",
-  "title": "Recommender V1 API - Class Google::Cloud::Recommender::V1::RecommendationStateInfo::StateMetadataEntry (v1.8.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:07:41.700252+00:00"
-}

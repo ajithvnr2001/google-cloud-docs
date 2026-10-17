@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-dlp/latest/com.google.privacy.dlp.v2.ContentPolicy.PolicyRule.PolicyCondition.InfoTypeCondition.InfoTypeConditionCase",
-  "file": "java/docs/reference/google-cloud-dlp/latest/com.google.privacy.dlp.v2.ContentPolicy.PolicyRule.PolicyCondition.InfoTypeCondition.InfoTypeConditionCase.md",
-  "title": "Enum ContentPolicy.PolicyRule.PolicyCondition.InfoTypeCondition.InfoTypeConditionCase (3.103.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:13:49.153425+00:00"
-}

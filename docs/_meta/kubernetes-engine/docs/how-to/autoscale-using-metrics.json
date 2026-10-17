@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/how-to/autoscale-using-metrics/",
-  "file": "kubernetes-engine/docs/how-to/autoscale-using-metrics.md",
-  "title": "Autoscale Pods by using custom or external metrics \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:13:54.209399+00:00"
-}

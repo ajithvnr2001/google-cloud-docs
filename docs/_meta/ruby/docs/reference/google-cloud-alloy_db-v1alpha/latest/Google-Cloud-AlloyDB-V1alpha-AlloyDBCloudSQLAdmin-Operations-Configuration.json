@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-alloy_db-v1alpha/latest/Google-Cloud-AlloyDB-V1alpha-AlloyDBCloudSQLAdmin-Operations-Configuration/",
-  "file": "ruby/docs/reference/google-cloud-alloy_db-v1alpha/latest/Google-Cloud-AlloyDB-V1alpha-AlloyDBCloudSQLAdmin-Operations-Configuration.md",
-  "title": "AlloyDB V1ALPHA API - Class Google::Cloud::AlloyDB::V1alpha::AlloyDBCloudSQLAdmin::Operations::Configuration (v0.24.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:50:42.508994+00:00"
-}

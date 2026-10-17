@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/cpp/docs/reference/compute/latest/compute_security_policies_v1_1_1SecurityPoliciesClient-retry-snippet/",
-  "file": "cpp/docs/reference/compute/latest/compute_security_policies_v1_1_1SecurityPoliciesClient-retry-snippet.md",
-  "title": "Override compute_security_policies_v1::SecurityPoliciesClient Retry Policies \u00a0|\u00a0 C++ client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:20:02.332305+00:00"
-}

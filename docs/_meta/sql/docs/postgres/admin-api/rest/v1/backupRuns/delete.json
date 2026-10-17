@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/sql/docs/postgres/admin-api/rest/v1/backupRuns/delete/",
-  "file": "sql/docs/postgres/admin-api/rest/v1/backupRuns/delete.md",
-  "title": "Method: backupRuns.delete \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:54:57.171331+00:00"
-}

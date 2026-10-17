@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/datastream/latest/google.cloud.datastream_v1alpha1.types.CreateConnectionProfileRequest",
-  "file": "python/docs/reference/datastream/latest/google.cloud.datastream_v1alpha1.types.CreateConnectionProfileRequest.md",
-  "title": "Class CreateConnectionProfileRequest (1.20.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:47:31.942680+00:00"
-}

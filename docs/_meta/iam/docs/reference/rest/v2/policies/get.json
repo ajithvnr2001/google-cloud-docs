@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/iam/docs/reference/rest/v2/policies/get/",
-  "file": "iam/docs/reference/rest/v2/policies/get.md",
-  "title": "Method: policies.get \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:53:42.083693+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/monitoring/latest/monitoring/protos.google.monitoring.v3.service.icloudrun",
-  "file": "nodejs/docs/reference/monitoring/latest/monitoring/protos.google.monitoring.v3.service.icloudrun.md",
-  "title": "Interface protos.google.monitoring.v3.Service.ICloudRun (6.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:31:55.632149+00:00"
-}

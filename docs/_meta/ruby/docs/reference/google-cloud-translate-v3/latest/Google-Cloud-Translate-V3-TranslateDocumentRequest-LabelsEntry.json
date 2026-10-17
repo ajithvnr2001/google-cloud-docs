@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-translate-v3/latest/Google-Cloud-Translate-V3-TranslateDocumentRequest-LabelsEntry/",
-  "file": "ruby/docs/reference/google-cloud-translate-v3/latest/Google-Cloud-Translate-V3-TranslateDocumentRequest-LabelsEntry.md",
-  "title": "Cloud Translation V3 API - Class Google::Cloud::Translate::V3::TranslateDocumentRequest::LabelsEntry (v1.10.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:14:10.700147+00:00"
-}

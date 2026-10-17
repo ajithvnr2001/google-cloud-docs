@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/assured-workloads/docs/reference/rest/v1beta1/organizations.locations.workloads.violations/acknowledge/",
-  "file": "assured-workloads/docs/reference/rest/v1beta1/organizations.locations.workloads.violations/acknowledge.md",
-  "title": "Method: organizations.locations.workloads.violations.acknowledge \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:38:27.099445+00:00"
-}

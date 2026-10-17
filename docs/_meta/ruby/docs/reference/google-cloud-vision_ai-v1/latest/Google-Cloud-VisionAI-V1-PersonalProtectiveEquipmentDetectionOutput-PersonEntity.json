@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-vision_ai-v1/latest/Google-Cloud-VisionAI-V1-PersonalProtectiveEquipmentDetectionOutput-PersonEntity/",
-  "file": "ruby/docs/reference/google-cloud-vision_ai-v1/latest/Google-Cloud-VisionAI-V1-PersonalProtectiveEquipmentDetectionOutput-PersonEntity.md",
-  "title": "Vision AI V1 API - Class Google::Cloud::VisionAI::V1::PersonalProtectiveEquipmentDetectionOutput::PersonEntity (v1.5.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:12:08.574689+00:00"
-}

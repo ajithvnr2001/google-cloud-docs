@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.isecuritypolicyrulematcherconfiglayer4config",
-  "file": "nodejs/docs/reference/compute/latest/compute/protos.google.cloud.compute.v1beta.isecuritypolicyrulematcherconfiglayer4config.md",
-  "title": "Interface protos.google.cloud.compute.v1beta.ISecurityPolicyRuleMatcherConfigLayer4Config (7.6.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:22:21.899720+00:00"
-}

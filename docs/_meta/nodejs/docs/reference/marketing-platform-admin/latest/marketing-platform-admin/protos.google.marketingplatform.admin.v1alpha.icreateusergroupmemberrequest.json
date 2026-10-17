@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/marketing-platform-admin/latest/marketing-platform-admin/protos.google.marketingplatform.admin.v1alpha.icreateusergroupmemberrequest",
-  "file": "nodejs/docs/reference/marketing-platform-admin/latest/marketing-platform-admin/protos.google.marketingplatform.admin.v1alpha.icreateusergroupmemberrequest.md",
-  "title": "Interface protos.google.marketingplatform.admin.v1alpha.ICreateUserGroupMemberRequest (0.6.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:45:34.484448+00:00"
-}

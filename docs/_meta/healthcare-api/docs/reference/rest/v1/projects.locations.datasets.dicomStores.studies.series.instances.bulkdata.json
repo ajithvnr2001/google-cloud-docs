@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/healthcare-api/docs/reference/rest/v1/projects.locations.datasets.dicomStores.studies.series.instances.bulkdata",
-  "file": "healthcare-api/docs/reference/rest/v1/projects.locations.datasets.dicomStores.studies.series.instances.bulkdata.md",
-  "title": "REST Resource: projects.locations.datasets.dicomStores.studies.series.instances.bulkdata \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:46:48.672720+00:00"
-}

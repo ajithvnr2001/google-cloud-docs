@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases/dropDatabase/",
-  "file": "spanner/docs/reference/rest/v1/projects.instances.databases/dropDatabase.md",
-  "title": "Method: projects.instances.databases.dropDatabase \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:30:05.180841+00:00"
-}

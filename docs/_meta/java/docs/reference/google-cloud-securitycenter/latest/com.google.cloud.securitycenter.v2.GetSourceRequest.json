@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-securitycenter/latest/com.google.cloud.securitycenter.v2.GetSourceRequest",
-  "file": "java/docs/reference/google-cloud-securitycenter/latest/com.google.cloud.securitycenter.v2.GetSourceRequest.md",
-  "title": "Class GetSourceRequest (2.107.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:46:13.145898+00:00"
-}

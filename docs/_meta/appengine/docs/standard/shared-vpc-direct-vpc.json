@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/appengine/docs/standard/shared-vpc-direct-vpc/",
-  "file": "appengine/docs/standard/shared-vpc-direct-vpc.md",
-  "title": "Direct VPC egress with a Shared VPC network \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:46:05.562617+00:00"
-}

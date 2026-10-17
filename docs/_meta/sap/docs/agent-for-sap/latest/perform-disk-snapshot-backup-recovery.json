@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/sap/docs/agent-for-sap/latest/perform-disk-snapshot-backup-recovery/",
-  "file": "sap/docs/agent-for-sap/latest/perform-disk-snapshot-backup-recovery.md",
-  "title": "Back up and recover SAP HANA by using disk snapshots \u00a0|\u00a0 SAP on Google Cloud \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:58:09.105261+00:00"
-}

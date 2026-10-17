@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-redis-cluster/latest/com.google.cloud.redis.cluster.v1.CloudRedisClusterGrpc.CloudRedisClusterFutureStub",
-  "file": "java/docs/reference/google-cloud-redis-cluster/latest/com.google.cloud.redis.cluster.v1.CloudRedisClusterGrpc.CloudRedisClusterFutureStub.md",
-  "title": "Class CloudRedisClusterGrpc.CloudRedisClusterFutureStub (0.71.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:10:04.798152+00:00"
-}

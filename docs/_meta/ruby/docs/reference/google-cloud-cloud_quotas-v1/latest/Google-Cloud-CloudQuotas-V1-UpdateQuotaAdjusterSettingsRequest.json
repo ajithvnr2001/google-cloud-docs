@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-cloud_quotas-v1/latest/Google-Cloud-CloudQuotas-V1-UpdateQuotaAdjusterSettingsRequest/",
-  "file": "ruby/docs/reference/google-cloud-cloud_quotas-v1/latest/Google-Cloud-CloudQuotas-V1-UpdateQuotaAdjusterSettingsRequest.md",
-  "title": "Cloud Quotas V1 API - Class Google::Cloud::CloudQuotas::V1::UpdateQuotaAdjusterSettingsRequest (v2.6.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:35:25.198639+00:00"
-}

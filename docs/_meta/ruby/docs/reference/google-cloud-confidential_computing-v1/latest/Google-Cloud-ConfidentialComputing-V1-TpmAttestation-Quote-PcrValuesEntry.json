@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-confidential_computing-v1/latest/Google-Cloud-ConfidentialComputing-V1-TpmAttestation-Quote-PcrValuesEntry/",
-  "file": "ruby/docs/reference/google-cloud-confidential_computing-v1/latest/Google-Cloud-ConfidentialComputing-V1-TpmAttestation-Quote-PcrValuesEntry.md",
-  "title": "Confidential Computing V1 API - Class Google::Cloud::ConfidentialComputing::V1::TpmAttestation::Quote::PcrValuesEntry (v2.5.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:58:56.134646+00:00"
-}

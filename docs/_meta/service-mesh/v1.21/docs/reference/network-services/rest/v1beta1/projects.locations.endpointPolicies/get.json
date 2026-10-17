@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-mesh/v1.21/docs/reference/network-services/rest/v1beta1/projects.locations.endpointPolicies/get/",
-  "file": "service-mesh/v1.21/docs/reference/network-services/rest/v1beta1/projects.locations.endpointPolicies/get.md",
-  "title": "Method: projects.locations.endpointPolicies.get \u00a0|\u00a0 Cloud Service Mesh v1.21 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:27:54.784032+00:00"
-}

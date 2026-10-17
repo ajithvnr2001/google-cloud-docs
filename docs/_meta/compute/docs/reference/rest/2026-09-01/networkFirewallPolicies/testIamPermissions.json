@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/compute/docs/reference/rest/2026-09-01/networkFirewallPolicies/testIamPermissions/",
-  "file": "compute/docs/reference/rest/2026-09-01/networkFirewallPolicies/testIamPermissions.md",
-  "title": "Method: networkFirewallPolicies.testIamPermissions \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:10:31.534819+00:00"
-}

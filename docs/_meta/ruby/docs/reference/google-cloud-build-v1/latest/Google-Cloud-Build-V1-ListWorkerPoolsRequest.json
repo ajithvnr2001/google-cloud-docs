@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-build-v1/latest/Google-Cloud-Build-V1-ListWorkerPoolsRequest/",
-  "file": "ruby/docs/reference/google-cloud-build-v1/latest/Google-Cloud-Build-V1-ListWorkerPoolsRequest.md",
-  "title": "Cloud Build V1 API - Class Google::Cloud::Build::V1::ListWorkerPoolsRequest (v1.14.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:18:26.743163+00:00"
-}

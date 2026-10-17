@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/cloud/context-parsers/gcp-kubernetes-context/",
-  "file": "chronicle/docs/ingestion/cloud/context-parsers/gcp-kubernetes-context.md",
-  "title": "Collect Google Cloud Kubernetes Context logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:26:38.982980+00:00"
-}

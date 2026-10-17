@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/datacatalog/latest/datacatalog/protos.google.cloud.datacatalog.v1beta1.icreatetagtemplatefieldrequest",
-  "file": "nodejs/docs/reference/datacatalog/latest/datacatalog/protos.google.cloud.datacatalog.v1beta1.icreatetagtemplatefieldrequest.md",
-  "title": "Interface protos.google.cloud.datacatalog.v1beta1.ICreateTagTemplateFieldRequest (6.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:00:10.117107+00:00"
-}

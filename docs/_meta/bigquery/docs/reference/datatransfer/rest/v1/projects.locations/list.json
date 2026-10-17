@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/bigquery/docs/reference/datatransfer/rest/v1/projects.locations/list/",
-  "file": "bigquery/docs/reference/datatransfer/rest/v1/projects.locations/list.md",
-  "title": "Method: locations.list \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:21:05.662458+00:00"
-}

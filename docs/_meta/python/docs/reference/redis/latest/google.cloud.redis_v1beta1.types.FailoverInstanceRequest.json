@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/redis/latest/google.cloud.redis_v1beta1.types.FailoverInstanceRequest",
-  "file": "python/docs/reference/redis/latest/google.cloud.redis_v1beta1.types.FailoverInstanceRequest.md",
-  "title": "Class FailoverInstanceRequest (2.23.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:06:21.026405+00:00"
-}

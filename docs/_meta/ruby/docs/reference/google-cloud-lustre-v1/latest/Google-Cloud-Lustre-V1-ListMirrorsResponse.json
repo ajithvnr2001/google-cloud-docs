@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-lustre-v1/latest/Google-Cloud-Lustre-V1-ListMirrorsResponse/",
-  "file": "ruby/docs/reference/google-cloud-lustre-v1/latest/Google-Cloud-Lustre-V1-ListMirrorsResponse.md",
-  "title": "Google Cloud Managed Lustre V1 API - Class Google::Cloud::Lustre::V1::ListMirrorsResponse (v1.1.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:58:54.923477+00:00"
-}

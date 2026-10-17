@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/cloud/context-parsers/collect-gcp-iam-context-logs/",
-  "file": "chronicle/docs/ingestion/cloud/context-parsers/collect-gcp-iam-context-logs.md",
-  "title": "Collect Google Cloud IAM context logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:26:31.981944+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/spanner/docs/pg-psycopg3-connect/",
-  "file": "spanner/docs/pg-psycopg3-connect.md",
-  "title": "Connect psycopg3 to a PostgreSQL-dialect database \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:29:57.844352+00:00"
-}

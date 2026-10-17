@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/yl2-gke-data-accessed-anonymously-from-internet/",
-  "file": "security-command-center/docs/findings/threats/yl2-gke-data-accessed-anonymously-from-internet.md",
-  "title": "Initial Access: GKE resource modified anonymously from the internet \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:09:32.548913+00:00"
-}

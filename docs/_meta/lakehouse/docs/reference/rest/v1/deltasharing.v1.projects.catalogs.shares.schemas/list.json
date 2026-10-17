@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/lakehouse/docs/reference/rest/v1/deltasharing.v1.projects.catalogs.shares.schemas/list/",
-  "file": "lakehouse/docs/reference/rest/v1/deltasharing.v1.projects.catalogs.shares.schemas/list.md",
-  "title": "Method: deltasharing.v1.projects.catalogs.shares.schemas.list \u00a0|\u00a0 BigLake API \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:43:37.934794+00:00"
-}

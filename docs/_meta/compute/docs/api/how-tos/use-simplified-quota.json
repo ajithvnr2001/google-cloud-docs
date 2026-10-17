@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/compute/docs/api/how-tos/use-simplified-quota/",
-  "file": "compute/docs/api/how-tos/use-simplified-quota.md",
-  "title": "Use simplified API quota metrics in Cloud Monitoring \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:01:13.118221+00:00"
-}

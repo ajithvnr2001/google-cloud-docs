@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-datacatalog/latest/com.google.cloud.datacatalog.v1beta1.DataCatalogClient.ListEntryGroupsPagedResponse",
-  "file": "java/docs/reference/google-cloud-datacatalog/latest/com.google.cloud.datacatalog.v1beta1.DataCatalogClient.ListEntryGroupsPagedResponse.md",
-  "title": "Class DataCatalogClient.ListEntryGroupsPagedResponse (1.101.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:23:37.229178+00:00"
-}

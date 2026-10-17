@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/bigquery/docs/samples/bigquery-load-table-gcs-orc-truncate/",
-  "file": "bigquery/docs/samples/bigquery-load-table-gcs-orc-truncate.md",
-  "title": "Load an ORC file to replace a table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:56:15.203508+00:00"
-}

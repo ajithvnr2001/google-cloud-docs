@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dialogflow/cx/docs/reference/rest/v3/projects.locations.agents.transitionRouteGroups/list/",
-  "file": "dialogflow/cx/docs/reference/rest/v3/projects.locations.agents.transitionRouteGroups/list.md",
-  "title": "Method: projects.locations.agents.transitionRouteGroups.list \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:39:07.538195+00:00"
-}

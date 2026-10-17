@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/sap/docs/sap-datasphere-cds-replication-bigquery/",
-  "file": "sap/docs/sap-datasphere-cds-replication-bigquery.md",
-  "title": "Set up CDS-based replication: SAP S/4HANA to BigQuery through SAP Datasphere \u00a0|\u00a0 SAP on Google Cloud \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:58:27.256556+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/commerceproducer/latest/commerceproducer/protos.google.cloud.commerceproducer.v1beta.iupdateprivateofferdocumentrequest",
-  "file": "nodejs/docs/reference/commerceproducer/latest/commerceproducer/protos.google.cloud.commerceproducer.v1beta.iupdateprivateofferdocumentrequest.md",
-  "title": "Interface protos.google.cloud.commerceproducer.v1beta.IUpdatePrivateOfferDocumentRequest (0.1.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:12:01.343783+00:00"
-}

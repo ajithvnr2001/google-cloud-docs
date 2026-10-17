@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/aiplatform/latest/aiplatform/protos.google.cloud.aiplatform.v1beta1.reasoningenginecontextspec.memorybankconfig-class",
-  "file": "nodejs/docs/reference/aiplatform/latest/aiplatform/protos.google.cloud.aiplatform.v1beta1.reasoningenginecontextspec.memorybankconfig-class.md",
-  "title": "Class protos.google.cloud.aiplatform.v1beta1.ReasoningEngineContextSpec.MemoryBankConfig (7.4.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:14:34.911057+00:00"
-}

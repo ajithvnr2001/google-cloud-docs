@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-network-security/latest/com.google.cloud.networksecurity.v1beta1.DnsThreatDetectorServiceGrpc.DnsThreatDetectorServiceFutureStub",
-  "file": "java/docs/reference/google-cloud-network-security/latest/com.google.cloud.networksecurity.v1beta1.DnsThreatDetectorServiceGrpc.DnsThreatDetectorServiceFutureStub.md",
-  "title": "Class DnsThreatDetectorServiceGrpc.DnsThreatDetectorServiceFutureStub (0.102.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:53:15.509816+00:00"
-}

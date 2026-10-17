@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/security-posture-pci-dss-template/",
-  "file": "security-command-center/docs/security-posture-pci-dss-template.md",
-  "title": "Predefined posture template for PCI DSS v3.2.1 and v1.0 \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:13:56.691946+00:00"
-}

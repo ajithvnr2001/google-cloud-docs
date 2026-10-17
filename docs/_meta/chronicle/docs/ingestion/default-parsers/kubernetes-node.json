@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/kubernetes-node/",
-  "file": "chronicle/docs/ingestion/default-parsers/kubernetes-node.md",
-  "title": "Collect Google Kubernetes Engine logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:26:40.567862+00:00"
-}

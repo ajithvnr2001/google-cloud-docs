@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-privileged_access_manager-v1/latest/Google-Longrunning-GetOperationRequest/",
-  "file": "ruby/docs/reference/google-cloud-privileged_access_manager-v1/latest/Google-Longrunning-GetOperationRequest.md",
-  "title": "Privileged Access Manager V1 API - Class Google::Longrunning::GetOperationRequest (v1.7.2) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:35:06.384867+00:00"
-}

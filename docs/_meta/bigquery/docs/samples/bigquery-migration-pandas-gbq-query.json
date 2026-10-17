@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/bigquery/docs/samples/bigquery-migration-pandas-gbq-query/",
-  "file": "bigquery/docs/samples/bigquery-migration-pandas-gbq-query.md",
-  "title": "Migration Guide: pandas-gbq \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:49:44.362522+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/dataplex/latest/dataplex/protos.google.cloud.dataplex.v1.dataqualityruleresult.debugqueryresultset",
-  "file": "nodejs/docs/reference/dataplex/latest/dataplex/protos.google.cloud.dataplex.v1.dataqualityruleresult.debugqueryresultset.md",
-  "title": "Class protos.google.cloud.dataplex.v1.DataQualityRuleResult.DebugQueryResultSet (6.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:33:44.128325+00:00"
-}

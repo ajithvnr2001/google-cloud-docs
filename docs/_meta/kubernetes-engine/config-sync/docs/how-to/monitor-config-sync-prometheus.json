@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/how-to/monitor-config-sync-prometheus/",
-  "file": "kubernetes-engine/config-sync/docs/how-to/monitor-config-sync-prometheus.md",
-  "title": "Monitor Config Sync with Prometheus \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:34:06.909608+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-data_catalog-lineage-v1/latest/Google-Cloud-DataCatalog-Lineage-V1-SearchLineageStreamingResponse/",
-  "file": "ruby/docs/reference/google-cloud-data_catalog-lineage-v1/latest/Google-Cloud-DataCatalog-Lineage-V1-SearchLineageStreamingResponse.md",
-  "title": "Data Lineage V1 API - Class Google::Cloud::DataCatalog::Lineage::V1::SearchLineageStreamingResponse (v0.16.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:54:56.859450+00:00"
-}

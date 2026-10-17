@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/compute/docs/samples/compute-template-preemptible/",
-  "file": "compute/docs/samples/compute-template-preemptible.md",
-  "title": "Create an instance template for a MIG with preemptible VMs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:41:46.095087+00:00"
-}

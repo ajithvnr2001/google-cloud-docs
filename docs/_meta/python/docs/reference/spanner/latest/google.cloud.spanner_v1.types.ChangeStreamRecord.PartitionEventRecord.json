@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/spanner/latest/google.cloud.spanner_v1.types.ChangeStreamRecord.PartitionEventRecord",
-  "file": "python/docs/reference/spanner/latest/google.cloud.spanner_v1.types.ChangeStreamRecord.PartitionEventRecord.md",
-  "title": "Class PartitionEventRecord (3.71.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:21:53.652889+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/deploy/docs/api/reference/rest/v1/projects.locations.operations/cancel/",
-  "file": "deploy/docs/api/reference/rest/v1/projects.locations.operations/cancel.md",
-  "title": "Method: projects.locations.operations.cancel \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:41:06.512396+00:00"
-}

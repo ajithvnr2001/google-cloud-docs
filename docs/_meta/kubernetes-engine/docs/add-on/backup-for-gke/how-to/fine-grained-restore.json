@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke/how-to/fine-grained-restore/",
-  "file": "kubernetes-engine/docs/add-on/backup-for-gke/how-to/fine-grained-restore.md",
-  "title": "Enable fine-grained restore \u00a0|\u00a0 Backup for GKE \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:10:00.251981+00:00"
-}

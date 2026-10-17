@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/reference/rest/v1/projects.locations.instances.logTypes.parserExtensions.validationReports.parsingErrors/list/",
-  "file": "chronicle/docs/reference/rest/v1/projects.locations.instances.logTypes.parserExtensions.validationReports.parsingErrors/list.md",
-  "title": "Method: parsingErrors.list \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:15:48.864699+00:00"
-}

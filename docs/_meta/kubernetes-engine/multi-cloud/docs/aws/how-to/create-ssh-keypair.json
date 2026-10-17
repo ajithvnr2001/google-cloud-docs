@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/aws/how-to/create-ssh-keypair/",
-  "file": "kubernetes-engine/multi-cloud/docs/aws/how-to/create-ssh-keypair.md",
-  "title": "Create an EC2 key pair \u00a0|\u00a0 GKE on AWS \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:48:30.531286+00:00"
-}

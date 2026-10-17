@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-beyondcorp-clientconnectorservices/latest/com.google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorService.Ingress.Config.DestinationRouteOrBuilder",
-  "file": "java/docs/reference/google-cloud-beyondcorp-clientconnectorservices/latest/com.google.cloud.beyondcorp.clientconnectorservices.v1.ClientConnectorService.Ingress.Config.DestinationRouteOrBuilder.md",
-  "title": "Interface ClientConnectorService.Ingress.Config.DestinationRouteOrBuilder (0.97.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:22:22.671300+00:00"
-}

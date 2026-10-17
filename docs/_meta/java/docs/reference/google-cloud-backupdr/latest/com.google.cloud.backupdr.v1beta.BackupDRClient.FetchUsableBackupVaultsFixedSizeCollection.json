@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-backupdr/latest/com.google.cloud.backupdr.v1beta.BackupDRClient.FetchUsableBackupVaultsFixedSizeCollection",
-  "file": "java/docs/reference/google-cloud-backupdr/latest/com.google.cloud.backupdr.v1beta.BackupDRClient.FetchUsableBackupVaultsFixedSizeCollection.md",
-  "title": "Class BackupDRClient.FetchUsableBackupVaultsFixedSizeCollection (0.58.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:26:51.192262+00:00"
-}

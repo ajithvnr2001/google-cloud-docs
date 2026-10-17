@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/alloydb/omni/containers/16.9.0/docs/kubernetes-dr-backup-singleserver-gcs/",
-  "file": "alloydb/omni/containers/16.9.0/docs/kubernetes-dr-backup-singleserver-gcs.md",
-  "title": "Clone a database cluster in a single server using a Cloud Storage backup \u00a0|\u00a0 AlloyDB Omni for containers: 16.9.0 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:54:37.873306+00:00"
-}

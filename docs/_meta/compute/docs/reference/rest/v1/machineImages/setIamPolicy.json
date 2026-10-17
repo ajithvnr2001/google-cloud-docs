@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/compute/docs/reference/rest/v1/machineImages/setIamPolicy/",
-  "file": "compute/docs/reference/rest/v1/machineImages/setIamPolicy.md",
-  "title": "Method: machineImages.setIamPolicy \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:18:22.847662+00:00"
-}

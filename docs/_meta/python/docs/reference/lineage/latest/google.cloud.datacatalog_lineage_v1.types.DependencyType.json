@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/lineage/latest/google.cloud.datacatalog_lineage_v1.types.DependencyType",
-  "file": "python/docs/reference/lineage/latest/google.cloud.datacatalog_lineage_v1.types.DependencyType.md",
-  "title": "Class DependencyType (0.7.1) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:03:47.882154+00:00"
-}

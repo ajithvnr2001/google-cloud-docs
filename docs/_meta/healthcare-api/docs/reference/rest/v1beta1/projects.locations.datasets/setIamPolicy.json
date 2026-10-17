@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/healthcare-api/docs/reference/rest/v1beta1/projects.locations.datasets/setIamPolicy/",
-  "file": "healthcare-api/docs/reference/rest/v1beta1/projects.locations.datasets/setIamPolicy.md",
-  "title": "Method: datasets.setIamPolicy \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:17:46.541774+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/ai-agent-granted-token-creator-role-folder/",
-  "file": "security-command-center/docs/findings/threats/ai-agent-granted-token-creator-role-folder.md",
-  "title": "Defense Evasion: Folder Level TokenCreator Role Granted to AI Agent \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:23:54.881212+00:00"
-}

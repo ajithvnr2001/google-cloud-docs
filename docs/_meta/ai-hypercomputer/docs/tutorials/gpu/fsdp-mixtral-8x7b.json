@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/gpu/fsdp-mixtral-8x7b/",
-  "file": "ai-hypercomputer/docs/tutorials/gpu/fsdp-mixtral-8x7b.md",
-  "title": "Use FSDP to fine-tune Mixtral-8x7B on an A4 Slurm cluster \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:55:09.067449+00:00"
-}

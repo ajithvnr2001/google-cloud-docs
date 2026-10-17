@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/sap/docs/sap-netweaver-ha-vip-migration-for-sles/",
-  "file": "sap/docs/sap-netweaver-ha-vip-migration-for-sles.md",
-  "title": "Migrate a VIP in an SAP NetWeaver HA cluster on SLES to an internal passthrough Network Load Balancer \u00a0|\u00a0 SAP on Google Cloud \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:58:12.874429+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-discovery_engine-v1/latest/Google-Cloud-DiscoveryEngine-V1-EngineService-Rest-ServiceStub/",
-  "file": "ruby/docs/reference/google-cloud-discovery_engine-v1/latest/Google-Cloud-DiscoveryEngine-V1-EngineService-Rest-ServiceStub.md",
-  "title": "Discovery Engine V1 API - Class Google::Cloud::DiscoveryEngine::V1::EngineService::Rest::ServiceStub (v2.12.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:53:04.500279+00:00"
-}

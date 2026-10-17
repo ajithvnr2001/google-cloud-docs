@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/security-center/latest/security-center/protos.google.cloud.securitycenter.v1p1beta1.updateorganizationsettingsrequest",
-  "file": "nodejs/docs/reference/security-center/latest/security-center/protos.google.cloud.securitycenter.v1p1beta1.updateorganizationsettingsrequest.md",
-  "title": "Class protos.google.cloud.securitycenter.v1p1beta1.UpdateOrganizationSettingsRequest (10.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:13:37.095734+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/reference/rest/v1/projects.locations.instances.dashboardCharts/batchGet/",
-  "file": "chronicle/docs/reference/rest/v1/projects.locations.instances.dashboardCharts/batchGet.md",
-  "title": "Method: dashboardCharts.batchGet \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:49:51.157274+00:00"
-}

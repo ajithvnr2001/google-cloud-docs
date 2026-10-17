@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/aggregate-dp-functions/",
-  "file": "bigquery/docs/reference/standard-sql/aggregate-dp-functions.md",
-  "title": "Differentially private aggregate functions \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:58:35.072362+00:00"
-}

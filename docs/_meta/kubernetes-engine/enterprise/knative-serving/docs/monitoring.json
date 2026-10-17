@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/enterprise/knative-serving/docs/monitoring/",
-  "file": "kubernetes-engine/enterprise/knative-serving/docs/monitoring.md",
-  "title": "Monitoring health and performance \u00a0|\u00a0 Knative serving \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:37:18.691258+00:00"
-}

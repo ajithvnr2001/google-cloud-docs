@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/alloydb/omni/kubernetes/15.17.0/docs/reference/kubernetes-crds-1.3.0/pgbouncer/",
-  "file": "alloydb/omni/kubernetes/15.17.0/docs/reference/kubernetes-crds-1.3.0/pgbouncer.md",
-  "title": "PgBouncer v1.3.0 custom resource definition \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 15.17.0 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:53:23.769740+00:00"
-}

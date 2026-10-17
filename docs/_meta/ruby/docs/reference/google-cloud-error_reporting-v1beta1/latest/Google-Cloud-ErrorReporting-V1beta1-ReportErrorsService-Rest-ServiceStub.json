@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-error_reporting-v1beta1/latest/Google-Cloud-ErrorReporting-V1beta1-ReportErrorsService-Rest-ServiceStub/",
-  "file": "ruby/docs/reference/google-cloud-error_reporting-v1beta1/latest/Google-Cloud-ErrorReporting-V1beta1-ReportErrorsService-Rest-ServiceStub.md",
-  "title": "Error Reporting V1beta1 API - Class Google::Cloud::ErrorReporting::V1beta1::ReportErrorsService::Rest::ServiceStub (v0.17.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:05:40.014429+00:00"
-}

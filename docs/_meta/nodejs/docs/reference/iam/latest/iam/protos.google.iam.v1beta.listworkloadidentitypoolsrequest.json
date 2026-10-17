@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/iam/latest/iam/protos.google.iam.v1beta.listworkloadidentitypoolsrequest",
-  "file": "nodejs/docs/reference/iam/latest/iam/protos.google.iam.v1beta.listworkloadidentitypoolsrequest.md",
-  "title": "Class protos.google.iam.v1beta.ListWorkloadIdentityPoolsRequest (3.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:44:26.968999+00:00"
-}

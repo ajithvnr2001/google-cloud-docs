@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-discoveryengine/latest/com.google.cloud.discoveryengine.v1alpha.SearchRequest.ContentSearchSpec.ExtractiveContentSpec",
-  "file": "java/docs/reference/google-cloud-discoveryengine/latest/com.google.cloud.discoveryengine.v1alpha.SearchRequest.ContentSearchSpec.ExtractiveContentSpec.md",
-  "title": "Class SearchRequest.ContentSearchSpec.ExtractiveContentSpec (0.95.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:53:12.724458+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.DiscoveryEngine.V1/latest/Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse.Types.DocumentMetadata.Types.MatcherValue.MatcherValueOneofCase",
-  "file": "dotnet/docs/reference/Google.Cloud.DiscoveryEngine.V1/latest/Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse.Types.DocumentMetadata.Types.Match_1bede784.md",
-  "title": "Discovery Engine v1 API - Enum BatchGetDocumentsMetadataResponse.Types.DocumentMetadata.Types.MatcherValue.MatcherValueOneofCase (1.16.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:46:34.774961+00:00"
-}

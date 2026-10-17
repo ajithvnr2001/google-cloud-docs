@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/securitycentermanagement/latest/securitycentermanagement/protos.google.cloud.securitycentermanagement.v1.validateeventthreatdetectioncustommoduleresponse.iposition",
-  "file": "nodejs/docs/reference/securitycentermanagement/latest/securitycentermanagement/protos.google.cloud.securitycentermanagement.v1.validateeventthreatdetectioncustommoduleresponse.iposition.md",
-  "title": "Interface protos.google.cloud.securitycentermanagement.v1.ValidateEventThreatDetectionCustomModuleResponse.IPosition (0.10.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:45:05.330341+00:00"
-}

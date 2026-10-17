@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering/",
-  "file": "kubernetes-engine/docs/how-to/cluster-usage-metering.md",
-  "title": "Understanding cluster resource usage \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:29:47.548699+00:00"
-}

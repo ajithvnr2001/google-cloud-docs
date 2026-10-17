@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/resource-manager/reference/rest/v3/organizations/setIamPolicy/",
-  "file": "resource-manager/reference/rest/v3/organizations/setIamPolicy.md",
-  "title": "Method: organizations.setIamPolicy \u00a0|\u00a0 Resource Manager \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:19:13.021603+00:00"
-}

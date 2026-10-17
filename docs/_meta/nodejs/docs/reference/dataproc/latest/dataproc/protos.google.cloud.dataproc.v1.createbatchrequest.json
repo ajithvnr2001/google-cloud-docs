@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/dataproc/latest/dataproc/protos.google.cloud.dataproc.v1.createbatchrequest",
-  "file": "nodejs/docs/reference/dataproc/latest/dataproc/protos.google.cloud.dataproc.v1.createbatchrequest.md",
-  "title": "Class protos.google.cloud.dataproc.v1.CreateBatchRequest (7.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:03:39.154150+00:00"
-}

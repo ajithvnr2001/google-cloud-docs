@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/docs/how-to/user-managed-firewall-rules/",
-  "file": "kubernetes-engine/docs/how-to/user-managed-firewall-rules.md",
-  "title": "User-managed firewall rules for GKE LoadBalancer Services \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:24:15.241782+00:00"
-}

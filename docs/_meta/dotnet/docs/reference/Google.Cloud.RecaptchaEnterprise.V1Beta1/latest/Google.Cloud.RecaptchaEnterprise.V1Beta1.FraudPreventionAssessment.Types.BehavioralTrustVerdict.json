@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.RecaptchaEnterprise.V1Beta1/latest/Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.BehavioralTrustVerdict",
-  "file": "dotnet/docs/reference/Google.Cloud.RecaptchaEnterprise.V1Beta1/latest/Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.BehavioralTrustVerdict.md",
-  "title": "Google Cloud reCAPTCHA Enterprise v1beta1 API - Class FraudPreventionAssessment.Types.BehavioralTrustVerdict (2.0.0-beta10) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:54:18.480536+00:00"
-}

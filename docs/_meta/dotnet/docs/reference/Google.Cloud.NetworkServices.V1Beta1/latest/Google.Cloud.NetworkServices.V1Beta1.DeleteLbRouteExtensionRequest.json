@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.NetworkServices.V1Beta1/latest/Google.Cloud.NetworkServices.V1Beta1.DeleteLbRouteExtensionRequest",
-  "file": "dotnet/docs/reference/Google.Cloud.NetworkServices.V1Beta1/latest/Google.Cloud.NetworkServices.V1Beta1.DeleteLbRouteExtensionRequest.md",
-  "title": "Network Services v1beta1 API - Class DeleteLbRouteExtensionRequest (1.0.0-beta01) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:52:28.957538+00:00"
-}

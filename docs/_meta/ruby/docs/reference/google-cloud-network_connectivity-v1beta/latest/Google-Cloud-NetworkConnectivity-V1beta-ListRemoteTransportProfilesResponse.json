@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-network_connectivity-v1beta/latest/Google-Cloud-NetworkConnectivity-V1beta-ListRemoteTransportProfilesResponse/",
-  "file": "ruby/docs/reference/google-cloud-network_connectivity-v1beta/latest/Google-Cloud-NetworkConnectivity-V1beta-ListRemoteTransportProfilesResponse.md",
-  "title": "Network Connectivity V1BETA API - Class Google::Cloud::NetworkConnectivity::V1beta::ListRemoteTransportProfilesResponse (v0.3.2) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:20:18.555280+00:00"
-}

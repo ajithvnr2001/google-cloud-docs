@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/vmware-workspaceone-uem/",
-  "file": "chronicle/docs/ingestion/default-parsers/vmware-workspaceone-uem.md",
-  "title": "Collect Omnissa Workspace ONE UEM (formerly VMware Workspace ONE) logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:13:10.509265+00:00"
-}

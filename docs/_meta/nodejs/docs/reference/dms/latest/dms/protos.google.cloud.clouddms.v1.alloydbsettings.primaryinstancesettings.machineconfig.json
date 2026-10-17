@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/dms/latest/dms/protos.google.cloud.clouddms.v1.alloydbsettings.primaryinstancesettings.machineconfig",
-  "file": "nodejs/docs/reference/dms/latest/dms/protos.google.cloud.clouddms.v1.alloydbsettings.primaryinstancesettings.machineconfig.md",
-  "title": "Class protos.google.cloud.clouddms.v1.AlloyDbSettings.PrimaryInstanceSettings.MachineConfig (5.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:17:20.636054+00:00"
-}

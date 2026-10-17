@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/vpc/docs/using-vpc-peering/",
-  "file": "vpc/docs/using-vpc-peering.md",
-  "title": "Set up and manage VPC Network Peering \u00a0|\u00a0 Virtual Private Cloud \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:27:53.208565+00:00"
-}

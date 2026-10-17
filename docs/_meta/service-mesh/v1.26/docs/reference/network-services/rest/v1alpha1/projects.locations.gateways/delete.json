@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-mesh/v1.26/docs/reference/network-services/rest/v1alpha1/projects.locations.gateways/delete/",
-  "file": "service-mesh/v1.26/docs/reference/network-services/rest/v1alpha1/projects.locations.gateways/delete.md",
-  "title": "Method: projects.locations.gateways.delete \u00a0|\u00a0 Cloud Service Mesh v1.26 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:43:54.538448+00:00"
-}

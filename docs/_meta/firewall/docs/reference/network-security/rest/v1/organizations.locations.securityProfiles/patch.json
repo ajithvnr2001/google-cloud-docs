@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/firewall/docs/reference/network-security/rest/v1/organizations.locations.securityProfiles/patch/",
-  "file": "firewall/docs/reference/network-security/rest/v1/organizations.locations.securityProfiles/patch.md",
-  "title": "Method: organizations.locations.securityProfiles.patch \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:25:58.809265+00:00"
-}

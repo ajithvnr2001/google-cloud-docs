@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-sql-v1beta4/latest/Google-Cloud-Sql-V1beta4-SqlInstancesUpdateRequest/",
-  "file": "ruby/docs/reference/google-cloud-sql-v1beta4/latest/Google-Cloud-Sql-V1beta4-SqlInstancesUpdateRequest.md",
-  "title": "Cloud SQL Admin V1BETA4 API - Class Google::Cloud::Sql::V1beta4::SqlInstancesUpdateRequest (v0.2.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:41:17.279198+00:00"
-}

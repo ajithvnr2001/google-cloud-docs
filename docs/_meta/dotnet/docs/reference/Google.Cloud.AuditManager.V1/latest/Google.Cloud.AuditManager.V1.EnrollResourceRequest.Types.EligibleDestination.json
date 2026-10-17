@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.AuditManager.V1/latest/Google.Cloud.AuditManager.V1.EnrollResourceRequest.Types.EligibleDestination",
-  "file": "dotnet/docs/reference/Google.Cloud.AuditManager.V1/latest/Google.Cloud.AuditManager.V1.EnrollResourceRequest.Types.EligibleDestination.md",
-  "title": "Audit Manager v1 API - Class EnrollResourceRequest.Types.EligibleDestination (1.3.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:39:14.281767+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/alloydb/omni/kubernetes/16.11.0/docs/columnar-engine/manage-content-recommendations/",
-  "file": "alloydb/omni/kubernetes/16.11.0/docs/columnar-engine/manage-content-recommendations.md",
-  "title": "Manage column store content using auto-columnarization \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 16.11.0 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:35:50.344423+00:00"
-}

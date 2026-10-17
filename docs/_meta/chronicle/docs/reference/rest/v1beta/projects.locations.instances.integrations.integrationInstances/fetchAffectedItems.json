@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/reference/rest/v1beta/projects.locations.instances.integrations.integrationInstances/fetchAffectedItems/",
-  "file": "chronicle/docs/reference/rest/v1beta/projects.locations.instances.integrations.integrationInstances/fetchAffectedItems.md",
-  "title": "Method: integrationInstances.fetchAffectedItems \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:37:37.156978+00:00"
-}

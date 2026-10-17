@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/cluster-director/docs/reference/rest/v1beta/projects.locations.clusters/list/",
-  "file": "cluster-director/docs/reference/rest/v1beta/projects.locations.clusters/list.md",
-  "title": "Method: projects.locations.clusters.list \u00a0|\u00a0 Cluster Director \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:07:39.597329+00:00"
-}

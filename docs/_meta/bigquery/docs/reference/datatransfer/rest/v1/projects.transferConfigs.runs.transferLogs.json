@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/bigquery/docs/reference/datatransfer/rest/v1/projects.transferConfigs.runs.transferLogs",
-  "file": "bigquery/docs/reference/datatransfer/rest/v1/projects.transferConfigs.runs.transferLogs.md",
-  "title": "REST Resource: projects.transferConfigs.runs.transferLogs \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:45:27.054760+00:00"
-}

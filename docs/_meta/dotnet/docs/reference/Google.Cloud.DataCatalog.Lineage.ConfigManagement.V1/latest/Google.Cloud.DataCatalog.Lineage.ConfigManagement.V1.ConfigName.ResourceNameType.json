@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1/latest/Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigName.ResourceNameType",
-  "file": "dotnet/docs/reference/Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1/latest/Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigName.ResourceNameType.md",
-  "title": "Data Lineage v1 API - Enum ConfigName.ResourceNameType (1.0.0-beta01) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:03:27.097103+00:00"
-}

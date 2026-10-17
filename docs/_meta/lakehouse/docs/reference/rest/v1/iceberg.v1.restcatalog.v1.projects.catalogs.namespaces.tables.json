@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/lakehouse/docs/reference/rest/v1/iceberg.v1.restcatalog.v1.projects.catalogs.namespaces.tables",
-  "file": "lakehouse/docs/reference/rest/v1/iceberg.v1.restcatalog.v1.projects.catalogs.namespaces.tables.md",
-  "title": "REST Resource: iceberg.v1.restcatalog.v1.projects.catalogs.namespaces.tables \u00a0|\u00a0 BigLake API \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:47:39.952723+00:00"
-}

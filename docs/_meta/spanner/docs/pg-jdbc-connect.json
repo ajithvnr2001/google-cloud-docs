@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/spanner/docs/pg-jdbc-connect/",
-  "file": "spanner/docs/pg-jdbc-connect.md",
-  "title": "Connect JDBC to a PostgreSQL-dialect database \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:29:56.079625+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/stackdriver/docs/solutions/agents/ops-agent/third-party/tomcat/",
-  "file": "stackdriver/docs/solutions/agents/ops-agent/third-party/tomcat.md",
-  "title": "Apache Tomcat \u00a0|\u00a0 Google Cloud Observability \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:28:05.046776+00:00"
-}

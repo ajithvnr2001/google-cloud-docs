@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-cloudsupport/latest/com.google.cloud.support.v2.CaseAttachmentServiceGrpc.CaseAttachmentServiceBlockingV2Stub",
-  "file": "java/docs/reference/google-cloud-cloudsupport/latest/com.google.cloud.support.v2.CaseAttachmentServiceGrpc.CaseAttachmentServiceBlockingV2Stub.md",
-  "title": "Class CaseAttachmentServiceGrpc.CaseAttachmentServiceBlockingV2Stub (0.83.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:23:28.602768+00:00"
-}

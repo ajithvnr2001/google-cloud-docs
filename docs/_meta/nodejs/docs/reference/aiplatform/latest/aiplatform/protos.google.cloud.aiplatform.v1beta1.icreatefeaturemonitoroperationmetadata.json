@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/aiplatform/latest/aiplatform/protos.google.cloud.aiplatform.v1beta1.icreatefeaturemonitoroperationmetadata",
-  "file": "nodejs/docs/reference/aiplatform/latest/aiplatform/protos.google.cloud.aiplatform.v1beta1.icreatefeaturemonitoroperationmetadata.md",
-  "title": "Interface protos.google.cloud.aiplatform.v1beta1.ICreateFeatureMonitorOperationMetadata (7.4.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:43:45.431207+00:00"
-}

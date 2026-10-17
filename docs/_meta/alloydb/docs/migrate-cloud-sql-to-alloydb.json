@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/alloydb/docs/migrate-cloud-sql-to-alloydb/",
-  "file": "alloydb/docs/migrate-cloud-sql-to-alloydb.md",
-  "title": "Migrate from Cloud SQL for PostgreSQL to AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:10:01.333467+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/compute/docs/reference/rest/v1/rollouts/list/",
-  "file": "compute/docs/reference/rest/v1/rollouts/list.md",
-  "title": "Method: rollouts.list \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:32:04.117672+00:00"
-}

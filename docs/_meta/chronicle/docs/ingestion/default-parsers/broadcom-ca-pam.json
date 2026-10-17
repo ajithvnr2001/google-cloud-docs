@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/broadcom-ca-pam/",
-  "file": "chronicle/docs/ingestion/default-parsers/broadcom-ca-pam.md",
-  "title": "Collect Broadcom CA PAM logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:02:40.856261+00:00"
-}

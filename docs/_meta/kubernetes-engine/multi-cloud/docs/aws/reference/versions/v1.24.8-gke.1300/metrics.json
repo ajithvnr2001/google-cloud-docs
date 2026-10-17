@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/aws/reference/versions/v1.24.8-gke.1300/metrics/",
-  "file": "kubernetes-engine/multi-cloud/docs/aws/reference/versions/v1.24.8-gke.1300/metrics.md",
-  "title": "Metrics available in 1.24.8-gke.1300 \u00a0|\u00a0 GKE on AWS \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:03:20.521237+00:00"
-}

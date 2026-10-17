@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/pubsub-api/latest/pubsub-api/protos.google.pubsub.v1.streamingpullresponse.subscriptionproperties",
-  "file": "nodejs/docs/reference/pubsub-api/latest/pubsub-api/protos.google.pubsub.v1.streamingpullresponse.subscriptionproperties.md",
-  "title": "Class protos.google.pubsub.v1.StreamingPullResponse.SubscriptionProperties (0.4.0) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:12:10.378083+00:00"
-}

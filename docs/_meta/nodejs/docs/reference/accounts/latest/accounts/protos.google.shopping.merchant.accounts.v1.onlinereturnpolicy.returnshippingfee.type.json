@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/accounts/latest/accounts/protos.google.shopping.merchant.accounts.v1.onlinereturnpolicy.returnshippingfee.type",
-  "file": "nodejs/docs/reference/accounts/latest/accounts/protos.google.shopping.merchant.accounts.v1.onlinereturnpolicy.returnshippingfee.type.md",
-  "title": "Enum protos.google.shopping.merchant.accounts.v1.OnlineReturnPolicy.ReturnShippingFee.Type (4.0.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:27:00.069874+00:00"
-}

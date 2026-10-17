@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-meet/latest/com.google.apps.meet.v2.ConferenceRecordsServiceClient.ListParticipantSessionsFixedSizeCollection",
-  "file": "java/docs/reference/google-cloud-meet/latest/com.google.apps.meet.v2.ConferenceRecordsServiceClient.ListParticipantSessionsFixedSizeCollection.md",
-  "title": "Class ConferenceRecordsServiceClient.ListParticipantSessionsFixedSizeCollection (0.66.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:12:56.869524+00:00"
-}

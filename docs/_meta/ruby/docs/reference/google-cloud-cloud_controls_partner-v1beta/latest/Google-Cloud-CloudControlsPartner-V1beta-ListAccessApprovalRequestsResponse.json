@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-cloud_controls_partner-v1beta/latest/Google-Cloud-CloudControlsPartner-V1beta-ListAccessApprovalRequestsResponse/",
-  "file": "ruby/docs/reference/google-cloud-cloud_controls_partner-v1beta/latest/Google-Cloud-CloudControlsPartner-V1beta-ListAccessApprovalRequestsResponse.md",
-  "title": "Cloud Controls Partner V1BETA API - Class Google::Cloud::CloudControlsPartner::V1beta::ListAccessApprovalRequestsResponse (v0.9.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:08:04.419006+00:00"
-}

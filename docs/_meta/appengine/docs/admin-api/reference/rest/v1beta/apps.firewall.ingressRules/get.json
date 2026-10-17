@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.firewall.ingressRules/get/",
-  "file": "appengine/docs/admin-api/reference/rest/v1beta/apps.firewall.ingressRules/get.md",
-  "title": "Method: apps.firewall.ingressRules.get \u00a0|\u00a0 App Engine Admin API \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:18:54.120617+00:00"
-}

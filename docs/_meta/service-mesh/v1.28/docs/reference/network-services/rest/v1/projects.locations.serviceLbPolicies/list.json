@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-mesh/v1.28/docs/reference/network-services/rest/v1/projects.locations.serviceLbPolicies/list/",
-  "file": "service-mesh/v1.28/docs/reference/network-services/rest/v1/projects.locations.serviceLbPolicies/list.md",
-  "title": "Method: projects.locations.serviceLbPolicies.list \u00a0|\u00a0 Cloud Service Mesh \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:31:30.343827+00:00"
-}

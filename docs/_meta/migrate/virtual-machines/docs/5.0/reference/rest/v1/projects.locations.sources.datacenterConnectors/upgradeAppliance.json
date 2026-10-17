@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/migrate/virtual-machines/docs/5.0/reference/rest/v1/projects.locations.sources.datacenterConnectors/upgradeAppliance/",
-  "file": "migrate/virtual-machines/docs/5.0/reference/rest/v1/projects.locations.sources.datacenterConnectors/upgradeAppliance.md",
-  "title": "Method: projects.locations.sources.datacenterConnectors.upgradeAppliance \u00a0|\u00a0 Migrate to Virtual Machines \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:24:19.491425+00:00"
-}

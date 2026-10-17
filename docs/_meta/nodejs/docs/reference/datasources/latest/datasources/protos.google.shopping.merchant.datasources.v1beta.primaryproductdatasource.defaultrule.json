@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/datasources/latest/datasources/protos.google.shopping.merchant.datasources.v1beta.primaryproductdatasource.defaultrule",
-  "file": "nodejs/docs/reference/datasources/latest/datasources/protos.google.shopping.merchant.datasources.v1beta.primaryproductdatasource.defaultrule.md",
-  "title": "Class protos.google.shopping.merchant.datasources.v1beta.PrimaryProductDataSource.DefaultRule (0.12.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:12:47.628408+00:00"
-}

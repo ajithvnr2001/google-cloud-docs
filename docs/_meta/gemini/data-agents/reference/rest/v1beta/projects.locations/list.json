@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1beta/projects.locations/list/",
-  "file": "gemini/data-agents/reference/rest/v1beta/projects.locations/list.md",
-  "title": "Method: projects.locations.list \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:06:33.194418+00:00"
-}

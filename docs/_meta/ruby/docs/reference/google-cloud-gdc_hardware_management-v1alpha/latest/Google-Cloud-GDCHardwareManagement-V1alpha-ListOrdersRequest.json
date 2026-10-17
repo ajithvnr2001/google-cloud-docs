@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-gdc_hardware_management-v1alpha/latest/Google-Cloud-GDCHardwareManagement-V1alpha-ListOrdersRequest/",
-  "file": "ruby/docs/reference/google-cloud-gdc_hardware_management-v1alpha/latest/Google-Cloud-GDCHardwareManagement-V1alpha-ListOrdersRequest.md",
-  "title": "GDC Hardware Management V1ALPHA API - Class Google::Cloud::GDCHardwareManagement::V1alpha::ListOrdersRequest (v0.15.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:11:31.463931+00:00"
-}

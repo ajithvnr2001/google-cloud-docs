@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/bigquery/docs/reference/analytics-hub/rest/v1beta1/projects.locations.dataExchanges.listings/getIamPolicy/",
-  "file": "bigquery/docs/reference/analytics-hub/rest/v1beta1/projects.locations.dataExchanges.listings/getIamPolicy.md",
-  "title": "Method: projects.locations.dataExchanges.listings.getIamPolicy \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:11:12.409955+00:00"
-}

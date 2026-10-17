@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/backup-disaster-recovery/docs/configuration/discover-sap-hana-scaleout/",
-  "file": "backup-disaster-recovery/docs/configuration/discover-sap-hana-scaleout.md",
-  "title": "Add an SAP HANA database host and discover and protect its databases in the appliance management console \u00a0|\u00a0 Backup and DR \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:06:59.364583+00:00"
-}

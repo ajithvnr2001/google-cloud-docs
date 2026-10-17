@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/sql/docs/sqlserver/samples/cloud-sql-sqlserver-mssql-connect-tcp/",
-  "file": "sql/docs/sqlserver/samples/cloud-sql-sqlserver-mssql-connect-tcp.md",
-  "title": "Create a TCP connection when using Node.js \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:32:23.769157+00:00"
-}

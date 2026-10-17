@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-capacity_planner-v1beta/latest/Google-Cloud-CapacityPlanner-V1beta-ExportReservationsUsageRequest-ShareType/",
-  "file": "ruby/docs/reference/google-cloud-capacity_planner-v1beta/latest/Google-Cloud-CapacityPlanner-V1beta-ExportReservationsUsageRequest-ShareType.md",
-  "title": "Capacity Planner V1BETA API - Module Google::Cloud::CapacityPlanner::V1beta::ExportReservationsUsageRequest::ShareType (v0.5.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:04:37.234140+00:00"
-}

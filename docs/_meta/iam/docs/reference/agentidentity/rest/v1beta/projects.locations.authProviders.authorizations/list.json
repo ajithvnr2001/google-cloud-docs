@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/iam/docs/reference/agentidentity/rest/v1beta/projects.locations.authProviders.authorizations/list/",
-  "file": "iam/docs/reference/agentidentity/rest/v1beta/projects.locations.authProviders.authorizations/list.md",
-  "title": "Method: projects.locations.authProviders.authorizations.list \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T16:32:25.768338+00:00"
-}

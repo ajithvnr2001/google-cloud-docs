@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-deploy-v1/latest/Google-Cloud-Deploy-V1-ApproveRolloutRequest/",
-  "file": "ruby/docs/reference/google-cloud-deploy-v1/latest/Google-Cloud-Deploy-V1-ApproveRolloutRequest.md",
-  "title": "Google Cloud Deploy V1 API - Class Google::Cloud::Deploy::V1::ApproveRolloutRequest (v2.6.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:29:18.798137+00:00"
-}

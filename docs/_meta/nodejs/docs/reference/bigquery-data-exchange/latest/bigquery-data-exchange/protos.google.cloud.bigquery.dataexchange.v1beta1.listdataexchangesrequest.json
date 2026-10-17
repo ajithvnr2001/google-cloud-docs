@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/bigquery-data-exchange/latest/bigquery-data-exchange/protos.google.cloud.bigquery.dataexchange.v1beta1.listdataexchangesrequest",
-  "file": "nodejs/docs/reference/bigquery-data-exchange/latest/bigquery-data-exchange/protos.google.cloud.bigquery.dataexchange.v1beta1.listdataexchangesrequest.md",
-  "title": "Class protos.google.cloud.bigquery.dataexchange.v1beta1.ListDataExchangesRequest (3.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:54:42.992071+00:00"
-}

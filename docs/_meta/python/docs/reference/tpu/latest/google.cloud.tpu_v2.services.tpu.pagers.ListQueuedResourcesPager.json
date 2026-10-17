@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/tpu/latest/google.cloud.tpu_v2.services.tpu.pagers.ListQueuedResourcesPager",
-  "file": "python/docs/reference/tpu/latest/google.cloud.tpu_v2.services.tpu.pagers.ListQueuedResourcesPager.md",
-  "title": "Class ListQueuedResourcesPager (1.28.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:25:36.031011+00:00"
-}

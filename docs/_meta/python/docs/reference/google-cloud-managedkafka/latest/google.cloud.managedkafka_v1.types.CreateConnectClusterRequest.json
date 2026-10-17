@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest/google.cloud.managedkafka_v1.types.CreateConnectClusterRequest",
-  "file": "python/docs/reference/google-cloud-managedkafka/latest/google.cloud.managedkafka_v1.types.CreateConnectClusterRequest.md",
-  "title": "Class CreateConnectClusterRequest (0.4.2) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:21:27.462002+00:00"
-}

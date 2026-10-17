@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/storage-transfer/docs/event-driven-azure/",
-  "file": "storage-transfer/docs/event-driven-azure.md",
-  "title": "Event-driven transfers from Azure Blob Storage or Data Lake Storage Gen2 \u00a0|\u00a0 Storage Transfer Service \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:29:34.219131+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/text-to-speech/latest/text-to-speech/protos.google.cloud.texttospeech.v1beta1.istreamingsynthesizerequest",
-  "file": "nodejs/docs/reference/text-to-speech/latest/text-to-speech/protos.google.cloud.texttospeech.v1beta1.istreamingsynthesizerequest.md",
-  "title": "Interface protos.google.cloud.texttospeech.v1beta1.IStreamingSynthesizeRequest (7.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:54:33.909379+00:00"
-}

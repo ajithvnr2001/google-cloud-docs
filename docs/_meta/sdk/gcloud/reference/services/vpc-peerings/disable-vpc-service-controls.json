@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/sdk/gcloud/reference/services/vpc-peerings/disable-vpc-service-controls/",
-  "file": "sdk/gcloud/reference/services/vpc-peerings/disable-vpc-service-controls.md",
-  "title": "gcloud services vpc-peerings disable-vpc-service-controls \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:14:21.967148+00:00"
-}

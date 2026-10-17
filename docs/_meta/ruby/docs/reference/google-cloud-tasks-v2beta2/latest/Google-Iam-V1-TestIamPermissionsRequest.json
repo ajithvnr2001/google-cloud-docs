@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-tasks-v2beta2/latest/Google-Iam-V1-TestIamPermissionsRequest/",
-  "file": "ruby/docs/reference/google-cloud-tasks-v2beta2/latest/Google-Iam-V1-TestIamPermissionsRequest.md",
-  "title": "Cloud Tasks V2beta2 API - Class Google::Iam::V1::TestIamPermissionsRequest (v0.18.2) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:49:02.669519+00:00"
-}

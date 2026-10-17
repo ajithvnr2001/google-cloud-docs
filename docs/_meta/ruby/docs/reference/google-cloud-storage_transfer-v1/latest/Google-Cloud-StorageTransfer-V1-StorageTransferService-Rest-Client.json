@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_transfer-v1/latest/Google-Cloud-StorageTransfer-V1-StorageTransferService-Rest-Client/",
-  "file": "ruby/docs/reference/google-cloud-storage_transfer-v1/latest/Google-Cloud-StorageTransfer-V1-StorageTransferService-Rest-Client.md",
-  "title": "Storage Transfer Service V1 API - Class Google::Cloud::StorageTransfer::V1::StorageTransferService::Rest::Client (v1.11.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:55:22.680627+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-discovery_engine-v1beta/latest/Google-Cloud-DiscoveryEngine-V1beta-PurgeSuggestionDenyListEntriesMetadata/",
-  "file": "ruby/docs/reference/google-cloud-discovery_engine-v1beta/latest/Google-Cloud-DiscoveryEngine-V1beta-PurgeSuggestionDenyListEntriesMetadata.md",
-  "title": "Discovery Engine V1BETA API - Class Google::Cloud::DiscoveryEngine::V1beta::PurgeSuggestionDenyListEntriesMetadata (v0.30.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:59:39.363401+00:00"
-}

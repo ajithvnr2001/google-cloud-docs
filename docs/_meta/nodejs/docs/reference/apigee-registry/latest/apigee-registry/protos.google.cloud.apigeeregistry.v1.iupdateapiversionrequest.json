@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/apigee-registry/latest/apigee-registry/protos.google.cloud.apigeeregistry.v1.iupdateapiversionrequest",
-  "file": "nodejs/docs/reference/apigee-registry/latest/apigee-registry/protos.google.cloud.apigeeregistry.v1.iupdateapiversionrequest.md",
-  "title": "Interface protos.google.cloud.apigeeregistry.v1.IUpdateApiVersionRequest (3.0.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:59:56.060599+00:00"
-}

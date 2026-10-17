@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/sql/latest/sql/protos.google.cloud.sql.v1.isqldatabasesgetrequest",
-  "file": "nodejs/docs/reference/sql/latest/sql/protos.google.cloud.sql.v1.isqldatabasesgetrequest.md",
-  "title": "Interface protos.google.cloud.sql.v1.ISqlDatabasesGetRequest (0.29.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:00:11.093939+00:00"
-}

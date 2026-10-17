@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/cpp/docs/reference/iap/latest/structgoogle_1_1cloud_1_1iap__v1_1_1IdentityAwareProxyAdminServiceBackoffPolicyOption/",
-  "file": "cpp/docs/reference/iap/latest/structgoogle_1_1cloud_1_1iap__v1_1_1IdentityAwareProxyAdminServiceBackoffPolicyOption.md",
-  "title": "Struct IdentityAwareProxyAdminServiceBackoffPolicyOption (3.13.0-rc) \u00a0|\u00a0 C++ client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:17:14.829728+00:00"
-}

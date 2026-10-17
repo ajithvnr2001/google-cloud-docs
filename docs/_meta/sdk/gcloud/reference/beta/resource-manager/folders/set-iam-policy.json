@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/sdk/gcloud/reference/beta/resource-manager/folders/set-iam-policy/",
-  "file": "sdk/gcloud/reference/beta/resource-manager/folders/set-iam-policy.md",
-  "title": "gcloud beta resource-manager folders set-iam-policy \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:10:39.237760+00:00"
-}

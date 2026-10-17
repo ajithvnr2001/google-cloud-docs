@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Dataflow.V1Beta3/latest/Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3.SnapshotsV1Beta3Client",
-  "file": "dotnet/docs/reference/Google.Cloud.Dataflow.V1Beta3/latest/Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3.SnapshotsV1Beta3Client.md",
-  "title": "Dataflow v1beta3 API - Class SnapshotsV1Beta3.SnapshotsV1Beta3Client (2.0.0-beta10) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:46:29.218823+00:00"
-}

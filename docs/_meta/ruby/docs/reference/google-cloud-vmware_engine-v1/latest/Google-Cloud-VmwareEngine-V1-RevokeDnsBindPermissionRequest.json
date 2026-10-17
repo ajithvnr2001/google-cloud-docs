@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-vmware_engine-v1/latest/Google-Cloud-VmwareEngine-V1-RevokeDnsBindPermissionRequest/",
-  "file": "ruby/docs/reference/google-cloud-vmware_engine-v1/latest/Google-Cloud-VmwareEngine-V1-RevokeDnsBindPermissionRequest.md",
-  "title": "Google Cloud VMware Engine V1 API - Class Google::Cloud::VmwareEngine::V1::RevokeDnsBindPermissionRequest (v1.5.2) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:37:13.143057+00:00"
-}

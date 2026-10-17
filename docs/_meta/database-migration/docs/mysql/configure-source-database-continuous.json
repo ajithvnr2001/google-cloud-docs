@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/database-migration/docs/mysql/configure-source-database-continuous/",
-  "file": "database-migration/docs/mysql/configure-source-database-continuous.md",
-  "title": "Configure your source MySQL database for continuous migrations \u00a0|\u00a0 Database Migration Service for MySQL \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:48:33.926979+00:00"
-}

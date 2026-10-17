@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/reference/rest/v1/projects.locations.features/getIamPolicy/",
-  "file": "kubernetes-engine/fleet-management/docs/reference/rest/v1/projects.locations.features/getIamPolicy.md",
-  "title": "Method: projects.locations.features.getIamPolicy \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:05:55.981339+00:00"
-}

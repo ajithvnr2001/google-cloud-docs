@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/gke-backup/latest/gke-backup/protos.google.cloud.gkebackup.v1.restoreconfig.restoreorder.groupkinddependency",
-  "file": "nodejs/docs/reference/gke-backup/latest/gke-backup/protos.google.cloud.gkebackup.v1.restoreconfig.restoreorder.groupkinddependency.md",
-  "title": "Class protos.google.cloud.gkebackup.v1.RestoreConfig.RestoreOrder.GroupKindDependency (3.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:17:14.060505+00:00"
-}

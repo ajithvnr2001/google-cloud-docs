@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/logging/docs/reference/v2/rest/v2/projects.locations.buckets.links/list/",
-  "file": "logging/docs/reference/v2/rest/v2/projects.locations.buckets.links/list.md",
-  "title": "Method: projects.locations.buckets.links.list \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:32:02.980408+00:00"
-}

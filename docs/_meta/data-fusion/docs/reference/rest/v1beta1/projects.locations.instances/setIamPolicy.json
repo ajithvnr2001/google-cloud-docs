@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/data-fusion/docs/reference/rest/v1beta1/projects.locations.instances/setIamPolicy/",
-  "file": "data-fusion/docs/reference/rest/v1beta1/projects.locations.instances/setIamPolicy.md",
-  "title": "Method: projects.locations.instances.setIamPolicy \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T14:43:57.728841+00:00"
-}

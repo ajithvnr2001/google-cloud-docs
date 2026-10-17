@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-valkey/latest/com.google.cloud.memorystore.v1beta.StartMigrationRequestOrBuilder",
-  "file": "java/docs/reference/google-cloud-valkey/latest/com.google.cloud.memorystore.v1beta.StartMigrationRequestOrBuilder.md",
-  "title": "Interface StartMigrationRequestOrBuilder (0.45.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:02:12.750129+00:00"
-}

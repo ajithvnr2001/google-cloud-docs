@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-iap-v1/latest/Google-Cloud-Iap-V1-IdentityAwareProxyAdminService-Rest-ServiceStub/",
-  "file": "ruby/docs/reference/google-cloud-iap-v1/latest/Google-Cloud-Iap-V1-IdentityAwareProxyAdminService-Rest-ServiceStub.md",
-  "title": "Identity-Aware Proxy V1 API - Class Google::Cloud::Iap::V1::IdentityAwareProxyAdminService::Rest::ServiceStub (v1.8.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:37:35.668271+00:00"
-}

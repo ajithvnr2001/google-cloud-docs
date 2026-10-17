@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts/disable/",
-  "file": "iam/docs/reference/rest/v1/projects.serviceAccounts/disable.md",
-  "title": "Method: projects.serviceAccounts.disable \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:54:05.964244+00:00"
-}

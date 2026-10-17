@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/service-mesh/v1.22/docs/reference/network-services/rest/v1/projects.locations.endpointPolicies/delete/",
-  "file": "service-mesh/v1.22/docs/reference/network-services/rest/v1/projects.locations.endpointPolicies/delete.md",
-  "title": "Method: projects.locations.endpointPolicies.delete \u00a0|\u00a0 Cloud Service Mesh v1.22 \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:34:39.697416+00:00"
-}

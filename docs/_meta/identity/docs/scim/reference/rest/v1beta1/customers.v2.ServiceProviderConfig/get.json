@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/identity/docs/scim/reference/rest/v1beta1/customers.v2.ServiceProviderConfig/get/",
-  "file": "identity/docs/scim/reference/rest/v1beta1/customers.v2.ServiceProviderConfig/get.md",
-  "title": "Method: customers.v2.ServiceProviderConfig.get \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:39:05.022497+00:00"
-}

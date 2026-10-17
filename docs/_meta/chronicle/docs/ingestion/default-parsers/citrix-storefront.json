@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/citrix-storefront/",
-  "file": "chronicle/docs/ingestion/default-parsers/citrix-storefront.md",
-  "title": "Collect Citrix StoreFront logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:22:41.344177+00:00"
-}

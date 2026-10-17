@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-BatchPredictionJob-OutputInfo/",
-  "file": "ruby/docs/reference/google-cloud-ai_platform-v1/latest/Google-Cloud-AIPlatform-V1-BatchPredictionJob-OutputInfo.md",
-  "title": "Vertex AI V1 API - Class Google::Cloud::AIPlatform::V1::BatchPredictionJob::OutputInfo (v1.49.0) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:21:43.186989+00:00"
-}

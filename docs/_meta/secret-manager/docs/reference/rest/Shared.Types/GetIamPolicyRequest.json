@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/secret-manager/docs/reference/rest/Shared.Types/GetIamPolicyRequest/",
-  "file": "secret-manager/docs/reference/rest/Shared.Types/GetIamPolicyRequest.md",
-  "title": "GetIamPolicyRequest \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:15:09.658953+00:00"
-}

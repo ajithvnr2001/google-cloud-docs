@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/deploy/docs/api/reference/rest/v1/projects.locations.customTargetTypes/create/",
-  "file": "deploy/docs/api/reference/rest/v1/projects.locations.customTargetTypes/create.md",
-  "title": "Method: projects.locations.customTargetTypes.create \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:35:44.504519+00:00"
-}

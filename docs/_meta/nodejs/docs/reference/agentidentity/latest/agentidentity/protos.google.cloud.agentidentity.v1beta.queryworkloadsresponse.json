@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/agentidentity/latest/agentidentity/protos.google.cloud.agentidentity.v1beta.queryworkloadsresponse",
-  "file": "nodejs/docs/reference/agentidentity/latest/agentidentity/protos.google.cloud.agentidentity.v1beta.queryworkloadsresponse.md",
-  "title": "Class protos.google.cloud.agentidentity.v1beta.QueryWorkloadsResponse (0.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:25:07.698450+00:00"
-}

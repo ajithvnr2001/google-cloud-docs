@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/api-gateway/docs/reference/rest/v1/projects.locations.operations/cancel/",
-  "file": "api-gateway/docs/reference/rest/v1/projects.locations.operations/cancel.md",
-  "title": "Method: projects.locations.operations.cancel \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:31:59.287361+00:00"
-}

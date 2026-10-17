@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Monitoring.V3/latest/Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher",
-  "file": "dotnet/docs/reference/Google.Cloud.Monitoring.V3/latest/Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.md",
-  "title": "Google Cloud Monitoring v3 API - Class UptimeCheckConfig.Types.ContentMatcher (3.16.0) \u00a0|\u00a0 .NET client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:14:41.131743+00:00"
-}

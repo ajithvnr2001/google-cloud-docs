@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/chronicle/docs/reference/rest/v1alpha/projects.locations.instances.integrations.jobs.revisions/rollback/",
-  "file": "chronicle/docs/reference/rest/v1alpha/projects.locations.instances.integrations.jobs.revisions/rollback.md",
-  "title": "Method: revisions.rollback \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:14:07.163480+00:00"
-}

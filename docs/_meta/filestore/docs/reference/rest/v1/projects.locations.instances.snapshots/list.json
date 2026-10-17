@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/filestore/docs/reference/rest/v1/projects.locations.instances.snapshots/list/",
-  "file": "filestore/docs/reference/rest/v1/projects.locations.instances.snapshots/list.md",
-  "title": "Method: projects.locations.instances.snapshots.list \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:50:47.812118+00:00"
-}

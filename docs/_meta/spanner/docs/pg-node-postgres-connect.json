@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/spanner/docs/pg-node-postgres-connect/",
-  "file": "spanner/docs/pg-node-postgres-connect.md",
-  "title": "Connect node-postgres to a PostgreSQL-dialect database \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T15:29:58.321987+00:00"
-}

@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-infra-manager/latest/com.google.cloud.config.v1.ConfigClient.ListResourceChangesFixedSizeCollection",
-  "file": "java/docs/reference/google-cloud-infra-manager/latest/com.google.cloud.config.v1.ConfigClient.ListResourceChangesFixedSizeCollection.md",
-  "title": "Class ConfigClient.ListResourceChangesFixedSizeCollection (0.76.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T18:55:01.265003+00:00"
-}

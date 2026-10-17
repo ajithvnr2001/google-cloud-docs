@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-video-transcoder-v1/latest/Google-Cloud-Video-Transcoder-V1-TranscoderService-Rest-Client-Configuration/",
-  "file": "ruby/docs/reference/google-cloud-video-transcoder-v1/latest/Google-Cloud-Video-Transcoder-V1-TranscoderService-Rest-Client-Configuration.md",
-  "title": "Transcoder V1 API - Class Google::Cloud::Video::Transcoder::V1::TranscoderService::Rest::Client::Configuration (v2.6.1) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:08:56.347922+00:00"
-}

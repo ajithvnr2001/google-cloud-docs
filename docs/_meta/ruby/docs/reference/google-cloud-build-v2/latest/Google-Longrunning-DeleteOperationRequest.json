@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/ruby/docs/reference/google-cloud-build-v2/latest/Google-Longrunning-DeleteOperationRequest/",
-  "file": "ruby/docs/reference/google-cloud-build-v2/latest/Google-Longrunning-DeleteOperationRequest.md",
-  "title": "Cloud Build V2 API - Class Google::Longrunning::DeleteOperationRequest (v0.14.2) \u00a0|\u00a0 Ruby client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T20:12:34.592448+00:00"
-}

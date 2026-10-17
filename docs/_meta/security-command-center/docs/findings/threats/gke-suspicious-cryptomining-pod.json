@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/security-command-center/docs/findings/threats/gke-suspicious-cryptomining-pod/",
-  "file": "security-command-center/docs/findings/threats/gke-suspicious-cryptomining-pod.md",
-  "title": "Impact: Suspicious Kubernetes Container Names - Cryptocurrency Mining \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:25:00.482028+00:00"
-}

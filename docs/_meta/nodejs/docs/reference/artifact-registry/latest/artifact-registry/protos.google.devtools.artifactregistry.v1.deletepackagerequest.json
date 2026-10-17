@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/nodejs/docs/reference/artifact-registry/latest/artifact-registry/protos.google.devtools.artifactregistry.v1.deletepackagerequest",
-  "file": "nodejs/docs/reference/artifact-registry/latest/artifact-registry/protos.google.devtools.artifactregistry.v1.deletepackagerequest.md",
-  "title": "Class protos.google.devtools.artifactregistry.v1.DeletePackageRequest (5.1.1) \u00a0|\u00a0 Node.js client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T19:57:46.590506+00:00"
-}

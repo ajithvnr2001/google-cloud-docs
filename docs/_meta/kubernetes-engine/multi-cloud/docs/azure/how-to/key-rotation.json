@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/how-to/key-rotation/",
-  "file": "kubernetes-engine/multi-cloud/docs/azure/how-to/key-rotation.md",
-  "title": "Rotate your cluster's security keys \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T12:13:59.044578+00:00"
-}

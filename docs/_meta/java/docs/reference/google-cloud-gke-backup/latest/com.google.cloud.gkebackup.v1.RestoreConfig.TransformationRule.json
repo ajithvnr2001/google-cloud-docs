@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/java/docs/reference/google-cloud-gke-backup/latest/com.google.cloud.gkebackup.v1.RestoreConfig.TransformationRule",
-  "file": "java/docs/reference/google-cloud-gke-backup/latest/com.google.cloud.gkebackup.v1.RestoreConfig.TransformationRule.md",
-  "title": "Class RestoreConfig.TransformationRule (0.98.0) \u00a0|\u00a0 Java client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T17:14:20.231388+00:00"
-}

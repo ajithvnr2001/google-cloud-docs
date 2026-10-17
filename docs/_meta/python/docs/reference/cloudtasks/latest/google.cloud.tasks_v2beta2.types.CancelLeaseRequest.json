@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/python/docs/reference/cloudtasks/latest/google.cloud.tasks_v2beta2.types.CancelLeaseRequest",
-  "file": "python/docs/reference/cloudtasks/latest/google.cloud.tasks_v2beta2.types.CancelLeaseRequest.md",
-  "title": "Class CancelLeaseRequest (2.26.0) \u00a0|\u00a0 Python client libraries \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:42:39.304768+00:00"
-}

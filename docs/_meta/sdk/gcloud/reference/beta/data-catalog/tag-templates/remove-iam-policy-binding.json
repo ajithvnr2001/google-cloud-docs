@@ -1,7 +1,0 @@
-{
-  "url": "https://docs.cloud.google.com/sdk/gcloud/reference/beta/data-catalog/tag-templates/remove-iam-policy-binding/",
-  "file": "sdk/gcloud/reference/beta/data-catalog/tag-templates/remove-iam-policy-binding.md",
-  "title": "gcloud beta data-catalog tag-templates remove-iam-policy-binding \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation",
-  "method": "scrapling+scrapegraph",
-  "fetched_at": "2026-10-13T13:26:35.054293+00:00"
-}
