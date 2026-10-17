@@ -1,10 +1,17 @@
 # Google Cloud Docs — End-to-End Crawler
 
-Crawls **https://docs.cloud.google.com/** completely (1,230,913 sitemap URLs across 70 shards: guides + versioned API reference) plus in-guide reference domains. Three stacks: **Scrapling** → **Crawl4AI** → **ScrapeGraphAI** (local, no LLM key).
+Crawls **https://docs.cloud.google.com/** completely (1,230,844 raw sitemap URLs → **601,023 unique canonical pages** across 70 shards: guides + versioned API reference) plus in-guide reference domains. Three stacks: **Scrapling** → **Crawl4AI** → **ScrapeGraphAI** (local, no LLM key).
+
+## Status: COMPLETE (2026-10-17)
+
+- **607,307 pages crawled** (= 601,023 sitemap canonicals + link-discovered extras; only 364 sitemap gap URLs found by audit, fetched via `final_gapfill.py`; 64 PDFs are binary assets, recorded not converted).
+- 70/70 shards done — see `STATUS.json` (`"done": true`) / `STATUS.log`.
+- **Corpus is too large for git pushes** (GitHub pre-receive rejects >~5GB pushes / >100MB files), so `docs/` is intentionally **not in git**. **Full-corpus snapshots are published as GitHub Release assets** (tar.gz, ≤2GB each): see [Releases](https://github.com/ajithvnr2001/google-cloud-docs/releases).
 
 ## Scale (measured)
 
-- 1,230,913 URLs; 53% API reference dumps (`java` 150k, `nodejs` 127k); guides ≈ 575k.
+- 1,230,844 raw sitemap URLs (duplicates/locale-version pairs) → 601,023 unique canonical after normalization.
+- `java` 150k, `nodejs` 127k pages dominate (54% is versioned API reference); guides ≈ rest.
 - Median fetch 0.9 s/page → ~15–20/s at `--concurrency 30` → **~18–24 h** full pass, ~35 GB output.
 
 ## Install
@@ -26,10 +33,11 @@ State (all under `/data`, survives crashes): `crawl_state.db` (sqlite visited/fa
 ## Layout
 
 ```
-inventory.py  crawl_gcp.py  requirements.txt
+inventory.py  crawl_gcp.py  final_gapfill.py  requirements.txt
 guide_code/   # coder guide + coder_scrape.py / coder_update.py
 seeds/        # git-ignored shard URL lists (regenerable)
-docs/         # git-ignored output (~35GB when complete)
+docs/         # git-ignored output (~12GB; published via Releases)
+releases/     # local staging for release tar.gz assets
 ```
 
 ## Key findings
@@ -39,4 +47,4 @@ docs/         # git-ignored output (~35GB when complete)
 
 ## Status
 
-Full crawl in progress — see `STATUS.log` / `STATUS.json`. No GitHub Actions (manual durable runs).
+Crawl complete — 70/70 shards, `"done": true` in `STATUS.json`. Full-corpus snapshots published as GitHub Release assets. No GitHub Actions (manual durable runs, by design).
