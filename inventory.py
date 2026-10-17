@@ -30,10 +30,24 @@ async def get(c, u, sem):
                     return u, f"ERR {str(e)[:120]}"
                 await asyncio.sleep(5)
 
+async def discover_sitemaps():
+    """Fetch sitemap index at runtime (the /tmp cache file may not survive reboots)."""
+    import httpx, re
+    async with httpx.AsyncClient(follow_redirects=True, timeout=60) as c:
+        r = await c.get("https://docs.cloud.google.com/sitemap.xml")
+        r.raise_for_status()
+        return sorted(set(re.findall(r"https://docs\.cloud\.google\.com/sitemap[^<]*\.xml", r.text)))
+
 async def main():
     import httpx
     SEEDS.mkdir(parents=True, exist_ok=True)
-    urls = [l.strip() for l in open("/tmp/gcp-sitemaps-real.txt") if l.strip()]
+    cache = SEEDS / "_sitemap_files_cache.txt"
+    if cache.exists():
+        urls = [l.strip() for l in cache.read_text().splitlines() if l.strip()]
+    else:
+        urls = await discover_sitemaps()
+        cache.write_text("\n".join(urls) + "\n")
+        log(f"discovered {len(urls)} sitemap files from index")
     prog_f = SEEDS / "_progress.json"
     prog = json.loads(prog_f.read_text()) if prog_f.exists() else {}
     todo = [u for u in urls if prog.get(u, {}).get("done")]

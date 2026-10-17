@@ -5,14 +5,20 @@
 set -e
 UNIT_SRC="/data/opencode/gcpdocs/gcp-crawl.service"
 UNIT_DST="/etc/systemd/system/gcp-crawl.service"
+UPDATE_UNIT_SRC="/data/opencode/gcpdocs/gcp-update.service"
+UPDATE_TIMER_SRC="/data/opencode/gcpdocs/gcp-update.timer"
 
 if [ ! -f "$UNIT_SRC" ]; then
   echo "FATAL: $UNIT_SRC missing (/data not attached?)" >&2
   exit 1
 fi
 cp -f "$UNIT_SRC" "$UNIT_DST"
+cp -f "$UPDATE_UNIT_SRC" /etc/systemd/system/gcp-update.service
+cp -f "$UPDATE_TIMER_SRC" /etc/systemd/system/gcp-update.timer
 systemctl daemon-reload
 systemctl enable gcp-crawl.service
+# daily incremental update: enabled always (cheap when nothing changed)
+systemctl enable --now gcp-update.timer
 if ! systemctl is-active --quiet gcp-crawl.service; then
   # don't start a duplicate if a manual crawl is already running on the DB
   if pgrep -f "crawl_gcp.py" >/dev/null; then
