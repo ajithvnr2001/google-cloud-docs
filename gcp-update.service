@@ -9,6 +9,10 @@ Type=oneshot
 User=root
 WorkingDirectory=/data/opencode/gcpdocs
 ExecStart=/usr/bin/python3 /data/opencode/gcpdocs/update_gcp.py --concurrency 20
+# ship any tracked-side changes (README/GUIDE edits, future stamps) — most days this is a no-op;
+# the 12GB corpus itself ships as Release deltas, never git (see GUIDE.md)
+EnvironmentFile=/data/opencode/secrets/git.env
+ExecStartPost=/data/opencode/gcpdocs/vm-ship.sh ajithvnr2001/google-cloud-docs README.md GUIDE.md
 TimeoutStartSec=7200
 
 [Install]
