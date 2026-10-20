@@ -7,6 +7,7 @@ UNIT_SRC="/data/opencode/gcpdocs/gcp-crawl.service"
 UNIT_DST="/etc/systemd/system/gcp-crawl.service"
 UPDATE_UNIT_SRC="/data/opencode/gcpdocs/gcp-update.service"
 UPDATE_TIMER_SRC="/data/opencode/gcpdocs/gcp-update.timer"
+DRAIN_UNIT_SRC="/data/opencode/gcpdocs/gcp-drain.service"
 
 if [ ! -f "$UNIT_SRC" ]; then
   echo "FATAL: $UNIT_SRC missing (/data not attached?)" >&2
@@ -15,6 +16,9 @@ fi
 cp -f "$UNIT_SRC" "$UNIT_DST"
 cp -f "$UPDATE_UNIT_SRC" /etc/systemd/system/gcp-update.service
 cp -f "$UPDATE_TIMER_SRC" /etc/systemd/system/gcp-update.timer
+if [ -f "$DRAIN_UNIT_SRC" ]; then
+  cp -f "$DRAIN_UNIT_SRC" /etc/systemd/system/gcp-drain.service
+fi
 systemctl daemon-reload
 systemctl enable gcp-crawl.service
 # daily incremental update: enabled always (cheap when nothing changed)
@@ -29,5 +33,11 @@ if ! systemctl is-active --quiet gcp-crawl.service; then
   fi
 else
   echo "gcp-crawl.service already active."
+fi
+if [ -f "$DRAIN_UNIT_SRC" ]; then
+  # backlog drain loop: no-ops when backlog is small, drains 4k batches otherwise
+  systemctl enable gcp-drain.service
+  systemctl start gcp-drain.service || true
+  echo "gcp-drain.service enabled/started."
 fi
 systemctl is-enabled gcp-crawl.service

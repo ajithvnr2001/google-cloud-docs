@@ -1,0 +1,20 @@
+[Unit]
+Description=GCP docs lastmod-backlog drain (4k-page batches until below threshold)
+Wants=network-online.target
+After=network-online.target
+RequiresMountsFor=/data
+StartLimitIntervalSec=3600
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/data/opencode/gcpdocs
+EnvironmentFile=/data/opencode/secrets/git.env
+ExecStart=/bin/bash /data/opencode/gcpdocs/drain_until_done.sh
+Restart=on-failure
+RestartSec=300
+Nice=10
+
+[Install]
+WantedBy=multi-user.target
