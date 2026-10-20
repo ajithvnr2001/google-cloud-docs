@@ -4,4 +4,6 @@
 # then reinstalls + starts the crawler from /data on first boot.
 # (The crawler resumes itself from crawl_state.db — nothing else needed.)
 runcmd:
-  - [bash, /data/opencode/gcpdocs/boot.sh]
+  # boot-all.sh waits for /data to mount (cloud-init can run before it) and
+  # restores systemd units for every VM-managed site
+  - [bash, /data/opencode/boot-all.sh]
