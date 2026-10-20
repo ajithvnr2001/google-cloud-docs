@@ -377,9 +377,14 @@ def snapshot(con, extra=None):
         done_sh = [r[0] for r in con.execute("SELECT name FROM shards WHERE done=1")]
         snap = {"phase": "crawl", "visited": v, "failed": f,
                 "shards_done": len(done_sh), "updated": datetime.now(timezone.utc).isoformat()}
+        try:  # merge over previous snapshot: preserves last_update block from the daily updater
+            prev = json.loads(STATUS_JSON.read_text()) if STATUS_JSON.exists() else {}
+        except Exception:
+            prev = {}
+        prev.update(snap)
         if extra:
-            snap.update(extra)
-        STATUS_JSON.write_text(json.dumps(snap, indent=2))
+            prev.update(extra)
+        STATUS_JSON.write_text(json.dumps(prev, indent=2))
     except Exception:
         pass
 
@@ -555,11 +560,17 @@ async def main(concurrency=30):
         except Exception:
             pass
     el = time.time() - store["t0"]
-    MANIFEST_FILE.write_text(json.dumps(
-        {"base": BASE_URL, "visited": store["ok"], "failed": store["fail"],
-         "elapsed_h": round(el / 3600, 2), "out_root": str(OUT_ROOT),
-         "tools": ["scrapling (Fetcher)", "crawl4AI (AsyncWebCrawler fallback)", "scrapegraph-ai (convert_to_md)"],
-         "generated_at": datetime.now(timezone.utc).isoformat()}, indent=2))
+    manifest = {"base": BASE_URL, "visited": store["ok"], "failed": store["fail"],
+                "elapsed_h": round(el / 3600, 2), "out_root": str(OUT_ROOT),
+                "tools": ["scrapling (Fetcher)", "crawl4AI (AsyncWebCrawler fallback)", "scrapegraph-ai (convert_to_md)"],
+                "generated_at": datetime.now(timezone.utc).isoformat()}
+    try:  # merge: preserve updater-side fields if present
+        prev = json.loads(MANIFEST_FILE.read_text()) if MANIFEST_FILE.exists() else {}
+        prev.update(manifest)
+        manifest = prev
+    except Exception as e:
+        status(f"manifest merge skipped: {e}")
+    MANIFEST_FILE.write_text(json.dumps(manifest, indent=2))
     status(f"ALL DONE ok={store['ok']} fail={store['fail']} elapsed_h={el/3600:.1f}")
     snapshot(con, {"done": True})
 
