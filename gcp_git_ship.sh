@@ -5,6 +5,7 @@
 set -uo pipefail
 cd /data/opencode/gcpdocs
 : "${GH_TOKEN:?GH_TOKEN missing — unit EnvironmentFile}"
+URL="https://ajithvnr2001:${GH_TOKEN}@github.com/ajithvnr2001/google-cloud-docs.git"
 
 git add -A -- docs || { echo "[git-ship] add failed"; exit 1; }
 if git diff --cached --quiet; then
@@ -16,7 +17,7 @@ git commit -q -m "chore: daily docs update $(date -u +%F)" || { echo "[git-ship]
 echo "[git-ship] committed $(git rev-parse --short HEAD): $(git diff-tree --shortstat --no-commit-id HEAD)"
 
 for i in 1 2 3 4 5; do
-  if git pull --rebase -q origin main && git push origin main; then
+  if git pull --rebase -q "$URL" main >/dev/null 2>&1 && git push "$URL" main >/dev/null 2>&1; then
     echo "[git-ship] pushed $(git rev-parse --short HEAD)"
     exit 0
   fi

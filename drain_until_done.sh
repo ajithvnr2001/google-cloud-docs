@@ -78,5 +78,6 @@ for i in $(seq 1 "$MAX_BATCHES"); do
   sleep 30
 done
 
+./gcp_git_ship.sh >>"$LOG" 2>&1 || true
 ./vm-ship.sh "$REPO" README.md GUIDE.md >>"$LOG" 2>&1 || true
 log "drain finished (backlog≈$(backlog))"
