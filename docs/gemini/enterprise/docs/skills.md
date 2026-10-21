@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/skills/
 title: Create and manage skills \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:37:02.506640+00:00
+fetched_at: 2026-10-21T11:58:09.739342+00:00
 ---
 
 # Create and manage skills  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -59,7 +59,7 @@ To create a new skill in the Gemini Enterprise web app, follow these steps:
   3. Click the add icon and click **Create skill with Gemini**.
   4. Enter a name for your skill.
   5. Enter a description. Gemini Enterprise uses the description to determine whether the skill can help with a prompt or task. You can also add trigger instructions to the description to help guide Gemini Enterprise.
-  6. Provide the skill instructions using natural language in the chat box or by manually editing the Markdown details.
+  6. Provide the skill instructions using natural language in the chat box or the **Instructions** field. To create a skill using an existing `SKILL.md` file with custom Markdown or YAML front matter, see Upload a skill.
   7. Click **Save**. Gemini Enterprise turns on the new skill by default.
 
 
@@ -199,7 +199,7 @@ This section lists the limitations for skills in Gemini Enterprise:
 
   * Skills are not available for use with agents.
   * Skills support Python and Bash execution only.
-  * The web app editor lets you manually or naturally create skills that use a single `SKILL.md` file. You must upload more complex skills that require additional scripts or files as a ZIP file.
+  * The web app editor lets you create skills by entering instructions in the form fields or by chatting with the assistant, which automatically generates a single`SKILL.md` file. You must upload more complex skills that require additional scripts or files as a ZIP file.
   * Natural language skill creation does not use your conversation context or connectors as inputs to create a skill.
   * Skills work best with Canvas when a skill has only one `SKILL.md` file.
 
@@ -215,6 +215,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

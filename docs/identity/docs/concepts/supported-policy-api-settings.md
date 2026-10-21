@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/concepts/supported-policy-api-settings/
 title: Settings available in the API \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:25.132270+00:00
+fetched_at: 2026-10-21T11:58:11.598917+00:00
 ---
 
 # Settings available in the API  |  Cloud Identity  |  Google Cloud Documentation
@@ -659,10 +659,10 @@ This table provides Gmail sub-settings that are referenced by other Gmail settin
 **N/A** | rule_id  | string   
 **RuleState** | **N/A (For all rules)** | enabled  | boolean   
 rule_id  | string   
-**RuleConditions** | **Email messages to affect** | **Inbound** | affect_inbound_messages  | boolean   
-**Outbound** | affect_outbound_messages  | boolean   
-**Internal - Sending** | affect_internal_sending_messages  | boolean   
-**Internal - Receiving** | affect_internal_receiving_messages  | boolean   
+**RuleConditions** | **Email messages to affect** | **Inbound messages** | affect_inbound_messages  | boolean   
+**Outbound messages** | affect_outbound_messages  | boolean   
+**Internal outbound messages** | affect_internal_sending_messages  | boolean   
+**Internal inbound messages** | affect_internal_receiving_messages  | boolean   
 **Address lists** | **Use address lists to bypass or control application of this setting** | address_list_option  | enum: 
 
   * `NO_EFFECT`
@@ -1058,7 +1058,7 @@ The list of available content to scan for, corresponding to the matching configu
   * `equals({string})`
   * `matches_dlp_detector({detector name}, {likelihood}, {minimum_match_count: {count}, minimum_unique_match_count: {count}})`
     * Corresponds to the **matches predefined data type** option in the Admin Console.
-    * `{detector name}` denotes the predefined data type to scan for, which can be one of the built-in infotypes supported by Cloud DLP: https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference. For example, `CREDIT_CARD_NUMBER` or `US_SOCIAL_SECURITY_NUMBER`
+    * `{detector name}` denotes the predefined data type to scan for, which can be one of the built-in infotypes supported by Sensitive Data Protection: https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference (for example, `CREDIT_CARD_NUMBER` or `US_SOCIAL_SECURITY_NUMBER`). Some newer detector types aren't supported in this API and return an error if specified.
     * `{likelihood}` denotes the likelihood threshold of the match. For example, **google.privacy.dlp.v2.Likelihood.LIKELY** corresponds to the **High** threshold in the Admin Console.
   * `matches_regex_detector({detector name}, {minimum_match_count: {count}})`
     * Corresponds to the **matches regular expression** option in the Admin Console.
@@ -1646,6 +1646,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

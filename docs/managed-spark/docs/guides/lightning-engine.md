@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-spark/docs/guides/lightning-engine/
 title: Managed Service for Apache Spark \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:46:30.846838+00:00
+fetched_at: 2026-10-21T11:59:14.790780+00:00
 ---
 
 # Managed Service for Apache Spark  |  Google Cloud Documentation
@@ -23,9 +23,11 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Use Lightning Engine
 
-Lightning Engine is the next generation of Apache Spark performance, introducing exclusive enhancements designed to deliver substantial improvements in performance, cost-efficiency, and operational stability.
+Lightning Engine is a high-performance execution environment for Apache Spark on Managed Service for Apache Spark that accelerates compute-intensive workloads and reduces runtime costs without requiring changes to your Spark code. It's designed for data engineers and analytics practitioners running compute-intensive workloads that use Spark DataFrame APIs, Spark Dataset APIs, or Spark SQL queries.
 
-### Benefits
+If your workloads are primarily I/O-bound or rely heavily on Resilient Distributed Datasets (RDDs), the standard engine might be more appropriate.
+
+## Benefits
 
 Lightning Engine benefits include the following:
 
@@ -38,9 +40,9 @@ Lightning Engine benefits include the following:
 
 
 
-While Lightning Engine offers substantial performance gains, the specific impact varies with the workload. It is best suited for compute-intensive tasks that leverage Spark Dataframe APIs, Spark Dataset APIs and Spark SQL queries, rather than I/O-bound operations.
+While Lightning Engine offers substantial performance gains, the specific impact varies with the workload.
 
-### Comparison to standard engine
+## Comparison to standard engine
 
 Lightning Engine is an alternative to the standard engine used to execute Spark jobs on a Managed Service for Apache Spark cluster. The following table compares Lightning Engine to standard engine activation properties, workload applicability, and key benefits.
 
@@ -50,7 +52,7 @@ Feature | Standard engine | Lightning Engine
 **Best For** | General purpose jobs, development, and testing | Enterprise-scale workloads requiring significant acceleration  
 **Key Benefits** | Baseline performance | Optimized cloud storage interaction, intelligent query execution  
   
-### Requirements
+## Lightning Engine requirements
 
 The following requirements apply to the Lightning Engine feature:
 
@@ -64,7 +66,7 @@ The following requirements apply to the Lightning Engine feature:
 Native Query Execution (NQE) is an optional component of Lightning Engine that provides a deeper level of acceleration for specific jobs. It is a native engine based on [Apache Gluten](https://gluten.apache.org/) and [Velox](https://github.com/facebookincubator/velox?tab=readme-ov-file#readme), optimized for Google hardware, which boosts performance by running parts of a Spark query outside the JVM.
 
 **NQE is recommended for** :
-    Compute-intensive tasks that leverage Spark Dataframe APIs and Spark Dataset APIs, and Spark SQL queries that read data from Parquet, ORC, Apache Iceberg, and Delta Lake files and tables. The output file format doesn't affect its performance.
+    Compute-intensive tasks that leverage Spark DataFrame APIs and Spark Dataset APIs, and Spark SQL queries that read data from Parquet, ORC, Apache Iceberg, and Delta Lake files and tables. The output file format doesn't affect its performance.
 **NQE is not recommended for** :
     Jobs that rely heavily on Resilient Distributed Datasets (RDDs), User-Defined Functions (UDFs), most Spark Machine Learning (ML) libraries, and I/O-bound operations with delays due to storage access.
 
@@ -83,13 +85,13 @@ Key benefits on ARM include:
 
 
 
-## Requirements
+## Native Query Execution requirements
 
 The following requirements apply to the Native Query Execution feature:
 
   * **Execution engine** : NQE is available only on clusters enabled with Lightning engine at cluster creation.
 
-  * **Supported jobs** : Spark, PySpark, SparkSQL, and SparkR are supported. The standard engine will run (without NQE) on other job types submitted to a Lightning Engine cluster.
+  * **Supported jobs** : Spark, PySpark, Spark SQL, and SparkR are supported. The standard engine will run (without NQE) on other job types submitted to a Lightning Engine cluster.
 
   * **No GPUs and Accelerators** : NQE-enabled jobs submitted on GPU accelerators will fail (but can benefit from Lightning Engine without NQE).
 
@@ -197,9 +199,8 @@ For more information about granting roles, see [Manage access to projects, folde
 
 To get the permissions that you need to create a Managed Service for Apache Spark cluster, ask your administrator to grant you the following IAM roles: 
 
-  * All: 
-    * [Dataproc Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataproc#dataproc.editor) (`roles/dataproc.editor`) on the project
-    * [Service Account User ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`) on the Compute Engine default service account
+  * [Dataproc Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataproc#dataproc.editor) (`roles/dataproc.editor`) on the project
+  * [Service Account User ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`) on the Compute Engine default service account
 
 
 
@@ -554,8 +555,8 @@ Incompatible behavior or incorrect results can occur when you use Native Query E
 ## What's next
 
   * [Accelerate Spark batch workloads and sessions with Lightning Engine](https://docs.cloud.google.com/managed-spark/docs/guides/lightning-engine-serverless).
-  * Review [ARM machine types supported on Managed Service for Apache Spark](https://docs.cloud.google.com/managed-spark/docs/concepts/compute/supported-machine-types#arm-machine-types). 
-    * Learn how to [tune Spark jobs for optimal performance](https://docs.cloud.google.com/managed-spark/docs/support/spark-job-tuning).
+  * Review [ARM machine types supported on Managed Service for Apache Spark](https://docs.cloud.google.com/managed-spark/docs/concepts/compute/supported-machine-types#arm-machine-types).
+  * Learn how to [tune Spark jobs for optimal performance](https://docs.cloud.google.com/managed-spark/docs/support/spark-job-tuning).
 
 
 
@@ -563,6 +564,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

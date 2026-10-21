@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/configure-your-source-oracle-database/
 title: Configure a source Oracle database \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:50:48.004054+00:00
+fetched_at: 2026-10-21T12:24:09.744853+00:00
 ---
 
 # Configure a source Oracle database  |  Datastream  |  Google Cloud Documentation
@@ -21,11 +21,13 @@ Send feedback
 
 #  Configure a source Oracle database Stay organized with collections  Save and categorize content based on your preferences. 
 
-This section describes how to configure your source Oracle database so that Datastream can pull data from it. Datastream can pull changes to data from on-premises or cloud-hosted Oracle databases, including Oracle relational database service (RDS).
+Datastream lets you stream change data capture (CDC) updates from an Oracle database to a [supported destination](https://docs.cloud.google.com/datastream/docs/destinations), such as BigQuery or Cloud Storage. Depending on whether your database is on-premises or cloud-hosted, you configure redo log access and user privileges for your deployment type and CDC method.
+
+## Methods for querying redo log files
 
 Datastream can use the following methods to query redo log files:
 
-  * **Binary log reader** ([Preview](https://cloud.google.com/products/#product-launch-stages)): select this method if you need to query both online and archived redo log files. Binary reader can access the log files using Automatic Storage Management (ASM) or database directory objects. This method is multithreaded and supports low-latency CDC.
+  * Binary log reader, [Preview](https://cloud.google.com/products#product-launch-stages): select this method if you need to query both online and archived redo log files. Binary reader can access log files using Automatic Storage Management or database directory objects. This method is multithreaded and supports low-latency CDC.
 
   * **LogMiner API** : select this method if you only need to work with archived redo log files. The Oracle LogMiner is single-threaded and can be subject to higher latency and lower throughput. However, this method supports most data types and Oracle database features.
 
@@ -56,6 +58,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

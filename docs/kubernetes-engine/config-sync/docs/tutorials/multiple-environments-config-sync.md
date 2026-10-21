@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/tutorials/multiple-environments-config-sync/
 title: Using Config Sync in multiple environments with automated rendering \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:20:22.642737+00:00
+fetched_at: 2026-10-21T12:22:47.648605+00:00
 ---
 
 # Using Config Sync in multiple environments with automated rendering  |  Google Cloud Documentation
@@ -26,9 +26,13 @@ This tutorial shows you how to set up Config Sync for Google Kubernetes Engine a
 
 In this scenario, you're part of a platform admin team at Foo Corp. The Foo Corp applications are deployed to GKE, with resources divided across two projects, `dev` and `prod`. The `dev` project contains a development GKE cluster, and the `prod` project contains the production GKE cluster. Your goal as the platform admin is to ensure that both environments stay within compliance of Foo Corp's policies, and that base level resources, like Kubernetes namespaces and service accounts, remain consistent across both environments.
 
+The following diagram shows you an overview of the environments that you set up in this tutorial: 
+
+![An overview of the environments that you set up in this tutorial.](https://docs.cloud.google.com/static/kubernetes-engine/config-sync/docs/img/multi-environ-rendering-arch.png)
+
 This tutorial leverages the automated rendering feature in Config Sync to render the resources on the cluster. Each of the clusters is configured to sync from a directory that contains a Kustomization config file, which triggers the rendering process automatically in Config Sync. For more details, see [Use a repo with Kustomize configurations and Helm charts](https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/tutorials/config-sync-helm).
 
-In this tutorial you create the following resources: 
+As shown in the preceding diagram, in this tutorial you create the following resources: 
 
   * Two Google Cloud projects representing the development and production environments.
   * Two GKE clusters, `dev` and `prod`, in the separate projects, with Config Sync installed.
@@ -322,6 +326,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

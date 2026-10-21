@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/start-developing/my-first-integration/
 title: Develop your first custom integration \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:04.499938+00:00
+fetched_at: 2026-10-21T09:47:48.942508+00:00
 ---
 
 # Develop your first custom integration  |  Google Security Operations  |  Google Cloud Documentation
@@ -24,6 +24,8 @@ Send feedback  Stay organized with collections  Save and categorize content base
 Supported in:
 
 Google SecOps  [ SOAR ](https://docs.cloud.google.com/chronicle/docs/secops/google-secops-soar-toc)
+
+**Important:** This document explains how to build custom integrations using the built-in IDE. While still supported for quick prototypes, this is considered a legacy workflow. The current best practice is to develop integrations locally using your own IDE and manage them via GitHub. For more information on the modern GitOps workflow, see [Build custom integrations](https://docs.cloud.google.com/chronicle/docs/soar/respond/ide/building-a-custom-integration). 
 
 This document explains how to create a custom integration in the Integrated Development Environment (IDE) with the same structure as commercial integrations. Custom integrations appear in the Content Hub where you can configure them for different environments to use in playbooks, manual actions, and remote agents. You can also import and export them, like other IDE items. 
 
@@ -50,7 +52,7 @@ To create your first custom integration in the IDE, follow these steps:
 In this example, the following details appear:
      * An image of the WhoisXML API logo is uploaded. This image appears in the Content Hub with the integration.
      * An SVG icon has been added next to the integration in the IDE with a brief description and one parameter, the API Key. This is the parameter that the **Who Is XML API** Product requires for the configuration of the integration.
-     * You don't need additional Python libraries for this integration. By default, the integration is set to run on Python 3.7, and you can change the version in **Settings**.
+     * You don't need additional Python libraries for this integration. By default, the integration is set to run on Python 3.11, and you can change the version in **Settings**.
 **Note:** Script dependencies are Python libraries that your custom integration must import. You can add them in formats, such as Wheel files (`WHL`), tarballs (`TAR`), Gzip archives (`GZ`), or Python files (`PY`). Each integration runs in its own virtual environment, letting you include specific library versions even if a different version is already installed on the system. For example, if you need a particular version of the requests library, download it from a trusted source (such as PyPI or GitHub) and add it to the script dependencies. If the dependency is not in the virtual environment, the integration uses the system-installed version instead. 
 
 
@@ -111,6 +113,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

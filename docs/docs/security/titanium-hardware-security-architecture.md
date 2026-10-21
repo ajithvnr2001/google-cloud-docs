@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/titanium-hardware-security-architecture/
 title: Titanium hardware security architecture at Google \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:43:26.281051+00:00
+fetched_at: 2026-10-21T11:59:18.639689+00:00
 ---
 
 # Titanium hardware security architecture at Google  |  Security  |  Google Cloud Documentation

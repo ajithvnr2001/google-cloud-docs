@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/migration/external-metastore-lakehouse-migration/
 title: Migrate metadata from external data catalogs to Lakehouse REST catalog tables for Apache Iceberg \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:52:14.517077+00:00
+fetched_at: 2026-10-21T12:01:27.665609+00:00
 ---
 
 # Migrate metadata from external data catalogs to Lakehouse REST catalog tables for Apache Iceberg  |  BigQuery  |  Google Cloud Documentation
@@ -90,7 +90,7 @@ Your administrator might also be able to give the service agent the required per
   4. Grant the Storage Transfer Service service agent (`project-PROJECT_NUMBER@storage-transfer-service.iam.gserviceaccount.com`) the following roles in the project:
 
      * `roles/storage.admin`
-     * If you are migrating from on-prem/HDFS, you must also grant the `roles/storagetransfer.serviceAgent` role.
+     * If you're migrating from on-premises or HDFS, you must also grant the `roles/storagetransfer.serviceAgent` role.
 
 You can also configure more granular permissions. For more information, see the following guide:
 
@@ -165,10 +165,10 @@ If you are migrating to a Apache Iceberg REST catalog, you must create a secret 
 
 Replace the following:
 
-  * `CLIENT_ID`: the OAuth2.0 client ID
-  * `CLIENT_SECRET`: the OAuth2.0 client secret
+  * `CLIENT_ID`: the OAuth 2.0 client ID
+  * `CLIENT_SECRET`: the OAuth 2.0 client secret
   * `POLARIS_REALM`: the realm for the Polaris catalog. This field is required only for Apache Polaris. For example, `FINANCE`.
-  * `SCOPE`: (Optional) the OAuth2.0 scope. Default value is `PRINCIPAL_ROLE:ALL`.
+  * `SCOPE`: (Optional) the OAuth 2.0 scope. Default value is `PRINCIPAL_ROLE:ALL`.
 
 
 
@@ -215,6 +215,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/bidi-stream-api/
 title: Bidirectional API \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:44:27.611544+00:00
+fetched_at: 2026-10-21T12:23:00.148810+00:00
 ---
 
 # Bidirectional API  |  Agent Assist  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback
 
 The `BiDiStreamingAnalyzeContent` API is the primary API for next-generation audio and multi-modal experiences in both Conversational Agents and Agent Assist. This API facilitates the streaming of audio data and returns either transcriptions or human agent suggestions to you.
 
-Unlike previous APIs, the simplified audio configuration has optimized support for human-to-human conversations and an extended deadline limit of 15 minutes. Except for live translation, this API also supports all the Agent Assist features that `StreamingAnalyzeContent` supports.
+Unlike previous APIs, the simplified audio configuration has optimized support for human-to-human conversations and an extended deadline limit of 30 minutes. This API also supports all the Agent Assist features that `StreamingAnalyzeContent` supports.
 
 ## Streaming basics
 
@@ -49,7 +49,7 @@ To use the `BiDiStreamingAnalyzeContent` API at conversation runtime, follow the
   5. You can half close the stream at any time. After you half close the stream, the server sends back the response containing remaining recognition results, along with potential Agent Assist suggestions.
   6. Start or restart a new stream in the following cases: 
      * The stream is broken. For example, the stream stopped when it wasn't supposed to.
-     * Your conversation is approaching the request maximum of 15 minutes.
+     * Your conversation is approaching the request maximum of 30 minutes.
   7. For best quality, when you start a stream, send audio data generated after the last `speech_end_offset` of the `BiDiStreamingAnalyzeContentResponse.recognition_result` with `is_final=true` to `BidiStreamingAnalyzeContent`.
 
 
@@ -236,6 +236,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

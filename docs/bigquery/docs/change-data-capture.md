@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/change-data-capture/
 title: Stream table updates with change data capture ingestion \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:58.417103+00:00
+fetched_at: 2026-10-21T12:24:09.204985+00:00
 ---
 
 # Stream table updates with change data capture ingestion  |  BigQuery  |  Google Cloud Documentation
@@ -99,6 +99,31 @@ When you set the `max_staleness` option on your table, BigQuery applies pending 
 For example, if you query the table at T35, and the process of applying pending row modifications has not completed, then the current version of the table is 15 minutes stale, which is greater than the `max_staleness` interval of 10 minutes. In this case, at query run time, BigQuery applies all row modifications between T20 and T35 for the current query, meaning the queried data is completely up to date, at the cost of some additional query latency. This is considered a _runtime merge job_.
 
 ![Query run time occurs outside of the maximum time interval for data staleness.](https://docs.cloud.google.com/static/bigquery/images/max_staleness_watermark_2.png)
+
+### Partition pruning and runtime merge
+
+When you query a [partitioned table](https://docs.cloud.google.com/bigquery/docs/partitioned-tables) with active CDC, such as a destination table replicated by Datastream, whether BigQuery can apply [partition pruning](https://docs.cloud.google.com/bigquery/docs/querying-partitioned-tables) depends on whether the query triggers a runtime merge job:
+
+  * **Queries within the`max_staleness` window:** If the time since the last background apply job is within the table's `max_staleness` interval, BigQuery reads directly from the baseline table. Partition pruning and [cluster pruning](https://docs.cloud.google.com/bigquery/docs/clustered-tables) work as expected, and BigQuery scans only the partitions that match your `WHERE` clause filter.
+  * **Queries that trigger a runtime merge:** If `max_staleness` isn't set, is set to `0`, or the baseline table is older than the `max_staleness` interval, BigQuery performs a runtime merge of the baseline table and recently streamed row modifications. During a runtime merge, **partition pruning is bypassed** because BigQuery can't determine in advance which partitions are affected by unapplied streamed changes. As a result, the query scans the entire table even when you filter on the partitioning column.
+
+
+
+If your queries can tolerate slight data staleness, you can enable partition pruning and avoid full table scans by setting the `max_staleness` option on the table, for example, to 15 minutes, so that background apply jobs merge changes before queries run:
+    
+    
+    ALTER TABLE `DATASET_NAME.TABLE_NAME`
+    SET OPTIONS (
+      max_staleness = INTERVAL 15 MINUTE);
+
+Replace the following:
+
+  * `DATASET_NAME`: the name of the dataset in which the table resides.
+  * `TABLE_NAME`: the name of the partitioned table.
+
+
+
+For guidance on choosing an interval that prevents runtime merges for your workload, see Recommended table `max_staleness` value.
 
 ### Recommended table `max_staleness` value
 
@@ -338,7 +363,7 @@ Replace `REGION` with the [region name](https://docs.cloud.google.com/bigquery/d
     * The [BigQuery Storage Read API](https://docs.cloud.google.com/bigquery/docs/reference/storage)
     * The [`requirePartitionFilter` table option](https://docs.cloud.google.com/bigquery/docs/managing-partitioned-tables#require-filter)
   * BigQuery [export](https://docs.cloud.google.com/bigquery/docs/exporting-data#export-data-in-bigquery) operations on tables with active CDC don't export recently streamed row modifications that have yet to be applied by a background job. To export the full table, use an [`EXPORT DATA` statement](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/export-statements).
-  * If your query triggers a runtime merge on a partitioned table, then the entire table is scanned whether or not the query is restricted to a subset of the partitions.
+  * If your query triggers a runtime merge on a partitioned table, then partition pruning is bypassed and the entire table is scanned whether or not the query is restricted to a subset of the partitions. To allow partition pruning for queries that can tolerate slight data staleness, configure the table's `max_staleness` option.
   * If you are using the [Standard edition](https://docs.cloud.google.com/bigquery/docs/editions-intro), `BACKGROUND` reservations are not available, so applying pending row modifications uses the [on-demand pricing model](https://cloud.google.com/bigquery/pricing#on_demand_pricing). However, you can query tables with active CDC regardless of your edition.
   * Pseudocolumns `_CHANGE_TYPE` and `_CHANGE_SEQUENCE_NUMBER` are not queryable columns when performing a table read.
   * Mixing rows that have `UPSERT` or `DELETE` values for `_CHANGE_TYPE` with rows that have `INSERT` or unspecified values for `_CHANGE_TYPE` in the same connection isn't supported and results in the following validation error: `The given value is not a valid CHANGE_TYPE`.
@@ -388,6 +413,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

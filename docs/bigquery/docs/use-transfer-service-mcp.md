@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/use-transfer-service-mcp/
 title: Use the BigQuery Data Transfer Service remote MCP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T15:12:26.631149+00:00
+fetched_at: 2026-10-21T12:23:24.636722+00:00
 ---
 
 # Use the BigQuery Data Transfer Service remote MCP server  |  Google Cloud Documentation
@@ -160,7 +160,7 @@ In your AI application, look for a way to add or connect to a remote MCP server.
 
   * **Server name** : BigQuery Data Transfer Service MCP server
   * **Server URL** or **Endpoint** : `https://bigquerydatatransfer.googleapis.com/mcp`
-  * **Transport** : HTTP
+  * **Transport** : [Streamable HTTP](https://modelcontextprotocol.io/specification/latest/basic/transports/streamable-http)
   * **Authentication details** : Depending on how you want to authenticate, you can enter your Google Cloud credentials, your OAuth Client ID and secret, or an agent identity and credentials. For more information about authentication, see [Authenticate to MCP servers](https://docs.cloud.google.com/mcp/authenticate-mcp).
 
 
@@ -187,15 +187,36 @@ To view details of available MCP tools and their descriptions for the BigQuery D
 Use the [MCP inspector](https://modelcontextprotocol.io/docs/tools/inspector) to list tools, or send a `tools/list` HTTP request directly to the BigQuery Data Transfer Service remote MCP server. The `tools/list` method doesn't require authentication.
     
     
-    POST /mcp HTTP/1.1
-    Host: bigquerydatatransfer.googleapis.com
-    Content-Type: application/json
+    curl -X POST https://bigquerydatatransfer.googleapis.com/TOOLSET_ENDPOINT \
+        -H 'Content-Type: application/json' \
+        -H 'Accept: application/json' \
+        -H 'MCP-Protocol-Version: MCP_PROTOCOL_VERSION' \
+        -H 'Mcp-Method: tools/list' \
+        -d '{
+          "jsonrpc": "2.0",
+          "id": 1,
+          "method": "tools/list",
+          "params": {
+            "_meta": {
+              "io.modelcontextprotocol/protocolVersion": "MCP_PROTOCOL_VERSION",
+              "io.modelcontextprotocol/clientCapabilities": {
+                "extensions": {
+                  "io.modelcontextprotocol/ui": {
+                    "mimeTypes": ["text/html;profile=mcp-app"]
+                  }
+                }
+              }
+            }
+          }
+        }'
     
-    {
-      "jsonrpc": "2.0",
-      "method": "tools/list",
-    }
-    
+
+Replace the following:
+
+  * `TOOLSET_ENDPOINT`: the remainder of the MCP endpoint after the service name. For BigQuery Data Transfer Service, this is `mcp`.
+  * `MCP_PROTOCOL_VERSION`: the MCP protocol version. For example, `2026-07-28`.
+
+
 
 ## Example use cases
 
@@ -354,6 +375,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

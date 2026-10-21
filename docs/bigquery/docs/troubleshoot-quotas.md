@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/troubleshoot-quotas/
 title: Troubleshoot quota and limit errors \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:08:02.643190+00:00
+fetched_at: 2026-10-21T12:21:58.010832+00:00
 ---
 
 # Troubleshoot quota and limit errors  |  BigQuery  |  Google Cloud Documentation
@@ -369,6 +369,8 @@ For more information on individual rate limits, see the [**Maximum number of API
 
 When you encounter this error, diagnose the issue and then follow the recommended steps to resolve it.
 
+If the error has reason `apiLimitExceeded`, see API rate and metadata evaluation limit errors or, for dataset replica errors, Cross-region dataset replica creation limit errors.
+
 #### Diagnosis
 
 If you have not identified the method that has reached this rate limit, do the following:
@@ -431,6 +433,40 @@ To resolve this quota error, do the following:
 
     * For additional quota, see [Request a quota increase](https://docs.cloud.google.com/bigquery/quotas#requesting_a_quota_increase). Requesting a quota increase might take several days to process. To provide more information for your request, we recommend that your request includes the priority of the job, the user running the query, and the affected method.
 
+
+
+
+### API rate and metadata evaluation limit errors
+
+BigQuery returns an HTTP `403 Forbidden` error with reason `apiLimitExceeded` when a request exceeds API rate limits or concurrent metadata and access evaluation limits.
+
+**Error messages**
+
+  * `Quota exceeded for the project...`
+  * `API limit exceeded: Quota exceeded for quota metric 'Read requests'...`
+
+
+
+#### Diagnosis
+
+This error can occur in the following scenarios:
+
+  * **High volume of concurrent API requests.** An application submits a burst of concurrent API calls (such as `jobs.insert`, `tables.get`, or rapid job status polling) that exceeds BigQuery API request limits.
+  * **BigLake Metastore concurrency.** Queries against external tables backed by BigLake Metastore generate a high volume of concurrent metadata read requests.
+  * **Complex IAM or row-level security evaluation.** Concurrent queries reference a large number of datasets, tables, or row-level security (RLS) policies, exhausting backend access-evaluation limits.
+
+
+
+If the error message is `Quota exceeded: Your user_method exceeded quota for concurrent api requests per user per method`, see Maximum number of API requests limit errors.
+
+#### Resolution
+
+To resolve this error, do the following:
+
+  * **Retry with truncated exponential backoff.** Configure your client application or script to retry failed requests by using truncated exponential backoff.
+  * **Batch and consolidate API operations.** Load or query data in fewer, larger batches rather than issuing high-frequency single-row or per-table API calls, and reduce the frequency of `jobs.get` polling calls.
+  * **Simplify IAM and security configurations.** Prefer Google Groups and dataset-level IAM role bindings over large numbers of granular per-table IAM bindings or overlapping row-level security policies to reduce access-check overhead.
+  * **Check quota usage in the Google Cloud console.** Review the [**Quotas & System Limits** page](https://docs.cloud.google.com/docs/quotas/view-manage#viewing_your_quota_console) to identify whether an adjustable BigQuery or BigLake API quota is being reached. If you have a sustained need for more capacity, request a quota adjustment.
 
 
 
@@ -829,6 +865,29 @@ To resolve this quota error, do the following:
 
 For more information about limits that apply when you load data into BigQuery, see [Load jobs](https://docs.cloud.google.com/bigquery/quotas#load_jobs).
 
+### Cross-region dataset replica creation limit errors
+
+BigQuery returns this error (`reason: apiLimitExceeded`) when you configure [cross-region dataset replication](https://docs.cloud.google.com/bigquery/docs/data-replication) (`ALTER SCHEMA ... ADD REPLICA`) and exceed the maximum number of dataset replicas that can be added for a region within a rolling time window.
+
+**Error message**
+    
+    
+    API limit exceeded: Cannot add more than LIMIT replicas for a region within WINDOW day(s)
+    
+
+#### Diagnosis
+
+This error frequently happens when an automated script or Infrastructure-as-Code (IaC) tool repeatedly creates and drops dataset replicas (`ADD REPLICA` and `DROP REPLICA`) in a loop.
+
+#### Resolution
+
+To resolve this error, do the following:
+
+  * **Audit automation and Infrastructure-as-Code scripts.** Inspect any Terraform, deployment scripts, or scheduled jobs managing dataset replicas to ensure they aren't repeatedly dropping and recreating replicas on every run.
+  * **Wait for the rolling window to elapse.** Wait until the rolling day window specified in the error message passes before running `ALTER SCHEMA ... ADD REPLICA` again for that region.
+
+
+
 ### Your user exceeded quota for concurrent `project.lists` requests
 
 This error occurs when Microsoft Power BI jobs that communicate with BigQuery through a Simba ODBC driver or DataHub fail because they exceed the `project.list` API limit. To resolve this issue, use the short-term or long-term workarounds described in this section.
@@ -950,6 +1009,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

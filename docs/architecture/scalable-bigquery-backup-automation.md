@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/scalable-bigquery-backup-automation/
 title: Scalable BigQuery backup automation \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:41.909827+00:00
+fetched_at: 2026-10-21T12:22:05.265365+00:00
 ---
 
 # Scalable BigQuery backup automation  |  Cloud Architecture Center  |  Google Cloud Documentation

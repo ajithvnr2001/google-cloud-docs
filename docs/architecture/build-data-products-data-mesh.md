@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/build-data-products-data-mesh/
 title: Build data products in a data mesh \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:41.410738+00:00
+fetched_at: 2026-10-21T12:01:24.671852+00:00
 ---
 
 # Build data products in a data mesh  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -222,15 +222,13 @@ Data stream interfaces using Pub/Sub topics don't need any additional replicatio
 
 ## Expose consumption interfaces to data consumers
 
-This section discusses how to make consumption interfaces discoverable by potential consumers. [Data Catalog](https://docs.cloud.google.com/data-catalog/docs/concepts/overview) is a fully managed service which organizations can use to provide the data discovery and metadata management services. Data producers must make the consumption interfaces of their data products searchable and annotate them with the appropriate metadata to enable product consumers to access them in a self-service manner. We
+This section discusses how to make consumption interfaces discoverable by potential consumers. [Knowledge Catalog](https://docs.cloud.google.com/knowledge-catalog/docs/metadata-overview) is a fully managed service that organizations can use to provide data discovery and metadata management services. Data producers must make the consumption interfaces of their data products searchable and annotate them with the appropriate metadata so that product consumers can access them in a self-service manner.
 
-The following sections discuss how each interface type is defined as a Data Catalog entry.
-
-**Caution:** Data Catalog is [deprecated](https://docs.cloud.google.com/data-catalog/docs/deprecations) in favor of [Knowledge Catalog](https://docs.cloud.google.com/dataplex/docs/catalog-overview). Knowledge Catalog is also integrated with the same source systems like BigQuery, offering similar capabilities. It also allows [creating custom entries](https://docs.cloud.google.com/dataplex/docs/ingest-custom-sources). 
+The following sections discuss how each interface type is defined as a Knowledge Catalog entry.
 
 ### BigQuery-based SQL interfaces
 
-Technical metadata, such as a fully qualified table name or table schema, is automatically registered for authorized views, BigLake views, and BigQuery tables that are available through the Storage Read API. We recommend that data producers also provide additional information in the data product documentation to help data consumers. For example, to help users find the product documentation for an entry, data producers can add a URL to one of the tags that has been applied to the entry. Producers can also provide the following:
+Technical metadata, such as a fully qualified table name or table schema, is automatically registered for authorized views, BigLake views, and BigQuery tables that are available through the Storage Read API. We recommend that data producers also provide additional information in the data product documentation to help data consumers. For example, to help users find the product documentation for an entry, data producers can add a URL to an [aspect](https://docs.cloud.google.com/knowledge-catalog/docs/enrich-entries-metadata#aspects) that has been applied to the entry. Producers can also provide the following:
 
   * Sets of [clustered](https://docs.cloud.google.com/bigquery/docs/clustered-tables) columns, which should be used in query filters.
   * Enumeration values for fields that have logical enumeration type, if the type is not provided as part of the field description.
@@ -240,21 +238,21 @@ Technical metadata, such as a fully qualified table name or table schema, is aut
 
 ### Data streams
 
-Pub/Sub topics are automatically registered with the Data Catalog. However, data producers must describe the schema in the data product documentation.
+Pub/Sub topics are automatically registered in Knowledge Catalog. However, data producers must describe the schema in the data product documentation.
 
 ### Cloud Storage API
 
-Data Catalog supports the definition of Cloud Storage file entries and their schema. If a data lake fileset is managed by Knowledge Catalog, the fileset is automatically registered in the Data Catalog. Filesets that aren't associated with Knowledge Catalog are added using [a different approach](https://docs.cloud.google.com/data-catalog/docs/how-to/filesets).
+You can use [automatic discovery](https://docs.cloud.google.com/knowledge-catalog/docs/cloud-storage-discovery) in Knowledge Catalog to scan data in Cloud Storage buckets and extract and catalog metadata. If a data lake fileset is managed by Knowledge Catalog, the fileset is also automatically registered in Knowledge Catalog.
 
 ### Other interfaces
 
-You can add other interfaces which don't have built-in support from Data Catalog by creating [custom entries](https://docs.cloud.google.com/data-catalog/docs/how-to/custom-entries).
+You can add other interfaces that don't have built-in support from Knowledge Catalog by creating [custom entries](https://docs.cloud.google.com/knowledge-catalog/docs/ingest-custom-sources).
 
 ## What's next
 
   * See a [reference implementation of the data mesh architecture](https://github.com/GoogleCloudPlatform/data-mesh-demo).
   * Learn more about [BigQuery](https://docs.cloud.google.com/bigquery).
-  * Read about [Dataplex](https://docs.cloud.google.com/dataplex).
+  * Read about [Knowledge Catalog ](https://docs.cloud.google.com/knowledge-catalog).
   * For more reference architectures, diagrams, and best practices, explore the [Cloud Architecture Center](https://docs.cloud.google.com/architecture). 
 
 

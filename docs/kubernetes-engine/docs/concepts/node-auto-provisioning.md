@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/node-auto-provisioning/
 title: About node pool auto-creation \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:01:59.634480+00:00
+fetched_at: 2026-10-21T12:23:01.168210+00:00
 ---
 
 # About node pool auto-creation  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -257,38 +257,41 @@ You can explicitly request any supported Compute Engine machine series or machin
 
 Node pool auto-creation supports the following machine series only in specific GKE versions:
 
-  * [**C4 machine series**](https://docs.cloud.google.com/compute/docs/general-purpose-machines#c4_series): 
-    * 1.28.15-gke.1159000 and later.
-    * 1.29.10-gke.1227000 and later.
-    * 1.30.3-gke.1225000 and later.
-  * [**C4A machine series**](https://docs.cloud.google.com/compute/docs/general-purpose-machines#c4a_series):
+Machine series | Supported GKE versions  
+---|---  
+[C4 machine series](https://docs.cloud.google.com/compute/docs/general-purpose-machines#c4_series) | 
 
-    * C4A VMs: 
-      * 1.30.7-gke.1136000 and later.
-      * 1.31.3-gke.1056000 and later.
-    * [C4A bare metal instances](https://docs.cloud.google.com/compute/docs/instances/bare-metal-instances#c4a-metal):
+  * 1.28.15-gke.1159000 and later
+  * 1.29.10-gke.1227000 and later
+  * 1.30.3-gke.1225000 and later
 
-      * `c4a-highmem-96-metal`: 1.35.3-gke.1389000 and later.
-      * `c4a-standard-96-metal`: not supported.
-  * [**C4D machine series**](https://docs.cloud.google.com/compute/docs/general-purpose-machines#c4d_machine_types): 1.32.3-gke.1717000 and later.
+  
+[C4A machine series](https://docs.cloud.google.com/compute/docs/general-purpose-machines#c4a_series) (VMs) | 
 
-  * [**C4N machine series**](https://docs.cloud.google.com/compute/docs/network-optimized-machines#c4n_series): 1.36.0-gke.3009002 and later.
+  * 1.30.7-gke.1136000 and later
+  * 1.31.3-gke.1056000 and later
 
-  * [**N4 machine series**](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n4_series): 1.29.3 and later.
+  
+[C4A bare metal instances](https://docs.cloud.google.com/compute/docs/instances/bare-metal-instances#c4a-metal) | 
 
-  * [**N4A machine series**](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n4a_series): 1.34.1-gke.3403001 and later.
+  * `c4a-highmem-96-metal`: 1.35.3-gke.1389000 and later
+  * `c4a-standard-96-metal`: Not supported
 
-  * [**N4D machine series**](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n4d_series):
+  
+[C4D machine series](https://docs.cloud.google.com/compute/docs/general-purpose-machines#c4d_machine_types) | 1.32.3-gke.1717000 and later  
+[C4N machine series](https://docs.cloud.google.com/compute/docs/network-optimized-machines#c4n_series) | 1.36.0-gke.3009002 and later  
+[N4 machine series](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n4_series) | 1.29.3 and later  
+[N4A machine series](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n4a_series) | 1.34.1-gke.3403001 and later  
+[N4D machine series](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n4d_series) | 
 
-    * 1.33.12-gke.1208000 and later.
-    * 1.34.1-gke.2037000 and later.
-  * [**Z3 machine series**](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z3_series): 1.29 and later.
+  * 1.33.12-gke.1208000 and later
+  * 1.34.1-gke.2037000 and later
 
-  * [**Z4D machine series**](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4d_series): 1.36.3-gke.1244000 and later.
-
-
-
-
+  
+[Z3 machine series](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z3_series) | 1.29 and later  
+[Z4D machine series](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4d_series) | 1.36.3-gke.1244000 and later  
+[Z4M machine series](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4m_series) | 1.37.0-gke.4713000 and later  
+  
 Other machine series are supported in all GKE versions.
 
 ### GPU selection
@@ -467,6 +470,7 @@ The cluster autoscaler can scale nodes in existing node pools that use these con
   * Learn about [cluster autoscaler visibility](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cluster-autoscaler-visibility).
   * Learn how to use [workload separation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/workload-separation) in GKE.
   * [Troubleshoot custom ComputeClass issues](https://docs.cloud.google.com/kubernetes-engine/docs/troubleshooting/custom-computeclass).
+  * Learn how to [deploy a cluster with node auto-provisioning in Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/deploy-cluster-nap).
 
 
 
@@ -474,6 +478,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

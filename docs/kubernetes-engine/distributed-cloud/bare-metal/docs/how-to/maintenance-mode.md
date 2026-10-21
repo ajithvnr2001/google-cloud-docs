@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/how-to/maintenance-mode/
 title: Put nodes into maintenance mode \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:47:35.785891+00:00
+fetched_at: 2026-10-21T12:21:55.602424+00:00
 ---
 
 # Put nodes into maintenance mode  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -22,9 +22,9 @@ Send feedback
 
 #  Put nodes into maintenance mode Stay organized with collections  Save and categorize content based on your preferences. 
 
-When you need to repair or maintain nodes, you should first put the nodes into maintenance mode. This gracefully drains existing pods and workloads, excluding critical system pods like the API server. Maintenance mode also prevents the node from receiving new pod assignments. In maintenance mode, you can work on your nodes without a risk of disrupting pod traffic.
+Maintenance mode lets you repair and service nodes with minimal disruption to your workloads. When you add nodes to the `maintenanceBlocks` section of your cluster configuration, Google Distributed Cloud gracefully drains their workloads and prevents new pods from being scheduled on them. When you need to take an entire cluster offline, you can also safely shut it down and restart it.
 
-**Note:** When you upgrade a cluster, Google Distributed Cloud uses the maintenance mode flow described on this page to drain nodes before they are upgraded. For more information about the upgrade process, see [Lifecycle and stages of cluster upgrades](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/how-to/upgrade-lifecycle).
+During cluster upgrades, Google Distributed Cloud automatically uses maintenance mode to drain nodes before they are upgraded. For more information about the upgrade process, see [Lifecycle and stages of cluster upgrades](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/how-to/upgrade-lifecycle).
 
 ## How it works
 
@@ -376,6 +376,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

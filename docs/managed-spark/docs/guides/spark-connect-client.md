@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-spark/docs/guides/spark-connect-client/
 title: Use the serverless Spark Connect client \u00a0|\u00a0 Managed Service for Apache Spark \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:37:19.070267+00:00
+fetched_at: 2026-10-21T11:58:16.879205+00:00
 ---
 
 # Use the serverless Spark Connect client  |  Managed Service for Apache Spark  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback
 
 #  Use the serverless Spark Connect client Stay organized with collections  Save and categorize content based on your preferences. 
 
-The Managed Service for Apache Spark Connect client is a wrapper of the Apache Spark Connect client. It lets applications communicate with a remote Managed Service for Apache Spark session using the [Spark Connect](https://spark.apache.org/spark-connect/) protocol. This document shows you how to install, configure, and use the client.
+The Spark Connect client is a wrapper of the Managed Service for Apache Spark Connect client. It lets applications communicate with a remote Managed Service for Apache Spark session using the [Spark Connect](https://spark.apache.org/spark-connect/) protocol. This document shows you how to install, configure, and use the client.
 
 ## Before you begin
 
@@ -65,7 +65,7 @@ Set the `GOOGLE_CLOUD_PROJECT` and `GOOGLE_CLOUD_REGION` environment variables.
 Expand example Collapse example
     
     
-    # Google Cloud Configuration for Dataproc Spark Connect Integration Tests
+    # Google Cloud Configuration for Managed Spark Connect Integration Tests
     # Copy this file to .env and fill in your actual values
     
     # ============================================================================
@@ -75,7 +75,7 @@ Expand example Collapse example
     # Your Google Cloud Project ID
     GOOGLE_CLOUD_PROJECT="your-project-id"
     
-    # Google Cloud Region where Dataproc sessions will be created
+    # Google Cloud Region where Managed Spark sessions will be created
     GOOGLE_CLOUD_REGION="us-central1"
     
     # Path to service account key file (if using SERVICE_ACCOUNT auth)
@@ -86,35 +86,35 @@ Expand example Collapse example
     # ============================================================================
     
     # Authentication type (SERVICE_ACCOUNT or END_USER_CREDENTIALS). If not set, API default is used.
-    # DATAPROC_SPARK_CONNECT_AUTH_TYPE="SERVICE_ACCOUNT"
-    # DATAPROC_SPARK_CONNECT_AUTH_TYPE="END_USER_CREDENTIALS"
+    # MANAGED_SPARK_CONNECT_AUTH_TYPE="SERVICE_ACCOUNT"
+    # MANAGED_SPARK_CONNECT_AUTH_TYPE="END_USER_CREDENTIALS"
     
     # Service account email for workload authentication (optional)
-    # DATAPROC_SPARK_CONNECT_SERVICE_ACCOUNT="your-service-account@your-project.iam.gserviceaccount.com"
+    # MANAGED_SPARK_CONNECT_SERVICE_ACCOUNT="your-service-account@your-project.iam.gserviceaccount.com"
     
     # ============================================================================
     # SESSION CONFIGURATION
     # ============================================================================
     
     # Session timeout in seconds (how long session stays active)
-    # DATAPROC_SPARK_CONNECT_TTL_SECONDS="3600"
+    # MANAGED_SPARK_CONNECT_TTL_SECONDS="3600"
     
     # Session idle timeout in seconds (how long session stays active when idle)
-    # DATAPROC_SPARK_CONNECT_IDLE_TTL_SECONDS="900"
+    # MANAGED_SPARK_CONNECT_IDLE_TTL_SECONDS="900"
     
     # Automatically terminate session when Python process exits (true/false)
-    # DATAPROC_SPARK_CONNECT_SESSION_TERMINATE_AT_EXIT="false"
+    # MANAGED_SPARK_CONNECT_SESSION_TERMINATE_AT_EXIT="false"
     
     # Custom file path for storing active session information
-    # DATAPROC_SPARK_CONNECT_ACTIVE_SESSION_FILE_PATH="/tmp/dataproc_spark_connect_session"
+    # MANAGED_SPARK_CONNECT_ACTIVE_SESSION_FILE_PATH="/tmp/managed_spark_connect_session"
     
     # ============================================================================
     # DATA SOURCE CONFIGURATION
     # ============================================================================
     
     # Default data source for Spark SQL (currently only supports "bigquery")
-    # Only available for Dataproc runtime version 2.3
-    # DATAPROC_SPARK_CONNECT_DEFAULT_DATASOURCE="bigquery"
+    # Only available for Managed Spark runtime version 2.3
+    # MANAGED_SPARK_CONNECT_DEFAULT_DATASOURCE="bigquery"
     
     # ============================================================================
     # ADVANCED CONFIGURATION
@@ -123,10 +123,9 @@ Expand example Collapse example
     # Custom Dataproc API endpoint (uncomment if needed)
     # GOOGLE_CLOUD_DATAPROC_API_ENDPOINT="your-region-dataproc.googleapis.com"
     
-    # Subnet URI for Dataproc Spark Connect (full resource name format)
+    # Subnet URI for Managed Spark Connect (full resource name format)
     # Example: projects/your-project-id/regions/us-central1/subnetworks/your-subnet-name
-    # DATAPROC_SPARK_CONNECT_SUBNET="projects/your-project-id/regions/us-central1/subnetworks/your-subnet-name"
-    
+    # MANAGED_SPARK_CONNECT_SUBNET="projects/your-project-id/regions/us-central1/subnetworks/your-subnet-name"
     
     
 
@@ -258,6 +257,8 @@ The following options are available:
 
   * Learn more about [Managed Service for Apache Spark sessions](https://docs.cloud.google.com/managed-spark/docs/guides/create-serverless-sessions-templates).
 
+  * [Visualize Spark DataFrames in notebooks](https://docs.cloud.google.com/managed-spark/docs/guides/visualize-dataframes-notebooks).
+
   * [Run PySpark code in BigQuery Studio notebooks](https://docs.cloud.google.com/bigquery/docs/use-spark).
 
 
@@ -267,6 +268,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mcp/set-up-authentication-mcp-servers/
 title: Set up authentication to Google and Google Cloud MCP servers \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:17:06.127657+00:00
+fetched_at: 2026-10-21T12:23:02.072337+00:00
 ---
 
 # Set up authentication to Google and Google Cloud MCP servers  |  Google Cloud Documentation
@@ -41,13 +41,15 @@ Google and Google Cloud remote MCP servers don't support [Dynamic Client Registr
 
 ### Required roles
 
-To get the permission that you need to make MCP tool calls, ask your administrator to grant you the [MCP Tool User ](https://docs.cloud.google.com/iam/docs/roles-permissions/mcp#mcp.toolUser) (`roles/mcp.toolUser`) IAM role on Google Cloud project. For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+[Non-Google Cloud MCP servers](https://docs.cloud.google.com/mcp/supported-products#google-mcp-servers) don't require the MCP Tool User (`roles/mcp.toolUser`) role. You also can't use Identity and Access Management (IAM) policies or permissions to control access to non-Google Cloud MCP servers.
 
-This predefined role contains the `mcp.tools.call` permission, which is required to make MCP tool calls. 
+To get the permission that you need to make tool calls to Google Cloud MCP servers, ask your administrator to grant you the [MCP Tool User ](https://docs.cloud.google.com/iam/docs/roles-permissions/mcp#mcp.toolUser) (`roles/mcp.toolUser`) IAM role on the Google Cloud project. For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+This predefined role contains the `mcp.tools.call` permission, which is required to make tool calls to Google Cloud MCP servers. 
 
 You might also be able to get this permission with [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
 
-To access Google and Google Cloud products through MCP, you or your agent must have the required permissions on the accessed resources. See the MCP server's product documentation for the required roles for specific actions.
+To access Google Cloud products through MCP, your administrator must also grant you or your agent the required IAM roles for the accessed resources. See the documentation for the MCP server for the required roles or access for specific actions.
 
 ## Authentication methods
 
@@ -329,6 +331,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

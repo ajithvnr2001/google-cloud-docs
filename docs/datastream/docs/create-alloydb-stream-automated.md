@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/create-alloydb-stream-automated/
 title: Create an AlloyDB stream using the automated flow \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:50:54.193982+00:00
+fetched_at: 2026-10-21T12:24:09.644950+00:00
 ---
 
 # Create an AlloyDB stream using the automated flow  |  Datastream  |  Google Cloud Documentation
@@ -21,15 +21,9 @@ Send feedback
 
 #  Create an AlloyDB stream using the automated flow Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to create an AlloyDB for PostgreSQL stream using the automated setup flow.
+You can replicate data from an AlloyDB for PostgreSQL cluster to BigQuery directly from your cluster overview page by using the automated stream setup flow in Datastream. Datastream simplifies setup by automatically configuring the Virtual Private Cloud (VPC) connection, source database settings, and stream resources.
 
-**Note:** To use the automated stream setup flow when replicating from an AlloyDB for PostgreSQL cluster, your primary instance must be [private services access](https://docs.cloud.google.com/vpc/docs/private-services-access) enabled and must use the [Private Service Connect interfaces](https://docs.cloud.google.com/datastream/docs/psc-interfaces) connectivity type.
-
-The automated stream setup simplifies the process of moving data from AlloyDB for PostgreSQL clusters to BigQuery by reducing the number of steps that you need to perform. The flow lets you create a stream directly from the overview page of your AlloyDB for PostgreSQL cluster.
-
-An AlloyDB for PostgreSQL deployment consists of a primary cluster, which contains a primary instance. It can also include secondary clusters and secondary instances. Datastream always creates the stream from the primary instance in the primary cluster.
-
-Datastream automates securing the VPC connection between the stream and the source cluster, creating database configurations and stream connection resources.
+Datastream creates the stream from the primary instance in your primary AlloyDB cluster, even if your deployment includes secondary clusters or instances. To use the automated flow, your primary instance must have [private services access](https://docs.cloud.google.com/vpc/docs/private-services-access) enabled and use [Private Service Connect interfaces](https://docs.cloud.google.com/datastream/docs/psc-interfaces).
 
 ## Free Tier
 
@@ -206,6 +200,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/create-custom-images/import-virtual-disk/
 title: Import virtual disks \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:11:17.022211+00:00
+fetched_at: 2026-10-21T12:22:37.052411+00:00
 ---
 
 # Import virtual disks  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -24,7 +24,7 @@ Send feedback
 
 This document describes the steps to import virtual machine (VM) disk images into Google Distributed Cloud (GDC) air-gapped.
 
-Import your existing virtual disks, often called _golden disks_ or _golden images_ , into Distributed Cloud to save time and use the resulting image to create virtual machines. The import tool supports RAW and QCOW image formats.
+Import your existing virtual disks, often called _golden disks_ or _golden images_ , into GDC to save time and use the resulting image to create virtual machines. The import tool supports RAW and QCOW image formats.
 
 This document is for developers in platform administrator or application operator groups that create VM images. For more information, see [Audiences for GDC air-gapped documentation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/audiences).
 
@@ -32,19 +32,19 @@ This document is for developers in platform administrator or application operato
 
 Before continuing, ensure that you have the following:
 
-## Prepare the environment
+### Prepare the environment
 
-  * The [gdcloud CLI](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-overview) downloaded, installed, and configured. All CLI commands for GDC use the `gdcloud` or `kubectl` CLI, and require an operating system (OS) environment.
+  * The [gdcloud CLI](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-overview) downloaded, installed, and configured. All CLI commands for GDC use the gdcloud CLI or the kubectl CLI, and require an operating system (OS) environment.
 
 **Note:** Record the path to the generated file, `/tmp/admin-kubeconfig-with-user-identity.yaml`. Use the path to replace MANAGEMENT_API_SERVER in these instructions.
 
 ### Request IAM roles
 
-Contact your Project IAM Admin to request the following roles on your project:
+To get the permissions that you need to import virtual disks, ask your Project IAM Admin to grant you the following roles on your project:
 
   * **Virtual Machine Project Admin** (`project-vm-admin`): create, modify, list, and delete VMs in the project namespace.
 
-  * **Project Viewer**(`project-viewer`): view all resources within the project namespace.
+  * **Project Viewer** (`project-viewer`): view all resources within the project namespace.
 
   * **Virtual Machine Image Project Admin** (`project-vm-image-admin`): create, list, and delete VM images in the project namespace.
 
@@ -56,6 +56,8 @@ All VM roles must bind to the namespace of the project where the VM resides. Fol
 ## Import virtual disks
 
 You can import virtual disk files directly from your workstation. The import tool automatically uploads the file to an object storage bucket in your project.
+
+**Important:** To avoid boot errors in Unified Extensible Firmware Interface (UEFI) mode, verify that the source image is UEFI-compatible. A UEFI-compatible image requires a GUID Partition Table (GPT) and a FAT32-formatted EFI System Partition (ESP) with a properly structured boot loader.
 
 To import your virtual disks, use either the gdcloud CLI or the [Virtual Machine Manager API](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/virtualmachine/vmm-api-overview).
 
@@ -91,7 +93,7 @@ The upload operation can take an extended period of time depending on the size o
 
 To import a virtual disk through the API, do the following:
 
-  1. Create a `VirtualMachineImageImport` object in the Management API server to start the image import process:
+  1. Create a `VirtualMachineImageImport` custom resource in the management API server to start the image import process:
          
          kubectl --kubeconfig MANAGEMENT_API_SERVER \
            -n PROJECT_ID \
@@ -116,12 +118,13 @@ To import a virtual disk through the API, do the following:
 
 Replace the following variables:
 
-     * IMAGE_NAME: The name of the image to import. The name must be no longer than 35 characters.
-     * PROJECT_ID: The project ID for the project where you want to import the image.
-     * SOURCE_FILE: The name of the source file that contains the upload of the virtual disk to object storage. This value is the section of the object storage path after `vm-images-bucket/`. 
-     * IMAGE_OS: The OS on the disk to import. 
-     * DISK_SIZE: The minimum size a disk must have to be created with this image. Use at least a 20% buffer on top of the file system size of the original image. For example, use at least `12G` for a virtual disk with an original file system size of 10G.
-  2. Monitor the progress of the import by querying the status of the `VirtualMachineImageImport` object:
+     * MANAGEMENT_API_SERVER: the kubeconfig file for the management API server.
+     * IMAGE_NAME: the name of the image to import. The name must be no longer than 35 characters.
+     * PROJECT_ID: the project ID for the project where you want to import the image.
+     * SOURCE_FILE: the name of the source file that contains the upload of the virtual disk to object storage. This value is the section of the object storage path after `vm-images-bucket/`. 
+     * IMAGE_OS: the OS on the disk to import. 
+     * DISK_SIZE: the minimum size for a disk that you create from this image. Use at least a 20% buffer on top of the file system size of the original image. For example, use at least `12G` for a virtual disk with an original file system size of 10G.
+  2. Monitor the progress of the import by querying the status of the `VirtualMachineImageImport` custom resource:
          
          kubectl --kubeconfig MANAGEMENT_API_SERVER \
            -n PROJECT_ID \
@@ -134,11 +137,11 @@ Replace the following variables:
 
 ### Clean up resources
 
-The import process involves uploading your virtual disk file to object storage. If you use the gdcloud CLI, the object is cleaned up when the command finishes, whether or not it was successful. If the command is interrupted, or if you perform the image import with the API, the virtual disk file might remain in the object storage bucket named `vm-images-bucket` until you manually delete the file.
+The import process involves uploading your virtual disk file to object storage. If you use the gdcloud CLI, the CLI deletes the object when the command finishes, even if the import fails. If you interrupt the command, or if you import the image with the API, the virtual disk file might remain in the object storage bucket named `vm-images-bucket` until you manually delete the file.
 
 ## What's next
 
-  * Review [GDC-supported images](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/create-a-vm/supported-vm-images)
+  * Review [GDC-supported images](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/create-a-vm/supported-vm-images).
   * [Create and start a VM](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/create-a-vm/create-and-start) instance that uses your image.
   * [Create a boot disk](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-vm-boot-disks/create-customized-boot-disk) for your VM.
 
@@ -148,6 +151,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

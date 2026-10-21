@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-query-filter-eq-boolean/
 title: Query a Firestore collection with a boolean eq filter \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:25:39.750897+00:00
+fetched_at: 2026-10-21T11:58:33.084171+00:00
 ---
 
 # Query a Firestore collection with a boolean eq filter  |  Google Cloud Documentation

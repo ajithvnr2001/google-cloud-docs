@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/composer/docs/composer-1/shared-responsibility/
 title: Managed Airflow shared responsibility model \u00a0|\u00a0 Managed Service for Apache Airflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:26:58.887083+00:00
+fetched_at: 2026-10-21T09:29:02.020616+00:00
 ---
 
 # Managed Airflow shared responsibility model  |  Managed Service for Apache Airflow  |  Google Cloud Documentation
@@ -31,7 +31,7 @@ Running a business-critical application on Managed Airflow requires multiple par
 
   * [Hardening](https://docs.cloud.google.com/container-optimized-os/docs/concepts/security) and [patching](https://docs.cloud.google.com/kubernetes-engine/docs/resources/security-patching) the Managed Airflow environment's components and underlying infrastructure, including Google Kubernetes Engine cluster, Cloud SQL database (that hosts the Airflow database), Pub/Sub, Artifact Registry and other environment elements. In particular, this includes auto-upgrading the underlying infrastructure, including the GKE cluster and Cloud SQL instance of an environment.
 
-**Note:** Managed Airflow (Legacy Gen 1) is in the post-maintenance mode and new versions of Managed Airflow (Legacy Gen 1) with security fixes are no longer published. Migrate to Managed Airflow (Gen 2) to get the latest version updates with security improvements.
+**Note:** Managed Airflow (Legacy Gen 1) is in the post-maintenance mode and new versions of Managed Airflow (Legacy Gen 1) with security fixes are no longer published. Migrate to Managed Airflow (Gen 2) or Managed Airflow (Gen 3) to get the latest version updates with security improvements.
   * Protecting access to Managed Airflow environments through incorporating access control provided by IAM, [encrypting data at rest by default](https://docs.cloud.google.com/security/encryption-at-rest/default-encryption), providing [additional customer-managed storage encryption](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/using-cmek), [encrypting data in transit](https://docs.cloud.google.com/security/encryption-in-transit).
 
   * Providing Google Cloud integrations for Identity and Access Management, Cloud Audit Logs and Cloud Key Management Service.
@@ -129,6 +129,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

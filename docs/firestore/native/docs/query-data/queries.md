@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/query-data/queries/
 title: Query and filter data \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:25:15.587229+00:00
+fetched_at: 2026-10-21T11:58:56.589364+00:00
 ---
 
 # Query and filter data  |  Firestore in Native mode  |  Google Cloud Documentation
@@ -643,7 +643,7 @@ Android
     	}
     }
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/query.go#L29-L68)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L29-L68)
 
 ##### PHP
     
@@ -861,7 +861,7 @@ Android
       }
     )
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/7bb92241fb38e5329efa7b1dfa9d6512f91dda64/google-cloud-firestore/samples/query_data.rb#L23-L78)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L23-L78)
 
 ## Simple queries
 
@@ -1017,7 +1017,7 @@ Android
     
     query := client.Collection("cities").Where("state", "==", "CA")
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/query.go#L82-L82)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L82-L82)
 
 ##### PHP
     
@@ -1068,7 +1068,7 @@ Android
       puts "Document #{city.document_id} returned by query state=CA."
     end
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/7bb92241fb38e5329efa7b1dfa9d6512f91dda64/google-cloud-firestore/samples/query_data.rb#L89-L95)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L89-L95)
 
 The following query returns all the capital cities:
 
@@ -1195,7 +1195,7 @@ Android
     
     query := client.Collection("cities").Where("capital", "==", true)
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/query.go#L75-L75)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L75-L75)
 
 ##### PHP
     
@@ -1246,7 +1246,7 @@ Android
       puts "Document #{city.document_id} returned by query capital=true."
     end
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/7bb92241fb38e5329efa7b1dfa9d6512f91dda64/google-cloud-firestore/samples/query_data.rb#L105-L111)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L105-L111)
 
 ### Execute a query
 
@@ -1484,7 +1484,7 @@ Android
     }
     
     
-    [retrieve_data_query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/retrieve_data_query.go#L18-L42)
+    [retrieve_data_query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/retrieve_data_query.go#L18-L42)
 
 ##### PHP
 
@@ -1553,7 +1553,7 @@ To authenticate to Firestore, set up Application Default Credentials. For more i
       puts "#{city.document_id} data: #{city.data}."
     end
     
-    [get_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/7bb92241fb38e5329efa7b1dfa9d6512f91dda64/google-cloud-firestore/samples/get_data.rb#L96-L102)
+    [get_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/get_data.rb#L96-L102)
 
 See [Get Data](https://docs.cloud.google.com/firestore/native/docs/query-data/get-data) for more information on retrieving query results. You can also [add a listener](https://docs.cloud.google.com/firestore/native/docs/query-data/listen) to a query to get the current results and listen for future updates.
 
@@ -1706,7 +1706,7 @@ Android
     popQuery := cities.Where("population", "<", 1000000)
     cityQuery := cities.Where("name", ">=", "San Francisco")
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/query.go#L90-L92)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L90-L92)
 
 ##### PHP
     
@@ -1741,7 +1741,7 @@ Android
     population_query = cities_ref.where "population", ">", 1_000_000
     name_query       = cities_ref.where "name", ">=", "San Francisco"
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/7bb92241fb38e5329efa7b1dfa9d6512f91dda64/google-cloud-firestore/samples/query_data.rb#L123-L125)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L123-L125)
 
 ### Not equal (`!=`)
 
@@ -1860,7 +1860,7 @@ Android
     cities_ref = firestore.col collection_path
     query = cities_ref.where "capital", "!=", false
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/7bb92241fb38e5329efa7b1dfa9d6512f91dda64/google-cloud-firestore/samples/query_data.rb#L239-L240)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L239-L240)
 
 This query returns every `city` document where the `capital` field exists with a value other than `false` or `null`. This includes `city` documents where the `capital` field value equals `true` or any non-boolean value besides `null`.
 
@@ -2001,7 +2001,7 @@ Android
     
     query := cities.Where("regions", "array-contains", "west_coast").Documents(ctx)
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/query.go#L284-L284)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L284-L284)
 
 ##### PHP
     
@@ -2030,7 +2030,7 @@ Android
     cities_ref = firestore.col collection_path
     cities = cities_ref.where "regions", "array-contains", "west_coast"
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/7bb92241fb38e5329efa7b1dfa9d6512f91dda64/google-cloud-firestore/samples/query_data.rb#L281-L282)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L281-L282)
 
 This query returns every `city` document where the `regions` field is an array that contains `west_coast`. If the array has multiple instances of the value you query on, the document is included in the results only once.
 
@@ -2163,7 +2163,7 @@ Android
     cities := client.Collection("cities")
     query := cities.Where("country", "in", []string{"USA", "Japan"}).Documents(ctx)
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/query.go#L263-L264)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L263-L264)
 
 ##### PHP
     
@@ -2194,7 +2194,7 @@ Android
     cities_ref = firestore.col collection_path
     usr_or_japan = cities_ref.where "country", "in", ["USA", "Japan"]
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/7bb92241fb38e5329efa7b1dfa9d6512f91dda64/google-cloud-firestore/samples/query_data.rb#L211-L212)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L211-L212)
 
 This query returns every `city` document where the `country` field is set to `USA` or `Japan`. From the example data, this includes the `SF`, `LA`, `DC`, and `TOK` documents.
 
@@ -2326,7 +2326,7 @@ Android
     cities_ref = firestore.col collection_path
     usr_or_japan = cities_ref.where "country", "not_in", ["USA", "Japan"]
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/7bb92241fb38e5329efa7b1dfa9d6512f91dda64/google-cloud-firestore/samples/query_data.rb#L253-L254)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L253-L254)
 
 This query returns every `city` document where the `country` field exists and is not set to `USA`, `Japan`, or `null`. From the example data, this includes the `London` and `Hong Kong` documents.
 
@@ -2473,7 +2473,7 @@ Android
     cities := client.Collection("cities")
     query := cities.Where("regions", "array-contains-any", []string{"west_coast", "east_coast"}).Documents(ctx)
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/query.go#L293-L294)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L293-L294)
 
 ##### PHP
     
@@ -2506,7 +2506,7 @@ Android
     cities_ref = firestore.col collection_path
     costal_cities = cities_ref.where "regions", "array-contains-any", ["west_coast", "east_coast"]
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/7bb92241fb38e5329efa7b1dfa9d6512f91dda64/google-cloud-firestore/samples/query_data.rb#L267-L268)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L267-L268)
 
 This query returns every city document where the `regions` field is an array that contains `west_coast` or `east_coast`. From the example data, this includes the `SF`, `LA`, and `DC` documents.
 
@@ -2640,7 +2640,7 @@ Android
     cities := client.Collection("cities")
     query := cities.Where("regions", "in", [][]string{{"west_coast"}, {"east_coast"}}).Documents(ctx)
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/query.go#L273-L274)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L273-L274)
 
 ##### PHP
     
@@ -2669,7 +2669,7 @@ Android
     cities_ref = firestore.col collection_path
     exactly_one_cost = cities_ref.where "regions", "in", [["west_coast"], ["east_coast"]]
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/7bb92241fb38e5329efa7b1dfa9d6512f91dda64/google-cloud-firestore/samples/query_data.rb#L225-L226)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L225-L226)
 
 This query returns every city document where the `regions` field is an array that contains exactly one element of either `west_coast` or `east_coast`. From the example data, only the `DC` document qualifies with its `regions` field of `["east_coast"]`. The `SF` document, however, does not match because its `regions` field is `["west_coast", "norcal"]`.
 
@@ -2826,7 +2826,7 @@ Android
     caliQuery := cities.Where("state", "==", "CA").Where("population", "<=", 1000000)
     query := cities.Where("country", "==", "USA").Where("population", ">", 5000000)
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/query.go#L115-L115)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L115-L115)
 
 ##### PHP
     
@@ -2859,7 +2859,7 @@ Android
     
     chained_query = cities_ref.where("state", "=", "CA").where("name", "=", "San Francisco")
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/7bb92241fb38e5329efa7b1dfa9d6512f91dda64/google-cloud-firestore/samples/query_data.rb#L145-L145)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L145-L145)
 
 ## `OR` queries
 
@@ -3036,7 +3036,7 @@ Snippet not available.
     }
     
     
-    [query_filter_or.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/query_filter_or.go#L18-L73)
+    [query_filter_or.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query_filter_or.go#L18-L73)
 
 ##### PHP
 
@@ -3901,7 +3901,7 @@ Android
     }
     
     
-    [collection_group_setup.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/collection_group_setup.go#L18-L62)
+    [collection_group_setup.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/collection_group_setup.go#L18-L62)
 
 ##### PHP
     
@@ -4544,7 +4544,7 @@ Android
       }
     )
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/7bb92241fb38e5329efa7b1dfa9d6512f91dda64/google-cloud-firestore/samples/query_data.rb#L295-L365)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L295-L365)
 
 We can use the simple and compound query described earlier to query a single city's `landmarks` subcollection, but you might also want to retrieve results from every city's `landmarks` subcollection at once.
 
@@ -4740,7 +4740,7 @@ Android
     }
     
     
-    [collection_group_query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/collection_group_query.go#L18-L52)
+    [collection_group_query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/collection_group_query.go#L18-L52)
 
 ##### PHP
     
@@ -4784,7 +4784,7 @@ Android
       puts "#{museum[:type]} name is #{museum[:name]}."
     end
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/7bb92241fb38e5329efa7b1dfa9d6512f91dda64/google-cloud-firestore/samples/query_data.rb#L369-L372)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L369-L372)
 
 Before using a collection group query, you must create an index that supports your collection group query. [You can create an index through an error message, the console, or the Firebase CLI](https://docs.cloud.google.com/firestore/native/docs/query-data/indexing).
 
@@ -4952,6 +4952,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

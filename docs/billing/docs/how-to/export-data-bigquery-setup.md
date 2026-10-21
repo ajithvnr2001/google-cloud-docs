@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/docs/how-to/export-data-bigquery-setup/
 title: Set up Cloud Billing data export to BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T13:57:15.627280+00:00
+fetched_at: 2026-10-21T12:21:54.402066+00:00
 ---
 
 # Set up Cloud Billing data export to BigQuery  |  Google Cloud Documentation
@@ -325,9 +325,10 @@ To _re-enable_ a disabled export of Cloud Billing data to BigQuery, see Enable y
 
 To update the project or dataset where your exported billing data is stored, do the following:
 
-  1. For the export you want to update, select **Enable [data type] export**.
-  2. On the **BigQuery export settings** page, choose a different project or dataset.
-  3. Select **Save** to confirm your updates.
+  1. Before you can edit the export settings, you must first disable the export.
+  2. For the export you want to update, select **Enable [data type] export**.
+  3. On the **BigQuery export settings** page, choose a different project or dataset.
+  4. Select **Save** to confirm your updates.
 
 **Caution:** Previously exported billing data isn't backfilled automatically to the new storage location. After switching your export settings to a new dataset, to include the billing information that was exported prior to the switch, you must manually join the new dataset with the previous dataset. For more information, see [Join operation](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax#join_types).
 
@@ -535,6 +536,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

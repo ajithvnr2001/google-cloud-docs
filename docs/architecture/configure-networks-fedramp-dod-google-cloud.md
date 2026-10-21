@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/configure-networks-fedramp-dod-google-cloud/
 title: Configure networks for FedRAMP and DoD in Google Cloud \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:46:46.849945+00:00
+fetched_at: 2026-10-21T12:22:30.349499+00:00
 ---
 
 # Configure networks for FedRAMP and DoD in Google Cloud  |  Cloud Architecture Center  |  Google Cloud Documentation

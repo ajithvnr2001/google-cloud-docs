@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/deploy/slurm/create-a4x-cluster/
 title: Create an A4X Slurm cluster \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T13:40:19.328174+00:00
+fetched_at: 2026-10-21T12:22:46.868300+00:00
 ---
 
 # Create an A4X Slurm cluster  |  Cluster Toolkit  |  Google Cloud Documentation
@@ -25,7 +25,7 @@ In this guide, you create and deploy AI-optimized Slurm clusters that use A4X ma
 
 ## A4X limitations
 
-The following limitations apply to A4X VMs in your Slurm cluster:
+The following limitations apply to A4X instances in your Slurm cluster:
 
 **Caution:** The [ Compute Engine Service Level Agreement (SLA)](https://cloud.google.com/compute/sla) doesn't apply to the A4X machine series.
 
@@ -141,7 +141,7 @@ To create your deployment file, use a text editor to create a YAML file named `a
       project_id: PROJECT_ID
       region: REGION
       zone: ZONE
-      a4x_cluster_size: NUMBER_OF_VMS
+      a4x_cluster_size: NUMBER_OF_INSTANCES
       a4x_reservation_name: RESERVATION_NAME
     
 
@@ -152,9 +152,9 @@ Replace the following:
   * `PROJECT_ID`: your project ID.
   * `REGION`: the region that has the reserved machines.
   * `ZONE`: the zone where you want to provision the cluster. If you're using a reservation-based consumption option, the region and zone information was provided by your account team when the [capacity was delivered](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity).
-  * `NUMBER_OF_VMS`: the number of A4X VMs in your cluster. You can specify any number of VMs. However, A4X VMs are physically interconnected by a [multi-node NVLink system](https://docs.nvidia.com/multi-node-nvlink-systems/mnnvl-user-guide/overview.html) in groups of 18 VMs (72 GPUs) to form an NVLink domain. 
+  * `NUMBER_OF_INSTANCES`: the number of A4X instances in your cluster. You can specify any number of instances. However, A4X instances are physically interconnected by a [multi-node NVLink system](https://docs.nvidia.com/multi-node-nvlink-systems/mnnvl-user-guide/overview.html) in groups of 18 instances (72 GPUs) to form an NVLink domain. 
 
-For optimal network performance, we recommend that you specify a value that is a multiple of 18 VMs (for example, 18, 36, or 54). When you create an A4X cluster, the A4X blueprint automatically creates and applies a compact placement policy with a GPU topology of `1x72` for each group of 18 VMs. For more information about A4X topology, see [A4X fundamentals](https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-vm-a4x#a4x_fundamentals). 
+For optimal network performance, we recommend that you specify a value that is a multiple of 18 instances (for example, 18, 36, or 54). When you create an A4X cluster, the A4X blueprint automatically creates and applies a compact placement policy with a GPU topology of `1x72` for each group of 18 instances. For more information about A4X topology, see [A4X fundamentals](https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-vm-a4x#a4x_fundamentals). 
 
   * `RESERVATION_NAME`: the name of your [reservation](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-reservation).
 
@@ -211,7 +211,7 @@ If the output lists multiple Slurm clusters, you can identify your login node by
 
 Replace the following:
 
-     * `ZONE`: the zone where the VMs for your cluster are located.
+     * `ZONE`: the zone where the compute instances for your cluster are located.
      * `LOGIN_NODE`: the name of the login node, which you identified in the previous step.
 
 
@@ -270,13 +270,13 @@ To learn how to cleanly destroy infrastructure and for advanced manual deploymen
 
 ## What's next
 
-  * [Verify reservation consumption](https://docs.cloud.google.com/compute/docs/instances/reservations-consume#verify-consumption)
-  * [View the topology of a compute instance](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/instance-topology)
+  * [Verify reservations consumption](https://docs.cloud.google.com/compute/docs/instances/reservations-consume#verify-consumption)
+  * [View topology of a compute instance](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/instance-topology)
   * Learn how to manage host events: 
-    * [Manage host events across VMs](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/host-events)
+    * [Manage host events across compute instances](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/host-events)
     * [Manage host events across reservations](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/host-events-reservations)
-  * [Monitor VMs](https://docs.cloud.google.com/ai-hypercomputer/docs/monitor) in your Slurm cluster
-  * [Test and optimize with NCCL/gIB](https://docs.cloud.google.com/ai-hypercomputer/docs/nccl/overview)
+  * [Monitor Compute Engine instances and Slurm clusters](https://docs.cloud.google.com/ai-hypercomputer/docs/monitor)
+  * [Optimize cluster networking by using NCCL/gIB](https://docs.cloud.google.com/ai-hypercomputer/docs/nccl/overview)
   * [Report faulty host](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/report-faulty-host)
 
 
@@ -285,6 +285,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-12 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-12 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

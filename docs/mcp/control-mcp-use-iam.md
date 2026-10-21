@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mcp/control-mcp-use-iam/
 title: Control MCP use with Identity and Access Management \u00a0|\u00a0 Google Cloud MCP servers \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:56.818326+00:00
+fetched_at: 2026-10-21T12:23:02.504167+00:00
 ---
 
 # Control MCP use with Identity and Access Management  |  Google Cloud MCP servers  |  Google Cloud Documentation
@@ -22,13 +22,13 @@ Send feedback
 
 #  Control MCP use with Identity and Access Management Stay organized with collections  Save and categorize content based on your preferences. 
 
-Identity and Access Management (IAM) [deny policies](https://docs.cloud.google.com/iam/docs/deny-overview) and [allow policies](https://docs.cloud.google.com/iam/docs/allow-policies) let you secure Google Cloud Model Context Protocol (MCP) servers. You can configure these policies to grant or restrict MCP tool calls based on the service, tool name, OAuth client ID, or whether a tool is read-only. You can't use IAM to control access to [non-Google Cloud MCP servers](https://docs.cloud.google.com/mcp/supported-products#google-mcp-servers).
+Identity and Access Management (IAM) [deny policies](https://docs.cloud.google.com/iam/docs/deny-overview) and [allow policies](https://docs.cloud.google.com/iam/docs/allow-policies) let you secure Google Cloud Model Context Protocol (MCP) servers. You can configure these policies to grant or restrict MCP tool calls based on the service, tool name, OAuth client ID, or whether a tool is read-only. [Non-Google Cloud MCP servers](https://docs.cloud.google.com/mcp/supported-products#google-mcp-servers) don't require the MCP Tool User (`roles/mcp.toolUser`) role. You also can't use IAM policies or permissions to control access to non-Google Cloud MCP servers.
 
 ## Understand IAM permission checks for MCP
 
-When you use Google Cloud services through MCP servers, the principal making the tool call must have the following permissions:
+When you use Google Cloud services through MCP servers, the principal making the tool call must be granted IAM roles that contain the following permissions:
 
-  * The `mcp.tools.call` permission on the Google Cloud project.
+  * The `mcp.tools.call` permission on the Google Cloud project, which is included in the MCP Tool User (`roles/mcp.toolUser`) role.
   * The required permissions to access the underlying Google Cloud resources.
 
 
@@ -73,7 +73,7 @@ The following sections give examples of Identity and Access Management deny poli
 
 ### Deny all MCP tool use
 
-The following IAM deny policy prevents use of Google and Google Cloud MCP server tools by all users.
+The following IAM deny policy prevents use of Google Cloud MCP server tools by all users.
     
     
     {
@@ -292,6 +292,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

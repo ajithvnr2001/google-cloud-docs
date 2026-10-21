@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/object-tables/
 title: Create object tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:45.049684+00:00
+fetched_at: 2026-10-21T12:24:06.401247+00:00
 ---
 
 # Create object tables  |  BigQuery  |  Google Cloud Documentation
@@ -279,7 +279,7 @@ To use a [ default connection](https://docs.cloud.google.com/bigquery/docs/defau
 
 You can use one asterisk (`*`) wildcard character in each path to limit the objects included in the object table. For example, if the bucket contains several types of unstructured data, you could create the object table over only PDF objects by specifying `['gs://bucket_name/*.pdf']`. For more information, see [Wildcard support for Cloud Storage URIs](https://docs.cloud.google.com/bigquery/docs/external-data-cloud-storage#wildcard-support).
 
-You can specify multiple buckets for the `uris` option by providing multiple paths, for example `['gs://mybucket1/*', 'gs://mybucket2/folder5/*']`.
+You can specify multiple buckets for the `uris` option by providing multiple paths, for example `['gs://mybucket1/*', 'gs://mybucket2/folder5/*']`. For optimal performance, specify a maximum of 10 URIs per object table. Providing more than 10 bucket URIs reduces the total number of files that the object table can support.
 
 For more information about using Cloud Storage URIs in BigQuery, see [Cloud Storage resource path](https://docs.cloud.google.com/bigquery/docs/external-data-cloud-storage#google-cloud-storage-uri).
 
@@ -578,6 +578,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

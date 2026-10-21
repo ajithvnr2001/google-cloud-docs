@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/networking-for-ai-inference-gke/
 title: Networking for AI inference model serving on GKE \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:33.696823+00:00
+fetched_at: 2026-10-21T12:22:05.167247+00:00
 ---
 
 # Networking for AI inference model serving on GKE  |  Cloud Architecture Center  |  Google Cloud Documentation

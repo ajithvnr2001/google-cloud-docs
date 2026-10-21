@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/troubleshooting/
 title: Troubleshoot Dataform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:42.235836+00:00
+fetched_at: 2026-10-21T11:59:59.913134+00:00
 ---
 
 # Troubleshoot Dataform  |  Google Cloud Documentation
@@ -107,8 +107,9 @@ The following errors occur during compilation due to size or number of compiled 
   * `Compilation timed out. Reduce the complexity of your project to ensure it can compile within limits.`
   * `Compilation exceeded its allowed heap memory limits. Reduce the complexity of your project to ensure it can compile within limits.`
   * `Compilation exceeded its allowed ArrayBuffer or string memory limits. Reduce the complexity of your project to ensure it can compile within limits.`
+  * `Compilation cancelled because it exceeded size limits.`
 
-
+**Note:** The `Compilation cancelled because it exceeded size limits.` error occurs when the total serialized size of the compiled workflow graph exceeds the 20 MB [compilation resource limit](https://docs.cloud.google.com/dataform/docs/quotas#compilation-limits). This size limit includes all compiled SQL queries, actions, and any compilation error messages. For more information about estimating your compiled graph size, see [Estimate the compilation resource usage of your repository](https://docs.cloud.google.com/dataform/docs/best-practices-repositories#estimate-comp-resource-usage-of-repo).
 
 To resolve these errors, follow these steps:
 
@@ -388,6 +389,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

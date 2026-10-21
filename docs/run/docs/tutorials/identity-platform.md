@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/tutorials/identity-platform/
 title: End user authentication for Cloud Run tutorial \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:06:27.462792+00:00
+fetched_at: 2026-10-21T12:24:20.445077+00:00
 ---
 
 # End user authentication for Cloud Run tutorial  |  Google Cloud Documentation
@@ -66,9 +66,9 @@ In this document, you use the following billable components of Google Cloud:
   * [Cloud Build](https://docs.cloud.google.com/build/docs)
   * [Artifact Registry](https://docs.cloud.google.com/artifact-registry)
   * [Secret Manager](https://docs.cloud.google.com/secret-manager)
-  * [Cloud SQL](https://docs.cloud.google.com/sql)
+  * [Cloud SQL](https://cloud.google.com/sql)
   * [Identity Platform](https://docs.cloud.google.com/identity-platform)
-  * [Cloud Run](https://docs.cloud.google.com/run)
+  * [Cloud Run](https://cloud.google.com/run)
 
 
 
@@ -170,7 +170,7 @@ Meeting your latency, availability, or durability requirements are primary facto
 
 Cloud Run is available in the following regions:
 
-#### Subject to [Tier 1 pricing](https://docs.cloud.google.com/run/pricing#tables)
+#### Subject to [Tier 1 pricing](https://cloud.google.com/run/pricing#tables)
 
   * `asia-east1` (Taiwan) 
   * `asia-northeast1` (Tokyo) 
@@ -195,7 +195,7 @@ Cloud Run is available in the following regions:
 
 
 
-#### Subject to [Tier 2 pricing](https://docs.cloud.google.com/run/pricing#tables)
+#### Subject to [Tier 2 pricing](https://cloud.google.com/run/pricing#tables)
 
   * `africa-south1` (Johannesburg) 
   * `asia-east2` (Hong Kong) 
@@ -325,7 +325,7 @@ The Firebase JavaScript SDK handles the sign-in flow by prompting the end user t
         });
     }
 
-**Note:** To capture browser logging, you might want to route logs to [Cloud Logging](https://docs.cloud.google.com/logging). For an implementation example, refer to [Stackdriver Error Reporting library](https://github.com/GoogleCloudPlatform/stackdriver-errors-js).
+**Note:** To capture browser logging, you might want to route logs to [Cloud Logging](https://cloud.google.com/logging). For an implementation example, refer to [Stackdriver Error Reporting library](https://github.com/GoogleCloudPlatform/stackdriver-errors-js).
 
 When a user successfully signs in, the client uses Firebase methods to mint an ID token. The client adds the ID token to the `Authorization` header of its request to the server.
     
@@ -882,6 +882,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

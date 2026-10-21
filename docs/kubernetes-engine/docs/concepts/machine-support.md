@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-support/
 title: About machine support with GKE clusters \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:01:50.111914+00:00
+fetched_at: 2026-10-21T12:23:01.441580+00:00
 ---
 
 # About machine support with GKE clusters  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -99,6 +99,7 @@ Machine series | Unsupported machine types from the machine series
 [X4](https://docs.cloud.google.com/compute/docs/memory-optimized-machines#x4_series) | GKE doesn't support any machine types of the X4 machine series.  
 [Z3](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z3_series) | GKE doesn't support the `z3-highmem-192-highlssd-metal` machine type.  
 [Z4D](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4d_series) | GKE doesn't support the `-metal` machine types.  
+[Z4M](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4m_series) |  GKE doesn't support the `-metal` machine types.   
   
 ## What's next
 
@@ -112,6 +113,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

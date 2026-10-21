@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/release-notes/
 title: BigQuery release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:54:18.135826+00:00
+fetched_at: 2026-10-21T11:59:16.985889+00:00
 ---
 
 # BigQuery release notes  |  Google Cloud Documentation
@@ -28,6 +28,63 @@ For older release notes, see the [Release notes archive](https://docs.cloud.goog
 You can see the latest product updates for all of Google Cloud on the [ Google Cloud](https://docs.cloud.google.com/release-notes) page, browse and filter all release notes in the [Google Cloud console](https://console.cloud.google.com/release-notes), or programmatically access release notes in [BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_cloud_release_notes&t=release_notes&page=table). 
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/bigquery-release-notes.xml) directly. 
+
+## October 16, 2026
+
+Feature
+
+[Conversational analytics in BigQuery](https://docs.cloud.google.com/bigquery/docs/conversational-analytics) is now available in the following locations:
+
+  * `northamerica-northeast1` (Montréal)
+  * `northamerica-northeast2` (Toronto)
+
+
+
+For more information, see [Locations](https://docs.cloud.google.com/bigquery/docs/conversational-analytics#locations).
+
+## October 15, 2026
+
+Feature
+
+You can [copy tables across regions](https://docs.cloud.google.com/bigquery/docs/managing-tables#copy_tables_across_regions). This feature is now [generally available](https://cloud.google.com/products/#product-launch-stages) (GA).
+
+Feature
+
+You can now use [reusable column aliases](https://docs.cloud.google.com/bigquery/docs/column-aliases) in GoogleSQL. This feature lets you define an alias for an expression in the `SELECT` clause of a SQL query and immediately reference that alias within the same `SELECT` list or in the `WHERE` clause of the same query block.
+
+Reusable column aliases also streamline the migration of workloads from other data warehouses such as Snowflake and Teradata, by supporting their syntax.
+
+This feature is [generally available](https://cloud.google.com/products#product-launch-stages), and is opt-in only. To use reusable column aliases, you must first [enable the feature](https://docs.cloud.google.com/bigquery/docs/column-aliases#enabling_column_aliases).
+
+Feature
+
+You can [export a conversational analytics agent's answer](https://docs.cloud.google.com/bigquery/docs/create-conversations#export-answer), including text, visualizations, tables, and citations, to a PDF or CSV file. This feature is [generally available](https://cloud.google.com/products#product-launch-stages) (GA).
+
+## October 14, 2026
+
+Feature
+
+The Apache Hive catalog endpoint in the Lakehouse runtime catalog is now [generally available](https://cloud.google.com/products#product-launch-stages) (GA). This integration lets you use the metastore as a serverless, central metadata layer, enabling seamless data sharing and unified querying across Apache Spark, Apache Hive, and BigQuery.
+
+For more information, see [About the Hive catalog endpoint](https://docs.cloud.google.com/lakehouse/docs/about-spark-hive-metastore) and [Set up Spark and Hive with the Lakehouse runtime catalog](https://docs.cloud.google.com/lakehouse/docs/use-spark-hive-metastore).
+
+Feature
+
+Metadata migration from Dataproc Metastore to Lakehouse is now [generally available](https://cloud.google.com/products#product-launch-stages) (GA). You can perform a one-time backfill migration or dry run to migrate metadata from a Dataproc Metastore service to an Apache Iceberg REST catalog endpoint or a Hive catalog endpoint using the Google Cloud console, the gcloud CLI, or the REST API.
+
+For more information, see [Migrate metadata from Dataproc Metastore to Lakehouse](https://docs.cloud.google.com/lakehouse/docs/migrate-dataproc-metastore).
+
+Feature
+
+Conversational analytics now lets you [create a conversation](https://docs.cloud.google.com/bigquery/docs/create-conversations#converse_with_a_data_source_using_the_agents_page) with all of the data sources in multiple projects, or create a conversation with a [dataset](https://docs.cloud.google.com/bigquery/docs/create-conversations#datasets). These features are [generally available](https://cloud.google.com/products#product-launch-stages) (GA).
+
+Feature
+
+You can publish a [BigQuery Conversational Analytics agent in Gemini Enterprise](https://docs.cloud.google.com/bigquery/docs/create-data-agents#publish-agent-gemini-enterprise). This feature is now [generally available](https://cloud.google.com/products/#product-launch-stages) (GA).
+
+Feature
+
+The [`AI.AGG` function](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/bigqueryml-syntax-ai-agg) now supports the `output_schema` argument, which lets you specify the schema of the function output as a comma-separated list of fields. This feature is [generally available](https://cloud.google.com/products#product-launch-stages) (GA).
 
 ## October 13, 2026
 

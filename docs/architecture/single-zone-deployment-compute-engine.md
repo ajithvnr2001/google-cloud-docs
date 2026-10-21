@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/single-zone-deployment-compute-engine/
 title: Single-zone deployment on Compute Engine \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:25.980260+00:00
+fetched_at: 2026-10-21T12:22:05.560422+00:00
 ---
 
 # Single-zone deployment on Compute Engine  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -118,7 +118,7 @@ For low-cost storage that's replicated across multiple locations, you can use Cl
 
 
 
-To store data that's shared across multiple VMs in a region, such as across all the VMs in the web tier or application tier, you can use a [Filestore regional instance](https://docs.cloud.google.com/filestore/docs/service-tiers#regional). The data that you store in a Filestore regional instance is replicated synchronously across three zones within the region. This replication ensures [high availability](https://cloud.google.com/filestore/sla) and robustness against zone outages. You can store shared configuration files, common tools and utilities, and centralized logs in the Filestore instance, and mount the instance on multiple VMs. For robustness against region outages, you can replicate a Filestore instance to a different region. For more information, see [Instance replication](https://docs.cloud.google.com/filestore/docs/instance-replication#instance-replication).
+To store data that's shared across multiple VMs in a region, such as across all the VMs in the web tier or application tier, you can use a [Filestore regional instance](https://docs.cloud.google.com/filestore/docs/service-tiers-regional). The data that you store in a Filestore regional instance is replicated synchronously across three zones within the region. This replication ensures [high availability](https://cloud.google.com/filestore/sla) and robustness against zone outages. You can store shared configuration files, common tools and utilities, and centralized logs in the Filestore instance, and mount the instance on multiple VMs. For robustness against region outages, you can replicate a Filestore instance to a different region. For more information, see [Instance replication](https://docs.cloud.google.com/filestore/docs/instance-replication#instance-replication).
 
 If your database is Microsoft SQL Server, we recommend using Cloud SQL for SQL Server. In scenarios when Cloud SQL doesn't support your configuration requirements, or if you need access to the operating system, you can deploy a [Microsoft SQL Server failover cluster instance (FCI)](https://learn.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server). In this scenario, you can use the fully managed [Google Cloud NetApp Volumes](https://docs.cloud.google.com/netapp/volumes/docs/discover/overview) to provide continuous availability (CA) SMB storage for the database.
 
@@ -227,7 +227,7 @@ You can use [Backup and DR](https://docs.cloud.google.com/backup-disaster-recove
 Compute Engine provides the following options to help you to ensure the durability of data that's stored in Persistent Disk volumes:
 
   * You can use [snapshots](https://docs.cloud.google.com/compute/docs/disks/snapshots) to capture the point-in-time state of Persistent Disk volumes. The snapshots are stored redundantly in multiple regions, with automatic checksums to ensure the integrity of your data. Snapshots are incremental by default, so they use less storage space and you save money. Snapshots are stored in a [Cloud Storage location](https://docs.cloud.google.com/compute/docs/disks/snapshot-settings#storage_location_options) that you can configure. For more recommendations about using and managing snapshots, see [Best practices for Compute Engine disk snapshots](https://docs.cloud.google.com/compute/docs/disks/snapshot-best-practices).
-  * To ensure that data in Persistent Disk remains available if a zone outage occurs, you can use [Regional Persistent Disk](https://docs.cloud.google.com/compute/docs/disks/persistent-disks#repds) or [Hyperdisk Balanced High Availability](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced-ha). Data in these disk types is replicated synchronously between two zones in the same region. For more information, see [About synchronous disk replication](https://docs.cloud.google.com/compute/docs/disks/about-regional-persistent-disk#about-synchronous-disk-replication).
+  * To ensure that data in Persistent Disk remains available if a zone outage occurs, you can use [Regional Persistent Disk](https://docs.cloud.google.com/compute/docs/disks/about-regional-persistent-disk) or [Hyperdisk Balanced High Availability](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced-ha). Data in these disk types is replicated synchronously between two zones in the same region. For more information, see [About synchronous disk replication](https://docs.cloud.google.com/compute/docs/disks/about-regional-persistent-disk#zonal_replication).
 
 
 
@@ -254,7 +254,7 @@ This section provides guidance to optimize the cost of setting up and operating 
 
 #### VM machine types
 
-To help you optimize the resource utilization of your VM instances, Compute Engine provides [machine type recommendations](https://docs.cloud.google.com/compute/docs/instances/apply-machine-type-recommendations-for-instances). Use the recommendations to choose machine types that match your workload's compute requirements. For workloads with predictable resource requirements, you can customize the machine type to your needs and save money by using [custom machine types](https://docs.cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#specifications).
+To help you optimize the resource utilization of your VM instances, Compute Engine provides [machine type recommendations](https://docs.cloud.google.com/compute/docs/instances/apply-machine-type-recommendations-for-instances). Use the recommendations to choose machine types that match your workload's compute requirements. For workloads with predictable resource requirements, you can customize the machine type to your needs and save money by using [custom machine types](https://docs.cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type).
 
 #### VM provisioning model
 
@@ -268,10 +268,10 @@ The [autoscaling](https://docs.cloud.google.com/compute/docs/autoscaler) capabil
 
 #### Third-party licensing
 
-When you migrate third-party workloads to Google Cloud, you might be able to reduce cost by bringing your own licenses (BYOL). For example, to deploy Microsoft Windows Server VMs, instead of using a [premium image](https://docs.cloud.google.com/compute/disks-image-pricing#section-1) that incurs additional cost for the third-party license, you can create and use a [custom Windows BYOL image](https://docs.cloud.google.com/compute/docs/images/creating-custom-windows-byol-images). You then pay only for the VM infrastructure that you use on Google Cloud. This strategy helps you continue to realize value from your existing investments in third-party licenses. If you decide to use the BYOL approach, then the following recommendations might help to reduce cost:
+When you migrate third-party workloads to Google Cloud, you might be able to reduce cost by bringing your own licenses (BYOL). For example, to deploy Microsoft Windows Server VMs, instead of using a [premium image](https://cloud.google.com/compute/disks-image-pricing#premium-images) that incurs additional cost for the third-party license, you can create and use a [custom Windows BYOL image](https://docs.cloud.google.com/compute/docs/images/creating-custom-windows-byol-images). You then pay only for the VM infrastructure that you use on Google Cloud. This strategy helps you continue to realize value from your existing investments in third-party licenses. If you decide to use the BYOL approach, then the following recommendations might help to reduce cost:
 
   * Provision the required number of compute CPU cores independently of memory by using [custom machine types](https://docs.cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#extendedmemory). By doing this, you limit the third-party licensing cost to the number of CPU cores that you need.
-  * Reduce the number of vCPUs per core from 2 to 1 by disabling [simultaneous multithreading (SMT)](https://docs.cloud.google.com/compute/docs/instances/configuring-simultaneous-multithreading).
+  * Reduce the number of vCPUs per core from 2 to 1 by disabling [simultaneous multithreading (SMT)](https://docs.cloud.google.com/compute/docs/instances/set-threads-per-core).
 
 
 
@@ -295,7 +295,7 @@ For your VMs, instead of using Google-provided public images, we recommend that 
 
 #### Deterministic instance templates
 
-If the instance templates that you use for your MIGs include startup scripts to install third-party software, make sure that the scripts explicitly specify software-installation parameters such as the software version. Otherwise, when the MIG creates the VMs, the software that's installed on the VMs might not be consistent. For example, if your instance template includes a startup script to install Apache HTTP Server 2.0 (the `apache2` package), then make sure that the script specifies the exact `apache2` version that should be installed, such as version `2.4.53`. For more information, see [Deterministic instance templates](https://docs.cloud.google.com/compute/docs/instance-templates/deterministic-instance-templates).
+If the instance templates that you use for your MIGs include startup scripts to install third-party software, make sure that the scripts explicitly specify software-installation parameters such as the software version. Otherwise, when the MIG creates the VMs, the software that's installed on the VMs might not be consistent. For example, if your instance template includes a startup script to install Apache HTTP Server 2.4 (the `apache2` package), then make sure that the script specifies the exact `apache2` version that should be installed, such as version `2.4.69`. For more information, see [Deterministic instance templates](https://docs.cloud.google.com/compute/docs/instance-templates/deterministic-instance-templates).
 
 #### More operational considerations
 

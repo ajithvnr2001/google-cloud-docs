@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/compute/docs/images/image-builder/create-pipeline/
-title: Create a custom OS image pipeline using gcloud or Terraform \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
+title: Create a custom OS image pipeline programmatically \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:54:05.059746+00:00
+fetched_at: 2026-10-21T12:22:59.485300+00:00
 ---
 
-# Create a custom OS image pipeline using gcloud or Terraform  |  Compute Engine  |  Google Cloud Documentation
+# Create a custom OS image pipeline programmatically  |  Compute Engine  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/compute/docs/images/image-builder/create-pipeline/
 
@@ -19,13 +19,13 @@ fetched_at: 2026-10-13T21:54:05.059746+00:00
 
 Send feedback 
 
-#  Create a custom OS image pipeline using gcloud or Terraform Stay organized with collections  Save and categorize content based on your preferences. 
+#  Create a custom OS image pipeline programmatically Stay organized with collections  Save and categorize content based on your preferences. 
 
 Linux 
 
 **Note:** Image Builder is generally available, but your project must be added to an allowlist before you can use it. To request access, submit the [access request form](https://forms.gle/4NncEhwetZDjaPx9A) or contact your Google Cloud account team. The allowlist covers only the service accounts in your project and doesn't cover Google-owned service accounts. For more information, see [Service accounts covered by the allowlist](https://docs.cloud.google.com/compute/docs/images/image-builder/prerequisites#allowlist-coverage). 
 
-Configure and submit an Image Builder pipeline programmatically by using the Google Cloud CLI or Terraform. Configuring your pipeline programmatically lets you define infrastructure settings, base OS images, customization actions, and validation tests in declarative configuration files.
+You can configure and submit an Image Builder pipeline programmatically by using the gcloud CLI, Terraform, or client libraries such as Go. Configuring your pipeline programmatically lets you define infrastructure settings, base OS images, customization actions, and validation tests in declarative configuration files.
 
 ## Before you begin
 
@@ -65,12 +65,30 @@ If an authentication error is returned, and you are using an external identity p
 
 For more information, see [ Set up authentication for a local development environment](https://docs.cloud.google.com/compute/docs/authentication#local-development). 
 
+### Go
+
+To use the Go samples on this page in a local development environment, install and initialize the gcloud CLI, and then set up Application Default Credentials with your user credentials. 
+
+    1. [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. 
+
+    2. If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). 
+
+    3. If you're using a local shell, then create local authentication credentials for your user account: 
+           
+           gcloud auth application-default login
+
+You don't need to do this if you're using Cloud Shell.
+
+If an authentication error is returned, and you are using an external identity provider (IdP), confirm that you have [ signed in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). 
+
+For more information, see [ Set up authentication for a local development environment](https://docs.cloud.google.com/compute/docs/authentication#local-development). 
+
 
 
 
 ## Required roles
 
-To get the permissions that you need to create and submit image customization pipelines using the Google Cloud CLI or Terraform, ask your administrator to grant you the following IAM roles on your project: 
+To get the permissions that you need to create and submit image customization pipelines programmatically, ask your administrator to grant you the following IAM roles on your project: 
 
   * [Cloud Build Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/cloudbuild#cloudbuild.builds.editor) (`roles/cloudbuild.builds.editor`)
   * [Service Account User ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`)
@@ -89,6 +107,8 @@ To configure your pipeline by using the gcloud CLI or Terraform, create two conf
   * [`cloudbuild.yaml`](https://docs.cloud.google.com/compute/docs/images/image-builder/build-configuration-schema): orchestrates the build process steps in Cloud Build, including parsing, validation, building, testing, and publishing the custom OS image.
 
 
+
+If you submit your build by using Go, you only need to create the `imagebuilder.yaml` file and upload it to your Cloud Storage bucket, because the Go sample defines the Cloud Build orchestration steps in code.
 
 ### Create the image configuration file
 
@@ -204,7 +224,7 @@ Replace the following placeholder values:
 
 ## Create and submit the build pipeline
 
-To run your image customization pipeline, submit a build by using the gcloud CLI or deploy your pipeline by using Terraform. Select one of the following tabs:
+To run your image customization pipeline, submit a build by using the gcloud CLI, deploy your pipeline by using Terraform, or submit a build by using the Go client library. Select one of the following tabs:
 
 ###  gcloud 
 
@@ -516,6 +536,123 @@ This file declares all required and optional input variables and validation rule
 
 
 
+###  Go 
+
+Before you run this sample, upload your `imagebuilder.yaml` configuration file to your Cloud Storage staging bucket, for example, `gs://STAGING_BUCKET_NAME/imagebuilder.yaml`.
+
+To submit a Cloud Build build that runs the Image Builder pipeline by using the Cloud Build Go client library, use the following sample:
+    
+    
+    import (
+    	"context"
+    	"encoding/json"
+    	"fmt"
+    	"io"
+    
+    	"google.golang.org/api/cloudbuild/v1"
+    )
+    
+    // submitBuild submits a Cloud Build build that uses Image Builder to
+    // customize, validate, and publish a VM image to Compute Engine and Artifact
+    // Registry.
+    //
+    // Before you run this sample, upload your imagebuilder.yaml configuration file
+    // to Cloud Storage, create a generic Artifact Registry repository, and create a
+    // service account to run the build.
+    func submitBuild(w io.Writer, projectID, gcsWorkdir, configPath, serviceAccount string) error {
+    	// projectID := "my-project-id"
+    	region := "us-central1"
+    	// gcsWorkdir := "gs://my-bucket/workdir/"
+    	// configPath := "gs://my-bucket/imagebuilder.yaml"
+    	repository := "vm-images"
+    	packageName := "custom-os-images"
+    	// serviceAccount := "image-builder@my-project-id.iam.gserviceaccount.com"
+    
+    	ctx := context.Background()
+    	cbService, err := cloudbuild.NewService(ctx)
+    	if err != nil {
+    		return fmt.Errorf("cloudbuild.NewService: %w", err)
+    	}
+    
+    	sa := fmt.Sprintf("projects/%s/serviceAccounts/%s", projectID, serviceAccount)
+    	req := &cloudbuild.Build{
+    		ServiceAccount: sa,
+    		// AutomapSubstitutions exposes these substitutions to every step as
+    		// environment variables. See
+    		// https://cloud.google.com/build/docs/configuring-builds/substitute-variable-values#mapping_substitutions_to_environment_variables
+    		Substitutions: map[string]string{
+    			"_GCS_WORKDIR":               gcsWorkdir,
+    			"_SERVICE_ACCOUNT":           sa,
+    			"_IMAGE_OUTPUT_PATH":         "image-builder/binaryOut",
+    			"_IMAGE_BUILDER_CONFIG_PATH": configPath,
+    			"_ARTIFACT_REGISTRY_RESOURCE_URI": fmt.Sprintf(
+    				"projects/%s/locations/%s/repositories/%s/packages/%s/versions/v${BUILD_ID}",
+    				projectID, region, repository, packageName,
+    			),
+    		},
+    		Steps: []*cloudbuild.BuildStep{
+    			{
+    				Id:     "imagebuilder-customize",
+    				Name:   "us-docker.pkg.dev/image-builder-official/release/builder:stable",
+    				Script: "#!/usr/bin/env bash\n/build",
+    				Results: []*cloudbuild.StepResult{
+    					{
+    						Name:            "base_image",
+    						AttestationType: "https://cloudbuild.googleapis.com/attestations/build_content_restrictions",
+    					},
+    					{Name: "image_builder_telemetry_metrics"},
+    				},
+    			},
+    			{
+    				Id:      "imagebuilder-validate",
+    				Name:    "us-docker.pkg.dev/image-builder-official/release/validator:stable",
+    				Script:  "#!/usr/bin/env bash\n/validate",
+    				Results: []*cloudbuild.StepResult{{Name: "image_builder_telemetry_metrics"}},
+    			},
+    			{
+    				Id:      "imagebuilder-publish",
+    				Name:    "us-docker.pkg.dev/image-builder-official/release/builder:stable",
+    				Script:  "#!/usr/bin/env bash\n/publish",
+    				Results: []*cloudbuild.StepResult{{Name: "image_builder_telemetry_metrics"}},
+    			},
+    		},
+    		Options: &cloudbuild.BuildOptions{
+    			AutomapSubstitutions:  true,
+    			DynamicSubstitutions:  true,
+    			RequestedVerifyOption: "VERIFIED",
+    			SubstitutionOption:    "ALLOW_LOOSE",
+    			// Builds that run as a user-specified service account must set a
+    			// logging option.
+    			Logging: "CLOUD_LOGGING_ONLY",
+    		},
+    		Artifacts: &cloudbuild.Artifacts{
+    			GenericArtifacts: []*cloudbuild.GenericArtifact{
+    				{
+    					Folder:       "${_IMAGE_OUTPUT_PATH}",
+    					RegistryPath: "${_ARTIFACT_REGISTRY_RESOURCE_URI}",
+    				},
+    			},
+    		},
+    		Timeout: "3600s",
+    	}
+    
+    	parent := fmt.Sprintf("projects/%s/locations/%s", projectID, region)
+    	op, err := cbService.Projects.Locations.Builds.Create(parent, req).Context(ctx).Do()
+    	if err != nil {
+    		return fmt.Errorf("Builds.Create: %w", err)
+    	}
+    
+    	// The operation metadata contains the build that was created.
+    	var metadata cloudbuild.BuildOperationMetadata
+    	if err := json.Unmarshal(op.Metadata, &metadata); err != nil {
+    		return fmt.Errorf("json.Unmarshal: %w", err)
+    	}
+    	fmt.Fprintf(w, "Build submitted. ID: %s\n", metadata.Build.Id)
+    	fmt.Fprintf(w, "Logs: %s\n", metadata.Build.LogUrl)
+    	return nil
+    }
+    
+
 ## Verify and monitor the build
 
 To track the progress of your build pipeline, complete the following steps:
@@ -544,6 +681,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

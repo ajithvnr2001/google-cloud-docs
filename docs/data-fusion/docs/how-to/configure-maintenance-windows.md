@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/configure-maintenance-windows/
 title: Configure maintenance windows \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:38:49.669288+00:00
+fetched_at: 2026-10-21T12:24:18.752133+00:00
 ---
 
 # Configure maintenance windows  |  Cloud Data Fusion  |  Google Cloud Documentation
@@ -25,7 +25,7 @@ Send feedback
 
 This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
-This page explains how to define maintenance windows for Cloud Data Fusion instances.
+Maintenance windows in Cloud Data Fusion let you control when automated updates and routine maintenance occur. Setting designated time frames helps you prevent service disruptions during peak operational hours.
 
 Maintenance windows are supported for Cloud Data Fusion instances in versions 6.8.0 and later.
 
@@ -364,9 +364,51 @@ Replace the following:
 
 
 
+## View maintenance events and receive notifications
+
+Cloud Data Fusion reports scheduled maintenance events for your instances through [Unified Maintenance](https://docs.cloud.google.com/unified-maintenance/docs/overview). To view these events and receive notifications about them, you need to set up each separately:
+
+  * To view maintenance events on the [Cloud Hub **Maintenance** page](https://docs.cloud.google.com/hub/docs/maintenance) in the Google Cloud console, or to query the Unified Maintenance API directly, you must enable the API in your project.
+  * To receive notifications, you must configure log-based alerting policies in Cloud Logging. Enabling the API doesn't subscribe you to notifications.
+
+
+
+### Enable the Unified Maintenance API
+
+To view maintenance events in the Google Cloud console, enable the Unified Maintenance API (`maintenance.googleapis.com`) in your project. Unified Maintenance doesn't display historical events that were scheduled before you enabled the API.
+
+###  Console 
+
+  1. In the **API Library** , go to the **Maintenance API** page.
+
+[Go to Maintenance API](https://console.cloud.google.com/apis/library/maintenance.googleapis.com)
+
+  2. Click **Enable**.
+
+
+
+
+###  gcloud 
+
+Use the [`gcloud services enable`](https://docs.cloud.google.com/sdk/gcloud/reference/services/enable) command:
+    
+    
+    gcloud services enable maintenance.googleapis.com \
+        --project=PROJECT_ID
+    
+
+Replace `PROJECT_ID` with your project ID.
+
+### Configure notifications
+
+Unified Maintenance writes maintenance event logs with the log ID `maintenance.googleapis.com/maintenance_events` to Logging automatically, regardless of whether the Unified Maintenance API is enabled. To receive notifications through channels such as email, Pub/Sub, Slack, PagerDuty, or webhooks, create log-based alerting policies that match these logs. For more information, see [Configure alerts and notifications](https://docs.cloud.google.com/unified-maintenance/docs/configure-alerts-and-notifications).
+
 ## What's next
 
   * Refer to the [instances API documentation](https://docs.cloud.google.com/data-fusion/docs/reference/rest/v1/projects.locations.instances#Instance).
+  * Learn how to [view maintenance activities in Cloud Hub](https://docs.cloud.google.com/hub/docs/maintenance).
+  * Learn how to [configure alerts and notifications for maintenance events](https://docs.cloud.google.com/unified-maintenance/docs/configure-alerts-and-notifications).
+  * Learn more about [Unified Maintenance](https://docs.cloud.google.com/unified-maintenance/docs/overview).
 
 
 
@@ -374,6 +416,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

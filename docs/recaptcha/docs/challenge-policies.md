@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/challenge-policies/
 title: Configure challenge policies \u00a0|\u00a0 Google Cloud Fraud Defense \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:50:26.058049+00:00
+fetched_at: 2026-10-21T11:58:11.755679+00:00
 ---
 
 # Configure challenge policies  |  Google Cloud Fraud Defense  |  Google Cloud Documentation
@@ -53,7 +53,7 @@ You can use challenge policies with the following recommended features:
 
 [Go to Fraud Defense](https://console.cloud.google.com/security/recaptcha)
 
-       2. In the **reCAPTCHA keys** list, find the key that you want to copy and click content_copy **Copy to clipboard**.
+       2. In the **Keys** list, find the key that you want to copy and click content_copy **Copy to clipboard**.
 
      * To copy the ID of an existing key using the REST API, call the [`projects.keys.list`](https://docs.cloud.google.com/recaptcha/docs/reference/rest/v1/projects.keys/list) method.
 
@@ -336,6 +336,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

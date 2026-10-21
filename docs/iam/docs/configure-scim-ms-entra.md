@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/configure-scim-ms-entra/
 title: Configure SCIM in Microsoft Entra ID \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:09:58.868279+00:00
+fetched_at: 2026-10-21T12:23:15.323667+00:00
 ---
 
 # Configure SCIM in Microsoft Entra ID  |  Identity and Access Management (IAM)  |  Google Cloud Documentation
@@ -171,7 +171,7 @@ To enable SCIM for a provider, set the `--scim-usage` flag based on your product
     
           gcloud iam workforce-pools providers update-oidc PROVIDER_ID \
               --workforce-pool=WORKFORCE_POOL_ID \
-              --location=LOCATION \
+              --location=global \
               --scim-usage=enabled-for-groups
         
 
@@ -179,7 +179,6 @@ Replace the following:
 
   * `PROVIDER_ID`: the ID of the workforce identity pool provider
   * `WORKFORCE_POOL_ID`: the ID of the workforce pool
-  * `LOCATION`: the location of the workforce pool
 
 
 
@@ -188,7 +187,7 @@ Replace the following:
     
           gcloud iam workforce-pools providers update-saml PROVIDER_ID \
               --workforce-pool=WORKFORCE_POOL_ID \
-              --location=LOCATION \
+              --location=global \
               --scim-usage=enabled-for-groups
         
 
@@ -196,7 +195,6 @@ Replace the following:
 
   * `PROVIDER_ID`: the ID of the workforce identity pool provider
   * `WORKFORCE_POOL_ID`: the ID of the workforce pool
-  * `LOCATION`: the location of the workforce pool
 
 
 
@@ -207,7 +205,7 @@ Replace the following:
     
           gcloud iam workforce-pools providers update-oidc PROVIDER_ID \
               --workforce-pool=WORKFORCE_POOL_ID \
-              --location=LOCATION \
+              --location=global \
               --scim-usage=enabled-for-users-groups
         
 
@@ -215,7 +213,6 @@ Replace the following:
 
   * `PROVIDER_ID`: the ID of the workforce identity pool provider
   * `WORKFORCE_POOL_ID`: the ID of the workforce pool
-  * `LOCATION`: the location of the workforce pool
 
 
 
@@ -224,7 +221,7 @@ Replace the following:
     
           gcloud iam workforce-pools providers update-saml PROVIDER_ID \
               --workforce-pool=WORKFORCE_POOL_ID \
-              --location=LOCATION \
+              --location=global \
               --scim-usage=enabled-for-users-groups
         
 
@@ -232,7 +229,6 @@ Replace the following:
 
   * `PROVIDER_ID`: the ID of the workforce identity pool provider
   * `WORKFORCE_POOL_ID`: the ID of the workforce pool
-  * `LOCATION`: the location of the workforce pool
 
 
 
@@ -386,7 +382,7 @@ To force delete a SCIM tenant, do the following:
          
          gcloud iam workforce-pools providers update-oidc PROVIDER_ID \
              --workforce-pool=WORKFORCE_POOL_ID \
-             --location=LOCATION \
+             --location=global \
              --scim-usage=SCIM_USAGE_UNSPECIFIED
          
 
@@ -394,13 +390,12 @@ Replace the following:
 
      * `PROVIDER_ID`: the ID of the workforce identity pool provider
      * `WORKFORCE_POOL_ID`: the ID of the workforce pool
-     * `LOCATION`: the location of the workforce pool
 
 ### SAML
     
     gcloud iam workforce-pools providers update-saml PROVIDER_ID \
         --workforce-pool=WORKFORCE_POOL_ID \
-        --location=LOCATION \
+        --location=global \
         --scim-usage=SCIM_USAGE_UNSPECIFIED
     
 
@@ -408,7 +403,6 @@ Replace the following:
 
      * `PROVIDER_ID`: the ID of the workforce identity pool provider
      * `WORKFORCE_POOL_ID`: the ID of the workforce pool
-     * `LOCATION`: the location of the workforce pool
   2. Delete the SCIM tenant: 
          
          gcloud iam workforce-pools providers scim-tenants delete SCIM_TENANT_ID \
@@ -441,6 +435,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

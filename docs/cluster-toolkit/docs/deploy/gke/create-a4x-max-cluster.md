@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/create-a4x-max-cluster/
 title: Create an A4X Max GKE cluster \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:44.785746+00:00
+fetched_at: 2026-10-21T12:23:10.186650+00:00
 ---
 
 # Create an A4X Max GKE cluster  |  Cluster Toolkit  |  Google Cloud Documentation
@@ -93,7 +93,7 @@ To create an A4X Max GKE cluster, follow these steps:
 
 **Note:** If you create multiple clusters by using these same cluster blueprints, help ensure that all VPC network and subnet names are unique per project to prevent errors.
 
-  1. [Launch Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell). You can use a different environment; however, we recommend that you use Cloud Shell because the dependencies are already pre-installed for Cluster Toolkit. If you don't want to use Cloud Shell, follow the instructions to [install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) to prepare a different environment. 
+  1. [Launch Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell). Although it's possible to use a different environment, we recommend that you use Cloud Shell because the dependencies are already pre-installed for Cluster Toolkit. If you don't want to use Cloud Shell, then follow the instructions to [install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) to prepare a different environment. 
   2. Create a Cloud Storage bucket to store the state of the Terraform deployment: 
          
          gcloud storage buckets create gs://BUCKET_NAME \
@@ -109,36 +109,37 @@ Replace the following variables:
      * `BUCKET_NAME`: the name of the new Cloud Storage bucket.
      * `PROJECT_ID`: your Google Cloud project ID.
      * `COMPUTE_REGION_TERRAFORM_STATE`: the compute region where you want to store the state of the Terraform deployment.
-  3. In the [`examples/gke-a4x-max-bm/gke-a4x-max-bm-deployment.yaml`](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4x-max-bm/gke-a4x-max-bm-deployment.yaml) blueprint from the GitHub repository, fill in the following settings in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment: 
+  3. Choose a consumption option for your GKE deployment:
 
-Replace the following variables:
+By default, the deployment file is configured to consume [specific reservations](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options#reservations). To use an alternative consumption model , update your deployment YAML file. For more information, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options).
+
+  4. In the [`examples/gke-a4x-max-bm/gke-a4x-max-bm-deployment.yaml`](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4x-max-bm/gke-a4x-max-bm-deployment.yaml) deployment file from the GitHub repository, fill in the following settings in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
 
      * `BUCKET`: the name of the Cloud Storage bucket that you created in the previous step.
      * `PROJECT_ID`: your Google Cloud project ID.
-     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, cluster creation fails. The default value is `gke-a4x-max-bm`.
+     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, then cluster creation fails. The default value is `gke-a4x-max-bm`.
      * `REGION`: the compute region for the cluster.
-     * `ZONE`: the compute zone for the node pool of A4X Max machines. This zone should match the zone where machines are available in your reservation.
-     * `STATIC_NODE_COUNT`: the number of A4X Max nodes in your cluster's node pool, which must be 18 nodes or less. We recommend that you use 18 nodes to obtain the GPU topology of `1x72` in one subblock by using an NVLink domain.
+     * `ZONE`: the compute zone for the node pool of A4X Max machines. This zone must match the zone where machines are available in your reservation.
      * `AUTHORIZED_CIDR`: the IP address range that you want to let connect to the cluster. This CIDR block must include the IP address of the machine that calls Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
+     * `STATIC_NODE_COUNT`: the number of A4X Max nodes in your cluster's node pool, which must be 18 nodes or less. We recommend that you use 18 nodes to obtain the GPU topology of `1x72` in one subblock by using an NVLink domain.
      * For the `reservation` field, use one of the following, depending on whether you want to target specific [blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/terminology#block) in a reservation when you provision the node pool: 
        * To place the node pool anywhere in the reservation, provide the name of your reservation (`RESERVATION_NAME`).
        * To target a specific block within your reservation, use the reservation and block names in the following format: 
              
              RESERVATION_NAME/reservationBlocks/BLOCK_NAME
-                         
 
-If you don't know which blocks are available in your reservation, see [View a reservation topology](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology). 
+If you don't know which blocks are available in your reservation, then see [View the topology of a reservation](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology). 
      * `RESERVATION_PROJECT_ID`: the Google Cloud project ID that has the reservation. Your reservation might exist in a different project from `PROJECT_ID`.
      * `NUM_NODE_POOLS`: the number of node pools to enable in your cluster. If you want a cluster larger than 18 nodes, then you can specify multiple node pools. The default value is `1`.
 
 To modify advanced settings, edit the [`examples/gke-a4x-max-bm/gke-a4x-max-bm.yaml`](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4x-max-bm/gke-a4x-max-bm.yaml) file.
 
-  4. [Generate Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#google-idp) to provide access to Terraform. If you're using Cloud Shell, use the `gcloud auth application-default login` command: 
+  5. [Generate Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#google-idp) to provide access to Terraform. If you're using Cloud Shell, use the `gcloud auth application-default login` command: 
          
          gcloud auth application-default login
              
 
-  5. Deploy the blueprint by using the [`gcluster deploy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-deploy) to provision the GKE infrastructure with A4X Max machine types: 
+  6. Deploy the blueprint by using the [`gcluster deploy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-deploy) to provision the GKE infrastructure with A4X Max machine types: 
          
          cd ~/cluster-toolkit
              ./gcluster deploy -d \
@@ -146,10 +147,10 @@ To modify advanced settings, edit the [`examples/gke-a4x-max-bm/gke-a4x-max-bm.y
                  examples/gke-a4x-max-bm/gke-a4x-max-bm.yaml
              
 
-**Note:** If you encounter an error at Jobset or Kueue installation when you deploy your blueprint, then deploy the blueprint again with the addition of the `-w` flag (`./gcluster deploy -w -d ...`) to complete the deployment.
-  6. When prompted, select **(A)pply** to deploy the blueprint. 
+**Note:** If you encounter an error at the JobSet or Kueue installation stage when you deploy your blueprint, then deploy the blueprint again with the addition of the `-w` flag (`./gcluster deploy -w -d ...`) to complete the deployment.
+  7. When prompted, select **(A)pply** to deploy the blueprint. 
      * The blueprint creates VPC networks, a GPU RDMA VPC network, service accounts, a cluster, and a node pool.
-     * To support the `fio-bench-job-template` job template in the blueprint, Google Cloud buckets, network storage, and persistent volume resources are created.
+     * To support the `fio-bench-job-template` Job template in the blueprint, Google Cloud buckets, network storage, and persistent volume resources are created.
 
 
 
@@ -180,6 +181,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

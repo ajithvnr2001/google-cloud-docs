@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/access-control/
 title: Setting up access control \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:09.156183+00:00
+fetched_at: 2026-10-21T12:00:24.658042+00:00
 ---
 
 # Setting up access control  |  App Engine flexible environment  |  Google Cloud Documentation
@@ -260,7 +260,7 @@ Here's an example of creating a client for Cloud Storage:
          
          # If you don't specify credentials when constructing the client, the client
          # library will look for credentials in the environment.
-         storage = Google::Cloud::[Storage](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage-control/latest/Google-Cloud-Storage.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html) project: project_id
+         storage = Google::Cloud::[Storage](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage-control-v2/latest/Google-Cloud-Storage.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html) project: project_id
          
          # Make an authenticated API request
          storage.buckets.[each](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage-Policy-Bindings.html) do |bucket|

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/handle-disruption-gpu-tpu/
 title: Understand how to do host maintenance on GKE \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:26:23.346195+00:00
+fetched_at: 2026-10-21T12:23:02.171408+00:00
 ---
 
 # Understand how to do host maintenance on GKE  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -34,7 +34,8 @@ This document applies to the following machine types:
   * Machine types with GPUs or TPUs attached
   * [H4D machine types](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/run-hpc-workloads)
   * [Z3 machine types](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z3_maintenance) with more than 18 TiB of attached Titanium SSD.
-  * [Z4D machine types](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4d_series) with more than 41 TiB of attached Titanium SSD.
+  * [Z4D machine types](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4d_series) with more than 42 TiB of attached Titanium SSD.
+  * [Z4M machine types](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4m_maintenance) with more than 48 TiB of attached Titanium SSD, or any Z4M VMs that use Cloud RDMA.
   * Bare metal instances from the [C4A machine series](https://docs.cloud.google.com/compute/docs/general-purpose-machines#c4a_series). For more information, see the [Requirements and limitations](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/arm-on-gke#arm-requirements-limitations) section in the "Arm workloads on GKE" document.
   * Confidential GKE Nodes that use [machine types that don't support live migration](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-type-cpu-zone).
 
@@ -75,7 +76,8 @@ Most Compute Engine VMs, with some exceptions, have their [host maintenance poli
   * H4D machine types.
   * The `c4a-highmem-96-metal` machine type.
   * Z3 machine types with more than 18 TiB of attached Titanium SSD.
-  * Z4D machine types with more than 41 TiB of attached Titanium SSD.
+  * Z4D machine types with more than 42 TiB of attached Titanium SSD.
+  * Z4M machine types with more than 48 TiB of attached Titanium SSD, or any Z4M instances that use Cloud RDMA.
 
 
 
@@ -362,6 +364,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

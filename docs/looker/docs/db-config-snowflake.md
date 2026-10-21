@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/db-config-snowflake/
 title: Snowflake \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T19:02:45.136307+00:00
+fetched_at: 2026-10-21T12:22:59.633731+00:00
 ---
 
 # Snowflake  |  Looker  |  Google Cloud Documentation
@@ -289,6 +289,12 @@ Selecting **Log In** displays an **Authorize OAuth Connection** dialog in Looker
 
 Once you sign in to Snowflake through Looker, you can sign out or reauthorize your credentials at any time through your **Account** page, as described on the [Personalizing your user account](https://docs.cloud.google.com/looker/docs/user-account#oauth) documentation page.
 
+## Context comments for Snowflake connections
+
+For most database dialects, Looker adds [SQL context comments](https://docs.cloud.google.com/looker/docs/admin-panel-server-usage#sql_comments) to the beginning of each outgoing SQL query. For Snowflake connections, Looker appends context comments to the end of each SQL query rather than the beginning because Snowflake removes leading comments.
+
+For more information about context comments and the fields that they include, see [Context comments for SQL queries](https://docs.cloud.google.com/looker/docs/admin-panel-server-usage#sql_comments).
+
 ## Supported JDBC parameters
 
 For Snowflake, Looker supports the following JDBC parameters in the [**Additional JDBC parameters**](https://docs.cloud.google.com/looker/docs/connecting-to-your-db#additional_jdbc_parameters) field for the connection. See the documentation for your database for information on these parameters.
@@ -367,7 +373,7 @@ For Snowflake, Looker supports the following JDBC parameters in the [**Additiona
 
 For Looker to support some features, your database dialect must also support them.
 
-Snowflake supports the following features as of Looker 26.18:
+Snowflake supports the following features as of Looker 26.20:
 
 Feature | Supported?  
 ---|---  
@@ -416,6 +422,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

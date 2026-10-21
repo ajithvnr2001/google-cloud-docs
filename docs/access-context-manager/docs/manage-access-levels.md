@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/access-context-manager/docs/manage-access-levels/
-title: Managing access levels \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
+title: Manage access levels \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:39:16.562233+00:00
+fetched_at: 2026-10-21T11:58:07.317198+00:00
 ---
 
-# Managing access levels  |  Access Context Manager  |  Google Cloud Documentation
+# Manage access levels  |  Access Context Manager  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/access-context-manager/docs/manage-access-levels/
 
@@ -19,7 +19,7 @@ fetched_at: 2026-10-14T05:39:16.562233+00:00
 
 Send feedback 
 
-#  Managing access levels Stay organized with collections  Save and categorize content based on your preferences. 
+#  Manage access levels Stay organized with collections  Save and categorize content based on your preferences. 
 
 This page describes how to manage existing access levels. You can:
 
@@ -40,11 +40,11 @@ This page describes how to manage existing access levels. You can:
 
 **Warning:** If you share an access level across Google Cloud and Google Workspace, modifying or deleting that access level can impact user access. For more information, see the [Google Workspace documentation](https://support.google.com/a/answer/13570967).
 
-  * [Set your default access policy](https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy#set-default) for using the `gcloud` command-line tool.
+  * [Set your default access policy](https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy#set-default) for using the Google Cloud CLI.
 
 _-or-_
 
-[Get the name of your policy.](https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy#get_the_name_of_an_access_policy) The policy name is required for commands using the `gcloud` command-line tool and making API calls. If you set a default access policy, you do not need to specify the policy for the `gcloud` command-line tool.
+[Get the name of your policy.](https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy#get_the_name_of_an_access_policy) The policy name is required for commands using the gcloud CLI and making API calls. If you set a default access policy, you don't need to specify the policy for the gcloud CLI.
 
   * Ensure that you have an Identity and Access Management (IAM) role at the organization level that lets you manage access levels. Ask your administrator to grant you one of the following roles, or a custom role with the same permissions:
 
@@ -59,7 +59,7 @@ _-or-_
 
 ###  Console 
 
-To list all access levels, open the **Access Context Manager** page in the Google Cloud console and then, if prompted, select your organization. Your organization's access levels are displayed in a grid on the page, including details about the configuration of each access level.
+To list all access levels, open the **Access Context Manager** page in the Google Cloud console and then, if prompted, select your organization. The page displays your organization's access levels in a grid, including details about the configuration of each access level.
 
 [Open the Access Context Manager page](https://console.cloud.google.com/security/access-level)
 
@@ -73,11 +73,11 @@ To list all access levels, use the [`list`](https://docs.cloud.google.com/sdk/gc
 
 Replace the following:
 
-  * `POLICY_NAME` is the name of your organization's access policy. This value is required only if you haven't set a [default access policy](https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy#set-default).
+  * `POLICY_NAME`: the name of your organization's access policy. This value is required only if you haven't set a [default access policy](https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy#set-default).
 
 
 
-The output will look something like:
+The output is similar to the following:
     
     
     NAME             TITLE                  LEVEL_TYPE
@@ -87,15 +87,15 @@ The output will look something like:
 
 ###  API 
 
-To list all the access levels for a policy, call [`accessLevels.list`](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1alpha/accessPolicies.accessLevels/list).
+To list all the access levels for a policy, call [`accessLevels.list`](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.accessLevels/list).
     
     
-    GET https://accesscontextmanager.googleapis.com/v1alpha/accessPolicies/POLICY_NAME/accessLevels
+    GET https://accesscontextmanager.googleapis.com/v1/accessPolicies/POLICY_NAME/accessLevels
     
 
 Replace the following:
 
-  * `POLICY_NAME` is the name of your organization's access policy.
+  * `POLICY_NAME`: the name of your organization's access policy.
 
 
 
@@ -110,16 +110,16 @@ Optionally, include one or more of the following query parameters.
 Parameters  
 ---  
 `pageSize` |  `number` By default, the list of [ access levels](https://docs.cloud.google.com/access-context-manager/docs/overview#access-levels) returned by `accessLevels.list` is paginated. Each page is limited to 100 access levels.  You can use this parameter to modify the number of access levels that are returned per page.   
-`pageToken` |  `string` If the number of access levels returned by your call exceeded the page size, the response body will include a page token.  You can use this parameter in a subsequent call to obtain the next page of results.   
+`pageToken` |  `string` If the number of access levels returned by your call exceeded the page size, the response body includes a page token.  You can use this parameter in a subsequent call to obtain the next page of results.   
 `accessLevelFormat` |  `enum([LevelFormat](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1/LevelFormat))` Normally, access levels are returned as they are defined, either as `BasicLevel` or `CustomLevel`.  You can specify the value `CEL` for this parameter to return `BasicLevels` as `CustomLevels` in Cloud Common Expression Language.   
   
 ### Response body
 
-If successful, the response body for the call contains an [`AccessLevels`](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1alpha/accessPolicies.accessLevels#AccessLevel) object that lists the access levels, and a [`nextPageToken`](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1alpha/accessPolicies.accessLevels/list#body.ListAccessLevelsResponse.FIELDS.next_page_token) string. `nextPageToken` only has a value if the number of access levels returned exceeds the page size. Otherwise, `nextPageToken` is returned as an empty string.
+If successful, the response body for the call contains an [`AccessLevels`](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.accessLevels#AccessLevel) object that lists the access levels, and a [`nextPageToken`](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.accessLevels/list#body.ListAccessLevelsResponse.FIELDS.next_page_token) string. `nextPageToken` only has a value if the number of access levels returned exceeds the page size. Otherwise, `nextPageToken` is returned as an empty string.
 
 ## List access levels (formatted)
 
-Using the `gcloud` command-line tool, you can obtain a list of your access levels in YAML or JSON format.
+Using the gcloud CLI, you can obtain a list of your access levels in YAML or JSON format.
 
 To get a formatted list of access levels, use the [`list`](https://docs.cloud.google.com/sdk/gcloud/reference/access-context-manager/levels/list) command.
     
@@ -130,30 +130,30 @@ To get a formatted list of access levels, use the [`list`](https://docs.cloud.go
 
 Replace the following:
 
-  * FORMAT is one of the following values:
+  * `FORMAT`: one of the following values:
 
     * `list` (YAML format)
 
     * `json` (JSON format)
 
-  * `POLICY_NAME` is the name of your organization's access policy. This value is required only if you haven't set a [default access policy](https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy#set-default).
+  * `POLICY_NAME`: the name of your organization's access policy. This value is required only if you haven't set a [default access policy](https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy#set-default).
 
 
 
 
-The YAML output will look something like: 
+The YAML output is similar to the following: 
     
     
-    - basic: {'conditions': [{'ipSubnetworks': ['8.8.0.0/24']}]}
+    - basic: {'conditions': [{'ipSubnetworks': ['192.0.2.0/24']}]}
       description: Level for corp access.
-      name: accessPolicies/165717541651/accessLevels/corp_level
+      name: accessPolicies/123456789012/accessLevels/corp_level
       title: Corp Level
-    - basic: {'combiningFunction': 'OR', 'conditions': [{'ipSubnetworks': ['8.8.0.0/24']}]}
+    - basic: {'combiningFunction': 'OR', 'conditions': [{'ipSubnetworks': ['192.0.2.0/24']}]}
       description: Level for net access.
-      name: accessPolicies/165717541651/accessLevels/net_level
+      name: accessPolicies/123456789012/accessLevels/net_level
       title: Net Level
 
-The JSON output will look something like: 
+The JSON output is similar to the following: 
     
     
     [
@@ -162,13 +162,13 @@ The JSON output will look something like:
           "conditions": [
             {
               "ipSubnetworks": [
-                "8.8.0.0/24"
+                "192.0.2.0/24"
               ]
             }
           ]
         },
         "description": "Level for corp access.",
-        "name": "accessPolicies/165717541651/accessLevels/corp_level",
+        "name": "accessPolicies/123456789012/accessLevels/corp_level",
         "title": "Corp Level"
       },
       {
@@ -177,13 +177,13 @@ The JSON output will look something like:
           "conditions": [
             {
               "ipSubnetworks": [
-                "8.8.0.0/24"
+                "192.0.2.0/24"
               ]
             }
           ]
         },
         "description": "Level for net access.",
-        "name": "accessPolicies/165717541651/accessLevels/net_level",
+        "name": "accessPolicies/123456789012/accessLevels/net_level",
         "title": "Net Level"
       }
     ]
@@ -204,14 +204,14 @@ Listing access levels only provides their name, title, and level type. To get de
 
 Replace the following:
 
-  * `LEVEL_NAME` is the name of the access level you want to describe.
+  * `LEVEL_NAME`: the name of the access level that you want to describe.
 
-  * `POLICY_NAME` is the name of your organization's access policy. This value is required only if you haven't set a [default access policy](https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy#set-default).
-
-
+  * `POLICY_NAME`: the name of your organization's access policy. This value is required only if you haven't set a [default access policy](https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy#set-default).
 
 
-The command will print information about the level formatted as YAML. For example, if the level restricted access to certain operating system versions, the output might look something like:
+
+
+The command prints information about the level formatted as YAML. For example, if the level restricts access to certain operating system versions, the output is similar to the following:
     
     
     basic:
@@ -227,24 +227,24 @@ The command will print information about the level formatted as YAML. For exampl
           - minimumVersion: 68.0.3440
             osType: DESKTOP_CHROME_OS
           requireScreenlock: true
-    name: accessPolicies/330193482019/accessLevels/Device_Trust
+    name: accessPolicies/123456789012/accessLevels/Device_Trust
     title: Device_Trust Extended
 
-**Note:** To use the output of the describe command to update or create a basic access level, send the response to a .yaml file, and then edit the file to remove the `name`, `title`, `description`, `basic`, and `conditions` lines. 
+**Note:** To use the output of the describe command to update or create a basic access level, send the response to a YAML file, and then edit the file to remove the `name`, `title`, `description`, `basic`, and `conditions` lines. 
 
 ###  API 
 
-Listing access levels only provides the name, title, and type of the levels. To get detailed information about an access level, call [`accessLevels.get`](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1alpha/accessPolicies.accessLevels/get).
+Listing access levels only provides the name, title, and type of the levels. To get detailed information about an access level, call [`accessLevels.get`](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.accessLevels/get).
     
     
-    GET https://accesscontextmanager.googleapis.com/v1alpha/accessPolicies/POLICY_NAME/accessLevels/LEVEL_NAME
+    GET https://accesscontextmanager.googleapis.com/v1/accessPolicies/POLICY_NAME/accessLevels/LEVEL_NAME
     
 
 Replace the following:
 
-  * `POLICY_NAME` is the name of your organization's access policy.
+  * `POLICY_NAME`: the name of your organization's access policy.
 
-  * `LEVEL_NAME` is the name of the access level you want to describe.
+  * `LEVEL_NAME`: the name of the access level that you want to describe.
 
 
 
@@ -261,7 +261,7 @@ You can specify the value `CEL` for this parameter to return `BasicLevels` as `C
 
 ### Response body
 
-If successful, the response body for the call contains an [`AccessLevel`](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1alpha/accessPolicies.accessLevels#AccessLevel) resource that includes details about what the access level does, the last time the level was updated, and more.
+If successful, the response body for the call contains an [`AccessLevel`](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.accessLevels#AccessLevel) resource that includes details about what the access level does, the last time the level was updated, and more.
 
 ## Update an access level
 
@@ -310,13 +310,13 @@ Use the [`update`](https://docs.cloud.google.com/sdk/gcloud/reference/access-con
 
 Replace the following:
 
-  * `LEVEL_NAME` is the name of the access level that you want to update.
+  * `LEVEL_NAME`: the name of the access level that you want to update.
 
-  * FILE is the name of a .yaml file that defines [the conditions for the access level](https://docs.cloud.google.com/access-context-manager/docs/example-yaml-file) (for basic access levels) or a [CEL expression](https://docs.cloud.google.com/access-context-manager/docs/custom-access-level-spec) that resolves to a single boolean value (for custom access levels).
+  * `FILE`: the name of a YAML file that defines [the conditions for the access level](https://docs.cloud.google.com/access-context-manager/docs/example-yaml-file) (for basic access levels) or a [CEL expression](https://docs.cloud.google.com/access-context-manager/docs/custom-access-level-spec) that resolves to a single boolean value (for custom access levels).
 
 For a complete list of the attributes that you can use in your basic access level conditions, read about [access level attributes](https://docs.cloud.google.com/access-context-manager/docs/access-level-attributes).
 
-  * `POLICY_NAME` is the name of your organization's access policy. This value is required only if you haven't set a [default access policy](https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy#set-default).
+  * `POLICY_NAME`: the name of your organization's access policy. This value is required only if you haven't set a [default access policy](https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy#set-default).
 
   * You can include one or more of the following options.
 
@@ -339,7 +339,7 @@ You can include any of the [gcloud-wide flags](https://docs.cloud.google.com/sdk
         --combine-function=OR \
         --description='Access level that conforms to updated corporate spec.' \
         --title='Device_Trust Extended' \
-        --policy=1034095178592
+        --policy=123456789012
 
 ###  API 
 
@@ -351,18 +351,18 @@ To update an access level, call [`accessLevels.patch`](https://docs.cloud.google
 
 Replace the following:
 
-  * `POLICY_NAME` is the name of your organization's access policy.
+  * `POLICY_NAME`: the name of your organization's access policy.
 
-  * `LEVEL_NAME` is the name of the access level you want to describe.
+  * `LEVEL_NAME`: the name of the access level that you want to update.
 
-  * FIELDS is a comma-separated list of [fully-qualified field names](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.accessLevels/patch#query-parameters) that you are updating.
+  * `FIELDS`: a comma-separated list of [fully-qualified field names](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.accessLevels/patch#query-parameters) that you are updating.
 
 
 
 
 ### Request body
 
-The request body must include an [`AccessLevel`](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1alpha/accessPolicies.accessLevels#AccessLevel) resource that specifies the changes you want to make to the access level.
+The request body must include an [`AccessLevel`](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.accessLevels#AccessLevel) resource that specifies the changes you want to make to the access level.
 
 ### Response body
 
@@ -381,15 +381,15 @@ This section describes how to delete Access Context Manager access levels. Delet
 
 ### Check access level dependencies
 
-Before you delete an access level, ensure that it's not referenced by other access levels.
+Before you delete an access level, ensure that it isn't referenced by other access levels, VPC Service Controls service perimeters, Google Workspace Context-Aware Access policies, [Google Cloud access bindings](https://docs.cloud.google.com/access-context-manager/docs/manage-access-bindings), or IAM conditions.
 
-**Note:** Access levels can reference each other. Attempting to delete an access level that is referenced by another results in an error.
+**Note:** Access Context Manager blocks deleting an access level that is referenced by another access level, a VPC Service Controls service perimeter, or a Google Workspace Context-Aware Access policy in the Google Admin console. If deletion fails because the access level is used in a Google Workspace Context-Aware Access policy, see [Cannot delete an access level used in Google Workspace Context-Aware Access policies](https://docs.cloud.google.com/access-context-manager/docs/troubleshooting#cannot-delete-access-level-workspace-caa).**Warning:** Access Context Manager doesn't block deleting an access level that is referenced only by a [Google Cloud access binding](https://docs.cloud.google.com/access-context-manager/docs/manage-access-bindings) (which you can inspect by running `gcloud access-context-manager cloud-bindings list`) or an IAM condition. Deleting an access level that is still used in a Google Cloud access binding or IAM condition causes access evaluations to fail closed and can lock users out of the Google Cloud console and Google Cloud APIs. For recovery steps, see [Locked out of the Google Cloud console after deleting or modifying an access level](https://docs.cloud.google.com/access-context-manager/docs/troubleshooting#locked-out-access-binding).
 
 To find all access levels that reference the one that you want to delete, do the following:
 
-  1. Make sure that you have installed `jq`. To verify that `jq` is installed, run `jq --version`. [Install `jq`](https://jqlang.org/download/).
+  1. Make sure that you have installed `jq`. To verify that `jq` is installed, run `jq --version`. If needed, [install `jq`](https://jqlang.org/download/).
 
-  2. Check for access level dependencies. This command lists all access levels, then uses `jq` to filter for access levels that reference LEVEL_NAME in basic or custom level definitions.
+  2. Check for access level dependencies. This command lists all access levels, then uses `jq` to filter for access levels that reference `LEVEL_NAME` in basic or custom level definitions.
          
          echo "Searching for Access Levels referencing: accessPolicies/POLICY_NAME/accessLevels/LEVEL_NAME"
          echo ""
@@ -401,10 +401,10 @@ To find all access levels that reference the one that you want to delete, do the
            .[] |
            select(
              # Check basic levels: Is the target access level present as an element in any requiredAccessLevels array?
-             (.basic.conditions // []) | .[] | .requiredAccessLevels | index("accessPolicies/POLICY_NAME/accessLevels/LEVEL_NAME") != null
+             ([(.basic.conditions // [])[] | (.requiredAccessLevels // []) | index("accessPolicies/POLICY_NAME/accessLevels/LEVEL_NAME") != null] | any)
              or
              # Check custom levels: Does the expression string contain the target access level?
-             (.custom.expr.expression // "") | contains("accessPolicies/POLICY_NAME/accessLevels/LEVEL_NAME")
+             ((.custom.expr.expression // "") | (contains("accessPolicies/POLICY_NAME/accessLevels/LEVEL_NAME") or contains("levels.LEVEL_NAME")))
            ) |
            "  - \(.title) (Name: \(.name))"
          '
@@ -414,11 +414,15 @@ To find all access levels that reference the one that you want to delete, do the
 
 Replace the following:
 
-     * `POLICY_NAME` is the name of your organization's access policy. This value is required only if you haven't set a [default access policy](https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy#set-default).
+     * `POLICY_NAME`: the name of your organization's access policy. This value is required only if you haven't set a [default access policy](https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy#set-default).
 
-     * `LEVEL_NAME` is the name of the access level that you want to delete—for example, `my_level`.
+     * `LEVEL_NAME`: the name of the access level that you want to delete—for example, `my_level`.
 
-In the output, any access levels that reference `accessPolicies/POLICY_NAME/accessLevels/LEVEL_NAME` are listed, along with their `title` and `name`. This includes both basic levels (where `accessPolicies/POLICY_NAME/accessLevels/LEVEL_NAME` is in `requiredAccessLevels`) and custom levels (where `accessPolicies/POLICY_NAME/accessLevels/LEVEL_NAME` appears in the `custom.expr.expression` string).
+In the output, any access levels that reference `accessPolicies/POLICY_NAME/accessLevels/LEVEL_NAME` or `levels.LEVEL_NAME` are listed, along with their `title` and `name`. These access levels include the following:
+
+     * Basic levels, where `accessPolicies/POLICY_NAME/accessLevels/LEVEL_NAME` is listed in `requiredAccessLevels`
+
+     * Custom levels, where `accessPolicies/POLICY_NAME/accessLevels/LEVEL_NAME` or `levels.LEVEL_NAME` is listed in the `custom.expr.expression` string.
 
   3. If the command lists any referencing access levels, you must first update those levels to remove the dependency. For instructions, see Update an access level.
 
@@ -433,7 +437,7 @@ After all references are removed, you can proceed with deleting the individual a
 
 To delete an access level:
 
-  1. Open the **Access Context Manager** page in the Google Cloud console
+  1. Open the **Access Context Manager** page in the Google Cloud console.
 
 [Open the Access Context Manager page](https://console.cloud.google.com/security/access-level)
 
@@ -443,7 +447,7 @@ To delete an access level:
 
   4. Click **Delete**.
 
-  5. In the dialog box that appears, confirm that you want to delete the access level.
+  5. In the dialog that appears, confirm that you want to delete the access level.
 
 
 
@@ -459,9 +463,9 @@ To delete an access level:
 
 Replace the following:
 
-     * `LEVEL_NAME` is the name of the access level that you want to delete.
+     * `LEVEL_NAME`: the name of the access level that you want to delete.
 
-     * `POLICY_NAME` is the name of your organization's access policy. This value is required only if you haven't set a [default access policy](https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy#set-default).
+     * `POLICY_NAME`: the name of your organization's access policy. This value is required only if you haven't set a [default access policy](https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy#set-default).
 
   2. Confirm that you want to delete the access level.
 
@@ -474,7 +478,7 @@ For example:
 
 You should see output similar to the following:
          
-         Waiting for operation [accessPolicies/330193482019/accessLevels/Device_Trust/delete/1531171874311645] to complete...done.
+         Waiting for operation [accessPolicies/123456789012/accessLevels/Device_Trust/delete/1531171874311645] to complete...done.
          Deleted level [Device_Trust].
          
 
@@ -483,17 +487,17 @@ You should see output similar to the following:
 
 ###  API 
 
-To delete an access level, call [`accessLevels.delete`](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1alpha/accessPolicies.accessLevels/delete).
+To delete an access level, call [`accessLevels.delete`](https://docs.cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.accessLevels/delete).
     
     
-    DELETE https://accesscontextmanager.googleapis.com/v1alpha/accessPolicies/POLICY_NAME/accessLevels/LEVEL_NAME
+    DELETE https://accesscontextmanager.googleapis.com/v1/accessPolicies/POLICY_NAME/accessLevels/LEVEL_NAME
     
 
 Replace the following:
 
-  * `POLICY_NAME` is the name of your organization's access policy.
+  * `POLICY_NAME`: the name of your organization's access policy.
 
-  * `LEVEL_NAME` is the name of the access level you want to describe.
+  * `LEVEL_NAME`: the name of the access level that you want to delete.
 
 
 
@@ -510,6 +514,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

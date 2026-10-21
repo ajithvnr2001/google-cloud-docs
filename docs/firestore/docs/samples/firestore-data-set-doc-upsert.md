@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-data-set-doc-upsert/
 title: Update a Firestore document using merge \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:25:38.650016+00:00
+fetched_at: 2026-10-21T11:58:50.521226+00:00
 ---
 
 # Update a Firestore document using merge  |  Google Cloud Documentation

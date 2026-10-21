@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/creating-instances/
 title: Create an instance \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:17.364428+00:00
+fetched_at: 2026-10-21T12:22:47.785709+00:00
 ---
 
 # Create an instance  |  Filestore  |  Google Cloud Documentation
@@ -24,6 +24,8 @@ Send feedback
 This page shows you how to create a Filestore instance by using either the Google Cloud console or the Google Cloud CLI.
 
 ## Instructions for creating an instance
+
+**Note:** The operation to create an instance might take longer than expected in a new project that you have not previously used for Filestore. Refresh the instance list to track progress.
 
 ###  Google Cloud console 
 
@@ -320,14 +322,12 @@ Tier | Minimum size | Maximum size | Incremental step size
 ---|---|---|---  
 Zonal | 1 TiB | 9.75 TiB | 256 GiB  
 Zonal | 10 TiB | 100 TiB | 2.5 TiB  
-Regional | 100 GiB* / 1 TiB | 10,239 GiB* / 9.75 TiB | 1 GiB* / 256 GiB  
+Regional | 100 GiB | 10,239 GiB | 1 GiB  
 Regional | 10 TiB | 100 TiB | 2.5 TiB  
 Basic HDD | 1 TiB | 63.9 TiB | 1 GiB  
 Basic SSD | 2.5 TiB | 63.9 TiB | 1 GiB  
 Enterprise | 1 TiB | 10 TiB | 256 GiB  
   
-* If small capacity instances are available in the region where your instance is located, Regional instance capacity ranges from 100 GiB to 10,239 GiB. Otherwise, the range is 1 TiB to 9.75 TiB. For more information, see [Small capacity instances](https://docs.cloud.google.com/filestore/docs/service-tiers#small-instances).
-
 The size of instances can be any whole gibibyte value or its tebibyte equivalent that's between the minimum and maximum instance size and is divisible by its incremental step size. For example, valid sizes for zonal-tier instances with a higher capacity range include 10 TiB, 12.5 TiB, and 15 TiB.
 
 Once created, basic HDD and basic SSD instances can only scale up in size. All other service tiers can scale up or down in capacity. For more information, see [Edit instances](https://docs.cloud.google.com/filestore/docs/editing-instances) and [Scale capacity](https://docs.cloud.google.com/filestore/docs/scale).
@@ -680,6 +680,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

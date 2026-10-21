@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/github/build-repos-from-github/
 title: Building repositories from GitHub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:05.529830+00:00
+fetched_at: 2026-10-21T12:00:27.546338+00:00
 ---
 
 # Building repositories from GitHub  |  Google Cloud Documentation
@@ -161,7 +161,7 @@ To create a GitHub trigger with the API, use the following JSON template:
     {
         "filename": "cloudbuild.yaml",
         "name": "curl-trigger",
-        "description": "curl trigger",
+        "description": "curl trigger&quot;,
         "repository_event_config": {
           "repository": "REPO_NAME",
           "repository_type": "GITHUB",
@@ -183,7 +183,7 @@ Where:
 Enter the following `curl` command in your terminal:
     
     
-      curl -X POST -H "Authorization: Bearer "$(gcloud auth print-access-token) -H "Content-Type: application/json; charset=utf-8" -H "x-goog-user-project: PROJECT_NUMBER" https://cloudbuild.googleapis.com/v1/projects/PROJECT_ID/triggers -d @trigger.json
+      curl -X POST -H "Authorization: Bearer "$(gcloud auth print-access-token) -H "Content-Type: application/json; charset=utf-8" -H &quot;x-goog-user-project: PROJECT_NUMBER" https://cloudbuild.googleapis.com/v1/projects/PROJECT_ID/triggers -d @trigger.json
     
 
 Where:

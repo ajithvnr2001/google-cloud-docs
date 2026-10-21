@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-spark/docs/concepts/compute/gpus/
 title: Attach GPUs to clusters \u00a0|\u00a0 Managed Service for Apache Spark \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:46:24.182766+00:00
+fetched_at: 2026-10-21T11:59:12.797629+00:00
 ---
 
 # Attach GPUs to clusters  |  Managed Service for Apache Spark  |  Google Cloud Documentation
@@ -111,7 +111,7 @@ To attach GPUs to the master and primary and secondary worker nodes in a Managed
 
 GPU drivers are required to utilize GPUs attached to Managed Service for Apache Spark nodes. As an alternative to using the GPU drivers installed in the Managed Service for Apache Spark `-ml` images, you can use the following initialization actions to install GPU drivers when you create a cluster:
 
-  * [Spark Rapids ](https://github.com/GoogleCloudDataproc/initialization-actions/tree/master/spark-rapids)
+  * [NVIDIA cuDF for Apache Sparkx](https://github.com/GoogleCloudDataproc/initialization-actions/tree/master/spark-rapids)
   * [GPU ML Libraries](https://github.com/GoogleCloudDataproc/initialization-actions/tree/master/gpu)
 
 
@@ -185,6 +185,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

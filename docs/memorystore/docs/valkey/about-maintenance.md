@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/valkey/about-maintenance/
 title: About maintenance \u00a0|\u00a0 Memorystore for Valkey \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:43:24.154895+00:00
+fetched_at: 2026-10-21T11:59:12.198311+00:00
 ---
 
 # About maintenance  |  Memorystore for Valkey  |  Google Cloud Documentation
@@ -22,9 +22,9 @@ Send feedback
 
 #  About maintenance Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page explains how Memorystore for Valkey performs maintenance on instances. It also provides information and configuration recommendations that your client applications must be aware of to take advantage of Memorystore for Valkey's zero downtime maintenance design. These recommendations apply to both [highly available](https://docs.cloud.google.com/memorystore/docs/valkey/ha-and-replicas) instances and instances without replicas. However, for all production use cases, we strongly recommend that you use the high-availability configuration.
+This page explains how Memorystore for Valkey performs maintenance on instances. It also provides information and configuration recommendations that your client applications must be aware of to take advantage of Memorystore for Valkey's zero-downtime maintenance design. These recommendations apply to both [highly available](https://docs.cloud.google.com/memorystore/docs/valkey/ha-and-replicas) instances and instances without replicas. However, for all production use cases, we strongly recommend that you use the high-availability configuration.
 
-Memorystore for Valkey updates instances routinely to ensure that the service is reliable, performant, secure, and up-to-date. These updates are called _maintenance_. Maintenance is managed fully by the service and is designed to have a zero downtime impact.
+Memorystore for Valkey updates instances routinely to ensure that the service is reliable, performant, secure, and up-to-date. These updates are called _maintenance_. Maintenance is managed fully by the service and is designed to have a zero-downtime impact.
 
 Maintenance typically falls into the following categories:
 
@@ -40,6 +40,19 @@ To configure your client application for the best performance and availability d
 
   1. Use and configure your third-party client according to the guidance at [Valkey client best practices](https://docs.cloud.google.com/memorystore/docs/valkey/general-best-practices#valkey_client_best_practices) to make sure that any scheduled maintenance doesn't impact the client application. Our recommended client configurations can avoid connection resets through periodic inline topology refreshes and background connection rotations.
   2. Test your client application with a series of update operations (such as scale in or out, or replica count changes) while running a representative workload on primary and replica nodes, and monitoring for client impact. These updates test the inline topology refresh logic on clients, full sync impact, new node discovery, and existing node removal capability. Testing helps make sure that the third-party client is configured correctly to avoid any negative impact to your application.
+
+
+
+### Cluster Mode Disabled instances
+
+During maintenance, Cluster Mode Disabled instances undergo a failover, which resets their connections. This failover typically lasts for 15 seconds. To reconnect your client applications to the instance after the failover, we recommend that you create a retry mechanism with exponential backoff. After you receive an email that notifies you of upcoming maintenance, you can run simulated maintenance on a non-production instance to test the impact that maintenance has on the instance. For more information, see [Run maintenance simulation on an instance](https://docs.cloud.google.com/memorystore/docs/valkey/simulate-maintenance#run-maintenance-simulation-on-instance).
+
+We also recommend that you keep the `/instance/memory/maximum_utilization` metric at 50% or lower when the scheduled maintenance begins. Guidance for this metric refers to an 80% threshold for memory management. However, we recommend that you target a ratio of 50% or lower during maintenance. For more information about the metric, see [Cloud Monitoring metrics](https://docs.cloud.google.com/memorystore/docs/valkey/supported-monitoring-metrics#cloud-monitoring-metrics).
+
+You can ensure this ratio in one of the following ways:
+
+  * Schedule maintenance when traffic for the instance is low.
+  * Scale up the size of your instance temporarily during the maintenance window.
 
 
 
@@ -93,6 +106,8 @@ You can best take advantage of the horizontal scale architecture of the instance
 
 If the Valkey node that needs to be updated is a primary node, Memorystore runs a coordinated failover to the newly added replica node. Then, Memorystore [removes the node](https://docs.cloud.google.com/memorystore/docs/valkey/about-maintenance#step_3_remove_the_replica). During the coordinated failover, the client and the Valkey nodes work together and use the following strategies to avoid downtime for the application:
 
+**Important** : You don't need to perform this step for Cluster Mode Disabled instances. Because these instances have only one shard per instance, the instances don't have an in-memory topology.
+
   1. Incoming client requests are temporarily blocked on the primary node, providing a window to ensure the existing replica is synced 100% with the primary node.
   2. The replica completes the election process to take over the primary role.
   3. The previous primary node, now a replica node, unblocks the existing requests and redirects the requests to the new primary node by using the OSS Valkey instance protocol. Any new requests sent to the previous replica node continue to be redirected to the new primary node.
@@ -104,9 +119,11 @@ Coordinated failovers typically take tens of milliseconds. However, in-flight da
 
 #### Step 3: Remove the replica
 
-The last step of the create-before-destroy mechanism is to remove the replica node on the earlier software. An abrupt node removal would be impactful for client applications because clients cache the endpoint information and the instance topology. Memorystore for Valkey has designed the removal of a Valkey replica to be graceful to allow client applications to refresh their topology before experiencing a hard node shutdown. The topology is customized to enable clients to learn about the new replica but also forget the one to be removed ahead of time.
+The last step of the create-before-destroy mechanism is to remove the replica node on the earlier software. The node removal impacts client applications because Memorystore for Valkey drops your clients. Because topology refresh isn't applicable for Cluster Mode Disabled instances, we recommend that you use a retry mechanism with exponential backoff to reconnect your application to the new replica endpoints after they become available.
 
-The replica node running the earlier software is kept around for a certain drain period, typically on the order of minutes, during which it starts redirecting the incoming read requests to the primary node of its shard. It lets the third-party client refresh the node topology and learn about the new replica endpoints. If the client tries to reach a removed node after the drain period, then the attempt fails. This triggers a node topology refresh on the connecting client so that it learns about the replica change. New refreshes of the node topology don't see the replica node to be removed.
+For Cluster Mode Enabled instances, Memorystore for Valkey designed the removal of a Valkey replica to be graceful to let client applications refresh their topology before experiencing a hard node shutdown. The topology is customized to enable clients to learn about the new replica but also forget the one to be removed ahead of time.
+
+Memorystore for Valkey keeps the replica node running the earlier software around for a certain drain period, typically on the order of minutes, during which it starts redirecting the incoming read requests to the primary node of its shard. This process lets the third-party client refresh the node topology and learn about the new replica endpoints. If the client tries to reach a removed node after the drain period, then the attempt fails. This failure triggers a node topology refresh on the connecting client so that it learns about the replica change. New refreshes of the node topology don't see the replica node to be removed.
 
 ## Maintenance settings
 
@@ -247,6 +264,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

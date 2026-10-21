@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/openstack-k8s-provider/
 title: Configure the OpenStack Cloud Provider for Kubernetes \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:11:47.655600+00:00
+fetched_at: 2026-10-21T12:21:55.665163+00:00
 ---
 
 # Configure the OpenStack Cloud Provider for Kubernetes  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -22,7 +22,7 @@ Send feedback
 
 #  Configure the OpenStack Cloud Provider for Kubernetes Stay organized with collections  Save and categorize content based on your preferences. 
 
-This guide explains how to configure the [OpenStack Cloud Provider for Kubernetes](https://github.com/kubernetes/cloud-provider-openstack) in your bare metal cluster. The OpenStack Cloud Provider must be configured to expose Kubernetes Services using the [OpenStack LBaaS](https://docs.openstack.org/mitaka/networking-guide/config-lbaas.html).
+The [OpenStack Cloud Provider for Kubernetes](https://github.com/kubernetes/cloud-provider-openstack) lets you use OpenStack load balancing for a cluster that runs on OpenStack VMs. After you install and configure the provider, each Service of type `LoadBalancer` gets an [OpenStack Octavia](https://docs.openstack.org/octavia/latest/) load balancer and an external IP address from your floating IP network. In this document, you verify the integration by exposing a sample application.
 
 ## Prerequisites
 
@@ -171,6 +171,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

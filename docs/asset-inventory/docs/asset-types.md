@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/asset-types/
 title: Asset types \u00a0|\u00a0 Cloud Asset Inventory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:30:02.603921+00:00
+fetched_at: 2026-10-21T11:58:13.158305+00:00
 ---
 
 # Asset types  |  Cloud Asset Inventory  |  Google Cloud Documentation
@@ -1269,6 +1269,11 @@ Disabling or enabling a service account can take up to 48 hours to be reflected 
   * [ ` transcoder.googleapis.com/JobTemplate ` ](https://docs.cloud.google.com/transcoder/docs/reference/rest/v1/projects.locations.jobTemplates)
 
   
+**Unified Maintenance** |  [API reference](https://maintenance.googleapis.com/$discovery/rest?version=v1)
+
+  * [ ` maintenance.googleapis.com/ResourceMaintenance ` ](https://docs.cloud.google.com/unified-maintenance/docs/reference/rest/v1/projects.locations.resourceMaintenances) Not available in the analysis APIs. 
+
+  
 **Vertex AI** Vertex AI asset change history might be incomplete. Data freshness is synchronized every 7 hours. If a sync fails, freshness is delayed until the next successful sync. Some datasets' metadata (for example, the `TABLE` data type) could be stale due to an ongoing data issue. |  [API reference](https://aiplatform.googleapis.com/$discovery/rest?version=v1)
 
   * [ ` aiplatform.googleapis.com/BatchPredictionJob ` ](https://docs.cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.batchPredictionJobs)
@@ -1383,6 +1388,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

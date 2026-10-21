@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/servicenow/third-party-config/
 title: ServiceNow configuration \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T17:58:05.724034+00:00
+fetched_at: 2026-10-21T12:22:36.812256+00:00
 ---
 
 # ServiceNow configuration  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -62,14 +62,12 @@ Federated connectorIngestion connector
 
 Set up OAuth for federated connector 
 
-To perform federated search and [Actions](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/servicenow#supported-actions), you only need to set up the OAuth Authorization Code grant flow. This provides the client secret required for real-time discovery and task performance. The required steps depend on your ServiceNow interface.
+To perform federated search and [Actions](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/servicenow#supported-actions), you only need to set up the OAuth Authorization Code grant flow. This provides the client secret required for real-time discovery and task performance.
 
-### New experience UI
-
-In ServiceNow versions (Vancouver, Washington DC, and later), you use the **New inbound integration experience**.
+To create OAuth credentials for a federated connector: 
 
   1. Navigate to **All** > **System OAuth** > **Application registry**.
-  2. Click **New** > **New inbound integration experience** > **New integration**.
+  2. Click **New** > **Inbound integration experience** > **New integration**.
   3. Enter the mandatory fields: 
      1. **Integration name** : Enter a unique name for the OAuth credential, like Gemini Enterprise OAuth Actions.
      2. **Active** : Select the checkbox.
@@ -78,23 +76,6 @@ In ServiceNow versions (Vancouver, Washington DC, and later), you use the **New 
      5. **Scope and API access policy** : Ensure the **Allow access only to APIs in selected scope** checkbox is unchecked. Also, don't select any **Auth scope**. Leaving this blank ensures that the integration is **Broadly scoped**.
   4. Click **Submit** to create the credential.
   5. After submission, click the record name to view the **Client ID** and unmask the **Client secret**. Save these for later use.
-
-**Note:** The secret must be alphanumeric. If the generated secret contains special characters, manually change it to an alphanumeric string before saving. 
-
-### Legacy UI
-
-For older ServiceNow instances or users preferring the legacy interface, do the following to obtain credentials:
-
-  1. Sign in to the PDI ServiceNow instance using the administrator credentials.
-  2. Navigate to **All** > **System OAuth** > **Application registry**.
-  3. Click **New** and then select **[Deprecated UI] Create an OAuth API endpoint for external clients**.
-  4. Enter the following mandatory fields: 
-     1. **Name** : Enter a unique name.
-     2. **Active** : Select the checkbox.
-     3. **Redirect URL** : Enter `https://vertexaisearch.cloud.google.com/console/oauth/default_oauth.html,https://vertexaisearch.cloud.google.com/oauth-redirect`.
-     4. **Access control** : Find the **Scope restriction** toggle and change the **Securely scoped** default setting to **Broadly scoped**.
-  5. Click **Submit** to create the credential.
-  6. Click the record name to view the **Client ID** and unmask the **Client secret**. Save these for later use.
 
 **Note:** The secret must be alphanumeric. If the generated secret contains special characters, manually change it to an alphanumeric string before saving. 
 
@@ -126,15 +107,13 @@ When a query is posted to the ServiceNow Table API, the connector executes it wi
 
 Set up OAuth for ingestion connector 
 
-To synchronize and index your records using the ingestion connector, you must create OAuth credentials and configure roles. The required steps for authentication depend on your ServiceNow interface.
+To synchronize and index your records using the ingestion connector, you must create OAuth credentials and configure roles.
 
 #### Obtain authentication credentials
 
 **Note:** To ensure successful data synchronization, ensure **OAuth scope** is empty and **Allow access only to APIs in selected scopes** is unchecked. 
 
-### New experience UI
-
-In ServiceNow versions (Vancouver, Washington DC, and later), you use the **New inbound integration experience**. For an Ingestion connector using the new UI, you must create **two** sets of credentials:
+To create OAuth credentials for an ingestion connector using the inbound integration, you must create **two** sets of credentials:
 
   1. **Ingestion credentials** : Uses the OAuth Resource Owner Password Credentials grant type.
   2. **Actions credentials** : Uses the OAuth Authorization Code grant type.
@@ -169,25 +148,6 @@ In ServiceNow versions (Vancouver, Washington DC, and later), you use the **New 
      5. **Scope and API access policy** : Ensure the checkbox is unchecked and don't select any Auth scope.
   4. Click **Submit** to create the credential.
   5. Click the record name to view the **Client ID** and unmask the **Client secret**. Save these for later use.
-
-**Note:** The secret must be alphanumeric. If the generated secret contains special characters, manually change it to an alphanumeric string before saving. 
-
-### Legacy UI
-
-For older ServiceNow instances or users preferring the legacy interface, do the following to obtain credentials for both Ingestion and Actions:
-
-  1. Sign in to the PDI ServiceNow instance using the administrator credentials.
-  2. Navigate to **All** > **System OAuth** > **Application registry**.
-  3. Click **New** and then select **\\[Deprecated UI\\] Create an OAuth API endpoint for external clients**.
-  4. Enter the following mandatory fields: 
-     1. **Name** : Enter a unique name.
-     2. **Active** : Select the checkbox.
-     3. **Redirect URL** : Enter the following redirect URLs, separated by a comma: 
-        * `https://vertexaisearch.cloud.google.com/console/oauth/default_oauth.html`
-        * `https://vertexaisearch.cloud.google.com/oauth-redirect`
-     4. **Access control** : Find the **Scope restriction** toggle and change the **Securely scoped** default setting to **Broadly scoped**.
-  5. Click **Submit** to create the credential.
-  6. Click the record name to view the **Client ID** and unmask the **Client secret**. Save these for later use.
 
 **Note:** The secret must be alphanumeric. If the generated secret contains special characters, manually change it to an alphanumeric string before saving. 
 
@@ -372,6 +332,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

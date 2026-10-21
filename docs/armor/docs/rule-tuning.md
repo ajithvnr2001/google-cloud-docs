@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/rule-tuning/
 title: Tune preconfigured WAF rules \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:38:39.992882+00:00
+fetched_at: 2026-10-21T12:23:02.682999+00:00
 ---
 
 # Tune preconfigured WAF rules  |  Google Cloud Armor  |  Google Cloud Documentation
@@ -78,9 +78,9 @@ Instead of opting out rule signatures, you can opt in rule signatures in otherwi
 
 ## Exclude request fields from inspection
 
-Your custom application might contain content in request fields (like headers, cookies, query parameters, or URIs) that matches signatures in preconfigured WAF rules, but which you know is legitimate. In this case, you can reduce false positives by excluding those request fields from inspection by associating a list of exclusions for request fields with the security policy rule. Note that when you have a request field exclusion attached to a WAF rule, you can't use the `allow` action.
+Custom applications sometimes contain legitimate content in request fields (such as headers, cookies, query parameters, URIs, or request bodies) that matches signatures in preconfigured WAF rules. To reduce false positives, exclude these request fields from inspection by adding a list of exclusions to the security policy rule. Note that when you have a request field exclusion attached to a WAF rule, you can't use the `allow` action.
 
-When configuring a request field exclusion, you associate it with a target, which can be an entire preconfigured WAF rule, or a list of signatures under a preconfigured WAF rule. You can specify an exact match or a partial match by using a field operator and a field value. The available field operators are as follows:
+When you configure a request field exclusion, you associate it with a target. A target can be all rule sets (a global exclusion), an entire preconfigured WAF rule, or a list of signatures under a preconfigured WAF rule. Use a field operator and a field value to specify an exact or partial match. The available field operators are as follows:
 
   * `EQUALS`: the operator matches if the field value equals the specified value.
   * `STARTS_WITH`: the operator matches if the field value starts with the specified value.
@@ -98,12 +98,17 @@ The default tuning exclusion limit is 100 for service-level backend policies (bo
   * Request cookies
   * Request query parameters
   * Request URIs
+  * Request bodies
 
 
 
-For example, if you have a preconfigured WAF rule (such as `evaluatePreconfiguredWaf('sqli-v422-stable')`), and you want to exclude request fields on a specific target (such as `owasp-crs-v042200-id942100-sqli` under `sqli-v422-stable`), you can configure up to 100 request headers, 100 request cookies, 100 request query parameters, and 100 request URIs to be excluded for that target.
+For example, if you have a preconfigured WAF rule (such as `evaluatePreconfiguredWaf('sqli-v422-stable')`), and you want to exclude request fields on a specific target (such as `owasp-crs-v042200-id942100-sqli` under `sqli-v422-stable`), you can configure up to 100 request headers, 100 request cookies, 100 request query parameters, 100 request URIs, and 100 request bodies to be excluded for that target.
 
-The following sections provide more information about the request fields that you can exclude from inspection, followed by examples.
+The following sections describe global exclusions, the request fields you can exclude from inspection, and examples.
+
+### Global exclusions
+
+To apply an exclusion to all rule sets under a security policy rule, specify a global exclusion by setting the --target-rule-set flag to "*". You can use a global exclusion to exclude any request field type, such as headers, cookies, query parameters, URIs, or request bodies. Don't specify target rule IDs for a global exclusion.
 
 ### Request headers
 
@@ -165,6 +170,14 @@ The exclusion is only applicable for signatures in the target that would inspect
 
 When excluding any of the preceding fields, the field is excluded entirely from inspection, and no re-assembling is performed.
 
+### Request bodies
+
+Specifies the request body values to exclude from inspection during preconfigured WAF rule evaluation.
+
+This exclusion applies only to signatures in the target that inspect the request body value, such as signatures associated with the `REQUEST_BODY` request flag in the OWASP Core Rule Set.
+
+Only request bodies that match the specified value are excluded from inspection.
+
 ### Field values
 
 You must specify a field value if you use a field operator other than `EQUALS_ANY`.
@@ -172,7 +185,15 @@ You must specify a field value if you use a field operator other than `EQUALS_AN
 For request headers, request cookies, and request query parameters, the permitted character set for field values includes the following characters:
 
   * `!`, `#`, `$`, `%`, `&`, `*`, `+`, `-`, `.`, `^`, `_`, ```, `|`, `~`
-  * Alpha characters `A` through `Z` (both lower and upper cases)
+  * Alpha characters `A` through `Z` (both uppercase and lowercase)
+  * Digit characters `0` through `9`
+
+
+
+For request bodies, the permitted character set for field values includes all printable ASCII characters except `'`, `\`,`(`, and`)`:
+
+  * Space (``) and special characters: `!`, `"`, `#`, `$`, `%`, `&`, `*`, `+`, `,`, `-`, `.`, `/`, `:`, `;`, `<`, `=`, `>`, `?`, `@`, `[`, `]`, `^`, `_`, ```, `{`, `|`, `}`, `~`
+  * Alpha characters `A` through `Z` (both uppercase and lowercase)
   * Digit characters `0` through `9`
 
 
@@ -194,13 +215,13 @@ When applying exclusions for request URIs, the configured field values are compa
 
 ### Examples
 
-The first example updates the rule in the security policy `POLICY_1` at `PRIORITY` to add an exclusion configuration for all signatures under the `sqli-v422-stable` preconfigured WAF rule, to exclude all request cookies from inspection:
+The first example updates the rule in the security policy `POLICY_1` at `PRIORITY` to add a global exclusion configuration for all rule sets. This excludes request bodies that contain `bad-body-value` from inspection:
     
     
     gcloud compute security-policies rules add-preconfig-waf-exclusion PRIORITY \
         --security-policy POLICY_1 \
-        --target-rule-set "sqli-v422-stable" \
-        --request-cookie-to-exclude "op=EQUALS_ANY"
+        --target-rule-set "*" \
+        --request-body-to-exclude "op=CONTAINS,val=bad-body-value"
     
 
 Replace the following:
@@ -210,15 +231,13 @@ Replace the following:
 
 
 
-The second example updates the rule in the security policy `POLICY_2` at `PRIORITY` to add an exclusion configuration for signatures `owasp-crs-v042200-id941140-xss` and `owasp-crs-v042200-id941270-xss` under the `xss-v422-stable` preconfigured WAF rule, to exclude request headers that either start with `abc` or end with `xyz` from inspection:
+The second example updates the rule in the security policy `POLICY_2` at `PRIORITY` to add an exclusion configuration for all signatures under the `sqli-v422-stable` preconfigured WAF rule, to exclude all request cookies from inspection:
     
     
     gcloud compute security-policies rules add-preconfig-waf-exclusion PRIORITY \
         --security-policy POLICY_2 \
-        --target-rule-set "xss-v422-stable" \
-        --target-rule-ids "owasp-crs-v042200-id941140-xss,owasp-crs-v042200-id941270-xss" \
-        --request-header-to-exclude "op=STARTS_WITH,val=abc" \
-        --request-header-to-exclude "op=ENDS_WITH,val=xyz"
+        --target-rule-set "sqli-v422-stable" \
+        --request-cookie-to-exclude "op=EQUALS_ANY"
     
 
 Replace the following:
@@ -228,13 +247,15 @@ Replace the following:
 
 
 
-The third example updates the rule in the security policy `POLICY_3` at `PRIORITY` to add an exclusion configuration for all signatures under the `sqli-v422-stable` preconfigured WAF rule. This excludes request query parameters (parsed from the URI query string or the body payload) that are equal to `bad-param` from inspection:
+The third example updates the rule in the security policy `POLICY_3` at `PRIORITY` to add an exclusion configuration for signatures `owasp-crs-v042200-id941140-xss` and `owasp-crs-v042200-id941270-xss` under the `xss-v422-stable` preconfigured WAF rule, to exclude request headers that either start with `abc` or end with `xyz` from inspection:
     
     
     gcloud compute security-policies rules add-preconfig-waf-exclusion PRIORITY \
         --security-policy POLICY_3 \
-        --target-rule-set "sqli-v422-stable" \
-        --request-query-param-to-exclude "op=EQUALS,val=bad-param"
+        --target-rule-set "xss-v422-stable" \
+        --target-rule-ids "owasp-crs-v042200-id941140-xss,owasp-crs-v042200-id941270-xss" \
+        --request-header-to-exclude "op=STARTS_WITH,val=abc" \
+        --request-header-to-exclude "op=ENDS_WITH,val=xyz"
     
 
 Replace the following:
@@ -244,14 +265,13 @@ Replace the following:
 
 
 
-The fourth example updates the rule in the security policy `POLICY_4` at `PRIORITY` to add an exclusion configuration for signature `owasp-crs-v042200-id930100-lfi` under the `lfi-v422-stable` preconfigured WAF rule. This excludes request URIs that contain `/bad-path` from inspection:
+The fourth example updates the rule in the security policy `POLICY_4` at `PRIORITY` to add an exclusion configuration for all signatures under the `sqli-v422-stable` preconfigured WAF rule. This excludes request query parameters (parsed from the URI query string or the body payload) that are equal to `bad-param` from inspection:
     
     
     gcloud compute security-policies rules add-preconfig-waf-exclusion PRIORITY \
         --security-policy POLICY_4 \
-        --target-rule-set "lfi-v422-stable" \
-        --target-rule-ids "owasp-crs-v042200-id930100-lfi" \
-        --request-uri-to-exclude "op=CONTAINS,val=/bad-path"
+        --target-rule-set "sqli-v422-stable" \
+        --request-query-param-to-exclude "op=EQUALS,val=bad-param"
     
 
 Replace the following:
@@ -261,11 +281,28 @@ Replace the following:
 
 
 
-The fifth example updates the rule in the security policy `POLICY_5` at `PRIORITY` to remove all the request field exclusions for the rule IDs `owasp-crs-v042200-id942110-sqli` and `owasp-crs-v042200-id942120-sqli` under `sqli-v422-stable`.
+The fifth example updates the rule in the security policy `POLICY_5` at `PRIORITY` to add an exclusion configuration for signature `owasp-crs-v042200-id930100-lfi` under the `lfi-v422-stable` preconfigured WAF rule. This excludes request URIs that contain `/bad-path` from inspection:
+    
+    
+    gcloud compute security-policies rules add-preconfig-waf-exclusion PRIORITY \
+        --security-policy POLICY_5 \
+        --target-rule-set "lfi-v422-stable" \
+        --target-rule-ids "owasp-crs-v042200-id930100-lfi" \
+        --request-uri-to-exclude "op=CONTAINS,val=/bad-path"
+    
+
+Replace the following:
+
+  * `PRIORITY`: the priority of the rule
+  * `POLICY_5`: the name of the security policy
+
+
+
+The sixth example updates the rule in the security policy `POLICY_6` at `PRIORITY` to remove all the request field exclusions for the rule IDs `owasp-crs-v042200-id942110-sqli` and `owasp-crs-v042200-id942120-sqli` under `sqli-v422-stable`.
     
     
     gcloud compute security-policies rules remove-preconfig-waf-exclusion PRIORITY \
-        --security-policy POLICY_5 \
+        --security-policy POLICY_6 \
         --target-rule-set "sqli-v422-stable" \
         --target-rule-ids "owasp-crs-v042200-id942110-sqli,owasp-crs-v042200-id942120-sqli"
     
@@ -273,7 +310,7 @@ The fifth example updates the rule in the security policy `POLICY_5` at `PRIORIT
 Replace the following:
 
   * `PRIORITY`: the priority of the rule
-  * `POLICY_5`: the name of the security policy
+  * `POLICY_6`: the name of the security policy
 
 
 
@@ -292,6 +329,7 @@ For more information, see [Request body content parsing](https://docs.cloud.goog
 
 ## What's next
 
+  * Learn more about [tuning rules](https://docs.cloud.google.com/armor/docs/security-policy-rule-tuning).
   * Learn more about [creating and viewing security policies](https://docs.cloud.google.com/armor/docs/configure-security-policies).
   * Learn more about what rule signatures are available for [preconfigured WAF rules](https://docs.cloud.google.com/armor/docs/waf-rules).
   * Learn more about preconfigured WAF rules by using the [custom rules language reference](https://docs.cloud.google.com/armor/docs/rules-language-reference).
@@ -302,6 +340,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

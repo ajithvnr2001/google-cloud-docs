@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/shutdownscript/
 title: Run shutdown scripts \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:05:50.953465+00:00
+fetched_at: 2026-10-21T12:01:43.285951+00:00
 ---
 
 # Run shutdown scripts  |  Compute Engine  |  Google Cloud Documentation
@@ -319,6 +319,217 @@ To add a shutdown script to a running instance, follow the instructions in the [
 
 
 
+## Run a shutdown script during a graceful shutdown
+
+By default, if a compute instance has [graceful shutdown](https://docs.cloud.google.com/compute/docs/instances/graceful-shutdown-overview) enabled, then any shutdown scripts that you configure in metadata keys run after the graceful shutdown ends.
+
+To run commands during a graceful shutdown, you must use a custom watcher script that continuously polls the metadata server in the background, as shown in this section. To give your scripts enough time to complete and to avoid potential data loss or incomplete tasks, we recommend that you modify your shutdown scripts by moving your logic into this watcher script.
+
+To run a shutdown script during a graceful shutdown, select one of the following options based on the guest OS that your compute instance uses:
+
+###  Linux 
+
+  1. If you haven't already, then [connect to the compute instance](https://docs.cloud.google.com/compute/docs/connect/standard-ssh).
+
+  2. Run a watcher script, or configure it to run at boot, such as the following. Add your specific shutdown logic where indicated:
+         
+         #!/bin/bash
+         
+         # --------------------------------------------------------
+         # Script for graceful shutdown based on the metadata value
+         # --------------------------------------------------------
+         #
+         # This script monitors the metadata key `shutdown-status` and
+         # waits for its value to change to `PENDING_STOP`. After the script
+         # runs a series of user-defined commands, it runs `sudo shutdown -h now`
+         # to signal to Compute Engine that the shutdown process is
+         # complete.
+         #
+         # To run this script, you must have passwordless sudo privileges.
+         
+         METADATA_URL="http://metadata.google.internal/computeMetadata/v1/instance/attributes/shutdown-status"
+         LAST_ETAG="0"
+         
+         echo "Starting shutdown status watcher"
+         
+         while true; do
+           # Wait for the metadata value to change.
+           # The metadata server blocks the request until a change occurs or a timeout is reached.
+           RESPONSE=$(curl -H "Metadata-Flavor: Google" -s -i "${METADATA_URL}?wait_for_change=true&last_etag=${LAST_ETAG}")
+           CURL_EXIT_STATUS=$?
+         
+           if [[ ${CURL_EXIT_STATUS} -ne 0 ]]; then
+             echo "Error: curl command failed with exit status ${CURL_EXIT_STATUS}. Retrying in 5 seconds..."
+             sleep 5
+             continue
+           fi
+         
+           # Strip carriage returns (\r) immediately to prevent CRLF line endings from corrupting string comparisons
+           RESPONSE=$(echo "$RESPONSE" | tr -d '\r')
+         
+           # Extract the HTTP status code from the first line of the response
+           HTTP_STATUS=$(echo "$RESPONSE" | head -n 1 | awk '{print $2}')
+         
+           if [[ "${HTTP_STATUS}" -eq 200 ]]; then
+             # Read the new etag value to re-subscribe on the next poll.
+             NEW_ETAG=$(echo "$RESPONSE" | grep -i "^ETag:" | awk '{print $2}')
+             if [[ -n "${NEW_ETAG}" ]]; then
+               LAST_ETAG="${NEW_ETAG}"
+             fi
+         
+             # Extract the value of the shutdown status from the last line of the response body.
+             SHUTDOWN_STATUS=$(echo "$RESPONSE" | tail -n 1)
+         
+             echo "Metadata changed. New ETag: ${LAST_ETAG}, shutdown-status: '${SHUTDOWN_STATUS}'"
+         
+             if [[ "${SHUTDOWN_STATUS}" == "PENDING_STOP" ]]; then
+               echo "Shutdown signal 'PENDING_STOP' received. Exiting watcher loop."
+               break
+             fi
+           elif [[ "${HTTP_STATUS}" -eq 503 ]]; then
+             # 503 Service Unavailable: wait_for_change timed out with no change. Sleep and loop again.
+             echo "Service temporarily unavailable or request timed out. Retrying in 2 seconds..."
+             sleep 2
+             continue
+           else
+             # Unexpected HTTP status
+             echo "Warning: Unexpected HTTP status ${HTTP_STATUS}. Retrying in 5 seconds..."
+             sleep 5
+           fi
+         done
+         
+         # --------------------------------------------------------
+         # Graceful shutdown commands section
+         # --------------------------------------------------------
+         echo "Watcher loop exited. Starting graceful shutdown procedures..."
+         
+         # --- ADD YOUR GRACEFUL SHUTDOWN COMMANDS HERE ---
+         
+         echo "Graceful shutdown commands executed."
+         
+         # --------------------------------------------------------
+         # Signal OS to stop
+         # --------------------------------------------------------
+         echo "Shutting down the guest OS to turn off the compute instance..."
+         sudo shutdown -h now
+         
+
+
+
+
+###  Windows 
+
+  1. If you haven't already, then connect to the compute instance by using one of the following methods:
+
+     * [PowerShell](https://docs.cloud.google.com/compute/docs/instances/windows/connecting-powershell)
+
+     * [Remote Desktop Protocol (RDP)](https://docs.cloud.google.com/compute/docs/instances/connecting-to-windows)
+
+     * [Secure Shell (SSH)](https://docs.cloud.google.com/compute/docs/connect/windows-ssh)
+
+     * [Special Administrative Console (SAC)](https://docs.cloud.google.com/compute/docs/instances/connecting-to-sac)
+
+  2. Run a watcher script, or configure it to run at boot, such as the following. Add your specific shutdown logic where indicated:
+         
+         <#
+         .SYNOPSIS
+         pre-shutdown-script.ps1
+         #>
+         
+         # --------------------------------------------------------
+         # Script for graceful shutdown based on the metadata value
+         # --------------------------------------------------------
+         #
+         # This script monitors the metadata key `shutdown-status` and
+         # waits for its value to change to `PENDING_STOP`. After the script
+         # runs a series of user-defined commands, it runs `Stop-Computer -Force`
+         # to signal to Compute Engine that the shutdown process is
+         # complete.
+         
+         $METADATA_URL = "http://metadata.google.internal/computeMetadata/v1/instance/attributes/shutdown-status"
+         $LAST_ETAG = "0"
+         
+         Write-Host "Starting shutdown status watcher"
+         
+         while ($true) {
+             $Response = $null
+             $HTTP_STATUS = 0
+         
+             # Wait for the metadata value to change.
+             # The metadata server blocks the request until a change occurs or a timeout is reached.
+             try {
+                 $Response = Invoke-WebRequest `
+                     -Headers @{"Metadata-Flavor" = "Google"} `
+                     -Uri "${METADATA_URL}?wait_for_change=true&last_etag=${LAST_ETAG}" `
+                     -TimeoutSec 320 `
+                     -ErrorAction Stop
+         
+                 if ($null -ne $Response) {
+                     $HTTP_STATUS = [int]$Response.StatusCode
+                 }
+             } catch {
+                 # Invoke-WebRequest throws an error for non-2xx status codes or connection failures.
+                 $Exception = $_.Exception
+                 if ($null -ne $Exception -and $null -ne $Exception.Response) {
+                     $HTTP_STATUS = [int]$Exception.Response.StatusCode
+                 } else {
+                     $HTTP_STATUS = 0
+                 }
+             }
+         
+             if ($HTTP_STATUS -eq 0) {
+                 Write-Host "Error: Request failed. Retrying in 5 seconds..."
+                 Start-Sleep -Seconds 5
+                 continue
+             }
+         
+             if ($HTTP_STATUS -eq 200) {
+                 # Read the new etag value to re-subscribe on the next poll.
+                 $NEW_ETAG = $Response.Headers["ETag"]
+                 if ($null -ne $NEW_ETAG) {
+                     $LAST_ETAG = $NEW_ETAG
+                 }
+         
+                 # Extract the value of the shutdown status from the response body.
+                 $SHUTDOWN_STATUS = $Response.Content.Trim()
+         
+                 Write-Host "Metadata changed. New ETag: ${LAST_ETAG}, shutdown-status: '${SHUTDOWN_STATUS}'"
+         
+                 if ($SHUTDOWN_STATUS -eq "PENDING_STOP") {
+                     Write-Host "Shutdown signal 'PENDING_STOP' received. Exiting watcher loop."
+                     break
+                 }
+             } elseif ($HTTP_STATUS -eq 503) {
+                 # 503 Service Unavailable: wait_for_change timed out with no change. Sleep and loop again.
+                 Write-Host "Service temporarily unavailable or request timed out. Retrying in 2 seconds..."
+                 Start-Sleep -Seconds 2
+                 continue
+             } else {
+                 # Unexpected HTTP status
+                 Write-Host "Warning: Unexpected HTTP status ${HTTP_STATUS}. Retrying in 5 seconds..."
+                 Start-Sleep -Seconds 5
+             }
+         }
+         
+         # --------------------------------------------------------
+         # Graceful shutdown commands section
+         # --------------------------------------------------------
+         Write-Host "Watcher loop exited. Starting graceful shutdown procedures..."
+         
+         # --- ADD YOUR GRACEFUL SHUTDOWN COMMANDS HERE ---
+         
+         Write-Host "Graceful shutdown commands executed."
+         
+         # --------------------------------------------------------
+         # Signal OS to Halt
+         # --------------------------------------------------------
+         Write-Host "Shutting down the guest OS to turn off the compute instance..."
+         Stop-Computer -Force
+         
+
+
+
+
 ## Viewing the output of a shutdown script
 
 ###  Linux 
@@ -353,6 +564,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/pipeline/functions/string_functions/
 title: String Functions Reference \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:24:33.476280+00:00
+fetched_at: 2026-10-21T11:58:28.190523+00:00
 ---
 
 # String Functions Reference  |  Firestore in Native mode  |  Google Cloud Documentation
@@ -31,6 +31,8 @@ Name  | Description
 `ENDS_WITH` | Returns `TRUE` if a `STRING` ends with a given postfix   
 `LIKE` | Returns `TRUE` if a `STRING` matches a pattern   
 `REGEX_CONTAINS` | Returns `TRUE` if a value is a partial or full match for a regular expression   
+`REGEX_FIND` | Returns the first substring that matches a regular expression, or `NULL` if there is no match.   
+`REGEX_FIND_ALL` | Returns an array of all substrings that match a regular expression, or an empty array if there are no matches.   
 `REGEX_MATCH` | Returns `TRUE` if any part of a value matches a regular expression   
 `STRING_CONCAT` | Concatenates multiple `STRING` into a `STRING`  
 `STRING_CONTAINS` | Returns `TRUE` if a value contains a `STRING`  
@@ -166,7 +168,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_string.go#L28-L33)
+    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_string.go#L28-L33)
 
 ### CHAR_LENGTH
 
@@ -287,7 +289,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_string.go#L47-L52)
+    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_string.go#L47-L52)
 
 ### STARTS_WITH
 
@@ -415,7 +417,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_string.go#L66-L71)
+    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_string.go#L66-L71)
 
 ### ENDS_WITH
 
@@ -528,7 +530,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_string.go#L85-L90)
+    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_string.go#L85-L90)
 
 ### LIKE
 
@@ -655,29 +657,41 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_string.go#L104-L109)
+    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_string.go#L104-L109)
 
 ### REGEX_CONTAINS
 
 **Syntax:**
     
     
-    regex_contains(value: STRING, pattern: STRING) -> BOOLEAN
+    regex_contains(value: STRING, regexp: STRING | REGEX) -> BOOLEAN
     
 
 **Description:**
 
-Returns `TRUE` if some part of `value` matches `pattern`. If `pattern` is not a valid regular expression, this function returns an `error`.
+Returns `TRUE` if some part of `value` matches `regexp`. If `regexp` is not a valid regular expression, this function returns an `error`.
+
+The `regexp` argument can also be a `REGEX` value created using `regex("pattern", "options")`. This format lets you provide regular expression options along with the pattern. The supported options are:
+
+  * `i`: Case-insensitive matching.
+  * `m`: Multi-line mode (`^` and `$` match the start or end of lines).
+  * `s`: Dotall mode (`.` matches newlines).
+
+
+
+If `regexp` is a `STRING`, no options are applied besides those embedded in the pattern itself (e.g., `(?i)`).
 
 Regular expressions follow the syntax of the [re2](https://github.com/google/re2/wiki/Syntax) library.
 
 **Examples:**
 
-value | pattern | `regex_contains(value, pattern)`  
+value | regexp | `regex_contains(value, regexp)`  
 ---|---|---  
 "Firestore" | "Fire" | true  
 "Firestore" | "store$" | true  
 "Firestore" | "data" | false  
+"Firestore" | `regex("fire", "i")` | true  
+"Firestore" | `regex("FIRE", "")` | false  
   
 ##### Node.js
     
@@ -789,29 +803,106 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_string.go#L123-L128)
+    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_string.go#L123-L128)
 
-### REGEX_MATCH
+### REGEX_FIND
 
 **Syntax:**
     
     
-    regex_match(value: STRING, pattern: STRING) -> BOOLEAN
+    regex_find(value: STRING, regexp: STRING | REGEX) -> STRING
     
 
 **Description:**
 
-Returns `TRUE` if `value` fully matches `pattern`. If `pattern` is not a valid regular expression, this function returns an `error`.
+Returns the first substring in `value` that matches `regexp`, or `NULL` if there is no match. If `regexp` is not a valid regular expression, this function returns an `error`.
+
+The `regexp` argument can also be a `REGEX` value created using `regex("pattern", "options")`. This format lets you provide regular expression options along with the pattern. The supported options are:
+
+  * `i`: Case-insensitive matching.
+  * `m`: Multi-line mode (`^` and `$` match the start or end of lines).
+  * `s`: Dotall mode (`.` matches newlines).
+
+
+
+If `regexp` is a `STRING`, no options are applied besides those embedded in the pattern itself (e.g., `(?i)`).
 
 Regular expressions follow the syntax of the [re2](https://github.com/google/re2/wiki/Syntax) library.
 
 **Examples:**
 
-value | pattern | `regex_match(value, pattern)`  
+value | regexp | `regex_find(value, regexp)`  
+---|---|---  
+"Sometext MATCH" | "SomeText" | "Sometext"  
+"Sometext MATCH" | `regex("match", "i")` | "MATCH"  
+"Sometext MATCH" | `regex("(match)", "i")` | "MATCH"  
+"Sometext match" | `regex("MATCH", "")` | null  
+  
+### REGEX_FIND_ALL
+
+**Syntax:**
+    
+    
+    regex_find_all(value: STRING, regexp: STRING | REGEX) -> ARRAY<STRING>
+    
+
+**Description:**
+
+Returns an array of all substrings in `value` that match `regexp`, or an empty array if there are no matches. If `regexp` is not a valid regular expression, this function returns an `error`.
+
+The `regexp` argument can also be a `REGEX` value created using `regex("pattern", "options")`. This format lets you provide regular expression options along with the pattern. The supported options are:
+
+  * `i`: Case-insensitive matching.
+  * `m`: Multi-line mode (`^` and `$` match the start or end of lines).
+  * `s`: Dotall mode (`.` matches newlines).
+
+
+
+If `regexp` is a `STRING`, no options are applied besides those embedded in the pattern itself (e.g., `(?i)`).
+
+Regular expressions follow the syntax of the [re2](https://github.com/google/re2/wiki/Syntax) library.
+
+**Examples:**
+
+value | regexp | `regex_find_all(value, regexp)`  
+---|---|---  
+"one two three two" | "one" | ["one"]  
+"one TWO three Two" | `regex("two", "i")` | ["TWO", "Two"]  
+"one two three two" | `regex("TWO", "")` | []  
+  
+### REGEX_MATCH
+
+**Syntax:**
+    
+    
+    regex_match(value: STRING, regexp: STRING | REGEX) -> BOOLEAN
+    
+
+**Description:**
+
+Returns `TRUE` if `value` fully matches `regexp`. If `regexp` is not a valid regular expression, this function returns an `error`.
+
+The `regexp` argument can also be a `REGEX` value created using `regex("pattern", "options")`. This format lets you provide regular expression options along with the pattern. The supported options are:
+
+  * `i`: Case-insensitive matching.
+  * `m`: Multi-line mode (`^` and `$` match the start or end of lines).
+  * `s`: Dotall mode (`.` matches newlines).
+
+
+
+If `regexp` is a `STRING`, no options are applied besides those embedded in the pattern itself (e.g., `(?i)`).
+
+Regular expressions follow the syntax of the [re2](https://github.com/google/re2/wiki/Syntax) library.
+
+**Examples:**
+
+value | regexp | `regex_match(value, regexp)`  
 ---|---|---  
 "Firestore" | "F.*store" | true  
 "Firestore" | "Fire" | false  
 "Firestore" | "^F.*e$" | true  
+"FiReStOrE" | `regex("firestore", "i")` | true  
+"Firestore" | `regex("firestore", "")` | false  
   
 ##### Node.js
     
@@ -923,7 +1014,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_string.go#L180-L185)
+    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_string.go#L180-L185)
 
 ### STRING_CONCAT
 
@@ -1054,7 +1145,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_string.go#L199-L204)
+    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_string.go#L199-L204)
 
 ### STRING_CONTAINS
 
@@ -1182,7 +1273,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_string.go#L218-L223)
+    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_string.go#L218-L223)
 
 ### STRING_INDEX_OF
 
@@ -1209,7 +1300,7 @@ value | search | `string_index_of(value, search)`
 "hello world" | "o" | 4  
 "hello world" | "l" | 2  
 "hello world" | "z" | -1  
-"banana" | "na" | 2  
+"banana" | "ana" | 1  
 "abc" | "" | 0  
 b"abc" | b"b" | 1  
 "é" | "é" | 0  
@@ -1342,7 +1433,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_string.go#L237-L242)
+    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_string.go#L237-L242)
 
 ### TO_LOWER
 
@@ -1471,7 +1562,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_string.go#L256-L261)
+    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_string.go#L256-L261)
 
 ### SUBSTRING
 
@@ -1634,7 +1725,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_string.go#L275-L281)
+    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_string.go#L275-L281)
 
 ### STRING_REVERSE
 
@@ -1758,7 +1849,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_string.go#L295-L300)
+    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_string.go#L295-L300)
 
 ### STRING_REPEAT
 
@@ -1970,7 +2061,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_string.go#L314-L319)
+    [pipeline_snippets_string.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_string.go#L314-L319)
 
 ### LTRIM
 
@@ -2097,6 +2188,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

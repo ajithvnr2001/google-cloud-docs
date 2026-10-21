@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/apply-policies-to-user-groups/
 title: Apply policies to user groups using access bindings \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:57:42.320593+00:00
+fetched_at: 2026-10-21T11:58:13.246204+00:00
 ---
 
 # Apply policies to user groups using access bindings  |  Access Context Manager  |  Google Cloud Documentation
@@ -491,10 +491,11 @@ Field name | Description
 ---|---  
 `protoPayload.authenticationInfo.principalEmail` | Email ID of the principal that the access is denied for.  
 `protoPayload.metadata.deniedApplications` | Name of the application that the access is denied for.  
-`protoPayload.metadata.evaluationResult` | The evaluation result of the active access policy. Possible values: `GRANTED` or `DENIED`.  
+`protoPayload.metadata.evaluationResult` | The evaluation result of the active access policy. Possible values: `GRANTED` or `DENIED`. If no active access levels are applied in the binding, this field is set to `GRANTED`.  
 `protoPayload.metadata.appliedAccessLevels` | The applied access levels required by the active access policy.  
 `protoPayload.metadata.appliedDryRunAccessLevels` | The applied access levels required by the dry-run access policy.  
-`protoPayload.metadata.dryRunEvaluationResult` | The evaluation result of the dry-run access policy, which indicates the intended action when the access policy is enforced. Possible values: `GRANTED` or `DENIED`.  
+`protoPayload.metadata.dryRunEvaluationResult` | The evaluation result of the dry-run access policy, which indicates the intended action when the access policy is enforced. Possible values: `GRANTED` or `DENIED`. If no dry-run access levels are applied in the binding, this field is set to `GRANTED`, even when `evaluationResult` is `DENIED`.  
+`protoPayload.metadata.unsatisfiedAccessLevels` | The access levels in the organization that the request failed to satisfy. This list can include access levels that aren't applied in the access binding. To identify which access levels caused an access denial, compare this field with `appliedAccessLevels` or `appliedDryRunAccessLevels`.  
   
 For instructions on how to create a query for logs, see [Logging query language](https://docs.cloud.google.com/logging/docs/view/logging-query-language).
 
@@ -502,6 +503,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/working-with-remote-agents/troubleshooting/
 title: Troubleshoot common issues \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:14.558679+00:00
+fetched_at: 2026-10-21T12:01:44.274087+00:00
 ---
 
 # Troubleshoot common issues  |  Google Security Operations  |  Google Cloud Documentation
@@ -182,12 +182,45 @@ Run the following command to force start of Installer agent:
 Run the following command to force start of the Docker agent:  
 `docker start `
 
+## Remote Agent tasks fail on hardened environments
+
+When you deploy a Remote Agent on a hardened Linux host like RHEL 8, agent tasks (including saving or upgrading an integration, or running connectors and actions) might fail or time out in the UI while the agent status remains **Live**. This issue occurs when host OS security enforcement—such as SELinux in `Enforcing` mode, AppArmor, or endpoint security software—blocks OS commands executed by the agent inside the container.
+
+To resolve this issue, the Remote Agent must be exempted from the host security enforcement policies that block its OS commands. Follow these steps to diagnose and resolve the issue:
+
+  1. Verify whether SELinux is in `Enforcing` mode on the host machine:
+         
+         getenforce
+         sestatus
+         
+
+To check `/var/log/audit/audit.log` for recent blocked commands or denied operations without returning the entire log file, run the following command:
+         
+         sudo grep -i "denied" /var/log/audit/audit.log | tail -n 50
+         
+
+You can also inspect your endpoint security logs on the host for blocked operations related to the agent container processes.
+
+  2. Exempt the Remote Agent from the blocking security policy on the host:
+
+     * For containerized deployments (Docker or Podman), exempt the entire Remote Agent container when starting it for the first time by adding `--security-opt label=disable` (for SELinux) or `--security-opt apparmor=unconfined` (for AppArmor) to your `docker run` or `podman run` command.
+     * Configure custom SELinux policy rules, AppArmor profiles, or host endpoint security exemptions for the Remote Agent directories (`/opt/SiemplifyAgent`, `/home/siemplify_agent/agent_source`, and `/var/log/SiemplifyAgent`) and executables (`/usr/local/bin/python3.11`, `/usr/local/bin/pip3`, and `/usr/bin/supervisord`) so OS commands aren't blocked.
+  3. Alternatively, if you can't configure a targeted SELinux exemption, set SELinux to `Permissive` mode persistently across reboots by setting `SELINUX=permissive` in `/etc/selinux/config` on the host.
+
+If modifying `/etc/selinux/config` isn't possible or you need to apply the change immediately without rebooting, run the following command to switch SELinux to `Permissive` mode temporarily:
+         
+         sudo setenforce 0
+         
+
+
+
+
 **Need more help?** [Get answers from Community members and Google SecOps professionals.](https://security.googlecloudcommunity.com/)
 
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

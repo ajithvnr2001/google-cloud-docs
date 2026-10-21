@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/export-cloud-storage/
 title: Export asset metadata to Cloud Storage \u00a0|\u00a0 Cloud Asset Inventory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:43:53.097428+00:00
+fetched_at: 2026-10-21T11:59:54.240655+00:00
 ---
 
 # Export asset metadata to Cloud Storage  |  Cloud Asset Inventory  |  Google Cloud Documentation
@@ -482,9 +482,9 @@ To authenticate to Cloud Asset Inventory, set up Application Default Credentials
     import com.google.cloud.asset.v1.[ExportAssetsRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.ExportAssetsRequest.html);
     import com.google.cloud.asset.v1.[ExportAssetsRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.ExportAssetsRequest.html).Builder;
     import com.google.cloud.asset.v1.[ExportAssetsResponse](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.ExportAssetsResponse.html);
-    import com.google.cloud.asset.v1.[GcsDestination](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.GcsDestination.html);
-    import com.google.cloud.asset.v1.[OutputConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.OutputConfig.html);
-    import com.google.cloud.asset.v1.[ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-accessapproval/latest/com.google.cloud.accessapproval.v1.ProjectName.html);
+    import com.google.cloud.asset.v1.[GcsDestination](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.GcsDestination.html);
+    import com.google.cloud.asset.v1.[OutputConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.OutputConfig.html);
+    import com.google.cloud.asset.v1.[ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.ProjectName.html);
     import java.io.IOException;
     import java.util.Arrays;
     import java.util.concurrent.ExecutionException;
@@ -510,14 +510,14 @@ To authenticate to Cloud Asset Inventory, set up Application Default Credentials
               ExecutionException,
               TimeoutException {
         try ([AssetServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.AssetServiceClient.html) client = [AssetServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.AssetServiceClient.html).create()) {
-          [ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-accessapproval/latest/com.google.cloud.accessapproval.v1.ProjectName.html) parent = [ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-accessapproval/latest/com.google.cloud.accessapproval.v1.ProjectName.html).of(projectId);
-          [OutputConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.OutputConfig.html) outputConfig =
-              [OutputConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.OutputConfig.html).newBuilder()
-                  .setGcsDestination([GcsDestination](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.GcsDestination.html).newBuilder().setUri(exportPath).build())
+          [ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.ProjectName.html) parent = [ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.ProjectName.html).of(projectId);
+          [OutputConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.OutputConfig.html) outputConfig =
+              [OutputConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.OutputConfig.html).newBuilder()
+                  .setGcsDestination([GcsDestination](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.GcsDestination.html).newBuilder().setUri(exportPath).build())
                   .build();
           Builder exportAssetsRequestBuilder =
               [ExportAssetsRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.ExportAssetsRequest.html).newBuilder()
-                  .setParent([parent](https://docs.cloud.google.com/java/docs/reference/google-cloud-firestore/latest/com.google.cloud.firestore.pipeline.expressions.Expression.html#com_google_cloud_firestore_pipeline_expressions_Expression_parent__).[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-accessapproval/latest/com.google.cloud.accessapproval.v1.ProjectName.html#com_google_cloud_accessapproval_v1_ProjectName_toString__)())
+                  .setParent([parent](https://docs.cloud.google.com/java/docs/reference/google-cloud-firestore/latest/com.google.cloud.firestore.pipeline.expressions.Expression.html#com_google_cloud_firestore_pipeline_expressions_Expression_parent__).[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.ProjectName.html#com_google_cloud_asset_v1_ProjectName_toString__)())
                   .setContentType(contentType)
                   .setOutputConfig(outputConfig);
           if (assetTypes.length > 0) {

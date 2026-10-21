@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/private-connectivity-rag-capable-gen-ai/
 title: Private connectivity for RAG-capable generative AI applications \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:32.506230+00:00
+fetched_at: 2026-10-21T12:22:12.031106+00:00
 ---
 
 # Private connectivity for RAG-capable generative AI applications  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/presenting-content/
 title: Presenting content with boards \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:33:17.879717+00:00
+fetched_at: 2026-10-21T12:01:22.737364+00:00
 ---
 
 # Presenting content with boards  |  Looker  |  Google Cloud Documentation
@@ -88,7 +88,7 @@ To manage access to a board, you need the **Manage Access, Edit** access level f
   6. Save your changes by selecting **Save**.
 
 
-
+**Caution:** When you search for individual users in the **Add group or user** field, the search results don't indicate whether a user is a [standard user](https://docs.cloud.google.com/looker/docs/admin-panel-users-users#viewing_and_searching_users) or an [embed user](https://docs.cloud.google.com/looker/docs/signed-embedding). To prevent inadvertently sharing internal content with external embed users, see Best practices for board access with embed users.
 
 ## Creating a board
 
@@ -461,6 +461,18 @@ When you grant a user access to a board, you are given the option of sending tha
 
 Individual users you have added to the board will receive an email notifying them that they have been granted **View** or **Manage Access, Edit** access to the board. The email also invites users to view the board and encourages them to add it to their lists.
 
+### Best practices for board access with embed users
+
+When you search for individual users in the **Add group or user** field of the When you search for individual users in the **Add group or user** field of the **Manage access** window, the search results don't indicate whether a user is a [standard user](https://docs.cloud.google.com/looker/docs/admin-panel-users-users#viewing_and_searching_users) or an [embed user](https://docs.cloud.google.com/looker/docs/signed-embedding). If your Looker instance hosts both internal standard users and external embed users who have similar names or email domains, you might inadvertently share internal content with an external user when you select individual user accounts.
+
+To reduce the risk of sharing boards with the unintended user type, follow these best practices:
+
+  * **Manage board access using groups** : Instead of granting board access to individual user accounts, organize users into [Looker groups](https://docs.cloud.google.com/looker/docs/admin-panel-users-groups) (such as separate groups for internal standard users and external embed users) and grant board access at the group level.
+  * **Configure a closed system** : For multitenant or [signed embed](https://docs.cloud.google.com/looker/docs/signed-embedding) deployments on a shared instance, enable the [**Closed System** option](https://docs.cloud.google.com/looker/docs/access-levels#configuring_a_closed_system) so that boards and folders are private by default and users can see other users only if they belong to the same group.
+  * **Use separate Looker instances** : To completely isolate internal users and content from external embed users, host internal analytics and external embedded analytics on separate Looker instances.
+
+
+
 ## Deleting a board
 
 **Caution:** When you delete a board, you won't be able to recover it.
@@ -480,6 +492,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

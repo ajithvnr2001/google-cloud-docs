@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/continuous-queries/
 title: Create continuous queries \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T15:23:14.429856+00:00
+fetched_at: 2026-10-21T12:22:56.001452+00:00
 ---
 
 # Create continuous queries  |  BigQuery  |  Google Cloud Documentation
@@ -465,7 +465,7 @@ The following SQL examples show common use cases for continuous queries.
 
 ### Export data to a Pub/Sub topic
 
-The following example shows a continuous query that filters data from a BigQuery table that is receiving streaming taxi ride information, and publishes the data for cancelled rides to a Pub/Sub topic in real time with message attributes:
+The following example shows a continuous query that filters data from a BigQuery table that is receiving streaming taxi ride information, and publishes the data for canceled rides to a Pub/Sub topic in real time with message attributes:
     
     
     EXPORT DATA
@@ -720,7 +720,7 @@ Replace the following:
 
 ## Cancel a continuous query
 
-You can [cancel](https://docs.cloud.google.com/bigquery/docs/managing-jobs#cancel_jobs) a continuous query job just like any other job. It might take up to a minute for the query to stop running after the job is cancelled.
+You can [cancel](https://docs.cloud.google.com/bigquery/docs/managing-jobs#cancel_jobs) a continuous query job just like any other job. It might take up to a minute for the query to stop running after the job is canceled.
 
 If you cancel and then restart a query, the restarted query behaves like a new, independent query. The restarted query doesn't start processing data where the previous job stopped and can't reference the previous query's results. See Start a continuous query from a particular point in time.
 
@@ -744,6 +744,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

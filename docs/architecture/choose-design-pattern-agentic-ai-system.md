@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system/
 title: Choose a design pattern for your agentic AI system \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:30.132689+00:00
+fetched_at: 2026-10-21T12:22:18.667888+00:00
 ---
 
 # Choose a design pattern for your agentic AI system  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -74,9 +74,11 @@ A single agent's performance can be less effective when it uses more tools and w
 
 A _multi-agent system_ orchestrates multiple specialized agents to solve a complex problem that a single agent can't easily manage. The core principle is to decompose a large objective into smaller sub-tasks and assign each sub-task to a dedicated agent with a specific skill. These agents then interact through collaborative or hierarchical workflows to achieve the final goal. Multi-agent patterns provide a modular design that can improve the scalability, reliability, and maintainability of the overall system compared to a single agent with a monolithic prompt.
 
-In a multi-agent system, each agent requires a specific context to perform its task effectively. Context can include documentation, historical preferences, relevant links, conversational history, or any operational constraints. The process of managing this information flow is called _context engineering_. Context engineering includes strategies such as isolating context for a specific agent, persisting information across multiple steps, or compressing large amounts of data to improve efficiency.
+In a multi-agent system, each agent requires a specific context to perform its task effectively. Context can include documentation, historical preferences, relevant links, conversational history, or any operational constraints. The process of managing this information flow is called _context engineering_. [Context engineering](https://cloud.google.com/discover/ai-context-engineering) includes strategies such as isolating context for a specific agent, persisting information across multiple steps, or compressing large amounts of data to improve efficiency.
 
-Building a multi-agent system requires additional evaluation, security, reliability, and cost considerations when compared to a single-agent system. For example, multi-agent systems must implement precise access controls for each specialized agent, design a robust orchestration system to ensure reliable inter-agent communication, and manage the increased operational costs from the computational overhead of running multiple agents. For an example reference architecture to build a multi-agent system, see [Multi-agent AI systems in Google Cloud](https://docs.cloud.google.com/architecture/multiagent-ai-system).
+AI agents introduce certain unique and critical security risks that conventional, deterministic security practices might not be able to mitigate adequately. Use [Agent Gateway](https://docs.cloud.google.com/architecture/multiagent-ai-system#agent-gateway) for ingress and egress traffic routing and security, [Agent Identity](https://docs.cloud.google.com/architecture/multiagent-ai-system#agent-identity) for workload-bound authentication and least-privilege access control, and [Agent Registry](https://docs.cloud.google.com/architecture/multiagent-ai-system#agent-registry) to help ensure that verified tools and subagents are used.
+
+The guidance in this section isn't exhaustive. For more information about design factors and best practices, and for recommendations about building and deploying a multi-agent AI system, see [Multi-agent AI system in Google Cloud](https://docs.cloud.google.com/architecture/multiagent-ai-system#design_considerations).
 
 ### Sequential pattern
 

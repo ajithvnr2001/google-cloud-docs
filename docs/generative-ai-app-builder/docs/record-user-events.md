@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/record-user-events/
 title: Record real-time user events \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:03.484296+00:00
+fetched_at: 2026-10-21T12:01:52.258519+00:00
 ---
 
 # Record real-time user events  |  Agent Search  |  Google Cloud Documentation
@@ -306,15 +306,15 @@ To authenticate to Agent Search, set up Application Default Credentials. For mor
     # - It may require specifying regional endpoints when creating the service
     #   client as shown in:
     #   https://googleapis.dev/python/google-api-core/latest/client_options.html
-    from google.cloud import discoveryengine_v1
+    from google.cloud import [discoveryengine_v1](https://docs.cloud.google.com/python/docs/reference/discoveryengine/latest)
     
     
     def sample_write_user_event():
         # Create a client
-        client = discoveryengine_v1.[UserEventServiceClient](https://docs.cloud.google.com/python/docs/reference/discoveryengine/latest/google.cloud.discoveryengine_v1.services.user_event_service.UserEventServiceClient.html)()
+        client = [discoveryengine_v1](https://docs.cloud.google.com/python/docs/reference/discoveryengine/latest).[UserEventServiceClient](https://docs.cloud.google.com/python/docs/reference/discoveryengine/latest/google.cloud.discoveryengine_v1.services.user_event_service.UserEventServiceClient.html)()
     
         # Initialize request argument(s)
-        request = discoveryengine_v1.[WriteUserEventRequest](https://docs.cloud.google.com/python/docs/reference/discoveryengine/latest/google.cloud.discoveryengine_v1.types.WriteUserEventRequest.html)(
+        request = [discoveryengine_v1](https://docs.cloud.google.com/python/docs/reference/discoveryengine/latest).[WriteUserEventRequest](https://docs.cloud.google.com/python/docs/reference/discoveryengine/latest/google.cloud.discoveryengine_v1.types.WriteUserEventRequest.html)(
             parent="parent_value",
         )
     

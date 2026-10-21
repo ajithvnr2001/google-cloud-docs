@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/oasv3-extensions/
 title: OpenAPI 3.x Extensions in API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:14:09.182152+00:00
+fetched_at: 2026-10-21T11:59:56.154426+00:00
 ---
 
 # OpenAPI 3.x Extensions in API Gateway  |  Google Cloud Documentation
@@ -90,7 +90,7 @@ Field | Type | Required | Default | Description
 `jwtAudience` | `string` | No | Empty | By default, API Gateway will create the instance ID token with a JWT audience that matches the address field. Manually specifying `jwt_audience` is only required when the target backend uses JWT-based authentication and the expected audience is different than the value specified in the address field. For remote backends deployed on App Engine or with IAP, you must override the JWT audience. App Engine and IAP use their OAuth client ID as the expected audience.  
 `disableAuth` | `bool` | No | `False` | Prevent the data plane proxy from obtaining an instance ID token and attaching it to the request.  
 `pathTranslation` | `string` | No | `APPEND_PATH_TO_ADDRESS` or `CONSTANT_ADDRESS` | Set the path translation strategy when proxying requests to the target backend. When `x-google-backend` is set at the top level and no `path_translation` is specified, the default `pathTranslation` is `APPEND_PATH_TO_ADDRESS`. When `x-google-backend` is set on at the operation level and no `path_translation` is specified, the default is `CONSTANT_ADDRESS`.  
-`deadline` | `double` | No | `15.0` | Specify the number of seconds to wait for a full response from a request. Responses that exceed this deadline time out. On an SSE or chunked-transfer endpoint, the deadline still bounds the entire stream's duration; on a gRPC or WebSocket endpoint it bounds the gap between messages instead. See [Set the stream deadline](https://docs.cloud.google.com/api-gateway/docs/streaming-configure#configure-deadline) for the timeouts that apply to each kind of request. The deadline is configurable up to 3600 seconds. A non-streaming gateway enforces a lower maximum of 600 seconds, rejecting a higher deadline at gateway create or update rather than at API config create.  
+`deadline` | `double` | No | `15.0` | Specify the number of seconds to wait for a full response from a request. Responses that exceed this deadline time out. On an SSE or chunked-transfer endpoint, the deadline still bounds the entire stream's duration; on a gRPC or WebSocket endpoint it bounds the gap between messages instead. See [Set the stream deadline](https://docs.cloud.google.com/api-gateway/docs/streaming-configure#configure-deadline) for the timeouts that apply to each kind of request. Omit the field or set it to `0` to use the default. A negative value is rejected. The deadline is configurable up to 3600 seconds. A non-streaming gateway enforces a lower maximum of 600 seconds, rejecting a higher deadline at gateway create or update rather than at API config create.  
 `protocol` | `string` | No | `http/1.1` | Set the protocol for sending a request to the backend. Supported values include `http/1.1` and `h2`. Protocol requirements depend on the streaming type:  
 \- **gRPC** : You must set the protocol to `h2`.  
 \- **WebSockets** : You must use `http/1.1`.  
@@ -379,6 +379,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

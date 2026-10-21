@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/storage_overview/
 title: Overview of BigQuery storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:51.580144+00:00
+fetched_at: 2026-10-21T12:22:53.836871+00:00
 ---
 
 # Overview of BigQuery storage  |  Google Cloud Documentation
@@ -61,7 +61,7 @@ The majority of the data that you store in BigQuery is table data. Table data in
 
 In addition, [cached query results](https://docs.cloud.google.com/bigquery/docs/cached-results) are stored as temporary tables. You aren't charged for cached query results stored in temporary tables.
 
-[External tables](https://docs.cloud.google.com/bigquery/docs/external-tables) are a special type of table, where the data resides in a data store that is external to BigQuery, such as Cloud Storage. An external table has a table schema, just like a standard table, but the table definition points to the external data store. In this case, only the table metadata is kept in BigQuery storage. BigQuery does not charge for external table storage, although the external data store might charge for storage.
+[External tables](https://docs.cloud.google.com/bigquery/docs/external-tables) are a special type of table, where the data resides in a datastore that is external to BigQuery, such as Cloud Storage. An external table has a table schema, just like a standard table, but the table definition points to the external datastore. In this case, only the table metadata is kept in BigQuery storage. BigQuery does not charge for external table storage, although the external datastore might charge for storage.
 
 BigQuery organizes tables and other resources into logical containers called _datasets_. How you group your BigQuery resources affects permissions, quotas, billing, and other aspects of your BigQuery workloads. For more information and best practices, see [Introduction to the resource hierarchy](https://docs.cloud.google.com/bigquery/docs/resource-hierarchy).
 
@@ -180,6 +180,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

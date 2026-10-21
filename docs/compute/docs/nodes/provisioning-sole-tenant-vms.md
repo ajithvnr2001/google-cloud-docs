@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/nodes/provisioning-sole-tenant-vms/
 title: Provision VMs on sole-tenant nodes \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:10.457373+00:00
+fetched_at: 2026-10-21T12:01:41.633547+00:00
 ---
 
 # Provision VMs on sole-tenant nodes  |  Compute Engine  |  Google Cloud Documentation
@@ -428,7 +428,7 @@ Or, you can use the following procedure to provision a VM on a sole-tenant node 
 
   4. Click **Create instance** to provision a VM instance on this node group, note the values automatically applied for the **Name** , **Region** , and **Zone** , and modify those values as necessary.
 
-  5. Select a **Machine configuration** by specifying the **Machine family** , **Series** , and **Machine type**. Choose the **Series** that corresponds to the [sole-tenant node type](https://docs.cloud.google.com/compute/docs/nodes#node_types).
+  5. Select a **Machine configuration** by specifying the **Machine family** , **Series** , and **Machine type**. Choose the **Series** that corresponds to the [sole-tenant node type](https://docs.cloud.google.com/compute/docs/nodes/sole-tenant-nodes#node_types).
 
   6. Modify the **Boot disk** , **Firewall** , and other settings as necessary.
 
@@ -783,7 +783,7 @@ Node affinity labels let you logically group node groups and schedule VMs on a s
            --node-affinity-labels workload=frontend,environment=prod
          
 
-  2. Use the [`gcloud compute sole-tenancy node-templates describe` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/sole-tenancy/node-groups/describe) to view the node affinity labels assigned to the node template.
+  2. Use the [`gcloud compute sole-tenancy node-templates describe` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/sole-tenancy/node-templates/describe) to view the node affinity labels assigned to the node template.
 
   3. Use the [`gcloud compute sole-tenancy node-groups create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/sole-tenancy/node-groups/create) to create a node group that uses the production template:
          
@@ -865,11 +865,11 @@ Node affinity labels can be configured as anti-affinity labels to prevent VMs fr
   * For information about sole-tenant node pricing, see [Sole-tenant nodes pricing](https://cloud.google.com/compute/sole-tenant-pricing).
 
 
-  * For information about how to enable autoscaling on sole-tenant node groups, see [Node group autoscaler](https://docs.cloud.google.com/compute/docs/nodes/node-group-autoscaler).
+  * For information about how to enable autoscaling on sole-tenant node groups, see [Node group autoscaler](https://docs.cloud.google.com/compute/docs/nodes/autoscaling-node-groups).
 
   * For more information about bringing existing licenses to Google Cloud, see [Bring existing licenses](https://docs.cloud.google.com/compute/docs/nodes/bringing-your-own-licenses).
 
-  * For more information about sole-tenant nodes, see [Sole-tenant nodes](https://docs.cloud.google.com/compute/docs/nodes).
+  * For more information about sole-tenant nodes, see [Sole-tenant nodes](https://docs.cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
 
 
 
@@ -878,6 +878,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

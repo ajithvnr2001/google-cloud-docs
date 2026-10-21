@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/get-asset-history/
 title: Get asset histories \u00a0|\u00a0 Cloud Asset Inventory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:43:52.717859+00:00
+fetched_at: 2026-10-21T11:59:53.692004+00:00
 ---
 
 # Get asset histories  |  Cloud Asset Inventory  |  Google Cloud Documentation
@@ -490,7 +490,7 @@ To authenticate to Cloud Asset Inventory, set up Application Default Credentials
     import com.google.cloud.asset.v1.[BatchGetAssetsHistoryRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.BatchGetAssetsHistoryRequest.html);
     import com.google.cloud.asset.v1.[BatchGetAssetsHistoryResponse](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.BatchGetAssetsHistoryResponse.html);
     import com.google.cloud.asset.v1.[ContentType](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.ContentType.html);
-    import com.google.cloud.asset.v1.[ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.ProjectName.html);
+    import com.google.cloud.asset.v1.[ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-accessapproval/latest/com.google.cloud.accessapproval.v1.ProjectName.html);
     import com.google.cloud.asset.v1.[TimeWindow](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.TimeWindow.html);
     import java.util.Arrays;
     
@@ -505,12 +505,12 @@ To authenticate to Cloud Asset Inventory, set up Application Default Credentials
         // Asset names, e.g.: "//storage.googleapis.com/[BUCKET_NAME]"
         [String](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigtable/latest/com.google.cloud.bigtable.common.Type.String.html)[] assetNames = args[0].[split](https://docs.cloud.google.com/java/docs/reference/google-cloud-firestore/latest/com.google.cloud.firestore.pipeline.expressions.Expression.html#com_google_cloud_firestore_pipeline_expressions_Expression_split_com_google_cloud_firestore_pipeline_expressions_Expression_)(",");
         try ([AssetServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.AssetServiceClient.html) client = [AssetServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.AssetServiceClient.html).create()) {
-          [ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.ProjectName.html) parent = [ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.ProjectName.html).of(projectId);
+          [ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-accessapproval/latest/com.google.cloud.accessapproval.v1.ProjectName.html) parent = [ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-accessapproval/latest/com.google.cloud.accessapproval.v1.ProjectName.html).of(projectId);
           [ContentType](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.ContentType.html) contentType = [ContentType](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.ContentType.html).CONTENT_TYPE_UNSPECIFIED;
           [TimeWindow](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.TimeWindow.html) readTimeWindow = [TimeWindow](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.TimeWindow.html).newBuilder().build();
           [BatchGetAssetsHistoryRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.BatchGetAssetsHistoryRequest.html) request =
               [BatchGetAssetsHistoryRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.BatchGetAssetsHistoryRequest.html).newBuilder()
-                  .setParent([parent](https://docs.cloud.google.com/java/docs/reference/google-cloud-firestore/latest/com.google.cloud.firestore.pipeline.expressions.Expression.html#com_google_cloud_firestore_pipeline_expressions_Expression_parent__).[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-asset/latest/com.google.cloud.asset.v1.ProjectName.html#com_google_cloud_asset_v1_ProjectName_toString__)())
+                  .setParent([parent](https://docs.cloud.google.com/java/docs/reference/google-cloud-firestore/latest/com.google.cloud.firestore.pipeline.expressions.Expression.html#com_google_cloud_firestore_pipeline_expressions_Expression_parent__).[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-accessapproval/latest/com.google.cloud.accessapproval.v1.ProjectName.html#com_google_cloud_accessapproval_v1_ProjectName_toString__)())
                   .addAllAssetNames(Arrays.asList(assetNames))
                   .setContentType(contentType)
                   .setReadTimeWindow(readTimeWindow)

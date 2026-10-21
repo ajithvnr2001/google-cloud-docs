@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/list-clusters/
 title: List your Google Cloud Managed Service for Apache Kafka clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:28:09.573692+00:00
+fetched_at: 2026-10-21T11:59:21.228517+00:00
 ---
 
 # List your Google Cloud Managed Service for Apache Kafka clusters  |  Google Cloud Documentation
@@ -55,9 +55,12 @@ To list all your clusters in a project, follow these steps:
      * **Cluster name** : The unique identifier for your Managed Service for Apache Kafka cluster. You can use it to reference the cluster in various operations.
      * **Cluster state** : Indicates the current [operational status](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/reference/rpc/google.cloud.managedkafka.v1#google.cloud.managedkafka.v1.Cluster.State) of the cluster, such as **Active**.
      * **Region** : The geographical location where your cluster is hosted.
+     * **Bootstrap URL** : The [bootstrap address](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/view-cluster#view-bootstrap-address) that Kafka clients use to connect to the cluster.
      * **Memory** : The total amount of memory allocated to the cluster. This determines the capacity for handling message traffic and storage.
      * **vCPU** : The number of vCPUs assigned to the cluster. This affects the cluster's processing power and ability to handle concurrent operations.
      * **Labels** : Key-value pairs that you can attach to the cluster for organization, filtering, and automation purposes.
+  3. Optional: To find the cluster associated with a specific bootstrap address, enter the bootstrap URL in the **Filter** field.
+
 
 
 
@@ -69,16 +72,23 @@ To list all your clusters in a project, follow these steps:
 
 At the bottom of the Google Cloud console, a [Cloud Shell](https://docs.cloud.google.com/shell/docs/how-cloud-shell-works) session starts and displays a command-line prompt. Cloud Shell is a shell environment with the Google Cloud CLI already installed and with values already set for your current project. It can take a few seconds for the session to initialize. 
 
-  2. Run the [`gcloud managed-service-for-apache-kafka clusters list`](https://docs.cloud.google.com/sdk/gcloud/reference/managed-kafka/clusters/list) command:
+  2. Run the [`gcloud managed-kafka clusters list`](https://docs.cloud.google.com/sdk/gcloud/reference/managed-kafka/clusters/list) command:
          
          gcloud managed-kafka clusters list --location=LOCATION \
              --limit=LIMIT
          
 
+To find the cluster associated with a specific bootstrap address, filter by the `bootstrapAddress` field:
+         
+         gcloud managed-kafka clusters list --location=LOCATION \
+             --filter="bootstrapAddress:BOOTSTRAP_ADDRESS"
+         
+
 Replace the following:
 
-     * LOCATION: The location of the cluster.
+     * LOCATION: The location (region) of the cluster, such as `us-central1`. The region is also included as the third dot-separated segment of the bootstrap URL.
      * LIMIT: The maximum number of clusters to list.
+     * BOOTSTRAP_ADDRESS: The bootstrap URL or hostname of the cluster.
 
 
 
@@ -288,6 +298,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

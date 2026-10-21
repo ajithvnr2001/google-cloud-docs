@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/eval-python-sdk/evaluation-quickstart/
 title: Tutorial: Perform evaluation using the Python SDK \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:26:01.384312+00:00
+fetched_at: 2026-10-21T11:59:10.051307+00:00
 ---
 
 # Tutorial: Perform evaluation using the Python SDK  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

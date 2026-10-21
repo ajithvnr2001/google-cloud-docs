@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/secure-data-environments/
 title: Secure data environments in Google Cloud \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T10:25:38.426923+00:00
+fetched_at: 2026-10-21T12:22:11.355309+00:00
 ---
 
 # Secure data environments in Google Cloud  |  Cloud Architecture Center  |  Google Cloud Documentation

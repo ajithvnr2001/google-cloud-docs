@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/restrict-artifact-downloads/
 title: Restrict artifact downloads with download rules \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:26.132104+00:00
+fetched_at: 2026-10-21T12:22:51.098271+00:00
 ---
 
 # Restrict artifact downloads with download rules  |  Artifact Registry  |  Google Cloud Documentation
@@ -671,6 +671,7 @@ You can define conditions for your download rules with [Common Expression Langua
   * **`pkg.id`** : a string representing the package name of the artifact. Can be used with rules set at the repository level.
   * **`pkg.version.id`** : a string representing the version of the artifact.
   * **`pkg.version.tag`** : a string representing the tag of the artifact. Use only in a Docker repository.
+  * **`pkg.version.annotations`** : a map of key-value strings representing user-defined annotations on the artifact version in a standard repository.
 
 
 
@@ -691,6 +692,7 @@ You can use logical operators and built-in functions with CEL. The following are
           pkg.version.tag == 'tag1' #Artifact tag must be 'tag1'
           pkg.version.tag.startsWith('tag') #Artifact tag must start with 'tag'
           pkg.version.tag in ['tag1', 'tag2'] #Artifact tag must be a member of the list ['tag1', 'tag2']
+          'quarantined' in pkg.version.annotations && pkg.version.annotations['quarantined'] == 'true' #Artifact version has annotation 'quarantined' set to 'true'
         
 
 
@@ -707,6 +709,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/regional-persistent-disk/
 title: Create and manage regional disks \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:22.383420+00:00
+fetched_at: 2026-10-21T12:22:29.195759+00:00
 ---
 
 # Create and manage regional disks  |  Compute Engine  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback
 
 #  Create and manage regional disks Stay organized with collections  Save and categorize content based on your preferences. 
 
-[Hyperdisk Balanced High Availability and regional Persistent Disk](https://docs.cloud.google.com/compute/docs/disks/about-regional-persistent-disk) are storage options that let you implement high availability (HA) services in Compute Engine. Regional Persistent Disk and Hyperdisk Balanced High Availability synchronously replicate data between two zones in the same region and ensure HA for disk data for up to one zonal failure. The regional disk can be a boot disk or a non-boot disk. 
+[Hyperdisk Balanced High Availability and regional Persistent Disk](https://docs.cloud.google.com/compute/docs/disks/about-regional-persistent-disk) are storage options that let you implement high availability (HA) services in Compute Engine. Regional Persistent Disk and Hyperdisk Balanced High Availability synchronously replicate data between two zones in the same region and ensure HA for disk data for up to one zonal failure. The regional disk can be a boot disk or a data disk. You can attach regional disks only to instances that are in the same zones as the disk's replicas. 
 
-You can also allow different instances to concurrently access a Hyperdisk Balanced High Availability disk by setting the disk access mode. Regional disks can only be attached to instances in the same zones as the disk's replicas. For more information, see [Share a disk between instances](https://docs.cloud.google.com/compute/docs/disks/sharing-disks-between-vms).
+To allow different instances to concurrently access a Hyperdisk Balanced High Availability volume, set the access mode for the volume. For more information, see [Share a disk between instances](https://docs.cloud.google.com/compute/docs/disks/sharing-disks-between-vms).
 
 This document explains how to do the following tasks for regional disks:
 
@@ -127,17 +127,19 @@ You might also be able to get these permissions with [custom roles](https://docs
 
   * You can attach regional Persistent Disk only to VMs that use [E2](https://docs.cloud.google.com/compute/docs/general-purpose-machines#e2_machine_types), [N1](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n1_machines), [N2](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n2_machines), and [N2D](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n2d_machines) machine types.
   * You can attach Hyperdisk Balanced High Availability only to [supported machine types](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced-ha#machine-series-support). 
-  * You can't create a regional disk by cloning a Hyperdisk ML or Hyperdisk Throughput disk. You must create a snapshot of the source disk and then create a Hyperdisk Balanced High Availability disk from the snapshot. For more information, see [Change a zonal disk to a Hyperdisk Balanced High Availability disk.](https://docs.cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hdbha)
   * When using read-only mode, you can attach a regional Balanced Persistent Disk to a maximum of 10 VM instances.
   * The minimum size of a regional Standard Persistent Disk is 200 GiB.
   * You can only increase the size of a regional Persistent Disk or Hyperdisk Balanced High Availability volume; you can't decrease its size.
   * Regional Persistent Disk and Hyperdisk Balanced High Availability volumes have different performance characteristics than their corresponding zonal disks. For more information, see [About Persistent Disk performance](https://docs.cloud.google.com/compute/docs/disks/performance) and [Hyperdisk Balanced High Availability performance limits](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced-ha#perf-limits). 
+  * You can't change the size of a Hyperdisk Balanced High Availability volume that's in multi-writer mode if any of the instances that the volume is attached to is in a zone that's experiencing an outage. 
   * You can't use a Hyperdisk Balanced High Availability volume that's in multi-writer mode as a boot disk.
   * If you create a replicated disk by cloning a zonal disk, then the two zonal replicas aren't fully in sync at the time of creation. After creation, you can use the regional disk clone within 3 minutes, on average. However, you might need to wait for tens of minutes before the disk reaches a fully replicated state and the [ recovery point objective (RPO)](https://wikipedia.org/wiki/Recovery_point_objective) is close to zero. Learn how to [ check if your replicated disk is fully replicated](https://docs.cloud.google.com/compute/docs/disks/monitor-regional-persistent-disk-replica-state#determine_repd_replication_state).
   * You can't create regional disks in [AI zones](https://docs.cloud.google.com/compute/docs/regions-zones/ai-zones).
   * Creating a regional disk from an image has the following limitations: 
     * When you create a regional disk from an image, you can create one disk within a project every 5 minutes. You can issue up to 5 requests at once but you can't create more than 5 disks within a 25-minute period. 
     * Creating a regional disk from an image is in [Preview](https://cloud.google.com/products#product-launch-stages), and is slower than creating a zonal disk from an image. 
+  * You can't create a regional disk by cloning the source disk if the source disk is a Hyperdisk ML or Hyperdisk Throughput volume. You must [create a new Hyperdisk Balanced High Availability volume from a snapshot of the zonal disk](https://docs.cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hdbha). 
+
 
 
 
@@ -147,28 +149,38 @@ You can attach a regional Persistent Disk or Hyperdisk Balanced High Availabilit
 
 In a high availability setup, if the boot device is a regional disk, Google recommends that you don't pre-create and start the standby instance. Instead, at the failover stage, attach the existing regional disk when you create the standby instance by using the `forceAttach` option.
 
-You can create a regional boot disk from an image ([Preview](https://cloud.google.com/products#product-launch-stages)), a standard snapshot, or an instant snapshot.
+You can create a regional boot disk from any of the following Compute Engine resources:
+
+  * Standard and archive snapshots
+  * Public and custom images ([Preview](https://cloud.google.com/products#product-launch-stages))
+  * Instant snapshots
+  * Zonal boot disks, by cloning the disk ([Preview](https://cloud.google.com/products#product-launch-stages)).
+
+
 
 To use a regional disk as the boot disk for an instance, use one of the following methods.
 
-  1. Create the instance and the boot disk at the same time.
-  2. Create a regional boot disk, and then attach it to an instance:
+  * Create the instance and the boot disk at the same time.
+  * Create a regional boot disk, and then use the disk as the boot disk for a new or existing instance:
 
-     1. Create a regional boot disk from an image or snapshot of a disk.
-     2. Attach the regional boot disk to an instance.
+    1. Create a regional boot disk using one of the following methods:
 
-We recommend creating regional boot disks from snapshots and not from clones of zonal disks.
+       * [Clone an existing zonal boot disk](https://docs.cloud.google.com/compute/docs/disks/clone-duplicate-disks#create-regional-clone) ([Preview](https://cloud.google.com/products/#product-launch-stages))
+       * Create a new disk from an image ([Preview](https://cloud.google.com/products/#product-launch-stages)) or snapshot
+    2. Attach the regional boot disk to an instance.
+
+We recommend creating regional boot disks from snapshots and not from clones of zonal boot disks.
 
 
 
 
 To failover a regional boot disk to a running standby instance in the replica zone, use the steps described in Attach a regional boot disk to an instance.
 
-### Size limits and reference names for regional disks
+## Size limits and reference names for regional disks
 
 The size you specify for a regional disk must be within the ranges listed in following table.
 
-If you create a regional disk with the Google Cloud CLI, REST, or the Cloud Client Libraries for Compute Engine, indicate the disk type to create by providing the value in the **Reference name** column in the following table.
+When you create a regional disk with the Google Cloud CLI, REST, or the Cloud Client Libraries for Compute Engine, you can indicate the type of disk to create by providing the value in the **Reference name** column in the following table.
 
 Disk type | Reference name | Minimum size | Maximum size | Default size  
 ---|---|---|---|---  
@@ -182,7 +194,7 @@ Regional: 200 GiB | 64 TiB | 500 GiB
   
 ## Create a regional disk from an image or snapshot
 
-Create a regional Persistent Disk or Hyperdisk Balanced High Availability volume. The disk must be in the same region as the compute instance that you plan to attach it to.
+Create a regional Persistent Disk or Hyperdisk Balanced High Availability volume that you can use as a boot or data disk for an instance. The regional disk must be in the same region as the compute instance that you plan to attach it to.
 
 If you create a Hyperdisk Balanced High Availability volume, you can also allow different instances to concurrently access the disk by setting the disk access mode. For more information, see [Share a disk between instances](https://docs.cloud.google.com/compute/docs/disks/sharing-disks-between-vms).
 
@@ -255,12 +267,12 @@ You can create a blank disk, or you can create the disk from an image ([Preview]
 Replace the following: 
 
   * `DISK_NAME`: the name of the new disk
-  * `DISK_SIZE`: the size, in GiB, of the new disk. Must be within the size limits for the disk type.
+  * `DISK_SIZE`: the size, in GiB, of the new disk. Must be within the size limits for the disk type. 
   * `DISK_TYPE`: For regional Persistent Disk, this is the type of the regional disk. The default value is `pd-standard`. For Hyperdisk, specify the value `hyperdisk-balanced-high-availability`.
   * `REGION`: the region for the regional disk to reside in, for example: `europe-west1`
   * `ZONE1`,`ZONE2`: the zones within the region where the two disk replicas are located, for example: `europe-west1-b,europe-west1-c`
   * `DISK_ACCESS_MODE`: optional: For Hyperdisk Balanced High Availability disks, specify how instances can access the data on the disk. The following values are supported: 
-    * `READ_WRITE_SINGLE`, for read-write access from one instance. This is the default.
+    * `READ_WRITE_SINGLE`, for read-write access from one instance. This is the default. 
     * `READ_WRITE_MANY`, for read-write access from multiple instances.
 
 
@@ -283,12 +295,12 @@ To create the disk from a **standard or archive snapshot** , use the `--source-s
 Replace the following: 
 
   * `DISK_NAME`: the name of the new disk
-  * `DISK_SIZE`: the size, in GiB, of the new disk. Must be within the size limits for the disk type.
+  * `DISK_SIZE`: the size, in GiB, of the new disk. Must be within the size limits for the disk type. 
   * `DISK_TYPE`: For regional Persistent Disk, this is the type of the regional disk. The default value is `pd-standard`. For Hyperdisk, specify the value `hyperdisk-balanced-high-availability`.
   * `REGION`: the region for the regional disk to reside in, for example: `europe-west1`
   * `ZONE1`,`ZONE2`: the zones within the region where the two disk replicas are located, for example: `europe-west1-b,europe-west1-c`
   * `DISK_ACCESS_MODE`: optional: For Hyperdisk Balanced High Availability disks, specify how instances can access the data on the disk. The following values are supported: 
-    * `READ_WRITE_SINGLE`, for read-write access from one instance. This is the default.
+    * `READ_WRITE_SINGLE`, for read-write access from one instance. This is the default. 
     * `READ_WRITE_MANY`, for read-write access from multiple instances.
   * `SNAPSHOT_NAME` with the name of the snapshot. 
   * `SOURCE_REGION`: optional. If the snapshot is a regionally scoped snapshot, specify the region that the snapshot is scoped to.
@@ -325,12 +337,12 @@ To create the disk from a specific version of a public image or from a custom im
 Replace the following: 
 
   * `DISK_NAME`: the name of the new disk
-  * `DISK_SIZE`: the size, in GiB, of the new disk. Must be within the size limits for the disk type.
+  * `DISK_SIZE`: the size, in GiB, of the new disk. Must be within the size limits for the disk type. 
   * `DISK_TYPE`: For regional Persistent Disk, this is the type of the regional disk. The default value is `pd-standard`. For Hyperdisk, specify the value `hyperdisk-balanced-high-availability`.
   * `REGION`: the region for the regional disk to reside in, for example: `europe-west1`
   * `ZONE1`,`ZONE2`: the zones within the region where the two disk replicas are located, for example: `europe-west1-b,europe-west1-c`
   * `DISK_ACCESS_MODE`: optional: For Hyperdisk Balanced High Availability disks, specify how instances can access the data on the disk. The following values are supported: 
-    * `READ_WRITE_SINGLE`, for read-write access from one instance. This is the default.
+    * `READ_WRITE_SINGLE`, for read-write access from one instance. This is the default. 
     * `READ_WRITE_MANY`, for read-write access from multiple instances.
   * `IMAGE_NAME` with the name of the image, for example: `debian-13-trixie-v20260902`. 
 
@@ -540,9 +552,9 @@ After you create the disk, you can use it as a boot disk for an instance or atta
 
 ## Attach a regional disk to your instance
 
-For disks that are not boot disks, after you create a regional Persistent Disk or Hyperdisk Balanced High Availability volume, you can attach it to an instance. The instance must be in the same region as the disk.
-
 To attach a regional boot disk to an instance, see Attach a regional boot disk to an instance.
+
+For disks that are not boot disks, after you create a regional Persistent Disk or Hyperdisk Balanced High Availability volume, you can attach it to an instance. The instance must be in the same region as the disk.
 
 To attach a Hyperdisk Balanced High Availability disk to multiple instances, repeat the procedure in this section for each instance. You can attach Hyperdisk Balanced High Availability disks only in read-write mode.
 
@@ -656,29 +668,34 @@ Replace the following:
 
 
 
-For non-boot disks, after you create and attach a blank regional disk to a instance, you must [format and mount the disk](https://docs.cloud.google.com/compute/docs/disks/format-mount-disk-linux), so that the operating system can use the available storage space.
+For non-boot disks, after you create and attach a blank regional disk to an instance, you must [format and mount the disk](https://docs.cloud.google.com/compute/docs/disks/format-mount-disk-linux), so that the operating system can use the available storage space.
 
 ## Change a zonal disk to a regional disk
 
-To convert an existing zonal disk of the following types to a regional disk, [Create a regional disk by cloning the source disk](https://docs.cloud.google.com/compute/docs/disks/clone-duplicate-disks#create-regional-clone).
+How you change a zonal disk to a regional disk depends on the type of the zonal disk:
 
-  * Hyperdisk Balanced
-  * Hyperdisk Extreme
-  * Balanced Persistent Disk
-  * SSD Persistent Disk
-  * Standard Persistent Disk
+  * To convert an existing zonal disk of the following types to a regional disk, create a clone of the source disk.
+
+    * Hyperdisk Balanced volumes
+    * Hyperdisk Extreme volumes
+    * Balanced, SSD, and Standard Persistent Disk volumes
+
+To learn how to clone a disk, see [Create a regional disk by cloning the source disk](https://docs.cloud.google.com/compute/docs/disks/clone-duplicate-disks#create-regional-clone).
+
+  * To convert a disk of any of the following types to a regional disk, follow the steps in [Change a zonal disk to a Hyperdisk Balanced High Availability disk](https://docs.cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hdbha):
+
+    * Hyperdisk Throughput
+    * Hyperdisk ML
 
 
 
-To convert a Hyperdisk ML or Hyperdisk Throughput volume to a regional disk, create a new Hyperdisk Balanced High Availability disk from a snapshot of the existing disk, as described in [Change a zonal disk to a Hyperdisk Balanced High Availability disk](https://docs.cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hdbha).
-
-## Create an instance with a new regional boot disk
+## Create an instance that uses a new regional boot disk
 
 When setting up a highly available compute instance, you can create the primary instance with a new regional boot disk. When you create an instance at the same time as its regional boot disk, you can create the boot disk from an image ([Preview](https://cloud.google.com/products/#product-launch-stages)) or a standard snapshot.
 
 **Important:** You can't use a disk that's in multi-writer mode as a boot disk.
 
-To create a new regional disk from an existing zonal disk instead, you must first Change the zonal disk to a regional disk, and then create the instance with the new regional disk.
+To create a new regional disk from an existing zonal disk instead, you must first Change the zonal disk to a regional disk, and then create the instance with the regional disk that you created.
 
 This section describes how to create an instance with a new, regional, boot disk using the Google Cloud console, Google Cloud CLI, or REST.
 
@@ -878,9 +895,9 @@ Replace the following:
     }
     
 
-## Create a new instance with additional regional disks
+## Create a new instance and attach regional data disks
 
-When creating an instance, you can optionally include regional Persistent Disk or Hyperdisk Balanced High Availability volumes as additional disks.
+When creating an instance, you can optionally include regional Persistent Disk or Hyperdisk Balanced High Availability volumes as additional data disks.
 
 To create and attach a regional Persistent Disk or Hyperdisk Balanced High Availability volume to an instance during instance creation, see either of the following:
 
@@ -891,7 +908,7 @@ To create and attach a regional Persistent Disk or Hyperdisk Balanced High Avail
 
 ## Attach a regional boot disk to an instance
 
-Use the following steps to:
+Follow the steps in this section to complete any of the following tasks:
 
   * Replace the boot disk of an existing instance with a regional boot disk.
   * Failover a regional boot disk to a hot standby instance that is running in the backup zone. You do this by attaching the regional disk to the instance as the boot disk.
@@ -899,6 +916,8 @@ Use the following steps to:
 
 
 These steps assume that the regional disk and instance already exist.
+
+To attach a regional boot disk to an instance, use the gcloud CLI or REST.
 
 ###  gcloud 
 
@@ -1012,15 +1031,28 @@ To view detailed information about your regional disks, use the following:
 
 ## Resize a regional disk
 
-If instances with regional disks require additional storage space, you can resize the disks. You can resize disks at any time, regardless of whether the disk is attached to a running instance. If you need to separate your data into unique volumes, create multiple secondary disks for the instance. For Hyperdisk Balanced High Availability you can also increase the IOPS and throughput limits for the disk.
+If instances with regional disks require additional storage space, you can resize the disks. You can resize a regional disk at any time, even if the disk is attached to a running instance. If you need to separate your data into unique volumes, create multiple secondary disks for the instance. For Hyperdisk Balanced High Availability you can also increase the IOPS and throughput limits for the disk.
 
-The command for resizing a regional disk is very similar to that for resizing a zonal disk. However, you must specify a region instead of a zone for the disk location.
+### Decrease the size of a regional disk
 
 You can only increase, and not decrease, the size of a disk. To decrease the disk size, you must create a new disk with a smaller size. Until you delete the original, larger disk, you are charged for both disks.
 
-For instructions on how to modify a regional disk, see the following: 
+### Considerations for resizing a Hyperdisk Balanced High Availability volume that's in multi-writer mode
 
-  * Regional Persistent Disk: [Increase the size of a persistent disk](https://docs.cloud.google.com/compute/docs/disks/resize-persistent-disk#increase_the_size_of_a_disk)
+You can increase the size of a Hyperdisk Balanced High Availability volume that's in multi-writer mode while it is attached to multiple instances. However, you must keep the following constraints in mind:
+
+  * You can't increase the size of a Hyperdisk Balanced High Availability volume that's in multi-writer mode if any of the instances that the volume is attached to is in a zone that's experiencing an outage.
+  * You must wait for the resize operation to complete before you attempt to access the disk from any of the attached instances.
+  * After the resize operation completes, you must verify that the updated disk size is visible to all the attached instances.
+  * After you verify that the updated disk size is visible to all the attached instances, you must connect to one of the attached instances to resize the file system.
+
+
+
+### How to increase the size of a regional disk
+
+The command for resizing a regional disk is very similar to that for resizing a zonal disk. However, you must specify a region instead of a zone for the disk location. For instructions on how to modify a regional disk, see the following: 
+
+  * Regional Persistent Disk: [Increase the size of a Persistent Disk](https://docs.cloud.google.com/compute/docs/disks/resize-persistent-disk#increase_the_size_of_a_disk)
   * Hyperdisk Balanced High Availability: [Modify a Hyperdisk volume](https://docs.cloud.google.com/compute/docs/disks/modify-hyperdisks#modify_hyperdisk)
 
 
@@ -1042,6 +1074,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

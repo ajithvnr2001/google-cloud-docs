@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/release-notes-1162/
 title: Google Distributed Cloud air-gapped 1.16.2 release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:16.364323+00:00
+fetched_at: 2026-10-21T11:58:09.866522+00:00
 ---
 
 # Google Distributed Cloud air-gapped 1.16.2 release notes  |  Google Cloud Documentation
@@ -91,6 +91,12 @@ The following issues are identified:
 
 
 
+**Inventory**
+
+  * Incorrect data plane network bond generated on `Cell`, `Server`, and `BaremetalHostNetwork` custom resources for B300 (`d4-highgpu2-256-gdc-metal`) servers when `fe-s6p1` and `fe-s6p2` aren't ordered first in `devices.csv`. 
+
+
+
 **Monitoring**
 
   * Cortex `VirtualService` and `IstioAuthorizationResource` resources, and Grafana `IstioAuthorizationResource` resources, remain in the cluster after a project is deleted. 
@@ -131,6 +137,12 @@ The following issues are identified:
 **Vertex AI**
 
   * Vertex AI Service Usage dashboards display a `No data` state because the PromQL queries contain restrictive filters for NVIDIA resources and Workbench labels that might not be present in the environment. 
+
+
+
+**Virtual machines**
+
+  * VMs in tenant organizations that use the package repository servers of the `gdchservices` organization can't install or update packages from `pkg.org.internal` and receive `503 Service Unavailable` errors, because the `pkg-infra-cert` certificate is generated without the DNS suffix. 
 
 
 
@@ -243,6 +255,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

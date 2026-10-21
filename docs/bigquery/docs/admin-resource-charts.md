@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/admin-resource-charts/
 title: Monitor health and resource utilization \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T13:44:19.770055+00:00
+fetched_at: 2026-10-21T12:22:52.601392+00:00
 ---
 
 # Monitor health and resource utilization  |  BigQuery  |  Google Cloud Documentation
@@ -327,9 +327,9 @@ Metric name | Description
 ---|---  
 **Reservation - Slot usage** | Monitors total slot usage for the selected time period.  
 **Reservation - Idle slot usage** | Monitors slot usage in excess of the reservation's capacity in the selected time period. This metric lets you monitor the idle slots borrowed from other reservations and commitments, or the rounding imprecisions in the usage data. The latter may cause this metric to be a non-zero value, even if idle slots sharing is disabled.   
-The idle slots usage is an approximate value and is computed based on **Slot Usage** , **Committed Slots** , and **Autoscaled Slots**. If the slot usage value exceeds the **Commitment Capacity** and **Autoscaled Slots** , then the chart groups the remaining as idle slots.   
+Usage data might be delayed or incomplete for the most recent 5 minutes.  
 **Reservation - Baseline used slots** | Monitors slots used from the reservation baseline.  
-**Reservation - Autoscaled used slots** | Monitors slots used from reservation autoscaled slots.  
+**Reservation - Autoscaled used slots** | Monitors slots used from reservation autoscaled slots. Usage data might be delayed or incomplete for the most recent 5 minutes.  
   
 ##### Edition utilization overview
 
@@ -456,7 +456,7 @@ To filter the chart data, apply filters in the filter pane. You can only select 
 
 ### View project-level resource utilization data
 
-You can analyze project-level resource utilization using the same configuration steps as you would for viewing organization-level data. Charts only display project-level data and configuration options (organizational-level options are greyed out). This project-level scope shows the overall resource utilization, regardless of billing mode within the contextual project.
+You can analyze project-level resource utilization using the same configuration steps as you would for viewing organization-level data. Charts only display project-level data and configuration options (organizational-level options are grayed-out). This project-level scope shows the overall resource utilization, regardless of billing mode within the contextual project.
 
 ### Resource utilization chart limitations
 
@@ -567,7 +567,7 @@ The chart refreshes after you apply filters to show data within the selected par
 
 ## Monitor autoscaling
 
-When you monitor slot usage with [administrative resource charts](https://docs.cloud.google.com/bigquery/docs/admin-resource-charts), you might see significantly more scaled slots than your slot usage because the charts smooth the number of used slots over the alignment period. To view autoscale slot usage with more precise details, reduce the time frame option. This automatically updates the alignment period to a smaller increment.
+When you monitor slot usage with [administrative resource charts](https://docs.cloud.google.com/bigquery/docs/admin-resource-charts), you might see significantly more scaled slots than your slot usage because the charts smooth the number of used slots over the alignment period. To view autoscale slot usage with more precise details, reduce the timeframe option. This automatically updates the alignment period to a smaller increment.
 
 In the following example, the chart displays significantly more scaled slots than the workload demands.
 
@@ -575,7 +575,7 @@ In the following example, the chart displays significantly more scaled slots tha
 appear more than the slot usage
 demands.](https://docs.cloud.google.com/static/bigquery/images/monitoring-1-minute-interval.png)
 
-However, if you shorten the time frame option so that the alignment period is two seconds, you can see that the autoscaler scales to the workload demand and displays more accurate data. You can adjust the time frame option by dragging the start and end ranges of the time frame option. To display the most accurate workload demand data, select **p99** from the **Metric** list.
+However, if you shorten the timeframe option so that the alignment period is two seconds, you can see that the autoscaler scales to the workload demand and displays more accurate data. You can adjust the timeframe option by dragging the start and end ranges of the timeframe option. To display the most accurate workload demand data, select **p99** from the **Metric** list.
 
 ![The alignment period is set to a two second interval and the scaled slots
 are appropriate for the workload
@@ -674,6 +674,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/security/implement-preemptive-cyber-defense/
 title: Implement preemptive cyber defense \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:18.112091+00:00
+fetched_at: 2026-10-21T12:22:24.935556+00:00
 ---
 
 # Implement preemptive cyber defense  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/database-migration/docs/postgres/diagnose-issues/
 title: Diagnose issues for homogeneous migrations to Cloud SQL for PostgreSQL \u00a0|\u00a0 Database Migration Service for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:50:20.260126+00:00
+fetched_at: 2026-10-21T11:59:37.040565+00:00
 ---
 
 # Diagnose issues for homogeneous migrations to Cloud SQL for PostgreSQL  |  Database Migration Service for PostgreSQL  |  Google Cloud Documentation
@@ -14,7 +14,7 @@ fetched_at: 2026-10-14T07:50:20.260126+00:00
   * [ Databases ](https://docs.cloud.google.com/docs/databases)
   * [ Database Migration Service ](https://docs.cloud.google.com/database-migration/docs)
   * [ PostgreSQL ](https://docs.cloud.google.com/database-migration/docs/postgres)
-  * [ Resources ](https://docs.cloud.google.com/database-migration/docs/postgres/resources)
+  * [ Guides ](https://docs.cloud.google.com/database-migration/docs/postgres/scenario-overview)
 
 
 
@@ -39,7 +39,7 @@ In the following table, you can find some examples of issues and how they can be
 
 For this problem... | The issue might be... | Try this...  
 ---|---|---  
-When you migrate to [ an existing destination instance](https://docs.cloud.google.com/database-migration/docs/postgres/create-migration-job-existing-instance), you receive the following error message: `The destination instance contains existing data or user defined entities (for example databases, tables, or functions). You can only migrate to empty instances. Clear your destination instance and retry the migration job.` | Your destination Cloud SQL instance contains extra data. You can only migrate to existing instances that are empty. See [ Known limitations](https://docs.cloud.google.com/database-migration/docs/postgres/known-limitations#existing-instance-limitations). | Promote your destination instance to make it a read/write instance, remove the extra data, and re-try the migration job. See  Clear extra data from your existing destination instance.   
+When you migrate to [an existing destination instance](https://docs.cloud.google.com/database-migration/docs/postgres/create-migration-job-existing-instance), you receive the following error message: `The destination instance contains existing data or user defined entities (for example databases, tables, or functions). You can only migrate to empty instances. Clear your destination instance and retry the migration job.` | Your destination Cloud SQL instance contains extra data. You can only migrate to existing instances that are empty. See [Known limitations](https://docs.cloud.google.com/database-migration/docs/postgres/known-limitations#existing-instance-limitations). | Promote your destination instance to make it a read/write instance, remove the extra data, and re-try the migration job. See Clear extra data from your existing destination instance.   
 Failure connecting to the source database instance.  | There was a connectivity issue between the source database instance and the destination instance. | Follow the steps in [Debugging connectivity](https://docs.cloud.google.com/database-migration/docs/postgres/debugging-connectivity).  
 Failure running migration job due to incompatible source and destination database versions.  | The source and destination database versions aren't a supported combination. Specifically, the source database version provided is incompatible with the destination database version. | Make sure that the [destination database version](https://docs.cloud.google.com/database-migration/docs/postgres/migration-src-and-dest) is the same or one major version above the source database version. Then, create a new migration job.  
 Data definition languages (DDLs) or data manipulation languages (DMLs) are blocked on the source.  | DDLs that require the `ACCESS EXCLUSIVE` [lock](https://www.postgresql.org/docs/10/explicit-locking.html#LOCKING-TABLES) and are running during the full dump phase are blocked. | During the initial sync process (full dump), DDLs or programs requiring `ACCESS EXCLUSIVE` [locks](https://www.postgresql.org/docs/10/explicit-locking.html#LOCKING-TABLES) such as `ALTER TABLE` or `DROP TABLE` should be avoided on the tables. Otherwise, the DDLs or programs will wait until the initial sync finishes. For example, if a table is still in the initial sync process and an `ALTER TABLE` command is executed on the same table, then the command won't be run and subsequent DDL and DML commands will be blocked until the initial sync finishes.  
@@ -49,10 +49,10 @@ When migrating to PostgreSQL version 15, after multiple subsequent connection re
   * You receive a `Cannot connect to invalid database` error message. 
   * The [Storage usage migration job metric](https://docs.cloud.google.com/database-migration/docs/postgres/migration-job-metrics) shows no progress after a long time when the migration job is performing the full database dump. 
 
-|  This problem is often attributed to the deadlock issue in the `pglogical` extension. For more information, see the [ `pglogical` issue tracker in GitHub](https://github.com/2ndQuadrant/pglogical/issues/418).  | Retry the migration job, or migrate to an intermediate PostgreSQL version first. For more details, see  Error message: `Cannot connect to invalid database`.   
+|  This problem is often attributed to the deadlock issue in the `pglogical` extension. For more information, see the [`pglogical` issue tracker in GitHub](https://github.com/2ndQuadrant/pglogical/issues/418).  | Retry the migration job, or migrate to an intermediate PostgreSQL version first. For more details, see Error message: `Cannot connect to invalid database`.   
 Error Message: `Replication user 'x' doesn't have sufficient privileges.` | The user who's using Database Migration Service doesn't have the required privileges to perform the designated operation. | Follow [these guidelines](https://docs.cloud.google.com/database-migration/docs/postgres/configure-source-database#pglogical) to ensure that this user has the required privileges.  
-Error Message: `Unable to connect to source database server.` | Database Migration Service can't establish a connection to the source database server. | Make sure that the source and destination database instances can communicate with each other, and that you've completed all of the required prerequsities that appeared when you [defined your settings for the migration job](https://docs.cloud.google.com/database-migration/docs/postgres/create-migration-job#src).  
-Error Message: `The source database 'wal_level' configuration must be equal to 'logical'.` | The `wal_level` for the source database is set to a value other than `logical`.  | Set the `wal_level` to `logical`.  
+Error Message: `Unable to connect to source database server.` | Database Migration Service can't establish a connection to the source database server. | Make sure that the source and destination database instances can communicate with each other, and that you've completed all of the required prerequisites that appeared when you [defined your settings for the migration job](https://docs.cloud.google.com/database-migration/docs/postgres/create-migration-job#src).  
+Error Message: `The source database 'wal_level' configuration must be equal to 'logical'.` | The `wal_level` for the source database is set to a value other than `logical`. | Set the `wal_level` to `logical`. See [WAL level configuration](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-WAL-LEVEL).  
 Error Message: `The source database 'max_replication_slots' configuration is not sufficient.` | The `max_replication_slots` parameter wasn't configured correctly. | Follow [these guidelines](https://docs.cloud.google.com/database-migration/docs/postgres/configure-source-database#pglogical) to set this parameter correctly.  
 Error Message: `The source database 'max_wal_senders' configuration is not sufficient.` | The `max_wal_senders` parameter wasn't configured correctly. | Follow [these guidelines](https://docs.cloud.google.com/database-migration/docs/postgres/configure-source-database#pglogical) to set this parameter correctly.  
 Error Message: `The source database 'max_worker_processes' configuration is not sufficient.` | The `max_worker_processes` parameter wasn't configured correctly. | Follow [these guidelines](https://docs.cloud.google.com/database-migration/docs/postgres/configure-source-database#pglogical) to set this parameter correctly.  
@@ -65,12 +65,12 @@ The full dump is slow. | The Cloud SQL destination might be slow in importing la
 
   * When creating the destination, set the data disk size so that it's close to the final size. The full dump phase uses an I/O write-intensive workload, and a larger disk size has a better I/O performance. For more information, see [Block storage performance](https://docs.cloud.google.com/compute/docs/disks/performance).
   * Choose a higher tier for the Cloud SQL destination to get the maximum available network and disk bandwidth.
-  * Tune the Cloud SQL destination's `[max_wal_size](https://www.postgresql.org/docs/current/static/runtime-config-wal.html#GUC-MAX-WAL-SIZE)` flag. Typically, 32 GB or 64 GB is a good value to set for this flag. Updating this flag doesn't require you to restart the server.
+  * Tune the Cloud SQL destination's [`max_wal_size`](https://www.postgresql.org/docs/current/static/runtime-config-wal.html#GUC-MAX-WAL-SIZE) flag. Typically, 32 GB or 64 GB is a good value to set for this flag. Updating this flag doesn't require you to restart the server.
 
   
-Error Message: `subscriber {subscriber_name} initialization failed during nonrecoverable step (d), please try the setup again` | The migration job failed during the full dump phase and the job isn't recoverable. The source database instance was restarted or in recovery mode, or the replication connections ended because of an insufficient value set for the [`wal_sender_timeout`](https://www.postgresql.org/docs/current/runtime-config-replication.html#GUC-WAL-SENDER-TIMEOUT) parameter.  To find the root cause of the problem:
+Error Message: `subscriber {subscriber_name} initialization failed during nonrecoverable step (d), please try the setup again` | The migration job failed during the full dump phase and the job isn't recoverable. The source database instance was restarted or in recovery mode, or the replication connections ended because of an insufficient value set for the [`wal_sender_timeout`](https://www.postgresql.org/docs/current/runtime-config-replication.html#GUC-WAL-SENDER-TIMEOUT) parameter. To find the root cause of the problem:
 
-  1. Go to the [Logs Explorer](https://console.cloud.google.com/logs/query) page in the Google Cloud Console.
+  1. Go to the [Logs Explorer](https://console.cloud.google.com/logs/query) page in the Google Cloud console.
   2. From the resource list, select your Cloud SQL replica. A list of the most recent logs for the replica appears.
   3. From the log file names, select `postgres.log`.
   4. Set the log's severity level to all levels above `Warning`. The first error logs may be the root cause of the failure.
@@ -82,29 +82,29 @@ Error Message: `subscriber {subscriber_name} initialization failed during nonrec
   * Restart the migration job, and then try again.
 
   
-Error Message: `ERROR: unknown column name {column_name}` | A column was added to a replicated table on the primary node but not on the replica node.  |  Only data manipulation language (DML) changes are updated automatically during continuous migrations. Managing data definition language (DDL) changes so that the source and destination databases remain compatible is the responsibility of the user, and can be achieved in two ways:
+Error Message: `ERROR: unknown column name {column_name}` | A column was added to a replicated table on the primary node but not on the replica node. |  Only data manipulation language (DML) changes are updated automatically during continuous migrations. Managing data definition language (DDL) changes so that the source and destination databases remain compatible is the responsibility of the user, and can be achieved in two ways:
 
   * Stop writes to the source database and run the DDL commands in both source and destination. Before running the DDL commands on the destination, grant the `cloudsqlexternalsync` role to the Cloud SQL user applying the DDL changes.
-  * Use the `pglogical.replicate_ddl_command` to allow DDL commands to be run on the source and destination at a consistent point. The user running the commands must have the same username on both the source and the destination, and should be the superuser or the owner of the artifact being migrated (for example, the table, sequence, view, or database).
-See [Continuous migration](https://docs.cloud.google.com/database-migration/docs/postgres/migration-fidelity#continuous_migration) to find the examples of using the `pglogical.replicate_ddl_command.` 
-  
+  * Use `pglogical.replicate_ddl_command` to allow DDL commands to be run on the source and destination at a consistent point. The user running the commands must have the same username on both the source and the destination, and should be the superuser or the owner of the artifact being migrated (for example, the table, sequence, view, or database).
+
+See [Continuous migration](https://docs.cloud.google.com/database-migration/docs/postgres/migration-fidelity#continuous_migration) to find examples of using `pglogical.replicate_ddl_command`.  
 Error Message: `ERROR: cannot truncate a table referenced in a foreign key constraint` | The user tried to truncate a table that has a foreign key constraint. |  Remove the foreign key constraint first, and then truncate the table.  
-Error Message: `ERROR: connection to other side has died` | The replication connection ended because of an insufficient value set for the `wal_sender_timeout parameter`. The error usually occurs during the replication phase after the success of the initial dump. |  Consider increasing the [`wal_sender_timeout`](https://www.postgresql.org/docs/current/runtime-config-replication.html#GUC-WAL-SENDER-TIMEOUT) parameter value or disable the timeout mechanism by setting its value to `0` on the source database instance.  
-Warning Message: `migration job test configuration has returned the following warnings: Some table(s) have limited support.` | Source has tables with limited support, for example tables without primary keys. |  This is a warning message. You can proceed with the migration, but note that unsupported entities (for example tables without primary keys) don't get migrated. For more information, review [ Configure your source databases](https://docs.cloud.google.com/database-migration/docs/postgres/configure-source-database#configure-your-source-databases-postgres).   
+Error Message: `ERROR: connection to other side has died` | The replication connection ended because of an insufficient value set for the `wal_sender_timeout` parameter. The error usually occurs during the replication phase after the success of the initial dump. |  Consider increasing the [`wal_sender_timeout`](https://www.postgresql.org/docs/current/runtime-config-replication.html#GUC-WAL-SENDER-TIMEOUT) parameter value or disable the timeout mechanism by setting its value to `0` on the source database instance.  
+Warning Message: `migration job test configuration has returned the following warnings: Some table(s) have limited support.` | Source has tables with limited support, for example tables without primary keys. |  This is a warning message. You can proceed with the migration, but note that unsupported entities (for example tables without primary keys) don't get migrated. For more information, review [Configure your source databases](https://docs.cloud.google.com/database-migration/docs/postgres/configure-source-database).   
 When you migrate selected databases and the migration job is unable to replicate data to one or more databases, a **Failed** status is displayed in the list of databases. | Various migration job errors. | In the **Errors** column, click **View errors** and fix them. You can also remove the failed databases from the migration job. For more information about removing a failed database from a migration job, see [Manage migration jobs](https://docs.cloud.google.com/database-migration/docs/postgres/migration-job-actions).  
   
 ### Clear extra data from your existing destination instance
 
-When you migrate to [ an existing destination instance](https://docs.cloud.google.com/database-migration/docs/postgres/create-migration-job-existing-instance), you receive the following error message: `The destination instance contains existing data or user defined entities (for example databases, tables, or functions). You can only migrate to empty instances. Clear your destination instance and retry the migration job.`
+When you migrate to [an existing destination instance](https://docs.cloud.google.com/database-migration/docs/postgres/create-migration-job-existing-instance), you receive the following error message: `The destination instance contains existing data or user defined entities (for example databases, tables, or functions). You can only migrate to empty instances. Clear your destination instance and retry the migration job.`
 
-This issue can occur if your destination instance contains extra data. You can only migrate to existing instances that are empty. See [ Known limitations](https://docs.cloud.google.com/database-migration/docs/postgres/known-limitations#existing-instance-limitations).
+This issue can occur if your destination instance contains extra data. You can only migrate to existing instances that are empty. See [Known limitations](https://docs.cloud.google.com/database-migration/docs/postgres/known-limitations#existing-instance-limitations).
 
 #### Things to try
 
 Clear extra data from your destination instance and start the migration job again by performing the following steps:
 
-  1. [ Stop the migration job](https://docs.cloud.google.com/database-migration/docs/postgres/migration-job-actions).
-  2. At this point, your destination Cloud SQL instance is in `read-only` mode. [ Promote the destination instance](https://docs.cloud.google.com/sql/docs/postgres/replication/configure-replication-from-external#promote_the_replica) to gain write access. 
+  1. [Stop the migration job](https://docs.cloud.google.com/database-migration/docs/postgres/migration-job-actions).
+  2. At this point, your destination Cloud SQL instance is in `read-only` mode. [Promote the destination instance](https://docs.cloud.google.com/sql/docs/postgres/replication/configure-replication-from-external#promote_the_replica) to gain write access. 
   3. [Connect to your destination Cloud SQL instance](https://docs.cloud.google.com/sql/docs/postgres/connect-overview).
   4. Remove extra data from your destination instance databases. Your destination can only contain system configuration data. Destination databases can't contain user data (such as tables). There are different SQL statements you can run on your databases to find non-system data, for example: 
 
@@ -115,7 +115,7 @@ Clear extra data from your destination instance and start the migration job agai
 
 #### Example SQL statement to retrieve non-system data in the `postgres` database (click to expand)
 
-The `postgres` database is a system database, but it can contain non-system data. Make sure you run these statements on the `postgres` database. If you use the `psql` client to connect to the destination instance, you can switch to another database without resetting your connection by using the [ `\connect {database_name_here}`](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMAND-C-LC) command.
+The `postgres` database is a system database, but it can contain non-system data. Make sure you run these statements on the `postgres` database. If you use the `psql` client to connect to the destination instance, you can switch to another database without resetting your connection by using the [`\connect {database_name_here}`](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMAND-C-LC) command.
          
          SELECT table_schema, table_name FROM information_schema.tables
          WHERE table_schema != 'information_schema' AND table_schema not like 'pg\_%';
@@ -151,15 +151,15 @@ For each database, run the following commands as a user with the `superuser` pri
 
   1. Get the replication slot names from the error message, and then run the following command to drop the slots, one by one:
          
-         select pg_drop_replication_slot({slot_name});
+         SELECT pg_drop_replication_slot('slot_name');
 
   2. If the replication slot names aren't available in the error message, then run the following command to query for the existing replication slots:
          
-         select pg_drop_replication_slot(slot_name) from pg_replication_slots where slot_name like '%cloudsql%' and active = 'f';
+         SELECT pg_drop_replication_slot(slot_name) FROM pg_replication_slots WHERE slot_name LIKE '%cloudsql%' AND active = 'f';
 
   3. If there are no Cloud SQL replicas using the source instance, then run the following command to clean up `pglogical` settings:
          
-         select pglogical.drop_node(node_name) from pglogical.node where node_name like 'cloudsql';
+         SELECT pglogical.drop_node(node_name) FROM pglogical.node WHERE node_name LIKE 'cloudsql';
 
   4. If the `pglogical` extension isn't needed anymore, then run the following command to uninstall the extension:
          
@@ -181,7 +181,7 @@ When migrating to PostgreSQL version 15, after multiple subsequent connection re
 
 #### The issue might be
 
-This problem is often attributed to the deadlock issue in the `pglogical` extension. For more information, see the [ `pglogical` issue tracker in GitHub](https://github.com/2ndQuadrant/pglogical/issues/418).
+This problem is often attributed to the deadlock issue in the `pglogical` extension. For more information, see the [`pglogical` issue tracker in GitHub](https://github.com/2ndQuadrant/pglogical/issues/418).
 
 #### Things to try
 
@@ -190,14 +190,16 @@ This problem is often attributed to the deadlock issue in the `pglogical` extens
 Try deleting the destination database where you experienced the issue and re-create your migration job. Follow these steps: 
 
   1. Delete the destination instance where you experienced the problems. See [Delete instances](https://docs.cloud.google.com/sql/docs/postgres/delete-instance) in Cloud SQL for PostgreSQL documentation.
-  2. Delete the failed migration job. See [ Review a migration job](https://docs.cloud.google.com/database-migration/docs/postgres/review-migration-job).
-  3. Re-create your migration job. See [ Create a migration job](https://docs.cloud.google.com/database-migration/docs/postgres/create-migration-job).
+  2. Delete the failed migration job. See [Review a migration job](https://docs.cloud.google.com/database-migration/docs/postgres/migration-job-actions).
+  3. Re-create your migration job. See [Create a migration job](https://docs.cloud.google.com/database-migration/docs/postgres/create-migration-job).
 
 
 
 ##### Migrate to an intermediate version
 
-Consider migrating to an earlier PostgreSQL version, such as PostgreSQL 14. After a successful migration, you can try upgrade to the desired PostgreSQL 15 instance. See [Upgrade the database major version by migrating data](https://docs.cloud.google.com/sql/docs/postgres/upgrade-major-db-version-migrate) in Cloud SQL for PostgreSQL documentation.
+Consider migrating to an earlier PostgreSQL version, such as PostgreSQL 14. After a successful migration, you can upgrade to the desired PostgreSQL 15 instance. See [Upgrade the database major version by migrating data](https://docs.cloud.google.com/sql/docs/postgres/upgrade-major-db-version-migrate) in Cloud SQL for PostgreSQL documentation.
+
+* * *
 
 ### Manage users and roles
 
@@ -225,6 +227,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

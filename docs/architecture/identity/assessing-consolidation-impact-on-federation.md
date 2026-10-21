@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/identity/assessing-consolidation-impact-on-federation/
 title: Assess the impact of user account consolidation on federation \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-16T11:30:26.836126+00:00
+fetched_at: 2026-10-21T12:22:13.825452+00:00
 ---
 
 # Assess the impact of user account consolidation on federation  |  Cloud Architecture Center  |  Google Cloud Documentation

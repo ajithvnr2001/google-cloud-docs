@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/monitoring-on-premises-resources-with-bindplane/
 title: Monitor on-premises resources with BindPlane \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:34:42.668418+00:00
+fetched_at: 2026-10-21T12:22:15.062615+00:00
 ---
 
 # Monitor on-premises resources with BindPlane  |  Cloud Architecture Center  |  Google Cloud Documentation

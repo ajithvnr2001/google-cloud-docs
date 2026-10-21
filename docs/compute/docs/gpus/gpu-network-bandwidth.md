@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/gpus/gpu-network-bandwidth/
 title: Networking and GPU machines \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:45:20.222548+00:00
+fetched_at: 2026-10-21T12:22:40.514068+00:00
 ---
 
 # Networking and GPU machines  |  Compute Engine  |  Google Cloud Documentation
@@ -134,29 +134,33 @@ To set up these networks, see [Create VPC networks](https://docs.cloud.google.co
 
 **Note:** When provisioning A4X Max instances, you must [reserve capacity](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity) to create instances and clusters. You can then create instances that use the features and services available from AI Hypercomputer. For more information, see [Deployment options overview](https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-overview) in the AI Hypercomputer documentation. 
 
-| Attached NVIDIA GB300 Grace Blackwell Ultra Superchips  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM3e)  
+Machine type | vCPU count | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps) | NVIDIA GB300 GPU count | GPU memory (GB HBM3e)  
+---|---|---|---|---|---|---|---  
 `a4x-maxgpu-4g-metal` | 144 | 960 | 12,000 | 6 | 3,600 | 4 | 1,116  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
 
 ###  A4X 
 
 **Note:** When provisioning A4X instances, you must [reserve capacity](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity) to create instances and clusters. You can then create instances that use the features and services available from AI Hypercomputer. For more information, see [Deployment options overview](https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-overview) in the AI Hypercomputer documentation. 
 
-| Attached NVIDIA GB200 Grace Blackwell Superchips  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM3e)  
+Machine type | vCPU count | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps) | NVIDIA GB200 GPU count | GPU memory (GB HBM3e)  
+---|---|---|---|---|---|---|---  
 `a4x-highgpu-4g` | 140 | 884 | 12,000 | 6 | 2,000 | 4 | 744  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
 
 ### A4 and A3 Ultra machine types
 
@@ -182,29 +186,33 @@ To set up these networks, see [Create VPC networks](https://docs.cloud.google.co
 
 **Note:** When provisioning A4 machine types, you must reserve capacity to create instances or clusters, use Spot VMs, use Flex-start VMs, or create a resize request in a MIG. For instructions on how to create A4 instances, see [Create an A3 Ultra or A4 instance](https://docs.cloud.google.com/compute/docs/gpus/create-gpu-vm-a3u-a4#create-overview). . 
 
-| Attached NVIDIA B200 Blackwell GPUs  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM3e)  
+Machine type | vCPU count | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps) | NVIDIA B200 Blackwell GPU count | GPU memory (GB HBM3e)  
+---|---|---|---|---|---|---|---  
 `a4-highgpu-8g` | 224 | 3,968 | 12,000 | 10 | 3,600 | 8 | 1,440  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
 
 ###  A3 Ultra 
 
 **Note:** When provisioning A3 Ultra machine types, you must reserve capacity to create instances or clusters, use Spot VMs, use Flex-start VMs, or create a resize request in a MIG. For more information about the parameters to set when creating an A3 Ultra instance, see [Create an A3 Ultra or A4 instance](https://docs.cloud.google.com/compute/docs/gpus/create-gpu-vm-a3u-a4#create-overview). 
 
-| Attached NVIDIA H200 GPUs  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM3e)  
+Machine type | vCPU count | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps) | NVIDIA H200 GPU count | GPU memory (GB HBM3e)  
+---|---|---|---|---|---|---|---  
 `a3-ultragpu-8g` | 224 | 2,952 | 12,000 | 10 | 3,600 | 8 | 1128  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
 
 ### A3 Mega, High, and Edge machine types
 
@@ -228,10 +236,8 @@ NICs that share the same PCIe bus, have a non-uniform memory access (NUMA) align
   * To create Google Kubernetes Engine cluster, see [Deploy an A3 Mega cluster with GKE](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/gpu-bandwidth-gpudirect-tcpx).
   * To create a Slurm cluster, see [Deploy an A3 Mega Slurm cluster](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/slurm/deploy-a3-mega-cluster).
 
-| Attached NVIDIA H100 GPUs  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM3)  
+Machine type | vCPU count | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps) | NVIDIA H100 GPU count | GPU memory (GB HBM3)  
+---|---|---|---|---|---|---|---  
 `a3-megagpu-8g` | 208 | 1,872 | 6,000 | 9 | 1,800 | 8 | 640  
   
 ### A3 High
@@ -243,10 +249,8 @@ Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | P
     * Create a standalone VM and set the provisioning model to `FLEX_START` when you [create an accelerator-optimized VM](https://docs.cloud.google.com/compute/docs/gpus/create-gpu-vm-accelerator-optimized).
     * Create a resize request in a managed instance group (MIG). For instructions, see [Create a MIG with GPU VMs](https://docs.cloud.google.com/compute/docs/instance-groups/create-mig-with-gpu-vms).
 
-| Attached NVIDIA H100 GPUs  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM3)  
+Machine type | vCPU count | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps) | NVIDIA H100 GPU count | GPU memory (GB HBM3)  
+---|---|---|---|---|---|---|---  
 `a3-highgpu-1g` | 26 | 234 | 750 | 1 | 25 | 1 | 80  
 `a3-highgpu-2g` | 52 | 468 | 1,500 | 1 | 50 | 2 | 160  
 `a3-highgpu-4g` | 104 | 936 | 3,000 | 1 | 100 | 4 | 320  
@@ -254,20 +258,17 @@ Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | P
   
 ### A3 Edge
 
-**Note:** To get started with A3 Edge instances, see [Create an A3 VM with GPUDirect-TCPX enabled](https://docs.cloud.google.com/compute/docs/gpus/gpudirect).  | Attached NVIDIA H100 GPUs  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM3)  
-`a3-edgegpu-8g` | 208 | 1,872 | 6,000 | 5 | 
-
-  * 600: _for asia-south1 and northamerica-northeast2_
-  * 400: _for all other[A3 Edge regions](https://docs.cloud.google.com/compute/docs/gpus/gpu-regions-zones#view-using-table)_
-
-| 8 | 640  
+**Note:** To get started with A3 Edge instances, see [Create an A3 VM with GPUDirect-TCPX enabled](https://docs.cloud.google.com/compute/docs/gpus/gpudirect). Machine type | vCPU count | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps) | NVIDIA H100 GPU count | GPU memory (GB HBM3)  
+---|---|---|---|---|---|---|---  
+`a3-edgegpu-8g` | 208 | 1,872 | 6,000 | 5 | 600 (`asia-south1` and `northamerica-northeast2`) or 400 (all other [A3 Edge regions](https://docs.cloud.google.com/compute/docs/gpus/gpu-regions-zones#view-using-table)) | 8 | 640  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
 
 ### A2 machine types
 
@@ -282,10 +283,8 @@ A2 machine series are available in two types:
 
 ### A2 Ultra
 
-| Attached NVIDIA A100 80GB GPUs  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM2e)  
+Machine type | vCPU count | Instance memory (GB) | Attached Local SSD (GiB) | Maximum network bandwidth (Gbps) | NVIDIA A100 80GB GPU count | GPU memory (GB HBM2e)  
+---|---|---|---|---|---|---  
 `a2-ultragpu-1g` | 12 | 170 | 375 | 24 | 1 | 80  
 `a2-ultragpu-2g` | 24 | 340 | 750 | 32 | 2 | 160  
 `a2-ultragpu-4g` | 48 | 680 | 1,500 | 50 | 4 | 320  
@@ -293,19 +292,21 @@ Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | M
   
 ### A2 Standard
 
-| Attached NVIDIA A100 40GB GPUs  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Local SSD supported | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM2)  
+Machine type | vCPU count | Instance memory (GB) | Local SSD supported | Maximum network bandwidth (Gbps) | NVIDIA A100 40GB GPU count | GPU memory (GB HBM2)  
+---|---|---|---|---|---|---  
 `a2-highgpu-1g` | 12 | 85 | Yes | 24 | 1 | 40  
 `a2-highgpu-2g` | 24 | 170 | Yes | 32 | 2 | 80  
 `a2-highgpu-4g` | 48 | 340 | Yes | 50 | 4 | 160  
 `a2-highgpu-8g` | 96 | 680 | Yes | 100 | 8 | 320  
 `a2-megagpu-16g` | 96 | 1,360 | Yes | 100 | 16 | 640  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
 
 ### G4 machine types
 
@@ -315,10 +316,10 @@ This feature is subject to the "Pre-GA Offerings Terms" in the General Service T
 
 [G4 accelerator-optimized](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#g4-series) machine types use [ NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs](https://www.nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/) (`nvidia-rtx-pro-6000`) and are suitable for NVIDIA Omniverse simulation workloads, graphics-intensive applications, video transcoding, and virtual desktops. G4 machine types also provide a low-cost solution for performing single host inference and model tuning compared with A series machine types. 
 
-**Note:** To get started with G4 instances, see [Create a G4 instance](https://docs.cloud.google.com/compute/docs/gpus/create-gpu-vm-g-series).  | Attached NVIDIA RTX PRO 6000 GPUs  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Maximum Titanium SSD supported (GiB)2 | Physical NIC count | Maximum network bandwidth (Gbps)3 | GPU count | GPU memory4  
-(GB GDDR7)  
+You can also add Titanium SSD disks when you create a G4 instance. For the number of disks you can attach, see [Machine types that require you to choose a number of Local SSD disks](https://docs.cloud.google.com/compute/docs/disks/local-ssd#lssd_disk_options). For information about machine type limitations, see [G4 limitations](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#g4-limitations). 
+
+**Note:** To get started with G4 instances, see [Create a G4 instance](https://docs.cloud.google.com/compute/docs/gpus/create-gpu-vm-g-series). Machine type | vCPU count | Instance memory (GB) | Maximum Titanium SSD supported (GiB) | Physical NIC count | Maximum network bandwidth (Gbps) | NVIDIA RTX PRO 6000 GPU count | GPU memory (GB GDDR7)  
+---|---|---|---|---|---|---|---  
 `g4-standard-6` | 6 | 22 | 0 | 1 | 20 | 1/8 | 12  
 `g4-standard-12` | 12 | 45 | 375 | 1 | 20 | 1/4 | 24  
 `g4-standard-24` | 24 | 90 | 750 | 1 | 20 | 1/2 | 48  
@@ -327,10 +328,13 @@ Machine type | vCPU count1 | Instance memory (GB) | Maximum Titanium SSD support
 `g4-standard-192` | 192 | 720 | 6,000 | 1 | 200 | 4 | 384  
 `g4-standard-384` | 384 | 1,440 | 12,000 | 2 | 400 | 8 | 768  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2You can add Titanium SSD disks when creating a G4 instance. For the number of disks you can attach, see [Machine types that require you to choose a number of Local SSD disks](https://docs.cloud.google.com/compute/docs/disks/local-ssd#lssd_disk_options).  
-3Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. See [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-4GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
 
 ### G2 machine types
 
@@ -340,9 +344,8 @@ Each G2 machine type also has a default memory and a custom memory range. The cu
 
 To get the higher network bandwidth rates (50 Gbps or higher) applied to most GPU instances, it is recommended that you use Google Virtual NIC (gVNIC). For more information about creating GPU instances that use gVNIC, see [Creating GPU instances that use higher bandwidths](https://docs.cloud.google.com/compute/docs/gpus/optimize-gpus#create-high-bandwidth-vm).
 
-| Attached NVIDIA L4 GPUs  
----|---  
-Machine type | vCPU count1 | Default instance memory (GB) | Custom instance memory range (GB) | Max Local SSD supported (GiB) | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3 (GB GDDR6)  
+Machine type | vCPU count | Default instance memory (GB) | Custom instance memory range (GB) | Max Local SSD supported (GiB) | Maximum network bandwidth (Gbps) | NVIDIA L4 GPU count | GPU memory (GB GDDR6)  
+---|---|---|---|---|---|---|---  
 `g2-standard-4` | 4 | 16 | 16 to 32 | 375 | 10 | 1 | 24  
 `g2-standard-8` | 8 | 32 | 32 to 54 | 375 | 16 | 1 | 24  
 `g2-standard-12` | 12 | 48 | 48 to 54 | 375 | 16 | 1 | 24  
@@ -352,9 +355,13 @@ Machine type | vCPU count1 | Default instance memory (GB) | Custom instance memo
 `g2-standard-48` | 48 | 192 | 192 to 216 | 1,500 | 50 | 4 | 96  
 `g2-standard-96` | 96 | 384 | 384 to 432 | 3,000 | 100 | 8 | 192  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
 
 ### N1 + GPU machine types
 
@@ -449,6 +456,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

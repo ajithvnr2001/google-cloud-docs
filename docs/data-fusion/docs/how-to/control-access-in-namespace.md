@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/control-access-in-namespace/
 title: Access control with a namespace service account \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:26:07.061602+00:00
+fetched_at: 2026-10-21T11:54:54.943021+00:00
 ---
 
 # Access control with a namespace service account  |  Cloud Data Fusion  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Access control with a namespace service account Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to configure an Identity and Access Management (IAM) service account for a namespace in a Cloud Data Fusion instance.
+A namespace service account in Cloud Data Fusion lets you enforce granular access control between namespaces during pipeline design time. Configuring a dedicated Identity and Access Management (IAM) service account restricts design-time activities—such as Wrangler, pipeline preview, and pipeline validation—to specific Google Cloud resources.
 
 ## About namespaces in Cloud Data Fusion
 
@@ -32,6 +32,8 @@ A namespace is a logical grouping of applications, data, and the associated meta
 To control access to Google Cloud resources, namespaces in Cloud Data Fusion use the [Cloud Data Fusion API Service Agent](https://docs.cloud.google.com/iam/docs/roles-permissions/datafusion#datafusion.serviceAgent) by default.
 
 For better data isolation, you can associate a customized IAM service account (known as a _Per Namespace Service Account_) with each namespace. The customized IAM service account, which can be different for different namespaces, lets you control access to Google Cloud resources between namespaces for pipeline design-time operations in Cloud Data Fusion, such as pipeline preview, Wrangler, and pipeline validation.
+
+**Note:** Although granting IAM roles directly to a Kubernetes ServiceAccount principal (`principal://`) is the recommended best practice for [Workload Identity Federation for GKE](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/workload-identity), Cloud Data Fusion requires IAM service account impersonation because the **Pipeline design service account** configuration and the `credentials/workloadIdentity` REST API require an IAM service account email address.
 
 ## Before You begin
 
@@ -250,6 +252,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

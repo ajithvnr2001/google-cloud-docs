@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/migration-to-google-cloud-transferring-your-large-datasets/
 title: Migrate to Google Cloud: Transfer your large datasets \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:50.106807+00:00
+fetched_at: 2026-10-21T12:01:23.172523+00:00
 ---
 
 # Migrate to Google Cloud: Transfer your large datasets  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -84,7 +84,7 @@ Gathering project requirements and input from these stakeholders can be challeng
 When you design a transfer plan, we recommend that you first collect requirements for your data transfer and then decide on a transfer option. To collect requirements, you can use the following process:
 
   1. Identify what datasets you need to move. 
-     * Select tools like [Data Catalog](https://docs.cloud.google.com/data-catalog/docs/concepts/overview) to organize your data into logical groupings that are moved and used together.
+     * Select tools like [Knowledge Catalog](https://docs.cloud.google.com/knowledge-catalog/docs/introduction) to organize your data into logical groupings that are moved and used together.
      * Work with teams within your organization to validate or update these groupings.
   2. Identify what datasets you _can_ move. 
      * Consider whether regulatory, security, or other factors prohibit some datasets from being transferred.

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/reuse-clusters/
 title: Reuse clusters \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:58:38.138276+00:00
+fetched_at: 2026-10-21T11:55:44.965232+00:00
 ---
 
 # Reuse clusters  |  Cloud Data Fusion  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Reuse clusters Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to reuse Managed Service for Apache Spark clusters for your pipeline runs in Cloud Data Fusion. For more information, see [When to reuse clusters](https://docs.cloud.google.com/data-fusion/docs/concepts/configure-clusters#reuse-clusters) and [Run a pipeline against an existing Managed Service for Apache Spark cluster](https://docs.cloud.google.com/data-fusion/docs/how-to/running-against-existing-dataproc).
+Reusing Managed Service for Apache Spark clusters in Cloud Data Fusion lets you reduce provisioning overhead and speed up pipeline execution across runs. For more information, see [When to reuse clusters](https://docs.cloud.google.com/data-fusion/docs/concepts/configure-clusters#reuse-clusters) and [Run a pipeline against an existing Managed Service for Apache Spark cluster](https://docs.cloud.google.com/data-fusion/docs/how-to/running-against-existing-dataproc).
 
 ## Before you begin
 
@@ -98,6 +98,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

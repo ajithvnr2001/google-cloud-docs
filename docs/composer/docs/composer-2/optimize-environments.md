@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/composer/docs/composer-2/optimize-environments/
 title: Optimize environment performance and costs \u00a0|\u00a0 Managed Service for Apache Airflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:44:06.402827+00:00
+fetched_at: 2026-10-21T12:00:27.034390+00:00
 ---
 
 # Optimize environment performance and costs  |  Managed Service for Apache Airflow  |  Google Cloud Documentation
@@ -434,7 +434,7 @@ The following example sets the maximum number of schedulers to six:
       config {
         workloads_config {
           worker {
-            max_count = &quot;6"
+            max_count = "6"
           }
         }
       }

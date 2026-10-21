@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/workload/aci-images/
 title: Overview of Advanced Compute Images \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:44.630394+00:00
+fetched_at: 2026-10-21T12:24:03.379601+00:00
 ---
 
 # Overview of Advanced Compute Images  |  Compute Engine  |  Google Cloud Documentation
@@ -51,7 +51,8 @@ Advanced Compute Images contain multiple layers of configurations to support run
     * [NVIDIA Enroot](https://github.com/NVIDIA/enroot)
     * [NVIDIA Pyxis](https://github.com/NVIDIA/pyxis/)
   * **NVIDIA** : Installs the following tools: 
-    * [NVIDIA CUDA Toolkit](https://developer.nvidia.com/cuda/toolkit) version 13.0,
+    * [NVIDIA CUDA Toolkit](https://developer.nvidia.com/cuda/toolkit) version 13.0 or 13.2
+    * NVIDIA drivers (version 580 or 595)
     * [NVIDIA Data Center GPU Manager (DCGM)](https://developer.nvidia.com/dcgm) version 4
     * [NVIDIA Fabric Manager](https://docs.nvidia.com/datacenter/tesla/fabric-manager-user-guide/index.html)
     * [NCCL/gIB plugin](https://docs.cloud.google.com/ai-hypercomputer/docs/nccl/overview)
@@ -62,7 +63,7 @@ Advanced Compute Images contain multiple layers of configurations to support run
 
   * **Slurm** : Installs the core components required to create a [Slurm](https://slurm.schedmd.com/overview.html) cluster node, including:
 
-    * Slurm binaries (version 25.11)
+    * Slurm binaries (version 25.11 or 26.05)
     * [Munge](https://github.com/dun/munge/wiki) for authentication
     * [PMIx](https://github.com/openpmix/openpmix) for process management
     * [JSON Web Token (JWT)](https://wikipedia.org/wiki/JSON_Web_Token) library (`libjwt`)
@@ -95,7 +96,8 @@ ACI supports two primary hardware platforms:
   * **CPU (HPC)** : support CPU workloads and have the following characteristics:
 
     * Are optimized for compute-intensive workloads
-    * Support Rocky Linux 9
+    * Support Rocky Linux 8 and Rocky Linux 9
+    * Come with pre-integrated CUDA 13.2 and NVIDIA 595 drivers
     * Come with RDMA drivers and utilities to support Cloud RDMA
     * Come with pre-integrated MPI libraries, including Open MPI and configurable Intel MPI
   * **GPU (AI/ML/HPC)** : support GPU workloads and have the following characteristics:
@@ -113,20 +115,34 @@ CPU | Rocky Linux 9 | none |
 
   * RDMA
   * OpenMPI,IntelMPI
+  * CUDA 13.2
+  * NVIDIA 595
 
-| AMD x86_64 | C2D, H3, H4D | `aci-cpu-rocky-linux-9-amd64`  
+| Intel or AMD x86_64 | C2D, H3, H4D | `aci-cpu-rocky-linux-9-amd64`  
 CPU | Rocky Linux 8 | none | 
 
   * RDMA
   * OpenMPI,IntelMPI
+  * CUDA 13.2
+  * NVIDIA 595
 
-| AMD x86_64 | C2D, H3, H4D | `aci-cpu-rocky-linux-8-amd64`  
-CPU | Rocky Linux 9 | Slurm 25.11 | 
+| Intel or AMD x86_64 | C2D, H3, H4D | `aci-cpu-rocky-linux-8-amd64`  
+CPU | Rocky Linux 8 | Slurm 26.05 | 
 
   * RDMA
   * MPI
+  * CUDA 13.2
+  * NVIDIA 595
 
-| AMD x86_64 | C2D, H3, H4D | `aci-cpu-rocky-linux-9-slurm-2511-amd64`  
+| Intel or AMD x86_64 | C2D, H3, H4D | `aci-cpu-rocky-linux-8-slurm-2605-amd64`  
+CPU | Rocky Linux 9 | Slurm 26.05 | 
+
+  * RDMA
+  * MPI
+  * CUDA 13.2
+  * NVIDIA 595
+
+| Intel or AMD x86_64 | C2D, H3, H4D | `aci-cpu-rocky-linux-9-slurm-2605-amd64`  
 GPU | Ubuntu LTS 24.04 | Slurm 25.11 | 
 
   * CUDA 13.0
@@ -222,6 +238,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

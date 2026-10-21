@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/loading-data-cloud-storage-csv/
 title: Load CSV data from Cloud Storage \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:43:51.582863+00:00
+fetched_at: 2026-10-21T12:01:32.442071+00:00
 ---
 
 # Load CSV data from Cloud Storage  |  BigQuery  |  Google Cloud Documentation
@@ -142,7 +142,7 @@ To follow step-by-step guidance for this task directly in the Cloud Shell Editor
         1. For **Dataset** , select the dataset in which you want to create the table.
         2. In the **Table** field, enter the name of the table that you want to create.
         3. Verify that the **Table type** field is set to **Native table**.
-     3. In the **Schema** section, enter the [schema](https://docs.cloud.google.com/bigquery/docs/schemas) definition. To enable the [auto detection](https://docs.cloud.google.com/bigquery/docs/schema-detect) of a schema, select **Auto detect**. You can enter schema information manually by using one of the following methods: 
+     3. In the **Schema** section, enter the [schema](https://docs.cloud.google.com/bigquery/docs/schemas) definition. To enable the [auto-detection](https://docs.cloud.google.com/bigquery/docs/schema-detect) of a schema, select **Auto detect**. You can enter schema information manually by using one of the following methods: 
         * Option 1: Click **Edit as text** and paste the schema in the form of a JSON array. When you use a JSON array, you generate the schema using the same process as [creating a JSON schema file](https://docs.cloud.google.com/bigquery/docs/schemas#specifying_a_json_schema_file). You can view the schema of an existing table in JSON format by entering the following command: 
               
               [bq show](https://docs.cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq_show) --format=prettyjson dataset.table
@@ -1015,7 +1015,7 @@ If you load data into an existing table, the load job can append the data or ove
         1. For **Dataset** , select the dataset in which you want to create the table.
         2. In the **Table** field, enter the name of the table that you want to create.
         3. Verify that the **Table type** field is set to **Native table**.
-     3. In the **Schema** section, enter the [schema](https://docs.cloud.google.com/bigquery/docs/schemas) definition. To enable the [auto detection](https://docs.cloud.google.com/bigquery/docs/schema-detect) of a schema, select **Auto detect**. You can enter schema information manually by using one of the following methods: 
+     3. In the **Schema** section, enter the [schema](https://docs.cloud.google.com/bigquery/docs/schemas) definition. To enable the [auto-detection](https://docs.cloud.google.com/bigquery/docs/schema-detect) of a schema, select **Auto detect**. You can enter schema information manually by using one of the following methods: 
         * Option 1: Click **Edit as text** and paste the schema in the form of a JSON array. When you use a JSON array, you generate the schema using the same process as [creating a JSON schema file](https://docs.cloud.google.com/bigquery/docs/schemas#specifying_a_json_schema_file). You can view the schema of an existing table in JSON format by entering the following command: 
               
               [bq show](https://docs.cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq_show) --format=prettyjson dataset.table
@@ -1748,6 +1748,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

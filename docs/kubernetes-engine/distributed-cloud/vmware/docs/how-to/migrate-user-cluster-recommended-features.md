@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/migrate-user-cluster-recommended-features/
 title: Migrate a user cluster to recommended features \u00a0|\u00a0 Google Distributed Cloud software only for VMware \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:19:43.489431+00:00
+fetched_at: 2026-10-21T12:22:36.148136+00:00
 ---
 
 # Migrate a user cluster to recommended features  |  Google Distributed Cloud software only for VMware  |  Google Cloud Documentation
@@ -326,7 +326,12 @@ Before migrating, check whether DataPlane V2 is enabled on the cluster by runnin
     kubectl --kubeconfig ADMIN_CLUSTER_KUBECONFIG get onpremusercluster USER_CLUSTER_NAME -n USER_CLUSTER_NAME-gke-onprem-mgmt -o yaml | grep enableDataplaneV2
     
 
-If Dataplane V2 is already enabled, skip to the next section, Prepare for the load balancer migration.
+If Dataplane V2 is already enabled:
+
+  * If the cluster was originally created with Dataplane V2 enabled, skip to Prepare for the load balancer migration.
+  * If the cluster was previously migrated from Calico to Dataplane V2 (for example, during an upgrade to version 1.31), skip to Remove dormant Calico DaemonSets.
+
+
 
 To migrate to Dataplane V2, you have the following options:
 
@@ -383,7 +388,49 @@ Migrate to Dataplane V2 using these steps:
 
 
 
-After completing those steps, you have Dataplane V2 is enabled. Next, prepare to migrate your cluster to the recommended load balancer and Controlplane V2.
+You enabled Dataplane V2.
+
+### Remove dormant Calico DaemonSets
+
+After you migrate an admin cluster or user cluster from Calico to Dataplane V2, the `calico-node` and `calico-route-daemon` DaemonSets remain dormant in the `kube-system` namespace to preserve rollback capability. Before you scale or upgrade the cluster, remove the `features.onprem.cluster.gke.io/dpv2-migration` annotation once per migrated cluster so the cluster controller permanently deletes the dormant Calico DaemonSets and prevents them from initializing on new nodes (see the [Intermittent connection timeouts after upgrading or scaling a cluster migrated from Calico to Dataplane V2](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#connection-timeouts-after-dpv2-migration-upgrade) known issue). You don't need to perform these steps on clusters that were created with Dataplane V2 enabled.
+
+**Caution:** Only remove this annotation after the migration to Dataplane V2 is complete on all nodes. Removing it on a cluster that is still using Calico or is in the middle of migrating evicts Calico from existing nodes and disrupts Pod networking.
+
+  1. Verify that the Dataplane V2 migration is complete and that all nodes in the cluster have the `networking.gke.io/cni-type: cilium` label:
+         
+         kubectl --kubeconfig CLUSTER_KUBECONFIG get nodes -L networking.gke.io/cni-type
+         
+
+Replace `CLUSTER_KUBECONFIG` with the path to the user cluster or admin cluster kubeconfig file.
+
+  2. After you confirm that Dataplane V2 is running on all nodes and you no longer need to roll back to Calico, remove the `features.onprem.cluster.gke.io/dpv2-migration` annotation from the `OnPremUserCluster` custom resource (and from `OnPremAdminCluster` if your admin cluster was migrated from Calico during the upgrade from version 1.29 to 1.30):
+         
+         # For a user cluster:
+         kubectl --kubeconfig ADMIN_CLUSTER_KUBECONFIG annotate onpremusercluster USER_CLUSTER_NAME \
+             -n USER_CLUSTER_NAME-gke-onprem-mgmt \
+             features.onprem.cluster.gke.io/dpv2-migration-
+         
+         # For an admin cluster:
+         kubectl --kubeconfig ADMIN_CLUSTER_KUBECONFIG annotate onpremadmincluster ADMIN_CLUSTER_NAME \
+             -n kube-system \
+             features.onprem.cluster.gke.io/dpv2-migration-
+         
+
+Replace the following:
+
+     * `ADMIN_CLUSTER_KUBECONFIG`: the path to the admin cluster kubeconfig file.
+     * `USER_CLUSTER_NAME`: the name of the user cluster.
+     * `ADMIN_CLUSTER_NAME`: the name of the admin cluster (you can find this by running `kubectl --kubeconfig ADMIN_CLUSTER_KUBECONFIG get onpremadmincluster -n kube-system`).
+**Note:** Don't use `kubectl delete daemonset` to manually delete the DaemonSets, because the cluster controller reconciles the add-on bundle during updates and upgrades and recreates them unless you remove the `features.onprem.cluster.gke.io/dpv2-migration` annotation.
+  3. Verify that the controller deleted the `calico-node` and `calico-route-daemon` DaemonSets (both return `NotFound`):
+         
+         kubectl --kubeconfig CLUSTER_KUBECONFIG -n kube-system get daemonset calico-node calico-route-daemon
+         
+
+
+
+
+Next, prepare to migrate your cluster to the recommended load balancer and Controlplane V2.
 
 ## Prepare for the load balancer migration
 
@@ -691,6 +738,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

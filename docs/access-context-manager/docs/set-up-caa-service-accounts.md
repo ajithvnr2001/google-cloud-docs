@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/set-up-caa-service-accounts/
 title: Configure Context-Aware Access for service accounts \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:39:18.479892+00:00
+fetched_at: 2026-10-21T11:58:07.406127+00:00
 ---
 
 # Configure Context-Aware Access for service accounts  |  Access Context Manager  |  Google Cloud Documentation
@@ -27,18 +27,18 @@ This guide describes how you can set up Context-Aware Access to help secure serv
 
 The following limitations apply to Context-Aware Access policies for service accounts:
 
-  * Network-based or IP address-based attributes cannot be used for service account bindings if the service account will be used for workflow executions and Cloud Scheduler.
+  * You can't use network-based or IP address-based attributes for service account bindings if the service account is used for workflow executions and Cloud Scheduler.
 
-  * Connections to private GKE clusters, using `kubectl`, and to Cloud SQL, using Auth Proxy, cannot be blocked by Context-Aware Access policies.
+  * Context-Aware Access policies can't block connections to private Google Kubernetes Engine (GKE) clusters using `kubectl`, or to Cloud SQL using the Auth Proxy.
 
-  * If an access level that is bound to a service account contains unsupported attributes, such as `Device` attributes, then API access is denied.
+  * If an access level that you bind to a service account contains unsupported attributes, such as `Device` attributes, Context-Aware Access denies API access.
 
   * Scoped access levels aren't supported for service accounts.
 
 
 
 
-If you use Cloud Build and Cloud Run, we recommend that you use the following built-in VPC features:
+If you use Cloud Build and Cloud Run, we recommend that you use the following built-in Virtual Private Cloud (VPC) features:
 
   * For Cloud Run, use [Serverless VPC Access](https://docs.cloud.google.com/vpc/docs/serverless-vpc-access).
 
@@ -81,15 +81,23 @@ Replace `PROJECT_ID` with your Google Cloud project name.
 
   7. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). 
 
-  8. [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. 
+  8. Enable the IAM, Access Context Manager, and Resource Manager APIs, if any are not already enabled: 
 
-  9. If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). 
+**Roles required to enable APIs**
 
-  10. To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: 
+To enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+         
+         gcloud services enable accesscontextmanager.googleapis.com cloudresourcemanager.googleapis.com iam.googleapis.com
+
+  9. [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. 
+
+  10. If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). 
+
+  11. To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: 
          
          gcloud init
 
-  11. [Create or select a Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
+  12. [Create or select a Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
 
 **Roles required to select or create a project**
 
@@ -108,13 +116,21 @@ Replace `PROJECT_ID` with a name for the Google Cloud project you are creating.
 
 Replace `PROJECT_ID` with your Google Cloud project name.
 
-  12. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). 
+  13. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). 
 
-  13. Update Google Cloud CLI components: 
+  14. Enable the IAM, Access Context Manager, and Resource Manager APIs, if any are not already enabled: 
+
+**Roles required to enable APIs**
+
+To enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+         
+         gcloud services enable accesscontextmanager.googleapis.com cloudresourcemanager.googleapis.com iam.googleapis.com
+
+  15. Update Google Cloud CLI components: 
          
          gcloud components update --quiet
 
-  14. [Create a service account](https://docs.cloud.google.com/iam/docs/service-accounts-create) in your project if you don't already have one. This service account is the target of the Context-Aware Access policy.
+  16. [Create a service account](https://docs.cloud.google.com/iam/docs/service-accounts-create) in your project if you don't already have one. This service account is the target of the Context-Aware Access policy.
 
 
 
@@ -161,9 +177,9 @@ You can use multiple policies to incrementally and selectively deploy policies�
 
 ## Access level attributes for service accounts
 
-This section lists the access levels that are supported for service accounts.
+This section lists the access level attributes that are supported for service accounts.
 
-**Important:** Only [org-level Access Context Manager access levels](https://docs.cloud.google.com/access-context-manager/docs/create-access-policy#organization-access-policy) can be bound to service accounts. Scoped access levels aren't supported for service accounts. 
+**Important:** You can bind only [organization-level Access Context Manager access levels](https://docs.cloud.google.com/access-context-manager/docs/create-access-policy#organization-access-policy) to service accounts. Scoped access levels aren't supported for service accounts. 
 
 The following attributes are supported for service accounts:
 
@@ -171,7 +187,7 @@ The following attributes are supported for service accounts:
   * VPC networks, which are based on the private IP address. 
   * Geolocation, which is based on the public IP address.
 
-When the service account makes any request to Google Cloud APIs, the request is evaluated by Context-Aware Access, and the IP address of the request is compared to the IP addresses specified in the Context-Aware Access policy. If the IP addresses match, the API call is allowed. If the IP address doesn't match, the API call is denied. 
+When the service account makes any request to Google Cloud APIs, Context-Aware Access evaluates the request and compares the IP address of the request to the IP addresses specified in the Context-Aware Access policy. If the IP addresses match, Context-Aware Access allows the API call. If the IP addresses don't match, Context-Aware Access denies the API call. 
 
   * A custom access level with a Common Expression Language (CEL) expression. The expression must evaluate to `true` to allow access and `false` to deny access. 
 
@@ -179,7 +195,7 @@ The following CEL expression is useful for restricting access by service account
 
 The expression evaluates to `true` if the request originated from one or more specified project numbers: 
         
-        expression: "originatesFromProjects(origin, [PROJECT_NUMBER, ...])"
+        expression: "originatesFromProjects(origin, ['projects/PROJECT_NUMBER'])"
             
 
 `originatesFromProjects` checks whether the request comes from a network that is associated with the specified project and whether the request comes from a private IP address. 
@@ -223,11 +239,11 @@ Bind the access level to a service account using the gcloud CLI.
 
 Replace the following:
 
-  * `ORGANIZATION_ID`: your Google Cloud organization ID
-  * `SERVICE_ACCOUNT_NAME`: the name, not the email, of the target service account
-  * `SERVICE_ACCOUNT_PROJECT_ID`: the ID of the project that contains the target service account
-  * `POLICY_ID`: the ID of the Access Context Manager access policy
-  * `ACCESS_LEVEL_NAME`: the name of the access level that you created
+  * `ORGANIZATION_ID`: your Google Cloud organization ID.
+  * `SERVICE_ACCOUNT_NAME`: the ID of the target service account (the part of the email address before the `@` symbol).
+  * `SERVICE_ACCOUNT_PROJECT_ID`: the ID of the project that contains the target service account.
+  * `POLICY_ID`: the ID of the Access Context Manager access policy.
+  * `ACCESS_LEVEL_NAME`: the name of the access level that you created.
 
 To use Context-Aware Access without enforcing the access level and disallowing access, you can bind the access level in dry-run mode.
 
@@ -250,13 +266,13 @@ To bind the access level to a specific service account using the REST API, run t
 
 Replace the following:
 
-     * `SERVICE_ACCOUNT_NAME`: the name, not the email, of the target service account
+     * `SERVICE_ACCOUNT_NAME`: the ID of the target service account (the part of the email address before the `@` symbol).
 
-     * `SERVICE_ACCOUNT_PROJECT_ID`: the ID of the project that contains the target service account
+     * `SERVICE_ACCOUNT_PROJECT_ID`: the ID of the project that contains the target service account.
 
-     * `POLICY_ID`: the ID of the Access Context Manager access policy
+     * `POLICY_ID`: the ID of the Access Context Manager access policy.
 
-     * `ACCESS_LEVEL_NAME`: the name of the access level that you created
+     * `ACCESS_LEVEL_NAME`: the name of the access level that you created.
 
   2. Run the following command:
          
@@ -269,7 +285,7 @@ Replace the following:
 
 Replace the following:
 
-     * `PROJECT_ID`: the ID of the project that you are using to make the API calls
+     * `PROJECT_ID`: the ID of the project that you are using to make the API calls.
 
      * `ORGANIZATION_ID`: your Google Cloud organization ID.
 
@@ -293,9 +309,9 @@ To bind the access level to all of the service accounts in a project using the g
 
 Replace the following:
 
-  * `ORGANIZATION_ID`: your Google Cloud organization ID
-  * `PROJECT_NUMBER`: the project number of the project that contains all of the service accounts that you want to bind access to
-  * `POLICY_ID`: the ID of the Access Context Manager access policy
+  * `ORGANIZATION_ID`: your Google Cloud organization ID.
+  * `PROJECT_NUMBER`: the project number of the project that contains all of the service accounts that you want to bind access to.
+  * `POLICY_ID`: the ID of the Access Context Manager access policy.
   * `ACCESS_LEVEL_NAME`: the name of the access level that you created.
 
 
@@ -316,8 +332,8 @@ To bind the access level to all of the service accounts in a project using the R
 
 Replace the following:
 
-     * `PROJECT_NUMBER`: the project number of the project that contains all of the service accounts that you want to bind access to
-     * `POLICY_ID`: the ID of the Access Context Manager access policy
+     * `PROJECT_NUMBER`: the project number of the project that contains all of the service accounts that you want to bind access to.
+     * `POLICY_ID`: the ID of the Access Context Manager access policy.
      * `ACCESS_LEVEL_NAME`: the name of the access level that you created.
   2. Run the following command:
          
@@ -330,8 +346,8 @@ Replace the following:
 
 Replace the following:
 
-     * `PROJECT_ID`: the ID of the project you are using to make the API calls
-     * `ORGANIZATION_ID`: your Google Cloud organization ID
+     * `PROJECT_ID`: the ID of the project that you are using to make the API calls.
+     * `ORGANIZATION_ID`: your Google Cloud organization ID.
 
 
 
@@ -368,9 +384,9 @@ To bind the access level in dry-run mode, create the `request.json` file with th
 
 Replace the following:
 
-  * `TARGET_PROJECT_NUMBER`: the project number of the target project
-  * `POLICY_ID`: the ID of the Access Context Manager access policy
-  * `ACCESS_LEVEL_NAME`: the name of the access level
+  * `TARGET_PROJECT_NUMBER`: the project number of the target project.
+  * `POLICY_ID`: the ID of the Access Context Manager access policy.
+  * `ACCESS_LEVEL_NAME`: the name of the access level.
 
 
 
@@ -390,7 +406,7 @@ If you use the search bar to find this page, then select the result whose subhea
 
   1. In the Google Cloud console, select your project or organization.
 
-  2. In the Log query field, enter the following query:
+  2. In the **Log query** field, enter the following query:
          
          protoPayload.serviceName="contextawareaccess.googleapis.com"
          protoPayload.metadata.dryRunEvaluationResult:DENIED
@@ -416,57 +432,17 @@ To view Cloud Audit Logs dry-run mode service account access denials by using th
 
 Replace the following:
 
-  * `ORGANIZATION_ID`: the ID of the organization
-  * `SERVICE_ACCOUNT_NAME`: the name of the service account
+  * `ORGANIZATION_ID`: the ID of the organization.
+  * `SERVICE_ACCOUNT_NAME`: the ID of the service account (the part of the email address before the `@` symbol).
 
 
 
 The `gcloud logging read` command supports the `--freshness` flag to view logging information over relative timeframes. For example, by adding `--freshness=3h` to the command, you can view dry-run mode log entries over the last 3 hours.
 
-## Troubleshooting
-
-This section describes how to troubleshoot Context-Aware Access for service accounts.
-
-### General troubleshooting
-
-  1. Review Cloud Audit Logs.
-
-Use the following log query and review log entries for more information.
-         
-         protoPayload.serviceName="contextawareaccess.googleapis.com"
-         
-
-  2. Review the access level resource name that Context-Aware Access reports when it logs enforcement events.
-
-  3. Make sure that the access level is an org-level resource.
-
-  4. Make sure that the access level in your Context-Aware Access policy is based on attributes that are supported for service accounts.
-
-  5. Verify that the Context-Aware Access policy is bound to the intended service account.
-
-  6. Make sure that your _user_ identity isn't access restricted by a Context-Aware Access policy. This can happen when a user identity is a member of a Google group that has a bound Context-Aware Access policy. That policy might restrict user access, in turn preventing call flow to the service account.
-
-  7. Contact your security administrator.
-
-
-
-
-### Access denied
-
-Access is denied because of the following:
-
-  * You bound the Context-Aware Access policy in enforcement mode rather than dry-run mode.
-
-Instead of enforcement, you can use dry-run mode to let service accounts access resources and log enforcement events without actually denying access to resources. Additionally, you can follow general troubleshooting instructions.
-
-  * The access level needs to be updated to include more sources. For example, an IP address is being used that wasn't included in the access level when it was created.
-
-
-
-
 ## What's next
 
-  * Learn how to [manage access bindings](https://docs.cloud.google.com/access-context-manager/docs/manage-access-bindings).
+  * [Manage access bindings](https://docs.cloud.google.com/access-context-manager/docs/manage-access-bindings)
+  * [Troubleshoot Context-Aware Access for service accounts](https://docs.cloud.google.com/access-context-manager/docs/troubleshooting#service-account-issues)
 
 
 
@@ -474,6 +450,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

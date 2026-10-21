@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/get-list/
 title: Get a list of VMs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:25:00.024951+00:00
+fetched_at: 2026-10-21T12:00:07.429089+00:00
 ---
 
 # Get a list of VMs  |  Compute Engine  |  Google Cloud Documentation
@@ -173,7 +173,7 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     func listAllInstances(w io.Writer, projectID string) error {
     	// projectID := "your_project_id"
     	ctx := context.Background()
-    	instancesClient, err := compute.[NewInstancesRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_InstancesClient_NewInstancesRESTClient)(ctx)
+    	instancesClient, err := compute.NewInstancesRESTClient(ctx)
     	if err != nil {
     		return fmt.Errorf("NewInstancesRESTClient: %w", err)
     	}
@@ -192,7 +192,7 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     	// automatically, returning separated pages as you iterate over the results.
     	for {
     		pair, err := it.Next()
-    		if err == iterator.[Done](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_Operation_Done) {
+    		if err == iterator.Done {
     			break
     		}
     		if err != nil {
@@ -244,7 +244,7 @@ You can also get a list instances in a specific zone:
     	// projectID := "your_project_id"
     	// zone := "europe-central2-b"
     	ctx := context.Background()
-    	instancesClient, err := compute.[NewInstancesRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_InstancesClient_NewInstancesRESTClient)(ctx)
+    	instancesClient, err := compute.NewInstancesRESTClient(ctx)
     	if err != nil {
     		return fmt.Errorf("NewInstancesRESTClient: %w", err)
     	}
@@ -259,7 +259,7 @@ You can also get a list instances in a specific zone:
     	fmt.Fprintf(w, "Instances found in zone %s:\n", zone)
     	for {
     		instance, err := it.Next()
-    		if err == iterator.[Done](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_Operation_Done) {
+    		if err == iterator.Done {
     			break
     		}
     		if err != nil {
@@ -281,11 +281,11 @@ Before trying this sample, follow the Java setup instructions in the [Compute En
 To authenticate to Compute Engine, set up Application Default Credentials. For more information, see [Set up authentication for client libraries](https://docs.cloud.google.com/compute/docs/authentication#client-libs). 
     
     
-    import com.google.cloud.compute.v1.[AggregatedListInstancesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AggregatedListInstancesRequest.html);
-    import com.google.cloud.compute.v1.[Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html);
-    import com.google.cloud.compute.v1.[InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html);
-    import com.google.cloud.compute.v1.[InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html).AggregatedListPagedResponse;
-    import com.google.cloud.compute.v1.[InstancesScopedList](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesScopedList.html);
+    import com.google.cloud.compute.v1.AggregatedListInstancesRequest;
+    import com.google.cloud.compute.v1.Instance;
+    import com.google.cloud.compute.v1.InstancesClient;
+    import com.google.cloud.compute.v1.InstancesClient.AggregatedListPagedResponse;
+    import com.google.cloud.compute.v1.InstancesScopedList;
     import java.io.IOException;
     import java.util.Map;
     
@@ -303,17 +303,17 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
         // once, and can be reused for multiple requests. After completing all of your requests, call
         // the `instancesClient.close()` method on the client to
         // safely clean up any remaining background resources.
-        try ([InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html) instancesClient = [InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html).create()) {
+        try (InstancesClient instancesClient = InstancesClient.create()) {
     
           // Use the `setMaxResults` parameter to limit the number of results
           // that the API returns per response page.
-          [AggregatedListInstancesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AggregatedListInstancesRequest.html) aggregatedListInstancesRequest = [AggregatedListInstancesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AggregatedListInstancesRequest.html)
+          AggregatedListInstancesRequest aggregatedListInstancesRequest = AggregatedListInstancesRequest
               .newBuilder()
               .setProject(project)
               .setMaxResults(5)
               .build();
     
-          [InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html).AggregatedListPagedResponse response = instancesClient
+          InstancesClient.AggregatedListPagedResponse response = instancesClient
               .aggregatedList(aggregatedListInstancesRequest);
     
           // Despite using the `setMaxResults` parameter, you don't need to handle the pagination
@@ -360,8 +360,8 @@ You can also get a list instances in a specific zone:
     package compute;
     
     
-    import com.google.cloud.compute.v1.[Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html);
-    import com.google.cloud.compute.v1.[InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html);
+    import com.google.cloud.compute.v1.Instance;
+    import com.google.cloud.compute.v1.InstancesClient;
     import java.io.IOException;
     
     public class ListInstance {
@@ -379,10 +379,10 @@ You can also get a list instances in a specific zone:
         // once, and can be reused for multiple requests. After completing all of your requests, call
         // the `instancesClient.close()` method on the client to 
         // safely clean up any remaining background resources.
-        try ([InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html) instancesClient = [InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html).create()) {
+        try (InstancesClient instancesClient = InstancesClient.create()) {
           // Set the project and zone to retrieve instances present in the zone.
           System.out.printf("Listing instances from %s in %s:", project, zone);
-          for ([Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html) zoneInstance : instancesClient.list(project, zone).iterateAll()) {
+          for (Instance zoneInstance : instancesClient.list(project, zone).iterateAll()) {
             System.out.println(zoneInstance.getName());
           }
           System.out.println("####### Listing instances complete #######");
@@ -405,11 +405,11 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
      */
     // const projectId = 'YOUR_PROJECT_ID';
     
-    const compute = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)');
+    const compute = require('@google-cloud/compute');
     
     // List all instances in the specified project.
     async function listAllInstances() {
-      const instancesClient = new compute.[InstancesClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+      const instancesClient = new compute.InstancesClient();
     
       //Use the `maxResults` parameter to limit the number of results that the API returns per response page.
       const aggListRequest = instancesClient.aggregatedListAsync({
@@ -466,11 +466,11 @@ You can also get a list instances in a specific zone:
       // const projectId = 'YOUR_PROJECT_ID';
       // const zone = 'europe-central2-b'
     
-      const compute = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)');
+      const compute = require('@google-cloud/compute');
     
       // List all instances in the given zone in the specified project.
       async function listInstances() {
-        const instancesClient = new compute.[InstancesClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+        const instancesClient = new compute.InstancesClient();
     
         const [instanceList] = await instancesClient.list({
           project: projectId,

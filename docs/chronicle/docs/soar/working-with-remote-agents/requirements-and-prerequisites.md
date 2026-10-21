@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/working-with-remote-agents/requirements-and-prerequisites/
 title: Review deployment requirements \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:35:56.776891+00:00
+fetched_at: 2026-10-21T12:01:45.738243+00:00
 ---
 
 # Review deployment requirements  |  Google Security Operations  |  Google Cloud Documentation
@@ -65,12 +65,24 @@ The Remote Agent supports the following container engines:
 
 
 
+## Hardened environments and OS security policies
+
+Host OS hardening and security enforcement mechanisms—such as **SELinux** in `Enforcing` mode, **AppArmor** , or endpoint security software—can cause Remote Agent tasks to fail when the security policy blocks OS commands executed by the agent.
+
+If you deploy the Remote Agent on a hardened host, you must exempt the Remote Agent from these security enforcement policies so that it can run required OS commands:
+
+  * For containerized deployments (Docker or Podman), exempt the Remote Agent container when starting it for the first time by adding `--security-opt label=disable` (for SELinux) or `--security-opt apparmor=unconfined` (for AppArmor) to your `docker run` or `podman run` command.
+  * Configure custom SELinux policy rules, AppArmor profiles, or endpoint security and antivirus exemptions for the Remote Agent directories (`/opt/SiemplifyAgent`, `/home/siemplify_agent/agent_source`, and `/var/log/SiemplifyAgent`) and executables (`/usr/local/bin/python3.11`, `/usr/local/bin/pip3`, and `/usr/bin/supervisord`).
+  * Alternatively, set SELinux to `Permissive` mode on the host machine by setting `SELINUX=permissive` in `/etc/selinux/config` (or temporarily running `sudo setenforce 0`) if targeted policy exemptions aren't configured.
+
+
+
 **Need more help?** [Get answers from Community members and Google SecOps professionals.](https://security.googlecloudcommunity.com/)
 
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

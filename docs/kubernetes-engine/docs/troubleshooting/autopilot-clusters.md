@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/troubleshooting/autopilot-clusters/
 title: Troubleshooting Autopilot clusters \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:53:34.950694+00:00
+fetched_at: 2026-10-21T12:23:05.726695+00:00
 ---
 
 # Troubleshooting Autopilot clusters  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -132,8 +132,8 @@ The output is similar to the following:
         LAST SEEN         TYPE            REASON                  OBJECT                   Message
         19m               Warning         FailedScheduling        pod/example-pod          gke.io/optimize-utilization-scheduler  0/2 nodes are available: 2 node(s) didn't match Pod's node affinity/selector. preemption: 0/2 nodes are available: 2 Preemption is not helpful for scheduling.
         14m               Warning         FailedScheduling        pod/example-pod          gke.io/optimize-utilization-scheduler  0/2 nodes are available: 2 node(s) didn't match Pod's node affinity/selector. preemption: 0/2 nodes are available: 2 Preemption is not helpful for scheduling.
-        **12m (x2 over 18m) Warning         FailedScaleUp           cluster-autoscaler       Node scale up in zones us-central1-f associated with this pod failed: GCE out of resources. Pod is at risk of not being scheduled.
-        34s (x3 over 17m) Warning         FailedScaleUp           cluster-autoscaler       Node scale up in zones us-central1-b associated with this pod failed: GCE out of resources. Pod is at risk of not being scheduled.**
+        **12m (x2 over 18m) Warning         FailedScaleUp           cluster-autoscaler       Node scale up in zones us-central1-f associated with this pod failed: GCE out of resources. Pod is at risk of not being scheduled.**
+        **34s (x3 over 17m) Warning         FailedScaleUp           cluster-autoscaler       Node scale up in zones us-central1-b associated with this pod failed: GCE out of resources. Pod is at risk of not being scheduled.**
         
 
 
@@ -150,6 +150,7 @@ To resolve this issue, try the following:
 
 To avoid scale-up issues caused by resource availability in the future, consider the following approaches:
 
+  * Define a [custom ComputeClass](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes) with a prioritized list of fallback machine series and enable [active migration](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes#active-migration) (`optimizeRulePriority: true`). This configuration lets GKE automatically provision alternative hardware when there is insufficient compute capacity in the zone and migrates Pods back when preferred capacity recovers.
   * Use Kubernetes PriorityClasses to consistently provision extra compute capacity in your cluster. For details, see [Provision extra compute capacity for rapid Pod scaling](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/capacity-provisioning).
   * Use Compute Engine capacity reservations with the `Performance` ComputeClass or accelerated Pods. For details, see [Consume reserved zonal resources](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/consuming-reservations).
 
@@ -496,6 +497,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/performance-optimization/elasticity/
 title: Take advantage of elasticity \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:21.117794+00:00
+fetched_at: 2026-10-21T12:22:03.177535+00:00
 ---
 
 # Take advantage of elasticity  |  Cloud Architecture Center  |  Google Cloud Documentation

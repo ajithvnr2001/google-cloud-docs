@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/custom-mcp-server/set-up-custom-mcp-server/
 title: Set up your custom MCP server data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:15:59.102503+00:00
+fetched_at: 2026-10-21T12:01:35.432571+00:00
 ---
 
 # Set up your custom MCP server data store  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -225,12 +225,24 @@ For example, in Python:
 
 To ensure that your changes are reflected in your setup, reload custom actions. For more information, see Enable actions.
 
+### Performance and reliability best practices
+
+To minimize response latency and prevent request timeouts when using a custom MCP server, follow these best practices:
+
+  * **Keep tool descriptions and schemas concise** : Keep tool descriptions and input parameter schemas concise to reduce prompt processing latency.
+  * **Use pagination or asynchronous polling for long-running operations** : Keep individual tool calls fast by paginating large query results. For long-running backend operations (such as large data warehouse queries or report generation), implement an asynchronous tool pattern where one tool starts the job and returns a job ID immediately, and a second tool polls the job status and retrieves the results.
+  * **Request offline access for persistent OAuth tokens** : When configuring OAuth 2.0 authentication, include the `offline_access` scope (or `&access_type=offline&prompt=consent` in **Authorization URL Parameters** for providers that require it) from initial setup so your identity provider issues a refresh token and requests don't fail or time out after the initial access token expires.
+  * **Turn off unused or unhealthy actions and data stores** : Only enable the actions that users need, and turn off custom MCP server data stores that are unused or undergoing maintenance so unreachable endpoints don't add latency to chat turns.
+
+
+
 ## What's next
 
   * To protect against malicious inputs and outputs, enable Model Armor. For more information, see [Enable Model Armor](https://docs.cloud.google.com/gemini/enterprise/docs/enable-model-armor).
   * If you want to query your MCP server using a custom agent, instead of the Gemini Enterprise assistant, see [Create an agent](https://docs.cloud.google.com/gemini/enterprise/docs/workflow-builder/create-chat-agent).
   * If the data store is not connected to an app, see [Connect a data store to app and authorize Gemini Enterprise](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/connect-existing-data-store).
   * To use your agent that's connected to your custom MCP server, see [Use an agent](https://docs.cloud.google.com/gemini/enterprise/docs/workflow-builder/use-chat-agent).
+  * To display source citation chips when Gemini Enterprise answers a question using tools on your custom MCP server, see [Configure citations for custom MCP data stores](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/custom-mcp-server/configure-citations-for-custom-mcp-data-stores).
 
 
 
@@ -238,6 +250,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

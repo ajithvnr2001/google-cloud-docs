@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/release-notes-1161/
 title: Google Distributed Cloud air-gapped 1.16.1 release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:15.863790+00:00
+fetched_at: 2026-10-21T12:01:26.255063+00:00
 ---
 
 # Google Distributed Cloud air-gapped 1.16.1 release notes  |  Google Cloud Documentation
@@ -110,6 +110,8 @@ The following new features are available:
   * Added Windows 2022 image support for bring-your-own (BYO) custom images. For more information, see [GDC-supported VM images](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/create-a-vm/supported-vm-images).
 
   * Added Secure Boot certificate renewal support for VMs with expiring certificates. For more information, see [Update Secure Boot certificates](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-vms/secure-vms/secure-boot-cert-update).
+
+  * Increased the maximum [Tier 1 networking](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-vms/operations-and-lifecycle/vm-config-network) egress bandwidth limit from 25 Gbps to 32 Gbps per VM, depending on machine type and vCPU count, to handle demanding workloads.
 
 
 
@@ -538,6 +540,12 @@ b/534561687 #}
 
 
 
+**Networking**
+
+  * External `kubectl` requests to standard cluster API servers fail with an `RBAC: access denied` error when only `matchTypes: ["api-server"]` is configured in an `OrganizationNetworkPolicy`. 
+
+
+
 **Network Time Protocol (NTP)**
 
   * The `ntp-relay-controller` pod might enter a crash loop state due to out-of-memory errors. 
@@ -597,6 +605,8 @@ b/534561687 #}
 
 
 **Storage**
+
+  * Bootstrapping a new tenant organization hangs during the `VMImageDistributing` step when Nearline storage is enabled. 
 
   * The ONTAP S3 event audit logging is disabled. 
 
@@ -680,6 +690,12 @@ The following issues are fixed:
 
 
 
+**Virtual machines**
+
+  * When you import a VM disk image using the `gdcloud compute images import` command or the `VirtualMachineImageImport` custom resource, the import operation gets stuck at the `JobImport` stage if the `VirtualMachineImageImport` resource name exceeds 33 characters (or 28 characters for the image name passed to the gdcloud CLI). 
+
+
+
 * * *
 
 Change
@@ -711,6 +727,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/multiregional-vms/
 title: Multi-regional deployment on Compute Engine \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:26.243718+00:00
+fetched_at: 2026-10-21T12:22:04.874910+00:00
 ---
 
 # Multi-regional deployment on Compute Engine  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -19,7 +19,7 @@ Send feedback
 
 #  Multi-regional deployment on Compute Engine Stay organized with collections  Save and categorize content based on your preferences. 
 
-Last reviewed 2025-08-11 UTC
+Last reviewed 2026-10-14 UTC
 
 This document provides a reference architecture for a multi-tier application that runs on Compute Engine VMs in multiple [regions](https://docs.cloud.google.com/docs/geography-and-regions#regions_and_zones) in Google Cloud. You can use this reference architecture to efficiently [rehost (lift and shift)](https://docs.cloud.google.com/architecture/migration-to-gcp-getting-started#rehost_lift_and_shift) on-premises applications to the cloud with minimal changes to the applications. The document also describes the design factors that you should consider when you build a multi-regional architecture for your cloud applications. The intended audience for this document is cloud architects.
 
@@ -27,9 +27,7 @@ This document provides a reference architecture for a multi-tier application tha
 
 The following diagram shows an architecture for an application that runs in active-active mode in isolated stacks that are deployed across two Google Cloud regions. In each region, the application runs independently in three zones. The architecture is aligned with the [Google Cloud multi-regional deployment archetype](https://docs.cloud.google.com/architecture/deployment-archetypes/multiregional), which ensures that your Google Cloud topology is robust against zone and region outages and that it provides low latency for application users.
 
-![Multi-regional architecture using a global load balancer](https://docs.cloud.google.com/static/architecture/images/multiregional-ra-gclb.svg)
-
-![](https://docs.cloud.google.com/static/architecture/images/multiregional-ra-gclb.svg)
+![Multi-regional architecture using a global load balancer](https://docs.cloud.google.com/static/architecture/images/multiregional-ra-gclb.svg)![](https://docs.cloud.google.com/static/architecture/images/multiregional-ra-gclb.svg)
 
 The architecture is based on the infrastructure as a service (IaaS) cloud model. You provision the required infrastructure resources (compute, networking, and storage) in Google Cloud, and you retain full control over and responsibility for the operating system, middleware, and higher layers of the application stack. To learn more about IaaS and other cloud models, see [PaaS vs. IaaS vs. SaaS vs. CaaS: How are they different?](https://cloud.google.com/learn/paas-vs-iaas-vs-saas)
 
@@ -84,9 +82,7 @@ The preceding architecture uses a global load balancer, which supports certain f
 
 For more information about the differences between regional and global load balancers, see [Global versus regional load balancing](https://docs.cloud.google.com/load-balancing/docs/choosing-load-balancer#global-regional) and [Modes of operation](https://docs.cloud.google.com/load-balancing/docs/https#load-balancer-mode).
 
-![Multi-regional architecture using regional load balancers and DNS.](https://docs.cloud.google.com/static/architecture/images/multiregional-ra-dns-with-regional-lb.svg)
-
-![](https://docs.cloud.google.com/static/architecture/images/multiregional-ra-dns-with-regional-lb.svg)
+![Multi-regional architecture using regional load balancers and DNS.](https://docs.cloud.google.com/static/architecture/images/multiregional-ra-dns-with-regional-lb.svg)![](https://docs.cloud.google.com/static/architecture/images/multiregional-ra-dns-with-regional-lb.svg)
 
 The alternative architecture in the preceding diagram is robust against zone and region outages. A [Cloud DNS](https://docs.cloud.google.com/dns/docs/overview) public zone routes user requests to the appropriate region. Regional external load balancers receive user requests and distribute them across the web tier instances of the application within each region. The other components in this architecture are identical to the components in the global load balancer-based architecture.
 
@@ -131,7 +127,7 @@ The decision of whether to use VMs, containers, or serverless services involves 
 
 #### Storage services
 
-The architectures shown in this document use [regional Persistent Disk volumes](https://docs.cloud.google.com/compute/docs/disks#repds) for all the tiers. Persistent disks provide synchronous replication of data across two zones within a region.
+The architectures shown in this document use [regional Persistent Disk volumes](https://docs.cloud.google.com/compute/docs/disks/about-regional-persistent-disk) for all the tiers. Persistent disks provide synchronous replication of data across two zones within a region.
 
 [Google Cloud Hyperdisk](https://docs.cloud.google.com/compute/docs/disks/hyperdisks) provides better performance, flexibility, and efficiency than Persistent Disk. With Hyperdisk Balanced, you can provision IOPS and throughput separately and dynamically, which lets you tune the volume to a wide variety of workloads.
 
@@ -142,7 +138,7 @@ For low-cost storage that's replicated across multiple locations, you can use Cl
 
 
 
-To store data that's shared across multiple VMs in a region, such as across all the VMs in the web tier or application tier, you can use a [Filestore regional instance](https://docs.cloud.google.com/filestore/docs/service-tiers#regional). The data that you store in a Filestore regional instance is replicated synchronously across three zones within the region. This replication ensures [high availability](https://cloud.google.com/filestore/sla) and robustness against zone outages. You can store shared configuration files, common tools and utilities, and centralized logs in the Filestore instance, and mount the instance on multiple VMs. For robustness against region outages, you can replicate a Filestore instance to a different region. For more information, see [Instance replication](https://docs.cloud.google.com/filestore/docs/instance-replication#instance-replication).
+To store data that's shared across multiple VMs in a region, such as across all the VMs in the web tier or application tier, you can use a [Filestore regional instance](https://docs.cloud.google.com/filestore/docs/service-tiers-regional). The data that you store in a Filestore regional instance is replicated synchronously across three zones within the region. This replication ensures [high availability](https://cloud.google.com/filestore/sla) and robustness against zone outages. You can store shared configuration files, common tools and utilities, and centralized logs in the Filestore instance, and mount the instance on multiple VMs. For robustness against region outages, you can replicate a Filestore instance to a different region. For more information, see [Instance replication](https://docs.cloud.google.com/filestore/docs/instance-replication#instance-replication).
 
 If your database is Microsoft SQL Server, we recommend using Cloud SQL for SQL Server. In scenarios when Cloud SQL doesn't support your configuration requirements, or if you need access to the operating system, you can deploy a [Microsoft SQL Server failover cluster instance (FCI)](https://learn.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server). In this scenario, you can use the fully managed [Google Cloud NetApp Volumes](https://docs.cloud.google.com/netapp/volumes/docs/discover/overview) to provide continuous availability (CA) SMB storage for the database.
 
@@ -196,7 +192,7 @@ To enhance the security of SSH connections to the Compute Engine VMs in your arc
 
 #### Disk encryption
 
-By default, the data that's stored in Persistent Disk volumes is encrypted using Google-owned and Google-managed encryption keys. As an additional layer of protection, you can choose to encrypt the Google-owned and managed key by using keys that you own and manage in Cloud Key Management Service (Cloud KMS). For more information, see [About disk encryption](https://docs.cloud.google.com/compute/docs/disks/disk-encryption) for Hyperdisk volumes and [Encrypt data with customer-managed encryption keys](https://docs.cloud.google.com/compute/docs/disks/customer-supplied-encryption).
+By default, the data that's stored in Persistent Disk volumes is encrypted using Google-owned and Google-managed encryption keys. As an additional layer of protection, you can choose to encrypt the Google-owned and managed key by using keys that you own and manage in Cloud Key Management Service (Cloud KMS). For more information, see [About disk encryption](https://docs.cloud.google.com/compute/docs/disks/disk-encryption) and [Protect resources with Cloud KMS keys](https://docs.cloud.google.com/compute/docs/disks/customer-managed-encryption).
 
 #### Network security
 
@@ -204,7 +200,7 @@ To control network traffic between the resources in the architecture, you must c
 
 #### Data residency considerations
 
-You can use regional load balancers to build a multi-regional architecture that helps you to meet data residency requirements. For example, a country in Europe might require that all user data be stored and accessed in data centers that are located physically within Europe. To meet this requirement, you can use the regional load balancer-based architecture. In that architecture, the application runs in [Google Cloud regions in Europe](https://cloud.google.com/about/locations#europe) and you use Cloud DNS with a [geofenced routing policy](https://docs.cloud.google.com/dns/docs/policies-overview#geo-fenced-policy) to route traffic through regional load balancers. To meet data residency requirements for the database tier, use a [sharded](https://en.wikipedia.org/wiki/Shard_\(database_architecture\)) architecture instead of replication across regions. With this approach, the data in each region is isolated, but you can't implement cross-region high availability and failover for the database.
+You can use regional load balancers to build a multi-regional architecture that helps you to meet data residency requirements. For example, a country in Europe might require that all user data be stored and accessed in data centers that are located physically within Europe. To meet this requirement, you can use the regional load balancer-based architecture. In that architecture, the application runs in [Google Cloud regions in Europe](https://cloud.google.com/about/locations#europe) and you use Cloud DNS with a [geofenced routing policy](https://docs.cloud.google.com/dns/docs/routing-policies-overview#geo-fenced-policy) to route traffic through regional load balancers. To meet data residency requirements for the database tier, use a [sharded](https://en.wikipedia.org/wiki/Shard_\(database_architecture\)) architecture instead of replication across regions. With this approach, the data in each region is isolated, but you can't implement cross-region high availability and failover for the database.
 
 #### More security considerations
 
@@ -220,7 +216,7 @@ In a multi-regional deployment architecture, if any individual component in the 
 
 If a zone outage occurs, the load balancer isn't affected, because it's a regional resource. A zone outage might affect individual Compute Engine VMs. But the application remains available and responsive because the VMs are in a regional MIG. A regional MIG ensures that new VMs are created automatically to maintain the configured minimum number of VMs. After Google resolves the zone outage, you must verify that the application runs as expected in all of the zones where it's deployed.
 
-If all of the zones in one of the regions have an outage or if a region-wide outages occurs, then the application in the other region remains available and responsive. The global external load balancer directs traffic to the region that isn't affected by the outage. After Google resolves the region outage, you must verify that the application runs as expected in the region that had the outage.
+If all of the zones in one of the regions have an outage or if a region-wide outage occurs, then the application in the other region remains available and responsive. The global external load balancer directs traffic to the region that isn't affected by the outage. After Google resolves the region outage, you must verify that the application runs as expected in the region that had the outage.
 
 If both of the regions in this architecture have outages, then the application is unavailable. You must wait for Google to resolve the outage, and then verify that the application works as expected.
 
@@ -259,7 +255,7 @@ You can use [Backup and DR](https://docs.cloud.google.com/backup-disaster-recove
 Compute Engine provides the following options to help you to ensure the durability of data that's stored in Persistent Disk volumes:
 
   * You can use [snapshots](https://docs.cloud.google.com/compute/docs/disks/snapshots) to capture the point-in-time state of Persistent Disk volumes. The snapshots are stored redundantly in multiple regions, with automatic checksums to ensure the integrity of your data. Snapshots are incremental by default, so they use less storage space and you save money. Snapshots are stored in a [Cloud Storage location](https://docs.cloud.google.com/compute/docs/disks/snapshot-settings#storage_location_options) that you can configure. For more recommendations about using and managing snapshots, see [Best practices for Compute Engine disk snapshots](https://docs.cloud.google.com/compute/docs/disks/snapshot-best-practices).
-  * To ensure that data in Persistent Disk remains available if a zone outage occurs, you can use [Regional Persistent Disk](https://docs.cloud.google.com/compute/docs/disks/persistent-disks#repds) or [Hyperdisk Balanced High Availability](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced-ha). Data in these disk types is replicated synchronously between two zones in the same region. For more information, see [About synchronous disk replication](https://docs.cloud.google.com/compute/docs/disks/about-regional-persistent-disk#about-synchronous-disk-replication).
+  * To ensure that data in Persistent Disk remains available if a zone outage occurs, you can use [Regional Persistent Disk](https://docs.cloud.google.com/compute/docs/disks/about-regional-persistent-disk) or [Hyperdisk Balanced High Availability](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced-ha). Data in these disk types is replicated synchronously between two zones in the same region. For more information, see [About synchronous disk replication](https://docs.cloud.google.com/compute/docs/disks/about-regional-persistent-disk#zonal_replication).
 
 
 
@@ -284,7 +280,7 @@ This section provides guidance to optimize the cost of setting up and operating 
 
 #### VM machine types
 
-To help you optimize the resource utilization of your VM instances, Compute Engine provides [machine type recommendations](https://docs.cloud.google.com/compute/docs/instances/apply-machine-type-recommendations-for-instances). Use the recommendations to choose machine types that match your workload's compute requirements. For workloads with predictable resource requirements, you can customize the machine type to your needs and save money by using [custom machine types](https://docs.cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#specifications).
+To help you optimize the resource utilization of your VM instances, Compute Engine provides [machine type recommendations](https://docs.cloud.google.com/compute/docs/instances/apply-machine-type-recommendations-for-instances). Use the recommendations to choose machine types that match your workload's compute requirements. For workloads with predictable resource requirements, you can customize the machine type to your needs and save money by using [custom machine types](https://docs.cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type).
 
 #### VM provisioning model
 
@@ -298,10 +294,10 @@ The [autoscaling](https://docs.cloud.google.com/compute/docs/autoscaler) capabil
 
 #### Third-party licensing
 
-When you migrate third-party workloads to Google Cloud, you might be able to reduce cost by bringing your own licenses (BYOL). For example, to deploy Microsoft Windows Server VMs, instead of using a [premium image](https://docs.cloud.google.com/compute/disks-image-pricing#section-1) that incurs additional cost for the third-party license, you can create and use a [custom Windows BYOL image](https://docs.cloud.google.com/compute/docs/images/creating-custom-windows-byol-images). You then pay only for the VM infrastructure that you use on Google Cloud. This strategy helps you continue to realize value from your existing investments in third-party licenses. If you decide to use the BYOL approach, then the following recommendations might help to reduce cost:
+When you migrate third-party workloads to Google Cloud, you might be able to reduce cost by bringing your own licenses (BYOL). For example, to deploy Microsoft Windows Server VMs, instead of using a [premium image](https://cloud.google.com/compute/disks-image-pricing#premium-images) that incurs additional cost for the third-party license, you can create and use a [custom Windows BYOL image](https://docs.cloud.google.com/compute/docs/images/creating-custom-windows-byol-images). You then pay only for the VM infrastructure that you use on Google Cloud. This strategy helps you continue to realize value from your existing investments in third-party licenses. If you decide to use the BYOL approach, then the following recommendations might help to reduce cost:
 
   * Provision the required number of compute CPU cores independently of memory by using [custom machine types](https://docs.cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#extendedmemory). By doing this, you limit the third-party licensing cost to the number of CPU cores that you need.
-  * Reduce the number of vCPUs per core from 2 to 1 by disabling [simultaneous multithreading (SMT)](https://docs.cloud.google.com/compute/docs/instances/configuring-simultaneous-multithreading).
+  * Reduce the number of vCPUs per core from 2 to 1 by disabling [simultaneous multithreading (SMT)](https://docs.cloud.google.com/compute/docs/instances/set-threads-per-core).
 
 
 
@@ -325,7 +321,7 @@ For your VMs, instead of using Google-provided public images, we recommend that 
 
 #### Deterministic instance templates
 
-If the instance templates that you use for your MIGs include startup scripts to install third-party software, make sure that the scripts explicitly specify software-installation parameters such as the software version. Otherwise, when the MIG creates the VMs, the software that's installed on the VMs might not be consistent. For example, if your instance template includes a startup script to install Apache HTTP Server 2.0 (the `apache2` package), then make sure that the script specifies the exact `apache2` version that should be installed, such as version `2.4.53`. For more information, see [Deterministic instance templates](https://docs.cloud.google.com/compute/docs/instance-templates/deterministic-instance-templates).
+If the instance templates that you use for your MIGs include startup scripts to install third-party software, make sure that the scripts explicitly specify software-installation parameters such as the software version. Otherwise, when the MIG creates the VMs, the software that's installed on the VMs might not be consistent. For example, if your instance template includes a startup script to install Apache HTTP Server 2.4 (the `apache2` package), then make sure that the script specifies the exact `apache2` version that should be installed, such as version `2.4.69`. For more information, see [Deterministic instance templates](https://docs.cloud.google.com/compute/docs/instance-templates/deterministic-instance-templates).
 
 #### More operational considerations
 
@@ -406,6 +402,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2025-08-11 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2025-08-11 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

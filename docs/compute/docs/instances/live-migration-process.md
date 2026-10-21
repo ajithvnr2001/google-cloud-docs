@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/live-migration-process/
 title: Live migration process during maintenance events \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:29:03.661990+00:00
+fetched_at: 2026-10-21T11:58:09.667115+00:00
 ---
 
 # Live migration process during maintenance events  |  Compute Engine  |  Google Cloud Documentation
@@ -40,7 +40,7 @@ Compute Engine only performs a live migration of VMs that have the host maintena
 
 ## Live migration process and Local SSD disks
 
-Compute Engine can live migrate instances with Local SSD disks attached (excluding Z3 instances with more than 18 TiB of attached Titanium SSD). Compute Engine moves the compute instances along with their Local SSD data to a new host server in advance of any planned maintenance.
+Compute Engine can live migrate instances with Local SSD disks attached (excluding Z3 instances with more than 18,000 GiB of attached Titanium SSD). Compute Engine moves the compute instances along with their Local SSD data to a new host server in advance of any planned maintenance.
 
 **Important:** Instances with a large amount of Local SSD data can experience a longer period of performance degradation during the migration to the new host server. 
 
@@ -49,6 +49,7 @@ Compute Engine can live migrate instances with Local SSD disks attached (excludi
 Live migration is not supported for the following VM types: 
 
   * **H4D instances with Local SSD**.
+  * **Instances that have a Cloud RDMA network interface**.
   * **Bare metal instances**. Instances created with a [bare metal machine type](https://docs.cloud.google.com/compute/docs/instances/bare-metal-instances) don't support live migration. The maintenance behavior for these instances is set to `TERMINATE` and `RESTART`, respectively.
   * **Most Confidential VM instances**. Live migration for Confidential VM instances is supported on N2D and C3D machine types running AMD SEV. All other Confidential VM instances don't support live migration, and must be set to stop and optionally restart during a host maintenance event. See [Live migration](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/troubleshoot-live-migration) for more details.
   * **VMs with GPUs attached**. VM instances with GPUs attached must be set to stop and optionally restart. Compute Engine offers a notice before a VM instance with a GPU attached is stopped, depending on the GPU type:
@@ -63,8 +64,9 @@ To learn more about handling host maintenance with GPUs, read [Handling host mai
   * **Cloud TPUs**. [Cloud TPUs](https://docs.cloud.google.com/tpu/docs/tpus) don't support live migration.
   * **Storage-optimized VMs**. For the following machine types, the maintenance behavior for these VMs is set to `TERMINATE` and `RESTART`. Compute Engine preserves the data on Titanium SSD during the maintenance event, as described in [Disk persistence following instance termination](https://docs.cloud.google.com/compute/docs/instances/host-maintenance-overview#disk-persistence). 
 
-    * Z4D VMs with more than 42 TiB of attached Titanium SSD
-    * Z3 VMs with more than 18 TiB of attached Titanium SSD
+    * Z4D or Z4M VMs with more than 42,000 GiB of attached Titanium SSD
+    * Z4M VMs that have a Cloud RDMA network interface
+    * Z3 VMs with more than 18,000 GiB of attached Titanium SSD 
   * **Compute-optimized VMs** H4D VMs don't support live migration, because live migration isn't supported for RDMA-enabled VMs. From an HPC application perspective, performing live migration of an instance would severely impact application performance, and it's better for applications to start from a checkpoint. Maintenance behavior for these VMs is set to `TERMINATE` and `RESTART`. Compute Engine preserves the data on Titanium SSD during the maintenance event, as described in [Disk persistence following instance termination](https://docs.cloud.google.com/compute/docs/instances/host-maintenance-overview#disk-persistence). 
 
 
@@ -86,13 +88,13 @@ After a VM is selected for migration, Google Cloud provides a notification to th
 
 There are three stages involved in the VM's migration:
 
-  1. **Source brownout.** The VM is still executing on the source, while most state is sent from the source to the target. For example, Google Cloud copies all the guest memory to the target, while tracking the pages that have been changed on the source. The time spent in source brownout is a function of the size of the guest memory and the rate at which pages are being changed.
+  1. **Source brownout.** The VM is still executing on the source host, while most state is sent from the source VM to the target VM. For example, Google Cloud copies all the guest memory to the target VM, while tracking the pages that have been changed on the source VM. The time spent in source brownout is a function of the size of the guest memory and the rate at which pages are being changed.
 
-  2. **Blackout.** A very brief moment when the VM is not running anywhere, the source VM is paused and all the remaining state required to begin running the VM on the target is sent. The VM enters the blackout stage when sending state changes during the source brownout stage reaches a point of diminishing returns. An algorithm is used that balances numbers of bytes of memory being sent against the rate at which the guest VM is making changes.
+  2. **Blackout.** A very brief moment when the VM is not running anywhere. The source VM is paused and all the remaining state required to begin running the VM on the target host is sent. The VM enters the blackout stage when sending state changes during the source brownout stage reaches a point of diminishing returns. An algorithm is used that balances numbers of bytes of memory being sent against the rate at which the guest is making changes.
 
 During blackout events, the system clock appears to jump forward, up to 5 seconds. If a blackout event exceeds 5 seconds, Google Cloud stops and synchronizes the clock using a daemon that is included as part of the VM guest packages.
 
-  3. **Target brownout.** The VM executes on the target VM. The source VM is present and might provide support for the target VM. For example, until the network fabric has caught up with the new location of the target VM, the source VM provides forwarding services for packets to and from the target VM.
+  3. **Target brownout.** The VM executes on the target host. The source VM is present and might provide support for the target VM. For example, until the network fabric has caught up with the new location of the target VM, the source VM provides forwarding services for packets to and from the target VM.
 
 
 
@@ -122,6 +124,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

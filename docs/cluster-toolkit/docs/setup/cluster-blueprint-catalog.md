@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/setup/cluster-blueprint-catalog/
 title: Cluster blueprint catalog \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:39.207699+00:00
+fetched_at: 2026-10-21T12:23:08.949100+00:00
 ---
 
 # Cluster blueprint catalog  |  Cluster Toolkit  |  Google Cloud Documentation
@@ -103,17 +103,17 @@ Clear all
   * GPUs
 
 | Core  
-[gke-a3-highgpu](https://github.com/GoogleCloudPlatform/cluster-toolkit/tree/main/examples/README.md#gke-a3-highgpuyaml-) | [A3 High for GKE](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/create-a3-high-cluster) | GKE | None | A3 High | Container-Optimized OS | 
+[ gke-a3-highgpu](https://github.com/GoogleCloudPlatform/cluster-toolkit/tree/main/examples/gke-a3-highgpu) |  [ A3 High for GKE](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/create-a3-high-cluster) | GKE | None | A3 High | Container-Optimized OS | 
 
   * GPUs
-  * Jobset
+  * JobSet
   * Kueue
 
 | Core  
-[gke-a3-megagpu](https://github.com/GoogleCloudPlatform/cluster-toolkit/tree/main/examples/README.md#gke-a3-megagpuyaml-) | [A3 Mega for GKE](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/deploy-a3-mega-gke-cluster) | GKE | None | A3 Mega | Container-Optimized OS | 
+[ gke-a3-megagpu](https://github.com/GoogleCloudPlatform/cluster-toolkit/tree/main/examples/gke-a3-megagpu) |  [ A3 Mega for GKE](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/deploy-a3-mega-gke-cluster) | GKE | None | A3 Mega | Container-Optimized OS | 
 
   * GPUs
-  * Jobset
+  * JobSet
   * Kueue
 
 | Core  
@@ -278,6 +278,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

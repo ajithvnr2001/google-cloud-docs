@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/reservations-consume/
 title: Consume reservations \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:59:07.443146+00:00
+fetched_at: 2026-10-21T12:00:06.432355+00:00
 ---
 
 # Consume reservations  |  Compute Engine  |  Google Cloud Documentation
@@ -21,20 +21,20 @@ Send feedback
 
 #  Consume reservations Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document explains how to consume reservations in Compute Engine. To learn how to consume reservations in other Google Cloud products, see the following documentation:
+This document explains how to consume reservations in Compute Engine. To learn how to consume reservations in other Google Cloud products that support reservations, see the following documentation:
 
   * [Batch](https://docs.cloud.google.com/batch/docs/create-run-job-reservation)
-  * [ Dataflow](https://docs.cloud.google.com/dataflow/docs/guides/compute-engine-reservations)
-  * [ Managed Service for Apache Spark](https://docs.cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#auto_zone_and_resource_reservations)
-  * [ Google Kubernetes Engine](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/consuming-reservations)
-  * [Cloud TPU](https://docs.cloud.google.com/tpu/docs/consume-reservation-compute)
+  * [Dataflow](https://docs.cloud.google.com/dataflow/docs/guides/compute-engine-reservations)
+  * [Managed Service for Apache Spark](https://docs.cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#auto_zone_and_resource_reservations)
+  * [Google Kubernetes Engine](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/consuming-reservations)
   * Vertex AI: 
-    * [ Use reservations with prediction](https://docs.cloud.google.com/vertex-ai/docs/predictions/use-reservations)
-    * [ Use reservations with training](https://docs.cloud.google.com/vertex-ai/docs/training/use-reservations)
+    * [Use reservations with prediction](https://docs.cloud.google.com/vertex-ai/docs/predictions/use-reservations)
+    * [Use reservations with training](https://docs.cloud.google.com/vertex-ai/docs/training/use-reservations)
+  * [Cloud TPU](https://docs.cloud.google.com/tpu/docs/consume-reservation-compute)
 
 
 
-After you create a reservation, or Compute Engine automatically creates a reservation for you to fulfill a future reservation, Compute Engine holds your reserved resources for you. You can then use those reserved resources to create Compute Engine instances that match the reservation's properties. This action is known as _consuming a reservation_. You can use your reserved capacity for creating instances until the reservation is [fully consumed](https://docs.cloud.google.com/compute/docs/instances/reservations-view#number-instances-reservation).
+After you create a reservation, or Compute Engine automatically creates a reservation for you to fulfill a future reservation or future reservation in calendar mode, Compute Engine holds your reserved resources for your project, and any project you share the reservation with. When you create Compute Engine instances that match the reservation's properties, you _consume_ the reservation by using the reserved resources to create your compute instances instead of using the available resources in the compute instances' zone. You can consume your reservation for creating compute instances until the reservation is [fully consumed](https://docs.cloud.google.com/compute/docs/instances/reservations-view#number-instances-reservation).
 
 ## Limitations
 
@@ -173,7 +173,7 @@ These predefined roles contain the permissions required to consume reservations.
 The following permissions are required to consume reservations:
 
   * To create reservations: `compute.reservations.create` on the project 
-  * To create instances: 
+  * To create compute instances: 
     * `compute.instances.create` on the project
     * To use a custom image to create the VM: `compute.images.useReadOnly` on the image
     * To use a snapshot to create the VM: `compute.snapshots.useReadOnly` on the snapshot
@@ -198,30 +198,30 @@ You might also be able to get these permissions with [custom roles](https://docs
 
 ## Consume a reservation
 
-The examples in the following sections show how to consume a reservation by creating a single compute instance. You can also consume reservations by creating instances that match the reservations' properties using a different [deployment option](https://docs.cloud.google.com/compute/docs/choose-compute-deployment-option), or by updating the properties of existing instances to match automatically consumed reservations.
+The examples in the following sections show how to consume a reservation by creating a single compute instance. You can also consume reservations by creating compute instances that match the reservations' properties by using a different [deployment option](https://docs.cloud.google.com/compute/docs/choose-compute-deployment-option), or by updating the properties of existing compute instances to match your automatically consumed reservations.
 
 To consume a reservation, use one of the following methods:
 
-  * To create an instance that consumes an automatic reservation, regardless of how that reservation was created, see Consume an automatically consumed reservation.
+  * To create a compute instance that consumes an automatic reservation that you created, or that Compute Engine automatically created to fulfill a future reservation, see Consume an automatically consumed reservation.
 
-  * To create an instance that consumes a specific reservation that you created, see Consume a specifically targeted reservation.
+  * To create a compute instance that consumes a specific reservation that you created, or that Compute Engine automatically created to fulfill a future reservation, see Consume a specifically targeted reservation.
 
-  * To create an instance to consume a specific reservation that was automatically created by Compute Engine (in this case, to fulfill a future reservation in calendar mode), see Consume an auto-created reservation for a request in calendar mode.
+  * To create a compute instance to consume a specific reservation that Compute Engine automatically created to fulfill a future reservation in calendar mode, see Consume an auto-created reservation for a request in calendar mode.
 
 
 
 
 ### Consume an automatically consumed reservation
 
-Automatically consumed reservations allow any compute instances that match the reservation's properties to automatically consume it. This consumption behavior applies to both new and existing, running instances. When you create reservations, or Compute Engine automatically creates a reservation to fulfill a future reservation, this reservation type is the default setting.
+Automatically consumed reservations allow any compute instances that match the reservation's properties to automatically consume it. This consumption behavior applies to both new and existing, running compute instances. When you create on-demand reservations, or Compute Engine automatically creates a reservation to fulfill a future reservation, this reservation type is the default setting.
 
-If the properties of a single-project, automatic reservation and a shared, automatic reservation match, then the instances in your project consume the single-project reservation first, and then they consume the shared reservation. For more information, see the [consumption order for reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-overview#consumption-order).
+If the properties of a single-project, automatic reservation and a shared, automatic reservation match, then the compute instances in your project consume the single-project reservation first, and then they consume the shared reservation. For more information, see the [consumption order for reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-overview#consumption-order).
 
 To create and consume an example automatic reservation, select one of the following options:
 
 ###  Console 
 
-The following example shows how to create an automatic reservation in zone `us-central1-a` for three N2 instances with 32 vCPUs, and Intel Cascade Lake as the minimum CPU platform. It also shows how to create a single instance to consume the reservation.
+The following example shows how to create an automatic reservation in zone `us-central1-a` for three N2 instances with 32 vCPUs, and Intel Cascade Lake as the minimum CPU platform. It also shows how to create a single compute instance to consume the reservation.
 
 To create the example automatic reservation and consume it, do the following:
 
@@ -257,7 +257,7 @@ The remaining steps automatically appear in the Google Cloud console.
 
      11. Click **Create**.
 
-  2. To create an instance that consumes the example reservation, complete the following steps:
+  2. To create a compute instance that consumes the example reservation, complete the following steps:
 
      1. In the Google Cloud console, go to the **Create an instance** page.
 
@@ -267,7 +267,7 @@ The **Create an instance** page appears and displays the **Machine configuration
 
      2. In the Machine configuration pane, do the following:
 
-        1. In the **Name** field, enter a name for the instance. For this example, enter `instance-01`.
+        1. In the **Name** field, enter a name for the compute instance. For this example, enter `instance-01`.
 
         2. Specify the **Region** and **Zone** where to reserve resources. For this example, select **us-central1** and **us-central1-a** respectively.
 
@@ -290,7 +290,7 @@ The **Create an instance** page appears and displays the **Machine configuration
 
 ###  gcloud 
 
-The following example shows how to create an automatic reservation in zone `us-central1-a` for three N2 instances with 32 vCPUs, and Intel Cascade Lake as the minimum CPU platform. It also shows how to create a single instance to consume the reservation.
+The following example shows how to create an automatic reservation in zone `us-central1-a` for three N2 instances with 32 vCPUs, and Intel Cascade Lake as the minimum CPU platform. It also shows how to create a single compute instance to consume the reservation.
 
 To create the example automatic reservation and consume it, do the following:
 
@@ -303,7 +303,7 @@ To create the example automatic reservation and consume it, do the following:
              --zone=us-central1-a
          
 
-  2. To create an instance that consumes the example reservation, use the [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create) with the `--reservation-affinity` flag set to `any`. Because `any` is the default configuration, you can also omit this flag.
+  2. To create a compute instance that consumes the example reservation, use the [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create) with the `--reservation-affinity` flag set to `any`. Because `any` is the default configuration, you can also omit this flag.
          
          gcloud compute instances create instance-01 \
              --machine-type=n2-standard-32 \
@@ -343,7 +343,7 @@ To create the example automatic reservation using an instance template, and crea
     
     	ctx := context.Background()
     
-    	instancesClient, err := compute.[NewInstancesRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_InstancesClient_NewInstancesRESTClient)(ctx)
+    	instancesClient, err := compute.NewInstancesRESTClient(ctx)
     	if err != nil {
     		return fmt.Errorf("NewInstancesRESTClient: %w", err)
     	}
@@ -383,17 +383,17 @@ The following example shows how to create an N1 instance with four vCPUs, and In
 To create the example instance, use the following code sample:
     
     
-    import static com.google.cloud.compute.v1.[ReservationAffinity](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.html).[ConsumeReservationType](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.ConsumeReservationType.html).[ANY_RESERVATION](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.ConsumeReservationType.html#com_google_cloud_compute_v1_ReservationAffinity_ConsumeReservationType_ANY_RESERVATION);
+    import static com.google.cloud.compute.v1.ReservationAffinity.ConsumeReservationType.ANY_RESERVATION;
     
-    import com.google.api.gax.longrunning.[OperationFuture](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationFuture.html);
-    import com.google.cloud.compute.v1.[AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html);
-    import com.google.cloud.compute.v1.[AttachedDiskInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDiskInitializeParams.html);
-    import com.google.cloud.compute.v1.[InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html);
-    import com.google.cloud.compute.v1.[Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html);
-    import com.google.cloud.compute.v1.[InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html);
-    import com.google.cloud.compute.v1.[NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html);
-    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html);
-    import com.google.cloud.compute.v1.[ReservationAffinity](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.html);
+    import com.google.api.gax.longrunning.OperationFuture;
+    import com.google.cloud.compute.v1.AttachedDisk;
+    import com.google.cloud.compute.v1.AttachedDiskInitializeParams;
+    import com.google.cloud.compute.v1.InsertInstanceRequest;
+    import com.google.cloud.compute.v1.Instance;
+    import com.google.cloud.compute.v1.InstancesClient;
+    import com.google.cloud.compute.v1.NetworkInterface;
+    import com.google.cloud.compute.v1.Operation;
+    import com.google.cloud.compute.v1.ReservationAffinity;
     import java.io.IOException;
     import java.util.concurrent.ExecutionException;
     import java.util.concurrent.TimeUnit;
@@ -430,38 +430,38 @@ To create the example instance, use the following code sample:
       // Create a virtual machine targeted with the reserveAffinity field.
       // In this consumption model, existing and new VMs automatically consume a reservation
       // if their properties match the VM properties specified in the reservation.
-      public static [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html) createInstanceAsync(String projectId, String zone,
+      public static Instance createInstanceAsync(String projectId, String zone,
           String instanceName, String machineTypeName, String sourceImage,
           long diskSizeGb, String networkName, String minCpuPlatform)
           throws IOException, InterruptedException, ExecutionException, TimeoutException {
         String machineType = String.format("zones/%s/machineTypes/%s", zone, machineTypeName);
         // Initialize client that will be used to send requests. This client only needs to be created
         // once, and can be reused for multiple requests.
-        try ([InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html) instancesClient = [InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html).create()) {
-          [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html) disk =
-              [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html).newBuilder()
+        try (InstancesClient instancesClient = InstancesClient.create()) {
+          AttachedDisk disk =
+              AttachedDisk.newBuilder()
                   .setBoot(true)
                   .setAutoDelete(true)
-                  .setType([AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html).Type.PERSISTENT.toString())
+                  .setType(AttachedDisk.Type.PERSISTENT.toString())
                   .setDeviceName("disk-1")
-                  .[setInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.Builder.html#com_google_cloud_compute_v1_AttachedDisk_Builder_setInitializeParams_com_google_cloud_compute_v1_AttachedDiskInitializeParams_)(
-                      [AttachedDiskInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDiskInitializeParams.html).newBuilder()
+                  .setInitializeParams(
+                      AttachedDiskInitializeParams.newBuilder()
                           .setSourceImage(sourceImage)
                           .setDiskSizeGb(diskSizeGb)
                           .build())
                   .build();
     
-          [NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html) networkInterface = [NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html).newBuilder()
+          NetworkInterface networkInterface = NetworkInterface.newBuilder()
               .setName(networkName)
               .build();
     
-          [ReservationAffinity](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.html) reservationAffinity =
-              [ReservationAffinity](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.html).newBuilder()
-                  .[setConsumeReservationType](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.Builder.html#com_google_cloud_compute_v1_ReservationAffinity_Builder_setConsumeReservationType_java_lang_String_)([ANY_RESERVATION](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.ConsumeReservationType.html#com_google_cloud_compute_v1_ReservationAffinity_ConsumeReservationType_ANY_RESERVATION).toString())
+          ReservationAffinity reservationAffinity =
+              ReservationAffinity.newBuilder()
+                  .setConsumeReservationType(ANY_RESERVATION.toString())
                   .build();
     
-          [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html) instanceResource =
-              [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html).newBuilder()
+          Instance instanceResource =
+              Instance.newBuilder()
                   .setName(instanceName)
                   .setMachineType(machineType)
                   .addDisks(disk)
@@ -470,7 +470,7 @@ To create the example instance, use the following code sample:
                   .setReservationAffinity(reservationAffinity)
                   .build();
     
-          [InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html) insertInstanceRequest = [InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html).newBuilder()
+          InsertInstanceRequest insertInstanceRequest = InsertInstanceRequest.newBuilder()
               .setProject(projectId)
               .setZone(zone)
               .setInstanceResource(instanceResource)
@@ -479,9 +479,9 @@ To create the example instance, use the following code sample:
           OperationFuture<Operation, Operation> operation = instancesClient.insertAsync(
               insertInstanceRequest);
     
-          [Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html) response = operation.get(3, TimeUnit.MINUTES);
+          Operation response = operation.get(3, TimeUnit.MINUTES);
     
-          if (response.[hasError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_hasError__)()) {
+          if (response.hasError()) {
             return null;
           }
           return instancesClient.get(projectId, zone, instanceName);
@@ -497,13 +497,13 @@ To create the example instance, use the following code sample:
     
     
     // Import the Compute library
-    const computeLib = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)');
+    const computeLib = require('@google-cloud/compute');
     const compute = computeLib.protos.google.cloud.compute.v1;
     
     // Instantiate a reservationsClient
-    const instancesClient = new computeLib.[InstancesClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+    const instancesClient = new computeLib.InstancesClient();
     // Instantiate a zoneOperationsClient
-    const zoneOperationsClient = new computeLib.[ZoneOperationsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+    const zoneOperationsClient = new computeLib.ZoneOperationsClient();
     
     /**
      * TODO(developer): Update/uncomment these variables before running the sample.
@@ -585,7 +585,7 @@ To create the example automatic reservation and consume it, do the following:
     from typing import Any
     
     from google.api_core.extended_operation import ExtendedOperation
-    from google.cloud import [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest)
+    from google.cloud import compute_v1
     
     
     def wait_for_extended_operation(
@@ -656,55 +656,55 @@ To create the example automatic reservation and consume it, do the following:
             min_cpu_platform (str): The minimum CPU platform for the instance.
         """
         instance_properties = (
-            [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[AllocationSpecificSKUAllocationReservedInstanceProperties](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.AllocationSpecificSKUAllocationReservedInstanceProperties.html)(
+            compute_v1.AllocationSpecificSKUAllocationReservedInstanceProperties(
                 machine_type=machine_type,
                 min_cpu_platform=min_cpu_platform,
             )
         )
     
-        reservation = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[Reservation](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.Reservation.html)(
+        reservation = compute_v1.Reservation(
             name=reservation_name,
-            specific_reservation=[compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[AllocationSpecificSKUReservation](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.AllocationSpecificSKUReservation.html)(
+            specific_reservation=compute_v1.AllocationSpecificSKUReservation(
                 count=3,
                 instance_properties=instance_properties,
             ),
         )
     
         # Create a reservation client
-        client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[ReservationsClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.reservations.ReservationsClient.html)()
-        operation = client.[insert](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.reservations.ReservationsClient.html#google_cloud_compute_v1_services_reservations_ReservationsClient_insert)(
+        client = compute_v1.ReservationsClient()
+        operation = client.insert(
             project=project_id,
             zone=zone,
             reservation_resource=reservation,
         )
         wait_for_extended_operation(operation, "Reservation creation")
     
-        instance = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[Instance](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.Instance.html)()
+        instance = compute_v1.Instance()
         instance.name = instance_name
         instance.machine_type = f"zones/{zone}/machineTypes/{machine_type}"
         instance.min_cpu_platform = min_cpu_platform
         instance.zone = zone
     
         # Set the reservation affinity to target any matching reservation
-        instance.reservation_affinity = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[ReservationAffinity](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.ReservationAffinity.html)(
+        instance.reservation_affinity = compute_v1.ReservationAffinity(
             consume_reservation_type="ANY_RESERVATION",  # Type of reservation to consume
         )
         # Define the disks for the instance
-        instance.[disks](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.disks.html) = [
-            [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[AttachedDisk](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.AttachedDisk.html)(
+        instance.disks = [
+            compute_v1.AttachedDisk(
                 boot=True,  # Indicates that this is a boot disk
                 auto_delete=True,  # The disk will be deleted when the instance is deleted
-                initialize_params=[compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[AttachedDiskInitializeParams](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.AttachedDiskInitializeParams.html)(
+                initialize_params=compute_v1.AttachedDiskInitializeParams(
                     source_image="projects/debian-cloud/global/images/family/debian-13",
                     disk_size_gb=10,
                 ),
             )
         ]
         instance.network_interfaces = [
-            [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[NetworkInterface](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.NetworkInterface.html)(
+            compute_v1.NetworkInterface(
                 network="global/networks/default",  # The network to use
                 access_configs=[
-                    [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[AccessConfig](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.AccessConfig.html)(
+                    compute_v1.AccessConfig(
                         name="External NAT",  # Name of the access configuration
                         type="ONE_TO_ONE_NAT",  # Type of access configuration
                     )
@@ -712,17 +712,17 @@ To create the example automatic reservation and consume it, do the following:
             )
         ]
         # Create a request to insert the instance
-        request = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[InsertInstanceRequest](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.InsertInstanceRequest.html)()
+        request = compute_v1.InsertInstanceRequest()
         request.zone = zone
         request.project = project_id
         request.instance_resource = instance
     
-        vm_client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[InstancesClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html)()
-        operation = vm_client.[insert](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html#google_cloud_compute_v1_services_instances_InstancesClient_insert)(request)
+        vm_client = compute_v1.InstancesClient()
+        operation = vm_client.insert(request)
         wait_for_extended_operation(operation, "instance creation")
         print(f"Instance {instance_name} that targets any open reservation created.")
     
-        return vm_client.[get](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html#google_cloud_compute_v1_services_instances_InstancesClient_get)(project=project_id, zone=zone, instance=instance_name)
+        return vm_client.get(project=project_id, zone=zone, instance=instance_name)
     
     
 
@@ -780,11 +780,11 @@ To create the example automatic reservation and consume it, do the following:
 
 ### Consume a specifically targeted reservation
 
-Specifically targeted reservations allow new compute instances that match the reservation's properties and target the reservation to consume it. Instances are successfully created only if their properties match the reservation properties. Otherwise, you encounter errors.
+Specifically targeted reservations allow new compute instances that match the reservation's properties and target the reservation to consume it. You can successfully create compute instances only if their properties match the reservation properties. Otherwise, your creation request fails.
 
-Based on the creation method that you want to use, create specific reservations and instances that target them as follows:
+Based on the creation method that you want to use, create specific reservations and compute instances that target them as follows:
 
-Creation method | [When you create a reservation](https://docs.cloud.google.com/compute/docs/instances/reservations-single-project) | When you create instances to consume the reservation  
+Creation method | [When you create a reservation](https://docs.cloud.google.com/compute/docs/instances/choose-reservation-type) | When you create compute instances to consume the reservation  
 ---|---|---  
 Google Cloud console | In the **Use with VM instance** section, select **Select specific reservation**. | In the **Advanced** pane, in the **Reservations** section, select **Choose a reservation**. Then, follow the prompts to select a reservation.  
 Google Cloud CLI | Include the `--require-specific-reservation` flag. | Include the following flags:   
@@ -832,11 +832,11 @@ Terraform | Include the `specific_reservation_required` field set to `true`. | I
   
 **Note:** To enable a regional managed instance group (MIG) to consume specific reservations in multiple zones, create reservations with matching names and properties in each zone. Then, target the reservations in the group's instance template.
 
-To create an example specific reservation and an instance to consume it, select one of the following options:
+To create an example specific reservation and a compute instance to consume it, select one of the following options:
 
 ###  Console 
 
-The following example shows how to create a specific reservation in zone `us-central1-a` for three N2 instances with 32 vCPUs, and Intel Cascade Lake as the minimum CPU platform. It also shows how to create a single instance to consume the reservation.
+The following example shows how to create a specific reservation in zone `us-central1-a` for three N2 instances with 32 vCPUs, and Intel Cascade Lake as the minimum CPU platform. It also shows how to create a single compute instance to consume the reservation.
 
 To create the example specific reservation and consume it, do the following:
 
@@ -872,7 +872,7 @@ The remaining steps automatically appear in the Google Cloud console.
 
      11. Click **Create**.
 
-  2. To create an instance that consumes the example reservation, complete the following steps:
+  2. To create a compute instance that consumes the example reservation, complete the following steps:
 
      1. In the Google Cloud console, go to the **Create an instance** page.
 
@@ -882,7 +882,7 @@ The **Create an instance** page appears and displays the **Machine configuration
 
      2. In the Machine configuration pane, do the following:
 
-        1. In the **Name** field, enter a name for the instance. For this example, enter `instance-02`.
+        1. In the **Name** field, enter a name for the compute instance. For this example, enter `instance-02`.
 
         2. Specify the **Region** and **Zone** where to reserve resources. For this example, select **us-central1** and **us-central1-a** respectively.
 
@@ -909,7 +909,7 @@ The **Create an instance** page appears and displays the **Machine configuration
 
 ###  gcloud 
 
-The following example shows how to create a specific reservation in zone `us-central1-a` for three N2 instances with 32 vCPUs, and Intel Cascade Lake as the minimum CPU platform. It also shows how to create a single instance to consume the reservation.
+The following example shows how to create a specific reservation in zone `us-central1-a` for three N2 instances with 32 vCPUs, and Intel Cascade Lake as the minimum CPU platform. It also shows how to create a single compute instance to consume the reservation.
 
 To create the example specific reservation and consume it, do the following:
 
@@ -923,7 +923,7 @@ To create the example specific reservation and consume it, do the following:
              --zone=us-central1-a
          
 
-  2. To create an instance that consumes the example reservation, use the [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create) with the `--reservation` and `--reservation-affinity=specific` flags:
+  2. To create a compute instance that consumes the example reservation, use the [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create) with the `--reservation` and `--reservation-affinity=specific` flags:
          
          gcloud compute instances create instance-02 \
              --machine-type=n2-standard-32 \
@@ -946,7 +946,7 @@ Replace `RESERVATION_URL` with the URL of the reservation. Specify one of the fo
 
 The following examples show how to create an N2 instance with 32 vCPUs, and Intel Cascade Lake as the minimum CPU platform, in zone `us-central1-a` to consume a specific, matching reservation:
 
-  * To create the example instance to consume a single-project, specific reservation, use the following code sample:
+  * To create the example compute instance to consume a single-project, specific reservation, use the following code sample:
         
         import (
         	"context"
@@ -970,7 +970,7 @@ The following examples show how to create an N2 instance with 32 vCPUs, and Inte
         	machineType := fmt.Sprintf("zones/%s/machineTypes/%s", zone, "n2-standard-32")
         	sourceImage := "projects/debian-cloud/global/images/family/debian-12"
         
-        	instancesClient, err := compute.[NewInstancesRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_InstancesClient_NewInstancesRESTClient)(ctx)
+        	instancesClient, err := compute.NewInstancesRESTClient(ctx)
         	if err != nil {
         		return fmt.Errorf("NewInstancesRESTClient: %w", err)
         	}
@@ -988,7 +988,7 @@ The following examples show how to create an N2 instance with 32 vCPUs, and Inte
         					},
         					AutoDelete: proto.Bool(true),
         					Boot:       proto.Bool(true),
-        					Type:       proto.String(computepb.[AttachedDisk_PERSISTENT](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1/computepb.html#cloud_google_com_go_compute_apiv1_computepb_AttachedDisk_UNDEFINED_TYPE_AttachedDisk_PERSISTENT_AttachedDisk_SCRATCH).String()),
+        					Type:       proto.String(computepb.AttachedDisk_PERSISTENT.String()),
         				},
         			},
         			MachineType:    proto.String(machineType),
@@ -1022,7 +1022,7 @@ The following examples show how to create an N2 instance with 32 vCPUs, and Inte
         }
         
 
-  * To create the example instance to consume a shared, specific reservation, use the following code sample:
+  * To create the example compute instance to consume a shared, specific reservation, use the following code sample:
         
         import (
         	"context"
@@ -1047,31 +1047,31 @@ The following examples show how to create an N2 instance with 32 vCPUs, and Inte
         	sourceImage := "projects/debian-cloud/global/images/family/debian-12"
         	sharedReservation := fmt.Sprintf("projects/%s/reservations/%s", baseProjectId, reservationName)
         
-        	req := &computepb.[InsertInstanceRequest](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1/computepb.html#cloud_google_com_go_compute_apiv1_computepb_InsertInstanceRequest){
+        	req := &computepb.InsertInstanceRequest{
         		Project: projectID,
         		Zone:    zone,
-        		InstanceResource: &computepb.[Instance](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1/computepb.html#cloud_google_com_go_compute_apiv1_computepb_Instance){
-        			Disks: []*computepb.[AttachedDisk](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1/computepb.html#cloud_google_com_go_compute_apiv1_computepb_AttachedDisk){
+        		InstanceResource: &computepb.Instance{
+        			Disks: []*computepb.AttachedDisk{
         				{
-        					InitializeParams: &computepb.[AttachedDiskInitializeParams](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1/computepb.html#cloud_google_com_go_compute_apiv1_computepb_AttachedDiskInitializeParams){
+        					InitializeParams: &computepb.AttachedDiskInitializeParams{
         						DiskSizeGb:  proto.Int64(10),
         						SourceImage: proto.String(sourceImage),
         					},
         					AutoDelete: proto.Bool(true),
         					Boot:       proto.Bool(true),
-        					Type:       proto.String(computepb.[AttachedDisk_PERSISTENT](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1/computepb.html#cloud_google_com_go_compute_apiv1_computepb_AttachedDisk_UNDEFINED_TYPE_AttachedDisk_PERSISTENT_AttachedDisk_SCRATCH).String()),
+        					Type:       proto.String(computepb.AttachedDisk_PERSISTENT.String()),
         				},
         			},
         			MachineType:    proto.String(machineType),
         			MinCpuPlatform: proto.String("Intel Cascade Lake"),
         			Name:           proto.String(instanceName),
-        			NetworkInterfaces: []*computepb.[NetworkInterface](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1/computepb.html#cloud_google_com_go_compute_apiv1_computepb_NetworkInterface){
+        			NetworkInterfaces: []*computepb.NetworkInterface{
         				{
         					Network: proto.String("global/networks/default"),
         				},
         			},
         			// specifies particular reservation, which should be consumed
-        			ReservationAffinity: &computepb.[ReservationAffinity](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1/computepb.html#cloud_google_com_go_compute_apiv1_computepb_ReservationAffinity){
+        			ReservationAffinity: &computepb.ReservationAffinity{
         				ConsumeReservationType: proto.String("SPECIFIC_RESERVATION"),
         				Key:                    proto.String("compute.googleapis.com/reservation-name"),
         				Values:                 []string{sharedReservation},
@@ -1102,19 +1102,19 @@ The following examples show how to create an N2 instance with 32 vCPUs, and Inte
 
 The following examples show how to create an N1 instance with four vCPUs, and Intel Skylake as the minimum CPU platform, in zone `us-central1-a` to consume a specific, matching reservation:
 
-  * To create an example reservation as a single-project reservation, and create an instance to consume it, use the following code sample:
+  * To create an example reservation as a single-project reservation, and create a compute instance to consume it, use the following code sample:
         
-        import static com.google.cloud.compute.v1.[ReservationAffinity](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.html).[ConsumeReservationType](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.ConsumeReservationType.html).[SPECIFIC_RESERVATION](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.ConsumeReservationType.html#com_google_cloud_compute_v1_ReservationAffinity_ConsumeReservationType_SPECIFIC_RESERVATION);
+        import static com.google.cloud.compute.v1.ReservationAffinity.ConsumeReservationType.SPECIFIC_RESERVATION;
         
-        import com.google.api.gax.longrunning.[OperationFuture](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationFuture.html);
-        import com.google.cloud.compute.v1.[AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html);
-        import com.google.cloud.compute.v1.[AttachedDiskInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDiskInitializeParams.html);
-        import com.google.cloud.compute.v1.[InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html);
-        import com.google.cloud.compute.v1.[Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html);
-        import com.google.cloud.compute.v1.[InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html);
-        import com.google.cloud.compute.v1.[NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html);
-        import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html);
-        import com.google.cloud.compute.v1.[ReservationAffinity](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.html);
+        import com.google.api.gax.longrunning.OperationFuture;
+        import com.google.cloud.compute.v1.AttachedDisk;
+        import com.google.cloud.compute.v1.AttachedDiskInitializeParams;
+        import com.google.cloud.compute.v1.InsertInstanceRequest;
+        import com.google.cloud.compute.v1.Instance;
+        import com.google.cloud.compute.v1.InstancesClient;
+        import com.google.cloud.compute.v1.NetworkInterface;
+        import com.google.cloud.compute.v1.Operation;
+        import com.google.cloud.compute.v1.ReservationAffinity;
         import java.io.IOException;
         import java.util.concurrent.ExecutionException;
         import java.util.concurrent.TimeUnit;
@@ -1151,41 +1151,41 @@ The following examples show how to create an N1 instance with four vCPUs, and In
         
           // Create a virtual machine targeted with the reserveAffinity field.
           // Ensure that the VM's properties match the reservation's VM properties.
-          public static [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html) createInstanceAsync(String projectId, String zone, String instanceName,
+          public static Instance createInstanceAsync(String projectId, String zone, String instanceName,
               String reservationName, String machineTypeName, String sourceImage, long diskSizeGb,
               String networkName, String minCpuPlatform)
               throws IOException, InterruptedException, ExecutionException, TimeoutException {
             String machineType = String.format("zones/%s/machineTypes/%s", zone, machineTypeName);
             // Initialize client that will be used to send requests. This client only needs to be created
             // once, and can be reused for multiple requests.
-            try ([InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html) instancesClient = [InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html).create()) {
-              [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html) disk =
-                  [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html).newBuilder()
+            try (InstancesClient instancesClient = InstancesClient.create()) {
+              AttachedDisk disk =
+                  AttachedDisk.newBuilder()
                       .setBoot(true)
                       .setAutoDelete(true)
-                      .setType([AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html).Type.PERSISTENT.toString())
+                      .setType(AttachedDisk.Type.PERSISTENT.toString())
                       .setDeviceName("disk-1")
-                      .[setInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.Builder.html#com_google_cloud_compute_v1_AttachedDisk_Builder_setInitializeParams_com_google_cloud_compute_v1_AttachedDiskInitializeParams_)(
-                          [AttachedDiskInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDiskInitializeParams.html).newBuilder()
+                      .setInitializeParams(
+                          AttachedDiskInitializeParams.newBuilder()
                               .setSourceImage(sourceImage)
                               .setDiskSizeGb(diskSizeGb)
                               .build())
                       .build();
         
-              [NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html) networkInterface = [NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html).newBuilder()
+              NetworkInterface networkInterface = NetworkInterface.newBuilder()
                   .setName(networkName)
                   .build();
         
-              [ReservationAffinity](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.html) reservationAffinity =
-                  [ReservationAffinity](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.html).newBuilder()
-                      .[setConsumeReservationType](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.Builder.html#com_google_cloud_compute_v1_ReservationAffinity_Builder_setConsumeReservationType_java_lang_String_)([SPECIFIC_RESERVATION](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.ConsumeReservationType.html#com_google_cloud_compute_v1_ReservationAffinity_ConsumeReservationType_SPECIFIC_RESERVATION).toString())
+              ReservationAffinity reservationAffinity =
+                  ReservationAffinity.newBuilder()
+                      .setConsumeReservationType(SPECIFIC_RESERVATION.toString())
                       .setKey("compute.googleapis.com/reservation-name")
                       // Set specific reservation
                       .addValues(reservationName)
                       .build();
         
-              [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html) instanceResource =
-                  [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html).newBuilder()
+              Instance instanceResource =
+                  Instance.newBuilder()
                       .setName(instanceName)
                       .setMachineType(machineType)
                       .addDisks(disk)
@@ -1194,7 +1194,7 @@ The following examples show how to create an N1 instance with four vCPUs, and In
                       .setReservationAffinity(reservationAffinity)
                       .build();
         
-              [InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html) insertInstanceRequest = [InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html).newBuilder()
+              InsertInstanceRequest insertInstanceRequest = InsertInstanceRequest.newBuilder()
                   .setProject(projectId)
                   .setZone(zone)
                   .setInstanceResource(instanceResource)
@@ -1202,9 +1202,9 @@ The following examples show how to create an N1 instance with four vCPUs, and In
         
               OperationFuture<Operation, Operation> operation = instancesClient.insertAsync(
                   insertInstanceRequest);
-              [Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html) response = operation.get(3, TimeUnit.MINUTES);
+              Operation response = operation.get(3, TimeUnit.MINUTES);
         
-              if (response.[hasError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_hasError__)()) {
+              if (response.hasError()) {
                 return null;
               }
               return instancesClient.get(projectId, zone, instanceName);
@@ -1212,19 +1212,19 @@ The following examples show how to create an N1 instance with four vCPUs, and In
           }
         }
 
-  * To create an example reservation as a shared reservation, and create an instance to consume it, use the following code sample:
+  * To create an example reservation as a shared reservation, and create a compute instance to consume it, use the following code sample:
         
-        import static com.google.cloud.compute.v1.[ReservationAffinity](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.html).[ConsumeReservationType](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.ConsumeReservationType.html).[SPECIFIC_RESERVATION](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.ConsumeReservationType.html#com_google_cloud_compute_v1_ReservationAffinity_ConsumeReservationType_SPECIFIC_RESERVATION);
+        import static com.google.cloud.compute.v1.ReservationAffinity.ConsumeReservationType.SPECIFIC_RESERVATION;
         
-        import com.google.api.gax.longrunning.[OperationFuture](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationFuture.html);
-        import com.google.cloud.compute.v1.[AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html);
-        import com.google.cloud.compute.v1.[AttachedDiskInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDiskInitializeParams.html);
-        import com.google.cloud.compute.v1.[InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html);
-        import com.google.cloud.compute.v1.[Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html);
-        import com.google.cloud.compute.v1.[InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html);
-        import com.google.cloud.compute.v1.[NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html);
-        import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html);
-        import com.google.cloud.compute.v1.[ReservationAffinity](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.html);
+        import com.google.api.gax.longrunning.OperationFuture;
+        import com.google.cloud.compute.v1.AttachedDisk;
+        import com.google.cloud.compute.v1.AttachedDiskInitializeParams;
+        import com.google.cloud.compute.v1.InsertInstanceRequest;
+        import com.google.cloud.compute.v1.Instance;
+        import com.google.cloud.compute.v1.InstancesClient;
+        import com.google.cloud.compute.v1.NetworkInterface;
+        import com.google.cloud.compute.v1.Operation;
+        import com.google.cloud.compute.v1.ReservationAffinity;
         import java.io.IOException;
         import java.util.concurrent.ExecutionException;
         import java.util.concurrent.TimeUnit;
@@ -1261,7 +1261,7 @@ The following examples show how to create an N1 instance with four vCPUs, and In
         
           // Create a virtual machine targeted with the reserveAffinity field.
           // Ensure that the VM's properties match the reservation's VM properties.
-          public static [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html) createInstanceAsync(String projectId, String zone, String instanceName,
+          public static Instance createInstanceAsync(String projectId, String zone, String instanceName,
               String reservationName, String machineTypeName, String sourceImage, long diskSizeGb,
               String networkName, String minCpuPlatform)
               throws IOException, InterruptedException, ExecutionException, TimeoutException {
@@ -1272,34 +1272,34 @@ The following examples show how to create an N1 instance with four vCPUs, and In
                 String.format("projects/%s/reservations/%s", projectId, reservationName);
             // Initialize client that will be used to send requests. This client only needs to be created
             // once, and can be reused for multiple requests.
-            try ([InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html) instancesClient = [InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html).create()) {
-              [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html) disk =
-                  [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html).newBuilder()
+            try (InstancesClient instancesClient = InstancesClient.create()) {
+              AttachedDisk disk =
+                  AttachedDisk.newBuilder()
                       .setBoot(true)
                       .setAutoDelete(true)
-                      .setType([AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html).Type.PERSISTENT.toString())
+                      .setType(AttachedDisk.Type.PERSISTENT.toString())
                       .setDeviceName("disk-1")
-                      .[setInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.Builder.html#com_google_cloud_compute_v1_AttachedDisk_Builder_setInitializeParams_com_google_cloud_compute_v1_AttachedDiskInitializeParams_)(
-                          [AttachedDiskInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDiskInitializeParams.html).newBuilder()
+                      .setInitializeParams(
+                          AttachedDiskInitializeParams.newBuilder()
                               .setSourceImage(sourceImage)
                               .setDiskSizeGb(diskSizeGb)
                               .build())
                       .build();
         
-              [NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html) networkInterface = [NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html).newBuilder()
+              NetworkInterface networkInterface = NetworkInterface.newBuilder()
                   .setName(networkName)
                   .build();
         
-              [ReservationAffinity](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.html) reservationAffinity =
-                  [ReservationAffinity](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.html).newBuilder()
-                      .[setConsumeReservationType](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.Builder.html#com_google_cloud_compute_v1_ReservationAffinity_Builder_setConsumeReservationType_java_lang_String_)([SPECIFIC_RESERVATION](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ReservationAffinity.ConsumeReservationType.html#com_google_cloud_compute_v1_ReservationAffinity_ConsumeReservationType_SPECIFIC_RESERVATION).toString())
+              ReservationAffinity reservationAffinity =
+                  ReservationAffinity.newBuilder()
+                      .setConsumeReservationType(SPECIFIC_RESERVATION.toString())
                       .setKey("compute.googleapis.com/reservation-name")
                       // Set specific reservation
                       .addValues(reservationPath)
                       .build();
         
-              [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html) instanceResource =
-                  [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html).newBuilder()
+              Instance instanceResource =
+                  Instance.newBuilder()
                       .setName(instanceName)
                       .setMachineType(machineType)
                       .addDisks(disk)
@@ -1308,7 +1308,7 @@ The following examples show how to create an N1 instance with four vCPUs, and In
                       .setReservationAffinity(reservationAffinity)
                       .build();
         
-              [InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html) insertInstanceRequest = [InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html).newBuilder()
+              InsertInstanceRequest insertInstanceRequest = InsertInstanceRequest.newBuilder()
                   .setProject(projectId)
                   .setZone(zone)
                   .setInstanceResource(instanceResource)
@@ -1316,9 +1316,9 @@ The following examples show how to create an N1 instance with four vCPUs, and In
         
               OperationFuture<Operation, Operation> operation = instancesClient.insertAsync(
                   insertInstanceRequest);
-              [Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html) response = operation.get(3, TimeUnit.MINUTES);
+              Operation response = operation.get(3, TimeUnit.MINUTES);
         
-              if (response.[hasError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_hasError__)()) {
+              if (response.hasError()) {
                 return null;
               }
               return instancesClient.get(projectId, zone, instanceName);
@@ -1335,13 +1335,13 @@ The following examples show how to create an N1 instance with 4 vCPUs, and Intel
     
     
     // Import the Compute library
-    const computeLib = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)');
+    const computeLib = require('@google-cloud/compute');
     const compute = computeLib.protos.google.cloud.compute.v1;
     
     // Instantiate a reservationsClient
-    const instancesClient = new computeLib.[InstancesClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+    const instancesClient = new computeLib.InstancesClient();
     // Instantiate a zoneOperationsClient
-    const zoneOperationsClient = new computeLib.[ZoneOperationsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+    const zoneOperationsClient = new computeLib.ZoneOperationsClient();
     
     /**
      * TODO(developer): Update/uncomment these variables before running the sample.
@@ -1432,7 +1432,7 @@ To create the example specific reservation and consume it, do the following:
         from typing import Any
         
         from google.api_core.extended_operation import ExtendedOperation
-        from google.cloud import [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest)
+        from google.cloud import compute_v1
         
         
         def wait_for_extended_operation(
@@ -1503,15 +1503,15 @@ To create the example specific reservation and consume it, do the following:
                 min_cpu_platform (str): The minimum CPU platform for the instance.
             """
             instance_properties = (
-                [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[AllocationSpecificSKUAllocationReservedInstanceProperties](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.AllocationSpecificSKUAllocationReservedInstanceProperties.html)(
+                compute_v1.AllocationSpecificSKUAllocationReservedInstanceProperties(
                     machine_type=machine_type,
                     min_cpu_platform=min_cpu_platform,
                 )
             )
         
-            reservation = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[Reservation](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.Reservation.html)(
+            reservation = compute_v1.Reservation(
                 name=reservation_name,
-                specific_reservation=[compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[AllocationSpecificSKUReservation](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.AllocationSpecificSKUReservation.html)(
+                specific_reservation=compute_v1.AllocationSpecificSKUReservation(
                     count=3,
                     instance_properties=instance_properties,
                 ),
@@ -1520,42 +1520,42 @@ To create the example specific reservation and consume it, do the following:
             )
         
             # Create a reservation client
-            client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[ReservationsClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.reservations.ReservationsClient.html)()
-            operation = client.[insert](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.reservations.ReservationsClient.html#google_cloud_compute_v1_services_reservations_ReservationsClient_insert)(
+            client = compute_v1.ReservationsClient()
+            operation = client.insert(
                 project=project_id,
                 zone=zone,
                 reservation_resource=reservation,
             )
             wait_for_extended_operation(operation, "Reservation creation")
         
-            instance = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[Instance](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.Instance.html)()
+            instance = compute_v1.Instance()
             instance.name = instance_name
             instance.machine_type = f"zones/{zone}/machineTypes/{machine_type}"
             instance.min_cpu_platform = min_cpu_platform
             instance.zone = zone
         
             # Set the reservation affinity to target the specific reservation
-            instance.reservation_affinity = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[ReservationAffinity](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.ReservationAffinity.html)(
+            instance.reservation_affinity = compute_v1.ReservationAffinity(
                 consume_reservation_type="SPECIFIC_RESERVATION",  # Type of reservation to consume
                 key="compute.googleapis.com/reservation-name",  # Key for the reservation
                 values=[reservation_name],  # Reservation name to consume
             )
             # Define the disks for the instance
-            instance.[disks](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.disks.html) = [
-                [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[AttachedDisk](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.AttachedDisk.html)(
+            instance.disks = [
+                compute_v1.AttachedDisk(
                     boot=True,  # Indicates that this is a boot disk
                     auto_delete=True,  # The disk will be deleted when the instance is deleted
-                    initialize_params=[compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[AttachedDiskInitializeParams](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.AttachedDiskInitializeParams.html)(
+                    initialize_params=compute_v1.AttachedDiskInitializeParams(
                         source_image="projects/debian-cloud/global/images/family/debian-13",
                         disk_size_gb=10,
                     ),
                 )
             ]
             instance.network_interfaces = [
-                [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[NetworkInterface](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.NetworkInterface.html)(
+                compute_v1.NetworkInterface(
                     network="global/networks/default",  # The network to use
                     access_configs=[
-                        [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[AccessConfig](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.AccessConfig.html)(
+                        compute_v1.AccessConfig(
                             name="External NAT",  # Name of the access configuration
                             type="ONE_TO_ONE_NAT",  # Type of access configuration
                         )
@@ -1563,17 +1563,17 @@ To create the example specific reservation and consume it, do the following:
                 )
             ]
             # Create a request to insert the instance
-            request = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[InsertInstanceRequest](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.InsertInstanceRequest.html)()
+            request = compute_v1.InsertInstanceRequest()
             request.zone = zone
             request.project = project_id
             request.instance_resource = instance
         
-            vm_client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[InstancesClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html)()
-            operation = vm_client.[insert](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html#google_cloud_compute_v1_services_instances_InstancesClient_insert)(request)
+            vm_client = compute_v1.InstancesClient()
+            operation = vm_client.insert(request)
             wait_for_extended_operation(operation, "instance creation")
             print(f"Instance {instance_name} with specific reservation created successfully.")
         
-            return vm_client.[get](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html#google_cloud_compute_v1_services_instances_InstancesClient_get)(project=project_id, zone=zone, instance=instance_name)
+            return vm_client.get(project=project_id, zone=zone, instance=instance_name)
         
         
 
@@ -1585,7 +1585,7 @@ To create the example specific reservation and consume it, do the following:
         from typing import Any
         
         from google.api_core.extended_operation import ExtendedOperation
-        from google.cloud import [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest)
+        from google.cloud import compute_v1
         
         
         def wait_for_extended_operation(
@@ -1658,24 +1658,24 @@ To create the example specific reservation and consume it, do the following:
                 min_cpu_platform (str): The minimum CPU platform for the instance.
             """
             instance_properties = (
-                [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[AllocationSpecificSKUAllocationReservedInstanceProperties](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.AllocationSpecificSKUAllocationReservedInstanceProperties.html)(
+                compute_v1.AllocationSpecificSKUAllocationReservedInstanceProperties(
                     machine_type=machine_type,
                     min_cpu_platform=min_cpu_platform,
                 )
             )
         
-            reservation = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[Reservation](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.Reservation.html)(
+            reservation = compute_v1.Reservation(
                 name=reservation_name,
-                specific_reservation=[compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[AllocationSpecificSKUReservation](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.AllocationSpecificSKUReservation.html)(
+                specific_reservation=compute_v1.AllocationSpecificSKUReservation(
                     count=3,
                     instance_properties=instance_properties,
                 ),
                 # Only VMs that target the reservation by name can consume from this reservation
                 specific_reservation_required=True,
-                share_settings=[compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[ShareSettings](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.ShareSettings.html)(
+                share_settings=compute_v1.ShareSettings(
                     share_type="SPECIFIC_PROJECTS",
                     project_map={
-                        shared_project_id: [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[ShareSettingsProjectConfig](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.ShareSettingsProjectConfig.html)(
+                        shared_project_id: compute_v1.ShareSettingsProjectConfig(
                             project_id=shared_project_id
                         )
                     },
@@ -1683,43 +1683,43 @@ To create the example specific reservation and consume it, do the following:
             )
         
             # Create a reservation client
-            client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[ReservationsClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.reservations.ReservationsClient.html)()
-            operation = client.[insert](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.reservations.ReservationsClient.html#google_cloud_compute_v1_services_reservations_ReservationsClient_insert)(
+            client = compute_v1.ReservationsClient()
+            operation = client.insert(
                 project=owner_project_id,
                 zone=zone,
                 reservation_resource=reservation,
             )
             wait_for_extended_operation(operation, "Reservation creation")
         
-            instance = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[Instance](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.Instance.html)()
+            instance = compute_v1.Instance()
             instance.name = instance_name
             instance.machine_type = f"zones/{zone}/machineTypes/{machine_type}"
             instance.min_cpu_platform = min_cpu_platform
             instance.zone = zone
         
             # Set the reservation affinity to target the specific reservation
-            instance.reservation_affinity = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[ReservationAffinity](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.ReservationAffinity.html)(
+            instance.reservation_affinity = compute_v1.ReservationAffinity(
                 consume_reservation_type="SPECIFIC_RESERVATION",  # Type of reservation to consume
                 key="compute.googleapis.com/reservation-name",
                 # To consume this reservation from any consumer projects, specify the owner project of the reservation
                 values=[f"projects/{owner_project_id}/reservations/{reservation_name}"],
             )
             # Define the disks for the instance
-            instance.[disks](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.disks.html) = [
-                [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[AttachedDisk](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.AttachedDisk.html)(
+            instance.disks = [
+                compute_v1.AttachedDisk(
                     boot=True,  # Indicates that this is a boot disk
                     auto_delete=True,  # The disk will be deleted when the instance is deleted
-                    initialize_params=[compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[AttachedDiskInitializeParams](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.AttachedDiskInitializeParams.html)(
+                    initialize_params=compute_v1.AttachedDiskInitializeParams(
                         source_image="projects/debian-cloud/global/images/family/debian-13",
                         disk_size_gb=10,
                     ),
                 )
             ]
             instance.network_interfaces = [
-                [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[NetworkInterface](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.NetworkInterface.html)(
+                compute_v1.NetworkInterface(
                     network="global/networks/default",  # The network to use
                     access_configs=[
-                        [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[AccessConfig](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.AccessConfig.html)(
+                        compute_v1.AccessConfig(
                             name="External NAT",  # Name of the access configuration
                             type="ONE_TO_ONE_NAT",  # Type of access configuration
                         )
@@ -1727,18 +1727,18 @@ To create the example specific reservation and consume it, do the following:
                 )
             ]
             # Create a request to insert the instance
-            request = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[InsertInstanceRequest](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.InsertInstanceRequest.html)()
+            request = compute_v1.InsertInstanceRequest()
             request.zone = zone
             # The instance will be created in the shared project
             request.project = shared_project_id
             request.instance_resource = instance
         
-            vm_client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[InstancesClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html)()
-            operation = vm_client.[insert](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html#google_cloud_compute_v1_services_instances_InstancesClient_insert)(request)
+            vm_client = compute_v1.InstancesClient()
+            operation = vm_client.insert(request)
             wait_for_extended_operation(operation, "instance creation")
             print(f"Instance {instance_name} from project {owner_project_id} created.")
             # The instance is created in the shared project, so we return it from there.
-            return vm_client.[get](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html#google_cloud_compute_v1_services_instances_InstancesClient_get)(project=shared_project_id, zone=zone, instance=instance_name)
+            return vm_client.get(project=shared_project_id, zone=zone, instance=instance_name)
         
         
 
@@ -1768,7 +1768,7 @@ To create the example specific reservation and consume it, do the following:
          }
          
 
-  2. To create an instance that consumes the example reservation, make a `POST` request to the [`instances.insert` method](https://docs.cloud.google.com/compute/docs/reference/rest/v1/instances/insert). In the request body, in the `reservationAffinity` field, include the following:
+  2. To create a compute instance that consumes the example reservation, make a `POST` request to the [`instances.insert` method](https://docs.cloud.google.com/compute/docs/reference/rest/v1/instances/insert). In the request body, in the `reservationAffinity` field, include the following:
 
      * The `consumeReservationType` field set to `SPECIFIC_RESERVATION`.
 
@@ -1820,13 +1820,13 @@ Replace `RESERVATION_URL` with the URL of the reservation. Specify one of the fo
 
 This reservation type allows new compute instances to consume a reservation that Compute Engine automatically creates (auto-creates) to fulfill a [future reservation in calendar mode](https://docs.cloud.google.com/compute/docs/instances/future-reservations-calendar-mode-overview).
 
-To consume this type of reservation, you must create an instance as follows:
+To consume this type of reservation, you must create a compute instance as follows:
 
-  * The instance must [specifically target the reservation](https://docs.cloud.google.com/compute/docs/instances/reservations-consume#consuming_instances_from_a_specific_reservation).
+  * The compute instance must [specifically target the reservation](https://docs.cloud.google.com/compute/docs/instances/reservations-consume#consuming_instances_from_a_specific_reservation).
 
-  * The instance must be [stopped or deleted at the reservation end time](https://docs.cloud.google.com/compute/docs/instances/limit-vm-runtime#limit-runtime-new-vm).
+  * The compute instance must be [stopped or deleted at the reservation end time](https://docs.cloud.google.com/compute/docs/instances/limit-vm-runtime#limit-runtime-new-vm).
 
-  * The instance must use the [reservation-bound provisioning model](https://docs.cloud.google.com/compute/docs/instances/provisioning-models). When you create an instance, you can specify this model as follows:
+  * The compute instance must use the [reservation-bound provisioning model](https://docs.cloud.google.com/compute/docs/instances/provisioning-models). When you create a compute instance, you can specify this model as follows:
 
     * In the Google Cloud console, if you specify a supported machine type for future reservations in calendar mode, then the reservation-bound model is automatically selected.
 
@@ -1870,7 +1870,7 @@ To consume the example auto-created reservation, select one of the following opt
 
 [Go to Create an instance](https://console.cloud.google.com/compute/instancesAdd)
 
-     2. In the **Name** field, enter a name for the instance. For this example, enter `example-instance`.
+     2. In the **Name** field, enter a name for the compute instance. For this example, enter `example-instance`.
 
      3. Specify the **Region** and **Zone** where the auto-created reservation exists. For this example, select **us-central1** and **us-central1-b** respectively.
 
@@ -2030,40 +2030,48 @@ The request body includes the following values:
 
 
 
-## Test that instance properties match an automatically consumed reservation
+## Test if compute instance properties match an automatically consumed reservation
 
-To test if a compute instance's properties match an automatically consumed reservation, do the following:
+Unlike specifically targeted reservations, automatically consumed reservations don't return an error when compute instance properties don't match. Instead, Compute Engine attempts to create a compute instance by using on-demand capacity. To verify that your compute instance properties match an automatically consumed reservation before you launch your workloads, test the properties against a test specifically targeted reservation that has the same properties.
 
-  1. Create a copy of the reservation as a specifically targeted reservation for a single instance.
+To test if a compute instance's properties match an automatically consumed reservation, complete the following steps:
 
-  2. Create a test instance to consume the reservation.
+  1. **Create a test reservation** : create a specifically targeted reservation with the same compute instance properties as the automatically consumed reservation that you want to test. Set the number of reserved compute instances to `1`.
+
+  2. **Create a test compute instance** : attempt to create a compute instance by targeting your test reservation. The outcome of this step is one of the following:
+
+     * If you successfully create the compute instance, then the properties of the compute instance and the test reservation match.
+
+     * If you can't create the compute instance and receive an error, then the properties might not match. To troubleshoot the error, see [Troubleshoot reservation consumption](https://docs.cloud.google.com/compute/docs/troubleshooting/troubleshooting-reservation-consumption).
+
+  3. **Clean up resources** : if you successfully created a compute instance by targeting the test reservation, then delete the test resources to avoid unnecessary charges:
+
+     * [Delete the test compute instance](https://docs.cloud.google.com/compute/docs/instances/deleting-instance)
+
+     * [Delete the test reservation](https://docs.cloud.google.com/compute/docs/instances/reservations-delete)
 
 
 
-
-If you can create the test instance, then its properties match the properties of the test reservation. Otherwise, you encounter errors.
-
-After you confirm that the properties of your test instance and test reservation match, [delete the reservation](https://docs.cloud.google.com/compute/docs/instances/reservations-delete) and the [test instance](https://docs.cloud.google.com/compute/docs/instances/deleting-instance).
 
 ## Verify reservations consumption
 
 To verify reservations consumption, use one of the following methods:
 
-  * To check which reservation a compute instance is consuming, [view the reservation that an instance is consuming](https://docs.cloud.google.com/compute/docs/instances/reservations-view#view_the_reservation_that_an_instance_is_consuming).
+  * To check which reservation a compute instance is consuming, [view the reservation that a compute instance is consuming](https://docs.cloud.google.com/compute/docs/instances/reservations-view#view_the_reservation_that_an_instance_is_consuming).
 
-  * To check which instances are consuming a specific reservation, [view a list of instances that are consuming a reservation](https://docs.cloud.google.com/compute/docs/instances/reservations-view#view_a_list_of_instances_that_are_consuming_a_reservation).
+  * To check which compute instances are consuming a specific reservation, [view a list of compute instances that are consuming a reservation](https://docs.cloud.google.com/compute/docs/instances/reservations-view#view_a_list_of_instances_that_are_consuming_a_reservation).
 
-  * To check the current reservation usage and see the number of instances that are consuming a reservation, and how many more instances can consume it, [view reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-view#number-instances).
+  * To check the current reservation usage and see the number of compute instances that are consuming a reservation, and how many more compute instances can consume it, [view reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-view#number-instances).
 
   * To monitor reservations consumption data, which updates every 30 minutes, and receive alerts when reservations are consumed, [monitor reservations consumption](https://docs.cloud.google.com/compute/docs/instances/reservations-monitor).
 
   * To analyze reservation consumption by using Cloud Billing data exported to BigQuery, see the following examples:
 
-    * [View consumption for a given instance](https://docs.cloud.google.com/billing/docs/how-to/bq-examples#view_consumption_for_a_given_instance)
+    * [View consumption for a given compute instance](https://docs.cloud.google.com/billing/docs/how-to/bq-examples#view_consumption_for_a_given_instance)
 
     * [Analyze usage distribution for a given reservation](https://docs.cloud.google.com/billing/docs/how-to/bq-examples#analyze_usage_distribution_for_a_given_reservation)
 
-    * [List all the instances consuming a reservation](https://docs.cloud.google.com/billing/docs/how-to/bq-examples#list_all_the_instances_consuming_a_reservation)
+    * [List all the compute instances consuming a reservation](https://docs.cloud.google.com/billing/docs/how-to/bq-examples#list_all_the_instances_consuming_a_reservation)
 
   * To view reservations consumption data, which updates every 24 hours, do one of the following:
 
@@ -2088,6 +2096,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

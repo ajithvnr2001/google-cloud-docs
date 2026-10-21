@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/hyperdisk/
 title: About Hyperdisk for GKE \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:02:03.007465+00:00
+fetched_at: 2026-10-21T12:23:06.306833+00:00
 ---
 
 # About Hyperdisk for GKE  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -101,7 +101,7 @@ The following shows an example of a StorageClass with the feature enabled.
 
 ## Automated disk type selection
 
-In version 1.35.3-gke.1290000 or later, you can specify your preferred disk types for Hyperdisk and Persistent Disk in a StorageClass. GKE automatically selects a disk type for your workloads based on the machine type of the node. This approach lets you create a single StorageClass that supports multiple VM generations. For example, if you're gradually migrating your nodes to newer machine series, you can provision Hyperdisk compatible machine series like C3 and C4 while falling back to Persistent Disk on machine series like C2.
+In version 1.35.3-gke.1290000 or later, you can specify your preferred disk types for Hyperdisk and Persistent Disk in a StorageClass. GKE automatically selects a disk type for your workloads based on the machine type of the node. This approach lets you create a single StorageClass that supports multiple VM generations, which is necessary when you use [custom ComputeClasses](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes) for multi-series capacity fallback. Because newer machine series such as C4, C4D, and N4 support only Hyperdisk and older series such as N2 and N2D support Persistent Disk, a StorageClass pinned to a single disk type can prevent stateful Pods from failing over across machine generations during a zonal resource shortage. With automated disk type selection, you can provision Hyperdisk-compatible machine series like C4, C3, and N4 while falling back to Persistent Disk on machine series like N2D or C2.
 
 To enable automatic disk selection, you set the `parameters.type` field in a StorageClass to a value of `dynamic`. You can specify your preferred disk types by using the following parameters:
 
@@ -231,6 +231,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

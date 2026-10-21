@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/merchant-center-performance-schema/
 title: Google Merchant Center Performance Table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:27:33.849470+00:00
+fetched_at: 2026-10-21T11:54:55.113555+00:00
 ---
 
 # Google Merchant Center Performance Table  |  BigQuery  |  Google Cloud Documentation
@@ -69,12 +69,13 @@ The `ProductPerformance_` table has the following schema:
 `customer_country_code` | `STRING` | Country of the customer clicking or seeing the product. | CH  
 `clicks` | `INTEGER` | Total number of clicks on your products on Google that led to visits to your product detail pages. | 17  
 `impressions` | `INTEGER` | Total number of times your products were shown on Google. Only impressions where customers had the option to visit your product detail pages are counted. If your products show zero impressions, you should verify that the products are approved and wait a few days for impressions to appear. Impressions may also not show if they are below a minimum threshold for a category, which can lead to different totals than what is reported in other Google surfaces. | 601  
-`destination` | `STRING` | Whether the interaction happened on Shopping Ads or Free Listings. | FREE, ADS  
+`destination` | `STRING` | The destination of the interactive, whether it be Shopping Ads, Free Listings, or YouTube Affiliate. | FREE, ADS, AFFILIATE  
+`network` | `STRING` | The Network to which metrics apply. | SEARCH, SEARCH_PARTNERS, CONTENT, YOUTUBE  
   
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

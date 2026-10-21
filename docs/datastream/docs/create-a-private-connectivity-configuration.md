@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/create-a-private-connectivity-configuration/
 title: Create a private connectivity configuration \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:50:56.405415+00:00
+fetched_at: 2026-10-21T12:24:08.685742+00:00
 ---
 
 # Create a private connectivity configuration  |  Datastream  |  Google Cloud Documentation
@@ -21,13 +21,11 @@ Send feedback
 
 #  Create a private connectivity configuration Stay organized with collections  Save and categorize content based on your preferences. 
 
-In this page, you learn how to create a private connectivity configuration. This type of configuration contains information that Datastream uses to communicate with a data source over a private network (internally within Google Cloud, or with external sources connected over VPN or Interconnect). This communication happens through a _Private Service Connect interface_ connection or a _Virtual Private Cloud (VPC) peering_ connection.
+A private connectivity configuration lets you connect Datastream to data sources over an internal Google Cloud network, VPN, or Cloud Interconnect. You can connect through a Private Service Connect interface attached to a network attachment subnetwork in your Virtual Private Cloud (VPC) network.
 
-A **Private Service Connect interface** connection uses a virtual machine (VM) with a network interface that Datastream creates. The network interface then connects to your VPC network using the network attachment that you supply, with the IP address assigned from the network attachment subnetwork.
+Alternatively, you can use VPC peering to route traffic between two VPC networks over an allocated internal IP range. Because Datastream doesn't support DNS resolution in private connections, you must specify private IPv4 addresses for your sources.
 
-A **VPC peering** connection is a networking connection between two VPCs that lets you route traffic between them using internal, private IPv4 addresses. You need to provide the private IP addresses when setting up the private connectivity configuration because Datastream doesn't support Domain Name System (DNS) resolution in private connections.
-
-Datastream automatically deletes private connectivity configurations that haven't been used for a period of six consecutive months. To retain your private connectivity configurations, make sure they are used in at least one active connection profile.
+Note that Datastream automatically deletes private connectivity configurations that haven't been used for a period of six consecutive months. To retain your private connectivity configurations, make sure they are used in at least one active connection profile.
 
 ## Before you begin
 
@@ -88,6 +86,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

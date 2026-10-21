@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/identity/okta-provisioning-and-single-sign-on/
 title: Okta user provisioning and single sign-on \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:58:37.986965+00:00
+fetched_at: 2026-10-21T12:22:34.101752+00:00
 ---
 
 # Okta user provisioning and single sign-on  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/admin-panel-server-usage/
 title: Admin settings - Usage \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:35:16.445308+00:00
+fetched_at: 2026-10-21T12:22:59.724249+00:00
 ---
 
 # Admin settings - Usage  |  Looker  |  Google Cloud Documentation
@@ -61,7 +61,7 @@ The **Query by Source** tile, which is located at the top of the **Usage** page,
 
 Looker adds a unique comment to the beginning of each SQL query. The comments are added to queries from Explores, SQL Runner, the API, and filter suggestions. Context comments are automatically included.
 
-> [Context comments on Google BigQuery connections](https://docs.cloud.google.com/looker/docs/db-config-google-bigquery#context_comments) are disabled by default because context comments invalidate Google BigQuery's ability to cache and can negatively impact cache performance. You can enable context comments for a BigQuery connection by enabling the [**Disable Context**](https://docs.cloud.google.com/looker/docs/db-config-google-bigquery#disable_context_comment) toggle on the [Connection Settings](https://docs.cloud.google.com/looker/docs/connecting-to-your-db) page for the connection. See the [Google BigQuery](https://docs.cloud.google.com/looker/docs/db-config-google-bigquery#context_comments) documentation page for more information.
+**Note:** [Context comments on Google BigQuery connections](https://docs.cloud.google.com/looker/docs/db-config-google-bigquery#context_comments) are disabled by default because context comments invalidate Google BigQuery's ability to cache and can negatively impact cache performance. You can enable context comments for a BigQuery connection by enabling the [**Disable Context**](https://docs.cloud.google.com/looker/docs/db-config-google-bigquery#disable_context_comment) toggle on the [Connection Settings](https://docs.cloud.google.com/looker/docs/connecting-to-your-db) page for the connection. See the [Google BigQuery](https://docs.cloud.google.com/looker/docs/db-config-google-bigquery#context_comments) documentation page for more information.**Note:** [Context comments on Snowflake connections](https://docs.cloud.google.com/looker/docs/db-config-snowflake#context-comments) are appended to the end of each SQL query rather than added to the beginning because Snowflake removes leading comments.
 
 Context comments are added in the following format:
     
@@ -88,6 +88,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

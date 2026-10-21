@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/identity/azure-ad-b2b-user-provisioning-and-sso/
 title: Microsoft Entra ID (formerly Azure AD) B2B user provisioning and single sign-on \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:06:33.635988+00:00
+fetched_at: 2026-10-21T12:22:16.912461+00:00
 ---
 
 # Microsoft Entra ID (formerly Azure AD) B2B user provisioning and single sign-on  |  Cloud Architecture Center  |  Google Cloud Documentation

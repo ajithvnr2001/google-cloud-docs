@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/release-notes/
 title: Conversational Analytics API release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:35.243734+00:00
+fetched_at: 2026-10-21T12:21:56.480115+00:00
 ---
 
 # Conversational Analytics API release notes  |  Google Cloud Documentation
@@ -23,6 +23,21 @@ Send feedback
 #  Conversational Analytics API release notes Stay organized with collections  Save and categorize content based on your preferences. 
 
 These release notes are for updates to the [Conversational Analytics API](https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/overview).
+
+## October 16, 2026
+
+**Conversational Analytics API updates:**
+
+Feature
+
+The Conversational Analytics API now supports the following regional endpoints in Canada for BigQuery data sources:
+
+  * `northamerica-northeast1` (Montréal)
+  * `northamerica-northeast2` (Toronto)
+
+
+
+These endpoints support data residency for data at rest and jurisdictional machine learning (ML) processing for data in use. For more information, see [Locations](https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/locations) and [Data residency](https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/data-residency).
 
 ## October 13, 2026
 
@@ -529,6 +544,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

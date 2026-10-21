@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/oracle-ebs-on-compute-engine-vm/
 title: Oracle E-Business Suite with Oracle Database on Compute Engine \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:42.782571+00:00
+fetched_at: 2026-10-21T12:22:09.463416+00:00
 ---
 
 # Oracle E-Business Suite with Oracle Database on Compute Engine  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -320,7 +320,7 @@ This section provides guidance to optimize the cost of setting up and operating 
 
 #### VM machine types
 
-To help you optimize the resource utilization of your VM instances, Compute Engine provides [machine type recommendations](https://docs.cloud.google.com/compute/docs/instances/apply-machine-type-recommendations-for-instances). Use the recommendations to choose machine types that match your workload's compute requirements. For workloads with predictable resource requirements, you can customize the machine type to your needs and save money by using [custom machine types](https://docs.cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#specifications).
+To help you optimize the resource utilization of your VM instances, Compute Engine provides [machine type recommendations](https://docs.cloud.google.com/compute/docs/instances/apply-machine-type-recommendations-for-instances). Use the recommendations to choose machine types that match your workload's compute requirements. For workloads with predictable resource requirements, you can customize the machine type to your needs and save money by using [custom machine types](https://docs.cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type).
 
 #### Oracle product licenses
 

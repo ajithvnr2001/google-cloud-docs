@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mainframe-connector/docs/api-command-reference/
 title: Mainframe Connector command-line reference \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:35:01.382521+00:00
+fetched_at: 2026-10-21T12:01:23.339199+00:00
 ---
 
 # Mainframe Connector command-line reference  |  Google Cloud Documentation
@@ -81,7 +81,7 @@ To run this command you must provide an SQL query (see flags `--sql` and `query_
 **`--exporter_thread_count`=COUNT**
     (Optional) Set the number of exporter threads. The default value is 4.
 **`--help` or `-h`**
-    Display this helper text.
+    Display this help message.
 **`--keepAliveTimeInSeconds`=SECONDS**
     (Optional) Specify the keep alive timeout in seconds for an HTTP channel. The default value 480 seconds.
 **`--location`=LOCATION**
@@ -89,7 +89,7 @@ To run this command you must provide an SQL query (see flags `--sql` and `query_
 **`--max_read_queue`=NUMBER**
     (Optional) Set the maximum size of the Avro records queue. The default value is twice the number of threads.
 **`--max_read_streams`=NUMBER**
-    (Optional) Set the maximum number of read streams threads. the default value is 4.
+    (Optional) Set the maximum number of read streams threads. The default value is 4.
 **`--maximum_bytes_billed`=BYTES**
     (Optional) Limit the bytes billed for the query.
 **`--order_response`**
@@ -118,7 +118,7 @@ To run this command you must provide an SQL query (see flags `--sql` and `query_
 **`--stats_table`=TABLE**
     (Optional) Specify the table to insert statistics into.
 **`--timeOutMinutes`=MINUTES**
-    (Optional) Set the timeout in minutes for the remote grpc call. The default value is 90 minutes.
+    (Optional) Set the timeout in minutes for the remote gRPC call. The default value is 90 minutes.
 **`--transcoding_buffer`=BUFFER**
     (Optional) Sets the size of the transcoding buffer per thread, in MB. The default value is 20.
 **`--use_cache`={true|false}**
@@ -167,7 +167,7 @@ The `bq load` command uses the following flags and arguments:
 **`--field_delimiter` or `-F`=FIELD**
     (Optional) Specify the column delimiter in the CSV data. Use `\t` or `tab` for tab delimiters.
 **`--help` or `-h`**
-    Display this helper text.
+    Display this help message.
 **`--ignore_unknown_values`=VALUES**
     (Optional) Ignore extra unrecognized values in CSV or JSON data.
 **`--location`=LOCATION**
@@ -243,7 +243,7 @@ The `bq mk` command uses the following flags and arguments:
 **`--external_table_definition` or `-e`=TABLE**
     (Optional) Specify a name and schema definition to create an external table. Example: `ORC=gs://bucket/table_part1.orc/_,gs://bucket/table_part2.orc/_.`
 **`--help` or `-h`**
-    Display this helper text.
+    Display this help message.
 **`--location`=LOCATION**
     (Optional) Specify a region or multi-region location to execute the command. The default value is US.
 **`--parser_type`=TYPE**
@@ -298,7 +298,7 @@ You can run this command in the local and remote modes. For the remote mode, see
 **`--follow`={true|false}**
     (Optional) To track individual query steps or the script as a whole, set to true. The default value is false. This option is not supported in remote mode.
 **`--help` or `-h`**
-    Display this helper text.
+    Display this help message.
 **`--location`=LOCATION**
     (Optional) Specify a region or multi-region location to execute the command. The default value is US.
 **`--maximum_bytes_billed`=BYTES**
@@ -523,7 +523,7 @@ Transcode data from your Mainframe to a Cloud Storage bucket.
 
 You can use this command for the following different purposes: 
 
-  * Copy and transcode a file from a Mainframe or a linux environment to Cloud Storage.
+  * Copy and transcode a file from a Mainframe or a Linux environment to Cloud Storage.
     * Source: `--inDSN`. If not provided, is specified by [DD INFILE](https://docs.cloud.google.com/mainframe-connector/docs/reference#dataset-names).
     * Destination: `gcsUri`
   * Copy and transcode a file within Cloud Storage
@@ -533,7 +533,7 @@ You can use this command for the following different purposes:
     * Source: `gcsUri`
     * Destination: `--destDSN`
     * Relevant flags: `--lrecl`, `--blksize`, `--recfm`, `--noseek`.
-  * Copy a file from Cloud Storage to a linux environment.
+  * Copy a file from Cloud Storage to a Linux environment.
     * Source: `gcsUri`
     * Destination: `--destPath`
 
@@ -562,7 +562,7 @@ This command can run in local, remote, and standalone modes. For remote mode, se
 **`--encoding`=ENCODING**
     (Optional) Specify the character set to use for encoding and decoding character fields. When specified, this value overrides the default set by the [`ENCODING`](https://docs.cloud.google.com/mainframe-connector/docs/environment-variables#encoding) environment variable.
 **`--help` or `-h`**
-    Display this helper text.
+    Display this help message.
 **`--inDsn`=DSN**
     (Optional) Specify the infile DSN that you want to use. If you don't provide a value, Mainframe Connector reads from [DD INFILE](https://docs.cloud.google.com/mainframe-connector/docs/reference#dataset-names).
 **`--keepAliveTimeInSeconds`=SECONDS**
@@ -608,7 +608,7 @@ This command can run in local, remote, and standalone modes. For remote mode, se
 **`--tfGCS`=GCS**
     (Optional) Specify the transformations file from Cloud Storage.
 **`--timeOutMinutes`=MINUTES**
-    (Optional) Specify the timeout in minutes for a remote grpc call. The default value is 90 minutes for Cloud Storage and 50 minutes for a Mainframe.
+    (Optional) Specify the timeout in minutes for a remote gRPC call. The default value is 90 minutes for Cloud Storage and 50 minutes for a Mainframe.
 
 ### `pubsub topics publish`
 
@@ -713,7 +713,7 @@ The `qsam decode` command uses the following flags and arguments:
 **`--output-format`=FORMAT : TranscodeFormat**
     
 
-(Optional) Specify the format of the output file. If you provide a the `DataPath` of a Pub/Sub topic as the value to `OUTPUT`, then the default output format is `JSONL`. For all other `DataPaths`, the default output format is `ORC`.
+(Optional) Specify the format of the output file. If you provide a `DataPath` of a Pub/Sub topic as the value to `OUTPUT`, then the default output format is `JSONL`. For all other `DataPaths`, the default output format is `ORC`.
 
 **`--parallelism`=COUNT**
     
@@ -863,7 +863,7 @@ The `scp` command uses the following flags and arguments:
 **`--gcsOutUri`=URI**
     (Optional) Specify the destination Cloud Storage URI of the file copy.
 **`--help` or `-h`**
-    Display this helper text.
+    Display this help message.
 **`--inDD`=INPUT**
     (Optional) Specify the DD file to be copied. The default value is [DD INFILE](https://docs.cloud.google.com/mainframe-connector/docs/reference#dataset-names).
 **`--inDsn`=INPUT**
@@ -947,7 +947,7 @@ The `vsam decode` command uses the following flags and arguments:
 **`--output-format`=FORMAT : TranscodeFormat**
     
 
-(Optional) Specify the format of the output file. If you provide a the `DataPath` of a Pub/Sub topic as the value to `OUTPUT`, then the default output format is `JSONL`. For all other `DataPaths`, the default output format is `ORC`.
+(Optional) Specify the format of the output file. If you provide a `DataPath` of a Pub/Sub topic as the value to `OUTPUT`, then the default output format is `JSONL`. For all other `DataPaths`, the default output format is `ORC`.
 
 **`--parallelism`=COUNT**
     
@@ -1060,7 +1060,7 @@ The format to be used during transcode.
 
 Valid values are:
 
-  * **_`BIGQUERY`_** \- Pulls data directly from big-query. `INPUT` must be a path to a query file.
+  * **_`BIGQUERY`_** \- Pulls data directly from BigQuery. `INPUT` must be a path to a query file.
 
 Available input parameters are:
 
@@ -1082,6 +1082,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

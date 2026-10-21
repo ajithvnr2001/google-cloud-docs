@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/valkey/ha-and-replicas/
 title: High availability and replicas \u00a0|\u00a0 Memorystore for Valkey \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:36:41.283710+00:00
+fetched_at: 2026-10-21T11:59:12.134305+00:00
 ---
 
 # High availability and replicas  |  Memorystore for Valkey  |  Google Cloud Documentation
@@ -88,6 +88,14 @@ The following diagram illustrates an example for Cluster Mode Disabled instances
 
 ![A Memorystore for Valkey Cluster Mode Disabled instance with multiple replicas and nodes divided evenly across three zones.](https://docs.cloud.google.com/static/memorystore/img/valkey_cluster_mode_disabled.png)
 
+## How a failover affects your application
+
+When Memorystore for Valkey promotes a replica to the primary instance, it drops existing connections to the primary endpoint of the instance. During automated repairs and maintenance events, the instance is unavailable for an average of 30 seconds.
+
+After the instance becomes available, Memorystore for Valkey uses the same connection string or IP address to redirect your application to the new primary instance automatically. You don't need to update your application.
+
+During a failover, if there are connections to the read endpoint, then Memorystore for Valkey drops connections to the replica that it promotes to the primary instance. However, Memorystore for Valkey doesn't drop the connections to the other replicas. After the failover is complete and the new replica is available, Memorystore for Valkey redirects connections to the new replica.
+
 ## Automatic failover
 
 Automatic failovers within a shard can occur due to [maintenance](https://docs.cloud.google.com/memorystore/docs/valkey/about-maintenance) or an unexpected failure of the primary node. During a failover a replica is promoted to be the primary. You can configure replicas explicitly. The service can also temporarily provision extra replicas during internal maintenance to avoid any downtime.
@@ -156,6 +164,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

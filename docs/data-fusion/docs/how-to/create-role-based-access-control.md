@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/create-role-based-access-control/
 title: Use role-based access control \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:58:37.866334+00:00
+fetched_at: 2026-10-21T11:55:45.580318+00:00
 ---
 
 # Use role-based access control  |  Cloud Data Fusion  |  Google Cloud Documentation
@@ -21,11 +21,9 @@ Send feedback
 
 #  Use role-based access control Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to get started using role-based access control (RBAC) in Cloud Data Fusion instances. RBAC is available in Cloud Data Fusion instances running in versions 6.5 and later.
+Role-based access control (RBAC) in Cloud Data Fusion lets you manage user permissions across instances and namespaces. This access model helps you isolate workspaces and secure pipelines by controlling who can view, design, and run integration workloads.
 
-For more information, see the [role-based access control (RBAC) overview](https://docs.cloud.google.com/data-fusion/docs/concepts/rbac).
-
-**Recommended:** Unless required for automation purposes, use the Google Cloud console to perform your RBAC tasks.
+RBAC is available in Cloud Data Fusion instances running version 6.5 and later. Unless required for automation purposes, use the Google Cloud console to perform your RBAC tasks. For more information, see [Role-based access control (RBAC) overview](https://docs.cloud.google.com/data-fusion/docs/concepts/rbac).
 
 ## Enable RBAC for an existing instance
 
@@ -535,6 +533,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

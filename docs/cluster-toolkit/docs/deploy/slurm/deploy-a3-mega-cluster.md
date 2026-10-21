@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/deploy/slurm/deploy-a3-mega-cluster/
 title: Deploy an A3 Mega Slurm cluster for ML training \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:35:07.580396+00:00
+fetched_at: 2026-10-21T12:22:46.721391+00:00
 ---
 
 # Deploy an A3 Mega Slurm cluster for ML training  |  Cluster Toolkit  |  Google Cloud Documentation
@@ -106,9 +106,9 @@ Replace the following:
 
 If you plan to use reservation-bound clusters, you must reserve capacity. To reserve capacity, follow the instructions in this section. If you plan to use flex-start or Spot VMs, skip this section.
 
-Reservations help ensure that you have the available resources to create A3 Mega instances with the specified hardware (memory, vCPUs, and GPUs) and attached Local SSD disks whenever you need them. To review the different methods to reserve resources for creating compute instances, see [Choose a reservation type](https://docs.cloud.google.com/compute/docs/instances/choose-reservation-type). 
+For Slurm consumption options, see [Choose a consumption option](https://docs.cloud.google.com/ai-hypercomputer/docs/consumption-models). To see GKE consumption options for Cluster Toolkit, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options). 
 
-For example, to create an on-demand, specifically targeted reservation for A3 Mega instances, use the [`gcloud compute reservations create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/reservations/create) with the `--require-specific-reservation` flag: 
+To create a standard single-project reservation for A3 Mega instances, use the [`gcloud compute reservations create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/reservations/create) with the `--require-specific-reservation` flag: 
     
     
     gcloud compute reservations create RESERVATION_NAME \
@@ -371,6 +371,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

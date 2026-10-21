@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/secure-apps-resources-using-context-aware-access/
 title: Secure apps and resources by using context-aware access \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T19:31:50.138570+00:00
+fetched_at: 2026-10-21T12:22:08.616735+00:00
 ---
 
 # Secure apps and resources by using context-aware access  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy/
 title: OAuthV2 policy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:44:54.327351+00:00
+fetched_at: 2026-10-21T12:00:27.439718+00:00
 ---
 
 # OAuthV2 policy  |  Apigee  |  Google Cloud Documentation
@@ -1382,9 +1382,9 @@ If `<GenerateResponse>` is **true** , the policy returns errors in this format f
     {  
        {  
           "fault":{  
-             &quot;faultstring":&quot;Invalid Access Token",
+             "faultstring":"Invalid Access Token",
              "detail":{  
-                "errorcode&quot;:&quot;keymanagement.service.invalid_access_token"
+                "errorcode":"keymanagement.service.invalid_access_token"
              }
           }
        }
@@ -1392,17 +1392,17 @@ If `<GenerateResponse>` is **true** , the policy returns errors in this format f
 ### Example fault rule
     
     
-    <FaultRule name="OAuthV2 Fa>ults&<quot>;
-        Ste<p
-      >      NameAM-InvalidClie<ntRes>ponse/Nam<e
-           > Condition(fault.name = "invalid_client") OR (fault.name = "<InvalidCli>entId<entif>ier&q<uot;>)/Conditi<on
-     >   /Step
-        Step
-         <   Na>meAM-Inva<lidTokenR>esponse/Name
-            Condition(fault.<name = &qu>ot;in<valid>_acce<ss_token&>quot;)/Condition
-        /St<ep
-        Con>d<ition(oaut>hV2.failed = true) /Condition
-    /FaultRule
+    <FaultRule name="OAuthV2 Faults">
+        <Step>
+            <Name>AM-InvalidClientResponse</Name>
+            <Condition>(fault.name = "invalid_client") OR (fault.name = "InvalidClientIdentifier")</Condition>
+        </Step>
+        <Step>
+            <Name>AM-InvalidTokenResponse</Name>
+            <Condition>(fault.name = "invalid_access_token")</Condition>
+        </Step>
+        <Condition>(oauthV2.failed = true) </Condition>
+    </FaultRule>
 
 ## Tokens in Storage are Hashed
 

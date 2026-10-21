@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/create-a-stream/
 title: Create a stream \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:52:44.721723+00:00
+fetched_at: 2026-10-21T12:24:09.556808+00:00
 ---
 
 # Create a stream  |  Datastream  |  Google Cloud Documentation
@@ -21,34 +21,9 @@ Send feedback
 
 #  Create a stream Stay organized with collections  Save and categorize content based on your preferences. 
 
-In this section, you learn how to create a stream. Datastream uses this stream to transfer data from source databases into BigQuery or Cloud Storage.
+A stream in Datastream lets you replicate data and schema changes from a data source into [BigQuery](https://docs.cloud.google.com/datastream/docs/create-connection-profiles#cp4bigquery), Apache Iceberg tables, or a [Cloud Storage](https://docs.cloud.google.com/datastream/docs/create-connection-profiles#cp4cloudstorage) bucket. In the Google Cloud console wizard, you select connection profiles and choose which schemas, tables, or objects to replicate. You also configure historical backfill alongside ongoing replication.
 
-Creating a stream includes:
-
-  * Defining settings for the stream.
-  * Selecting the connection profile that you created, or creating one.
-  * Configuring information about the source database for the stream by specifying the tables and schemas in the source database that Datastream: 
-    * Can transfer into the destination.
-    * Is restricted from transferring into the destination.
-  * Determining whether Datastream will backfill historical data, as well as stream ongoing changes into the destination, or stream only changes to the data. When enabling historical backfill, you can optionally specify schemas and tables in the source database that Datastream shouldn't backfill into the destination.
-
-  * Selecting the connection profile that you created for [BigQuery](https://docs.cloud.google.com/datastream/docs/create-connection-profiles#cp4bigquery) or [Cloud Storage](https://docs.cloud.google.com/datastream/docs/create-connection-profiles#cp4cloudstorage) (the destination connection profile), or creating a destination connection profile if you haven't created one.
-
-  * Configuring information about the destination for the stream. This information includes:
-
-    * For BigQuery: 
-      * The datasets into which Datastream will replicate schemas, tables, and data from a source database.
-    * For Cloud Storage: 
-      * The folder of the destination bucket into which Datastream will transfer schemas, tables, and data from a source database.
-  * Validating the stream to ensure that it will run successfully. Validating a stream checks:
-
-    * Whether the source is configured properly to allow Datastream to stream data from it.
-    * Whether the stream can connect to both the source and the destination.
-    * The end-to-end configuration of the stream.
-
-
-
-Datastream comes equipped with a wizard to help you create a stream. This wizard consists of six panels: Get started, Define & test source, Configure source, Define destination, Configure destination, and Review & create. Information on how to populate each panel is provided in the various sections of this page.
+Before starting replication, you can validate the stream to verify your source settings, confirm network connectivity to the destination, and check the end-to-end configuration.
 
 ## Before you begin
 
@@ -737,6 +712,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

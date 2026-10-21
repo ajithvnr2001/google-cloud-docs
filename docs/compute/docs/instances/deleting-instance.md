@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/deleting-instance/
 title: Delete a Compute Engine instance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:54:04.089090+00:00
+fetched_at: 2026-10-21T12:01:44.066649+00:00
 ---
 
 # Delete a Compute Engine instance  |  Google Cloud Documentation
@@ -21,11 +21,32 @@ Send feedback
 
 #  Delete a Compute Engine instance Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document explains how to delete a Compute Engine instance. To learn more about the lifecycle of an instance, see [Compute Engine instance lifecycle](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle).
+This document explains how to permanently delete a Compute Engine instance.
 
-If you no longer need an instance, then delete it to stop incurring charges for the instance and its attached resources.
+If you no longer need a compute instance, then delete it to stop incurring charges for the compute instance and its attached resources. You can't recover the deleted compute instance. To learn more about the states that a compute instance goes through from its creation up to its deletion, see [Compute Engine instance lifecycle](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle).
 
-**Caution:** If you delete an instance in a managed instance group (MIG) that uses autoscaler, then the MIG may automatically create a new instance to replace the deleted instance. To prevent this, [resize the MIG](https://docs.cloud.google.com/compute/docs/instance-groups/add-remove-vms-in-mig#set_the_groups_target_size) or [reconfigure its autoscaler](https://docs.cloud.google.com/compute/docs/autoscaler).
+**Caution:** If you delete a compute instance in a managed instance group (MIG) with an autoscaler, then the MIG might automatically create a new compute instance to replace the deleted compute instance. To prevent this behavior, [resize the MIG](https://docs.cloud.google.com/compute/docs/instance-groups/add-remove-vms-in-mig#set_the_groups_target_size) or [reconfigure its autoscaler](https://docs.cloud.google.com/compute/docs/autoscaler).
+
+## Billing implications for deleted instances
+
+After you delete a compute instance, you stop incurring charges for the compute instance and its attached resources, except in the following cases:
+
+  * If you delete a compute instance that is hosted on a [sole-tenant node](https://docs.cloud.google.com/compute/docs/nodes), then you still incur charges for the sole-tenant node.
+
+  * If you delete a compute instance that you created by using a [reservation](https://docs.cloud.google.com/compute/docs/instances/choose-reservation-type), then you continue to pay for the reserved resources until one of the following occurs:
+
+    * You delete the reservation, or Compute Engine does so for an automatic operation.
+
+    * You reduce the number of reserved compute instances in the reservation.
+
+  * If you have a [committed use discount](https://docs.cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts), then you continue to pay for the committed resources, regardless if you use them or not.
+
+  * If you preserve any resources that are attached to the compute instance, such as disks or external IP addresses, then you continue to pay for those resources until you delete them.
+
+
+
+
+For more information, see [VM instances pricing](https://cloud.google.com/compute/vm-instance-pricing).
 
 ## Before you begin
 
@@ -187,6 +208,25 @@ For more information, see [Authenticate for using REST](https://docs.cloud.googl
 
 
 
+### Preserve attached resources
+
+If you want to preserve a resource that is attached to a compute instance before you delete it, then you can do one or more of the following:
+
+  * To preserve a GPU attached to an N1 virtual machine (VM) instance, [remove the GPU from the VM](https://docs.cloud.google.com/compute/docs/gpus/add-remove-gpus#remove-gpu).
+
+  * To preserve an attached disk, do one of the following:
+
+    * To preserve a boot disk, [detach the boot disk from the compute instance](https://docs.cloud.google.com/compute/docs/disks/detach-reattach-boot-disk#detach_disk).
+
+    * To preserve a boot or non-boot disk, set the [auto-delete setting of the disk to `false`](https://docs.cloud.google.com/compute/docs/disks/modify-persistent-disk#updateautodelete).
+
+  * To preserve the data of a Local SSD disk, copy the data of the disk to a persistent [storage option](https://docs.cloud.google.com/compute/docs/disks/local-ssd#lssd_backup).
+
+  * To reuse the static external IP address of a compute instance, [unassign the IP address](https://docs.cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address#unassign_ip).
+
+
+
+
 ### Required roles
 
 To get the permissions that you need to delete a compute instance, ask your administrator to grant you the [Compute Instance Admin (v1) ](https://docs.cloud.google.com/iam/docs/roles-permissions/compute#compute.instanceAdmin.v1) (`roles/compute.instanceAdmin.v1`) IAM role on the project. For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
@@ -197,87 +237,43 @@ This predefined role contains the permissions required to delete a compute insta
 
 The following permissions are required to delete a compute instance:
 
-  * `compute.instances.delete` on the instance
+  * `compute.instances.delete` on the compute instance
   * To force the deletion of an attached disk: `compute.disks.delete` on the disk 
 
 
 
 You might also be able to get these permissions with [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
 
-### Billing implications
+## Delete compute instances
 
-After you delete a compute instance, you stop incurring charges for the instance and its attached resources, except in the following cases:
+When you delete a compute instance, Compute Engine [stops the compute instance](https://docs.cloud.google.com/compute/docs/instances/suspend-stop-reset-instances-overview#stopping-instance) before it's deleted. If you delete one or more compute instances simultaneously, then you must decide what happens to the attached disks:
 
-  * If you delete an instance that is hosted on a [sole-tenant node](https://docs.cloud.google.com/compute/docs/nodes), then you still incur charges for the sole-tenant node.
+  * **Delete disks** : you can delete the boot disks, non-boot disks, or all of its attached disks to your compute instances. If you configured your disks to be preserved upon deletion, then you can optionally override this configuration and force their deletion.
 
-  * If you delete an instance that is using a [reservation](https://docs.cloud.google.com/compute/docs/instances/reservations-overview), then you continue to pay for the reserved resources until one of the following occurs:
+For instructions, see Delete compute instances and all attached resources.
 
-    * Compute Engine automatically deletes the reservation at your chosen date and time.
+  * **Preserve disks** : you can preserve boot disks, non-boot disks, or all of its attached disks to your compute instances.
 
-    * You delete the reservation.
-
-    * You reduce the number of reserved instances in the reservation.
-
-  * If you have a [committed use discount](https://docs.cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts), then you continue to pay for the committed resources, regardless if you use them or not.
-
-  * If you preserve any resources attached to the instance, such as disks, then you continue to pay for those resources until you delete them.
+For instructions, see Delete compute instances and preserve disks.
 
 
 
 
-For more information, see [VM instances pricing](https://cloud.google.com/compute/vm-instance-pricing).
+### Delete compute instances and all attached resources
 
-### Preserve attached resources
+To delete compute instances in specific scenarios—such as forcing the deletion of attached disks, skipping or ending a graceful shutdown, or deleting multiple instances at the same time—use the appropriate method:
 
-In some cases, before you delete a compute instance, you might want to preserve one of its attached resources. You can preserve attached resources by doing the following:
+  * **Force delete disks** : if you've [configured an attached disk to be preserved](https://docs.cloud.google.com/compute/docs/disks/modify-persistent-disk#updateautodelete) when Compute Engine deletes a compute instance, then you can override this setting and force its deletion by using the Google Cloud CLI.
 
-  * To preserve a GPU attached to an N1 virtual machine (VM) instance, [remove the GPU from the VM](https://docs.cloud.google.com/compute/docs/gpus/add-remove-gpus#remove-gpu).
+**Caution:** Forcefully deleting a disk that is attached to a compute instance also deletes all its instant snapshots. You can't recover these snapshots. To retain the data in an instant snapshot, [create a standard snapshot from it](https://docs.cloud.google.com/compute/docs/disks/convert-instant-snapshot) before you delete the compute instance.
+  * **Skip or end a graceful shutdown** : if you've enabled [graceful shutdown](https://docs.cloud.google.com/compute/docs/instances/graceful-shutdown-overview) in the compute instance, then you can delete the compute instance without gracefully shutting it down or end an ongoing graceful shutdown by using the Google Cloud console, gcloud CLI, or REST API.
 
-  * To preserve an attached disk, do one of the following:
-
-    * To preserve a boot disk, [detach the boot disk from the instance](https://docs.cloud.google.com/compute/docs/disks/detach-reattach-boot-disk#detach_disk).
-
-    * To preserve a boot or non-boot disk, set the [auto-delete setting of the disk to `false`](https://docs.cloud.google.com/compute/docs/disks/modify-persistent-disk#updateautodelete).
-
-  * To preserve the data of a Local SSD disk, copy the data of the disk to a persistent [storage option](https://docs.cloud.google.com/compute/docs/disks/local-ssd#lssd_backup).
-
-  * To reuse the static external IP address of an instance, [unassign the IP address](https://docs.cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address#unassign_ip).
+  * **Delete multiple compute instances** : if you want to delete multiple compute instances simultaneously, then use the Google Cloud console or, for multiple compute instances that exist in the same zone, the gcloud CLI.
 
 
 
 
-## Delete instances
-
-When you delete a compute instance, Compute Engine [stops the instance](https://docs.cloud.google.com/compute/docs/instances/suspend-stop-reset-instances-overview#stopping-instance) before deleting it.
-
-If you delete one or more instances simultaneously, then you must decide what happens to the attached disks:
-
-  * Delete instances and all attached resources
-
-This option deletes the instances and deletes, or forces the deletion of, boot, non-boot, or all attached disks.
-
-  * Delete instances and preserve disks
-
-This option deletes the instances but preserves boot, non-boot, or all attached disks for later use.
-
-
-
-
-### Delete instances and all attached resources
-
-Depending on what you want to do when deleting a compute instance, use the following options:
-
-  * If you [configured an attached disk to be preserved](https://docs.cloud.google.com/compute/docs/disks/modify-persistent-disk#updateautodelete) upon instance deletion, then you can override this setting and force its deletion using the Google Cloud CLI.
-
-**Caution:** Forcefully deleting a disk that is attached to an instance also deletes all its instant snapshots. You can't recover these snapshots. To retain the data in an instant snapshot, [create a standard snapshot from it](https://docs.cloud.google.com/compute/docs/disks/convert-instant-snapshot) before deleting the instance.
-  * If you've enabled [graceful shutdown](https://docs.cloud.google.com/compute/docs/instances/graceful-shutdown-overview) in the instance, then you can delete the instance without gracefully shutting it down or end an ongoing graceful shutdown using the Google Cloud console, gcloud CLI, or REST API.
-
-  * To delete multiple instances simultaneously, use the Google Cloud console or, for instances located in the same zone, the gcloud CLI.
-
-
-
-
-To delete one or more instances and all attached resources, select one of the following options:
+To delete one or more compute instances and all of their attached resources, select one of the following options:
 
 ###  Console 
 
@@ -287,11 +283,11 @@ To delete one or more instances and all attached resources, select one of the fo
 
   2. Select the instances that you want to delete.
 
-  3. Click delete **Delete**.
+  3. Click delete **Delete**. If there is no **Delete** option, then click **More actions** , and then select **Delete**.
 
-  4. In the dialog, do the following:
+  4. In the dialog that appears, do the following:
 
-     1. Optional: To delete the instances without gracefully shut them down, or end an ongoing graceful shutdown, select the **Skip graceful shutdown (if applicable)** checkbox.
+     1. Optional: To delete the compute instances without gracefully shutting them down, or to end an ongoing graceful shutdown, select the **Skip graceful shutdown (if applicable)** checkbox.
 
      2. To confirm, click **Delete**.
 
@@ -300,7 +296,7 @@ To delete one or more instances and all attached resources, select one of the fo
 
 ###  gcloud 
 
-To delete one or more instances in the same zone, use the [`gcloud compute instances delete` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/delete):
+To delete one or more compute instances in the same zone, use the [`gcloud compute instances delete` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/delete):
     
     
     gcloud compute instances delete INSTANCE_NAMES \
@@ -309,37 +305,33 @@ To delete one or more instances in the same zone, use the [`gcloud compute insta
 
 Replace the following:
 
-  * `INSTANCE_NAMES`: a list of instance names separated by spaces—for example, `instance-01 instance-02 instance-03`.
+  * `INSTANCE_NAMES`: a list of names of compute instances that you want to delete, separated by spaces. For example, specify `instance-01 instance-02 instance-03`.
 
-  * `ZONE`: the zone where the instances are located.
-
-
+  * `ZONE`: the zone where the compute instances exist.
 
 
-Optionally, you can do one or both of the following:
 
-  * To force the deletion of the disks attached to one or more instances, include the `--delete-disks` flag:
+
+Optionally, you can include one or both of the following flags:
+
+  * To force the deletion of the disks that are attached to one or more compute instances, include the `--delete-disks` flag:
         
         gcloud compute instances delete INSTANCE_NAMES \
             **--delete-disks= DELETE_DISK_TYPE** \
             --zone=ZONE
         
 
-Replace `DELETE_DISK_TYPE` with one of the following values:
+Replace `DELETE_DISK_TYPE` with the types of storage that you want to delete. Specify one of the following values:
 
-    * To delete attached boot and non-boot persistent storage: `all`
+    * To delete boot and non-boot persistent storage: `all`
 
-    * To delete only attached boot persistent storage: `boot`
+    * To delete only boot persistent storage: `boot`
 
     * To delete only non-boot persistent storage: `data`
 
-  * If you've enabled graceful shutdown in one or more instances, then you can delete the instances without gracefully shutting them down, or manually end an ongoing graceful shutdown. To do so, use the [`gcloud beta compute instances delete` command](https://docs.cloud.google.com/sdk/gcloud/reference/beta/compute/instances/delete) with the `--no-graceful-shutdown` flag:
-
-**Preview — The`--no-graceful-shutdown` flag **
-
-This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+  * To skip or end an ongoing graceful shutdown, include the `--no-graceful-shutdown` flag:
         
-        gcloud beta compute instances delete INSTANCE_NAMES \
+        gcloud compute instances delete INSTANCE_NAMES \
             **--no-graceful-shutdown** \
             --zone=ZONE
         
@@ -667,7 +659,7 @@ This feature is subject to the "Pre-GA Offerings Terms" in the General Service T
 
 ###  REST 
 
-To delete an instance, make a `DELETE` request to the [`instances delete` method](https://docs.cloud.google.com/compute/docs/reference/latest/instances/delete):
+To delete a compute instance, make a `DELETE` request to the [`instances delete` method](https://docs.cloud.google.com/compute/docs/reference/latest/instances/delete):
     
     
     DELETE https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances/INSTANCE_NAME
@@ -675,30 +667,26 @@ To delete an instance, make a `DELETE` request to the [`instances delete` method
 
 Replace the following:
 
-  * `PROJECT_ID`: the ID of the project where the instance is located.
+  * `PROJECT_ID`: the ID of the project where the compute instance exists.
 
-  * `ZONE`: the zone of the instance.
+  * `ZONE`: the zone where the compute instance exists.
 
-  * `INSTANCE_NAME`: the instance name.
-
-
+  * `INSTANCE_NAME`: the name of the compute instance.
 
 
-Optionally, if you've enabled graceful shutdown in the instance, you can delete the instances without gracefully shutting it down, or manually end an ongoing graceful shutdown. To do so, make a `DELETE` request to the [beta `instances.delete` method](https://docs.cloud.google.com/compute/docs/reference/beta/instances/delete). In the request URL, include the `noGracefulShutdown` query parameter set to `true`:
 
-**Preview — The`noGracefulShutdown` query parameter **
 
-This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+If you want to skip or end an ongoing graceful shutdown, then include the `noGracefulShutdown` query parameter set to `true` in the request URL:
     
     
-    DELETE https://compute.googleapis.com/compute/beta/projects/PROJECT_ID/zones/ZONE/instances/VM_NAME**?noGracefulShutdown=true**
+    DELETE https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances/VM_NAME**?noGracefulShutdown=true**
     
 
-### Delete instances and preserve disks
+### Delete compute instances and preserve disks
 
-By default, deleting a compute instance deletes the instance and its attached resources. However, when you delete an instance using the gcloud CLI, you can specify to preserve the attached disks, regardless of their [auto-delete settings](https://docs.cloud.google.com/compute/docs/disks/modify-persistent-disk#updateautodelete).
+By default, deleting a compute instance deletes the compute instance and its attached resources. However, when you delete a compute instance by using the gcloud CLI, you can specify to preserve the attached disks, regardless of their [auto-delete settings](https://docs.cloud.google.com/compute/docs/disks/modify-persistent-disk#updateautodelete).
 
-To delete one or more instances in the same zone while preserving their attached disks, use the [`gcloud compute instances delete` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/delete) with the `--keep-disks` flag:
+To delete one or more compute instances in the same zone while preserving their attached disks, use the [`gcloud compute instances delete` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/delete) with the `--keep-disks` flag:
     
     
     gcloud compute instances delete INSTANCE_NAMES \
@@ -708,9 +696,9 @@ To delete one or more instances in the same zone while preserving their attached
 
 Replace the following:
 
-  * `INSTANCE_NAMES`: a list of instance names separated by spaces—for example, `instance-01 instance-02 instance-03`.
+  * `INSTANCE_NAMES`: a list of names of compute instances that you want to delete, separated by spaces. For example, specify `instance-01 instance-02 instance-03`.
 
-  * `KEEP_DISK_TYPE`: specify one of the following values:
+  * `KEEP_DISK_TYPE`: the types of disks that you want to preserve. Specify one of the following values:
 
     * To preserve attached boot and non-boot persistent storage: `all`
 
@@ -718,19 +706,15 @@ Replace the following:
 
     * To preserve only attached non-boot persistent storage: `data`
 
-  * `ZONE`: the zone where the instances are located.
+  * `ZONE`: the zone where the compute instances exist.
 
 
 
 
-Optionally, if you've enabled [graceful shutdown](https://docs.cloud.google.com/compute/docs/instances/graceful-shutdown-overview) in one or more instances, you can delete the instances without gracefully shutting them down, or manually end an ongoing graceful shutdown. To do so, use the [`gcloud beta compute instances delete` command](https://docs.cloud.google.com/sdk/gcloud/reference/beta/compute/instances/delete) with the `--no-graceful-shutdown` flag:
-
-**Preview — The `--no-graceful-shutdown` flag**
-
-This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+If you've enabled [graceful shutdown](https://docs.cloud.google.com/compute/docs/instances/graceful-shutdown-overview) in one or more compute instances, then you can save costs by deleting the compute instances without gracefully shutting them down, or by manually ending an ongoing graceful shutdown. To do so, include the `--no-graceful-shutdown` flag in the command:
     
     
-    gcloud beta compute instances delete VM_NAMES \
+    gcloud compute instances delete VM_NAMES \
         --keep-disks=KEEP_DISK_TYPE \
         **--no-graceful-shutdown** \
         --zone=ZONE
@@ -749,6 +733,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

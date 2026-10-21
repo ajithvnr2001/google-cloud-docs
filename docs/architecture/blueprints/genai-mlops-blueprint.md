@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/blueprints/genai-mlops-blueprint/
 title: Build and deploy generative AI and machine learning models in an enterprise \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:33.385238+00:00
+fetched_at: 2026-10-21T12:22:04.094577+00:00
 ---
 
 # Build and deploy generative AI and machine learning models in an enterprise  |  Cloud Architecture Center  |  Google Cloud Documentation

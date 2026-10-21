@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/release-notes/
 title: Compute Engine release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:52:41.325512+00:00
+fetched_at: 2026-10-21T12:01:43.867105+00:00
 ---
 
 # Compute Engine release notes  |  Google Cloud Documentation
@@ -33,6 +33,50 @@ This page contains the latest release notes for features and updates to the Comp
 You can see the latest product updates for all of Google Cloud on the [ Google Cloud](https://docs.cloud.google.com/release-notes) page, browse and filter all release notes in the [Google Cloud console](https://console.cloud.google.com/release-notes), or programmatically access release notes in [BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_cloud_release_notes&t=release_notes&page=table). 
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/compute-release-notes.xml) directly. 
+
+## October 19, 2026
+
+Feature
+
+**Generally available** : To prevent data loss or corruption when you stop or delete a Compute Engine instance, you can enable graceful shutdown. This setting gives the guest OS up to six hours to finish running tasks. For more information, see [About graceful shutdown](https://docs.cloud.google.com/compute/docs/instances/graceful-shutdown-overview).
+
+## October 15, 2026
+
+Feature
+
+**Preview** : You can create regional disks, including Hyperdisk Balanced High Availability volumes, by cloning a zonal boot disk.
+
+For more information, see [Duplicate a disk with clones](https://docs.cloud.google.com/compute/docs/disks/clone-duplicate-disks).
+
+Change
+
+If you try to create an on-demand reservation or increase the number of reserved Compute Engine instances in a reservation when the zone has reached its reservation capacity limit for your requested machine family, then the request fails with a `RESERVATION_CAPACITY_LIMIT_EXCEEDED` error. For more information, see [Reservation capacity limit exceeded](https://docs.cloud.google.com/compute/docs/troubleshooting/troubleshooting-reservation-creation#reservation-capacity-limit-exceeded).
+
+Feature
+
+**Generally available** : The storage-optimized Z4M machine series is generally available for Compute Engine. Powered by fifth generation Intel Emerald Rapids Xeon Scalable processors and Titanium offload processors, Z4M instances are purpose-built for workloads that require larger storage capacity, such as:
+
+  * Parallel file systems to support AI/ML workloads
+  * I/O intensive workloads such as SQL, NoSQL, and vector databases
+  * AI/ML training and inference workloads such as checkpointing and distributed Key-Value (KV) cache
+
+
+
+The Z4M machine series delivers up to 1,536 GB of memory and 168,000 GiB of local Titanium SSD capacity. Z4M also supports up to 400 Gbps of network bandwidth using two physical NICs. Z4M instances use Titanium and Cloud RDMA to help enable higher levels of networking performance, isolation, and security.
+
+For more information, see [Storage-optimized machine family](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4m_series).
+
+## October 14, 2026
+
+Feature
+
+**Generally available** : When you reserve capacity by using future reservation requests, you can specify that Compute Engine delivers your reserved capacity as specifically targeted reservations. Specifically targeted reservations help you track and control which Compute Engine instances consume your reserved capacity. For more information, see [About future reservation requests](https://docs.cloud.google.com/compute/docs/instances/future-reservations-overview).
+
+Feature
+
+**Generally available** : You can increase the size of a Google Cloud Hyperdisk volume that's in multi-writer mode while the volume is attached to multiple instances. Previously, you had to detach the volume from all instances before you could resize it.
+
+For more information, see [Share disks between instances](https://docs.cloud.google.com/compute/docs/disks/sharing-disks-between-vms) and [Change the size or provisioned performance of a Hyperdisk volume](https://docs.cloud.google.com/compute/docs/disks/modify-hyperdisks).
 
 ## October 13, 2026
 

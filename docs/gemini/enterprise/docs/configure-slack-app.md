@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/configure-slack-app/
 title: Configure the Gemini Enterprise app for Slack \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:26:16.019387+00:00
+fetched_at: 2026-10-21T11:59:10.010399+00:00
 ---
 
 # Configure the Gemini Enterprise app for Slack  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/release-notes/
 title: Google Security Operations SOAR release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:28:57.752661+00:00
+fetched_at: 2026-10-21T12:01:47.197272+00:00
 ---
 
 # Google Security Operations SOAR release notes  |  Google Cloud Documentation
@@ -26,6 +26,30 @@ This page documents production updates to Google Security Operations SOAR. You c
 You can see the latest product updates for all of Google Cloud on the [ Google Cloud](https://docs.cloud.google.com/release-notes) page, browse and filter all release notes in the [Google Cloud console](https://console.cloud.google.com/release-notes), or programmatically access release notes in [BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_cloud_release_notes&t=release_notes&page=table). 
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/chronicle-soar-release-notes.xml) directly. 
+
+## October 18, 2026
+
+Announcement
+
+Release 6.3.103 is being rolled out to the first phase of regions as listed [here](https://docs.cloud.google.com/chronicle/docs/soar/overview-and-introduction/soar-gradual-release).
+
+Feature
+
+**Specify whether to reopen closed cases when the grouping is by Source Grouping Identifier**
+
+You can now specify whether Google SecOps reopens closed cases when grouping alerts by **Source Grouping Identifier**. When the option is enabled and a new alert is received with a source grouping identifier of a case that was previously closed in Google SecOps, then Google SecOps reopens the case. For more information, see [Configure alert grouping](https://docs.cloud.google.com/chronicle/docs/soar/investigate/working-with-alerts/alert-grouping-mechanism-admin).
+
+Deprecated
+
+**Deprecation of the ListCaseEvents API endpoint**
+
+Effective October 12, 2026, the ListCaseEvents API endpoint is deprecated. You should use the [ListCaseEvidenceData](https://docs.cloud.google.com/chronicle/docs/reference/rest/v1alpha/projects.locations.instances.cases.caseEvidenceDatas/list) API endpoint instead.
+
+## October 17, 2026
+
+Announcement
+
+[Release 6.3.102](https://docs.cloud.google.com/chronicle/docs/soar/release-notes#October_11_2026) is now available for all regions.
 
 ## October 12, 2026
 

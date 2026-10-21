@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr/
 title: Configure maximum Pods per node \u00a0|\u00a0 GKE networking \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:41:01.186588+00:00
+fetched_at: 2026-10-21T12:24:03.108828+00:00
 ---
 
 # Configure maximum Pods per node  |  GKE networking  |  Google Cloud Documentation
@@ -199,9 +199,7 @@ To calculate the maximum number of Pods that your cluster can support, you provi
 
 These are the values you provide when creating a cluster or node pool.
 
-  * `Q`: The maximum number of Pods per node. 
-    * For Autopilot clusters, `Q` is fixed (currently 32).
-    * For Standard clusters, you can configure `Q`.
+  * `Q`: The maximum number of Pods per node.
   * `DS`: The prefix length of the Pod subnet. For example, for a CIDR range of `/17`, the prefix length is `17`.
   * `S`: The prefix length of the primary subnet. For example, for a CIDR range of `/24`, the prefix length is `24`.
 
@@ -290,6 +288,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

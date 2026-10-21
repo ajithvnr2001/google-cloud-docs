@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/configure-mongodb-atlas-psc/
 title: Configure MongoDB Atlas using Private Service Connect interfaces \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:50:51.607096+00:00
+fetched_at: 2026-10-21T12:24:07.525649+00:00
 ---
 
 # Configure MongoDB Atlas using Private Service Connect interfaces  |  Datastream  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Configure MongoDB Atlas using Private Service Connect interfaces Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to configure a MongoDB Atlas source database to work with Datastream using Private Service Connect interfaces. Note that the described procedure isn't a high availability solution. If the MongoDB node fails the connection profile test, you need to manually update the IP address in the Datastream connection profile.
+You can stream change data capture (CDC) updates from a MongoDB Atlas database over a private network by using Private Service Connect interfaces in Datastream. To prepare your source, you create a MongoDB database user, set up private network connectivity between Datastream and MongoDB Atlas, and create a connection profile. This configuration doesn't provide high availability. If a MongoDB node fails the connection profile test, you must manually update the IP address in the Datastream connection profile.
 
 ## Configure a MongoDB database user
 
@@ -82,6 +82,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

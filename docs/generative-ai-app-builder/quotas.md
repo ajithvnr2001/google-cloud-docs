@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/quotas/
 title: Quotas and limits \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:58.783067+00:00
+fetched_at: 2026-10-21T12:01:34.952248+00:00
 ---
 
 # Quotas and limits  |  Agent Search  |  Google Cloud Documentation
@@ -81,10 +81,10 @@ The following quotas apply to Discovery Engine API requests.
 **Note:** The **Regional search requests per minute per project per location** quota can't be increased under the general pricing model. If you need to serve more search traffic, enable configurable pricing and set a queries per minute (QPM) subscription threshold for your project. For more information, see [Set up configurable pricing for custom search](https://docs.cloud.google.com/generative-ai-app-builder/docs/enable-configurable-pricing).Quota | Value  
 ---|---  
 Complete query requests per minute per project | 300  
-Conversational search read requests per minute per project | 300  
-Conversational search write requests per minute per project | 300  
+Conversational search read requests per minute per project | 600  
+Conversational search write requests per minute per project | 600  
 Document batch requests (such as inline import and purge) per minute per project | 100  
-Document async import (Cloud Storage, BigQuery, etc.) requests per minute per project | 5  
+Document async import (Cloud Storage, BigQuery, etc.) requests per minute per project | 10  
 Document purge requests per minute per project | 100  
 Document read requests per minute per project | 300  
 Document write requests per minute per project | 12,000  
@@ -118,6 +118,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

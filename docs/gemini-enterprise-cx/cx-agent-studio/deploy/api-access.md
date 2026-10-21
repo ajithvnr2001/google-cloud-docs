@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/deploy/api-access/
 title: API access \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:24:40.581792+00:00
+fetched_at: 2026-10-21T12:01:50.534921+00:00
 ---
 
 # API access  |  CX Agent Studio  |  Google Cloud Documentation
@@ -182,7 +182,7 @@ To authenticate to CX Agent Studio, set up Application Default Credentials. For 
           RunSessionRequest request =
               RunSessionRequest.newBuilder()
                   .setConfig(SessionConfig.newBuilder().build())
-                  .addAll<Inputs(new A>rrayListSessionInput())
+                  .addAllInputs(new ArrayList<SessionInput>())
                   .build();
           RunSessionResponse response = sessionServiceClient.runSession(request);
         }

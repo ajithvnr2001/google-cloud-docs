@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/regional-endpoints/
 title: BigQuery regional endpoints \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:45:41.922531+00:00
+fetched_at: 2026-10-21T12:22:55.342666+00:00
 ---
 
 # BigQuery regional endpoints  |  Google Cloud Documentation
@@ -27,7 +27,7 @@ This page describes how you can use [Private Service Connect regional endpoints]
 
 Regional endpoints are request endpoints that help restrict requests to proceed only if the affected resource exists in the location specified by the endpoint. For example, if you use the endpoint `https://bigquery.us-central1.rep.googleapis.com` in a delete dataset request, then the request only proceeds if the dataset is located in `US-CENTRAL1`.
 
-Unlike global endpoints, where requests can be routed through a different location from where the resource resides, regional endpoints can help to restrict your requests to the location specified by the endpoint where the resource resides. Regional endpoints terminate TLS sessions in the location specified by the endpoint for requests received from the Internet, other Google Cloud resources (such as Compute Engine virtual machines), on-premise services using VPN or Interconnect, and Virtual Private Clouds (VPCs).
+Unlike global endpoints, where requests can be routed through a different location from where the resource resides, regional endpoints can help to restrict your requests to the location specified by the endpoint where the resource resides. Regional endpoints terminate TLS sessions in the location specified by the endpoint for requests received from the Internet, other Google Cloud resources (such as Compute Engine virtual machines), on-premises services using VPN or Interconnect, and Virtual Private Clouds (VPCs).
 
 Regional endpoints help to ensure data residency by keeping your at-rest and in-transit table data within the location specified by the endpoint. This excludes resource metadata, such as dataset names and IAM policies. For more information, see [Note on service data](https://docs.cloud.google.com/assured-workloads/docs/data-residency#service-data).
 
@@ -153,6 +153,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

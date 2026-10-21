@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/create-alerts/
 title: Create pipeline alerts \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:38:54.352242+00:00
+fetched_at: 2026-10-21T11:55:44.867606+00:00
 ---
 
 # Create pipeline alerts  |  Cloud Data Fusion  |  Google Cloud Documentation
@@ -21,20 +21,13 @@ Send feedback
 
 #  Create pipeline alerts Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to set up alerts for data pipelines in Cloud Data Fusion.
+Pipeline alerts in Cloud Data Fusion let you track execution status and monitor workflow health. These notifications help you detect pipeline failures immediately.
 
-You can create alerts through the following services:
-
-  * **Alerts through Cloud Data Fusion** : you set up these alerts when you design a batch pipeline in Cloud Data Fusion. After you deploy the pipeline, you can't add or edit an alert.
-
-  * **Log-based alerts through Cloud Monitoring** : you set up these alerts in the Google Cloud console before and after you deploy the pipeline.
-
-
-
+You can configure alerts using two different services depending on your deployment stage. Cloud Data Fusion alerts are set up during batch pipeline design and can't be added or edited after deployment. In contrast, you can create log-based alerts through Cloud Monitoring in the Google Cloud console at any time—either before or after you deploy the pipeline.
 
 ## Before you begin
 
-You need a Cloud Data Fusion instance. For more information, see [Creating a Cloud Data Fusion instance](https://docs.cloud.google.com/data-fusion/docs/how-to/create-instance).
+You need a Cloud Data Fusion instance. For more information, see [Create a public instance](https://docs.cloud.google.com/data-fusion/docs/how-to/create-instance).
 
 ## Add an alert in Cloud Data Fusion
 
@@ -60,7 +53,7 @@ You need a Cloud Data Fusion instance. For more information, see [Creating a Clo
 
 
 
-### Create an alert in Monitoring
+## Create an alert in Monitoring
 
   1. [Enable Cloud Logging](https://docs.cloud.google.com/data-fusion/docs/how-to/viewing-stackdriver-logs#enabling-stackdriver) in your Cloud Data Fusion instance.
 
@@ -100,6 +93,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

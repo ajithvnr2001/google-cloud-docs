@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/pan-firewall/
 title: Collect Palo Alto Networks firewall logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:27:12.038410+00:00
+fetched_at: 2026-10-21T12:01:45.491607+00:00
 ---
 
 # Collect Palo Alto Networks firewall logs  |  Google Security Operations  |  Google Cloud Documentation
@@ -25,18 +25,18 @@ Supported in:
 
 Google SecOps  [ SIEM ](https://docs.cloud.google.com/chronicle/docs/secops/google-secops-siem-toc)
 
-This document describes how to configure Google SecOps to ingest logs from Palo Alto Networks using two primary deployment methods.
+This document describes how to configure Google Security Operations to ingest logs from Palo Alto Networks using two primary deployment methods.
 
-Select the section below that matches your architecture:
+Select the following section that matches your architecture:
 
-  * [Palo Alto Networks Firewall](https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/pan-firewall#palo_alto_networks_firewall)
+  * Palo Alto Networks Firewall
     * Description: Collects logs directly from PAN-OS firewalls.
-    * Ingestion Method: Logs are sent using Syslog to a Google SecOps Forwarder or a Bindplane agent. Since the Google SecOps Forwarder is reaching EOL and will be deprecated later this year, use the Bindplane agent for log forwarding.
-    * Supported Formats: CSV, CEF, and LEEF.
-  * [Palo Alto Networks Firewall Strata Logging Service](https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/pan-firewall#palo_alto_networks_firewall_strata_logging_service)
+    * Ingestion method: Logs are sent using syslog to a Google SecOps forwarder or a Bindplane agent. Because the Google SecOps forwarder is deprecated, use the Bindplane agent for log forwarding.
+    * Supported formats: CSV, CEF, and LEEF.
+  * Palo Alto Networks Firewall Strata Logging Service
     * Description: Collects logs from the cloud-based Strata Logging Service.
-    * Ingestion Method: Logs are forwarded directly to Google SecOps using an HTTPS webhook. No local forwarder is required for this method.
-    * Supported Formats: JSON.
+    * Ingestion method: Logs are forwarded directly to Google SecOps using an HTTPS webhook. No local forwarder is required for this method.
+    * Supported formats: JSON Array.
 
 
 
@@ -1431,13 +1431,39 @@ CORRELATION  | GENERIC_EVENT
 
 ### Overview
 
-Palo Alto Networks Strata Logging Service provides cloud-based, centralized log storage and aggregation for your on-premise, virtual (private cloud and public cloud) firewalls, for Prisma Access, and for cloud-delivered services such as Cortex XDR.Strata Logging Service is secure, resilient, and fault-tolerant, and it ensures your logging data is up-to-date and available when you need it. It provides a scalable logging infrastructure that alleviates the need for you to plan and deploy Log Collectors to meet your log retention needs. If you already have on-premise Log Collectors, the new Strata Logging Service can complement your existing setup. You can augment your existing log collection infrastructure with the cloud-based Strata Logging Service to expand operational capacity as your business grows, or to meet the capacity needs for new locations.With this service, Palo Alto Networks takes care of the ongoing maintenance and monitoring of the logging infrastructure so that you can focus on your business.
+Palo Alto Networks Strata Logging Service provides cloud-based, centralized log storage and aggregation for your on-premises and virtual (private cloud and public cloud) firewalls, for Prisma Access, and for cloud-delivered services such as Cortex XDR. Strata Logging Service is secure, resilient, and fault-tolerant, and it helps ensure that your logging data is up-to-date and available when you need it. Strata Logging Service provides a scalable logging infrastructure that alleviates the need to plan and deploy Log Collectors to meet your log retention needs. If you already have on-premises Log Collectors, then Strata Logging Service can complement your existing setup to expand operational capacity as your business grows, or to meet the capacity needs for new locations. With this service, Palo Alto Networks manages the ongoing maintenance and monitoring of the logging infrastructure.
+
+This section describes how to configure Palo Alto Networks Next-Generation Firewalls (NGFW) to generate logs, forward them to Strata Logging Service, and deliver logs to Google SecOps using an HTTPS webhook.
+
+The following table describes the supported platforms, management modes, PAN-OS versions, and destination settings for this deployment:
+
+Category | Supported configurations  
+---|---  
+Firewall platforms |  All Palo Alto Networks NGFW platforms:
+
+  * **Physical hardware** : PA-400, PA-800, PA-3200, PA-5200, and PA-7000 Series
+  * **VM-Series** : virtual firewall on VMware, AWS, Azure, Google Cloud, KVM, and Hyper-V
+  * **CN-Series** : containerized firewall for Kubernetes environments
+
+  
+Management mode | 
+
+  * **Standalone** : firewall managed directly using the PAN-OS web UI or CLI
+  * **Panorama-managed** : centrally managed using a Panorama appliance or Panorama in the cloud
+
+  
+PAN-OS version |  PAN-OS 10.0 and later (11.x recommended)  
+Google SecOps destination |  Google SecOps using Strata Logging Service HTTPS Log Forwarding (JSON Array formats)  
+  
+### Before you begin
+
+Before you configure log forwarding through Strata Logging Service, verify the following prerequisites:
 
   * Verify the log formats and PAN-OS versions that the Strata Logging Service parser supports. The following table lists the log formats and the corresponding PAN-OS versions that the Strata Logging Service parser supports:
 
-**Log format** | **PAN-OS version**  
+Log format | PAN-OS version  
 ---|---  
-JSON  | 12.1   
+JSON Array | 10.0 and later  
   * Verify the Palo Alto Networks firewall log types that the Google SecOps parser supports. The Google SecOps parser supports the following Palo Alto Networks firewall log types:
 
     * Traffic
@@ -1451,42 +1477,225 @@ JSON  | 12.1
     * Authentication
     * URL filtering
     * GlobalProtect
+    * SCTP
+    * Audit
+  * **PAN-OS version** : Install PAN-OS 10.0 or later on all firewall platforms (PA-Series, VM-Series, and CN-Series). For general firewall setup instructions, see the [PAN-OS Administrator's Guide](https://docs.paloaltonetworks.com/pan-os/10-1/pan-os-admin/getting-started) and [Strata Logging Service deployment prerequisites](https://docs.paloaltonetworks.com/strata-logging-service/activation-and-onboarding/planning).
+
+  * **Strata Logging Service license** : Ensure that the `PAN-LGS-DL` license is active on the same Customer Support Portal (CSP) account as the firewall.
+
+  * **Cloud Logging enabled on all platforms** : On every firewall, go to **Device** > **Setup** > **Management** > **Cloud Logging** , select **Enable Cloud Logging** , and select your **Region**. This setting is required for VM-Series (PAVM), CN-Series, and physical firewalls.
+
+**Note:** After you deploy a VM-Series (PAVM) firewall, go to **Device** > **Setup** > **Management** > **Cloud Logging** and enable **Cloud Logging** before proceeding. The firewall won't send logs to Strata Logging Service until you explicitly enable this setting.
+  * **Network and firewall access** : Ensure that the firewall management interface can reach the following fully qualified domain names (FQDNs) on TCP port 443 without SSL decryption:
+
+    * `api.paloaltonetworks.com`
+    * `apitrusted.paloaltonetworks.com`
+    * `certificate.paloaltonetworks.com`
+    * `certificatetrusted.paloaltonetworks.com`
+    * `lic.lc.prod.us.cs.paloaltonetworks.com`
+  * **Administrator credentials** : Ensure that you have the `Superuser` or `device-admin` role on the firewall and access to the [Strata Hub console](https://stratacloudmanager.paloaltonetworks.com/).
+
+  * **Google SecOps webhook URL** : Obtain the region-specific HTTPS endpoint URL from your Google SecOps instance (see Step 2: Configure the HTTPS forwarding profile).
+
+  * **SSL/TLS certificate** : Obtain a valid CA certificate for the HTTPS webhook. Publicly trusted certificate authorities (CAs), such as GlobalSign and DigiCert, are pre-trusted by Strata Logging Service. If you use a self-signed or private CA certificate, then you must upload it manually.
+
+  * **Panorama plugin (if Panorama-managed)** : Install Cloud Services Plugin 2.x or later on Panorama.
 
 
 
-### Strata Logging Service Deployment
 
-  * Ensure that the Palo Alto Networks firewall product is properly deployed and configured. For detailed setup instructions, refer to the [PAN-OS Documentation](https://docs.paloaltonetworks.com/pan-os/10-1/pan-os-admin/getting-started) and then follow this document of deployment before sending logs to strata logging service [Strata Logging Service Deployment Prerequisites](https://docs.paloaltonetworks.com/strata-logging-service/activation-and-onboarding/planning)
+### Architecture overview
 
+Log ingestion through Strata Logging Service follows a three-stage pipeline from your PAN-OS firewalls to Google SecOps:
 
-
-### Start Sending Logs to Strata Logging Service:
-
-To Start Sending Logs to Strata Logging Service, following the steps:
-
-  1. Install a supported PAN-OS version
-  2. Activate Strata Logging Service- Activating Strata Logging Service includes provisioning the certificate that the firewalls need to securely connect to Strata Logging Service.
-  3. Onboard firewalls to Strata Logging Service with or without Panorama
+  1. **PAN-OS NGFW** (PA-Series, VM-Series, or CN-Series) forwards logs over Cloud Logging (TLS on TCP port 443).
+  2. **Strata Logging Service** (https://stratacloudmanager.paloaltonetworks.com/) normalizes, indexes, and stores logs in regional cloud storage.
+  3. **Google SecOps** (`chronicle.googleapis.com` region-specific endpoint) receives GZIP-compressed JSON Array payloads from Strata Logging Service over an HTTPS webhook.
 
 
 
-For detailed onboarding steps, refer to the [Documentation](https://docs.paloaltonetworks.com/strata-logging-service/activation-and-onboarding/start-sending-logs).
+The following table describes each stage of the log forwarding architecture:
 
-### Forward Logs from Strata Logging Service
+Stage | Component | Transport | Description  
+---|---|---|---  
+Phase 1 |  **PAN-OS NGFW** (PA-Series, VM-Series, CN-Series; standalone or Panorama-managed) | Cloud Logging (TLS on TCP port 443) |  The firewall generates various types of logs. A **Log Forwarding Profile** is assigned to Security Policy rules to activate log forwarding. Cloud Logging must be explicitly enabled on each firewall.  
+Phase 2 |  **Strata Logging Service** (`(https://stratacloudmanager.paloaltonetworks.com/)`, regional cloud storage) | Cloud storage (indexed and normalized) |  Palo Alto Networks cloud-native logging infrastructure receives logs from all onboarded firewalls, and normalizes and indexes them. This service provides the **Log Forwarding** application to push logs outbound to external platforms, and supports up to 200 destinations per instance.  
+Phase 3 |  **Google SecOps** (`chronicle.googleapis.com`, region-specific URL) | HTTPS webhook, JSON Array (GZIP-compressed) |  Strata Log Forwarding pushes logs to Google SecOps using HTTPS POST. An SSL/TLS certificate and **Basic Authorization** credentials help secure the connection. The Google SecOps URL must match your Strata Logging Service region.  
+  
+### Phase 1: Generate logs on the PAN-OS firewall
 
-To meet your long-term storage, reporting and monitoring, or legal and compliance needs, you can configure Strata Logging Service to forward logs to Google Chronicle.
+To configure your PAN-OS firewall to generate and forward security and system logs, complete the following steps:
 
-Use the HTTPS forward method to forward the logs using the Strata Logging Service for detailed information follow this [Documentation](https://docs.paloaltonetworks.com/strata-logging-service/administration/forward-logs/forward-logs-to-an-https-server).
+  1. Go to **Device** > **Log Settings**. Confirm that **System** , **Configuration** , and **HIP Match** logs are active with appropriate severity levels (minimum **Informational** for **System** logs). PAN-OS generates these system-level logs automatically without requiring an additional profile.
+  2. Go to **Objects** > **Log Forwarding** > **Add** to create a log forwarding profile. Define the log types to forward: **Traffic** , **Threat** , **WildFire** , **URL Filtering** , and **Auth**. Assign a server profile (**Syslog** or **HTTP**) and configure filters if required.
+  3. Go to **Policies** > **Security** , edit each rule, and select the **Actions** tab. Select your **Log Forwarding** profile, and select **Log at Session End** (and optionally **Log at Session Start**). Click **OK** , and then click **Commit**.
+
+
+
+For more information, see the following Palo Alto Networks resources:
+
+  * [Configure log forwarding on PAN-OS](https://docs.paloaltonetworks.com/ngfw/administration/monitoring/configure-log-forwarding)
+  * [Configure a log forwarding profile](https://docs.paloaltonetworks.com/network-security/security-policy/administration/objects/log-forwarding/configure-a-log-forwarding-profile-pm)
+  * [Configure syslog monitoring](https://docs.paloaltonetworks.com/ngfw/administration/monitoring/use-syslog-for-monitoring/configure-syslog-monitoring)
+
+
+
+### Phase 2: Onboard and forward logs to Strata
+
+To activate Strata Logging Service, onboard your firewalls, and verify log delivery, complete the following steps:
+
+  1. Sign in to the [Strata Hub console](https://stratacloudmanager.paloaltonetworks.com/) and activate your `PAN-LGS-DL` license. Select your **CSP Account** , **Tenant/TSG** , and the **Region** where logs will be stored.
+  2. On each firewall (including PA-Series, VM-Series, and CN-Series), go to **Device** > **Setup** > **Management** > **Cloud Logging** :
+
+     1. Select **Enable Cloud Logging**.
+     2. Select the **Region** that matches your Strata Logging Service instance.
+     3. Optional: To send log copies to both Strata Logging Service and on-premises Panorama, select **Enable Duplicate Logging**.
+     4. Click **OK** , and then click **Commit**.
+**Note:** In PAN-OS versions earlier than 10.1, this setting might appear as **Cortex Data Lake** or **Logging Service**. For CN-Series firewalls, go to the **Cloud Logging** pane in Panorama, select **Enable Cloud Logging** , and click **Commit & Push**.
+  3. Verify connectivity between the firewall and Strata Logging Service:
+
+     1. Go to **Device** > **Setup** > **Management** > **Cloud Logging** , and click **Show Status**. Confirm that the status displays **Connected**.
+     2. Open **Strata Log Viewer** in the Strata Hub console to confirm that logs are arriving.
+     3. To verify connectivity from the PAN-OS CLI, run the following command:
+            
+            show logging-status
+            
+
+  4. Optional: To capture DNS queries, HTTP user-agent strings, and session metadata (required for Cortex XSIAM and IoT Security), in the **Cloud Logging** settings, select **Enable Enhanced Application Logging**.
+
+
+**Warning:** Don't enable SSL/TLS decryption for traffic destined to Strata Logging Service FQDNs. Strata Logging Service uses mutual TLS authentication; enabling decryption breaks the connection and stops log delivery.
+
+For more information, see the following Palo Alto Networks resources:
+
+  * [Onboard firewalls to Strata Logging Service](https://docs.paloaltonetworks.com/strata-logging-service/activation-and-onboarding/onboard-overview)
+  * [Start sending logs to Strata Logging Service](https://docs.paloaltonetworks.com/strata-logging-service/activation-and-onboarding/start-sending-logs)
+  * [Strata Logging Service deployment prerequisites and planning](https://docs.paloaltonetworks.com/strata-logging-service/activation-and-onboarding/planning)
+  * [Guide to onboard and ingest logs from firewalls to Strata](https://live.paloaltonetworks.com/t5/community-blogs/guide-to-onboard-and-ingest-logs-from-firewalls-to-strata/ba-p/1233567)
+
+
+
+### Phase 3: Configure an HTTPS webhook to forward logs
+
+To forward logs from Strata Logging Service to Google SecOps using an HTTPS webhook, complete the following steps.
+
+**Note:** A valid CA certificate must be in place before you can save or test the HTTPS webhook. Strata Logging Service uses this certificate to authenticate your HTTPS receiver (server authentication). Publicly trusted CAs, such as GlobalSign and DigiCert, are trusted by default and don't require an upload. If you use a self-signed or private PKI CA, then upload the CA certificate file using **Upload CA Certificate**.
+
+#### Step 1: Configure a Google SecOps pipeline with the Unroll processor
+
+To split Palo Alto Networks Strata Logging Service JSON Array logs into individual log events using the **Unroll** processor, complete the following steps:
+
+  1. Create a [webhook feed](https://docs.cloud.google.com/chronicle/docs/administration/feed-management#setup-webhook) for the **Palo Alto Networks Firewall** (`PAN_FIREWALL`) log type. Generate the webhook URL using the following format:
+         
+         ENDPOINT_URL?key=API_KEY&secret=SECRET
+         
+
+  2. Create a [Google SecOps data processing pipeline](https://docs.cloud.google.com/chronicle/docs/ingestion/data-processing-pipeline) and [add a stream](https://docs.cloud.google.com/chronicle/docs/ingestion/data-processing-pipeline#configure_streams) using the webhook feed that you created.
+
+  3. Add a **Parse JSON** processor to parse the raw JSON payload (this is a [requirement](https://docs.cloud.google.com/chronicle/docs/ingestion/data-processing-pipeline#configure-processors) for the **Unroll** processor).
+
+  4. Add an **Unroll** processor to split the JSON Array logs into individual log events, and then save and activate the pipeline.
+
+
+
+
+#### Step 2: Configure the HTTPS forwarding profile
+
+  1. To create an HTTPS forwarding profile, sign in to the [Strata Hub console](https://stratacloudmanager.paloaltonetworks.com/), open your Strata Logging Service instance, and go to **Log Forwarding** > **Add**.
+  2. Configure the profile name and Google SecOps URL:
+
+     * **Profile Name** : Enter a descriptive name (for example, `PAVM-Chronicle-HTTPS`). The **Profile Type** is preset to **Log Forwarding**.
+     * **URL** : Enter the region-specific Google SecOps HTTPS webhook URL (beginning with `https://` on default port `443` in the format `ENDPOINT_URL?key=API_KEY&secret=SECRET`) that matches your Strata Logging Service region, as shown in the following table.
+
+For more information, see [Set up a SIEM webhook](https://docs.cloud.google.com/chronicle/docs/administration/feed-management#setup-webhook).
+
+Strata Logging Service region | Google SecOps ingestion URL  
+---|---  
+US | `https://chronicle.googleapis.com`  
+Europe | `https://europe-chronicle.googleapis.com`  
+Asia | `https://asia-southeast1-chronicle.googleapis.com`  
+
+
+
+#### Step 3: Configure server authentication
+
+In the **Server Authentication** section, configure the SSL/TLS certificate for your HTTPS endpoint:
+
+  1. If you use a self-signed or private CA, then drag the CA certificate file or click **Upload CA Certificate**. If you use a publicly trusted CA (for example, GlobalSign), then default public roots are already trusted and no upload is required. Click **Delete** only if you need to replace an existing certificate.
+  2. Verify that the **Certificate Details** match your endpoint's CA. Ensure that your HTTPS receiver presents a TLS certificate signed by this CA; if the certificate chain doesn't match, then the **Test Connection** step fails.
+
+
+
+You can download the root certificates from the **Root CAs** section on the [Google Trust Services repository](https://pki.goog/repository/) page.
+
+The following table shows example certificate details displayed in the **Server Authentication** section:
+
+Certificate field | Example value  
+---|---  
+Common name | `GlobalSign Root CA`  
+Expires on | `1/28/2028`  
+Issued by | `GlobalSign Root CA`  
+Purpose | Server authentication (verifies the TLS certificate of your HTTPS receiver)  
+  
+#### Step 4: Configure client authentication and client authorization
+
+Client authentication lets Google SecOps verify that incoming requests originate from Strata Logging Service. Client authorization provides the credentials that Strata Logging Service uses when calling your Google SecOps endpoint.
+
+In the **Client Authorization** section, configure the following fields:
+
+  * **Type** : Select **Basic Authorization**.
+  * **Username** : Enter a placeholder value, such as `test`. The Google SecOps HTTPS endpoint doesn't require a username.
+  * **Password** : Enter a placeholder value, such as `test`. The Google SecOps HTTPS endpoint doesn't require a password.
+
+
+
+The following table describes the client authorization configuration for Google SecOps:
+
+Authorization type | When to use | Configuration for Google SecOps  
+---|---|---  
+Basic Authorization | HTTPS receiver requires username and password credentials | Enter a placeholder value, such as `test`, for both the username and password because the Google SecOps HTTPS endpoint doesn't require these credentials  
+  
+#### Step 5: Test the connection and save
+
+  1. Click **Test Connection** at the bottom of the **Client Authorization** section. Strata Logging Service sends a test payload to your Google SecOps HTTPS endpoint: 
+     * **Success** : The status indicates that the connection succeeded. Click **Next**.
+     * **Failure** : Verify the CA certificate match, confirm that the Google SecOps URL matches your region, check your credentials, and ensure that the endpoint accepts GZIP-compressed JSON Array payloads.
+  2. After **Test Connection** succeeds, click **Next**.
+  3. In the **Payload Format** list, select **Array JSON**.
+  4. Select the log types to forward to Google SecOps:
+
+     * **Traffic logs** (`action = deny` is recommended for high-value alerts)
+     * **Threat logs** (`severity >= High`)
+     * **WildFire logs**
+     * **System and Auth logs** (`severity = Critical`)
+  5. Click **Save**. Generate a test event on the firewall (for example, access a blocked URL) and verify that the event appears in the Google SecOps console within 1 to 5 minutes.
+
+
+
+
+For more information, see the following Palo Alto Networks resources:
+
+  * [Forward logs to an HTTPS server](https://docs.paloaltonetworks.com/strata-logging-service/administration/forward-logs/forward-logs-to-an-https-server)
+  * [Forward logs from Strata Logging Service](https://docs.paloaltonetworks.com/strata-logging-service/administration/forward-logs)
+  * [Forward logs to a Syslog server](https://docs.paloaltonetworks.com/strata-logging-service/administration/forward-logs/forward-logs-to-syslog-server)
+  * [Server certificate validation](https://docs.paloaltonetworks.com/strata-logging-service/administration/forward-logs/server-certificate-validation)
+  * [Log Forwarding API release notes](https://pan.dev/cdl/docs/logforwarding/release-notes/relnotes)
+  * [Strata Logging Service log reference](https://docs.paloaltonetworks.com/strata-logging-service/log-reference)
+  * [Strata Logging Service administration overview](https://docs.paloaltonetworks.com/strata-logging-service/administration/overview)
+
+
 
 ### Supported log formats
 
-The Palo Alto Networks Strata Logging Service firewall parser supports logs in JSON format.
+The Palo Alto Networks Strata Logging Service firewall parser supports logs in JSON and JSON Array formats.
 
 ### Supported sample logs
 
-  * JSON
+The following sample logs show the supported Strata Logging Service formats:
+
+  * JSON Array
         
-        {"source": "Palo Alto Networks FLS LF", "host": "dummy-loghost", "time": "1730265996460", "event": {"TimeReceived": "2024-10-30T05:25:50.000000Z", "DeviceSN": "no-serial", "LogType": "TRAFFIC", "Subtype": "end", "ConfigVersion": "10.2", "TimeGenerated": "2024-10-30T05:25:40.000000Z", "SourceAddress": "198.51.100.6", "DestinationAddress": "198.51.100.6", "NATSource": "", "NATDestination": "", "Rule": "egress-dns-ping-traceroute", "SourceUser": null, "DestinationUser": null, "Application": "dns-base", "VirtualLocation": "vsys1", "FromZone": "VA8280-RN", "ToZone": "inter-fw", "InboundInterface": "tunnel.101", "OutboundInterface": "tunnel.4005", "LogSetting": "Cortex Data Lake", "SessionID": 754194, "RepeatCount": 1, "SourcePort": 53578, "DestinationPort": 53, "NATSourcePort": 0, "NATDestinationPort": 0, "Protocol": "udp", "Action": "allow", "Bytes": 214, "BytesSent": 72, "BytesReceived": 142, "PacketsTotal": 2, "SessionStartTime": "2024-10-30T05:25:10.000000Z", "SessionDuration": 0, "URLCategory": "any", "SequenceNo": 7382192512716388639, "SourceLocation": "198.51.100.6-198.51.255.255", "DestinationLocation": "198.51.100.6-198.51.255.255", "PacketsSent": 1, "PacketsReceived": 1, "SessionEndReason": "aged-out", "DGHierarchyLevel1": 65537, "DGHierarchyLevel2": 65538, "DGHierarchyLevel3": 65541, "DGHierarchyLevel4": 0, "VirtualSystemName": "", "DeviceName": "VA8280-RN", "ActionSource": "from-policy", "SourceUUID": null, "DestinationUUID": null, "IMSI": 0, "IMEI": null, "ParentSessionID": 0, "ParentStarttime": "1970-01-01T00:00:00.000000Z", "Tunnel": "N/A", "EndpointAssociationID": 72057594037927936, "ChunksTotal": 0, "ChunksSent": 0, "ChunksReceived": 0, "RuleUUID": "95cfc3cc-cb00-4758-af1d-de9ab5f07f97", "HTTP2Connection": 0, "LinkChangeCount": 0, "SDWANPolicyName": null, "LinkSwitches": null, "SDWANCluster": null, "SDWANDeviceType": null, "SDWANClusterType": null, "SDWANSite": null, "DynamicUserGroupName": null, "X-Forwarded-ForIP": null, "SourceDeviceCategory": null, "SourceDeviceProfile": null, "SourceDeviceModel": null, "SourceDeviceVendor": null, "SourceDeviceOSFamily": null, "SourceDeviceOSVersion": null, "SourceDeviceHost": null, "SourceDeviceMac": null, "DestinationDeviceCategory": null, "DestinationDeviceProfile": null, "DestinationDeviceModel": null, "DestinationDeviceVendor": null, "DestinationDeviceOSFamily": null, "DestinationDeviceOSVersion": null, "DestinationDeviceHost": null, "DestinationDeviceMac": null, "ContainerID": null, "ContainerNameSpace": null, "ContainerName": null, "SourceEDL": null, "DestinationEDL": null, "GPHostID": null, "EndpointSerialNumber": null, "SourceDynamicAddressGroup": null, "DestinationDynamicAddressGroup": null, "HASessionOwner": null, "TimeGeneratedHighResolution": "2024-10-30T05:25:41.009000Z", "NSSAINetworkSliceType": null, "NSSAINetworkSliceDifferentiator": null}}"
+        [{  "TimeReceived": "2026-06-23T10:20:00.000000Z",  "DeviceSN": "023201024129",  "LogType": "TRAFFIC",  "Subtype": "end",  "ConfigVersion": "11.2",  "TimeGenerated": "2026-06-23T10:19:50.000000Z",  "SourceAddress": "198.51.100.0",  "DestinationAddress": "198.51.100.1",  "NATSource": "198.51.100.2",  "NATDestination": "198.51.100.1",  "Rule": "PAMGMT_INTERNET_RULE",  "SourceUser": null,  "DestinationUser": null,  "Application": "dns-base",  "VirtualLocation": "vsys1",  "FromZone": "Vlan-Zone",  "ToZone": "outside",  "InboundInterface": "ethernet1/6.20",  "OutboundInterface": "ethernet1/5",  "LogSetting": "IoT Security Default Profile",  "SessionID": 141475,  "RepeatCount": 1,  "SourcePort": 47343,  "DestinationPort": 53,  "NATSourcePort": 35449,  "NATDestinationPort": 53,  "Protocol": "udp",  "Action": "allow",  "Bytes": 354,  "BytesSent": 149,  "BytesReceived": 205,  "PacketsTotal": 2,  "SessionStartTime": "2026-06-23T10:19:22.000000Z",  "SessionDuration": 1,  "URLCategory": "any",  "SequenceNo": 7650419021796487925,  "SourceLocation": "198.51.100.3-198.51.100.4",  "DestinationLocation": "US",  "PacketsSent": 1,  "PacketsReceived": 1,  "SessionEndReason": "aged-out",  "DGHierarchyLevel1": 0,  "DGHierarchyLevel2": 0,  "DGHierarchyLevel3": 0,  "DGHierarchyLevel4": 0,  "VirtualSystemName": "",  "DeviceName": "PA-450",  "ActionSource": "from-policy",  "SourceUUID": null,  "DestinationUUID": null,  "IMSI": 0,  "IMEI": null,  "ParentSessionID": 0,  "ParentStarttime": "1970-01-01T00:00:00.000000Z",  "Tunnel": "N/A",  "EndpointAssociationID": 0,  "ChunksTotal": 0,  "ChunksSent": 0,  "ChunksReceived": 0,  "RuleUUID": "29222f63-8656-476f-b70e-6ec3332ff5fe",  "HTTP2Connection": 0,  "LinkChangeCount": 0,  "SDWANPolicyName": null,  "LinkSwitches": null,  "SDWANCluster": null,  "SDWANDeviceType": null,  "SDWANClusterType": null,  "SDWANSite": null,  "DynamicUserGroupName": null,  "X-Forwarded-ForIP": "",  "SourceDeviceCategory": null,  "SourceDeviceProfile": null,  "SourceDeviceModel": null,  "SourceDeviceVendor": null,  "SourceDeviceOSFamily": null,  "SourceDeviceOSVersion": null,  "SourceDeviceHost": null,  "SourceDeviceMac": null,  "DestinationDeviceCategory": null,  "DestinationDeviceProfile": null,  "DestinationDeviceModel": null,  "DestinationDeviceVendor": null,  "DestinationDeviceOSFamily": null,  "DestinationDeviceOSVersion": null,  "DestinationDeviceHost": null,  "DestinationDeviceMac": null,  "ContainerID": null,  "ContainerNameSpace": null,  "ContainerName": null,  "SourceEDL": null,  "DestinationEDL": null,  "GPHostID": null,  "EndpointSerialNumber": null,  "SourceDynamicAddressGroup": null,  "DestinationDynamicAddressGroup": null,  "HASessionOwner": null,  "TimeGeneratedHighResolution": "2026-06-23T10:19:51.048000Z",  "NSSAINetworkSliceType": null,  "NSSAINetworkSliceDifferentiator": null},{  "TimeReceived": "2026-06-23T10:20:00.000000Z",  "DeviceSN": "023201024129",  "LogType": "TRAFFIC",  "Subtype": "end",  "ConfigVersion": "11.2",  "TimeGenerated": "2026-06-23T10:19:51.000000Z",  "SourceAddress": "198.51.100.0",  "DestinationAddress": "198.51.100.1",  "NATSource": "198.51.100.5",  "NATDestination": "198.51.100.1",  "Rule": "PAMGMT_INTERNET_RULE",  "SourceUser": null,  "DestinationUser": null,  "Application": "dns-base",  "VirtualLocation": "vsys1",  "FromZone": "Vlan-Zone",  "ToZone": "outside",  "InboundInterface": "ethernet1/6.20",  "OutboundInterface": "ethernet1/8",  "LogSetting": "IoT Security Default Profile",  "SessionID": 195791,  "RepeatCount": 1,  "SourcePort": 53359,  "DestinationPort": 53,  "NATSourcePort": 51905,  "NATDestinationPort": 53,  "Protocol": "udp",  "Action": "allow",  "Bytes": 278,  "BytesSent": 133,  "BytesReceived": 145,  "PacketsTotal": 2,  "SessionStartTime": "2026-06-23T10:19:22.000000Z",  "SessionDuration": 1,  "URLCategory": "any",  "SequenceNo": 7650419021796487926,  "SourceLocation": "198.51.100.3-198.51.100.4",  "DestinationLocation": "US",  "PacketsSent": 1,  "PacketsReceived": 1,  "SessionEndReason": "aged-out",  "DGHierarchyLevel1": 0,  "DGHierarchyLevel2": 0,  "DGHierarchyLevel3": 0,  "DGHierarchyLevel4": 0,  "VirtualSystemName": "",  "DeviceName": "PA-450",  "ActionSource": "from-policy",  "SourceUUID": null,  "DestinationUUID": null,  "IMSI": 0,  "IMEI": null,  "ParentSessionID": 0,  "ParentStarttime": "1970-01-01T00:00:00.000000Z",  "Tunnel": "N/A",  "EndpointAssociationID": 0,  "ChunksTotal": 0,  "ChunksSent": 0,  "ChunksReceived": 0,  "RuleUUID": "29222f63-8656-476f-b70e-6ec3332ff5fe",  "HTTP2Connection": 0,  "LinkChangeCount": 0,  "SDWANPolicyName": null,  "LinkSwitches": null,  "SDWANCluster": null,  "SDWANDeviceType": null,  "SDWANClusterType": null,  "SDWANSite": null,  "DynamicUserGroupName": null,  "X-Forwarded-ForIP": "",  "SourceDeviceCategory": null,  "SourceDeviceProfile": null,  "SourceDeviceModel": null,  "SourceDeviceVendor": null,  "SourceDeviceOSFamily": null,  "SourceDeviceOSVersion": null,  "SourceDeviceHost": null,  "SourceDeviceMac": null,  "DestinationDeviceCategory": null,  "DestinationDeviceProfile": null,  "DestinationDeviceModel": null,  "DestinationDeviceVendor": null,  "DestinationDeviceOSFamily": null,  "DestinationDeviceOSVersion": null,  "DestinationDeviceHost": null,  "DestinationDeviceMac": null,  "ContainerID": null,  "ContainerNameSpace": null,  "ContainerName": null,  "SourceEDL": null,  "DestinationEDL": null,  "GPHostID": null,  "EndpointSerialNumber": null,  "SourceDynamicAddressGroup": null,  "DestinationDynamicAddressGroup": null,  "HASessionOwner": null,  "TimeGeneratedHighResolution": "2026-06-23T10:19:51.048000Z",  "NSSAINetworkSliceType": null,  "NSSAINetworkSliceDifferentiator": null},{  "TimeReceived": "2026-06-23T10:20:00.000000Z",  "DeviceSN": "023201024129",  "LogType": "TRAFFIC",  "Subtype": "end",  "ConfigVersion": "11.2",  "TimeGenerated": "2026-06-23T10:19:51.000000Z",  "SourceAddress": "198.51.100.6",  "DestinationAddress": "198.51.100.1",  "NATSource": "198.51.100.2",  "NATDestination": "198.51.100.1",  "Rule": "PAMGMT_INTERNET_RULE",  "SourceUser": null,  "DestinationUser": null,  "Application": "dns-base",  "VirtualLocation": "vsys1",  "FromZone": "Vlan-Zone",  "ToZone": "outside",  "InboundInterface": "ethernet1/6.20",  "OutboundInterface": "ethernet1/5",  "LogSetting": "IoT Security Default Profile",  "SessionID": 262531,  "RepeatCount": 1,  "SourcePort": 56168,  "DestinationPort": 53,  "NATSourcePort": 32784,  "NATDestinationPort": 53,  "Protocol": "udp",  "Action": "allow",  "Bytes": 351,  "BytesSent": 149,  "BytesReceived": 202,  "PacketsTotal": 2,  "SessionStartTime": "2026-06-23T10:19:23.000000Z",  "SessionDuration": 0,  "URLCategory": "any",  "SequenceNo": 7650419021796487928,  "SourceLocation": "198.51.100.3-198.51.100.4",  "DestinationLocation": "US",  "PacketsSent": 1,  "PacketsReceived": 1,  "SessionEndReason": "aged-out",  "DGHierarchyLevel1": 0,  "DGHierarchyLevel2": 0,  "DGHierarchyLevel3": 0,  "DGHierarchyLevel4": 0,  "VirtualSystemName": "",  "DeviceName": "PA-450",  "ActionSource": "from-policy",  "SourceUUID": null,  "DestinationUUID": null,  "IMSI": 0,  "IMEI": null,  "ParentSessionID": 0,  "ParentStarttime": "1970-01-01T00:00:00.000000Z",  "Tunnel": "N/A",  "EndpointAssociationID": 0,  "ChunksTotal": 0,  "ChunksSent": 0,  "ChunksReceived": 0,  "RuleUUID": "29222f63-8656-476f-b70e-6ec3332ff5fe",  "HTTP2Connection": 0,  "LinkChangeCount": 0,  "SDWANPolicyName": null,  "LinkSwitches": null,  "SDWANCluster": null,  "SDWANDeviceType": null,  "SDWANClusterType": null,  "SDWANSite": null,  "DynamicUserGroupName": null,  "X-Forwarded-ForIP": "",  "SourceDeviceCategory": null,  "SourceDeviceProfile": null,  "SourceDeviceModel": null,  "SourceDeviceVendor": null,  "SourceDeviceOSFamily": null,  "SourceDeviceOSVersion": null,  "SourceDeviceHost": null,  "SourceDeviceMac": null,  "DestinationDeviceCategory": null,  "DestinationDeviceProfile": null,  "DestinationDeviceModel": null,  "DestinationDeviceVendor": null,  "DestinationDeviceOSFamily": null,  "DestinationDeviceOSVersion": null,  "DestinationDeviceHost": null,  "DestinationDeviceMac": null,  "ContainerID": null,  "ContainerNameSpace": null,  "ContainerName": null,  "SourceEDL": null,  "DestinationEDL": null,  "GPHostID": null,  "EndpointSerialNumber": null,  "SourceDynamicAddressGroup": null,  "DestinationDynamicAddressGroup": null,  "HASessionOwner": null,  "TimeGeneratedHighResolution": "2026-06-23T10:19:51.048000Z",  "NSSAINetworkSliceType": null,  "NSSAINetworkSliceDifferentiator": null},{  "TimeReceived": "2026-06-23T10:20:00.000000Z",  "DeviceSN": "023201024129",  "LogType": "TRAFFIC",  "Subtype": "end",  "ConfigVersion": "11.2",  "TimeGenerated": "2026-06-23T10:19:53.000000Z",  "SourceAddress": "198.51.100.0",  "DestinationAddress": "198.51.100.1",  "NATSource": "198.51.100.2",  "NATDestination": "198.51.100.1",  "Rule": "PAMGMT_INTERNET_RULE",  "SourceUser": null,  "DestinationUser": null,  "Application": "dns-base",  "VirtualLocation": "vsys1",  "FromZone": "Vlan-Zone",  "ToZone": "outside",  "InboundInterface": "ethernet1/6.20",  "OutboundInterface": "ethernet1/5",  "LogSetting": "IoT Security Default Profile",  "SessionID": 76996,  "RepeatCount": 1,  "SourcePort": 49024,  "DestinationPort": 53,  "NATSourcePort": 9559,  "NATDestinationPort": 53,  "Protocol": "udp",  "Action": "allow",  "Bytes": 342,  "BytesSent": 145,  "BytesReceived": 197,  "PacketsTotal": 2,  "SessionStartTime": "2026-06-23T10:19:24.000000Z",  "SessionDuration": 1,  "URLCategory": "any",  "SequenceNo": 7650419021796489539,  "SourceLocation": "198.51.100.3-198.51.100.4",  "DestinationLocation": "US",  "PacketsSent": 1,  "PacketsReceived": 1,  "SessionEndReason": "aged-out",  "DGHierarchyLevel1": 0,  "DGHierarchyLevel2": 0,  "DGHierarchyLevel3": 0,  "DGHierarchyLevel4": 0,  "VirtualSystemName": "",  "DeviceName": "PA-450",  "ActionSource": "from-policy",  "SourceUUID": null,  "DestinationUUID": null,  "IMSI": 0,  "IMEI": null,  "ParentSessionID": 0,  "ParentStarttime": "1970-01-01T00:00:00.000000Z",  "Tunnel": "N/A",  "EndpointAssociationID": 0,  "ChunksTotal": 0,  "ChunksSent": 0,  "ChunksReceived": 0,  "RuleUUID": "29222f63-8656-476f-b70e-6ec3332ff5fe",  "HTTP2Connection": 0,  "LinkChangeCount": 0,  "SDWANPolicyName": null,  "LinkSwitches": null,  "SDWANCluster": null,  "SDWANDeviceType": null,  "SDWANClusterType": null,  "SDWANSite": null,  "DynamicUserGroupName": null,  "X-Forwarded-ForIP": "",  "SourceDeviceCategory": null,  "SourceDeviceProfile": null,  "SourceDeviceModel": null,  "SourceDeviceVendor": null,  "SourceDeviceOSFamily": null,  "SourceDeviceOSVersion": null,  "SourceDeviceHost": null,  "SourceDeviceMac": null,  "DestinationDeviceCategory": null,  "DestinationDeviceProfile": null,  "DestinationDeviceModel": null,  "DestinationDeviceVendor": null,  "DestinationDeviceOSFamily": null,  "DestinationDeviceOSVersion": null,  "DestinationDeviceHost": null,  "DestinationDeviceMac": null,  "ContainerID": null,  "ContainerNameSpace": null,  "ContainerName": null,  "SourceEDL": null,  "DestinationEDL": null,  "GPHostID": null,  "EndpointSerialNumber": null,  "SourceDynamicAddressGroup": null,  "DestinationDynamicAddressGroup": null,  "HASessionOwner": null,  "TimeGeneratedHighResolution": "2026-06-23T10:19:53.080000Z",  "NSSAINetworkSliceType": null,  "NSSAINetworkSliceDifferentiator": null},{  "TimeReceived": "2026-06-23T10:20:00.000000Z",  "DeviceSN": "023201024129",  "LogType": "TRAFFIC",  "Subtype": "end",  "ConfigVersion": "11.2",  "TimeGenerated": "2026-06-23T10:19:53.000000Z",  "SourceAddress": "198.51.100.0",  "DestinationAddress": "198.51.100.1",  "NATSource": "198.51.100.5",  "NATDestination": "198.51.100.1",  "Rule": "PAMGMT_INTERNET_RULE",  "SourceUser": null,  "DestinationUser": null,  "Application": "dns-base",  "VirtualLocation": "vsys1",  "FromZone": "Vlan-Zone",  "ToZone": "outside",  "InboundInterface": "ethernet1/6.20",  "OutboundInterface": "ethernet1/8",  "LogSetting": "IoT Security Default Profile",  "SessionID": 117181,  "RepeatCount": 1,  "SourcePort": 43566,  "DestinationPort": 53,  "NATSourcePort": 37003,  "NATDestinationPort": 53,  "Protocol": "udp",  "Action": "allow",  "Bytes": 348,  "BytesSent": 148,  "BytesReceived": 200,  "PacketsTotal": 2,  "SessionStartTime": "2026-06-23T10:19:24.000000Z",  "SessionDuration": 1,  "URLCategory": "any",  "SequenceNo": 7650419021796489538,  "SourceLocation": "198.51.100.3-198.51.100.4",  "DestinationLocation": "US",  "PacketsSent": 1,  "PacketsReceived": 1,  "SessionEndReason": "aged-out",  "DGHierarchyLevel1": 0,  "DGHierarchyLevel2": 0,  "DGHierarchyLevel3": 0,  "DGHierarchyLevel4": 0,  "VirtualSystemName": "",  "DeviceName": "PA-450",  "ActionSource": "from-policy",  "SourceUUID": null,  "DestinationUUID": null,  "IMSI": 0,  "IMEI": null,  "ParentSessionID": 0,  "ParentStarttime": "1970-01-01T00:00:00.000000Z",  "Tunnel": "N/A",  "EndpointAssociationID": 0,  "ChunksTotal": 0,  "ChunksSent": 0,  "ChunksReceived": 0,  "RuleUUID": "29222f63-8656-476f-b70e-6ec3332ff5fe",  "HTTP2Connection": 0,  "LinkChangeCount": 0,  "SDWANPolicyName": null,  "LinkSwitches": null,  "SDWANCluster": null,  "SDWANDeviceType": null,  "SDWANClusterType": null,  "SDWANSite": null,  "DynamicUserGroupName": null,  "X-Forwarded-ForIP": "",  "SourceDeviceCategory": null,  "SourceDeviceProfile": null,  "SourceDeviceModel": null,  "SourceDeviceVendor": null,  "SourceDeviceOSFamily": null,  "SourceDeviceOSVersion": null,  "SourceDeviceHost": null,  "SourceDeviceMac": null,  "DestinationDeviceCategory": null,  "DestinationDeviceProfile": null,  "DestinationDeviceModel": null,  "DestinationDeviceVendor": null,  "DestinationDeviceOSFamily": null,  "DestinationDeviceOSVersion": null,  "DestinationDeviceHost": null,  "DestinationDeviceMac": null,  "ContainerID": null,  "ContainerNameSpace": null,  "ContainerName": null,  "SourceEDL": null,  "DestinationEDL": null,  "GPHostID": null,  "EndpointSerialNumber": null,  "SourceDynamicAddressGroup": null,  "DestinationDynamicAddressGroup": null,  "HASessionOwner": null,  "TimeGeneratedHighResolution": "2026-06-23T10:19:53.080000Z",  "NSSAINetworkSliceType": null,  "NSSAINetworkSliceDifferentiator": null}]
         
 
 
@@ -1494,9 +1703,9 @@ The Palo Alto Networks Strata Logging Service firewall parser supports logs in J
 
 ### Field mapping reference: Logs fields to UDM fields
 
-This section explains how the parser maps Palo Alto Networks Strata Logging Service firewall log fields to Google UDM event fields for each log type.
+This section explains how the parser maps Palo Alto Networks Strata Logging Service firewall log fields to Google SecOps UDM event fields for each log type.
 
-Refer to the following sections for mapping reference of each log type:
+See the following sections for the mapping reference of each log type:
 
   * System
   * Threat
@@ -2937,6 +3146,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

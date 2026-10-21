@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/admin-panel-users-roles/
 title: Admin settings - Roles \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:47:54.978229+00:00
+fetched_at: 2026-10-21T11:59:11.651765+00:00
 ---
 
 # Admin settings - Roles  |  Looker  |  Google Cloud Documentation
@@ -429,7 +429,7 @@ Users cannot edit any other settings in the **Additional Settings** section. The
 `see_pdts` | None | Connection Specific | Users can see the [Persistent Derived Tables](https://docs.cloud.google.com/looker/docs/admin-panel-database-pdts) page in the **Admin** section of Looker and view information about PDTs from projects that use any connection associated with models for which they have [data access](https://docs.cloud.google.com/looker/docs/access-control-and-permission-management#controlling_feature_and_data_access).This permission is included in the **Developer** default permission set for new Looker installations.This permission is applied to connections to which users have data access, rather than across the entire Looker instance or to individual models or model sets.  
 `see_datagroups` | None | Model Specific | Users can see the [Datagroups](https://docs.cloud.google.com/looker/docs/admin-panel-database-datagroups) page in the **Admin** section of Looker. Users can see connection names, model names, and other information about datagroups defined in a model for which they have [data access](https://docs.cloud.google.com/looker/docs/access-control-and-permission-management#controlling_feature_and_data_access).This permission is applied to individual models or model sets, rather than across the entire Looker instance or to connections.  
 `update_datagroups` | `see_datagroups` | Model Specific | Users can trigger a datagroup, or reset its cache, through the [Datagroups page](https://docs.cloud.google.com/looker/docs/admin-panel-database-datagroups) in the **Admin** section of Looker. Like users who have the `see_datagroups` permission, users who have the `update_datagroups` permission can see datagroups that are defined in projects that use a model for which they have [data access](https://docs.cloud.google.com/looker/docs/access-control-and-permission-management#controlling_feature_and_data_access).This permission is applied to individual models or model sets, rather than across the entire Looker instance or to connections.  
-`see_system_activity` | None | Instance Wide CM | Users can access the System Activity [Explores](https://docs.cloud.google.com/looker/docs/usage-reports-with-system-activity-explores) and [dashboards](https://docs.cloud.google.com/looker/docs/system-activity-pages) to view usage, history, and other metadata about a Looker instance.  
+`see_system_activity` | None | Instance Wide CM | Users can access the System Activity [Explores](https://docs.cloud.google.com/looker/docs/usage-reports-with-system-activity-explores) and [dashboards](https://docs.cloud.google.com/looker/docs/system-activity-pages) to view usage, history, and other metadata about a Looker instance. In an [embedded environment](https://docs.cloud.google.com/looker/docs/signed-embedding), strict restrictions prevent embedded users from rendering underlying system data, even if you grant the `see_system_activity` permission during single sign-on (SSO) authentication. For alternative ways to share this data, see [System Activity in embedded environments](https://docs.cloud.google.com/looker/docs/system-activity-pages#embedded-environments).  
 `see_admin` | None | Instance Wide CM | Users can have read-only access to admin resources, including [pages in the **Admin** panel](https://docs.cloud.google.com/looker/docs/admin-panel-general-support-access#access_levels_for_support_users), with the exception of the following pages:
 
   * Support Access
@@ -583,6 +583,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

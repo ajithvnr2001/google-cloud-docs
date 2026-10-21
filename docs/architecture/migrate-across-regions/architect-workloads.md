@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/migrate-across-regions/architect-workloads/
 title: Architect your workloads \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-16T13:19:02.430334+00:00
+fetched_at: 2026-10-21T12:22:15.631707+00:00
 ---
 
 # Architect your workloads  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/config-auto-net-for-accelerators/
 title: Configure automated networking for accelerator VMs \u00a0|\u00a0 GKE networking \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:41:02.282064+00:00
+fetched_at: 2026-10-21T12:23:00.913748+00:00
 ---
 
 # Configure automated networking for accelerator VMs  |  GKE networking  |  Google Cloud Documentation
@@ -65,7 +65,7 @@ When a Pod requests GPUs or TPUs, you can configure it to access the high-perfor
 ## Limitations
 
   * Automated networking requires the cluster to use GKE Dataplane V2.
-  * Automated networking is supported on A3, A4, and TPU Trillium (v6e) accelerator-optimized machine families.
+  * Automated networking is supported on A3, A4, and TPU Trillium (v6e) accelerator-optimized machine families, as well as the Z4M storage-optimized machine series.
   * You must use a node pool with a single zone.
   * You can't use automated networking in a cluster that uses [Shared VPC](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cluster-shared-vpc).
   * When using GKE managed DRANET to configure workloads, see the [key considerations](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/allocate-network-resources-dra#key-considerations) and [limitations](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/allocate-network-resources-dra#limitations) for GKE managed DRANET.
@@ -74,9 +74,9 @@ When a Pod requests GPUs or TPUs, you can configure it to access the high-perfor
 
 
 
-## Accelerator-optimized machines network configurations
+## Machine network configurations
 
-Accelerator-optimized machines have varying network configurations depending on their type. The following table summarizes the network specifications for various machine types.
+Accelerator-optimized and storage-optimized machines have varying network configurations depending on their type. The following tables summarize the network specifications for various machine types.
 
 ### GPU accelerator VMs
 
@@ -97,6 +97,14 @@ TPU Trillium (v6e) (ct6e-standard-1t) | 1 | 0.25 | 1
 TPU Trillium (v6e) (ct6e-standard-4t) | 4 | 2 | 2 (1 for 2nd NIC, 1 for extra VNIC on 1st NIC)  
 TPU Trillium (v6e) (ct6e-standard-8t) | 8 | 4 | 4  
 tpu7x-standard-4t | 4 | 2 | 2  
+  
+### Storage-optimized VMs
+
+On Z4M instances, the two physical Titanium NICs support both general network traffic (gVNIC) and up to two IRDMA virtual network interfaces (vNICs) for Cloud RDMA communication.
+
+Machine type | Number of physical Titanium NICs | Number of RDMA vNICs | Networking technology | Additional VPCs  
+---|---|---|---|---  
+Z4M (`z4m-highmem-192`) | 2 | Up to 2 (shared on physical NICs) | RDMA | 2 for RDMA vNICs  
   
 ## Before you begin
 
@@ -119,7 +127,7 @@ Before you start, make sure that you have performed the following tasks:
             --enable-dataplane-v2
         
 
-  * If you plan to deploy GPU workloads that use RDMA, verify the existence of the `DeviceClass` resources:
+  * If you plan to deploy GPU or Z4M workloads that use RDMA, verify the existence of the `DeviceClass` resources (`mrdma.google.com` for GPUs or `irdma.google.com` for Z4M):
         
         kubectl get deviceclass mrdma.google.com
         
@@ -513,6 +521,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

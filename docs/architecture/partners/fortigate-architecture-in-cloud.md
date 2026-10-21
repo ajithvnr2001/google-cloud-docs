@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/partners/fortigate-architecture-in-cloud/
 title: FortiGate architecture in Google Cloud \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:41:47.477900+00:00
+fetched_at: 2026-10-21T12:22:35.777881+00:00
 ---
 
 # FortiGate architecture in Google Cloud  |  Cloud Architecture Center  |  Google Cloud Documentation

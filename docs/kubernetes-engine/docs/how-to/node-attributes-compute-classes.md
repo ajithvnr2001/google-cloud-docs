@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-attributes-compute-classes/
 title: Control autoscaled node attributes with custom ComputeClasses \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:02:08.880490+00:00
+fetched_at: 2026-10-21T12:23:06.419144+00:00
 ---
 
 # Control autoscaled node attributes with custom ComputeClasses  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -173,6 +173,29 @@ You can also specify a precise [custom machine type](https://docs.cloud.google.c
       nodePoolAutoCreation:
         enabled: true
     
+
+To optimize capacity availability during capacity constraints, define a ComputeClass that spans multiple machine series and generations. For stateless or disruption-tolerant workloads, you can also enable active migration to return workloads to your preferred hardware when capacity recovers:
+    
+    
+    apiVersion: cloud.google.com/v1
+    kind: ComputeClass
+    metadata:
+      name: multi-family-fallback
+    spec:
+      priorities:
+      - machineFamily: c4d
+      - machineFamily: c3d
+      - machineFamily: c4
+      - machineFamily: c3
+      - machineFamily: n4
+      - machineFamily: n2d
+      activeMigration:
+        optimizeRulePriority: true
+      nodePoolAutoCreation:
+        enabled: true
+    
+
+Newer machine series such as C4, C4D, and N4 support only Hyperdisk, and older series such as N2D use Persistent Disk. If stateful workloads use a ComputeClass that spans both generations, [disable active migration](https://docs.cloud.google.com/kubernetes-engine/docs/best-practices/computeclasses#disable-active-migration) and, in GKE version 1.35.3-gke.1290000 and later, use the built-in `dynamic-rwo` StorageClass or a custom StorageClass with [automated disk type selection](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/hyperdisk#automated_disk_type_selection) (`parameters.type: dynamic`), `use-allowed-disk-topology: "true"`, and `volumeBindingMode: WaitForFirstConsumer`. GKE then selects a compatible disk type when provisioning new volumes and schedules existing volumes only on compatible machine series.
 
 ### Use ComputeClasses with manually-created node pools
 
@@ -365,6 +388,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

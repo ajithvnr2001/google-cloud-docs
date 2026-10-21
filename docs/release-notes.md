@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/release-notes/
 title: Google Cloud release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:08:36.166822+00:00
+fetched_at: 2026-10-21T12:12:36.217401+00:00
 ---
 
 # Google Cloud release notes  |  Google Cloud Documentation
@@ -23,6 +23,14 @@ The following release notes cover the most recent changes over the last 60 days.
 You can also see and filter all release notes in the [Google Cloud console](https://console.cloud.google.com/release-notes) or you can programmatically access release notes in [BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_cloud_release_notes&t=release_notes&page=table).
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/gcp-release-notes.xml) directly. 
+
+## October 21, 2026
+
+**Model Armor**
+
+Feature
+
+You can use custom organization policies to ensure that all new or updated Model Armor `Template` resources enforce required filters, like responsible AI or prompt injection and jailbreak detection. This feature is generally available ([GA](https://cloud.google.com/products#product-launch-stages)). For more information, see [Use custom organization policies](https://docs.cloud.google.com/model-armor/access-control/custom-constraints).
 
 ## October 20, 2026
 
@@ -18481,20 +18489,6 @@ Installed latest packages from upstream dependencies.
 
 ## August 22, 2026
 
-**Apigee UI**
-
-Fixed
-
-Bug ID | Description  
----|---  
-543626585 |  **ServiceCallout policy can now be added in the Apigee UI** Adding a ServiceCallout policy in the Apigee UI no longer leaves the **Create** or **Add** button disabled.  Previously, selecting **Service Callout** in the **Create policy** or **Add policy** panel could display only the **Name** and **Display name** fields and omit the required HTTP target field. With the required field missing, the form never became valid, so the **Create** or **Add** button stayed disabled no matter what you entered. This affected both API proxies and shared flows.  The earlier workaround of creating a placeholder policy and replacing its XML in the code editor is no longer needed. For more information, see [ServiceCallout policy](https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy) and [Attach and configure policies in the UI](https://docs.cloud.google.com/apigee/docs/api-platform/develop/attaching-and-configuring-policies-management-ui).   
-  
-Fixed
-
-Bug ID | Description  
----|---  
-540008387 |  **Developer custom attributes now save reliably in the Apigee UI** Saving changes to a developer in the [Apigee UI in Cloud console](https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/ui-overview) no longer intermittently fails to persist that developer's custom attributes.  Previously, the UI reported the save as successful, but the previous attribute values reappeared when the page was reloaded. Developer updates made with the Apigee API were not affected.   
-  
 **Identity and Access Management**
 
 Feature
@@ -18511,28 +18505,6 @@ For more information, see the following documentation:
   * [Agent Identity locations](https://docs.cloud.google.com/iam/docs/agent-identity-locations)
 
 
-
-## August 21, 2026
-
-**Google Cloud Contact Center as a Service**
-
-Announcement
-
-**Google Cloud CCaaS 6.4**
-
-We've released version 6.4 of Google Cloud CCaaS.
-
-The timing of the update to your instance depends on the deployment schedule that you have chosen. For more information, see [Deployment schedules](https://cloud.google.com/contact-center/ccai-platform/docs/deployment-schedules).
-
-Feature
-
-**Automatic SIP parameter mapping in contact lists**
-
-Contact lists now support automatic SIP header mapping for outbound call destinations.
-
-Administrators: In the **Add Destination** dialog at **Settings > Call > Contact Lists > Contact list management > `CREATE OR EDIT CONTACT LIST`> Add Destination**, toggle **Pass Data Parameters** to the on position to see the new **Automatically Include and Pass all Inbound SIP Headers** checkbox.
-
-For more information, see [Add a SIP URI address destination to a contact list](https://docs.cloud.google.com/contact-center/ccai-platform/docs/contact-list#add-sip-uri-address-destination).
 
 Send feedback 
 

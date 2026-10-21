@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/configure-pluggable-oracle/
 title: Configure a pluggable Oracle database for CDC \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:50:48.105391+00:00
+fetched_at: 2026-10-21T12:24:08.380577+00:00
 ---
 
 # Configure a pluggable Oracle database for CDC  |  Datastream  |  Google Cloud Documentation
@@ -21,26 +21,15 @@ Send feedback
 
 #  Configure a pluggable Oracle database for CDC Stay organized with collections  Save and categorize content based on your preferences. 
 
-Datastream supports Oracle multi-tenant architecture, where a single [container database (CDB)](https://docs.oracle.com/en/database/oracle/oracle-database/21/cncpt/CDBs-and-PDBs.html#GUID-5C339A60-2163-4ECE-B7A9-4D67D3D894FB) contains one or more pluggable databases (PDBs). Each pluggable database is a self-contained database with a unique ID and name, and can be managed independently.
+To stream change data capture (CDC) updates from a pluggable Oracle database to a [supported destination](https://docs.cloud.google.com/datastream/docs/destinations) such as BigQuery or Cloud Storage, you can connect your database to Datastream. Each pluggable database runs inside a multi-tenant [container database (CDB)](https://docs.oracle.com/en/database/oracle/oracle-database/21/cncpt/CDBs-and-PDBs.html#GUID-5C339A60-2163-4ECE-B7A9-4D67D3D894FB). To prepare your source, you configure `ARCHIVELOG` mode and log retention on the CDB, and supplemental logging and user privileges across both containers.
 
 To connect to a container in a multi-tenant architecture setup, or to switch between container sessions, use the following command: 
 
 `ALTER SESSION SET CONTAINER = CONTAINER_NAME;`
 
-Replace CONTAINER_NAME with the name of your container, for example your pluggable database or the `CDB$ROOT` container.
+Replace `CONTAINER_NAME` with the name of your container, for example, your pluggable database or the `CDB$ROOT` container.
 
-This page describes how to configure change data capture (CDC) to stream data from a pluggable Oracle database to a [supported destination](https://docs.cloud.google.com/datastream/docs/destinations), such as BigQuery or Cloud Storage. 
-
-You can configure your pluggable Oracle database for use with the following CDC methods:
-
-  * Binary log reader ([Preview](https://cloud.google.com/products/#product-launch-stages))
-  * LogMiner API
-
-
-
-For more information about the binary log reader and the LogMiner API, see [Work with Oracle database redo log files](https://docs.cloud.google.com/datastream/docs/work-with-oracle-database-redo-log-files).
-
-For detailed instructions about how to configure your source Oracle database for each of these methods, see the sections that follow.
+You can configure your pluggable Oracle database to use either the binary log reader ([Preview](https://cloud.google.com/products#product-launch-stages)) or the LogMiner API CDC method. For more information about these methods, see [Work with Oracle database redo log files](https://docs.cloud.google.com/datastream/docs/work-with-oracle-database-redo-log-files). 
 
 ## Configure your pluggable Oracle database for binary log reader
 
@@ -272,6 +261,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

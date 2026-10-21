@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/17.10.0/docs/choose-install-monitoring-tools/
 title: Use AlloyDB Omni monitoring tools \u00a0|\u00a0 AlloyDB Omni using containers: 17.10.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:18:35.292323+00:00
+fetched_at: 2026-10-21T12:01:01.215180+00:00
 ---
 
 # Use AlloyDB Omni monitoring tools  |  AlloyDB Omni using containers: 17.10.0  |  Google Cloud Documentation
@@ -217,7 +217,7 @@ Prometheus is a monitoring system that can be used to query Postgres Exporter an
          scrape_configs:
          - job_name: postgres
            static_configs:
-           - targets: ['POSTGRES_EXPORTER_MACHINE_IP_ADDRESS:9187']
+           - targets: [&#39;POSTGRES_EXPORTER_MACHINE_IP_ADDRESS:9187']
          
 
   9. Add the following information to `/etc/systemd/system/prometheus.service` so Prometheus survives reboots.

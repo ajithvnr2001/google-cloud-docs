@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/viewing-stackdriver-logs/
 title: View advanced pipeline logs in Cloud Logging \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:58:35.969707+00:00
+fetched_at: 2026-10-21T11:54:54.714215+00:00
 ---
 
 # View advanced pipeline logs in Cloud Logging  |  Cloud Data Fusion  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  View advanced pipeline logs in Cloud Logging Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to enable Cloud Logging for your Cloud Data Fusion Managed Service for Apache Spark clusters and access advanced pipeline logs.
+Enabling Cloud Logging for your Cloud Data Fusion Managed Service for Apache Spark clusters lets you access granular execution records beyond standard pipeline metrics. You can use these advanced logs to troubleshoot run failures, inspect driver and executor behavior, and debug complex data transformations.
 
 ## Enable Managed Service for Apache Spark Cloud Logging
 
@@ -95,6 +95,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

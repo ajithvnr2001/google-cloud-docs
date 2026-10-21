@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/create-conversations/
 title: Analyze data with conversations \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T14:27:02.438005+00:00
+fetched_at: 2026-10-21T11:59:21.096524+00:00
 ---
 
 # Analyze data with conversations  |  BigQuery  |  Google Cloud Documentation
@@ -21,9 +21,16 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Analyze data with conversations
 
-This document describes how to create, edit, and delete conversations in BigQuery. Conversations are persisted chats with a [data agent](https://docs.cloud.google.com/bigquery/docs/create-data-agents) or data sources, such as tables, views or graphs, that you select.
+This document describes how to create, edit, export, and delete conversations in BigQuery. Conversations are persisted chats with a [data agent](https://docs.cloud.google.com/bigquery/docs/create-data-agents) or data sources, such as tables, views or graphs, that you select.
 
-Conversations are persisted chats with a data agent or data source. You can ask data agents multi-part questions that use common terms like "sales" or "most popular," without having to specify table field names or define conditions to filter the data. You can also ask questions about data located in objects such as PDFs. An agent can determine which data sources to query and take advantage of optimizations, such as table partitions or search indexes, when it constructs a response. Agents can use existing embeddings of your column values to match your question to the right data. For example, asking about "Texas" would find rows stored as "TX."
+Conversations are persisted chats with a data agent or data source. You can ask data agents multi-part questions that use common terms like "sales" or "most popular," without having to specify table field names or define conditions to filter the data. You can also ask questions about data located in objects such as PDFs. An agent can do the following:
+
+  * Determine which data sources to query.
+  * Take advantage of optimizations, such as table partitions or search indexes.
+  * Use existing embeddings of your column values to match your question to the right data. For example, asking about "Texas" would find rows stored as "TX."
+  * Take into account all of the context about a data source stored in Knowledge Catalog.
+
+
 
 The chat response returned to you provides the following features:
 
@@ -277,6 +284,22 @@ To create a data agent from a conversation, follow these steps:
 
 
 
+## Export a data agent's answer
+
+To export an answer provided by a data agent as a PDF or CSV file, complete the following steps:
+
+  1. Navigate to the agent answer that you want to save.
+
+  2. Click the file_download **Download** button. Select from the following options:
+
+     * **PDF** : Includes up to 20 rows for each table.
+     * **Detailed PDF** : Includes up to 1,000 rows for each table.
+     * **CSV** : Includes up to 5,000 rows for each table.
+
+
+
+The file downloads through your browser.
+
 ## Manage conversations
 
 You can open, rename, or delete a conversation on the **Agents** page, and manage conversations in BigQuery Studio Explorer.
@@ -362,6 +385,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

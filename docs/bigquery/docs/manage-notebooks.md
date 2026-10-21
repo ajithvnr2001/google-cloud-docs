@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/manage-notebooks/
 title: Manage notebooks \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:40:06.754726+00:00
+fetched_at: 2026-10-21T11:59:12.727643+00:00
 ---
 
 # Manage notebooks  |  BigQuery  |  Google Cloud Documentation
@@ -138,6 +138,60 @@ If you don't see the left pane, click last_page **Expand left pane** to open the
 
 
 
+## Disable notebook output saving
+
+You can prevent sharing saved notebook output with other users who have access to the notebook file by disabling notebook output saving.
+
+When you disable output saving for a selected notebook, BigQuery deletes all output saved in the notebook file and doesn't save the output of subsequent runs.
+
+However, users who have [access to the notebook](https://docs.cloud.google.com/bigquery/docs/create-notebooks#grant_access_to_notebooks) can still view its output in the following ways:
+
+  * Run the notebook to view its current output. This output is not saved.
+  * View an archival version of the notebook and its output in revision history.
+
+
+
+To disable saving of output for a selected notebook, follow these steps:
+
+  1. In the Google Cloud console, go to the **BigQuery** page.
+
+[Go to BigQuery](https://console.cloud.google.com/bigquery)
+
+  2. In the left pane, click explore **Explorer** :
+
+![Highlighted button for the Explorer pane.](https://docs.cloud.google.com/static/bigquery/images/explorer-tab.png)
+
+If you don't see the left pane, click last_page **Expand left pane** to open the pane.
+
+  3. In the **Explorer** pane, expand your project and click **Notebooks**.
+
+  4. Click the notebook for which you want to disable saving output.
+
+  5. To expand the menu bar, click keyboard_arrow_down **Toggle header visibility**.
+
+  6. Click **Edit > Notebook settings**.
+
+  7. In the **Notebook settings** window, select **Omit code cell output when saving this notebook**.
+
+  8. Click **Save**.
+
+  9. Click **Reload**.
+
+
+
+
+## Resolve conflicts
+
+If you and another user make conflicting changes in a notebook, the service raises the error `Automatic saving failed. This file was updated remotely or in another tab.` and provides a `Show diff` link. To resolve the conflict, follow these steps:
+
+  1. Click the `Show diff` link. The **Review remote changes** dialog opens.
+  2. Optional: To compare the notebook source code, select the **Raw source** checkbox.
+  3. Optional: To compare the versions inline instead of in separate panes, select the **Inline diff** checkbox.
+  4. Review the changes and decide which to keep, revising your input if necessary.
+  5. Click **Save your changes**.
+
+
+
 ## View all notebooks
 
 To view a list of all notebooks in your project, do the following:
@@ -270,6 +324,31 @@ Restoring a notebook version from the comparison pane lets you compare the curre
 
 
 
+## Rename a notebook
+
+To rename a notebook, follow these steps:
+
+  1. In the Google Cloud console, go to the **BigQuery** page.
+
+[Go to BigQuery](https://console.cloud.google.com/bigquery)
+
+  2. In the left pane, click explore **Explorer** :
+
+![Highlighted button for the Explorer pane.](https://docs.cloud.google.com/static/bigquery/images/explorer-tab.png)
+
+  3. In the **Explorer** pane, expand your project and click **Notebooks**.
+
+  4. Click the notebook that you want to rename.
+
+  5. Click keyboard_arrow_down **Toggle header visibility** to expand the menu bar.
+
+  6. Click **File > Rename**.
+
+  7. In the **Rename notebook** dialog, type a name for the notebook, and then click **Rename**.
+
+
+
+
 ## Download a notebook
 
 To download a notebook, follow these steps:
@@ -365,6 +444,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

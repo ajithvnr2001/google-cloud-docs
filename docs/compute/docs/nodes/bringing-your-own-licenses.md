@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/nodes/bringing-your-own-licenses/
 title: Bringing your own licenses \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:13.379504+00:00
+fetched_at: 2026-10-21T12:01:40.007874+00:00
 ---
 
 # Bringing your own licenses  |  Compute Engine  |  Google Cloud Documentation
@@ -25,7 +25,7 @@ Linux  Windows
 
 This document describes how Google Cloud supports bringing your own licenses (BYOL) that have dedicated hardware requirements to Compute Engine. Before attempting to bring images with existing licenses to Google Cloud, review your licensing terms and conditions.
 
-Bringing your existing physical-core or physical-processor licenses that have dedicated hardware requirements requires you to bring your own media and to run that media on hardware configurations, such as [sole-tenant nodes](https://docs.cloud.google.com/compute/docs/nodes), that are compliant with your licenses. You can bring images with existing licenses in any [region that supports sole-tenant nodes](https://docs.cloud.google.com/compute/docs/regions-zones), and although there is no additional charge for bringing images with existing licenses, you must still pay for your licenses according to your agreements.
+Bringing your existing physical-core or physical-processor licenses that have dedicated hardware requirements requires you to bring your own media and to run that media on hardware configurations, such as [sole-tenant nodes](https://docs.cloud.google.com/compute/docs/nodes/sole-tenant-nodes), that are compliant with your licenses. You can bring images with existing licenses in any [region that supports sole-tenant nodes](https://docs.cloud.google.com/compute/docs/regions-zones), and although there is no additional charge for bringing images with existing licenses, you must still pay for your licenses according to your agreements.
 
 Licensing scenarios such as licenses related to Linux BYOS with RHEL or SLES, as well as Microsoft applications don't require sole-tenant nodes. If you are considering bringing licenses from Microsoft applications such as SharePoint Server and SQL Server, use [Microsoft License Mobility](https://docs.cloud.google.com/compute/docs/instances/windows/ms-licensing).
 
@@ -227,7 +227,7 @@ If you used node affinity labels in the template, you can create multiple VMs by
      * To create a VM on a specific sole-tenant node, click the **Name** of a sole-tenant node group, then click the **Name** of a sole-tenant node, then click **Create instance**.
   4. Configure the sole-tenant VM. Because you already selected your node group or a specific node, the **Region** , **Zone** , and **Node affinity labels** are already specified by the template.
 
-  5. Select a **Machine configuration** by specifying the **Machine family** , **Series** , and **Machine type**. Choose the **Series** that corresponds to the [sole-tenant node type](https://docs.cloud.google.com/compute/docs/nodes#node_types).
+  5. Select a **Machine configuration** by specifying the **Machine family** , **Series** , and **Machine type**. Choose the **Series** that corresponds to the [sole-tenant node type](https://docs.cloud.google.com/compute/docs/nodes/sole-tenant-nodes#node_types).
 
   6. Select the **Boot disk** for the sole-tenant VM, which is the previously imported virtual disk image.
 
@@ -342,6 +342,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/manage-access-policy/
 title: Manage an access policy \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:39:16.345840+00:00
+fetched_at: 2026-10-21T11:58:07.232299+00:00
 ---
 
 # Manage an access policy  |  Access Context Manager  |  Google Cloud Documentation
@@ -27,6 +27,8 @@ This page describes how to manage an existing access policy. You can do the foll
 
   * Set the default access policy for the `gcloud` command-line tool
 
+  * Delegate an access policy
+
   * Describe an access policy
 
   * Update an access policy
@@ -40,7 +42,22 @@ This page describes how to manage an existing access policy. You can do the foll
 
 ###  Console 
 
-The Google Cloud console does not support managing access policies. If you want to manage your access policy, you must use the `gcloud` command-line tool or the API.
+To get the numeric name of an access policy in the Google Cloud console, do the following:
+
+  1. In the Google Cloud console navigation menu, click **Security** , and then click **VPC Service Controls**.
+
+[Go to VPC Service Controls](https://console.cloud.google.com/security/service-perimeter)
+
+  2. If you are prompted, select your organization, folder, or project.
+
+  3. On the **VPC Service Controls** page, click **Manage policies**.
+
+  4. On the **Manage VPC Service Control policies** page, click the title of the access policy that you want to inspect.
+
+  5. On the **Edit access policy** page, find the numeric ID of the policy under **Access policy name**.
+
+
+**Note:** The Google Cloud console does not display the `etag` of an access policy. To get the `etag`, use the `gcloud` command-line tool or the API.
 
 ###  gcloud 
 
@@ -114,7 +131,28 @@ Where:
 
 ###  Console 
 
-The Google Cloud console does not support managing access policies. If you want to manage your access policy, you must use the `gcloud` command-line tool or the API.
+To delegate administration of a scoped access policy in the Google Cloud console, do the following:
+
+  1. In the Google Cloud console navigation menu, click **Security** , and then click **VPC Service Controls**.
+
+[Go to VPC Service Controls](https://console.cloud.google.com/security/service-perimeter)
+
+  2. If you are prompted, select your organization, folder, or project.
+
+  3. On the **VPC Service Controls** page, click **Manage policies**.
+
+  4. On the **Manage VPC Service Control policies** page, in the row for the scoped access policy that you want to delegate, click the _more_vert_ button, and then click **Edit**.
+
+  5. On the **Edit access policy** page, under **Manage principals** , click **Add principals**.
+
+  6. In the **Add principals** pane, select a [principal](https://docs.cloud.google.com/iam/docs/overview#concepts_related_identity), such as a user or service account.
+
+  7. Select the role that you want to associate with the principal, such as **Access Context Manager admin** , **Access Context Manager editor** , or **Access Context Manager reader** , and then click **Save**.
+
+  8. On the **Edit access policy** page, click **Save**.
+
+
+
 
 ###  gcloud 
 
@@ -164,7 +202,22 @@ If successful, the response body contains an instance of [`policy`](https://docs
 
 ###  Console 
 
-The Google Cloud console does not support managing access policies. If you want to manage your access policy, you must use the `gcloud` command-line tool or the API.
+To view the details of an access policy in the Google Cloud console, do the following:
+
+  1. In the Google Cloud console navigation menu, click **Security** , and then click **VPC Service Controls**.
+
+[Go to VPC Service Controls](https://console.cloud.google.com/security/service-perimeter)
+
+  2. If you are prompted, select your organization, folder, or project.
+
+  3. On the **VPC Service Controls** page, click **Manage policies**.
+
+  4. On the **Manage VPC Service Control policies** page, click the title of the access policy that you want to view.
+
+The **Edit access policy** page displays the policy's title, numeric **Access policy name** , scope, and delegated principals.
+
+
+
 
 ###  gcloud 
 
@@ -213,7 +266,9 @@ If successful, the response body contains an [`AccessPolicy` object](https://doc
 
 ###  Console 
 
-The Google Cloud console does not support managing access policies. If you want to manage your access policy, you must use the `gcloud` command-line tool or the API.
+In the Google Cloud console, you cannot change the title or scope of an existing access policy. To change the title of an access policy, use the `gcloud` command-line tool or the API.
+
+To update the delegated principals and role bindings for a scoped access policy in the Google Cloud console, see Delegate an access policy.
 
 ###  gcloud 
 
@@ -281,7 +336,22 @@ If successful, the response body for the call contains an [`Operation`](https://
 
 ###  Console 
 
-The Google Cloud console does not currently support managing access policies. If you want to manage your access policy, you must use the `gcloud` command-line tool or the API.
+To delete an access policy in the Google Cloud console, do the following:
+
+  1. In the Google Cloud console navigation menu, click **Security** , and then click **VPC Service Controls**.
+
+[Go to VPC Service Controls](https://console.cloud.google.com/security/service-perimeter)
+
+  2. If you are prompted, select your organization, folder, or project.
+
+  3. On the **VPC Service Controls** page, click **Manage policies**.
+
+  4. On the **Manage VPC Service Control policies** page, in the row for the access policy that you want to delete, click the _more_vert_ button, and then click **Delete**.
+
+  5. In the confirmation dialog, click **Delete**.
+
+
+
 
 ###  gcloud 
 
@@ -343,6 +413,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/containers/docs/m2c-cli-relnotes/
 title: Migrate to Containers CLI release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:54:46.436457+00:00
+fetched_at: 2026-10-21T09:07:09.138010+00:00
 ---
 
 # Migrate to Containers CLI release notes  |  Google Cloud Documentation
@@ -23,6 +23,26 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 This page documents production updates to Migrate to Containers CLI. You can periodically check this page for announcements about new or updated features, bug fixes, known issues, and deprecated functionality.
 
+## October 15, 2026
+
+On October 15, 2026, we released version 1.2.6 of the Migrate to Containers CLI and version 1.4.22 of the Migrate to Containers modernization plugins.
+
+### Bug Fixes
+
+  * Updated the following plugin images to address discovered vulnerabilities:
+
+Plugin Image | Vulnerabilities  
+---|---  
+us-docker.pkg.dev/migrate-modernize-public/modernize-plugins-prod/apache | CVE-2026-42767, CVE-2026-54874, CVE-2026-63072, CVE-2026-63074, CVE-2026-63076, CVE-2026-75803, CVE-2026-84445  
+us-docker.pkg.dev/migrate-modernize-public/modernize-plugins-prod/jboss | CVE-2026-42767, CVE-2026-54874, CVE-2026-63072, CVE-2026-63074, CVE-2026-63076, CVE-2026-75803, CVE-2026-84445  
+us-docker.pkg.dev/migrate-modernize-public/modernize-plugins-prod/linux-discovery | CVE-2026-42767, CVE-2026-54874, CVE-2026-63072, CVE-2026-63074, CVE-2026-63076, CVE-2026-75803, CVE-2026-84445  
+us-docker.pkg.dev/migrate-modernize-public/modernize-plugins-prod/linux-extraction | CVE-2026-103111, CVE-2026-84445  
+us-docker.pkg.dev/migrate-modernize-public/modernize-plugins-prod/service-manager-runtime | CVE-2026-84445  
+us-docker.pkg.dev/migrate-modernize-public/modernize-plugins-prod/tomcat-discovery | CVE-2026-42767, CVE-2026-54874, CVE-2026-63072, CVE-2026-63074, CVE-2026-63076, CVE-2026-75803, CVE-2026-84445  
+us-docker.pkg.dev/migrate-modernize-public/modernize-plugins-prod/tomcat-extraction | CVE-2026-42767, CVE-2026-54874, CVE-2026-63072, CVE-2026-63074, CVE-2026-63076, CVE-2026-75803, CVE-2026-84445  
+us-docker.pkg.dev/migrate-modernize-public/modernize-plugins-prod/websphere | CVE-2026-46675, CVE-2026-84445  
+us-docker.pkg.dev/migrate-modernize-public/modernize-plugins-prod/wordpress | CVE-2026-42767, CVE-2026-54874, CVE-2026-63072, CVE-2026-63074, CVE-2026-63076, CVE-2026-75803, CVE-2026-84445  
+  
 ## October 1, 2026
 
 On October 1, 2026, we released version 1.2.5 of the Migrate to Containers CLI and version 1.4.21 of the Migrate to Containers modernization plugins.
@@ -692,6 +712,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

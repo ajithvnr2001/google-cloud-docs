@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/design-with-gemini-obtainability/
 title: Design for capacity flexibility and efficiency on GKE with Gemini \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:01:50.338003+00:00
+fetched_at: 2026-10-21T12:23:07.969366+00:00
 ---
 
 # Design for capacity flexibility and efficiency on GKE with Gemini  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -46,7 +46,7 @@ Kubernetes scheduling relies on declared resource requests. When scheduling larg
 
 This section provides recommendations to increase your capacity availability when scheduling workloads on GKE. These best practices cover strategies such as designing flexible hardware requirements, configuring node pool auto-creation, and leveraging geographic distribution to adapt to resource constraints. [Node pool auto-creation](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/node-auto-provisioning) automatically manages node pools based on Pod specifications. Rather than pre-defining node pools, specify resource requirements in your Pod manifests, and let GKE dynamically create nodes.
 
-You can also discover and implement the following best practices by using Compute Advisor. For more information, see Use Compute Advisor.
+You can also discover and implement the following best practices by using Compute Advisor (Preview). For more information, see Use Compute Advisor.
 
 ### Options for increasing the availability of compute capacity
 
@@ -54,14 +54,14 @@ To optimize capacity availability, you can instruct GKE to avoid binding workloa
 
   * General-purpose CPU node pools:
 
-    * **Primary example:** N2 (Intel-based general-purpose).
-    * **Sample alternatives:** N2D (AMD EPYC), C2 or C2D (Compute-optimized), or E2 (Cost-optimized).
-    * **Implementation pattern:** configure Pod specs with node affinity or tolerations that permit scheduling across multiple machine family labels, for example, `cloud.google.com/machine-family` in `["n2", "n2d", "c2d"]`. This configuration lets GKE provision whichever pool has available capacity.
+    * **Primary example:** N4 (Intel-based general-purpose).
+    * **Sample alternatives:** N4D (AMD EPYC general-purpose), C4 or C3 (Intel general-purpose), or C4D or C3D (AMD EPYC general-purpose).
+    * **Implementation pattern:** configure Pod specs with a custom ComputeClass or node affinity rules that permit scheduling across multiple machine family labels, for example, `cloud.google.com/machine-family` in `["n4", "n4d", "c4", "c4d"]`. This configuration lets GKE provision whichever pool has available capacity.
   * GPU node pools:
 
-    * **Primary example:** A2 Series (NVIDIA A100 GPUs).
-    * **Sample alternatives:** L4 (Universal AI/ML) or T4 (Inference).
-    * **Implementation pattern:** Configure separate node pools or ComputeClasses for different GPU tiers. For workloads that can run without A100-specific features, allow Pods to fall back to L4 or T4 pools if A2 provisioning is constrained.
+    * **Primary example:** A3 Series (NVIDIA H100 GPUs) or A4 Series (NVIDIA B200 GPUs).
+    * **Sample alternatives:** G2 Series (NVIDIA L4 GPUs) or alternative accelerator tiers.
+    * **Implementation pattern:** configure separate node pools or ComputeClasses for different GPU tiers. For inference or serving workloads that can run across accelerator generations, allow Pods to fall back to G2 (L4) or alternative GPU pools if primary accelerator provisioning is constrained.
   * TPU node pools:
 
     * **Primary example:** TPU Ironwood (TPU7x).
@@ -74,8 +74,8 @@ The following table summarizes the primary selections and hardware alternatives 
 
 Workload type | Primary selection example | Sample alternatives | Architectural considerations  
 ---|---|---|---  
-**System or core workloads** | N2 | N2D, C2D, E2 | Spans Intel and AMD hardware pools for node pool auto-creation.  
-**GPU inference and processing** | A2 (A100) | L4, T4 | Flexibly targets lower-cost or higher-availability GPU node pools.  
+**System or core workloads** | N4 | N4D, C4, C4D, C3, C3D | Spans modern Intel and AMD hardware pools for node pool auto-creation.  
+**GPU inference and processing** | A3 (H100) or A4 (B200) | G2 (L4) | Flexibly targets lower-cost or higher-availability GPU node pools.  
 **TPU model training** | TPU Ironwood (TPU7x) | TPU v6, TPU v5 (v5e or v5p) | Utilizes flexible topologies for slice-based scheduling.  
   
 ### Implement node pool auto-creation and ComputeClasses
@@ -84,9 +84,13 @@ To optimize capacity availability, combine node pool auto-creation with [Compute
 
   * **Define ComputeClasses:** create ComputeClass resources that specify a prioritized list of machine families, GPU types, or provisioning models. GKE attempts to provision nodes by using the highest-priority configuration available in the class. A prioritized fallback list significantly helps you obtain the resources that your workloads require. For example, to prevent GKE from falling back to general-purpose machines when a preferred specialized accelerator is unavailable, add the `whenUnsatisfiable: DoNotScaleUp` setting to your ComputeClass configuration. For more information, see [Control autoscaled node attributes with custom ComputeClasses](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-attributes-compute-classes).
 
+  * **Enable active migration (`optimizeRulePriority: true`) for stateless or disruption-tolerant workloads:** configure [active migration](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes#active-migration) in your ComputeClass so GKE automatically cordons, drains, and replaces fallback nodes with your higher-priority machine series when capacity recovers in that location.
+
+  * **Use dynamic StorageClasses for cross-generation fallback:** in GKE version 1.35.3-gke.1290000 and later, when a ComputeClass spans Hyperdisk-only series (such as C4, C4D, and N4) and Persistent Disk series (such as N2 and N2D), configure stateful workloads so that GKE dynamically selects a compatible disk type. To do so, use a StorageClass with [automated disk type selection](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/hyperdisk#automated_disk_type_selection) (`parameters.type: dynamic`) and the `volumeBindingMode: WaitForFirstConsumer` setting.
+
   * **Reference ComputeClasses in Pod specs:** in your workload Pod specifications, use the `cloud.google.com/compute-class` label to target your custom ComputeClass instead of a specific machine family or GPU type. For more information, see [Request a ComputeClass in a workload](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-attributes-compute-classes#request-compute-class-workload).
 
-  * **Define multiple tolerations:** if you don't use ComputeClasses, use node affinity rules in your Pod specifications that permit a range of machine families (such as `cloud.google.com/machine-family` in `["n2", "n2d"]`). For more information, see [Configure node pool auto-creation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning).
+  * **Define multiple tolerations:** if you don't use ComputeClasses, use node affinity rules in your Pod specifications that permit a range of machine families (such as `cloud.google.com/machine-family` in `["n4", "n4d", "c4", "c4d"]`). For more information, see [Configure node pool auto-creation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning).
 
 
 
@@ -108,7 +112,7 @@ To increase capacity availability, deploy GKE clusters that span multiple zones,
 
 Beyond hardware diversification, incorporate these GKE best practices to optimize cluster scaling success:
 
-  * **Implement Pod overprovisioning (capacity buffers):** deploy low-priority "pause" Pods that reserve node capacity in advance. When high-priority AI workloads are submitted and regional capacity is constrained, Kubernetes immediately preempts the pause Pods, allowing containers to start up without waiting for new node provisioning. For more information, see [About capacity buffers](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/capacity-buffer).
+  * **Use capacity buffers:** proactively reserve spare node capacity so that high-priority AI workloads can schedule immediately without waiting for new node provisioning. You can use declarative [capacity buffers](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/capacity-buffer) with the active buffer strategy for GPU and TPU workloads so that the cluster autoscaler automatically maintains spare capacity.
   * **Use Flex-start with queued provisioning:** for large batch and AI model training jobs, use Flex-start with queued provisioning, which integrates with Kueue and Dynamic Workload Scheduler. Flex-start with queued provisions all-or-nothing atomic node allocation, which prevents partial cluster scale-up failures. For more information, see [Run a large-scale workload with flex-start with queued provisioning](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/provisioningrequest).
   * **Enable image streaming and container image preloading:** for large AI container images (such as PyTorch or TensorFlow images exceeding 10 GB), enable GKE Image streaming or use secondary boot disks for image preloading. This configuration reduces node warm-up time, which lets newly provisioned nodes start running workloads in seconds. For more information, see [Use Image streaming to pull container images](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/image-streaming) and [Use secondary boot disks to preload data or container images](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/data-container-image-preloading).
   * **Set cluster autoscaler location policy to`ANY`:** configure node pools (especially for Spot VMs or flex-start) with the `ANY` location policy. This setting instructs the cluster autoscaler to search for requested capacity across all specified zones. Cluster autoscaler finds capacity over balancing node counts. For more information, see [Cluster autoscaler overview](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler).
@@ -146,7 +150,7 @@ _Use case:_ use this prompt to analyze regional capacity signals and receive rec
         Configure a GKE cluster to improve chances of obtaining scarce GPU or TPU capacity.
         
 
-[Run prompt in Compute Advisor](https://console.cloud.google.com/compute/advisor/?advisor_ref=gke_obtainability_strategy)
+[Run prompt in Compute Advisor](https://console.cloud.google.com/kubernetes/compute-advisor?advisor_ref=gke_obtainability_strategy)
 
   * **Geographic flexibility and fallbacks** :
 
@@ -155,7 +159,7 @@ _Use case:_ use this prompt when designing multi-cluster architectures or global
         Configure multi-region fallbacks and geographic scheduling on GKE to increase GPU availability.
         
 
-[Run prompt in Compute Advisor](https://console.cloud.google.com/compute/advisor/?advisor_ref=gke_geographic_flexibility)
+[Run prompt in Compute Advisor](https://console.cloud.google.com/kubernetes/compute-advisor?advisor_ref=gke_geographic_flexibility)
 
   * **Priority reservation consumption** :
 
@@ -164,16 +168,16 @@ _Use case:_ use this prompt to generate YAML configuration patterns for Pod affi
         Configure GKE autoscaling rules and Pod specs to prioritize consuming active reservations before scaling into on-demand pools.
         
 
-[Run prompt in Compute Advisor](https://console.cloud.google.com/compute/advisor/?advisor_ref=gke_reservation_consumption)
+[Run prompt in Compute Advisor](https://console.cloud.google.com/kubernetes/compute-advisor?advisor_ref=gke_reservation_consumption)
 
   * **ComputeClasses for fallback prioritization** :
 
 _Use case:_ use this prompt to generate the YAML manifest for a ComputeClass CustomResourceDefinition that prioritizes high-performance GPUs but includes lower-tier fallbacks to ensure workload scheduling.
         
-        Define a ComputeClass manifest for GKE to prioritize A2 GPU nodes with automatic fallbacks to L4 or T4 GPUs.
+        Define a ComputeClass manifest for GKE to prioritize A3 GPU nodes with automatic fallbacks to G2 (L4) GPUs.
         
 
-[Run prompt in Compute Advisor](https://console.cloud.google.com/compute/advisor/?advisor_ref=gke_compute_class_fallbacks)
+[Run prompt in Compute Advisor](https://console.cloud.google.com/kubernetes/compute-advisor?advisor_ref=gke_compute_class_fallbacks)
 
   * **Node pool auto-creation for diversification** :
 
@@ -182,7 +186,7 @@ _Use case:_ Use this prompt to write the YAML manifest for GKE cluster autoscale
         Configure GKE node pool auto-creation to diversify machine families and prevent pending pods when regional accelerator capacity is constrained.
         
 
-[Run prompt in Compute Advisor](https://console.cloud.google.com/compute/advisor/?advisor_ref=gke_nap_diversification)
+[Run prompt in Compute Advisor](https://console.cloud.google.com/kubernetes/compute-advisor?advisor_ref=gke_nap_diversification)
 
 
 
@@ -199,6 +203,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

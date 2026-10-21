@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/image-builder/schedule-builds/
 title: Schedule custom OS image builds \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:09:47.286895+00:00
+fetched_at: 2026-10-21T12:23:00.004306+00:00
 ---
 
 # Schedule custom OS image builds  |  Compute Engine  |  Google Cloud Documentation
@@ -82,7 +82,7 @@ You might also be able to get the required permissions through [custom roles](ht
 
 ## Create a scheduled build pipeline
 
-You can configure recurring image builds by using the gcloud CLI or the Go client SDKs:
+You can configure recurring image builds by using the gcloud CLI or the Go client library:
 
 ###  gcloud 
 
@@ -134,171 +134,166 @@ Replace the following:
 
 ###  Go 
 
-You can schedule pipelines programmatically inside your enterprise applications by using the Google Cloud Go API client libraries (`cloudbuild/v1` and `cloudscheduler/v1`).
+To schedule pipelines programmatically by using the Cloud Build and Cloud Scheduler Go client libraries, use the `scheduleBuild` function.
 
-The following complete Go example demonstrates how to parse command-line flags and construct the `Build` request from your `imagebuilder.yaml` definition. The program then registers a manual Cloud Build trigger and provisions a Cloud Scheduler job when you supply the `--cron_schedule` flag.
+Before you run this sample, complete the following prerequisites:
+
+  * Upload your [`imagebuilder.yaml`](https://docs.cloud.google.com/compute/docs/images/image-builder/customization-recipe-schema) configuration file to your Cloud Storage bucket, for example, `gs://STAGING_BUCKET/imagebuilder.yaml`.
+  * Grant the scheduling service account `cloud-build-trigger-scheduler@PROJECT_ID.iam.gserviceaccount.com`, the Cloud Build Editor role (`roles/cloudbuild.builds.editor`) on your project and the Service Account User role (`roles/iam.serviceAccountUser`) on the service account that runs the build. For more information, see [Schedule builds](https://docs.cloud.google.com/build/docs/schedule-builds) in the Cloud Build documentation.
+
+
     
-    
-    // Program main demonstrates how to submit or schedule a Image Builder pipeline using Go SDKs.
-    package main
     
     import (
-        "context"
-        "flag"
-        "fmt"
-        "os"
+    	"context"
+    	"fmt"
+    	"io"
     
-        "google.golang.org/api/cloudbuild/v1"
-        "google.golang.org/api/cloudscheduler/v1"
+    	scheduler "cloud.google.com/go/scheduler/apiv1"
+    	"cloud.google.com/go/scheduler/apiv1/schedulerpb"
+    	"google.golang.org/api/cloudbuild/v1"
     )
     
-    var (
-        projectID        = flag.String("project_id", "", "The target Project ID")
-        region           = flag.String("region", "us-central1", "Region of resources")
-        gcsWorkdir       = flag.String("gcs_workdir", "", "The storage workspace directory URI, e.g. gs://my-bucket/workdir/")
-        serviceAccount   = flag.String("service_account", "", "Service account email to run the worker VM")
-        imageBuilderYAML = flag.String("config_path", "imagebuilder.yaml", "Path to the imagebuilder.yaml configuration file")
-        arRepositoryID   = flag.String("ar_repo_id", "os-images", "Name of the target generic Artifact Registry repository")
-        arPackageName    = flag.String("ar_package_name", "custom-os", "Package identifier for OS images")
-        cronSchedule     = flag.String("cron_schedule", "", "Optional cron schedule to run this build periodically (e.g. '0 6 * * 1')")
-    )
+    // scheduleBuild creates a manual Cloud Build trigger that runs an Image
+    // Builder pipeline, and a Cloud Scheduler job that runs the trigger every day.
+    //
+    // Before you run this sample, upload your imagebuilder.yaml configuration file
+    // to Cloud Storage, create a generic Artifact Registry repository, and create a
+    // service account to run the build.
+    //
+    // The job runs the trigger as the default scheduling service account,
+    // cloud-build-trigger-scheduler@PROJECT_ID.iam.gserviceaccount.com. Grant that
+    // service account the Cloud Build Editor role, and the Service Account User
+    // role on the service account that runs the build. For details, see
+    // https://cloud.google.com/build/docs/schedule-builds.
+    func scheduleBuild(w io.Writer, projectID, gcsWorkdir, configPath, serviceAccount string) error {
+    	// projectID := "my-project-id"
+    	region := "us-central1"
+    	// gcsWorkdir := "gs://my-bucket/workdir/"
+    	// configPath := "gs://my-bucket/imagebuilder.yaml"
+    	repository := "vm-images"
+    	packageName := "custom-os-images"
+    	// serviceAccount := "image-builder@my-project-id.iam.gserviceaccount.com"
+    	triggerName := "scheduled-image-builder"
+    	jobName := "scheduled-image-builder-job"
+    	schedule := "0 9 * * *"
     
-    func main() {
-        flag.Parse()
+    	ctx := context.Background()
+    	cbService, err := cloudbuild.NewService(ctx)
+    	if err != nil {
+    		return fmt.Errorf("cloudbuild.NewService: %w", err)
+    	}
+    	schedulerClient, err := scheduler.NewCloudSchedulerClient(ctx)
+    	if err != nil {
+    		return fmt.Errorf("scheduler.NewCloudSchedulerClient: %w", err)
+    	}
+    	defer schedulerClient.[Close](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/scheduler/latest/apiv1.html#cloud_google_com_go_scheduler_apiv1_CloudSchedulerClient_Close)()
     
-        if *projectID == "" || *serviceAccount == "" || *gcsWorkdir == "" {
-            fmt.Fprintln(os.Stderr, "Error: --project_id, --gcs_workdir, and --service_account are required flags")
-            flag.Usage()
-            os.Exit(1)
-        }
+    	parent := fmt.Sprintf("projects/%s/locations/%s", projectID, region)
+    	sa := fmt.Sprintf("projects/%s/serviceAccounts/%s", projectID, serviceAccount)
     
-        ctx := context.Background()
+    	trigger := &cloudbuild.BuildTrigger{
+    		Name:        triggerName,
+    		Description: "Manual trigger for scheduled VM image builds",
+    		EventType:   "MANUAL",
+    		Build: &cloudbuild.Build{
+    			ServiceAccount: sa,
+    			// AutomapSubstitutions exposes these substitutions to every step as
+    			// environment variables. See
+    			// https://cloud.google.com/build/docs/configuring-builds/substitute-variable-values#mapping_substitutions_to_environment_variables
+    			Substitutions: map[string]string{
+    				"_GCS_WORKDIR":               gcsWorkdir,
+    				"_SERVICE_ACCOUNT":           sa,
+    				"_IMAGE_OUTPUT_PATH":         "image-builder/binaryOut",
+    				"_IMAGE_BUILDER_CONFIG_PATH": configPath,
+    				"_ARTIFACT_REGISTRY_RESOURCE_URI": fmt.Sprintf(
+    					"projects/%s/locations/%s/repositories/%s/packages/%s/versions/v${BUILD_ID}",
+    					projectID, region, repository, packageName,
+    				),
+    			},
+    			Steps: []*cloudbuild.BuildStep{
+    				{
+    					Id:     "imagebuilder-customize",
+    					Name:   "us-docker.pkg.dev/image-builder-official/release/builder:stable",
+    					Script: "#!/usr/bin/env bash\n/build",
+    					Results: []*cloudbuild.StepResult{
+    						{
+    							Name:            "base_image",
+    							AttestationType: "https://cloudbuild.googleapis.com/attestations/build_content_restrictions",
+    						},
+    						{Name: "image_builder_telemetry_metrics"},
+    					},
+    				},
+    				{
+    					Id:      "imagebuilder-validate",
+    					Name:    "us-docker.pkg.dev/image-builder-official/release/validator:stable",
+    					Script:  "#!/usr/bin/env bash\n/validate",
+    					Results: []*cloudbuild.StepResult{{Name: "image_builder_telemetry_metrics"}},
+    				},
+    				{
+    					Id:      "imagebuilder-publish",
+    					Name:    "us-docker.pkg.dev/image-builder-official/release/builder:stable",
+    					Script:  "#!/usr/bin/env bash\n/publish",
+    					Results: []*cloudbuild.StepResult{{Name: "image_builder_telemetry_metrics"}},
+    				},
+    			},
+    			Options: &cloudbuild.BuildOptions{
+    				AutomapSubstitutions:  true,
+    				DynamicSubstitutions:  true,
+    				RequestedVerifyOption: "VERIFIED",
+    				SubstitutionOption:    "ALLOW_LOOSE",
+    				// Builds that run as a user-specified service account must set a
+    				// logging option.
+    				Logging: "CLOUD_LOGGING_ONLY",
+    			},
+    			Artifacts: &cloudbuild.Artifacts{
+    				GenericArtifacts: []*cloudbuild.GenericArtifact{
+    					{
+    						Folder:       "${_IMAGE_OUTPUT_PATH}",
+    						RegistryPath: "${_ARTIFACT_REGISTRY_RESOURCE_URI}",
+    					},
+    				},
+    			},
+    			Timeout: "3600s",
+    		},
+    	}
+    	createdTrigger, err := cbService.Projects.Locations.Triggers.Create(parent, trigger).
+    		Context(ctx).Do()
+    	if err != nil {
+    		return fmt.Errorf("Triggers.Create: %w", err)
+    	}
+    	fmt.Fprintf(w, "Created trigger %s (ID: %s)\n", createdTrigger.Name, createdTrigger.Id)
     
-        if *cronSchedule != "" {
-            fmt.Printf("Scheduling build with cron schedule: %s\n", *cronSchedule)
-            if err := scheduleBuild(ctx); err != nil {
-                fmt.Fprintf(os.Stderr, "Failed to schedule Cloud Build: %v\n", err)
-                os.Exit(1)
-            }
-        } else {
-            fmt.Println("Submitting build request immediately to Cloud Build API...")
-            if err := triggerBuild(ctx); err != nil {
-                fmt.Fprintf(os.Stderr, "Failed to trigger Cloud Build: %v\n", err)
-                os.Exit(1)
-            }
-        }
+    	schedulerSA := fmt.Sprintf(
+    		"cloud-build-trigger-scheduler@%s.iam.gserviceaccount.com", projectID,
+    	)
+    	job := &schedulerpb.Job{
+    		Name:        fmt.Sprintf("%s/jobs/%s", parent, jobName),
+    		Description: "Runs the Image Builder trigger on a schedule",
+    		Schedule:    schedule,
+    		Target: &schedulerpb.Job_HttpTarget{
+    			HttpTarget: &schedulerpb.HttpTarget{
+    				Uri: fmt.Sprintf(
+    					"https://cloudbuild.googleapis.com/v1/projects/%s/locations/%s/triggers/%s:run",
+    					projectID, region, createdTrigger.Id,
+    				),
+    				HttpMethod: schedulerpb.[HttpMethod_POST](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/scheduler/latest/apiv1/schedulerpb.html#cloud_google_com_go_scheduler_apiv1_schedulerpb_HttpMethod_HTTP_METHOD_UNSPECIFIED_HttpMethod_POST_HttpMethod_GET_HttpMethod_HEAD_HttpMethod_PUT_HttpMethod_DELETE_HttpMethod_PATCH_HttpMethod_OPTIONS),
+    				AuthorizationHeader: &schedulerpb.HttpTarget_OauthToken{
+    					OauthToken: &schedulerpb.OAuthToken{
+    						ServiceAccountEmail: schedulerSA,
+    					},
+    				},
+    			},
+    		},
+    	}
+    	req := &schedulerpb.CreateJobRequest{Parent: parent, Job: job}
+    	createdJob, err := schedulerClient.CreateJob(ctx, req)
+    	if err != nil {
+    		return fmt.Errorf("CreateJob: %w", err)
+    	}
+    	fmt.Fprintf(w, "Created job %s with schedule %q\n", createdJob.Name, createdJob.Schedule)
+    	return nil
     }
-    
-    func createBuildRequest() *cloudbuild.Build {
-        subs := map[string]string{
-            "_GCS_WORKDIR":                    *gcsWorkdir,
-            "_SERVICE_ACCOUNT":                fmt.Sprintf("projects/%s/serviceAccounts/%s", *projectID, *serviceAccount),
-            "_IMAGE_OUTPUT_PATH":              "image-builder/binaryOut",
-            "_IMAGE_BUILDER_CONFIG_PATH":      *imageBuilderYAML,
-            "_ARTIFACT_REGISTRY_RESOURCE_URI": fmt.Sprintf("projects/%s/locations/%s/repositories/%s/packages/%s/versions/v${BUILD_ID}", *projectID, *region, *arRepositoryID, *arPackageName),
-        }
-    
-        return &cloudbuild.Build{
-            Steps: []*cloudbuild.BuildStep{
-                {
-                    Name:   "us-central1-docker.pkg.dev/image-builder-official/release/builder:stable",
-                    Script: "#!/usr/bin/env bash\n/build",
-                    Id:     "imagebuilder-customize",
-                },
-                {
-                    Name:   "us-central1-docker.pkg.dev/image-builder-official/release/validator:stable",
-                    Script: "#!/usr/bin/env bash\n/validate",
-                    Id:     "imagebuilder-validate",
-                },
-                {
-                    Name:   "us-central1-docker.pkg.dev/image-builder-official/release/builder:stable",
-                    Script: "#!/usr/bin/env bash\n/publish",
-                    Id:     "imagebuilder-publish",
-                },
-            },
-            Substitutions: subs,
-            Options: &cloudbuild.BuildOptions{
-                AutomapSubstitutions:  true,
-                RequestedVerifyOption: "VERIFIED",
-                SubstitutionOption:    "ALLOW_LOOSE",
-                DynamicSubstitutions:  true,
-            },
-            Timeout: "3600s",
-        }
-    }
-    
-    func triggerBuild(ctx context.Context) error {
-        cbService, err := cloudbuild.NewService(ctx)
-        if err != nil {
-            return err
-        }
-        build := createBuildRequest()
-        op, err := cbService.Projects.Locations.Builds.Create(fmt.Sprintf("projects/%s/locations/%s", *projectID, *region), build).Do()
-        if err != nil {
-            return err
-        }
-        fmt.Printf("Build submitted: %s\n", op.Name)
-        return nil
-    }
-    
-    func scheduleBuild(ctx context.Context) error {
-        cbService, err := cloudbuild.NewService(ctx)
-        if err != nil {
-            return err
-        }
-        csService, err := cloudscheduler.NewService(ctx)
-        if err != nil {
-            return err
-        }
-    
-        // 1. Create a manual Cloud Build trigger
-        trigger := &cloudbuild.BuildTrigger{
-            Build:       createBuildRequest(),
-            Name:        "scheduled-image-builder-trigger",
-            Description: "Manual trigger invoked periodically via Cloud Scheduler for Image Builder",
-        }
-        createdTrigger, err := cbService.Projects.Locations.Triggers.Create(fmt.Sprintf("projects/%s/locations/%s", *projectID, *region), trigger).Do()
-        if err != nil {
-            return fmt.Errorf("failed creating trigger: %w", err)
-        }
-        fmt.Printf("Created Cloud Build trigger with ID: %s\n", createdTrigger.Id)
-    
-        // 2. Create the Cloud Scheduler job
-        targetURI := fmt.Sprintf("https://cloudbuild.googleapis.com/v1/projects/%s/locations/%s/triggers/%s:run", *projectID, *region, createdTrigger.Id)
-        job := &cloudscheduler.Job{
-            Name:        fmt.Sprintf("projects/%s/locations/%s/jobs/weekly-image-builder-job", *projectID, *region),
-            Schedule:    *cronSchedule,
-            Description: "Scheduled job to run custom OS Image Builder pipeline",
-            HttpTarget: &cloudscheduler.HttpTarget{
-                Uri:        targetURI,
-                HttpMethod: "POST",
-                OauthToken: &cloudscheduler.OAuthToken{
-                    ServiceAccountEmail: *serviceAccount,
-                },
-            },
-        }
-    
-        createdJob, err := csService.Projects.Locations.Jobs.Create(fmt.Sprintf("projects/%s/locations/%s", *projectID, *region), job).Do()
-        if err != nil {
-            return fmt.Errorf("failed creating scheduler job: %w", err)
-        }
-        fmt.Printf("Successfully scheduled job: %s\n", createdJob.Name)
-        return nil
-    }
-    
-
-#### Execute the scheduled Go application
-
-To run the compiled Go binary and schedule recurring execution every Monday at 6:00 AM, run the following command:
-    
-    
-    go run main.go \
-      --project_id PROJECT_ID \
-      --region us-central1 \
-      --gcs_workdir gs://STAGING_BUCKET/workdir/ \
-      --service_account SERVICE_ACCOUNT_EMAIL \
-      --config_path gs://STAGING_BUCKET/imagebuilder.yaml \
-      --cron_schedule '0 6 * * 1'
     
 
 ## What's next
@@ -312,6 +307,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

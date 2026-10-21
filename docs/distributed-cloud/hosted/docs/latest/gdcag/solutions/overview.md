@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/overview/
 title: Solutions overview for GDC air-gapped \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:57:36.936418+00:00
+fetched_at: 2026-10-21T12:01:02.467175+00:00
 ---
 
 # Solutions overview for GDC air-gapped  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -47,10 +47,19 @@ The following sections list the available solution guides for GDC air-gapped, or
     * **Envoy**
       * [Reference implementation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/ai-gateway/envoy/reference-implementation): Deploy Envoy Gateway and Envoy Agent Router on a standard cluster.
       * [Body-based routing](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/ai-gateway/envoy/body-based-routing): Configure request payload inspection and content-based model routing.
-  * **Open-weight LLMs**
-    * [Reference architecture](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/open-weight-llm-architecture): Architecture for deploying and serving open-weight large language models.
-    * [Reference implementation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/open-weight-llm-impl): Deploy vLLM and serve open-weight models on standard clusters with GPUs.
-    * [User guide](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/open-weight-llm-guide): Configure Open WebUI and connect to served open-weight models.
+  * **Elastic Stack**
+    * [Reference architecture](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/elasticstackgdcagarchitecture): Architecture for deploying the Elastic Stack and integrating it with an LLM service to enable Elastic's generative AI features.
+    * [Reference implementation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/elasticstackgdcagimpl): Deploy the Elastic Stack and integrate it with an LLM service to evaluate Elastic's generative AI features.
+  * **Open weight models**
+    * [Reference architecture](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/open-weight-models/reference-architecture): Architecture for deploying and serving open weight large language models.
+    * **Ollama**
+      * [Reference implementation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/open-weight-models/ollama/reference-implementation): Deploy Ollama to serve open weight models on standard clusters.
+      * [Gemma models](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/open-weight-models/ollama/gemma): Serve Gemma 4 models using Ollama; select the model and the GPU option in one guide.
+    * **vLLM**
+      * [Reference implementation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/open-weight-models/vllm/reference-implementation): Deploy vLLM to serve high-throughput model inference on standard clusters with GPUs.
+      * [Gemma models](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/open-weight-models/vllm/gemma): Serve Gemma 4 models using vLLM; select the model and the GPU option in one guide.
+      * [Mistral models](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/open-weight-models/vllm/mistral): Serve Mistral 7B, Mistral NeMo 12B, Mistral Small 3.2 24B, Ministral 8B, Mixtral 8x7B, or Magistral Small 1.2 using vLLM; select the model and the GPU option in one guide.
+    * [Open WebUI](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/open-weight-models/open-webui): Deploy and configure Open WebUI to interact with models served by Ollama and vLLM.
 
 
 
@@ -90,6 +99,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

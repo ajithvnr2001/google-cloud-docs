@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/build-apps-using-gateway-and-cloud-service/deployment/
 title: From edge to multi-cluster mesh: Deploy globally distributed applications through GKE Gateway and Cloud Service Mesh \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:38.817467+00:00
+fetched_at: 2026-10-21T12:22:04.739948+00:00
 ---
 
 # From edge to multi-cluster mesh: Deploy globally distributed applications through GKE Gateway and Cloud Service Mesh  |  Cloud Architecture Center  |  Google Cloud Documentation

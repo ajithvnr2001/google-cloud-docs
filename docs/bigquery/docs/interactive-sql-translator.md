@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/interactive-sql-translator/
 title: Translate queries with the interactive SQL translator \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:49.771292+00:00
+fetched_at: 2026-10-21T12:01:31.248149+00:00
 ---
 
 # Translate queries with the interactive SQL translator  |  BigQuery  |  Google Cloud Documentation
@@ -41,7 +41,7 @@ Enable the required API, and get the permissions needed to use a BigQuery SQL tr
 
 ### Required permissions
 
-To get the permissions that you need to create translation jobs with the interactor translator, the translation API, or the batch SQL translator, ask your administrator to grant you the following IAM roles on the `parent` resource: 
+To get the permissions that you need to create translation jobs with the interactive translator, the translation API, or the batch SQL translator, ask your administrator to grant you the following IAM roles on the `parent` resource: 
 
   * Viewing and monitoring migration jobs: [MigrationWorkflow Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquerymigration#bigquerymigration.viewer) (`roles/bigquerymigration.viewer`) 
   * Submitting migration jobs: [MigrationWorkflow Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquerymigration#bigquerymigration.editor) (`roles/bigquerymigration.editor`) 
@@ -51,11 +51,11 @@ To get the permissions that you need to create translation jobs with the interac
 
 For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
 
-These predefined roles contain the permissions required to create translation jobs with the interactor translator, the translation API, or the batch SQL translator. To see the exact permissions that are required, expand the **Required permissions** section: 
+These predefined roles contain the permissions required to create translation jobs with the interactive translator, the translation API, or the batch SQL translator. To see the exact permissions that are required, expand the **Required permissions** section: 
 
 #### Required permissions
 
-The following permissions are required to create translation jobs with the interactor translator, the translation API, or the batch SQL translator:
+The following permissions are required to create translation jobs with the interactive translator, the translation API, or the batch SQL translator:
 
   * `bigquerymigration.workflows.create`
   * `bigquerymigration.workflows.get`
@@ -177,7 +177,7 @@ To translate a query without creating a file, pipe it through standard input and
 
 To apply the customizations that you would otherwise set in **Translation settings** , use the following flags:
 
-  * `--translation-config-files`: a comma-separated list of [configuration YAML files](https://docs.cloud.google.com/bigquery/docs/config-yaml-translation). File names must end with `.config.yaml`.
+  * `--translation-config-files`: a comma-separated list of [configuration YAML files](https://docs.cloud.google.com/bigquery/docs/config-yaml-translation). Filenames must end with `.config.yaml`.
   * `--metadata-gcs-uri`: the Cloud Storage URI of a metadata ZIP file.
   * `--explanation-output-file`: a local file that receives a Gemini-generated explanation of the translation.
 
@@ -403,6 +403,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

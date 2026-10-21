@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/guides/streaming-write-to-iceberg-biglake/
 title: Streaming Write to Apache Iceberg with Lakehouse REST Catalog \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:02:40.156714+00:00
+fetched_at: 2026-10-21T11:58:20.562878+00:00
 ---
 
 # Streaming Write to Apache Iceberg with Lakehouse REST Catalog  |  Cloud Dataflow  |  Google Cloud Documentation
@@ -21,30 +21,9 @@ Send feedback
 
 #  Streaming Write to Apache Iceberg with Lakehouse REST Catalog Stay organized with collections  Save and categorize content based on your preferences. 
 
-To write from Dataflow to Apache Iceberg using the Lakehouse REST Catalog, use the [managed I/O connector](https://docs.cloud.google.com/dataflow/docs/guides/managed-io-iceberg).
+The Dataflow [managed I/O connector](https://docs.cloud.google.com/dataflow/docs/guides/managed-io-iceberg) lets you ingest real-time data into Apache Iceberg tables through a REST catalog. This approach provides low-latency streaming writes and dynamic destination routing while maintaining open table format interoperability across your lakehouse analytics stack.
 
-Managed I/O supports the following capabilities for Apache Iceberg:
-
-Catalogs | 
-
-  * Hadoop
-  * Hive
-  * REST-based catalogs
-  * [BigQuery metastore](https://docs.cloud.google.com/bigquery/docs/about-bqms) (requires Apache Beam SDK 2.62.0 or later if not using the Portable Runner) 
-
-  
----|---  
-Read capabilities | Batch read  
-Write capabilities | 
-
-  * Batch write
-  * Streaming write
-  * [ Dynamic destinations](https://docs.cloud.google.com/dataflow/docs/guides/write-to-iceberg#dynamic-destinations)
-  * Dynamic table creation
-
-  
-  
-For [BigQuery tables for Apache Iceberg](https://docs.cloud.google.com/bigquery/docs/iceberg-tables), use the [`BigQueryIO` connector](https://beam.apache.org/documentation/io/built-in/google-bigquery/) with BigQuery Storage API. The table must already exist; dynamic table creation is not supported.
+Managed I/O supports multiple catalog backends, including Hadoop, Hive, and BigQuery metastore, but this document focuses on streaming pipelines that target a Lakehouse REST catalog. If you write to [BigQuery tables for Apache Iceberg](https://docs.cloud.google.com/bigquery/docs/iceberg-tables), use the [`BigQueryIO` connector](https://beam.apache.org/documentation/io/built-in/google-bigquery/) with the BigQuery Storage API instead, as target tables must exist before ingestion.
 
 ## Prerequisites
 
@@ -217,6 +196,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

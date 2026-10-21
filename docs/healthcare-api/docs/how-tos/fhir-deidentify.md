@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/fhir-deidentify/
 title: De-identifying FHIR data \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:24:49.260761+00:00
+fetched_at: 2026-10-21T12:01:46.933702+00:00
 ---
 
 # De-identifying FHIR data  |  Cloud Healthcare API  |  Google Cloud Documentation
@@ -95,10 +95,10 @@ The samples in this guide use a Patient ([DSTU2](https://www.hl7.org/fhir/dstu2/
       ],
       "birthDate": "1980-12-05",
       "gender": "female",
-      "id<&qu><o><t>;: &quo<t;><r7><7><4>33dd<-d>keuc-633743nfd<-3><8><3>nfdsjds732&<qu>ot;,
-      "<;n><a><m>e"<;:> [
-        {<
-     ><    > "family": "Smith",
+      "id": "r77433dd-dkeuc-633743nfd-383nfdsjds732",
+      "name": [
+        {
+          "family": "Smith",
           "given": [
             "Darcy"
           ],
@@ -108,7 +108,7 @@ The samples in this guide use a Patient ([DSTU2](https://www.hl7.org/fhir/dstu2/
       "resourceType": "Patient",
       "text": {
         "status": "generated",
-        "div": "divpbPatient/b/ppbName/b: Smith, Darcy/ppbDateOfBirth/b: 1980-12-05/ppbGender/b: Female/p/div"
+        "div": "<div><p><b>Patient</b></p><p><b>Name</b>: Smith, Darcy</p><p><b>DateOfBirth</b>: 1980-12-05</p><p><b>Gender</b>: Female</p></div>"
       }
     }
     
@@ -2588,14 +2588,14 @@ For example:
 **Dataset level de-identification:**
     
     
-    'destinationDataset': &#39;projects/PROJECT_ID/locations/LOCATION/datasets/DESTINATION_DATASET_ID'
+    'destinationDataset': 'projects/PROJECT_ID/locations/LOCATION/datasets/DESTINATION_DATASET_ID'
     …
     "https://healthcare.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/datasets/SOURCE_DATASET_ID:deidentify"
 
 **FHIR store level de-identification:**
     
     
-    'destinationStore': &#39;projects/PROJECT_ID/locations/LOCATION/datasets/DESTINATION_DATASET_ID/fhirStores/DESTINATION_FHIR_STORE_ID'
+    'destinationStore': 'projects/PROJECT_ID/locations/LOCATION/datasets/DESTINATION_DATASET_ID/fhirStores/DESTINATION_FHIR_STORE_ID'
     …
     "https://healthcare.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/datasets/SOURCE_DATASET_ID/fhirStores/SOURCE_FHIR_STORE_ID:deidentify"
 

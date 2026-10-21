@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/resize-persistent-disk/
 title: Modify the size of a Persistent Disk \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:59:24.736214+00:00
+fetched_at: 2026-10-21T12:22:28.889416+00:00
 ---
 
 # Modify the size of a Persistent Disk  |  Compute Engine  |  Google Cloud Documentation
@@ -27,7 +27,7 @@ If your Compute Engine virtual machine (VM) instance needs additional storage sp
 
 This page discusses how to change the size of a Persistent Disk. To increase the size of a Google Cloud Hyperdisk volume, see [Modify the size and provisioned performance of a Hyperdisk volume](https://docs.cloud.google.com/compute/docs/disks/modify-hyperdisks).
 
-**Important:** You can't reduce the size of a disk. For more information, see Decrease the size of a disk.
+**Important:** You can't reduce the size of a disk. For more information, see Move data to a smaller disk.
 
 When you [create a custom Linux image](https://docs.cloud.google.com/compute/docs/images/create-custom), [custom Windows image](https://docs.cloud.google.com/compute/docs/instances/windows/creating-windows-os-image), or a [Fedora CoreOS image](https://docs.cloud.google.com/compute/docs/images/os-details#fedora_coreos), you need to manually increase the size of the boot and non-boot disks. If you're using a [public image](https://docs.cloud.google.com/compute/docs/images) (except for Fedora CoreOS images), Compute Engine automatically resizes the boot disks.
 
@@ -104,9 +104,9 @@ This predefined role contains the `compute.disks.update` permission, which is re
 
 You might also be able to get this permission with [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
 
-## Decrease the size of a disk
+## Move data to a smaller disk
 
-You can't decrease the size of a Persistent Disk. You must replace the disk with a new, smaller disk. To do so, create a blank disk that has a smaller size, then copy the contents from the original disk to the new disk. You can then use the new disk instead of the original.
+You can't directly decrease the size of a Persistent Disk. If the provisioned size of a Persistent Disk volume is too large, then you must replace the disk with a new, smaller disk. To do so, create a blank disk that has a smaller size, then copy the contents from the original disk to the new disk. You can then use the new disk instead of the original.
 
 To replace a disk with a smaller disk, follow these steps: 
 
@@ -138,7 +138,7 @@ Extreme Persistent Disk | 500 GiB | 64 TiB | 1 TiB
 
 To increase the size of a boot or non-boot disk, use the following procedures:
 
-**Note:** You can resize an Extreme Persistent Disk only once in a 6-hour period.
+**Note:** You can resize an Extreme Persistent Disk volume only once in a 6-hour period.
 
 ###  Console 
 
@@ -264,7 +264,7 @@ Replace the following:
 
 ## Resize the file system and partitions
 
-After you increase the size of a disk, you might need to resize its file system and partitions. The following is additional information for boot and non-boot disks:
+After you increase the size of a disk, you might need to resize both the file system and partitions. The following is additional information for boot and non-boot disks:
 
   * **Boot disks** : If you're using [a custom Linux image](https://docs.cloud.google.com/compute/docs/images/create-custom), [custom Windows image](https://docs.cloud.google.com/compute/docs/instances/windows/creating-windows-os-image), or a [Fedora CoreOS image](https://docs.cloud.google.com/compute/docs/images/os-details#fedora_coreos), you must manually resize the root partition and file system. For instances with [public images](https://docs.cloud.google.com/compute/docs/images) (except for Fedora CoreOS images), Compute Engine automatically resizes the root partition and file system after you increase the size of the boot disk and you don't need to restart the instance.
 
@@ -489,6 +489,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

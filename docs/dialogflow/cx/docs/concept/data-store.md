@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/data-store/
 title: Data stores \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:36.373754+00:00
+fetched_at: 2026-10-21T11:58:15.574183+00:00
 ---
 
 # Data stores  |  Dialogflow CX  |  Google Cloud Documentation
@@ -25,9 +25,9 @@ Send feedback
 
 **Note:** The _Data Stores_ feature is excluded from the [Dialogflow CX SLA](https://cloud.google.com/dialogflow/sla).
 
-_Data stores_ are used by [data store tools](https://docs.cloud.google.com/dialogflow/cx/docs/concept/data-store/handler) to find answers for end-user questions from your data. Data stores are a collection of websites, documents, or data in third-party systems, each of which references your data.
+[Data store tools](https://docs.cloud.google.com/dialogflow/cx/docs/concept/data-store/handler) use data stores to find answers for end-user questions from your data. Data stores are a collection of websites, documents, or data in third-party systems, each of which references your data.
 
-When an end-user asks the agent a question, the agent searches for an answer from the given source content and summarizes the findings into a coherent agent response. It also provides supporting links to the sources of the response for the end-user to learn more. The agent can provide up to five answer snippets for a given question.
+When you ask the agent a question, it searches for an answer from the given source content and summarizes the findings into a coherent response. It also provides supporting links to the sources of the response to help you learn more. The agent can provide up to five answer snippets for a given question.
 
 ## Data store sources
 
@@ -39,8 +39,8 @@ You can use different sources for your data:
   * **AlloyDB:** Import data from your [AlloyDB for PostgreSQL](https://docs.cloud.google.com/alloydb/docs) cluster.
   * **Bigtable:** Import data from a [Bigtable](https://docs.cloud.google.com/bigtable/docs) table.
   * **Firestore:** Import data from your [Firestore](https://firebase.google.com/docs/firestore) collection.
-  * **Cloud SQL:** Import data from a [Cloud SQL](https://docs.cloud.google.com/sql/docs) table.
-  * **Spanner:** Import data from a [Spanner](https://docs.cloud.google.com/spanner/docs) table.
+  * **Cloud SQL:** Import data from your [Cloud SQL](https://docs.cloud.google.com/sql/docs) table.
+  * **Spanner:** Import data from your [Spanner](https://docs.cloud.google.com/spanner/docs) table.
 
 
 
@@ -50,20 +50,20 @@ Google offers many additional first- and third-party data store sources as a res
 
 ## Website content
 
-When adding website content as a source, you can add and exclude multiple sites. When you specify a site, you can use individual pages or `*` as a wildcard for a pattern. All HTML and PDF content will be processed.
+When adding website content as a source, you can add and exclude multiple sites. When you specify a site, you can use individual pages or `*` as a wildcard for a pattern. The system processes all HTML and PDF content.
 
-You must [verify your domain](https://docs.cloud.google.com/generative-ai-app-builder/docs/domain-verification) when using website content as a source.
+[Verify your domain](https://docs.cloud.google.com/generative-ai-app-builder/docs/domain-verification) when using website content as a source.
 
 Limitations:
 
-  * Files from public URLs must have been crawled by the Google Search indexer to exist in the search index. You can check this with the [Google Search Console](https://search.google.com/search-console).
+  * Files from public URLs must have been crawled by the Google Search indexer to exist in the search index. You can check this by using the [Google Search Console](https://search.google.com/search-console).
   * Up to 200,000 pages are indexed. If the data store contains more pages, indexing fails at that point, but any content already indexed remains.
 
 
 
 ## Import data
 
-You can import data from BigQuery or Cloud Storage. This data can be in FAQ form or unstructured, and it can be with metadata or without metadata.
+You can import data from BigQuery or Cloud Storage. This data can take the form of FAQ data, unstructured data, data with metadata, or data without metadata.
 
 The following **Data Import Options** are available:
 
@@ -74,7 +74,7 @@ The following **Data Import Options** are available:
 
 ### FAQ data store
 
-Data stores can hold answers to frequently asked questions. When user questions are matched with high confidence to an uploaded question, the agent returns the answer to that question without modification. You can provide a title and a URL for each question and answer pair that the agent displays.
+Data stores can hold answers to frequently asked questions. When the agent matches user questions with high confidence to an uploaded question, it returns the answer to that question without modification. You can provide a title and a URL for each question and answer pair that the agent displays.
 
 Upload data to the data store in CSV format. Each file must include a header row that describes the columns.
 
@@ -93,11 +93,11 @@ You can omit the `title` and `url` columns:
     "42","What is the meaning of life?"
     
 
-During the upload process, you can select a folder where each file is processed as a `CSV` file, regardless of the file extension.
+During the upload process, you can select a folder where each file is processed as a CSV file, regardless of the file extension.
 
 Limitations:
 
-  * An extra space character after `,` causes an error.
+  * An extra space character after a comma causes an error.
   * Blank lines (even at the end of the file) cause an error.
 
 
@@ -106,14 +106,14 @@ Limitations:
 
 Unstructured data stores can contain content in the following formats:
 
-  * `HTML`
-  * `PDF`
-  * `TXT`
-  * `CSV`
+  * HTML
+  * PDF
+  * TXT
+  * CSV
 
-**Note:** `CSV` files can also be imported as unstructured content. The schema requirements from the FAQ data section also apply. Metadata is generated automatically if `title` and `url` columns are provided. Each question and answer pair is indexed separately. Matching requirements are less strict than for FAQ `CSV` data stores, and the agent might rewrite the answer rather than returning it word-for-word.
+**Note:** CSV files can also be imported as unstructured content. The schema requirements from the FAQ data store section also apply. Metadata is generated automatically if `title` and `url` columns are provided. Each question and answer pair is indexed separately. Matching requirements are less strict than for FAQ CSV data stores, and the agent might rewrite the answer rather than returning it word-for-word.
 
-You can import files from another project's Cloud Storage bucket. To do so, grant explicit access to the import process. Follow the instructions in the error message, which will contain the name of the user that needs read access to the bucket to perform the import.
+You can import files from another project's Cloud Storage bucket. To do so, grant explicit access to the import process. Follow the instructions in the error message, which contains the name of the user that needs read access to the bucket to perform the import.
 
 Limitations:
 
@@ -123,11 +123,11 @@ Limitations:
 
 ### Data store with metadata
 
-You can provide a title and `URL` as metadata. During a conversation, the agent can provide this information to help users quickly link to internal web pages that are not accessible by the Google Search indexer.
+You can provide a title and `url` as metadata. During a conversation, the agent can provide this information to help you quickly link to internal web pages that aren't accessible by the Google Search indexer.
 
-To import content with metadata, you must provide one or more [JSON Lines](https://jsonlines.org/) files. Each line of this file describes one document. You do not directly upload the actual documents; `URIs` that link to the Cloud Storage paths are provided in the JSON Lines file.
+To import content with metadata, you must provide one or more [JSON Lines](https://jsonlines.org/) files. Each line of this file describes one document. You don't directly upload the actual documents; URIs that link to the Cloud Storage paths are provided in the JSON Lines file.
 
-To provide your JSON Lines files, provide a Cloud Storage folder that contains these files. Do not put any other files in this folder.
+To submit your JSON Lines files, provide a Cloud Storage folder that contains these files. Don't put any other files in this folder.
 
 Field descriptions:
 
@@ -148,33 +148,33 @@ For example:
 
 ### Data store without metadata
 
-This type of content has no metadata. Instead, you provide URI links to the individual documents. The content type is determined by the file extension.
+This content has no metadata. Instead, you provide URI links to the individual documents. The content type is determined by the file extension.
 
 ## Parse and chunk configuration
 
-Depending on the data source, you can configure [parse and chunk settings](https://docs.cloud.google.com/generative-ai-app-builder/docs/parse-chunk-documents) as defined by Agent Search.
+Depending on the data source, you can configure [parse and chunk settings](https://docs.cloud.google.com/generative-ai-app-builder/docs/parse-chunk-documents) that Agent Search defines.
 
 ## Use Cloud Storage for a data store document
 
-If your content is not public, storing it in [Cloud Storage](https://docs.cloud.google.com/storage/docs) is the recommended option. When you create data store documents, you provide the URLs for your Cloud Storage objects in the form: `gs://bucket-name/folder-name`. Each document within the folder is added to the data store.
+If your content isn't public, we recommend storing it in [Cloud Storage](https://docs.cloud.google.com/storage/docs). When you create data store documents, you provide the URLs for your Cloud Storage objects in the form: `gs://bucket-name/folder-name`. Each document within the folder is added to the data store.
 
 When you create the Cloud Storage bucket:
 
-  * Select the project you use for the agent.
+  * Choose the project that you use for the agent.
   * Use the [Standard Storage class](https://docs.cloud.google.com/storage/docs/storage-classes#standard).
   * Set the [bucket location](https://docs.cloud.google.com/storage/docs/locations) to the same location as your agent.
 
 
 
-Follow the [Cloud Storage quickstart](https://docs.cloud.google.com/storage/docs/quickstart-console) to create a bucket and upload files.
+Create a bucket and upload files by using the [Cloud Storage quickstart](https://docs.cloud.google.com/storage/docs/quickstart-console).
 
 ## Languages
 
-For supported languages, see the data store column in the [language reference](https://docs.cloud.google.com/dialogflow/cx/docs/reference/language).
+For more information about supported languages, see the data store column in the [language reference](https://docs.cloud.google.com/dialogflow/cx/docs/reference/language).
 
 For best performance, create data stores in a single language.
 
-After creating a data store, you can optionally specify the data store language. If you set the data store language, you can connect the data store to an agent that is configured for a different language. For example, you can create a French data store that is connected to an English agent.
+After creating a data store, you can optionally specify the data store language. If you set the data store language, you can connect the data store to an agent that is configured for a different language. For example, you can create a French data store that's connected to an English agent.
 
 ## Supported regions
 
@@ -182,11 +182,11 @@ For information about supported regions, see the [region reference](https://docs
 
 ## (Restricted access) Additional data store sources
 
-Additional data store types are listed in the following table. They are available as restricted access features. You can fill out the [access request form](https://docs.google.com/forms/d/1ijB9VXrn9OVVhc_9ZLJaJ0cD_laPlXduAGCtHI2N-jY/viewform?edit_requested=true) to request access. Once approved, you will be able to see these options when you create a data store in Vertex AI Agent Builder.
+Additional data store types are listed in the following table. They are available as restricted access features. You can fill out the [access request form](https://docs.google.com/forms/d/1ijB9VXrn9OVVhc_9ZLJaJ0cD_laPlXduAGCtHI2N-jY/viewform?edit_requested=true) to request access. Once approved, you can see these options when you create a data store in Vertex AI Agent Builder.
 
 ### Third-party data store sources
 
-Data store source | Description  
+Data Store Source | Description  
 ---|---  
 [Box](https://www.box.com/home) | Import data from your organization's Box site.  
 [Confluence Cloud](https://developer.atlassian.com/cloud/confluence/) | Import data from your Confluence Cloud workspace.  
@@ -203,7 +203,7 @@ Data store source | Description
   
 ### Set up a third-party data store using a connector
 
-This section outlines the process of setting up a data store using third-party data. For instructions specific to each third-party data source, see the [Vertex AI Agent Builder documentation](https://docs.cloud.google.com/generative-ai-app-builder/docs/connect-third-party-data-source).
+This section explains how to set up a data store using third-party data. For instructions specific to each third-party data source, see the [Vertex AI Agent Builder documentation](https://docs.cloud.google.com/generative-ai-app-builder/docs/connect-third-party-data-source).
 
 #### Identity providers
 
@@ -218,7 +218,7 @@ Identity providers let you manage users, groups, and authentication. When you se
 
 **Third-party identity provider:**
 
-  * Users of the agent sign in using non-Google credentials, for example a Microsoft email address.
+  * Users of the agent sign in using non-Google credentials, for example, a Microsoft email address.
   * You must create a [Workforce Pool](https://docs.cloud.google.com/iam/docs/manage-workforce-identity-pools-providers) using Google Cloud containing the non-Google identity providers. You can then use [IAM](https://docs.cloud.google.com/support/docs/access-control) to grant access to either the entire pool or individual users within that pool.
   * This method can't be used with any Google Cloud projects set up under the `@google.com` organization.
 
@@ -244,26 +244,26 @@ Third-party data stores are implemented using a connector. Each connector can co
 
 This feature includes two parts:
 
-  1. Display of the data store internal execution tracings and step latencies in the agent simulator.
-  2. Export of the data store internal execution tracings and step latencies into Cloud Logging and BigQuery.
+  * Displays the data store internal execution tracings and step latencies in the agent simulator.
+  * Exports the data store internal execution tracings and step latencies into Cloud Logging and BigQuery.
 
 
 
 ### View data in the simulator
 
-To display tracing and execution data in the agent simulator, expand the details about a conversation turn by clicking on the expander arrow to the right of the agent's response.
+To display tracing and execution data in the agent simulator, expand the details about a conversation turn by clicking the expander arrow to the right of the agent's response.
 
-The **execution** tab displays the internal data store execution traces, including:
+The **execution** tab displays internal data store execution traces, including the following elements:
 
-  * The original user input.
-  * The query as rewritten by the data store engine.
-  * Quality signals from execution steps, such as security check status, stability check status, grounding check result, and safety check status.
-  * Search snippets from the data store search.
-  * The list of supporting documents for the snippets.
+  * Original user input.
+  * Query as rewritten by the data store engine.
+  * Quality signals from execution steps, including security check status, stability check status, grounding check result, and safety check status.
+  * Search snippets from data store search.
+  * List of supporting documents for snippets.
 
 
 
-The **latency** tab displays a time graph for various data store execution steps. The list of steps varies depending on how the data store is configured and the execution flow. Displayed data can include the following:
+The **latency** tab displays a time graph for various data store execution steps. The list of steps varies depending on how you configure the data store and the execution flow. The tab can display the following data:
 
   * **FAQ match:** Performs an FAQ matching step.
   * **Query rewriting:** Rewrites the original user query.
@@ -283,7 +283,7 @@ The **latency** tab displays a time graph for various data store execution steps
 
 ## What's next
 
-To learn how to create and use a data store with an agent, see the [data store tools documentation](https://docs.cloud.google.com/dialogflow/cx/docs/concept/data-store/handler).
+For more information about how to create and use a data store with an agent, see the [Data store tools documentation](https://docs.cloud.google.com/dialogflow/cx/docs/concept/data-store/handler).
 
 [ Previous arrow_back  Playbook evaluations  ](https://docs.cloud.google.com/dialogflow/cx/docs/concept/playbook/evaluation)
 
@@ -293,6 +293,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

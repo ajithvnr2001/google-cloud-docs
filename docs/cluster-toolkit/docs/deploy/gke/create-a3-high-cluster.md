@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/create-a3-high-cluster/
 title: Create an A3 High GKE cluster \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:45.265629+00:00
+fetched_at: 2026-10-21T12:23:11.411792+00:00
 ---
 
 # Create an A3 High GKE cluster  |  Cluster Toolkit  |  Google Cloud Documentation
@@ -42,7 +42,7 @@ To learn more about the A3 High accelerator-optimized machine type, see the [A3 
   3. Verify that you have enough GPU quotas. Each `a3-highgpu-8g` machine has 8 H100 80GB GPUs attached, so you need at least 8 NVIDIA H100 80GB GPUs in your selected region.
 
      1. To view quotas, see [View the quotas for your project](https://docs.cloud.google.com/docs/quotas/view-manage). In the filter_list **Filter** field, select **Dimensions (e.g. location)** and specify [`gpu_family:NVIDIA_H100_80GB`](https://docs.cloud.google.com/compute/resource-usage#gpu_quota).
-     2. If you don't have enough quota, [request a higher quota](https://docs.cloud.google.com/view-manage#requesting_higher_quota).
+     2. If you don't have enough quota, [request a higher quota](https://docs.cloud.google.com/docs/quotas/view-manage#requesting_higher_quota).
   4. Verify that you have enough Filestore quota. You need a minimum of 2560 GiB of Basic SSD capacity. If you don't have enough quota, [request a quota increase](https://docs.cloud.google.com/filestore/docs/requesting-quota-increases).
 
 
@@ -68,30 +68,19 @@ For more information about granting roles, see [Manage access to projects, folde
 
 You might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
 
-## Create an A3 High GKE cluster
-
-To deploy the cluster, you must complete the following:
-
-  1. Install Cluster Toolkit.
-  2. Create a reservation.
-  3. Create a cluster.
-  4. Clean up resources created by Cluster Toolkit.
-
-
-
-### Install Cluster Toolkit
+## Install Cluster Toolkit
 
 **Important:** If you use [Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell), the Cluster Toolkit dependencies are already pre-installed. If you are using an alternative to Cloud Shell, such as using a workstation that is running Linux or macOS, you must follow the instructions in [Install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies).
 
-If you are using Cloud Shell, then follow the instructions in [Set up Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment).
+If you're using Cloud Shell, then follow the instructions in [Set up Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment).
 
-If you are using an alternative to Cloud Shell, such as using a workstation that is running Linux or macOS, then follow the instructions in [Install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies).
+If you're using an alternative to Cloud Shell, such as using a workstation that is running Linux or macOS, then follow the instructions in [Install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies).
 
-### Create a reservation
+## Create a reservation
 
-Reservations help ensure that you have the available resources to create A3 High instances with the specified hardware (memory, vCPUs, and GPUs) and attached Local SSD disks whenever you need them. To review the different methods to reserve resources for creating compute instances, see [Choose a reservation type](https://docs.cloud.google.com/compute/docs/instances/choose-reservation-type). 
+For Slurm consumption options, see [Choose a consumption option](https://docs.cloud.google.com/ai-hypercomputer/docs/consumption-models). To see GKE consumption options for Cluster Toolkit, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options). 
 
-For example, to create an on-demand, specifically targeted reservation for A3 High instances, use the [`gcloud compute reservations create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/reservations/create) with the `--require-specific-reservation` flag: 
+To create a standard single-project reservation for A3 High instances, use the [`gcloud compute reservations create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/reservations/create) with the `--require-specific-reservation` flag: 
     
     
     gcloud compute reservations create RESERVATION_NAME \
@@ -113,7 +102,7 @@ Replace the following variables:
 
 After you destroy your cluster, you can delete the reservation if you don't need it anymore. For information, see [Delete reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-delete). 
 
-### Create an A3 High GKE cluster
+## Create a cluster
 
 If you create multiple clusters by using the Cluster Toolkit example blueprints, then verify that all VPC and subnet names are unique per project to prevent errors. To create the cluster, you do the following:
 
@@ -132,53 +121,45 @@ If you create multiple clusters by using the Cluster Toolkit example blueprints,
          gcloud storage buckets update gs://BUCKET_NAME --versioning
          
 
-Replace the following variables:
+Replace the following:
 
      * `BUCKET_NAME`: the name of the new Cloud Storage bucket.
      * `PROJECT_ID`: your Google Cloud project ID.
      * `COMPUTE_REGION_TERRAFORM_STATE`: the compute region where you want to store the state of the Terraform deployment.
-  3. To define your cluster specifications, create a local file named `gke-a3-highgpu-deployment.yaml` and copy the following deployment variables into it.
-         
-         terraform_backend_defaults:
-           type: gcs
-           configuration:
-             bucket: BUCKET_NAME
-         
-         vars:
-           deployment_name: DEPLOYMENT_NAME
-           project_id: PROJECT_ID
-           region: COMPUTE_REGION
-           zone: COMPUTE_ZONE
-           authorized_cidr: IP_ADDRESS/SUFFIX
-           reservation: RESERVATION_NAME
-           static_node_count: NODE_COUNT
-         
+  3. In the [`examples/gke-a3-highgpu/gke-a3-highgpu-deployment.yaml` blueprint from GitHub](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-highgpu/gke-a3-highgpu-deployment.yaml), replace the following variables in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
 
-Replace the following:
-
-     * `DEPLOYMENT_NAME`: a unique name for the deployment. If the deployment name isn't unique within a project, cluster creation fails.
-     * `BUCKET_NAME`: the name of the Cloud Storage bucket you created in the previous step.
+     * `BUCKET`: the name of the Cloud Storage bucket that you created in the previous step.
+     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, then cluster creation fails.
      * `PROJECT_ID`: your Google Cloud project ID.
-     * `COMPUTE_REGION`: the compute region for the cluster.
-     * `COMPUTE_ZONE`: the compute zone for the node pool of A3 High machines.
-     * `NODE_COUNT`: the number of A3 High nodes in your cluster.
-     * `IP_ADDRESS`/`SUFFIX`: The IP address range that connects to the cluster. This CIDR block must include the IP address of the machine running Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work). To get the IP address for your host machine, run the command `curl ifconfig.me`. 
-     * `RESERVATION_NAME`: the name of the reservation. Use one of the following options, depending on whether you want to target specific [blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/terminology#block) in a reservation when provisioning the node pool: 
-       * To place the node pool anywhere in the reservation, provide the name of your reservation.
-       * To target a specific block within your reservation, use the reservation and block names in the following format: 
+     * `REGION`: the compute region for the cluster.
+     * `ZONE`: the compute zone for the node pool of A3 High machines. This zone must match the zone where machines are available in your reservation.
+     * `AUTHORIZED_CIDR`: the IP address range that you want to let connect to the cluster. This CIDR block must include the IP address of the machine that calls Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work). To get the IP address for your host machine, run the `curl -s https://ifconfig.me` command.
+  4. Choose a consumption option for your GKE deployment:
+
+By default, the deployment file is configured to consume [standard or future reservations](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options#reservations). To use an alternative consumption model (such as on-demand capacity, Spot VMs, or flex-start provisioning mode), update your deployment YAML file. For more information, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options).
+
+To configure a reservation, set the following values in the specific reservation section:
+
+     * In the `reservation_affinity` block, in the `specific_reservations` list, specify the reservation `name` field:
+
+       * To place the node pool anywhere in the reservation, provide the name of your reservation (`RESERVATION_NAME`).
+       * To target a specific block within your reservation, use the reservation and block names in the following format:
              
              RESERVATION_NAME/reservationBlocks/BLOCK_NAME
-               
+             
 
-If you don't know which blocks are available in your reservation, see [View the topology of a reservation](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology). 
-  4. To modify advanced blueprint settings, edit the [`examples/gke-a3-highgpu/gke-a3-highgpu.yaml`](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-highgpu/gke-a3-highgpu.yaml) file in the repository.
+If you don't know which blocks are available in your reservation, then see [View the topology of a reservation](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology).
+
+     * `STATIC_NODE_COUNT`: the number of A3 High nodes in your cluster.
+
+To modify advanced settings, edit the [`examples/gke-a3-highgpu/gke-a3-highgpu.yaml` blueprint from GitHub](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-highgpu/gke-a3-highgpu.yaml).
 
   5. Use the [`gcluster deploy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-deploy) to deploy the blueprint and provision the GKE infrastructure that uses A3 High machine types:
          
          cd ~/cluster-toolkit
          ./gcluster deploy -d \
-         gke-a3-highgpu-deployment.yaml \
-         examples/gke-a3-highgpu/gke-a3-highgpu.yaml
+             examples/gke-a3-highgpu/gke-a3-highgpu-deployment.yaml \
+             examples/gke-a3-highgpu/gke-a3-highgpu.yaml
          
 
   6. When prompted, select **(A)pply** to deploy the blueprint. The blueprint creates VPC networks, service accounts, a cluster, and a node pool.
@@ -186,13 +167,205 @@ If you don't know which blocks are available in your reservation, see [View the 
 
 
 
-### Test network performance
+## Run Dynamic Workload Scheduler sample Jobs
 
-We recommend that you validate the functionality of provisioned clusters. To do so, use [NCCL/gIB tests](https://docs.cloud.google.com/ai-hypercomputer/docs/nccl/test-gke), which are [NVIDIA Collective Communications Library (NCCL) tests](https://developer.nvidia.com/nccl) that are optimized for the Google environment.
+If you provisioned your cluster using Dynamic Workload Scheduler (either flex-start or queued provisioning), then you can validate workload scheduling by submitting sample Kubernetes Jobs.
 
-### Clean up resources created by Cluster Toolkit
+For more information about Dynamic Workload Scheduler provisioning modes, see [Dynamic Workload Scheduler flex-start with queued provisioning](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options#dws-queued-provisioning).
 
-To avoid recurring charges for the resources used on this page, use the [`gcluster destroy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-destroy) to clean up the resources provisioned by Cluster Toolkit, including the VPC networks and GKE cluster:
+### Submit a sample Job
+
+This task is optional and applies only if you provisioned your cluster with flex-start or queued provisioning. Select the tab that corresponds to your consumption option:
+
+### Flex-start
+
+Workloads configured for flex-start require the `cloud.google.com/gke-flex-start: "true"` node selector in their Pod specification.
+
+  1. Submit the sample flex-start Job:
+         
+         kubectl apply -f examples/dws-sample-workloads/sample-job-flex.yaml
+         
+
+  2. Monitor the status of your Job and Pods:
+         
+         kubectl get jobs
+         kubectl describe job JOB_NAME
+         kubectl get pods
+         kubectl describe pod POD_NAME
+         
+
+Replace the following:
+
+     * `JOB_NAME`: the name of your Job.
+     * `POD_NAME`: the name of your Pod.
+
+The output of `kubectl get pods` command is similar to the following:
+    
+    NAME    READY   STATUS      RESTARTS   AGE   IP       NODE               NOMINATED NODE   READINESS GATES
+    job-1   0/1     Completed   0          19m   10.(...) gke-flex-zonal-a2  <none>           <none>
+    job-2   0/1     Completed   0          19m   10.(...) gke-flex-zonal-a2  <none>           <none>
+    
+
+  3. When the Job completes, delete the Job resources:
+         
+         kubectl delete -f examples/dws-sample-workloads/sample-job-flex.yaml
+         
+
+
+
+
+### Queued provisioning
+
+Workloads configured for queued provisioning require the following label and annotation in their Pod specification:
+
+  * Label: `kueue.x-k8s.io/queue-name: dws-local-queue`
+  * Annotation: `provreq.kueue.x-k8s.io/maxRunDurationSeconds: "MAX_RUN_DURATION"`
+
+
+
+For more information, see [Workload manifest requirements for queued provisioning](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options#queued-provisioning-manifest).
+
+  1. Submit the sample queued provisioning Job:
+         
+         kubectl apply -f examples/dws-sample-workloads/sample-job-flex-queue.yaml
+         
+
+  2. Monitor the status of your Job and Pods:
+         
+         kubectl get jobs
+         kubectl describe job JOB_NAME
+         kubectl get pods
+         kubectl describe pod POD_NAME
+         
+
+Replace the following:
+
+     * `JOB_NAME`: the name of your Job.
+     * `POD_NAME`: the name of your Pod.
+
+The output of `kubectl describe job` command is similar to the following:
+    
+    Events:
+    Type    Reason            Age    From                        Message
+    ----    ------            ----   ----                        -------
+    Normal  Suspended         5m17s  job-controller              Job suspended
+    Normal  CreatedWorkload   5m17s  batch/job-kueue-controller  Created Workload: default/job-sample-job-7f173
+    Normal  Started           3m27s  batch/job-kueue-controller  Admitted by clusterQueue dws-cluster-queue
+    Normal  SuccessfulCreate  3m27s  job-controller              Created pod: sample-job-9qsfd
+    Normal  Resumed           3m27s  job-controller              Job resumed
+    Normal  Completed         12s    job-controller              Job completed
+    
+
+  3. When the Job completes, delete the Job resources:
+         
+         kubectl delete -f examples/dws-sample-workloads/sample-job-flex-queue.yaml
+         
+
+
+
+
+## Test network performance
+
+Validate the networking performance and GPU communication of your provisioned clusters by running GPUDirect-TCPX with [NCCL tests](https://developer.nvidia.com/nccl), which are optimized for A3 High VM instances in Google Cloud.
+
+Select the tab for your cluster provisioning model:
+
+### Standard
+
+For clusters that are provisioned with standard or future reservations, Spot VMs, or on-demand capacity, run the standard NCCL test manifest:
+
+  1. Deploy the NCCL test manifest:
+         
+         kubectl apply -f examples/gke-a3-highgpu/nccl-test.yaml
+         
+
+  2. Monitor the test Pods:
+         
+         kubectl get pods
+         
+
+  3. Inspect the benchmark results in the Pod logs:
+         
+         kubectl logs POD_NAME
+         
+
+Replace `POD_NAME` with the name of the NCCL test Pod.
+
+  4. When the test completes and Pods show a `Completed` status, clean up the test resources:
+         
+         kubectl delete -f examples/gke-a3-highgpu/nccl-test.yaml
+         
+
+For more information, see [Optimize cluster networking by using NCCL/gIB](https://docs.cloud.google.com/ai-hypercomputer/docs/nccl/overview).
+
+
+
+
+### Flex-start
+
+For clusters that are configured with Dynamic Workload Scheduler flex-start, deploy the NCCL test by using the JobSet manifest:
+
+  1. Deploy the NCCL test JobSet:
+         
+         kubectl create -f examples/gke-a3-highgpu/nccl-jobset-flex.yaml
+         
+
+  2. Monitor the status of the JobSet Pods:
+         
+         kubectl get pods
+         
+
+  3. Inspect the benchmark results in the primary JobSet Pod logs:
+         
+         kubectl logs JOBSET_POD_NAME
+         
+
+Replace `JOBSET_POD_NAME` with the name of the primary JobSet Pod.
+
+  4. When the test completes and Jobs show a `Completed` status, clean up the test resources:
+         
+         kubectl delete -f examples/gke-a3-highgpu/nccl-jobset-flex.yaml
+         
+
+For more information, see [Optimize cluster networking by using NCCL/gIB](https://docs.cloud.google.com/ai-hypercomputer/docs/nccl/overview).
+
+
+
+
+### Queued provisioning
+
+For clusters that are configured with flex-start with queued provisioning, deploy the NCCL test by using the queued provisioning JobSet manifest:
+
+  1. Deploy the NCCL test JobSet:
+         
+         kubectl create -f examples/gke-a3-highgpu/nccl-jobset-flex-queue.yaml
+         
+
+  2. Monitor the status of the JobSet Pods:
+         
+         kubectl get pods
+         
+
+  3. Inspect the benchmark results in the primary JobSet Pod logs:
+         
+         kubectl logs JOBSET_POD_NAME
+         
+
+Replace `JOBSET_POD_NAME` with the name of the primary JobSet Pod.
+
+  4. When the test completes and Jobs show a `Completed` status, clean up the test resources:
+         
+         kubectl delete -f examples/gke-a3-highgpu/nccl-jobset-flex-queue.yaml
+         
+
+For more information, see [Optimize cluster networking by using NCCL/gIB](https://docs.cloud.google.com/ai-hypercomputer/docs/nccl/overview).
+
+
+
+
+## Clean up resources created by Cluster Toolkit
+
+To avoid recurring charges for the resources used on this page, clean up the resources provisioned by Cluster Toolkit, including the VPC networks and GKE cluster:
     
     
     cd ~/cluster-toolkit
@@ -201,10 +374,19 @@ To avoid recurring charges for the resources used on this page, use the [`gclust
 
 Replace `CLUSTER_NAME` with the name of your cluster. For the clusters created with Cluster Toolkit, the cluster names are based on the `DEPLOYMENT_NAME` name.
 
+## What's next
+
+  * To learn about scheduling workloads on your GKE clusters by using Topology-Aware Scheduling (TAS) and Kueue, see [Schedule GKE workloads with Topology Aware Scheduling](https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/schedule-gke-workloads-tas).
+  * To learn about managing common events that are relevant to GKE clusters and AI workloads, see [Manage AI-optimized GKE clusters](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/manage-gke-clusters).
+  * For information about testing your environment for proper setup and optimization, see [Cluster networking optimization overview](https://docs.cloud.google.com/ai-hypercomputer/docs/nccl/overview).
+  * To explore all supported consumption models for GKE clusters, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options).
+
+
+
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

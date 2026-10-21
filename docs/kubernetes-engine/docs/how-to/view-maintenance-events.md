@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/view-maintenance-events/
 title: Monitor maintenance events \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:25:23.530476+00:00
+fetched_at: 2026-10-21T12:23:02.390413+00:00
 ---
 
 # Monitor maintenance events  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -41,16 +41,17 @@ Compute Engine issues [notifications](https://docs.cloud.google.com/compute/docs
 
 ### View upcoming maintenance on GKE
 
-On GKE version 1.31.1-gke.2008000 and later, and for specific machine types, you can monitor upcoming maintenance events.
+You can monitor upcoming maintenance events on GKE for specific machine types. The following table lists the supported machine types and the minimum required GKE version for each:
 
-  * For machine types with GPUs or TPUs attached, 1.31.1-gke.2008000 or later.
-  * For H4D machine types, 1.32.6-gke.1060000 or later.
-  * For `c4a-highmem-96-metal`, 1.35.0-gke.2232000 or later.
-  * For Z3 machine types with more than 18 TiB of Titanium SSD, 1.32.4-gke.1376000 or later.
-  * For Z4D machine types with more than 41 TiB of attached Titanium SSD, 1.36.3-gke.1244000 or later.
-
-
-
+Machine type | Minimum GKE version  
+---|---  
+Machine types with GPUs or TPUs attached | 1.31.1-gke.2008000 or later  
+H4D machine types | 1.32.6-gke.1060000 or later  
+`c4a-highmem-96-metal` | 1.35.0-gke.2232000 or later  
+Z3 machine types with more than 18 TiB of Titanium SSD | 1.32.4-gke.1376000 or later  
+Z4D machine types with more than 42 TiB of attached Titanium SSD | 1.36.3-gke.1244000 or later  
+Z4M machine types with more than 48 TiB of attached Titanium SSD, or any Z4M instances that use Cloud RDMA | 1.36.3-gke.1767000 or later  
+  
 To view upcoming maintenance events, you can do any of the following:
 
   * Query notifications at the node level. To do so, run the following command:
@@ -148,6 +149,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

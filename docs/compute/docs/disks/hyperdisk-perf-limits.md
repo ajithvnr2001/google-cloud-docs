@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/hyperdisk-perf-limits/
 title: Performance limits for machine series that support Hyperdisk \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:22:09.463367+00:00
+fetched_at: 2026-10-21T12:22:31.730744+00:00
 ---
 
 # Performance limits for machine series that support Hyperdisk  |  Compute Engine  |  Google Cloud Documentation
@@ -68,7 +68,7 @@ The performance limits also apply to [custom N2, N2D, N4, N4A, and N4D machine t
 
 Select a machine series to display the performance limits for its machine types.
 
-A2A3 (H100)A3 (H200)A4A4XA4X MaxC3C3DC4C4AC4DC4NG2G4H3H4DM1M2M3M4M4NN2N2DN4N4AN4DT2DTPU v6eTPU7xX4X5Z3Z4DInstance machine type | Maximum IOPS | Maximum throughput (MiB/s)  
+A2A3 (H100)A3 (H200)A4A4XA4X MaxC3C3DC4C4AC4DC4NG2G4H3H4DM1M2M3M4M4NN2N2DN4N4AN4DT2DTPU v6eTPU7xX4X5Z3Z4DZ4MInstance machine type | Maximum IOPS | Maximum throughput (MiB/s)  
 ---|---|---  
 A2   
 `a2-ultragpu-1g` | 30,000 | 1,800  
@@ -312,6 +312,12 @@ Z4D 1
 `z4d-*-96`1 | 350,000 | 6,250  
 `z4d-*-192`1 | 500,000 | 12,500  
 `z4d-*-384`1 | 1,000,000 | 25,000  
+Z4M 1  
+`z4m-*-16`1 | 75,000 | 1,600  
+`z4m-*-32`1 | 100,000 | 2,100  
+`z4m-*-48`1 | 125,000 | 3,125  
+`z4m-*-192`1 | 500,000 | 12,500  
+`z4m-*-192-metal`1 | 500,000 | 12,500  
   
 1 Also offers steady state performance. For these limits, see Performance limits for machine types with steady state performance.  
 2 The actual throughput limits are 240 MB/s for read operations and 204 MB/s for write operations.  
@@ -401,6 +407,12 @@ Z4D
 `z4d-*-96` | 250,000 | 6,250| 350,000 | 6,250  
 `z4d-*-192` | 500,000 | 12,500| 500,000 | 12,500  
 `z4d-*-384` | 1,000,000 | 25,000| 1,000,000 | 25,000  
+Z4M   
+`z4m-*-16` | 41,667 | 1,040| 75,000 | 1,600  
+`z4m-*-32` | 83,333 | 2,083| 100,000 | 2,100  
+`z4m-*-48` | 125,000 | 3,125| 125,000 | 3,125  
+`z4m-*-192` | 500,000 | 12,500| 500,000 | 12,500  
+`z4m-*-192-metal` | 500,000 | 12,500| 500,000 | 12,500  
   
 ## Performance limits by Hyperdisk type
 
@@ -420,9 +432,7 @@ This section lists the maximum performance that Hyperdisk Balanced volumes can a
 
 #### Achieve higher performance with multiple Hyperdisk Balanced volumes
 
-Certain instances can exceed the maximum performance for a single Hyperdisk Balanced volume— 160,000 IOPS or 2,400 MiB per second (MiB/s). An instance can only achieve these higher limits if you attach multiple Hyperdisk Balanced volumes to the instance. 
-
-If an instance's performance limit in the following table exceeds 160,000 IOPS or 2,400 MiB/s, then the instance can only achieve that limit if you attach multiple Hyperdisk Balanced volumes. For example, the performance limit for a `c4a-*-72` instance using Hyperdisk Balanced is 240,000 IOPS and 5,000 MiB/s. To achieve this maximum performance you must attach at least two Hyperdisk Balanced volumes to the instance. 
+If an instance's performance limit exceeds 160,000 IOPS or 2,400 MiB/s, then the instance can only achieve that limit if you attach multiple Hyperdisk Balanced volumes. For example, the performance limit for a `c4a-*-72` instance using Hyperdisk Balanced is 240,000 IOPS and 5,000 MiB/s. To achieve this maximum performance you must attach at least two Hyperdisk Balanced volumes to the instance. 
 
 To learn more about Hyperdisk Balanced, see [About Hyperdisk Balanced](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced).
 
@@ -624,9 +634,15 @@ Z4D 1
 `z4d-*-96`1 | 160,000 | 6,250  
 `z4d-*-192`1 | 320,000 | 12,500  
 `z4d-*-384`1,2 | 640,000 | 25,000  
+Z4M 1  
+`z4m-*-16`1 | 75,000 | 1,600  
+`z4m-*-32`1 | 100,000 | 2,100  
+`z4m-*-48`1 | 125,000 | 3,125  
+`z4m-*-192`1,2 | 320,000 | 12,500  
+`z4m-*-192-metal`1,2 | 320,000 | 12,500  
   
 1 Also offers steady state performance. For more information, see [Performance limits for machine types with steady state performance](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-perf-limits#steady-state).  
-2 The disk performance for this machine type depends on having 2 network interfaces (vNIC). Compute Engine automatically maps attached disks to a physical NIC in a balanced round-robin fashion.  
+2 The disk performance for this machine type is based on having 2 physical NICs per instance. Compute Engine automatically maps attached disks to a physical NIC in a balanced round-robin fashion.  
 
 
 ### Hyperdisk Balanced High Availability performance limits
@@ -778,12 +794,6 @@ X5
 `x5-1376-*-metal` | 640,000 | 20,000  
 `x5-2064-*-metal` | 640,000 | 20,000  
 Z3   
-`z3-*-8` | 50,000 | 800  
-`z3-*-14` | 100,000 | 1,600  
-`z3-*-16` | 100,000 | 1,600  
-`z3-*-22` | 120,000 | 1,800  
-`z3-*-32` | 160,000 | 2,400  
-`z3-*-44` | 160,000 | 2,400  
 `z3-*-88` | 160,000 | 4,800  
 `z3-*-176` | 160,000 | 4,800  
 Z4D 1  
@@ -795,9 +805,15 @@ Z4D 1
 `z4d-*-96`1 | 160,000 | 6,250  
 `z4d-*-192`1 | 320,000 | 12,500  
 `z4d-*-384`1,2 | 640,000 | 25,000  
+Z4M 1  
+`z4m-*-16`1 | 75,000 | 1,600  
+`z4m-*-32`1 | 100,000 | 2,100  
+`z4m-*-48`1 | 125,000 | 3,125  
+`z4m-*-192`1,2 | 320,000 | 12,500  
+`z4m-*-192-metal`1,2 | 320,000 | 12,500  
   
 1 Also offers steady state performance. For more information, see [Performance limits for machine types with steady state performance](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-perf-limits#steady-state).  
-2 The disk performance for this machine type depends on having 2 network interfaces (vNIC). Compute Engine automatically maps attached disks to a physical NIC in a balanced round-robin fashion.  
+2 The disk performance for this machine type is based on having 2 physical NICs per instance. Compute Engine automatically maps attached disks to a physical NIC in a balanced round-robin fashion.  
 
 
 ### Hyperdisk Extreme performance limits
@@ -832,7 +848,7 @@ A4X Max 2
 C3 1  
 `c3-*-88`1 | 350,000 | 5,000  
 `c3-*-176`1 | 500,000 | 10,000  
-`c3-*-192-metal` | 500,000 | 10,000  
+`c3-*-192-metal`1 | 500,000 | 10,000  
 C3D   
 `c3d-*-60`1 | 350,000 | 5,000  
 `c3d-*-90`1 | 350,000 | 5,000  
@@ -889,27 +905,32 @@ N2
 `n2-*-96` | 160,000 | 5,000  
 `n2-*-128` | 160,000 | 5,000  
 X4   
-`x4-480-*-metal` | 400,000 | 10,000  
-`x4-960-*-metal` | 400,000 | 10,000  
-`x4-1440-24t-metal` | 400,000 | 10,000  
-`x4-1920-32t-metal` | 400,000 | 10,000  
+`x4-480-*-metal`1 | 400,000 | 10,000  
+`x4-960-*-metal`1 | 400,000 | 10,000  
+`x4-1440-24t-metal`1 | 400,000 | 10,000  
+`x4-1920-32t-metal`1 | 400,000 | 10,000  
 X5   
-`x5-688-*-metal` | 1,000,000 | 25,000  
-`x5-1376-*-metal` | 1,000,000 | 25,000  
-`x5-2064-48t-metal` | 1,000,000 | 25,000  
+`x5-480-*-metal` | 1,000,000 | 20,000  
+`x5-960-*-metal`1 | 1,000,000 | 20,000  
+`x5-1440-24t-metal`1 | 1,000,000 | 20,000  
+`x5-1920-32t-metal`1 | 1,000,000 | 25,000  
 Z3 1  
 `z3-*-88`1 | 350,000 | 5,000  
 `z3-*-176`1 | 350,000 | 5,000  
-`z3-*-192-metal` | 500,000 | 10,000  
-Z4D 1  
-`z4d-*-64`1 | 200,000 | 5,000  
-`z4d-*-96`1 | 250,000 | 6,250  
-`z4d-*-192`1 | 500,000 | 12,500  
-`z4d-*-384`1,2 | 1,000,000 | 25,000  
+`z3-*-192-metal`1 | 500,000 | 10,000  
+Z4D 2  
+`z4d-*-64`2 | 200,000 | 5,000  
+`z4d-*-96`2 | 250,000 | 6,250  
+`z4d-*-192`2 | 500,000 | 12,500  
+`z4d-*-384`2,3 | 1,000,000 | 25,000  
+Z4M 2  
+`z4m-*-48`2 | 125,000 | 3,125  
+`z4m-*-192`2,3 | 500,000 | 12,500  
+`z4m-*-192-metal`2,3 | 500,000 | 12,500  
   
 1 If using Hyperdisk Extreme with an instance that uses Microsoft Windows, refer to the [known issues for Windows VM instances](https://docs.cloud.google.com/compute/docs/troubleshooting/known-issues#known_issues_for_windows_vm_instances).  
 2 Also offers steady state performance. For more information, see [Performance limits for machine types with steady state performance](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-perf-limits#steady-state).  
-3 The disk performance for this machine type depends on having 2 network interfaces (vNIC). Compute Engine automatically maps attached disks to a physical NIC in a balanced round-robin fashion.  
+3 The disk performance for this machine type is based on having 2 physical NICs per instance. Compute Engine automatically maps attached disks to a physical NIC in a balanced round-robin fashion.  
 
 
 ### Hyperdisk ML performance limits
@@ -1009,7 +1030,7 @@ C4N 1
 `c4n-*-24`1 | 51,200 | 3,200  
 `c4n-*-48`1 | 100,000 | 6,250  
 `c4n-*-96`1 | 160,000 | 10,000  
-`c4n-*-192`1 | 320,000 | 20,000  
+`c4n-*-192`1,2 | 320,000 | 20,000  
 G2   
 `g2-standard-4` | 12,800 | 800  
 `g2-standard-8` | 19,200 | 1,200  
@@ -1084,18 +1105,24 @@ X5
 `x5-688-*-metal` | 320,000 | 20,000  
 `x5-1376-*-metal` | 320,000 | 20,000  
 `x5-2064-*-metal` | 320,000 | 20,000  
-Z4D   
-`z4d-*-8` | 12,800 | 800  
-`z4d-*-16` | 19,200 | 1,200  
-`z4d-*-32` | 33,600 | 2,100  
-`z4d-*-48` | 51,200 | 3,200  
-`z4d-*-64` | 67,200 | 4,200  
-`z4d-*-96` | 100,000 | 6,250  
-`z4d-*-192` | 200,000 | 12,500  
-`z4d-*-384`2 | 400,000 | 25,000  
+Z4D 1  
+`z4d-*-8`1 | 12,800 | 800  
+`z4d-*-16`1 | 19,200 | 1,200  
+`z4d-*-32`1 | 33,600 | 2,100  
+`z4d-*-48`1 | 51,200 | 3,200  
+`z4d-*-64`1 | 67,200 | 4,200  
+`z4d-*-96`1 | 100,000 | 6,250  
+`z4d-*-192`1 | 200,000 | 12,500  
+`z4d-*-384`1,2 | 400,000 | 25,000  
+Z4M 1  
+`z4m-*-16`1 | 25,600 | 1,600  
+`z4m-*-32`1 | 33,600 | 2,100  
+`z4m-*-48`1 | 50,000 | 3,125  
+`z4m-*-192`1,2 | 200,000 | 12,500  
+`z4m-*-192-metal`1,2 | 200,000 | 12,500  
   
 1 Also offers steady state performance. For more information, see [Performance limits for machine types with steady state performance](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-perf-limits#steady-state).  
-2 The disk performance for this machine type depends on having 2 network interfaces (vNIC). Compute Engine automatically maps attached disks to a physical NIC in a balanced round-robin fashion.  
+2 The disk performance for this machine type is based on having 2 physical NICs per instance. Compute Engine automatically maps attached disks to a physical NIC in a balanced round-robin fashion.  
 
 
 ### Hyperdisk Throughput performance limits
@@ -1307,18 +1334,24 @@ Z3
 `z3-*-44` | 7,200 | 1,800  
 `z3-*-88` | 9,600 | 2,400  
 `z3-*-176` | 9,600 | 2,400  
-Z4D   
-`z4d-*-8` | 3,200 | 800  
-`z4d-*-16` | 4,800 | 1,200  
-`z4d-*-32` | 8,400 | 2,100  
-`z4d-*-48` | 12,800 | 3,200  
-`z4d-*-64` | 16,800 | 4,200  
-`z4d-*-96` | 25,000 | 6,250  
-`z4d-*-192` | 50,000 | 12,500  
-`z4d-*-384`2 | 100,000 | 25,000  
+Z4D 1  
+`z4d-*-8`1 | 3,200 | 800  
+`z4d-*-16`1 | 4,800 | 1,200  
+`z4d-*-32`1 | 8,400 | 2,100  
+`z4d-*-48`1 | 12,800 | 3,200  
+`z4d-*-64`1 | 16,800 | 4,200  
+`z4d-*-96`1 | 25,000 | 6,250  
+`z4d-*-192`1 | 50,000 | 12,500  
+`z4d-*-384`1,2 | 100,000 | 25,000  
+Z4M 1  
+`z4m-*-16`1 | 6,400 | 1,600  
+`z4m-*-32`1 | 8,400 | 2,100  
+`z4m-*-48`1 | 12,500 | 3,125  
+`z4m-*-192`1,2 | 50,000 | 12,500  
+`z4m-*-192-metal`1,2 | 50,000 | 12,500  
   
 1 Also offers steady state performance. For more information, see [Performance limits for machine types with steady state performance](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-perf-limits#steady-state).  
-2 The disk performance for this machine type depends on having 2 network interfaces (vNIC). Compute Engine automatically maps attached disks to a physical NIC in a balanced round-robin fashion.  
+2 The disk performance for this machine type is based on having 2 physical NICs per instance. Compute Engine automatically maps attached disks to a physical NIC in a balanced round-robin fashion.  
 
 
 ## Hyperdisk size and attachment limits per instance
@@ -1418,6 +1451,7 @@ machine types
 
   * [Z3](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z3_disks)
   * [Z4D](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4d_disks)
+  * [Z4M](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4m_disks)
 
 | 
 
@@ -1460,6 +1494,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

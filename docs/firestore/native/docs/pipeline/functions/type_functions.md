@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/pipeline/functions/type_functions/
 title: Type Functions Reference \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:24:40.077148+00:00
+fetched_at: 2026-10-21T11:58:21.058679+00:00
 ---
 
 # Type Functions Reference  |  Firestore in Native mode  |  Google Cloud Documentation
@@ -46,19 +46,23 @@ If given an absent value, returns `NULL`.
 
 `input` | `type(input)`  
 ---|---  
-NULL | "null"  
-true | "boolean"  
-1 | "int32"  
--3L | "int64"  
-3.14 | "float64"  
-2024-01-01T00:00:00Z UTC | "timestamp"  
-"foo" | "string"  
-b"foo" | "bytes"  
-[1, 2] | "array"  
-{"a": 1} | "map"  
-`path("c/d")` | "reference"  
-`vector([1.0, 2.0])` | "vector"  
-ABSENT | NULL  
+NULL | `"null"`  
+true | `"boolean"`  
+1 | `"int32"`  
+-3L | `"int64"`  
+3.14 | `"float64"`  
+2024-01-01T00:00:00Z UTC | `"timestamp"`  
+"foo" | `"string"`  
+b"foo" | `"bytes"`  
+[1, 2] | `"array"`  
+{"a": 1} | `"map"`  
+`path("c/d")` | `"reference"`  
+`vector([1.0, 2.0])` | `"vector"`  
+`object_id "a7f2c9d18b3e4509f67c12d8"` | `"object_id"`  
+`1.2e9m` | `"decimal128"`  
+`regex "/pattern/i"` | `"regex"`  
+`bson_timestamp(1732754912, 500)` | `"bson_timestamp"`  
+ABSENT | `NULL`  
   
 **Client examples**
 
@@ -151,7 +155,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_comparison.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/pipeline_snippets_comparison.go#L123-L128)
+    [pipeline_snippets_comparison.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_comparison.go#L123-L128)
 
 ### IS_TYPE
 
@@ -215,6 +219,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

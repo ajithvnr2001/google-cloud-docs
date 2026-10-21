@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/register-and-manage-an-adk-agent/
 title: Register and manage ADK agents hosted on Agent Runtime \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:46:17.620478+00:00
+fetched_at: 2026-10-21T12:01:39.104549+00:00
 ---
 
 # Register and manage ADK agents hosted on Agent Runtime  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -489,10 +489,21 @@ Refer to the following table for compatibility requirements:
 `us` | Any region starting with `us-`, such as `us-central1` or `us-east4`  
 `eu` | Any region starting with `europe-`, such as `europe-west1` or `europe-west3`  
   
+## Best practices for performance and reliability
+
+To minimize response latency and prevent request timeouts when running ADK agents hosted on Agent Runtime in Gemini Enterprise, follow these best practices:
+
+  * **Minimize sequential multi-agent hops and redundant summarization** : Each additional sub-agent handoff or tool round-trip adds model inference latency to the turn. Avoid deep sequential agent chains, and wrap sub-agents with `AgentTool(..., skip_summarization=True)` when the parent agent doesn't need to run an extra model pass to re-summarize a sub-agent's output.
+  * **Configure runtime scaling and concurrency for multi-user workloads** : To prevent cold-start delays, request queuing, and out-of-memory (`OOM`) crashes when multiple users query your agent concurrently, configure `min_instances`, `resource_limits` (`cpu` and `memory`), and `container_concurrency` when deploying to Agent Runtime. For more information, see [Optimize and scale Agent Runtime performance](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/optimize-and-scale).
+  * **Pin matching package versions between local build and cloud runtime** : When deploying an agent to Agent Runtime, pin the exact same versions of `google-adk`, `google-cloud-aiplatform`, and `cloudpickle` in your deployment `requirements` list that you use in your local build environment to avoid deserialization overhead and initialization delays.
+  * **Use the`global` endpoint for model calls and bound tool retries**: When your ADK agent invokes Gemini models on Vertex AI, use the `global` endpoint (or Provisioned Throughput) to reduce regional capacity contention, and configure explicit connection timeouts and bounded retry limits on external tool calls so slow downstream dependencies don't cause cascading turn timeouts.
+
+
+
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/working-with-managed-instances/
 title: Work with managed instances \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:06:26.875124+00:00
+fetched_at: 2026-10-21T12:01:41.187705+00:00
 ---
 
 # Work with managed instances  |  Compute Engine  |  Google Cloud Documentation
@@ -141,7 +141,7 @@ When you delete managed instances, the MIG reduces the `targetSize` of the group
 
 If you set up a [stateful MIG](https://docs.cloud.google.com/compute/docs/instance-groups/stateful-migs), then the MIG deletes the instances' preserved state configurations. The MIG also removes the instances from any [target pools](https://docs.cloud.google.com/compute/docs/load-balancing/network/target-pools) of which they are a member.
 
-If the group is part of a [backend service](https://docs.cloud.google.com/compute/docs/load-balancing/http/backend-service) that has [enabled connection draining](https://docs.cloud.google.com/compute/docs/load-balancing/enabling-connection-draining), it can take up to an additional 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted.
+If the group is part of a [backend service](https://docs.cloud.google.com/compute/docs/load-balancing/http/backend-service) that has [enabled connection draining](https://docs.cloud.google.com/compute/docs/load-balancing/enabling-connection-draining), then it can take up to an additional 60 seconds after the connection draining period finishes before the compute instance is removed or deleted.
 
 To delete a managed instance, you can:
 
@@ -176,7 +176,7 @@ The MIG considers these factors together to select the most suitable instances f
 
 Use this method to update selected VMs so that they use the group's latest [VM configuration components](https://docs.cloud.google.com/compute/docs/instance-groups/updating-migs#vm_configuration_components). If you need to recreate all of the VMs in a managed instance group, start a [rolling update](https://docs.cloud.google.com/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups) instead.
 
-If the group is part of a [backend service](https://docs.cloud.google.com/compute/docs/load-balancing/http/backend-service) that has [enabled connection draining](https://docs.cloud.google.com/compute/docs/load-balancing/enabling-connection-draining), it can take up to an additional 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted.
+If the group is part of a [backend service](https://docs.cloud.google.com/compute/docs/load-balancing/http/backend-service) that has [enabled connection draining](https://docs.cloud.google.com/compute/docs/load-balancing/enabling-connection-draining), then it can take up to an additional 60 seconds after the connection draining period finishes before the compute instance is removed or deleted.
 
 Recreate selected VM instances in a managed instance group using the [gcloud CLI](https://docs.cloud.google.com/compute/docs/gcloud-compute), or [REST](https://docs.cloud.google.com/compute/docs/reference/latest/instanceGroupManagers).
 
@@ -238,6 +238,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

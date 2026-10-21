@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/managing-datasets/
 title: Manage datasets \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:44:21.094969+00:00
+fetched_at: 2026-10-21T12:00:35.471674+00:00
 ---
 
 # Manage datasets  |  BigQuery  |  Google Cloud Documentation
@@ -873,7 +873,7 @@ Install the [Python client for the BigQuery Data Transfer API](https://docs.clou
     require "google/cloud/bigquery"
     
     def delete_dataset dataset_id = "my_empty_dataset"
-      bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-data_policies-v1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html)
+      bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-reservation-v1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html)
     
       # Delete a dataset that does not contain any tables
       dataset = bigquery.dataset dataset_id
@@ -900,7 +900,7 @@ The following code sample deletes a dataset and all of its contents:
     require "google/cloud/bigquery"
     
     def delete_dataset_and_contents dataset_id = "my_dataset_with_tables"
-      bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-data_policies-v1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html)
+      bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-reservation-v1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html)
     
       # Use the force parameter to delete a dataset and its contents
       dataset = bigquery.dataset dataset_id

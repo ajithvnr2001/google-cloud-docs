@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/overview/
 title: Config Sync overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:20:20.030001+00:00
+fetched_at: 2026-10-21T12:22:47.693186+00:00
 ---
 
 # Config Sync overview  |  Google Cloud Documentation
@@ -36,13 +36,16 @@ This page is for Operators who want to implement [GitOps](https://opengitops.dev
 
 For information about pricing, see [GKE pricing](https://cloud.google.com/kubernetes-engine/pricing). 
 
-## Benefits of Config Sync
+## Why choose Config Sync for GitOps on GKE?
 
-Config Sync provides the following key GitOps advantages for managing your Kubernetes clusters:
+Although all GitOps tools provide benefits like improved stability and consistency, Config Sync provides a set of unique advantages:
 
-  * **Consistency across environments** : By using a central source of truth like a Git repository, you can ensure that your cluster configurations and policies remain stable and consistent across all your environments.
-  * **Automated reconciliation** : Config Sync continuously monitors your source of truth and automatically reconciles the state of your clusters to match it, preventing configuration drift and saving manual effort.
-  * **Version-controlled configuration** : Storing your Kubernetes manifests in Git lets you leverage standard version-control workflows, including peer reviews, audit trails, and easy rollbacks. 
+  * **Integration with GKE and other Google Cloud products** : Config Sync is compatible with the Google Cloud console, Terraform, or Google Cloud CLI. Config Sync extends the functionality of GKE and works well with services like Policy Controller, Workload Identity Federation for GKE, and Cloud Monitoring. The built-in integration helps you set up GitOps and eases the maintenance burden required for open-source alternatives.
+
+  * **Built-in observability** : Config Sync includes a dashboard in the Google Cloud console that requires no extra setup. You can view the sync status of all your clusters and configs from a central location, or use the Google Cloud CLI to check for reconciliation issues.
+
+  * **Scalable multi-cluster and multi-team management** : Config Sync is designed for both centralized platform administration and delegated application management. Its architecture is tested to be horizontally and vertically scalable, letting you manage clusters at scale and empower your application teams to safely manage their own environments. 
+
 
 
 
@@ -66,7 +69,8 @@ You can use Config Sync to provision and manage Kubernetes namespaces with names
 
 ## What's next
 
-  * [Install Config Sync manually using kubectl](https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/how-to/installing-kubectl)
+  * [Quickstart: Sync from a Git repository](https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/tutorials/config-sync-multi-repo)
+  * [Install Config Sync with default settings](https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/how-to/install-default)
   * [Review GitOps best practices](https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/concepts/gitops-best-practices)
 
 
@@ -75,6 +79,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

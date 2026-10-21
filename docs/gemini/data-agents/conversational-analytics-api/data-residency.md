@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/data-residency/
 title: Data residency \u00a0|\u00a0 Conversational Analytics API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T13:45:25.992572+00:00
+fetched_at: 2026-10-21T12:21:56.148219+00:00
 ---
 
 # Data residency  |  Conversational Analytics API  |  Google Cloud Documentation
@@ -57,6 +57,8 @@ Location | Location description | Endpoint type | Endpoint URL | Dataset locatio
 `global` | Global | Global | `geminidataanalytics.googleapis.com` | Any region or multi-region | Not supported  
 `eu` | European Union | Multi-regional | `geminidataanalytics.eu.rep.googleapis.com` | Any region or multi-region | **At rest** , **In use (jurisdictional)**  
 `us` | United States | Multi-regional | `geminidataanalytics.us.rep.googleapis.com` | Any region or multi-region | **At rest** , **In use (jurisdictional)**  
+`northamerica-northeast1` | Montréal | Regional | `geminidataanalytics-northamerica-northeast1.googleapis.com` | Any region or multi-region | **At rest** , **In use (jurisdictional)**  
+`northamerica-northeast2` | Toronto | Regional | `geminidataanalytics-northamerica-northeast2.googleapis.com` | Any region or multi-region | **At rest** , **In use (jurisdictional)**  
 `us-east4` | Northern Virginia | Regional | `geminidataanalytics-us-east4.googleapis.com` | Any region or multi-region | **At rest** , **In use (jurisdictional)**  
 **Note:** The [`ThinkingMode` parameter](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1beta/projects.locations/chat#ThinkingMode) is supported only with preview model versions. Because GA model versions don't support this parameter, enabling thinking mode automatically switches the agent to a preview model version.
 
@@ -85,7 +87,7 @@ The service endpoints for the Conversational Analytics API use the following for
 
 
 
-Replace the LOCATION placeholder with a supported single region or multi-region, such as `eu`, `us`, or `us-east4`.
+Replace the LOCATION placeholder with a supported region or multi-region for your data source. For details, see Supported data locations.
 
 The following examples show how to configure a regional endpoint for HTTP and Python SDK requests:
 
@@ -148,7 +150,7 @@ To use a regional endpoint with the Python SDK, pass `client_options` with the r
 Replace the sample values as follows:
 
   * PROJECT_ID: Your Google Cloud project ID.
-  * LOCATION: The region or multi-region where you want to create your resources. To use one of the regional endpoints, specify `eu`, `us`, or `us-east4`.
+  * LOCATION: The region or multi-region where you want to create your resources. For the locations that each data source supports, see Supported data locations.
 
 
 
@@ -173,6 +175,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

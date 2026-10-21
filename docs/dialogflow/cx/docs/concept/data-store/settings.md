@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/data-store/settings/
 title: Data store tool settings \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:36.962500+00:00
+fetched_at: 2026-10-21T11:58:15.508401+00:00
 ---
 
 # Data store tool settings  |  Dialogflow CX  |  Google Cloud Documentation
@@ -23,13 +23,13 @@ Send feedback
 
 #  Data store tool settings Stay organized with collections  Save and categorize content based on your preferences. 
 
-The following [data store tool](https://docs.cloud.google.com/dialogflow/cx/docs/concept/data-store/handler) configuration settings are available.
+You can configure the following [data store tool](https://docs.cloud.google.com/dialogflow/cx/docs/concept/data-store/handler) settings.
 
 ## Tool settings (Conversational Agents console only)
 
 Selecting an option from the **Tool settings** list automatically affects which other tool configurations are available.
 
-The `Default` and `Optimized for voice` options are default settings that will automatically configure all other parameters in the tool configuration menu.
+The `Default` and `Optimized for voice` options are default settings that automatically configure all other parameters in the tool configuration menu.
 
 The following options are available:
 
@@ -47,11 +47,11 @@ Dialogflow CX calculates a confidence level for each response generated from the
 
 There are five confidence levels to choose from: `VERY_LOW`, `LOW`, `MEDIUM`, `HIGH`, and `VERY_HIGH`.
 
-You can also apply a grounding heuristics filter. If enabled, responses containing content that is likely inaccurate based on common hallucinations are suppressed.
+You can also apply a grounding heuristics filter. If you enable it, the agent suppresses responses containing content that is likely inaccurate based on common hallucinations.
 
 ## Select summarization model
 
-You can select the generative model that a data store agent uses for the summarization generative request. The following table lists the available options:
+You can select the generative model that a data store agent uses for summarization generative requests. The following table lists the available options:
 
 Model Name | Launch Stage | Model Spec  
 ---|---|---  
@@ -67,7 +67,7 @@ All listed models are available in all [supported languages](https://docs.cloud.
 
 ### Summarization custom prompt
 
-**Note:** Providing a custom prompt might influence the quality of answers either positively or negatively. You are responsible for the quality of the answers.
+**Note:** Providing a custom prompt might influence the quality of answers either positively or negatively. You're responsible for the quality of the answers.
 
 You can either use a default summarization prompt with your selected summarization model or provide your own. The prompt is a text template that can contain predefined placeholders. The placeholders will be replaced with the appropriate values at runtime and the final text will be sent to the LLM.
 
@@ -109,7 +109,7 @@ For example, `${conversation USER:"Human says:" AGENT:"Agent says:" TURNS:1}`. T
         
 
 
-**Important:** The placeholders `$original-query` (or `$rewritten-query`) and `$sources` are required in custom prompts. You can't save prompts missing these placeholders because the agent doesn't function correctly without them. The `$conversation` placeholder is **recommended** \--without it, the agent can't use contextual information from the conversation to answer questions.
+**Important:** The placeholders `$original-query` (or `$rewritten-query`) and `$sources` are required in custom prompts. You can't save prompts missing these placeholders because the agent doesn't function correctly without them. The `$conversation` placeholder is **recommended** —without it, the agent can't use contextual information from the conversation to answer questions.
 
 A custom prompt should instruct the LLM to return "NOT_ENOUGH_INFORMATION" when it cannot provide an answer. In this case, the agent invokes a [no-match event](https://docs.cloud.google.com/dialogflow/cx/docs/concept/handler#event-built-in).
 
@@ -162,7 +162,7 @@ For example:
 
 ## Select rewriter model
 
-**Note:** Providing a custom prompt might influence the quality of answers either positively or negatively. You are responsible for the quality of the answers.
+**Note:** Providing a custom prompt might influence the quality of answers either positively or negatively. You're responsible for the quality of the answers.
 
 When the agent processes a user query, it sends the user query and a prompt to the LLM to refactor the query using a **rewriter**.
 
@@ -172,7 +172,7 @@ Model Name | Launch Stage | Model Spec
 ---|---|---  
 Default  | GA  | This is the recommended configuration and is subject to change over time. If you use this option, you may experience changes in agent behavior (likely improvements). If you would like more consistency in agent behavior, select a specific model.  
 Disabled Rewriter  | GA  | No query rewrite will occur. Latency will improve, but quality will be degraded. In particular, the data store tool may struggle to answer questions that require context from conversation history.  
-rewrite-by-agent.  | GA  | Only supported under Customer Engagement AI. This option delegates rewrite to the agent. It is optimized for both voice and text with optimized latency  
+rewrite-by-agent  | GA  | Only supported under Customer Engagement AI. This option delegates rewrite to the agent. It is optimized for both voice and text with optimized latency  
 gemini-2.5-flash | GA | [Gemini 2.5 flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash)  
 gemini-2.5-flash-lite | GA | [Gemini 2.5 flash lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite)  
 gemini-3.1-flash-lite | GA | [Gemini 3.1 flash lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite)  
@@ -182,7 +182,7 @@ All listed models are available in all [supported languages](https://docs.cloud.
 
 ### Rewriter custom prompt
 
-You can use a default prompt or optionally provide your own. The prompt is a text template that can contain predefined placeholders. The placeholders will be replaced with the appropriate values at runtime and the final text will be sent to the LLM.
+You can use a default prompt or provide your own. The prompt is a text template that can contain predefined placeholders. Runtime values replace the placeholders, and the final text is sent to the LLM.
 
 The placeholders and required text are as follows:
 
@@ -218,6 +218,7 @@ For example, `${conversation USER:"Human says:" AGENT:"Agent says:" TURNS:1}`. T
 For example:
     
     
+    You observe conversations between a human and an AI assistant working at ${customer!}${business_description!}.
     Your goal is to perform a search query to help the AI assistant respond to the human's last statement.
     * Always output the best search query you can, even if you suspect it's not needed.
     * Never generate a query that is the same as the user's last statement.
@@ -233,11 +234,11 @@ For example:
 
 ## Payload settings
 
-Payload settings provide a way to add the data store snippets as rich content in the response payload, which is rendered in the [messenger](https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/dialogflow-messenger). You can turn this feature on or off.
+Payload settings let you add the data store snippets as rich content in the response payload, which is rendered in the [messenger](https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/dialogflow-messenger). You can turn this feature on or off.
 
 ## Data store tool search configuration
 
-You can configure dynamic search parameters to fine-tune your results based on context from an ongoing conversation. For more information, see the [search configuration documentation](https://docs.cloud.google.com/dialogflow/cx/docs/concept/data-store/search-configure).
+You can configure dynamic search parameters to fine-tune your results based on context from an ongoing conversation. For more information, see the [Search configuration documentation](https://docs.cloud.google.com/dialogflow/cx/docs/concept/data-store/search-configure).
 
 [ Previous arrow_back  Data store tools  ](https://docs.cloud.google.com/dialogflow/cx/docs/concept/data-store/handler)
 
@@ -247,6 +248,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

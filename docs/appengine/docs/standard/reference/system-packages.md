@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/reference/system-packages/
 title: System packages and extensions \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:34:40.809423+00:00
+fetched_at: 2026-10-21T12:01:38.903132+00:00
 ---
 
 # System packages and extensions  |  App Engine standard environment  |  Google Cloud Documentation
@@ -181,7 +181,7 @@ libdav1d5 | 0.9.2-1
 libdb5.3 | 5.3.28+dfsg1-0.8ubuntu3  
 libdbus-1-3 | 1.12.20-2ubuntu4.1  
 libdc1394-25 | 2.2.6-4  
-libde265-0 | 1.0.8-1ubuntu0.3+esm2  
+libde265-0 | 1.0.8-1ubuntu0.3+esm3  
 libdebconfclient0 | 0.261ubuntu1  
 libdecor-0-0 | 0.1.0-3build1  
 libdeflate0 | 1.10-2  
@@ -319,7 +319,7 @@ libpcre3 | 2:8.39-13ubuntu0.22.04.1
 libperl5.34 | 5.34.0-3ubuntu1.9  
 libpgm-5.3-0 | 5.3.128~dfsg-2  
 libpixman-1-0 | 0.40.0-1ubuntu0.22.04.1  
-libpng16-16 | 1.6.37-3ubuntu0.6  
+libpng16-16 | 1.6.37-3ubuntu0.7  
 libpocketsphinx3 | 0.8.0+real5prealpha+1-14ubuntu1  
 libpostproc55 | 7:4.4.2-0ubuntu0.22.04.1+esm16  
 libpq5 | 14.24-0ubuntu0.22.04.1  
@@ -435,7 +435,7 @@ libxfixes3 | 1:6.0.0-1
 libxi6 | 2:1.8-1build1  
 libxinerama1 | 2:1.1.4-3  
 libxkbcommon0 | 1.4.0-1  
-libxml2 | 2.9.13+dfsg-1ubuntu0.13  
+libxml2 | 2.9.13+dfsg-1ubuntu0.14  
 libxpm4 | 1:3.5.12-1ubuntu0.22.04.4  
 libxrandr2 | 2:1.5.2-1build1  
 libxrender1 | 1:0.9.10-1build4  
@@ -1093,6 +1093,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

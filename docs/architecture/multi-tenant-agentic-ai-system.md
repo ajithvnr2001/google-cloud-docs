@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/multi-tenant-agentic-ai-system/
 title: Multi-tenant agentic AI system \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:30.995927+00:00
+fetched_at: 2026-10-21T12:22:06.512115+00:00
 ---
 
 # Multi-tenant agentic AI system  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -19,7 +19,7 @@ Send feedback
 
 #  Multi-tenant agentic AI system Stay organized with collections  Save and categorize content based on your preferences. 
 
-Last reviewed 2026-06-18 UTC
+Last reviewed 2026-10-16 UTC
 
 This document provides a reference architecture to help you design and deploy a multi-tenant agentic AI system on Google Cloud. As your organization scales generative AI deployments, different business units require specialized AI agents that access unique tools, follow specific operational rules, and process sensitive data. Business units might develop fragmented application silos within an organization, which can cause high operational overhead, severe governance gaps, and a risk of data exposure. This architecture shows you how to build a centralized system that lets you empower decentralized teams with autonomous AI capabilities while you maintain unified security and compliance.
 
@@ -37,10 +37,10 @@ The architecture consists of the following components:
 
 Component | Description  
 ---|---  
-**[VPC Service Controls](https://docs.cloud.google.com/vpc-service-controls/docs/overview)** |  The architecture uses VPC Service Controls to configure a [service perimeter](https://docs.cloud.google.com/vpc-service-controls/docs/service-perimeters) at the organization level. This service perimeter provides a strict security boundary and it prevents data exfiltration.   
+**[VPC Service Controls](https://docs.cloud.google.com/vpc-service-controls/docs/overview)** |  The architecture uses VPC Service Controls to configure a [service perimeter](https://docs.cloud.google.com/vpc-service-controls/docs/service-perimeters) at the organization level. This service perimeter provides a strict security boundary and it helps prevent data exfiltration.   
 **Routing hub** |  The routing hub acts as the central ingress point for the architecture and it includes the following components:
 
-  * **[External Application Load Balancer](https://docs.cloud.google.com/load-balancing/docs/https)** : Acts as the central ingress point for external or internal users. The load balancer ensures that only authenticated and safe traffic reaches the frontend portal. 
+  * **[External Application Load Balancer](https://docs.cloud.google.com/load-balancing/docs/https)** : Acts as the central ingress point for external or internal users. The load balancer helps ensure that only authenticated and safe traffic reaches the frontend portal. 
   * **[Google Cloud Armor](https://docs.cloud.google.com/armor/docs/integrating-cloud-armor#https-iap)** and **[Model Armor](https://docs.cloud.google.com/model-armor/overview)** : The load balancer integrates Cloud Armor and Model Armor to inspect and scrub malicious prompts at the network edge. The routing hub uses [Service Extensions](https://docs.cloud.google.com/service-extensions/docs/lb-extensions-overview#supported-lbs) on the external Application Load Balancer to integrate [Model Armor](https://docs.cloud.google.com/model-armor/overview) directly into the request flow. 
   * **[Identity-Aware Proxy (IAP)](https://docs.cloud.google.com/iap/docs)** : Enforces a [zero-trust model](https://docs.cloud.google.com/architecture/framework/security/implement-zero-trust) to verify user identity and context before any request reaches the application. 
   * **Frontend portal** : A serverless [Cloud Run application](https://docs.cloud.google.com/run/docs/overview/what-is-cloud-run) that acts as a routing engine to route requests to the appropriate isolated tenant project. 
@@ -55,10 +55,10 @@ Component | Description
   
 **Tenant projects** |  Each tenant project is a dedicated Google Cloud project for each business unit. Individual tenant projects are isolated environments that include the following components:
 
-  * **[Principal Access Boundary Policy (PAB Policy)](https://docs.cloud.google.com/iam/docs/principal-access-boundary-policies)** : PAB Policy provides internal hard isolation between different business units and they ensure that principals can only access resources within their approved boundaries. 
+  * **[Principal Access Boundary Policy (PAB Policy)](https://docs.cloud.google.com/iam/docs/principal-access-boundary-policies)** : PAB Policy provides internal hard isolation between different business units and it helps ensure that principals can only access resources within their approved boundaries. 
   * **[Agent Runtime on Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/runtime)** : A runtime that hosts the specific business unit agent and executes custom orchestration code that you build by using [Agent Development Kit (ADK)](https://adk.dev/). 
   * **[Model Armor](https://docs.cloud.google.com/model-armor/overview)** : A managed security service that inspects and filters malicious prompts and responses. It protects the tenant's agent and compute resources from threats like prompt injection attacks. 
-  * **[Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) servers:** MCP server facilitates access between the tenant agent and tenant datastore. 
+  * **[Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) servers**: MCP servers facilitate access between the tenant agent and the tenant datastore. 
   * **Tenant datastore** : A dedicated data repository, such as [BigQuery](https://docs.cloud.google.com/bigquery/docs/introduction) or [AlloyDB for PostgreSQL](https://docs.cloud.google.com/alloydb/docs/overview), that stores specific business unit data. The agent performs [ retrieval-augmented generation (RAG)](https://docs.cloud.google.com/docs/generative-ai/glossary#retrieval-augmented-generation) to generate more accurate responses based on the context in the datastore. To maintain strict data sovereignty, only the tenant agents can access this data. 
   * **Gemini models** : For inference serving, the agents in this example architecture use the latest [Gemini model](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/google-models) on [Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview). 
 
@@ -77,8 +77,8 @@ The example multi-tenant system in the preceding architecture has the following 
      1. Extracts the user's identity, such as the user's business unit or tenant ID.
      2. Uses IAP to verify the user's corporate identity and device health.
      3. Uses a dynamically maintained registry to identify the correct target tenant.
-  3. The frontend portal routes the request to the tenant. To ensure that the agent can't access other tenant projects or unauthorized Google Cloud services, Agent Runtime uses a PAB Policy to limit the resources that the agent can access.
-  4. Model Armor uses [Sensitive Data Protection](https://docs.cloud.google.com/sensitive-data-protection/docs/sensitive-data-protection-overview) to inspect and dynamically mask any personally identifiable information (PII) or restricted content. Model Armor performs an additional check for malicious prompt injections from the request to ensure that the agent only processes safe data.
+  3. The frontend portal routes the request to the tenant. To help ensure that the agent can't access other tenant projects or unauthorized Google Cloud services, Agent Runtime uses a PAB Policy to limit the resources that the agent can access.
+  4. Model Armor uses [Sensitive Data Protection](https://docs.cloud.google.com/sensitive-data-protection/docs/sensitive-data-protection-overview) to inspect and dynamically mask any personally identifiable information (PII) or restricted content. Model Armor performs an additional check for malicious prompt injections from the request to help ensure that the agent only processes safe data.
   5. Gemini performs the following tasks to generate a response:
 
      1. Performs an initial reasoning pass to understand the user's intent.
@@ -126,8 +126,8 @@ You can adapt this reference architecture to provide AI-powered customer service
 
 For this use case, the architecture provides the following benefits:
 
-  * **Strict data isolation** : The multi-tenant design ensures that the support knowledge for each division is strictly isolated. PAB Policy provides guardrails that help ensure that an agent identity in one tenant can't access data in another tenant.
-  * **Specialized agent knowledge** : Because each agent resides in an isolated tenant project, the agent only retrieves context from its division-specific datastore. This targeted retrieval ensures high accuracy and prevents the agent from confusing the policies of different business units.
+  * **Strict data isolation** : The multi-tenant design helps ensure that the support knowledge for each division is strictly isolated. PAB Policy provides guardrails that help ensure that an agent identity in one tenant can't access data in another tenant.
+  * **Specialized agent knowledge** : Because each agent resides in an isolated tenant project, the agent only retrieves context from its division-specific datastore. This targeted retrieval helps improve accuracy and helps prevent the agent from confusing the policies of different business units.
   * **Reduced cross-domain risk** : The architecture helps to eliminate the risk of data exposure between business units. Even if an agent identity is compromised, the agent can't access unauthorized Google Cloud resources.
 
 
@@ -162,7 +162,7 @@ To further minimize latency and to help ensure high availability to meet your di
 
 To prioritize a serverless-first approach that provides easier management and lower operational overhead, the architecture in this document uses Cloud Run for its compute infrastructure. You can also run [containerized](https://cloud.google.com/discover/what-are-containerized-applications) applications on [GKE clusters](https://docs.cloud.google.com/kubernetes-engine/docs/get-started/cluster-lifecycle). Google Kubernetes Engine (GKE) is a container orchestration engine that automates the deployment, scaling, and management of containerized applications. GKE fully supports both internal and external Application Load Balancers. For information about how to choose a compute service for your workloads on Google Cloud, see [Hosting Applications on Google Cloud](https://cloud.google.com/hosting-options).
 
-### Model Context Protocol (MCP) servers
+### Local and shared MCP servers
 
 To enable the components of your agentic system to interact, you need to establish clear communication protocols. [MCP](https://modelcontextprotocol.io/docs/getting-started/intro) is an open protocol that provides a standardized interface for agents to access and use necessary tools, data, and other services.
 
@@ -182,7 +182,7 @@ Local MCP servers offer maximum isolation and they can handle highly sensitive o
 
 The following are key features and considerations for shared MCP servers:
 
-    * **Network** : To ensure that traffic doesn't traverse the public internet, shared MCP servers require private connectivity, such as [Private Service Connect](https://docs.cloud.google.com/vpc/docs/private-service-connect) or [VPC Network Peering](https://docs.cloud.google.com/vpc/docs/vpc-peering).
+    * **Network** : To help ensure that traffic doesn't traverse the public internet, shared MCP servers require private connectivity, such as [Private Service Connect](https://docs.cloud.google.com/vpc/docs/private-service-connect) or [VPC Network Peering](https://docs.cloud.google.com/vpc/docs/vpc-peering).
     * **Management** : A centralized operations team manages the implementation for the entire system. This consolidated management optimizes operational efficiency and removes the requirement to duplicate local implementations across multiple tenants.
     * **Security** : You securely propagate the end-user identity from the agent in the tenant project to the shared MCP server. To help ensure that users can only access or modify data that they're permitted to, the shared MCP server uses the propagated user identity to enforce fine-grained access control on the backend system.
 
@@ -201,30 +201,96 @@ The following sections describe design factors, best practices, and recommendati
 
 This section describes design considerations and recommendations to design a topology in Google Cloud that meets your workload's security, privacy, and compliance requirements.
 
-Component | Design considerations and recommendations  
----|---  
-Virtual Private Cloud (VPC) | **Tenant isolation** : In this architecture, you deploy each tenant in a dedicated Google Cloud project. To create a strict security boundary, combine tenant project-level isolation with PAB Policy and [VPC Service Controls](https://docs.cloud.google.com/vpc-service-controls/docs/overview) at the organization level.  
-IAM | **Access control** : To implement the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege), use a persona-based access model. For example, you can define custom IAM roles to ensure that a developer who builds an agent in one tenant can't access data in another tenant.  
-Cloud Armor |  **Edge and internal WAF protection** : Cloud Armor provides security and WAF protection to defend the frontend portal against DDoS attacks and web vulnerabilities. A global external Application Load Balancer supports the full suite of advanced edge features, such as [bot management](https://docs.cloud.google.com/armor/docs/bot-management) and [Google Cloud Armor Adaptive Protection](https://docs.cloud.google.com/armor/docs/adaptive-protection-overview). If you deploy a regional internal Application Load Balancer, then Cloud Armor operates with a restricted set of standard WAF policies. The restricted set of policies are tailored for internal network boundaries and it includes policies like SQLi and XSS protection. For more information, see [Integrating Cloud Armor with other Google products](https://docs.cloud.google.com/armor/docs/integrating-cloud-armor).  
-Agent Platform | **Shared model endpoints** : To prevent abuse and ensure fair usage for shared model endpoints, implement one of the following strategies:
+#### Security considerations for agents
 
-  * **Tenant-level rate limiting** : Enforce quotas in the frontend portal for each tenant before requests reach the shared endpoint. Enforce the quotas by doing the following: 
-    1. Extract the tenant identity from the IAP context.
-    2. Track usage against predefined limits for each tenant by using an external store like [ Memorystore for Redis](https://docs.cloud.google.com/memorystore/docs/redis/connect-redis-instance-functions).
-    3. Reject requests from tenants that exceed their limits.
-  * **API Gateway** : To enforce per-tenant quotas by using API keys and usage plans, implement [API Gateway](https://docs.cloud.google.com/api-gateway/docs/about-api-gateway) before the shared endpoint. 
+AI agents introduce certain unique and critical security risks that conventional, deterministic security practices might not be able to mitigate adequately. Google recommends an [approach for secure AI agents](https://research.google/pubs/an-introduction-to-googles-approach-for-secure-ai-agents/) that combines the strengths of deterministic security controls with dynamic, reasoning-based defenses. This approach is grounded in three core principles: human oversight, carefully defined agent autonomy, and observability. The following are specific recommendations that are aligned with these core principles:
 
-  
-Cloud Run | **Content rendering** : To enhance the security posture of the frontend portal, prioritize [server-side rendering (SSR)](https://developers.google.com/solutions/content-driven/hosting/rendering#server-side_rendering_ssr) over [client-side rendering (CSR)](https://developers.google.com/solutions/content-driven/hosting/rendering#client-side_rendering_csr). Compared to CSR, SSR offers these benefits:
+  * **Human oversight** : An agentic AI system might sometimes fail or might not perform as expected. For example, the model might generate inaccurate content or an agent might select inappropriate tools. In business-critical agentic AI systems, incorporate a human-in-the-loop flow to let human supervisors monitor, override, and pause agents. For example, human users can review the output of agents, approve or reject the outputs, and provide further guidance to correct errors or to make strategic decisions. This approach combines the efficiency of agentic AI systems with the critical thinking and domain expertise of human users.
+  * **Agent identity and least-privilege access** : 
+    * Provide each agent a workload-bound, [SPIFFE](https://spiffe.io/docs/latest/spiffe-about/overview)-based identity by using [Agent Identity](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/agent-identity-overview). You can use Agent Identity when you deploy agents to [Agent Runtime](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/agent-identity) or to [Cloud Run](https://docs.cloud.google.com/run/docs/ai/agent-platform-features).
+    * Configure per-agent permissions by using [IAM access policies](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/policies/iam-overview-uap) and [Agent Platform access control with IAM](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/access-control). Grant each agent only the permissions that it needs to perform its tasks and to communicate with tools and with other agents. To further isolate each agent and limit the potential impact of a security breach, bind a [PAB Policy](https://docs.cloud.google.com/iam/docs/principal-access-boundary-policies) to the agent identity.
+    * When agents need to authenticate to external tools or to third-party APIs, use the [Agent Identity auth manager](https://docs.cloud.google.com/iam/docs/auth-manager-overview). With this approach, you can centrally control OAuth tokens and API keys instead of having to embed credentials within agent code or prompts.
+  * **Ingress and egress traffic governance** : Route agent traffic through [Agent Gateway](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/gateways/agent-gateway-overview) to enforce runtime security policies at both the ingress and egress boundaries. For information about the runtime platforms that support Agent Gateway, see [Supported agent runtimes](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/gateways/agent-gateway-overview#agent-runtimes).
 
-  * Executes application logic and manages secrets within a controlled Google Cloud environment. 
-  * Reduces the client-side attack surface and prevents sensitive data leaks to the user's untrusted browser.
+    * **Client-to-Agent (ingress)** : Deploy [Agent Gateway](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/agent-gateway-runtime-deploy) in front of your agent runtime. The gateway helps to authenticate callers and inspect inbound prompts in real time by using [Model Armor](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/configure-model-armor).
+    * **Agent-to-Anywhere (egress)** :
+
+      * Route outbound agent-to-agent (A2A) and agent-to-tool (MCP) requests through Agent Gateway in egress mode.
+      * Enforce default-deny access policies by using IAM access policies and [IAP](https://docs.cloud.google.com/iap/docs/agent-overview).
+      * Verify that target agents and tools are registered in [Agent Registry](https://docs.cloud.google.com/agent-registry/overview).
+      * Inspect outbound tool invocations and responses with Model Armor to help prevent data exfiltration, indirect prompt injection, and tool misuse.
+  * **Monitoring** : Monitor agent behavior by using comprehensive tracing capabilities that give you visibility into every action that an agent takes, including its reasoning process, tool selection, and execution paths. For more information, see [Logging an agent in Agent Runtime](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/logging) and [Logging in ADK](https://adk.dev/observability/logging/).
+
+
+
+
+For more information about securing AI agents, see [Safety and Security for AI Agents](https://adk.dev/safety/).
+
+#### Virtual Private Cloud (VPC) security considerations
+
+In this architecture, you deploy each tenant in a dedicated Google Cloud project. To create a strict security boundary, combine tenant project-level isolation with PAB Policy and [VPC Service Controls](https://docs.cloud.google.com/vpc-service-controls/docs/overview) at the organization level.
+
+#### IAM security considerations
+
+To implement the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege), use a persona-based access model. For example, you can define custom IAM roles to help ensure that a developer who builds an agent in one tenant can't access data in another tenant.
+
+#### Cloud Armor security considerations
+
+Cloud Armor provides security and WAF protection to defend the frontend portal against DDoS attacks and web vulnerabilities. A global external Application Load Balancer supports the full suite of advanced edge features, such as [bot management](https://docs.cloud.google.com/armor/docs/bot-management) and [Google Cloud Armor Adaptive Protection](https://docs.cloud.google.com/armor/docs/adaptive-protection-overview).
+
+If you deploy a regional internal Application Load Balancer, then Cloud Armor operates with a restricted set of standard WAF policies. The restricted set of policies are tailored for internal network boundaries and it includes policies like SQLi and XSS protection. For more information, see [Integrating Cloud Armor with other Google products](https://docs.cloud.google.com/armor/docs/integrating-cloud-armor).
+
+#### Agent Platform security considerations
+
+To help ensure that your Agent Platform configurations and usage meet your security requirements, consider the following recommendations:
+
+  * **Shared responsibility** : Security is a shared responsibility. Agent Platform secures the underlying infrastructure and provides tools and security controls to help you protect your data, code, and models. You are responsible for properly configuring your services, managing access controls, and securing your applications. For more information, see [Agent Platform shared responsibility](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/shared-responsibility).
+  * **Security controls** : Agent Platform supports Google Cloud security controls that you can use to meet your requirements for data residency, [customer-managed encryption keys (CMEK)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/cmek), network security using [VPC Service Controls](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/vpc-service-controls), and [Access Transparency](https://docs.cloud.google.com/assured-workloads/access-transparency/docs/overview). For more information, see the following documentation: 
+    * [Security controls for Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/security-controls)
+    * [Security controls for Generative AI](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/security-controls)
+    * [Agent Platform and zero data retention](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention)
+  * **Safety** : AI models might produce harmful responses, sometimes in response to malicious prompts. 
+    * To enhance safety and mitigate potential misuse of the agentic AI system, you can configure content filters to act as barriers to harmful inputs and responses. For more information, see [Safety and content filters](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/configure-safety-filters).
+    * To inspect and sanitize inference requests, agent prompts, tool calls, and responses for threats like prompt injection and harmful content, you can use [Model Armor](https://docs.cloud.google.com/model-armor/overview) for direct model API calls _and_ for requests that are routed through [Agent Gateway](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/configure-model-armor). Model Armor helps you prevent malicious input, verify content safety, protect sensitive data, maintain compliance, and enforce safety and security policies consistently.
+  * **Model access** : You can set up organization policies to limit the type and versions of AI models that can be used in a Google Cloud project. For more information, see [Control access to Model Garden models](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/control-model-access).
+  * **Data protection** : To discover and de-identify sensitive data in the prompts and responses and in log data, use the [Cloud Data Loss Prevention API](https://docs.cloud.google.com/sensitive-data-protection/docs/apis). For more information, see this video: [Protecting sensitive data in AI apps](https://www.youtube.com/watch?v=ct1nuLS-wlA).
+  * **Shared model endpoints** : To help prevent abuse and ensure fair usage for shared model endpoints, implement one of the following strategies:
+
+    * **Tenant-level rate limiting** : Enforce quotas in the frontend portal for each tenant before requests reach the shared endpoint. Enforce the quotas by doing the following:
+
+      1. Extract the tenant identity from the IAP context.
+      2. Track usage against predefined limits for each tenant by using an external store like [Memorystore for Redis](https://docs.cloud.google.com/memorystore/docs/redis/memorystore-for-redis-overview).
+      3. Reject requests from tenants that exceed their limits.
+    * **API Gateway** : To enforce per-tenant quotas by using API keys and usage plans, implement [API Gateway](https://docs.cloud.google.com/api-gateway/docs/about-api-gateway) before the shared endpoint.
+
+
+
+
+#### MCP security considerations
+
+To help ensure that your MCP implementation meets your security requirements, consider the following recommendations:
+
+  * **Tool registration and discovery** : Register MCP servers and tools in [Agent Registry](https://docs.cloud.google.com/agent-registry/register-mcp-servers) so that agents only connect to inventoried, administrator-approved MCP endpoints.
+  * **Access control and traffic inspection** : Route agent-to-MCP traffic through Agent Gateway in **Agent-to-Anywhere (egress)** mode and protect MCP servers (such as MCP servers hosted on Cloud Run) by using [IAP](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/policies/iap-cloud-run-mcp) and IAM access policies. Configure Model Armor or semantic governance policies on Agent Gateway to inspect MCP tool inputs and outputs for sensitive data exposure and indirect prompt injection.
+  * **General MCP security** : When you configure your agents to use MCP, ensure that access to external data and tools is authorized, implement privacy controls like encryption, apply filters to protect sensitive data, and monitor agent interactions. For more information, see [MCP and security](https://cloud.google.com/discover/what-is-model-context-protocol#mcp-and-security).
+
+
+
+#### Cloud Run security considerations
+
+To enhance the security posture of the frontend portal, prioritize [server-side rendering (SSR)](https://developers.google.com/solutions/content-driven/hosting/rendering#server-side_rendering_ssr) over [client-side rendering (CSR)](https://developers.google.com/solutions/content-driven/hosting/rendering#client-side_rendering_csr). Compared to CSR, SSR offers these benefits:
+
+  * Executes application logic and manages secrets within a controlled Google Cloud environment.
+  * Reduces the client-side attack surface and helps prevent sensitive data leaks to the user's untrusted browser.
   * Limits data exposure by sending only the necessary HTML to the client.
   * Provides centralized output encoding to defend against cross-site scripting (XSS) attacks.
 
-  
-Security Command Center | **Centralized security monitoring** : To monitor for threats and enforce security policies such as multi-factor authentication (MFA) and data encryption, use the tools in the [Security Command Center](https://docs.cloud.google.com/security-command-center/docs/security-command-center-overview).   
-  
+
+
+#### Security Command Center security considerations
+
+To monitor for threats and enforce security policies such as multi-factor authentication (MFA) and data encryption, use the tools in [Security Command Center](https://docs.cloud.google.com/security-command-center/docs/security-command-center-overview).
+
 #### More security recommendations
 
   * [Google Cloud Well-Architected Framework AI and ML perspective: Security](https://docs.cloud.google.com/architecture/framework/perspectives/ai-ml/security)
@@ -236,54 +302,91 @@ Security Command Center | **Centralized security monitoring** : To monitor for t
 
 This section describes design considerations and recommendations to build and operate reliable infrastructure for your deployment in Google Cloud.
 
-Component | Design considerations and recommendations  
----|---  
-Cloud Load Balancing | **Global routing** : A global external Application Load Balancer provides a single [Anycast](https://en.wikipedia.org/wiki/Anycast) IP address that automatically routes user traffic to the closest geographical Google edge. This configuration reduces latency through edge [Secure Sockets Layer (SSL)](https://docs.cloud.google.com/load-balancing/docs/ssl-policies-concepts) termination. It also ensures high availability if a region experiences an outage because it intelligently reroutes traffic to healthy regional backends.  
-Tenant | **Fault tolerance** : To tolerate or handle agent-level failures, deploy agents in isolated tenant projects. This isolation helps to ensure that operational issues or security incidents stay within a single business unit and don't affect other resources or business units.  
-Agent Platform | **Capacity planning** : If the number of requests to the model exceeds the allocated capacity, then the model returns [error code 429](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deploy/error-code-429). For workloads that are business critical and that require consistently high throughput, you can reserve throughput by using [Provisioned Throughput](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/provisioned-throughput).  
-Agent Runtime |  **Serverless scalability** : Agents that are deployed on Agent Runtime scale independently based on demand. A sudden spike in usage in one tenant doesn't exhaust the compute resources or affect the availability of an agent in another tenant project.  **Error handling** : To handle transient errors like error code 429 rate limits, the agent orchestration logic uses [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff). If a context deadline is exceeded, then the agent performs a [graceful shutdown](https://en.wikipedia.org/wiki/Graceful_exit) and it reports partial progress back to the user. For example, a context deadline can be exceeded due to slow tool calls, third-party API latency, processing massive datasets, or compute-intensive processing.   
-  
+#### Cloud Load Balancing reliability considerations
+
+A global external Application Load Balancer provides a single [Anycast](https://en.wikipedia.org/wiki/Anycast) IP address that automatically routes user traffic to the closest geographical Google edge. This configuration reduces latency through edge [Secure Sockets Layer (SSL)](https://docs.cloud.google.com/load-balancing/docs/ssl-policies-concepts) termination. It also helps ensure high availability if a region experiences an outage because it intelligently reroutes traffic to healthy regional backends.
+
+#### Tenant reliability considerations
+
+To tolerate or handle agent-level failures, deploy agents in isolated tenant projects. This isolation helps to ensure that operational issues or security incidents stay within a single business unit and don't affect other resources or business units.
+
+#### Agent Platform reliability considerations
+
+If the number of requests to the model exceeds the allocated capacity, then the model returns [error code 429](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deploy/error-code-429). For workloads that are business critical and that require consistently high throughput, you can reserve throughput by using [Provisioned Throughput](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/provisioned-throughput).
+
+#### Agent Runtime reliability considerations
+
+To help ensure that your Agent Runtime configurations and usage meet your reliability requirements, consider the following recommendations:
+
+  * **Serverless scalability** : Agents that are deployed on Agent Runtime scale independently based on demand. A sudden spike in usage in one tenant doesn't exhaust the compute resources or affect the availability of an agent in another tenant project.
+  * **Error handling** : To handle transient errors like error code 429 rate limits, the agent orchestration logic uses [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff). If a context deadline is exceeded, then the agent performs a [graceful shutdown](https://en.wikipedia.org/wiki/Graceful_exit) and it reports partial progress back to the user. For example, a context deadline can be exceeded due to slow tool calls, third-party API latency, processing massive datasets, or compute-intensive processing.
+
+
+
 For reliability principles and recommendations that are specific to AI and ML workloads, see [AI and ML perspective: Reliability](https://docs.cloud.google.com/architecture/framework/perspectives/ai-ml/reliability) in the Well-Architected Framework. 
 
 ### Operational efficiency
 
 This section describes the factors to consider when you use this reference architecture to design a Google Cloud topology that you can operate efficiently.
 
-Component | Design considerations and recommendations  
----|---  
-Google Cloud Observability | **Centralized monitoring** : Logging and Monitoring let you monitor the health and performance of the entire platform. You can set up alerts to proactively detect and troubleshoot issues without allowing access to sensitive data.  
-All of the products in the architecture | **Standardized deployments** : Using Agent Platform within a standardized tenant architecture pattern lets you establish a consistent baseline when you onboard new tenants. To reduce operational burden, automate the deployment process by using [Infrastructure as Code (IaC)](https://en.wikipedia.org/wiki/Infrastructure_as_code) tools like Terraform. For Terraform code that you can use to build and deploy a multi-tenant agentic AI system, see the Deployment section of this document.  
-  
+#### Google Cloud Observability considerations
+
+Logging and Cloud Monitoring let you monitor the health and performance of the entire platform. You can set up alerts to proactively detect and troubleshoot issues without allowing access to sensitive data.
+
+#### Operational efficiency considerations for all of the products in the architecture
+
+Using Agent Platform within a standardized tenant architecture pattern lets you establish a consistent baseline when you onboard new tenants. To reduce operational burden, automate the deployment process by using [Infrastructure as Code (IaC)](https://en.wikipedia.org/wiki/Infrastructure_as_code) tools like Terraform. For Terraform code that you can use to build and deploy a multi-tenant agentic AI system, see the Deployment section of this document.
+
 For operational excellence principles and recommendations that are specific to AI and ML workloads, see [AI and ML perspective: Operational excellence](https://docs.cloud.google.com/architecture/framework/perspectives/ai-ml/operational-excellence) in the Well-Architected Framework. 
 
 ### Cost optimization
 
 This section provides guidance to optimize the cost of setting up and operating a Google Cloud topology that you build by using this reference architecture.
 
-Component | Design considerations and recommendations  
----|---  
-Agent Platform |  **Token consumption** : To manage costs and prevent your AI model from exceeding context windows, use the following strategies to manage context for the AI model:
+#### Agent Platform cost considerations
 
-  * **Context summarization** : Instead of saving an entire session conversation as context, use an AI model to summarize older conversation and less critical information.
-  * **Prune outputs** : Identify and remove less relevant or verbose parts of tool outputs or retrieved context. For example, if you only need the column names from your data, you can remove excessive metadata from a database schema fetch. This strategy requires custom logic that uses heuristics, filtering, or a small language model (SLM) to extract the most important information.
-  * **Maximum token limit** : To help prevent infinite loops and to help control costs, enforce a session maximum token limit.
+To help ensure that your Agent Platform configurations and usage meet your cost requirements, consider the following recommendations:
 
-**Model endpoints** : To manage API quotas and resource utilization, you can deploy Agent Platform endpoints in either a dedicated configuration or a shared configuration:
+  * **Token consumption** : To manage costs and prevent your AI model from exceeding context windows, use the following strategies to manage context for the AI model: 
+    * **Context summarization** : Instead of saving an entire session conversation as context, use an AI model to summarize older conversation and less critical information.
+    * **Prune outputs** : Identify and remove less relevant or verbose parts of tool outputs or retrieved context. For example, if you only need the column names from your data, you can remove excessive metadata from a database schema fetch. This strategy requires custom logic that uses heuristics, filtering, or a small language model (SLM) to extract the most important information.
+    * **Maximum token limit** : To help prevent infinite loops and to help control costs, enforce a session maximum token limit.
+  * **Model endpoints** : To manage API quotas and resource utilization, you can deploy Agent Platform endpoints in either a dedicated configuration or a shared configuration:
 
-  * **Dedicated endpoints** : When you deploy endpoints within each tenant project, you provide inherent quota isolation. Each tenant's usage counts against its own project quotas, which prevents inter-tenant impact. Compared to shared endpoints, dedicated endpoints offer simpler quota management. However, dedicated endpoints prevent you from taking advantage of the potential cost savings of a shared endpoint.
-  * **Shared endpoints** : To optimize costs, you can host a shared endpoint in the central governance and security hub. Because all of the tenants share the same pool of quotas, to prevent malicious attacks, you must implement mitigation strategies such as tenant-level rate limiting or quota enforcement with API Gateway. Compared to dedicated endpoints, shared endpoints are more cost-effective. However, shared endpoints require additional engineering effort and they can introduce latency and management overhead.
+    * **Dedicated endpoints** : When you deploy endpoints within each tenant project, you provide inherent quota isolation. Each tenant's usage counts against its own project quotas, which prevents inter-tenant impact. Compared to shared endpoints, dedicated endpoints offer simpler quota management. However, dedicated endpoints prevent you from taking advantage of the potential cost savings of a shared endpoint.
+    * **Shared endpoints** : To optimize costs, you can host a shared endpoint in the central governance and security hub. Because all of the tenants share the same pool of quotas, to help prevent malicious attacks, you must implement mitigation strategies such as tenant-level rate limiting or quota enforcement with API Gateway. Compared to dedicated endpoints, shared endpoints are more cost-effective. However, shared endpoints require additional engineering effort and they can introduce latency and management overhead.
 
-For information about costs on Agent Platform, see [Cost of building and deploying AI models in Agent Platform](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing).  
-Cloud Run | **Instrumentation** : Instrumentation lets you monitor performance, troubleshoot issues, and track resource usage for each tenant. To identify the tenant for each request, extract the user identity from the context that IAP provides. For information about how to instrument your application, see [Choose an instrumentation approach](https://docs.cloud.google.com/stackdriver/docs/instrumentation/choose-approach#run).  
-Model Armor | **Centralized prompt filtering** : To enforce strict governance and a zero-trust posture, this architecture deploys Model Armor at two layers: in the routing hub and within each tenant project. Although this two-layered approach helps to ensure data sovereignty, it increases latency and operational costs. To reduce costs and system complexity, filter all of the prompts and responses by deploying Model Armor exclusively in the routing hub.  
-All of the products in the architecture |  **Shared infrastructure** : Shared core infrastructure components, such as the frontend portal, the central governance and security hub, and Agent Platform, can reduce costs compared to when you build a separate, custom stack for each agent. **Platform overhead** : To distribute the shared costs of the central governance and security hub, use an allocation model that fits your tracking capabilities and usage patterns. We recommend that you use one of the following cost allocation models:
+For information about costs on Agent Platform, see [Cost of building and deploying AI models in Agent Platform](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing).
 
-  * **Even split allocation** : An even split model allocates shared costs equally across all of the tenants. Use this model when the platform is a baseline utility or when the overhead of granular tracking outweighs the cost benefits.
-  * **Proportional allocation** : A proportional model, or [chargeback process](https://cloud.google.com/blog/topics/cost-management/principles-for-designing-a-chargeback-process), allocates shared costs based on the proportion of direct costs that each tenant incurs. Use this model when tenant consumption varies drastically and you have robust telemetry, such as Resource Manager [labels](https://docs.cloud.google.com/resource-manager/docs/labels-overview) and log parsing, to attribute costs accurately.
-  * **Fixed allocation** : A fixed, or tiered, model allocates shared costs based on business-defined coefficients. Use this model when tenants require different service-level agreements (SLAs). A fixed model allocation lets you charge fixed rates for premium dedicated capabilities versus standard shared capabilities.
 
-For more information about how to allocate shared services costs, see [Cloud FinOps: Shared services cost allocation](https://services.google.com/fh/files/misc/cloud_finops_shared_services_cost_allocation_whitepaper.pdf). **Centralized cost management** : To accurately track the total cost of ownership (TCO) of your agentic AI system and attribute costs to individual business units, use labels and Cloud Billing export data. For more information about how to use labels for cost awareness, see [Foster a culture of cost awareness](https://docs.cloud.google.com/architecture/framework/cost-optimization/foster-culture-cost-awareness#use_a_consistent_and_standard_set_of_labels_for_all_your_resources).  
-  
+
+
+#### Cloud Run cost considerations
+
+Instrumentation lets you monitor performance, troubleshoot issues, and track resource usage for each tenant. To identify the tenant for each request, extract the user identity from the context that IAP provides. For information about how to instrument your application, see [Choose an instrumentation approach](https://docs.cloud.google.com/stackdriver/docs/instrumentation/choose-approach#run).
+
+#### Model Armor cost considerations
+
+To enforce strict governance and a zero-trust posture, this architecture deploys Model Armor at two layers: in the routing hub and within each tenant project. Although this two-layered approach helps to ensure data sovereignty, it increases latency and operational costs. To reduce costs and system complexity, filter all of the prompts and responses by deploying Model Armor exclusively in the routing hub.
+
+#### Cost considerations for all of the products in the architecture
+
+To help ensure that your architecture meets your cost requirements, consider the following general recommendations:
+
+  * **Shared infrastructure** : Shared core infrastructure components, such as the frontend portal, the central governance and security hub, and Agent Platform, can reduce costs compared to when you build a separate, custom stack for each agent.
+  * **Platform overhead** : To distribute the shared costs of the central governance and security hub, use an allocation model that fits your tracking capabilities and usage patterns. We recommend that you use one of the following cost allocation models:
+
+    * **Even split allocation** : An even split model allocates shared costs equally across all of the tenants. Use this model when the platform is a baseline utility or when the overhead of granular tracking outweighs the cost benefits.
+    * **Proportional allocation** : A proportional model, or [chargeback process](https://cloud.google.com/blog/topics/cost-management/principles-for-designing-a-chargeback-process), allocates shared costs based on the proportion of direct costs that each tenant incurs. Use this model when tenant consumption varies drastically and you have robust telemetry, such as Resource Manager [labels](https://docs.cloud.google.com/resource-manager/docs/labels-overview) and log parsing, to attribute costs accurately.
+    * **Fixed allocation** : A fixed, or tiered, model allocates shared costs based on business-defined coefficients. Use this model when tenants require different service-level agreements (SLAs). A fixed model allocation lets you charge fixed rates for premium dedicated capabilities versus standard shared capabilities.
+
+For more information about how to allocate shared services costs, see [Cloud FinOps: Shared services cost allocation](https://services.google.com/fh/files/misc/cloud_finops_shared_services_cost_allocation_whitepaper.pdf).
+
+  * **Centralized cost management** : To accurately track the total cost of ownership (TCO) of your agentic AI system and attribute costs to individual business units, use labels and Cloud Billing export data. For more information about how to use labels for cost awareness, see [Foster a culture of cost awareness](https://docs.cloud.google.com/architecture/framework/cost-optimization/foster-culture-cost-awareness#use_a_consistent_and_standard_set_of_labels_for_all_your_resources).
+
+
+
+
 To estimate the cost of your Google Cloud resources, use the [Google Cloud Pricing Calculator](https://cloud.google.com/products/calculator).
 
 For cost optimization principles and recommendations that are specific to AI and ML workloads, see [AI and ML perspective: Cost optimization](https://docs.cloud.google.com/architecture/framework/perspectives/ai-ml/cost-optimization) in the Well-Architected Framework. 
@@ -345,6 +448,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-06-18 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-06-18 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

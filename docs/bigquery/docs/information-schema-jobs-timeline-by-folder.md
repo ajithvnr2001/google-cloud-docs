@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-jobs-timeline-by-folder/
 title: JOBS_TIMELINE_BY_FOLDER view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:56:41.582933+00:00
+fetched_at: 2026-10-21T11:59:56.475458+00:00
 ---
 
 # JOBS_TIMELINE_BY_FOLDER view  |  BigQuery  |  Google Cloud Documentation
@@ -68,6 +68,13 @@ The `INFORMATION_SCHEMA.JOBS_TIMELINE_BY_*` view has the following schema:
 `period_shuffle_ram_usage_ratio` | `FLOAT` | Shuffle usage ratio in the selected time period. The value is `0.0` if the job ran with a reservation that uses autoscaling and has zero baseline slots.  
 `period_estimated_runnable_units` | `INTEGER` | Units of work that can be scheduled immediately in this period. Additional slots for these units of work accelerate your query, provided no other query in the reservation needs additional slots.  
 `transaction_id` | `STRING` |  ID of the [transaction](https://docs.cloud.google.com/bigquery/docs/transactions) in which this job ran, if any. ([Preview](https://cloud.google.com/products#product-launch-stages))   
+`global_query_info` | `RECORD` |  Information about a [global query](https://docs.cloud.google.com/bigquery/docs/global-queries). Contains the following fields: 
+
+  * `parent_job_id`: The ID of the parent global query job in the primary region.
+  * `parent_job_location`: The location of the parent global query job.
+  * `remote_regions`: An array of remote regions referenced by the global query.
+
+  
   
 For stability, we recommend that you explicitly list columns in your information schema queries instead of using a wildcard (`SELECT *`). Explicitly listing columns prevents queries from breaking if the underlying schema changes.
 
@@ -170,6 +177,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

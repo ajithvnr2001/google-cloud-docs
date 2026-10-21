@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/migration/schema-data-overview/
 title: Schema and data transfer overview \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:48.756685+00:00
+fetched_at: 2026-10-21T12:22:51.241008+00:00
 ---
 
 # Schema and data transfer overview  |  BigQuery  |  Google Cloud Documentation
@@ -109,7 +109,7 @@ We've described the downstream process transformation first. This lets you show 
 
   5. Transform upstream processes.
 
-You can transform some of your upstream processes to write into the new schema. Because views are read only, you create tables based on the new schema, and you then modify the query definition of the facade views. Some views will still query the source schema, while others will query the newly created tables, or perform a SQL `UNION` operation on both, as shown in the following diagram:
+You can transform some of your upstream processes to write into the new schema. Because views are read-only, you create tables based on the new schema, and you then modify the query definition of the facade views. Some views will still query the source schema, while others will query the newly created tables, or perform a SQL `UNION` operation on both, as shown in the following diagram:
 
 ![Upstream processes feed into BigQuery tables, but they no longer feed into downstream processes. Instead, the BigQuery tables feed into facade views, which in turn feed into evolved downstream processes.](https://docs.cloud.google.com/static/bigquery/images/dw-bq-schema-and-data-transfer-overview-evolve-transform-upstream.svg)
 
@@ -312,6 +312,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

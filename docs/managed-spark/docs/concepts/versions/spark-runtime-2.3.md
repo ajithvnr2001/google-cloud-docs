@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-spark/docs/concepts/versions/spark-runtime-2.3
 title: Managed Service for Apache Spark runtime 2.3 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-18T05:42:47.713259+00:00
+fetched_at: 2026-10-21T11:59:14.022524+00:00
 ---
 
 # Managed Service for Apache Spark runtime 2.3  |  Google Cloud Documentation
@@ -59,13 +59,13 @@ The following sections list the library versions that are available in Managed S
 
 For Managed Service for Apache Spark batch workloads that use GPU VMs, the following NVIDIA driver and libraries are available in the Managed Service for Apache Spark container. You can use them to accomplish the following tasks:
 
-  * Accelerate Spark batch workloads with the [NVIDIA Spark Rapids library](https://docs.nvidia.com/spark-rapids/index.html)
+  * Accelerate Spark batch workloads with the [NVIDIA cuDF for Apache Spark library](https://docs.nvidia.com/cudf-spark/latest/index.html)
   * Train machine learning workloads
   * Run distributed batch inference using Spark
 
 Package Name | Version  
 ---|---  
-Spark Rapids | 25.02.1  
+Spark cuDF | 25.02.1  
 NVIDIA Driver | 570.133.20  
 CUDA | 12.9  
 cublas | 12.9.0  
@@ -352,6 +352,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

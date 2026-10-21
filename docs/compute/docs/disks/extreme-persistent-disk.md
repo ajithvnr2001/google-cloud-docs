@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/extreme-persistent-disk/
 title: Extreme Persistent Disk \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:28.405060+00:00
+fetched_at: 2026-10-21T11:58:13.385397+00:00
 ---
 
 # Extreme Persistent Disk  |  Compute Engine  |  Google Cloud Documentation
@@ -65,7 +65,7 @@ For more information, see [Authenticate for using REST](https://docs.cloud.googl
 
 ## Machine shape support
 
-You can use N2, M2 and M3 machine series with Extreme Persistent Disk. N2 VMs require at least 64 vCPUs.The following is list of machine types that support the maximum performance levels offered by Extreme Persistent Disk:
+You can use N2, M2 and M3 machine series with Extreme Persistent Disk. N2 VMs require at least 64 vCPUs. The following is a list of machine types that support the maximum performance levels offered by Extreme Persistent Disk:
 
   * [N2](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n2_series):
 
@@ -201,6 +201,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

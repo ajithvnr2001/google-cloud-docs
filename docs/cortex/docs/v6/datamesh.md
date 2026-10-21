@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/datamesh/
 title: (Deprecated) Data Mesh User Guide \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:52:12.704010+00:00
+fetched_at: 2026-10-21T12:01:24.460440+00:00
 ---
 
 # (Deprecated) Data Mesh User Guide  |  Google Cloud Cortex Framework  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 **Warning:** The Data Mesh feature within the Google Cloud Cortex Framework is now deprecated and disabled. This change is prompted by the evolution of Google Cloud's data management services. The Data Mesh solution was built using Data Catalog for metadata management, which is now being replaced by the more advanced [Knowledge Catalog](https://docs.cloud.google.com/dataplex/docs/introduction). Knowledge Catalog provides a unified API, enhanced metadata capabilities, and new features for a more comprehensive data governance experience.  
   
-For existing Cortex Framework users who have implemented the Data Mesh feature, we recommend transitioning to Knowledge Catalog to ensure continued support and access to the latest features. For a detailed migration guide, see [Transition to Knowledge Catalog](https://docs.cloud.google.com/dataplex/docs/transition-to-dataplex-catalog). 
+
 
 Data Mesh for Cortex Framework extends the data foundation to enable data governance, discoverability, and access control through BigQuery metadata and [Knowledge Catalog](https://docs.cloud.google.com/dataplex/docs/introduction). This is implemented by providing a base set of metadata resources and BigQuery asset annotations that can be customized and optionally deployed alongside the data foundation. These base specifications provide a customized configuration that are the metadata foundation to complement Cortex Framework Data Foundation. See [Data Mesh concepts](https://docs.cloud.google.com/cortex/docs/v6/datamesh-concepts) before proceeding with this guide.
 
@@ -364,6 +364,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

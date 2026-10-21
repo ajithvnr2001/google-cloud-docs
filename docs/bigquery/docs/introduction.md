@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/introduction/
 title: BigQuery overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:54:17.309285+00:00
+fetched_at: 2026-10-21T12:22:38.536735+00:00
 ---
 
 # BigQuery overview  |  Google Cloud Documentation
@@ -21,13 +21,22 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # BigQuery overview
 
-BigQuery is a fully managed, AI-ready data platform that helps you manage and analyze your data with built-in features like machine learning, search, geospatial analysis, and business intelligence. BigQuery's serverless architecture lets you use languages like SQL and Python to answer your organization's biggest questions with zero infrastructure management.
+BigQuery is a fully managed, AI-ready data platform that helps you manage and analyze your data. Its serverless architecture lets you use languages like SQL and Python to answer your organization's biggest questions with zero infrastructure management.
 
-BigQuery provides a uniform way to work with both structured and unstructured data and supports open table formats like Apache Iceberg, Delta, and Apache Hudi. BigQuery streaming supports continuous data ingestion and analysis while BigQuery's scalable, distributed analysis engine lets you query terabytes in seconds and petabytes in minutes.
+As a data analyst, data engineer, data warehouse administrator, or data scientist, you can use BigQuery for the following key use cases:
 
-BigQuery offers built-in governance capabilities that let you discover and curate data, and manage metadata and data quality. Through features like semantic search and data lineage, you can find and validate relevant data for analysis. You can share data and AI assets across your organization with the benefits of access control. These features are powered by Knowledge Catalog, which is a unified, intelligent governance solution for data and AI assets in Google Cloud. 
+  * **AI-assisted workflows:** leverage generative AI, vector search, and Gemini assistive features to explore, transform, and integrate large language models (LLMs) into your data workflows.
+  * **Machine learning and predictive analytics:** build, train, and deploy models on your data using SQL or Python.
+  * **Business intelligence and ad hoc analysis:** query terabytes in seconds and petabytes in minutes to inform critical business decisions.
+  * **Geospatial analysis:** analyze and visualize location-based data using geographic information systems (GIS).
+  * **Data governance and semantic search:** discover, curate, and validate data and AI assets using built-in features powered by Knowledge Catalog.
+  * **Continuous data ingestion:** stream both structured and unstructured data in real-time, with support for open table formats like Apache Iceberg, Delta, and Apache Hudi.
 
-BigQuery's architecture consists of two parts: a storage layer that ingests, stores, and optimizes data and a compute layer that provides analytics capabilities. These compute and storage layers efficiently operate independently of each other thanks to Google's petabit-scale network that enables the necessary communication between them.
+
+
+## BigQuery architecture
+
+BigQuery architecture consists of two parts: a storage layer that ingests, stores, and optimizes data and a compute layer that provides analytics capabilities. These compute and storage layers efficiently operate independently of each other thanks to Google's petabit-scale network that enables the necessary communication between them.
 
 Legacy databases usually have to share resources between read and write operations and analytical operations. This can result in resource conflicts and can slow queries while data is written to or read from storage. Shared resource pools can become further strained when resources are required for database management tasks such as assigning or revoking permissions. BigQuery's separation of compute and storage layers lets each layer dynamically allocate resources without impacting the performance or availability of the other.
 
@@ -36,8 +45,6 @@ Legacy databases usually have to share resources between read and write operatio
 This separation principle lets BigQuery innovate faster because storage and compute improvements can be deployed independently, without downtime or negative impact on system performance. It is also essential to offering a fully managed serverless data warehouse in which the BigQuery engineering team handles updates and maintenance. The result is that you don't need to provision or manually scale resources, leaving you free to focus on delivering value instead of traditional database management tasks.
 
 BigQuery interfaces include Google Cloud console interface and the BigQuery command-line tool. Developers and data scientists can use client libraries with familiar programming including Python, Java, JavaScript, and Go, as well as BigQuery's REST API and RPC API to transform and manage data. ODBC and JDBC drivers provide interaction with existing applications including third-party tools and utilities.
-
-As a data analyst, data engineer, data warehouse administrator, or data scientist, BigQuery helps you load, process, and analyze data to inform critical business decisions.
 
 ## Get started with BigQuery
 
@@ -75,7 +82,7 @@ Descriptive and prescriptive analysis uses include business intelligence, ad hoc
   * ANSI-standard SQL queries ([ISO/IEC 9075 support](https://www.iso.org/standard/76583.html)) including support for joins, nested and repeated fields, analytic and aggregation functions, multi-statement queries, and a variety of spatial functions with geospatial analytics - Geographic Information Systems.
   * Pandas-compatible Python API, provided by [BigQuery DataFrames](https://docs.cloud.google.com/bigquery/docs/dataframes-quickstart).
   * [Create views](https://docs.cloud.google.com/bigquery/docs/views-intro) to share your analysis. 
-  * Business intelligence tool support including [BI Engine](https://docs.cloud.google.com/bigquery/docs/bi-engine-intro) with [Data Studio](https://docs.cloud.google.com/bigquery/docs/visualize-looker-studio), [Looker](https://docs.cloud.google.com/bigquery/docs/looker), [Google Sheets](https://docs.cloud.google.com/bigquery/docs/connected-sheets), and 3rd party tools like Tableau and Power BI. 
+  * Business intelligence tool support including [BI Engine](https://docs.cloud.google.com/bigquery/docs/bi-engine-intro) with [Data Studio](https://docs.cloud.google.com/bigquery/docs/visualize-looker-studio), [Looker](https://docs.cloud.google.com/bigquery/docs/looker), [Google Sheets](https://docs.cloud.google.com/bigquery/docs/connected-sheets), and third-party tools like Tableau and Power BI. 
   * [BigQuery ML](https://docs.cloud.google.com/bigquery/docs/bqml-introduction) provides machine learning and predictive analytics. 
   * [BigQuery Studio](https://docs.cloud.google.com/bigquery/docs/query-overview#bigquery-studio) offers features such as Python notebooks, and version control for both notebooks and saved queries. These features make it easier for you to complete your data analysis and machine learning (ML) workflows in BigQuery. 
   * [Query data outside of BigQuery](https://docs.cloud.google.com/bigquery/external-data-sources) with [federated queries](https://docs.cloud.google.com/bigquery/docs/federated-queries-intro) and [external tables](https://docs.cloud.google.com/bigquery/docs/external-tables). 
@@ -130,7 +137,7 @@ Gemini in BigQuery is part of the [Gemini for Google Cloud](https://docs.cloud.g
 Gemini in BigQuery provides AI assistance to help you do the following:
 
   * **Explore and understand your data with data insights**. Data insights offers an automated, intuitive way to uncover patterns and perform statistical analysis by using insightful queries that are generated from the metadata of your tables. This feature is especially helpful in addressing the cold-start challenges of early data exploration. For more information, see [Generate data insights in BigQuery](https://docs.cloud.google.com/bigquery/docs/data-insights).
-  * **Chat with your data using conversational analytics**. Conversational analytics lets you have natural language conversations with your data. You can create data agents configured with custom metadata, instructions, glossary terms, and verified queries to establish business logic. You can also start direct conversations with data sources, including tables, views, property graphs, and Lakehouse tables. For more information, see [Conversational analytics overview](https://docs.cloud.google.com/bigquery/docs/conversational-analytics).
+  * **Chat with your data using conversational analytics**. Conversational analytics lets you have natural language conversations with your data. You can create data agents configured with custom metadata, instructions, glossary terms, and verified queries to establish business logic. You can also start direct conversations with data sources, including tables, views, graphs, and Lakehouse tables. For more information, see [Conversational analytics overview](https://docs.cloud.google.com/bigquery/docs/conversational-analytics).
   * **Discover, transform, query, and visualize data with BigQuery data canvas**. You can use natural language with Gemini in BigQuery, to find, join, and query table assets, visualize results, and seamlessly collaborate with others throughout the entire process. For more information, see [Analyze with data canvas](https://docs.cloud.google.com/bigquery/docs/data-canvas).
   * **Get assisted SQL and Python data analysis**. You can use Gemini in BigQuery to generate or suggest code in either SQL or Python, and to explain an existing SQL query. You can also use natural language queries to begin data analysis. To learn how to generate, complete, and summarize code, see the following documentation:  
 
@@ -244,6 +251,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

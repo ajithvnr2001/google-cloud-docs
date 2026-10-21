@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/cloudsupport/
 title: Google Cloud Support roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-16T11:36:00.853178+00:00
+fetched_at: 2026-10-21T12:23:06.109411+00:00
 ---
 
 # Google Cloud Support roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation
@@ -30,7 +30,7 @@ Role | Permissions
   
 #### Support Administrator 
 
-(`roles/cloudsupport.admin`) Allows management of a support account without giving access to support cases. See the [Cloud Support documentation](https://docs.cloud.google.com/support/docs/access-control#support_account_admin) for more information.  Lowest-level resources where you can grant this role:
+(`roles/cloudsupport.admin`) Allows management of a support account and support cases. See the [Cloud Support documentation](https://docs.cloud.google.com/support/docs/access-control#support_account_admin) for more information.  Lowest-level resources where you can grant this role:
 
   * Organization 
 
@@ -66,11 +66,11 @@ Role | Permissions
   
 #### Advisory Support Editor 
 
-(`roles/cloudsupport.advisorySupportEditor`) Full read-write access to advisory support cases applicable for GCP Customer Care.  |  `cloudasset.assets.searchAllResources` `cloudsupport.properties.get` `resourcemanager.projects.get` `resourcemanager.projects.list`  
+(`roles/cloudsupport.advisorySupportEditor`) Full read-write access to advisory support cases applicable for Cloud Customer Care.  |  `cloudasset.assets.searchAllResources` `cloudsupport.properties.get` `resourcemanager.projects.get` `resourcemanager.projects.list`  
   
 #### Advisory Support Viewer 
 
-(`roles/cloudsupport.advisorySupportViewer`) Read-only access to advisory support cases applicable for GCP Customer Care.  |  `cloudsupport.properties.get` `resourcemanager.projects.get` `resourcemanager.projects.list`  
+(`roles/cloudsupport.advisorySupportViewer`) Read-only access to advisory support cases applicable for Cloud Customer Care.  |  `cloudsupport.properties.get` `resourcemanager.projects.get` `resourcemanager.projects.list`  
   
 #### Support Subscription Editor 
 
@@ -82,7 +82,7 @@ Role | Permissions
   
 #### Tech Support Editor 
 
-(`roles/cloudsupport.techSupportEditor`) Full read-write access to technical support cases (applicable for GCP Customer Care and Maps support). See the [Cloud Support documentation](https://docs.cloud.google.com/support/docs/access-control#tech_support_editor) for more information.  |  `billing.resourceAssociations.list` `cloudasset.assets.searchAllResources` `cloudsupport.properties.get` `cloudsupport.techCases.*`
+(`roles/cloudsupport.techSupportEditor`) Full read-write access to technical support cases (applicable for Cloud Customer Care and Maps support). See the [Cloud Support documentation](https://docs.cloud.google.com/support/docs/access-control#tech_support_editor) for more information.  |  `billing.resourceAssociations.list` `cloudasset.assets.searchAllResources` `cloudsupport.properties.get` `cloudsupport.techCases.*`
 
   * `cloudsupport.techCases.create`
   * `cloudsupport.techCases.escalate`
@@ -94,7 +94,7 @@ Role | Permissions
   
 #### Tech Support Viewer 
 
-(`roles/cloudsupport.techSupportViewer`) Read-only access to technical support cases (applicable for GCP Customer Care and Maps support). See the [Cloud Support documentation](https://docs.cloud.google.com/support/docs/access-control#tech_support_viewer) for more information.  |  `cloudsupport.properties.get` `cloudsupport.techCases.get` `cloudsupport.techCases.list` `resourcemanager.projects.get` `resourcemanager.projects.list`  
+(`roles/cloudsupport.techSupportViewer`) Read-only access to technical support cases (applicable for Cloud Customer Care and Maps support). See the [Cloud Support documentation](https://docs.cloud.google.com/support/docs/access-control#tech_support_viewer) for more information.  |  `cloudsupport.properties.get` `cloudsupport.techCases.get` `cloudsupport.techCases.list` `resourcemanager.projects.get` `resourcemanager.projects.list`  
   
 ## Google Cloud Support permissions
 
@@ -177,6 +177,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

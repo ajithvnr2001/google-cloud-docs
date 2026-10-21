@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-spark/docs/tutorials/genomics-single-cell/
 title: Run a genomics analysis in a JupyterLab notebook \u00a0|\u00a0 Managed Service for Apache Spark \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:37:26.104934+00:00
+fetched_at: 2026-10-21T11:59:13.752653+00:00
 ---
 
 # Run a genomics analysis in a JupyterLab notebook  |  Managed Service for Apache Spark  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback
 
 #  Run a genomics analysis in a JupyterLab notebook Stay organized with collections  Save and categorize content based on your preferences. 
 
-This tutorial shows you how to run a single-cell genomics analysis using [Dask](https://dask.org/), [NVIDIA RAPIDS](https://rapids.ai/), and GPUs, which you can configure on [Managed Service for Apache Spark](https://docs.cloud.google.com/dataproc). You can configure Managed Service for Apache Spark to run Dask either with its standalone scheduler or with YARN for resource management.
+This tutorial shows you how to run a single-cell genomics analysis using [Dask](https://dask.org/), [NVIDIA CUDA-X](https://rapids.ai/), and GPUs, which you can configure on [Managed Service for Apache Spark](https://docs.cloud.google.com/dataproc). You can configure Managed Service for Apache Spark to run Dask either with its standalone scheduler or with YARN for resource management.
 
 This tutorial configures Managed Service for Apache Spark with a hosted [JupyterLab](https://jupyter.org/) instance to run a notebook featuring a single-cell genomics analysis. Using a Jupyter Notebook on Managed Service for Apache Spark lets you combine the interactive capabilities of Jupyter with the workload scaling that Managed Service for Apache Spark enables. With Managed Service for Apache Spark, you can scale out your workloads from one to many machines, which you can configure with as many GPUs as you need.
 
@@ -31,7 +31,7 @@ This tutorial is intended for data scientists and researchers. It assumes that y
 
   * [Managed Service for Apache Spark](https://docs.cloud.google.com/dataproc)
   * [Dask](https://dask.org/)
-  * [RAPIDS](https://rapids.ai/)
+  * [CUDA-X](https://rapids.ai/)
   * [Jupyter Notebooks](https://jupyter.org/)
 
 
@@ -135,9 +135,9 @@ The cluster has the following properties:
   * `--image-version`: `2.0-ubuntu18`, the [cluster image version](https://docs.cloud.google.com/managed-spark/docs/concepts/versioning/dataproc-versions#debian_images)
   * `--master-machine-type`: `n1-standard-32`, the main [machine type](https://docs.cloud.google.com/compute/docs/machine-types).
   * `--master-accelerator`: the type and count of [GPUs](https://docs.cloud.google.com/managed-spark/docs/concepts/compute/gpus) on the main node, four `nvidia-tesla-t4` GPUs.
-  * `--initialization-actions`: the Cloud Storage paths to the installation scripts that install GPU drivers, Dask, RAPIDS, and extra dependencies.
+  * `--initialization-actions`: the Cloud Storage paths to the installation scripts that install GPU drivers, Dask, CUDA-X, and extra dependencies.
   * `--initialization-action-timeout`: the timeout for the initialization actions.
-  * `--metadata`: passed to the initialization actions to configure the cluster with NVIDIA GPU drivers, the standalone scheduler for Dask, and RAPIDS version `21.06`.
+  * `--metadata`: passed to the initialization actions to configure the cluster with NVIDIA GPU drivers, the standalone scheduler for Dask, and CUDA-X version `21.06`.
   * `--optional-components`: configures the cluster with the [Jupyter optional component](https://docs.cloud.google.com/managed-spark/docs/concepts/components/jupyter).
   * `--enable-component-gateway`: allows access to web UIs on the cluster.
   * `--single-node`: configures the cluster as a single node (no workers).
@@ -161,7 +161,7 @@ The cluster has the following properties:
 
   7. To clear all the outputs in the notebook, select **Edit > Clear All Outputs**
 
-  8. Read the instructions in the cells of the notebook. The notebook uses Dask and RAPIDS on Managed Service for Apache Spark to guide you through a single-cell RNA-seq workflow on 1 million cells, including processing and visualizing the data. To learn more, see [Accelerating Single Cell Genomic Analysis using RAPIDS](https://developer.nvidia.com/blog/accelerating-single-cell-genomic-analysis-using-rapids/).
+  8. Read the instructions in the cells of the notebook. The notebook uses Dask and CUDA-X on Managed Service for Apache Spark to guide you through a single-cell RNA-seq workflow on 1 million cells, including processing and visualizing the data. To learn more, see [Accelerating Single Cell Genomic Analysis using CUDA-X](https://developer.nvidia.com/blog/accelerating-single-cell-genomic-analysis-using-rapids/).
 
 
 
@@ -214,6 +214,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

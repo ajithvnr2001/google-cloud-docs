@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/sharing-disks-between-vms/
 title: Share disks between instances \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:31.498510+00:00
+fetched_at: 2026-10-21T12:22:30.228206+00:00
 ---
 
 # Share disks between instances  |  Compute Engine  |  Google Cloud Documentation
@@ -271,15 +271,15 @@ For example, suppose you attach a Hyperdisk Balanced volume provisioned with 100
   * C4 instances created before May 1, 2026, don't support multi-writer mode. To attach a Hyperdisk volume that's in multi-writer mode to a C4 instance, the instance must have been created after May 1, 2026.
   * For zonal Hyperdisk volumes, all the instances attached to the volume must be in the same zone. For regional Hyperdisk volumes, the instances must be in the same zone as one of the volume's replicas.
   * You can attach a single Hyperdisk Balanced or Hyperdisk Balanced High Availability volume in multi-writer mode to at most 8 instances. You can attach a single Hyperdisk Extreme volume in multi-writer mode to at most 16 instances.
-  * You can't create machine images, or disk images from Hyperdisk volumes in multi-writer mode. 
+  * You can't create machine images or disk images from Hyperdisk volumes in multi-writer mode. 
   * You can't create a Hyperdisk volume in multi-writer mode when you're creating or editing an instance. You must create the Hyperdisk volume separately first, and then attach it to the instance.
-  * You can't resize a Hyperdisk volume in multi-writer mode unless you detach the volume from all instances.
   * You can make the following changes to a Hyperdisk volume that's in multi-writer mode, even if the volume is attached to multiple instances:
 
     * Modify its provisioned IOPS or throughput
     * Attach the disk to additional instances
+    * Increase the volume's size
 
-When you make one of these changes, Compute Engine redistributes the Hyperdisk volume's provisioned performance across all the attached instances. This process might take up to 6 hours to complete.
+When you modify the provisioned performance or attach the disk to additional instances, Compute Engine redistributes the Hyperdisk volume's provisioned performance across all the attached instances. This process might take up to 6 hours to complete.
 
   * You can't create an image from a Hyperdisk volume in multi-writer mode.
 
@@ -560,6 +560,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/table-snapshots-restore/
 title: Restore table snapshots \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:45:43.992042+00:00
+fetched_at: 2026-10-21T12:01:44.414493+00:00
 ---
 
 # Restore table snapshots  |  BigQuery  |  Google Cloud Documentation
@@ -21,15 +21,15 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Restore table snapshots
 
-This document describes how to create a writeable table from a table snapshot by using the Google Cloud console, a `CREATE TABLE CLONE` query, a `bq cp` command, or the `jobs.insert` API. It is intended for users who are familiar with [table snapshots](https://docs.cloud.google.com/bigquery/docs/table-snapshots-intro).
+This document describes how to create a writable table from a table snapshot by using the Google Cloud console, a `CREATE TABLE CLONE` query, a `bq cp` command, or the `jobs.insert` API. It is intended for users who are familiar with [table snapshots](https://docs.cloud.google.com/bigquery/docs/table-snapshots-intro).
 
 ## Permissions and roles
 
-This section describes the [Identity and Access Management (IAM) permissions](https://docs.cloud.google.com/bigquery/docs/access-control#bq-permissions) that you need to create a writeable table from a table snapshot, and the [predefined IAM roles](https://docs.cloud.google.com/bigquery/docs/access-control#bigquery) that grant those permissions.
+This section describes the [Identity and Access Management (IAM) permissions](https://docs.cloud.google.com/bigquery/docs/access-control#bq-permissions) that you need to create a writable table from a table snapshot, and the [predefined IAM roles](https://docs.cloud.google.com/bigquery/docs/access-control#bigquery) that grant those permissions.
 
 ### Permissions
 
-To create a writeable table from a table snapshot, you need the following permissions:
+To create a writable table from a table snapshot, you need the following permissions:
 
 **Permission** | **Resource**  
 ---|---  
@@ -38,7 +38,7 @@ All of the following:
 `bigquery.tables.get`  
 `bigquery.tables.getData`  
 `bigquery.tables.restoreSnapshot`  
-| The table snapshot that you want to copy into a writeable table.  
+| The table snapshot that you want to copy into a writable table.  
 `bigquery.tables.create` | The dataset that contains the destination table.  
   
 ### Roles
@@ -51,7 +51,7 @@ Any of the following:
   
 `bigquery.dataEditor`  
 `bigquery.dataOwner`  
-`bigquery.admin` | The table snapshot that you want to copy into a writeable table.  
+`bigquery.admin` | The table snapshot that you want to copy into a writable table.  
 Any of the following:  
   
 `bigquery.dataEditor`  
@@ -60,7 +60,7 @@ Any of the following:
   
 ## Restore a table snapshot
 
-To create a writeable table from a snapshot, specify the table snapshot that you want to copy and the destination table. The destination table can be a new table, or you can overwrite an existing table with the table snapshot.
+To create a writable table from a snapshot, specify the table snapshot that you want to copy and the destination table. The destination table can be a new table, or you can overwrite an existing table with the table snapshot.
 
 ### Restore to a new table
 
@@ -328,6 +328,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

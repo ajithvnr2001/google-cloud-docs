@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/editions/
 title: Compare editions of Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:07:10.921010+00:00
+fetched_at: 2026-10-21T12:22:37.344946+00:00
 ---
 
 # Compare editions of Gemini Enterprise  |  Google Cloud Documentation
@@ -56,13 +56,15 @@ Use your own full-code agents built outside of Gemini Enterprise |  | check | ch
 Access the Agent Marketplace |  | check | check | check | check  
 Access basic agent governance and administration | check | check | check | check |   
 Enterprise-grade security and compliance |  | check | check | check | check  
-AI developer tools |  | check | check | check |   
+[AI developer tools](https://docs.cloud.google.com/gemini/enterprise/docs/ai-developer-tools-overview)4 |  | check | check | check |   
   
 1 Storage and data indexing quotas are pooled across all users in a project and location, regardless of edition. Other feature quotas are pooled within each edition.
 
 2 Gemini Enterprise Frontline users can install skills themselves from **Browse skills**. They can't create or upload custom skills. For more information, see [Create and manage skills](https://docs.cloud.google.com/gemini/enterprise/docs/skills#supported-editions).
 
 3 With Gemini Enterprise Frontline, users can only access previously-developed agents that have been provisioned for them by their administrator.
+
+4 To configure and use AI developer tools, your project must be linked to an [invoiced Cloud Billing account](https://docs.cloud.google.com/billing/docs/concepts#billing_account_types). For more information, see [AI developer tools overview](https://docs.cloud.google.com/gemini/enterprise/docs/ai-developer-tools-overview).
 
 ## Next steps
 
@@ -76,6 +78,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

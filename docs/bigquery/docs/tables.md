@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/tables/
 title: Create and use tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:44:07.703128+00:00
+fetched_at: 2026-10-21T12:01:34.916332+00:00
 ---
 
 # Create and use tables  |  BigQuery  |  Google Cloud Documentation
@@ -1889,7 +1889,7 @@ Column name | Data type | Value
 `collation_name` | `STRING` |  The name of the [collation specification](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/collation-concepts) if it exists; otherwise, `NULL`.  
   
 If a `STRING`, `ARRAY<STRING>`, or `STRING` field in a `STRUCT` is passed in, the collation specification is returned if it exists; otherwise, `NULL` is returned.   
-`rounding_mode` | `STRING` |  The mode of rounding that's used when applying precision and scale to+ parameterized `NUMERIC` or `BIGNUMERIC` values; otherwise, the value is `NULL`.   
+`rounding_mode` | `STRING` |  The mode of rounding that's used when applying precision and scale to parameterized `NUMERIC` or `BIGNUMERIC` values; otherwise, the value is `NULL`.   
 `data_policies.name` | `STRING` |  The list of data policies that are attached to the column to control access and masking. This field is in ([Preview](https://cloud.google.com/products#product-launch-stages)).   
 `policy_tags` | `ARRAY<STRING>` |  The list of policy tags that are attached to the column.   
   
@@ -1899,7 +1899,7 @@ The following example retrieves metadata from the `INFORMATION_SCHEMA.COLUMN_FIE
 
 Because the table you're querying is in another project, the `bigquery-public-data` project, you add the project ID to the dataset in the following format: ``project_id`.dataset.INFORMATION_SCHEMA.view`; for example, ``bigquery-public-data`.github_repos.INFORMATION_SCHEMA.COLUMN_FIELD_PATHS`.
 
-The `commits` table contains the following nested and nested and repeated columns:
+The `commits` table contains the following nested and repeated columns:
 
   * `author`: nested `RECORD` column
   * `committer`: nested `RECORD` column
@@ -2534,6 +2534,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

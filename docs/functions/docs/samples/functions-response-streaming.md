@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/samples/functions-response-streaming/
 title: Stream BigQuery query results \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:26:18.126327+00:00
+fetched_at: 2026-10-21T12:01:53.385976+00:00
 ---
 
 # Stream BigQuery query results  |  Cloud Run functions  |  Google Cloud Documentation
@@ -268,7 +268,7 @@ To authenticate to Cloud Run functions, set up Application Default Credentials. 
       # Provide the Project ID by setting the env variable or specifying directly.
       # project_id = "Your Google Cloud project ID"
       project_id = ENV["CLOUD_PROJECT_ID"]
-      bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-reservation-v1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html) project: project_id
+      bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-data_policies-v1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html) project: project_id
       # Example to retrieve a large payload from public BigQuery dataset.
       sql = "SELECT abstract FROM `bigquery-public-data.breathe.bioasq` LIMIT 1000"
     

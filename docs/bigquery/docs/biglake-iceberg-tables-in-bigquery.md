@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/biglake-iceberg-tables-in-bigquery/
 title: Apache Iceberg managed tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T15:10:01.614060+00:00
+fetched_at: 2026-10-21T11:58:15.854494+00:00
 ---
 
 # Apache Iceberg managed tables  |  BigQuery  |  Google Cloud Documentation
@@ -31,7 +31,7 @@ Iceberg managed tables support the following features:
   * _Schema evolution_ , which lets you add, drop, and rename columns to suit your needs. This feature also lets you change an existing column's [data type](https://docs.cloud.google.com/bigquery/docs/managing-table-schemas#change_a_columns_data_type) and [mode](https://docs.cloud.google.com/bigquery/docs/managing-table-schemas#change_a_columns_mode). For more information, see [Conversion rules](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/conversion_rules).
   * _Automatic storage optimization_ , including adaptive file sizing, automatic clustering, garbage collection, and metadata optimization.
   * [_Time travel_](https://docs.cloud.google.com/bigquery/docs/time-travel) for historical data access in BigQuery.
-  * [_Column-level security_](https://docs.cloud.google.com/bigquery/docs/column-level-security-intro) and [_data masking_](https://docs.cloud.google.com/bigquery/docs/column-data-masking-intro).
+  * [_Column-level security_](https://docs.cloud.google.com/bigquery/docs/column-level-security-intro), [_row-level security_](https://docs.cloud.google.com/bigquery/docs/row-level-security-intro), and [_data masking_](https://docs.cloud.google.com/bigquery/docs/column-data-masking-intro).
   * _Multi-statement transactions_.
   * _Table partitioning_.
   * [_Table creation in Dataform workflows_](https://docs.cloud.google.com/dataform/docs/create-tables#create-iceberg-table).
@@ -81,7 +81,7 @@ The configuration of your Cloud Storage bucket and its connection with BigQuery 
 
   * Select a name that clearly indicates that the bucket is only meant for Iceberg managed tables.
 
-  * Choose [single-region Cloud Storage buckets](https://docs.cloud.google.com/storage/docs/locations#available-locations) that are co-located in the same region as your BigQuery dataset. This coordination improves performance and lowers costs by avoiding data transfer charges.
+  * Choose [single-region Cloud Storage buckets](https://docs.cloud.google.com/storage/docs/locations#available-locations) that are colocated in the same region as your BigQuery dataset. This coordination improves performance and lowers costs by avoiding data transfer charges.
 
   * By default, Cloud Storage stores data in the Standard storage class, which provides sufficient performance. To optimize data storage costs, you can enable [Autoclass](https://docs.cloud.google.com/storage/docs/autoclass) to automatically manage [storage class](https://docs.cloud.google.com/storage/docs/storage-classes) transitions. Autoclass starts with the Standard storage class and moves objects that aren't accessed to progressively colder classes in order to reduce storage costs. When the object is read again, it's moved back to the Standard class.
 
@@ -494,9 +494,8 @@ Iceberg managed tables have the following limitations:
     * Adding new nested fields to an existing `RECORD` columns using SQL DDL statements
   * Iceberg managed tables display a 0-byte storage size when queried by the console or APIs.
   * Iceberg managed tables don't support [materialized views](https://docs.cloud.google.com/bigquery/docs/materialized-views-intro).
-  * Iceberg managed tables don't support [authorized views](https://docs.cloud.google.com/bigquery/docs/authorized-views), but [column-level access control](https://docs.cloud.google.com/bigquery/docs/column-level-security-intro) is supported.
+  * Iceberg managed tables don't support [authorized views](https://docs.cloud.google.com/bigquery/docs/authorized-views), but [column-level access control](https://docs.cloud.google.com/bigquery/docs/column-level-security-intro) and [row-level security](https://docs.cloud.google.com/bigquery/docs/row-level-security-intro) are supported.
   * Iceberg managed tables don't support [managed disaster recovery](https://docs.cloud.google.com/bigquery/docs/managed-disaster-recovery)
-  * Iceberg managed tables don't support [row-level security](https://docs.cloud.google.com/bigquery/docs/row-level-security-intro).
   * Iceberg managed tables don't support [fail-safe windows](https://docs.cloud.google.com/bigquery/docs/time-travel#fail-safe).
   * Iceberg managed tables don't support extract jobs.
   * The `INFORMATION_SCHEMA.TABLE_STORAGE` view doesn't include Iceberg managed tables.
@@ -518,6 +517,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

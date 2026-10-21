@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/agentic-ai-classify-multimodal-data/
 title: Agentic AI use case: Classify multimodal data \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:31.695615+00:00
+fetched_at: 2026-10-21T12:22:36.322435+00:00
 ---
 
 # Agentic AI use case: Classify multimodal data  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -19,7 +19,7 @@ Send feedback
 
 #  Agentic AI use case: Classify multimodal data Stay organized with collections  Save and categorize content based on your preferences. 
 
-Last reviewed 2026-03-03 UTC
+Last reviewed 2026-10-14 UTC
 
 This document provides a high-level architecture for a multi-agent AI system deployed on Cloud Run that analyzes disparate multimodal data and produces a high-confidence classification. This approach cross-validates fragmented media by matching live data against historical ground truth to produce grounded, verifiable insights.
 
@@ -38,8 +38,8 @@ The following diagram shows the architecture of the multi-agent AI system that u
 The architecture shows the following data flow:
 
   1. The web application sends a request to the root agent to analyze a set of multimodal data for classification. The root agent is a [coordinator agent](https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system#coordinator-pattern) that receives requests and is deployed on a [Cloud Run](https://docs.cloud.google.com/run/docs/overview/what-is-cloud-run) service.
-  2. The root agent handles the request in the following way: 
-     1. The root agent initiates a [`before_agent_callback`](https://google.github.io/adk-docs/callbacks/types-of-callbacks/#before-agent-callback) to gather environment configurations, validate user input, and save resource paths in a shared [session state](https://google.github.io/adk-docs/sessions/state/). All of the subagents can access the shared session state, which eliminates redundant calls to fetch state data and decreases overall latency.
+  2. The root agent handles the request as follows: 
+     1. The root agent initiates a [`before_agent_callback`](https://adk.dev/callbacks/types-of-callbacks/#before-agent-callback) to gather environment configurations, validate user input, and save resource paths in a shared [session state](https://adk.dev/sessions/state/). All of the subagents can access the shared session state, which eliminates redundant calls to fetch state data and decreases overall latency.
      2. The root agent uses Gemini on Gemini Enterprise Agent Platform to interpret the user's request and distribute tasks to specialized subagents that run in parallel.
   3. Each subagent is specialized in a particular domain and conducts the following tasks independently: 
      1. The image and video analyst subagents interact with [custom Model Context Protocol (MCP) servers](https://docs.cloud.google.com/run/docs/tutorials/deploy-remote-mcp-server) to perform the following actions: 
@@ -69,7 +69,7 @@ This reference architecture uses the following Google Cloud products and tools:
   * [ Cloud Storage](https://cloud.google.com/storage): A low-cost, no-limit object store for diverse data types. Data can be accessed from within and outside Google Cloud, and it's replicated across locations for redundancy.
   * [ Google Cloud MCP servers](https://docs.cloud.google.com/mcp/overview): Google-managed remote services that implement the [Model Context Protocol (MCP)](https://cloud.google.com/discover/what-is-model-context-protocol) to provide AI applications access to Google and Google Cloud products and services. 
   * [ Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro): An open-source standard for connecting AI applications to external systems.
-  * [Agent Development Kit (ADK)](https://google.github.io/adk-docs/): A set of tools and libraries to develop, test, and deploy AI agents.
+  * [Agent Development Kit (ADK)](https://adk.dev/): A set of tools and libraries to develop, test, and deploy AI agents.
 
 
 
@@ -83,26 +83,51 @@ The following are examples of use cases for the architecture that's described in
 
   * **Medical diagnosis** : Provide comprehensive diagnostic assessments by deploying specialized agents to independently analyze medical images, patient symptoms, and lab results. The AI system summarizes these findings based on a determined confidence threshold to provide grounded, verifiable insights for clinicians.
   * **Fraud detection** : Detect and flag potential fraud by deploying agents to independently analyze user behavior patterns and transaction data like scanned receipts and merchant invoices. By cross-referencing visual evidence from documents against digital network activity, the system identifies discrepancies and flags any transactions where a single agent identifies a suspicious indicator.
-  * **Document processing** : Automate the classification and extraction of information from documents by deploying specialized agents for [Optical Character Recognition (OCR)](https://cloud.google.com/use-cases/ocr), document classification and data extraction. To support high-confidence processing, the AI system requires all agents to agree on the output.
-  * **Quality Control** : Classify product quality or detect anomalies by deploying specialized agents for visual inspection, sensor data analysis, and specification checking. The system determines a pass or fail based on a determined confidence threshold among the agents.
+  * **Document processing** : Automate the classification and extraction of information from documents by deploying specialized agents for [optical character recognition (OCR)](https://cloud.google.com/use-cases/ocr), document classification, and data extraction. To support high-confidence processing, the AI system requires all agents to agree on the output.
+  * **Quality control** : Classify product quality or detect anomalies by deploying specialized agents for visual inspection, sensor data analysis, and specification checking. The system determines a pass or fail based on a determined confidence threshold among the agents.
 
 
 
 ## Design considerations
 
-To implement this architecture for production, consider the following recommendations:
+This section describes design factors, best practices, and recommendations to consider when you use this reference architecture to develop a topology that meets your specific requirements for security, cost, and performance.
 
-  * **Agent security** : To limit an agent's ability to take dangerous actions, create an [agent identity](https://docs.cloud.google.com/mcp/authenticate-mcp#agent-identity) and then secure access to your MCP servers by using [Identity and Access Management (IAM) attributes](https://docs.cloud.google.com/mcp/control-mcp-use-iam). By applying the [principle of least privilege](https://docs.cloud.google.com/secret-manager/docs/access-control#principle-of-least-privilege), you can help ensure that your agentic AI system performs expected behavior and prevents unintended read-write access to your production resources.
-  * **Ingress security:** To control access to the application, [disable the default run.app URL](https://docs.cloud.google.com/run/docs/securing/ingress#disable-url) of the frontend Cloud Run service and [set up a regional external Application Load Balancer](https://docs.cloud.google.com/load-balancing/docs/https/setting-up-reg-ext-https-serverless). In addition to load-balancing incoming traffic to the application, the load balancer handles SSL certificate management. For added protection, use [Google Cloud Armor security policies](https://docs.cloud.google.com/armor/docs/integrating-cloud-armor#serverless) to provide request filtering, DDoS protection, and rate limiting for the service.
-  * **Container image security:** To ensure that only authorized container images are deployed to Cloud Run, use [Binary Authorization](https://docs.cloud.google.com/binary-authorization/docs/run/overview). To identify and mitigate security risks in the container images, automatically run vulnerability scans by using [Artifact Analysis](https://docs.cloud.google.com/artifact-analysis/docs). For more information, see [Container scanning overview](https://docs.cloud.google.com/artifact-analysis/docs/container-scanning-overview).
+The guidance in this section isn't exhaustive. For more information about design factors and best practices, and for recommendations about building and deploying a multi-agent AI system, see [Multi-agent AI system in Google Cloud](https://docs.cloud.google.com/architecture/multiagent-ai-system#design_considerations).
+
+### Security, privacy, and compliance
+
+To help address the unique security risks of AI agents, Google recommends an [approach](https://research.google/pubs/an-introduction-to-googles-approach-for-secure-ai-agents/) that combines deterministic security controls with dynamic, reasoning-based defenses:
+
+  * **Human oversight** : Incorporate a human-in-the-loop flow in business-critical systems so human supervisors can review outputs and approve, override, or pause agent actions.
+  * **[Agent Identity](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/agent-identity-overview)** : Assign each agent a workload-bound identity to enforce least-privilege access control and centrally manage credentials for external tools.
+  * **[Agent Gateway](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/gateways/agent-gateway-overview)** : Enforce ingress and egress traffic governance, default-deny access policies, and inline prompt and tool inspection with [Model Armor](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/configure-model-armor).
+  * **[Agent Registry](https://docs.cloud.google.com/agent-registry/overview)** : Verify that agents only connect to approved subagents and MCP tools.
+
+  * **Application ingress security** : To control access to the application, [disable the default run.app URL](https://docs.cloud.google.com/run/docs/securing/ingress#disable-url) of the frontend Cloud Run service and [set up a regional external Application Load Balancer](https://docs.cloud.google.com/load-balancing/docs/https/setting-up-reg-ext-https-serverless). In addition to load-balancing incoming traffic to the application, the load balancer handles SSL certificate management. For added protection, use [Google Cloud Armor security policies](https://docs.cloud.google.com/armor/docs/integrating-cloud-armor#serverless) to provide request filtering, DDoS protection, and rate limiting for the service.
+
+  * **Container image security** : To help ensure that only authorized container images are deployed to Cloud Run, use [Binary Authorization](https://docs.cloud.google.com/binary-authorization/docs/run/overview). To identify and mitigate security risks in the container images, automatically run vulnerability scans by using [Artifact Analysis](https://docs.cloud.google.com/artifact-analysis/docs). For more information, see [Container scanning overview](https://docs.cloud.google.com/artifact-analysis/docs/container-scanning-overview).
+
+  * **Storage security** : Cloud Storage supports two methods for controlling user access to your buckets and objects: Identity and Access Management (IAM) and access control lists (ACLs). In most cases, we recommend using IAM, which lets you grant permissions at the bucket and project levels. For more information, see [Overview of access control](https://docs.cloud.google.com/storage/docs/access-control).
+
+
+
+
+### Cost optimization
+
+To help ensure that your agent configurations meet your cost requirements, consider the following recommendations:
+
   * **Cost-effective prompting** : The length of your prompts (input) and the generated responses (output) directly affect performance and cost. Write prompts that are short, direct, and provide sufficient context. For more information, see the [best practices for prompt design](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/prompts/prompt-design-strategies#best-practices).
-  * **Storage costs:** To control storage costs, you can choose the [Standard storage class](https://docs.cloud.google.com/storage/docs/storage-classes) and enable [object lifecycle management](https://docs.cloud.google.com/storage/docs/lifecycle) and [Autoclass](https://docs.cloud.google.com/storage/docs/autoclass). These features help you optimize costs by automatically moving or deleting data between storage classes based on your access patterns or rules that you set.
-  * **Storage security** : Cloud Storage supports two methods for controlling user access to your buckets and objects: IAM and access control lists (ACLs). In most cases, we recommend using IAM, which lets you grant permissions at the bucket and project levels. For more information, see [Overview of access control](https://docs.cloud.google.com/storage/docs/access-control).
-  * **Resource allocation:** Depending on your performance requirements, configure the [memory limits](https://docs.cloud.google.com/run/docs/configuring/services/memory-limits) and [CPU limits](https://docs.cloud.google.com/run/docs/configuring/services/cpu) to be allocated to the Cloud Run service. For more performance optimization guidance, see [General Cloud Run development tips](https://docs.cloud.google.com/run/docs/tips/general#optimize_performance).
+  * **Storage costs** : To control storage costs, you can choose the [Standard storage class](https://docs.cloud.google.com/storage/docs/storage-classes) and enable [object lifecycle management](https://docs.cloud.google.com/storage/docs/lifecycle) and [Autoclass](https://docs.cloud.google.com/storage/docs/autoclass). These features help you optimize costs by automatically moving or deleting data between storage classes based on your access patterns or rules that you set.
 
 
 
-For information about design factors and best practices, and for recommendations about building and deploying a multi-agent AI system, see [Multi-agent AI system in Google Cloud](https://docs.cloud.google.com/architecture/multiagent-ai-system#design_considerations).
+### Performance optimization
+
+To help ensure that your agent configurations meet your performance requirements, consider the following recommendations:
+
+  * **Resource allocation** : Depending on your performance requirements, configure the [memory limits](https://docs.cloud.google.com/run/docs/configuring/services/memory-limits) and [CPU limits](https://docs.cloud.google.com/run/docs/configuring/services/cpu) to be allocated to the Cloud Run service. For more performance optimization guidance, see [General Cloud Run development tips](https://docs.cloud.google.com/run/docs/tips/general#optimize_performance).
+
+
 
 ## Deployment
 
@@ -112,7 +137,7 @@ To deploy a sample implementation of this architecture, try the [Way Back Home L
 
   * Learn how to [host AI agents on Cloud Run](https://docs.cloud.google.com/run/docs/ai-agents).
   * Learn how to [build and deploy a remote MCP server on Cloud Run](https://docs.cloud.google.com/run/docs/tutorials/deploy-remote-mcp-server).
-  * Learn how to [choose your agentic AI architecture components](https://docs.cloud.google.com/architecture/choose-agentic-ai-architecture-components)
+  * Learn how to [choose your agentic AI architecture components](https://docs.cloud.google.com/architecture/choose-agentic-ai-architecture-components).
   * (Video) Watch the [Agent Factory Podcast about building custom tools for agents](https://www.youtube.com/embed/NiLb5DK4_rU).
   * Explore learning resources to build and deploy enterprise-grade agents with [Gemini Enterprise Agent Ready (GEAR)](https://developers.google.com/program/gear).
   * Explore more [agentic AI architecture guides](https://docs.cloud.google.com/architecture/agentic-ai-overview).
@@ -140,6 +165,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-03-03 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-03-03 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

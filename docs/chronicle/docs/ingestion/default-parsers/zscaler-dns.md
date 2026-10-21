@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/zscaler-dns/
 title: Collect Zscaler DNS logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:31:30.085285+00:00
+fetched_at: 2026-10-21T10:47:04.933340+00:00
 ---
 
 # Collect Zscaler DNS logs  |  Google Security Operations  |  Google Cloud Documentation
@@ -221,7 +221,9 @@ Else, if the `dns_resp` log field value is equal to `NOTZONE`, then the `network
 `` | `network.dns.answers.type` | If the `restype` log field value matches the regular expression pattern `ipv4`, then the `network.dns.answers.type` UDM field is set to `1`.  
   
 Else, if the `restype` log field value matches the regular expression pattern `ipv6`, then the `network.dns.answers.type` UDM field is set to `28`.  
-`dns_req` | `network.dns.questions.name` |   
+`dns_req` | `network.dns.questions.name` | If the length of the `dns_req` log field value is less than or equal to 255 characters, then the `dns_req` log field is mapped to the `network.dns.questions.name` UDM field.   
+  
+Otherwise, if the length of the `dns_req` log field value exceeds 255 characters, then the `dns_req` log field value is truncated to the first 255 characters and mapped to the `network.dns.questions.name` UDM field. The original value of the `dns_req` log field is mapped to the `additional.fields.value` UDM field and the `additional.fields.key` UDM field is set to `original_dns_req`.   
 `` | `network.dns.questions.type` |  If the `record_type` log field value is equal to `A`, then the `network.dns.questions.type` UDM field is set to `1`.  
   
 Else, if the `record_type` log field value is equal to `NS`, then the `network.dns.questions.type` UDM field is set to `2`.  
@@ -501,6 +503,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/compute-optimized-machines/
 title: Compute-optimized machine family for Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:35.562904+00:00
+fetched_at: 2026-10-21T12:22:01.428487+00:00
 ---
 
 # Compute-optimized machine family for Compute Engine  |  Google Cloud Documentation
@@ -161,11 +161,11 @@ If using Cloud RDMA, you must configure at least two network interfaces (vNICs) 
 
 
 
-Before migrating to H4D or creating H4D instances, make sure that the [operating system image](https://docs.cloud.google.com/compute/docs/images/os-details#networking) that you use supports the IDPF network driver. If you create an H4D instance with an operating system that doesn't support the IDPF driver, then you might not be able to connect to the instance.
+Before migrating to H4D or creating H4D instances, make sure that the [operating system image](https://docs.cloud.google.com/compute/docs/images/os-details#networking) that you use is fully supported for H4D. Fully supported images include support for 200 Gbps network bandwidth. If you are using Cloud RDMA, then the OS image must also support the [IRDMA network interface type](https://docs.cloud.google.com/compute/docs/networking/using-irdma#os-support). If your H4D instance is using an operating system that is not fully supported or has earlier versions of the network drivers, then your instance might not be able to achieve the maximum network bandwidth for H4D instances.
 
 ### Maintenance experience for H4D instances
 
-During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the regular maintenance of Compute Engine infrastructure, or in rare cases, a host error. Compute Engine also applies some non-disruptive lightweight upgrades for the hypervisor and network in the background. 
+During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the regular maintenance of Compute Engine infrastructure, or in rare cases, a host error. Compute Engine also applies some non-disruptive lightweight upgrades for the hypervisor and network in the background.
 
 The H4D machine series offers the following features related to host maintenance:
 
@@ -177,7 +177,7 @@ Machine type | Typical scheduled maintenance event frequency | [Maintenance beha
 `h4d-megamem-192` | Minimum of 30 days | Terminate | 7 days | Yes | No  
 `h4d-megamem-192-lssd` | Minimum of 30 days | Terminates with Local SSD data persistence | 7 days | Yes | No  
   
-The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently. 
+The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently.
 
 ## H3 machine series
 
@@ -257,11 +257,13 @@ types | Hyperdisk Balanced | Hyperdisk Throughput | Hyperdisk Extreme
 
 H3 instances require [gVNIC network interfaces](https://docs.cloud.google.com/compute/docs/networking/using-gvnic). H3 supports up to 200 Gbps network bandwidth for standard networking and doesn't support per VM Tier_1 networking performance.
 
-Before migrating to H3 or creating H3 instances, make sure that the [operating system image](https://docs.cloud.google.com/compute/docs/images/os-details#networking) that you use supports the IDPF network driver. If you create an H3 instance with an operating system that doesn't support the IDPF driver, then you might not be able to connect to the instance.
+Before migrating to H3 or creating H3 instances, make sure that the operating system image that you use supports the gVNIC driver. To get the best possible performance on H3 instances, on the [**Networking features**](https://docs.cloud.google.com/compute/docs/images/os-details#networking-features) tab of the OS details table, choose an OS image that supports both "Tier_1 Networking" and "200 Gbps network bandwidth". These images include an updated gVNIC driver, even if the guest OS shows the `gve` driver version as 1.0.0. If your H3 instance is using an operating system with an older version of the gVNIC driver, this is still supported but the instance might experience suboptimal performance such as less network bandwidth or higher latency.
+
+If you use a custom OS image with the H3 machine series, you can [manually install the most recent gVNIC driver](https://docs.cloud.google.com/compute/docs/networking/using-gvnic#manual-gvnic-setup). The gVNIC driver version v1.4.2 or later is recommended for use with H3 instances. Google recommends using the latest gVNIC driver version to benefit from additional features and bug fixes.
 
 ### Maintenance experience for H3 instances
 
-During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the regular maintenance of Compute Engine infrastructure, or in rare cases, a host error. Compute Engine also applies some non-disruptive lightweight upgrades for the hypervisor and network in the background. 
+During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the regular maintenance of Compute Engine infrastructure, or in rare cases, a host error. Compute Engine also applies some non-disruptive lightweight upgrades for the hypervisor and network in the background.
 
 The H3 machine series offers the following features related to host maintenance:
 
@@ -269,7 +271,7 @@ Machine type | Typical scheduled maintenance event frequency | [Maintenance beha
 ---|---|---|---|---|---  
 `h3-standard-88` | Minimum of 30 days | Live migrate | 7 days | Yes | Yes  
   
-The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently. 
+The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently.
 
 ## C2D machine series
 
@@ -392,7 +394,7 @@ The C2D machine types support either the VirtIO or gVNIC network driver. C2D ins
 
 ### Maintenance experience for C2D instances
 
-During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the regular maintenance of Compute Engine infrastructure, or in rare cases, a host error. Compute Engine also applies some non-disruptive lightweight upgrades for the hypervisor and network in the background. 
+During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the regular maintenance of Compute Engine infrastructure, or in rare cases, a host error. Compute Engine also applies some non-disruptive lightweight upgrades for the hypervisor and network in the background.
 
 The C2D machine series offers the following features related to host maintenance:
 
@@ -401,7 +403,7 @@ Machine type | Typical scheduled maintenance event frequency | [Maintenance beha
 All machine types | Minimum of 30 days | Live migrate | 60 seconds | No | Yes  
 Confidential VM | Minimum of 30 days | Restart in place | 60 seconds | No | Yes  
   
-The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently. 
+The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently.
 
 ## C2 machine series
 
@@ -463,7 +465,7 @@ The C2 machine types support either the VirtIO or gVNIC network driver. C2 insta
 
 ### Maintenance experience for C2 instances
 
-During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the regular maintenance of Compute Engine infrastructure, or in rare cases, a host error. Compute Engine also applies some non-disruptive lightweight upgrades for the hypervisor and network in the background. 
+During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the regular maintenance of Compute Engine infrastructure, or in rare cases, a host error. Compute Engine also applies some non-disruptive lightweight upgrades for the hypervisor and network in the background.
 
 The C2 machine series offers the following features related to host maintenance:
 
@@ -473,7 +475,7 @@ All machine types | Minimum of 30 days | Live migrate | 60 seconds | No | Yes
 Confidential VM | Minimum of 30 days | Restart in place | 60 seconds | No | Yes  
 Sole tenant node VMs | 4 to 6 weeks | Live migrate, restart in place, or migrate with a node group | none | No | Yes  
   
-The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently. 
+The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently.
 
 ## What's next
 
@@ -489,6 +491,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

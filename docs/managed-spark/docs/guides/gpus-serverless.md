@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-spark/docs/guides/gpus-serverless/
 title: Use GPUs \u00a0|\u00a0 Managed Service for Apache Spark \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:46:38.696740+00:00
+fetched_at: 2026-10-21T11:59:13.901383+00:00
 ---
 
 # Use GPUs  |  Managed Service for Apache Spark  |  Google Cloud Documentation
@@ -34,7 +34,7 @@ You can attach GPU accelerators to your Managed Service for Apache Spark batch w
 
 
 
-All [supported Managed Service for Apache Spark runtimes](https://docs.cloud.google.com/managed-spark/docs/concepts/versions/serverless-versions#supported_versions) add the [Spark RAPIDS library](https://rapids.ai/) to each workload node. Managed Service for Apache Spark runtime [version 1.1](https://docs.cloud.google.com/managed-spark/docs/concepts/versions/spark-runtime-versions#spark_runtime_version_11) also adds the [XGBoost library](https://xgboost.ai/) to workload nodes. These libraries provide a powerful data transformation and machine learning tools that you can use in your GPU-accelerated workloads.
+All [supported Managed Service for Apache Spark runtimes](https://docs.cloud.google.com/managed-spark/docs/concepts/versions/serverless-versions#supported_versions) add the [NVIDIA cuDF for Apache Spark library](https://docs.nvidia.com/cudf-spark/latest/index.html) to each workload node. Managed Service for Apache Spark runtime [version 1.1](https://docs.cloud.google.com/managed-spark/docs/concepts/versions/spark-runtime-versions#spark_runtime_version_11) also adds the [XGBoost library](https://xgboost.ai/) to workload nodes. These libraries provide a powerful data transformation and machine learning tools that you can use in your GPU-accelerated workloads.
 
 ## GPU benefits
 
@@ -67,7 +67,7 @@ Here are some of the benefits when you use GPUs with your Managed Service for Ap
 
   * Accelerator-enabled jobs are not compatible with the [`constraints/compute.requireShieldedVm`](https://docs.cloud.google.com/compute/shielded-vm/docs/shielded-vm#organization-policy-constraint) organization policy. If your organization enforces this policy, its accelerator-enabled jobs won't run successfully.
 
-  * You must set the default character set to UTF-8 when using RAPIDS GPU acceleration with [supported Managed Service for Apache Spark runtimes prior to version `2.2`](https://docs.cloud.google.com/managed-spark/docs/concepts/versions/serverless-versions#supported_versions). See Create a serverless batch workload with GPU accelerators for more information.
+  * You must set the default character set to UTF-8 when using CUDA-X GPU acceleration with [supported Managed Service for Apache Spark runtimes prior to version `2.2`](https://docs.cloud.google.com/managed-spark/docs/concepts/versions/serverless-versions#supported_versions). See Create a serverless batch workload with GPU accelerators for more information.
 
 
 
@@ -263,7 +263,7 @@ Notes:
   * PROJECT_ID: Your Google Cloud project ID.
   * REGION: An available Compute Engine [region](https://docs.cloud.google.com/compute/docs/regions-zones#available) to run the workload.
   * BUCKET_NAME: The name of your Cloud Storage bucket. Spark uploads workload dependencies to a `/dependencies` folder in this bucket before running the batch workload.
-  * **\--version:** All [Supported Managed Service for Apache Spark runtimes](https://docs.cloud.google.com/managed-spark/docs/concepts/versions/serverless-versions#supported_versions) add the [RAPIDS](https://rapids.ai/) library to each node of a GPU-accelerated workload. Only runtime version 1.1 adds the [XGBoost](https://xgboost.ai/) library to each node of a GPU-accelerated workload.
+  * **\--version:** All [Supported Managed Service for Apache Spark runtimes](https://docs.cloud.google.com/managed-spark/docs/concepts/versions/serverless-versions#supported_versions) add the [NVIDIA cuDF for Apache Spark library](https://docs.nvidia.com/cudf-spark/latest/index.html) to each node of a GPU-accelerated workload. Only runtime version 1.1 adds the [XGBoost](https://xgboost.ai/) library to each node of a GPU-accelerated workload.
   * **\--properties** (see [Spark resource allocation properties](https://docs.cloud.google.com/managed-spark/docs/concepts/properties#resource_allocation_properties)) :
 
     * `spark.dataproc.driverEnv.LANG=C.UTF-8` and `spark.executorEnv.LANG=C.UTF-8` (required with runtime versions prior to `2.2`): These properties set the default character set to C.UTF-8.
@@ -290,17 +290,17 @@ The following table shows the maximum amount of memory that can be set for diffe
 | A100 (40 GB) | A100 (80 GB) | L4 (4 cores) | L4 (8 cores) | L4 (12 cores) | L4 (16 cores) | L4 (24 cores) | L4 (48 cores) | L4 (96 cores)  
 ---|---|---|---|---|---|---|---|---|---  
 Maximum total memory (MB) | 78040 | 165080 | 13384 | 26768 | 40152 | 53536 | 113072 | 160608 | 321216  
-    * Spark RAPIDS properties (optional): By default, Managed Service for Apache Spark sets the following Spark RAPIDS property values:
+    * NVIDIA cuDF for Apache Spark library properties (optional): By default, Managed Service for Apache Spark sets the following NVIDIA cuDF for Apache Spark library property values:
 
       * `spark.plugins`=com.nvidia.spark.SQLPlugin
       * `spark.executor.resource.gpu.amount`=1
       * `spark.task.resource.gpu.amount`=1/$spark_executor_cores
-      * `spark.shuffle.manager`=''. By default, this property is unset. NVIDIA recommends turning on the [RAPIDS shuffle manager](https://docs.nvidia.com/spark-rapids/user-guide/latest/additional-functionality/rapids-shuffle.html) when using GPUs to improve performance. To do this, set `spark.shuffle.manager=com.nvidia.spark.rapids.RapidsShuffleManager` when you submit a workload.
+      * `spark.shuffle.manager`=''. By default, this property is unset. NVIDIA recommends turning on the [CUDA-X shuffle manager](https://docs.nvidia.com/spark-rapids/user-guide/latest/additional-functionality/rapids-shuffle.html) when using GPUs to improve performance. To do this, set `spark.shuffle.manager=com.nvidia.spark.rapids.RapidsShuffleManager` when you submit a workload.
       * `spark.rapids.sql.concurrentGpuTasks`= minimum of (`gpuMemoryinMB` / 8, 4)
       * `spark.rapids.shuffle.multiThreaded.writer.threads`= minimum of (cpu cores in the VM / gpu count per VM, 32)
       * `spark.rapids.shuffle.multiThreaded.reader.threads`= minimum of (cpu cores in the VM / gpu count per VM, 32)
 
-See [RAPIDS Accelerator for Apache Spark Configuration](https://nvidia.github.io/spark-rapids/docs/configs.html) to set Spark RAPIDS properties, and [RAPIDS Accelerator for Apache Spark Advanced Configuration](https://nvidia.github.io/spark-rapids/docs/additional-functionality/advanced_configs.html) to set Spark advanced properties.
+See [NVIDIA cuDF plug-in for Apache Spark Configuration](https://nvidia.github.io/spark-rapids/docs/configs.html) to set NVIDIA cuDF for Apache Spark library properties, and [NVIDIA cuDF plug-in for Apache Spark Advanced Configuration](https://nvidia.github.io/spark-rapids/docs/additional-functionality/advanced_configs.html) to set Spark advanced properties.
 
 
 
@@ -309,6 +309,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

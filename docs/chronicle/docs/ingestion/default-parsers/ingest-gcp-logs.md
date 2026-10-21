@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/ingest-gcp-logs/
 title: Ingest Google Cloud logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:19.585993+00:00
+fetched_at: 2026-10-21T12:01:35.336613+00:00
 ---
 
 # Ingest Google Cloud logs  |  Google Security Operations  |  Google Cloud Documentation
@@ -526,15 +526,17 @@ To export your Security Command Center Premium findings to Google SecOps, set th
 
 ### Troubleshooting Security Command Center findings
 
-Google Cloud log ingestion stops if changes are made to your organization's Security Command Center Premium license. This can occur when downgrading the Security Command Center tier, after a trial expires, or due to other license modifications, causing Google SecOps to automatically disable Google Cloud log ingestion. The impact is an immediate cessation of log ingestion from your configured Google Cloud sources, resulting in a visibility gap. Note that logs generated while ingestion is disabled cannot be retroactively collected. To resolve this and resume log ingestion, you must manually re-enable the Google Cloud logs export within your Google Cloud settings, ensuring you apply any relevant export filters:
+Google Cloud log ingestion stops if changes are made to your organization's Security Command Center Premium license. This can occur when downgrading the Security Command Center tier, after a trial expires, or due to other license modifications, causing Google SecOps to automatically disable Google Cloud log ingestion. The impact is an immediate cessation of log ingestion from your configured Google Cloud sources, resulting in a visibility gap. Note that logs generated while ingestion is disabled can't be retroactively collected.
 
-  1. Navigate to **SIEM Settings** in your Google SecOps instance.
-  2. From the left-hand menu, select **GCP Ingestion**.
-  3. Review the list of your Google Cloud projects, folders, or organization log sources.
-  4. Toggle any of the disabled sources back to **Enable**.
-  5. Allow a few minutes for the connection to re-establish. You can verify that ingestion has resumed by searching for new logs in Search.
+To resolve this issue and resume log ingestion, manually re-enable the Google Cloud logs export in the Google Cloud console and apply any relevant export filters:
+
+  * **If you own the bound project** : In the Google Cloud console, go to **Security** > **Google SecOps** > **Ingestion Settings** , select your bound project and organization, and turn on the **Sending data to Google Security Operations** toggle. For detailed steps, see Configure ingestion when project owned by customer.
+  * **If your instance uses a Google-managed project** : In the Google Cloud console, go to the **Google SecOps** > **Overview** > **Ingestion** tab, click **Manage organization ingestion settings** , and re-enable your data export options. For detailed steps, see Configure ingestion for a Google managed project.
+  * **If your instance uses a complex mapping** : If your instance maps multiple Google Cloud organizations to a single Google SecOps instance, no self-service option is available. Contact Google SecOps Support to re-enable ingestion.
 
 
+
+Allow a few minutes for the connection to re-establish. You can verify that ingestion has resumed by searching for new logs in Search.
 
 ## Export Sensitive Data Protection data
 
@@ -605,6 +607,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

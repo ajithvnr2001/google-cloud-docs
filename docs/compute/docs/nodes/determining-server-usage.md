@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/nodes/determining-server-usage/
 title: Monitor VM and sole-tenant node usage for license reporting \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:53:15.032630+00:00
+fetched_at: 2026-10-21T12:01:39.409346+00:00
 ---
 
 # Monitor VM and sole-tenant node usage for license reporting  |  Compute Engine  |  Google Cloud Documentation
@@ -44,7 +44,7 @@ The License Tracker tool replaces the usage reporting feature provided by [IAP D
 This guide uses billable components of Google Cloud, including:
 
   * [Cloud Run](https://cloud.google.com/run/pricing)
-  * [BigQuery](https://cloud.google.com/vpc/pricing)
+  * [BigQuery](https://cloud.google.com/bigquery/pricing)
 
 
 
@@ -397,6 +397,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

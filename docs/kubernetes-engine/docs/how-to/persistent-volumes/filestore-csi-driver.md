@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/filestore-csi-driver/
 title: Access Filestore instances with the Filestore CSI driver \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:02:06.133298+00:00
+fetched_at: 2026-10-21T12:01:37.374767+00:00
 ---
 
 # Access Filestore instances with the Filestore CSI driver  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -81,8 +81,6 @@ Basic HDD | Single share | 1.21 | Not supported
 Basic SSD | Single share | 1.21 | Not supported  
   
 Filestore uses the NFSv3 file system protocol on the Filestore instance by default and supports any NFSv3-compatible client. 
-
-* If small capacity instances are available in the region where your instance is located, Regional instance capacity ranges from 100 GiB to 10,239 GiB. Otherwise, the range is 1 TiB to 9.75 TiB. For more information, see [Small capacity instances](https://docs.cloud.google.com/filestore/docs/service-tiers#small-instances).
 
 ## Before you begin
 
@@ -535,18 +533,24 @@ For dynamic provisioning, set the `protocol` field to `NFS_V4_1` in the paramete
     apiVersion: storage.k8s.io/v1
     kind: StorageClass
     metadata:
-      name: enterprise-multishare-rwx
+      name: enterprise-nfsv41-rwx
     provisioner: filestore.csi.storage.gke.io
     parameters:
       tier: enterprise
-      multishare: "true"
-      instance-storageclass-label: "enterprise-multishare-rwx"
+      instance-storageclass-label: "enterprise-nfsv41-rwx"
       protocol: NFS_V4_1
     volumeBindingMode: WaitForFirstConsumer
     allowVolumeExpansion: true
     
 
-You cannot mount the Filestore instance with the `NFSv4.1` protocol with `mountOptions` set to `nfsvers=3` in the `StorageClass` object.
+**Note:** When creating the `StorageClass` object, consider the following limitations: 
+
+  * Don't configure `protocol: NFS_V4_1` and `multishare: "true"` in the same `StorageClass` object definition. The NFSv4.1 protocol only supports single-share instances, whereas Filestore. multishares for GKE require the NFSv3 protocol.
+  * A `StorageClass` object definition can't combine a Filestore NFSv4.1 protocol instance with `mountOptions` set to nfsvers=3.
+
+
+
+For more information, see [NFSv4.1 limitations](https://docs.cloud.google.com/filestore/docs/service-tiers#nfsv41-limitations).
 
 ## Use fsgroup with Filestore volumes
 
@@ -764,6 +768,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

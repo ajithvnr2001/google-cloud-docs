@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/usage-insights/
 title: Analyze usage insights \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:45:42.017755+00:00
+fetched_at: 2026-10-21T11:58:39.218221+00:00
 ---
 
 # Analyze usage insights  |  Firestore in Native mode  |  Google Cloud Documentation
@@ -30,19 +30,14 @@ Standard |
   * Reads
   * Writes (includes deletes)
   * TTL deletes
-  * Stream reads (`Listen` requests)
-  * Stream writes (`StreamWrite` requests, includes deletes)
 
   
 Enterprise | 
 
-  * Read units
-  * Write units (includes deletes)
-  * TTL delete or managed delete units
-  * Eventarc units
-  * Stream read units (`Listen` polling)
-  * Real-time read units (`Listen` streaming updates)
-  * Stream write units (`StreamWrite` requests, includes deletes)
+  * Reads
+  * Writes
+  * TTL deletes
+  * Event
 
   
   
@@ -70,8 +65,8 @@ You might also be able to get this permission with [custom roles](https://cloud.
 
 The Usage insights dashboard is organized into two primary sections:
 
-  * **Total Usage:** Displays aggregated metrics (reads, writes, stream reads, stream writes, and TTL deletes) for the entire database.
-  * **GroupBy Usage:** Shows metrics broken down by the top 100 dimensions and grouped by collection, collection group, or namespace.
+  * **Total Usage:** Displays aggregated metrics (Reads, Writes, TTL Deletes) for the entire database.
+  * **GroupBy Usage:** Shows metrics broken down by the top 100 dimensions and is grouped by collection, collection group, or namespaces.
 
 
 
@@ -102,18 +97,13 @@ Collection Name
   
 CollectionGroup Name  
 | The value corresponding to the usage dimension for which the usage data is aggregated. This could be a collection name or collection group name   
-Total Read Operations | Total number of non-streaming read operations. Applicable only to Standard edition.  
-Total Write Operations | Total number of non-streaming write operations. Includes delete operations. Applicable only to Standard edition.  
-Total Stream Read Operations | Total number of read operations used for streaming `Listen` requests (including initial query polling, real-time document change notifications, skipped results, index reads, and minimum read charges). Applicable only to Standard edition.  
-Total Stream Write Operations | Total number of write operations used for `StreamWrite` requests. Includes delete operations. Applicable only to Standard edition.  
+Total Read Operations | Total number of read operations. Applicable only to Standard edition.  
+Total Write Operations | Total number of write operations. Includes Delete operations as well. Applicable only to Standard edition.  
 Total TTL Delete Operations | Total number of TTL Delete operations. Applicable only to Standard edition.  
-Total Read Units | Total number of tranched read units (4 KiB tranches) for non-streaming reads. Applicable only to Enterprise edition.  
-Total Write Units | Total number of tranched write units (1 KiB tranches) for non-streaming writes. Includes delete units. Applicable only to Enterprise edition.  
+Total Read operations | Total number of tranched read units (4KiB tranches). Applicable only to Enterprise edition.  
+Total Write operations | Total number of tranched write units (1KiB tranches). Includes Delete units as well. Applicable only to Enterprise edition.  
 Total TTL Delete or Managed Delete operations | Total number of TTL Delete or Managed Delete units. Applicable only to Enterprise edition.  
 Total Eventarc units | Total number of Eventarc units. Applicable only to Enterprise edition.  
-Total Stream Read Units | Total number of tranched read units (4 KiB tranches) used for polling operations in streaming `Listen` requests. Applicable only to Enterprise edition.  
-Total Realtime Read Units | Total number of real-time read units (1 KiB tranches) used for streaming updates in `Listen` requests. Applicable only to Enterprise edition.  
-Total Stream Write Units | Total number of tranched write units (1 KiB tranches) used for `StreamWrite` requests. Includes delete units. Applicable only to Enterprise edition.  
 Total Read Bytes | Total number of bytes scanned.  
 Total Scanned Documents Count | Total number of documents scanned.  
 Total Scanned Index Entries Count | Total number of index entries scanned.  
@@ -123,6 +113,7 @@ Total Sum of Document Size written | Total document write size in bytes.
   
 ## Limitations
 
+    * Streaming queries that contribute to billable reads and writes are not tracked as part of the API response.
     * Usage insights for Admin operations (that contribute to billable reads and writes) like import/export, bulk delete, restore, clone, and index builds in Enterprise edition are not supported.
     * Network egress and storage billing are not supported.
 
@@ -154,6 +145,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

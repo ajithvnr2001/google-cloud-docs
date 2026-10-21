@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/reliability/define-reliability-based-on-user-experience-goals/
 title: Define reliability based on user-experience goals \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:18.890341+00:00
+fetched_at: 2026-10-21T12:22:03.246562+00:00
 ---
 
 # Define reliability based on user-experience goals  |  Cloud Architecture Center  |  Google Cloud Documentation

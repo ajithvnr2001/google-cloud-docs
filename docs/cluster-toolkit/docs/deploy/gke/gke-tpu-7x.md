@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-tpu-7x/
 title: Deploy a GKE TPU 7x cluster \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:45.563453+00:00
+fetched_at: 2026-10-21T12:23:09.782700+00:00
 ---
 
 # Deploy a GKE TPU 7x cluster  |  Cluster Toolkit  |  Google Cloud Documentation
@@ -85,7 +85,11 @@ Replace the following:
 
   3. Open the [`examples/gke-tpu-7x/gke-tpu-7x-deployment.yaml`](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-tpu-7x/gke-tpu-7x-deployment.yaml) file.
 
-  4. In the `terraform_backend_defaults` and `vars` sections, replace the placeholders to match your deployment:
+  4. Choose a consumption option for your GKE deployment:
+
+By default, the deployment file is configured to consume [standard or future reservations](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options?tab=cloud-tpu#tpu-reservations). To use an alternative consumption model, update your deployment YAML file. For more information, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options).
+
+  5. In the `terraform_backend_defaults` and `vars` sections, replace the placeholders to match your chosen deployment:
          
          terraform_backend_defaults:
           type: gcs
@@ -101,7 +105,6 @@ Replace the following:
           machine_type: MACHINE_TYPE
           tpu_topology: TPU_TOPOLOGY
           authorized_cidr: AUTHORIZED_CIDR
-          reservation: RESERVATION_NAME
          
          
 
@@ -115,12 +118,11 @@ Replace the following:
      * `NUM_SLICES`: the number of independent Cloud TPU slices to create.
      * `MACHINE_TYPE`: the machine type for your Cloud TPU nodes.
      * `TPU_TOPOLOGY`: the physical arrangement of the Cloud TPU chips in a slice.
-     * `AUTHORIZED_CIDR`: the CIDR block containing the IP address of the machine calling Terraform. To allow all IP addresses, use `0.0.0.0/0`. Identity and Access Management (IAM) restrictions are still enforced. To allow only your IP address, use your IP address followed by `/32`.
-     * `RESERVATION_NAME`: the name of the Compute Engine reservation of Cloud TPU 7x nodes. 
+     * `AUTHORIZED_CIDR`: the CIDR block containing the IP address of the machine calling Terraform. To allow all IP addresses, use `0.0.0.0/0`. Identity and Access Management (IAM) restrictions are still enforced. To allow only your IP address, use your IP address followed by `/32`. 
 
 Cluster Toolkit automatically calculates the exact number of nodes required based on your selected `tpu_topology` and `machine_type`.
 
-  5. Generate Application Default Credentials (ADC) to provide access to Terraform:
+  6. Generate Application Default Credentials (ADC) to provide access to Terraform:
          
          gcloud auth application-default login
          
@@ -236,7 +238,7 @@ Replace the following:
      * `DEPLOYMENT_NAME`: the name of your deployment.
      * `REGION`: the Google Cloud region used for this deployment.
      * `PROJECT_ID`: your Google Cloud project ID.
-  2. Open the [`examples/gke-tpu-7x/gke-tpu-7x-job.yaml`](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-tpu-7x/gke-tpu-7x-job.yaml) file and update the `nodeSelector` values under the template specification to match the accelerator and topology that you used in your blueprint.
+  2. Open the [`examples/gke-tpu-7x/gke-tpu-7x-job.yaml`](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-tpu-7x/gke-tpu-7x-job.yaml) file and update the `nodeSelector` values in the template specification to match the accelerator and topology that you used in your blueprint.
 
 For example, the `nodeSelector` section might look like the following example:
          
@@ -429,6 +431,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

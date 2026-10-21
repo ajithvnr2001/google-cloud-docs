@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/get-contribution-analysis-insights-sum-ratio/
 title: Get data insights from a contribution analysis model using a summable ratio metric \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:44:51.831031+00:00
+fetched_at: 2026-10-21T12:00:14.123491+00:00
 ---
 
 # Get data insights from a contribution analysis model using a summable ratio metric  |  BigQuery  |  Google Cloud Documentation

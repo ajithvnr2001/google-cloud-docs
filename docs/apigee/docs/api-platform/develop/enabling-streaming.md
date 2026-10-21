@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/develop/enabling-streaming/
 title: Streaming requests and responses \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:56:43.499096+00:00
+fetched_at: 2026-10-21T12:01:03.789603+00:00
 ---
 
 # Streaming requests and responses  |  Apigee  |  Google Cloud Documentation
@@ -73,32 +73,32 @@ You can locate these configuration files in the Apigee UI in the Develop view fo
 This sample shows how to enable both request and response streaming in the TargetEndpoint definition.
     
     
-    <TargetEndpoint name="default">
-      <HTTPTargetConnection>
-        <URL>http://mocktarget.apigee.net</URL>
-        <Properties>
-          <Property name="**response.streaming.enabled" >true**</Property>
-          <Property name="**request.streaming.enabled" >true**</Property>
-          <Property name="supports.http10">true</Property>
-          <Property name="request.retain.headers">User-Agent,Referer,Accept-Language</Property>
-          <Property name="retain.queryparams">apikey</Property>
-        </Properties>
-      </HTTPTargetConnection>
-    </TargetEndpoint>
+    <TargetEndpoint name="def>aul<t"
+      HTTPTarget>Conne<cti>on
+        URLhttp://mocktarget.<apig>ee.ne<t/URL
+        >Propert<ies
+          Prope**rty name="response.str >eami**<ng.enable>d"<true/Property
+     **Property name="r >eque**<st.stream>ing.ena<bled"true/Property
+          P>rope<rty name=>"s<upports.http10"true/Property
+        >  Property name="request.reta<in.header>s"<User-Agent,Referer,Accept-Language>/Prope<rty
+         > Prop<erty name=&>quo<t;retain.queryparams&>q<uot;apikey/Prop>erty
+        /Properties
+      /HTTPTargetConnection
+    /TargetEndpoint
 
 This example shows how to enable response and request streaming in the ProxyEndpoint definition:
     
     
-    <ProxyEndpoint name="default">
-      <HTTPProxyConnection>
-        <BasePath>/v1/weather</BasePath>
-        <Properties>
-          <Property name="allow.http10">true</Property>
-          <Property name="**response.streaming.enabled" >true**</Property>
-          <Property name="**request.streaming.enabled" >true**</Property>
-        </Properties>
-      </HTTPProxyConnection>
-    </ProxyEndpoint>
+    <ProxyEndpoint name="def>aul<t"
+      HTTPProxy>Conne<ction
+      >  BasePath/<v1/weathe>r/Bas<ePath
+        >Propert<ies
+          Property name=&quo>t;al<low.http1>0"<true/Property
+     **Property name="re >spon**<se.stream>ing.ena<bled"true/**Property
+          Property na >me=&**<quot;requ>est.s<treaming.en>abl<ed"true/Propert>y<
+        /Properti>es
+      /HTTPProxyConnection
+    /ProxyEndpoint
 
 For more information about configuring endpoint definitions, see [Endpoint properties reference](https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference).
 
@@ -117,6 +117,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-13 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

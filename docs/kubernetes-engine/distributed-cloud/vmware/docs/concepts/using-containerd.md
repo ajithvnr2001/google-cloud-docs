@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/concepts/using-containerd/
-title: Using containerd for the container runtime \u00a0|\u00a0 Google Distributed Cloud software only for VMware \u00a0|\u00a0 Google Cloud Documentation
+title: About the containerd container runtime \u00a0|\u00a0 Google Distributed Cloud software only for VMware \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:19:47.101542+00:00
+fetched_at: 2026-10-21T12:21:55.050542+00:00
 ---
 
-# Using containerd for the container runtime  |  Google Distributed Cloud software only for VMware  |  Google Cloud Documentation
+# About the containerd container runtime  |  Google Distributed Cloud software only for VMware  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/concepts/using-containerd/
 
@@ -19,11 +19,11 @@ fetched_at: 2026-10-14T03:19:47.101542+00:00
 
 Send feedback 
 
-#  Using containerd for the container runtime Stay organized with collections  Save and categorize content based on your preferences. 
+#  About the containerd container runtime Stay organized with collections  Save and categorize content based on your preferences. 
 
-The [container runtime](https://kubernetes.io/docs/setup/production-environment/container-runtimes/) is software that is responsible for managing containers and container images on a Kubernetes node. [containerd](https://containerd.io/) is a [CNCF (Cloud Native Cloud Foundation) graduated](https://www.cncf.io/announcements/2019/02/28/cncf-announces-containerd-graduation/) container runtime. It supports Kubernetes natively, and is considered more resource-efficient and secure than the Docker Engine for Kubernetes. Until Kubernetes 1.20, [Docker Engine](https://docs.docker.com/engine/) was the primary container runtime. However, Dockershim, the Docker Engine integration code in Kubernetes, was deprecated in Kubernetes 1.20, and was removed in Kubernetes 1.24.
+Google Distributed Cloud uses [containerd](https://containerd.io/) as the container runtime on all admin and user cluster nodes, including Windows nodes. As a [Cloud Native Computing Foundation (CNCF) graduated](https://www.cncf.io/announcements/2019/02/28/cncf-announces-containerd-graduation/) [container runtime](https://kubernetes.io/docs/setup/production-environment/container-runtimes/), containerd provides built-in Kubernetes support.
 
-Going forward, you should use containerd in your clusters.
+Kubernetes 1.24 removed dockershim, the component that let Kubernetes use Docker Engine as its container runtime. In this document, you find node pools that still use Docker Engine and update them to containerd.
 
 ## Support for containerd in an admin cluster
 
@@ -138,6 +138,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

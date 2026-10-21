@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/local-ssd-raw/
 title: Provision and use Local SSD-backed raw block storage \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T13:22:43.101727+00:00
+fetched_at: 2026-10-21T12:23:00.620201+00:00
 ---
 
 # Provision and use Local SSD-backed raw block storage  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -27,7 +27,7 @@ This page explains how to provision Local SSD storage on Google Kubernetes Engin
 
 Using this Local SSD option gives you more control over the underlying storage and lets you build your own node-level cache for Pods to deliver better performance for your applications. You can also customize this option by installing a file system on Local SSD disks by running a DaemonSet to configure RAID and format disks as needed.
 
-**Note:** Local SSD volumes require machine type `n1-standard-1` or larger; the default machine type, `e2-medium` is not supported. To learn more, see [machine types](https://docs.cloud.google.com/compute/docs/machine-resource) in the Compute Engine documentation.**Warning:** We don't recommend using the Local SSD as raw block storage for your storage-optimized [Z3 VMs](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z3_series) or [Z4D VMs](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4d_series). Data in the Local SSD in Z3 or Z4D nodes might not be available during [maintenance events](https://docs.cloud.google.com/compute/docs/instances/live-migration-process#limitations), and [data recovery isn't assured](https://docs.cloud.google.com/compute/docs/disks/local-ssd#data_persistence) after maintenance. Hence, we recommend using the [Local SSD as ephemeral storage](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/local-ssd) for your workloads running on Z3 or Z4D VMs.
+**Note:** Local SSD volumes require machine type `n1-standard-1` or larger; the default machine type, `e2-medium` is not supported. To learn more, see [machine types](https://docs.cloud.google.com/compute/docs/machine-resource) in the Compute Engine documentation.**Warning:** Don't use the Local SSD as raw block storage for your storage-optimized [Z3 VMs](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z3_series), [Z4D VMs](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4d_series), or [Z4M VMs](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4m_series). Data in the Local SSD in Z3, Z4D, or Z4M nodes might not be available during [maintenance events](https://docs.cloud.google.com/compute/docs/instances/live-migration-process#limitations), and [data recovery isn't assured](https://docs.cloud.google.com/compute/docs/disks/local-ssd#data_persistence) after maintenance. Instead, use the [Local SSD as ephemeral storage](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/local-ssd) for your workloads running on Z3, Z4D, or Z4M VMs.
 
 To learn more about Local SSD support for raw block access on GKE, see [About local SSDs](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/local-ssd#block-access).
 
@@ -359,6 +359,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

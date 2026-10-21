@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/ide/building-a-custom-integration/
 title: Build custom integrations \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:05.882716+00:00
+fetched_at: 2026-10-21T09:47:48.662681+00:00
 ---
 
 # Build custom integrations  |  Google Security Operations  |  Google Cloud Documentation
@@ -25,13 +25,32 @@ Supported in:
 
 Google SecOps  [ SOAR ](https://docs.cloud.google.com/chronicle/docs/secops/google-secops-soar-toc)
 
-This document explains how to create custom integrations inside the Integrated Development Environment (IDE) using the same structure as commercial integrations. You can find and configure custom integrations in the Content Hub for various environments. You can then use them in playbooks, manual actions, and remote agents. Import and export capability is also supported, similar to other IDE items. 
+This document explains the workflows for building custom integrations for Google SecOps. The current best practice is to develop integrations locally using your preferred IDE and manage them via GitHub using modern GitOps workflows. For legacy environments or quick prototypes, you can also build integrations directly inside the built-in SOAR IDE. 
 
 **Note:** For a standardized development framework, quality assurance guidelines, and best practices for building and submitting custom integrations, see [Custom integrations guide](https://github.com/chronicle/content-hub/blob/main/docs/content_deep_dive/response_integrations/response_integration_structure.md). 
 
-## Create a custom integration in the IDE
+## Local IDE & GitHub workflow (recommended)
 
-You can build a custom integration for the Armis product and create a manager along with a **Ping** action. Knowledge of Python and object-oriented programming is assumed for this procedure.
+Developing integrations locally and managing them via GitHub is the recommended workflow. This approach aligns with modern GitOps practices, allowing for better version control, collaboration, and automated dependency management.
+
+For detailed technical steps, installation guides, and modern commands using the **Marketplace CLI** tool and `uv` package manager, refer to the official [Chronicle Content Hub GitHub Repository](https://github.com/chronicle/content-hub/tree/main/packages/mp). 
+
+#### Conceptual workflow overview
+
+To develop custom integrations locally, it is recommended that you follow this GitOps lifecycle. For the exact, up-to-date syntax of these commands, see the [official MP CLI documentation on GitHub](https://github.com/chronicle/content-hub/tree/main/packages/mp).
+
+  1. **Fork and clone:** Clone the official `content-hub` repository to your local development machine.
+  2. **Install tools:** Install the `mp` CLI tool and the `uv` Python package manager.
+  3. **Authenticate:** Log in to your Google SecOps environment via the MP CLI using your instance URL and API keys.
+  4. **Develop locally:** Use your preferred IDE (like VS Code or PyCharm) to write your integration code, taking advantage of local debugging and testing tools.
+  5. **Manage dependencies:** Use `uv` to declare and manage dependencies (like `TIPCommon`) in your local `pyproject.toml` file.
+  6. **Synchronize:** Use `mp pull` and `mp push` commands to synchronize your local code with your Google SecOps instance for testing and deployment.
+
+
+
+## Alternative: Create a custom integration in the built-in IDE
+
+If you are maintaining legacy integrations, testing a script quickly, or working in an environment where local development is restricted, you can use the built-in IDE.
 
 ### Use case: Build a custom Armis integration
 
@@ -47,91 +66,9 @@ The integration is now listed with the  settings **Settings** option, indicating
 
 Click  settings **Settings** to display the integration settings where you can define the icon, description, Python dependencies, and integration parameters. 
 
-**Note:** Script dependencies are Python libraries required by your custom integration. Dependencies can be uploaded as `.WHL`, `.TAR`, `.GZ`, or `.PY` files. Each integration runs in its own virtual environment, letting you use specific library versions, regardless of what's installed on the underlying system. For example, to use a different version of the requests library, download it from a trusted source such as PyPI or GitHub and add it as a script dependency.   
-For dependencies that require a pre-compiled binary wheel (like packages with C extensions), the SOAR platform uses standard cpython built against the `manylinux_2_17_x86_64` architecture. When selecting a `.WHL` file, verify that it's compatible with this tag.   
-If a library is not installed in the virtual environment, the integration falls back to the system-installed version.   
+**Note:** Script dependencies are Python libraries required by your custom integration. Dependencies can be uploaded as `.WHL`, `.TAR`, `.GZ`, or `.PY` files. Each integration runs in its own virtual environment, letting you use specific library versions, regardless of what's installed on the underlying system.   
   
-If you are using a custom or proprietary `.WHL` file (such as `TIPCommon`) that requires nested sub-dependencies, you must manually upload individual wheel files for the entire dependency tree (for example: `anyio`, `certifi`, `httpx`, `idna`, or `sniffio`) before saving. Failing to resolve nested dependencies will result in a generic `errorCode: 2000` failure. For a complete list of required platform libraries, see the [Community Guide on Retrieving TIPCommon](https://security.googlecloudcommunity.com/google-security-operations-2/retrieving-latest-version-of-tipcommon-and-its-dependencies-1880). 
-
-If a dependency package doesn't have a pre-compiled wheel (`.WHL`) file available for the `manylinux_2_17_x86_64` architecture, or if you need a specific source code version, you can provide a direct URL to the source code (for example, a `.tar.gz` file). The platform's dependency resolver, `uv`, supports defining these source URLs in the `[tool.uv.sources]` table within your `pyproject.toml` file. For example: 
-    
-    
-    [project]
-    # ... other project fields ...
-    
-    [tool.uv.sources]
-    compressed-rtf = { url = "https://files.pythonhosted.org/packages/.../compressed_rtf-1.0.6.tar.gz" }
-    dkimpy = { url = "https://files.pythonhosted.org/packages/.../dkimpy-1.1.8.tar.gz" }
-
-For more details on defining different types of dependencies using `uv`, see the `uv` documentation on [Managing dependencies](https://docs.astral.sh/uv/concepts/projects/dependencies/). 
-
-### Recommended workflow: Advanced dependency management using mp CLI
-
-For integrations requiring complex or multi-layered external libraries like `TIPCommon`, Google recommends bypassing manual IDE uploads entirely and developing them locally using the **Marketplace CLI (mp)** tool. This tool automatically tracks and packages nested dependencies using the `uv` package manager. 
-
-#### Prerequisites
-
-  * Python 3.11 or later installed on your local development machine.
-  * The `uv` Python package manager installed (see the [uv installation guide](https://docs.astral.sh/uv/getting-started/installation/)).
-
-
-
-#### Initial Setup
-
-  1. Fork and clone the official [Content Hub repository](https://github.com/chronicle/content-hub) to your local environment.
-  2. Install the `mp` tool using `uv`: 
-         
-         uv tool install mp --from git+https://github.com/chronicle/content-hub.git#subdirectory=packages/mp
-
-  3. Sign in to your Google SecOps environment using your instance root URL and your legacy API key: 
-         
-         mp login --api-root https://{YOUR_INSTANCE}.siemplify-soar.com --api-key {YOUR_LEGACY_API_KEY}
-
-**Note:** The CLI tool requires your legacy SOAR instance URL and API key format for authentication. 
-  4. Configure your local root repository path: 
-         
-         mp config --root-path /path/to/cloned/content-hub
-
-  5. Create a custom subdirectory for your proprietary integrations within the repository layout at: `content-hub/content/response_integrations/custom/`
-
-
-
-#### Adding TIPCommon or Complex Dependencies to an Integration
-
-If you have an integration created in the IDE that needs `TIPCommon` or other multi-layered libraries, use the following local workflow to manage its dependencies safely:
-
-  1. Navigate to your custom integration directory inside your cloned repository: 
-         
-         cd content-hub/content/response_integrations/custom/
-
-  2. Pull the existing integration structure down from your Google SecOps instance: 
-         
-         mp pull --type integration --name "{INTEGRATION_NAME}"
-
-  3. Change directory into the newly pulled integration folder: 
-         
-         cd {INTEGRATION_NAME}
-
-  4. Use `uv` to inject the required `TIPCommon` wheel file package. This automatically tracks and downloads the nested sub-dependency wheels into your local environment package configuration: 
-         
-         uv pip install /path/to/wheels/TIPCommon-your-version-py3-none-any.whl
-
-  5. Push the fully compiled integration along with its newly tracked dependency tree back up to your Google SecOps instance: 
-         
-         mp push --type integration --name "{INTEGRATION_NAME}"
-
-
-
-
-#### Verifying the installation
-
-To confirm that your dependencies successfully packaged without encountering an `errorCode: 2000` loop, do the following:
-
-  * Open your custom integration inside the IDE.
-  * Add a test line to import a module from the package, such as: `from TIPCommon.extraction import extract_action_param`
-  * Click the **Test/Play** button to debug the execution. If the script compiles cleanly without throwing a `ModuleNotFoundError`, your nested dependencies are correctly resolved.
-
-
+If you are using a custom or proprietary `.WHL` file (such as `TIPCommon`) that requires nested sub-dependencies, you must manually upload individual wheel files for the entire dependency tree before saving. Failing to resolve nested dependencies results in a generic `errorCode: 2000` failure. For advanced dependency tracking, consider using the **Local IDE & GitHub workflow**. 
 
 ### Create a custom manager
 
@@ -261,6 +198,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

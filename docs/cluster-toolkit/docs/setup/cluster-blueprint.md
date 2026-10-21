@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/setup/cluster-blueprint/
 title: Cluster blueprint overview \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:39.118253+00:00
+fetched_at: 2026-10-21T12:01:01.119813+00:00
 ---
 
 # Cluster blueprint overview  |  Cluster Toolkit  |  Google Cloud Documentation
@@ -151,6 +151,16 @@ Deploys a basic autoscaling cluster with Slurm that uses default settings. The b
       deployment_name: hpc-slurm
       region: us-central1
       zone: us-central1-a
+      # The following settings are safe to override via `-d deployment.yaml` or
+      # `--vars` without editing the module blocks below.
+      # Maximum number of dynamically provisioned nodes in the debug partition.
+      debug_node_count_max: 4
+      # Maximum number of dynamically provisioned nodes in the compute partition.
+      compute_node_count_max: 20
+      # Machine type for the compute partition.
+      compute_machine_type: c2-standard-60
+      # Use Spot VMs for the compute partition.
+      compute_enable_spot_vm: false
     
     # Documentation for each of the modules used below can be found at
     # https://github.com/GoogleCloudPlatform/hpc-toolkit/blob/main/modules/README.md
@@ -183,7 +193,7 @@ Deploys a basic autoscaling cluster with Slurm that uses default settings. The b
         source: community/modules/compute/schedmd-slurm-gcp-v6-nodeset
         use: [network]
         settings:
-          node_count_dynamic_max: 4
+          node_count_dynamic_max: $(vars.debug_node_count_max)
           machine_type: n2-standard-2
           allow_automatic_updates: false
     
@@ -200,7 +210,9 @@ Deploys a basic autoscaling cluster with Slurm that uses default settings. The b
         source: community/modules/compute/schedmd-slurm-gcp-v6-nodeset
         use: [network]
         settings:
-          node_count_dynamic_max: 20
+          node_count_dynamic_max: $(vars.compute_node_count_max)
+          machine_type: $(vars.compute_machine_type)
+          enable_spot_vm: $(vars.compute_enable_spot_vm)
           bandwidth_tier: gvnic_enabled
           allow_automatic_updates: false
     
@@ -284,10 +296,9 @@ Deploys a cluster with Slurm that has a tiered file systems for higher performan
       slurm_image:
         # Visit https://github.com/GoogleCloudPlatform/slurm-gcp/blob/master/docs/images.md#published-image-family
         # for a list of valid family options with Slurm
-        # Rocky 8: slurm-gcp-6-12-hpc-rocky-linux-8
-        # Rocky 9: slurm-gcp-6-12-hpc-rocky-linux-9
-        family: slurm-gcp-6-12-hpc-rocky-linux-9
-        project: schedmd-slurm-public
+        # Rocky 9: aci-cpu-rocky-linux-9-slurm-2605-amd64
+        family: aci-cpu-rocky-linux-9-slurm-2605-amd64
+        project: advanced-compute-images
       # If image above is changed to use custom image, then setting below must be set to true
       instance_image_custom: false
       metadata: # Workaround for https://github.com/GoogleCloudPlatform/cluster-toolkit/discussions/3243

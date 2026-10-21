@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/dr-scenarios-building-blocks/
 title: Disaster recovery building blocks \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T17:46:05.318661+00:00
+fetched_at: 2026-10-21T12:22:25.463832+00:00
 ---
 
 # Disaster recovery building blocks  |  Cloud Architecture Center  |  Google Cloud Documentation

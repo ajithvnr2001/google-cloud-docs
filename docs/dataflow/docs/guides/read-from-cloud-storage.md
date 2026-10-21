@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/guides/read-from-cloud-storage/
 title: Read from Cloud Storage to Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:02:42.263132+00:00
+fetched_at: 2026-10-21T11:58:20.321761+00:00
 ---
 
 # Read from Cloud Storage to Dataflow  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback
 
 #  Read from Cloud Storage to Dataflow Stay organized with collections  Save and categorize content based on your preferences. 
 
-To read data from Cloud Storage to Dataflow, use the Apache Beam `TextIO` or `AvroIO` [I/O connector](https://beam.apache.org/documentation/io/connectors/).
+Unstructured or semi-structured data stored in Cloud Storage—such as text, CSV, JSON, or Avro files—often needs to be ingested and transformed at scale for downstream analytics. Ingesting Cloud Storage data into Dataflow lets you run distributed, parallel pipelines to read and process high-volume file datasets reliably across batch and streaming workloads.
 
-**Note:** Depending on your scenario, consider using one of the [Google-provided Dataflow templates](https://docs.cloud.google.com/dataflow/docs/guides/templates/provided-templates). Several of these templates read from Cloud Storage.
+To build custom pipelines, you can use Apache Beam [I/O connectors](https://beam.apache.org/documentation/io/connectors/) such as `TextIO` or `AvroIO` to read files for processing. For common workflows, you can also use [Google-provided Dataflow templates](https://docs.cloud.google.com/dataflow/docs/guides/templates/provided-templates) to deploy prebuilt pipelines without writing custom code.
 
 ## Include the Google Cloud library dependency
 
@@ -157,6 +157,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/deploy/google-telephony-platform/
 title: Google Telephony Platform \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:22:25.614430+00:00
+fetched_at: 2026-10-21T12:22:47.149029+00:00
 ---
 
 # Google Telephony Platform  |  CX Agent Studio  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback
 
 This guide walks you through the process of creating and configuring a new Google Telephony Platform (GTP) phone number for your agent application. This out-of-the-box feature lets you attach a new phone number to your agent that can handle incoming traffic in only a few minutes.
 
-If you want to use a pre-existing phone number, you can configure your Session Border Control (SBC) system to automatically redirect the existing number to the new GTP number. For detailed instructions on SBC integration and setup, see the Dialogflow CX [telephony documentation](https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/sip-trunk/overview).
+If you want to use a pre-existing phone number, you can configure your Session Border Control (SBC) system to automatically redirect the existing number to the new GTP number or to a virtual phone number over a SIP trunk. For detailed instructions on SBC integration and setup, see the Dialogflow CX [telephony documentation](https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/sip-trunk/overview).
 
 ## Before you begin
 
@@ -38,8 +38,7 @@ If you want to use a pre-existing phone number, you can configure your Session B
 The following limitations apply:
 
   * Standard PSTN (Public Switched Telephone Network) phone numbers are supported for the `us` multi-region. For `eu` multi-region, you can use virtual phone numbers.
-  * Only US phone numbers are supported in the `us` multi-region.
-  * Virtual phone numbers can't be dialed from standard PSTN phones.
+  * Virtual phone numbers can't be dialed directly from standard PSTN phones, but you can route calls to them from your SBC over a SIP trunk or test them in the WebRTC widget.
 
 
 
@@ -48,13 +47,13 @@ The following limitations apply:
   1. Open the [CX Agent Studio console](https://ces.cloud.google.com) and select your agent application.
   2. At the top of the console, click the **Deploy** tab followed by **Connect to a platform**. If you already have deployed channels, click **+New channel**.
   3. Enter a **Name** for the channel and select **Google Telephony Platform (GTP)** from the **Platform** menu.
-  4. The default option is to provision a virtual phone number for testing your agent application in the browser. To provision a standard PSTN (Public Switched Telephone Network) phone number, select that option from the `Connection type` drop-down.
+  4. The default option is to provision a virtual phone number for testing your agent application in the browser or routing inbound calls from an SBC over a SIP trunk. To provision a standard PSTN (Public Switched Telephone Network) phone number, select that option from the `Connection type` drop-down.
   5. Select a **Version** for deployment. If you don't have pre-existing versions, create a new one.
   6. (Optional) Click the **Channel-specific behavior** toggle to configure additional options. You can change the agent response length, enable DTMF input, and allow users to interrupt the agent mid-response. For more information about these settings, see the [agent application settings documentation](https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/agent#agent-application-settings).
   7. Click **Create channel**. You can now see the phone number and deployment ID for the channel.
-  8. If you provisioned a PSTN phone number, call it to test that it connects to your agent application, then click **Done**. The new channel appears on the agent application's **Deployed channels** page. You can now use this number to have customers call your agent. If you provisioned a virtual phone number, you can test it in the WebRTC widget.
+  8. If you provisioned a PSTN phone number, call it to test that it connects to your agent application, then click **Done**. The new channel appears on the agent application's **Deployed channels** page. You can now use this number to have customers call your agent. If you provisioned a virtual phone number, you can test it in the WebRTC widget or connect it to an SBC over a SIP trunk.
 
-**Note:** Virtual phone numbers can't be dialed from standard PSTN phones.
+**Note:** Virtual phone numbers can't be dialed directly from standard PSTN phones. To route PSTN calls to a virtual phone number, forward the calls from your SBC over a SIP trunk.
 
 
 
@@ -68,6 +67,53 @@ Whether you provisioned a standard PSTN or a virtual phone number, you can test 
   4. Interact with your agent through audio, video, or text. When using video, you can also switch to screen sharing by using the drop-down menu next to the camera icon.
 
 
+
+## Connect a virtual phone number to an SBC over a SIP trunk
+
+You can route inbound PSTN or VoIP calls from your own Session Border Controller (SBC) or carrier to a CX Agent Studio virtual phone number over a secure SIP trunk. Virtual phone numbers are country-agnostic identifiers (prefixed with `+0` followed by 32 hexadecimal characters) that let you keep your existing carrier phone numbers in any country and forward inbound calls to your agent.
+
+### Prerequisites for SIP trunk connectivity
+
+Before sending SIP traffic from your SBC to a virtual phone number, complete the standard Dialogflow CX [SIP trunk setup](https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/sip-trunk/cloud-setup) and [SBC configuration](https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/sip-trunk/sbc-config).
+
+### Format the SIP URI for a virtual phone number
+
+Because virtual phone numbers (`+0...`) are not PSTN E.164 numbers, Google Telephony Platform routes them based on the **SIP domain** in the `INVITE` Request-URI and `To` header.
+
+Format the destination SIP URI in **both** the `INVITE` Request-URI and the `To` header as follows:
+    
+    
+    sip:VIRTUAL_NUMBER@ccai.prod-LOCATION.telephony.goog:5672;transport=tls
+    
+
+Replace the following:
+
+  * VIRTUAL_NUMBER: The full 34-character virtual phone number copied from the console, starting with `+0` followed by 32 uppercase hexadecimal characters and **no spaces** (for example, `+01BCE14D51A354F8E84E142E7E1E3B4E5`).
+  * LOCATION: The Google Cloud location ID where the GTP deployment channel and virtual phone number were created (for example, `us`, `eu`).
+
+Channel Google Cloud Location | SIP Domain (`ccai.prod-LOCATION.telephony.goog`) | Example SIP URI  
+---|---|---  
+`global` | `ccai.prod-global.telephony.goog` | `sip:+01BCE14D51A354F8E84E142E7E1E3B4E5@ccai.prod-global.telephony.goog`  
+`us` | `ccai.prod-us.telephony.goog` | `sip:+01BCE14D51A354F8E84E142E7E1E3B4E5@ccai.prod-us.telephony.goog`  
+`eu` | `ccai.prod-eu.telephony.goog` | `sip:+01BCE14D51A354F8E84E142E7E1E3B4E5@ccai.prod-eu.telephony.goog`  
+Other supported region (REGION) | `ccai.prod-REGION.telephony.goog` | `sip:+01BCE14D51A354F8E84E142E7E1E3B4E5@ccai.prod-REGION.telephony.goog`  
+  
+### Sample SIP `INVITE` for a virtual phone number
+
+The following example shows a valid `SIP INVITE` sent over mTLS to `us.telephony.goog:5672` (`74.125.88.132:5672`) targeting the virtual phone number `+01BCE14D51A354F8E84E142E7E1E3B4E5` in the `us` location:
+    
+    
+    INVITE sip:+01BCE14D51A354F8E84E142E7E1E3B4E5@ccai.prod-us.telephony.goog:5672;transport=tls SIP/2.0
+    Via: SIP/2.0/TLS sbc.example.com:5672;branch=z9hG4bK74bf9;rport
+    Max-Forwards: 70
+    From: "Caller" <sip:+16502530000@sbc.example.com>;tag=9fxced76sl
+    To: <sip:+01BCE14D51A354F8E84E142E7E1E3B4E5@ccai.prod-us.telephony.goog:5672;transport=tls>
+    Call-ID: 3848276298220188511@sbc.example.com
+    CSeq: 1 INVITE
+    Contact: <sip:+16502530000@sbc.example.com:5672;transport=tls>
+    Content-Type: application/sdp
+    Content-Length: ...
+    
 
 ## Configure agent application behavior
 
@@ -289,6 +335,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

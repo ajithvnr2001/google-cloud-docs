@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-jobs/
 title: JOBS view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:51:21.023610+00:00
+fetched_at: 2026-10-21T11:59:58.399437+00:00
 ---
 
 # JOBS view  |  BigQuery  |  Google Cloud Documentation
@@ -74,11 +74,18 @@ For all other jobs, the value is `NULL`.
 This column is present in the `INFORMATION_SCHEMA.JOBS_BY_USER` and `INFORMATION_SCHEMA.JOBS_BY_PROJECT` views.   
 `end_time` | `TIMESTAMP` | The end time of this job, in milliseconds since the epoch. This field represents the time when the job enters the `DONE` state.  
 `error_result` | `RECORD` |  Details of any errors as [ErrorProto](https://cloud.google.com/bigquery/docs/reference/rest/v2/ErrorProto) objects.   
-`job_creation_reason.code` | `STRING` |  Specifies the high level reason why a job was created.  
+`global_query_info` | `RECORD` |  Information about a [global query](https://docs.cloud.google.com/bigquery/docs/global-queries). Contains the following fields: 
+
+  * `parent_job_id`: The ID of the parent global query job in the primary region.
+  * `parent_job_location`: The location of the parent global query job.
+  * `remote_regions`: An array of remote regions referenced by the global query.
+
+  
+`job_creation_reason.code` | `STRING` |  Specifies the high-level reason why a job was created.  
 Possible values are: 
 
   * `REQUESTED`: job creation was requested.
-  * `LONG_RUNNING`: the query request ran beyond a system defined timeout specified by the [timeoutMs field in the `QueryRequest`](https://docs.cloud.google.com/bigquery/docs/reference/rest/v2/jobs/query#queryrequest). As a result it was considered a long running operation for which a job was created.
+  * `LONG_RUNNING`: the query request ran beyond a system-defined timeout specified by the [timeoutMs field in the `QueryRequest`](https://docs.cloud.google.com/bigquery/docs/reference/rest/v2/jobs/query#queryrequest). As a result it was considered a long-running operation for which a job was created.
   * `LARGE_RESULTS`: the results from the query cannot fit in the in-line response.
   * `OTHER`: the system has determined that the query needs to be executed as a job.
 
@@ -481,9 +488,9 @@ The results should look similar to the following:
     +------------+--------------------------+------------------+-------------------------------------+
     
 
-### Query the list of long running jobs
+### Query the list of long-running jobs
 
-The following example shows the list of long running jobs that are in the `RUNNING` or `PENDING` state for more than 30 minutes:
+The following example shows the list of long-running jobs that are in the `RUNNING` or `PENDING` state for more than 30 minutes:
     
     
     SELECT
@@ -772,9 +779,9 @@ The result is similar to the following:
     +------------+------------+----------+----------------+
     
 
-### Legacy sql query jobs count per project
+### Legacy SQL query jobs count per project
 
-The 'query_dialect' field in the INFORMATION_SCHEMA has been available since May 2025. The following example shows how many legacy sql query jobs are executed by projects.
+The 'query_dialect' field in the INFORMATION_SCHEMA has been available since May 2025. The following example shows how many legacy SQL query jobs are executed by projects.
     
     
     SELECT
@@ -1270,6 +1277,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

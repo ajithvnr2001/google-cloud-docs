@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/
 title: Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:53:19.952896+00:00
+fetched_at: 2026-10-21T12:01:24.966347+00:00
 ---
 
 # Security  |  Google Cloud Documentation
@@ -417,12 +417,6 @@ Store API keys, passwords, certificates, and other sensitive data.
 
 Discover and redact sensitive data. 
 
-block 
-
-####  [ Data Catalog ](https://docs.cloud.google.com/data-catalog/docs)
-
-Discover and understand your data using a fully managed and scalable data discovery and metadata management service. (Deprecated) 
-
 ### Network security
 
 Centrally manage network resources, establish scalable segmentation for different security zones, and detect network threats. 
@@ -645,6 +639,6 @@ VMs on Google Cloud hardened by a set of security controls that help defend agai
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

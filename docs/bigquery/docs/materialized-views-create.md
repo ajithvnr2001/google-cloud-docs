@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/materialized-views-create/
 title: Create materialized views \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:48.490261+00:00
+fetched_at: 2026-10-21T12:22:55.125254+00:00
 ---
 
 # Create materialized views  |  BigQuery  |  Google Cloud Documentation
@@ -810,7 +810,7 @@ If you stream data into the base tables of a materialized view with the `max_sta
 
 While BigQuery datasets have a default [time travel window](https://docs.cloud.google.com/bigquery/docs/time-travel) of 7 days, the **streaming storage buffer** only retains data for 3 days. This creates the following limitation for materialized views:
 
-  * **Query failure:** If a materialized view uses the `max_staleness` option and hasn't been refreshed for more than 3 days, queries against the view fail with the the error message `Streaming data from <materialized_view_name> is temporarily unavailable`.
+  * **Query failure:** If a materialized view uses the `max_staleness` option and hasn't been refreshed for more than 3 days, queries against the view fail with the error message `Streaming data from <materialized_view_name> is temporarily unavailable`.
 
   * **Cause:** The failure occurs because the query rewrite process attempts to read incremental changes (deltas) from the streaming storage buffer. If the required data is older than the 3-day retention period, the system can't retrieve the deltas needed for the incremental rewrite.
 
@@ -980,6 +980,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

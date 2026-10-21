@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/nodes/updating-vm-tenancy/
 title: Updating VM tenancy \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:20:36.236804+00:00
+fetched_at: 2026-10-21T12:01:40.120427+00:00
 ---
 
 # Updating VM tenancy  |  Compute Engine  |  Google Cloud Documentation
@@ -46,7 +46,7 @@ In addition to moving VMs to and from sole-tenant nodes and node groups, you can
 
 ## Limitations
 
-  * When you move a VM that is already running on a sole-tenant node, the VM might restart on another node. If a VM's sole tenancy is specified by node group name or by using the `node-group-name` [default affinity label](https://docs.cloud.google.com/compute/docs/nodes#default_affinity_labels), the VM can restart on any node in the node group. If the VM's sole tenancy is specified using affinity or anti-affinity [custom affinity labels](https://docs.cloud.google.com/compute/docs/nodes#custom_affinity_labels), the VM might restart on any node of any node group in the zone.
+  * When you move a VM that is already running on a sole-tenant node, the VM might restart on another node. If a VM's sole tenancy is specified by node group name or by using the `node-group-name` [default affinity label](https://docs.cloud.google.com/compute/docs/nodes/sole-tenant-nodes#default_affinity_labels), the VM can restart on any node in the node group. If the VM's sole tenancy is specified using affinity or anti-affinity [custom affinity labels](https://docs.cloud.google.com/compute/docs/nodes/sole-tenant-nodes#custom_affinity_labels), the VM might restart on any node of any node group in the zone.
 
 
 
@@ -271,6 +271,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

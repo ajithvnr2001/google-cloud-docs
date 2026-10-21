@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/observability/
 title: Troubleshoot Google Distributed Cloud observability issues \u00a0|\u00a0 Google Distributed Cloud software only for VMware \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:20:01.266172+00:00
+fetched_at: 2026-10-21T12:21:54.519880+00:00
 ---
 
 # Troubleshoot Google Distributed Cloud observability issues  |  Google Distributed Cloud software only for VMware  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Troubleshoot Google Distributed Cloud observability issues Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document helps you troubleshoot observability issues in Google Distributed Cloud. If you experience any of these issues, review the suggested fixes and workarounds.
+To restore missing audit logs, metrics, or metadata labels in Google Distributed Cloud clusters, you can use the following fixes for common observability issues. Most of these issues are caused by permission errors or by out-of-memory crashes in components such as `kube-state-metrics` in large clusters. Some issues also affect Horizontal Pod Autoscaler and `kubectl top`.
 
 If you need additional assistance, reach out to [Cloud Customer Care](https://cloud.google.com/support-hub). 
 
@@ -282,6 +282,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

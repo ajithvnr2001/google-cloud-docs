@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/manage-data/add-data/
 title: Add and update data \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:25:09.499709+00:00
+fetched_at: 2026-10-21T11:58:26.470070+00:00
 ---
 
 # Add and update data  |  Firestore in Native mode  |  Google Cloud Documentation
@@ -253,7 +253,7 @@ Android
     }
     
     
-    [main.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/firestore_quickstart/main.go#L40-L48)
+    [main.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/firestore_quickstart/main.go#L40-L48)
 
 ##### PHP
 
@@ -566,7 +566,7 @@ Use the `Set()` method:
     }
     
     
-    [save_data_set_from_map.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/save_data_set_from_map.go#L18-L39)
+    [save_data_set_from_map.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/save_data_set_from_map.go#L18-L39)
 
 ##### PHP
 
@@ -795,7 +795,7 @@ Android
     }
     
     
-    [save_data_set_doc_upsert.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/save_data_set_doc_upsert.go#L18-L38)
+    [save_data_set_doc_upsert.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/save_data_set_doc_upsert.go#L18-L38)
 
 ##### PHP
 
@@ -1185,7 +1185,7 @@ Android
     }
     
     
-    [save_data_set_from_map_nested.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/save_data_set_from_map_nested.go#L18-L48)
+    [save_data_set_from_map_nested.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/save_data_set_from_map_nested.go#L18-L48)
 
 ##### PHP
 
@@ -1608,7 +1608,7 @@ Each custom class must have a public constructor that takes no arguments. In add
     }
     
     
-    [custom_type_definition.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/custom_type_definition.go#L18-L29)
+    [custom_type_definition.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/custom_type_definition.go#L18-L29)
 
 ##### PHP
 
@@ -1889,7 +1889,7 @@ Android
     }
     
     
-    [save_data_set_from_custom_type.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/save_data_set_from_custom_type.go#L18-L39)
+    [save_data_set_from_custom_type.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/save_data_set_from_custom_type.go#L18-L39)
 
 ##### PHP
     
@@ -2054,7 +2054,7 @@ Android
     }
     
     
-    [save_data_set_id_specified.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/save_data_set_id_specified.go#L18-L37)
+    [save_data_set_id_specified.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/save_data_set_id_specified.go#L18-L37)
 
 ##### PHP
 
@@ -2314,7 +2314,7 @@ Use the `Add()` method:
     }
     
     
-    [save_data_set_id_random_collection.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/save_data_set_id_random_collection.go#L18-L38)
+    [save_data_set_id_random_collection.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/save_data_set_id_random_collection.go#L18-L38)
 
 ##### PHP
 
@@ -2565,7 +2565,7 @@ Android
     }
     
     
-    [save_data_set_id_random_document_ref.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/save_data_set_id_random_document_ref.go#L18-L43)
+    [save_data_set_id_random_document_ref.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/save_data_set_id_random_document_ref.go#L18-L43)
 
 ##### PHP
 
@@ -2844,7 +2844,7 @@ Use the `Update()` method:
     }
     
     
-    [save_data_set_field.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/save_data_set_field.go#L18-L51)
+    [save_data_set_field.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/save_data_set_field.go#L18-L51)
 
 ##### PHP
 
@@ -3095,7 +3095,7 @@ Android
     }
     
     
-    [save_data_set_server_timestamp.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/save_data_set_server_timestamp.go#L18-L47)
+    [save_data_set_server_timestamp.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/save_data_set_server_timestamp.go#L18-L47)
 
 ##### PHP
 
@@ -3447,7 +3447,7 @@ Android
     }
     
     
-    [save_data_set_nested_fields.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/save_data_set_nested_fields.go#L18-L57)
+    [save_data_set_nested_fields.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/save_data_set_nested_fields.go#L18-L57)
 
 ##### PHP
 
@@ -4029,7 +4029,7 @@ Android
     }
     
     
-    [increment.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/increment.go#L18-L48)
+    [increment.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/increment.go#L18-L48)
 
 ##### PHP
 
@@ -4075,6 +4075,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

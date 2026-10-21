@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/troubleshooting/node-pools/
 title: Troubleshoot GKE Standard node pools \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:48:05.086239+00:00
+fetched_at: 2026-10-21T12:23:06.916197+00:00
 ---
 
 # Troubleshoot GKE Standard node pools  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -72,6 +72,7 @@ To resolve this issue, try the following suggestions:
   * Ensure that the selected Google Cloud region or zone has the specific hardware that you need. Use the [Compute Engine availability table](https://docs.cloud.google.com/compute/docs/regions-zones#available) to check whether specific zones support specific hardware. Choose a different Google Cloud region or zone for your nodes that might have better availability of the hardware that you need.
   * Create the node pool with smaller machine types. Increase the number of nodes in the node pool so that the total compute capacity remains the same.
   * Use [Compute Engine capacity reservation](https://docs.cloud.google.com/compute/docs/instances/reservations-overview) to reserve the resources in advance.
+  * Define a [custom ComputeClass](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes) with a prioritized list of fallback machine series and enable [active migration](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes#active-migration) (`optimizeRulePriority: true`). This configuration lets GKE automatically provision alternative hardware when your preferred machine series is unavailable in a zone and migrates workloads back when preferred capacity recovers.
   * Use best-effort provisioning, described in the following section, to successfully create the node pool if it can provision at least a specified minimum number of nodes out of the requested number.
 
 
@@ -257,6 +258,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

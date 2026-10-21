@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/agentic-ai-build-multicloud-open-data-lakehouse/
 title: Agentic AI use case: Build a borderless open data lakehouse \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:31.602302+00:00
+fetched_at: 2026-10-21T12:22:24.249425+00:00
 ---
 
 # Agentic AI use case: Build a borderless open data lakehouse  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -19,7 +19,7 @@ Send feedback
 
 #  Agentic AI use case: Build a borderless open data lakehouse Stay organized with collections  Save and categorize content based on your preferences. 
 
-Last reviewed 2026-04-22 UTC
+Last reviewed 2026-10-14 UTC
 
 This document provides a high-level architecture to build a borderless open [data lakehouse](https://docs.cloud.google.com/lakehouse/docs/key-concepts#data-lakehouse) that establishes a highly governed, secure pipeline from raw borderless silos directly to AI-driven actions. It shows how to unify fragmented enterprise data across Google Cloud, other cloud providers, and live operational databases without relying on fragile [extract, transform, and load (ETL)](https://docs.cloud.google.com/bigquery/docs/load-transform-export-intro) pipelines that can duplicate data.
 
@@ -47,7 +47,7 @@ The following sections describe the components across the subsystems.
 
 The data ingestion subsystem contains the following components:
 
-[Managed Service for Apache Spark](https://docs.cloud.google.com/dataproc-serverless/docs/overview) with [Lightning Engine](https://docs.cloud.google.com/dataproc-serverless/docs/guides/lightning-engine)
+[Managed Service for Apache Spark](https://docs.cloud.google.com/managed-spark/docs/serverless-overview) with [Lightning Engine](https://docs.cloud.google.com/managed-spark/docs/guides/lightning-engine)
     
 
 A service that provides a distributed processing engine that handles complex analytical workloads, such as large-scale, borderless data joins and transformations. To maximize compute efficiency, Managed Service for Apache Spark uses Lightning Engine to handle the massive multi-way joins, complex windowing, and behavioral aggregations that are needed to combine the borderless data sources.
@@ -72,16 +72,16 @@ The enterprise data assets that reside in other cloud environments. In the archi
 Connecting to external data sources lets you analyze data in place and avoids the need for costly and time-consuming data migration. Although this example architecture uses Databricks Unity Catalog and Amazon S3 buckets, you can use this architecture pattern with other external Iceberg catalog services and cloud storage providers.
 
 [AlloyDB ](https://docs.cloud.google.com/alloydb/docs/overview)
-     A high-performance database for [hybrid transactional and analytical processing (HTAP)](https://en.wikipedia.org/wiki/Hybrid_transactional/analytical_processing), such as when you manage real-time inventory or live customer profiles. The [BigQuery AlloyDB federation](https://docs.cloud.google.com/bigquery/docs/alloydb-federated-queries) enables analytical engines to send a query from BigQuery directly to the live transactional data that is stored in AlloyDB. This approach eliminates the latency and overhead that is associated with [change data capture (CDC) pipelines](https://en.wikipedia.org/wiki/Change_data_capture). 
+     A high-performance database for [hybrid transactional and analytical processing (HTAP)](https://en.wikipedia.org/wiki/Hybrid_transactional/analytical_processing), such as when you manage real-time inventory or live customer profiles. The [BigQuery AlloyDB federation](https://docs.cloud.google.com/bigquery/docs/alloydb-federated-queries) enables analytical engines to send a query from BigQuery directly to the live transactional data that is stored in AlloyDB. This approach helps to avoid the latency and overhead that are associated with [change data capture (CDC) pipelines](https://en.wikipedia.org/wiki/Change_data_capture). 
 [Cloud Storage](https://docs.cloud.google.com/storage/docs/introduction)
-     A scalable object storage service for high-throughput data, such as clickstream events. To ensure that the data can be accessed by a variety of processing engines, use Cloud Storage to decouple the data from specific compute services and store the data in the open Apache Iceberg format, such as Apache Parquet. 
+     A scalable object storage service for high-throughput data, such as clickstream events. To help ensure that the data can be accessed by a variety of processing engines, use Cloud Storage to decouple the data from specific compute services and store the data in the open Apache Iceberg format, such as Apache Parquet. 
 [Borderless Lakehouse](https://docs.cloud.google.com/lakehouse/docs/introduction)
     
 
 The central metadata and governance system that enables a unified borderless federation. To establish connection to the lakehouse metadata, Lakehouse performs the following actions:
 
   1. Connect to Databricks Unity Catalog to resolve the schema and routing information for borderless data.
-  2. Send a request to Secret Manager to verify credentials.
+  2. Send a request to Secret Manager to verify credentials: 
      * If credentials are approved, establish direct connection to lakehouse metadata.
      * If credentials are denied, return an error message and abort the operation.
 
@@ -99,7 +99,7 @@ The serving subsystem contains the following components:
 
 Unified customer profile
      A [BigQuery](https://docs.cloud.google.com/bigquery/docs/introduction) database that consolidates the output of distributed Spark jobs. The BigQuery table transforms fragmented borderless metrics into complex denormalized data types and serves as the central, governed datastore for analysis. 
-[BigQuerydata agent](https://docs.cloud.google.com/bigquery/docs/conversational-analytics)
+[BigQuery data agent](https://docs.cloud.google.com/bigquery/docs/conversational-analytics)
      A conversational analytics agent that lets users query data directly in BigQuery and generates enterprise insights. The agent enforces security and governance guardrails on the queries. 
 BigQuery MCP server
      A Google-managed [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) server that provides access to BigQuery data. The BigQuery MCP server securely exposes the governed lakehouse context to local or external AI models, like Gemini CLI. It enables end-to-end agentic workflows without requiring AI engineers to build and maintain custom REST API middleware. 
@@ -134,8 +134,8 @@ This example architecture uses the following third-party products:
 
 This reference architecture is designed for organizations that need to unify siloed data from multiple cloud environments and on-premises systems to drive analytics and AI initiatives. This architecture provides the following benefits:
 
-  * **A borderless unified profile** : A single, holistic view of business entities that lets analysts and decision-makers gain comprehensive insights. This unified view improves accuracy of analytics and it ensures that data is consistent and up-to-date regardless of where it's stored.
-  * **Reduced operational complexity and lower total cost of ownership (TCO)** : Lakehouse eliminates the need to build and maintain brittle data pipelines. This approach lets you query data directly where it resides across different clouds. It avoids the operational overhead, storage costs, and latency that are associated with physical data movement.
+  * **A borderless unified profile** : A single, holistic view of business entities that lets analysts and decision-makers gain comprehensive insights. This unified view improves accuracy of analytics and it helps ensure that data is consistent and up-to-date regardless of where it's stored.
+  * **Reduced operational complexity and lower total cost of ownership (TCO)** : Lakehouse helps to avoid the need to build and maintain brittle data pipelines. This approach lets you query data directly where it resides across different clouds. It avoids the operational overhead, storage costs, and latency that are associated with physical data movement.
   * **Agentic AI workflows** : AI agents empower data analysts to translate complex behavioral aggregations directly into actionable business strategies. Agents let analysts securely access the structured, governed lakehouse data through standard protocols.
 
 
@@ -149,19 +149,38 @@ The following are examples of use cases for the architecture that's described in
 
 ## Design considerations
 
-To implement this architecture for production, consider the following recommendations:
+This section describes design factors, best practices, and recommendations to consider when you use this reference architecture to develop a topology that meets your specific requirements for security and cost.
 
-  * **Network topology and egress strategy** : To ensure reliable performance and minimize data transfer costs over borderless networks, use [Cross-Cloud Interconnect](https://docs.cloud.google.com/network-connectivity/docs/interconnect/concepts/cci-overview) to establish a private connection between Google Cloud and AWS. Otherwise, data query over public internet from Google Cloud to AWS can incur high egress fees and unpredictable latency.
+The guidance in this section isn't exhaustive. For more information about design factors and best practices, and for recommendations about building and deploying a multi-agent AI system, see [Multi-agent AI system in Google Cloud](https://docs.cloud.google.com/architecture/multiagent-ai-system#design_considerations).
+
+### Security, privacy, and compliance
+
+To help enforce the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege), manage access through system-managed identities. Consider the following recommendations:
+
+  * To create and manage permissions for Google Cloud resources, use Google's [Identity and Access Management (IAM)](https://docs.cloud.google.com/iam/docs/manage-access-other-resources) service.
+  * To securely access raw data in Cloud Storage, use [BigQuery Cloud resource connections](https://docs.cloud.google.com/bigquery/docs/create-cloud-resource-connection).
+  * To securely authenticate cross-cloud Databricks connections, use [Lakehouse catalog federation](https://docs.cloud.google.com/lakehouse/docs/set-up-cross-cloud-connection-databricks#setup-federation) with Secret Manager.
+
+
+
+#### Agent security and governance
+
+To help address the unique security risks of AI agents, Google recommends an [approach](https://research.google/pubs/an-introduction-to-googles-approach-for-secure-ai-agents/) that combines deterministic security controls with dynamic, reasoning-based defenses:
+
+  * **Human oversight** : Incorporate a human-in-the-loop flow in business-critical systems so human supervisors can review outputs and approve, override, or pause agent actions.
+  * **[Agent Identity](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/agent-identity-overview)** : Assign each agent a workload-bound identity to enforce least-privilege access control and centrally manage credentials for external tools.
+  * **[Agent Gateway](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/gateways/agent-gateway-overview)** : Enforce ingress and egress traffic governance, default-deny access policies, and inline prompt and tool inspection with [Model Armor](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/configure-model-armor).
+  * **[Agent Registry](https://docs.cloud.google.com/agent-registry/overview)** : Verify that agents only connect to approved subagents and MCP tools.
+
+
+
+### Cost and performance optimization
+
+To help ensure that your agent configurations meet your cost and performance requirements, consider the following recommendations:
+
   * **Compute selection** : To optimize performance and cost, select a compute service that is best suited for each part of your workload. A modern data lakehouse doesn't rely on a monolithic compute service. To perform exact-match filters to operational databases, use BigQuery [federated queries](https://docs.cloud.google.com/bigquery/docs/federated-queries-intro). To offload memory-heavy and complex data manipulation, such as vectorized borderless joins, use Managed Service for Apache Spark with Lightning Engine.
   * **AI model grounding** : To mitigate AI model hallucinations, ground your model on the unified customer profile to enforce business definitions and statistical validation. When you expose the AI model to raw, unaggregated borderless data across billions of rows, it can lead to excessive token consumption and high hallucination rates.
-  * **Identity and access management** : To enforce the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) , manage access through system-managed identities.
-
-    * To create and manage permissions for Google Cloud resources, use Google's [Identity and Access Management (IAM)](https://docs.cloud.google.com/iam/docs/manage-access-other-resources) service.
-    * To securely access raw data in Cloud Storage, use [BigQuery Cloud resource connections](https://docs.cloud.google.com/bigquery/docs/create-cloud-resource-connection).
-    * To securely authenticate cross-cloud Databricks authentication, use [Lakehouse REST catalog federation](https://docs.cloud.google.com/lakehouse/docs/lakehouse-iceberg-rest-catalog#federation) with Secret Manager.
-
-The use of these identity and access management strategies helps to prevent unauthorized data exfiltration and it provides a unified audit trail for all data access.
-
+  * **Network topology and egress strategy** : To help ensure reliable performance and minimize data transfer costs over borderless networks, use [Cross-Cloud Interconnect](https://docs.cloud.google.com/network-connectivity/docs/interconnect/concepts/cci-overview) to establish a private connection between Google Cloud and AWS. Otherwise, data query over public internet from Google Cloud to AWS can incur high egress fees and unpredictable latency.
 
 
 
@@ -171,9 +190,9 @@ To deploy this architecture, see [Building a borderless open data lakehouse](htt
 
 ## What's next
 
-  * Learn how to [use Lakehouse runtime catalog with tables in BigQuery](https://docs.cloud.google.com/lakehouse/docs/lakehouse-catalog-tables).
-  * Learn how to [accelerate Spark with Lightning Engine](https://docs.cloud.google.com/dataproc-serverless/docs/guides/lightning-engine).
-  * Lean how to [analyze data with conversations](https://docs.cloud.google.com/bigquery/docs/create-conversations).
+  * Learn how to [use the Lakehouse runtime catalog with tables in BigQuery](https://docs.cloud.google.com/lakehouse/docs/lakehouse-catalog-tables).
+  * Learn how to [accelerate Spark with Lightning Engine](https://docs.cloud.google.com/managed-spark/docs/guides/lightning-engine).
+  * Learn how to [analyze data with conversations](https://docs.cloud.google.com/bigquery/docs/create-conversations).
   * For an overview of architectural principles and recommendations that are specific to AI and ML workloads in Google Cloud, see the [AI and ML perspective](https://docs.cloud.google.com/architecture/framework/perspectives/ai-ml) in the Well-Architected Framework. 
   * For more reference architectures, diagrams, and best practices, explore the [Cloud Architecture Center](https://docs.cloud.google.com/architecture). 
 
@@ -194,6 +213,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-04-22 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-04-22 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

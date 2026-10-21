@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/create-instance/
 title: Create a public instance \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:58:24.578542+00:00
+fetched_at: 2026-10-21T11:55:46.072973+00:00
 ---
 
 # Create a public instance  |  Cloud Data Fusion  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Create a public instance Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page explains how to create a Cloud Data Fusion [instance](https://docs.cloud.google.com/data-fusion/docs/concepts/overview).
+A public Cloud Data Fusion [instance](https://docs.cloud.google.com/data-fusion/docs/concepts/overview) lets you build and manage data integration pipelines that connect to publicly accessible endpoints. This default instance type uses your project's default VPC network to run execution clusters and connect to external endpoints over the public internet.
 
 ## Before you begin
 
@@ -89,6 +89,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

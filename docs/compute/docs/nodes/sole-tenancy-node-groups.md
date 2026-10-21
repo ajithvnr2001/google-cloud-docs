@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/nodes/sole-tenancy-node-groups/
 title: Create sole-tenant node groups \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:10.084978+00:00
+fetched_at: 2026-10-21T12:01:41.356649+00:00
 ---
 
 # Create sole-tenant node groups  |  Compute Engine  |  Google Cloud Documentation
@@ -66,7 +66,7 @@ To create a sole-tenant node group, use one of the following methods:
 
   8. Specify the **Number of nodes** for the group. If you enable the [node group autoscaler](https://docs.cloud.google.com/compute/docs/nodes/autoscaling-node-groups), specify a range for the size of the node group. You can manually change the values later.
 
-  9. Set the **Maintenance policy** of the sole-tenant node group in the **Configure Maintenance Settings** section to one of the following values. The maintenance policy lets you configure the behavior of VMs on the node group during host maintenance events. For more information, see [Maintenance policies](https://docs.cloud.google.com/compute/docs/nodes#maintenance_policies):
+  9. Set the **Maintenance policy** of the sole-tenant node group in the **Configure Maintenance Settings** section to one of the following values. The maintenance policy lets you configure the behavior of VMs on the node group during host maintenance events. For more information, see [Maintenance policies](https://docs.cloud.google.com/compute/docs/nodes/sole-tenant-nodes#host_maintenance_policy):
 
      * **Default**
      * **Restart in place**
@@ -113,7 +113,7 @@ Replace the following:
   * `TEMPLATE_NAME`: the name of the node template to use to create this group.
   * `TARGET_SIZE`: the number of nodes to create in the group.
   * `ZONE`: the zone to create the node group in. This must be the same region as the node template on which you are basing the node group.
-  * `MAINTENANCE_POLICY`: the maintenance policy for the node group. For more information, see [Maintenance policies](https://docs.cloud.google.com/compute/docs/nodes#maintenance_policies). This must be one of the following values:
+  * `MAINTENANCE_POLICY`: the maintenance policy for the node group. For more information, see [Maintenance policies](https://docs.cloud.google.com/compute/docs/nodes/sole-tenant-nodes#host_maintenance_policy). This must be one of the following values:
 
     * `default`
     * `restart-in-place`
@@ -170,7 +170,7 @@ Replace the following:
 
   * `GROUP_NAME`: the name for the new node group.
 
-  * `MAINTENANCE_POLICY`: the [maintenance policy](https://docs.cloud.google.com/compute/docs/nodes#maintenance_policies) for the node group. This must be one of the following values:
+  * `MAINTENANCE_POLICY`: the [maintenance policy](https://docs.cloud.google.com/compute/docs/nodes/sole-tenant-nodes#host_maintenance_policy) for the node group. This must be one of the following values:
 
     * `DEFAULT`
     * `RESTART_IN_PLACE`
@@ -281,11 +281,11 @@ Replace the following:
   * For information about sole-tenant node pricing, see [Sole-tenant nodes pricing](https://cloud.google.com/compute/sole-tenant-pricing).
 
 
-  * For information about how to enable autoscaling on sole-tenant node groups, see [Node group autoscaler](https://docs.cloud.google.com/compute/docs/nodes/node-group-autoscaler).
+  * For information about how to enable autoscaling on sole-tenant node groups, see [Node group autoscaler](https://docs.cloud.google.com/compute/docs/nodes/autoscaling-node-groups).
 
   * For more information about bringing existing licenses to Google Cloud, see [Bring existing licenses](https://docs.cloud.google.com/compute/docs/nodes/bringing-your-own-licenses).
 
-  * For more information about sole-tenant nodes, see [Sole-tenant nodes](https://docs.cloud.google.com/compute/docs/nodes).
+  * For more information about sole-tenant nodes, see [Sole-tenant nodes](https://docs.cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
 
 
 
@@ -294,6 +294,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

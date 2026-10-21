@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/agentic-ai-system-with-grounding-using-maps/
 title: Build trusted AI agents with Google Maps Platform \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:31.380827+00:00
+fetched_at: 2026-10-21T12:22:09.936248+00:00
 ---
 
 # Build trusted AI agents with Google Maps Platform  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -63,7 +63,7 @@ This architecture uses the following Google products and tools:
   * [ Google Maps Platform](https://cloud.google.com/maps-platform): A platform that provides mapping, routing, and location search services. 
   * [ Google Calendar](https://workspace.google.com/products/calendar/): A tool for teams and individuals to manage schedules and events. 
   * [ Gemini Enterprise](https://cloud.google.com/gemini-enterprise): A fully-managed secure platform to deploy and manage AI agents within an enterprise. 
-  * [Agent Development Kit (ADK)](https://google.github.io/adk-docs/): A set of tools and libraries to develop, test, and deploy AI agents.
+  * [Agent Development Kit (ADK)](https://adk.dev/): A set of tools and libraries to develop, test, and deploy AI agents.
   * [ Cloud Logging](https://cloud.google.com/logging): A real-time log management system with storage, search, analysis, and alerting.
   * [ Firestore](https://cloud.google.com/firestore): A NoSQL document database built for automatic scaling, high performance, and ease of application development. 
   * [ Cloud Run](https://cloud.google.com/run): A serverless compute platform that lets you run containers directly on top of Google's scalable infrastructure.

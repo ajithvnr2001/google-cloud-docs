@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/database-migration/docs/postgresql-to-alloydb/quickstarts/
 title: Quickstarts \u00a0|\u00a0 Database Migration Service for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:04:24.689773+00:00
+fetched_at: 2026-10-21T11:59:58.716024+00:00
 ---
 
 # Quickstarts  |  Database Migration Service for SQL Server  |  Google Cloud Documentation

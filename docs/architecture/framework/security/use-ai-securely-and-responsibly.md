@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/security/use-ai-securely-and-responsibly/
 title: Use AI securely and responsibly \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:17.929292+00:00
+fetched_at: 2026-10-21T12:01:25.924936+00:00
 ---
 
 # Use AI securely and responsibly  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -155,7 +155,7 @@ This explainability feature is integrated with [BigQuery ML](https://docs.cloud.
 
 Track the origin and transformation of data that's used in your AI systems. This tracking helps you understand the data's journey and identify potential sources of bias or error.
 
-[Data lineage](https://docs.cloud.google.com/data-catalog/docs/concepts/about-data-lineage) is a Knowledge Catalog feature that lets you track how data moves through your systems: where it comes from, where it's passed to, and what transformations are applied to it.
+[Data lineage](https://docs.cloud.google.com/knowledge-catalog/docs/about-data-lineage) is a Knowledge Catalog feature that lets you track how data moves through your systems: where it comes from, where it's passed to, and what transformations are applied to it.
 
 ### Establish accountability
 

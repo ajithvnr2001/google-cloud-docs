@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-client-json-credentials/
 title: Create a client with a service account key file \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:44:03.323161+00:00
+fetched_at: 2026-10-21T12:00:00.251441+00:00
 ---
 
 # Create a client with a service account key file  |  BigQuery  |  Google Cloud Documentation
@@ -90,9 +90,9 @@ To authenticate to BigQuery, set up Application Default Credentials. For more in
     # Alternatively, use service_account.Credentials.from_service_account_info()
     # to set credentials directly via a json object rather than set a filepath
     # TODO(developer): Set key_json to the content of the service account key file.
-    # credentials = service_account.Credentials.from_service_account_info([key_json](https://docs.cloud.google.com/python/docs/reference/bigquery/latest))[
+    # credentials = service_account.Credentials.from_service_account_info(key_json)
     
-    clie](https://docs.cloud.google.com/python/docs/reference/bigquery/latest/google.cloud.bigquery.client.Client.html)nt = bigquery.Client(
+    client = [bigquery](https://docs.cloud.google.com/python/docs/reference/bigquery/latest).[Client](https://docs.cloud.google.com/python/docs/reference/bigquery/latest/google.cloud.bigquery.client.Client.html)(
         credentials=credentials,
         project=credentials.project_id,
     )

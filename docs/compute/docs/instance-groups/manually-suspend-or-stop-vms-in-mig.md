@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/manually-suspend-or-stop-vms-in-mig/
 title: Manually suspend or stop VMs in a MIG \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:17:22.745544+00:00
+fetched_at: 2026-10-21T12:01:42.091738+00:00
 ---
 
 # Manually suspend or stop VMs in a MIG  |  Compute Engine  |  Google Cloud Documentation
@@ -178,17 +178,26 @@ Replace the following:
 
 ## Stop selected VMs in a MIG
 
-You can stop a running VM in a MIG using the Google Cloud console, the Google Cloud CLI, or the Compute Engine API.
+If you've enabled [graceful shutdown](https://docs.cloud.google.com/compute/docs/instances/graceful-shutdown-overview) in the instance template that your MIG uses, then the running VMs in your MIG gracefully shut down when you stop them. When you stop a running VM, you can optionally skip a graceful shutdown, or end an ongoing graceful shutdown when all tasks have finished running, to reduce unnecessary costs.
+
+You can stop a running VM in a MIG by using the Google Cloud console, the Google Cloud CLI, or the Compute Engine API.
 
 ###  Console 
 
-  1. In the Google Cloud console, go to the **Instance groups** page. 
+  1. In the Google Cloud console, go to the **Instance groups** page.
 
 [Go to the Instance groups page](https://console.cloud.google.com/compute/instanceGroups)
 
-  2. Click the instance group name where you want to stop VMs.
-  3. In the instance group **Overview** page, under **VM instances** , select all the VMs that you want to stop, then click **Stop**. If there is no **Stop** option, click more_vert **More actions >** stop **Stop**.
-  4. In the confirmation dialog that appears, click **Stop** to confirm.
+  2. Click the name of the MIG where you want to stop VMs. The **Overview** page appears.
+
+  3. In the **VM instances** list, select all the VMs that you want to stop, then click **Stop**. If there is no **Stop** option, then click **More actions** , and then select **Stop**.
+
+  4. In the dialog that appears, do the following:
+
+     1. Optional: To stop VMs without using graceful shutdown, or to end an ongoing graceful shutdown, select the **Skip graceful shutdown (if applicable)** checkbox.
+
+     2. To confirm, click **Stop**.
+
 
 
 
@@ -198,8 +207,8 @@ Use the [`instance-groups managed stop-instances` command](https://docs.cloud.go
     
     
     gcloud compute instance-groups managed stop-instances MIG_NAME \
-      --instances=INSTANCE_NAME \
-      [--region=REGION | --zone=ZONE]
+        --instances=INSTANCE_NAME \
+        [--region=REGION | --zone=ZONE]
     
 
 Replace the following:
@@ -211,6 +220,15 @@ Replace the following:
 
 
 
+If you want to skip or end a graceful shutdown, then use the same command with the `--no-graceful-shutdown` flag:
+    
+    
+    gcloud compute instance-groups managed stop-instances MIG_NAME \
+        --instances=INSTANCE_NAME \
+        **--no-graceful-shutdown** \
+        [--region=REGION | --zone=ZONE]
+    
+
 ###  REST 
 
 Use the [`instanceGroupManager.stopInstances` method](https://docs.cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/stopInstances) and specify the instances in the request body. For regional MIGs, use the [`regionInstanceGroupManager.stopInstances` method](https://docs.cloud.google.com/compute/docs/reference/rest/v1/regionInstanceGroupManagers/stopInstances).
@@ -219,9 +237,9 @@ Use the [`instanceGroupManager.stopInstances` method](https://docs.cloud.google.
     POST https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instanceGroupManagers/MIG_NAME/stopInstances
     
     {
-      "instances": [
-        "INSTANCE_NAME_URL"
-      ]
+        "instances": [
+          "INSTANCE_NAME_URL"
+        ]
     }
     
 
@@ -234,6 +252,18 @@ Replace the following:
   * `INSTANCE_NAME_URL`: the URL of the instance to stop—for example, `zones/us-central1-a/instances/example-instance-name1`. To stop multiple instances, provide a comma-separated list of URLs—for example, `"zones/us-central1-a/instances/example-instance-name1","zones/us-central1-a/instances/example-instance-name2"`.
 
 
+
+If you want to skip or end a graceful shutdown, then include the `noGracefulShutdown` query parameter set to `true` in the request URL:
+    
+    
+    POST https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instanceGroupManagers/MIG_NAME/stopInstances**?noGracefulShutdown=true**
+    
+    {
+        "instances": [
+          "INSTANCE_NAME_URL"
+        ]
+    }
+    
 
 ## Start selected VMs in a MIG
 
@@ -303,6 +333,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mcp/access-control/
 title: Access control with Identity and Access Management \u00a0|\u00a0 Google Cloud MCP servers \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:47:41.806182+00:00
+fetched_at: 2026-10-21T12:23:02.631487+00:00
 ---
 
 # Access control with Identity and Access Management  |  Google Cloud MCP servers  |  Google Cloud Documentation
@@ -24,13 +24,13 @@ Send feedback
 
 Google Cloud remote MCP servers let you use Identity and Access Management (IAM) to enforce fine-grained authorization across your resource hierarchy. You can configure access at the project or individual resource level to control tool use based on resource tags and read-only or read-write permissions.
 
-You can't use IAM to control access to [non-Google Cloud MCP servers](https://docs.cloud.google.com/mcp/supported-products#google-mcp-servers).
+[Non-Google Cloud MCP servers](https://docs.cloud.google.com/mcp/supported-products#google-mcp-servers) don't require the MCP Tool User (`roles/mcp.toolUser`) role. You also can't use IAM policies or permissions to control access to non-Google Cloud MCP servers.
 
 For detailed information about IAM and its features, see [IAM overview](https://docs.cloud.google.com/iam/docs/overview).
 
 ## Grant access
 
-Grant a principal the Tool User role on a project.
+Grant a principal the MCP Tool User role on a project.
 
   1. In the Google Cloud console, go to the **IAM** page.
 
@@ -42,7 +42,7 @@ Grant a principal the Tool User role on a project.
 
   4. Enter an identifier for the principal. For example, `my-app@example.com`.
 
-  5. From the **Select a role** drop-down menu, search for **Tool User** , and then click **Tool User**.
+  5. From the **Select a role** drop-down menu, search for **MCP Tool User** , and then click **MCP Tool User**.
 
   6. Click **Save**.
 
@@ -75,7 +75,7 @@ The following sections describe the IAM roles required for interacting with and 
 
 ### Roles
 
-In order to use MCP tools, the tool caller must be granted the Tool User (`roles/mcp.toolUser`) role on the Google Cloud project, as well as the required roles for any Google Cloud products or services that you access.
+To use Google Cloud MCP tools, the tool caller must be granted the MCP Tool User (`roles/mcp.toolUser`) role on the Google Cloud project, as well as the required roles for any Google Cloud products or services that you access. [Non-Google Cloud MCP servers](https://docs.cloud.google.com/mcp/supported-products#google-mcp-servers) don't require the MCP Tool User role.
 
 ### Permissions
 
@@ -95,6 +95,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

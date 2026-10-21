@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/audit-logs/
 title: Audit logging \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:35:14.070134+00:00
+fetched_at: 2026-10-21T11:58:12.420692+00:00
 ---
 
 # Audit logging  |  Access Context Manager  |  Google Cloud Documentation
@@ -38,9 +38,18 @@ Each audit log record contains information which can be divided into two major c
 **`resource`** | The target of the audited operation.   
 **`resourceName`** | The organization intended to receive this audit record.   
 **`requestMetadata.callerIp`** | The IP address from which the call originated.   
-**`requestMetadata.requestAttributes.auth.accessLevels`** | The active access levels satisfied by the request.   
+**`requestMetadata.requestAttributes.auth.accessLevels`** | The access levels in the organization that the request satisfied, regardless of whether those access levels are applied in the access binding.   
 **`status`** | The overall status of handling an operation described in this record.   
-**`metadata`** | An instance of `google.cloud.audit.ContextAwareAccessAuditMetadata` protobuf type, serialized as a JSON Struct. Its 'unsatisfiedAccessLevels' field contains a list of the access levels that the request failed to satisfy.   
+**`metadata`** | An instance of the `google.cloud.audit.ContextAwareAccessAuditMetadata` protobuf type, serialized as a JSON `Struct`. It includes the following fields:
+
+  * `appliedAccessLevels`: The access levels required by the active access policy in the binding.
+  * `appliedDryRunAccessLevels`: The access levels required by the dry-run access policy in the binding.
+  * `unsatisfiedAccessLevels`: The access levels in the organization that the request failed to satisfy. This list can include access levels that aren't applied in the access binding. To identify which access levels caused an access denial, compare this field with `appliedAccessLevels` or `appliedDryRunAccessLevels`.
+  * `evaluationResult`: The evaluation result of the active access policy (`GRANTED` or `DENIED`). If no active access levels are applied in the binding, this field is set to `GRANTED`.
+  * `dryRunEvaluationResult`: The evaluation result of the dry-run access policy (`GRANTED` or `DENIED`). If no dry-run access levels are applied in the binding, this field is set to `GRANTED`, even when `evaluationResult` is `DENIED`.
+  * `deniedApplications`: The applications for which access was denied.
+
+  
   
 ## Accessing the audit log
 
@@ -58,6 +67,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

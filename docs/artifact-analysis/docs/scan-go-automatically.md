@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/scan-go-automatically/
 title: Scan Go packages automatically \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:44:05.668941+00:00
+fetched_at: 2026-10-21T12:00:14.205189+00:00
 ---
 
 # Scan Go packages automatically  |  Artifact Analysis  |  Google Cloud Documentation
@@ -335,7 +335,7 @@ You can use the `layerDetails` field to determine which specific layer introduce
         "index": 0,
         "diffID": "sha256:123",
         "buildCommand": "FROM golang:example_sha256",
-        "BaseImages&quot;: [
+        "BaseImages": [
           {
             "name": "library/golang",
           },
@@ -412,7 +412,7 @@ Where:
 In your API query, use the following filter expression:
     
     
-    kind=&quot;PACKAGE_VULNERABILITY" AND resourceUrl=&quot;RESOURCE_URL"
+    kind="PACKAGE_VULNERABILITY" AND resourceUrl="RESOURCE_URL"
 
 Where:
 
@@ -430,7 +430,7 @@ You can use the `hasPrefix` function to filter with a wider scope.
 For example, the following filters to occurrences of a specific kind across multiple versions of the same package:
     
     
-    kind=&quot;NOTE_KIND" AND has_prefix(resourceUrl, "RESOURCE_URL_PREFIX")
+    kind="NOTE_KIND" AND has_prefix(resourceUrl, "RESOURCE_URL_PREFIX")
 
 Where:
 
@@ -489,7 +489,7 @@ To limit vulnerability scanning results to one package type, run the following g
       gcloud artifacts docker images list /
           --show-occurrences /
           --occurrence-filter='kind="VULNERABILITY" AND packageType="PACKAGE_TYPE"' /
-          >LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY/IMAGE_ID
+          LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY/IMAGE_ID
     
 
 Where:
@@ -514,7 +514,7 @@ To list all images within a project that are associated with a particular note, 
     
     gcloud artifacts docker images list /
         --show-occurrences /
-        --occurrence-filter='noteProjectId="goog-vulnz"; AND noteId=&quot;NOTE_ID"' /
+        --occurrence-filter='noteProjectId="goog-vulnz" AND noteId="NOTE_ID"' /
         LOCATION-docker.pkg.dev/PROJECT_ID
     
 
@@ -547,7 +547,7 @@ To check a specific image for a specific note, use the following filter expressi
     
     gcloud artifacts docker images list /
         --show-occurrences /
-        --occurrence-filter='noteProjectId="goog-vulnz"; AND noteId=&quot;NOTE_ID"' /
+        --occurrence-filter='noteProjectId="goog-vulnz" AND noteId="NOTE_ID"' /
         LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY/IMAGE_ID
     
 
@@ -565,7 +565,7 @@ Where
 In your API query, add the following filter expression:
     
     
-    resourceUrl=&quot;RESOURCE_URL" AND noteProjectId=&quot;goog-vulnz&quot; \
+    resourceUrl="RESOURCE_URL" AND noteProjectId="goog-vulnz" \
     AND noteId="NOTE_ID"
 
 Where:

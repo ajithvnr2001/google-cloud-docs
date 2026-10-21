@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-vms/secure-vms/secure-boot/
 title: Securely boot a VM \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T20:51:42.137675+00:00
+fetched_at: 2026-10-21T12:22:36.463165+00:00
 ---
 
 # Securely boot a VM  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -22,17 +22,17 @@ Send feedback
 
 #  Securely boot a VM Stay organized with collections  Save and categorize content based on your preferences. 
 
-**Important:** The following certificates are approaching end-of-life in 2026: Microsoft Corporation UEFI CA 2011 and the Microsoft Windows Production PCA 2011. These certificates sign the bootloaders, for example, Linux Shim and Windows bootloader that are used to ensure boot-time integrity. To avoid service disruption, follow the instructions to [update Secure Boot certificates](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-vms/secure-vms/secure-boot-cert-update).
+**Important:** The following certificates are approaching end-of-life in 2026: Microsoft Corporation UEFI CA 2011 and the Microsoft Windows Production PCA 2011. These certificates sign bootloaders, such as Linux Shim and the Windows bootloader, to ensure boot-time integrity. To avoid service disruption, follow the instructions to [update Secure Boot certificates](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-vms/secure-vms/secure-boot-cert-update).
 
-This document explains how to enable secure boot or a virtualized trusted platform module (vTPM) on a virtual machine (VM) instance in Google Distributed Cloud (GDC) air-gapped.
+This document explains how to enable Secure Boot or a virtualized trusted platform module (vTPM) on a virtual machine (VM) instance in Google Distributed Cloud (GDC) air-gapped.
 
-This document is for developers in platform administrator or application operator groups that configure secure boot and vTPMs on VMs in a Distributed Cloud environment. For more information, see [Audiences for GDC air-gapped documentation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/audiences).
+This document is for developers in platform administrator or application operator groups that configure Secure Boot and vTPMs on VMs in a GDC environment. For more information, see [Audiences for GDC air-gapped documentation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/audiences).
 
-## About secure boot
+## About Secure Boot
 
-Secure boot is a feature that ensures the system runs only authentic software by verifying the digital signature of all boot components and stops the process if verification fails. It uses the Unified Extensible Firmware Interface (UEFI) firmware to manage certificates and keys that manufacturers use to sign system firmware, boot loaders, and loaded binaries.
+Secure Boot is a feature that ensures the system runs only authentic software by verifying the digital signature of all boot components and stops the process if verification fails. It uses the Unified Extensible Firmware Interface (UEFI) firmware to manage certificates and keys that manufacturers use to sign system firmware, boot loaders, and loaded binaries.
 
-On each boot, the UEFI firmware verifies each component's digital signature against stored approved keys and blocks any unsigned or improperly signed components. To enable secure boot on your VM instance, you must set the VM's `bootloader` type to `uefi`.
+On each boot, the UEFI firmware verifies each component's digital signature against stored approved keys and blocks any unsigned or improperly signed components. To enable Secure Boot on your VM instance, you must set the VM's `shieldConfig.bootType` field to `uefi`, and `shieldConfig.enableSecureBoot` to `true`.
 
 To view the official UEFI documentation, see <https://uefi.org/sites/default/files/resources/UEFI_Secure_Boot_in_Modern_Computer_Security_Solutions_2013.pdf>.
 
@@ -59,17 +59,19 @@ To run commands against the Management API server, ensure you have the following
 
 ### Request IAM roles
 
-To enable secure boot or vTPM on your VM, contact your Project IAM Admin to request the **Virtual Machine Project Admin** (`project-vm-admin`) role.
+To get the permissions that you need to enable Secure Boot or vTPM on your VM, ask your Project IAM Admin to grant you the Virtual Machine Project Admin (`project-vm-admin`) role.
 
 All VM roles must bind to the namespace of the project where the VM resides. Follow the steps to [verify](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/preparation#verify-user-access) your access.
 
-## Enable secure boot
+## Enable Secure Boot
 
-Enable secure boot for a VM. Use the following instructions for a VM called `VM_NAME` in the project's namespace (`PROJECT_NAMESPACE`).
+Enable Secure Boot for a VM. Use the following instructions for a VM called `VM_NAME` in the project's namespace (`PROJECT_NAMESPACE`).
+
+**Important:** To avoid boot errors in UEFI mode, verify that the boot disk image of your VM is UEFI-compatible before you enable Secure Boot. A UEFI-compatible image requires a GUID Partition Table (GPT) and a FAT32-formatted EFI System Partition (ESP) with a properly structured boot loader.
 
   1. Stop your VM if it's running before applying the patch. If you attempt to patch `shieldConfig` while the VM is running, the API returns a `Forbidden` error: `Changes to shieldConfig are not allowed while the VM is running`. For instructions, see [Stop a VM](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-vms/operations-and-lifecycle/start-and-stop-vm#stop-a-vm).
 
-  2. Update your VM custom resource to enable secure boot:
+  2. Update your VM custom resource to enable Secure Boot:
          
          kubectl --kubeconfig MANAGEMENT_API_SERVER \
            -n PROJECT_NAMESPACE \
@@ -82,21 +84,26 @@ Enable secure boot for a VM. Use the following instructions for a VM called `VM_
          '
          
 
+Replace the following variables:
+
+     * `MANAGEMENT_API_SERVER`: the kubeconfig file for the management API server.
+     * `PROJECT_NAMESPACE`: the namespace of the project where the VM resides.
+     * `VM_NAME`: the name of the VM.
   3. After you successfully apply the patch, start your VM using the instructions to [start a VM](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-vms/operations-and-lifecycle/start-and-stop-vm#start-a-vm). 
 
-  4. Verify that you've enabled secure boot. [Establish an SSH connection to your VM](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/connect-to-vm/connect-to-a-vm) and run the following command: 
+  4. Verify that you've enabled Secure Boot. [Establish an SSH connection to your VM](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/connect-to-vm/connect-to-a-vm) and run the following command: 
          
          mokutil --sb-state
          
 
-If you've successfully enabled secure boot, the command returns `SecureBoot enabled`.
+If you've successfully enabled Secure Boot, the command returns `SecureBoot enabled`.
 
-If the `mokutil` tool reports that you have not enabled secure boot, follow the steps in the section [Troubleshoot secure boot configuration](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-vms/secure-vms/secure-boot#troubleshoot-secure-boot).
-
-
+If the `mokutil` tool reports that you have not enabled Secure Boot, follow the steps in the section [Troubleshoot Secure Boot configuration](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-vms/secure-vms/secure-boot#troubleshoot-secure-boot).
 
 
-### Troubleshoot secure boot configuration
+
+
+### Troubleshoot Secure Boot configuration
 
   1. Open your VM custom resource in an editor:
          
@@ -105,7 +112,12 @@ If the `mokutil` tool reports that you have not enabled secure boot, follow the 
            edit virtualmachines.virtualmachine.gdc.goog VM_NAME
          
 
-  2. Look for missing fields or values as shown in the `spec` field in "Run the following command". These are required.
+Replace the following variables:
+
+     * `MANAGEMENT_API_SERVER`: the kubeconfig file for the management API server.
+     * `PROJECT_NAMESPACE`: the namespace of the project where the VM resides.
+     * `VM_NAME`: the name of the VM.
+  2. Look for missing fields or values as shown in the `spec` field in Enable Secure Boot. These are required.
 
   3. If any are missing or are incorrect, edit `spec` to add the missing fields and correct erroneous values.
 
@@ -116,7 +128,7 @@ If the `mokutil` tool reports that you have not enabled secure boot, follow the 
 
 
 
-If the previous steps don't resolve your issue, check the documentation corresponding to the VM's operating system (OS) to verify that the OS version supports the secure boot.
+If the previous steps don't resolve your issue, check the documentation corresponding to the VM's operating system (OS) to verify that the OS version supports the Secure Boot.
 
 ## Enable vTPM
 
@@ -136,6 +148,11 @@ Enable vTPM for a VM. Use the following instructions for a VM called `VM_NAME` i
          '
          
 
+Replace the following variables:
+
+     * `MANAGEMENT_API_SERVER`: the kubeconfig file for the management API server.
+     * `PROJECT_NAMESPACE`: the namespace of the project where the VM resides.
+     * `VM_NAME`: the name of the VM.
   3. After you successfully apply the patch, start your VM using the instructions to [start a VM](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-vms/operations-and-lifecycle/start-and-stop-vm#start-a-vm). 
 
   4. Verify that you've enabled vTPM. [Establish an SSH connection to your VM](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/connect-to-vm/connect-to-a-vm) and run the following command: 
@@ -162,7 +179,12 @@ If the `ACPI tables` don't display the TPM module, follow the steps in the secti
            edit virtualmachines.virtualmachine.gdc.goog VM_NAME
          
 
-  2. Look for missing fields or values as shown in the `spec` field in Run the following command. These are required.
+Replace the following variables:
+
+     * `MANAGEMENT_API_SERVER`: the kubeconfig file for the management API server.
+     * `PROJECT_NAMESPACE`: the namespace of the project where the VM resides.
+     * `VM_NAME`: the name of the VM.
+  2. Look for missing fields or values as shown in the `spec` field in Enable vTPM. These are required.
 
   3. If any are missing or are incorrect, edit `spec` to add the missing fields and correct erroneous values.
 
@@ -179,6 +201,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

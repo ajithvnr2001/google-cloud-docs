@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/operational-excellence/automate-and-manage-change/
 title: Automate and manage change \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:16.980625+00:00
+fetched_at: 2026-10-21T12:22:22.778987+00:00
 ---
 
 # Automate and manage change  |  Cloud Architecture Center  |  Google Cloud Documentation

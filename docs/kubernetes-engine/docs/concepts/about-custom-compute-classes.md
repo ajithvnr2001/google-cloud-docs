@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes/
 title: About custom ComputeClasses \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:02:09.972186+00:00
+fetched_at: 2026-10-21T12:23:07.523893+00:00
 ---
 
 # About custom ComputeClasses  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -29,7 +29,7 @@ You can create your own ComputeClasses to control the properties of the nodes th
 
 In GKE, a _ComputeClass_ is a profile that consists of a set of node attributes that GKE uses to provision the nodes that run your workloads during autoscaling events. ComputeClasses can target specific optimizations, like provisioning high-performance nodes or prioritizing cost-optimized configurations for cheaper running costs. _Custom_ ComputeClasses let you define profiles that GKE then uses to autoscale nodes to closely meet the requirements of specific workloads.
 
-Custom ComputeClasses are available to use in GKE Autopilot mode and GKE Standard mode in version 1.30.3-gke.1451000 and later, and offer a declarative approach to defining node attributes and autoscaling priorities. Custom ComputeClasses are available to configure and use in all eligible GKE clusters by default.
+ComputeClasses are available to use in GKE Autopilot mode and GKE Standard mode in version 1.30.3-gke.1451000 and later, and offer a declarative approach to defining node attributes and autoscaling priorities. ComputeClasses are available to configure and use in all eligible GKE clusters by default.
 
 ### Benefits of custom ComputeClasses
 
@@ -42,6 +42,7 @@ Custom ComputeClasses offer the following benefits:
   * **Cost optimization** : prioritize cost-efficient node types like Spot VMs to reduce your cluster expenses.
   * **Default custom ComputeClasses** : set a custom ComputeClass as the default for an entire cluster or for specific Kubernetes namespaces, so that workloads run on optimized hardware even if they don't request a specific ComputeClass.
   * **Custom node consolidation thresholds** : define custom resource usage thresholds for nodes. If a specific node's resource usage falls below your threshold, GKE attempts to consolidate the workloads into a similar, available node and scales down the underutilized node.
+  * **Declarative minimum capacity** : maintain a minimum number of nodes of this ComputeClass in your cluster proactively, which helps to ensure that capacity is available for critical workloads.
 
 
 
@@ -97,12 +98,13 @@ To effectively plan, deploy, and use a custom ComputeClass in your cluster, you 
   4. Set autoscaling parameters for node consolidation: tell GKE when to consolidate workloads and remove underutilized nodes.
   5. Configure active migration to higher priority nodes: optionally, tell GKE to move workloads to more preferred nodes as hardware becomes available.
   6. Consume Compute Engine reservations: optionally, tell GKE to consume existing Compute Engine zonal reservations when creating new nodes.
+  7. Provision a minimum number of nodes: optionally, tell GKE to maintain a minimum node count in your cluster.
 
 
 
 ## Choose your fallback compute priorities
 
-The primary advantage of using a custom ComputeClass is to have control over the fallback strategy when your preferred nodes are unavailable due to factors like resource exhaustion and quota limitations.
+The primary advantage of using a custom ComputeClass is to have control over the fallback strategy when your preferred nodes are unavailable due to factors like zonal resource exhaustion (such as seeing `ZONE_RESOURCE_POOL_EXHAUSTED` or `GCE out of resources` messages during `FailedScaleUp` events) and quota limitations. By defining a prioritized list of alternative machine series or provisioning models, your cluster can automatically provision available capacity instead of leaving Pods in a `Pending` state. For more information about troubleshooting insufficient compute capacity, see [Node pool creation fails due to insufficient resources](https://docs.cloud.google.com/kubernetes-engine/docs/troubleshooting/node-pools#insufficient-resources) and [Node scale up failed: Compute Engine out of resources](https://docs.cloud.google.com/kubernetes-engine/docs/troubleshooting/autopilot-clusters#scaleup-failed-out-of-resources).
 
 You create a fallback strategy by defining a list of _priority rules_ in the `priorities` field in the ComputeClass specification. Each priority rule can request nodes in one of the following ways:
 
@@ -667,7 +669,7 @@ In this configuration, GKE removes unused nodes after five minutes, and nodes on
 
 Active migration is an optional autoscaling feature in ComputeClasses that automatically replaces existing nodes with new nodes. The following types of active migration are supported:
 
-  * `optimizeRulePriority`: GKE replaces nodes that use a lower-priority configuration with nodes that use a higher-priority configuration. This option helps you to ensure that your Pods eventually run on your most preferred node configuration, even if GKE originally had to run those Pods on a less preferred node configuration.
+  * `optimizeRulePriority`: GKE replaces nodes that use a lower-priority configuration with nodes that use a higher-priority configuration. This option provides automatic recovery after a temporary zonal capacity shortage (`ZONE_RESOURCE_POOL_EXHAUSTED`). This option helps ensure that your stateless or disruption-tolerant Pods eventually return to your most preferred node configuration even if GKE originally had to provision fallback hardware from a lower-priority rule.
   * `ensureAllDaemonSetPodsRunning`: GKE replaces nodes that have unschedulable DaemonSet Pods with larger nodes that can run all of the required DaemonSet Pods. This option helps you to ensure that all of your DaemonSets eventually run on your nodes.
 
 
@@ -722,7 +724,7 @@ The `optimizeRulePriority` active migration type lets GKE replace existing nodes
         optimizeRulePriority: true
     
 
-If N4 nodes were unavailable when you deployed a Pod with this ComputeClass, GKE would have used C4 nodes as a fallback option. If N4 nodes become available to provision later, like if your quota increases or if N4 VMs become available in your location, the following steps happen:
+If N4 nodes were unavailable when you deployed a Pod with this ComputeClass—for example, because of a temporary zonal resource shortage (`ZONE_RESOURCE_POOL_EXHAUSTED`)—GKE would have used C4 nodes as a fallback option. When N4 capacity recovers in your location or your quota increases, GKE automatically migrates your workloads back to N4 nodes:
 
   1. GKE creates a new N4 node.
   2. GKE cordons and drains the existing C4 node. Your Pods are evicted, respecting any PodDisruptionBudgets and graceful termination configurations.
@@ -945,6 +947,125 @@ When you use this feature, be aware of these considerations:
   * These features apply only to _specific reservations_ in either a single or a shared project.
 
 
+
+## Minimum node counts
+
+_Available in GKE version 1.36.3-gke.1253000 and later._
+
+You can specify a minimum number of nodes for GKE to maintain for either an entire ComputeClass or for specific priority rules by using the `minimumCapacity.targetNodeCount` field. GKE maintains at least the specified number of nodes, even if that capacity is idle. Specifying a minimum capacity works well for workloads that need a baseline amount of compute capacity, such as large AI/ML training or low-latency serving workloads. GKE continues to autoscale nodes above the minimum when your workloads need more capacity.
+
+When you specify a minimum capacity for a ComputeClass or priority rule, consider the following behavior:
+
+  * If the capacity is for the entire ComputeClass, then GKE maintains at least that number of nodes across all of the priority rules in the ComputeClass. If the capacity is for a specific priority rule, then GKE maintains at least that number of nodes for that priority rule.
+  * If the number of nodes is less than the specified minimum number, then GKE automatically creates new nodes to maintain the minimum capacity, even if those additional nodes don't run any of your Pods.
+  * GKE doesn't scale down the nodes that make up the minimum capacity, even if those nodes are empty.
+  * The specified capacity is a _minimum_ value. During scale-up events, GKE can exceed the minimum number of nodes to run pending Pods.
+  * If you enable active migration to higher priority nodes, then GKE can replace the nodes for the minimum capacity with nodes from a higher-priority rule. However, GKE doesn't replace a node if the replacement puts a priority rule below its minimum capacity.
+  * Resource availability or quotas might prevent GKE from creating nodes for the minimum capacity requirement.
+  * If GKE can't create enough nodes for the minimum capacity of a priority rule, then GKE doesn't fall back to other priority rules. Instead, GKE creates the missing nodes for that priority rule when capacity becomes available.
+  * Nodes might still be deleted and replaced to maintain cluster health (for example, to fix an unhealthy node or to preempt a Spot VMs). GKE automatically creates new nodes to maintain the minimum capacity.
+
+
+
+Depending on whether you configure a minimum capacity for an entire ComputeClass or for specific priority rules, the following requirements apply:
+
+  * **Minimum capacity for the ComputeClass** : if you specify the `minimumCapacity.targetNodeCount` field for the entire ComputeClass, then all of the priority rules must directly or indirectly request a specific machine type. Every priority rule must use at least one of the following configurations:
+
+    * `machineType`
+    * `gpu`
+    * `tpu`
+    * A specific capacity reservation
+
+GKE rejects ComputeClasses that use flexible configurations in a priority rule, such as the `machineFamily` field, and that also specify a minimum capacity for the entire ComputeClass.
+
+  * **Minimum capacity for a priority rule** : if you specify the `minimumCapacity.targetNodeCount` field for a specific priority rule, then that priority rule must directly or indirectly request a specific machine type by using at least one of the following configurations:
+
+    * `machineType`
+    * `gpu`
+    * `tpu`
+    * A specific capacity reservation
+
+
+
+The following examples show the minimum capacity configuration for a ComputeClass and for a priority rule:
+
+  * **ComputeClass** :
+        
+        apiVersion: cloud.google.com/v1
+        kind: ComputeClass
+        metadata:
+          name: gpu-class-min-nodes
+        spec:
+          nodePoolAutoCreation:
+            enabled: true
+          # Define a global minimum capacity of 5 nodes for this ComputeClass
+          minimumCapacity:
+            targetNodeCount: 5
+          priorities:
+          - gpu:
+              type: "nvidia-tesla-a100"
+              count: 1
+            machineType: "a2-highgpu-1g"
+          - gpu:
+              type: "nvidia-l4"
+              count: 1
+            machineType: "g2-standard-8"
+        
+
+  * **Priority rule** :
+        
+        apiVersion: cloud.google.com/v1
+        kind: ComputeClass
+        metadata:
+          name: tiered-compute-class
+        spec:
+          nodePoolAutoCreation:
+            enabled: true
+          priorities:
+          - machineType: "n2-standard-16"
+            # Maintain at least three nodes of this specific configuration
+            minimumCapacity:
+              targetNodeCount: 3
+          - machineType: "e2-standard-4"
+        
+
+
+
+
+### Minimum capacity for both a ComputeClass and its priority rules
+
+If you specify a minimum capacity for a ComputeClass and for some of its priority rules, then the priority rule minimums count toward the ComputeClass minimum. The following behavior applies:
+
+  * If the priority rule minimums add up to at least the ComputeClass minimum, then the nodes for the priority rules also meet the ComputeClass minimum. GKE doesn't create additional nodes for the ComputeClass minimum, even in higher-priority rules that don't specify a minimum capacity.
+  * The ComputeClass minimum doesn't limit the priority rule minimums. GKE creates all of the nodes for each priority rule minimum, even if the total exceeds the ComputeClass minimum.
+  * If the priority rule minimums add up to less than the ComputeClass minimum, then GKE creates the remaining nodes by using the priority rules in order. If needed, GKE falls back to lower-priority rules for these remaining nodes.
+
+
+
+For example, consider the following ComputeClass, which specifies a minimum capacity for the ComputeClass and for the second priority rule:
+    
+    
+    apiVersion: cloud.google.com/v1
+    kind: ComputeClass
+    metadata:
+      name: combined-min-nodes
+    spec:
+      nodePoolAutoCreation:
+        enabled: true
+      minimumCapacity:
+        targetNodeCount: 5
+      priorities:
+      - machineType: "n2-standard-16"
+      - machineType: "e2-standard-16"
+        minimumCapacity:
+          targetNodeCount: 3
+    
+
+For this ComputeClass, GKE creates three `e2-standard-16` nodes for the second priority rule. These nodes count toward the ComputeClass minimum of five nodes. For the two remaining nodes, GKE tries to create `n2-standard-16` nodes first. If `n2-standard-16` nodes aren't available, then GKE falls back to `e2-standard-16` nodes.
+
+If you enable active migration to higher priority nodes, then GKE can later replace up to two `e2-standard-16` nodes with `n2-standard-16` nodes. However, GKE keeps at least three `e2-standard-16` nodes for the minimum capacity of the second priority rule.
+
+If you set the `targetNodeCount` field in the second priority rule to `6` instead, then GKE creates six `e2-standard-16` nodes. These six nodes meet the ComputeClass minimum of five nodes, so GKE doesn't create any `n2-standard-16` nodes for the minimum capacity.
 
 ## Customize the node system configuration
 
@@ -1272,6 +1393,12 @@ Node label | `ComputeClass` field
 `cloud.google.com/gke-workload-type` | [`nodePoolConfig.workloadType`](https://docs.cloud.google.com/kubernetes-engine/docs/reference/crds/computeclass#nodepoolconfig)  
 `node.kubernetes.io/instance-type` | [`priorities.machineType`](https://docs.cloud.google.com/kubernetes-engine/docs/reference/crds/computeclass#priorities)  
   
+## Monitoring ComputeClass usage
+
+You can monitor how the cluster autoscaler interacts with ComputeClasses by using Cloud Monitoring metrics. Metrics such as `kubernetes.io/autoscaler/cluster_pending_pods_per_ccc`, `kubernetes.io/autoscaler/cluster_node_provisioning_attempts_count_per_ccc`, and `kubernetes.io/autoscaler/cluster_node_provisioning_failed_attempts_count_per_ccc` track pending Pods, node provisioning attempts, and provisioning failures. These metrics are available on GKE version 1.37 and later.
+
+For detailed information about querying these metrics and interpreting labels, see [View cluster autoscaler events and metrics](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cluster-autoscaler-visibility).
+
 ## Limitations
 
   * ComputeClass name can't begin with `gke` or `autopilot` (reserved for system ComputeClasses).
@@ -1295,6 +1422,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

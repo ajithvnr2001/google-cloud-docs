@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/os-details/
 title: Operating system details \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:46.374221+00:00
+fetched_at: 2026-10-21T11:58:18.600992+00:00
 ---
 
 # Operating system details  |  Compute Engine  |  Google Cloud Documentation
@@ -490,6 +490,12 @@ The following section summarizes feature support for versions of this OS that ar
 
 OS version | Image project | Image family | [Machine series](https://docs.cloud.google.com/compute/docs/machine-resource#recommendations_for_machine_types) | [Lifecycle stage](https://docs.cloud.google.com/compute/docs/images/os-image-lifecycle#lifecycle-stages) | EOS and image deprecation date  
 ---|---|---|---|---|---  
+COS 133 LTS  | `cos-cloud` | 
+
+  * x86: `cos-133-lts`
+  * Arm: `cos-arm64-133-lts`
+
+| All | GA | November 2028  
 COS 129 LTS  | `cos-cloud` | 
 
   * x86: `cos-129-lts`
@@ -519,6 +525,7 @@ COS 117 LTS  | `cos-cloud` |
 
 OS version | SCSI | NVMe | [Google Virtual NIC (gVNIC)](https://docs.cloud.google.com/compute/docs/instances/create-vm-with-gvnic) | [IRDMA](https://docs.cloud.google.com/compute/docs/networking/using-irdma) | [IDPF](https://docs.cloud.google.com/compute/docs/networking/using-idpf) | [Multiple network interfaces](https://docs.cloud.google.com/vpc/docs/create-use-multiple-interfaces)  
 ---|---|---|---|---|---|---  
+COS 133 LTS  | Yes | Yes | Yes | Yes | Yes | Yes  
 COS 129 LTS  | Yes | Yes | Yes | Yes | Yes | Yes  
 COS 125 LTS  | Yes | Yes | Yes | Yes | Yes | Yes  
 COS 121 LTS  | Yes | Yes | Yes | Yes | Yes | Yes  
@@ -528,6 +535,7 @@ COS 117 LTS  | Yes | Yes | Yes | Yes | Yes | Yes
 
 OS version | Shielded VM | Confidential VM SEV | Confidential VM SEV-SNP | Confidential VM Intel TDX  
 ---|---|---|---|---  
+COS 133 LTS  | Yes | Yes | Yes | Yes  
 COS 129 LTS  | Yes | Yes | Yes | Yes  
 COS 125 LTS  | Yes | Yes | Yes | Yes  
 COS 121 LTS  | Yes | Yes | Yes | Yes  
@@ -537,6 +545,7 @@ COS 117 LTS  | Yes | Yes | Yes | Yes
 
 OS version | [Guest environment installed](https://docs.cloud.google.com/compute/docs/images/guest-environment) | gcloud CLI installed | [OS Login supported](https://docs.cloud.google.com/compute/docs/oslogin) | [Suspend and resume supported](https://docs.cloud.google.com/compute/docs/instances/suspend-resume-instance)  
 ---|---|---|---|---  
+COS 133 LTS  | Yes | No | Yes | Yes  
 COS 129 LTS  | Yes | No | Yes | Yes  
 COS 125 LTS  | Yes | No | Yes | Yes  
 COS 121 LTS  | Yes | No | Yes | Yes  
@@ -546,6 +555,7 @@ COS 117 LTS  | Yes | No | Yes | Yes
 
 OS version | [Tier_1 networking](https://docs.cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration)1 | [200 Gbps network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth#summary-table)1 | [Jumbo frames/MTU](https://docs.cloud.google.com/compute/docs/network-bandwidth#jumbo-mtu)  
 ---|---|---|---  
+COS 133 LTS  | Yes | Yes | Yes  
 COS 129 LTS  | Yes | Yes | Yes  
 COS 125 LTS  | Yes | Yes | Yes  
 COS 121 LTS  | Yes | Yes | Yes  
@@ -565,6 +575,7 @@ For more information about GPU requirements and recommended OSes, see [choosing 
 
 OS version | [A4X Max (GB300)](https://docs.cloud.google.com/compute/docs/gpus#gb300-gpus) | [A4X (GB200)](https://docs.cloud.google.com/compute/docs/gpus#gb200-gpus) | [A4 (B200)](https://docs.cloud.google.com/compute/docs/gpus#b200-gpus) | [A3 (H200)](https://docs.cloud.google.com/compute/docs/gpus#h200-gpus) | [A3 (H100)](https://docs.cloud.google.com/compute/docs/gpus#h100-gpus) | [A2 (A100)](https://docs.cloud.google.com/compute/docs/gpus#a100-gpus) | [G4 (RTX PRO 6000)](https://docs.cloud.google.com/compute/docs/gpus#rtx-6000-gpus) | [G2 (L4)](https://docs.cloud.google.com/compute/docs/gpus#l4-gpus) | [N1+GPU](https://docs.cloud.google.com/compute/docs/gpus#nvidia_gpus_for_compute_workloads)  
 ---|---|---|---|---|---|---|---|---|---  
+COS 133 LTS  | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes  
 COS 129 LTS  | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes  
 COS 125 LTS  | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes  
 COS 121 LTS  | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes  
@@ -574,6 +585,7 @@ COS 117 LTS  | No | Yes | Yes | Yes | Yes | Yes | No | Yes | Yes
 
 OS version | [OS Config agent preinstalled](https://docs.cloud.google.com/compute/docs/manage-os#check-install) | [OS inventory](https://docs.cloud.google.com/compute/docs/instances/os-inventory-management) | [OS policies](https://docs.cloud.google.com/compute/docs/os-configuration-management) | [Patch](https://docs.cloud.google.com/compute/docs/os-patch-management) | [Vulnerability reports](https://docs.cloud.google.com/compute/docs/manage-os/vulnerability-reports)  
 ---|---|---|---|---|---  
+COS 133 LTS  | Yes | Yes | Yes | No | Yes  
 COS 129 LTS  | Yes | Yes | Yes | No | Yes  
 COS 125 LTS  | Yes | Yes | Yes | No | Yes  
 COS 121 LTS  | Yes | Yes | Yes | No | Yes  
@@ -585,6 +597,7 @@ For operating system support information on migrating VMs using Migrate to Virtu
 
 OS version | [Import disk](https://docs.cloud.google.com/compute/docs/import/importing-virtual-disks) | [Import virtual appliance](https://docs.cloud.google.com/compute/docs/import/import-ovf-files) | [Import machine image](https://docs.cloud.google.com/compute/docs/machine-images/create-machine-images#create-image-from-appliance)  
 ---|---|---|---  
+COS 133 LTS  | No | No | No  
 COS 129 LTS  | No | No | No  
 COS 125 LTS  | No | No | No  
 COS 121 LTS  | No | No | No  
@@ -594,6 +607,7 @@ COS 117 LTS  | No | No | No
 
 OS version | [License type](https://docs.cloud.google.com/compute/docs/licenses/about#license_types_and_pricing) | License URL  
 ---|---|---  
+COS 133 LTS  | Free | `https://www.googleapis.com/compute/v1/projects/cos-cloud/global/licenses/cos `  
 COS 129 LTS  | Free | `https://www.googleapis.com/compute/v1/projects/cos-cloud/global/licenses/cos `  
 COS 125 LTS  | Free | `https://www.googleapis.com/compute/v1/projects/cos-cloud/global/licenses/cos `  
 COS 121 LTS  | Free | `https://www.googleapis.com/compute/v1/projects/cos-cloud/global/licenses/cos `  
@@ -798,13 +812,13 @@ Debian 13  | `debian-cloud` |
   * x86: `debian-13`
   * Arm: `debian-13-arm64`
 
-| All except A4X Max, A4X | GA | June 30, 2030  
+| All except A4X Max, A4X, C4D-metal, Z4D-metal | GA | June 30, 2030  
 Debian 12  | `debian-cloud` | 
 
   * x86: `debian-12`
   * Arm: `debian-12-arm64`
 
-| All except A4X Max, A4X, X4, C4D-metal, C4-metal, C3-metal, Z3-metal | GA | June 30, 2028  
+| All except A4X Max, A4X, X4, C4D-metal, C4-metal, C3-metal, Z4D-metal, Z3-metal | GA | June 30, 2028  
   
 ### Interfaces
 
@@ -882,7 +896,7 @@ The following section summarizes feature support for versions of this OS that ar
 
 OS version | Image project | Image family | [Machine series](https://docs.cloud.google.com/compute/docs/machine-resource#recommendations_for_machine_types) | [Lifecycle stage](https://docs.cloud.google.com/compute/docs/images/os-image-lifecycle#lifecycle-stages) | EOS and image deprecation date  
 ---|---|---|---|---|---  
-Debian 11  | `debian-cloud` | x86: `debian-11` | All except A4X Max, A4X, G4, A4, A3 Ultra, C4-metal, C4A, C4D-metal, C3-metal, X4, N4A, Z3-metal | EOS | August 31, 2026  
+Debian 11  | `debian-cloud` | x86: `debian-11` | All except A4X Max, A4X, G4, A4, A3 Ultra, C4-metal, C4A, C4D-metal, C3-metal, X4, N4A, Z4D-metal, Z3-metal | EOS | August 31, 2026  
 Debian 11 Arm  | N/A | N/A | N/A | EOS | August 15, 2024  
 Debian 10  | N/A | N/A | N/A | EOS | [June 30, 2024](https://www.debian.org/News/2024/20240615)  
   
@@ -1510,7 +1524,7 @@ OS version | SCSI | NVMe | [Google Virtual NIC (gVNIC)](https://docs.cloud.googl
 [RHEL 9.6 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | Yes | Yes | Yes | No | Yes | Yes  
 [RHEL 9.4 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | Yes | Yes | Yes | No | Yes | Yes  
 [RHEL 9.2 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | Yes | Yes | Yes | No | No | Yes  
-[RHEL 8.10 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | Yes | Yes | Yes | No | Yes | Yes  
+[RHEL 8.10 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | Yes | Yes | Yes | Yes3 | Yes | Yes  
 [RHEL 8.8 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | Yes | Yes | Yes | No | No | Yes  
 [RHEL 10.2 EUS](https://access.redhat.com/articles/rhel-eus) | Yes | Yes | Yes | No | Yes | Yes  
 [RHEL 10.2 EUS with out-of-tree gVNIC driver](https://access.redhat.com/articles/rhel-eus) | Yes | Yes | Yes | No | Yes | Yes  
@@ -1521,6 +1535,8 @@ OS version | SCSI | NVMe | [Google Virtual NIC (gVNIC)](https://docs.cloud.googl
 1This OS image supports NVMe but does not include all optimizations for NVMe.
 
 2If a compute instance withmultiple NICs is created using this OS image, the instance might lose network connectivity after rebooting. This happens if one of these NICs uses a non-VirtIO interface. See [known issues](https://docs.cloud.google.com/compute/docs/troubleshooting/known-issues#rhel-access-loss-after-reboot).
+
+3 Supported, but not installed by default. You can install the Cloud RDMA driver from the repository at [IRDMA kernel modules repository](https://depot.ciq.com/public/files/gce-accelerator/irdma-kernel-modules-el8-x86_64/irdma-repos.rpm\\). 
 
 ### Security features
 
@@ -1766,7 +1782,7 @@ OS version | SCSI | NVMe | [Google Virtual NIC (gVNIC)](https://docs.cloud.googl
 [RHEL 7](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/) | Yes | Yes | Yes2 | No | No | Yes2  
 [RHEL 6](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6) | Yes | Yes1 | No | No | No | No  
 [RHEL 9.0 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | Yes | Yes | Yes | No | No | Yes  
-[RHEL 8.6 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | Yes | Yes | Yes | No | No | Yes  
+[RHEL 8.6 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | Yes | Yes | Yes | Yes3 | No | Yes  
 [RHEL 8.4 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | Yes | Yes | Yes | No | No | Yes  
 [RHEL 8.2 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | Yes | Yes | Yes | No | No | Yes  
 [RHEL 7.9 for SAP](https://access.redhat.com/articles/3751271) | Yes | Yes | Yes2 | No | No | Yes2  
@@ -1775,6 +1791,8 @@ OS version | SCSI | NVMe | [Google Virtual NIC (gVNIC)](https://docs.cloud.googl
 1This OS image supports NVMe but does not include all optimizations for NVMe.
 
 2If a compute instance withmultiple NICs is created using this OS image, the instance might lose network connectivity after rebooting. This happens if one of these NICs uses a non-VirtIO interface. See [known issues](https://docs.cloud.google.com/compute/docs/troubleshooting/known-issues#rhel-access-loss-after-reboot).
+
+3 Supported, but not installed by default. You can install the Cloud RDMA driver from the repository at [IRDMA kernel modules repository](https://depot.ciq.com/public/files/gce-accelerator/irdma-kernel-modules-el8-x86_64/irdma-repos.rpm\\). 
 
 ### Security features
 
@@ -2084,7 +2102,7 @@ OS version | SCSI | NVMe | [Google Virtual NIC (gVNIC)](https://docs.cloud.googl
 [Rocky Linux 8 optimized for Google Cloud](https://docs.ciq.com/rlc/ciq-sig-cloud-next/) | Yes | Yes | Yes | Yes1 | Yes | Yes  
 [Rocky Linux 8 Accelerated with NVIDIA driver version 580](https://docs.ciq.com/rlc/ciq-sig-cloud-next/) | Yes | Yes | Yes | No | Yes | Yes  
   
-1 Supported, but not installed by default. You must install the `kmod-idpf-irdma` package in the guest environment before using Cloud RDMA.
+1 Supported, but not installed by default. You can install the Cloud RDMA driver from the repository at <https://depot.ciq.com/public/files/gce-accelerator/irdma-kernel-modules-el8-x86_64/irdma-repos.rpm>. 
 
 ### Security features
 
@@ -2246,7 +2264,7 @@ OS version | SCSI | NVMe | [Google Virtual NIC (gVNIC)](https://docs.cloud.googl
 [Rocky Linux 8 Accelerated with NVIDIA driver version 570](https://docs.ciq.com/rlc/ciq-sig-cloud-next/) | Yes | Yes | Yes | No | Yes | Yes  
 [Rocky Linux 8 Accelerated with NVIDIA driver version 550](https://docs.ciq.com/rlc/ciq-sig-cloud-next/) | Yes | Yes | Yes | No | Yes | Yes  
   
-1 Supported, but not installed by default. You must install the `kmod-idpf-irdma` package in the guest environment before using Cloud RDMA.
+1 Supported, but not installed by default. You can install the Cloud RDMA driver from the repository at <https://depot.ciq.com/public/files/gce-accelerator/irdma-kernel-modules-el8-x86_64/irdma-repos.rpm>. 
 
 ### Security features
 
@@ -4201,6 +4219,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

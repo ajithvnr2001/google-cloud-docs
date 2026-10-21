@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/
 title: Google Cloud Fraud Defense documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:50:23.329476+00:00
+fetched_at: 2026-10-21T11:58:12.083531+00:00
 ---
 
 # Google Cloud Fraud Defense documentation  |  Google Cloud Documentation
@@ -54,15 +54,15 @@ info
 
   * [ Versions comparison ](https://docs.cloud.google.com/recaptcha/docs/compare-tiers)
 
-  * [ Test reCAPTCHA in a demo website ](https://docs.cloud.google.com/recaptcha/docs/quickstart-app)
+  * [ Test Fraud Defense in a demo website ](https://docs.cloud.google.com/recaptcha/docs/quickstart-app)
 
   * [ Implementation workflow ](https://docs.cloud.google.com/recaptcha/docs/implementation-workflow)
 
-  * [ Set up reCAPTCHA on websites ](https://docs.cloud.google.com/recaptcha/docs/setup-overview-web)
+  * [ Set up Fraud Defense on websites ](https://docs.cloud.google.com/recaptcha/docs/setup-overview-web)
 
-  * [ Set up reCAPTCHA on mobile applications ](https://docs.cloud.google.com/recaptcha/docs/setup-overview-mobile)
+  * [ Set up Fraud Defense on mobile applications ](https://docs.cloud.google.com/recaptcha/docs/setup-overview-mobile)
 
-  * [ Set up reCAPTCHA with Cloud Armor ](https://docs.cloud.google.com/recaptcha/docs/setup-overview-ca)
+  * [ Set up Fraud Defense with Cloud Armor ](https://docs.cloud.google.com/recaptcha/docs/setup-overview-ca)
 
   * [ Refine site-specific model ](https://docs.cloud.google.com/recaptcha/docs/annotate-assessment)
 
@@ -92,7 +92,7 @@ group_work
 
 ### Reference and resources
 
-  * [ Authentication to reCAPTCHA ](https://docs.cloud.google.com/recaptcha/docs/authentication)
+  * [ Authenticate to Fraud Defense ](https://docs.cloud.google.com/recaptcha/docs/authentication)
 
   * [ Client Libraries ](https://docs.cloud.google.com/recaptcha/docs/libraries)
 
@@ -119,6 +119,6 @@ group_work
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

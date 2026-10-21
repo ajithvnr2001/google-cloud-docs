@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/dr-scenarios-planning-guide/
 title: Disaster recovery planning guide \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:22:47.575285+00:00
+fetched_at: 2026-10-21T12:22:03.673017+00:00
 ---
 
 # Disaster recovery planning guide  |  Cloud Architecture Center  |  Google Cloud Documentation

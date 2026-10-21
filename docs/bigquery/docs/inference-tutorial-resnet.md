@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/inference-tutorial-resnet/
 title: Tutorial: Run inference on an object table by using a classification model \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:40:16.181143+00:00
+fetched_at: 2026-10-21T12:22:58.158566+00:00
 ---
 
 # Tutorial: Run inference on an object table by using a classification model  |  BigQuery  |  Google Cloud Documentation
@@ -25,7 +25,7 @@ This tutorial shows you how to create an object table based on the images from a
 
 ## The ResNet 50 model
 
-The ResNet 50 model analyzes image files and outputs a batch of vectors representing the likelihood that an image belongs the corresponding class (logits). For more information, see the **Usage** section on the [model's TensorFlow Hub page](https://tfhub.dev/tensorflow/resnet_50/classification/1).
+The ResNet 50 model analyzes image files and outputs a batch of vectors representing the likelihood that an image belongs to the corresponding class (logits). For more information, see the **Usage** section on the [model's TensorFlow Hub page](https://tfhub.dev/tensorflow/resnet_50/classification/1).
 
 The ResNet 50 model input takes a tensor of [`DType`](https://www.tensorflow.org/api_docs/python/tf/dtypes/DType) = `float32` in the shape `[-1, 224, 224, 3]`. The output is an array of tensors of `tf.float32` in the shape`[-1, 1024]`.
 
@@ -406,6 +406,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

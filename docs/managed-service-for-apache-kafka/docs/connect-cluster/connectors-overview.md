@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/connectors-overview/
 title: Connectors overview \u00a0|\u00a0 Managed Service for Apache Kafka \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:28:16.269131+00:00
+fetched_at: 2026-10-21T11:58:09.364220+00:00
 ---
 
 # Connectors overview  |  Managed Service for Apache Kafka  |  Google Cloud Documentation
@@ -28,10 +28,12 @@ Connector | Description | Use cases
 [ BigQuery Sink](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-bq-connector) |  Streams data from Kafka topics to a BigQuery table.  | Data warehousing, analytics  
 [ Cloud SQL for PostgreSQL Source](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-cloud-sql-postgres-source-connector) |  Reads row-level changes from a Cloud SQL for PostgreSQL database and writes them to Kafka.  | Database integration, monitor and respond to database events  
 [ Cloud Storage Sink](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-cloud-storage-connector) |  Streams data from Kafka topics to a Cloud Storage bucket.  | Data lake ingestion, data archiving  
-[ MirrorMaker 2.0](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-mirrormaker-connector) |  Replicates topics and data from one Kafka cluster to another Kafka cluster.  | Data replication, disaster recovery, data migration  
+[ Generic PostgreSQL Source](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-generic-postgres-source-connector) |  Reads row-level changes from a PostgreSQL database and writes them to Kafka.  | Database integration, monitor and respond to database events  
+[ MirrorMaker 2.0 Checkpoint](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-mirrormaker-checkpoint-connector) | Copies consumer offsets from one Kafka cluster to another. | Data replication, disaster recovery, data migration  
+[ MirrorMaker 2.0 Heartbeat](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-mirrormaker-heartbeat-connector) | Generates periodic heartbeat messages and writes them to a topic | Monitoring cluster health, network connectivity, or end-to-end replication latency between clusters.  
+[ MirrorMaker 2.0 Source](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-mirrormaker-connector) |  Replicates topics and data from one Kafka cluster to another Kafka cluster.  | Data replication, disaster recovery, data migration  
 [ Pub/Sub Sink](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-pubsub-sink-connector) |  Streams data from Kafka topics to a Pub/Sub topic.  | Service integration, real-time notifications  
 [ Pub/Sub Source](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-pubsub-source-connector) |  Streams messages from a Pub/Sub subscription to a Kafka topic.  | Real-time data ingestion, event-driven architectures  
-[ Generic PostgreSQL Source](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-generic-postgres-source-connector) |  Reads row-level changes from a PostgreSQL database and writes them to Kafka.  | Database integration, monitor and respond to database events  
   
 ## Converters
 
@@ -140,6 +142,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

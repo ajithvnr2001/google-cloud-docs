@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/samples/iam-set-policy/
 title: Update a policy \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:40:11.487228+00:00
+fetched_at: 2026-10-21T11:58:21.151019+00:00
 ---
 
 # Update a policy  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-solution-sharded-counter-create-async/
 title: Create a Firestore sharded counter (async) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:25:38.134901+00:00
+fetched_at: 2026-10-21T11:59:06.932547+00:00
 ---
 
 # Create a Firestore sharded counter (async)  |  Google Cloud Documentation

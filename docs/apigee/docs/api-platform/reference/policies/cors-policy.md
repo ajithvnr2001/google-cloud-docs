@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy/
 title: CORS policy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:44:50.440307+00:00
+fetched_at: 2026-10-21T12:00:24.900243+00:00
 ---
 
 # CORS policy  |  Apigee  |  Google Cloud Documentation
@@ -297,9 +297,9 @@ Flow variable
 This example specifies a [ flow variable](https://docs.cloud.google.com/apigee/docs/api-platform/reference/variables-reference) that represents one origin that is allowed to access the resource. 
     
     
-    <CORS continueOnError="false" enabled="true"**< name="add-cors">
-      All<owOrigins>{**r<equest.header.origin}/AllowOrigins>
-    /CORS>
+    <CORS continueOnError="false" enabled="true" name="add-cors">
+      **< AllowOrigins>{request.header.origin}</AllowOrigins>**
+    </CORS>
 
 ### Example:  
 Wildcard

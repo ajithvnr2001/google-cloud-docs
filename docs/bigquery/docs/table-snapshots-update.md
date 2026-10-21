@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/table-snapshots-update/
 title: Update table snapshot metadata \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T10:46:34.203185+00:00
+fetched_at: 2026-10-21T12:22:51.529428+00:00
 ---
 
 # Update table snapshot metadata  |  BigQuery  |  Google Cloud Documentation
@@ -49,7 +49,7 @@ Any of the following:
   
 ## Limitations
 
-You can update a table snapshot's metadata, but you can't update its data because table snapshot data is read only. To update a table snapshot's data, you must first restore the table snapshot to a standard table, and then update the standard table's data. For more information, see [Restoring table snapshots](https://docs.cloud.google.com/bigquery/docs/table-snapshots-restore).
+You can update a table snapshot's metadata, but you can't update its data because table snapshot data is read-only. To update a table snapshot's data, you must first restore the table snapshot to a standard table, and then update the standard table's data. For more information, see [Restoring table snapshots](https://docs.cloud.google.com/bigquery/docs/table-snapshots-restore).
 
 ## Update a table snapshot's metadata
 
@@ -199,7 +199,7 @@ You can give a user access to view the data in a table snapshot by using one of 
 
   6. In the **Add principals** pane that appears, enter the identifier of the [principal](https://docs.cloud.google.com/iam/docs/principals-overview) you want to give access to the table snapshot.
 
-  7. In the **Select a role** dropdown, choose **BigQuery** , then **BigQuery Data Viewer**.
+  7. In the **Select a role** drop-down, choose **BigQuery** , then **BigQuery Data Viewer**.
 
   8. Click **Save**.
 
@@ -275,6 +275,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

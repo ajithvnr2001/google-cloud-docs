@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/install-universal-keys-web-pages/
 title: Install Universal keys on web pages \u00a0|\u00a0 Google Cloud Fraud Defense \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:50:25.889191+00:00
+fetched_at: 2026-10-21T11:58:12.181326+00:00
 ---
 
 # Install Universal keys on web pages  |  Google Cloud Fraud Defense  |  Google Cloud Documentation
@@ -40,11 +40,18 @@ This document describes how you can install and integrate a Universal key with y
 
 ## Install Universal keys on your website
 
-To install your Universal key and help protect your web pages, choose either the Google Cloud Fraud Defense AutoExecute configuration or the standard JavaScript installation:
+To install your Universal key and help protect your web pages, you can use the AutoExecute configuration, the manual JavaScript installation, or both methods together across different endpoints using the same Universal key:
+
+  * **AutoExecute configuration (recommended)** : Automatically intercepts asynchronous network requests to configured URL paths and attaches the reCAPTCHA token to the request header.
+  * **Manual installation** : Uses manual `grecaptcha.enterprise.execute()` calls or HTML button attributes. You can use this method on its own or alongside AutoExecute for network requests that AutoExecute doesn't support, requests that require custom token placement in the payload, or during incremental migrations to AutoExecute.
+
+**Caution:** Don't configure both AutoExecute and manual `grecaptcha.enterprise.execute()` calls on the same endpoint. Doing so triggers duplicate requests, increasing latency, showing duplicate CAPTCHA challenges, and potentially causing duplicate assessment charges.
+
+Depending on your integration approach, choose the appropriate option:
 
 ### AutoExecute configuration
 
-Fraud Defense AutoExecute can help simplify your frontend JavaScript integration through intercepting network requests on your web pages, eliminating the need to manually call `grecaptcha.enterprise.execute()` for each frontend action.
+AutoExecute can help simplify your frontend JavaScript integration by intercepting network requests on your web pages and eliminating manual `grecaptcha.enterprise.execute()` calls for each frontend action.
 
 **Important:** Consider the following when using AutoExecute:
 
@@ -56,7 +63,7 @@ Fraud Defense AutoExecute can help simplify your frontend JavaScript integration
 
 ### Add the script tag to your web pages
 
-To load reCAPTCHA on your web page, add the JavaScript API with your Universal key within the `<head></head>` element of your web page:
+To load Fraud Defense on your web page, add the JavaScript API with your Universal key within the `<head></head>` element of your web page:
     
     
     <head>
@@ -188,17 +195,18 @@ Save the request body in a file named `request.json`, and execute the following 
 
 If successful, the request returns the updated policy configuration. 
 
-The `path` parameter supports glob patterns with the following rules:
+You can configure up to 25 protected endpoints per Universal key. Each endpoint must meet the following requirements:
 
-  * Must start with `/` and cannot be empty.
-  * Cannot be a standalone `/*` or `/**`, as it can negatively impact performance to trigger Fraud Defense on every single request to your backend.
-  * Wildcards `*` (matching a single path segment) and `**` (matching multiple path segments) must occupy the entirety of a path segment (for example, `/api/*/login` or `/api/*` are valid; `/api/login*` is invalid).
-  * The `**` wildcard must only occupy the last path segment (for example, `/api/**` is valid; `/api/**/login` is invalid).
+  * `action`: The action name must contain 1 to 100 characters, and use only letters, numbers, slashes (`/`), and underscores (`_`).
+  * `path` (case-sensitive): The path must meet the following criteria: 
+    * Be unique, start with `/`, and contain 1 to 200 characters without consecutive slashes (`//`).
+    * Include at least one non-wildcard segment (for example, cannot be `/`, `/*`, `/**`, or `/*/`).
+    * Wildcards must occupy complete segments: `*` matches a single segment (for example, `/api/*/login` or `/api/*` are valid; `/api/login*` is invalid), and `**` matches multiple segments as the final segment only (for example, `/api/**` is valid; `/api/**/login` is invalid).
 
-**Note:** `AutoExecute` matches requests based on the **URL path only** and does not check the destination domain. This has the following practical implications:
+**Note:** AutoExecute matches requests based on the **URL path only** and does not check the destination domain. This has the following practical implications:
 
-  * **Third-party requests:** If third-party tools running on your page (such as analytics or partner scripts) send requests to paths that match your protected endpoints (for example, `https://analytics.example.net/login` matching `/login`), `AutoExecute` will also intercept them. This can cause extra network latency, skewed metrics, or unexpected CAPTCHA challenges. To avoid conflicts, ensure your protected paths are distinctive (for example, `/auth/v1/login`), or use the **Standard installation** if path collisions occur.
-  * **Cross-domain APIs:** If your backend API is hosted on a different domain than your website (for example, `examplecdn.net` versus `www.example.com`), `AutoExecute` works automatically without extra domain configuration.
+  * **Third-party requests:** If third-party tools running on your page (such as analytics or partner scripts) send requests to paths that match your protected endpoints (for example, `https://analytics.example.net/login` matching `/login`), AutoExecute will also intercept them. This can cause extra network latency, skewed metrics, or unexpected CAPTCHA challenges. To avoid conflicts, ensure your protected paths are distinctive (for example, `/auth/v1/login`), or use the **Manual installation** if path collisions occur.
+  * **Cross-domain APIs:** If your backend API is hosted on a different domain than your website (for example, `examplecdn.net` versus `www.example.com`), AutoExecute works automatically without extra domain configuration.
 
 
 
@@ -208,7 +216,7 @@ In your backend, get the response token from the `X-Recaptcha-Token` request hea
 
 **Important:** Your backend must specify `assessment.event.expected_action` (or `expectedAction` in JSON) in the [`CreateAssessmentRequest`](https://docs.cloud.google.com/recaptcha/docs/create-assessment-website), and it must match the action configured in the `ProtectedEndpoint`. For example, if you configure the protected endpoint action to be `login`, your backend must set `expected_action` to `login` when creating an assessment for that request. If there is a mismatch, it indicates that an attacker is attempting to falsify actions.
 
-### Standard installation
+### Manual installation
 
 We recommend that you add Fraud Defense verification on a user interaction that needs to be verified. For example, if you want to verify the submit action of a form, then you need to add Fraud Defense verification on the submit action.
 
@@ -265,8 +273,6 @@ The following example shows how to call `grecaptcha.enterprise.execute()` on a l
               }
             </script>
             
-
-s
 
   3. After the token is generated, send the reCAPTCHA token to your backend and create an assessment within two minutes.
 
@@ -336,6 +342,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

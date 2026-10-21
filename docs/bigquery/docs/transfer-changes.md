@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/transfer-changes/
 title: BigQuery Data Transfer Service data source change log \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:54.062770+00:00
+fetched_at: 2026-10-21T11:54:54.126526+00:00
 ---
 
 # BigQuery Data Transfer Service data source change log  |  Google Cloud Documentation
@@ -395,6 +395,23 @@ Summary of schema changes:
 
 
 
+## Google Merchant Center
+
+The BigQuery Data Transfer Service for Google Merchant Center connector periodically updates to support new columns and adapt to changes introduced by Google Merchant Center reporting.
+
+The following sections outline the changes organized by release date.
+
+### October 28, 2026
+
+On October 28, 2026, the [Google Merchant Center connector](https://docs.cloud.google.com/bigquery/docs/merchant-center-transfer) is updating the [Product Performance table](https://docs.cloud.google.com/bigquery/docs/merchant-center-performance-schema) to align with the Google Merchant Center performance reporting updates:
+
+  * **New`network` column:** The `network` column is now segmenting product performance metrics by the network to which the metrics apply, such as `SEARCH`, `SEARCH_PARTNERS`, `CONTENT`, and `YOUTUBE`.
+  * **New`destination` value:** Performance events from products featured in the YouTube Shopping Affiliate program are now reporting separately under the `destination` value `AFFILIATE`, instead of being included in `FREE`.
+
+
+
+Existing data transfers continue to run. New rows that are transferred after this date will include the new `network` column and the `AFFILIATE` destination value. For more details, see the Merchant Help Center article [Google Merchant Center performance reporting updates](https://support.google.com/merchants/answer/17103877).
+
 ## Microsoft SQL Server
 
 The BigQuery Data Transfer Service for Microsoft SQL Server connector periodically updates to adapt to new changes introduced by Microsoft SQL Server.
@@ -616,6 +633,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

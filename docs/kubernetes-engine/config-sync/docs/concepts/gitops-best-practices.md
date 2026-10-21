@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/concepts/gitops-best-practices/
 title: GitOps best practices \u00a0|\u00a0 Config Sync \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:20:21.095007+00:00
+fetched_at: 2026-10-21T12:22:47.583732+00:00
 ---
 
 # GitOps best practices  |  Config Sync  |  Google Cloud Documentation
@@ -38,6 +38,14 @@ When setting up your GitOps architecture, separate your repositories based on th
   2. A platform repository for fleet-wide configuration for clusters and namespaces.
   3. An application configuration repository.
   4. An application code repository.
+
+The following diagram shows the layout of these repositories: ![](https://docs.cloud.google.com/static/kubernetes-engine/config-sync/docs/img/gitops_package_flow.png)**Figure 1:** Suggested architecture for a package and platform repository that flows into the application configuration and application code repositories.![](https://docs.cloud.google.com/static/kubernetes-engine/config-sync/docs/img/gitops_app_build.png)**Figure 2:** Suggested application build that shows application code and application configurations that are pushed into a build.
+
+In **Figure 2** :
+
+  1. The development teams push code for applications and application configurations into a repository.
+  2. The code for both apps and configs is stored in the same place and application teams have control over these repositories.
+  3. The application teams push code into a build. 
 
 
 
@@ -184,6 +192,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-property-graphs/
 title: PROPERTY_GRAPHS view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-16T11:58:40.627008+00:00
+fetched_at: 2026-10-21T12:22:38.844952+00:00
 ---
 
 # PROPERTY_GRAPHS view  |  BigQuery  |  Google Cloud Documentation
@@ -21,13 +21,7 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # PROPERTY_GRAPHS view
 
-**Preview**
-
-This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
-
-**Note:** To request support or provide feedback for this feature, send email to [bq-graph-preview-support@google.com](mailto:bq-graph-preview-support@google.com).
-
-The `INFORMATION_SCHEMA.PROPERTY_GRAPHS` view contains one row for each [property graph](https://docs.cloud.google.com/bigquery/docs/graph-overview) in the dataset or region that you specify.
+The `INFORMATION_SCHEMA.PROPERTY_GRAPHS` view contains one row for each [graph](https://docs.cloud.google.com/bigquery/docs/graph-overview) in the dataset or region that you specify.
 
 ## Required permissions
 
@@ -59,17 +53,17 @@ For more information about BigQuery permissions, see [Access control with IAM](h
 
 ## Schema
 
-When you query the `INFORMATION_SCHEMA.PROPERTY_GRAPHS` view, the query results contain one row for each property graph in the resource scope that you specify.
+When you query the `INFORMATION_SCHEMA.PROPERTY_GRAPHS` view, the query results contain one row for each graph in the resource scope that you specify.
 
 The `INFORMATION_SCHEMA.PROPERTY_GRAPHS` view has the following schema:
 
 Column name | Data type | Value  
 ---|---|---  
-`property_graph_catalog` | `STRING` | The name of the project that contains the dataset where the property graph is defined.  
-`property_graph_schema` | `STRING` | The name of the dataset that contains the property graph.  
-`property_graph_name` | `STRING` | The name of the property graph.  
-`property_graph_metadata_json` | `STRING` | The JSON representation of the property graph definition. This representation contains information about the graph, such as its nodes, edges, labels, properties, creation timestamp, and modification timestamps.  
-`ddl` | `STRING` | A DDL statement that can be used to create the property graph.  
+`property_graph_catalog` | `STRING` | The name of the project that contains the dataset where the graph is defined.  
+`property_graph_schema` | `STRING` | The name of the dataset that contains the graph.  
+`property_graph_name` | `STRING` | The name of the graph.  
+`property_graph_metadata_json` | `STRING` | The JSON representation of the graph definition. This representation contains information about the graph, such as its nodes, edges, labels, properties, creation timestamp, and modification timestamps.  
+`ddl` | `STRING` | A DDL statement that can be used to create the graph.  
   
 ## Scope and syntax
 
@@ -119,6 +113,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

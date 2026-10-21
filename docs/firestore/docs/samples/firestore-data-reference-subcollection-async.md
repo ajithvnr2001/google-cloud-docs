@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-data-reference-subcollection-async/
 title: Create a Firestore subcollection reference (async) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:25:25.059639+00:00
+fetched_at: 2026-10-21T11:58:42.916521+00:00
 ---
 
 # Create a Firestore subcollection reference (async)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/configure-mongodb-atlas-ip-allowlists/
 title: Configure MongoDB Atlas using IP allowlists \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:50:51.513311+00:00
+fetched_at: 2026-10-21T12:24:07.925320+00:00
 ---
 
 # Configure MongoDB Atlas using IP allowlists  |  Datastream  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Configure MongoDB Atlas using IP allowlists Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to establish a secure connection between MongoDB Atlas source database and Datastream by allowlisting specific IP addresses. The IP allowlist connectivity method ensures that your database only accepts traffic from an authorized Datastream instance.
+To stream change data capture (CDC) updates from a MongoDB Atlas cluster to a [supported destination](https://docs.cloud.google.com/datastream/docs/destinations) over a public network, you can configure IP allowlists. To prepare your source, you create a MongoDB user with read privileges, add the Datastream public IP addresses to your MongoDB Atlas allowlist, and create a connection profile.
 
 ## Configure a MongoDB database user
 
@@ -85,6 +85,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

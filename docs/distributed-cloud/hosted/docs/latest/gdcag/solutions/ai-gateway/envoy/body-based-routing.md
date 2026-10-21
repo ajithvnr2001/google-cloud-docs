@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/ai-gateway/envoy/body-based-routing/
 title: Body-Based Routing with Envoy Agent Router user guide on GDC air-gapped \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:02:22.968519+00:00
+fetched_at: 2026-10-21T12:01:03.312395+00:00
 ---
 
 # Body-Based Routing with Envoy Agent Router user guide on GDC air-gapped  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -36,7 +36,7 @@ A `Gateway` of the `GatewayClass` created by the reference implementation expose
 
 ## Before you begin
 
-**Note:** This guide requires GDC air-gapped 1.16.2-hf1 (1.16.2-gdch.1353-1) or later, including later hotfix releases, and a standard cluster that runs Kubernetes v1.32.13-gke.400 or later. Hotfix releases can change the Kubernetes patch version, and standard clusters are upgraded separately from the organization, so check the version of your cluster before you begin. To change it, see [Upgrade a cluster](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/upgrade-cluster). GPU workloads in a standard cluster also require 1.16.2-hf1 or later.
+**Note:** This guide requires GDC air-gapped 1.16.2-hf1 (1.16.2-gdch.1353-1) or later, and a standard cluster.
 
 Ensure that the [Envoy Agent Router reference implementation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/ai-gateway/envoy/reference-implementation) has been deployed using the workstation and you have access to the `gdcag-solutions/ai-gateway/envoy` directory.
 
@@ -58,7 +58,7 @@ Ensure that the necessary IAM accounts, roles, and permissions are properly conf
 
 ### Workstation
 
-This guide requires a workstation with the necessary connectivity to the environment and internet.
+Run all commands in this guide from a workstation with the required tools and connectivity to the environment and internet, unless a step states otherwise.
 
   1. Create the user guide directory structure:
          
@@ -144,12 +144,7 @@ This guide requires a workstation with the necessary connectivity to the environ
          kubectl get nodes -L node.cluster.private.gdc.goog/machine-class
          
 
-  3. Verify that every node runs the Kubernetes version that the _Before you begin_ section of this guide requires:
-         
-         kubectl get nodes -o custom-columns='NAME:.metadata.name,VERSION:.status.nodeInfo.kubeletVersion'
-         
-
-  4. Verify the `GatewayClass` of the reference implementation is Accepted:
+  3. Verify the `GatewayClass` of the reference implementation is Accepted:
          
          kubectl get gatewayclass "${GDCS_GATEWAY_CLASS_NAME}"
          
@@ -204,7 +199,9 @@ The implementation seeds the additional artifacts, deploys the simulated model s
 
   1. Create the namespace:
          
-         kubectl create namespace "${GDCS_WORKLOAD_NAMESPACE}"
+         kubectl create namespace "${GDCS_WORKLOAD_NAMESPACE}" \
+         --dry-run=client \
+         --output=yaml | kubectl apply -f -
          
 
   2. Add the `imagePullSecret`:
@@ -1007,6 +1004,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

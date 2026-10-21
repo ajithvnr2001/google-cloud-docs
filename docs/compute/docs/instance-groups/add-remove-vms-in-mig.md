@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/add-remove-vms-in-mig/
 title: Add and remove VMs from a MIG \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:25.328212+00:00
+fetched_at: 2026-10-21T12:01:42.251408+00:00
 ---
 
 # Add and remove VMs from a MIG  |  Compute Engine  |  Google Cloud Documentation
@@ -107,9 +107,15 @@ For more information, see [About resize requests in a MIG](https://docs.cloud.go
 
 ### Manually setting the size of a MIG
 
-If a managed instance group isn't already set to [automatically scale](https://docs.cloud.google.com/compute/docs/autoscaler), you can resize the group manually to change the number of instances. If you increase the size, the managed instance group uses the current instance template to add new instances. If you decrease the size, the managed instance group deletes VMs from the group based on several factors. For more information, see [Factors that affect the deletion of VM instances](https://docs.cloud.google.com/compute/docs/instance-groups/working-with-managed-instances#factors_affecting_vm_deletion).
+If a MIG isn't already set to [automatically scale](https://docs.cloud.google.com/compute/docs/autoscaler), you can manually resize the group to change the number of compute instances in it. If you increase the size, the MIG uses the current instance template to add new compute instances. If you decrease the size, the MIG deletes compute instances from the group based on several factors. For more information, see [Factors that affect the deletion of VM instances](https://docs.cloud.google.com/compute/docs/instance-groups/working-with-managed-instances#factors_affecting_vm_deletion).
 
-If the group is part of a [backend service](https://docs.cloud.google.com/compute/docs/load-balancing/http/backend-service) that has [enabled connection draining](https://docs.cloud.google.com/compute/docs/load-balancing/enabling-connection-draining), it can take up to an additional 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted.
+When you manually set the size of a MIG, consider the following:
+
+  * If the group is part of a [backend service](https://docs.cloud.google.com/compute/docs/load-balancing/http/backend-service) that has [enabled connection draining](https://docs.cloud.google.com/compute/docs/load-balancing/enabling-connection-draining), then it can take up to an additional 60 seconds after the connection draining period finishes before the compute instance is removed or deleted. 
+  * If you've enabled [graceful shutdown](https://docs.cloud.google.com/compute/docs/instances/graceful-shutdown-overview) in the instance template that your MIG uses, then the compute instances in your MIG gracefully shut down when the MIG deletes them.
+
+
+**Note:** If both graceful shutdown and connection draining are enabled in a MIG, then Compute Engine drains connections before it gracefully shuts down the compute instances in the MIG.
 
 When you manually set the size of a MIG, by default, the MIG creates the VMs independently as soon as the resources become available. To obtain all of your required VMs all at once, you must set the target size policy mode to `BULK` when you create the MIG. For more information about bulk mode, see [About bulk creation of instances in MIG](https://docs.cloud.google.com/compute/docs/instance-groups/about-bulk-mode).
 
@@ -160,9 +166,9 @@ Call the `resize` method for a [zonal](https://docs.cloud.google.com/compute/doc
 
 If the instance group is a regional managed instance group, replace `zones/ZONE` with `regions/REGION`.
 
-After you make a request to resize a managed instance group, the VMs start or stop as soon as the system can provision or delete them. This process can take a significant amount of time depending on the number of instances in the group. [Verify the status of instances](https://docs.cloud.google.com/compute/docs/instance-groups/getting-info-about-migs#verify_instances) in your managed instance group.
+After you make a request to resize a managed instance group, the compute instances start or stop as soon as the system can provision or delete them. This process can take a significant amount of time depending on the number of compute instances in the group. [Verify the status of instances](https://docs.cloud.google.com/compute/docs/instance-groups/getting-info-about-migs#verify_instances) in your managed instance group.
 
-**Note:** Because new VMs are created with the current instance template, your group can contain dissimilar VMs if you add instances to the group after you change the instance template. Existing VMs use their previous instance templates until you [recreate them](https://docs.cloud.google.com/compute/docs/instance-groups/working-with-managed-instances#recreate_instances), and new VMs use the current instance template in the MIG.
+**Note:** Because new compute instances are created with the current instance template, your group can contain dissimilar compute instances if you add compute instances to the group after you change the instance template. Existing compute instances use their previous instance templates until you [recreate them](https://docs.cloud.google.com/compute/docs/instance-groups/working-with-managed-instances#recreate_instances), and new compute instances use the specified instance template for the MIG.
 
 ### Disable the creation retries mode during a resize operation
 
@@ -319,11 +325,15 @@ Send a POST request to the [`regionInstanceGroupManagers.createInstances`](https
 
 ### Deleting specific instances from a group
 
-You can delete individual VM instances in a managed instance group. Deleting instances reduces the specified `targetSize` of the instance group and removes the VMs from any [target pools](https://docs.cloud.google.com/compute/docs/load-balancing/network/target-pools) of which they are a member.
+You can delete individual compute instances in a MIG. Deleting compute instances reduces the specified `targetSize` of the instance group and removes the compute instance from any [target pools](https://docs.cloud.google.com/compute/docs/load-balancing/network/target-pools) of which they are a member.
 
-Deleting specific instances from a managed instance group doesn't change any specified autoscaler settings. If you delete instances from a managed instance group, the autoscaler might detect an increase in the workload on the other instances in the group and increase the group size back to its previous level. To prevent this, [stop the autoscaler](https://docs.cloud.google.com/compute/docs/autoscaler/managing-autoscalers#turn_off_or_restrict_an_autoscaler) before attempting to delete the instances.
+When you delete specific compute instances from a MIG, consider the following:
 
-If the group is part of a [backend service](https://docs.cloud.google.com/compute/docs/load-balancing/http/backend-service) that has [enabled connection draining](https://docs.cloud.google.com/compute/docs/load-balancing/enabling-connection-draining), it can take up to an additional 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted.
+  * If the group is part of a [backend service](https://docs.cloud.google.com/compute/docs/load-balancing/http/backend-service) that has [enabled connection draining](https://docs.cloud.google.com/compute/docs/load-balancing/enabling-connection-draining), then it can take up to an additional 60 seconds after the connection draining period finishes before the compute instance is removed or deleted. 
+  * If you've enabled [graceful shutdown](https://docs.cloud.google.com/compute/docs/instances/graceful-shutdown-overview) in the instance template that your MIG uses, then the compute instances in your MIG gracefully shut down when the MIG deletes them.
+
+
+**Note:** If both graceful shutdown and connection draining are enabled in a MIG, then Compute Engine drains connections first, and then gracefully shuts down the compute instances in the MIG.
 
 #### Permissions required for this task
 
@@ -345,7 +355,10 @@ To perform this task, you must have the following [permissions](https://docs.clo
 
   4. Click **Delete**.
 
-  5. In the dialog to confirm deletion, type `delete`, and then click **Delete**.
+  5. In the dialog that appears, do the following:
+
+     1. Optional: To delete the compute instances without gracefully shutting them down, or to end an ongoing graceful shutdown, select the **Skip graceful shutdown (if applicable)** checkbox.
+     2. Enter `delete`, and then click **Delete**.
 
 The MIG deletes the selected instances.
 
@@ -406,6 +419,14 @@ If you omit the `--skip-instances-on-validation-error` flag and if any instance 
     example-project  us-central1-a    example-instance-4    FAIL
     
 
+If you want to delete instances in a MIG without gracefully shutting them down, or to end an ongoing graceful shutdown, then use the same command with the `--no-graceful-shutdown` flag:
+    
+    
+    gcloud compute instance-groups managed delete-instances INSTANCE_GROUP_NAME \
+        --instances INSTANCE_NAME_1,INSTANCE_NAME_2 \
+        **--no-graceful-shutdown** \
+        [--region REGION | --zone ZONE]
+
 ###  REST 
 
 Send a POST request to the [`regionInstanceGroupManagers.deleteInstances`](https://docs.cloud.google.com/compute/docs/reference/rest/v1/regionInstanceGroupManagers/deleteInstances) method. For a zonal managed instance group, use the [`instanceGroupManagers.deleteInstances`](https://docs.cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/deleteInstances) method.
@@ -437,6 +458,18 @@ For example, the following request to delete 2 instances will succeed even if on
 
 You can view instances that were skipped in the operation by viewing the operation. For regional MIGs, use the [`regionOperations.get` method](https://docs.cloud.google.com/compute/docs/reference/rest/v1/regionOperations/get). For zonal MIGs, use the [`zoneOperations.get` method](https://docs.cloud.google.com/compute/docs/reference/rest/v1/zoneOperations/get). Warnings are listed in the operation's warning field.
 
+If you want to delete instances in a MIG without gracefully shutting them down or end an ongoing graceful shutdown, then include the `noGracefulShutdown` query parameter set to `true` in the request URL:
+    
+    
+    POST https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/regions/REGION/instanceGroupManagers/INSTANCE_GROUP_NAME/deleteInstances**?noGracefulShutdown=true**
+    
+    {
+      "instances": [
+        "zones/ZONE/instances/INSTANCE_NAME_1",
+        "zones/ZONE/instances/INSTANCE_NAME_2"
+       ]
+    }
+
 After you make a request to delete instances in a managed instance group, the instances stop as soon as the system can delete them. This process can take a significant amount of time depending on the number of instances that you delete from the group. [Verify the status of the group](https://docs.cloud.google.com/compute/docs/instance-groups/getting-info-about-migs#verify_group) or [verify the status of the managed instances](https://docs.cloud.google.com/compute/docs/instance-groups/getting-info-about-migs#verify_instances).
 
 ### Abandoning instances from a MIG
@@ -445,7 +478,7 @@ You can separate a VM instance from a managed instance group to debug issues wit
 
 You can't add an abandoned VM instance back to the group. Abandoning instances reduces the specified `targetSize` of the instance group, but doesn't change any specified autoscaler settings. Managed instance groups with an autoscaler continue to add or remove instances automatically as necessary. For a regional MIG with autoscaling set to `ONLY_SCALE_OUT` mode, if you abandon a VM instance to reduce the MIG target size to the [autoscaler's recommended size](https://docs.cloud.google.com/compute/docs/autoscaler#recommended_size), then the autoscaler might create a new VM instance in the same zone of the abandoned VM. In such cases, to avoid creation of a new VM instance, try abandoning VM instance from a different zone.
 
-If the group is part of a [backend service](https://docs.cloud.google.com/compute/docs/load-balancing/http/backend-service) that has [enabled connection draining](https://docs.cloud.google.com/compute/docs/load-balancing/enabling-connection-draining), it can take up to an additional 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted.
+If the group is part of a [backend service](https://docs.cloud.google.com/compute/docs/load-balancing/http/backend-service) that has [enabled connection draining](https://docs.cloud.google.com/compute/docs/load-balancing/enabling-connection-draining), then it can take up to an additional 60 seconds after the connection draining period finishes before the compute instance is removed or deleted.
 
 #### Permissions required for this task
 
@@ -697,6 +730,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

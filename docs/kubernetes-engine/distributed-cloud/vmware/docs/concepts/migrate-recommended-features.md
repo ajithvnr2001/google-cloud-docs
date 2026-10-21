@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/concepts/migrate-recommended-features/
 title: Plan cluster migration to recommended features \u00a0|\u00a0 Google Distributed Cloud software only for VMware \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:19:43.672941+00:00
+fetched_at: 2026-10-21T12:22:36.244719+00:00
 ---
 
 # Plan cluster migration to recommended features  |  Google Distributed Cloud software only for VMware  |  Google Cloud Documentation
@@ -162,6 +162,8 @@ The transition from Calico to Dataplane V2 requires planning and coordination, b
 kube-proxy | Required and automatically deployed | Not required and not deployed  
 Routing | kube-proxy + iptables | eBPF  
   
+Remove the `features.onprem.cluster.gke.io/dpv2-migration` annotation from both the `OnPremUserCluster` custom resource and the `OnPremAdminCluster` custom resource (if your admin cluster was migrated from Calico during the upgrade from version 1.29 to 1.30) after you verify that the migration from Calico to Dataplane V2 is complete and you don't need to roll back to Calico. Removing this annotation before you scale or upgrade the cluster lets the cluster controller permanently delete the dormant `calico-node` and `calico-route-daemon` DaemonSets. You don't need to perform this step for clusters that were created with Dataplane V2 enabled. For more information, see [Remove dormant Calico DaemonSets](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/migrate-user-cluster-recommended-features#remove-dormant-calico-daemonsets).
+
 ## Migrate load balancer type
 
 The recommended load balancer types (`loadBalancer.kind`) are `"ManualLB"` and `"MetalLB"`. Use `"ManualLB"` if you have a third-party load balancer such as F5 BIG-IP or Citrix. Use `"MetalLB"` for our bundled load balancing solution using the [MetalLB load balancer](https://metallb.universe.tf/).
@@ -298,6 +300,8 @@ The process varies depending on the cluster configurations. Overall, perform the
      1. Make the configuration changes and update the user cluster to trigger a migration of the user cluster from the old CNI, Calico, to Dataplane V2.
 
 **Note:** This step isn't needed for the admin cluster. When you upgrade the admin cluster to version 1.30, the cluster is automatically migrated to Dataplane V2.
+     2. After you verify that you completed the Dataplane V2 migration and you don't need to roll back to Calico, remove the `features.onprem.cluster.gke.io/dpv2-migration` annotation from the `OnPremUserCluster` custom resource (and from `OnPremAdminCluster` if your admin cluster was migrated from Calico during the upgrade from version 1.29 to 1.30). Removing this annotation before you scale or upgrade the cluster lets the cluster controller permanently delete the dormant `calico-node` and `calico-route-daemon` DaemonSets. For instructions, see [Remove dormant Calico DaemonSets](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/migrate-user-cluster-recommended-features#remove-dormant-calico-daemonsets).
+
   2. Migrate each user cluster from the old load balancer (LB) and old control plane (CP) to use the recommended load balancer and Controlplane V2.
 
      1. Make configuration changes to use the recommended load balancer (`MetalLB` or `ManualLB`).
@@ -328,6 +332,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

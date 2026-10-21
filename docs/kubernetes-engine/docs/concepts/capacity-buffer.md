@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/capacity-buffer/
 title: About capacity buffers \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:01:55.228081+00:00
+fetched_at: 2026-10-21T09:08:16.985102+00:00
 ---
 
 # About capacity buffers  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -49,7 +49,20 @@ We recommend capacity buffers for latency-sensitive workloads that require rapid
 
 Implement a capacity buffer by using a Kubernetes CapacityBuffer custom resource to define a buffer of spare capacity. The GKE cluster autoscaler monitors CapacityBuffer resources and treats them as pending demand to help ensure that spare capacity is available. If your cluster doesn't have enough capacity to satisfy the resource requests defined in the buffer, the cluster autoscaler provisions additional nodes.
 
-When a high-priority workload scales up, GKE schedules the workload on the available capacity in the buffer immediately. This immediate scheduling applies to the number of replicas or the resource amount that's reserved in the buffer, avoiding the typical delay associated with node provisioning. When a workload uses a buffer unit, the cluster autoscaler provisions a new node to refill the buffer.
+When a workload scales up, GKE schedules pending Pods on available capacity in the following priority order:
+
+  1. Running nodes in an active buffer
+  2. Running nodes in a standby buffer that haven't been suspended yet
+  3. Suspended nodes in a standby buffer
+  4. Newly provisioned nodes
+
+
+
+To schedule pending Pods as quickly as possible, GKE uses available buffer capacity before provisioning new nodes. This priority applies even if a higher-priority rule in a custom ComputeClass would otherwise provision a new node.
+
+Buffer capacity isn't restricted to the workload referenced in the `scalableRef` field. Any pending Pod whose scheduling constraints, such as node selectors, tolerations, and resource requests, match the buffer node's configuration can claim that capacity. To reserve a capacity buffer for a specific workload, configure [workload separation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/workload-separation) by adding matching tolerations and node selectors (or node affinities) to both the workload and the capacity buffer.
+
+When a workload consumes capacity from an active buffer, the cluster autoscaler replenishes the active buffer by resuming a node from a compatible standby buffer if one exists, or by provisioning a new node. When a workload or an active buffer consumes a node from a standby buffer, the cluster autoscaler replenishes the standby buffer by provisioning and suspending a new node. When your workload scales back down and nodes become underutilized, the cluster autoscaler deletes the excess running nodes after the scale-down stabilization window rather than resuspending them into the standby buffer. To replenish the standby buffer, GKE provisions and suspends fresh nodes separately.
 
 ## Capacity buffer strategies
 
@@ -84,6 +97,8 @@ To configure a capacity buffer, you create a CapacityBuffer CustomResourceDefini
 
 
 
+You can combine these options, for example by setting both `replicas` and `percentage` so that GKE uses the larger value as a minimum floor, and by setting `limits` as an upper bound.
+
 For more information, see the [CapacityBuffer CRD reference documentation](https://docs.cloud.google.com/kubernetes-engine/docs/reference/crds/capacitybuffer).
 
 ## Best practices
@@ -97,8 +112,33 @@ To optimize for cost-efficiency and responsiveness when configuring capacity buf
   * **Size standby buffers for sustained load** : define standby buffers that are sufficient to cover the extended load you expect to encounter, so that buffers can refill in the background from a cold start. A sufficiently-sized standby buffer can drop your maximum Pod scheduling latency to the time it takes to resume a node, which is approximately 30 seconds. When the capacity buffer starts to be used and gets refilled, new buffer nodes transition to an active state prior to suspending. This strategy helps to boost active capacity during a prolonged load.
   * **Use the buffer simulator** : experiment with different active and standby buffer sizes to get the best result for your specific workload. Run simulations of workload scaling behavior by using the open-source GKE buffers simulator at <https://github.com/gke-labs/buffers-simulator> to fine-tune your buffer sizing rules and achieve your performance targets.
   * **Reduce cold-start latency when scaling workloads from zero** : pair workloads that [scale to and from zero using HPA](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/scale-to-from-zero-hpa) (`minReplicas: 0`) with capacity buffers. When demand increases and the workload scales up from zero, GKE immediately schedules Pods on pre-warmed buffer nodes instead of waiting for new compute nodes to provision.
+  * **Consider the`optimize-utilization` autoscaling profile on Standard clusters**: because capacity buffers already maintain spare headroom, you can configure the [`optimize-utilization` autoscaling profile](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles) (`--autoscaling-profile=optimize-utilization`) so that the cluster autoscaler scales down underutilized nodes more quickly after demand drops. This profile also packs Pods more tightly onto nodes, so evaluate whether tighter bin packing fits your workload availability requirements before enabling it.
 
 
+
+## Calculate your buffer size
+
+When you combine an active buffer with a standby buffer, you can estimate the number of buffer replicas, or simulated buffer Pods, needed to absorb a traffic spike. Calculate this estimate by using your expected scale-up rate in Pods per second, your standby node resume latency, and your cold node creation latency. These latencies vary by VM machine series and node configuration. For example, standby node resume latency is typically 30 to 35 seconds, and new node creation latency is typically 60 to 120 seconds depending on the machine series. To measure actual latencies for your cluster, see [Monitor startup latency metrics](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/monitor-startup-latency-metrics).
+
+  1. Calculate your active buffer size to cover the Pods created while standby nodes resume:
+
+\\[ \text{Active buffer replicas} = \text{Expected scale-up rate} \times \text{Standby node resume latency} \\]
+
+  2. Calculate your standby buffer size to cover the remaining Pods created while new cold nodes finish provisioning:
+
+\\[ \text{Standby buffer replicas} = (\text{Expected scale-up rate} \times \text{Cold node creation latency}) - \text{Active buffer replicas} \\]
+
+
+
+
+For example, if your workload scales up at 2 Pods per second, standby nodes take 30 seconds to resume, and new cold nodes take 90 seconds to provision:
+
+  * Your active buffer needs \\( 2 \times 30 = 60 \\) replicas to absorb the first 30 seconds of the spike.
+  * Your standby buffer needs \\( (2 \times 90) - 60 = 120 \\) replicas to cover the remaining 60 seconds while the cluster autoscaler provisions new cold nodes in the background to replenish your buffers. If the spike continues past 90 seconds at the same rate, those replenished nodes are ready to serve incoming Pods without wait time.
+
+
+
+To test these estimates against your workload scaling patterns, run simulations with the [GKE buffers simulator](https://github.com/gke-labs/buffers-simulator).
 
 ## Requirements and limitations
 
@@ -106,15 +146,18 @@ Capacity buffers have the following requirements and limitations:
 
   * Capacity buffers are available for GKE clusters running version 1.35.2-gke.1842000 or later for active buffers, and version 1.36.0-gke.2253000 for standby buffers.
   * Capacity buffers support only workloads that use a [node-based billing model](https://cloud.google.com/kubernetes-engine/pricing#compute) for Standard node pools and [Autopilot node pools that select specific hardware](https://cloud.google.com/kubernetes-engine/pricing#autopilot-workloads-that-select-specific-hardware). Capacity buffers don't support workloads that use the [Pod-based billing model](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-autopilot-mode-standard-clusters#pricing).
-  * On Standard clusters, we recommend that you enable [node auto-provisioning](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning). Node auto-provisioning allows the cluster autoscaler to create new node pools based on the resource requests in your CapacityBuffer. If you don't enable node auto-provisioning, the cluster autoscaler only scales up existing node pools.
-  * Both active and standby capacity buffers count against [Compute Engine quotas](https://docs.cloud.google.com/compute/quotas-limits).
+  * On Standard clusters, we recommend that you enable [node pool auto-creation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning). Node pool auto-creation lets the cluster autoscaler create new node pools based on the resource requests in your CapacityBuffer. If you don't enable node pool auto-creation, the cluster autoscaler only scales up existing node pools.
+  * Active and standby capacity buffers consume quotas differently: 
+    * Running nodes in an active buffer count against your vCPU, memory, disk, and IP address [Compute Engine quotas](https://docs.cloud.google.com/compute/quotas-limits).
+    * Suspended nodes in a standby buffer don't count against Compute Engine vCPU or memory quotas while suspended. However, they continue to consume IP address quotas and [disk quotas](https://docs.cloud.google.com/compute/resource-usage#disk_quota), including the `Persistent disk standard (GB)` quota used to [store the suspended VM's memory](https://docs.cloud.google.com/compute/docs/instances/suspend-resume-instance).
+    * In Kubernetes, both active and suspended standby buffer units count toward [Kubernetes resource quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/) in your namespace as if the buffer Pods were running.
   * If your CapacityBuffer configuration dependency (for example, a PodTemplate) selects a custom ComputeClass, the dependency must define any tolerations, node selectors, or runtime classes required to schedule on the provisioned nodes (for example, requirements for GKE Sandbox). For instructions, see [custom ComputeClass documentation](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes).
 
 
 
 Standby buffers have the following additional limitations:
 
-  * They are supported on Standard clusters with node auto-provisioning enabled.
+  * They are supported on Standard clusters with [node pool auto-creation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning) enabled.
   * They are supported on Autopilot clusters running version 1.36.0-gke.2853000 or later.
   * Nodes with attached GPUs or TPUs are not supported.
   * Local SSDs are not supported.
@@ -127,9 +170,8 @@ Standby buffers have the following additional limitations:
     * Bare metal instances are not supported.
     * The node OS must support ACPI S3 sleep signals.
     * The suspension process length is proportional to the memory size.
-    * The resumption depends on the availability of the underlying resources required to resume.
 
-
+**Important:** Resuming a standby node requires available zonal Compute Engine capacity for the node's machine type and specific CPU platform generation (such as within the E2 or N2 machine series). In addition, suspended Spot VMs can't be converted to on-demand VMs when resuming.
 
 ## What's next
 
@@ -141,6 +183,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

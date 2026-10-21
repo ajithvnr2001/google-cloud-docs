@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/pipeline/functions/arithmetic_functions/
 title: Arithmetic Functions Reference \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:24:42.002764+00:00
+fetched_at: 2026-10-21T11:58:28.881399+00:00
 ---
 
 # Arithmetic Functions Reference  |  Firestore in Native mode  |  Google Cloud Documentation
@@ -60,7 +60,7 @@ Name  | Description
 **Syntax:**
     
     
-    abs[N <: INT32 | INT64 | FLOAT64](number: N) -> N
+    abs[N <: INT32 | INT64 | FLOAT64 | DECIMAL128](number: N) -> N
     
 
 **Description:**
@@ -89,7 +89,7 @@ number | `abs(number)`
 **Syntax:**
     
     
-    add[N <: INT32 | INT64 | FLOAT64](x: N, y: N) -> N
+    add[N <: INT32 | INT64 | FLOAT64 | DECIMAL128](x: N, y: N) -> N
     
 
 **Description:**
@@ -198,14 +198,14 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_arithmetic.go#L28-L33)
+    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_arithmetic.go#L28-L33)
 
 ### SUBTRACT
 
 **Syntax:**
     
     
-    subtract[N <: INT32 | INT64 | FLOAT64](x: N, y: N) -> N
+    subtract[N <: INT32 | INT64 | FLOAT64 | DECIMAL128](x: N, y: N) -> N
     
 
 **Description:**
@@ -322,14 +322,14 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_arithmetic.go#L47-L53)
+    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_arithmetic.go#L47-L53)
 
 ### MULTIPLY
 
 **Syntax:**
     
     
-    multiply[N <: INT32 | INT64 | FLOAT64](x: N, y: N) -> N
+    multiply[N <: INT32 | INT64 | FLOAT64 | DECIMAL128](x: N, y: N) -> N
     
 
 **Description:**
@@ -439,14 +439,14 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_arithmetic.go#L67-L72)
+    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_arithmetic.go#L67-L72)
 
 ### DIVIDE
 
 **Syntax:**
     
     
-    divide[N <: INT32 | INT64 | FLOAT64](x: N, y: N) -> N
+    divide[N <: INT32 | INT64 | FLOAT64 | DECIMAL128](x: N, y: N) -> N
     
 
 **Description:**
@@ -558,14 +558,14 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_arithmetic.go#L86-L91)
+    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_arithmetic.go#L86-L91)
 
 ### MOD
 
 **Syntax:**
     
     
-    mod[N <: INT32 | INT64 | FLOAT64](x: N, y: N) -> N
+    mod[N <: INT32 | INT64 | FLOAT64 | DECIMAL128](x: N, y: N) -> N
     
 
 **Description:**
@@ -690,14 +690,14 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_arithmetic.go#L105-L111)
+    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_arithmetic.go#L105-L111)
 
 ### CEIL
 
 **Syntax:**
     
     
-    ceil[N <: INT32 | INT64 | FLOAT64](number: N) -> N
+    ceil[N <: INT32 | INT64 | FLOAT64 | DECIMAL128](number: N) -> N
     
 
 **Description:**
@@ -834,14 +834,14 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_arithmetic.go#L125-L131)
+    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_arithmetic.go#L125-L131)
 
 ### FLOOR
 
 **Syntax:**
     
     
-    floor[N <: INT32 | INT64 | FLOAT64](number: N) -> N
+    floor[N <: INT32 | INT64 | FLOAT64 | DECIMAL128](number: N) -> N
     
 
 **Description:**
@@ -967,7 +967,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_arithmetic.go#L145-L150)
+    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_arithmetic.go#L145-L150)
 
 ### ROUND
 
@@ -1109,7 +1109,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_arithmetic.go#L164-L172)
+    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_arithmetic.go#L164-L172)
 
 ### TRUNC
 
@@ -1383,7 +1383,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_arithmetic.go#L186-L199)
+    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_arithmetic.go#L186-L199)
 
 ### SQRT
 
@@ -1618,7 +1618,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_arithmetic.go#L213-L226)
+    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_arithmetic.go#L213-L226)
 
 ### EXP
 
@@ -1734,7 +1734,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_arithmetic.go#L240-L245)
+    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_arithmetic.go#L240-L245)
 
 ### LN
 
@@ -1853,7 +1853,7 @@ Android
     	)).
     	Execute(ctx)
     
-    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_arithmetic.go#L259-L264)
+    [pipeline_snippets_arithmetic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/pipeline_snippets_arithmetic.go#L259-L264)
 
 ### LOG
 
@@ -1929,6 +1929,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

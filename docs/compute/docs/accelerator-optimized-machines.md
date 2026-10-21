@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines/
 title: GPU machines in accelerator-optimized machine family \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:37.913502+00:00
+fetched_at: 2026-10-21T12:22:41.654012+00:00
 ---
 
 # GPU machines in accelerator-optimized machine family  |  Compute Engine  |  Google Cloud Documentation
@@ -27,13 +27,32 @@ The accelerator-optimized machine family includes the following machine series: 
 
 For information about accelerator-optimized instances with attached TPUs, see [TPU machines in accelerator-optimized machine family](https://docs.cloud.google.com/compute/docs/tpus/tpu-machines).
 
+## GPU models and machine series
+
+The following table summarizes the hardware specifications, machine series mappings, networking bandwidth, and storage capabilities of GPU models available on Compute Engine:
+
+GPU model | Machine series | Architecture | GPU memory and bandwidth | GPUs per compute instance | Max network bandwidth | Local SSD | Interconnect | NVIDIA RTX Virtual Workstation (vWS) support  
+---|---|---|---|---|---|---|---|---  
+NVIDIA GB300 | [A4X Max](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4x-vms) | Blackwell Ultra | 279 GB HBM3e (8 TBps) | 4 (NVL72) | 3,600 Gbps | 12,000 GiB | NVLink Full Mesh (1,800 GBps) | No  
+NVIDIA GB200 | [A4X](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4x-vms) | Blackwell | 186 GB HBM3e (8 TBps) | 4 (NVL72) | 2,000 Gbps | 12,000 GiB | NVLink Full Mesh (1,800 GBps) | No  
+NVIDIA B200 | [A4](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4-vms) | Blackwell | 180 GB HBM3e (8 TBps) | 8 | 3,600 Gbps | 12,000 GiB | NVLink Full Mesh (1,800 GBps) | No  
+NVIDIA H200 | [A3 Ultra](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-vms) | Hopper | 141 GB HBM3e (4.8 TBps) | 8 | 3,600 Gbps | 12,000 GiB | NVLink Full Mesh (900 GBps) | No  
+NVIDIA H100 | [A3 Mega, High, Edge](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-vms) | Hopper | 80 GB HBM3 (3.35 TBps) | 1, 2, 4, 8 | Up to 1,000 Gbps | Up to 6,000 GiB | NVLink Full Mesh (900 GBps) | No  
+NVIDIA A100 (80GB) | [A2 Ultra](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a2-vms) | Ampere | 80 GB HBM2e (1.9 TBps) | 1, 2, 4, 8 | 100 Gbps | Up to 3,000 GiB | NVLink Full Mesh (600 GBps) | No  
+NVIDIA A100 (40GB) | [A2 Standard](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a2-vms) | Ampere | 40 GB HBM2 (1.6 TBps) | 1, 2, 4, 8, 16 | 100 Gbps | Up to 3,000 GiB | NVLink Full Mesh (600 GBps) | No  
+NVIDIA RTX PRO 6000 | [G4](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#g4-series) | Blackwell | 96 GB GDDR7 (1.597 TBps) | 1/8, 1/4, 1/2, 1, 2, 4, 8 | 200 Gbps | Up to 3,000 GiB | PCIe Gen 5 | Yes  
+NVIDIA L4 | [G2](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#g2-vms) | Ada Lovelace | 24 GB GDDR6 (300 GBps) | 1, 2, 4, 8 | 100 Gbps | Up to 3,000 GiB | PCIe Gen 4 | Yes  
+NVIDIA V100 | [N1+V100](https://docs.cloud.google.com/compute/docs/gpus#v100-gpus) | Volta | 16 GB HBM2 (900 GBps) | 1, 2, 4, 8 | 100 Gbps | Supported | NVLink Ring (300 GBps) | No  
+NVIDIA T4 (approaching [end of support](https://docs.cloud.google.com/compute/docs/eol/t4-eos)) | [N1+T4](https://docs.cloud.google.com/compute/docs/gpus#t4-gpus) | Turing | 16 GB GDDR6 (320 GBps) | 1, 2, 4 | 100 Gbps | Supported | PCIe Gen 3 | Yes  
+NVIDIA P4 (approaching [end of support](https://docs.cloud.google.com/compute/docs/eol/p4-eos)) | [N1+P4](https://docs.cloud.google.com/compute/docs/gpus#p4-gpus) | Pascal | 8 GB GDDR5 (192 GBps) | 1, 2, 4 | 100 Gbps | Supported | PCIe Gen 3 | Yes  
+  
 ## Recommended machine series by workload type
 
 The following section provides the recommended machine series based on your GPU workloads. For more information about how to choose a compute strategy for AI/ML and HPC workloads, see [Choose a compute strategy](https://docs.cloud.google.com/ai-hypercomputer/docs/choose-strategy) in the AI Hypercomputer documentation.
 
 ### AI/ML training
 
-  * **Frontier foundation models and mixture-of-experts (MoE)** : pre-training massive transformer models, multimodal architectures, and [mixture-of-experts (MoE)](https://en.wikipedia.org/wiki/Mixture_of_experts) networks requires high [Tensor Core](https://www.nvidia.com/en-us/data-center/tensor-cores/) throughput, large [High Bandwidth Memory (HBM)](https://en.wikipedia.org/wiki/High_Bandwidth_Memory) capacities (up to 279 GB per GPU), and ultra-high-speed [NVLink](https://www.nvidia.com/en-us/data-center/nvlink/) interconnect bandwidth (up to 1,800 GBps) to minimize multi-node synchronization latency. Recommended machine series:
+  * **Frontier foundation models and mixture-of-experts (MoE)** : pre-training large transformer models, multimodal architectures, and [mixture-of-experts (MoE)](https://en.wikipedia.org/wiki/Mixture_of_experts) networks requires high [Tensor Core](https://www.nvidia.com/en-us/data-center/tensor-cores/) throughput, large [High Bandwidth Memory (HBM)](https://en.wikipedia.org/wiki/High_Bandwidth_Memory) capacities (up to 279 GB per GPU), and ultra-high-speed [NVLink](https://www.nvidia.com/en-us/data-center/nvlink/) interconnect bandwidth (up to 1,800 GBps) to minimize multi-node synchronization latency. Recommended machine series:
 
     * [A4X Max](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4x-vms) (NVIDIA GB300)
     * [A4X](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4x-vms) (NVIDIA GB200)
@@ -56,7 +75,7 @@ For more information, see [Recommendations for fine-tuning models](https://docs.
 
 ### AI/ML inference
 
-  * **Large model inference (more than 70 billion parameters)** : serving massive [large language models (LLMs)](https://en.wikipedia.org/wiki/Large_language_model) benefits from high [High Bandwidth Memory (HBM3e)](https://en.wikipedia.org/wiki/High_Bandwidth_Memory) capacity (141–186 GB per GPU) to fit model weights across fewer GPUs, reducing inter-chip communication overhead. Recommended machine series:
+  * **Large model inference (more than 70 billion parameters)** : serving [large language models (LLMs)](https://en.wikipedia.org/wiki/Large_language_model) benefits from high [High Bandwidth Memory (HBM3e)](https://en.wikipedia.org/wiki/High_Bandwidth_Memory) capacity (141–186 GB per GPU) to fit model weights across fewer GPUs, reducing inter-chip communication overhead. Recommended machine series:
 
     * [A4X](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4x-vms) (NVIDIA GB200)
     * [A4](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4-vms) (NVIDIA B200)
@@ -72,7 +91,7 @@ For more information, see [Recommendations for serving inference](https://docs.c
 
 
 
-### Graphics and visual computing
+### Graphics and visual
 
   * **3D CAD, digital twins, and virtual workstations** : interactive 3D modeling, [computer-aided design (CAD)](https://en.wikipedia.org/wiki/Computer-aided_design), architectural rendering, and [digital twins](https://en.wikipedia.org/wiki/Digital_twin) (such as [NVIDIA Omniverse](https://www.nvidia.com/en-us/omniverse/)) use dedicated [ray tracing (RT) cores](https://en.wikipedia.org/wiki/Ray_tracing_\(graphics\)) and [NVIDIA RTX Virtual Workstations (vWS)](https://www.nvidia.com/en-us/design-visualization/virtual-workstation/) for remote visual workstations and fractional virtual GPUs (vGPUs). Recommended machine series:
 
@@ -99,79 +118,6 @@ For more information, see [Recommendations for HPC](https://docs.cloud.google.co
 
 
 
-## Pricing and consumption options
-
-Consumption options refers to the ways to get and use compute resources. Google Cloud bills accelerator-optimized machine types for their attached GPUs, predefined vCPU, memory, and bundled Local SSD (if applicable). Discounts for accelerator-optimized instances can vary depending on the resource type and consumption option that you use. At any given point, a resource is eligible for only one type of discount.
-
-Depending on the resource type and consumption option that you choose, discounts apply to accelerator-optimized machine types as follows:
-
-  * **On-demand:** With this consumption option, you can receive [compute flexible committed use discounts (CUDs)](https://docs.cloud.google.com/compute/docs/instances/committed-use-discounts-overview#spend_based) only for eligible spend on N1, G2, and G4 instance usage, as follows:
-
-    * For N1 machine types that have attached GPUs, you can receive compute flexible CUDs only for vCPUs, memory, and Local SSD disks.
-    * For G2 and G4 machine types, you can receive compute flexible CUDs for vCPUs, memory, GPUs, and Local SSD disks.
-
-To receive resource-based CUDs for other accelerator-optimized machine series, including G2 and G4, use one of the reservation options instead.
-
-  * **Spot:** Spot VMs automatically receive discounts through [Spot VMs pricing](https://docs.cloud.google.com/compute/docs/instances/spot#pricing).
-
-  * **Flex-start:** Instances provisioned by using the Flex-start consumption option automatically receive discounts through [Dynamic Workload Scheduler pricing](https://cloud.google.com/products/dws/pricing).
-
-  * **Reservations:** You can receive resource-based CUDs for your accelerator-optimized machine type resources by purchasing resource-based commitments. Resource-based commitments for all GPUs and most Local SSD disks [require attached reservations for those resources](https://docs.cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts#commitments_for_gpus_and_local_ssd_disk_resources).
-
-
-
-
-For more pricing information for accelerator-optimized instances, see the [Accelerator-optimized machine type family](https://docs.cloud.google.com/compute/vm-instance-pricing#accelerator-optimized) section on the VM instance pricing page.
-
-### Consumption option availability by machine type
-
-The following table summarizes the availability of each consumption option by machine types. For more information about how to choose a consumption option, see [Choose a consumption model](https://docs.cloud.google.com/ai-hypercomputer/docs/consumption-models#choose) in the AI Hypercomputer documentation.
-
-**Note:** Before you create and submit a future reservation request for a supported GPU machine type, you must contact your [account team](https://cloud.google.com/tam) or the [sales team](https://cloud.google.com/contact) to discuss your request. Otherwise, Google Cloud is likely to decline it.Machine type (GPU model) | On-demand | [Spot](https://docs.cloud.google.com/compute/docs/instances/spot) | [Flex-start](https://docs.cloud.google.com/compute/docs/instances/about-flex-start-vms) | [On-demand reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-overview) | [Future reservations](https://docs.cloud.google.com/compute/docs/instances/future-reservations-overview) | [Future reservations in calendar mode](https://docs.cloud.google.com/compute/docs/instances/future-reservations-calendar-mode-overview) | [Future reservations for capacity blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity)  
----|---|---|---|---|---|---|---  
-**A4X Max (GB300) and A4X (GB200)** |  |  |  |  |  |  |   
-**A4 (B200)** |  |  |  |  |  |  |   
-**A3 Ultra (H200)** |  |  |  |  |  |  |   
-**A3 Mega (H100)** |  |  |  |  |  |  |   
-**A3 High with 8 GPUs (H100)** |  |  |  |  |  |  |   
-**A3 High with less than 8 GPUs (H100)** |  |  |  |  |  |  |   
-**A3 Edge (H100)** |  |  |  |  |  |  |   
-**A2 (A100)** |  |  |  |  |  |  |   
-**G4 (RTX PRO 6000)** |  |  |  |  |  |  |   
-**G2 (L4)** |  |  |  |  |  |  |   
-**N1 with GPUs (T4/P4/V100)** |  |  |  |  |  |  |   
-  
-## Maintenance experience for accelerator-optimized machine types
-
-During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the regular maintenance of Compute Engine infrastructure, or in rare cases, a host error. Compute Engine also applies some non-disruptive lightweight upgrades for the hypervisor and network in the background. 
-
-The following table describes the host maintenance features for accelerator-optimized machine types:
-
-Machine type | Number of GPUs | Typical scheduled maintenance event frequency | Maintenance behavior | Advanced notification for scheduled maintenance | On-demand maintenance | Simulate maintenance  
----|---|---|---|---|---|---  
-A4X Max2 and A4X2 | 4 | Minimum of 90 days | Terminates with [ Local SSD data persistence](https://docs.cloud.google.com/compute/docs/instances/host-maintenance-overview#disk-persistence) | 90 days | Yes | No  
-A42 | 8 | Minimum of 90 days | Terminates with Local SSD data persistence | 90 days | Yes | No  
-A3 Ultra2 | 8 | Minimum of 90 days | Terminates with Local SSD data persistence | 90 days | Yes | No  
-A3 Mega2 and A3 High2 | 8 | Minimum of 30 days1 | Terminate and restart | 7 days | Yes | Yes  
-A3 High | 1, 2, 4 | Minimum of 30 days1 | Terminate and restart | 7 days1 | No | Yes  
-A3 Edge | 8 | Minimum of 30 days | Terminate and restart | 7 days | Yes | Yes  
-A2 Ultra | 1, 2, 4, 8 | Minimum of 30 days | Terminate and restart | 7 days | Yes (8 GPUs only) | Yes  
-A2 Standard | 1, 2, 4, 8, or 16 | Minimum of 30 days | Terminate and restart | 7 days | Yes (8 and 16 GPUs only) | Yes  
-G4 | 1, 2, or 4 | Minimum of 30 days | Terminate and restart. If Local SSD disks are attached, the instance terminates with Local SSD data persistence. | 7 days | No | Yes  
-G4 | 8 | Minimum of 90 days | Terminate and restart. If Local SSD disks are attached, the instance terminates with Local SSD data persistence. | 30 days | Yes | Yes  
-G2 | 1, 2, 4, or 8 | Minimum of 30 days | Terminate and restart | 7 days | Yes (8 GPUs only) | Yes  
-N1+T4 | 1 or 2 | Minimum of 15 days | Terminate and Restart | 7 days | No | Yes  
-N1+T4 | 4 | Minimum of 30 days | Terminate and Restart | 7 days | Yes | Yes  
-N1+P4 | 1 or 2 | Minimum of 15 days | Terminate and Restart | 7 days | No | Yes  
-N1+P4 | 4 | Minimum of 30 days | Terminate and Restart | 7 days | Yes | Yes  
-N1+V100 | 1, 2, or 4 | Minimum of 15 days | Terminate and Restart | 7 days | No | Yes  
-N1+V100 | 8 | Minimum of 30 days | Terminate and Restart | 7 days | Yes | Yes  
-  
-1 Excluding instances covered by specific customer maintenance agreements.   
-2 See also [Understand host maintenance](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/host-events#review) in the AI Hypercomputer documentation. 
-
-The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently. 
-
 ## The A4X Max and A4X machine series
 
 **Caution:** The [Compute Engine Service Level Agreement (SLA)](https://cloud.google.com/compute/sla) doesn't apply to the A4X Max and A4X machine series.
@@ -186,51 +132,81 @@ Both A4X Max and A4X machine series are built on NVIDIA's NVL72 rack-scale archi
 
 ### A4X Max and A4X comparison
 
-The following table provides a detailed comparison of the A4X Max and A4X machine types:
+The following table compares the features that differ between the A4X Max and A4X machine types:
 
-Feature | A4X Max | A4X  
+Feature | A4X Max (NVIDIA GB300) | A4X (NVIDIA GB200)  
 ---|---|---  
-**GPU acceleration** | A4X Max instances have NVIDIA GB300 Ultra Superchips automatically attached. These Superchips feature [NVIDIA B300 GPUs](https://www.nvidia.com/en-us/data-center/b300/), offering up to 20 TB of total GPU memory per NVL72 domain, which provides roughly 279 GB per GPU. | A4X instances have NVIDIA GB200 Superchips automatically attached. These Superchips have [NVIDIA B200 GPUs](https://www.nvidia.com/en-us/data-center/b200/) and offer 186 GB memory per GPU.  
-**Enhanced networking with RoCE** | For A4X Max instances, RoCE increases network performance by combining [NVIDIA ConnectX-8 (CX-8) SuperNICs](https://resources.nvidia.com/en-us-accelerated-networking-resource-library/connectx-datasheet-c) and Google's datacenter-wide network, which features [eight-way rail-alignment](https://docs.cloud.google.com/compute/docs/gpus/gpu-network-bandwidth#multi-layer-arch). This configuration delivers even higher performance with up to 3,200 Gbps of bandwidth, optimized for demanding large-scale training and HPC tasks. For general purpose networking, each instance also has up to 400 Gbps of bandwidth. | For A4X instances, RDMA over Converged Ethernet (RoCE) increases network performance by combining [NVIDIA ConnectX-7 (CX-7) NICs](https://resources.nvidia.com/en-us-accelerated-networking-resource-library/connectx-7-datasheet) Google's datacenter-wide network, which features [four-way rail-alignment](https://docs.cloud.google.com/compute/docs/gpus/gpu-network-bandwidth#multi-layer-arch). This architecture provides up to 1,600 Gbps of bandwidth, enabling high-throughput, low-latency communication for large-scale distributed workloads.For general purpose networking, each instance also has up to 400 Gbps of bandwidth.  
-**Performance** | The NVIDIA GB300 Ultra Superchips provide 15 PetaFLOPS of dense FP4 performance. For large-scale FP4 inference, the GB300 Ultra Superchips are expected to deliver 20-40% higher performance over the GB200 Superchips. | The NVIDIA GB200 Superchips provide 10 PetaFLOPS of dense FP4 performance.  
-**Bare metal and VM support** | Bare metal instances only | VM instances only  
-**OS support** | A4X Max instances support a range of Linux OS images. However, because bare metal instances use the IDPF network driver, your OS image must support IDPF. If you want to use an OS image that is available on Compute Engine, [OS images that support IDPF](https://docs.cloud.google.com/compute/docs/images/os-details#networking).  | A4X instances support a range of Linux OS images. For a complete list of supported operating systems on Compute Engine, see [OS support for GPUs](https://docs.cloud.google.com/compute/docs/images/os-details#gpu_support).   
-**CPU platform** | Both A4X Max and A4X machine types use the NVIDIA Grace CPU platform with Arm® Neoverse™ V2 cores. For more details about the platform, see [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-**NVLink scalability** | For both A4X Max and A4X machine types, multi-node NVLink scales up to 72 GPUs in a single domain and provides GPU NVLink bandwidth of 1800 GBps, bidirectionally per GPU.  
-**Disk support** | A4X Max and A4X instances support Local SSD for fast scratch disks, which is useful for feeding data into GPUs while preventing I/O bottlenecks. For durable storage, you can attach Hyperdisk volumes. 12,000 GiB of Local SSD is automatically added to A4X Max and A4X instances. For durable storage, you can also attach up to 512 TiB of Hyperdisk storage. For more information about disk types, see [Choose a disk type](https://docs.cloud.google.com/compute/docs/disks).  
-**Dense allocation and topology-aware scheduling support** | Both A4X Max and A4X machine types support requesting blocks of densely allocated capacity. Your host machines are allocated physically close to each other, provisioned as blocks of resources, and are interconnected with a dynamic ML network fabric to minimize network hops and optimize for low latency. Additionally, for A4X Max and A4X instances you can get topology information at the node and cluster level that can be used for job placement.  
+GPU acceleration | A4X Max instances have NVIDIA GB300 Ultra Superchips automatically attached. These Superchips feature [NVIDIA B300 GPUs](https://www.nvidia.com/en-us/data-center/b300/), offering up to 20 TB of total GPU memory per NVL72 domain, which provides roughly 279 GB per GPU. | A4X instances have NVIDIA GB200 Superchips automatically attached. These Superchips feature [NVIDIA B200 GPUs](https://www.nvidia.com/en-us/data-center/b200/) and offer 186 GB of memory per GPU.  
+Enhanced networking with RoCE |  For A4X Max instances, RDMA over Converged Ethernet (RoCE) increases network performance by combining [NVIDIA ConnectX-8 (CX-8) SuperNICs](https://resources.nvidia.com/en-us-accelerated-networking-resource-library/connectx-datasheet-c) and Google's datacenter-wide network, which features [eight-way rail-alignment](https://docs.cloud.google.com/compute/docs/gpus/gpu-network-bandwidth#multi-layer-arch). This configuration delivers up to 3,200 Gbps of bandwidth, which is optimal for demanding large-scale training and HPC tasks. For general-purpose networking, each instance also has up to 400 Gbps of bandwidth. |  For A4X instances, RDMA over Converged Ethernet (RoCE) increases network performance by combining [NVIDIA ConnectX-7 (CX-7) NICs](https://resources.nvidia.com/en-us-accelerated-networking-resource-library/connectx-7-datasheet) and Google's datacenter-wide network, which features [four-way rail-alignment](https://docs.cloud.google.com/compute/docs/gpus/gpu-network-bandwidth#multi-layer-arch). This architecture provides up to 1,600 Gbps of bandwidth, enabling high-throughput, low-latency communication for large-scale distributed workloads. For general-purpose networking, each instance also has up to 400 Gbps of bandwidth.  
+Performance | The NVIDIA GB300 Ultra Superchips provide 15 PetaFLOPS of dense FP4 performance. For large-scale FP4 inference, the GB300 Ultra Superchips are expected to deliver 20–40% higher performance over the GB200 Superchips. | The NVIDIA GB200 Superchips provide 10 PetaFLOPS of dense FP4 performance.  
+Bare metal and VM support | Bare metal instances only | VM instances only  
+OS support | A4X Max instances support a range of Linux OS images. However, because bare metal instances use the Infrastructure Data Path Function (IDPF) network driver, your OS image must support IDPF. To use an OS image that is available on Compute Engine, see [OS images that support IDPF](https://docs.cloud.google.com/compute/docs/images/os-details#networking). | A4X instances support a range of Linux OS images. For a complete list of supported operating systems on Compute Engine, see [OS support for GPUs](https://docs.cloud.google.com/compute/docs/images/os-details#gpu_support).  
   
-### A4X Max machine type (bare metal)
+Both A4X Max and A4X machine types share the following features:
+
+  * **CPU platform** : Both A4X Max and A4X machine types use the NVIDIA Grace CPU platform with Arm® Neoverse™ V2 cores. For more details about the platform, see [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+
+  * **NVLink scalability** : Multi-node NVLink scales up to 72 GPUs in a single domain and provides bidirectional GPU NVLink bandwidth of 1,800 GBps per GPU.
+
+  * **Disk support** : A4X Max and A4X instances support Local SSD for fast scratch disks, which is useful for feeding data into GPUs while preventing I/O bottlenecks. 12,000 GiB of Local SSD is automatically added to A4X Max and A4X instances.
+
+For durable storage, you can attach up to 512 TiB of Hyperdisk storage. For more information about disk types, see [Choose a disk type](https://docs.cloud.google.com/compute/docs/disks).
+
+  * **Dense allocation and topology-aware scheduling support** : Both A4X Max and A4X machine types support requesting blocks of densely allocated capacity. Your host machines are allocated physically close to each other, provisioned as blocks of resources, and interconnected with a dynamic ML network fabric to minimize network hops and optimize for low latency. Additionally, for A4X Max and A4X instances, you can get topology information at the node and cluster level that can be used for job placement.
+
+
+
+
+### Pricing and consumption options for A4X Max and A4X instances
+
+A4X Max and A4X instances support the following consumption and discount options:
+
+  * [Future reservations in AI Hypercomputer](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity)
+  * Resource-based committed use discounts (CUDs)
+
+
+
+Google Cloud bills A4X Max and A4X instances for their attached GPUs, predefined vCPUs, memory, and bundled Local SSD disks. Hyperdisk and network usage are billed separately from machine type pricing. For more information, see [Pricing and consumption options](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#pricing-and-provisioning), [Accelerator-optimized machine type family pricing](https://docs.cloud.google.com/compute/vm-instance-pricing#accelerator-optimized), and [GPU pricing](https://docs.cloud.google.com/compute/gpus-pricing).
+
+### A4X Max machine type (NVIDIA GB300)
 
 [A4X Max accelerator-optimized](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4x-vms) machine types use NVIDIA GB300 Grace Blackwell Ultra Superchips (`nvidia-gb300`) and are ideal for foundation model training and serving. A4X Max machine types are available as [bare metal instances](https://docs.cloud.google.com/compute/docs/instances/bare-metal-instances). 
 
-A4X Max is an exascale platform based on [NVIDIA GB300 NVL72](https://www.nvidia.com/en-us/data-center/gb300-nvl72/). Each machine has two sockets with NVIDIA Grace CPUs with Arm Neoverse V2 cores. These CPUs are connected to four NVIDIA B300 Blackwell GPUs with fast chip-to-chip ([NVLink-C2C](https://www.nvidia.com/en-us/data-center/nvlink-c2c/)) communication. 
+A4X Max is an exascale platform based on [NVIDIA GB300 NVL72](https://www.nvidia.com/en-us/data-center/gb300-nvl72/). Each machine has two sockets with NVIDIA Grace CPUs with Arm Neoverse V2 cores. These CPUs are connected to four NVIDIA B300 Blackwell GPUs with fast chip-to-chip ([NVLink-C2C](https://www.nvidia.com/en-us/data-center/nvlink-c2c/)) communication. For information about machine type limitations, see [A4X Max and A4X limitations](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4x-limitations). 
 
-**Note:** When provisioning A4X Max instances, you must [reserve capacity](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity) to create instances and clusters. You can then create instances that use the features and services available from AI Hypercomputer. For more information, see [Deployment options overview](https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-overview) in the AI Hypercomputer documentation.  | Attached NVIDIA GB300 Grace Blackwell Ultra Superchips  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM3e)  
+**Note:** When provisioning A4X Max instances, you must [reserve capacity](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity) to create instances and clusters. You can then create instances that use the features and services available from AI Hypercomputer. For more information, see [Deployment options overview](https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-overview) in the AI Hypercomputer documentation. Machine type | vCPU count | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps) | NVIDIA GB300 GPU count | GPU memory (GB HBM3e)  
+---|---|---|---|---|---|---|---  
 `a4x-maxgpu-4g-metal` | 144 | 960 | 12,000 | 6 | 3,600 | 4 | 1,116  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+#### A4X Max machine type notes
 
-### A4X machine type
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
+
+### A4X machine type (NVIDIA GB200)
 
 [A4X accelerator-optimized](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4x-vms) machine types use NVIDIA GB200 Grace Blackwell Superchips (`nvidia-gb200`) and are ideal for foundation model training and serving. 
 
-A4X is an exascale platform based on [NVIDIA GB200 NVL72](https://www.nvidia.com/en-us/data-center/gb200-nvl72/). Each machine has two sockets with NVIDIA Grace CPUs with Arm Neoverse V2 cores. These CPUs are connected to four NVIDIA B200 Blackwell GPUs with fast chip-to-chip ([NVLink-C2C](https://www.nvidia.com/en-us/data-center/nvlink-c2c/)) communication. 
+A4X is an exascale platform based on [NVIDIA GB200 NVL72](https://www.nvidia.com/en-us/data-center/gb200-nvl72/). Each machine has two sockets with NVIDIA Grace CPUs with Arm Neoverse V2 cores. These CPUs are connected to four NVIDIA B200 Blackwell GPUs with fast chip-to-chip ([NVLink-C2C](https://www.nvidia.com/en-us/data-center/nvlink-c2c/)) communication. For information about machine type limitations, see [A4X Max and A4X limitations](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4x-limitations). 
 
-**Note:** When provisioning A4X instances, you must [reserve capacity](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity) to create instances and clusters. You can then create instances that use the features and services available from AI Hypercomputer. For more information, see [Deployment options overview](https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-overview) in the AI Hypercomputer documentation.  | Attached NVIDIA GB200 Grace Blackwell Superchips  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM3e)  
+**Note:** When provisioning A4X instances, you must [reserve capacity](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity) to create instances and clusters. You can then create instances that use the features and services available from AI Hypercomputer. For more information, see [Deployment options overview](https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-overview) in the AI Hypercomputer documentation. Machine type | vCPU count | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps) | NVIDIA GB200 GPU count | GPU memory (GB HBM3e)  
+---|---|---|---|---|---|---|---  
 `a4x-highgpu-4g` | 140 | 884 | 12,000 | 6 | 2,000 | 4 | 744  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+#### A4X machine type notes
+
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
 
 ### A4X Max and A4X limitations
 
@@ -289,9 +265,10 @@ A4X Max instances can use the following block storage types:
 
 
 
-Maximum number of disks per instance1  
----  
+The following table lists the maximum number of disks supported per instance:
+
 Machine types | All Hyperdisk | Hyperdisk Balanced | Hyperdisk Throughput | Hyperdisk ML | Hyperdisk Extreme | Attached Local SSD  
+---|---|---|---|---|---|---  
 `a4x-maxgpu-4g-metal` | 32 | 32 | 32 | 32 | 8 | 4  
   
 ### A4X
@@ -305,12 +282,16 @@ A4X instances can use the following block storage types:
 
 
 
-Maximum number of disks per instance1  
----  
+The following table lists the maximum number of disks supported per instance:
+
 Machine types | All Hyperdisk | Hyperdisk Balanced | Hyperdisk Balanced High Availability | Hyperdisk Throughput | Hyperdisk ML | Hyperdisk Extreme | Attached Local SSD  
+---|---|---|---|---|---|---|---  
 `a4x-highgpu-4g` | 128 | 128 | 0 | 0 | 128 | 8 | 4  
   
-1Hyperdisk usage is charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).  
+The following note applies to the preceding table:
+
+  * **Disk pricing** : Hyperdisk usage is charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).
+
 
 
 #### Disk and capacity limits
@@ -318,6 +299,27 @@ Machine types | All Hyperdisk | Hyperdisk Balanced | Hyperdisk Balanced High Ava
 You can attach a mixture of different Hyperdisk types to an instance, but the maximum total disk capacity (in TiB) across all disk types can't exceed 512 TiB for all Hyperdisks. 
 
 For details about the capacity limits, see [ Hyperdisk size and attachment limits](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-perf-limits#limits-instance).
+
+### Maintenance experience for A4X Max and A4X instances
+
+During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the regular maintenance of Compute Engine infrastructure, or in rare cases, a host error. Compute Engine also applies some non-disruptive lightweight upgrades for the hypervisor and network in the background.
+
+The following table describes the host maintenance features for A4X Max and A4X machine types:
+
+Machine type | Number of GPUs | Typical scheduled maintenance event frequency | Maintenance behavior | Advanced notification for scheduled maintenance | On-demand maintenance | Simulate maintenance  
+---|---|---|---|---|---|---  
+A4X Max and A4X | 4 | Minimum of 90 days | Terminates with [ Local SSD data persistence](https://docs.cloud.google.com/compute/docs/instances/host-maintenance-overview#disk-persistence) | 90 days | Yes | No  
+  
+The following notes apply to the preceding table:
+
+  * **Typical scheduled maintenance event frequency** : 
+
+The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently.
+
+
+
+
+For more information about host maintenance in AI Hypercomputer, see [Understand host maintenance](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/host-events#review) in the AI Hypercomputer documentation.
 
 ## The A4 machine series
 
@@ -329,7 +331,7 @@ VM instances created by using the A4 machine type provide the following features
 
   * **5th Generation Intel Xeon Scalable Processor (Emerald Rapids)** : offers up to 4.0 GHz sustained single-core max turbo frequency. For more information about this processor, see [CPU platform](https://docs.cloud.google.com/compute/docs/cpu-platforms).
 
-  * **Industry-leading NVLink scalability** : NVIDIA B200 GPUs provide [GPU NVLink bandwidth](https://www.nvidia.com/en-us/data-center/nvlink/) of 1,800 GBps, bidirectionally per GPU.
+  * **NVLink scalability** : NVIDIA B200 GPUs provide [GPU NVLink bandwidth](https://www.nvidia.com/en-us/data-center/nvlink/) of 1,800 GBps, bidirectionally per GPU.
 
 With all-to-all NVLink topology between 8 GPUs in a system, the aggregate NVLink Bandwidth is up to 14.4 TBps.
 
@@ -353,19 +355,37 @@ The GPUs also expose Function Level Reset (FLR) for graceful recovery from failu
 
 
 
-### A4 machine type
+### Pricing and consumption options for A4 instances
 
-[A4 accelerator-optimized](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4-vms) machine types have [NVIDIA B200 Blackwell GPUs](https://www.nvidia.com/en-us/data-center/b200/) (`nvidia-b200`) attached and are ideal for foundation model training and serving. 
+A4 instances support the following consumption and discount options:
 
-**Note:** When provisioning A4 machine types, you must reserve capacity to create instances or clusters, use Spot VMs, use Flex-start VMs, or create a resize request in a MIG. For instructions on how to create A4 instances, see [Create an A3 Ultra or A4 instance](https://docs.cloud.google.com/compute/docs/gpus/create-gpu-vm-a3u-a4#create-overview). .  | Attached NVIDIA B200 Blackwell GPUs  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM3e)  
+  * [Spot VMs](https://docs.cloud.google.com/compute/docs/instances/spot)
+  * [Flex-start](https://docs.cloud.google.com/compute/docs/instances/about-flex-start-vms)
+  * [Future reservations in calendar mode](https://docs.cloud.google.com/compute/docs/instances/future-reservations-calendar-mode-overview)
+  * [Future reservations in AI Hypercomputer](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity)
+  * Resource-based committed use discounts (CUDs)
+
+
+
+Google Cloud bills A4 instances for their attached GPUs, predefined vCPUs, memory, and bundled Local SSD disks. Hyperdisk and network usage are billed separately from machine type pricing. For more information, see [Pricing and consumption options](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#pricing-and-provisioning), [Accelerator-optimized machine type family pricing](https://docs.cloud.google.com/compute/vm-instance-pricing#accelerator-optimized), and [GPU pricing](https://docs.cloud.google.com/compute/gpus-pricing).
+
+### A4 machine type (NVIDIA B200)
+
+[A4 accelerator-optimized](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4-vms) machine types have [NVIDIA B200 Blackwell GPUs](https://www.nvidia.com/en-us/data-center/b200/) (`nvidia-b200`) attached and are ideal for foundation model training and serving. For information about machine type limitations, see [A4 limitations](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4-limitations). 
+
+**Note:** When provisioning A4 machine types, you must reserve capacity to create instances or clusters, use Spot VMs, use Flex-start VMs, or create a resize request in a MIG. For instructions on how to create A4 instances, see [Create an A3 Ultra or A4 instance](https://docs.cloud.google.com/compute/docs/gpus/create-gpu-vm-a3u-a4#create-overview). . Machine type | vCPU count | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps) | NVIDIA B200 Blackwell GPU count | GPU memory (GB HBM3e)  
+---|---|---|---|---|---|---|---  
 `a4-highgpu-8g` | 224 | 3,968 | 12,000 | 10 | 3,600 | 8 | 1,440  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+#### A4 machine type notes
+
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
 
 #### A4 limitations
 
@@ -391,12 +411,18 @@ A4 instances can use the following block storage types:
   * Hyperdisk ML (`hyperdisk-ml`)
   * Local SSD: which is automatically added to instances that are created by using any of the A4 machine types
 
-Maximum number of disks per instance1  
----  
+
+
+The following table lists the maximum number of disks supported per instance:
+
 Machine types | All Hyperdisk | Hyperdisk Balanced | Hyperdisk Throughput | Hyperdisk ML | Hyperdisk Extreme | Attached Local SSD  
+---|---|---|---|---|---|---  
 `a4-highgpu-8g` | 128 | 128 | N/A | 128 | 8 | 32  
   
-1Hyperdisk usage is charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).  
+The following note applies to the preceding table:
+
+  * **Disk pricing** : Hyperdisk usage is charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).
+
 
 
 #### Disk and capacity limits
@@ -405,46 +431,109 @@ You can attach a mixture of different Hyperdisk types to an instance, but the ma
 
 For details about the capacity limits, see [ Hyperdisk size and attachment limits](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-perf-limits#limits-instance).
 
+### Maintenance experience for A4 instances
+
+During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the regular maintenance of Compute Engine infrastructure, or in rare cases, a host error. Compute Engine also applies some non-disruptive lightweight upgrades for the hypervisor and network in the background.
+
+The following table describes the host maintenance features for A4 machine types:
+
+Machine type | Number of GPUs | Typical scheduled maintenance event frequency | Maintenance behavior | Advanced notification for scheduled maintenance | On-demand maintenance | Simulate maintenance  
+---|---|---|---|---|---|---  
+A4 | 8 | Minimum of 90 days | Terminates with [ Local SSD data persistence](https://docs.cloud.google.com/compute/docs/instances/host-maintenance-overview#disk-persistence) | 90 days | Yes | No  
+  
+The following notes apply to the preceding table:
+
+  * **Typical scheduled maintenance event frequency** : 
+
+The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently.
+
+
+
+
+For more information about host maintenance in AI Hypercomputer, see [Understand host maintenance](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/host-events#review) in the AI Hypercomputer documentation.
+
 ## The A3 machine series
 
 The A3 machine series has up to 224 vCPUs, and 2,944 GB of memory. This machine series is optimized for compute and memory intensive, network bound ML training, and HPC workloads. The A3 machine series is available in A3 Ultra, A3 Mega, A3 High, and A3 Edge machine types.
 
-VM instances created by using the A3 machine types provide the following features:
+The following table compares the features that differ between the A3 machine types:
 
-Feature | A3 Ultra | A3 Mega, High, Edge  
+Feature | A3 Ultra (NVIDIA H200) | A3 Mega, High, and Edge (NVIDIA H100)  
 ---|---|---  
-GPU acceleration | [NVIDIA H200 SXM GPUs](https://www.nvidia.com/en-us/data-center/h200/) attached, which offers 141 GB GPU memory per GPU and provides larger and faster memory for supporting large language models and HPC workloads. | [NVIDIA H100 SXM GPUs](https://www.nvidia.com/en-us/data-center/h100/) attached, which offers 80 GB GPU memory per GPU and is ideal for large transformer-based language models, databases, and HPC.  
-Intel Xeon Scalable Processors | 5th Generation Intel Xeon Scalable processor (Emerald Rapids) and offers up to 4.0 GHz sustained single-core max turbo frequency. For more information about this processor, see [CPU platform](https://docs.cloud.google.com/compute/docs/cpu-platforms). | 4th Generation Intel Xeon Scalable processor (Sapphire Rapids) and offers up to 3.3 GHz sustained single-core max turbo frequency. For more information about this processor, see [CPU platform](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-Industry-leading NVLink scalability | NVIDIA H200 GPUs provide peak [GPU NVLink bandwidth](https://www.nvidia.com/en-us/data-center/nvlink/) of 450 GB/s, unidirectionally. With all-to-all NVLink topology between 8 GPUs in a system, the aggregate NVLink Bandwidth is up to 7.2 TB/s. | NVIDIA H100 GPUs provide peak [GPU NVLink bandwidth](https://www.nvidia.com/en-us/design-visualization/nvlink-bridges/) of 450 GB/s, unidirectionally. With all-to-all NVLink topology between 8 GPUs in a system, the aggregate NVLink Bandwidth is up to 7.2 TB/s.  
-Enhanced networking | For this machine type, RDMA over Converged Ethernet (RoCE) increases the network performance by combining [NVIDIA ConnectX-7 network interface cards (NICs)](https://www.nvidia.com/content/dam/en-zz/Solutions/networking/ethernet-adapters/connectx-7-datasheet-Final.pdf) with our datacenter-wide four-way rail-aligned network. By leveraging RDMA over Converged Ethernet (RoCE), the `a3-ultragpu-8g` machine type achieves much higher throughput between instances in a cluster when compared to other A3 machine types. **Note:** Because of the difference in network topology between A3 Ultra and the previous A3 series (A3 Mega, High, and Edge), you can't move workloads between instances that run on A3 Ultra and the previous A3 series.  | 
+GPU acceleration |  [NVIDIA H200 SXM GPUs](https://www.nvidia.com/en-us/data-center/h200/) are attached, offering 141 GB of GPU memory per GPU and providing larger and faster memory to support large language models and HPC workloads. |  [NVIDIA H100 SXM GPUs](https://www.nvidia.com/en-us/data-center/h100/) are attached, offering 80 GB of GPU memory per GPU, which is ideal for large transformer-based language models, databases, and HPC.  
+Intel Xeon Scalable processors |  5th Generation Intel Xeon Scalable processor (Emerald Rapids), which offers up to 4.0 GHz sustained single-core max turbo frequency. For more information about this processor, see [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms). |  4th Generation Intel Xeon Scalable processor (Sapphire Rapids), which offers up to 3.3 GHz sustained single-core max turbo frequency. For more information about this processor, see [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
+Enhanced networking |  For this machine type, RDMA over Converged Ethernet (RoCE) increases the network performance by combining [NVIDIA ConnectX-7 network interface cards (NICs)](https://www.nvidia.com/content/dam/en-zz/Solutions/networking/ethernet-adapters/connectx-7-datasheet-Final.pdf) with Google's datacenter-wide four-way rail-aligned network. By using RDMA over Converged Ethernet (RoCE), the `a3-ultragpu-8g` machine type achieves much higher throughput between instances in a cluster when compared to other A3 machine types. **Note:** Because of the difference in network topology between A3 Ultra and the previous A3 series (A3 Mega, High, and Edge), you can't move workloads between instances that run on A3 Ultra and the previous A3 series.  | 
 
-  * For the _A3 Mega_ machine types, GPUDirect-TCPXO further improves on GPUDirect-TCPX by offloading TCP protocol. By leveraging GPUDirect-TCPXO, the `a3-megagpu-8g` machine type doubles the network bandwidth when compared to the A3 High and A3 Edge machine types.
-  * For the _A3 Edge (`a3-edgegpu-8g`) and A3 High (`a3-highgpu-8g`)_ machine types, GPUDirect-TCPX increases the network performance by allowing data packet payloads to transfer directly from GPU memory to the network interface. By leveraging GPUDirect-TCPX, these machine type achieve much higher throughput between instances in a cluster when compared to the A2 or G2 accelerator-optimized machine types.
+  * For the _A3 Mega_ machine types, GPUDirect-TCPXO further improves on GPUDirect-TCPX by offloading the TCP protocol. By using GPUDirect-TCPXO, the `a3-megagpu-8g` machine type doubles the network bandwidth when compared to the A3 High and A3 Edge machine types.
+  * For the _A3 Edge (`a3-edgegpu-8g`) and A3 High (`a3-highgpu-8g`)_ machine types, GPUDirect-TCPX increases the network performance by allowing data packet payloads to transfer directly from GPU memory to the network interface. By using GPUDirect-TCPX, these machine types achieve much higher throughput between instances in a cluster when compared to the A2 or G2 accelerator-optimized machine types.
 
   
-Improved networking speeds | Offers up to 4x networking speeds when compared to the previous generation A2 machine series. For more information about networking, see [Network bandwidths and GPUs](https://docs.cloud.google.com/compute/docs/gpus/gpu-network-bandwidth#a3-bandwidth). | Offers up to 2.5X networking speeds when compared to the previous generation A2 machine series. For more information about networking, see [Network bandwidths and GPUs](https://docs.cloud.google.com/compute/docs/gpus/gpu-network-bandwidth#a3-bandwidth).  
-Virtualization optimizations | The Peripheral Component Interconnect Express (PCIe) topology of A3 instances provides more accurate locality information that workloads can use to optimize data transfers. The GPUs also expose Function Level Reset (FLR) for graceful recovery from failures and atomic operations support for concurrency improvements in certain scenarios.  
-Disk support |  A3 instances support Local SSD for fast scratch disks, which is useful for feeding data into GPUs while preventing I/O bottlenecks. For durable storage, you can attach Persistent Disk and Hyperdisk volumes. Local SSD is attached as follows:
-
-  * 12,000 GiB of Local SSD is automatically added to A3 Ultra instances.
-  * 6,000 GiB of Local SSD is automatically added to A3 Mega, High, and Edge instances.
-
-For workloads that require durable block storage, you can also attach up to 512 TiB of Persistent Disk and Hyperdisk to machine types in these series. For select machine types, up to 257 TiB of Persistent Disk is also supported. For more information about disk types, see [Choose a disk type](https://docs.cloud.google.com/compute/docs/disks).  
-Compact placement policy support | Provides you with more control over the physical placement of your instances within data centers. This enables lower-latency and higher bandwidth for instances that are located within a single availability zone.  For more information, see [ About compact placement policies](https://docs.cloud.google.com/compute/docs/instances/placement-policies-overview#about-compact-policies). **Caution:** By default, you can't apply compact placement policies with a max distance value to A3 VMs in Compute Engine. To request access to this feature, contact your assigned [Technical Account Manager (TAM)](https://cloud.google.com/tam) or the [Sales team](https://cloud.google.com/contact).   
+Improved networking speeds |  Offers up to 4x networking speeds when compared to the previous generation A2 machine series. For more information about networking, see [Network bandwidths and GPUs](https://docs.cloud.google.com/compute/docs/gpus/gpu-network-bandwidth#a3-bandwidth). |  Offers up to 2.5x networking speeds when compared to the previous generation A2 machine series. For more information about networking, see [Network bandwidths and GPUs](https://docs.cloud.google.com/compute/docs/gpus/gpu-network-bandwidth#a3-bandwidth).  
   
-### A3 Ultra machine type
+All A3 machine types share the following features:
 
-[A3 Ultra](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-ultra-vms) machine types have [NVIDIA H200 SXM GPUs](https://www.nvidia.com/en-us/data-center/h200/) (`nvidia-h200-141gb`) attached and provides the highest network performance in the A3 series. A3 Ultra machine types are ideal for foundation model training and serving. 
+  * **NVLink scalability** : NVIDIA H200 and H100 GPUs provide peak [GPU NVLink bandwidth](https://www.nvidia.com/en-us/data-center/nvlink/) of 450 GBps, unidirectionally. By using an all-to-all NVLink topology, an 8-GPU system achieves an aggregate bandwidth of up to 7.2 TBps.
 
-**Note:** When provisioning A3 Ultra machine types, you must reserve capacity to create instances or clusters, use Spot VMs, use Flex-start VMs, or create a resize request in a MIG. For more information about the parameters to set when creating an A3 Ultra instance, see [Create an A3 Ultra or A4 instance](https://docs.cloud.google.com/compute/docs/gpus/create-gpu-vm-a3u-a4#create-overview).  | Attached NVIDIA H200 GPUs  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM3e)  
+  * **Virtualization optimizations** : The Peripheral Component Interconnect Express (PCIe) topology of A3 instances provides more accurate locality information that workloads can use to optimize data transfers. The GPUs also expose Function Level Reset (FLR) for graceful recovery from failures and atomic operations support for concurrency improvements in certain scenarios.
+
+  * **Disk support** : A3 instances support Local SSD for fast scratch disks, which is useful for feeding data into GPUs while preventing I/O bottlenecks. For durable storage, you can attach Persistent Disk and Hyperdisk volumes.
+
+Local SSD is attached as follows:
+
+    * 12,000 GiB of Local SSD is automatically added to A3 Ultra instances.
+    * 6,000 GiB of Local SSD is automatically added to A3 Mega, High, and Edge instances.
+
+For workloads that require durable block storage, you can also attach up to 512 TiB of Persistent Disk and Hyperdisk to machine types in these series. For select machine types, up to 257 TiB of Persistent Disk is also supported. For more information about disk types, see [Choose a disk type](https://docs.cloud.google.com/compute/docs/disks).
+
+  * **Compact placement policy support** : Provides you with more control over the physical placement of your instances within data centers. This placement enables lower latency and higher bandwidth for instances that are located within a single availability zone. For more information, see [About compact placement policies](https://docs.cloud.google.com/compute/docs/instances/placement-policies-overview#about-compact-policies).
+
+
+**Caution:** By default, you can't apply compact placement policies with a max distance value to A3 VMs in Compute Engine. To request access to this feature, contact your assigned [Technical Account Manager (TAM)](https://cloud.google.com/tam) or the [Sales team](https://cloud.google.com/contact). 
+
+### Pricing and consumption options for A3 instances
+
+A3 instances support the following consumption and discount options:
+
+  * **A3 Ultra** : 
+    * [Spot VMs](https://docs.cloud.google.com/compute/docs/instances/spot)
+    * [Flex-start](https://docs.cloud.google.com/compute/docs/instances/about-flex-start-vms)
+    * [Future reservations in calendar mode](https://docs.cloud.google.com/compute/docs/instances/future-reservations-calendar-mode-overview)
+    * [Future reservations in AI Hypercomputer](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity)
+    * Resource-based committed use discounts (CUDs)
+  * **A3 Mega, A3 High (8 GPUs), and A3 Edge** : 
+    * On-demand
+    * [Spot VMs](https://docs.cloud.google.com/compute/docs/instances/spot)
+    * [Flex-start](https://docs.cloud.google.com/compute/docs/instances/about-flex-start-vms)
+    * [On-demand reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-overview)
+    * [Future reservations](https://docs.cloud.google.com/compute/docs/instances/future-reservations-overview)
+    * [Future reservations in calendar mode](https://docs.cloud.google.com/compute/docs/instances/future-reservations-calendar-mode-overview)
+    * [Future reservations in AI Hypercomputer](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity)
+    * Resource-based CUDs
+  * **A3 High (1, 2, or 4 GPUs)** : 
+    * [Spot VMs](https://docs.cloud.google.com/compute/docs/instances/spot)
+    * [Flex-start](https://docs.cloud.google.com/compute/docs/instances/about-flex-start-vms)
+
+
+
+Google Cloud bills A3 instances for their attached GPUs, predefined vCPUs, memory, and bundled Local SSD disks. Persistent Disk, Hyperdisk, and network usage are billed separately from machine type pricing. For more information, see [Pricing and consumption options](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#pricing-and-provisioning), [Accelerator-optimized machine type family pricing](https://docs.cloud.google.com/compute/vm-instance-pricing#accelerator-optimized), and [GPU pricing](https://docs.cloud.google.com/compute/gpus-pricing).
+
+### A3 Ultra machine type (NVIDIA H200)
+
+[A3 Ultra](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-ultra-vms) machine types have [NVIDIA H200 SXM GPUs](https://www.nvidia.com/en-us/data-center/h200/) (`nvidia-h200-141gb`) attached and provide the highest network performance in the A3 series. A3 Ultra machine types are ideal for foundation model training and serving. For information about machine type limitations, see [A3 Ultra limitations](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-ultra-limitations). 
+
+**Note:** When provisioning A3 Ultra machine types, you must reserve capacity to create instances or clusters, use Spot VMs, use Flex-start VMs, or create a resize request in a MIG. For more information about the parameters to set when creating an A3 Ultra instance, see [Create an A3 Ultra or A4 instance](https://docs.cloud.google.com/compute/docs/gpus/create-gpu-vm-a3u-a4#create-overview). Machine type | vCPU count | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps) | NVIDIA H200 GPU count | GPU memory (GB HBM3e)  
+---|---|---|---|---|---|---|---  
 `a3-ultragpu-8g` | 224 | 2,952 | 12,000 | 10 | 3,600 | 8 | 1128  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+#### A3 Ultra machine type notes
+
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
 
 #### A3 Ultra limitations
 
@@ -460,24 +549,28 @@ Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | P
 
 
 
-### A3 Mega machine type
+### A3 Mega machine type (NVIDIA H100)
 
-[A3 Mega](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-mega-vms) machine types have [NVIDIA H100 SXM GPUs](https://www.nvidia.com/en-us/data-center/h100/) and are ideal for large model training and multi-host inference. **Note:** When provisioning `a3-megagpu-8g` machine types, we recommend using a cluster of these instances and deploying with a scheduler such as Google Kubernetes Engine (GKE) or Slurm. For detailed instructions on either of these options, review the following: 
+[A3 Mega](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-mega-vms) machine types have [NVIDIA H100 SXM GPUs](https://www.nvidia.com/en-us/data-center/h100/) and are ideal for large model training and multi-host inference. For information about machine type limitations, see [A3 Mega limitations](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-mega-limitations). **Note:** When provisioning `a3-megagpu-8g` machine types, we recommend using a cluster of these instances and deploying with a scheduler such as Google Kubernetes Engine (GKE) or Slurm. For detailed instructions on either of these options, review the following: 
 
   * To create Google Kubernetes Engine cluster, see [Deploy an A3 Mega cluster with GKE](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/gpu-bandwidth-gpudirect-tcpx).
   * To create a Slurm cluster, see [Deploy an A3 Mega Slurm cluster](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/slurm/deploy-a3-mega-cluster).
 
-| Attached NVIDIA H100 GPUs  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM3)  
+Machine type | vCPU count | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps) | NVIDIA H100 GPU count | GPU memory (GB HBM3)  
+---|---|---|---|---|---|---|---  
 `a3-megagpu-8g` | 208 | 1,872 | 6,000 | 9 | 1,800 | 8 | 640  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+#### A3 Mega machine type notes
 
-#### A3 Mega limitations
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
+
+#### A3 Mega limitations (NVIDIA H100)
 
   * You can only request capacity by using the [supported consumption options](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#pricing-and-provisioning) for an A3 Mega machine type.
   * You don't receive [sustained use discounts](https://docs.cloud.google.com/compute/docs/sustained-use-discounts) and [flexible committed use](https://docs.cloud.google.com/compute/docs/instances/committed-use-discounts-overview#spend_based) discounts for instances that use an A3 Mega machine type.
@@ -489,27 +582,31 @@ Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | P
 
 
 
-### A3 High machine type
+### A3 High machine type (NVIDIA H100)
 
-[A3 High](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-high-vms) machine types have [NVIDIA H100 SXM GPUs](https://www.nvidia.com/en-us/data-center/h100/) and are well-suited for both large model inference and model fine tuning. **Note:** When provisioning `a3-highgpu-1g`, `a3-highgpu-2g`, or `a3-highgpu-4g` machine types, you must create instances by using Spot VMs or Flex-start VMs. For detailed instructions on these options, review the following: 
+[A3 High](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-high-vms) machine types have [NVIDIA H100 SXM GPUs](https://www.nvidia.com/en-us/data-center/h100/) and are well-suited for both large model inference and model fine tuning. For information about machine type limitations, see [A3 High limitations](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-high-limitations). **Note:** When provisioning `a3-highgpu-1g`, `a3-highgpu-2g`, or `a3-highgpu-4g` machine types, you must create instances by using Spot VMs or Flex-start VMs. For detailed instructions on these options, review the following: 
 
   * To create Spot VMs, set the provisioning model to `SPOT` when you [create an accelerator-optimized VM](https://docs.cloud.google.com/compute/docs/gpus/create-gpu-vm-accelerator-optimized).
   * To create Flex-start VMs, you can use one of the following methods: 
     * Create a standalone VM and set the provisioning model to `FLEX_START` when you [create an accelerator-optimized VM](https://docs.cloud.google.com/compute/docs/gpus/create-gpu-vm-accelerator-optimized).
     * Create a resize request in a managed instance group (MIG). For instructions, see [Create a MIG with GPU VMs](https://docs.cloud.google.com/compute/docs/instance-groups/create-mig-with-gpu-vms).
 
-| Attached NVIDIA H100 GPUs  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM3)  
+Machine type | vCPU count | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps) | NVIDIA H100 GPU count | GPU memory (GB HBM3)  
+---|---|---|---|---|---|---|---  
 `a3-highgpu-1g` | 26 | 234 | 750 | 1 | 25 | 1 | 80  
 `a3-highgpu-2g` | 52 | 468 | 1,500 | 1 | 50 | 2 | 160  
 `a3-highgpu-4g` | 104 | 936 | 3,000 | 1 | 100 | 4 | 320  
 `a3-highgpu-8g` | 208 | 1,872 | 6,000 | 5 | 1,000 | 8 | 640  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+#### A3 High machine type notes
+
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
 
 #### A3 High limitations
 
@@ -529,22 +626,21 @@ Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | P
 
 
 
-### A3 Edge machine type
+### A3 Edge machine type (NVIDIA H100)
 
-[A3 Edge](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-edge-vms) machine types have [NVIDIA H100 SXM GPUs](https://www.nvidia.com/en-us/data-center/h100/) and are designed specifically for serving and are available in a [limited set of regions](https://docs.cloud.google.com/compute/docs/gpus/gpu-regions-zones#view-using-table). **Note:** To get started with A3 Edge instances, see [Create an A3 VM with GPUDirect-TCPX enabled](https://docs.cloud.google.com/compute/docs/gpus/gpudirect).  | Attached NVIDIA H100 GPUs  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM3)  
-`a3-edgegpu-8g` | 208 | 1,872 | 6,000 | 5 | 
-
-  * 600: _for asia-south1 and northamerica-northeast2_
-  * 400: _for all other[A3 Edge regions](https://docs.cloud.google.com/compute/docs/gpus/gpu-regions-zones#view-using-table)_
-
-| 8 | 640  
+[A3 Edge](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-edge-vms) machine types have [NVIDIA H100 SXM GPUs](https://www.nvidia.com/en-us/data-center/h100/) and are designed specifically for serving and are available in a [limited set of regions](https://docs.cloud.google.com/compute/docs/gpus/gpu-regions-zones#view-using-table). For information about machine type limitations, see [A3 Edge limitations](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-edge-limitations). **Note:** To get started with A3 Edge instances, see [Create an A3 VM with GPUDirect-TCPX enabled](https://docs.cloud.google.com/compute/docs/gpus/gpudirect). Machine type | vCPU count | Instance memory (GB) | Attached Local SSD (GiB) | Physical NIC count | Maximum network bandwidth (Gbps) | NVIDIA H100 GPU count | GPU memory (GB HBM3)  
+---|---|---|---|---|---|---|---  
+`a3-edgegpu-8g` | 208 | 1,872 | 6,000 | 5 | 600 (`asia-south1` and `northamerica-northeast2`) or 400 (all other [A3 Edge regions](https://docs.cloud.google.com/compute/docs/gpus/gpu-regions-zones#view-using-table)) | 8 | 640  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+#### A3 Edge machine type notes
+
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
 
 #### A3 Edge limitations
 
@@ -573,15 +669,17 @@ A3 Ultra instances can use the following block storage types:
 
 
 
-Maximum number of disks per instance1  
----  
-Machine  
-types | All Hyperdisk | Hyperdisk Balanced | Hyperdisk Balanced High Availability | Hyperdisk Throughput | Hyperdisk ML | Hyperdisk Extreme | Attached  
-Local SSD  
-disks  
+The following table lists the maximum number of disks supported per instance:
+
+Machine types | All Hyperdisk | Hyperdisk Balanced | Hyperdisk Balanced High Availability | Hyperdisk Throughput | Hyperdisk ML | Hyperdisk Extreme | Attached Local SSD disks  
+---|---|---|---|---|---|---|---  
 `a3-ultragpu-8g` | 128 | 128 | 128 | N/A | 128 | 8 | 32  
   
-1Hyperdisk usage is charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk). 
+The following note applies to the preceding table:
+
+  * **Disk pricing** : Hyperdisk usage is charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).
+
+
 
 ### A3 Mega
 
@@ -598,15 +696,16 @@ A3 Mega instances can use the following block storage types:
 
 
 
-Maximum number of disks per instance1  
----  
-Machine  
-types | All Hyperdisk | Hyperdisk Balanced | Hyperdisk Balanced High Availability | Hyperdisk Throughput | Hyperdisk ML | Hyperdisk Extreme | Attached  
-Local SSD  
-disks  
+The following table lists the maximum number of disks supported per instance:
+
+Machine types | All Hyperdisk | Hyperdisk Balanced | Hyperdisk Balanced High Availability | Hyperdisk Throughput | Hyperdisk ML | Hyperdisk Extreme | Attached Local SSD disks  
+---|---|---|---|---|---|---|---  
 `a3-megagpu-8g` | 128 | 32 | 32 | 64 | 64 | 8 | 16  
   
-1Hyperdisk and Persistent Disk usage are charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Persistent Disk and Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).  
+The following note applies to the preceding table:
+
+  * **Disk pricing** : Hyperdisk and Persistent Disk usage are charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Persistent Disk and Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).
+
 
 
 ### A3 High
@@ -624,18 +723,19 @@ A3 High instances can use the following block storage types:
 
 
 
-Maximum number of disks per instance1  
----  
-Machine  
-types | All Hyperdisk | Hyperdisk Balanced | Hyperdisk Balanced High Availability | Hyperdisk Throughput | Hyperdisk ML | Hyperdisk Extreme | Attached  
-Local SSD  
-disks  
+The following table lists the maximum number of disks supported per instance:
+
+Machine types | All Hyperdisk | Hyperdisk Balanced | Hyperdisk Balanced High Availability | Hyperdisk Throughput | Hyperdisk ML | Hyperdisk Extreme | Attached Local SSD disks  
+---|---|---|---|---|---|---|---  
 `a3-highgpu-1g` | 128 | 32 | 32 | 64 | 64 | N/A | 2  
 `a3-highgpu-2g` | 128 | 32 | 32 | 64 | 64 | N/A | 4  
 `a3-highgpu-4g` | 128 | 32 | 32 | 64 | 64 | 8 | 8  
 `a3-highgpu-8g` | 128 | 32 | 32 | 64 | 64 | 8 | 16  
   
-1Hyperdisk and Persistent Disk usage are charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Persistent Disk and Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).  
+The following note applies to the preceding table:
+
+  * **Disk pricing** : Hyperdisk and Persistent Disk usage are charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Persistent Disk and Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).
+
 
 
 ### A3 Edge
@@ -653,12 +753,16 @@ A3 Edge instances can use the following block storage types:
 
 
 
-Maximum number of disks per instance1  
----  
+The following table lists the maximum number of disks supported per instance:
+
 Machine types | All Hyperdisk | Hyperdisk Balanced | Hyperdisk Balanced High Availability | Hyperdisk Throughput | Hyperdisk ML | Hyperdisk Extreme | Attached Local SSD  
+---|---|---|---|---|---|---|---  
 `a3-edgegpu-8g` | 128 | 32 | 32 | 64 | 64 | 8 | 16  
   
-1Hyperdisk and Persistent Disk usage are charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Persistent Disk and Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).  
+The following note applies to the preceding table:
+
+  * **Disk pricing** : Hyperdisk and Persistent Disk usage are charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Persistent Disk and Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).
+
 
 
 #### Disk and capacity limits
@@ -682,6 +786,31 @@ If supported by the machine type, you can attach a mixture of Hyperdisk and Pers
 
 For details about the capacity limits, see [ Hyperdisk size and attachment limits](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-perf-limits#limits-instance) and [Persistent Disk maximum capacity](https://docs.cloud.google.com/compute/docs/disks/persistent-disks#capacity_257tb).
 
+### Maintenance experience for A3 instances
+
+During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the regular maintenance of Compute Engine infrastructure, or in rare cases, a host error. Compute Engine also applies some non-disruptive lightweight upgrades for the hypervisor and network in the background.
+
+The following table describes the host maintenance features for A3 machine types:
+
+Machine type | Number of GPUs | Typical scheduled maintenance event frequency | Maintenance behavior | Advanced notification for scheduled maintenance | On-demand maintenance | Simulate maintenance  
+---|---|---|---|---|---|---  
+A3 Ultra | 8 | Minimum of 90 days | Terminates with [ Local SSD data persistence](https://docs.cloud.google.com/compute/docs/instances/host-maintenance-overview#disk-persistence) | 90 days | Yes | No  
+A3 Mega and A3 High | 8 | Minimum of 30 days | Terminate and restart | 7 days | Yes | Yes  
+A3 High | 1, 2, 4 | Minimum of 30 days | Terminate and restart | 7 days | No | Yes  
+A3 Edge | 8 | Minimum of 30 days | Terminate and restart | 7 days | Yes | Yes  
+  
+The following notes apply to the preceding table:
+
+  * **Typical scheduled maintenance event frequency** : 
+
+The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently.
+
+  * **A3 Mega and A3 High** : the scheduled maintenance frequencies and notification windows exclude instances covered by specific customer maintenance agreements.
+
+
+
+For more information about host maintenance in AI Hypercomputer, see [Understand host maintenance](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/host-events#review) in the AI Hypercomputer documentation.
+
 ## The A2 machine series
 
 The A2 machine series is available in A2 Standard and A2 Ultra machine types. These machine types have 12 to 96 vCPUs, and up to 1,360 GB of memory.
@@ -690,7 +819,7 @@ VM instances created by using the A2 machine types provide the following feature
 
   * **GPU acceleration** : each A2 instance has [NVIDIA A100 GPUs](https://www.nvidia.com/en-us/data-center/a100/). These are available in both A100 40GB and A100 80GB options.
 
-  * [Industry-leading NVLink scale](https://www.nvidia.com/en-us/design-visualization/nvlink-bridges/) that provides peak GPU to GPU NVLink bandwidth of 600 GBps. For example, systems with 16 GPUs have an aggregate NVLink bandwidth of up to 9.6 TBps. These 16 GPUs can be used as a single high performance accelerator with unified memory space to deliver up to 10 petaFLOPS of compute power and up to 20 petaFLOPS of inference compute power that can be used for artificial intelligence, deep learning, and machine learning workloads.
+  * **NVLink scalability** : NVIDIA A100 GPUs provide peak [GPU to GPU NVLink bandwidth](https://www.nvidia.com/en-us/design-visualization/nvlink-bridges/) of 600 GBps. For example, systems with 16 GPUs have an aggregate NVLink bandwidth of up to 9.6 TBps. These 16 GPUs can be used as a single high performance accelerator with unified memory space to deliver up to 10 petaFLOPS of compute power and up to 20 petaFLOPS of inference compute power that can be used for artificial intelligence, deep learning, and machine learning workloads.
 
   * **Improved computing speeds** : the attached NVIDIA A100 GPUs offer up to 10x improvements in computing speed when compared to previous generation NVIDIA V100 GPUs.
 
@@ -710,24 +839,43 @@ For workloads that require durable block storage, you can attach up to 257 TiB o
 
 
 
+### Pricing and consumption options for A2 instances
+
+A2 instances support the following consumption and discount options:
+
+  * On-demand
+  * [Spot VMs](https://docs.cloud.google.com/compute/docs/instances/spot)
+  * [Flex-start](https://docs.cloud.google.com/compute/docs/instances/about-flex-start-vms)
+  * [On-demand reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-overview)
+  * [Future reservations](https://docs.cloud.google.com/compute/docs/instances/future-reservations-overview)
+  * Resource-based committed use discounts (CUDs)
+
+
+
+Google Cloud bills A2 instances for their attached GPUs, predefined vCPUs, memory, and bundled Local SSD disks (for A2 Ultra). Persistent Disk, Hyperdisk, additional Local SSD disks (for A2 Standard), and network usage are billed separately from machine type pricing. For more information, see [Pricing and consumption options](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#pricing-and-provisioning), [Accelerator-optimized machine type family pricing](https://docs.cloud.google.com/compute/vm-instance-pricing#accelerator-optimized), and [GPU pricing](https://docs.cloud.google.com/compute/gpus-pricing).
+
 The following machine types are available for the A2 machine series.
 
-### A2 Ultra machine types
+### A2 Ultra machine types (NVIDIA A100 80GB)
 
-These machine types have a [fixed number of A100 80GB GPUs](https://docs.cloud.google.com/compute/docs/gpus#a100-gpus). Local SSD is automatically attached to instances created by using the A2 Ultra machine types.
+These machine types have a [fixed number of A100 80GB GPUs](https://docs.cloud.google.com/compute/docs/gpus#a100-gpus). Local SSD is automatically attached to instances created by using the A2 Ultra machine types. For information about machine type limitations, see A2 Ultra limitations.
 
-| Attached NVIDIA A100 80GB GPUs  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM2e)  
+Machine type | vCPU count | Instance memory (GB) | Attached Local SSD (GiB) | Maximum network bandwidth (Gbps) | NVIDIA A100 80GB GPU count | GPU memory (GB HBM2e)  
+---|---|---|---|---|---|---  
 `a2-ultragpu-1g` | 12 | 170 | 375 | 24 | 1 | 80  
 `a2-ultragpu-2g` | 24 | 340 | 750 | 32 | 2 | 160  
 `a2-ultragpu-4g` | 48 | 680 | 1,500 | 50 | 4 | 320  
 `a2-ultragpu-8g` | 96 | 1,360 | 3,000 | 100 | 8 | 640  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+#### A2 Ultra machine type notes
+
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
 
 #### A2 Ultra limitations
 
@@ -741,23 +889,27 @@ Machine type | vCPU count1 | Instance memory (GB) | Attached Local SSD (GiB) | M
 
 
 
-### A2 Standard machine types
+### A2 Standard machine types (NVIDIA A100 40GB)
 
-These machine types have a [fixed number of A100 40GB GPUs](https://docs.cloud.google.com/compute/docs/gpus#a100-gpus). You can also add Local SSD disks when creating an A2 Standard instance. For the number of disks you can attach, see [Machine types that require you to choose a number of Local SSD disks](https://docs.cloud.google.com/compute/docs/disks/local-ssd#lssd_disk_options).
+These machine types have a [fixed number of A100 40GB GPUs](https://docs.cloud.google.com/compute/docs/gpus#a100-gpus). You can also add Local SSD disks when creating an A2 Standard instance. For the number of disks you can attach, see [Machine types that require you to choose a number of Local SSD disks](https://docs.cloud.google.com/compute/docs/disks/local-ssd#lssd_disk_options). For information about machine type limitations, see A2 Standard limitations.
 
-| Attached NVIDIA A100 40GB GPUs  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Local SSD supported | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3  
-(GB HBM2)  
+Machine type | vCPU count | Instance memory (GB) | Local SSD supported | Maximum network bandwidth (Gbps) | NVIDIA A100 40GB GPU count | GPU memory (GB HBM2)  
+---|---|---|---|---|---|---  
 `a2-highgpu-1g` | 12 | 85 | Yes | 24 | 1 | 40  
 `a2-highgpu-2g` | 24 | 170 | Yes | 32 | 2 | 80  
 `a2-highgpu-4g` | 48 | 340 | Yes | 50 | 4 | 160  
 `a2-highgpu-8g` | 96 | 680 | Yes | 100 | 8 | 320  
 `a2-megagpu-16g` | 96 | 1,360 | Yes | 100 | 16 | 640  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+#### A2 Standard machine type notes
+
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
 
 #### A2 Standard limitations
 
@@ -785,30 +937,40 @@ A2 instances can use the following block storage types:
 
 ### A2 Ultra
 
-Maximum number of disks per instance1  
----  
-**Machine types** | **All disks 2** | **Hyperdisk ML** | **Attached Local SSD**  
+The following table lists the maximum number of disks supported per instance:
+
+Machine types | All disks | Hyperdisk ML | Attached Local SSD  
+---|---|---|---  
 `a2-ultragpu-1g` | 128 | 32 | 1  
 `a2-ultragpu-2g` | 128 | 48 | 2  
 `a2-ultragpu-4g` | 128 | 64 | 4  
 `a2-ultragpu-8g` | 128 | 64 | 8  
   
-1Hyperdisk and Persistent Disk usage are charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Persistent Disk and Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).  
-2This limit applies to Persistent Disk and Hyperdisk, but doesn't include Local SSD disks.
+The following notes apply to the preceding table:
+
+  * **All disks** : this limit applies to Persistent Disk and Hyperdisk, and doesn't include Local SSD disks.
+  * **Disk pricing** : Hyperdisk and Persistent Disk usage are charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Persistent Disk and Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).
+
+
 
 ### A2 Standard
 
-Maximum number of disks per instance1  
----  
-**Machine types** | **All disks 2** | **Hyperdisk ML** | **Local SSD**  
+The following table lists the maximum number of disks supported per instance:
+
+Machine types | All disks | Hyperdisk ML | Local SSD  
+---|---|---|---  
 `a2-highgpu-1g` | 128 | 32 | 8  
 `a2-highgpu-2g` | 128 | 48 | 8  
 `a2-highgpu-4g` | 128 | 64 | 8  
 `a2-highgpu-8g` | 128 | 64 | 8  
 `a2-megagpu-16g` | 128 | 64 | 8  
   
-1Hyperdisk and Persistent Disk usage are charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Persistent Disk and Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).  
-2This limit applies to Persistent Disk and Hyperdisk, but doesn't include Local SSD disks.
+The following notes apply to the preceding table:
+
+  * **All disks** : this limit applies to Persistent Disk and Hyperdisk, and doesn't include Local SSD disks.
+  * **Disk pricing** : Hyperdisk and Persistent Disk usage are charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Persistent Disk and Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).
+
+
 
 If supported by the machine type, you can attach a mixture of Hyperdisk and Persistent Disk volumes to an instance, but the following restrictions apply: 
 
@@ -828,6 +990,26 @@ If supported by the machine type, you can attach a mixture of Hyperdisk and Pers
 
 
 For details about the capacity limits, see [ Hyperdisk size and attachment limits](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-perf-limits#limits-instance) and [Persistent Disk maximum capacity](https://docs.cloud.google.com/compute/docs/disks/persistent-disks#capacity_257tb).
+
+### Maintenance experience for A2 instances
+
+During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the regular maintenance of Compute Engine infrastructure, or in rare cases, a host error. Compute Engine also applies some non-disruptive lightweight upgrades for the hypervisor and network in the background.
+
+The following table describes the host maintenance features for A2 machine types:
+
+Machine type | Number of GPUs | Typical scheduled maintenance event frequency | Maintenance behavior | Advanced notification for scheduled maintenance | On-demand maintenance | Simulate maintenance  
+---|---|---|---|---|---|---  
+A2 Ultra | 1, 2, 4, 8 | Minimum of 30 days | Terminate and restart | 7 days | Yes (8 GPUs only) | Yes  
+A2 Standard | 1, 2, 4, 8, or 16 | Minimum of 30 days | Terminate and restart | 7 days | Yes (8 and 16 GPUs only) | Yes  
+  
+The following notes apply to the preceding table:
+
+  * **Typical scheduled maintenance event frequency** : 
+
+The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently.
+
+
+
 
 ## The G4 machine series
 
@@ -865,14 +1047,30 @@ G4 instances support attaching up to 12,000 GiB of Titanium SSD. For workloads t
 
 
 
-### G4 machine types
+### Pricing and consumption options for G4 instances
+
+G4 instances support the following consumption and discount options:
+
+  * On-demand
+  * [Compute flexible committed use discounts (CUDs)](https://docs.cloud.google.com/compute/docs/instances/committed-use-discounts-overview#spend_based)
+  * Resource-based committed use discounts (CUDs)
+  * [Spot VMs](https://docs.cloud.google.com/compute/docs/instances/spot)
+  * [Flex-start](https://docs.cloud.google.com/compute/docs/instances/about-flex-start-vms)
+  * [On-demand reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-overview)
+  * [Future reservations](https://docs.cloud.google.com/compute/docs/instances/future-reservations-overview)
+
+
+
+Google Cloud bills G4 instances for their attached GPUs, predefined vCPUs, and memory. Hyperdisk, Titanium SSD disks, and network usage are billed separately from machine type pricing. For more information, see [Pricing and consumption options](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#pricing-and-provisioning), [Accelerator-optimized machine type family pricing](https://docs.cloud.google.com/compute/vm-instance-pricing#accelerator-optimized), and [GPU pricing](https://docs.cloud.google.com/compute/gpus-pricing).
+
+### G4 machine types (NVIDIA RTX PRO 6000)
 
 [G4 accelerator-optimized](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#g4-series) machine types use [ NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs](https://www.nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/) (`nvidia-rtx-pro-6000`) and are suitable for NVIDIA Omniverse simulation workloads, graphics-intensive applications, video transcoding, and virtual desktops. G4 machine types also provide a low-cost solution for performing single host inference and model tuning compared with A series machine types. 
 
-**Note:** To get started with G4 instances, see [Create a G4 instance](https://docs.cloud.google.com/compute/docs/gpus/create-gpu-vm-g-series).  | Attached NVIDIA RTX PRO 6000 GPUs  
----|---  
-Machine type | vCPU count1 | Instance memory (GB) | Maximum Titanium SSD supported (GiB)2 | Physical NIC count | Maximum network bandwidth (Gbps)3 | GPU count | GPU memory4  
-(GB GDDR7)  
+You can also add Titanium SSD disks when you create a G4 instance. For the number of disks you can attach, see [Machine types that require you to choose a number of Local SSD disks](https://docs.cloud.google.com/compute/docs/disks/local-ssd#lssd_disk_options). For information about machine type limitations, see [G4 limitations](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#g4-limitations). 
+
+**Note:** To get started with G4 instances, see [Create a G4 instance](https://docs.cloud.google.com/compute/docs/gpus/create-gpu-vm-g-series). Machine type | vCPU count | Instance memory (GB) | Maximum Titanium SSD supported (GiB) | Physical NIC count | Maximum network bandwidth (Gbps) | NVIDIA RTX PRO 6000 GPU count | GPU memory (GB GDDR7)  
+---|---|---|---|---|---|---|---  
 `g4-standard-6` | 6 | 22 | 0 | 1 | 20 | 1/8 | 12  
 `g4-standard-12` | 12 | 45 | 375 | 1 | 20 | 1/4 | 24  
 `g4-standard-24` | 24 | 90 | 750 | 1 | 20 | 1/2 | 48  
@@ -881,12 +1079,17 @@ Machine type | vCPU count1 | Instance memory (GB) | Maximum Titanium SSD support
 `g4-standard-192` | 192 | 720 | 6,000 | 1 | 200 | 4 | 384  
 `g4-standard-384` | 384 | 1,440 | 12,000 | 2 | 400 | 8 | 768  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2You can add Titanium SSD disks when creating a G4 instance. For the number of disks you can attach, see [Machine types that require you to choose a number of Local SSD disks](https://docs.cloud.google.com/compute/docs/disks/local-ssd#lssd_disk_options).  
-3Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. See [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-4GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+#### G4 machine type notes
 
-### G4 limitations
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
+
+#### G4 limitations
 
   * You can only request capacity by using the [supported consumption options](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#pricing-and-provisioning) for a G4 machine type.
   * You don't receive [sustained use discounts](https://docs.cloud.google.com/compute/docs/sustained-use-discounts) and [flexible committed use](https://docs.cloud.google.com/compute/docs/instances/committed-use-discounts-overview#spend_based) discounts for instances that use a G4 machine type.
@@ -913,9 +1116,10 @@ G4 instances can use the following block storage types:
 
 
 
-Maximum number of disks per instance1  
----  
+The following table lists the maximum number of disks supported per instance:
+
 Machine types | All Hyperdisk | Hyperdisk Balanced | Hyperdisk Balanced High Availability | Hyperdisk Extreme | Hyperdisk ML | Hyperdisk Throughput | Titanium SSD  
+---|---|---|---|---|---|---|---  
 `g4-standard-6` | 8 | 8 | 8 | 0 | 8 | 8 | 0  
 `g4-standard-12` | 16 | 16 | 16 | 0 | 16 | 16 | 1  
 `g4-standard-24` | 32 | 32 | 32 | 0 | 32 | 32 | 2  
@@ -924,7 +1128,10 @@ Machine types | All Hyperdisk | Hyperdisk Balanced | Hyperdisk Balanced High Ava
 `g4-standard-192` | 64 | 64 | 64 | 8 | 64 | 64 | 16  
 `g4-standard-384` | 128 | 128 | 128 | 8 | 128 | 128 | 32  
   
-1Hyperdisk usage is charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).  
+The following note applies to the preceding table:
+
+  * **Disk pricing** : Hyperdisk usage is charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).
+
 
 
 You can attach a mixture of different Hyperdisk types to an instance, but the maximum total disk capacity (in TiB) across all disk types can't exceed 512 TiB for all Hyperdisks. 
@@ -964,6 +1171,26 @@ Set the environment variable by using one of the following options:
 
 
 
+### Maintenance experience for G4 instances
+
+During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the regular maintenance of Compute Engine infrastructure, or in rare cases, a host error. Compute Engine also applies some non-disruptive lightweight upgrades for the hypervisor and network in the background.
+
+The following table describes the host maintenance features for G4 machine types:
+
+Machine type | Number of GPUs | Typical scheduled maintenance event frequency | Maintenance behavior | Advanced notification for scheduled maintenance | On-demand maintenance | Simulate maintenance  
+---|---|---|---|---|---|---  
+G4 | 1, 2, or 4 | Minimum of 30 days | Terminate and restart. If Local SSD disks are attached, the instance terminates with Local SSD data persistence. | 7 days | No | Yes  
+G4 | 8 | Minimum of 90 days | Terminate and restart. If Local SSD disks are attached, the instance terminates with Local SSD data persistence. | 30 days | Yes | Yes  
+  
+The following notes apply to the preceding table:
+
+  * **Typical scheduled maintenance event frequency** : 
+
+The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently.
+
+
+
+
 ## The G2 machine series
 
 The G2 machine series is available in standard machine types that have 4 to 96 vCPUs, and up to 432 GB of memory. This machine series is optimized for inference and graphics workloads. The G2 machine series is available in a single standard machine type with multiple configurations.
@@ -987,15 +1214,32 @@ You can add up to 3,000 GiB of Local SSD to G2 instances. For workloads that req
 
 
 
-### G2 machine types
+### Pricing and consumption options for G2 instances
+
+G2 instances support the following consumption and discount options:
+
+  * On-demand
+  * [Compute flexible committed use discounts (CUDs)](https://docs.cloud.google.com/compute/docs/instances/committed-use-discounts-overview#spend_based)
+  * Resource-based committed use discounts (CUDs)
+  * [Spot VMs](https://docs.cloud.google.com/compute/docs/instances/spot)
+  * [Flex-start](https://docs.cloud.google.com/compute/docs/instances/about-flex-start-vms)
+  * [On-demand reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-overview)
+  * [Future reservations](https://docs.cloud.google.com/compute/docs/instances/future-reservations-overview)
+
+
+
+Google Cloud bills G2 instances for their attached GPUs, predefined vCPUs, and memory. Persistent Disk, Hyperdisk, Local SSD disks, and network usage are billed separately from machine type pricing. For more information, see [Pricing and consumption options](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#pricing-and-provisioning), [Accelerator-optimized machine type family pricing](https://docs.cloud.google.com/compute/vm-instance-pricing#accelerator-optimized), and [GPU pricing](https://docs.cloud.google.com/compute/gpus-pricing).
+
+### G2 machine types (NVIDIA L4)
 
 [G2 accelerator-optimized](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#g2-vms) machine types have [NVIDIA L4 GPUs](https://www.nvidia.com/en-us/data-center/l4/) attached and are ideal for cost-optimized inference, graphics-intensive and high performance computing workloads.
 
 Each G2 machine type also has a default memory and a custom memory range. The custom memory range defines the amount of memory that you can allocate to your instance for each machine type. You can also add Local SSD disks when creating a G2 instance. For the number of disks you can attach, see [Machine types that require you to choose a number of Local SSD disks](https://docs.cloud.google.com/compute/docs/disks/local-ssd#lssd_disk_options).
 
-| Attached NVIDIA L4 GPUs  
----|---  
-Machine type | vCPU count1 | Default instance memory (GB) | Custom instance memory range (GB) | Max Local SSD supported (GiB) | Maximum network bandwidth (Gbps)2 | GPU count | GPU memory3 (GB GDDR6)  
+For information about machine type limitations, see G2 limitations.
+
+Machine type | vCPU count | Default instance memory (GB) | Custom instance memory range (GB) | Max Local SSD supported (GiB) | Maximum network bandwidth (Gbps) | NVIDIA L4 GPU count | GPU memory (GB GDDR6)  
+---|---|---|---|---|---|---|---  
 `g2-standard-4` | 4 | 16 | 16 to 32 | 375 | 10 | 1 | 24  
 `g2-standard-8` | 8 | 32 | 32 to 54 | 375 | 16 | 1 | 24  
 `g2-standard-12` | 12 | 48 | 48 to 54 | 375 | 16 | 1 | 24  
@@ -1005,11 +1249,17 @@ Machine type | vCPU count1 | Default instance memory (GB) | Custom instance memo
 `g2-standard-48` | 48 | 192 | 192 to 216 | 1,500 | 50 | 4 | 96  
 `g2-standard-96` | 96 | 384 | 384 to 432 | 3,000 | 100 | 8 | 192  
   
-1A vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).  
-2Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
-3GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads. 
+#### G2 machine type notes
 
-### G2 limitations
+The following notes apply to the preceding table:
+
+  * **vCPU count** : a vCPU is implemented as a single hardware hyper-thread on one of the available [CPU platforms](https://docs.cloud.google.com/compute/docs/cpu-platforms).
+  * **Maximum network bandwidth** : maximum egress bandwidth can't exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. For more information about network bandwidth, see [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).
+  * **GPU memory** : GPU memory is the memory on a GPU device that can be used for temporary storage of data. It is separate from the instance's memory and is specifically designed to handle the higher bandwidth demands of your graphics-intensive workloads.
+
+
+
+#### G2 limitations
 
   * You can only request capacity by using the [supported consumption options](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#pricing-and-provisioning) for a G2 machine type.
   * You don't receive [sustained use discounts](https://docs.cloud.google.com/compute/docs/sustained-use-discounts) and [flexible committed use](https://docs.cloud.google.com/compute/docs/instances/committed-use-discounts-overview#spend_based) discounts for instances that use a G2 machine type.
@@ -1040,9 +1290,10 @@ G2 instances can use the following block storage types:
 
 
 
-Maximum number of disks per instance1  
----  
-**Machine types** | **All disks 2** | **Hyperdisk ML** | **Hyperdisk Throughput** | **Local SSD**  
+The following table lists the maximum number of disks supported per instance:
+
+Machine types | All disks | Hyperdisk ML | Hyperdisk Throughput | Local SSD  
+---|---|---|---|---  
 `g2-standard-4` | 128 | 24 | 24 | 1  
 `g2-standard-8` | 128 | 32 | 32 | 1  
 `g2-standard-12` | 128 | 32 | 32 | 1  
@@ -1052,8 +1303,12 @@ Maximum number of disks per instance1
 `g2-standard-48` | 128 | 64 | 64 | 4  
 `g2-standard-96` | 128 | 64 | 64 | 8  
   
-1Hyperdisk and Persistent Disk usage are charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Persistent Disk and Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).  
-2This limit applies to Persistent Disk and Hyperdisk, but doesn't include Local SSD disks.
+The following notes apply to the preceding table:
+
+  * **All disks** : this limit applies to Persistent Disk and Hyperdisk, and doesn't include Local SSD disks.
+  * **Disk pricing** : Hyperdisk and Persistent Disk usage are charged separately from [machine type pricing](https://cloud.google.com/compute/vm-instance-pricing). For disk pricing, see [Persistent Disk and Hyperdisk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#persistentdisk).
+
+
 
 If supported by the machine type, you can attach a mixture of Hyperdisk and Persistent Disk volumes to an instance, but the following restrictions apply: 
 
@@ -1074,6 +1329,67 @@ If supported by the machine type, you can attach a mixture of Hyperdisk and Pers
 
 For details about the capacity limits, see [ Hyperdisk size and attachment limits](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-perf-limits#limits-instance) and [Persistent Disk maximum capacity](https://docs.cloud.google.com/compute/docs/disks/persistent-disks#capacity_257tb).
 
+### Maintenance experience for G2 instances
+
+During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the regular maintenance of Compute Engine infrastructure, or in rare cases, a host error. Compute Engine also applies some non-disruptive lightweight upgrades for the hypervisor and network in the background.
+
+The following table describes the host maintenance features for G2 machine types:
+
+Machine type | Number of GPUs | Typical scheduled maintenance event frequency | Maintenance behavior | Advanced notification for scheduled maintenance | On-demand maintenance | Simulate maintenance  
+---|---|---|---|---|---|---  
+G2 | 1, 2, 4, or 8 | Minimum of 30 days | Terminate and restart | 7 days | Yes (8 GPUs only) | Yes  
+  
+The following notes apply to the preceding table:
+
+  * **Typical scheduled maintenance event frequency** : 
+
+The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently.
+
+
+
+
+## Pricing and consumption options
+
+Consumption options refers to the ways to get and use compute resources. Google Cloud bills accelerator-optimized machine types for their attached GPUs, predefined vCPU, memory, and bundled Local SSD (if applicable). Discounts for accelerator-optimized instances can vary depending on the resource type and consumption option that you use. At any given point, a resource is eligible for only one type of discount.
+
+Depending on the resource type and consumption option that you choose, discounts apply to accelerator-optimized machine types as follows:
+
+  * **On-demand:** With this consumption option, you can receive [compute flexible committed use discounts (CUDs)](https://docs.cloud.google.com/compute/docs/instances/committed-use-discounts-overview#spend_based) only for eligible spend on N1, G2, and G4 instance usage, as follows:
+
+    * For N1 machine types that have attached GPUs, you can receive compute flexible CUDs only for vCPUs, memory, and Local SSD disks.
+    * For G2 and G4 machine types, you can receive compute flexible CUDs for vCPUs, memory, GPUs, and Local SSD disks.
+
+To receive resource-based CUDs for other accelerator-optimized machine series, including G2 and G4, use one of the reservation options instead.
+
+  * **Spot:** Spot VMs automatically receive discounts through [Spot VMs pricing](https://docs.cloud.google.com/compute/docs/instances/spot#pricing).
+
+  * **Flex-start:** Instances provisioned by using the Flex-start consumption option automatically receive discounts through [Dynamic Workload Scheduler pricing](https://cloud.google.com/products/dws/pricing).
+
+  * **Reservations:** You can receive resource-based CUDs for your accelerator-optimized machine type resources by purchasing resource-based commitments. Resource-based commitments for all GPUs and most Local SSD disks [require attached reservations for those resources](https://docs.cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts#commitments_for_gpus_and_local_ssd_disk_resources).
+
+
+
+
+For more pricing information for accelerator-optimized instances, see the [Accelerator-optimized machine type family](https://docs.cloud.google.com/compute/vm-instance-pricing#accelerator-optimized) section on the VM instance pricing page.
+
+### Consumption option availability by machine type
+
+The following table summarizes the availability of each consumption option by machine types. For more information about how to choose a consumption option, see [Choose a consumption model](https://docs.cloud.google.com/ai-hypercomputer/docs/consumption-models#choose) in the AI Hypercomputer documentation.
+
+**Note:** Before you create and submit a future reservation request for a supported GPU machine type, you must contact your [account team](https://cloud.google.com/tam) or the [sales team](https://cloud.google.com/contact) to discuss your request. Otherwise, Google Cloud is likely to decline it.Machine type (GPU model) | On-demand | [Spot](https://docs.cloud.google.com/compute/docs/instances/spot) | [Flex-start](https://docs.cloud.google.com/compute/docs/instances/about-flex-start-vms) | [On-demand reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-overview) | [Future reservations](https://docs.cloud.google.com/compute/docs/instances/future-reservations-overview) | [Future reservations in calendar mode](https://docs.cloud.google.com/compute/docs/instances/future-reservations-calendar-mode-overview) | [Future reservations in AI Hypercomputer](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity)  
+---|---|---|---|---|---|---|---  
+A4X Max (GB300) and A4X (GB200) | No | No | No | No | No | No | Yes  
+A4 (B200) | No | Yes | Yes | No | No | Yes | Yes  
+A3 Ultra (H200) | No | Yes | Yes | No | No | Yes | Yes  
+A3 Mega (H100) | Yes | Yes | Yes | Yes | Yes | Yes | Yes  
+A3 High with 8 GPUs (H100) | Yes | Yes | Yes | Yes | Yes | Yes | Yes  
+A3 High with less than 8 GPUs (H100) | No | Yes | Yes | No | No | No | No  
+A3 Edge (H100) | Yes | Yes | Yes | Yes | Yes | Yes | Yes  
+A2 (A100) | Yes | Yes | Yes | Yes | Yes | No | No  
+G4 (RTX PRO 6000) | Yes | Yes | Yes | Yes | Yes | No | No  
+G2 (L4) | Yes | Yes | Yes | Yes | Yes | No | No  
+N1 with GPUs (T4/P4/V100) | Yes | Yes | Yes | Yes | Yes | No | No  
+  
 ## What's next
 
   * [Create a VM with attached GPUs](https://docs.cloud.google.com/compute/docs/gpus/create-vm-with-gpus)
@@ -1088,6 +1404,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

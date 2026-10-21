@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/release-notes/
 title: Cloud Armor release notes \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:02:02.263783+00:00
+fetched_at: 2026-10-21T12:01:53.938764+00:00
 ---
 
 # Cloud Armor release notes  |  Google Cloud Armor  |  Google Cloud Documentation
@@ -26,6 +26,48 @@ This page contains release notes for features and updates to Google Cloud Armor.
 You can see the latest product updates for all of Google Cloud on the [ Google Cloud](https://docs.cloud.google.com/release-notes) page, browse and filter all release notes in the [Google Cloud console](https://console.cloud.google.com/release-notes), or programmatically access release notes in [BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_cloud_release_notes&t=release_notes&page=table). 
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/armor-release-notes.xml) directly. 
+
+## October 19, 2026
+
+Security
+
+Security fixes and enhancements to Cloud Armor preconfigured WAF `v33-stable` rulesets. For more information, see [Tuning Google Cloud Armor WAF rules](https://docs.cloud.google.com/armor/docs/rule-tuning).
+
+The following rulesets have been updated:
+
+  * `sqli-v33-stable`
+  * `xss-v33-stable`
+  * `lfi-v33-stable`
+  * `rfi-v33-stable`
+  * `rce-v33-stable`
+  * `methodenforcement-v33-stable`
+  * `scannerdetection-v33-stable`
+  * `protocolattack-v33-stable`
+  * `php-v33-stable`
+  * `sessionfixation-v33-stable`
+  * `java-v33-stable`
+  * `nodejs-v33-stable`
+
+
+
+Security
+
+Security fixes and enhancements to Cloud Armor preconfigured WAF `stable` rulesets for v3.0. For more information, see [Tuning Google Cloud Armor WAF rules](https://docs.cloud.google.com/armor/docs/rule-tuning).
+
+The following rulesets have been updated:
+
+  * `sqli-stable`
+  * `xss-stable`
+  * `lfi-stable`
+  * `rfi-stable`
+  * `rce-stable`
+  * `methodenforcement-stable`
+  * `scannerdetection-stable`
+  * `protocolattack-stable`
+  * `php-stable`
+  * `sessionfixation-stable`
+
+
 
 ## October 14, 2026
 

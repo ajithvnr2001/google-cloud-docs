@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mcp/manage-mcp-servers/
 title: Manage MCP servers \u00a0|\u00a0 Google Cloud MCP servers \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:50:53.010672+00:00
+fetched_at: 2026-10-21T12:23:01.964056+00:00
 ---
 
 # Manage MCP servers  |  Google Cloud MCP servers  |  Google Cloud Documentation
@@ -98,18 +98,19 @@ Replace `PROJECT_ID` with your Google Cloud project name.
 
 ### Required roles
 
-To get the permissions that you need to use MCP servers, ask your administrator to grant you the Make MCP tool calls to Google and Google Cloud MCP tools IAM role on the Google Cloud project. For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+[Non-Google Cloud MCP servers](https://docs.cloud.google.com/mcp/supported-products#google-mcp-servers) don't require the MCP Tool User (`roles/mcp.toolUser`) role. You also can't use Identity and Access Management (IAM) policies or permissions to control access to non-Google Cloud MCP servers.
 
-This predefined role contains the permissions required to use MCP servers. To see the exact permissions that are required, expand the **Required permissions** section: 
+To get the permissions that you need to use Google Cloud MCP servers, ask your administrator to grant you the [MCP Tool User ](https://docs.cloud.google.com/iam/docs/roles-permissions/mcp#mcp.toolUser) (`roles/mcp.toolUser`) IAM role on the Google Cloud project. For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+This predefined role contains the permissions required to use Google Cloud MCP servers. To see the exact permissions that are required, expand the **Required permissions** section: 
 
 #### Required permissions
 
-The following permissions are required to use MCP servers:
+The following permissions are required to use Google Cloud MCP servers:
 
-  * Make MCP tool calls to Google and Google Cloud MCP tools: 
-    * `mcp.tools.call`
-    * `resourcemanager.projects.get`
-    * `resourcemanager.projects.list`
+  * `mcp.tools.call`
+  * `resourcemanager.projects.get`
+  * `resourcemanager.projects.list`
 
 
 
@@ -442,7 +443,7 @@ For information about Model Armor audit and platform logs, see [Model Armor audi
 
 ## Use MCP servers
 
-To use Google and Google Cloud remote MCP servers, AI applications must have the MCP Tool User role (`roles/mcp.toolUser`) and the necessary service permissions for the tool's Google Cloud service.
+To use Google Cloud remote MCP servers, your administrator must grant the principal for your AI application the MCP Tool User (`roles/mcp.toolUser`) role and the required IAM roles for the Google Cloud service that the tool accesses. [Non-Google Cloud MCP servers](https://docs.cloud.google.com/mcp/supported-products#google-mcp-servers) don't require the MCP Tool User role. You also can't use IAM policies or permissions to control access to non-Google Cloud MCP servers.
 
 To grant the MCP Tool User role, run the following command:
     
@@ -455,7 +456,7 @@ To grant the MCP Tool User role, run the following command:
 Replace the following:
 
   * `PROJECT_ID`: the Google Cloud project.
-  * `PRINCIPAL`: the [principal identifier](https://docs.cloud.google.com/iam/docs/principal-identifiers) for the identity you are granting the MCP Tool User role to. For information about the types of principals available on Google Cloud, see [Identity and Access Management (IAM) Principals](https://docs.cloud.google.com/iam/docs/principals-overview).
+  * `PRINCIPAL`: the [principal identifier](https://docs.cloud.google.com/iam/docs/principal-identifiers) for the identity you are granting the MCP Tool User role to. For information about the types of principals available on Google Cloud, see [IAM principals](https://docs.cloud.google.com/iam/docs/principals-overview).
 
 
 
@@ -469,6 +470,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

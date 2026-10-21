@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/authenticating-corporate-users-in-a-hybrid-environment/
 title: Authenticate workforce users in a hybrid environment \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:48.712722+00:00
+fetched_at: 2026-10-21T12:22:26.785000+00:00
 ---
 
 # Authenticate workforce users in a hybrid environment  |  Cloud Architecture Center  |  Google Cloud Documentation

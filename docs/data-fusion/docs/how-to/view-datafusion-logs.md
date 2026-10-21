@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/view-datafusion-logs/
 title: View Cloud Data Fusion logs \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:58:35.755356+00:00
+fetched_at: 2026-10-21T11:55:44.921354+00:00
 ---
 
 # View Cloud Data Fusion logs  |  Google Cloud Documentation
@@ -21,9 +21,7 @@ Send feedback
 
 #  View Cloud Data Fusion logs Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document describes how to access and view pipeline logs and service logs for Cloud Data Fusion.
-
-Starting with Cloud Data Fusion version 6.11, pipeline logs and service logs are available in Cloud Logging.
+Cloud Data Fusion pipeline logs and service logs let you monitor execution health and troubleshoot failed pipeline runs or service issues. Starting with Cloud Data Fusion version 6.11, these logs are available in Cloud Logging.
 
 ## About log types
 
@@ -318,6 +316,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

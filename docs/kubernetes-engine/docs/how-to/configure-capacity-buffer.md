@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/configure-capacity-buffer/
 title: Configure capacity buffers \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:01:55.574093+00:00
+fetched_at: 2026-10-21T09:08:17.160905+00:00
 ---
 
 # Configure capacity buffers  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -42,8 +42,10 @@ Before you start, make sure that you have performed the following tasks:
   * To use the Google Cloud CLI for this task, [install](https://docs.cloud.google.com/sdk/docs/install) and then [initialize](https://docs.cloud.google.com/sdk/docs/initialize) the gcloud CLI. If you previously installed the gcloud CLI, get the latest version by running the `gcloud components update` command. Earlier gcloud CLI versions might not support running the commands in this document. **Note:** For existing gcloud CLI installations, make sure to set the `compute/region` [property](https://docs.cloud.google.com/sdk/docs/properties#setting_properties). If you use primarily zonal clusters, set the `compute/zone` instead. By setting a default location, you can avoid errors in the gcloud CLI like the following: `One of [--zone, --region] must be supplied: Please specify location`. You might need to specify the location in certain commands if the location of your cluster differs from the default that you set.
 
 
-  * Create, or have access to, a GKE cluster on version 1.35.2-gke.1842000 for active buffers, and version 1.36.0-gke.2253000 or later for standby buffers.
-  * Enable [node auto-provisioning](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning) on your Standard clusters. In Autopilot clusters, node auto-provisioning is already enabled. Node auto-provisioning is optional but recommended for active buffers and required for standby buffers.
+  * Create or have access to a GKE cluster that meets the following version requirements: 
+    * For active buffers, use version 1.35.2-gke.1842000 or later on Standard and Autopilot clusters.
+    * For standby buffers, use version 1.36.0-gke.2253000 or later on Standard clusters, or version 1.36.0-gke.2853000 or later on Autopilot clusters with [custom ComputeClasses](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes).
+  * Enable [node pool auto-creation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning) on your Standard clusters. In Autopilot clusters, node pool auto-creation is already enabled. Node pool auto-creation is optional but recommended for active buffers and required for standby buffers.
 
 
 
@@ -89,7 +91,6 @@ This manifest creates a namespace called `capacity-buffer-example`.
          kind: ComputeClass
          metadata:
            name: ccc-example
-           namespace: capacity-buffer-example
          spec:
            # Buffers are also created according to these priorities
            priorities:
@@ -103,6 +104,7 @@ This manifest creates a namespace called `capacity-buffer-example`.
 
 This manifest creates a custom `ComputeClass` that defines and controls the compute priorities for the nodes that GKE provisions. To learn more, see [custom ComputeClasses](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes).
 
+**Caution:** If you use a custom ComputeClass with standby buffers and combine [active migration to higher-priority nodes](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes#optimize-rule-priority) (`activeMigration.optimizeRulePriority: true`) with higher-priority Spot VMs rules, GKE gradually migrates standby nodes to Spot VMs. Because suspended Spot VMs can't convert to on-demand VMs when resuming, this configuration can prevent standby nodes from resuming during capacity constraints. For details, see Standby buffer nodes fail to resume.
   3. Save the following manifest as `buffer-pod-template.yaml`:
          
          apiVersion: v1
@@ -284,7 +286,17 @@ Check the CapacityBuffer status. The `replicas` field should show a value derive
 
 Configuring a percentage-based buffer dynamically sizes the buffer based on a percentage of an existing scalable workload. Percentage-based capacity buffers are supported only for Kubernetes scalable objects that implement the [scale subresource](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/#scale-subresource), such as Deployments, StatefulSets, ReplicaSets, or Jobs. You can't define a percentage-based buffer for Pod templates because they don't have a `replicas` field.
 
-We generally recommend starting with fixed replicas or resource limit strategies, rather than percentage-based buffers. Percentage-based buffers are less responsive to sudden scale-ups if the workload scales to low numbers or zero, because the safety margin scales in proportion to active Pods. They are useful mainly for large deployments that never scale to very low replica counts.
+In most cases, start with fixed replicas or resource limit strategies rather than percentage-based buffers. Consider the following when deciding:
+
+  * Percentage-based buffers are less responsive to sudden scale-ups if the workload scales to low numbers or zero because the safety margin decreases in proportion to active Pods.
+  * Standby nodes incur compute charges during their initialization period before suspending. Dynamically scaling standby buffers alongside workload fluctuations wastes compute resources, so use fixed replicas or resource limits for standby buffers instead.
+  * Percentage-based buffers are mainly useful for active buffers on large deployments that never scale to low replica counts.
+
+
+
+In GKE version 1.36.3-gke.1244000 and later, to keep a minimum buffer size when the referenced workload scales down, set the `replicas` field together with the `percentage` field. GKE uses whichever field results in more buffer units. To cap the buffer size, also set the `limits` field.
+
+For example, consider a buffer with `percentage: 20` and `replicas: 3` that references a Deployment with 10 replicas. Because 20% of 10 replicas is 2, which is less than the `replicas` value of 3, GKE provisions 3 buffer units. If the Deployment scales to 20 replicas, the buffer grows to 4 units. For more information, see the [CapacityBuffer reference documentation](https://docs.cloud.google.com/kubernetes-engine/docs/reference/crds/capacitybuffer).
 
 To create a percentage-based buffer, complete the following steps:
 
@@ -312,7 +324,7 @@ Replace the following:
 
 This manifest creates a CapacityBuffer resource that requests a buffer size equivalent to 20% of the referenced resource's replicas. If you're using the Deployment example from the previous section, the replica value is set to `10`.
 
-**Note:** You can set the value of the `percentage` field to greater than `100` if you require a buffer larger than the current size of the referenced workload. Non-whole buffer replica counts, resulting from percentage field values lower than 100, are rounded down.
+**Note:** You can set the `percentage` field to a value greater than `100` to create a buffer larger than the referenced workload. GKE rounds calculated buffer replica counts up to the nearest whole number, with a minimum of `0` when the referenced workload has `0` replicas or `percentage` is `0`.
   2. Apply the manifest:
          
          kubectl apply -f cb-percentage-based.yaml
@@ -339,8 +351,10 @@ The CapacityBuffer controller reacts and automatically scales the buffer to 4 re
 
 You can use annotations to customize how standby buffers start and refresh. Add these annotations to the `metadata.annotations` field of your CapacityBuffer resource:
 
-  * `buffer.gke.io/standby-capacity-init-time`: the amount of time a node remains active after creation before it's suspended. The format is a duration string (for example, `5m` or `1h`). The default is `5m`.
-  * `buffer.gke.io/standby-capacity-refresh-frequency`: how often suspended nodes are refreshed. The default is `24h`.
+  * `buffer.gke.io/standby-capacity-init-time`: the amount of time a node remains active after creation before GKE suspends it. Specify a duration string such as `5m` or `1h`. The default is `5m`.
+  * `buffer.gke.io/standby-capacity-refresh-frequency`: how often GKE refreshes suspended nodes. Specify a duration string such as `12h` or `24h`. The default is `24h`.
+
+**Warning:** Setting `buffer.gke.io/standby-capacity-refresh-frequency` to a duration greater than `120h` isn't supported. Currently, this causes an admission warning, but it will result in a validation error in a future GKE release. To ensure compatibility, update your configurations to use `120h` or less.
 
 
 
@@ -385,7 +399,7 @@ To preload images by using the DaemonSet, complete the following steps:
                  name: image-prefetch
              spec:
                tolerations:
-               - key: "buffer.gke.io/standby-node-suspended"
+               - key: "buffer.gke.io/standby-capacity-node-suspended"
                  operator: "Exists"
                initContainers:
                - name: image-puller
@@ -400,6 +414,9 @@ Replace the following:
 
      * `NAMESPACE`: the namespace for the DaemonSet, for example `capacity-buffer-example`.
      * `IMAGE_NAME`: the name of the image to preload, for example `your-app-image:latest`.
+
+This manifest includes the `buffer.gke.io/standby-capacity-node-suspended` toleration so that the DaemonSet remains scheduled on standby nodes after GKE suspends them.
+
   2. Apply the DaemonSet manifest to your cluster:
          
          kubectl apply -f image-puller-daemonset.yaml
@@ -453,12 +470,7 @@ A status of `True` indicates a standby VM is suspended. A status of `False` or `
 
 ### Monitor performance with Cloud Monitoring
 
-To help monitor the performance of capacity buffers, monitor the following resources in Cloud Monitoring:
-
-  * **Reaction latency (`cluster_autoscaler/reaction_time_milliseconds`)**: Tracks the duration for the Cluster Autoscaler to make a scaling decision based on your CapacityBuffer pending demand.
-  * **Cluster Autoscaler logs** : Search for log entries like `"Capacity pod processor injecting ..."` to observe active buffer Pod replacement events.
-
-
+To monitor the end-to-end impact of capacity buffers on scale-up times, use the **Startup Latency** dashboards in the Google Cloud console. Use the **Pod Startup Latency Distribution** and **Pod First Ready Latency** charts to track the `kubernetes.io/pod/latencies/pod_first_ready` metric from Pod creation to readiness. You can also query `Scheduled` events in Cloud Logging to measure Pod scheduling latency. For instructions, see [Monitor startup latency metrics](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/monitor-startup-latency-metrics).
 
 ## Remove capacity buffers
 
@@ -535,6 +547,59 @@ To resolve this issue, update your CapacityBuffer configuration to specify the r
 
 For more information, see the [custom ComputeClass documentation](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes).
 
+### Standby buffer nodes fail to resume
+
+Suspended standby buffer nodes might fail to resume for one of the following reasons:
+
+  * Resuming a suspended standby node requires available Compute Engine capacity in the zone for the node's machine type and specific CPU platform generation, such as within the E2 or N2 machine series. If the zone has insufficient compute capacity for that exact configuration, the node fails to resume. For more information, see [Compute Engine suspend and resume limitations](https://docs.cloud.google.com/compute/docs/instances/suspend-resume-instance#limitations).
+  * If your custom ComputeClass enables [active migration to higher-priority nodes](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes#optimize-rule-priority) (`activeMigration.optimizeRulePriority: true`) and places Spot VMs at a higher priority than on-demand VMs, GKE migrates on-demand standby nodes to Spot VMs over time. Because Spot VMs are more subject to capacity constraints and suspended Spot VMs can't convert to on-demand VMs when resuming, these constraints can prevent those standby nodes from resuming.
+  * Resuming the node exceeds your project's Compute Engine quotas. For more information, see Capacity buffer fails to provision due to quota limits.
+
+
+
+To identify why a standby node failed to resume, query [Compute Engine audit logs](https://docs.cloud.google.com/compute/docs/logging/audit-logging) in Logs Explorer for `ZONE_RESOURCE_POOL_EXHAUSTED` or `QUOTA_EXCEEDED` errors on `compute.instances.resume` operations.
+
+To resolve or mitigate this issue, do one or more of the following:
+
+  * Use regional clusters so that the cluster autoscaler can provision or resume nodes across multiple zones.
+  * Configure multiple machine families in the `spec.priorities` list of your custom ComputeClass. If suspended nodes can't resume, the cluster autoscaler can fall back to creating new nodes based on a different priority rule. These new nodes take longer to become ready than resumed standby nodes. This configuration doesn't help suspended nodes resume, because a suspended node can resume only with its original machine type.
+  * Use a dedicated custom ComputeClass with on-demand VMs, or set the `activeMigration.optimizeRulePriority` field to `false` for the ComputeClass that your standby buffer uses.
+  * Pair your standby buffer with a small active buffer to absorb immediate traffic spikes.
+
+
+
+### Capacity buffer fails to provision due to quota limits
+
+A capacity buffer might provision fewer replicas than requested or fail to scale up if it exceeds [Kubernetes ResourceQuotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/) or Compute Engine quotas.
+
+To identify which quota is limiting the buffer, check one or more of the following quotas:
+
+  * Check whether a Kubernetes ResourceQuota in the namespace is limiting the buffer:
+        
+        kubectl describe capacitybuffer \
+            CAPACITY_BUFFER_NAME \
+            -n NAMESPACE
+        
+
+In the `status.conditions` output, look for a `LimitedByQuotas` condition with a status of `True`. Both active and standby buffer units, including units backed by suspended standby nodes, count toward namespace ResourceQuota limits as if the buffer Pods were running. When a buffer exceeds the namespace quota, GKE caps the `status.replicas` field to fit within the available quota.
+
+  * Check whether Compute Engine project quotas are blocking node provisioning. In Logs Explorer, search the `container.googleapis.com/cluster-autoscaler-visibility` log for `no.scale.up.nap.quota.exceeded` events, or search Compute Engine audit logs for `QUOTA_EXCEEDED` errors.
+
+When checking Compute Engine quotas for standby buffers, verify both of the following quotas in addition to vCPU and memory quotas:
+
+    * Suspended standby nodes retain their internal and external IP addresses, which consumes the in-use IP address quota.
+    * When suspending a standby VM, Compute Engine writes the node's memory to disk, which consumes `Persistent disk standard (GB)` [disk quota](https://docs.cloud.google.com/compute/resource-usage#disk_quota) proportional to the node's memory size.
+
+
+
+To resolve the quota limit, do one of the following:
+
+  * Increase the Kubernetes ResourceQuota in the buffer's namespace.
+  * [Request a Compute Engine quota adjustment](https://docs.cloud.google.com/docs/quotas/view-manage#requesting_higher_quota).
+  * Reduce the `replicas`, `limits`, or `percentage` value in your CapacityBuffer manifest.
+
+
+
 ## What's next
 
   * Learn more about [capacity buffers](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/capacity-buffer).
@@ -546,6 +611,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

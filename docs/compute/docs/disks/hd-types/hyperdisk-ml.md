@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-ml/
 title: About Hyperdisk ML \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:27.711981+00:00
+fetched_at: 2026-10-21T12:22:33.345735+00:00
 ---
 
 # About Hyperdisk ML  |  Compute Engine  |  Google Cloud Documentation
@@ -69,6 +69,7 @@ You can use Hyperdisk ML with the following machine series:
   * [TPU7x](https://docs.cloud.google.com/tpu/docs/tpu7x)
   * [X5](https://docs.cloud.google.com/compute/docs/memory-optimized-machines#x5_series)
   * [Z4D](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4d_series)
+  * [Z4M](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4m_series)
 
 
 
@@ -240,7 +241,7 @@ C4N 1
 `c4n-*-24`1 | 51,200 | 3,200  
 `c4n-*-48`1 | 100,000 | 6,250  
 `c4n-*-96`1 | 160,000 | 10,000  
-`c4n-*-192`1 | 320,000 | 20,000  
+`c4n-*-192`1,2 | 320,000 | 20,000  
 G2   
 `g2-standard-4` | 12,800 | 800  
 `g2-standard-8` | 19,200 | 1,200  
@@ -315,18 +316,24 @@ X5
 `x5-688-*-metal` | 320,000 | 20,000  
 `x5-1376-*-metal` | 320,000 | 20,000  
 `x5-2064-*-metal` | 320,000 | 20,000  
-Z4D   
-`z4d-*-8` | 12,800 | 800  
-`z4d-*-16` | 19,200 | 1,200  
-`z4d-*-32` | 33,600 | 2,100  
-`z4d-*-48` | 51,200 | 3,200  
-`z4d-*-64` | 67,200 | 4,200  
-`z4d-*-96` | 100,000 | 6,250  
-`z4d-*-192` | 200,000 | 12,500  
-`z4d-*-384`2 | 400,000 | 25,000  
+Z4D 1  
+`z4d-*-8`1 | 12,800 | 800  
+`z4d-*-16`1 | 19,200 | 1,200  
+`z4d-*-32`1 | 33,600 | 2,100  
+`z4d-*-48`1 | 51,200 | 3,200  
+`z4d-*-64`1 | 67,200 | 4,200  
+`z4d-*-96`1 | 100,000 | 6,250  
+`z4d-*-192`1 | 200,000 | 12,500  
+`z4d-*-384`1,2 | 400,000 | 25,000  
+Z4M 1  
+`z4m-*-16`1 | 25,600 | 1,600  
+`z4m-*-32`1 | 33,600 | 2,100  
+`z4m-*-48`1 | 50,000 | 3,125  
+`z4m-*-192`1,2 | 200,000 | 12,500  
+`z4m-*-192-metal`1,2 | 200,000 | 12,500  
   
 1 Also offers steady state performance. For more information, see [Performance limits for machine types with steady state performance](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-perf-limits#steady-state).  
-2 The disk performance for this machine type depends on having 2 network interfaces (vNIC). Compute Engine automatically maps attached disks to a physical NIC in a balanced round-robin fashion.  
+2 The disk performance for this machine type is based on having 2 physical NICs per instance. Compute Engine automatically maps attached disks to a physical NIC in a balanced round-robin fashion.  
 
 
 ## Regional availability for Hyperdisk ML
@@ -391,6 +398,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/bundled-lb/
-title: Configure bundled load balancing with MetalLB \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
+title: Configure bundled Layer 2 load balancing \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:11:49.042943+00:00
+fetched_at: 2026-10-21T12:21:55.464595+00:00
 ---
 
-# Configure bundled load balancing with MetalLB  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
+# Configure bundled Layer 2 load balancing  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/bundled-lb/
 
@@ -20,11 +20,13 @@ fetched_at: 2026-10-14T09:11:49.042943+00:00
 
 Send feedback 
 
-#  Configure bundled load balancing with MetalLB Stay organized with collections  Save and categorize content based on your preferences. 
+#  Configure bundled Layer 2 load balancing Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to configure bundled load balancing with MetalLB for Google Distributed Cloud. MetalLB load balancers run on either a dedicated pool of worker nodes or on the same nodes as the control plane.
+Bundled load balancing lets you run the load balancers for your Google Distributed Cloud cluster on the cluster nodes themselves. Keepalived and HAProxy serve the control plane virtual IP address (VIP), and MetalLB in Layer 2 mode provides data plane load balancing for Services of type `LoadBalancer`.
 
-See [Overview of load balancers](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/load-balance) for examples of load-balancing topologies available in Google Distributed Cloud.
+The load balancers can run on the control plane nodes or on a dedicated load balancer node pool. You can also run the control plane and data plane load balancers on separate nodes.
+
+For examples of supported load balancing topologies, see [Overview of load balancers](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/load-balance).
 
 ## Requirements
 
@@ -305,6 +307,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

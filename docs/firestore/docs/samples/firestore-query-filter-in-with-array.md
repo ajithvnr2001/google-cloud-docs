@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-query-filter-in-with-array/
 title: Query a Firestore collection with an in array filter \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:25:24.883610+00:00
+fetched_at: 2026-10-21T11:59:03.521699+00:00
 ---
 
 # Query a Firestore collection with an in array filter  |  Google Cloud Documentation

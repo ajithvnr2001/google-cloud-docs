@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/format-mount-disk-linux/
 title: Format and mount a non-boot disk on a Linux VM \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:31.821882+00:00
+fetched_at: 2026-10-21T12:22:29.426501+00:00
 ---
 
 # Format and mount a non-boot disk on a Linux VM  |  Compute Engine  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback
 
 Linux 
 
-If you attached a new, blank disk to your VM, before you can use it you must format and mount the disk. If you attached a disk that already contains data, then you must mount the disk before you can use it.
+If you attached a new, blank Google Cloud Hyperdisk or Persistent Disk to your instance, before you can use it you must format and mount the disk. If you attached a disk that already contains data, then you must mount the disk before you can use it.
 
 ## Before you begin
 
@@ -82,6 +82,8 @@ To perform this task, you must have the following [permissions](https://docs.clo
 
 If you are connecting to a VM instance that can run as a service account, you must also grant the `roles/iam.serviceAccountUser` role.
 
+**Warning:** formatting a disk by following the steps in this section deletes all the data on the disk. Only format blank disks or disks that you're sure that you want to overwrite.
+
   1. In the terminal, use the [symlink](https://docs.cloud.google.com/compute/docs/disks/disk-symlinks) created for your attached disk to determine which device to format.
          
          ls -l /dev/disk/by-id/google-*
@@ -98,9 +100,42 @@ Unformatted disks don't have additional symlinks with `-partN` in the name.
           google-local-nvme-ssd-1 -> ../../nvme0n2
          
 
-In this example, the new Persistent Disk was created with the name `extra-scsi-disk`. The device name for the new disk is `sdb`.
+In this example, the new disk was created with the name `extra-scsi-disk`. The device name for the new disk is `sdb`.
 
-  2. Format the disk device using the [`mkfs` tool](http://manpages.ubuntu.com/manpages/xenial/man8/mkfs.8.html). This command **deletes** all data from the specified disk, so make sure that you specify the disk device correctly.
+  2. Verify that the [`mkfs.<type>`](http://manpages.ubuntu.com/manpages/xenial/man8/mkfs.8.html) utility is installed, where `<type>` is the file that system you want to use, like `xfs` or `ext4`.
+
+For example, to format the disk with the `xfs` file system, `mkfs.xfs` must be installed on the operating system.
+
+     1. To list which `mkfs` utilities are installed, run the following command:
+            
+            ls -l /usr/sbin/mkfs.*
+            
+
+The output is similar to the following:
+            
+            /usr/sbin/mkfs.bfs
+            /usr/sbin/mkfs.cramfs
+            /usr/sbin/mkfs.ext2 -> mke2fs
+            /usr/sbin/mkfs.ext3 -> mke2fs
+            /usr/sbin/mkfs.ext4 -> mke2fs
+            /usr/sbin/mkfs.minix
+            
+
+In this example,`mkfs.xfs` isn't listed, so you can't format the disk with `xfs` unless you install `mkfs.xfs`.
+
+     2. Optional: If the file system that you want to use isn't available, install it with the following command. For example, install `mkfs.xfs` with the following sample commands.
+
+        * To install on Ubuntu and Debian: 
+              
+              sudo apt update && sudo apt install xfsprogs
+              
+
+        * To install on CentOS, Fedora, and Red Hat Enterprise Linux: 
+              
+              sudo yum install xfsprogs
+              
+
+  3. Format the disk with the appropriate `mkfs.<type>` command. This command **deletes** all data from the specified disk, so make sure that you specify the disk device correctly.
 
 You can use any file format that you need, but we recommend a single `ext4` file system without a partition table. You can [increase the size of your disk](https://docs.cloud.google.com/compute/docs/disks/resize-persistent-disk) later without having to modify disk partitions.
 
@@ -209,6 +244,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

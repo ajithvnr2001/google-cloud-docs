@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/query-cloud-storage-using-biglake/
 title: Query Cloud Storage BigLake tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:02:46.215024+00:00
+fetched_at: 2026-10-21T12:01:27.060896+00:00
 ---
 
 # Query Cloud Storage BigLake tables  |  BigQuery  |  Google Cloud Documentation
@@ -105,7 +105,7 @@ To read BigLake tables from [Dataflow](https://docs.cloud.google.com/dataflow), 
 
 ## Query temporary BigLake tables
 
-Querying an external data source using a temporary table is useful for one-time, ad-hoc queries over external data, or for extract, transform, and load (ETL) processes.
+Querying an external data source using a temporary table is useful for one-time, ad hoc queries over external data, or for extract, transform, and load (ETL) processes.
 
 To query an external data source without creating a permanent table, you provide a table definition for the temporary table, and then use that table definition in a command or call to query the temporary table. You can provide the table definition in any of the following ways:
 
@@ -281,6 +281,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

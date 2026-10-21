@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/local-ssd/
 title: About Local SSD for GKE \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:02:05.002618+00:00
+fetched_at: 2026-10-21T12:23:01.038478+00:00
 ---
 
 # About Local SSD for GKE  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -189,11 +189,13 @@ If you need persistent storage, we recommend you use a durable storage option (s
 
   * Autopilot clusters and node auto-provisioning only support Local SSDs through [custom ComputeClasses](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes)
 
-  * We recommend using the [Local SSD as ephemeral storage](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/local-ssd) for workloads running on storage-optimized [Z3 VMs](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z3_series). Live migration is supported for these machines with the following conditions:
+  * Use the [Local SSD as ephemeral storage](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/local-ssd) for workloads running on storage-optimized [Z3 VMs](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z3_series), [Z4D VMs](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4d_series), or [Z4M VMs](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4m_series). Live migration is supported for these machines with the following conditions:
 
     * Z3 VMs with 18 TiB or less of attached Titanium SSD, but Z3 VMs with more than 18 TiB of Titanium SSD [are terminated](https://docs.cloud.google.com/compute/docs/instances/setting-vm-host-options#available_host_maintenance_properties) during [maintenance events](https://docs.cloud.google.com/compute/docs/instances/live-migration-process#limitations). For more information, see [Maintenance experience for Z3 instances](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z3_maintenance). Because Z3 VMs with more than 18 TiB of Titanium SSD are terminated, data in the Local SSD for the nodes might not be available during maintenance events, and [data recovery isn't assured](https://docs.cloud.google.com/compute/docs/disks/local-ssd#data_persistence) after maintenance. For more information, see [Disk persistence following instance termination](https://docs.cloud.google.com/compute/docs/instances/host-maintenance-overview#disk-persistence).
 
-    * Z4D VMs with 41 TiB or less of attached Titanium SSD, but Z4D VMs with more than 41 TiB of attached Titanium SSD are terminated during maintenance events.
+    * Z4D VMs with 42 TiB or less of attached Titanium SSD, but Z4D VMs with more than 42 TiB of attached Titanium SSD are terminated during maintenance events.
+
+    * Z4M VMs with 48 TiB or less of attached Titanium SSD support live migration if they don't use Cloud RDMA. Z4M VMs with more than 48 TiB of attached Titanium SSD, as well as any Z4M VM configured to use Cloud RDMA, are terminated during maintenance events.
 
 
 
@@ -212,6 +214,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

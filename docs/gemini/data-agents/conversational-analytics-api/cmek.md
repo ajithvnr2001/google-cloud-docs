@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/cmek/
 title: Customer-managed encryption keys (CMEK) \u00a0|\u00a0 Conversational Analytics API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:35.818295+00:00
+fetched_at: 2026-10-21T12:21:55.758078+00:00
 ---
 
 # Customer-managed encryption keys (CMEK)  |  Conversational Analytics API  |  Google Cloud Documentation
@@ -36,7 +36,7 @@ When you configure CMEK for a Conversational Analytics API resource, the specifi
 
 **Important:** You can configure CMEK only when creating resources. To use CMEK, you must specify the `kms_key` field when you create a `DataAgent` or `Conversation` resource. You can't add or change a Cloud KMS key on an existing resource.
 
-CMEK for the Conversational Analytics API is available in the `us-east4` region and the `us` and `eu` multi-regions. The `global` location isn't supported. For more information about regional endpoints and data locations, see [Data residency](https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/data-residency).
+CMEK for the Conversational Analytics API is available only in regional and multi-regional locations, not in the `global` location. For the locations that each data source supports, see [Supported data locations](https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/data-residency#supported-data-locations).
 
 ## What is protected with CMEK
 
@@ -318,6 +318,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

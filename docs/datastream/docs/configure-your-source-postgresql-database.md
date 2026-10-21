@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/configure-your-source-postgresql-database/
 title: Configure a source PostgreSQL database \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:50:49.050579+00:00
+fetched_at: 2026-10-21T12:24:09.965258+00:00
 ---
 
 # Configure a source PostgreSQL database  |  Datastream  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Configure a source PostgreSQL database Stay organized with collections  Save and categorize content based on your preferences. 
 
-Each source PostgreSQL database relies upon its [logical decoding](https://www.postgresql.org/docs/current/logicaldecoding-explanation.html) feature. In PostgreSQL, logical decoding is implemented by decoding the contents of the Write Ahead Log (WAL) files. The WAL files contain information about the history of activity on a database, and Datastream leverages these files to query data changes. For more information about how Datastream works with WAL files, see [Work with PostgreSQL database WAL files](https://docs.cloud.google.com/datastream/docs/work-with-postgresql-database-wal-log-files).
+You can stream ongoing changes from a source PostgreSQL database to a [supported destination](https://docs.cloud.google.com/datastream/docs/destinations), such as BigQuery or Cloud Storage, using Datastream. To capture database activity, Datastream uses [logical decoding](https://www.postgresql.org/docs/current/logicaldecoding-explanation.html) to read changes from write-ahead log (WAL) files through a publication and replication slot. For more information, see [Work with PostgreSQL database WAL files](https://docs.cloud.google.com/datastream/docs/work-with-postgresql-database-wal-log-files).
 
 ## Publication and replication slots
 
@@ -65,6 +65,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

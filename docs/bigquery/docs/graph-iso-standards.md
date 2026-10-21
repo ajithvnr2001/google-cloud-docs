@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/graph-iso-standards/
 title: BigQuery Graph and ISO standards \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:16:30.022333+00:00
+fetched_at: 2026-10-21T12:22:53.551004+00:00
 ---
 
 # BigQuery Graph and ISO standards  |  Google Cloud Documentation
@@ -50,7 +50,7 @@ Schema | Feature G924: Explicit key clause for element tables. This implies a cl
 Schema | Feature G925: Explicit label and properties clause for element tables. This implies a claim of conformance to Feature G920: DDL-based SQL-property graphs. | Supported. For more information, see [`CREATE_PROPERTY_GRAPH` statement](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/graph-schema-statements#gql_create_graph).  
 Query (GPML) | Feature G001: Repeatable-elements match mode. | Supported. Repeatable elements match mode is the default semantic. Explicit repeatable elements match mode clause syntax is not supported.  
 Query (GPML) | Feature G008: Graph pattern `WHERE` clause. This implies a claim of conformance to Feature G000: Graph pattern. | Supported. For more information, see [Graph pattern](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/graph-patterns#graph_pattern_definition).  
-Query (GPML) | Feature G034: Path concatenation. | Supported. For more information, see see [Graph pattern](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/graph-patterns#graph_pattern_definition).  
+Query (GPML) | Feature G034: Path concatenation. | Supported. For more information, see [Graph pattern](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/graph-patterns#graph_pattern_definition).  
 Query (GPML) | Feature G040: Vertex pattern. | Supported. For more information, see [Element pattern](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/graph-patterns#element_pattern_definition).  
 Query (GPML) | Feature G042: Basic full edge patterns. | Supported. For more information, see [Element pattern](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/graph-patterns#element_pattern_definition).  
 Query (GPML) | Feature G070: Label expression: label disjunction. | Supported. For more information, see [Label expression](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/graph-patterns#label_expression_definition).  
@@ -105,6 +105,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

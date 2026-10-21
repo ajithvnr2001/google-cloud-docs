@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/composer/docs/release-notes/
 title: Managed Service for Apache Airflow release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:17:31.132257+00:00
+fetched_at: 2026-10-21T12:23:14.503808+00:00
 ---
 
 # Managed Service for Apache Airflow release notes  |  Google Cloud Documentation
@@ -37,13 +37,91 @@ You can see the latest product updates for all of Google Cloud on the [ Google C
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/composer-release-notes.xml) directly. 
 
+## October 14, 2026
+
+Announcement
+
+All Managed Airflow environment's GKE clusters will be set up with maintenance exclusions from November 16, 2026 to December 2, 2026. For more information, see [Maintenance exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions#exclusions).
+
 ## October 13, 2026
+
+Announcement
+
+A new Managed Service for Apache Airflow release has started on **October 13, 2026**. Get ready for upcoming changes and features as we roll out the new release to all regions. This release is in progress at the moment. Listed changes and features might not be available in some regions yet.
 
 Feature
 
 [Development mode environments](https://docs.cloud.google.com/composer/docs/composer-3/create-environments#development-mode) and [Environment hibernation](https://docs.cloud.google.com/composer/docs/composer-3/hibernate-environments) are now generally available (GA).
 
 You can now create Managed Airflow (Gen 3) environments with Airflow 3 in development mode to test and develop DAGs before publishing them to production. You can hibernate development mode environments when you no longer need them. Hibernation reduces most environment costs to zero.
+
+Feature
+
+[Upgrade rollbacks](https://docs.cloud.google.com/composer/docs/composer-3/upgrade-environments#rollback) are available in Managed Airflow (Gen 3). You can roll back an environment upgrade if you encounter degraded performance, Airflow bugs, or compatibility issues with your DAGs, plugins, or dependencies.
+
+This feature is gradually rolling out over several releases. In this release, it's available in the following regions: europe-north1, europe-west3, us-east1, and us-west2.
+
+Feature
+
+New Managed Airflow (Gen 3) environments created while the Restrict Endpoint Usage (`constraints/gcp.restrictEndpointUsage`) organization policy is active now use regional endpoints for services like Cloud Storage, Cloud Logging, Pub/Sub, and Data Lineage.
+
+Feature
+
+_(Managed Airflow Gen 3)_ Added the scheduler loop duration metric:
+
+  * `composer.googleapis.com/workload/scheduler/loop_duration`: time spent running one Scheduler loop.
+
+
+
+Feature
+
+[Database retention](https://docs.cloud.google.com/composer/docs/composer-3/configure-db-retention) in Managed Airflow (Gen 3) now includes new Airflow 3 metadata tables, and updated retention logs to report the exact number of removed rows.
+
+This feature is gradually rolling out over several releases. In this release, it's available in the following regions: europe-north1, europe-west3, us-east1, and us-west2.
+
+Fixed
+
+Managed Airflow (Gen 3) environments now report Airflow workloads startup failure logs for issues such as internal quota limits, insufficient capacity, or internal errors (excluding failures related to KubernetesPodOperator or KubernetesExecutor).
+
+This fix is available without an upgrade and will gradually roll out to all Managed Airflow Gen 3 environments. You can upgrade your environment to receive this update immediately.
+
+Fixed
+
+Fixed an issue where a redundant `image-version` property set in the API request body could sometimes cause a long-running operation to fail.
+
+Fixed
+
+_(Managed Airflow Gen 2)_ Fixed an issue where the `airflow-monitoring` pod could run out of memory (`OOMKilled`) when calculating scheduled snapshot metrics in environments with a large number of files in their environment's bucket.
+
+Change
+
+The `apache-airflow-providers-google` package was upgraded to version 22.6.0. For more information about changes, see the [apache-airflow-providers-google changelog](https://airflow.apache.org/docs/apache-airflow-providers-google/stable/changelog.html).
+
+Deprecated
+
+The following Managed Airflow versions and builds have reached their [end of support period](https://docs.cloud.google.com/composer/docs/composer-versioning-overview#version-deprecation-and-support): composer-3-airflow-2.9.3-build.35, composer-3-airflow-2.10.5-build.15, composer-3-airflow-2.9.3-build.36, composer-3-airflow-2.10.5-build.16, composer-2.14.3-airflow-2.9.3, composer-2.14.3-airflow-2.10.5, composer-2.14.4-airflow-2.9.3, and composer-2.14.4-airflow-2.10.5.
+
+Change
+
+The `apache-airflow-providers-cncf-kubernetes` package was [upgraded to version 10.23.0](https://airflow.apache.org/docs/apache-airflow-providers-cncf-kubernetes/stable/changelog.html). For changes in other packages, see the [preinstalled packages changelog](https://cloud.google.com/composer/docs/versions-packages).
+
+Change
+
+New [images](https://docs.cloud.google.com/composer/docs/composer-versions#images-composer-2) are available in Managed Airflow (Gen 2):
+
+  * [composer-2.17.15-airflow-2.11.1](https://docs.cloud.google.com/composer/docs/versions-packages#composer-2-17-15-airflow-2-11-1) (default)
+
+
+
+Change
+
+New [Airflow builds](https://docs.cloud.google.com/composer/docs/composer-versions#images-composer-3) are available in Managed Airflow (Gen 3):
+
+  * [composer-3-airflow-3.3.1-build.4](https://docs.cloud.google.com/composer/docs/versions-packages#composer-3-airflow-3-3-1-build-4)
+  * [composer-3-airflow-3.2.2-build.8](https://docs.cloud.google.com/composer/docs/versions-packages#composer-3-airflow-3-2-2-build-8)
+  * [composer-3-airflow-2.11.1-build.21](https://docs.cloud.google.com/composer/docs/versions-packages#composer-3-airflow-2-11-1-build-21) (default)
+
+
 
 ## September 25, 2026
 
@@ -9763,6 +9841,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

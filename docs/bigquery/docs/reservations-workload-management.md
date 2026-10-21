@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/reservations-workload-management/
 title: Understand reservations \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:00:02.618657+00:00
+fetched_at: 2026-10-21T12:22:50.979201+00:00
 ---
 
 # Understand reservations  |  BigQuery  |  Google Cloud Documentation
@@ -132,7 +132,7 @@ The following types of project caps are supported:
   * **Maximum slots:** Limits the slot consumption of queries running for the assignee project within the reservation. The minimum allowed value is 100. This isn't a strict limit; it applies an approximate cap.
   * **Maximum concurrency:** Limits the number of simultaneous queries admitted for the assignee project within the reservation.
 
-The concurrency cap is only applied at query admission time and doesn't cause running queries to be cancelled. If you decrease the concurrency cap below the current number of running queries, new queries are queued until enough running queries have been completed.
+The concurrency cap is only applied at query admission time and doesn't cause running queries to be canceled. If you decrease the concurrency cap below the current number of running queries, new queries are queued until enough running queries have been completed.
 
 
 
@@ -233,11 +233,11 @@ We recommend assigning a non-zero baseline to your reservations for the most pre
 
 You select a renewal plan when you purchase a commitment. You can change the renewal plan for a commitment at any time until it expires. The following renewal plans are available:
 
-  * **None.** After the end of the commitment period, the commitment is removed. Reservations are not affected.
+  * **None.** After the end of the commitment period, the commitment is removed. Reservations aren't affected.
   * **Annual.** After the end of the commitment period, your commitment renews for another year.
   * **Three-Year.** After the end of the commitment period, your commitment renews for another three years.
 
-
+**Warning:** Canceling or allowing a slot commitment to expire doesn't delete or de-provision the associated reservations or assignments. Any reservation with configured baseline slots continues to incur baseline slot-hour charges at the [pay-as-you-go rate](https://cloud.google.com/bigquery/pricing#on_demand_pricing). To stop baseline slot-hour charges and transition back to on-demand billing, you must manually [delete all reservations](https://docs.cloud.google.com/bigquery/docs/reservations-tasks#delete_reservations) and [delete all reservation assignments](https://docs.cloud.google.com/bigquery/docs/reservations-assignments) in the Google Cloud console.
 
 For information about purchasing and renewing commitments, see [Create a capacity commitment](https://docs.cloud.google.com/bigquery/docs/reservations-commitments#create_a_capacity_commitment).
 
@@ -263,7 +263,7 @@ If you accidentally purchase a commitment or make a mistake when you configure y
   * Each organization can have a maximum of 10 administration projects with active reservations in a single location.
   * Idle capacity can't be shared between organizations or between different administration projects within a single organization.
   * Idle capacity can't be shared across different regions.
-  * Commitments and reservations are [regional resources](https://docs.cloud.google.com/bigquery/docs/locations#specify_locations). Commitments purchased in one region or multi-region can't be used for reservations in any other regions or multi-regions, even when the single region location is co-located with the multi-region location. For example, you can't use a commitment purchased in the `EU` multi-region for a reservation in `europe-west4`.
+  * Commitments and reservations are [regional resources](https://docs.cloud.google.com/bigquery/docs/locations#specify_locations). Commitments purchased in one region or multi-region can't be used for reservations in any other regions or multi-regions, even when the single region location is colocated with the multi-region location. For example, you can't use a commitment purchased in the `EU` multi-region for a reservation in `europe-west4`.
   * Commitments and reservations can't be moved from one region or multi-region to another.
   * Commitments purchased in one administration project can't be moved to a different administration project.
   * Commitments purchased with one [edition](https://docs.cloud.google.com/bigquery/docs/editions-intro) can't be used with reservations of another edition.
@@ -440,6 +440,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

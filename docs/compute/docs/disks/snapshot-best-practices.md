@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/snapshot-best-practices/
 title: Best practices for Compute Engine disk snapshots \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:53:19.460176+00:00
+fetched_at: 2026-10-21T12:22:33.075596+00:00
 ---
 
 # Best practices for Compute Engine disk snapshots  |  Google Cloud Documentation
@@ -116,12 +116,13 @@ This limit applies to the following operations:
   * [Creating snapshots of a Hyperdisk volume](https://docs.cloud.google.com/compute/docs/disks/create-snapshots#create_hyperdisk_snapshots)
   * [Creating images from a Persistent Disk](https://docs.cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#create_image)
   * [Creating standard or archive snapshots from instant snapshots](https://docs.cloud.google.com/compute/docs/disks/convert-instant-snapshot)
+  * [Creating regional clones of a zonal disk](https://docs.cloud.google.com/compute/docs/disks/clone-duplicate-disks#rate-limits), if the disk was created from an image or by cloning a disk that was created from an image
 
 
 
 This limit doesn't apply to the following operations:
 
-  * [Create schedules for disk snapshots](https://docs.cloud.google.com/compute/docs/disks/scheduled-snapshots). Scheduled snapshots have separate [frequency considerations](https://docs.cloud.google.com/compute/docs/disks/about-snapshot-schedules#schedule_frequency) and don't contribute to the snapshot frequency limit.
+  * [Creating schedules for disk snapshots](https://docs.cloud.google.com/compute/docs/disks/scheduled-snapshots). Scheduled snapshots have separate [frequency considerations](https://docs.cloud.google.com/compute/docs/disks/about-snapshot-schedules#schedule_frequency) and don't contribute to the snapshot frequency limit.
   * [Manually importing boot disk images](https://docs.cloud.google.com/compute/docs/import/import-existing-image)
 
 
@@ -227,6 +228,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

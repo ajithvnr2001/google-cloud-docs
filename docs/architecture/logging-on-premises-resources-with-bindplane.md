@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/logging-on-premises-resources-with-bindplane/
 title: Log on-premises resources with BindPlane \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:21:45.995961+00:00
+fetched_at: 2026-10-21T12:21:58.401546+00:00
 ---
 
 # Log on-premises resources with BindPlane  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-data-get-all-documents-async/
 title: Get all documents (async) \u00a0|\u00a0 Firestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:25:24.661880+00:00
+fetched_at: 2026-10-21T11:58:54.415912+00:00
 ---
 
 # Get all documents (async)  |  Firestore  |  Google Cloud Documentation

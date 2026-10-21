@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/policy-engine/
 title: Set up Policy Engine with a Universal key \u00a0|\u00a0 Google Cloud Fraud Defense \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:50:25.720533+00:00
+fetched_at: 2026-10-21T11:58:11.074557+00:00
 ---
 
 # Set up Policy Engine with a Universal key  |  Google Cloud Fraud Defense  |  Google Cloud Documentation
@@ -44,7 +44,7 @@ The Fraud Defense Policy Engine configuration provides two main features:
 
   2. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). 
 
-Fraud Defense requires billing to be linked and enabled on the project to use Policy Engine. You can enable billing by using either a credit card or an existing Google Cloud project billing ID. If you need help with billing, contact [Cloud Billing support](https://cloud.google.com/support/billing).
+A linked and enabled billing account is required to use Policy Engine. You can enable billing by using either a credit card or an existing Google Cloud project billing ID. If you need help with billing, contact [Cloud Billing support](https://cloud.google.com/support/billing).
 
 
 
@@ -81,7 +81,7 @@ To create a Universal key using the Google Cloud CLI, use the [`gcloud recaptcha
     gcloud recaptcha keys create --universal --display-name=DISPLAY_NAME
     
 
-The response contains the newly created reCAPTCHA Universal key.
+The response contains the newly created Universal key.
 
 ### REST API
 
@@ -103,7 +103,7 @@ Replace the following:
 
 
 
-The response contains the newly created reCAPTCHA Universal key.
+The response contains the newly created Universal key.
 
 ## Configure domains for Policy Engine
 
@@ -121,7 +121,7 @@ Depending on your preferred interface, choose the appropriate option to configur
 
 If you don't see the name of your project, click the resource selector, and then select your project.
 
-  3. Click the **reCAPTCHA Keys** tab.
+  3. Click the **Keys** tab.
 
   4. Identify the Universal key that you want to configure, and click the key.
 
@@ -251,6 +251,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

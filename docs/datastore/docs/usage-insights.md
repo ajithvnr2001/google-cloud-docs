@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/usage-insights/
 title: Analyze usage insights \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:31:45.788046+00:00
+fetched_at: 2026-10-21T12:23:06.167670+00:00
 ---
 
 # Analyze usage insights  |  Firestore in Datastore mode  |  Google Cloud Documentation
@@ -34,10 +34,10 @@ Standard |
   
 Enterprise | 
 
-  * Read units
-  * Write units (includes deletes)
-  * TTL delete or managed delete units
-  * Eventarc units
+  * Reads
+  * Writes
+  * TTL deletes
+  * Event
 
   
   
@@ -65,8 +65,8 @@ You might also be able to get this permission with [custom roles](https://cloud.
 
 The Usage insights dashboard is organized into two primary sections:
 
-  * **Total Usage:** Displays aggregated metrics (reads, writes, and TTL deletes) for the entire database.
-  * **GroupBy Usage:** Shows metrics broken down by the top 100 dimensions and grouped by collection, collection group, or namespace.
+  * **Total Usage:** Displays aggregated metrics (Reads, Writes, TTL Deletes) for the entire database.
+  * **GroupBy Usage:** Shows metrics broken down by the top 100 dimensions and is grouped by collection, collection group, or namespaces.
 
 
 
@@ -118,6 +118,7 @@ Total Sum of Entity Size written | Total entity write size in bytes.
   
 ## Limitations
 
+  * Streaming queries that contribute to billable reads and writes are not tracked as part of the API response.
   * Usage insights for Admin operations (that contribute to billable reads and writes) like import/export, bulk delete, restore, clone, and index builds in Enterprise edition are not supported.
   * Network egress and storage billing are not supported.
 
@@ -151,6 +152,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

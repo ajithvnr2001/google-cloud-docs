@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/configure-mongodb-atlas-vpc-peering/
 title: Configure MongoDB Atlas using VPC peering \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:50:51.428104+00:00
+fetched_at: 2026-10-21T12:24:08.165163+00:00
 ---
 
 # Configure MongoDB Atlas using VPC peering  |  Datastream  |  Google Cloud Documentation
@@ -21,9 +21,7 @@ Send feedback
 
 #  Configure MongoDB Atlas using VPC peering Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to configure a MongoDB Atlas source database to work with Datastream using Virtual Private Cloud peering. Note that the described procedure isn't a high availability solution. If the MongoDB node fails the connection profile test, you need to manually run the startup script referenced further in this page on the network address translation (NAT) virtual machine (VM).
-
-Because Virtual Private Cloud peering is non-transitive, you must configure a NAT gateway using a Compute Engine VM to route traffic from Datastream to MongoDB Atlas.
+Virtual Private Cloud (VPC) peering lets you stream change data capture (CDC) updates from a MongoDB Atlas database to Datastream over a private network. Because VPC peering is non-transitive, you route traffic through a Compute Engine network address translation (NAT) virtual machine (VM) with firewall rules. You also create a MongoDB user, add the NAT VM IP address to your MongoDB Atlas allowlist, and create a connection profile. This configuration doesn't provide high availability. If a MongoDB node fails the connection profile test, you must manually run the startup script on the NAT VM.
 
 ## Configure a MongoDB database user
 
@@ -270,6 +268,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

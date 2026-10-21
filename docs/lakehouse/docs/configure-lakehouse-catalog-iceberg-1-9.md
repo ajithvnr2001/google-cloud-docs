@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/lakehouse/docs/configure-lakehouse-catalog-iceberg-1-9/
 title: Configure the Lakehouse runtime catalog for Managed Service for Apache Spark using Apache Iceberg 1.9 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:19:43.309181+00:00
+fetched_at: 2026-10-21T11:07:44.544407+00:00
 ---
 
 # Configure the Lakehouse runtime catalog for Managed Service for Apache Spark using Apache Iceberg 1.9  |  Google Cloud Documentation
@@ -23,16 +23,14 @@ Send feedback
 
 #  Configure the Lakehouse runtime catalog for Managed Service for Apache Spark using Apache Iceberg 1.9 Stay organized with collections  Save and categorize content based on your preferences. 
 
-Configuring the _Custom Apache Iceberg catalog for BigQuery_ to connect with the _Lakehouse runtime catalog_ enables the use of [Managed Service for Apache Spark](https://docs.cloud.google.com/dataproc/docs) clusters or [ Managed Service for Apache Spark](https://docs.cloud.google.com/dataproc-serverless/docs) to create a single, shared catalog.
+The custom Apache Iceberg catalog for BigQuery lets you connect Apache Spark and Apache Flink engines using Apache Iceberg 1.9 and earlier to the Lakehouse runtime catalog. In borderless Lakehouse, this integration provides a single, shared metadata layer to manage open table formats across [Managed Service for Apache Spark clusters](https://docs.cloud.google.com/dataproc/docs) and [Managed Service for Apache Spark serverless](https://docs.cloud.google.com/dataproc-serverless/docs).
 
-As part of _borderless Lakehouse_ , this setup lets you use either a [Managed Service for Apache Spark](https://docs.cloud.google.com/dataproc/docs) cluster or [Managed Service for Apache Spark](https://docs.cloud.google.com/dataproc-serverless/docs) to create a single, shared catalog.
-
-Once configured, this metadata layer works with open source engines like Apache Spark and Apache Flink to manage your open table formats.
+**Note:** The custom Apache Iceberg catalog for BigQuery is a legacy integration option. If you're building new workloads, we recommend using the [Apache Iceberg REST catalog endpoint](https://docs.cloud.google.com/lakehouse/docs/about-iceberg-rest-catalog-endpoint), which implements the open standard Apache Iceberg REST Catalog API, supports multiple-bucket catalogs, and offers features such as [credential vending](https://docs.cloud.google.com/lakehouse/docs/credential-vending).
 
 ## Before you begin
 
   1. Enable billing for your Google Cloud project. Learn how to [check if billing is enabled on a project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled).
-  2. Enable the BigQuery and Managed Service for Apache Spark APIs.
+  2. Enable the BigQuery and Dataproc APIs.
 
 [Enable the APIs](https://console.cloud.google.com/apis/enableflow?apiid=bigquery.googleapis.com,dataproc.googleapis.com)
 
@@ -48,8 +46,8 @@ To get the permissions that you need to configure the Lakehouse runtime catalog,
   * Create a Managed Service for Apache Spark cluster: [Dataproc Worker ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataproc#dataproc.worker) (`roles/dataproc.worker`) on the Compute Engine default service account in the project 
   * Create Lakehouse runtime catalog tables: 
     * [Dataproc Worker ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataproc#dataproc.worker) (`roles/dataproc.worker`) on the Managed Service for Apache Spark VM service account in the project
-    * [BigQuery Data Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.dataEditor) (`roles/bigquery.dataEditor`) on the Dataproc VM service account in the project
-    * [Storage Object User ](https://docs.cloud.google.com/iam/docs/roles-permissions/storage#storage.objectUser) (`roles/storage.objectUser`) on the Dataproc VM service account in the project
+    * [BigQuery Data Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.dataEditor) (`roles/bigquery.dataEditor`) on the Managed Service for Apache Spark VM service account in the project
+    * [Storage Object User ](https://docs.cloud.google.com/iam/docs/roles-permissions/storage#storage.objectUser) (`roles/storage.objectUser`) on the Managed Service for Apache Spark VM service account in the project
   * Query Lakehouse runtime catalog tables: 
     * [BigQuery Data Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.dataViewer) (`roles/bigquery.dataViewer`) on the project
     * [BigQuery User ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.user) (`roles/bigquery.user`) on the project
@@ -61,13 +59,13 @@ For more information about granting roles, see [Manage access to projects, folde
 
 You might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
 
-## Configure the Lakehouse runtime catalog with Managed Service for Apache Spark
+## Configure the Lakehouse runtime catalog with Managed Service for Apache Spark clusters
 
-You can configure the Lakehouse runtime catalog with Managed Service for Apache Spark using either Apache Spark or Apache Flink:
+You can configure the Lakehouse runtime catalog with Managed Service for Apache Spark clusters using either Apache Spark or Apache Flink:
 
 ###  Apache Spark 
 
-  1. Configure a new cluster. To create a new Managed Service for Apache Spark cluster, run the following [`gcloud dataproc clusters create` command](https://docs.cloud.google.com/sdk/gcloud/reference/dataproc/clusters/create), which contains the settings that you need to use the Lakehouse runtime catalog:
+  1. Configure a new cluster. To create a new cluster, run the following [`gcloud dataproc clusters create` command](https://docs.cloud.google.com/sdk/gcloud/reference/dataproc/clusters/create), which contains the settings that you need to use the Lakehouse runtime catalog:
          
          gcloud dataproc clusters create CLUSTER_NAME \
              --project=PROJECT_ID \
@@ -76,7 +74,7 @@ You can configure the Lakehouse runtime catalog with Managed Service for Apache 
 
 Replace the following:
 
-     * `CLUSTER_NAME`: a name for your Managed Service for Apache Spark cluster.
+     * `CLUSTER_NAME`: a name for your cluster.
      * `PROJECT_ID`: the ID of the Google Cloud project where you're creating the cluster.
      * `LOCATION`: the Compute Engine region where you're creating the cluster.
   2. Submit an Apache Spark job using one of the following methods:
@@ -97,8 +95,8 @@ Replace the following:
 
 Replace the following:
 
-     * `PROJECT_ID`: the ID of the Google Cloud project that contains the Managed Service for Apache Spark cluster.
-     * `CLUSTER_NAME`: the name of the Managed Service for Apache Spark cluster that you're using to run the Apache Spark SQL job.
+     * `PROJECT_ID`: the ID of the Google Cloud project that contains the cluster.
+     * `CLUSTER_NAME`: the name of the cluster that you're using to run the Apache Spark SQL job.
      * `REGION`: the Compute Engine [region](https://docs.cloud.google.com/compute/docs/regions-zones#available) where your cluster is located.
      * `BIGLAKE_ICEBERG_CATALOG_JAR`: the Cloud Storage URI of the Apache Iceberg custom catalog plugin to use. Depending on your Apache Iceberg version number, select one of the following: 
        * Apache Iceberg 1.9.1: `gs://spark-lib/bigquery/iceberg-bigquery-catalog-1.9.1-1.0.1.jar`
@@ -114,7 +112,7 @@ Replace the following:
 
 [Go to VM Instances](https://console.cloud.google.com/compute/instances)
 
-     2. To connect to a Managed Service for Apache Spark VM instance, click **SSH** in the row that lists the Managed Service for Apache Spark cluster main VM instance name, which is the cluster name followed by an `-m` suffix. The output is similar to the following:
+     2. To connect to a cluster VM instance, click **SSH** in the row that lists the cluster's main VM instance name, which is the cluster name followed by an `-m` suffix. The output is similar to the following:
             
             Connected, host fingerprint: ssh-rsa ...
             Linux cluster-1-m 3.16.0-0.bpo.4-amd64 ...
@@ -152,13 +150,13 @@ After you successfully connect to the cluster, your Apache Spark terminal displa
 
 ###  Apache Flink 
 
-  1. [Create a Managed Service for Apache Spark cluster with the optional Apache Flink component enabled](https://docs.cloud.google.com/dataproc/docs/concepts/components/flink), and ensure that you're using Managed Service for Apache Spark `2.2` or later.
+  1. [Create a Managed Service for Apache Spark cluster with the optional Apache Flink component enabled](https://docs.cloud.google.com/dataproc/docs/concepts/components/flink), and ensure that you're using image version `2.2` or later.
 
   2. In the Google Cloud console, go to the **VM instances** page.
 
 [Go to VM instances](https://console.cloud.google.com/compute/instances)
 
-  3. In the list of virtual machine instances, click **SSH** to connect to the main Managed Service for Apache Spark cluster VM instance, which is listed as the cluster name followed by an `-m` suffix.
+  3. In the list of virtual machine instances, click **SSH** to connect to the cluster's main VM instance, which is listed as the cluster name followed by an `-m` suffix.
 
   4. Configure the Custom Apache Iceberg catalog for BigQuery plugin for the Lakehouse runtime catalog:
          
@@ -331,9 +329,9 @@ Replace `JOB_ID` with the job ID that was displayed in the output when you creat
 
 
 
-## Configure the Lakehouse runtime catalog with Managed Service for Apache Spark
+## Configure the Lakehouse runtime catalog with Managed Service for Apache Spark serverless
 
-You can configure the Lakehouse runtime catalog with Managed Service for Apache Spark using either Apache Spark SQL or PySpark.
+You can configure the Lakehouse runtime catalog with Managed Service for Apache Spark serverless using either Apache Spark SQL or PySpark.
 
 ###  Apache Spark SQL 
 
@@ -437,6 +435,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

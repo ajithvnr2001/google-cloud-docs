@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/create-delta-lake-table/
 title: Create BigLake external tables for Delta Lake \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:22:26.994299+00:00
+fetched_at: 2026-10-21T12:22:53.391364+00:00
 ---
 
 # Create BigLake external tables for Delta Lake  |  BigQuery  |  Google Cloud Documentation
@@ -24,7 +24,7 @@ BigLake lets you access Delta Lake tables with more granular access control. [De
 
 BigQuery supports the following features with Delta Lake tables:
 
-  * **Access delegation** : Query structured data in external data stores with access delegation. Access delegation decouples access to the Delta Lake table from access to the underlying datastore.
+  * **Access delegation** : Query structured data in external datastores with access delegation. Access delegation decouples access to the Delta Lake table from access to the underlying datastore.
   * **Fine-grained access control** : Enforce fine-grained security at the table level, including [row-level](https://docs.cloud.google.com/bigquery/docs/row-level-security-intro) and [column-level](https://docs.cloud.google.com/bigquery/docs/column-level-security-intro) security. For Delta Lake tables based on Cloud Storage, you can also use [dynamic data masking](https://docs.cloud.google.com/bigquery/docs/column-data-masking).
   * **Schema evolution** : Schema changes in the Delta Lake tables are autodetected. Changes to the schema are reflected in the BigQuery table.
 
@@ -350,6 +350,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

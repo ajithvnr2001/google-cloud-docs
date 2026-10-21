@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/usage-reports-with-system-activity-explores/
 title: Monitoring Looker usage with System Activity Explores \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:35:15.507539+00:00
+fetched_at: 2026-10-21T11:59:12.073829+00:00
 ---
 
 # Monitoring Looker usage with System Activity Explores  |  Google Cloud Documentation
@@ -38,6 +38,8 @@ It is not possible to query System Activity data using SQL Runner as permissions
 **Note:** The text in filters run by users is accessible in System Activity and can be viewed by any user who has permission to view the System Activity model.
 
 **Take action:** Modify who has view access to the System Activity model. Looker admins have access to this model by default. A Looker admin can grant access to System Activity to a non-admin user by giving the user the `see_system_activity` permission.
+
+In an [embedded environment](https://docs.cloud.google.com/looker/docs/signed-embedding), strict restrictions prevent embedded users from rendering underlying system data, even if you grant the `see_system_activity` permission during single sign-on (SSO) authentication. For alternative ways to share this data, see [System Activity in embedded environments](https://docs.cloud.google.com/looker/docs/system-activity-pages#embedded-environments).
 
 System Activity dashboards and Explores are restricted in the number of queries that can be run at the same time. This restriction may increase loading times for System Activity Explores.
 
@@ -1409,6 +1411,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/model-armor/manage-templates/
 title: Create and manage templates \u00a0|\u00a0 Model Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:18:21.756258+00:00
+fetched_at: 2026-10-21T09:07:06.012576+00:00
 ---
 
 # Create and manage templates  |  Model Armor  |  Google Cloud Documentation
@@ -746,29 +746,38 @@ For more information, see [Image screening](https://docs.cloud.google.com/model-
 
 ### Set Sensitive Data Protection settings
 
-Model Armor leverages Sensitive Data Protection to identify and prevent the exposure of sensitive information in your LLM interactions. For more information, see [Sensitive Data Protection](https://docs.cloud.google.com/model-armor/overview#ma-sensitive-data-prot).
+Model Armor uses Sensitive Data Protection to identify and prevent the exposure of sensitive information in your LLM interactions. For more information, see [Sensitive Data Protection](https://docs.cloud.google.com/model-armor/overview#ma-sensitive-data-prot).
 
 Model Armor offers two modes for configuring Sensitive Data Protection:
 
-  * **Basic** : A simpler approach that uses predefined infoTypes to detect sensitive data. For more information about the predefined infoType, see [Basic Sensitive Data Protection configuration](https://docs.cloud.google.com/model-armor/sanitize-prompts-responses#basic_sdp_configuration).
+  * **Basic** : A simpler approach that uses predefined infoTypes to detect sensitive data. For more information about the predefined infoTypes, see [Basic Sensitive Data Protection configuration](https://docs.cloud.google.com/model-armor/sanitize-prompts-responses#basic_sdp_configuration).
 
-  * **Advanced** : A more configurable option that uses an inspection template defined in the Sensitive Data Protection service as a single source for sensitive data infoTypes.
-
-
+  * **Advanced** : A more configurable option that uses templates defined in Sensitive Data Protection to inspect or de-identify sensitive data.
 
 
-If you select the **Advanced** mode, you need to specify the following parameters:
 
-  * **[Inspect template](https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates)** : Templates for saving configuration information for inspection scan jobs, including what predefined or custom detectors to use. Enter the template name in the following format: `projects/projectId/locations/locationId/inspectTemplates/templateName`
 
-  * **Optional** : **[De-identify template](https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid)** : Templates for saving configuration information for de-identification jobs, including both infoType and structured dataset transformations. Enter an identifier for the de-identification template in the following format: `projects/projectId/locations/locationId/deidentifyTemplates/templateName`
+If you select the **Advanced** mode, specify the following parameters:
+
+  * **[Inspect template](https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates)** : Templates for saving configuration information for inspection scan jobs, including what predefined or custom infoType detectors to use. Enter the template name in the following format: `projects/PROJECT_ID/locations/LOCATION/inspectTemplates/TEMPLATE_ID`
+
+  * **Optional** : **[De-identify template](https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid)** : Templates for saving configuration information for de-identification jobs, including both infoType and structured dataset transformations. Enter an identifier for the de-identification template in the following format: `projects/PROJECT_ID/locations/LOCATION/deidentifyTemplates/TEMPLATE_ID`
 
 
 
 
 Verify that the **Inspect template** and **De-identify template** exist in Sensitive Data Protection. If the template resides in a different project, the Model Armor service agent must be granted the [DLP User role](https://docs.cloud.google.com/sensitive-data-protection/docs/iam-roles#dlp.user) (`roles/dlp.user`) and [DLP Reader role](https://docs.cloud.google.com/sensitive-data-protection/docs/iam-roles#dlp.reader) (`roles/dlp.reader`) for that project.
 
-**Note:** If you specify only **Inspect template** , Model Armor reports the filter matches if sensitive data is detected. If you specify **Inspect template** and **De-identify template** , Model Armor returns the de-identified sensitive data and sanitized version of prompts or responses in the **deidentifyResult.data.text** field of the finding.
+Model Armor processes requests differently depending on whether you specify only an inspect template or both an inspect and a de-identify template:
+
+  * **Inspect template only** : Model Armor searches the content for the infoTypes that are specified in your inspect template and reports the findings.
+
+  * **Inspect and de-identify template** : Model Armor de-identifies the infoTypes that are specified in both the inspect and de-identify templates.
+
+
+
+
+Model Armor de-identifies only the infoTypes that you specify in both your inspect and de-identify templates. For example, if you don't specify `CREDIT_CARD_NUMBER` in both inspect and de-identify templates, Model Armor doesn't flag or de-identify any credit card numbers that are passed in prompts and responses.
 
 ### Set confidence level
 
@@ -1906,6 +1915,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-12 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-12 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

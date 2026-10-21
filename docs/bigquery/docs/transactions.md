@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/transactions/
 title: Multi-statement transactions \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:12.439624+00:00
+fetched_at: 2026-10-21T12:22:49.507804+00:00
 ---
 
 # Multi-statement transactions  |  BigQuery  |  Google Cloud Documentation
@@ -161,7 +161,7 @@ The following transaction updates `Inventory` with new arrivals and deletes the 
 
 ## Transaction concurrency
 
-If a transaction mutates (update or deletes) rows in a table, then other transactions or DML statements that mutate rows in the same table cannot run concurrently. Conflicting transactions are cancelled. Conflicting DML statements that run outside of a transaction are queued to run later, subject to [queuing limits](https://docs.cloud.google.com/bigquery/docs/data-manipulation-language#update_delete_merge_dml_concurrency).
+If a transaction mutates (update or deletes) rows in a table, then other transactions or DML statements that mutate rows in the same table cannot run concurrently. Conflicting transactions are canceled. Conflicting DML statements that run outside of a transaction are queued to run later, subject to [queuing limits](https://docs.cloud.google.com/bigquery/docs/data-manipulation-language#update_delete_merge_dml_concurrency).
 
 Operations that read or append new rows can run concurrently with the transaction. For example, any of the following operations can be performed concurrently on a table while a transaction mutates data in the same table:
 
@@ -294,6 +294,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/export-bigquery/
 title: Export asset metadata to BigQuery \u00a0|\u00a0 Cloud Asset Inventory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:39:58.512056+00:00
+fetched_at: 2026-10-21T11:59:55.531747+00:00
 ---
 
 # Export asset metadata to BigQuery  |  Cloud Asset Inventory  |  Google Cloud Documentation

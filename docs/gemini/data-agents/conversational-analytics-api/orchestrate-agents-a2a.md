@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/orchestrate-agents-a2a/
 title: Orchestrate data agents with A2A \u00a0|\u00a0 Conversational Analytics API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:36.644806+00:00
+fetched_at: 2026-10-21T12:01:52.559996+00:00
 ---
 
 # Orchestrate data agents with A2A  |  Conversational Analytics API  |  Google Cloud Documentation
@@ -82,13 +82,13 @@ The following code samples show how to retrieve an agent card. These samples use
 ### Python SDK
     
     
-    from google.cloud import [geminidataanalytics_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest)
+    from google.cloud import geminidataanalytics_v1
     
-    client = [geminidataanalytics_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest).DataA2AServiceClient()
+    client = geminidataanalytics_v1.DataA2AServiceClient()
     
     agent_name = "projects/PROJECT_ID/locations/LOCATION/agents/bigquery-ca"
     
-    request = [geminidataanalytics_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest).GetAgentCardRequest(tenant=agent_name)
+    request = geminidataanalytics_v1.GetAgentCardRequest(tenant=agent_name)
     card = client.[get_agent_card](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest/google.cloud.geminidataanalytics_v1alpha.services.data_a2a_service.DataA2AServiceClient.html#google_cloud_geminidataanalytics_v1alpha_services_data_a2a_service_DataA2AServiceClient_get_agent_card)(request=request)
     
     print(card)
@@ -193,25 +193,25 @@ The following code samples show how to send a message to the built-in BigQuery d
 ### Python SDK
     
     
-    from google.cloud import [geminidataanalytics_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest)
+    from google.cloud import geminidataanalytics_v1
     
-    client = [geminidataanalytics_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest).DataA2AServiceClient()
+    client = geminidataanalytics_v1.DataA2AServiceClient()
     
     agent_name = "projects/PROJECT_ID/locations/LOCATION/agents/bigquery-ca"
     
-    request = [geminidataanalytics_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest).SendMessageRequest(
+    request = geminidataanalytics_v1.SendMessageRequest(
         tenant=agent_name,
-        message=[geminidataanalytics_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest).[Message](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest/google.cloud.geminidataanalytics_v1.types.Message.html)(
+        message=geminidataanalytics_v1.[Message](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest/google.cloud.geminidataanalytics_v1.types.Message.html)(
             role="ROLE_USER",
             # Optional: Pass context_id to continue an existing conversation
             # context_id="projects/PROJECT_ID/locations/LOCATION/conversations/CONVERSATION_ID",
             parts=[
-                [geminidataanalytics_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest).Part(
+                geminidataanalytics_v1.Part(
                     text="What are the top 5 countries where our users are located?"
                 )
             ],
         ),
-        configuration=[geminidataanalytics_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest).SendMessageConfiguration(
+        configuration=geminidataanalytics_v1.SendMessageConfiguration(
             return_immediately=False
         ),
         metadata={
@@ -366,18 +366,18 @@ The following code samples show how to stream events from the built-in BigQuery 
 ### Python SDK
     
     
-    from google.cloud import [geminidataanalytics_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest)
+    from google.cloud import geminidataanalytics_v1
     
-    client = [geminidataanalytics_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest).DataA2AServiceClient()
+    client = geminidataanalytics_v1.DataA2AServiceClient()
     
     agent_name = "projects/PROJECT_ID/locations/LOCATION/agents/bigquery-ca"
     
-    request = [geminidataanalytics_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest).SendMessageRequest(
+    request = geminidataanalytics_v1.SendMessageRequest(
         tenant=agent_name,
-        message=[geminidataanalytics_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest).[Message](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest/google.cloud.geminidataanalytics_v1.types.Message.html)(
+        message=geminidataanalytics_v1.[Message](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest/google.cloud.geminidataanalytics_v1.types.Message.html)(
             role="ROLE_USER",
             parts=[
-                [geminidataanalytics_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-geminidataanalytics/latest).Part(
+                geminidataanalytics_v1.Part(
                     text="What are the top 5 countries where our users are located? Please show a pie chart."
                 )
             ],

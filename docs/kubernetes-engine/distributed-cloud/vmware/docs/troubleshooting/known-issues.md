@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues/
 title: Google Distributed Cloud (software only) for VMware known issues \u00a0|\u00a0 Google Distributed Cloud software only for VMware \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:45:01.614315+00:00
+fetched_at: 2026-10-21T11:59:16.154193+00:00
 ---
 
 # Google Distributed Cloud (software only) for VMware known issues  |  Google Distributed Cloud software only for VMware  |  Google Cloud Documentation
@@ -35,6 +35,45 @@ Or, search for you issue:
 
 Category | Identified version(s) | Issue and workaround  
 ---|---|---  
+Installation, Networking | All versions | 
+
+### Admin workstation creation with `gkeadm` fails when port 22 is blocked from the jump server
+
+When you run `./gkeadm create admin-workstation` from a jump server in an environment with strict firewall rules, the command fails after deploying the admin workstation VM in vSphere, or you can't connect to the admin workstation using `ssh`. This issue occurs when a firewall blocks TCP port `22` (SSH) between the jump server and the admin workstation IP address. During creation, `gkeadm` uses SCP over SSH (port `22`) to copy `credential.yaml`, cluster configuration files, and service account keys from the jump server to the newly created admin workstation VM. The [Firewall rules for remaining components](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/firewall-rules#firewall_rules_for_remaining_components) table lists the port `443` requirement from the jump server to the vCenter Server API and ESXi hosts, but omits the port `22` requirement from the jump server to the admin workstation. **Diagnosis:**
+
+  1. Check the `./gkeadm create admin-workstation` output for SSH or SCP connection timeouts while copying configuration files (`credential.yaml`, `admin-cluster.yaml`, or `user-cluster.yaml`) to the admin workstation VM.
+  2. From the jump server, verify whether TCP port `22` is reachable on the admin workstation IP address: 
+         
+         nc -zv ADMIN_WORKSTATION_IP 22
+                 
+
+Or test the SSH connection with verbose logging enabled:
+         
+         ssh -vvv -i SSH_KEY_PATH ubuntu@ADMIN_WORKSTATION_IP
+                 
+
+If the firewall blocks port `22`, the connection times out (`Connection timed out`) or fails to establish a TCP handshake on port `22`.
+
+**Workaround:**
+
+  1. Configure your firewall to allow outbound SSH traffic from the jump server to the admin workstation IP address: 
+     * **From:** Jump server to deploy the admin workstation
+     * **Source port:** Ephemeral port range (check `/proc/sys/net/ipv4/ip_local_port_range`)
+     * **To:** Admin workstation IP address
+     * **Port:** `22`
+     * **Protocol:** `TCP/ssh`
+  2. After you apply the firewall rule, verify connectivity on port `22` from the jump server, and then re-run the admin workstation creation command: 
+         
+         ./gkeadm create admin-workstation
+                 
+
+
+Replace the following:
+
+  * `ADMIN_WORKSTATION_IP`: the IP address of the admin workstation VM.
+  * `SSH_KEY_PATH`: the path to the SSH private key for the admin workstation (typically `~/.ssh/gke-admin-workstation`).
+
+  
 Upgrades, Networking, Migration | 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36 | 
 
 ### Intermittent connection timeouts after upgrading or scaling a cluster migrated from Calico to Dataplane V2
@@ -6115,6 +6154,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-18 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-18 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

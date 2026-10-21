@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/default-storage-class/
 title: Set the default StorageClass \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:11:51.950029+00:00
+fetched_at: 2026-10-21T12:21:55.522212+00:00
 ---
 
 # Set the default StorageClass  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -22,7 +22,7 @@ Send feedback
 
 #  Set the default StorageClass Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page shows how to set the default StorageClass for an Google Distributed Cloud cluster.
+A default StorageClass lets your Google Distributed Cloud cluster automatically provision storage for PersistentVolumeClaims (PVCs) that don't specify a storage class. Because Google Distributed Cloud doesn't configure a default StorageClass, these PVCs can't be dynamically provisioned until you designate one.
 
 ## Overview
 
@@ -35,11 +35,11 @@ Google Distributed Cloud can integrate with block or file storage by using any o
 
 ## Default StorageClass
 
-When you request storage with a [PersistentVolumeClaim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) (PVC), you can specify a StorageClass. If you do not specify a StorageClass, the default StorageClass is used if one is configured in the cluster. Google Distributed Cloud does not configure a default StorageClass. For example, suppose you create a PVC that does not specify a StorageClass. The volume controller will fulfill the claim according to the default StorageClass.
+When you request storage with a [PersistentVolumeClaim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) (PVC), you can specify a StorageClass. If you don't specify a StorageClass, the default StorageClass is used if one is configured in the cluster. Google Distributed Cloud does not configure a default StorageClass. For example, suppose you create a PVC that does not specify a StorageClass. The volume controller will fulfill the claim according to the default StorageClass.
 
 ## Change the default StorageClass
 
-As a cluster administrator, you might want to change the default storage class. Then all requests for storage that do not specify a StorageClass will be fulfilled according to the StorageClass of your choice. This section gives the steps for changing the default.
+As a cluster administrator, you might want to change the default storage class. Then all requests for storage that don't specify a StorageClass will be fulfilled according to the StorageClass of your choice. This section gives the steps for changing the default.
 
 ### Deploy a new storage system
 
@@ -89,6 +89,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

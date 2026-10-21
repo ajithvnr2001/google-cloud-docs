@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/create/gke-ai-hypercompute/
 title: Create an AI-optimized GKE cluster with Cluster Toolkit \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:26:20.108657+00:00
+fetched_at: 2026-10-21T12:23:08.519006+00:00
 ---
 
 # Create an AI-optimized GKE cluster with Cluster Toolkit  |  AI Hypercomputer  |  Google Cloud Documentation
@@ -25,9 +25,9 @@ Send feedback
 
 This document shows you how to create an AI-optimized Google Kubernetes Engine (GKE) cluster that uses A4X, A4, A3 Ultra, A3 Mega, and A3 High (8 GPUs) Compute Engine instances to support your AI and ML workloads.
 
-The A4X, A4, A3 Ultra, A3 Mega, and A3 High (8 GPUs) machine series are designed to enable you to run large-scale AI/ML clusters with features such as targeted workload placement, advanced cluster maintenance controls, and topology-aware scheduling. For more information, see [Cluster management overview](https://docs.cloud.google.com/ai-hypercomputer/docs/cluster-capabilities).
+The A4X, A4, A3 Ultra, A3 Mega, and A3 High (8 GPUs) machine series are designed to let you run large-scale AI/ML clusters with features such as targeted workload placement, advanced cluster maintenance controls, and topology-aware scheduling. For more information, see [Cluster management overview](https://docs.cloud.google.com/ai-hypercomputer/docs/cluster-capabilities).
 
-GKE provides a single platform surface to run a diverse set of workloads for your organization's needs. This includes high performance distributed pre-training, model fine-tuning, model inference, application serving, and supporting services. GKE reduces the operational burden of managing multiple platforms.
+GKE provides a single platform surface to run a diverse set of workloads for your organization's needs. These workloads include high-performance distributed pre-training, model fine-tuning, model inference, application serving, and supporting services. GKE reduces the operational burden of managing multiple platforms.
 
 ## Choose how to create an AI-optimized GKE cluster
 
@@ -69,17 +69,18 @@ Before you start, make sure that you have performed the following tasks:
 
 ### Choose a consumption option and obtain capacity
 
-  1. **Choose a consumption option**. Make your choice based on how you want to get and use GPU resources. To learn more, see [Choose a consumption option](https://docs.cloud.google.com/ai-hypercomputer/docs/consumption-models).
+To obtain capacity, complete the following steps:
+
+  1. **Choose a consumption option:** Make your choice based on how you want to get and use GPU resources. To learn more, see [Choose a consumption option](https://docs.cloud.google.com/ai-hypercomputer/docs/consumption-models).
 
 For GKE, consider the following additional information when choosing a consumption option:
 
-     * A4X Max and A4X compute instances can't be provisioned by flex-start.
-     * For more information about flex-start ([Preview](https://cloud.google.com/products#product-launch-stages)) and GKE, see [About GPU obtainability with flex-start](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/dws).
+     * A4X Max and A4X compute instances can't be provisioned by using flex-start.
+     * For more information about flex-start provisioning mode ([Preview](https://cloud.google.com/products#product-launch-stages)) and GKE, see [About GPU obtainability with flex-start](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/dws).
      * Flex-start uses best-effort compact placement. To examine your topology, see [View the physical topology of nodes in your GKE cluster](https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/schedule-gke-workloads-tas#view-physical-topology).
      * You can only get topology information when using Spot VMs if you configure [compact placement](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/compact-placement).
-  2. **Obtain capacity**. The process to obtain capacity differs for each consumption option.
-
-To learn about the process for your chosen consumption option, see [Capacity overview](https://docs.cloud.google.com/ai-hypercomputer/docs/obtain-capacity).
+     * For more information about configuring these consumption options in Cluster Toolkit blueprints, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options).
+  2. **Obtain capacity:** The process to obtain capacity differs for each consumption option. To learn about the process for your chosen consumption option, see [Capacity overview](https://docs.cloud.google.com/ai-hypercomputer/docs/obtain-capacity).
 
 **Note:** When you request A4X capacity, you obtain it in _all capacity mode_. This mode is the only supported reservation operational mode for A4X machine types. For more information about all capacity mode, see [Reservation operational mode](https://docs.cloud.google.com/ai-hypercomputer/docs/create/review-configurations#reservation-operational-mode).
 
@@ -143,7 +144,7 @@ Use the following instructions to create a cluster by using [Cluster Toolkit](ht
 
 ### A4X Max
 
-  1. [Launch Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell). You can use a different environment; however, we recommend Cloud Shell because the dependencies are already pre-installed for Cluster Toolkit. If you don't want to use Cloud Shell, follow the instructions to [install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) to prepare a different environment.
+  1. [Launch Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell). Although it's possible to use a different environment, we recommend that you use Cloud Shell because the dependencies are already pre-installed for Cluster Toolkit. If you don't want to use Cloud Shell, then follow the instructions to [install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) to prepare a different environment.
   2. [Install Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment#install).
 
   3. Create a Cloud Storage bucket with versioning enabled to store the state of your Terraform deployment:
@@ -160,51 +161,50 @@ Replace the following variables:
      * `BUCKET_NAME`: the name of the new Cloud Storage bucket, which must meet [bucket naming requirements](https://docs.cloud.google.com/storage/docs/buckets#naming).
      * `PROJECT_ID`: your Google Cloud project ID.
      * `COMPUTE_REGION_TERRAFORM_STATE`: the compute region where you want to store the state of the Terraform deployment.
-  4. In the [`examples/gke-a4x-max-bm/gke-a4x-max-bm-deployment.yaml` blueprint from the GitHub repo](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4x-max-bm/gke-a4x-max-bm-deployment.yaml), fill in the following settings in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
+  4. In the [`examples/gke-a4x-max-bm/gke-a4x-max-bm-deployment.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4x-max-bm/gke-a4x-max-bm-deployment.yaml), fill in the following settings in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
 
-     * `BUCKET`: the name of the Cloud Storage bucket you created in the previous step.
+     * `BUCKET`: the name of the Cloud Storage bucket that you created in the previous step.
      * `PROJECT_ID`: your Google Cloud project ID.
-     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, cluster creation fails. The default value is `gke-a4x-max-bm`.
+     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, then cluster creation fails. The default value is `gke-a4x-max-bm`.
      * `REGION`: the compute region for the cluster.
-     * `ZONE`: the compute zone for the node pool of A4X Max machines. Note that this zone must match the zone where machines are available in your reservation.
-     * `STATIC_NODE_COUNT`: the number of A4X Max nodes in your cluster's node pool, which must be 18 nodes or less. We recommend using 18 nodes to obtain the GPU topology of `1x72` in one subblock using an NVLink domain.
-     * `AUTHORIZED_CIDR`: the IP address range that you want to allow to connect with the cluster. This CIDR block must include the IP address of the machine that you want to use to call Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
-     * For the `reservation` field, use one of the following, depending on whether you want to target specific [blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/terminology#block) in a reservation when provisioning the node pool:
+     * `ZONE`: the compute zone for the node pool of A4X Max machines. This zone must match the zone where machines are available in your reservation.
+     * `STATIC_NODE_COUNT`: the number of A4X Max nodes in your cluster's node pool, which must be 18 nodes or less. We recommend that you use 18 nodes to obtain the GPU topology of `1x72` in one subblock by using an NVLink domain.
+     * `AUTHORIZED_CIDR`: the IP address range that you want to let connect to the cluster. This CIDR block must include the IP address of the machine that calls Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
+     * For the `reservation` field, use one of the following, depending on whether you want to target specific [blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/terminology#block) in a reservation when you provision the node pool:
 
-       * To place the node pool anywhere in the reservation, provide the name of your reservation (`RESERVATION_NAME`).
-       * To target a specific block within your reservation, use the reservation and block names in the following format:
-             
-             RESERVATION_NAME/reservationBlocks/BLOCK_NAME
-             
+     * To place the node pool anywhere in the reservation, provide the name of your reservation (`RESERVATION_NAME`).
 
-If you don't know which blocks are available in your reservation, see [View a reservation topology](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology).
+     * To target a specific block within your reservation, use the reservation and block names in the following format:
+           
+           RESERVATION_NAME/reservationBlocks/BLOCK_NAME
+           
+
+If you don't know which blocks are available in your reservation, then see [View the topology of a reservation](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology).
 
      * `RESERVATION_PROJECT_ID`: the Google Cloud project ID that has the reservation. Your reservation might exist in a different project from `PROJECT_ID`.
 
      * `NUM_NODE_POOLS`: the number of node pools to enable in your cluster. If you want a cluster larger than 18 nodes, then you can specify multiple node pools. The default value is `1`.
 
-To modify advanced settings, edit the [`examples/gke-a4x-max-bm/gke-a4x-max-bm.yaml`](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4x-max-bm/gke-a4x-max-bm.yaml) file.
+To modify advanced settings, edit the [`examples/gke-a4x-max-bm/gke-a4x-max-bm.yaml` blueprint](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4x-max-bm/gke-a4x-max-bm.yaml) file.
 
-  5. [Generate Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#google-idp) to provide access to Terraform. If you're using Cloud Shell, sign in and set up ADC:
+  5. [Generate Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#google-idp) to provide access to Terraform. If you're using Cloud Shell, then use the `gcloud auth application-default login` command:
          
          gcloud auth application-default login
          
 
-  6. Use the [`gcluster deploy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-deploy) to deploy the blueprint and provision the GKE infrastructure using A4X Max machine types:
+  6. Use the [`gcluster deploy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-deploy) to deploy the blueprint and provision the GKE infrastructure by using A4X Max machine types:
          
          cd ~/cluster-toolkit
          ./gcluster deploy -d \
-         examples/gke-a4x-max-bm/gke-a4x-max-bm-deployment.yaml \
-         examples/gke-a4x-max-bm/gke-a4x-max-bm.yaml \
-         --deployment DEPLOYMENT_NAME
+             examples/gke-a4x-max-bm/gke-a4x-max-bm-deployment.yaml \
+             examples/gke-a4x-max-bm/gke-a4x-max-bm.yaml
          
 
-Replace `DEPLOYMENT_NAME` with your deployment name.
-
+**Note:** If you encounter an error at the JobSet or Kueue installation stage when you deploy your blueprint, then deploy the blueprint again with the addition of the `-w` flag (`./gcluster deploy -w -d ...`) to complete the deployment.
   7. When prompted, select **(A)pply** to deploy the blueprint.
 
      * The blueprint creates VPC networks, a GPU RDMA VPC network, service accounts, a cluster, and a node pool.
-     * To support the `fio-bench-job-template` job template in the blueprint, Google Cloud buckets, network storage, and persistent volumes resources are created.
+     * To support the `fio-bench-job-template` Job template in the blueprint, Google Cloud buckets, network storage, and persistent volume resources are created.
 
 
 
@@ -212,8 +212,9 @@ Replace `DEPLOYMENT_NAME` with your deployment name.
 
 **Note:** This GKE A4X blueprint automatically configures GKE-managed [Dynamic Resource Allocation for Networking (DRANET)](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/allocate-network-resources-dra). For more information, see [Configure DRANET functionality](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/create-a4x-cluster#configure-dranet).
 
-  1. [Launch Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell). You can use a different environment; however, we recommend Cloud Shell because the dependencies are already pre-installed for Cluster Toolkit. If you don't want to use Cloud Shell, follow the instructions to [install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) to prepare a different environment.
+  1. [Launch Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell). Although it's possible to use a different environment, we recommend that you use Cloud Shell because the dependencies are already pre-installed for Cluster Toolkit. If you don't want to use Cloud Shell, then follow the instructions to [install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) to prepare a different environment.
   2. [Install Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment#install).
+
   3. Create a Cloud Storage bucket with versioning enabled to store the state of your Terraform deployment:
          
          gcloud storage buckets create gs://BUCKET_NAME \
@@ -228,54 +229,56 @@ Replace the following variables:
      * `BUCKET_NAME`: the name of the new Cloud Storage bucket, which must meet [bucket naming requirements](https://docs.cloud.google.com/storage/docs/buckets#naming).
      * `PROJECT_ID`: your Google Cloud project ID.
      * `COMPUTE_REGION_TERRAFORM_STATE`: the compute region where you want to store the state of the Terraform deployment.
-  4. In the [`examples/gke-a4x/gke-a4x-deployment.yaml` blueprint from the GitHub repo](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4x/gke-a4x-deployment.yaml), fill in the following settings in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
+  4. In the [`examples/gke-a4x/gke-a4x-deployment.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4x/gke-a4x-deployment.yaml), fill in the following settings in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
 
-     * `BUCKET`: the name of the Cloud Storage bucket you created in the previous step.
+     * `BUCKET`: the name of the Cloud Storage bucket that you created in the previous step.
      * `PROJECT_ID`: your Google Cloud project ID.
-     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, cluster creation fails. The default value is `gke-a4x`.
+     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, then cluster creation fails. The default value is `gke-a4x`.
      * `REGION`: the compute region for the cluster.
-     * `ZONE`: the compute zone for the node pool of A4X machines. Note that this zone must match the zone where machines are available in your reservation.
-     * `STATIC_NODE_COUNT`: the number of A4X nodes in your cluster's node pool, which must be 18 nodes or less. We recommend using 18 nodes to obtain the GPU topology of `1x72` in one subblock using an NVLink domain.
-     * `AUTHORIZED_CIDR`: the IP address range that you want to allow to connect with the cluster. This CIDR block must include the IP address of the machine that you want to use to call Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
-     * For the `reservation` field, use one of the following, depending on whether you want to target specific [blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/terminology#block) in a reservation when provisioning the node pool:
+     * `ZONE`: the compute zone for the node pool of A4X machines. This zone must match the zone where machines are available in your reservation.
+     * `STATIC_NODE_COUNT`: the number of A4X nodes in your cluster's node pool, which must be 18 nodes or less. We recommend that you use 18 nodes to obtain the GPU topology of `1x72` in one subblock by using an NVLink domain.
+     * `AUTHORIZED_CIDR`: the IP address range that you want to let connect to the cluster. This CIDR block must include the IP address of the machine that calls Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
+     * For the `reservation` field, use one of the following, depending on whether you want to target specific [blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/terminology#block) in a reservation when you provision the node pool:
 
-       * To place the node pool anywhere in the reservation, provide the name of your reservation (`RESERVATION_NAME`).
-       * To target a specific block within your reservation, use the reservation and block names in the following format:
-             
-             RESERVATION_NAME/reservationBlocks/BLOCK_NAME
-             
+     * To place the node pool anywhere in the reservation, provide the name of your reservation (`RESERVATION_NAME`).
 
-If you don't know which blocks are available in your reservation, see [View a reservation topology](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology).
+     * To target a specific block within your reservation, use the reservation and block names in the following format:
+           
+           RESERVATION_NAME/reservationBlocks/BLOCK_NAME
+           
+
+If you don't know which blocks are available in your reservation, then see [View the topology of a reservation](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology).
 
      * `RESERVATION_PROJECT_ID`: the Google Cloud project ID that has the reservation. Your reservation might exist in a different project from `PROJECT_ID`.
 
      * `NUM_NODE_POOLS`: the number of node pools to enable in your cluster. If you want a cluster larger than 18 nodes, then you can specify multiple node pools. The default value is `1`.
 
-To modify advanced settings, edit the [`examples/gke-a4x/gke-a4x.yaml`](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4x/gke-a4x.yaml) file.
+To modify advanced settings, edit the [`examples/gke-a4x/gke-a4x.yaml` blueprint](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4x/gke-a4x.yaml) file.
 
-  5. [Generate Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#google-idp) to provide access to Terraform. If you're using Cloud Shell, sign in and set up ADC:
+  5. [Generate Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#google-idp) to provide access to Terraform. If you're using Cloud Shell, then use the `gcloud auth application-default login` command:
          
          gcloud auth application-default login
          
 
-  6. Deploy the blueprint to provision the GKE infrastructure using A4X machine types:
+  6. Use the [`gcluster deploy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-deploy) to deploy the blueprint and provision the GKE infrastructure by using A4X machine types:
          
          cd ~/cluster-toolkit
          ./gcluster deploy -d \
-         examples/gke-a4x/gke-a4x-deployment.yaml \
-         examples/gke-a4x/gke-a4x.yaml
+             examples/gke-a4x/gke-a4x-deployment.yaml \
+             examples/gke-a4x/gke-a4x.yaml
          
 
+**Note:** If you encounter an error at the JobSet or Kueue installation stage when you deploy your blueprint, then deploy the blueprint again with the addition of the `-w` flag (`./gcluster deploy -w -d ...`) to complete the deployment.
   7. When prompted, select **(A)pply** to deploy the blueprint.
 
      * The blueprint creates VPC networks, a GPU RDMA VPC network, service accounts, a cluster, and a node pool.
-     * To support the `fio-bench-job-template` job template in the blueprint, Google Cloud buckets, network storage, and persistent volumes resources are created.
+     * To support the `fio-bench-job-template` Job template in the blueprint, Google Cloud buckets, network storage, and persistent volume resources are created.
 
 
 
 ### A4
 
-  1. [Launch Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell). You can use a different environment; however, we recommend Cloud Shell because the dependencies are already pre-installed for Cluster Toolkit. If you don't want to use Cloud Shell, follow the instructions to [install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) to prepare a different environment.
+  1. [Launch Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell). Although it's possible to use a different environment, we recommend that you use Cloud Shell because the dependencies are already pre-installed for Cluster Toolkit. If you don't want to use Cloud Shell, then follow the instructions to [install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) to prepare a different environment.
   2. [Install Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment#install).
 
   3. Create a Cloud Storage bucket with versioning enabled to store the state of your Terraform deployment:
@@ -292,181 +295,57 @@ Replace the following variables:
      * `BUCKET_NAME`: the name of the new Cloud Storage bucket, which must meet [bucket naming requirements](https://docs.cloud.google.com/storage/docs/buckets#naming).
      * `PROJECT_ID`: your Google Cloud project ID.
      * `COMPUTE_REGION_TERRAFORM_STATE`: the compute region where you want to store the state of the Terraform deployment.
-  4. The files that you need to edit to create a cluster depend on the [consumption option](https://docs.cloud.google.com/ai-hypercomputer/docs/consumption-models) that you're using for your deployment. Select the tab that corresponds to your consumption option's provisioning model.
+  4. Choose a consumption option for your GKE deployment:
 
-### Reservation-bound
+By default, the deployment file is configured to consume [specific reservations](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options#reservations). To use an alternative consumption model (such as Spot VMs or flex-start provisioning mode), update your deployment YAML file. For more information, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options).
 
-In the [`examples/gke-a4/gke-a4-deployment.yaml` blueprint from the GitHub repo](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4/gke-a4-deployment.yaml), fill in the following settings in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
+  5. In the [`examples/gke-a4/gke-a4-deployment.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4/gke-a4-deployment.yaml), fill in the following settings in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
 
-     * `BUCKET`: the name of the Cloud Storage bucket you created in the previous step.
+     * `BUCKET`: the name of the Cloud Storage bucket that you created in the previous step.
      * `PROJECT_ID`: your Google Cloud project ID.
-     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, cluster creation fails. The default value is `gke-a4`.
+     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, then cluster creation fails. The default value is `gke-a4`.
      * `REGION`: the compute region for the cluster.
-     * `ZONE`: the compute zone for the node pool of A4 machines. Note that this zone must match the zone where machines are available in your reservation.
-     * `STATIC_NODE_COUNT`: the number of A4 nodes in your cluster.
-     * `AUTHORIZED_CIDR`: the IP address range that you want to allow to connect with the cluster. This CIDR block must include the IP address of the machine that you want to use to call Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
-     * For the `reservation` field, use one of the following, depending on whether you want to target specific [blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/terminology#block) in a reservation when provisioning the node pool:
+     * `ZONE`: the compute zone for the node pool of A4 machines. This zone must match the zone where machines are available in your reservation.
+     * `AUTHORIZED_CIDR`: the IP address range that you want to let connect to the cluster. This CIDR block must include the IP address of the machine that calls Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
+     * In the specific reservation section, configure the following settings:
+     * In the `reservation_affinity` block, in the `specific_reservations` list, specify the reservation `name` field:
 
        * To place the node pool anywhere in the reservation, provide the name of your reservation (`RESERVATION_NAME`).
        * To target a specific block within your reservation, use the reservation and block names in the following format:
-             
-             RESERVATION_NAME/reservationBlocks/BLOCK_NAME
-             
+    
+    RESERVATION_NAME/reservationBlocks/BLOCK_NAME
+    
 
-If you don't know which blocks are available in your reservation, see [View a reservation topology](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology).
+If you don't know which blocks are available in your reservation, then see [View the topology of a reservation](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology).
 
-To modify advanced settings, edit [`examples/gke-a4/gke-a4.yaml`](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4/gke-a4.yaml).
+     * `STATIC_NODE_COUNT`: the number of A4 nodes in your cluster.
 
-### Flex-start
+To modify advanced settings, edit the [`examples/gke-a4/gke-a4.yaml` blueprint](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4/gke-a4.yaml) file.
 
-**Preview**
-
-This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
-
-     1. In the [`examples/gke-a4/gke-a4-deployment.yaml` blueprint from the GitHub repo](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4/gke-a4-deployment.yaml), fill in the following settings in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
-
-        * `BUCKET`: the name of the Cloud Storage bucket you created in the previous step.
-        * `PROJECT_ID`: your Google Cloud project ID.
-        * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, cluster creation fails. The default value is `gke-a4`.
-        * `REGION`: the compute region for the cluster.
-        * `ZONE`: the compute zone for the node pool of A4 machines.
-        * `AUTHORIZED_CIDR`: the IP address range that you want to allow to connect with the cluster. This CIDR block must include the IP address of the machine that you want to use to call Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
-        * Remove the `reservation` field, and replace the field with `enable_flex_start: true`. Add on the next line `enable_queued_provisioning: true` if you'd also like to use queued provisioning. For more information, see [Use node pools with flex-start with queued provisioning](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/provisioningrequest#node-pools).
-        * Remove `static_node_count`.
-     2. In the [`examples/gke-a4/gke-a4.yaml` blueprint from the GitHub repo](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4/gke-a4.yaml), make the following changes:
-
-        * In the `vars` block, remove `static_node_count`.
-        * In the `vars` block, make sure the `version_prefix` number is `"1.32."` or higher. To use flex-start in GKE, your cluster must use version 1.32.2-gke.1652000 or later.
-        * In the `vars` block, replace the entire `reservation` block (including the `reservation` line itself) with `enable_flex_start: true`, and, optionally, `enable_queued_provisioning: true`.
-        * In the `vars` block, if you don't require queued provisioning, remove the following line: `kueue_configuration_path: $(ghpc_stage("./kueue-configuration.yaml.tftpl"))`.
-        * Under `id: a4-pool`, remove the following line: `static_node_count: $(vars.static_node_count)`.
-        * Under `id: a4-pool`, remove the `reservation_affinity` block. Replace this block with the following lines:
-
-          * `enable_flex_start: $(vars.enable_flex_start)`
-          * `auto_repair: false`
-          * For queued provisioning, if you want to enable it, add the following additional lines: 
-            * `enable_queued_provisioning: $(vars.enable_queued_provisioning)`
-            * `autoscaling_total_min_nodes: 0`
-        * Under `id: workload-manager-install`, remove the following block:
-              
-              kueue:
-                  install: true
-                  config_path: $(vars.kueue_configuration_path)
-                  config_template_vars:
-                     num_gpus: $(a3-ultragpu-pool.static_gpu_count)
-                     accelerator_type: $(vars.accelerator_type)
-              
-
-          * For flex-start with queued provisioning, do the following:
-
-            1. Add `gpu_nominal_quota: NOMINAL_QUOTA` to the `vars` block. The `gpu_nominal_quota` value is used to set the `nominalQuota` of GPUs in the `ClusterQueue` spec (in the following, see the step setting `ClusterQueue`). In this example, the `ClusterQueue` only admits workloads if the sum of the GPU requests is less than or equal to the `NOMINAL_QUOTA` value. For more information about `ClusterQueue`, see the following [Kueue document of Cluster Queue](https://kueue.sigs.k8s.io/docs/concepts/cluster_queue/).
-
-            2. Update the `kueue` block to the following:
-                   
-                   kueue:
-                      install: true
-                      config_path: $(vars.kueue_configuration_path)
-                      config_template_vars:
-                         num_gpus: $(vars.gpu_nominal_quota)
-                   
-
-            3. Replace the content of the `kueue-configuration.yaml.tftpl` file with the following:
-                   
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: ResourceFlavor
-                   metadata:
-                      name: "default-flavor"
-                   ---
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: AdmissionCheck
-                   metadata:
-                      name: dws-prov
-                   spec:
-                      controllerName: kueue.x-k8s.io/provisioning-request
-                      parameters:
-                         apiGroup: kueue.x-k8s.io
-                         kind: ProvisioningRequestConfig
-                         name: dws-config
-                   ---
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: ProvisioningRequestConfig
-                   metadata:
-                      name: dws-config
-                   spec:
-                      provisioningClassName: queued-provisioning.gke.io
-                      managedResources:
-                      - nvidia.com/gpu
-                   ---
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: ClusterQueue
-                   metadata:
-                      name: "dws-cluster-queue"
-                   spec:
-                      namespaceSelector: {}
-                      resourceGroups:
-                      - coveredResources: ["nvidia.com/gpu"]
-                         flavors:
-                         - name: "default-flavor"
-                         resources:
-                         - name: "nvidia.com/gpu"
-                            nominalQuota: ${num_gpus}
-                      admissionChecks:
-                      - dws-prov
-                   ---
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: LocalQueue
-                   metadata:
-                      namespace: "default"
-                      name: "dws-local-queue"
-                   spec:
-                      clusterQueue: "dws-cluster-queue"
-                   ---
-                   
-
-        * Under `id: job-template`, replace the `node_count` variable with `2`.
-
-### Spot
-
-     1. In the [`examples/gke-a4/gke-a4-deployment.yaml` blueprint from the GitHub repo](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4/gke-a4-deployment.yaml), fill in the following settings in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
-
-        * `BUCKET`: the name of the Cloud Storage bucket you created in the previous step.
-        * `PROJECT_ID`: your Google Cloud project ID.
-        * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, cluster creation fails. The default value is `gke-a4`.
-        * `REGION`: the compute region for the cluster.
-        * `ZONE`: the compute zone for the node pool of A4 machines.
-        * `STATIC_NODE_COUNT`: the number of A4 nodes in your cluster.
-        * `AUTHORIZED_CIDR`: the IP address range that you want to allow to connect with the cluster. This CIDR block must include the IP address of the machine that you want to use to call Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
-        * Replace the entire `reservation` block (including the `reservation` line itself) with `spot: true`.
-     2. In the [`examples/gke-a4/gke-a4.yaml` blueprint from the GitHub repo](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4/gke-a4.yaml), make the following changes:
-
-        * In the `vars` block, replace the entire `reservation` block (including the `reservation` line itself) with `spot: true`.
-        * Under `id: a4-pool`, remove the `reservation_affinity` block. Replace this block with the following line:
-
-          * `spot: $(vars.spot)`
-
-  5. [Generate Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#google-idp) to provide access to Terraform. If you're using Cloud Shell, sign in and set up ADC:
+  6. [Generate Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#google-idp) to provide access to Terraform. If you're using Cloud Shell, then use the `gcloud auth application-default login` command:
          
          gcloud auth application-default login
          
 
-  6. Deploy the blueprint to provision the GKE infrastructure using A4 machine types:
+  7. Use the [`gcluster deploy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-deploy) to deploy the blueprint and provision the GKE infrastructure by using A4 machine types:
          
          cd ~/cluster-toolkit
          ./gcluster deploy -d \
-         examples/gke-a4/gke-a4-deployment.yaml \
-         examples/gke-a4/gke-a4.yaml
+             examples/gke-a4/gke-a4-deployment.yaml \
+             examples/gke-a4/gke-a4.yaml
          
 
-  7. When prompted, select **(A)pply** to deploy the blueprint.
+**Note:** If you encounter an error at the JobSet or Kueue installation stage when you deploy your blueprint, then deploy the blueprint again with the addition of the `-w` flag (`./gcluster deploy -w -d ...`) to complete the deployment.
+  8. When prompted, select **(A)pply** to deploy the blueprint.
 
-     * The blueprint creates VPC networks, a GPU RDMA VPC network, service accounts, a cluster, and a nodepool.
-     * To support the `fio-bench-job-template` job template in the blueprint, Google Cloud buckets, network storage, and persistent volumes resources are created.
+     * The blueprint creates VPC networks, a GPU RDMA VPC network, service accounts, a cluster, and a node pool.
+     * To support the `fio-bench-job-template` Job template in the blueprint, Google Cloud buckets, network storage, and persistent volume resources are created.
 
 
 
 ### A3 Ultra
 
-  1. [Launch Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell). You can use a different environment; however, we recommend Cloud Shell because the dependencies are already pre-installed for Cluster Toolkit. If you don't want to use Cloud Shell, follow the instructions to [install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) to prepare a different environment.
+  1. [Launch Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell). Although it's possible to use a different environment, we recommend that you use Cloud Shell because the dependencies are already pre-installed for Cluster Toolkit. If you don't want to use Cloud Shell, then follow the instructions to [install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) to prepare a different environment.
   2. [Install Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment#install).
 
   3. Create a Cloud Storage bucket with versioning enabled to store the state of your Terraform deployment:
@@ -483,182 +362,57 @@ Replace the following variables:
      * `BUCKET_NAME`: the name of the new Cloud Storage bucket, which must meet [bucket naming requirements](https://docs.cloud.google.com/storage/docs/buckets#naming).
      * `PROJECT_ID`: your Google Cloud project ID.
      * `COMPUTE_REGION_TERRAFORM_STATE`: the compute region where you want to store the state of the Terraform deployment.
-  4. The files that you need to edit to create a cluster depend on the [consumption option](https://docs.cloud.google.com/ai-hypercomputer/docs/consumption-models) that you're using for your deployment. Select the tab that corresponds to your consumption option's provisioning model.
+  4. Choose a consumption option for your GKE deployment:
 
-### Reservation-bound
+By default, the deployment file is configured to consume [specific reservations](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options#reservations). To use an alternative consumption model (such as Spot VMs or flex-start provisioning mode), update your deployment YAML file. For more information, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options).
 
-In the [`examples/gke-a3-ultragpu/gke-a3-ultragpu-deployment.yaml` blueprint from the GitHub repo](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-ultragpu/gke-a3-ultragpu-deployment.yaml), replace the following variables in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
+  5. In the [`examples/gke-a3-ultragpu/gke-a3-ultragpu-deployment.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-ultragpu/gke-a3-ultragpu-deployment.yaml), fill in the following settings in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
 
-     * `BUCKET_NAME`: the name of the Cloud Storage bucket you created in the previous step.
-     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, cluster creation fails.
+     * `BUCKET`: the name of the Cloud Storage bucket that you created in the previous step.
      * `PROJECT_ID`: your Google Cloud project ID.
-     * `COMPUTE_REGION`: the compute region for the cluster.
-     * `COMPUTE_ZONE`: the compute zone for the node pool of A3 Ultra machines. Note that this zone must match the zone where machines are available in your reservation.
-
-     * `IP_ADDRESS/SUFFIX`: The IP address range that you want to allow to connect with the cluster. This CIDR block must include the IP address of the machine that you want to use to call Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
-
-     * For the `reservation` field, use one of the following, depending on whether you want to target specific [blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/terminology#block) in a reservation when provisioning the node pool:
+     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, then cluster creation fails. The default value is `gke-a3-ultragpu`.
+     * `REGION`: the compute region for the cluster.
+     * `ZONE`: the compute zone for the node pool of A3 Ultra machines. This zone must match the zone where machines are available in your reservation.
+     * `AUTHORIZED_CIDR`: the IP address range that you want to let connect to the cluster. This CIDR block must include the IP address of the machine that calls Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
+     * In the specific reservation section, configure the following settings:
+     * In the `reservation_affinity` block, in the `specific_reservations` list, specify the reservation `name` field:
 
        * To place the node pool anywhere in the reservation, provide the name of your reservation (`RESERVATION_NAME`).
        * To target a specific block within your reservation, use the reservation and block names in the following format:
-             
-             RESERVATION_NAME/reservationBlocks/BLOCK_NAME
-             
+    
+    RESERVATION_NAME/reservationBlocks/BLOCK_NAME
+    
 
-If you don't know which blocks are available in your reservation, see [View a reservation topology](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology).
+If you don't know which blocks are available in your reservation, then see [View the topology of a reservation](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology).
 
-     * `NODE_COUNT`: the number of A3 Ultra nodes in your cluster.
+     * `STATIC_NODE_COUNT`: the number of A3 Ultra nodes in your cluster.
 
-To modify advanced settings, edit [`examples/gke-a3-ultragpu/gke-a3-ultragpu.yaml`](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-ultragpu/gke-a3-ultragpu.yaml).
+To modify advanced settings, edit the [`examples/gke-a3-ultragpu/gke-a3-ultragpu.yaml` blueprint](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-ultragpu/gke-a3-ultragpu.yaml) file.
 
-### Flex-start
-
-**Preview**
-
-This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
-
-     1. In the [`examples/gke-a3-ultragpu/gke-a3-ultragpu-deployment.yaml` blueprint from the GitHub repo](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-ultragpu/gke-a3-ultragpu-deployment.yaml), replace the following variables in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
-
-        * `BUCKET_NAME`: the name of the Cloud Storage bucket you created in the previous step.
-        * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, cluster creation fails.
-        * `PROJECT_ID`: your Google Cloud project ID.
-        * `COMPUTE_REGION`: the compute region for the cluster.
-        * `COMPUTE_ZONE`: the compute zone for the node pool of A3 Ultra machines.
-        * `IP_ADDRESS/SUFFIX`: The IP address range that you want to allow to connect with the cluster. This CIDR block must include the IP address of the machine that you want to use to call Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
-        * Remove the `reservation` field, and replace the field with `enable_flex_start: true`. Add on the next line `enable_queued_provisioning: true` if you'd also like to use queued provisioning. For more information, see [Use node pools with flex-start with queued provisioning](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/provisioningrequest#node-pools).
-        * Remove `static_node_count`.
-     2. In the [`examples/gke-a3-ultragpu/gke-a3-ultragpu.yaml` blueprint from the GitHub repo](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-ultragpu/gke-a3-ultragpu.yaml), make the following changes:
-
-        * In the `vars` block, remove `static_node_count`.
-        * In the `vars` block, update `version_prefix` number to `"1.32."` or higher. To use flex-start in GKE, your cluster must use version 1.32.2-gke.1652000 or later.
-        * In the `vars` block, replace the entire `reservation` block (including the `reservation` line itself) with `enable_flex_start: true`, and, optionally, `enable_queued_provisioning: true`.
-        * In the `vars` block, remove the following line: `kueue_configuration_path: $(ghpc_stage("./kueue-configuration.yaml.tftpl"))`.
-        * Under `id: a3-ultragpu-pool`, remove the following line: `static_node_count: $(vars.static_node_count)`.
-        * Under `id: a3-ultragpu-pool`, remove the `reservation_affinity` block. Replace this block with the following lines:
-
-          * `enable_flex_start: $(vars.enable_flex_start)`
-          * `auto_repair: false`
-          * For queued provisioning, if you want to enable it, add the following additional lines: 
-            * `enable_queued_provisioning: $(vars.enable_queued_provisioning)`
-            * `autoscaling_total_min_nodes: 0`
-        * Under `id: workload-manager-install`, remove the following block:
-              
-              config_path: $(vars.kueue_configuration_path)
-              config_template_vars:
-                num_gpus: $(a4-pool.static_gpu_count)
-                accelerator_type: $(vars.accelerator_type)
-              
-
-          * For flex-start with queued provisioning, follow these three steps:
-
-            1. Add `gpu_nominal_quota: NOMINAL_QUOTA` to the `vars` block. The `gpu_nominal_quota` value is used to set the `nominalQuota` of GPUs in the `ClusterQueue` specification. In this example, the `ClusterQueue` only admits workloads if the sum of the GPU requests is less than or equal to the `NOMINAL_QUOTA` value. For more information about `ClusterQueue`, see the following [Kueue document of Cluster Queue](https://kueue.sigs.k8s.io/docs/concepts/cluster_queue/).
-
-            2. Update the `kueue` block to the following:
-                   
-                   kueue:
-                      install: true
-                      config_path: $(vars.kueue_configuration_path)
-                      config_template_vars:
-                         num_gpus: $(vars.gpu_nominal_quota)
-                   
-
-            3. Replace the content of the `kueue-configuration.yaml.tftpl` file with the following:
-                   
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: ResourceFlavor
-                   metadata:
-                      name: "default-flavor"
-                   ---
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: AdmissionCheck
-                   metadata:
-                      name: dws-prov
-                   spec:
-                      controllerName: kueue.x-k8s.io/provisioning-request
-                      parameters:
-                         apiGroup: kueue.x-k8s.io
-                         kind: ProvisioningRequestConfig
-                         name: dws-config
-                   ---
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: ProvisioningRequestConfig
-                   metadata:
-                      name: dws-config
-                   spec:
-                      provisioningClassName: queued-provisioning.gke.io
-                      managedResources:
-                      - nvidia.com/gpu
-                   ---
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: ClusterQueue
-                   metadata:
-                      name: "dws-cluster-queue"
-                   spec:
-                      namespaceSelector: {}
-                      resourceGroups:
-                      - coveredResources: ["nvidia.com/gpu"]
-                         flavors:
-                         - name: "default-flavor"
-                         resources:
-                         - name: "nvidia.com/gpu"
-                            nominalQuota: ${num_gpus}
-                      admissionChecks:
-                      - dws-prov
-                   ---
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: LocalQueue
-                   metadata:
-                      namespace: "default"
-                      name: "dws-local-queue"
-                   spec:
-                      clusterQueue: "dws-cluster-queue"
-                   ---
-                   
-
-          * In the `id: job-template` field, replace the `node_count` variable with `2`.
-
-### Spot
-
-     1. In the [`examples/gke-a3-ultragpu/gke-a3-ultragpu-deployment.yaml` blueprint from the GitHub repo](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-ultragpu/gke-a3-ultragpu-deployment.yaml), fill in the following settings in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
-
-        * `BUCKET_NAME`: the name of the Cloud Storage bucket you created in the previous step.
-        * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, cluster creation fails.
-        * `PROJECT_ID`: your Google Cloud project ID.
-        * `COMPUTE_REGION`: the compute region for the cluster.
-        * `COMPUTE_ZONE`: the compute zone for the node pool of A3 Ultra machines.
-        * `IP_ADDRESS/SUFFIX`: The IP address range that you want to allow to connect with the cluster. This CIDR block must include the IP address of the machine that you want to use to call Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
-        * Replace the entire `reservation` block (including the `reservation` line itself) with `spot: true`.
-        * `NODE_COUNT`: the number of A3 Ultra nodes in your cluster.
-     2. In the [`examples/gke-a3-ultragpu/gke-a3-ultragpu.yaml` blueprint from the GitHub repo](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-ultragpu/gke-a3-ultragpu.yaml), make the following changes:
-
-        * In the `vars` block, replace the entire `reservation` variable with `spot: true`.
-        * In the `id: a3-ultragpu-pool` section, remove the `reservation_affinity` block. Replace this block with the following line:
-
-          * `spot: $(vars.spot)`
-
-  5. Generate [Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#google-idp) to provide access to Terraform. If you're using Cloud Shell, sign in and set up ADC:
+  6. [Generate Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#google-idp) to provide access to Terraform. If you're using Cloud Shell, then use the `gcloud auth application-default login` command:
          
          gcloud auth application-default login
          
 
-  6. Deploy the blueprint to provision the GKE infrastructure using A3 Ultra machine types:
+  7. Use the [`gcluster deploy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-deploy) to deploy the blueprint and provision the GKE infrastructure by using A3 Ultra machine types:
          
          cd ~/cluster-toolkit
          ./gcluster deploy -d \
-         examples/gke-a3-ultragpu/gke-a3-ultragpu-deployment.yaml \
-         examples/gke-a3-ultragpu/gke-a3-ultragpu.yaml
+             examples/gke-a3-ultragpu/gke-a3-ultragpu-deployment.yaml \
+             examples/gke-a3-ultragpu/gke-a3-ultragpu.yaml
          
 
-  7. When prompted, select **(A)pply** to deploy the blueprint.
+**Note:** If you encounter an error at the JobSet or Kueue installation stage when you deploy your blueprint, then deploy the blueprint again with the addition of the `-w` flag (`./gcluster deploy -w -d ...`) to complete the deployment.
+  8. When prompted, select **(A)pply** to deploy the blueprint.
 
-     * The blueprint creates VPC networks, a GPU RDMA VPC network, service accounts, a cluster, and a nodepool.
-     * To support the `fio-bench-job-template` job template in the blueprint, Google Cloud buckets, network storage, and persistent volumes resources are created.
+     * The blueprint creates VPC networks, a GPU RDMA VPC network, service accounts, a cluster, and a node pool.
+     * To support the `fio-bench-job-template` Job template in the blueprint, Google Cloud buckets, network storage, and persistent volume resources are created.
 
 
 
 ### A3 Mega
 
-  1. [Launch Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell). You can use a different environment; however, we recommend Cloud Shell because the dependencies are already pre-installed for Cluster Toolkit. If you don't want to use Cloud Shell, prepare a different environment by following the instructions to [install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies).
+  1. [Launch Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell). Although it's possible to use a different environment, we recommend that you use Cloud Shell because the dependencies are already pre-installed for Cluster Toolkit. If you don't want to use Cloud Shell, then prepare a different environment by following the instructions to [install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies).
   2. [Install Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment#install).
 
   3. Create a Cloud Storage bucket with versioning enabled to store the state of your Terraform deployment:
@@ -675,182 +429,57 @@ Replace the following variables:
      * `BUCKET_NAME`: the name of the new Cloud Storage bucket, which must meet [bucket naming requirements](https://docs.cloud.google.com/storage/docs/buckets#naming).
      * `PROJECT_ID`: your Google Cloud project ID.
      * `COMPUTE_REGION_TERRAFORM_STATE`: the compute region where you want to store the state of the Terraform deployment.
-  4. The files that you need to edit to create a cluster depend on the [consumption option](https://docs.cloud.google.com/ai-hypercomputer/docs/consumption-models) that you're using for your deployment. Select the tab that corresponds to your consumption option's provisioning model.
+  4. In the [`examples/gke-a3-megagpu/gke-a3-megagpu-deployment.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-megagpu/gke-a3-megagpu-deployment.yaml), replace the following variables in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
 
-### Reservation-bound
-
-In the [`examples/gke-a3-megagpu/gke-a3-megagpu-deployment.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-megagpu/gke-a3-megagpu-deployment.yaml), replace the following variables in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
-
-     * `BUCKET`: the name of the Cloud Storage bucket you created in the previous step.
-     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, cluster creation fails.
+     * `BUCKET`: the name of the Cloud Storage bucket that you created in the previous step.
+     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, then cluster creation fails.
      * `PROJECT_ID`: your Google Cloud project ID.
      * `REGION`: the compute region for the cluster.
-     * `ZONE`: the compute zone for the node pool of A3 Mega machines. Note that this zone should match the zone where machines are available in your reservation.
-     * `AUTHORIZED_CIDR`: the IP address range that you want to allow to connect with the cluster. This CIDR block must include the IP address of the machine that you want to use to call Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
-     * For the `reservation` field, use one of the following, depending on whether you want to target specific [blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/terminology#block) in a reservation when provisioning the node pool:
+     * `ZONE`: the compute zone for the node pool of A3 Mega machines. This zone must match the zone where machines are available in your reservation.
+     * `AUTHORIZED_CIDR`: the IP address range that you want to let connect to the cluster. This CIDR block must include the IP address of the machine that calls Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work). To get the IP address for your host machine, run the `curl -s https://ifconfig.me` command.
+  5. Choose a consumption option for your GKE deployment:
 
-       * To place the node pool anywhere in the reservation, provide the name of your reservation (`RESERVATION_NAME`).
-       * To target a specific block within your reservation, use the reservation and block names in the following format:
-             
-             RESERVATION_NAME/reservationBlocks/BLOCK_NAME
-             
+By default, the deployment file is configured to consume [standard or future reservations](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options#reservations). To use an alternative consumption model (such as on-demand capacity, Spot VMs, or flex-start provisioning mode), update your deployment YAML file. For more information, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options).
 
-If you don't know which blocks are available in your reservation, see [View the topology of a reservation](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology).
+To configure a reservation, set the following values in the specific reservation section:
+
+     * In the `reservation_affinity` block, in the `specific_reservations` list, specify the reservation `name` field:
+     * To place the node pool anywhere in the reservation, provide the name of your reservation (`RESERVATION_NAME`).
+     * To target a specific block within your reservation, use the reservation and block names in the following format:
+           
+           RESERVATION_NAME/reservationBlocks/BLOCK_NAME
+           
+
+If you don't know which blocks are available in your reservation, then see [View the topology of a reservation](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology).
 
      * `STATIC_NODE_COUNT`: the number of A3 Mega nodes in your cluster.
 
-To modify advanced settings, edit [`examples/gke-a3-megagpu/gke-a3-megagpu.yaml`](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-megagpu/gke-a3-megagpu.yaml).
+To modify advanced settings, edit the [`examples/gke-a3-megagpu/gke-a3-megagpu.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-megagpu/gke-a3-megagpu.yaml).
 
-### Flex-start
-
-**Preview**
-
-This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
-
-     1. In the [`examples/gke-a3-megagpu/gke-a3-megagpu-deployment.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-megagpu/gke-a3-megagpu-deployment.yaml), replace the following variables in the `vars` sections to match the specific values for your deployment:
-
-        * `BUCKET`: the name of the Cloud Storage bucket you created in the previous step.
-        * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, cluster creation fails.
-        * `PROJECT_ID`: your Google Cloud project ID.
-        * `REGION`: the compute region for the cluster.
-        * `ZONE`: the compute zone for the node pool of A3 Mega machines.
-        * `AUTHORIZED_CIDR`: the IP address range that you want to allow to connect with the cluster. This CIDR block must include the IP address of the machine that you want to use to call Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
-        * Remove the `reservation` field, and replace the field with `enable_flex_start: true`. If you also want to use queued provisioning, add `enable_queued_provisioning: true` to the following line. For more information, see [Use node pools with flex-start with queued provisioning](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/provisioningrequest#node-pools).
-        * Remove `static_node_count`.
-     2. In the [`examples/gke-a3-megagpu/gke-a3-megagpu.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-megagpu/gke-a3-megagpu.yaml), make the following changes:
-
-        * In the `vars` block, remove `static_node_count`.
-        * In the `vars` block, update `version_prefix` number to `"1.32."` or higher. To use flex-start in GKE, your cluster must use version 1.32.2-gke.1652000 or later.
-        * In the `vars` block, replace the entire `reservation` block (including the `reservation` line itself) with `enable_flex_start: true`, and, optionally, `enable_queued_provisioning: true`.
-        * In the `vars` block, remove the following line: `kueue_configuration_path: $(ghpc_stage("./kueue-configuration.yaml.tftpl"))`.
-        * Under `id: a3_megagpu_pool`, remove the following line: `static_node_count: $(vars.static_node_count)`.
-        * Under `id: a3_megagpu_pool`, remove the `reservation_affinity` block. Replace this block with the following lines:
-
-          * `enable_flex_start: $(vars.enable_flex_start)`
-          * `auto_repair: false`
-          * For queued provisioning, if you want to enable it, add the following additional lines: 
-            * `enable_queued_provisioning: $(vars.enable_queued_provisioning)`
-            * `autoscaling_total_min_nodes: 0`
-        * Under `id: workload_manager_install`, remove the following block:
-              
-              config_path: $(vars.kueue_configuration_path)
-              config_template_vars:
-                num_gpus: $(a3_megagpu_pool.static_gpu_count)
-                accelerator_type: $(vars.accelerator_type)
-              
-
-          * For flex-start with queued provisioning, follow these three steps:
-
-            1. Add `gpu_nominal_quota: NOMINAL_QUOTA` to the `vars` block. The `gpu_nominal_quota` value is used to set the `nominalQuota` of GPUs in the `ClusterQueue` specification. In this example, the `ClusterQueue` only admits workloads if the sum of the GPU requests is less than or equal to the `NOMINAL_QUOTA` value. For more information about `ClusterQueue`, see the following [Kueue document of Cluster Queue](https://kueue.sigs.k8s.io/docs/concepts/cluster_queue/).
-
-            2. Update the `kueue` block to the following:
-                   
-                   kueue:
-                      install: true
-                      config_path: $(vars.kueue_configuration_path)
-                      config_template_vars:
-                         num_gpus: $(vars.gpu_nominal_quota)
-                   
-
-            3. Replace the content of the `kueue-configuration.yaml.tftpl` file with the following:
-                   
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: ResourceFlavor
-                   metadata:
-                      name: "default-flavor"
-                   ---
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: AdmissionCheck
-                   metadata:
-                      name: dws-prov
-                   spec:
-                      controllerName: kueue.x-k8s.io/provisioning-request
-                      parameters:
-                         apiGroup: kueue.x-k8s.io
-                         kind: ProvisioningRequestConfig
-                         name: dws-config
-                   ---
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: ProvisioningRequestConfig
-                   metadata:
-                      name: dws-config
-                   spec:
-                      provisioningClassName: queued-provisioning.gke.io
-                      managedResources:
-                      - nvidia.com/gpu
-                   ---
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: ClusterQueue
-                   metadata:
-                      name: "dws-cluster-queue"
-                   spec:
-                      namespaceSelector: {}
-                      resourceGroups:
-                      - coveredResources: ["nvidia.com/gpu"]
-                         flavors:
-                         - name: "default-flavor"
-                         resources:
-                         - name: "nvidia.com/gpu"
-                            nominalQuota: ${num_gpus}
-                      admissionChecks:
-                      - dws-prov
-                   ---
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: LocalQueue
-                   metadata:
-                      namespace: "default"
-                      name: "dws-local-queue"
-                   spec:
-                      clusterQueue: "dws-cluster-queue"
-                   ---
-                   
-
-          * In the `id: job-template` field, replace the value of the `node_count` variable with `2`.
-
-### Spot
-
-     1. In the [`examples/gke-a3-megagpu/gke-a3-megagpu-deployment.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-megagpu/gke-a3-megagpu-deployment.yaml), update the following variables to match the specific values for your deployment:
-
-        * `BUCKET`: the name of the Cloud Storage bucket you created in the previous step.
-        * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, cluster creation fails.
-        * `PROJECT_ID`: your Google Cloud project ID.
-        * `REGION`: the compute region for the cluster.
-        * `ZONE`: the compute zone for the node pool of A3 Mega machines.
-        * `AUTHORIZED_CIDR`: the IP address range that you want to allow to connect with the cluster. This CIDR block must include the IP address of the machine that you want to use to call Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
-        * Replace the entire `reservation` block (including the `reservation` line itself) with `provisioning_model: SPOT`.
-        * `STATIC_NODE_COUNT`: the number of A3 Mega nodes in your cluster.
-     2. In the [`examples/gke-a3-megagpu/gke-a3-megagpu.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-megagpu/gke-a3-megagpu.yaml), make the following changes:
-
-        * In the `vars` block, replace the entire `reservation` block (including the `reservation` line itself) with `spot: true`.
-        * In the `id: a3_megagpu_pool` section, remove the `reservation_affinity` block. Replace this block with the following line:
-
-          * `spot: $(vars.spot)`
-
-  5. Generate [Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#google-idp) to provide access to Terraform. If you're using Cloud Shell, you can run the following command:
+  6. [Generate Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#google-idp) to provide access to Terraform. If you're using Cloud Shell, then use the `gcloud auth application-default login` command:
          
          gcloud auth application-default login
          
 
-  6. Deploy the blueprint to provision the GKE infrastructure using A3 Mega machine types:
+  7. Use the [`gcluster deploy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-deploy) to deploy the blueprint and provision the GKE infrastructure by using A3 Mega machine types:
          
          cd ~/cluster-toolkit
          ./gcluster deploy -d \
-         examples/gke-a3-megagpu/gke-a3-megagpu.yaml
+             examples/gke-a3-megagpu/gke-a3-megagpu-deployment.yaml \
+             examples/gke-a3-megagpu/gke-a3-megagpu.yaml
          
 
-  7. When prompted, select **(A)pply** to deploy the blueprint.
+  8. When prompted, select **(A)pply** to deploy the blueprint. The blueprint creates VPC networks, service accounts, a cluster, and a node pool.
 
-     * The blueprint creates VPC networks, a GPU RDMA VPC network, service accounts, a cluster, and a node pool.
-     * To support the `fio-bench-job-template` job template in the blueprint, Google Cloud buckets, network storage, and persistent volumes resources are created.
 
 
 
 ### A3 High
 
-  1. [Launch Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell). You can use a different environment; however, we recommend Cloud Shell because the dependencies are already pre-installed for Cluster Toolkit. If you don't want to use Cloud Shell, prepare a different environment by following the instructions to [install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies).
+  1. [Launch Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell). Although it's possible to use a different environment, we recommend that you use Cloud Shell because the dependencies are already pre-installed for Cluster Toolkit. If you don't want to use Cloud Shell, then prepare a different environment by following the instructions to [install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies).
   2. [Install Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment#install).
 
-  3. Create a Cloud Storage bucket to store the state of the Terraform deployment:
+  3. Create a Cloud Storage bucket with versioning enabled to store the state of your Terraform deployment:
          
          gcloud storage buckets create gs://BUCKET_NAME \
              --default-storage-class=STANDARD \
@@ -858,180 +487,129 @@ This product or feature is subject to the "Pre-GA Offerings Terms" in the Genera
              --location=COMPUTE_REGION_TERRAFORM_STATE \
              --uniform-bucket-level-access
          gcloud storage buckets update gs://BUCKET_NAME --versioning
-         
 
 Replace the following variables:
 
-     * `BUCKET_NAME`: the name of the new Cloud Storage bucket.
+     * `BUCKET_NAME`: the name of the new Cloud Storage bucket, which must meet [bucket naming requirements](https://docs.cloud.google.com/storage/docs/buckets#naming).
      * `PROJECT_ID`: your Google Cloud project ID.
      * `COMPUTE_REGION_TERRAFORM_STATE`: the compute region where you want to store the state of the Terraform deployment.
-  4. The files that you need to edit to create a cluster depend on the [consumption option](https://docs.cloud.google.com/ai-hypercomputer/docs/consumption-models) that you're using for your deployment. Select the tab that corresponds to your consumption option's provisioning model.
+  4. In the [`examples/gke-a3-highgpu/gke-a3-highgpu-deployment.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-highgpu/gke-a3-highgpu-deployment.yaml), replace the following variables in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
 
-### Reservation-bound
-
-In the [`examples/gke-a3-highgpu/gke-a3-highgpu-deployment.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-highgpu/gke-a3-highgpu-deployment.yaml), replace the following variables in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
-
-     * `BUCKET`: the name of the Cloud Storage bucket you created in the previous step.
-     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, cluster creation fails.
+     * `BUCKET`: the name of the Cloud Storage bucket that you created in the previous step.
+     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, then cluster creation fails.
      * `PROJECT_ID`: your Google Cloud project ID.
      * `REGION`: the compute region for the cluster.
-     * `ZONE`: the compute zone for the node pool of A3 High machines. Note that this zone should match the zone where machines are available in your reservation.
-     * `AUTHORIZED_CIDR`: the IP address range that you want to allow to connect with the cluster. This CIDR block must include the IP address of the machine that you want to use to call Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
+     * `ZONE`: the compute zone for the node pool of A3 High machines. This zone must match the zone where machines are available in your reservation.
+     * `AUTHORIZED_CIDR`: the IP address range that you want to let connect to the cluster. This CIDR block must include the IP address of the machine that calls Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work). To get the IP address for your host machine, run the `curl -s https://ifconfig.me` command.
+  5. Choose a consumption option for your GKE deployment:
+
+By default, the deployment file is configured to consume [standard or future reservations](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options#reservations). To use an alternative consumption model (such as on-demand capacity, Spot VMs, or flex-start provisioning mode), update your deployment YAML file. For more information, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options).
+
+To configure a reservation, set the following values in the specific reservation section:
+
+     * In the `reservation_affinity` block, in the `specific_reservations` list, specify the reservation `name` field:
+     * To place the node pool anywhere in the reservation, provide the name of your reservation (`RESERVATION_NAME`).
+     * To target a specific block within your reservation, use the reservation and block names in the following format:
+           
+           RESERVATION_NAME/reservationBlocks/BLOCK_NAME
+           
+
+If you don't know which blocks are available in your reservation, then see [View the topology of a reservation](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology).
+
      * `STATIC_NODE_COUNT`: the number of A3 High nodes in your cluster.
-     * For the `reservation` field, use one of the following, depending on whether you want to target specific [blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/terminology#block) in a reservation when provisioning the node pool:
 
-       * To place the node pool anywhere in the reservation, provide the name of your reservation (`RESERVATION_NAME`).
-       * To target a specific block within your reservation, use the reservation and block names in the following format:
-             
-             RESERVATION_NAME/reservationBlocks/BLOCK_NAME
-             
+To modify advanced settings, edit the [`examples/gke-a3-highgpu/gke-a3-highgpu.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-highgpu/gke-a3-highgpu.yaml).
 
-If you don't know which blocks are available in your reservation, see [View the topology of a reservation](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology).
-
-To modify advanced settings, edit [`examples/gke-a3-highgpu/gke-a3-highgpu.yaml`](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-highgpu/gke-a3-highgpu.yaml).
-
-### Flex-start
-
-**Preview**
-
-This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
-
-     1. In the [`examples/gke-a3-highgpu/gke-a3-highgpu-deployment.yaml` file from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-highgpu/gke-a3-highgpu-deployment.yaml), replace the following variables in the `vars` sections to match the specific values for your deployment:
-
-        * `BUCKET`: the name of the Cloud Storage bucket you created in the previous step.
-        * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, cluster creation fails.
-        * `PROJECT_ID`: your Google Cloud project ID.
-        * `REGION`: the compute region for the cluster.
-        * `ZONE`: the compute zone for the node pool of A3 High machines.
-        * `AUTHORIZED_CIDR`: the IP address range that you want to allow to connect with the cluster. This CIDR block must include the IP address of the machine that you want to use to call Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
-        * Remove the `reservation` field, and replace the field with `enable_flex_start: true`. If you also want to use queued provisioning, add `enable_queued_provisioning: true` to the following line. For more information, see [Use node pools with flex-start with queued provisioning](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/provisioningrequest#node-pools).
-        * Remove `static_node_count`.
-     2. In the [`examples/gke-a3-highgpu/gke-a3-highgpu.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-highgpu/gke-a3-highgpu.yaml), make the following changes:
-
-        * In the `vars` block, remove `static_node_count`.
-        * In the `vars` block, update `version_prefix` number to `"1.32."` or higher. To use flex-start in GKE, your cluster must use version 1.32.2-gke.1652000 or later.
-        * In the `vars` block, replace the entire `reservation` block (including the `reservation` line itself) with `enable_flex_start: true`, and, optionally, `enable_queued_provisioning: true`.
-        * In the `vars` block, remove the following line: `kueue_configuration_path: $(ghpc_stage("./kueue-configuration.yaml.tftpl"))`.
-        * Under `id: a3_highgpu_pool`, remove the following line: `static_node_count: $(vars.static_node_count)`.
-        * Under `id: a3_highgpu_pool`, remove the `reservation_affinity` block. Replace this block with the following lines:
-
-          * `enable_flex_start: $(vars.enable_flex_start)`
-          * `auto_repair: false`
-          * For queued provisioning, if you want to enable it, add the following additional lines: 
-            * `enable_queued_provisioning: $(vars.enable_queued_provisioning)`
-            * `autoscaling_total_min_nodes: 0`
-        * Under `id: workload_component_install`, remove the following block:
-              
-              config_path: $(vars.kueue_configuration_path)
-              config_template_vars:
-                num_gpus: $(a3_highgpu_pool.static_gpu_count)
-                accelerator_type: $(vars.accelerator_type)
-              
-
-          * For flex-start with queued provisioning, follow these three steps:
-
-            1. Add `gpu_nominal_quota: NOMINAL_QUOTA` to the `vars` block. The `gpu_nominal_quota` value is used to set the `nominalQuota` of GPUs in the `ClusterQueue` specification. In this example, the `ClusterQueue` only admits workloads if the sum of the GPU requests is less than or equal to the `NOMINAL_QUOTA` value. For more information about `ClusterQueue`, see the following [Kueue document of Cluster Queue](https://kueue.sigs.k8s.io/docs/concepts/cluster_queue/).
-
-            2. Update the `kueue` block to the following:
-                   
-                   kueue:
-                      install: true
-                      config_path: $(vars.kueue_configuration_path)
-                      config_template_vars:
-                         num_gpus: $(vars.gpu_nominal_quota)
-                   
-
-            3. Replace the content of the `kueue-configuration.yaml.tftpl` file with the following:
-                   
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: ResourceFlavor
-                   metadata:
-                      name: "default-flavor"
-                   ---
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: AdmissionCheck
-                   metadata:
-                      name: dws-prov
-                   spec:
-                      controllerName: kueue.x-k8s.io/provisioning-request
-                      parameters:
-                         apiGroup: kueue.x-k8s.io
-                         kind: ProvisioningRequestConfig
-                         name: dws-config
-                   ---
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: ProvisioningRequestConfig
-                   metadata:
-                      name: dws-config
-                   spec:
-                      provisioningClassName: queued-provisioning.gke.io
-                      managedResources:
-                      - nvidia.com/gpu
-                   ---
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: ClusterQueue
-                   metadata:
-                      name: "dws-cluster-queue"
-                   spec:
-                      namespaceSelector: {}
-                      resourceGroups:
-                      - coveredResources: ["nvidia.com/gpu"]
-                         flavors:
-                         - name: "default-flavor"
-                         resources:
-                         - name: "nvidia.com/gpu"
-                            nominalQuota: ${num_gpus}
-                      admissionChecks:
-                      - dws-prov
-                   ---
-                   apiVersion: kueue.x-k8s.io/v1beta1
-                   kind: LocalQueue
-                   metadata:
-                      namespace: "default"
-                      name: "dws-local-queue"
-                   spec:
-                      clusterQueue: "dws-cluster-queue"
-                   ---
-                   
-
-          * In the `id: job-template` field, replace the value of the `node_count` variable with `2`.
-
-### Spot
-
-     1. In the [`examples/gke-a3-highgpu/gke-a3-highgpu-deployment.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-highgpu/gke-a3-highgpu-deployment.yaml), update the following variables to match the specific values for your deployment:
-
-        * `BUCKET`: the name of the Cloud Storage bucket you created in the previous step.
-        * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, cluster creation fails.
-        * `PROJECT_ID`: your Google Cloud project ID.
-        * `REGION`: the compute region for the cluster.
-        * `ZONE`: the compute zone for the node pool of A3 High machines.
-        * `AUTHORIZED_CIDR`: the IP address range that you want to allow to connect with the cluster. This CIDR block must include the IP address of the machine that you want to use to call Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
-        * Replace the `reservation:` line with `provisioning_model: SPOT`.
-        * `STATIC_NODE_COUNT`: the number of A3 High nodes in your cluster.
-     2. In the [`examples/gke-a3-highgpu/gke-a3-highgpu.yaml` blueprint from the GitHub repository](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a3-highgpu/gke-a3-highgpu.yaml), make the following changes:
-
-        * In the `vars` block, replace the entire `reservation` block (including the `reservation` line itself) with `spot: true`.
-        * In the `id: a3_highgpu_pool` section, remove the `reservation_affinity` block. Replace this block with the following line:
-
-          * `spot: $(vars.spot)`
-
-  5. Generate [Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#google-idp) to provide access to Terraform. If you're using Cloud Shell, you can run the following command:
+  6. [Generate Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#google-idp) to provide access to Terraform. If you're using Cloud Shell, then use the `gcloud auth application-default login` command:
          
          gcloud auth application-default login
          
 
-  6. Deploy the blueprint to provision the GKE infrastructure using A3 High machine types:
+  7. Use the [`gcluster deploy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-deploy) to deploy the blueprint and provision the GKE infrastructure by using A3 High machine types:
          
          cd ~/cluster-toolkit
          ./gcluster deploy -d \
-         examples/gke-a3-highgpu/gke-a3-highgpu-deployment.yaml \
-         examples/gke-a3-highgpu/gke-a3-highgpu.yaml
+             examples/gke-a3-highgpu/gke-a3-highgpu-deployment.yaml \
+             examples/gke-a3-highgpu/gke-a3-highgpu.yaml
          
 
-  7. When prompted, select **(A)pply** to deploy the blueprint.
+  8. When prompted, select **(A)pply** to deploy the blueprint. The blueprint creates VPC networks, service accounts, a cluster, and a node pool.
 
-     * The blueprint creates VPC networks, a GPU RDMA VPC network, service accounts, a cluster, and a node pool.
-     * To support the `fio-bench-job-template` job template in the blueprint, Google Cloud buckets, network storage, and persistent volumes resources are created.
+
+
+
+## Run Dynamic Workload Scheduler sample Jobs
+
+If you provisioned your cluster using Dynamic Workload Scheduler (either flex-start or queued provisioning), then you can validate workload scheduling by submitting sample Kubernetes Jobs.
+
+For more information about Dynamic Workload Scheduler provisioning modes, see [Dynamic Workload Scheduler flex-start with queued provisioning](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options#dws-queued-provisioning).
+
+### Submit a sample Job
+
+Select the tab that corresponds to your consumption option:
+
+### Flex-start
+
+This task is optional and applies only if you provisioned your cluster with flex-start. Workloads configured for flex-start require the `cloud.google.com/gke-flex-start: "true"` node selector in their Pod specification.
+
+  1. Submit the sample flex-start Job:
+         
+         kubectl apply -f examples/dws-sample-workloads/sample-job-flex.yaml
+         
+
+  2. Monitor the status of your Job and Pods:
+         
+         kubectl get jobs
+         kubectl describe job JOB_NAME
+         kubectl get pods
+         kubectl describe pod POD_NAME
+         
+
+Replace the following:
+
+     * `JOB_NAME`: the name of your Job.
+     * `POD_NAME`: the name of your Pod.
+  3. When the Job completes, delete the Job resources:
+         
+         kubectl delete -f examples/dws-sample-workloads/sample-job-flex.yaml
+         
+
+
+
+
+### Queued provisioning
+
+This task is optional and applies only if you provisioned your cluster with queued provisioning. Workloads configured for queued provisioning require the following label and annotation in their Pod specification:
+
+  * Label: `kueue.x-k8s.io/queue-name: dws-local-queue`
+  * Annotation: `provreq.kueue.x-k8s.io/maxRunDurationSeconds: "MAX_RUN_DURATION"`
+
+
+
+For more information, see [Workload manifest requirements for queued provisioning](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options#queued-provisioning-manifest).
+
+  1. Submit the sample queued provisioning Job:
+         
+         kubectl apply -f examples/dws-sample-workloads/sample-job-flex-queue.yaml
+         
+
+  2. Monitor the status of your Job and Pods:
+         
+         kubectl get jobs
+         kubectl describe job JOB_NAME
+         kubectl get pods
+         kubectl describe pod POD_NAME
+         
+
+Replace the following:
+
+     * `JOB_NAME`: the name of your Job.
+     * `POD_NAME`: the name of your Pod.
+  3. When the Job completes, delete the Job resources:
+         
+         kubectl delete -f examples/dws-sample-workloads/sample-job-flex-queue.yaml
+         
+
 
 
 
@@ -1047,7 +625,7 @@ Each recipe provides you with the instructions to complete the following tasks:
 
   * Prepare your environment.
   * Run the benchmark.
-  * Analyze the benchmarks results. This includes the benchmark results and detailed logs for further analysis.
+  * Analyze the benchmark results. This review includes the benchmark results and detailed logs for further analysis.
 
 
 
@@ -1062,13 +640,14 @@ To avoid recurring charges for the resources used on this page, use the [`gclust
        ./gcluster destroy CLUSTER_NAME/
     
 
-Replace `CLUSTER_NAME` with the name of your cluster. For the clusters created with Cluster Toolkit, the cluster name is based on the `DEPLOYMENT_NAME`.
+Replace `CLUSTER_NAME` with the name of your cluster. For the clusters created with Cluster Toolkit, the cluster name is based on the `DEPLOYMENT_NAME` name.
 
 ## What's next
 
-  * To learn about scheduling workloads on your GKE clusters using TAS and Kueue, see [Schedule GKE workloads with Topology Aware Scheduling](https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/schedule-gke-workloads-tas).
-  * To learn about managing common events relevant to GKE clusters and AI workloads, see [Manage AI-optimized GKE clusters](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/manage-gke-clusters).
-  * For information about testing your environment for proper setup and optimization, see [Cluster networking optimization overview](https://docs.cloud.google.com/ai-hypercomputer/docs/nccl/overview)
+  * To learn about scheduling workloads on your GKE clusters by using Topology-Aware Scheduling (TAS) and Kueue, see [Schedule GKE workloads with Topology Aware Scheduling](https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/schedule-gke-workloads-tas).
+  * To learn about managing common events that are relevant to GKE clusters and AI workloads, see [Manage AI-optimized GKE clusters](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/manage-gke-clusters).
+  * For information about testing your environment for proper setup and optimization, see [Cluster networking optimization overview](https://docs.cloud.google.com/ai-hypercomputer/docs/nccl/overview).
+  * To explore all supported consumption models for GKE clusters, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options).
 
 
 
@@ -1076,6 +655,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

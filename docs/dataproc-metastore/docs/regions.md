@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataproc-metastore/docs/regions/
 title: Dataproc Metastore regions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:43:26.941639+00:00
+fetched_at: 2026-10-21T11:59:20.869010+00:00
 ---
 
 # Dataproc Metastore regions  |  Google Cloud Documentation

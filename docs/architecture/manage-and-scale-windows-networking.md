@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/manage-and-scale-windows-networking/
 title: Manage and scale networking for Windows applications that run on managed Kubernetes \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:43.930485+00:00
+fetched_at: 2026-10-21T12:22:06.086133+00:00
 ---
 
 # Manage and scale networking for Windows applications that run on managed Kubernetes  |  Cloud Architecture Center  |  Google Cloud Documentation

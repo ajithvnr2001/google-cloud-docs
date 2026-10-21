@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/oracle-peoplesoft-with-oci-exadata/
 title: Oracle PeopleSoft on Compute Engine with Oracle Exadata \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:43.084408+00:00
+fetched_at: 2026-10-21T12:22:01.903271+00:00
 ---
 
 # Oracle PeopleSoft on Compute Engine with Oracle Exadata  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -255,7 +255,7 @@ This section provides guidance to optimize the cost of setting up and operating 
 
 #### VM machine types
 
-To help you optimize the resource utilization of your VM instances, Compute Engine provides [machine type recommendations](https://docs.cloud.google.com/compute/docs/instances/apply-machine-type-recommendations-for-instances). Use the recommendations to choose machine types that match your workload's compute requirements. For workloads with predictable resource requirements, you can customize the machine type to your needs and save money by using [custom machine types](https://docs.cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#specifications).
+To help you optimize the resource utilization of your VM instances, Compute Engine provides [machine type recommendations](https://docs.cloud.google.com/compute/docs/instances/apply-machine-type-recommendations-for-instances). Use the recommendations to choose machine types that match your workload's compute requirements. For workloads with predictable resource requirements, you can customize the machine type to your needs and save money by using [custom machine types](https://docs.cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type).
 
 #### Oracle product licenses
 

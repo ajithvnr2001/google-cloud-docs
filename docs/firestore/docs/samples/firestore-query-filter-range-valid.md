@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-query-filter-range-valid/
 title: Use two ranges for a Firestore query \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:25:38.556640+00:00
+fetched_at: 2026-10-21T11:59:00.986755+00:00
 ---
 
 # Use two ranges for a Firestore query  |  Google Cloud Documentation

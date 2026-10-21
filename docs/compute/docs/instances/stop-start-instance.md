@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/stop-start-instance/
 title: Stop or restart a Compute Engine instance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T18:39:57.018968+00:00
+fetched_at: 2026-10-21T12:01:42.871162+00:00
 ---
 
 # Stop or restart a Compute Engine instance  |  Google Cloud Documentation
@@ -23,26 +23,33 @@ Send feedback
 
 Linux  Windows 
 
-You can manually stop a Compute Engine instance when you longer use it, or to modify its properties—for example, to change its machine type, or remove any attached and mounted disks. After the instance stops, you can either restart it to resume your workload, or delete the instance if you no longer need it.
+This document explains how to manually stop or restart a Compute Engine instance. Alternatively, to automate when a compute instance stops or restarts, see the following:
 
-This document explains how to manually stop or restart an instance. To automate stopping or restarting an instance, see the following:
+  * [Schedule a compute instance to start and stop](https://docs.cloud.google.com/compute/docs/instances/schedule-instance-start-stop)
 
-  * [Scheduling an instance to start and stop](https://docs.cloud.google.com/compute/docs/instances/schedule-instance-start-stop)
-
-  * [Limit the runtime of an instance](https://docs.cloud.google.com/compute/docs/instances/limit-vm-runtime)
+  * [Limit the runtime of a compute instance](https://docs.cloud.google.com/compute/docs/instances/limit-vm-runtime)
 
 
 
+
+It's possible to manually stop a compute instance. After a stop operation completes and the state of the compute instance transitions to `TERMINATED`, you can either restart the compute instance to resume your workload, or permanently delete the compute instance if you no longer need it. Manually stopping a compute instance is useful when you want to do the following:
+
+  * **Save costs while keeping your configurations** : you no longer want to run workloads on the compute instance. However, you want to retain the compute instance and its attached disks, configuration settings, IP addresses, MAC addresses, and metadata. If you also need to retain in-memory data and application state, then [suspend the compute instance](https://docs.cloud.google.com/compute/docs/instances/suspend-resume-instance) instead.
+
+  * **Update properties** : you want to modify one or more properties that require you to stop and restart the compute instance before the changes can take effect—for example, you want to change machine type or detach a disk. For more information, see [Properties that you can update](https://docs.cloud.google.com/compute/docs/instances/update-instance-properties#updatable-properties).
+
+
+**Caution:** After a stop operation completes, you continue to incur charges for any disks, disk snapshots, or external IP addresses that remain attached to a compute instance. To avoid unexpected costs, detach and delete any resources that you no longer need. For instructions, see how to [detach disks](https://docs.cloud.google.com/compute/docs/disks/detach-reattach-boot-disk), [manage disk snapshots](https://docs.cloud.google.com/compute/docs/disks/manage-snapshots), or [manage external IP addresses](https://docs.cloud.google.com/compute/docs/ip-addresses/configure-static-external-ip-address).
 
 ## Limitations
 
 When you stop a compute instance, the following limitations apply:
 
-  * You can only stop or restart an instance if the [instance state allows it](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle).
+  * You can only stop or restart a compute instance if the [state of the compute instance allows it](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle).
 
-  * You can only restart an instance if there are sufficient resources in the instance's zone.
+  * You can only restart a compute instance if there are sufficient resources in the zone where the compute instance exists.
 
-  * You can't restart TPU instances.
+  * You can't restart TPU compute instances. After you stop TPU compute instances, you can only delete them.
 
 
 
@@ -181,50 +188,42 @@ This predefined role contains the permissions required to stop or restart a comp
 
 The following permissions are required to stop or restart a compute instance:
 
-  * To stop an instance: `compute.instances.stop` on the instance 
-  * To stop an instance from the guest OS: `compute.instances.setMetadata` on the instance if it uses [instance-level public SSH keys](https://docs.cloud.google.com/compute/docs/connect/add-ssh-keys#add_ssh_keys_to_instance_metadata). 
-  * To restart an instance: `compute.instances.start` on the instance 
-  * To restart an instance that uses encryption keys: `compute.instances.startWithEncryptionKey` on the instance 
+  * To stop a compute instance: `compute.instances.stop` on the compute instance 
+  * To stop a compute instance from the guest OS: `compute.instances.setMetadata` on the compute instance if it uses [instance-level public SSH keys](https://docs.cloud.google.com/compute/docs/connect/add-ssh-keys#add_ssh_keys_to_instance_metadata). 
+  * To restart a compute instance: `compute.instances.start` on the compute instance 
+  * To restart a compute instance that uses encryption keys: `compute.instances.startWithEncryptionKey` on the compute instance 
 
 
 
 You might also be able to get these permissions with [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
 
-## Stop an instance
+## Stop a compute instance
 
-When you stop a compute instance, or Compute Engine does so for a scheduled action, the instance retains its attached disks, configuration settings, IP addresses, MAC addresses, and instance metadata. If you also want to retain in-memory data and application state, then [suspend the instance](https://docs.cloud.google.com/compute/docs/instances/suspend-resume-instance).
+To stop your compute instance, use one of the following methods. The best approach for your use case depends on whether you have Local SSD disks attached to your compute instance and how you want to handle any [shutdown scripts](https://docs.cloud.google.com/compute/docs/shutdownscript):
 
-**Important:** After you stop an instance, you keep incurring charges for any resources that remain attached to it. To avoid unnecessary costs, detach and delete any resources that you no longer need.
+  * **Stop a compute instance from Google Cloud**. You can stop one or more compute instances simultaneously from Google Cloud. If the compute instances have Local SSD disks attached, then you can choose whether to discard or preserve ([Preview](https://cloud.google.com/products/#product-launch-stages)) Local SSD data. Any shutdown scripts in the compute instance must finish running before the compute instance stops. For instructions, see one of the following:
 
-Depending on whether the instance has Local SSD disks attached and how you want to handle any [shutdown scripts](https://docs.cloud.google.com/compute/docs/shutdownscript), stop your instance by using one of the following methods:
+    * Stop a compute instance with no Local SSD disks
 
-  * **Stop an instance from Google Cloud**. You can stop one or more instances simultaneously from Google Cloud. If the instances have Local SSD disks attached, then you can choose whether to discard or preserve ([Preview](https://cloud.google.com/products/#product-launch-stages)) Local SSD data. Any shutdown scripts in the instance must finish running by the default shutdown period.
+    * Stop a compute instance with Local SSD disks
 
-For instructions, see one of the following:
-
-    * Stop an instance without Local SSD disks
-
-    * Stop an instance with Local SSD disks
-
-  * **Stop an instance from the guest OS**. You can stop a single instance from within its guest OS. This approach lets you stop an instance only after its shutdown scripts finish running. If you enabled [graceful shutdown](https://docs.cloud.google.com/compute/docs/instances/graceful-shutdown-overview), then you can also stop the instance without gracefully shutting it down, or end an ongoing graceful shutdown. Unless you manually back up data from any attached Local SSD disks to durable storage volume, stopping an instance from within its guest OS discards any data on those disks.
-
-For instruction, see Stop an instance from the guest OS.
+  * **Stop a compute instance from the guest OS**. This approach ensures your shutdown scripts finish running before the compute instance stops. If you've enabled [graceful shutdown](https://docs.cloud.google.com/compute/docs/instances/graceful-shutdown-overview), then you can skip or end the graceful shutdown. However, stopping a compute instance from the guest OS discards data on any attached Local SSD disks unless you first back the data up to durable storage. For instructions, see Stop a compute instance from the guest OS.
 
 
 
 
-### Stop an instance without Local SSD disks
+### Stop a compute instance with no Local SSD disks
 
-Depending on what you want to do when stopping an instance, use the following options:
+To stop a compute instance that doesn't have Local SSD disks attached, review the following options:
 
-  * If you've enabled graceful shutdown in the instance, then you can stop the instance without gracefully shutting it down or end an ongoing graceful shutdown using the Google Cloud console, gcloud CLI, or REST API.
+  * If you've enabled [graceful shutdown](https://docs.cloud.google.com/compute/docs/instances/graceful-shutdown-overview) in the compute instance, then you can save costs by skipping or ending an ongoing graceful shutdown. To do so, use the Google Cloud console, gcloud CLI, or REST API.
 
-  * To stop multiple instances simultaneously, use the Google Cloud console or, for instances located in the same zone, the gcloud CLI.
-
-
+  * To stop multiple compute instances simultaneously, use the Google Cloud console or, for compute instances that exist in the same zone, the gcloud CLI.
 
 
-To stop one or more instances, select one of the following options:
+
+
+To stop one or more compute instances, select one of the following options:
 
 ###  Console 
 
@@ -232,13 +231,13 @@ To stop one or more instances, select one of the following options:
 
 [Go to VM instances](https://console.cloud.google.com/compute/instances)
 
-  2. Select the running instances to stop.
+  2. Select the running compute instances to stop.
 
-  3. Click stop **Stop**. If there is no **Stop** option, then click more_vert **More actions >** stop **Stop**.
+  3. Click stop **Stop**. If there is no **Stop** option, then click **More actions** , and then select **Stop**.
 
   4. In the dialog that appears, do the following:
 
-     1. Optional: To stop the instances without gracefully shutting them down, or end an ongoing graceful shutdown, select the **Skip graceful shutdown (if applicable)** checkbox.
+     1. Optional: To stop the compute instances without gracefully shutting them down, or to end an ongoing graceful shutdown, select the **Skip graceful shutdown (if applicable)** checkbox.
 
      2. To confirm, click **Stop**.
 
@@ -247,7 +246,7 @@ To stop one or more instances, select one of the following options:
 
 ###  gcloud 
 
-To stop one or more instances in the same zone, use the [`gcloud compute instances stop` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/stop):
+To stop one or more compute instances that exist in the same zone, use the [`gcloud compute instances stop` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/stop):
     
     
     gcloud compute instances stop INSTANCE_NAMES \
@@ -256,21 +255,17 @@ To stop one or more instances in the same zone, use the [`gcloud compute instanc
 
 Replace the following:
 
-  * `INSTANCE_NAMES`: a list of instance names separated by spaces—for example, `instance-01 instance-02 instance-03`.
+  * `INSTANCE_NAMES`: a list of names of compute instances that you want to stop, separated by spaces. For example, specify `instance-01 instance-02 instance-03`.
 
-  * `ZONE`: the zone where the instances are located.
-
-
+  * `ZONE`: the zone where the compute instances exist.
 
 
-Optionally, if you've enabled graceful shutdown in one or more instances, then you can stop the instances without gracefully shutting them down, or manually end an ongoing graceful shutdown. To do so, use the [`gcloud beta compute instances stop` command](https://docs.cloud.google.com/sdk/gcloud/reference/beta/compute/instances/stop) with the `--no-graceful-shutdown` flag:
 
-**Preview — The`--no-graceful-shutdown` flag **
 
-This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+If you want to skip or end an ongoing graceful shutdown, then use the same command with the `--no-graceful-shutdown` flag:
     
     
-    gcloud beta compute instances stop INSTANCE_NAMES \
+    gcloud compute instances stop INSTANCE_NAMES \
         **--no-graceful-shutdown** \
         --zone=ZONE
     
@@ -532,7 +527,7 @@ This feature is subject to the "Pre-GA Offerings Terms" in the General Service T
 
 ###  REST 
 
-To stop an instance, make a `POST` request to the [`instances.stop` method](https://docs.cloud.google.com/compute/docs/reference/latest/instances/stop):
+To stop a compute instance, make a `POST` request to the [`instances.stop` method](https://docs.cloud.google.com/compute/docs/reference/latest/instances/stop):
     
     
     POST https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances/INSTANCE_NAME/stop
@@ -540,40 +535,36 @@ To stop an instance, make a `POST` request to the [`instances.stop` method](http
 
 Replace the following:
 
-  * `INSTANCE_NAME`: the name of the instance.
+  * `INSTANCE_NAME`: the name of the compute instance.
 
-  * `PROJECT_ID`: the ID of the project where the instance is located.
+  * `PROJECT_ID`: the ID of the project where the compute instance exists.
 
-  * `ZONE`: the zone where the instance is located.
-
-
+  * `ZONE`: the zone where the compute instance exists.
 
 
-Optionally, if you've enabled graceful shutdown in an instance, you can stop the instance without gracefully shutting it down, or manually end an ongoing graceful shutdown. To do so, make a `POST` request to the [`instances.stop` method](https://docs.cloud.google.com/compute/docs/reference/rest/beta/instances/stop). In the request URL, include the `noGracefulShutdown=true` query parameter:
 
-**Preview — The`noGracefulShutdown` query parameter **
 
-This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+If you want to skip or end an ongoing graceful shutdown, then include the `noGracefulShutdown=true` query parameter in the request URL:
     
     
-    POST https://compute.googleapis.com/compute/beta/projects/PROJECT_ID/zones/ZONE/instances/VM_NAME/stop**?noGracefulShutdown=true**
+    POST https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances/VM_NAME/stop**?noGracefulShutdown=true**
     
 
-### Stop an instance with Local SSD disks
+### Stop a compute instance with Local SSD disks
 
-Depending on what you want to do when stopping a compute instance, use the following options:
+The best method to stop a compute instance that has Local SSD disks attached depends on your use case. Use one of the following options: 
 
-  * If you've enabled graceful shutdown in the instance, then you can stop the instance without gracefully shutting it down or end an ongoing graceful shutdown using the Google Cloud console, gcloud CLI, or REST API.
+  * If you've enabled [graceful shutdown](https://docs.cloud.google.com/compute/docs/instances/graceful-shutdown-overview) in a compute instance, then you can save costs by skipping or ending an ongoing graceful shutdown. To do so, use the Google Cloud console, gcloud CLI, or REST API.
 
-  * To preserve the data of the Local SSD disks attached to an instance (excluding [machine types that use Titanium SSD](https://docs.cloud.google.com/compute/docs/disks/local-ssd#local_ssd_types)), stop the instance using the gcloud CLI or REST API. 
+  * To preserve Local SSD data (excluding for [machine types that use Titanium SSD](https://docs.cloud.google.com/compute/docs/disks/local-ssd#local_ssd_types)), use the gcloud CLI or REST API. 
 
-**Caution:** If you opt to preserve the Local SSD data, then Compute Engine stores the Local SSD data on durable storage while the instance is stopped. Thus, before stopping the instance, ensure that you have enough disk quota to store the Local SSD data.
-  * To stop multiple instances simultaneously, use the Google Cloud console or, for instances located in the same zone, the gcloud CLI.
-
-
+**Caution:** If you opt to preserve Local SSD data, then Compute Engine stores Local SSD data on durable storage while the compute instance is stopped. Before you stop your compute instance, verify that you have enough disk quota to store Local SSD data.
+  * To stop multiple compute instances simultaneously, use the Google Cloud console or, for compute instances that exist in the same zone, the gcloud CLI.
 
 
-To stop one or more instances that have Local SSD disks attached, select one of the following options:
+
+
+To stop one or more compute instances that have Local SSD disks attached, select one of the following options:
 
 ###  Console 
 
@@ -581,13 +572,13 @@ To stop one or more instances that have Local SSD disks attached, select one of 
 
 [Go to VM instances](https://console.cloud.google.com/compute/instances)
 
-  2. Select the running instances to stop.
+  2. Select the running compute instances to stop.
 
-  3. Click stop **Stop**. If there is no **Stop** option, click more_vert **More actions >** stop **Stop**.
+  3. Click stop **Stop**. If there is no **Stop** option, click **More actions** , and then select **Stop**.
 
-  4. In the dialog, do the following:
+  4. In the dialog that appears, do the following:
 
-     1. Optional: To stop the instances without gracefully shut them down, or end an ongoing graceful shutdown, select the **Skip graceful shutdown (if applicable)** checkbox.
+     1. Optional: To stop the compute instances without gracefully shut them down, or end an ongoing graceful shutdown, select the **Skip graceful shutdown (if applicable)** checkbox.
 
      2. To confirm, click **Stop**.
 
@@ -596,7 +587,7 @@ To stop one or more instances that have Local SSD disks attached, select one of 
 
 ###  gcloud 
 
-When stopping one or more instances in the same zone that have Local SSD disks attached, specify whether to discard or preserve Local SSD data as follows:
+When you stop one or more compute instances in the same zone that have Local SSD disks attached, specify whether to discard or preserve Local SSD data as follows:
 
   * To discard Local SSD data, use the [`gcloud compute instances stop` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/stop) with the `--discard-local-ssd=true` flag:
         
@@ -621,31 +612,27 @@ This feature is subject to the "Pre-GA Offerings Terms" in the General Service T
 
 Replace the following:
 
-  * `INSTANCE_NAMES`: a list of instance names separated by spaces—for example, `instance-01 instance-02 instance-03`.
+  * `INSTANCE_NAMES`: a list of names of compute instances that you want to stop, separated by spaces. For example, specify `instance-01 instance-02 instance-03`.
 
-  * `ZONE`: the zone where the instances are located.
-
-
+  * `ZONE`: the zone where the compute instances exist.
 
 
-Optionally, if you've enabled graceful shutdown in one or more instances, you can stop the instances without gracefully shutting them down, or end an ongoing graceful shutdown. To do so, use the [`gcloud beta compute instances stop` command](https://docs.cloud.google.com/sdk/gcloud/reference/beta/compute/instances/stop) with the `--no-graceful-shutdown` flag:
 
-**Preview — The`--no-graceful-shutdown` flag **
 
-This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+If you want to skip or end an ongoing graceful shutdown, then include the `--no-graceful-shutdown` flag in the command:
     
     
-    gcloud beta compute instances stop INSTANCE_NAMES \
+    gcloud compute instances stop INSTANCE_NAMES \
         --discard-local-ssd=DISCARD_LOCAL_SSD \
         **--no-graceful-shutdown** \
         --zone=ZONE
     
 
-Replace `DISCARD_LOCAL_SSD` with `true` to discard the data in the Local SSD disks, or `false` to preserve the data.
+Replace `DISCARD_LOCAL_SSD` with `true` to discard the data in the Local SSD disks, or `false` to preserve the data. If you specify `false`, then you must use the [`gcloud beta compute instances stop` command](https://docs.cloud.google.com/sdk/gcloud/reference/beta/compute/instances/stop).
 
 ###  REST 
 
-When stopping an instance that has Local SSD disks attached, specify whether to discard or preserve Local SSD data as follows:
+When you stop one or more compute instances in the same zone that have Local SSD disks attached, specify whether to discard or preserve Local SSD data as follows:
 
   * To discard Local SSD data, make a `POST` request to the [`instances.stop` method](https://docs.cloud.google.com/compute/docs/reference/rest/v1/instances/stop). In the request URL, include the `discardLocalSsd` query parameter set to `true`:
         
@@ -666,45 +653,41 @@ This feature is subject to the "Pre-GA Offerings Terms" in the General Service T
 
 Replace the following:
 
-  * `PROJECT_ID`: the ID of the project where the instance is located.
+  * `PROJECT_ID`: the ID of the project where the compute instance exists.
 
-  * `ZONE`: the zone where the instance is located.
+  * `ZONE`: the zone where the compute instance exists.
 
-  * `INSTANCE_NAME`: the name of the instance.
-
-
+  * `INSTANCE_NAME`: the name of the compute instance.
 
 
-Optionally, if you've enabled graceful shutdown in an instance, then you can stop the instance without gracefully shutting it down, or manually end an ongoing graceful shutdown. To do so, make a `POST` request to the [`instances.stop` method](https://docs.cloud.google.com/compute/docs/reference/rest/beta/instances/stop). In the request URL, include the `noGracefulShutdown=true` query parameter:
 
-**Preview — The`noGracefulShutdown` query parameter **
 
-This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+If you want to skip or end an ongoing graceful shutdown, then include the `noGracefulShutdown=true` query parameter in the request URL:
     
     
-    POST https://compute.googleapis.com/compute/beta/projects/PROJECT_ID/zones/ZONE/instances/VM_NAME/stop?discardLocalSsd=DISCARD_LOCAL_SSD&**noGracefulShutdown=true**
+    POST https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances/VM_NAME/stop?discardLocalSsd=DISCARD_LOCAL_SSD&**noGracefulShutdown=true**
     
 
-Replace `DISCARD_LOCAL_SSD` with `true` to discard the data in the Local SSD disks, or `false` to preserve the data.
+Replace `DISCARD_LOCAL_SSD` with `true` to discard the data in the Local SSD disks, or `false` to preserve the data. If you specify `false`, then you must make a `POST` request to the [`beta.instances.stop` method](https://docs.cloud.google.com/compute/docs/reference/rest/beta/instances/stop).
 
-### Stop an instance from the guest OS
+### Stop a compute instance from the guest OS
 
-If a compute instance has Local SSD disks attached, then shutting down the guest OS automatically discards the Local SSD data. To preserve this data, manually copy the data to a persistent storage option before stopping the instance.
+If a compute instance has Local SSD disks attached, then shutting down the guest OS automatically discards the Local SSD data. To preserve this data, manually copy the data to a persistent storage option before you stop the compute instance.
 
-To stop an instance from the guest OS, select one of the following options:
+To stop a compute instance from the guest OS, select one of the following options:
 
 ###  Linux 
 
-  1. If you haven't already, then [connect to the instance](https://docs.cloud.google.com/compute/docs/connect/standard-ssh).
+  1. If you haven't already, then [connect to the compute instance](https://docs.cloud.google.com/compute/docs/connect/standard-ssh).
 
-  2. To stop the instance, select one of the following methods:
+  2. To stop the compute instance from within its guest OS, select one of the following methods:
 
-     * For a clean shutdown that allows the instance to run shutdown scripts before shutting down the guest OS, run the following command:
+     * To cleanly shut down the guest OS only after all shutdown scripts have finished running, run the following command:
            
            sudo shutdown -h now
            
 
-     * Otherwise, to force a shutdown, run the following command:
+     * To force a shutdown of the guest OS, run the following command:
            
            sudo poweroff
            
@@ -714,7 +697,7 @@ To stop an instance from the guest OS, select one of the following options:
 
 ###  Windows 
 
-  1. If you haven't already, then connect to the instance using one of the following methods:
+  1. If you haven't already, then connect to the compute instance using one of the following methods:
 
      * [PowerShell](https://docs.cloud.google.com/compute/docs/instances/windows/connecting-powershell)
 
@@ -724,14 +707,14 @@ To stop an instance from the guest OS, select one of the following options:
 
      * [Special Administration Console (SAC)](https://docs.cloud.google.com/compute/docs/instances/connecting-to-sac)
 
-  2. To stop the instance, select one of the following methods:
+  2. To stop the compute instance from within its guest OS, select one of the following methods:
 
-     * To cleanly stop the instance and let the instance to run shutdown scripts before shutting down the guest OS, run the following command:
+     * To cleanly shut down the guest OS only after all shutdown scripts have finished running, run the following command:
            
            shutdown /s
            
 
-     * To force a shutdown, run the following command:
+     * To force a shutdown of the guest OS, run the following command:
            
            shutdown /f
            
@@ -739,24 +722,22 @@ To stop an instance from the guest OS, select one of the following options:
 
 
 
-## Restart an instance
+## Restart a compute instance
 
-You can restart a compute instance that has been fully stopped, which is when the instance state is `TERMINATED`.
+You can restart a compute instance that has been fully stopped, which is when the compute instance state is `TERMINATED`. If you opted to preserve Local SSD data when you stopped your compute instance, then you might need to remount the Local SSD disks after you restart the compute instance. For more information, see [Format and mounting a Local SSD device](https://docs.cloud.google.com/compute/docs/disks/add-local-ssd#formatandmount).
 
-If you chose to preserve the data of your Local SSD disks when stopping the instance, then you might need to remount the Local SSD disks after restarting it. For more information about how to mount Local SSD disks, see [Format and mounting a Local SSD device](https://docs.cloud.google.com/compute/docs/disks/add-local-ssd#formatandmount).
+To restart a compute instance, use one of the following methods. The best method for your use case depends on whether the compute instance has disks that were encrypted with [customer-supplied encryption keys (CSEK)](https://docs.cloud.google.com/compute/docs/disks/customer-supplied-encryption):
 
-To restart an instance, use one of the following methods based on whether the instance has disks that were encrypted with [customer-supplied encryption keys (CSEK)](https://docs.cloud.google.com/compute/docs/disks/customer-supplied-encryption):
+  * Restart a compute instance that doesn't have CSEK-encrypted disks
 
-  * If your instance doesn't have CSEK-encrypted disks attached, then see Restart an instance that doesn't have CSEK-encrypted disks.
-
-  * Otherwise, see Restart an instance with CSEK-encrypted disks.
+  * Restart a compute instance with CSEK-encrypted disks
 
 
 
 
-### Restart an instance that doesn't have CSEK-encrypted disks
+### Restart a compute instance that doesn't have CSEK-encrypted disks
 
-To restart multiple instances simultaneously across different zones, use the Google Cloud console. For instances located within the same zone, you can use the gcloud CLI. Otherwise, for other restart scenarios, select one of the following options:
+To restart multiple compute instances simultaneously across different zones, use the Google Cloud console. For compute instances that exist in the same zone, you can use the gcloud CLI. Otherwise, for other restart scenarios, select one of the following options:
 
 ###  Console 
 
@@ -764,7 +745,7 @@ To restart multiple instances simultaneously across different zones, use the Goo
 
 [Go to VM instances](https://console.cloud.google.com/compute/instances)
 
-  2. Select one or more instances.
+  2. Select the compute instances that you want to restart.
 
   3. Click play_arrow **Start / Resume**.
 
@@ -773,7 +754,7 @@ To restart multiple instances simultaneously across different zones, use the Goo
 
 ###  gcloud 
 
-To restart one or more instances in the same zone, use the [`gcloud compute instances start` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/start):
+To restart one or more compute instances that exist in the same zone, use the [`gcloud compute instances start` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/start):
     
     
     gcloud compute instances start INSTANCE_NAMES \
@@ -782,9 +763,9 @@ To restart one or more instances in the same zone, use the [`gcloud compute inst
 
 Replace the following:
 
-  * `INSTANCE_NAMES`: a list of instance names separated by spaces—for example, `instance-01 instance-02 instance-03`.
+  * `INSTANCE_NAMES`: a list of names of compute instances that you want to restart, separated by spaces. For example, specify `instance-01 instance-02 instance-03`.
 
-  * `ZONE`: the zone where the instances are located.
+  * `ZONE`: the zone where the compute instances exist.
 
 
 
@@ -1048,7 +1029,7 @@ Replace the following:
 
 ###  REST 
 
-To restart an instance, make a `POST` request to the [`instances.start` method](https://docs.cloud.google.com/compute/docs/reference/latest/instances/start):
+To restart a compute instance, make a `POST` request to the [`instances.start` method](https://docs.cloud.google.com/compute/docs/reference/latest/instances/start):
     
     
      POST https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances/INSTANCE_NAME/start
@@ -1056,20 +1037,20 @@ To restart an instance, make a `POST` request to the [`instances.start` method](
 
 Replace the following:
 
-  * `INSTANCE_NAME`: the name of the instance to restart.
+  * `INSTANCE_NAME`: the name of the compute instance.
 
-  * `PROJECT_ID`: the ID of the project where the instance is located.
+  * `PROJECT_ID`: the ID of the project where the compute instance exists.
 
-  * `ZONE`: the zone where the instance is located.
-
-
+  * `ZONE`: the zone where the compute instance exists.
 
 
-### Restart an instance with CSEK-encrypted disks
 
-When you restart a stopped compute instance that has attached disks that were encrypted using [customer-supplied encryption keys](https://docs.cloud.google.com/compute/docs/disks/customer-supplied-encryption), you must supply the encryption key information.
 
-To restart multiple instances simultaneously across different zones, use the Google Cloud console. For instances located within the same zone, you can use the gcloud CLI. Otherwise, for other restart scenarios, select one of the following options:
+### Restart a compute instance with CSEK-encrypted disks
+
+When you restart a stopped compute instance that has attached disks that were encrypted by using [customer-supplied encryption keys](https://docs.cloud.google.com/compute/docs/disks/customer-supplied-encryption), you must supply the encryption key information.
+
+To restart multiple compute instances simultaneously across different zones, use the Google Cloud console. For compute instances that exist in the same zone, you can use the gcloud CLI. Otherwise, for other restart scenarios, select one of the following options:
 
 ###  Console 
 
@@ -1077,18 +1058,22 @@ To restart multiple instances simultaneously across different zones, use the Goo
 
 [Go to VM instances](https://console.cloud.google.com/compute/instances)
 
-  2. Select the instances to restart.
+  2. Select the compute instances that you want to restart.
 
   3. Click play_arrow **Start / Resume**.
 
-  4. Specify encryption keys for each of the encrypted disks that are attached to the instances, and then click **Start**.
+  4. In the dialog that appears, do the following:
+
+     1. Specify encryption keys for each of the encrypted disks that are attached to the compute instances.
+
+     2. Click **Start**.
 
 
 
 
 ###  gcloud 
 
-To restart one or more instances that use encrypted disks in the same zone, use the [`gcloud compute instances start` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/start) with the `--csek-key-file` flag. If you're using an RSA-wrapped key, then use the [`gcloud beta compute instances start` command](https://docs.cloud.google.com/sdk/gcloud/reference/beta/compute/instances/start) with the `--csek-key-file` flag instead:
+To restart one or more compute instances that use encrypted disks that exist in the same zone, use the [`gcloud compute instances start` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/start) with the `--csek-key-file` flag. If you're using an RSA-wrapped key, then use the [`gcloud beta compute instances start` command](https://docs.cloud.google.com/sdk/gcloud/reference/beta/compute/instances/start) with the `--csek-key-file` flag instead:
     
     
     gcloud compute instances start INSTANCE_NAMES \
@@ -1098,11 +1083,11 @@ To restart one or more instances that use encrypted disks in the same zone, use 
 
 Replace the following:
 
-  * `INSTANCE_NAMES`: a list of instance names separated by spaces—for example, `instance-01 instance-02 instance-03`.
+  * `INSTANCE_NAMES`: a list of names of compute instances that you want to restart, separated by spaces. For example, specify `instance-01 instance-02 instance-03`.
 
-  * `ENCRYPTION_KEY_FILE`: the relative path to the JSON file that contains the customer-supplied encryption key. You can only restart multiple instances simultaneously if the instances use the same customer-supplied encryption key. The format of the file is described in [Key file format](https://docs.cloud.google.com/compute/docs/disks/customer-supplied-encryption#key_file_format).
+  * `ENCRYPTION_KEY_FILE`: the relative path to the JSON file that contains the customer-supplied encryption key. You can only restart multiple compute instances simultaneously if the compute instances use the same customer-supplied encryption key. The format of the file is described in [Key file format](https://docs.cloud.google.com/compute/docs/disks/customer-supplied-encryption#key_file_format).
 
-  * `ZONE`: the zone where the instances are located.
+  * `ZONE`: the zone where the compute instances exist.
 
 
 
@@ -1497,7 +1482,7 @@ Replace the following:
 
 ###  REST 
 
-To restart an instance that uses encrypted disks, make a `POST` request to the [`instances.startWithEncryptionKey` method](https://docs.cloud.google.com/compute/docs/reference/rest/v1/instances/startWithEncryptionKey):
+To restart a compute instance that uses encrypted disks, make a `POST` request to the [`instances.startWithEncryptionKey` method](https://docs.cloud.google.com/compute/docs/reference/rest/v1/instances/startWithEncryptionKey):
     
     
     POST  https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances/INSTANCE_NAME/startWithEncryptionKey
@@ -1516,30 +1501,30 @@ To restart an instance that uses encrypted disks, make a `POST` request to the [
 
 Replace the following:
 
-  * `PROJECT_ID`: the ID of the project where the instance is located.
+  * `PROJECT_ID`: the ID of the project where the compute instance exists.
 
-  * `ZONE`: the zone where the instance is located.
+  * `ZONE`: the zone where the compute instance exists.
 
-  * `INSTANCE_NAME`: the name of the instance.
+  * `INSTANCE_NAME`: the name of the compute instance.
 
   * `DISK_URL`: the [resource URL](https://docs.cloud.google.com/apis/design/resource_names#resource_name_vs_url) corresponding to the full resource name of the attached disk that is encrypted with a customer-supplied encryption key.
 
   * `ENCRYPTION_TYPE`: the type of disk encryption that you're using, which can be one of the following: `rawKey`, `kmsKeyName`, or `rsaEncryptedKey`. If you use the `rsaEncryptedKey` type, then make a `POST` request to the [`beta.instances.startWithEncryptionKey` method](https://docs.cloud.google.com/compute/docs/reference/rest/beta/instances/startWithEncryptionKey).
 
-  * `ENCRYPTION_KEY`: the encryption key used to encrypt the persistent disks attached to the instance. `rawKey` or `rsaEncryptedKey` keys must be [base64-encoded](https://docs.cloud.google.com/compute/docs/disks/customer-supplied-encryption#required_key_format). Additionally, to prepare a `rsaEncryptedKey` key, see [RSA key wrapping](https://docs.cloud.google.com/compute/docs/disks/customer-supplied-encryption#rsa-encryption).
+  * `ENCRYPTION_KEY`: the encryption key used to encrypt the persistent disks attached to the compute instance. `rawKey` or `rsaEncryptedKey` keys must be [base64-encoded](https://docs.cloud.google.com/compute/docs/disks/customer-supplied-encryption#required_key_format). Additionally, to prepare a `rsaEncryptedKey` key, see [RSA key wrapping](https://docs.cloud.google.com/compute/docs/disks/customer-supplied-encryption#rsa-encryption).
 
 
 
 
 ## What's next
 
-  * [Troubleshooting VM shutdowns and reboots](https://docs.cloud.google.com/compute/docs/troubleshooting/troubleshooting-reboots)
+  * [Troubleshoot compute instance shutdowns and reboots](https://docs.cloud.google.com/compute/docs/troubleshooting/troubleshooting-reboots)
 
-  * [Troubleshooting using the serial console](https://docs.cloud.google.com/compute/docs/instances/interacting-with-serial-console)
+  * [Troubleshoot compute instance by using the serial console](https://docs.cloud.google.com/compute/docs/instances/interacting-with-serial-console)
 
   * [Edit the machine type of a compute instance](https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance)
 
-  * [Delete a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/deleting-instance)
+  * [Delete a compute instance](https://docs.cloud.google.com/compute/docs/instances/deleting-instance)
 
 
 
@@ -1548,6 +1533,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

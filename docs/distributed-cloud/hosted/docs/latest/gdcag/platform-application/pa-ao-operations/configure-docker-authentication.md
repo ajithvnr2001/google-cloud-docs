@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/configure-docker-authentication/
 title: Sign in to Docker and Helm \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T10:45:03.885238+00:00
+fetched_at: 2026-10-21T11:58:18.710116+00:00
 ---
 
 # Sign in to Docker and Helm  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -24,9 +24,12 @@ Send feedback
 
 This page describes how to sign in to Docker or Helm using the Managed Harbor Service (MHS) credential helper or CLI secrets.
 
-To provide flexibility, Google Distributed Cloud (GDC) air-gapped provides two methods to authenticate with Docker and Helm from your Harbor registry instance. The first method is using the Managed Harbor Service (MHS) credential helper and your GDC identity to sign in to the Docker or Helm CLI. After authenticating with GDC, you can sign in to the Docker client and perform Docker operations, without having to create or manage separate CLI secrets in Harbor.
+Harbor registry instances in Google Distributed Cloud (GDC) air-gapped use Identity-Aware Proxy (IAP) for authentication. You can sign in to your Harbor registry instance from the Docker or Helm CLI using either of the following methods:
 
-The second method is using CLI secrets. After you authenticate using Identity-Aware Proxy (IAP) and sign in to the Harbor interface for the first time, use the Docker or Helm CLI to access Harbor. The Docker and Helm CLIs cannot handle redirection for IAP, so Harbor provides a CLI secret to use when signing in from Docker or Helm. This method is only available when Harbor uses IAP authentication.
+  * **MHS credential helper (`docker-credential-mhs`)**: uses your authenticated GDC identity to handle IAP authentication automatically. After you sign in with the gdcloud CLI, `docker-credential-mhs` fetches your authenticated user identity and verifies your access with Harbor. After verification, Harbor provides a short-lived token to Docker or Helm so you can perform registry operations without creating or managing separate CLI secrets.
+  * **CLI secrets** : uses a static CLI secret from your Harbor user profile. After you sign in to the Harbor web interface using IAP for the first time, you can retrieve your CLI secret and use it as your password when signing in from the Docker or Helm CLI. This method is only available with the Harbor UI.
+
+
 
 ## Before you begin
 
@@ -36,11 +39,15 @@ To configure Docker and Helm authentication for Harbor registry instances, you m
 
 To configure authentication for Harbor registry instances, contact your Project IAM Admin to request the **Harbor Instance Viewer** (`harbor-instance-viewer`) role, which lets you get, list, and watch Harbor instances in the project namespace. This role includes the required permissions to view the details of existing Harbor instances so you can retrieve the registry URLs for authentication.
 
-## Sign in to Docker with your GDC identity
+## Sign in with the MHS credential helper
 
-Use the MHS credential helper with your GDC identity to sign into the Docker CLI. To authenticate with Docker, follow these steps:
+How you authenticate with `docker-credential-mhs` depends on your CLI client: you can configure Docker to fetch credentials automatically, or retrieve temporary credentials directly to sign in to Docker.
 
-  1. Sign in to the Management API server with GDC CLI by following the instructions in [Sign in](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/sign-in).
+### Sign in to Docker
+
+To authenticate with Docker, follow these steps:
+
+  1. Sign in to the Management API server with the gdcloud CLI by following the instructions in [Sign in](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/sign-in).
 
   2. Configure Docker to use the MHS credential helper `docker-credential-mhs`:
          
@@ -54,7 +61,7 @@ Use the MHS credential helper with your GDC identity to sign into the Docker CLI
 Replace the following:
 
      * `PROJECT_NAME`: the name of your tenant project. This is the same project name you provided when [creating your Harbor instance](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/create-harbor-instances#create-a-harbor-registry-instance).
-     * `HARBOR_INSTANCE_NAME`: the name of the Harbor instance that is created in [Create Harbor registry instances](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/create-harbor-instances).
+     * `HARBOR_INSTANCE_NAME`: the name of the Harbor instance that you created in [Create Harbor registry instances](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/create-harbor-instances).
   3. Follow the instructions in [Configure Docker to trust the Harbor root CA](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/configure-docker-trust#configure-docker-to-trust-harbor-root-ca).
 
   4. Optional: Verify that the credential helper is successfully configured by verifying the `mhs` entry is added to `~/.docker/config.json`:
@@ -62,7 +69,7 @@ Replace the following:
          cat DOCKER_CONFIG_PATH
          
 
-Replace `DOCKER_CONFIG_PATH` with the path to your docker config file. For example, `~/.docker/config.json.`
+Replace `DOCKER_CONFIG_PATH` with the path to your Docker configuration file, such as `~/.docker/config.json`.
 
 The output is similar to the following:
          
@@ -90,7 +97,7 @@ The output is similar to the following:
 
 This example shows a successful output of `"myinstance-e2e-test-user.org-1.zone1.google.gdch.test": "mhs"`.
 
-  5. Configure the tenant project in `gdcloud`:
+  5. Configure the tenant project in the gdcloud CLI:
          
          TENANT_PROJECT=PROJECT_NAME
          gdcloud config set project $TENANT_PROJECT
@@ -101,7 +108,7 @@ The following output is shown:
          Updated property [core/project].
          
 
-  6. Identify a Harbor project that you have management access to. [Create a Harbor project](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/create-harbor-projects) if one does not exist.
+  6. Identify a Harbor project that you have management access to. If one doesn't exist, [create a Harbor project](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/create-harbor-projects).
 
   7. Perform Docker operations, such as an image push or pull:
          
@@ -145,14 +152,12 @@ If the operation is unsuccessful, you might see the following output:
          E1025 19:21:39.322290 1273587 get.go:24] failed to get user name: user is not logged in or login expired, please login again
          
 
-In this example, the GDC authentication session has expired and you must sign in to GDC again. For more information, see [Sign in](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/sign-in).
+In this example, the GDC authentication session has expired, and you must sign in to GDC again. For more information, see [Sign in](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/sign-in).
 
 
 
 
-## Sign into Helm with your GDC identity
-
-Use the MHS credential helper with your GDC identity to sign into the Helm CLI.
+### Sign in to Helm
 
 To authenticate with Helm, follow these steps:
 
@@ -181,38 +186,35 @@ A successful output for this operation looks like the following:
 
 
 
-## Sign in to Docker or Helm with CLI secrets
+## Sign in with CLI secrets
 
 To sign in to Docker or Helm with CLI secrets, follow these steps:
 
   1. Sign in to Harbor with an IAP user account.
   2. Click your username and select **User Profile**.
   3. To copy the CLI secret associated with your account, click content_copy **Copy**.
-  4. Optional: To display buttons for automatically generating or manually creating a new CLI secret, click the more_horiz ellipses in your user profile.
+  4. Optional: To display buttons for automatically generating or manually creating a new CLI secret, click more_horiz **More** in your user profile.
 
-**Note:** A user can only have one CLI secret. When a new secret is generated or created, the old secret becomes invalid.
+**Note:** You can have only one CLI secret. When a new secret is generated or created, the old secret becomes invalid.
   5. If you generated a new CLI secret, click content_copy **Copy** to copy it.
 
-  6. You can now use your CLI secret as the password when signing in to Harbor from the Docker or Helm CLI:
-
-
-
-    
-    
-        docker login -u USERNAME -p CLI_SECRET HARBOR_INSTANCE_URL
-    
+  6. Use your CLI secret as the password when signing in to Harbor from the Docker or Helm CLI:
+         
+         docker login -u USERNAME -p CLI_SECRET HARBOR_INSTANCE_URL
+         
 
 Replace the following:
 
-  * `USERNAME`: the Harbor account username
-  * `CLI_SECRET`: the generated CLI secret.
-  * `HARBOR_INSTANCE_URL`: the URL of the Harbor instance.
+     * `USERNAME`: the Harbor account username.
+     * `CLI_SECRET`: the generated CLI secret.
+     * `HARBOR_INSTANCE_URL`: the URL of the Harbor instance.
+**Note:** The CLI secret doesn't expire unless you manually rotate it. The CLI secret isn't associated with your user identity token. Signing out from Harbor or the GDC console doesn't revoke the CLI secret.
 
-**Note:** The CLI secret does not expire, unless you manually rotate it. The CLI secret is not associated with the user identity token. Signing out from Harbor or the GDC console does not revoke the CLI secret.
+
 
 ## What's next
 
-Once you've signed in to Docker and Helm, your registry is fully connected and you can start using it:
+After you sign in to Docker and Helm, your registry is connected and you can start using it:
 
   * [Push an image](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/push-image)
   * [Pull an image with Docker](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/pull-image)
@@ -223,6 +225,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

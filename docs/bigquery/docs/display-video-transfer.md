@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/display-video-transfer/
 title: Load Display & Video 360 data into BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:51:21.750302+00:00
+fetched_at: 2026-10-21T12:22:57.930388+00:00
 ---
 
 # Load Display & Video 360 data into BigQuery  |  Google Cloud Documentation
@@ -117,7 +117,7 @@ To retrieve your Display & Video 360 ID, navigate to the Cloud Storage **Buckets
 
 ### Finding your filename prefix
 
-In some cases, the files in your Cloud Storage bucket might have custom, nonstandard file names that were set up for you by the Google Marketing Platform services team. For example:
+In some cases, the files in your Cloud Storage bucket might have custom, nonstandard filenames that were set up for you by the Google Marketing Platform services team. For example:
 
 In a file named `dbm_partner123456custom_activity_*`, the prefix is `dbm_partner123456custom`.
 
@@ -181,7 +181,7 @@ Where:
   * PROJECT_ID: your project ID.
   * DATASET: the target dataset for the data transfer configuration.
   * NAME: the display name for the data transfer configuration. The transfer name can be any value that lets you identify the transfer if you need to modify it later.
-  * PARAMETERS: the parameters for the created data transfer configuration in JSON format. For example—`--params='{"param":"param_value"}'`. For Display & Video 360 transfers, the `bucket` and `displayvideo_id` parameters are required. The `file_name_prefix` parameter is optional and used for rare, custom file names only.
+  * PARAMETERS: the parameters for the created data transfer configuration in JSON format. For example—`--params='{"param":"param_value"}'`. For Display & Video 360 transfers, the `bucket` and `displayvideo_id` parameters are required. The `file_name_prefix` parameter is optional and used for rare, custom filenames only.
   * DATA_SOURCE: the data source — `displayvideo`.
 
 
@@ -217,6 +217,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

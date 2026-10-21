@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/guides/read-from-iceberg/
 title: Read from Apache Iceberg to Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:02:40.072478+00:00
+fetched_at: 2026-10-21T11:58:20.261424+00:00
 ---
 
 # Read from Apache Iceberg to Dataflow  |  Google Cloud Documentation
@@ -21,7 +21,11 @@ Send feedback
 
 #  Read from Apache Iceberg to Dataflow Stay organized with collections  Save and categorize content based on your preferences. 
 
-To read from Apache Iceberg to Dataflow, use the [managed I/O connector](https://docs.cloud.google.com/dataflow/docs/guides/managed-io-iceberg).
+You might need to ingest and transform data for downstream analytics at scale that's stored in Apache Iceberg open table formats. Ingesting Apache Iceberg data into Dataflow using the [managed I/O connector](https://docs.cloud.google.com/dataflow/docs/guides/managed-io-iceberg) lets you run distributed, parallel batch pipelines to read and process high-volume datasets across Hadoop, Hive, REST catalogs, and the BigQuery metastore.
+
+If you work with [BigQuery tables for Apache Iceberg](https://docs.cloud.google.com/bigquery/docs/iceberg-tables), use the [`BigQueryIO` connector](https://beam.apache.org/documentation/io/built-in/google-bigquery/) with the BigQuery Storage API instead. The target table must already exist, as dynamic table creation isn't supported.
+
+## Capabilities
 
 Managed I/O supports the following capabilities for Apache Iceberg:
 
@@ -168,6 +172,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

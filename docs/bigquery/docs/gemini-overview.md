@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/gemini-overview/
 title: Gemini in BigQuery overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:53:01.419521+00:00
+fetched_at: 2026-10-21T12:22:38.013396+00:00
 ---
 
 # Gemini in BigQuery overview  |  Google Cloud Documentation
@@ -28,7 +28,7 @@ This document describes how Gemini in BigQuery, which is part of the [Gemini for
 Gemini in BigQuery provides AI assistance to help you do the following:
 
   * **Explore and understand your data with data insights**. Data insights offers an automated, intuitive way to uncover patterns and perform statistical analysis by using insightful queries that are generated from the metadata of your tables. This feature is especially helpful in addressing the cold-start challenges of early data exploration. For more information, see [Generate data insights in BigQuery](https://docs.cloud.google.com/bigquery/docs/data-insights).
-  * **Chat with your data using conversational analytics**. Conversational analytics lets you have natural language conversations with your data. You can create data agents configured with custom metadata, instructions, glossary terms, and verified queries to establish business logic. You can also start direct conversations with data sources, including tables, views, property graphs, and Lakehouse tables. For more information, see [Conversational analytics overview](https://docs.cloud.google.com/bigquery/docs/conversational-analytics).
+  * **Chat with your data using conversational analytics**. Conversational analytics lets you have natural language conversations with your data. You can create data agents configured with custom metadata, instructions, glossary terms, and verified queries to establish business logic. You can also start direct conversations with data sources, including tables, views, graphs, and Lakehouse tables. For more information, see [Conversational analytics overview](https://docs.cloud.google.com/bigquery/docs/conversational-analytics).
   * **Discover, transform, query, and visualize data with BigQuery data canvas**. You can use natural language with Gemini in BigQuery, to find, join, and query table assets, visualize results, and seamlessly collaborate with others throughout the entire process. For more information, see [Analyze with data canvas](https://docs.cloud.google.com/bigquery/docs/data-canvas).
   * **Get assisted SQL and Python data analysis**. You can use Gemini in BigQuery to generate or suggest code in either SQL or Python, and to explain an existing SQL query. You can also use natural language queries to begin data analysis. To learn how to generate, complete, and summarize code, see the following documentation:  
 
@@ -116,6 +116,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

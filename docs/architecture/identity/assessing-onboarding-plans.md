@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/identity/assessing-onboarding-plans/
 title: Assess onboarding plans \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:58:46.696986+00:00
+fetched_at: 2026-10-21T12:22:18.451639+00:00
 ---
 
 # Assess onboarding plans  |  Cloud Architecture Center  |  Google Cloud Documentation

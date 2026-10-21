@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/buildpacks/stacks/
 title: Stacks \u00a0|\u00a0 Buildpacks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:27:04.737791+00:00
+fetched_at: 2026-10-21T12:01:38.302015+00:00
 ---
 
 # Stacks  |  Buildpacks  |  Google Cloud Documentation
@@ -50,7 +50,7 @@ bash | 5.2.21-2ubuntu4
 bsdutils | 1:2.39.3-9ubuntu6.6  
 ca-certificates | 20260601~24.04.1  
 coreutils | 9.4-3ubuntu6.3  
-curl | 8.5.0-2ubuntu10.15  
+curl | 8.5.0-2ubuntu10.16  
 dash | 0.5.12-6ubuntu5  
 debconf | 1.5.86ubuntu1  
 debianutils | 5.17build1  
@@ -81,7 +81,7 @@ libcap-ng0 | 0.8.4-2build2
 libcap2 | 1:2.66-5ubuntu2.4  
 libcom-err2 | 1.47.0-2.4~exp1ubuntu4.1  
 libcrypt1 | 1:4.4.36-4build1  
-libcurl4t64 | 8.5.0-2ubuntu10.15  
+libcurl4t64 | 8.5.0-2ubuntu10.16  
 libdb5.3t64 | 5.3.28+dfsg2-7  
 libdebconfclient0 | 0.271ubuntu3  
 libext2fs2t64 | 1.47.0-2.4~exp1ubuntu4.1  
@@ -128,10 +128,10 @@ libss2 | 1.47.0-2.4~exp1ubuntu4.1
 libssh-4 | 0.10.6-2ubuntu0.5  
 libssl3t64 | 3.0.13-0ubuntu3.16  
 libstdc++6 | 14.2.0-4ubuntu2~24.04.1  
-libsystemd0 | 255.4-1ubuntu8.17  
+libsystemd0 | 255.4-1ubuntu8.18  
 libtasn1-6 | 4.19.0-3ubuntu0.24.04.2  
 libtinfo6 | 6.4+20240113-1ubuntu2.2  
-libudev1 | 255.4-1ubuntu8.17  
+libudev1 | 255.4-1ubuntu8.18  
 libunistring5 | 1.1-2build1.1  
 libuuid1 | 2.39.3-9ubuntu6.6  
 libxxhash0 | 0.8.2-2build1  
@@ -151,7 +151,7 @@ sed | 4.9-2ubuntu0.24.04.1
 sensible-utils | 0.0.22  
 sysvinit-utils | 3.08-6ubuntu3  
 tar | 1.35+dfsg-3ubuntu0.4  
-tzdata | 2026c-0ubuntu0.24.04.1  
+tzdata | 2026e-0ubuntu0.24.04.1  
 ubuntu-keyring | 2023.11.28.1  
 unminimize | 0.2.1  
 util-linux | 2.39.3-9ubuntu6.6  
@@ -445,7 +445,7 @@ libperl5.38t64 | 5.38.2-3.2ubuntu0.6
 libpgm-5.3-0t64 | 5.3.128~dfsg-2.1build1  
 libpixman-1-0 | 0.42.2-1build1  
 libplacebo338 | 6.338.2-2build1  
-libpng16-16t64 | 1.6.43-5ubuntu0.6  
+libpng16-16t64 | 1.6.43-5ubuntu0.7  
 libpocketsphinx3 | 0.8.0+real5prealpha+1-15ubuntu5  
 libpostproc57 | 7:6.1.1-3ubuntu5+esm13  
 libpq5 | 16.15-0ubuntu0.24.04.1  
@@ -564,7 +564,7 @@ libxext6 | 2:1.3.4-1build2
 libxfixes3 | 1:6.0.0-2build1  
 libxi6 | 2:1.8.1-1build1  
 libxkbcommon0 | 1.6.0-1build1  
-libxml2 | 2.9.14+dfsg-1.3ubuntu3.9  
+libxml2 | 2.9.14+dfsg-1.3ubuntu3.10  
 libxpm4 | 1:3.5.17-1ubuntu0.24.04.2  
 libxrandr2 | 2:1.5.2-2build1  
 libxrender1 | 1:0.9.10-1.1build1  
@@ -651,7 +651,7 @@ bash | 5.1-6ubuntu1.1
 bsdutils | 1:2.37.2-4ubuntu3.6  
 ca-certificates | 20260601~22.04.1  
 coreutils | 8.32-4.1ubuntu1.4  
-curl | 7.81.0-1ubuntu1.29  
+curl | 7.81.0-1ubuntu1.30  
 dash | 0.5.11+git20210903+057cd650a4ed-3build1  
 debconf | 1.5.79ubuntu1  
 debianutils | 5.5-1ubuntu2  
@@ -681,7 +681,7 @@ libcap-ng0 | 0.7.9-2.2build3
 libcap2 | 1:2.44-1ubuntu0.22.04.3  
 libcom-err2 | 1.46.5-2ubuntu1.2  
 libcrypt1 | 1:4.4.27-1  
-libcurl4 | 7.81.0-1ubuntu1.29  
+libcurl4 | 7.81.0-1ubuntu1.30  
 libdb5.3 | 5.3.28+dfsg1-0.8ubuntu3  
 libdebconfclient0 | 0.261ubuntu1  
 libext2fs2 | 1.46.5-2ubuntu1.2  
@@ -729,12 +729,12 @@ libss2 | 1.46.5-2ubuntu1.2
 libssh-4 | 0.9.6-2ubuntu0.22.04.8  
 libssl3 | 3.0.2-0ubuntu1.30  
 libstdc++6 | 12.3.0-1ubuntu1~22.04.3  
-libsystemd0 | 249.11-0ubuntu3.22  
+libsystemd0 | 249.11-0ubuntu3.23  
 libtasn1-6 | 4.18.0-4ubuntu0.2  
 libtinfo6 | 6.3-2ubuntu0.3  
 libtirpc-common | 1.3.2-2ubuntu0.1  
 libtirpc3 | 1.3.2-2ubuntu0.1  
-libudev1 | 249.11-0ubuntu3.22  
+libudev1 | 249.11-0ubuntu3.23  
 libunistring2 | 1.0-1  
 libuuid1 | 2.37.2-4ubuntu3.6  
 libxxhash0 | 0.8.1-1  
@@ -755,7 +755,7 @@ sed | 4.8-1ubuntu2.1
 sensible-utils | 0.0.17  
 sysvinit-utils | 3.01-1ubuntu1  
 tar | 1.34+dfsg-1ubuntu0.1.22.04.6  
-tzdata | 2026c-0ubuntu0.22.04.1  
+tzdata | 2026e-0ubuntu0.22.04.1  
 ubuntu-keyring | 2021.03.26  
 usrmerge | 25ubuntu2  
 util-linux | 2.37.2-4ubuntu3.6  
@@ -914,7 +914,7 @@ libdav1d5 | 0.9.2-1
 libdb5.3 | 5.3.28+dfsg1-0.8ubuntu3  
 libdbus-1-3 | 1.12.20-2ubuntu4.1  
 libdc1394-25 | 2.2.6-4  
-libde265-0 | 1.0.8-1ubuntu0.3+esm2  
+libde265-0 | 1.0.8-1ubuntu0.3+esm3  
 libdebconfclient0 | 0.261ubuntu1  
 libdecor-0-0 | 0.1.0-3build1  
 libdeflate0 | 1.10-2  
@@ -1052,7 +1052,7 @@ libpcre3 | 2:8.39-13ubuntu0.22.04.1
 libperl5.34 | 5.34.0-3ubuntu1.9  
 libpgm-5.3-0 | 5.3.128~dfsg-2  
 libpixman-1-0 | 0.40.0-1ubuntu0.22.04.1  
-libpng16-16 | 1.6.37-3ubuntu0.6  
+libpng16-16 | 1.6.37-3ubuntu0.7  
 libpocketsphinx3 | 0.8.0+real5prealpha+1-14ubuntu1  
 libpostproc55 | 7:4.4.2-0ubuntu0.22.04.1+esm16  
 libpq5 | 14.24-0ubuntu0.22.04.1  
@@ -1168,7 +1168,7 @@ libxfixes3 | 1:6.0.0-1
 libxi6 | 2:1.8-1build1  
 libxinerama1 | 2:1.1.4-3  
 libxkbcommon0 | 1.4.0-1  
-libxml2 | 2.9.13+dfsg-1ubuntu0.13  
+libxml2 | 2.9.13+dfsg-1ubuntu0.14  
 libxpm4 | 1:3.5.12-1ubuntu0.22.04.4  
 libxrandr2 | 2:1.5.2-1build1  
 libxrender1 | 1:0.9.10-1build4  
@@ -1822,6 +1822,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

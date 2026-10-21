@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/database-migration/docs/postgresql-to-alloydb/apis/
 title: APIs & references \u00a0|\u00a0 Database Migration Service for PostgreSQL to AlloyDB \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:17:10.181337+00:00
+fetched_at: 2026-10-21T11:59:52.268901+00:00
 ---
 
 # APIs & references  |  Database Migration Service for PostgreSQL to AlloyDB  |  Google Cloud Documentation

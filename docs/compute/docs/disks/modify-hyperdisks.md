@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/compute/docs/disks/modify-hyperdisks/
-title: Modify the settings for a Google Cloud Hyperdisk volume \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
+title: Modify the size and provisioned performance of a Hyperdisk volume \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:33.105404+00:00
+fetched_at: 2026-10-21T12:22:27.232077+00:00
 ---
 
-# Modify the settings for a Google Cloud Hyperdisk volume  |  Compute Engine  |  Google Cloud Documentation
+# Modify the size and provisioned performance of a Hyperdisk volume  |  Compute Engine  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/compute/docs/disks/modify-hyperdisks/
 
@@ -19,17 +19,13 @@ fetched_at: 2026-10-13T23:18:33.105404+00:00
 
 Send feedback 
 
-#  Modify the settings for a Google Cloud Hyperdisk volume Stay organized with collections  Save and categorize content based on your preferences. 
+#  Modify the size and provisioned performance of a Hyperdisk volume Stay organized with collections  Save and categorize content based on your preferences. 
 
-You can modify the properties of your Google Cloud Hyperdisk volumes to meet your workload's needs.
+You can modify the size and performance of your Google Cloud Hyperdisk volumes as your workload's needs change. For example, you can increase a volume's provisioned size to store more data. You can also reduce or increase the provisioned performance to reduce costs or increase performance, respectively.
 
-This page discusses how to modify the following properties of a Hyperdisk volume:
+This page discusses how to modify a Hyperdisk volume's provisioned size and performance.
 
-  * Reduce or increase the provisioned IOPS or throughput to reduce costs or increase performance, respectively.
-  * Increase the volume's provisioned capacity.
-  * For certain Hyperdisk types, enable or disable simultaneous access to the volume's data from multiple instances. To do so, you set the volume's access mode.
-
-
+To modify other properties of a Hyperdisk volume, see [Modify the settings for Persistent Disk or Hyperdisk](https://docs.cloud.google.com/compute/docs/disks/modify-persistent-disk).
 
 ## Before you begin
 
@@ -70,7 +66,7 @@ For more information, see [Authenticate for using REST](https://docs.cloud.googl
 To get the permission that you need to modify a Hyperdisk, ask your administrator to grant you the following IAM roles on the project: 
 
   * [Compute Instance Admin (v1) ](https://docs.cloud.google.com/iam/docs/roles-permissions/compute#compute.instanceAdmin.v1) (`roles/compute.instanceAdmin.v1`)
-  * To connect to a VM that can run as a service account: [Service Account User (v1) ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`) 
+  * To connect to a compute instance that can run as a service account: [Service Account User (v1) ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`) 
 
 
 
@@ -80,40 +76,57 @@ This predefined role contains the `compute.disks.update` permission, which is re
 
 You might also be able to get this permission with [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
 
-## Overview of modifying Hyperdisk volumes
+## Access mode changes
 
-You can change the access mode and performance characteristics of Hyperdisk volumes, and you can increase the size of a Hyperdisk volume.
-
-**Note:** You can't decrease the size of a Hyperdisk volume. For more information, see Decrease the size of a Hyperdisk volume.
-
-The following table summarizes the supported changes for each Hyperdisk type. If a Hyperdisk type is shareable between VMs, then you can set its access mode.
+To set the access mode for a Hyperdisk volume so that you can attach it to multiple instances, see [Access mode for Hyperdisk volumes](https://docs.cloud.google.com/compute/docs/disks/modify-persistent-disk#access_mode).
 
 ## Limitations
 
-  * You can only increase the capacity of a Hyperdisk volume. You can't reduce the capacity of a Hyperdisk volume. 
-  * To set a disk's access mode, it must be detached from all VMs.
-  * For Hyperdisk ML volumes, you can't set the access mode back to read-write if you set it to read-only.
-  * You can't set the access mode for Hyperdisk Throughput and Hyperdisk Extreme volumes.
+  * You can only increase the size of a Hyperdisk volume. You can't reduce the size of a Hyperdisk volume.
+  * The size and performance that you specify must be within the ranges specified in Size limit and Performance limits, respectively.
+  * There are limits to how often you can modify Hyperdisk size and performance, as follows:
+
+    * Size modifications:
+
+      * For Hyperdisk Throughput: once every 6 hours
+      * For Hyperdisk Balanced and Hyperdisk Balanced High Availability: twice within a 4-hour window
+      * For all other Hyperdisk types: once every 4 hours
+    * Modifications to provisioned IOPS or throughput:
+
+      * For Hyperdisk ML: once every 6 hours
+      * For all other Hyperdisk types: once every 4 hours
+
+If you try to modify a Hyperdisk volume more than once within the specified limits, then you see an error message like `Cannot update provisioned throughput due to being rate limited.`
+
+  * If you increase the size of a Hyperdisk volume that is in multi-writer mode, then the following limitations apply:
+
+    * You can't change the size of a Hyperdisk Balanced High Availability volume that's in multi-writer mode if any of the instances that the volume is attached to is in a zone that's experiencing an outage.
+    * You can't use the Terraform provider for Google Cloud to change the size of the volume; you must use the Google Cloud console, gcloud CLI, or REST.
+    * You must wait for the size change operation to complete before you attempt to access the disk from any of the attached instances.
+    * Before you can use the added disk space, you must verify that the updated disk size is visible in all the instances that the disk is attached to.
 
 
 
-### Supported size and performance changes for Hyperdisk volumes
+## Best practices
 
-The following table summarizes the supported capacity and performance changes for each Hyperdisk type.
+Because there are limits to how often you can change disk properties, we recommend the following best practices:
 
-Hyperdisk type | Customizable throughput | Customizable IOPS | Shareable between VMs  
----|---|---|---  
-Hyperdisk Balanced | Yes | Yes | Yes  
-Hyperdisk Balanced High Availability  
-| Yes | Yes | Yes  
-Hyperdisk Extreme | No | Yes | Yes  
-Hyperdisk ML | Yes | No | Yes, in  
-read-only mode  
-Hyperdisk Throughput | Yes | No | No  
-  
-### Decrease the capacity of a Hyperdisk volume
+  * We recommend that you modify size and performance at the same time. For example, if you plan to modify both a disk's size and provisioned IOPS within a short period, plan to make both changes in a single request.
 
-You can't decrease the size of a Hyperdisk volume. You must replace the volume with a new, smaller volume. To do so, create a blank volume that has a smaller size, then copy the contents from the original volume to the new volume. You can then use the new volume instead of the original.
+  * When choosing a new value for a disk's provisioned performance or size, remember that you can't make any further changes until the required time has passed.
+
+For example, suppose you want to increase the size of a 500 GiB Hyperdisk Balanced High Availability volume to 1 TiB. Ensure that your workload won't require more than 1 TiB of disk space within the next 4 hours, since you can't increase the size again until 4 hours have passed.
+
+
+
+
+## Modifications to a Hyperdisk volume's size
+
+You can increase the size of a Hyperdisk volume, but you can't directly decrease its size. To reduce the size of a Hyperdisk volume, replace the volume with a smaller one as described in Move data to a smaller Hyperdisk volume.
+
+### Move data to a smaller Hyperdisk volume
+
+You can't directly decrease the size of a Hyperdisk volume. If the provisioned size of a Hyperdisk volume volume is too large, then you must replace the volume with a new, smaller volume. To do so, create a blank volume that has a smaller size, then copy the contents from the original volume to the new volume. You can then use the new volume instead of the original.
 
 To replace a volume with a smaller volume, follow these steps: 
 
@@ -127,9 +140,9 @@ To replace a volume with a smaller volume, follow these steps:
 
 You are charged for the original volume until you delete it. 
 
-### Increase the capacity of a Hyperdisk volume
+### Prepare to increase the size of a Hyperdisk volume
 
-You can resize, or increase the capacity of, a Hyperdisk volume even if it is attached to a running instance. However, if a Hyperdisk volume is in multi-writer mode, you must detach the volume from all instances before you can resize it.
+You can resize, or increase the size of, a Hyperdisk volume even if it is attached to a running instance.
 
 You can resize your Hyperdisk volumes at the following frequencies:
 
@@ -139,17 +152,9 @@ You can resize your Hyperdisk volumes at the following frequencies:
 
 
 
-For the best results, complete the following steps when changing the capacity of a Hyperdisk volume:
-
-  1. Increase the size of the volume
-  2. Backup the disk
-  3. Resize the disk partitions
-
-
-
 ### Size limits for Hyperdisk volumes
 
-The size you specify for a Hyperdisk volume must be within the following ranges:
+The size that you specify for a Hyperdisk volume must be within the following ranges:
 
 Disk type | Minimum size | Maximum size | Default size  
 ---|---|---|---  
@@ -162,11 +167,41 @@ Hyperdisk ML | 4 GiB | 64 TiB | 100 GiB
 
 However, the total size of all the Hyperdisk volumes that's attached to an instance can't exceed the [ instance's Hyperdisk size and attachment limits](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-perf-limits#limits-instance).
 
-### Performance changes
+### Recommended process to increase a Hyperdisk volume's size
 
-You can change a volume's provisioned performance even if it is attached to running instance.
+To increase the size of a Hyperdisk volume, follow these steps:
 
-After you change the provisioned IOPS or throughput, it can take up to 15 minutes for the changes to take effect. However, the following conditions apply:
+  1. Review the information in Best practices.
+  2. Increase the size of the volume.
+  3. Backup the volume.
+  4. If the disk is in multi-writer mode, then verify that the updated size is visible to the guest OS of all the instances the disk is attached to.
+  5. Resize the disk partitions. If the disk is in multi-writer mode, then you must resize the file system from one of the instances to which the disk is attached.
+
+
+
+## Modifications to a Hyperdisk volume's provisioned performance
+
+You can modify a volume's provisioned IOPS or throughput as your workload's needs change. For example, if you anticipate higher traffic for a period of time, you can increase the provisioned IOPS of your Hyperdisk volumes, and then reduce the provisioned performance at the end of the busy period.
+
+You can change a volume's provisioned performance even if it is attached to a running instance. Changing the provisioned performance for a Hyperdisk volume doesn't affect the data on the disk.
+
+The following table summarizes the supported performance changes for each Hyperdisk type.
+
+Hyperdisk type | Customizable throughput | Customizable IOPS | Shareable between VMs  
+---|---|---|---  
+Hyperdisk Balanced | Yes | Yes | Yes  
+Hyperdisk Balanced High Availability  
+| Yes | Yes | Yes  
+Hyperdisk Extreme | No | Yes | Yes  
+Hyperdisk ML | Yes | No | Yes, in  
+read-only mode  
+Hyperdisk Throughput | Yes | No | No  
+  
+### Prepare to modify a Hyperdisk volume's provisioned performance
+
+You can change the provisioned IOPS or throughput once every 4 hours for all Hyperdisk types except Hyperdisk ML. For Hyperdisk ML volumes, you can change the provisioned throughput once every 6 hours.
+
+After you change the provisioned IOPS or throughput, it can take up to 15 minutes for the changes to take effect. However, the following exceptions apply:
 
   * For disks in multi-writer mode, performance changes can take up to 6 hours to become effective if the disk was attached to multiple VMs when you made the change.
   * For Hyperdisk ML volumes, it can take up to 20 minutes for the changes to take effect.
@@ -176,9 +211,7 @@ After you change the provisioned IOPS or throughput, it can take up to 15 minute
 
 
 
-Changing the provisioned IOPS or throughput for a Hyperdisk volume does not delete or modify disk data.
-
-If you attempt to modify a Hyperdisk volume more than once within the specified limits, you will receive an error message like `Cannot update provisioned throughput due to being rate limited.`
+To modify a Hyperdisk's provisioned performance, follow the procedure in Increase a Hyperdisk's size or change its provisioned performance.
 
 ### Performance limits for Hyperdisk volumes
 
@@ -192,137 +225,30 @@ Hyperdisk Extreme | 350,000 |  You can't provision a throughput level for Hyperd
 Hyperdisk ML | You can't provision an IOPS level, but each MiB/s of provisioned throughput comes with 16 IOPS, up to 33,554,432 IOPS. | 2,097,152  
 Hyperdisk Throughput | You can't provision an IOPS level, but each MiB/s of provisioned throughput comes with 4 IOPS, up to 9,600 IOPS. | 2,400  
   
-### Access mode changes
+## Increase a Hyperdisk's size or change its provisioned performance
 
-To attach a single Hyperdisk volume to multiple VMs, you must set the volume's [access mode](https://docs.cloud.google.com/compute/docs/disks/sharing-disks-between-vms#hd_access_mode) to read-only or multi-writer mode, depending on your use case.
-
-#### Disable multi-read or multi-write access for a disk
-
-To perform certain actions on a Hyperdisk volume, it must be in single-writer mode. For example, you can't create an image from a Hyperdisk volume in multi-writer mode. You must set its access mode to single-writer.
-
-To disable multi-read or multi-write access, you must detach it from all VMs, then follow the instructions in Set the access mode.
-
-## Best practices
-
-Because there are limits to how often you can change disk properties, we recommend the following best practices:
-
-  * Avoid delays in modifying a disk by changing multiple properties at the same time. For example, if you plan to change both disk's size and provisioned IOPS within a short period, make both changes in a single request.
-
-  * When choosing a new value for a disk's provisioned performance or size, remember that you can't make any further changes until the required time has passed.
-
-For example, suppose you want to increase the size of a 500 GiB Hyperdisk Balanced High Availability volume to 1 TiB. Ensure that your workload won't require more than 1 TiB of disk space within the next 4 hours, since you can't increase the size again until 4 hours have passed.
-
-
-
-
-## Set the access mode of a Hyperdisk volume
-
-To set a disk's access mode, it must be detached from all VMs.
-
-You can make the following changes to a Hyperdisk volume's access mode:
-
-  * For Hyperdisk Balanced and Hyperdisk Balanced High Availability volumes, you can enable or disable multi-writer mode.
-  * For Hyperdisk ML volumes, you can enable read-only mode.
-
-
-
-You can't modify a Hyperdisk ML volume's access mode after you set it to read-only.
-
-You can set the access mode with the Google Cloud console, the Google Cloud CLI, or REST.
-
-###  Console 
-
-  1. In the Google Cloud console, go to the **Disks** page.
-
-[Go to Disks](https://console.cloud.google.com/compute/disks)
-
-  2. In the list of disks in your project, click the name of the Hyperdisk volume you want to modify.
-
-  3. On the disk details page, click edit**Edit**.
-
-  4. In the **Access mode** field, select the access mode that you want:
-
-     * To enable read-only mode, select **Multiple VMs read only**.
-     * To enable multi-writer mode, select **Multiple VMs read-write**
-     * (Default) To enable single-writer mode, select **Single VM read-write**.
-  5. To apply your changes, click **Save**.
-
-
-
-
-###  gcloud 
-
-Run the [`disks update` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/disks/update) and specify the access mode with the `--access-mode` flag.
-    
-    
-    gcloud compute disks update DISK_NAME  \
-       --access-mode=DISK_ACCESS_MODE
-    
-
-Replace the following:
-
-  * DISK_NAME: the name of the Hyperdisk volume that you are modifying.
-  * DISK_ACCESS_MODE: how VMs can access the data on the disk. Supported values are: 
-    * `READ_ONLY_MANY`, for read-only access from multiple VMs.
-    * `READ_WRITE_MANY`, for read-write access from multiple VMs.
-    * (Default) `READ_WRITE_SINGLE`, for read-write access from one VM.
-
-
-
-###  REST 
-
-Construct a `PATCH` request to the [`compute.disks.update` method](https://docs.cloud.google.com/compute/docs/reference/rest/v1/disks/update). In the request body, set the access mode with the `"accessMode"` parameter.
-    
-    
-    PATCH https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/disks/DISK_NAME/update
-    {
-       "accessMode": "DISK_ACCESS_MODE"
-    }
-    
-
-Replace the following:
-
-  * `PROJECT_ID`: your project ID.
-  * `ZONE`: the zone where your Hyperdisk volume is located.
-  * `DISK_NAME`: the name of the Hyperdisk volume to modify.
-  * `DISK_ACCESS_MODE`: how VMs can access the data on the disk. Supported values are: 
-    * `READ_ONLY_MANY`, for read-only access from multiple VMs.
-    * `READ_WRITE_MANY`, for read-write access from multiple VMs.
-    * `READ_WRITE_SINGLE`, for read-write access from one VM.
-
-
-
-## Change the size or provisioned performance of a Hyperdisk volume
-
-You can increase the volume size and change the provisioned IOPS or throughput for a Hyperdisk volume with the following time limits:
-
-  * Increase the disk size:
-
-    * For Hyperdisk Throughput: once every 6 hours
-    * For Hyperdisk Balanced and Hyperdisk Balanced High Availability: twice within a 4-hour window
-    * For all other Hyperdisk types: once every 4 hours
-  * Modify the provisioned IOPS or throughput:
-
-    * For Hyperdisk ML: once every 6 hours
-    * For all other Hyperdisk types: IOPS and throughput can each be modified once every 4 hours.
-
-
+There are limits to how often you can modify Hyperdisk size and performance. Therefore, to avoid delays, review the Limitations and Best practices.
 
 You can change the provisioned size and performance for a Hyperdisk volume with the Google Cloud console, gcloud CLI, or REST.
 
+**Caution:** If you increase the size of a Hyperdisk volume that's in multi-writer mode, then you must wait for the operation to complete. Don't attempt to access the disk from the guest OS of any of the instances that the disk is attached to before the operation completes.
+
 ###  Console 
 
   1. In the Google Cloud console, go to the **Disks** page.
 
 [Go to Disks](https://console.cloud.google.com/compute/disks)
 
-  2. In the list of disks in your project, click the name of the Hyperdisk volume for which you want to change the capacity or provisioned performance.
+  2. In the list of disks in your project, click the name of the Hyperdisk volume for which you want to change the size or provisioned performance.
 
   3. On the disk details page, click **Edit**.
 
      1. In the **Size** field, enter the new size for your disk. The disk size must be in the range of supported values.
      2. For Hyperdisk Extreme, Hyperdisk Balanced, and Hyperdisk Balanced High Availability: In the **Provisioned IOPS** field, enter the new IOPS value for your volume.
      3. For Hyperdisk Throughput, Hyperdisk ML, Hyperdisk Balanced, and Hyperdisk Balanced High Availability: In the **Provisioned throughput** field, enter the new throughput value for your volume.
+
+The throughput and IOPS values you specify must be in the range of supported values.
+
   4. Click **Save** to apply your changes to the disk.
 
 
@@ -332,12 +258,12 @@ You can change the provisioned size and performance for a Hyperdisk volume with 
 
 Use the [`disks update` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/disks/update) and specify the `--size`, `--provisioned-iops`, or `--provisioned-throughput` flags.
 
-To change the size of a Hyperdisk Balanced High Availability volume, include the `--region` flag.
+To modify a zonal Hyperdisk volume, use the following command:
     
     
     gcloud compute disks update DISK_NAME  \
         --size=DISK_SIZE  \
-        [--region=REGION]  \
+        --zone=ZONE \
         --provisioned-iops=IOPS_LIMIT  \
         --provisioned-throughput=THROUGHPUT_LIMIT
     
@@ -346,11 +272,23 @@ Replace the following:
 
   * DISK_NAME: the name of the Hyperdisk volume that you are modifying.
   * DISK_SIZE: Optional: The new size of the disk. The value must be a whole number followed by a size unit of GB for gibibyte, or TB for tebibyte. The disk size must be in the range of supported values.
-  * REGION: Optional. The region where the Hyperdisk Balanced High Availability disk is located
+  * ZONE: Optional. The zone where the disk is located. Omit this flag for Hyperdisk Balanced High Availability volumes.
   * IOPS_LIMIT: Optional: The IOPS configuration for Hyperdisk Extreme, Hyperdisk Balanced, and Hyperdisk Balanced High Availability volumes. The value must be in the range of supported values.
   * THROUGHPUT_LIMIT: Optional: The throughput configuration for the Hyperdisk Throughput, Hyperdisk ML, Hyperdisk Balanced, or Hyperdisk Balanced High Availability volume, specified as an integer that represents the throughput measured in MiB per second. The value must be in the range of supported values.
 
 
+
+To change the size of a Hyperdisk Balanced High Availability volume, include the `--region` flag instead of the `--zone` flag:
+    
+    
+      gcloud compute disks update DISK_NAME  \
+       --size=DISK_SIZE  \
+       --region=REGION \
+       --provisioned-iops=IOPS_LIMIT  \
+       --provisioned-throughput=THROUGHPUT_LIMIT
+    
+
+Replace REGION with the region where the Hyperdisk Balanced High Availability volume, is located, for example, `us-central1`.
 
 ###  REST 
 
@@ -388,7 +326,13 @@ Replace the following:
 
 
 
-If you attempt to modify a Hyperdisk volume's size or performance more than once within the specified limits, you will receive an error message like `Cannot update provisioned throughput due to being rate limited` or `Disk cannot be resized due to being rate limited`.
+Before you can use the added space, follow these steps:
+
+  1. Back up the disk.
+  2. If the disk is in multi-writer mode, then verify that the updated size is visible to the guest OS of all the instances the disk is attached to.
+  3. Resize the disk partitions. If the disk is in multi-writer mode, then you must resize the file system from one of the instances to which the disk is attached.
+
+
 
 ## Back up the Hyperdisk volume
 
@@ -396,12 +340,20 @@ Resizing a disk doesn't delete or modify disk data, but as a best practice, alwa
 
 ## Resize the file system and partitions
 
-After you increase the size of a disk, you might need to resize its file system and partitions. The following is additional information for boot and non-boot disks:
+After you increase the size of a disk, you might need to resize both the file system and partitions. The following is additional information for boot and non-boot disks:
 
   * **Boot disks** : If you're using [a custom Linux image](https://docs.cloud.google.com/compute/docs/images/create-custom), [custom Windows image](https://docs.cloud.google.com/compute/docs/instances/windows/creating-windows-os-image), or a [Fedora CoreOS image](https://docs.cloud.google.com/compute/docs/images/os-details#fedora_coreos), you must manually resize the root partition and file system. For instances with [public images](https://docs.cloud.google.com/compute/docs/images) (except for Fedora CoreOS images), Compute Engine automatically resizes the root partition and file system after you increase the size of the boot disk and you don't need to restart the instance.
 
   * **Non-boot disks** : After increasing the size of the disk, you must extend the file system on the disk to use the added space.
 
+
+
+
+If the disk is a Hyperdisk volume that's in multi-writer mode, then you must follow these steps before you resize the partition and file system:
+
+  1. Wait for the change operation to complete. For example, if you used the gcloud CLI to change the disk size, wait for the operation to complete.
+  2. Connect to each instance to verify that the updated disk size is visible to the OS. If you resize the file system before all the instances have registered the updated disk size, you might lose or corrupt your data. After you verify the updated disk size, you can resize the file system.
+  3. Resize the file system from one of the instances following the instructions in this section.
 
 
 
@@ -622,6 +574,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

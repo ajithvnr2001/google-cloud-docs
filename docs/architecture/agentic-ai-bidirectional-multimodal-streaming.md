@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/agentic-ai-bidirectional-multimodal-streaming/
 title: Agentic AI use case: Enable live bidirectional multimodal streaming \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:31.789307+00:00
+fetched_at: 2026-10-21T12:22:26.126260+00:00
 ---
 
 # Agentic AI use case: Enable live bidirectional multimodal streaming  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -19,7 +19,7 @@ Send feedback
 
 #  Agentic AI use case: Enable live bidirectional multimodal streaming Stay organized with collections  Save and categorize content based on your preferences. 
 
-Last reviewed 2026-04-06 UTC
+Last reviewed 2026-10-14 UTC
 
 This document provides a high-level architecture for a live, bidirectional multi-agent AI system on Google Cloud. The system helps users complete technical tasks, such as assembling intricate components, diagnosing equipment malfunctions, or navigating complex repair procedures. The agentic AI system provides grounded technical guidance and automated safety monitoring through a continuous, bidirectional stream of multimodal data.
 
@@ -35,8 +35,8 @@ The following diagram shows a high-level view of an architecture that uses a mul
 
 The architecture in the preceding diagram has two workflows: technical guidance and safety monitoring.
 
-  * The **technical guidance workflow** enables users to receive real-time, narrated solutions to complex technical inquiries. This workflow uses the [Gemini Live model](https://gemini.google/overview/gemini-live/) to process multimodal streams and coordinate with a subagent to retrieve grounded product information from the knowledge database.
-  * The **safety monitoring workflow** provides automated hazard detection to ensure user safety during technical procedures. This workflow uses [Gemini](https://gemini.google/about/) to analyze live video segments, identify potential risks, and trigger immediate warnings through the client dashboard.
+  * The **technical guidance workflow** enables users to receive real-time, narrated solutions to complex technical inquiries. This workflow uses the [Gemini Live API](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api) to process multimodal streams and coordinate with a subagent to retrieve grounded product information from the knowledge database.
+  * The **safety monitoring workflow** provides automated hazard detection to ensure user safety during technical procedures. This workflow uses [Gemini](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/google-models#gemini-models) to analyze live video segments, identify potential risks, and trigger immediate warnings through the client dashboard.
 
 
 
@@ -54,9 +54,9 @@ The preceding diagram shows the following data flow:
 
   2. The client dashboard establishes a persistent [WebSocket](https://docs.cloud.google.com/run/docs/triggering/websockets) connection between the frontend and the backend server.
 
-  3. WebSocket messages package the raw multimedia data into `Blob` objects. The Agent Development Kit (ADK) [`LiveRequestQueue`](https://google.github.io/adk-docs/streaming/dev-guide/part1/#create-liverequestqueue) component continuously streams the input data to the dispatcher agent.
+  3. WebSocket messages package the raw multimedia data into `Blob` objects. The Agent Development Kit (ADK) [`LiveRequestQueue`](https://adk.dev/live/tools/#video-streaming-tools) component continuously streams the input data to the dispatcher agent.
 
-  4. The dispatcher agent detects audio or visual commands that require technical guidance and it sends the input stream to the [Gemini Live model](https://gemini.google/overview/gemini-live/).
+  4. The dispatcher agent detects audio or visual commands that require technical guidance and it sends the input stream to the [Gemini Live API](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api).
 
   5. The Gemini Live model searches the raw data to identify _events_. Events are audio keywords, such as "assemble" or "help", or visual cues, such as hand gestures.
 
@@ -72,7 +72,7 @@ Gemini evaluates each event to determine whether it's relevant to the user's inq
 
      4. The architect agent sends the query through a [Serverless VPC Access ](https://docs.cloud.google.com/vpc/docs/configure-serverless-vpc-access) connector. The connector lets the agent securely access resources in the Virtual Private Cloud (VPC) network that's used for the storage resources in this architecture.
 
-     5. The Serverless VPC Access connector interacts with the cached data that's stored in [ Memorystore for Redis Cluster](https://docs.cloud.google.com/memorystore/docs/redis/connect-redis-instance-cloud-run). If the data isn't available in the cached layer, the architect agent interacts with the Compute Engine instances that host the knowledge database.
+     5. The Serverless VPC Access connector interacts with the cached data that's stored in [ Memorystore for Redis Cluster](https://docs.cloud.google.com/memorystore/docs/cluster/memorystore-for-redis-cluster-overview). If the data isn't available in the cached layer, the architect agent interacts with the Compute Engine instances that host the knowledge database.
 
      6. The architect agent receives the product information from the data cache or knowledge database. The architect agent sends the product information to Gemini to generate a response. For example, "Error code 3B: Fan malfunction. Recommended action: Check for obstructions."
 
@@ -80,9 +80,9 @@ Gemini evaluates each event to determine whether it's relevant to the user's inq
 
 If it doesn't need more context, Gemini generates a response to the user's request directly.
 
-  7. The dispatcher agent receives the response from Gemini or from the architecture agent, and it generates a multimodal response:
+  7. The dispatcher agent receives the response from Gemini or from the architect agent, and it generates a multimodal response:
 
-     1. Uses the Gemini Live model and ADK [`run_live`](https://google.github.io/adk-docs/streaming/dev-guide/part3/) function to generate a multimodal response that contains the technical solution.
+     1. Uses the Gemini Live model and ADK [`run_live`](https://adk.dev/live/sessions/#the-run_live-loop) loop to generate a multimodal response that contains the technical solution.
 
      2. Stores the response as a `Blob` object.
 
@@ -101,15 +101,15 @@ The following diagram shows a detailed architecture for a safety monitoring work
 
 The preceding diagram shows the following data flow:
 
-  1. The client dashboard establishes a persistent [WebSocket](https://docs.cloud.google.com/run/docs/triggering/websockets) connection between the frontend and the backend server to observe the live video stream. The WebSocket message packages this raw multimedia data into `Blob` objects, and sends them continuously to the streaming buffer, using the ADK [`LiveRequestQueue`](https://google.github.io/adk-docs/streaming/dev-guide/part1/#create-liverequestqueue) component. 
-  2. The streaming buffer directs the input stream to a [streaming tool](https://google.github.io/adk-docs/streaming/streaming-tools/) that runs in a continuous background loop to detect hazards in the video frame. 
+  1. The client dashboard establishes a persistent [WebSocket](https://docs.cloud.google.com/run/docs/triggering/websockets) connection between the frontend and the backend server to observe the live video stream. The WebSocket message packages this raw multimedia data into `Blob` objects, and sends them continuously to the streaming buffer, using the ADK [`LiveRequestQueue`](https://adk.dev/streaming/dev-guide/part1/#create-liverequestqueue) component. 
+  2. The streaming buffer directs the input stream to a [streaming tool](https://adk.dev/live/tools/#streaming-tools) that runs in a continuous background loop to detect hazards in the video frame. 
   3. The streaming tool sends the latest video frame from the streaming buffer to Gemini.
   4. Gemini observes the video frames for hazards, such as a bright light or steam. 
      * If no hazard is detected, nothing happens.
-     * If a hazard is detected, [Gemini](https://gemini.google/about/) generates a multimodal response containing the hazard type, attributes, and its location and stores it as a `Blob` object. Gemini sends the hazard warning response back to the streaming tool. 
+     * If a hazard is detected, Gemini generates a multimodal response containing the hazard type, attributes, and its location and stores it as a `Blob` object. Gemini sends the hazard warning response back to the streaming tool. 
   5. The streaming tool forwards the hazard warning response to the streaming buffer. 
-  6. The streaming buffer uses the persistent WebSocket connection to deliver the technical solution to the client dashboard. 
-  7. The client dashboard extracts the `Blob` data from the technical solution to provide immediate narrated guidance and updates the UI with relevant transcriptions. This completes the request loop while maintaining the active bidirectional stream. 
+  6. The streaming buffer uses the persistent WebSocket connection to deliver the hazard warning response to the client dashboard. 
+  7. The client dashboard extracts the `Blob` data from the hazard warning response to provide immediate narrated guidance and updates the UI with relevant transcriptions. This completes the request loop while maintaining the active bidirectional stream. 
 
 
 
@@ -120,7 +120,7 @@ This reference architecture uses the following Google Cloud products and tools:
   * [ Cloud Run](https://cloud.google.com/run): A serverless compute platform that lets you run containers directly on top of Google's scalable infrastructure.
   * [ Gemini](https://ai.google.dev/gemini-api/docs/models): A family of multimodal AI models developed by Google. 
   * [ Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview): A comprehensive platform that lets you build, scale, govern, and optimize enterprise‑grade AI agents. 
-  * [Agent Development Kit (ADK)](https://google.github.io/adk-docs/): A set of tools and libraries to develop, test, and deploy AI agents.
+  * [Agent Development Kit (ADK)](https://adk.dev/): A set of tools and libraries to develop, test, and deploy AI agents.
   * [ Agent2Agent (A2A) protocol](https://a2a-protocol.org/latest/): An open protocol that enables communication and interoperability between agents regardless of their programming language and runtime.
   * [ Serverless VPC Access](https://docs.cloud.google.com/vpc/docs/serverless-vpc-access): A service that lets your serverless environments connect to resources in a Virtual Private Cloud network.
   * [ Virtual Private Cloud (VPC)](https://cloud.google.com/vpc): A virtual system that provides global, scalable networking functionality for your Google Cloud workloads. VPC includes VPC Network Peering, Private Service Connect, private services access, and Shared VPC.
@@ -142,36 +142,57 @@ This reference architecture is designed for use cases that require the real-time
 
 ## Design considerations
 
-The following sections provides general recommendations for designing the AI agents and implementing this architecture for production.
+This section describes design factors, best practices, and recommendations to consider when you use this reference architecture to develop a topology that meets your specific requirements for security, operations, cost, and performance.
 
-### AI agent design
+The guidance in this section isn't exhaustive. For more information about design factors and best practices, and for recommendations about building and deploying a multi-agent AI system, see [Multi-agent AI system in Google Cloud](https://docs.cloud.google.com/architecture/multiagent-ai-system#design_considerations).
 
-To improve the cost and performance of your agents, consider the following recommendations:
+### Security, privacy, and compliance
 
-  * **Control loop scripts** : Write system prompts for bi-directional live agents as strict state-machine behavior loops rather than just personality guidelines. The system prompt should explicitly command the agent to stay silent until it's triggered. It should enforce brief, action-first responses so that voice interaction is concise and natural.
-  * **Separation of concerns** : Use a dedicated background streaming tool to monitor video feeds independently of the primary agent. The root agent in the architecture is bidirectional and it can instantly interrupt its own speech to broadcast these critical safety warnings to the user. Additionally, if you ask a single agent to constantly monitor a video feed, and it can lead to cognitive overload and hallucinations.
+To help address the unique security risks of AI agents, Google recommends an [approach](https://research.google/pubs/an-introduction-to-googles-approach-for-secure-ai-agents/) that combines deterministic security controls with dynamic, reasoning-based defenses:
+
+  * **Human oversight** : Incorporate a human-in-the-loop flow in business-critical systems so human supervisors can review outputs and approve, override, or pause agent actions.
+  * **[Agent Identity](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/agent-identity-overview)** : Assign each agent a workload-bound identity to enforce least-privilege access control and centrally manage credentials for external tools.
+  * **[Agent Gateway](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/gateways/agent-gateway-overview)** : Enforce ingress and egress traffic governance, default-deny access policies, and inline prompt and tool inspection with [Model Armor](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/configure-model-armor).
+  * **[Agent Registry](https://docs.cloud.google.com/agent-registry/overview)** : Verify that agents only connect to approved subagents and MCP tools.
+
+  * **Application ingress security** : To control access to the application, [disable the default `run.app` URL](https://docs.cloud.google.com/run/docs/securing/ingress#disable-url) of the frontend Cloud Run service and [set up a regional external Application Load Balancer](https://docs.cloud.google.com/load-balancing/docs/https/setting-up-reg-ext-https-serverless). In addition to load-balancing incoming traffic to the application, the load balancer handles SSL certificate management. For added protection, you can use [Google Cloud Armor security policies](https://docs.cloud.google.com/armor/docs/integrating-cloud-armor#serverless) to provide request filtering, DDoS protection, and rate limiting for the service.
+
+  * **WebSocket security** : Protect sensitive multimodal data, such as voice prints and video, by enforcing [TLS encryption](https://docs.cloud.google.com/docs/security/encryption-in-transit) for all bidirectional WebSocket connections.
+
+  * **Secure A2A communication** :
+
+    * Use [authenticated extended agent cards](https://a2a-protocol.org/latest/specification/#3111-get-extended-agent-card) to secure A2A communication.
+    * Attach [OpenID Connect (OIDC)](https://openid.net/specs/openid-connect-discovery-1_0.html) identity tokens to requests. The OIDC identity tokens let you use [Identity and Access Management (IAM)](https://docs.cloud.google.com/iam/docs) to validate that only authorized agents access the data.
+
+
+
+### Operational efficiency
+
+To help ensure that your agent configurations meet your operational efficiency requirements, consider the following recommendations:
+
+  * **Control loop scripts** : Write system prompts for bidirectional live agents as strict state-machine behavior loops rather than just personality guidelines. The system prompt should explicitly command the agent to stay silent until it's triggered. It should enforce brief, action-first responses so that voice interaction is concise and natural.
+  * **Separation of concerns** : Use a dedicated background streaming tool to monitor video feeds independently of the primary agent. The root agent in the architecture is bidirectional and it can instantly interrupt its own speech to broadcast these critical safety warnings to the user. Additionally, asking a single agent to constantly monitor a video feed can lead to cognitive overload and hallucinations.
+
+
+
+### Cost optimization
+
+To help ensure that your agent configurations meet your cost requirements, consider the following recommendations:
+
+  * **Data ingestion costs** : To reduce token costs and prevent context window exhaustion, use a low-frequency frame sampling, such as 2 frames per second, and compress all of the data to Base64 JPEG files.
   * **Cost-effective prompting** : The length of your prompts (input) and the generated responses (output) directly affect performance and cost. Write prompts that are short, direct, and provide sufficient context. Design your prompts to get concise responses from the model. For example, include phrases such as "summarize in 2 sentences" or "list 3 key points". For more information, see the [best practices for prompt design](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/prompts/prompt-design-strategies#best-practices).
 
 
 
-### Production design
+### Performance optimization
 
-To implement this architecture for production, consider the following recommendations:
+To help ensure that your agent configurations meet your performance requirements, consider the following recommendations:
 
-  * **Ingress security** : To control access to the application, [disable the default `run.app` URL](https://docs.cloud.google.com/run/docs/securing/ingress#disable-url) of the frontend Cloud Run service and [set up a regional external Application Load Balancer](https://docs.cloud.google.com/load-balancing/docs/https/setting-up-reg-ext-https-serverless). In addition to load-balancing incoming traffic to the application, the load balancer handles SSL certificate management. For added protection, you can use [Google Cloud Armor security policies](https://docs.cloud.google.com/armor/docs/integrating-cloud-armor#serverless) to provide request filtering, DDoS protection, and rate limiting for the service.
-  * **Access control** : When you configure permissions for the resources in your topology, follow the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege).
   * **Asynchronous buffering** : To decouple incoming audio and video packets from the model's inference engine, use a thread-safe, asynchronous [First-In-First-Out (FIFO) buffer](https://en.wikipedia.org/wiki/FIFO_\(computing_and_electronics\)). This buffer acts as a multiplexer that ensures the system remains responsive to user interruptions without freezing the user interface during heavy computation.
-  * **Data ingestion costs** : To reduce token costs and prevent context window exhaustion, use a low-frequency frame sampling, such as 2 frames per second, and compress all of the data to Base64 JPEG files.
-  * **In-memory caching** : To achieve sub-millisecond read speeds, use an in-memory [Memorystore for Redis Cluster](https://docs.cloud.google.com/memorystore/docs/redis/connect-redis-instance-cloud-run) database for the architect agent's schematic vault. This implementation minimizes latency, prevents silences during real-time voice interactions, and provides a scalable single source of truth.
-  * **WebSocket security** : Protect sensitive multimodal data, such as voice prints and video, by enforcing [TLS encryption](https://docs.cloud.google.com/secure-web-proxy/docs/tls-inspection-overview) for all bidirectional WebSocket connections.
-  * **Secure A2A communication** : 
-    * Use [authenticated extended agent cards](https://a2a-protocol.org/latest/specification/#3111-get-extended-agent-card) to secure A2A communication.
-    * Attach [OpenID Connect (OIDC)](https://openid.net/specs/openid-connect-discovery-1_0.html) identity tokens to requests. The OIDC identity tokens let you use [Identity and Access Management (IAM)](https://docs.cloud.google.com/iam/docs) to validate that only authorized agents access the data.
+  * **In-memory caching** : To achieve sub-millisecond read speeds, use an in-memory [Memorystore for Redis Cluster](https://docs.cloud.google.com/memorystore/docs/cluster/memorystore-for-redis-cluster-overview) database for the architect agent's schematic vault. This implementation minimizes latency, prevents silences during real-time voice interactions, and provides a scalable single source of truth.
   * **Resource allocation** : Depending on your performance requirements, configure the [memory limits](https://docs.cloud.google.com/run/docs/configuring/services/memory-limits) and [CPU limits](https://docs.cloud.google.com/run/docs/configuring/services/cpu) to be allocated to the Cloud Run service.
 
 
-
-For more information about design factors, best practices, and recommendations for building and deploying a multi-agent AI system, see [Multi-agent AI system in Google Cloud](https://docs.cloud.google.com/architecture/multiagent-ai-system#design_considerations).
 
 ## Deployment
 
@@ -185,7 +206,8 @@ To deploy a sample implementation of this architecture, try the following Codela
 ## What's next
 
   * Learn how to [start and manage live sessions](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api/start-manage-session).
-  * Explore the [introduction to ADK Gemini Live API Toolkit](https://google.github.io/adk-docs/streaming/dev-guide/part1/).
+  * Explore the [introduction to ADK Gemini Live API Toolkit](https://adk.dev/live/).
+  * (Video) Watch [Build a real-time voice AI agent with ADK and Gemini Live API](https://www.youtube.com/embed/yQEKMsCtsmE?si=d_Usq91uyyVbcwqq)
   * Learn how to [host AI agents on Cloud Run](https://docs.cloud.google.com/run/docs/ai-agents).
   * Learn about how to [choose your agentic AI architecture components](https://docs.cloud.google.com/architecture/choose-agentic-ai-architecture-components).
   * Explore learning resources to build and deploy enterprise-grade agents with [Gemini Enterprise Agent Ready (GEAR)](https://developers.google.com/program/gear).
@@ -215,6 +237,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-04-06 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-04-06 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

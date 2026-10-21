@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/conversational-analytics/
 title: Conversational analytics overview \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:27:50.957335+00:00
+fetched_at: 2026-10-21T11:59:20.577788+00:00
 ---
 
 # Conversational analytics overview  |  BigQuery  |  Google Cloud Documentation
@@ -92,7 +92,14 @@ Other services in the project that support data agents, such as the [Conversatio
 
 ## Conversations
 
-Conversations are persisted chats with a data agent or data source. You can ask data agents multi-part questions that use common terms like "sales" or "most popular," without having to specify table field names or define conditions to filter the data. You can also ask questions about data located in objects such as PDFs. An agent can determine which data sources to query and take advantage of optimizations, such as table partitions or search indexes, when it constructs a response.
+Conversations are persisted chats with a data agent or data source. You can ask data agents multi-part questions that use common terms like "sales" or "most popular," without having to specify table field names or define conditions to filter the data. You can also ask questions about data located in objects such as PDFs. An agent can do the following:
+
+  * Determine which data sources to query.
+  * Take advantage of optimizations, such as table partitions or search indexes.
+  * Use existing embeddings of your column values to match your question to the right data. For example, asking about "Texas" would find rows stored as "TX."
+  * Take into account all of the context about a data source stored in Knowledge Catalog.
+
+
 
 The chat response returned to you provides the following features:
 
@@ -182,7 +189,7 @@ Conversational analytics uses built-in SQL templates to help it return an accura
 
 ## Graph support
 
-Conversational analytics supports using a [graph](https://docs.cloud.google.com/bigquery/docs/graph-overview) as a data source. When you ask questions about your graph, the agent constructs queries to answer them. Agents can use [ descriptions and synonyms](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/graph-schema-statements#element_table_property_definition) that you define on your graph labels and properties to improve the quality of the results. Agents can also take advantage of [measures](https://docs.cloud.google.com/bigquery/docs/graph-measures) defined on your graph to perform multi-level aggregation. If the response includes graph paths, then graph visualizations are provided. 
+Conversational analytics supports using a [graph](https://docs.cloud.google.com/bigquery/docs/graph-overview) as a data source. When you ask questions about your graph, the agent constructs queries to answer them. Agents can use [ descriptions, synonyms, and extensions](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/graph-schema-statements#element_table_property_definition) that you define on your graph labels and properties to improve the quality of the results. Agents can also take advantage of [measures](https://docs.cloud.google.com/bigquery/docs/graph-measures) defined on your graph to perform multi-level aggregation. If the response includes graph paths, then graph visualizations are provided. 
 
 Depending on your graph schema and the question that you ask, the agent queries a graph by using either Graph Query Language (GQL) or the [`GRAPH_EXPAND`](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/graph-sql-queries#graph_expand) table-valued function in SQL. GQL queries require a [BigQuery Enterprise or Enterprise Plus edition](https://docs.cloud.google.com/bigquery/docs/editions-intro) reservation. In projects with on-demand pricing, GQL queries fail with an error. Queries that contain the `GRAPH_EXPAND` function can run using on-demand pricing, but the function doesn't support all types of graphs. For requirements and limitations, see [`GRAPH_EXPAND`](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/graph-sql-queries#graph_expand).
 
@@ -211,16 +218,20 @@ Conversational analytics includes the following security features and safeguards
 
 ## Locations
 
-Conversational analytics supports three locations that govern the storage of agent and conversation resources, and the location used for ML processing:
+Conversational analytics supports the following locations, which determine where agent and conversation resources are stored and where ML processing happens:
 
   * US MREP
   * EU MREP
+  * `northamerica-northeast1` (Montréal)
+  * `northamerica-northeast2` (Toronto)
+  * `us-east4` (Northern Virginia)
   * Global
 
 
 
 The following default behaviors apply when you create agents and conversations:
 
+  * If all of your knowledge sources come from the same supported region, such as `us-east4`, then that region is used.
   * If all of your knowledge sources come from regions in the US, then the US MREP is used.
   * If all of your knowledge sources come from regions in the EU, then the EU MREP is used.
   * Otherwise, the global location is used.
@@ -343,6 +354,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

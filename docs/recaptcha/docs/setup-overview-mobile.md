@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/setup-overview-mobile/
 title: Setup overview for mobile applications \u00a0|\u00a0 Google Cloud Fraud Defense \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:08:05.026377+00:00
+fetched_at: 2026-10-21T11:58:10.898822+00:00
 ---
 
 # Setup overview for mobile applications  |  Google Cloud Fraud Defense  |  Google Cloud Documentation
@@ -23,9 +23,9 @@ Send feedback
 
 #  Setup overview for mobile applications Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document provides a high-level overview of setting up reCAPTCHA on mobile applications.
+This document provides a high-level overview of setting up Google Cloud Fraud Defense on mobile applications.
 
-Setting up reCAPTCHA on a mobile application involves the following steps:
+Setting up Fraud Defense on a mobile application involves the following steps:
 
   1. Create a reCAPTCHA key (key).
 
@@ -37,7 +37,7 @@ Install the key that you created on your mobile applications by using the reCAPT
 
      * [Install keys on iOS](https://docs.cloud.google.com/recaptcha/docs/instrument-ios-apps).
      * [Install keys on Android](https://docs.cloud.google.com/recaptcha/docs/instrument-android-apps).
-**Note:** The reCAPTCHA Mobile SDK does not render a badge or widget in your app. For more information, see [Do I need to show the badge or widget in my native mobile application?](https://docs.cloud.google.com/recaptcha/docs/faq#mobile-badge).
+**Note:** The reCAPTCHA mobile SDK does not render a badge or widget in your app. For more information, see [Do I need to show the badge or widget in my native mobile application?](https://docs.cloud.google.com/recaptcha/docs/faq#mobile-badge).
   3. Integrate with your backend:
 
      1. To verify the token sent by reCAPTCHA and assess the risk, [create assessments](https://docs.cloud.google.com/recaptcha/docs/create-assessment-mobile) from your backend server.
@@ -55,6 +55,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

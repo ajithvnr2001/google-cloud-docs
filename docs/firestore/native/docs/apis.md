@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/apis/
 title: APIs and client libraries reference \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:26:10.778173+00:00
+fetched_at: 2026-10-21T11:59:04.865273+00:00
 ---
 
 # APIs and client libraries reference  |  Firestore in Native mode  |  Google Cloud Documentation
@@ -43,6 +43,9 @@ Send feedback
   * ### [iOS (Swift) Client Library Reference ](https://firebase.google.com/docs/reference/swift/firebasefirestore/api/reference/Classes)
   * ### [iOS (Objective-C) Client Library Reference ](https://firebase.google.com/docs/reference/ios/firebasefirestore/api/reference/Classes)
   * ### [Web Client Library Reference ](https://firebase.google.com/docs/reference/js/firebase.firestore)
+  * ### [Flutter Client Library Reference ](https://pub.dev/documentation/cloud_firestore/latest/)
+  * ### [Unity Client Library Reference ](https://firebase.google.com/docs/reference/unity/namespace/firebase/firestore)
+  * ### [C++ Client Library Reference ](https://firebase.google.com/docs/reference/cpp/namespace/firebase/firestore)
 
 
 

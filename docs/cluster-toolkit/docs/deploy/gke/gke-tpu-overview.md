@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-tpu-overview/
 title: Cloud TPU deployments overview \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:45.405291+00:00
+fetched_at: 2026-10-21T12:23:10.241164+00:00
 ---
 
 # Cloud TPU deployments overview  |  Cluster Toolkit  |  Google Cloud Documentation
@@ -21,17 +21,17 @@ Send feedback
 
 #  Cloud TPU deployments overview Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document explains the core concepts and advanced configurations available when you use Cluster Toolkit to deploy Google Kubernetes Engine (GKE) clusters with dedicated Cloud TPU node pools.
+When you use Cluster Toolkit to provision Google Kubernetes Engine (GKE) clusters, you can deploy dedicated Cloud TPU node pools designed for artificial intelligence (AI) and machine learning (ML) workloads. Cluster Toolkit provides blueprints to automate the deployment of supported Cloud TPU architectures.
 
-When you use Cluster Toolkit to provision Google Kubernetes Engine (GKE) clusters, you can deploy dedicated Cloud TPU node pools designed for artificial intelligence (AI) and machine learning (ML) workloads. Cluster Toolkit provides blueprints to automate the deployment of various supported Cloud TPU architectures.
+This document explains the core concepts and advanced configurations that are available when you deploy Cloud TPU node pools with Cluster Toolkit, including hardware topologies, multi-slice configurations, storage integration, and compute consumption models.
 
-## Key concepts for Cloud TPU deployments in Cluster Toolkit
+## Key Cloud TPU concepts
 
 To deploy a Cloud TPU cluster, you must understand how Cloud TPU hardware is grouped and allocated. You create Cloud TPU slices as a single, fixed hardware unit with physical, high-speed interconnects between all nodes.
 
 ### Cloud TPU in GKE
 
-Cloud TPU is Google's custom-developed Application-Specific Integrated Circuit (ASIC) that is used to accelerate machine learning workloads. GKE provides full support for Cloud TPU node and node pool lifecycle management, including node creation, configuration, and automatic upgrades.
+Cloud TPU is Google's custom-developed Application-Specific Integrated Circuit (ASIC) that accelerates machine learning workloads. GKE provides full support for Cloud TPU node and node pool lifecycle management, including node creation, configuration, and automatic upgrades.
 
 For more information about how Cloud TPU works with GKE, see [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus).
 
@@ -60,8 +60,8 @@ Cluster Toolkit provides both standard and advanced blueprints for deploying Clo
 
 Both standard and advanced blueprints support the following features:
 
-  * **Multi-Virtual Private Cloud (VPC) network architecture** : Provides the network architecture required for optimized high-throughput inter-chip communication.
-  * **Dedicated service accounts** : Provides dedicated service accounts for the deployment, which helps improve security isolation.
+  * **Multi-Virtual Private Cloud (VPC) network architecture** : provides the network architecture required for optimized high-throughput inter-chip communication.
+  * **Dedicated service accounts** : provides dedicated service accounts for the deployment, which helps improve security isolation.
 
 
 
@@ -80,11 +80,11 @@ Standard blueprints provide a basic, functional cluster with a single TPU node p
 
 To optimize high-throughput inter-chip communication and data pipelines, advanced blueprints add the following features to the standard blueprint:
 
-  * **Automatic bucket creation** : Creates two Cloud Storage buckets to store training data and checkpoints.
-  * **Performance-tuned Cloud Storage FUSE mounts** : Pre-configures Cloud Storage FUSE mounts in the cluster as Persistent Volumes for optimized high-throughput performance. Cloud Storage FUSE uses [Workload Identity](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) access. To learn how to mount Cloud Storage buckets in Google Kubernetes Engine (GKE), see [Access Cloud Storage buckets with the Cloud Storage FUSE CSI driver](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver).
-  * **Hyperdisk Balanced support** : Provides highly available and consistent performance across GKE nodes. For more information, see [About Hyperdisk for GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/hyperdisk).
-  * **Google Cloud Managed Lustre support** : Provides a high-performance, fully managed parallel file system optimized for AI and high performance computing (HPC) workloads. For more information, see the [Google Cloud Managed Lustre overview](https://docs.cloud.google.com/managed-lustre/docs/overview).
-  * **Filestore support** : Provides managed Network File System (NFS) capabilities that let multiple Cloud TPU hosts share logs, code, or datasets. For more information, see the [Filestore overview](https://docs.cloud.google.com/filestore/docs/overview).
+  * **Automatic bucket creation** : creates two Cloud Storage buckets to store training data and checkpoints.
+  * **Performance-tuned Cloud Storage FUSE mounts** : pre-configures Cloud Storage FUSE mounts in the cluster as Persistent Volumes for optimized high-throughput performance. Cloud Storage FUSE uses [Workload Identity](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) access. To learn how to mount Cloud Storage buckets in GKE, see [Access Cloud Storage buckets with the Cloud Storage FUSE CSI driver](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver).
+  * **Hyperdisk Balanced support** : provides highly available and consistent performance across GKE nodes. For more information, see [About Hyperdisk for GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/hyperdisk).
+  * **Google Cloud Managed Lustre support** : provides a high-performance, fully managed parallel file system optimized for AI and high performance computing (HPC) workloads. For more information, see the [Google Cloud Managed Lustre overview](https://docs.cloud.google.com/managed-lustre/docs/overview).
+  * **Filestore support** : provides managed Network File System (NFS) capabilities that let multiple Cloud TPU hosts share logs, code, or datasets. For more information, see the [Filestore overview](https://docs.cloud.google.com/filestore/docs/overview).
 
 
 
@@ -97,17 +97,23 @@ You can view the following advanced blueprints on GitHub:
 
 ## Workload scheduling and consumption
 
-Cluster Toolkit supports advanced scheduling and consumption models to help you manage costs and resource availability:
+Cluster Toolkit supports multiple compute consumption models and scheduling integrations for Cloud TPU node pools to balance capacity availability, cost, and provisioning speed:
 
-  * **[Kueue](https://kueue.sigs.k8s.io/)** : A Kubernetes-native system for managing quotas and Job queuing. Cluster Toolkit can automatically calculate and set a Cloud TPU quota matching the total static Cloud TPU capacity of your cluster.
-  * **Dynamic Workload Scheduler** : Cluster Toolkit supports the Dynamic Workload Scheduler (DWS) flex-start provisioning mode. The flex-start provisioning mode is ideal for training jobs that can wait for capacity and are cost-effective. The blueprints also provide queued provisioning support with DWS Flex Start. For more information, see [About GPU, TPU, and H4D consumption with flex-start provisioning mode](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/dws).
+  * **Compute consumption options** : configure standard or future reservations, Dynamic Workload Scheduler flex-start, Dynamic Workload Scheduler flex-start with queued provisioning, Spot VMs, or on-demand capacity in your deployment file. For configuration steps, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options).
+  * **Dynamic slicing on Cloud TPU 7x** : partition or aggregate physical Cloud TPU 7x cubes dynamically at workload submission time with Topology-Aware Scheduling (TAS). For more information, see [Deploy TPU workloads with dynamic slicing](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/deploy-tpu-dynamic-slicing).
+  * **Pathways distributed orchestration** : coordinate multi-slice Cloud TPU execution and elastic recovery by using Pathways. For more information, see [Run workloads with Pathways](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/run-workloads-pathways).
 
 
 
 ## What's next
 
-  * To learn how to deploy a cluster with a dedicated Cloud TPU v6e node pool, see [Deploy a GKE TPU v6e cluster](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-tpu-v6e).
-  * To learn how to deploy a cluster with a dedicated Cloud TPU 7x node pool, see [Deploy a GKE TPU 7x cluster](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-tpu-7x).
+  * To learn how to deploy a cluster with a dedicated Cloud TPU v6e node pool, see [Deploy a GKE Cloud TPU v6e cluster](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-tpu-v6e).
+  * To learn how to deploy a cluster with a dedicated Cloud TPU 7x node pool, see [Deploy a GKE Cloud TPU 7x cluster](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-tpu-7x).
+  * To learn about all supported compute consumption models and placement options, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options).
+  * To schedule dynamic Cloud TPU 7x slices, see [Deploy TPU workloads with dynamic slicing](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/deploy-tpu-dynamic-slicing).
+  * To orchestrate multi-slice workloads with Pathways, see [Run workloads with Pathways](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/run-workloads-pathways).
+  * To learn about GKE deployment choices and advanced orchestration features, see [GKE deployments overview](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-deployments-overview).
+  * To learn more about Cloud TPU hardware and topologies, see [Cloud TPU v6e](https://docs.cloud.google.com/tpu/docs/v6e) and [Cloud TPU 7x](https://docs.cloud.google.com/tpu/docs/tpu7x).
 
 
 
@@ -115,6 +121,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

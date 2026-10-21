@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-query-order-desc-limit/
 title: Ordering and limiting Firestore queries in descending order \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:25:19.011851+00:00
+fetched_at: 2026-10-21T11:58:36.731914+00:00
 ---
 
 # Ordering and limiting Firestore queries in descending order  |  Google Cloud Documentation

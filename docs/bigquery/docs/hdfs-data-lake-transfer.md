@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/hdfs-data-lake-transfer/
 title: Migrate Apache Hive Metastore tables to Google Cloud \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T10:37:55.157857+00:00
+fetched_at: 2026-10-21T12:01:29.797446+00:00
 ---
 
 # Migrate Apache Hive Metastore tables to Google Cloud  |  BigQuery  |  Google Cloud Documentation
@@ -60,7 +60,7 @@ Google Cloud.](https://docs.cloud.google.com/static/bigquery/images/hive-metasto
 Hive Metastore table transfers are subject to the following limitations:
 
   * Hive Metastore transfers must have a minimum of 30 minutes between 2 scheduled runs. On demand runs can still be triggered at any interval.
-  * File names must comply with [Cloud Storage object naming requirements](https://docs.cloud.google.com/storage/docs/objects#naming).
+  * Filenames must comply with [Cloud Storage object naming requirements](https://docs.cloud.google.com/storage/docs/objects#naming).
   * Cloud Storage has a 5 TiB limit for single objects. Files within your Hive Metastore tables larger than 5 TiB will fail to transfer.
   * Storage Transfer Service has specific behaviors if data is changed at the source while a transfer is in progress. We don't recommend writing to tables while the table is being actively migrated. For a list of other Storage Transfer Service limitations, see [known limitations](https://docs.cloud.google.com/storage-transfer/docs/known-limitations-transfer).
 
@@ -187,7 +187,7 @@ Your administrator might also be able to give the service agent the required per
   4. Grant the Storage Transfer Service service agent (`project-PROJECT_NUMBER@storage-transfer-service.iam.gserviceaccount.com`) the following roles in the project:
 
      * `roles/storage.admin`
-     * If you are migrating from on-prem/HDFS, you must also grant the `roles/storagetransfer.serviceAgent` role.
+     * If you're migrating from on-premises or HDFS, you must also grant the `roles/storagetransfer.serviceAgent` role.
 
 You can also configure more granular permissions. For more information, see the following guide:
 
@@ -208,7 +208,7 @@ Select one of the following options:
 
 ###  HDFS 
 
-An storage transfer agent is required for on-premises or HDFS transfers.
+A storage transfer agent is required for on-premises or HDFS transfers.
 
 To set up the agent, do the following:
 
@@ -772,6 +772,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-15 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

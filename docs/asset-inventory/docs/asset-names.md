@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/asset-names/
 title: Asset names \u00a0|\u00a0 Cloud Asset Inventory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:30:03.564602+00:00
+fetched_at: 2026-10-21T11:58:15.258317+00:00
 ---
 
 # Asset names  |  Cloud Asset Inventory  |  Google Cloud Documentation
@@ -660,6 +660,7 @@ Resource type | Name format
 ` looker.googleapis.com/Backup ` |  `//looker.googleapis.com/projects/PROJECT_ID/locations/LOCATION/instances/INSTANCE/backups/BACKUP`  
 ` looker.googleapis.com/Instance ` |  `//looker.googleapis.com/projects/PROJECT_ID/locations/LOCATION/instances/INSTANCE`  
 ` lustre.googleapis.com/Instance ` |  `//lustre.googleapis.com/projects/PROJECT_ID/locations/LOCATION/instances/INSTANCE`  
+` maintenance.googleapis.com/ResourceMaintenance ` |  `//maintenance.googleapis.com/projects/PROJECT_ID/locations/LOCATION/resourceMaintenances/RESOURCE_MAINTENANCE`  
 ` managedidentities.googleapis.com/Domain ` |  `//managedidentities.googleapis.com/projects/PROJECT_ID/locations/global/domains/DOMAIN`  
 ` managedkafka.googleapis.com/Cluster ` |  `//managedkafka.googleapis.com/projects/PROJECT_ID/locations/LOCATION/clusters/CLUSTER`  
 ` managedkafka.googleapis.com/ConnectCluster ` |  `//managedkafka.googleapis.com/projects/PROJECT_ID/locations/LOCATION/connectClusters/CONNECT_CLUSTER`  
@@ -962,6 +963,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

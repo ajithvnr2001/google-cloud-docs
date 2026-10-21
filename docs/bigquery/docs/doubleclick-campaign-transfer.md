@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/doubleclick-campaign-transfer/
 title: Load Campaign Manager data into BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-16T14:30:42.330577+00:00
+fetched_at: 2026-10-21T12:01:30.820704+00:00
 ---
 
 # Load Campaign Manager data into BigQuery  |  Google Cloud Documentation
@@ -140,7 +140,7 @@ For example:
 
 ### Finding your filename prefix
 
-In rare cases, the files in your Cloud Storage bucket may have custom, nonstandard file names that were set up for you by the Google Marketing Platform services team.
+In rare cases, the files in your Cloud Storage bucket may have custom, nonstandard filenames that were set up for you by the Google Marketing Platform services team.
 
 For example:
 
@@ -182,7 +182,7 @@ Contact [Campaign Manager support](https://support.google.com/campaignmanager/an
 
        * For **Cloud Storage bucket** , enter or browse for the name of the Cloud Storage bucket that stores your Data Transfer V2.0 files. When you enter the bucket name, don't include `gs://`.
        * For **DoubleClick ID** , enter the appropriate Campaign Manager ID.
-       * (Optional) If your files have [standard names like these examples](https://docs.cloud.google.com/bigquery/docs/doubleclick-campaign-transfer#find-id), leave the **File name prefix** field blank. Specify a [filename prefix](https://docs.cloud.google.com/bigquery/docs/doubleclick-campaign-transfer#filename-prefix) if the files in your Cloud Storage bucket have custom file names.
+       * (Optional) If your files have [standard names like these examples](https://docs.cloud.google.com/bigquery/docs/doubleclick-campaign-transfer#find-id), leave the **File name prefix** field blank. Specify a [filename prefix](https://docs.cloud.google.com/bigquery/docs/doubleclick-campaign-transfer#filename-prefix) if the files in your Cloud Storage bucket have custom filenames.
 
 ![Campaign Manager source details](https://docs.cloud.google.com/static/bigquery/images/dcm-source-details-console.png)
 
@@ -226,7 +226,7 @@ Where:
 
 You can also supply the `--project_id` flag to specify a particular project. If `--project_id` isn't specified, the default project is used.
 
-For example, the following command creates a Campaign Manager data transfer named `My Transfer` using Campaign Manager ID `123456`, Cloud Storage bucket `dcdt_-dcm_account123456`, and target dataset `mydataset`. The parameter `file_name_prefix` is optional and used for rare, custom file names only.
+For example, the following command creates a Campaign Manager data transfer named `My Transfer` using Campaign Manager ID `123456`, Cloud Storage bucket `dcdt_-dcm_account123456`, and target dataset `mydataset`. The parameter `file_name_prefix` is optional and used for rare, custom filenames only.
 
 The data transfer is created in the default project:
     
@@ -628,6 +628,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

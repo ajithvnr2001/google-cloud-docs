@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/best-practices/computeclasses/
 title: Best practices for ComputeClasses \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:56:19.993081+00:00
+fetched_at: 2026-10-21T12:23:07.048753+00:00
 ---
 
 # Best practices for ComputeClasses  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -104,7 +104,7 @@ The following sections provide best practices for reducing disruptions or unexpe
 Use StorageClasses to improve scheduling reliability for stateful workloads in the following ways:
 
   * **Create volumes only after Pod creation** : if you use dynamic volume provisioning, then specify a value of [`WaitForFirstConsumer` in the `volumeBindingMode` field](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/persistent-volumes#waitforfirstconsumer) in a StorageClass. This volume binding mode prevents the creation of a PersistentVolume until after GKE creates a Pod that uses the corresponding PersistentVolumeClaim. GKE provisions the PersistentVolume in the same zone as the node that runs the Pod.
-  * **Use topology-aware StorageClasses:** if your ComputeClass spans multiple generations of a machine series (for example, C4 and C3), then use a StorageClass that has [automatic disk type selection](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/hyperdisk#automated_disk_type_selection) enabled and that schedules only on nodes that support your specified disk types. You can use the built-in `dynamic-rwo` StorageClass or a custom StorageClass. Your stateful workloads can then run on multiple Compute Engine instance generations, because the cluster autoscaler dynamically chooses a compatible disk type.
+  * **Use topology-aware StorageClasses:** if your ComputeClass spans multiple generations of machine series, use a StorageClass that has [automatic disk type selection](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/hyperdisk#automated_disk_type_selection) (`parameters.type: dynamic`) enabled and that schedules only on nodes that support your specified disk types. For example, your ComputeClass falls back from Hyperdisk-only series such as C4, C4D, or N4 to Persistent Disk series such as N2 or N2D during zonal capacity constraints. You can use the built-in `dynamic-rwo` StorageClass or a custom StorageClass. Your stateful workloads can then fail over across multiple Compute Engine instance generations, because the cluster autoscaler dynamically chooses a compatible disk type (`hyperdisk-balanced` or `pd-balanced`) for whichever fallback node is provisioned.
 
 
 
@@ -232,6 +232,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

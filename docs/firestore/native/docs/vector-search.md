@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/vector-search/
 title: Search with vector embeddings \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:24:49.561831+00:00
+fetched_at: 2026-10-21T11:58:22.385968+00:00
 ---
 
 # Search with vector embeddings  |  Firestore in Native mode  |  Google Cloud Documentation
@@ -124,7 +124,7 @@ The following example shows how to store a vector embedding in a Firestore docum
     }
     
     
-    [vector_store.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/vector_store.go#L18-L58)
+    [vector_store.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/vector_store.go#L18-L58)
 
 ##### Java
     
@@ -427,7 +427,7 @@ The following example finds 10 nearest neighbors of the query vector.
     }
     
     
-    [vector_search_basic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/vector_search_basic.go#L18-L58)
+    [vector_search_basic.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/vector_search_basic.go#L18-L58)
 
 ##### Java
     
@@ -557,7 +557,7 @@ To pre-filter documents before finding the nearest neighbors, you can combine a 
     }
     
     
-    [vector_search_prefilter.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/vector_search_prefilter.go#L18-L59)
+    [vector_search_prefilter.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/vector_search_prefilter.go#L18-L59)
 
 ##### Java
     
@@ -666,7 +666,7 @@ You can retrieve the calculated vector distance by assigning a `distance_result_
     }
     
     
-    [vector_search_result_field.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/vector_search_result_field.go#L18-L58)
+    [vector_search_result_field.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/vector_search_result_field.go#L18-L58)
 
 ##### Java
     
@@ -763,7 +763,7 @@ If you want to use a field mask to return a subset of document fields along with
     }
     
     
-    [vector_search_result_field_masked.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/vector_search_result_field_masked.go#L18-L59)
+    [vector_search_result_field_masked.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/vector_search_result_field_masked.go#L18-L59)
 
 ##### Java
     
@@ -886,7 +886,7 @@ The following example shows how to specify a distance threshold to return up to 
     }
     
     
-    [vector_search_distance_threshold.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/vector_search_distance_threshold.go#L18-L58)
+    [vector_search_distance_threshold.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/vector_search_distance_threshold.go#L18-L58)
 
 ##### Java
     
@@ -933,6 +933,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

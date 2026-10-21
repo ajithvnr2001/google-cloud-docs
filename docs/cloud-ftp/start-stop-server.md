@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-ftp/start-stop-server/
 title: Start or stop an SFTP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:44:06.097477+00:00
+fetched_at: 2026-10-21T12:00:25.049757+00:00
 ---
 
 # Start or stop an SFTP server  |  Google Cloud Documentation
@@ -132,22 +132,22 @@ To authenticate to Cloud FTP, set up Application Default Credentials. For more i
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/servers/[SERVER]";
             // Make the request
-           < OperationServer, Operati>onMetadata response = await cloud[FtpClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Ftp.V1/latest/Google.Cloud.Ftp.V1.CloudFtpClient.html#Google_Cloud_Ftp_V1_CloudFtpClient_StopServerAsync_Google_Cloud_Ftp_V1_ServerName_Google_Api_Gax_Grpc_CallSettings_).StopServerAsync(name);
+            Operation<Server, OperationMetadata> response = await cloudFtpClient.[StopServerAsync](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Ftp.V1/latest/Google.Cloud.Ftp.V1.CloudFtpClient.html#Google_Cloud_Ftp_V1_CloudFtpClient_StopServerAsync_Google_Cloud_Ftp_V1_ServerName_Google_Api_Gax_Grpc_CallSettings_)(name);
     
             // Poll until the returned long-running operation is complete
-           < OperationServer, Operati>onMetadata completedResponse = await response.PollUntilCompletedAsync();
-            // Retrieve the operation resul[t](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Ftp.V1/latest/Google.Cloud.Ftp.V1.Server.html)
-            Server result = completedResponse.Result;
+            Operation<Server, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            [Server](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Ftp.V1/latest/Google.Cloud.Ftp.V1.Server.html) result = completedResponse.Result;
     
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-           < OperationServer, Operati>onMetadata retrievedResponse = await cloud[FtpClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Ftp.V1/latest/Google.Cloud.Ftp.V1.CloudFtpClient.html#Google_Cloud_Ftp_V1_CloudFtpClient_PollOnceStopServerAsync_System_String_Google_Api_Gax_Grpc_CallSettings_).PollOnceStopServerAsync(operationName);
+            Operation<Server, OperationMetadata> retrievedResponse = await cloudFtpClient.[PollOnceStopServerAsync](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Ftp.V1/latest/Google.Cloud.Ftp.V1.CloudFtpClient.html#Google_Cloud_Ftp_V1_CloudFtpClient_PollOnceStopServerAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-      [      ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Ftp.V1/latest/Google.Cloud.Ftp.V1.Server.html)    Server retrievedResult = retrievedResponse.Result;
+                [Server](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Ftp.V1/latest/Google.Cloud.Ftp.V1.Server.html) retrievedResult = retrievedResponse.Result;
             }
         }
     }
@@ -176,14 +176,14 @@ To authenticate to Cloud FTP, set up Application Default Credentials. For more i
     	// It will require modifications to work:
     	// - It may require correct/in-range values for request initialization.
     	// - It may require specifying regional endpoints when creating the service client as shown in:
-    	//   https://pkg.go.dev/cloud.google.com/go#hdr-[Client_Options](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/ftp/latest/apiv1.html#cloud_google_com_go_ftp_apiv1_CloudFtpClient_NewCloudFtpRESTClient)
-    	c, err := ftp.NewCloudFtpRESTClient(ctx)
+    	//   https://pkg.go.dev/cloud.google.com/go#hdr-Client_Options
+    	c, err := ftp.[NewCloudFtpRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/ftp/latest/apiv1.html#cloud_google_com_go_ftp_apiv1_CloudFtpClient_NewCloudFtpRESTClient)(ctx)
     	if err != nil {
-    		// TO[DO: H](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/ftp/latest/apiv1.html#cloud_google_com_go_ftp_apiv1_CloudFtpClient_Close)andle error.&
+    		// TODO: Handle error.
     	}
-    	defer c.Close()
+    	defer c.[Close](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/ftp/latest/apiv1.html#cloud_google_com_go_ftp_apiv1_CloudFtpClient_Close)()
     
-    	req := ftppb.StopServerRequest{
+    	req := &ftppb.StopServerRequest{
     		// TODO: Fill request struct fields.
     		// See https://pkg.go.dev/cloud.google.com/go/ftp/apiv1/ftppb#StopServerRequest.
     	}
@@ -230,10 +230,10 @@ To authenticate to Cloud FTP, set up Application Default Credentials. For more i
           [StopServerRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-ftp/latest/com.google.cloud.ftp.v1.StopServerRequest.html) request =
               [StopServerRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-ftp/latest/com.google.cloud.ftp.v1.StopServerRequest.html).newBuilder()
                   .setName([ServerName](https://docs.cloud.google.com/java/docs/reference/google-cloud-ftp/latest/com.google.cloud.ftp.v1.ServerName.html).of("[PROJECT]", "[LOCATION]", "[SERVER]").toString())
-             <     .bui>ld();
-          ApiFutureOper[ation](https://docs.cloud.google.com/java/docs/reference/google-cloud-ftp/latest/com.google.cloud.ftp.v1.CloudFtpClient.html#com_google_cloud_ftp_v1_CloudFtpClient_stopServerCallable__) future = cloudFtpClient.stopServerCallable().futureCall(request);[
-          //](https://docs.cloud.google.com/java/docs/reference/proto-google-common-protos/latest/com.google.longrunning.Operation.html) Do something.
-          Operation response = future.get();
+                  .build();
+          ApiFuture<Operation> future = cloudFtpClient.[stopServerCallable](https://docs.cloud.google.com/java/docs/reference/google-cloud-ftp/latest/com.google.cloud.ftp.v1.CloudFtpClient.html#com_google_cloud_ftp_v1_CloudFtpClient_stopServerCallable__)().futureCall(request);
+          // Do something.
+          [Operation](https://docs.cloud.google.com/java/docs/reference/proto-google-common-protos/latest/com.google.longrunning.Operation.html) response = future.get();
         }
       }
     }
@@ -258,10 +258,10 @@ To authenticate to Cloud FTP, set up Application Default Credentials. For more i
     // const name = 'abc123'
     
     // Imports the Ftp library
-    const {CloudFtpClient} = r[equire](https://docs.cloud.google.com/nodejs/docs/reference/ftp/latest/overview.html)('@google-cloud/ftp').v1;
+    const {CloudFtpClient} = require('[@google-cloud/ftp](https://docs.cloud.google.com/nodejs/docs/reference/ftp/latest/overview.html)').v1;
     
     // Instantiates a client
-    const [ftpClient = ne](https://docs.cloud.google.com/nodejs/docs/reference/ftp/latest/overview.html)w CloudFtpClient();
+    const ftpClient = new [CloudFtpClient](https://docs.cloud.google.com/nodejs/docs/reference/ftp/latest/overview.html)();
     
     async function callStopServer() {
       // Construct request
@@ -316,14 +316,14 @@ To authenticate to Cloud FTP, set up Application Default Credentials. For more i
             if ($response->operationSucceeded()) {
                 /** @var Server $result */
                 $result = $response->getResult();
-                printf('Operation successful with response data: %s' . PHP_EOL, >$result-serializeToJsonString());
+                printf('Operation successful with response data: %s' . PHP_EOL, $result->serializeToJsonString());
             } else {
                 /** @var Status $error */
-                $error = $r>esponse-getError();
-                printf('Operation failed with error data: %s' . >PHP_EOL, $error-serializeToJsonString());
+                $error = $response->getError();
+                printf('Operation failed with error data: %s' . PHP_EOL, $error->serializeToJsonString());
             }
         } catch (ApiException $ex) {
-            printf('Call failed with message:> %s' . PHP_EOL, $ex-getMessage());
+            printf('Call failed with message: %s' . PHP_EOL, $ex->getMessage());
         }
     }
     
@@ -338,7 +338,7 @@ To authenticate to Cloud FTP, set up Application Default Credentials. For more i
      */
     function callSample(): void
     {
-        $formattedName = CloudFtpClient::serverName('[PROJECT]', '[LOCATION]', '[SERVER]&#39;);
+        $formattedName = CloudFtpClient::serverName('[PROJECT]', '[LOCATION]', '[SERVER]');
     
         stop_server_sample($formattedName);
     }
@@ -370,7 +370,7 @@ To authenticate to Cloud FTP, set up Application Default Credentials. For more i
         )
     
         # Make the request
-        operation[ = client.s](https://docs.cloud.google.com/python/docs/reference/google-cloud-ftp/latest/google.cloud.ftp_v1.services.cloud_ftp.CloudFtpClient.html#google_cloud_ftp_v1_services_cloud_ftp_CloudFtpClient_stop_server)top_server(request=request)
+        operation = client.[stop_server](https://docs.cloud.google.com/python/docs/reference/google-cloud-ftp/latest/google.cloud.ftp_v1.services.cloud_ftp.CloudFtpClient.html#google_cloud_ftp_v1_services_cloud_ftp_CloudFtpClient_stop_server)(request=request)
     
         print("Waiting for operation to complete...")
     
@@ -504,22 +504,22 @@ To authenticate to Cloud FTP, set up Application Default Credentials. For more i
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/servers/[SERVER]";
             // Make the request
-           < OperationServer, Operati>onMetadata response = await cloud[FtpClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Ftp.V1/latest/Google.Cloud.Ftp.V1.CloudFtpClient.html#Google_Cloud_Ftp_V1_CloudFtpClient_StartServerAsync_Google_Cloud_Ftp_V1_ServerName_Google_Api_Gax_Grpc_CallSettings_).StartServerAsync(name);
+            Operation<Server, OperationMetadata> response = await cloudFtpClient.[StartServerAsync](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Ftp.V1/latest/Google.Cloud.Ftp.V1.CloudFtpClient.html#Google_Cloud_Ftp_V1_CloudFtpClient_StartServerAsync_Google_Cloud_Ftp_V1_ServerName_Google_Api_Gax_Grpc_CallSettings_)(name);
     
             // Poll until the returned long-running operation is complete
-           < OperationServer, Operati>onMetadata completedResponse = await response.PollUntilCompletedAsync();
-            // Retrieve the operation resul[t](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Ftp.V1/latest/Google.Cloud.Ftp.V1.Server.html)
-            Server result = completedResponse.Result;
+            Operation<Server, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            [Server](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Ftp.V1/latest/Google.Cloud.Ftp.V1.Server.html) result = completedResponse.Result;
     
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-           < OperationServer, Operati>onMetadata retrievedResponse = await cloud[FtpClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Ftp.V1/latest/Google.Cloud.Ftp.V1.CloudFtpClient.html#Google_Cloud_Ftp_V1_CloudFtpClient_PollOnceStartServerAsync_System_String_Google_Api_Gax_Grpc_CallSettings_).PollOnceStartServerAsync(operationName);
+            Operation<Server, OperationMetadata> retrievedResponse = await cloudFtpClient.[PollOnceStartServerAsync](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Ftp.V1/latest/Google.Cloud.Ftp.V1.CloudFtpClient.html#Google_Cloud_Ftp_V1_CloudFtpClient_PollOnceStartServerAsync_System_String_Google_Api_Gax_Grpc_CallSettings_)(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-      [      ](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Ftp.V1/latest/Google.Cloud.Ftp.V1.Server.html)    Server retrievedResult = retrievedResponse.Result;
+                [Server](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Ftp.V1/latest/Google.Cloud.Ftp.V1.Server.html) retrievedResult = retrievedResponse.Result;
             }
         }
     }
@@ -548,14 +548,14 @@ To authenticate to Cloud FTP, set up Application Default Credentials. For more i
     	// It will require modifications to work:
     	// - It may require correct/in-range values for request initialization.
     	// - It may require specifying regional endpoints when creating the service client as shown in:
-    	//   https://pkg.go.dev/cloud.google.com/go#hdr-[Client_Options](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/ftp/latest/apiv1.html#cloud_google_com_go_ftp_apiv1_CloudFtpClient_NewCloudFtpRESTClient)
-    	c, err := ftp.NewCloudFtpRESTClient(ctx)
+    	//   https://pkg.go.dev/cloud.google.com/go#hdr-Client_Options
+    	c, err := ftp.[NewCloudFtpRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/ftp/latest/apiv1.html#cloud_google_com_go_ftp_apiv1_CloudFtpClient_NewCloudFtpRESTClient)(ctx)
     	if err != nil {
-    		// TO[DO: H](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/ftp/latest/apiv1.html#cloud_google_com_go_ftp_apiv1_CloudFtpClient_Close)andle error.&
+    		// TODO: Handle error.
     	}
-    	defer c.Close()
+    	defer c.[Close](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/ftp/latest/apiv1.html#cloud_google_com_go_ftp_apiv1_CloudFtpClient_Close)()
     
-    	req := ftppb.StartServerRequest{
+    	req := &ftppb.StartServerRequest{
     		// TODO: Fill request struct fields.
     		// See https://pkg.go.dev/cloud.google.com/go/ftp/apiv1/ftppb#StartServerRequest.
     	}
@@ -602,10 +602,10 @@ To authenticate to Cloud FTP, set up Application Default Credentials. For more i
           [StartServerRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-ftp/latest/com.google.cloud.ftp.v1.StartServerRequest.html) request =
               [StartServerRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-ftp/latest/com.google.cloud.ftp.v1.StartServerRequest.html).newBuilder()
                   .setName([ServerName](https://docs.cloud.google.com/java/docs/reference/google-cloud-ftp/latest/com.google.cloud.ftp.v1.ServerName.html).of("[PROJECT]", "[LOCATION]", "[SERVER]").toString())
-             <     .bui>ld();
-          ApiFutureOper[ation](https://docs.cloud.google.com/java/docs/reference/google-cloud-ftp/latest/com.google.cloud.ftp.v1.CloudFtpClient.html#com_google_cloud_ftp_v1_CloudFtpClient_startServerCallable__) future = cloudFtpClient.startServerCallable().futureCall(request);[
-          //](https://docs.cloud.google.com/java/docs/reference/proto-google-common-protos/latest/com.google.longrunning.Operation.html) Do something.
-          Operation response = future.get();
+                  .build();
+          ApiFuture<Operation> future = cloudFtpClient.[startServerCallable](https://docs.cloud.google.com/java/docs/reference/google-cloud-ftp/latest/com.google.cloud.ftp.v1.CloudFtpClient.html#com_google_cloud_ftp_v1_CloudFtpClient_startServerCallable__)().futureCall(request);
+          // Do something.
+          [Operation](https://docs.cloud.google.com/java/docs/reference/proto-google-common-protos/latest/com.google.longrunning.Operation.html) response = future.get();
         }
       }
     }
@@ -630,10 +630,10 @@ To authenticate to Cloud FTP, set up Application Default Credentials. For more i
     // const name = 'abc123'
     
     // Imports the Ftp library
-    const {CloudFtpClient} = r[equire](https://docs.cloud.google.com/nodejs/docs/reference/ftp/latest/overview.html)('@google-cloud/ftp').v1;
+    const {CloudFtpClient} = require('[@google-cloud/ftp](https://docs.cloud.google.com/nodejs/docs/reference/ftp/latest/overview.html)').v1;
     
     // Instantiates a client
-    const [ftpClient = ne](https://docs.cloud.google.com/nodejs/docs/reference/ftp/latest/overview.html)w CloudFtpClient();
+    const ftpClient = new [CloudFtpClient](https://docs.cloud.google.com/nodejs/docs/reference/ftp/latest/overview.html)();
     
     async function callStartServer() {
       // Construct request
@@ -688,14 +688,14 @@ To authenticate to Cloud FTP, set up Application Default Credentials. For more i
             if ($response->operationSucceeded()) {
                 /** @var Server $result */
                 $result = $response->getResult();
-                printf('Operation successful with response data: %s' . PHP_EOL, >$result-serializeToJsonString());
+                printf('Operation successful with response data: %s' . PHP_EOL, $result->serializeToJsonString());
             } else {
                 /** @var Status $error */
-                $error = $r>esponse-getError();
-                printf('Operation failed with error data: %s' . >PHP_EOL, $error-serializeToJsonString());
+                $error = $response->getError();
+                printf('Operation failed with error data: %s' . PHP_EOL, $error->serializeToJsonString());
             }
         } catch (ApiException $ex) {
-            printf('Call failed with message:> %s' . PHP_EOL, $ex-getMessage());
+            printf('Call failed with message: %s' . PHP_EOL, $ex->getMessage());
         }
     }
     
@@ -710,7 +710,7 @@ To authenticate to Cloud FTP, set up Application Default Credentials. For more i
      */
     function callSample(): void
     {
-        $formattedName = CloudFtpClient::serverName('[PROJECT]', '[LOCATION]', '[SERVER]9;);
+        $formattedName = CloudFtpClient::serverName('[PROJECT]', '[LOCATION]', '[SERVER]');
     
         start_server_sample($formattedName);
     }
@@ -742,7 +742,7 @@ To authenticate to Cloud FTP, set up Application Default Credentials. For more i
         )
     
         # Make the request
-        operation[ = client.st](https://docs.cloud.google.com/python/docs/reference/google-cloud-ftp/latest/google.cloud.ftp_v1.services.cloud_ftp.CloudFtpClient.html#google_cloud_ftp_v1_services_cloud_ftp_CloudFtpClient_start_server)art_server(request=request)
+        operation = client.[start_server](https://docs.cloud.google.com/python/docs/reference/google-cloud-ftp/latest/google.cloud.ftp_v1.services.cloud_ftp.CloudFtpClient.html#google_cloud_ftp_v1_services_cloud_ftp_CloudFtpClient_start_server)(request=request)
     
         print("Waiting for operation to complete...")
     

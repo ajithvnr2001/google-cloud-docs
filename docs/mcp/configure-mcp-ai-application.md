@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mcp/configure-mcp-ai-application/
 title: Configure MCP in an AI application \u00a0|\u00a0 Google Cloud MCP servers \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:36:37.983806+00:00
+fetched_at: 2026-10-21T12:23:02.601891+00:00
 ---
 
 # Configure MCP in an AI application  |  Google Cloud MCP servers  |  Google Cloud Documentation
@@ -96,11 +96,15 @@ Replace `PROJECT_ID` with your Google Cloud project name.
 
 ### Required roles
 
-To get the permission that you need to make tool calls to Google and Google Cloud MCP tools, ask your administrator to grant you the [MCP Tool User ](https://docs.cloud.google.com/iam/docs/roles-permissions/mcp#mcp.toolUser) (`roles/mcp.toolUser`) IAM role on the Google Cloud project. For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+[Non-Google Cloud MCP servers](https://docs.cloud.google.com/mcp/supported-products#google-mcp-servers) don't require the MCP Tool User (`roles/mcp.toolUser`) role. You also can't use Identity and Access Management (IAM) policies or permissions to control access to non-Google Cloud MCP servers.
 
-This predefined role contains the `mcp.tools.call` permission, which is required to make tool calls to Google and Google Cloud MCP tools. 
+To get the permission that you need to make tool calls to Google Cloud MCP tools, ask your administrator to grant you the [MCP Tool User ](https://docs.cloud.google.com/iam/docs/roles-permissions/mcp#mcp.toolUser) (`roles/mcp.toolUser`) IAM role on the Google Cloud project. For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+This predefined role contains the `mcp.tools.call` permission, which is required to make tool calls to Google Cloud MCP tools. 
 
 You might also be able to get this permission with [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
+
+To access Google Cloud products through MCP, your administrator must also grant you or your agent the required IAM roles for the resources that you access. See the documentation for the MCP server for the required roles or access for specific actions.
 
 ## Enable the product or service
 
@@ -167,9 +171,9 @@ Use the following authentication methods to connect to MCP servers:
   
 #### Authentication identities
 
-You can use your own user identity to authenticate to MCP servers, but when you do so, the MCP client has the same permissions as you do on Google and Google Cloud resources, and actions taken by the MCP client are attributed to you.
+You can use your own user identity to authenticate to MCP servers. When you do so, the MCP client has the same access as you do on Google and Google Cloud resources, and actions taken by the MCP client are attributed to you.
 
-For production workloads, we recommend that you create a separate agent or workload identity, instead of using your identity. Using a separate identity to access MCP servers means you can limit the permissions and actions taken by the MCP client, and you can view actions taken through MCP requests in your logs. For more information see [Set up authentication for MCP servers](https://docs.cloud.google.com/mcp/set-up-authentication-mcp-servers), and [Authenticate to Google and Google Cloud MCP servers](https://docs.cloud.google.com/mcp/authenticate-mcp).
+For production workloads that use Google Cloud MCP servers, we recommend that you create a separate agent or workload identity, instead of using your identity. Using a separate identity to access Google Cloud MCP servers lets you use IAM roles and policies to limit the actions of the MCP client. You can also view actions taken through MCP requests in your logs. You can't use IAM policies or permissions to control access to [non-Google Cloud MCP servers](https://docs.cloud.google.com/mcp/supported-products#google-mcp-servers). For more information, see [Set up authentication for MCP servers](https://docs.cloud.google.com/mcp/set-up-authentication-mcp-servers) and [Authenticate to Google and Google Cloud MCP servers](https://docs.cloud.google.com/mcp/authenticate-mcp).
 
 You can authenticate to MCP servers using the following credential types:
 
@@ -602,6 +606,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

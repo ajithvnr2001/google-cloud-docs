@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/compute/instance-groups/managed/set-named-ports/
 title: gcloud beta compute instance-groups managed set-named-ports \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:47:56.513078+00:00
+fetched_at: 2026-10-21T12:24:20.059350+00:00
 ---
 
 # gcloud beta compute instance-groups managed set-named-ports  |  Google Cloud SDK  |  Google Cloud Documentation

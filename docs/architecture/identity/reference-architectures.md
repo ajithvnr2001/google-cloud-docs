@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/identity/reference-architectures/
 title: Reference architectures \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:29.233803+00:00
+fetched_at: 2026-10-21T12:22:12.624684+00:00
 ---
 
 # Reference architectures  |  Cloud Architecture Center  |  Google Cloud Documentation

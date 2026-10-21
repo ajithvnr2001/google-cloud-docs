@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/database-migration/docs/postgres/use-the-database-migration-service-api/
 title: Use the Database Migration Service API \u00a0|\u00a0 Database Migration Service for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:44:32.754101+00:00
+fetched_at: 2026-10-21T11:59:49.528105+00:00
 ---
 
 # Use the Database Migration Service API  |  Database Migration Service for PostgreSQL  |  Google Cloud Documentation
@@ -14,7 +14,7 @@ fetched_at: 2026-10-14T15:44:32.754101+00:00
   * [ Databases ](https://docs.cloud.google.com/docs/databases)
   * [ Database Migration Service ](https://docs.cloud.google.com/database-migration/docs)
   * [ PostgreSQL ](https://docs.cloud.google.com/database-migration/docs/postgres)
-  * [ Reference ](https://docs.cloud.google.com/database-migration/docs/postgres/apis)
+  * [ API and references ](https://docs.cloud.google.com/database-migration/docs/postgres/use-the-database-migration-service-api)
 
 
 
@@ -22,14 +22,7 @@ Send feedback
 
 #  Use the Database Migration Service API Stay organized with collections  Save and categorize content based on your preferences. 
 
-[MySQL](https://docs.cloud.google.com/database-migration/docs/mysql/use-the-database-migration-service-api "View this page for the MySQL version of Database Migration Service.") | PostgreSQL | [PostgreSQL to AlloyDB](https://docs.cloud.google.com/database-migration/docs/postgresql-to-alloydb/use-the-database-migration-service-api "View this page for the PostgreSQL to AlloyDB version of Database Migration Service.")
-
-  
-
-
-## Overview
-
-Database Migration Service provides a REST API for administering your connection profiles and migration jobs programmatically. The REST API is defined by resources associated with creating and managing connection profiles and migration jobs. For details about all resources and their methods, see the [Database Migration Service API Reference](https://docs.cloud.google.com/database-migration/docs/reference/rest).
+Database Migration Service provides a REST API for administering your connection profiles and migration jobs programmatically. The REST API is defined by resources associated with creating and managing connection profiles and migration jobs. For details about all resources and their methods, see the [ Database Migration Service API Reference](https://docs.cloud.google.com/database-migration/docs/reference/rest).
 
 When you send requests directly to the Database Migration Service REST API, you must create the correct form of the request, authorize the request as an authenticated user, and process any responses returned. Many of the tasks in this documentation provide API examples using [cURL](http://curl.haxx.se).
 
@@ -39,7 +32,7 @@ You're also using the Database Migration Service API, indirectly, when you use a
 
   * [Google Cloud CLI](https://docs.cloud.google.com/sdk): A command-line interface (CLI) that you can use to work with your instances.
 
-  * [Google Cloud console](https://console.cloud.google.com/): A graphical web interface.
+  * [the Google Cloud console](https://console.cloud.google.com/): A graphical web interface.
 
 
 
@@ -52,7 +45,7 @@ To use the Database Migration Service API, you need to enable it:
 
 ### Console
 
-  1. [ Enable the Database Migration Service API](https://console.cloud.google.com/apis/library/datamigration.googleapis.com). 
+  1. [Enable the Database Migration Service API](https://console.cloud.google.com/apis/library/datamigration.googleapis.com). 
   2. Select your project.
   3. Select **Continue**.
 
@@ -68,7 +61,7 @@ To use the Database Migration Service API, you need to enable it:
          
          gcloud config set project YOUR_PROJECT_ID
 
-  3. Enable the Cloud SQL Admin API: 
+  3. Enable the Database Migration Service API: 
          
          gcloud services enable datamigration.googleapis.com
 
@@ -87,10 +80,6 @@ You must have the required permissions to use the Database Migration Service API
 
 Google Cloud offers Identity and Access Management (IAM), which lets you give more granular access to specific Google Cloud resources and prevents unwanted access to other resources. You can get and set permissions for Database Migration Service using the Google Cloud console, the IAM methods of the API, or the Google Cloud CLI. For more information, see [Granting, changing, and revoking access to resources](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access).
 
-## API examples
-
-For examples of using the Database Migration Service API with cURL, see [Manage connection profiles using the API](https://docs.cloud.google.com/database-migration/docs/postgres/api-connection-profiles) and [Manage migration jobs using the API](https://docs.cloud.google.com/database-migration/docs/postgres/api-migration-jobs).
-
 ## Provide JSON data from a file
 
 When you use the API with cURL, you provide property values using the command line. If you're working with sensitive values such as passwords or security keys, providing them on the command line poses a security risk. For increased security, you can create a file containing the JSON data for the API call, and provide the path to the file on the command line.
@@ -105,29 +94,57 @@ Include the curly brackets, but don't include the single quotes.
          
          --data @<path-to-file>/<filename>
 
-For example, to create a connection profile for a Cloud SQL source database, you could create a file named `request.json` with the following content: 
-         
-         {
-           "displayName": "my Cloud SQL connection profile",
-           "mysql": {
-             "host": "10.11.12.13",
-             "port": 5432,
-             "username": "myusername",
-             "password": "mypassword"
-           }
-         }
-         
-
-Then, you would use the following cURL command at the command line:
-         
-         curl --header "Authorization: Bearer ${ACCESS_TOKEN}" \
-              --header 'Content-Type: application/json' \
-              --data @./request.json \
-              -X POST \
-              https://datamigration.googleapis.com/v1/projects/myProject/locations/myLocation/connectionProfiles?connectionProfileId=myCloudSQLconnectionprofile
 
 
 
+### Example: Create a PostgreSQL source connection profile
+
+To create a connection profile for a PostgreSQL source database, create a file named `request.json` with the following content:
+    
+    
+    {
+      "displayName": "PostgreSQL source connection profile",
+      "postgresql": {
+        "host": "198.51.100.1",
+        "port": 5432,
+        "username": "migration_admin",
+        "password": "MIGRATION_PASSWORD",
+        "ssl": {
+          "type": "SERVER_ONLY",
+          "caCertificate": "-----BEGIN CERTIFICATE-----\n...\n-----END CERTIFICATE-----"
+        }
+      }
+    }
+
+Then, send the following cURL request at the command line:
+    
+    
+    curl --header "Authorization: Bearer ${ACCESS_TOKEN}" \
+         --header 'Content-Type: application/json' \
+         --data @./request.json \
+         -X POST \
+         "https://datamigration.googleapis.com/v1/projects/PROJECT_ID/locations/REGION/connectionProfiles?connectionProfileId=SOURCE_PROFILE_ID"
+
+### Example: Create a PostgreSQL continuous migration job
+
+To create a continuous migration job for PostgreSQL, create a file named `migration_job.json` with the following content:
+    
+    
+    {
+      "displayName": "PostgreSQL continuous migration job",
+      "type": "CONTINUOUS",
+      "source": "projects/PROJECT_ID/locations/REGION/connectionProfiles/SOURCE_PROFILE_ID",
+      "destination": "projects/PROJECT_ID/locations/REGION/connectionProfiles/DESTINATION_PROFILE_ID"
+    }
+
+Then, send the following cURL request at the command line:
+    
+    
+    curl --header "Authorization: Bearer ${ACCESS_TOKEN}" \
+         --header 'Content-Type: application/json' \
+         --data @./migration_job.json \
+         -X POST \
+         "https://datamigration.googleapis.com/v1/projects/PROJECT_ID/locations/REGION/migrationJobs?migrationJobId=MIGRATION_JOB_ID"
 
 ## Work with long-running API calls
 
@@ -143,79 +160,14 @@ You can use the Database Migration Service API to [manage operations](https://do
 
 ## Database Migration Service and Google APIs Discovery Service
 
-[Google APIs Discovery Service](https://developers.google.com/discovery) is a service that you can use to discover Google APIs. For example, when you use the [Google APIs Explorer ](https://developers.google.com/apis-explorer/) tool, you're using the Discovery Service. 
+[Google APIs Discovery Service](https://developers.google.com/discovery) is a service that you can use to discover Google APIs. For example, when you use the [Google APIs Explorer](https://developers.google.com/apis-explorer/) tool, you're using the Discovery Service.
 
-In the Discovery Service, Database Migration Service is represented as "datamigration" (for example: https://**datamigration**.googleapis.com/$discovery/rest?version=v1).
+In the Discovery Service, Database Migration Service is represented as "datamigration" (for example: `https://datamigration.googleapis.com/$discovery/rest?version=v1`).
 
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
-
-  * ### Products and pricing
-
-    * [ See all products ](https://cloud.google.com/products/)
-    * [ Google Cloud pricing ](https://cloud.google.com/pricing/)
-    * [ Google Cloud Marketplace ](https://cloud.google.com/marketplace/)
-    * [ Contact sales ](https://cloud.google.com/contact/)
-  * ### Support
-
-    * [ Community forums ](https://discuss.google.dev/c/google-cloud/14/)
-    * [ Support ](https://cloud.google.com/support-hub/)
-    * [ Release Notes ](https://docs.cloud.google.com/release-notes)
-    * [ System status ](https://status.cloud.google.com)
-  * ### Resources
-
-    * [ GitHub ](https://github.com/googlecloudPlatform/)
-    * [ Getting Started with Google Cloud ](https://docs.cloud.google.com/docs/get-started/)
-    * [ Code samples ](https://docs.cloud.google.com/docs/samples)
-    * [ Cloud Architecture Center ](https://docs.cloud.google.com/architecture/)
-    * [ Training and Certification ](https://cloud.google.com/learn/training/)
-  * ### Engage
-
-    * [ Blog ](https://cloud.google.com/blog/)
-    * [ Events ](https://cloud.google.com/events/)
-    * [ X (Twitter) ](https://x.com/googlecloud)
-    * [ Google Cloud on YouTube ](https://www.youtube.com/googlecloud)
-    * [ Google Cloud Tech on YouTube ](https://www.youtube.com/googlecloudplatform)
-
-
-
-[ ![Google Developers](https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/clouddocs/images/lockup-google-for-developers.svg)](https://developers.google.com/)
-
-  * [ Android ](https://developer.android.com/)
-  * [ Chrome ](https://developer.chrome.com/)
-  * [ Firebase ](https://firebase.google.com/)
-  * [ Google AI ](https://ai.google.com/)
-
-
-
-  * [ About Google ](https://about.google/)
-  * [ Privacy ](https://policies.google.com/privacy)
-  * [ Site terms ](https://policies.google.com/terms?hl=en)
-  * [ Google Cloud terms ](https://cloud.google.com/product-terms)
-  * Manage cookies 
-  * [ Our third decade of climate action: join us ](https://cloud.google.com/sustainability)
-  * Sign up for the Google Cloud newsletter [ Subscribe ](https://cloud.google.com/newsletter/)
-
-
-
-  * English
-  * Deutsch
-  * Español
-  * Español – América Latina
-  * Français
-  * Indonesia
-  * Italiano
-  * Português
-  * Português – Brasil
-  * עברית
-  * 中文 – 简体
-  * 中文 – 繁體
-  * 日本語
-  * 한국어
-
-
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

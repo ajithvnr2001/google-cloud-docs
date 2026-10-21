@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/best-practices-costs/
 title: Estimate and control costs \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:36.067628+00:00
+fetched_at: 2026-10-21T12:22:54.211237+00:00
 ---
 
 # Estimate and control costs  |  BigQuery  |  Google Cloud Documentation
@@ -458,7 +458,7 @@ Rapid Cache provides an SSD-backed zonal read cache for your Cloud Storage bucke
 
 ## Control workload costs
 
-This section describes best practices for controlling costs within a workload. **A workload is a set of related queries**. For example, a workload can be a data transformation pipeline that runs daily, a set of dashboards run by a group of business analysts, or several ad-hoc queries run by a set of data scientists.
+This section describes best practices for controlling costs within a workload. **A workload is a set of related queries**. For example, a workload can be a data transformation pipeline that runs daily, a set of dashboards run by a group of business analysts, or several ad hoc queries run by a set of data scientists.
 
 ### Use the Google Cloud pricing calculator
 
@@ -751,6 +751,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

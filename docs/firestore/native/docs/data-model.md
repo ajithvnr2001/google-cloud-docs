@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/data-model/
 title: Data model \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:25:30.552720+00:00
+fetched_at: 2026-10-21T11:59:05.432493+00:00
 ---
 
 # Data model  |  Firestore in Native mode  |  Google Cloud Documentation
@@ -210,7 +210,7 @@ Android
     }
     
     
-    [retrieve_data_reference_document.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/retrieve_data_reference_document.go#L18-L29)
+    [retrieve_data_reference_document.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/retrieve_data_reference_document.go#L18-L29)
 
 ##### PHP
 
@@ -356,7 +356,7 @@ Android
     }
     
     
-    [retrieve_data_reference_collection.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/retrieve_data_reference_collection.go#L18-L28)
+    [retrieve_data_reference_collection.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/retrieve_data_reference_collection.go#L18-L28)
 
 ##### PHP
 
@@ -504,7 +504,7 @@ Android
     }
     
     
-    [retrieve_data_reference_document_path.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/retrieve_data_reference_document_path.go#L18-L29)
+    [retrieve_data_reference_document_path.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/retrieve_data_reference_document_path.go#L18-L29)
 
 ##### PHP
 
@@ -728,7 +728,7 @@ Android
     }
     
     
-    [retrieve_data_reference_subcollection.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/retrieve_data_reference_subcollection.go#L18-L29)
+    [retrieve_data_reference_subcollection.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/retrieve_data_reference_subcollection.go#L18-L29)
 
 ##### PHP
 
@@ -782,6 +782,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

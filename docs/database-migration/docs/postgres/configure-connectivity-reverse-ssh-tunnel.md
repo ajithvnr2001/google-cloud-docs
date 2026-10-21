@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/database-migration/docs/postgres/configure-connectivity-reverse-ssh-tunnel/
 title: Configure connectivity using reverse SSH tunnel \u00a0|\u00a0 Database Migration Service for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:01:39.580522+00:00
+fetched_at: 2026-10-21T11:59:48.257132+00:00
 ---
 
 # Configure connectivity using reverse SSH tunnel  |  Database Migration Service for PostgreSQL  |  Google Cloud Documentation
@@ -14,7 +14,7 @@ fetched_at: 2026-10-14T02:01:39.580522+00:00
   * [ Databases ](https://docs.cloud.google.com/docs/databases)
   * [ Database Migration Service ](https://docs.cloud.google.com/database-migration/docs)
   * [ PostgreSQL ](https://docs.cloud.google.com/database-migration/docs/postgres)
-  * [ Guides ](https://docs.cloud.google.com/database-migration/docs/postgres/migration-src-and-dest)
+  * [ Guides ](https://docs.cloud.google.com/database-migration/docs/postgres/scenario-overview)
 
 
 
@@ -22,22 +22,19 @@ Send feedback
 
 #  Configure connectivity using reverse SSH tunnel Stay organized with collections  Save and categorize content based on your preferences. 
 
-[MySQL](https://docs.cloud.google.com/database-migration/docs/mysql/configure-connectivity-reverse-ssh-tunnel "View this page for the MySQL version of Database Migration Service.") | PostgreSQL | [PostgreSQL to AlloyDB](https://docs.cloud.google.com/database-migration/docs/postgresql-to-alloydb/configure-connectivity-reverse-ssh-tunnel "View this page for the PostgreSQL to AlloyDB version of Database Migration Service.")
+You can establish connectivity from the destination database to the source database through a secure reverse SSH tunnel. This method requires a bastion host VM in the Google Cloud project as well as a machine (for example, a laptop on the network) that has connectivity to the source database.
 
-  
+**Important:** If your source is within a VPN (in AWS, for example, or your own on-premises VPN), your source connection profile should use the VPN IP address and port instead of the source IP address and port.
 
+The Database Migration Service collects the required information at migration creation time, and auto-generates the script for setting it all up.
 
-## Overview
-
-You can establish connectivity from the destination database to the source database through a secure reverse SSH tunnel. This method requires a bastion host VM in the Google Cloud project as well as a machine (for example, a laptop on the network) that has connectivity to the source database. **Important:** If your source is within a VPN (in AWS, for example, or your own on-premises VPN), your source connection profile should use the VPN IP address and port instead of the source IP address and port.
-
-The Database Migration Service for PostgreSQL collects the required information at migration creation time, and auto-generates the script for setting it all up.
-
-See the following diagram: ![Reverse SSH tunnel diagram](https://docs.cloud.google.com/static/database-migration/docs/images/updated-reverse-ssh.svg)
+![A networking diagram that shows a high-level connectivity
+      setup over a dedicated SSH server.](https://docs.cloud.google.com/static/database-migration/docs/images/hmm/pgsql/pgsql_hmm_reverse_ssh.svg) **Figure 1.** Migration networking example: source connectivity over an SSH tunnel. (click to enlarge) ![A networking diagram that shows a high-level connectivity
+      setup over a dedicated SSH server.](https://docs.cloud.google.com/static/database-migration/docs/images/hmm/pgsql/pgsql_hmm_reverse_ssh.svg)
 
 ## Set up a reverse SSH tunnel
 
-The following steps are performed in the Database Migration Service flow for [creating a migration job](https://docs.cloud.google.com/database-migration/docs/postgres/create-migration-job), to set up a reverse SSH tunnel between the source database and Cloud SQL instance. After you provide some parameters, you execute a set of `gcloud` commands on a machine which has connectivity to both the source database and to Google Cloud.
+The following steps are performed in the Database Migration Service flow for [ creating a migration job](https://docs.cloud.google.com/database-migration/docs/postgres/create-migration-job), to set up a reverse SSH tunnel between the source database and Cloud SQL instance. After you provide some parameters, you execute a set of `gcloud` commands on a machine which has connectivity to both the source database and to Google Cloud.
 
   1. Select the VM instance used to establish connectivity between the source database and the Cloud SQL instance. Typically this is a VM running in the VPC where the application accessing the new Cloud SQL database runs. The VM instance serves as the SSH tunnel bastion server.
   2. You can use an existing Compute Engine VM instance for this purpose.
@@ -46,9 +43,7 @@ The following steps are performed in the Database Migration Service flow for [cr
 
      2. Provide a free port that the SSH tunnel can use.
 
-Note: For the reverse SSH tunnel to work, set the `GatewayPorts` parameter to `yes` in the `/etc/ssh/sshd_config` file on the target server. After you update the file, restart the sshd service using the `sudo systemctl restart sshd.service` command.  
-  
-If you don't want to change the configuration of your existing VM, then create a new VM.
+Note: For the reverse SSH tunnel to work, set the `GatewayPorts` parameter to `yes` in the `/etc/ssh/sshd_config` file on the target server. After you update the file, restart the sshd service using the `sudo systemctl restart sshd.service` command. If you don't want to change the configuration of your existing VM, then create a new VM.
   3. Alternatively, you can create a new VM at this step. Select `CREATE A COMPUTE ENGINE VM INSTANCE` and the generated script includes instructions to create it.
 
      1. Provide a name for the VM instance.
@@ -62,8 +57,8 @@ Note: A Compute Engine VM instance created by the script isn't managed by Databa
 
 By default, the script will generate a public IP address for the Compute Engine VM server. If you want the IP address to be private, then do the following:
 
-     * Alter the `gcloud compute instances create` command by adding the [\--no-address](https://cloud.google.com/sdk/gcloud/reference/compute/instances/create#--address) flag.
-     * Alter the `gcloud compute ssh` command by adding the [\--internal-ip](https://cloud.google.com/sdk/gcloud/reference/compute/ssh#--internal-ip) flag.
+     * Alter the `gcloud compute instances create` command by adding the [ `--no-address` flag](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create#--address). 
+     * Alter the `gcloud compute ssh` command by adding the [ `--internal-ip` flag](https://docs.cloud.google.com/sdk/gcloud/reference/compute/ssh#--internal-ip). 
 
 Also, if you want to create a bastion host VM on a subnet which is on a shared VPC, then alter the `export SUBNET_NAME` command from the generated script to point to `/projects/project_name/regions/region_name/subnetworks/subnetwork_name`.
 
@@ -73,21 +68,20 @@ For example:
 
 project_name is the name of the project where the shared VPC is placed. A project has regions and subnetworks. region_name and subnetwork_name are the names of the region and subnetwork that are associated with the VPC project.
 
-**Make sure the replication connections section of the`pg_hba.conf` file or the AWS RDS security groups definitions on the source database are updated to accept connections from the Cloud SQL VPC's IP address range.**
-
+**Note:** Make sure the replication connections section of the `pg_hba.conf` file or the cloud security groups (for AWS RDS, Aurora, or Azure) on the source database are updated to accept incoming connections on port `5432` from the bastion host VM IP address and Cloud SQL VPC IP address range.
   5. **Run the script on a machine that has access to both the source database and the Compute Engine VM**. The script performs the following operations:
 
      * Configures the Compute Engine VM as an SSH tunnel bastion server.
 
-     * Establishes a secure SSH connection between the source database and the VPC.
+     * Establishes a secure SSH connection forwarding traffic from the bastion host port to the source PostgreSQL database server (port 5432).
 
-     * If you're creating a new Compute Engine VM, then after successfully running the script, copy the VM server IP from the script output and enter it in the provided text field. The Cloud SQL instance will be updated as needed when you later test or start the migration job. 
+     * If you're creating a new Compute Engine VM, then after successfully running the script, copy the VM server IP from the script output and enter it in the provided text field. The Cloud SQL instance will be updated as needed when you later test or start the migration job.
 
   6. Click **CONFIGURE & CONTINUE**.
 
-  7. [Verify your migration job](https://docs.cloud.google.com/database-migration/docs/postgres/verify-migration) to confirm that it correctly migrated data from your source database instance to the destination Cloud SQL database instance.
+  7. [ Verify your migration job](https://docs.cloud.google.com/database-migration/docs/postgres/verify-migration) to confirm that it correctly migrated data from your source database instance to the destination Cloud SQL database instance.
 
-  8. If your source is within a VPN (in AWS, for example, or your own on-premises VPN), proceed to the section on [ connecting VPCs through VPNs](https://docs.cloud.google.com/database-migration/docs/postgres/configure-connectivity-vpns#vpc-vpn) for more information on configuring the source VPN and Google Cloud VPN to work with each other.
+  8. Depending on your network architecture, you might need to set up additional VPN gateways in your system. For more information, see the following pages [ Create HA VPN connections between Google Cloud and AWS](https://docs.cloud.google.com/network-connectivity/docs/vpn/tutorials/create-ha-vpn-connections-google-cloud-aws) or [ Create HA VPN connections between Google Cloud and Azure](https://docs.cloud.google.com/network-connectivity/docs/vpn/tutorials/create-ha-vpn-connections-google-cloud-azure) in the Cloud VPN documentation.
 
   9. After your migration job is configured, connectivity is verified, and VPNs are configured successfully if necessary, then you can run the job.
 
@@ -98,71 +92,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
-
-  * ### Products and pricing
-
-    * [ See all products ](https://cloud.google.com/products/)
-    * [ Google Cloud pricing ](https://cloud.google.com/pricing/)
-    * [ Google Cloud Marketplace ](https://cloud.google.com/marketplace/)
-    * [ Contact sales ](https://cloud.google.com/contact/)
-  * ### Support
-
-    * [ Community forums ](https://discuss.google.dev/c/google-cloud/14/)
-    * [ Support ](https://cloud.google.com/support-hub/)
-    * [ Release Notes ](https://docs.cloud.google.com/release-notes)
-    * [ System status ](https://status.cloud.google.com)
-  * ### Resources
-
-    * [ GitHub ](https://github.com/googlecloudPlatform/)
-    * [ Getting Started with Google Cloud ](https://docs.cloud.google.com/docs/get-started/)
-    * [ Code samples ](https://docs.cloud.google.com/docs/samples)
-    * [ Cloud Architecture Center ](https://docs.cloud.google.com/architecture/)
-    * [ Training and Certification ](https://cloud.google.com/learn/training/)
-  * ### Engage
-
-    * [ Blog ](https://cloud.google.com/blog/)
-    * [ Events ](https://cloud.google.com/events/)
-    * [ X (Twitter) ](https://x.com/googlecloud)
-    * [ Google Cloud on YouTube ](https://www.youtube.com/googlecloud)
-    * [ Google Cloud Tech on YouTube ](https://www.youtube.com/googlecloudplatform)
-
-
-
-[ ![Google Developers](https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/clouddocs/images/lockup-google-for-developers.svg)](https://developers.google.com/)
-
-  * [ Android ](https://developer.android.com/)
-  * [ Chrome ](https://developer.chrome.com/)
-  * [ Firebase ](https://firebase.google.com/)
-  * [ Google AI ](https://ai.google.com/)
-
-
-
-  * [ About Google ](https://about.google/)
-  * [ Privacy ](https://policies.google.com/privacy)
-  * [ Site terms ](https://policies.google.com/terms?hl=en)
-  * [ Google Cloud terms ](https://cloud.google.com/product-terms)
-  * Manage cookies 
-  * [ Our third decade of climate action: join us ](https://cloud.google.com/sustainability)
-  * Sign up for the Google Cloud newsletter [ Subscribe ](https://cloud.google.com/newsletter/)
-
-
-
-  * English
-  * Deutsch
-  * Español
-  * Español – América Latina
-  * Français
-  * Indonesia
-  * Italiano
-  * Português
-  * Português – Brasil
-  * עברית
-  * 中文 – 简体
-  * 中文 – 繁體
-  * 日本語
-  * 한국어
-
-
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

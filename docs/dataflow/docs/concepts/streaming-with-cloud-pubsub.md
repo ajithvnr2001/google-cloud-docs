@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/concepts/streaming-with-cloud-pubsub/
 title: Read from Pub/Sub to Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:32:04.031516+00:00
+fetched_at: 2026-10-21T11:59:14.267075+00:00
 ---
 
 # Read from Pub/Sub to Dataflow  |  Google Cloud Documentation
@@ -108,7 +108,14 @@ For more information, see [Message reprocessing with Pub/Sub Snapshot and Seek](
 
 ## Pub/Sub source parallelism
 
-The Pub/Sub source assigns each message a deterministic key for processing and uses those keys to shuffle the messages. For [Streaming Engine](https://docs.cloud.google.com/dataflow/docs/streaming-engine) jobs, 1024 keys are used for shuffling. For non-Streaming Engine jobs, the number of keys is the lowest power of 2 greater than `(4 * maximum workers)`.
+The Pub/Sub source assigns each message a deterministic key for processing and uses those keys to shuffle the messages.
+
+  * For [Streaming Engine](https://docs.cloud.google.com/dataflow/docs/streaming-engine) jobs, Dataflow calculates the number of keys dynamically based on the active workers at a particular instant: `(number of workers * threads per worker) / 2`. The calculated value is constrained to a range between 128 and 65,536 keys, and then rounded down to the nearest power of 2 (the highest power of 2 smaller than or equal to the calculated value).
+
+  * For non-Streaming Engine jobs, the number of keys is the lowest power of 2 greater than or equal to `(4 * maximum workers)`.
+
+
+
 
 To override the default number of shuffle keys, set the `num_pubsub_keys` [service option](https://docs.cloud.google.com/dataflow/docs/reference/service-options#num_pubsub_keys):
 
@@ -210,6 +217,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

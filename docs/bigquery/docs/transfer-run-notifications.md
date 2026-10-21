@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/transfer-run-notifications/
 title: BigQuery Data Transfer Service run notifications \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:52.914538+00:00
+fetched_at: 2026-10-21T11:59:12.493827+00:00
 ---
 
 # BigQuery Data Transfer Service run notifications  |  Google Cloud Documentation
@@ -21,16 +21,7 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # BigQuery Data Transfer Service run notifications
 
-This page provides an overview of run notifications for the BigQuery Data Transfer Service.
-
-There are two types of run notifications you can configure for the BigQuery Data Transfer Service:
-
-  * **Pub/Sub notifications** : machine-readable notifications sent when a transfer run succeeds or fails
-  * **Email notifications** : human-readable notifications sent when a transfer run fails
-
-
-
-You can configure each type individually, or you can use both Pub/Sub and email run notifications.
+BigQuery Data Transfer Service run notifications let you automatically track the status of your scheduled data transfers. You can configure Pub/Sub to send machine-readable messages when a transfer run succeeds or fails, configure email alerts to receive human-readable details when a run fails, or use both options together.
 
 ## Pub/Sub notifications
 
@@ -255,6 +246,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

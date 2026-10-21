@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/visualize-looker-studio/
 title: Analyze data with Data Studio \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:18:06.844270+00:00
+fetched_at: 2026-10-21T12:22:50.083625+00:00
 ---
 
 # Analyze data with Data Studio  |  BigQuery  |  Google Cloud Documentation
@@ -169,7 +169,7 @@ Deleting your project prevents Data Studio from querying the data because the da
 
 ### View BigQuery job details
 
-When data source credentials are set to the current user, the user is called _datasource credential owner_. When viewed by a data source credential owner, most dashboard elements display a BigQuery icon. To navigate to **Job details** in BigQuery, click the BigQuery icon.
+When data source credentials are set to the current user, the user is called _data source credential owner_. When viewed by a data source credential owner, most dashboard elements display a BigQuery icon. To navigate to **Job details** in BigQuery, click the BigQuery icon.
 
 ### View Data Studio information schema details
 
@@ -259,6 +259,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

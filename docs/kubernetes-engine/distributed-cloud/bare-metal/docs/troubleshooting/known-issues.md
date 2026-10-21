@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/troubleshooting/known-issues/
 title: Google Distributed Cloud for bare metal known issues \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:18:53.211236+00:00
+fetched_at: 2026-10-21T11:58:10.561361+00:00
 ---
 
 # Google Distributed Cloud for bare metal known issues  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -42,6 +42,42 @@ Or, search for your issue:
 
 Category | Identified version(s) | Issue and workaround  
 ---|---|---  
+Upgrades and updates | 1.34.400, 1.34.500, 1.34.700, 1.34.800, 1.35.400, 1.35.600, 1.36.0 | 
+
+### Skip minor version upgrades fail due to unavailable intermediate release package
+
+When you perform a [skip upgrade](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/how-to/upgrade#skip-upgrades) (for example, from 1.34 to 1.36) to certain target patch versions of Distributed Cloud software only for bare metal, the upgrade fails because the required intermediate `1.N-1` (for example, 1.35 when upgrading from 1.34 to 1.36) patch version is missing from the public release bucket (`gs://anthos-baremetal-release/`). During a skip upgrade, the system first upgrades the cluster to a predefined intermediate `1.N-1` patch version (for example, 1.35 when upgrading from 1.34 to 1.36) before upgrading to the target `1.N` version (for example, 1.36 when upgrading from 1.34 to 1.36). In the affected target versions, the configured intermediate version references an unreleased build. As a result:
+
+  * If you use a registry mirror, attempting to download the intermediate images package (`bmpackages_INTERMEDIATE_VERSION.tar.xz`) fails with a `404 Not Found` (`No URLs matched`) error.
+  * When you run `bmctl upgrade cluster` or apply the updated `Cluster` resource with `kubectl`, the machine upgrade preflight check stalls and fails because the `ansible-runner` container can't pull the intermediate image, reporting an error similar to the following: 
+        
+        "ansible-runner" in pod "bm-system-machine-upgrade-preflight-check-10.200.0.4-4kx9mzq48r" is waiting to start: trying and failing to pull image
+
+
+Sequential minor version upgrades (for example, 1.34 to 1.35) and patch upgrades (for example, 1.35.400 to 1.35.600) to these target versions don't use an intermediate version and aren't affected. **Diagnosis:** To verify whether your target version is affected, run the following command using the `bmctl` binary for your target upgrade version:
+    
+    
+    bmctl upgrade intermediate-version
+
+If your target version and the returned intermediate version match an entry in the following table, skip upgrades to that target version fail: | Affected target version | Unavailable intermediate version | Recommended target version  
+---|---|---  
+`1.34.400-gke.88` | `1.33.700-gke.70` | `1.34.600-gke.53` or `1.34.900-gke.135`  
+`1.34.500-gke.108` | `1.33.700-gke.70` | `1.34.600-gke.53` or `1.34.900-gke.135`  
+`1.34.700-gke.93` | `1.33.900-gke.96` | `1.34.900-gke.135`  
+`1.34.800-gke.90` | `1.33.900-gke.96` | `1.34.900-gke.135`  
+`1.35.400-gke.81` | `1.34.600-gke.83` | `1.35.500-gke.142`  
+`1.35.600-gke.140` | `1.34.600-gke.105` | `1.35.500-gke.142`  
+`1.35.600-gke.141` | `1.34.600-gke.105` | `1.35.500-gke.142`  
+`1.36.0-gke.532` | `1.35.0-gke.517` | `1.36.100-gke.144`  
+  
+**Workaround:**
+
+To upgrade a cluster from two minor versions earlier (`1.N-2`), use one of the following options:
+
+  * Perform a skip upgrade to a recommended target version: upgrade directly from `1.N-2` to the corresponding recommended target version. If you require a later patch such as `1.35.600-gke.141`, perform a skip upgrade to `1.35.500-gke.142` first, and then perform a patch upgrade to `1.35.600-gke.141`.
+  * Perform sequential minor version upgrades: upgrade your cluster from `1.N-2` to a released `1.N-1` patch version, and then upgrade from `1.N-1` to your target `1.N` version. For example, to upgrade from 1.34 to 1.36, upgrade you cluster from 1.34 to 1.35 and then upgrade from 1.35 to 1.36. 
+
+  
 Networking | 1.34.0-1.34.900 | 
 
 ### Duplicate secondary IP addresses assigned to Pods on secondary networks
@@ -209,23 +245,28 @@ GKE Identity Service relies on an internal certificate that expires after five y
         
 
 Replace CLUSTER_NAME with the name of the cluster and ADMIN_KUBECONFIG with the path to your admin cluster kubeconfig file. For more information, see [Rotate certificate authorities](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/how-to/ca-rotation).  
-Upgrades, Configuration | 1.34.700 - 1.34.800, 1.35.300 - 1.35.400, 1.36.0 | 
+Upgrades, Configuration | 1.34.700 - 1.34.1000, 1.35.300 - 1.35.600, 1.36.0 - 1.36.200 | 
 
 ### Upgrade preflight check fails with volume mount error for registry credentials
 
-When you upgrade a cluster from an unaffected version to an affected version using `bmctl upgrade`, the [pre-upgrade preflight check](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/preflight#pre_upgrade_bmctl) might fail if the cluster configuration uses private registries (`nodeConfig.privateRegistries`) or registry mirrors(`nodeConfig.registryMirrors`) with source secrets that aren't in the `anthos-creds` namespace. During the check, the preflight check job doesn't mount the required credential or certificate volume and shows a warning similar to the following:
+When you use `bmctl upgrade` to upgrade your cluster, the [pre-upgrade preflight check](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/preflight#pre_upgrade_bmctl) might fail if your configuration meets both of the following conditions: 
+
+  * The configuration uses private registries (`nodeConfig.privateRegistries`) or registry mirrors (`nodeConfig.registryMirrors`)
+  * The configuration uses source secrets that aren't in the `anthos-creds` or target cluster namespace.
+
+The preflight check fails to mount the required credential or certificate volume and shows a warning similar to the following:
     
     
     Warning  FailedMount  ... kubelet  MountVolume.SetUp failed for volume "registry-auth-volume-0" : secret "<namespace>-<creds>" not found
 
-This issue affects CA certificate secrets (`caCertSecretRef`) and image pull credential secrets (`pullCredentialSecretRef`). Users with `cluster-admin` permissions can verify the status of the `SecretForwarder` resource in the cluster namespace:
+This issue is fixed in Distributed Cloud software only for bare metal versions 1.34.1100, 1.35.700, and 1.36.300 and later. This issue affects CA certificate secrets (`caCertSecretRef`) and image pull credential secrets (`pullCredentialSecretRef`). Users with `cluster-admin` permissions can verify the status of the `SecretForwarder` resource in the cluster namespace:
     
     
     kubectl get secretforwarder -n CLUSTER_NAMESPACE
 
 **Workaround:**
 
-  1. Copy the secret with the namespace prefix from the source namespace into the target cluster namespace using the expected target name (TARGET_SECRET_NAME): 
+  1. Copy the secret with the namespace prefix from the source namespace into the target cluster namespace using the expected target name (`TARGET_SECRET_NAME`): 
          
          kubectl get secret SOURCE_SECRET_NAME -n SOURCE_NAMESPACE -o yaml | \
            sed 's/namespace: SOURCE_NAMESPACE/namespace: CLUSTER_NAMESPACE/' | \
@@ -233,11 +274,11 @@ This issue affects CA certificate secrets (`caCertSecretRef`) and image pull cre
            kubectl apply -f -
 
 Replace the following:
-     * SOURCE_SECRET_NAME: the name of the secret to copy to the target cluster namespace.
-     * SOURCE_NAMESPACE: the name of the cluster namespace that contains the secret (frequently named `anthos-creds`).
-     * CLUSTER_NAMESPACE: the namespace of the target cluster.
-     * TARGET_SECRET_NAME: the name of the source namespace followed by a dash (-) and the source secret name (SOURCE_NAMESPACE-SOURCE_SECRET_NAME)
-  2. After you copy the secret to the target cluster namespace, rerun the preflight check or resume the upgrade using the same method originally used to manage the cluster: 
+     * `SOURCE_SECRET_NAME`: the name of the secret to copy to the target cluster namespace.
+     * `SOURCE_NAMESPACE`: the name of the namespace that contains the source secret.
+     * `CLUSTER_NAMESPACE`: the namespace of the target cluster.
+     * `TARGET_SECRET_NAME`: the name of the source namespace followed by a hyphen (`-`) and the source secret name (`SOURCE_NAMESPACE-SOURCE_SECRET_NAME`).
+  2. After you copy the secret to the target cluster namespace, rerun the preflight check or resume the upgrade using the same method that you originally used to manage the cluster: 
      * If you manage clusters with `bmctl`, rerun `bmctl upgrade`.
      * If you manage clusters with the Kubernetes API, reapply the cluster configuration using `kubectl apply`.
 
@@ -3685,6 +3726,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

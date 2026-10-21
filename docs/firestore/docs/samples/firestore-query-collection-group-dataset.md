@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-query-collection-group-dataset/
 title: Create a collection of Firestore documents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:25:16.962553+00:00
+fetched_at: 2026-10-21T11:58:59.082013+00:00
 ---
 
 # Create a collection of Firestore documents  |  Google Cloud Documentation

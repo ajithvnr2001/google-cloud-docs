@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/multimodal-data-sql-tutorial/
 title: Analyze multimodal data with SQL, object tables, and BigQuery DataFrames \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:28:14.532888+00:00
+fetched_at: 2026-10-21T12:01:46.481015+00:00
 ---
 
 # Analyze multimodal data with SQL, object tables, and BigQuery DataFrames  |  Google Cloud Documentation
@@ -190,7 +190,7 @@ Create a [Cloud resource connection](https://docs.cloud.google.com/bigquery/docs
 
 
 
-### Grant permissions on to use Agent Platform models
+### Grant permissions to use Agent Platform models
 
 Grant the connection's service account the Agent Platform User role to access remote models in Agent Platform. You must grant this role in the same project you created or selected previously. Granting the roles in a different project results in the error `bqcx-1234567890-abcd@gcp-sa-bigquery-condel.iam.gserviceaccount.com does not have the permission to access resource`.
 
@@ -1259,6 +1259,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-15 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

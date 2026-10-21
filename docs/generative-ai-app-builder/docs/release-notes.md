@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/release-notes/
 title: Agent Search release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:58.735436+00:00
+fetched_at: 2026-10-21T12:23:03.231648+00:00
 ---
 
 # Agent Search release notes  |  Google Cloud Documentation
@@ -29,7 +29,25 @@ You can see the latest product updates for all of Google Cloud on the [ Google C
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/gen-app-builder-release-notes.xml) directly. 
 
+## October 16, 2026
+
+Change
+
+**Agent Search: Update to the stable model**
+
+The `stable` model for answer generation is updated to `gemini-3.5-flash/answer_gen/v1` from `gemini-2.5-flash/answer_gen/v1`.
+
+For more information, see [Answer generation model versions and lifecycle](https://docs.cloud.google.com/generative-ai-app-builder/docs/answer-generation-models).
+
 ## September 14, 2026
+
+Feature
+
+**Agent Search: Rotate CMEK keys (GA)**
+
+Rotating customer-managed encryption keys (CMEK) that protect your Agent Search apps and data connectors is generally available (GA). When you make a new version of a registered key the primary version in Cloud Key Management Service (Cloud KMS), Agent Search detects the change and re-encrypts your data with the new key version automatically.
+
+For more information, see [Rotate Cloud KMS keys](https://docs.cloud.google.com/generative-ai-app-builder/docs/cmek#rotate-keys).
 
 Feature
 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/compute-area/gpus/
 title: Understand GPUs \u00a0|\u00a0 Compute \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T11:56:36.443479+00:00
+fetched_at: 2026-10-21T12:22:40.213449+00:00
 ---
 
 # Understand GPUs  |  Compute  |  Google Cloud Documentation
@@ -60,13 +60,9 @@ NVIDIA A100 (80GB) | [A2 Ultra](https://docs.cloud.google.com/compute/docs/accel
 NVIDIA A100 (40GB) | [A2 Standard](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a2-vms) | Ampere | 40 GB HBM2 (1.6 TBps) | 1, 2, 4, 8, 16 | 100 Gbps | Up to 3,000 GiB | NVLink Full Mesh (600 GBps) | No  
 NVIDIA RTX PRO 6000 | [G4](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#g4-series) | Blackwell | 96 GB GDDR7 (1.597 TBps) | 1/8, 1/4, 1/2, 1, 2, 4, 8 | 200 Gbps | Up to 3,000 GiB | PCIe Gen 5 | Yes  
 NVIDIA L4 | [G2](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#g2-vms) | Ada Lovelace | 24 GB GDDR6 (300 GBps) | 1, 2, 4, 8 | 100 Gbps | Up to 3,000 GiB | PCIe Gen 4 | Yes  
-NVIDIA T4  
-(Approaching [end of support](https://docs.cloud.google.com/compute/docs/eol/t4-eos)) | [N1+T4](https://docs.cloud.google.com/compute/docs/gpus#t4-gpus) | Turing | 16 GB GDDR6 (320 GBps) | 1, 2, 4 | 100 Gbps | Supported | PCIe Gen 3 | Yes  
 NVIDIA V100 | [N1+V100](https://docs.cloud.google.com/compute/docs/gpus#v100-gpus) | Volta | 16 GB HBM2 (900 GBps) | 1, 2, 4, 8 | 100 Gbps | Supported | NVLink Ring (300 GBps) | No  
-NVIDIA P100  
-(Approaching [end of support](https://docs.cloud.google.com/compute/docs/eol/p100-eos)) | [N1+P100](https://docs.cloud.google.com/compute/docs/gpus#p100-gpus) | Pascal | 16 GB HBM2 (732 GBps) | 1, 2, 4 | 100 Gbps | Supported | PCIe Gen 3 | Yes  
-NVIDIA P4  
-(Approaching [end of support](https://docs.cloud.google.com/compute/docs/eol/p4-eos)) | [N1+P4](https://docs.cloud.google.com/compute/docs/gpus#p4-gpus) | Pascal | 8 GB GDDR5 (192 GBps) | 1, 2, 4 | 100 Gbps | Supported | PCIe Gen 3 | Yes  
+NVIDIA T4 (approaching [end of support](https://docs.cloud.google.com/compute/docs/eol/t4-eos)) | [N1+T4](https://docs.cloud.google.com/compute/docs/gpus#t4-gpus) | Turing | 16 GB GDDR6 (320 GBps) | 1, 2, 4 | 100 Gbps | Supported | PCIe Gen 3 | Yes  
+NVIDIA P4 (approaching [end of support](https://docs.cloud.google.com/compute/docs/eol/p4-eos)) | [N1+P4](https://docs.cloud.google.com/compute/docs/gpus#p4-gpus) | Pascal | 8 GB GDDR5 (192 GBps) | 1, 2, 4 | 100 Gbps | Supported | PCIe Gen 3 | Yes  
   
 ## GPU performance characteristics
 
@@ -78,7 +74,7 @@ GPUs accelerate diverse computational workloads across AI, visual computing, and
 
 ### AI/ML training
 
-  * **Frontier foundation models and mixture-of-experts (MoE)** : pre-training massive transformer models, multimodal architectures, and [mixture-of-experts (MoE)](https://en.wikipedia.org/wiki/Mixture_of_experts) networks requires high [Tensor Core](https://www.nvidia.com/en-us/data-center/tensor-cores/) throughput, large [High Bandwidth Memory (HBM)](https://en.wikipedia.org/wiki/High_Bandwidth_Memory) capacities (up to 279 GB per GPU), and ultra-high-speed [NVLink](https://www.nvidia.com/en-us/data-center/nvlink/) interconnect bandwidth (up to 1,800 GBps) to minimize multi-node synchronization latency. Recommended machine series:
+  * **Frontier foundation models and mixture-of-experts (MoE)** : pre-training large transformer models, multimodal architectures, and [mixture-of-experts (MoE)](https://en.wikipedia.org/wiki/Mixture_of_experts) networks requires high [Tensor Core](https://www.nvidia.com/en-us/data-center/tensor-cores/) throughput, large [High Bandwidth Memory (HBM)](https://en.wikipedia.org/wiki/High_Bandwidth_Memory) capacities (up to 279 GB per GPU), and ultra-high-speed [NVLink](https://www.nvidia.com/en-us/data-center/nvlink/) interconnect bandwidth (up to 1,800 GBps) to minimize multi-node synchronization latency. Recommended machine series:
 
     * [A4X Max](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4x-vms) (NVIDIA GB300)
     * [A4X](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4x-vms) (NVIDIA GB200)
@@ -101,7 +97,7 @@ For more information, see [Recommendations for fine-tuning models](https://docs.
 
 ### AI/ML inference
 
-  * **Large model inference (more than 70 billion parameters)** : serving massive [large language models (LLMs)](https://en.wikipedia.org/wiki/Large_language_model) benefits from high [High Bandwidth Memory (HBM3e)](https://en.wikipedia.org/wiki/High_Bandwidth_Memory) capacity (141–186 GB per GPU) to fit model weights across fewer GPUs, reducing inter-chip communication overhead. Recommended machine series:
+  * **Large model inference (more than 70 billion parameters)** : serving [large language models (LLMs)](https://en.wikipedia.org/wiki/Large_language_model) benefits from high [High Bandwidth Memory (HBM3e)](https://en.wikipedia.org/wiki/High_Bandwidth_Memory) capacity (141–186 GB per GPU) to fit model weights across fewer GPUs, reducing inter-chip communication overhead. Recommended machine series:
 
     * [A4X](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4x-vms) (NVIDIA GB200)
     * [A4](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a4-vms) (NVIDIA B200)
@@ -117,7 +113,7 @@ For more information, see [Recommendations for serving inference](https://docs.c
 
 
 
-### Graphics and visual computing
+### Graphics and visual
 
   * **3D CAD, digital twins, and virtual workstations** : interactive 3D modeling, [computer-aided design (CAD)](https://en.wikipedia.org/wiki/Computer-aided_design), architectural rendering, and [digital twins](https://en.wikipedia.org/wiki/Digital_twin) (such as [NVIDIA Omniverse](https://www.nvidia.com/en-us/omniverse/)) use dedicated [ray tracing (RT) cores](https://en.wikipedia.org/wiki/Ray_tracing_\(graphics\)) and [NVIDIA RTX Virtual Workstations (vWS)](https://www.nvidia.com/en-us/design-visualization/virtual-workstation/) for remote visual workstations and fractional virtual GPUs (vGPUs). Recommended machine series:
 
@@ -213,6 +209,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

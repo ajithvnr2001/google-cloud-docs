@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/create-a4-cluster/
 title: Create an A4 GKE cluster \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:44.987487+00:00
+fetched_at: 2026-10-21T12:23:10.434177+00:00
 ---
 
 # Create an A4 GKE cluster  |  Cluster Toolkit  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Create an A4 GKE cluster Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document describes how to deploy an A4 GKE cluster. These clusters provide high-performance network topologies that let you efficiently run large-scale artificial intelligence (AI) and machine learning (ML) training workloads.
+This document describes how to deploy an A4 Google Kubernetes Engine (GKE) cluster. These clusters provide high-performance network topologies that let you efficiently run large-scale artificial intelligence (AI) and machine learning (ML) training workloads.
 
 A4 accelerator-optimized machine types have NVIDIA B200 Blackwell GPUs attached and are ideal for foundation model training and serving.
 
@@ -65,9 +65,10 @@ To obtain capacity, complete the following steps:
 
 For GKE, consider the following additional information when choosing a consumption option:
 
-     * For more information about flex-start ([Preview](https://cloud.google.com/products#product-launch-stages)) and GKE, see [About GPU obtainability with flex-start](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/dws).
+     * For more information about flex-start provisioning mode ([Preview](https://cloud.google.com/products#product-launch-stages)) and GKE, see [About GPU obtainability with flex-start](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/dws).
      * Flex-start uses best-effort compact placement. To examine your topology, see [View the physical topology of nodes in your GKE cluster](https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/schedule-gke-workloads-tas#view-physical-topology).
      * You can only get topology information when using Spot VMs if you configure [compact placement](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/compact-placement).
+     * For more information about configuring these consumption options in Cluster Toolkit blueprints, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options).
   2. **Obtain capacity:** The process to obtain capacity differs for each consumption option. To learn about the process for your chosen consumption option, see [Capacity overview](https://docs.cloud.google.com/ai-hypercomputer/docs/obtain-capacity).
 
 
@@ -79,7 +80,7 @@ The following requirements apply to an AI-optimized GKE cluster that uses A4 ins
 
   * **GPU drivers** : The B200 GPUs in A4 instances require a minimum of the R570 GPU driver version. GKE automatically installs this driver version by default on all A4 nodes that run the required minimum version for A4 (1.32.1-gke.1729000 or later).
   * **GPUDirect RDMA** : To use GPUDirect RDMA with A4, use GKE version 1.32.2-gke.1475000 or later.
-  * **Node images** : To use GPUDirect RDMA, the GKE nodes must use a Container-Optimized OS node image. Ubuntu and Windows node images are not supported.
+  * **Node images** : To use GPUDirect RDMA, the GKE nodes must use a Container-Optimized OS node image. Ubuntu and Windows node images aren't supported.
 
 
 
@@ -89,7 +90,7 @@ To create an A4 GKE cluster, do the following:
 
 **Note:** If you create multiple clusters by using these same cluster blueprints, then verify that all VPC network and subnet names are unique per project to prevent errors.
 
-  1. [Launch Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell). You can use a different environment; however, we recommend that you use Cloud Shell because the dependencies are already pre-installed for Cluster Toolkit. If you don't want to use Cloud Shell, follow the instructions to [install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) to prepare a different environment. 
+  1. [Launch Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell). Although it's possible to use a different environment, we recommend that you use Cloud Shell because the dependencies are already pre-installed for Cluster Toolkit. If you don't want to use Cloud Shell, then follow the instructions to [install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) to prepare a different environment. 
   2. Create a Cloud Storage bucket to store the state of the Terraform deployment: 
          
          gcloud storage buckets create gs://BUCKET_NAME \
@@ -105,34 +106,36 @@ Replace the following variables:
      * `BUCKET_NAME`: the name of the new Cloud Storage bucket.
      * `PROJECT_ID`: your Google Cloud project ID.
      * `COMPUTE_REGION_TERRAFORM_STATE`: the compute region where you want to store the state of the Terraform deployment.
-  3. In the [`examples/gke-a4/gke-a4-deployment.yaml`](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4/gke-a4-deployment.yaml) blueprint from the GitHub repository, fill in the following settings in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment: 
+  3. Choose a consumption option for your GKE deployment:
 
-Replace the following variables:
+By default, the deployment file is configured to consume [specific reservations](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options#reservations). To use an alternative consumption model (such as Spot VMs or flex-start provisioning mode), update your deployment YAML file. For more information, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options).
+
+  4. In the [`examples/gke-a4/gke-a4-deployment.yaml`](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4/gke-a4-deployment.yaml) deployment file from the GitHub repository, fill in the following settings in the `terraform_backend_defaults` and `vars` sections to match the specific values for your deployment:
 
      * `BUCKET`: the name of the Cloud Storage bucket that you created in the previous step.
      * `PROJECT_ID`: your Google Cloud project ID.
-     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, cluster creation fails. The default value is `gke-a4`.
+     * `DEPLOYMENT_NAME`: a unique name for the deployment, which must be between 6 and 30 characters in length. If the deployment name isn't unique within a project, then cluster creation fails. The default value is `gke-a4`.
      * `REGION`: the compute region for the cluster.
-     * `ZONE`: the compute zone for the node pool of A4 machines. This zone should match the zone where machines are available in your reservation.
-     * `STATIC_NODE_COUNT`: the number of A4 nodes in your cluster's node pool, 
+     * `ZONE`: the compute zone for the node pool of A4 machines. This zone must match the zone where machines are available in your reservation.
      * `AUTHORIZED_CIDR`: the IP address range that you want to let connect to the cluster. This CIDR block must include the IP address of the machine that calls Terraform. For more information, see [How authorized networks work](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation#how_authorized_networks_work).
-     * For the `reservation` field, use one of the following, depending on whether you want to target specific [blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/terminology#block) in a reservation when you provision the node pool: 
-       * To place the node pool anywhere in the reservation, provide the name of your reservation (`RESERVATION_NAME`).
-       * To target a specific block within your reservation, use the reservation and block names in the following format: 
-             
-             RESERVATION_NAME/reservationBlocks/BLOCK_NAME
-                         
+     * In the specific reservation section, configure the following settings: 
+       * In the `reservation_affinity` block, in the `specific_reservations` list, specify the reservation `name` field: 
+         * To place the node pool anywhere in the reservation, provide the name of your reservation (`RESERVATION_NAME`).
+         * To target a specific block within your reservation, use the reservation and block names in the following format: 
+               
+               RESERVATION_NAME/reservationBlocks/BLOCK_NAME
 
-If you don't know which blocks are available in your reservation, see [View a reservation topology](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology). 
+If you don't know which blocks are available in your reservation, then see [View the topology of a reservation](https://docs.cloud.google.com/ai-hypercomputer/docs/view-reserved-capacity#view-capacity-topology). 
+       * `STATIC_NODE_COUNT`: the number of A4 nodes in your cluster.
 
 To modify advanced settings, edit the [`examples/gke-a4/gke-a4.yaml`](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/examples/gke-a4/gke-a4.yaml) file.
 
-  4. [Generate Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#google-idp) to provide access to Terraform. If you're using Cloud Shell, use the `gcloud auth application-default login` command: 
+  5. [Generate Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#google-idp) to provide access to Terraform. If you're using Cloud Shell, use the `gcloud auth application-default login` command: 
          
          gcloud auth application-default login
              
 
-  5. Deploy the blueprint by using the [`gcluster deploy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-deploy) to provision the GKE infrastructure with A4 machine types: 
+  6. Deploy the blueprint by using the [`gcluster deploy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-deploy) to provision the GKE infrastructure with A4 machine types: 
          
          cd ~/cluster-toolkit
              ./gcluster deploy -d \
@@ -140,16 +143,180 @@ To modify advanced settings, edit the [`examples/gke-a4/gke-a4.yaml`](https://gi
                  examples/gke-a4/gke-a4.yaml
              
 
-**Note:** If you encounter an error at Jobset or Kueue installation when you deploy your blueprint, then deploy the blueprint again with the addition of the `-w` flag (`./gcluster deploy -w -d ...`) to complete the deployment.
-  6. When prompted, select **(A)pply** to deploy the blueprint. 
+**Note:** If you encounter an error at the JobSet or Kueue installation stage when you deploy your blueprint, then deploy the blueprint again with the addition of the `-w` flag (`./gcluster deploy -w -d ...`) to complete the deployment.
+  7. When prompted, select **(A)pply** to deploy the blueprint. 
      * The blueprint creates VPC networks, a GPU RDMA VPC network, service accounts, a cluster, and a node pool.
-     * To support the `fio-bench-job-template` job template in the blueprint, Google Cloud buckets, network storage, and persistent volume resources are created.
+     * To support the `fio-bench-job-template` Job template in the blueprint, Google Cloud buckets, network storage, and persistent volume resources are created.
+
+
+
+## Run Dynamic Workload Scheduler sample Jobs
+
+If you provisioned your cluster using Dynamic Workload Scheduler (either flex-start or queued provisioning), then you can validate workload scheduling by submitting sample Kubernetes Jobs.
+
+For more information about Dynamic Workload Scheduler provisioning modes, see [Dynamic Workload Scheduler flex-start with queued provisioning](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options#dws-queued-provisioning).
+
+### Submit a sample Job
+
+Select the tab that corresponds to your consumption option:
+
+### Flex-start
+
+This task is optional and applies only if you provisioned your cluster with flex-start. Workloads configured for flex-start require the `cloud.google.com/gke-flex-start: "true"` node selector in their Pod specification.
+
+  1. Submit the sample flex-start Job:
+         
+         kubectl apply -f examples/dws-sample-workloads/sample-job-flex.yaml
+         
+
+  2. Monitor the status of your Job and Pods:
+         
+         kubectl get jobs
+         kubectl describe job JOB_NAME
+         kubectl get pods
+         kubectl describe pod POD_NAME
+         
+
+Replace the following:
+
+     * `JOB_NAME`: the name of your Job.
+     * `POD_NAME`: the name of your Pod.
+  3. When the Job completes, delete the Job resources:
+         
+         kubectl delete -f examples/dws-sample-workloads/sample-job-flex.yaml
+         
+
+
+
+
+### Queued provisioning
+
+This task is optional and applies only if you provisioned your cluster with queued provisioning. Workloads configured for queued provisioning require the following label and annotation in their Pod specification:
+
+  * Label: `kueue.x-k8s.io/queue-name: dws-local-queue`
+  * Annotation: `provreq.kueue.x-k8s.io/maxRunDurationSeconds: "MAX_RUN_DURATION"`
+
+
+
+For more information, see [Workload manifest requirements for queued provisioning](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options#queued-provisioning-manifest).
+
+  1. Submit the sample queued provisioning Job:
+         
+         kubectl apply -f examples/dws-sample-workloads/sample-job-flex-queue.yaml
+         
+
+  2. Monitor the status of your Job and Pods:
+         
+         kubectl get jobs
+         kubectl describe job JOB_NAME
+         kubectl get pods
+         kubectl describe pod POD_NAME
+         
+
+Replace the following:
+
+     * `JOB_NAME`: the name of your Job.
+     * `POD_NAME`: the name of your Pod.
+  3. When the Job completes, delete the Job resources:
+         
+         kubectl delete -f examples/dws-sample-workloads/sample-job-flex-queue.yaml
+         
+
 
 
 
 ## Test network performance
 
-We recommend that you validate the functionality of provisioned clusters. To do so, use [NCCL/gIB tests](https://docs.cloud.google.com/ai-hypercomputer/docs/nccl/test-gke), which are [NVIDIA Collective Communications Library (NCCL) tests](https://developer.nvidia.com/nccl) that are optimized for the Google environment.
+Validate the networking performance and GPU communication of your provisioned clusters by running [NCCL/gIB tests](https://docs.cloud.google.com/ai-hypercomputer/docs/nccl/test-gke), which are [NVIDIA Collective Communications Library (NCCL) tests](https://developer.nvidia.com/nccl) that are optimized for the Google Cloud environment.
+
+Select the tab for your cluster provisioning model:
+
+### Standard
+
+For clusters provisioned with standard or future reservations or Spot VMs, deploy the standard NCCL test JobSet:
+
+  1. Deploy the NCCL test JobSet:
+         
+         kubectl create -f examples/gke-a4/nccl-jobset-example.yaml
+         
+
+  2. Confirm that all `nccl-test` Pods have reached the `Completed` state:
+         
+         kubectl get pods
+         
+
+  3. Inspect the benchmark results in the primary JobSet Pod logs:
+         
+         kubectl logs JOBSET_POD_NAME
+         
+
+Replace `JOBSET_POD_NAME` with the name of the primary JobSet Pod.
+
+  4. When the test completes and Jobs show a `Completed` status, clean up the test resources:
+         
+         kubectl delete -f examples/gke-a4/nccl-jobset-example.yaml
+         
+
+
+
+
+### Flex-start
+
+For clusters configured with Dynamic Workload Scheduler flex-start, deploy the NCCL test by using the JobSet manifest:
+
+  1. Deploy the NCCL test JobSet:
+         
+         kubectl create -f examples/gke-a4/nccl-jobset-flex.yaml
+         
+
+  2. Monitor the status of the JobSet Pods:
+         
+         kubectl get pods
+         
+
+  3. Inspect the benchmark results in the primary JobSet Pod logs:
+         
+         kubectl logs JOBSET_POD_NAME
+         
+
+Replace `JOBSET_POD_NAME` with the name of the primary JobSet Pod.
+
+  4. When the test completes and Jobs show a `Completed` status, clean up the test resources:
+         
+         kubectl delete -f examples/gke-a4/nccl-jobset-flex.yaml
+         
+
+
+
+
+### Queued provisioning
+
+For clusters configured with flex-start with queued provisioning, deploy the NCCL test by using the queued provisioning JobSet manifest:
+
+  1. Deploy the NCCL test JobSet:
+         
+         kubectl create -f examples/gke-a4/nccl-jobset-flex-queue.yaml
+         
+
+  2. Monitor the status of the JobSet Pods:
+         
+         kubectl get pods
+         
+
+  3. Inspect the benchmark results in the primary JobSet Pod logs:
+         
+         kubectl logs JOBSET_POD_NAME
+         
+
+Replace `JOBSET_POD_NAME` with the name of the primary JobSet Pod.
+
+  4. When the test completes and Jobs show a `Completed` status, clean up the test resources:
+         
+         kubectl delete -f examples/gke-a4/nccl-jobset-flex-queue.yaml
+         
+
+
+
 
 ## Clean up resources
 
@@ -164,9 +331,10 @@ Replace `CLUSTER_NAME` with the name of your cluster.
 
 ## What's next
 
-  * To learn about scheduling workloads on your GKE clusters by using TAS and Kueue, see [Schedule GKE workloads with Topology Aware Scheduling](https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/schedule-gke-workloads-tas).
+  * To learn about scheduling workloads on your GKE clusters by using Topology-Aware Scheduling (TAS) and Kueue, see [Schedule GKE workloads with Topology Aware Scheduling](https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/schedule-gke-workloads-tas).
   * To learn about managing common events that are relevant to GKE clusters and AI workloads, see [Manage AI-optimized GKE clusters](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/manage-gke-clusters).
   * For information about testing your environment for proper setup and optimization, see [Cluster networking optimization overview](https://docs.cloud.google.com/ai-hypercomputer/docs/nccl/overview).
+  * To explore all supported consumption models for GKE clusters, see [GKE consumption options](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-consumption-options).
 
 
 
@@ -174,6 +342,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mcp/authenticate-mcp/
 title: Authenticate to Google and Google Cloud MCP servers \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:36:36.838400+00:00
+fetched_at: 2026-10-21T12:23:02.445493+00:00
 ---
 
 # Authenticate to Google and Google Cloud MCP servers  |  Google Cloud Documentation
@@ -44,13 +44,13 @@ If the principal you're using doesn't have the permissions that you need to acco
 
 ### User, workload, and agent identities
 
-You can use your own user identity to authenticate to MCP servers, but when you do so, the MCP client has the same permissions as you do on Google and Google Cloud resources, and actions taken by the MCP client are attributed to you.
+You can use your own user identity to authenticate to MCP servers. When you do so, the MCP client has the same access as you do on Google and Google Cloud resources, and actions taken by the MCP client are attributed to you.
 
-For production workloads, we recommend that you create a separate agent or workload identity, instead of using your identity. Using a separate identity to access MCP servers means you can limit the permissions and actions taken by the MCP client and view actions taken through MCP requests in your logs.
+For production workloads that use Google Cloud MCP servers, we recommend that you create a separate agent or workload identity, instead of using your identity. Using a separate identity to access Google Cloud MCP servers lets you limit the permissions and actions of the MCP client and view actions taken through MCP requests in your logs.
 
-Only grant your agent identity the minimum permissions necessary, and consider using Identity and Access Management attributes to [prevent read-write MCP tool use](https://docs.cloud.google.com/mcp/prevent-read-write-tool-use) on important resources.
+Grant your agent identity only the IAM roles that contain the minimum permissions necessary, and consider using IAM attributes to [prevent read-write MCP tool use](https://docs.cloud.google.com/mcp/prevent-read-write-tool-use) on important Google Cloud resources. [Non-Google Cloud MCP servers](https://docs.cloud.google.com/mcp/supported-products#google-mcp-servers) don't require the MCP Tool User (`roles/mcp.toolUser`) role. You also can't use IAM policies or permissions to control access to non-Google Cloud MCP servers.
 
-The following sections describe how to set up a separate identity, or principal, for your agent. The agent principal can be granted separate roles to control the AI application's access to resources.
+The following sections describe how to set up a separate identity, or principal, for your agent. The agent principal can be granted separate IAM roles to control access by the AI application to Google Cloud resources.
 
 Your authentication setup depends on your environment. The most common options are described in the following sections.
 
@@ -170,6 +170,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

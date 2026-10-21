@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/identity/sanitizing-gmail-accounts/
 title: Sanitize Gmail accounts \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T15:16:08.512054+00:00
+fetched_at: 2026-10-21T12:22:20.973400+00:00
 ---
 
 # Sanitize Gmail accounts  |  Cloud Architecture Center  |  Google Cloud Documentation

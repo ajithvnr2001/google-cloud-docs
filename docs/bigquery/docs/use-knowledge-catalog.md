@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/use-knowledge-catalog/
 title: Use Knowledge Catalog with BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:31:27.802731+00:00
+fetched_at: 2026-10-21T12:01:23.568761+00:00
 ---
 
 # Use Knowledge Catalog with BigQuery  |  Google Cloud Documentation
@@ -81,44 +81,13 @@ After the metadata has been synchronized, you can search for and view the entry 
 
 
 
-## Migration considerations
-
-Migrating to Knowledge Catalog from the deprecated Data Catalog involves several steps. Standard metadata from BigQuery (like datasets, tables, views) is automatically available in Knowledge Catalog, so the migration process primarily focuses on custom metadata, API usage, and user interface defaults.
-
-The following are the main points to consider when migrating.
-
-### Understand the change
-
-Knowledge Catalog offers enhanced features for metadata management, governance, and discovery when compared to Data Catalog. Knowledge Catalog uses a different API (the Knowledge Catalog API) and has a slightly different data model; for example, Knowledge Catalog uses [aspects and aspect types](https://docs.cloud.google.com/knowledge-catalog/docs/enrich-entries-metadata) instead of tags and tag templates.
-
-### Assess current data catalog usage
-
-  * **No Custom Metadata** : if you only relied on Knowledge Catalog for the automatic ingestion and discovery of standard BigQuery metadata without creating any custom tags, tag templates, custom entries, or entry groups, then the transition is straightforward. You can start using the Knowledge Catalog interface immediately.
-  * **Custom Metadata or Programmatic Use** : if you created custom tags or templates, custom entries, or use the Data Catalog API, client libraries, Google Cloud CLI commands, or Terraform, then you need a more structured transition.
-
-
-
-### Specific BigQuery considerations
-
-  * **Automatic Ingestion** : technical metadata from BigQuery assets (datasets, tables, views, models, routines, and graphs) continue to be automatically ingested into Knowledge Catalog, as they were with Dataplex Universal Catalog.
-  * **Policy Tags** : policy tags used for BigQuery column-level access control are _not_ deprecated and their management remains within BigQuery.
-  * **Lineage** : data lineage for BigQuery operations is surfaced within Knowledge Catalog. For more information about data lineage, see [Track data lineage for a BigQuery table](https://docs.cloud.google.com/knowledge-catalog/docs/track-lineage-quickstart).
-
-
-
-### Follow the transition guide
-
-To migrate to Knowledge Catalog, follow the steps in [Transition from Data Catalog to Knowledge Catalog](https://docs.cloud.google.com/knowledge-catalog/docs/transition-to-dataplex-catalog).
-
-To update programmatic workflows to the Knowledge Catalog API, see [Map Data Catalog API methods to Knowledge Catalog](https://docs.cloud.google.com/knowledge-catalog/docs/catalog-overview#map-api-methods).
-
 ## What's next
 
 Learn more about Knowledge Catalog:
 
   * [Knowledge Catalog use cases](https://docs.cloud.google.com/knowledge-catalog/docs/use-cases)
   * [Knowledge Catalog FAQ](https://docs.cloud.google.com/knowledge-catalog/docs/faq)
-  * [About metadata management in Knowledge Catalog](https://docs.cloud.google.com/knowledge-catalog/docs/catalog-overview)
+  * [About metadata management in Knowledge Catalog](https://docs.cloud.google.com/knowledge-catalog/docs/metadata-overview)
 
 
 
@@ -126,6 +95,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

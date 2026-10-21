@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/ai-ml/generative-ai-knowledge-base/
 title: Delete the Generative AI Knowledge Base \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T14:27:19.736723+00:00
+fetched_at: 2026-10-21T12:22:28.270752+00:00
 ---
 
 # Delete the Generative AI Knowledge Base  |  Cloud Architecture Center  |  Google Cloud Documentation

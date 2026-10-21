@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/graph-schema-overview/
 title: Schema overview \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:19.091656+00:00
+fetched_at: 2026-10-21T12:22:37.283616+00:00
 ---
 
 # Schema overview  |  BigQuery  |  Google Cloud Documentation
@@ -23,13 +23,13 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 **Note:** This feature may not be available when using reservations that are created with certain BigQuery editions. For more information about which features are enabled in each edition, see [Introduction to BigQuery editions](https://docs.cloud.google.com/bigquery/docs/editions-intro).
 
-This document explains the components of a property graph schema and shows you how to create and manage a graph schema.
+This document explains the components of a graph schema and shows you how to create and manage a graph schema.
 
-Graphs let you model connected data that represents information as a network of nodes and edges. A graph schema consists of nodes and edges, along with labels that classify type their type, and properties that describe them. You define a property graph schema by mapping rows from input tables to graph nodes and edges and defining custom labels and properties. To learn more about BigQuery Graph, see the [BigQuery Graph overview](https://docs.cloud.google.com/bigquery/docs/graph-overview).
+Graphs let you model connected data that represents information as a network of nodes and edges. A graph schema consists of nodes and edges, along with labels that classify type their type, and properties that describe them. You define a graph schema by mapping rows from input tables to graph nodes and edges and defining custom labels and properties. To learn more about BigQuery Graph, see the [BigQuery Graph overview](https://docs.cloud.google.com/bigquery/docs/graph-overview).
 
-## Understand the property graph data model
+## Understand the graph data model
 
-A property graph lets you model connected data as a network of nodes and edges. Nodes represent entities in your data, such as customers, products, or locations. Edges represent connections between those nodes, capturing relationships such as purchases, follows, or locations.
+A graph lets you model connected data as a network of nodes and edges. Nodes represent entities in your data, such as customers, products, or locations. Edges represent connections between those nodes, capturing relationships such as purchases, follows, or locations.
 
 Nodes and edges can include the following information:
 
@@ -95,7 +95,7 @@ Nodes are defined by rows in the following types of tables or views:
 
 To define a node, add a node definition in the [`NODE TABLES` clause](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/graph-schema-statements#property_graph_definition). The simplest form of a node definition contains the name of an input table with a [primary key](https://docs.cloud.google.com/bigquery/docs/primary-foreign-keys). BigQuery Graph maps rows from the input table to graph nodes.
 
-In the following example, you use the `NODE TABLES` clause to define the `Account` node in the `FinGraph` property graph. The node definition contains the input table `Account`.
+In the following example, you use the `NODE TABLES` clause to define the `Account` node in the `FinGraph` graph. The node definition contains the input table `Account`.
     
     
     -- Create an Account table.
@@ -178,7 +178,7 @@ By default, BigQuery uses the table name as the label and exposes all columns fr
 
 An edge definition defines the source and destination node reference by using the `SOURCE KEY`, `DESTINATION KEY`, and `REFERENCES` clauses. You must define the source and destination nodes before using them in the edge definition.
 
-In the following example, you create a property graph `FinGraph` with the following:
+In the following example, you create a graph called `FinGraph` with the following elements:
 
   * `Person` and `Account` nodes
   * `PersonOwnAccount` edge
@@ -305,7 +305,8 @@ The following example defines a `Person` node with a custom property and an `Acc
           PROPERTIES (
             id,
             nick_name AS name OPTIONS(description = 'A user-defined account name',
-                                      synonyms = ['friendly name', 'display name'])
+                                      synonyms = ['friendly name', 'display name'],
+                                      extensions = [('data_classification', 'user'), ('currency', 'USD')])
           )
       );
     
@@ -321,9 +322,21 @@ The `Person` and `Account` nodes both have the `Entity` label with properties `i
 
   * In the `Person` node, the `id` and `name` properties come from the input table columns.
   * In the `Account` node, the `name` property refers to the `nick_name` column of the input table.
-  * In the `Account` node, the `name` property uses the `OPTIONS` clause to provide a description of the property and a list of synonyms. These fields provide context and improve discoverability for natural language querying interfaces. You can't access these fields directly in your graph queries and they don't change the query results in any way.
+  * In the `Account` node, the `name` property uses the `OPTIONS` clause to provide a description of the property, a list of synonyms, and a list of key-value pairs of metadata.
 
 
+
+#### Specify options
+
+You can specify custom, user-defined metadata within the `OPTIONS()` clause of a label or property definition, including a measure definition. The following options are supported:
+
+  * `description`: A human-readable string description of the label or property.
+  * `synonyms`: An array of strings that represents synonyms for the label or property.
+  * `extensions`: An array of string pairs (`ARRAY<STRUCT<STRING, STRING>>`) that represents additional metadata. You can use extensions to provide custom metadata, units, or formatting rules, such as `[('currency', 'USD')]`.
+
+
+
+These options provide context and improve discoverability for natural language querying interfaces. You can't access these fields directly in your graph queries and they don't change GQL query results in any way.
 
 #### Label and property consistency
 
@@ -369,7 +382,7 @@ To make any change to an existing graph's schema, you must redefine the graph sc
 
 ## Delete a graph schema
 
-To delete a property graph, use the [`DROP PROPERTY GRAPH` statement](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/graph-schema-statements#gql_drop_graph).
+To delete a graph, use the [`DROP PROPERTY GRAPH` statement](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/graph-schema-statements#gql_drop_graph).
 
 ## Best practices
 
@@ -426,7 +439,7 @@ The following example defines primary and foreign key constraints on the node ta
 ## What's next
 
   * Learn more about [BigQuery Graph](https://docs.cloud.google.com/bigquery/docs/graph-overview).
-  * Learn how to [create and query a property graph](https://docs.cloud.google.com/bigquery/docs/graph-create).
+  * Learn how to [create and query a graph](https://docs.cloud.google.com/bigquery/docs/graph-create).
   * Learn how to [write graph queries](https://docs.cloud.google.com/bigquery/docs/graph-query-overview).
   * Learn more about [building graphs with measures](https://docs.cloud.google.com/bigquery/docs/graph-measures).
 
@@ -436,6 +449,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

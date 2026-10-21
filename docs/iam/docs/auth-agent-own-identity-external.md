@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/auth-agent-own-identity-external/
 title: Authenticate to external services using an agent's own identity \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:10:06.281632+00:00
+fetched_at: 2026-10-21T12:24:20.933970+00:00
 ---
 
 # Authenticate to external services using an agent's own identity  |  Identity and Access Management (IAM)  |  Google Cloud Documentation
@@ -26,26 +26,32 @@ Send feedback
 
 This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
-Agents hosted on Google Cloud can use their own identity to authenticate to tools and services hosted on Google Cloud runtimes, such as Cloud Run or Google Kubernetes Engine (GKE), by requesting an OpenID Connect (OIDC) ID token from Agent Identity. Agents can also use these ID tokens to authenticate to third-party cloud platforms, such as Amazon Web Services (AWS) and Microsoft Azure, custom APIs, API gateways, and on-premises backends.
+Agent Identity lets your agents on Google Cloud use their own identity to authenticate to external services and to workloads hosted on Cloud Run or Google Kubernetes Engine (GKE). By using OpenID Connect (OIDC) ID tokens, you can connect agents to third-party cloud platforms such as Amazon Web Services (AWS) and Microsoft Azure, custom APIs, API gateways, and on-premises backends.
 
-When an agent acts on its own authority to access an external service, Agent Identity issues an OpenID Connect (OIDC) ID token. This JSON Web Token (JWT) asserts the agent's [SPIFFE identity](https://docs.cloud.google.com/iam/docs/agent-identity-overview#spiffe-identity) and is signed by the issuer keys for the agent's trust domain (managed workload identity pool). External systems can verify these tokens without Google Cloud credentials or SDKs through public endpoints hosted by the Google Cloud Security Token Service:
+When an agent acts on its own authority, Agent Identity issues an OIDC ID token, which is a JSON Web Token (JWT) that asserts the agent's [SPIFFE identity](https://docs.cloud.google.com/iam/docs/agent-identity-overview#spiffe-identity) and is signed by the issuer keys for the agent's trust domain (managed workload identity pool). External systems can verify these ID tokens without Google Cloud credentials or SDKs through public endpoints hosted by the Google Cloud Security Token Service:
 
   * An **OpenID Connect Discovery 1.0 endpoint** (`/.well-known/openid-configuration`) that publishes the OpenID provider metadata and the public key endpoint (`jwks_uri`).
   * A **JSON Web Key Set (JWKS) endpoint** (`/openid/jwks`) that serves the active public keys used to verify signatures on agent ID tokens.
 
-**Note:** If you want your agent to access Google Cloud APIs and resources using its own identity, see [Authenticate to Google Cloud using an agent's own identity](https://docs.cloud.google.com/iam/docs/auth-agent-own-identity). If you want your agent to access services on behalf of an end user, see [Authenticate using 3-legged OAuth with auth manager](https://docs.cloud.google.com/iam/docs/auth-with-3lo-v2).
+
+
+To authenticate your agent to Google Cloud APIs and resources using its own identity, see [Authenticate to Google Cloud using an agent's own identity](https://docs.cloud.google.com/iam/docs/auth-agent-own-identity). To access services on behalf of an end user, see [Authenticate using 3-legged OAuth with auth manager](https://docs.cloud.google.com/iam/docs/auth-with-3lo-v2).
 
 ## Before you begin
 
   1. [Verify that you have chosen the correct authentication method](https://docs.cloud.google.com/iam/docs/agent-identity-overview#auth-models). Review how [SPIFFE identities, trust domains](https://docs.cloud.google.com/iam/docs/agent-identity-overview#spiffe-identity), and [agent credentials](https://docs.cloud.google.com/iam/docs/agent-identity-overview#agent-credentials) work in the [Agent Identity overview](https://docs.cloud.google.com/iam/docs/agent-identity-overview).
   2. [Create and deploy an agent](https://docs.cloud.google.com/iam/docs/create-and-deploy-agent) with Agent Identity enabled.
-  3. Ensure that your external service or identity provider meets the following requirements: 
-     * Supports validating [JSON Web Tokens (JWTs)](https://datatracker.ietf.org/doc/html/rfc7519) using [OpenID Connect Discovery 1.0](https://openid.net/specs/openid-connect-discovery-1_0.html) and [JSON Web Key Sets (JWKS)](https://datatracker.ietf.org/doc/html/rfc7517).
-     * Can send outbound HTTPS requests to `https://sts.googleapis.com` to retrieve the OpenID Provider metadata and public signing keys.
-  4. Identify the following configuration values for your agent and target external service: 
+  3. Ensure that your external service or identity provider meets the following requirements:
+
+     * It supports validating [JSON Web Tokens (JWTs)](https://datatracker.ietf.org/doc/html/rfc7519) using [OpenID Connect Discovery 1.0](https://openid.net/specs/openid-connect-discovery-1_0.html) and [JSON Web Key Sets (JWKS)](https://datatracker.ietf.org/doc/html/rfc7517).
+     * If it enforces certificate binding over mutual TLS (mTLS), it supports client certificate authentication under [TLS 1.3 (RFC 9846)](https://www.rfc-editor.org/info/rfc9846/) and validates the `cnf` (`x5t#S256`) claim according to [RFC 8705 Section 6.1](https://www.rfc-editor.org/info/rfc8705/#section-6.1).
+     * It can send outbound HTTPS requests to `https://sts.googleapis.com` to retrieve the OpenID Provider metadata and public signing keys.
+  4. Identify the following configuration values for your agent and target external service:
+
      * **Issuer URL (`iss` claim)**: The workload identity pool issuer URL for your organization (`https://sts.googleapis.com/v1/organizations/ORGANIZATION_ID/locations/global/workloadIdentityPools/TRUST_DOMAIN`) or project (`https://sts.googleapis.com/v1/projects/PROJECT_NUMBER/locations/global/workloadIdentityPools/TRUST_DOMAIN`).
      * **Allowed audience (`aud` claim)**: The audience URI that the external service or identity provider expects when validating ID tokens.
   5. Verify that you have the roles required to complete this task.
+
 
 
 
@@ -125,7 +131,9 @@ By default, supported Google Auth client libraries cryptographically bind OIDC I
 
 Cloud Run automatically enforces certificate binding when the `cnf` claim is present in an ID token. If your agent calls a Cloud Run service using a bound ID token, you must call its mTLS endpoint (`*.mtls.run.app`) over an mTLS connection. To keep calling a standard `*.run.app` URL instead, opt out of certificate binding per request (for example, by setting `bind_id_token=False` in Python) or across the runtime environment with `GOOGLE_API_ENABLE_RUNTIME_BOUND_TOKEN=false`. For supported library versions and examples, see [Opt out of certificate-bound tokens](https://docs.cloud.google.com/iam/docs/auth-agent-own-identity#opt-out-caa).
 
-The following example uses the `google-auth` library to request an OIDC ID token and attach it as a `Bearer` token in an outgoing request:
+When calling an endpoint that enforces certificate binding over mTLS, configure the client session to present the agent's X.509 certificate during the mTLS handshake (for example, by calling `authed_session.configure_mtls_channel()` in Python).
+
+The following examples use the `google-auth` library to request a certificate-bound OIDC ID token, optionally configure the mTLS channel, and attach the token as a `Bearer` token in an outgoing request:
 
 ### Python
     
@@ -156,6 +164,35 @@ Replace the following:
 
 
 
+### Python (mTLS)
+    
+    
+    from google.auth.transport.requests import AuthorizedSession
+    from google.oauth2 import id_token
+    
+    # 1. Specify the audience expected by the receiving service
+    # (for example, a regional Cloud Run mTLS URL or an on-premises mTLS endpoint).
+    target_audience = "https://EXTERNAL_SERVICE_AUDIENCE"
+    
+    # 2. Create certificate-bound ID token credentials and configure the mTLS
+    # channel to present the agent's X.509 certificate.
+    credentials = id_token.fetch_id_token_credentials(audience=target_audience)
+    authed_session = AuthorizedSession(credentials)
+    authed_session.configure_mtls_channel()
+    
+    # 3. Send the authenticated request over mTLS.
+    response = authed_session.post(
+        "https://EXTERNAL_SERVICE_ENDPOINT",
+        json={"prompt": "Hello from Agent"},
+    )
+
+Replace the following:
+
+  * `EXTERNAL_SERVICE_AUDIENCE`: The audience URI expected by your receiving service (for example, a regional Cloud Run mTLS URL or `api.example.com`).
+  * `EXTERNAL_SERVICE_ENDPOINT`: The URL of the mTLS API or backend endpoint that your agent calls.
+
+
+
 For client library instructions and examples in other languages, such as Go, Node.js, and Java, see [Get an ID token](https://docs.cloud.google.com/docs/authentication/get-id-token). Client libraries for these languages support `--identity-type=agent-identity`. Libraries that support certificate-bound ID tokens bind tokens by default and let you opt out for individual requests.
 
 ## Verify Agent Identity ID tokens
@@ -171,7 +208,7 @@ When an external service receives an OIDC ID token from your agent, verify the t
 
 If your receiving service runs on a cloud platform that supports built-in IAM authentication or OIDC workload identity federation, you don't need to write custom token verification code:
 
-  * **Cloud Run** : If your receiving service runs on Cloud Run with authenticated ingress (`--no-allow-unauthenticated`), Cloud Run validates incoming Agent Identity tokens at the ingress layer. [Grant the calling agent](https://docs.cloud.google.com/iam/docs/auth-agent-own-identity#grant-access) the Cloud Run Invoker (`roles/run.invoker`) role on the receiving service. For more information, see [Authenticate to MCP servers on Cloud Run](https://docs.cloud.google.com/run/docs/ai/authenticate-agents#authenticate-mcp-servers).
+  * **Cloud Run** : If your receiving service runs on Cloud Run with authenticated ingress (`--no-allow-unauthenticated`), Cloud Run validates incoming Agent Identity tokens at the ingress layer. When the token includes the `cnf` claim, configure the calling agent to target the receiving service's regional mTLS URL (`https://SERVICE_NAME-PROJECT_NUMBER.REGION.mtls.run.app`) so that Cloud Run can validate the client certificate during the mTLS handshake. [Grant the calling agent](https://docs.cloud.google.com/iam/docs/auth-agent-own-identity#grant-access) the Cloud Run Invoker (`roles/run.invoker`) role on the receiving service. For more information, see [Authenticate to MCP servers on Cloud Run](https://docs.cloud.google.com/run/docs/ai/authenticate-agents#authenticate-mcp-servers).
 
 If your service allows unauthenticated ingress and verifies tokens in application code, see Verify tokens programmatically.
 
@@ -191,7 +228,8 @@ To verify incoming ID tokens programmatically, complete the following tasks:
   1. Extract and validate the token issuer URL
   2. Discover and cache the public signing keys
   3. Verify the token signature and claims
-  4. Authorize the agent's SPIFFE identity
+  4. Optional: Validate certificate binding (`cnf` claim)
+  5. Authorize the agent's SPIFFE identity
 
 
 
@@ -394,6 +432,16 @@ The following example uses Google Tink (`tink.jwt`) to verify an Agent Identity 
         # 4. Cryptographically verify the signature and standard OIDC claims.
         return jwt_verifier.verify_and_decode(token, validator)
 
+#### Optional: Validate certificate binding (`cnf` claim)
+
+If your receiving service enforces certificate binding over mTLS, validate the `cnf` (`x5t#S256`) claim against the client certificate presented during the mTLS handshake:
+
+  1. **Terminate mutual TLS (mTLS)** : Configure your server or ingress proxy to request and validate the [agent's X.509 certificate](https://docs.cloud.google.com/iam/docs/agent-identity-overview#agent-credentials) during the TLS handshake according to [TLS 1.3 (RFC 9846)](https://www.rfc-editor.org/info/rfc9846/).
+  2. **Compute the certificate fingerprint (`x5t#S256`)**: Extract the leaf X.509 client certificate from the mTLS connection. Compute the SHA-256 hash over its DER-encoded bytes, and base64url-encode the digest without `=` padding.
+  3. **Validate the`cnf` (`x5t#S256`) claim**: Inspect the verified JWT payload for the `cnf` object (`{"cnf": {"x5t#S256": "FINGERPRINT"}}`) and verify that the `x5t#S256` value matches the client certificate fingerprint according to [RFC 8705 Section 6.1](https://www.rfc-editor.org/info/rfc8705/#section-6.1). If the caller didn't present a client certificate over mTLS or if the fingerprints don't match, reject the request with an `HTTP 401 Unauthorized` response.
+
+
+
 #### Authorize the agent's SPIFFE identity
 
 After you verify the token's signature and standard claims, inspect the verified `sub` (subject) claim to authorize the request and record the calling agent in your audit logs.
@@ -421,6 +469,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

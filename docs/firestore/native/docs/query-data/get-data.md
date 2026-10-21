@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/query-data/get-data/
 title: Getting data \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:25:20.545046+00:00
+fetched_at: 2026-10-21T11:58:44.633754+00:00
 ---
 
 # Getting data  |  Firestore in Native mode  |  Google Cloud Documentation
@@ -249,7 +249,7 @@ Android
     }
     
     
-    [main.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/firestore_quickstart/main.go#L40-L48)
+    [main.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/firestore_quickstart/main.go#L40-L48)
 
 ##### PHP
 
@@ -877,7 +877,7 @@ Android
     }
     
     
-    [retrieve_data_get_dataset.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/retrieve_data_get_dataset.go#L18-L44)
+    [retrieve_data_get_dataset.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/retrieve_data_get_dataset.go#L18-L44)
 
 ##### PHP
 
@@ -1302,7 +1302,7 @@ Android
     }
     
     
-    [retrieve_data_get_as_map.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/retrieve_data_get_as_map.go#L18-L35)
+    [retrieve_data_get_as_map.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/retrieve_data_get_as_map.go#L18-L35)
 
 ##### PHP
 
@@ -1917,7 +1917,7 @@ Node.js uses JavaScript objects.
     }
     
     
-    [retrieve_data_get_as_custom_type.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/retrieve_data_get_as_custom_type.go#L18-L36)
+    [retrieve_data_get_as_custom_type.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/retrieve_data_get_as_custom_type.go#L18-L36)
 
 ##### PHP
 
@@ -2223,7 +2223,7 @@ Android
     }
     
     
-    [retrieve_data_query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/retrieve_data_query.go#L18-L42)
+    [retrieve_data_query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/retrieve_data_query.go#L18-L42)
 
 ##### PHP
 
@@ -2506,7 +2506,7 @@ Android
     }
     
     
-    [retrieve_data_get_all_documents.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/retrieve_data_get_all_documents.go#L18-L43)
+    [retrieve_data_get_all_documents.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/retrieve_data_get_all_documents.go#L18-L43)
 
 ##### PHP
 
@@ -2850,7 +2850,7 @@ Not available in the C++ client library.
     }
     
     
-    [retrieve_data_get_sub_collections.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/retrieve_data_get_sub_collections.go#L18-L41)
+    [retrieve_data_get_sub_collections.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/retrieve_data_get_sub_collections.go#L18-L41)
 
 ##### PHP
 
@@ -2902,6 +2902,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

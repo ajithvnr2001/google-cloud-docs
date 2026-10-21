@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/manage/host-events/
 title: Manage host events across compute instances \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:35:05.124579+00:00
+fetched_at: 2026-10-21T12:22:43.855519+00:00
 ---
 
 # Manage host events across compute instances  |  AI Hypercomputer  |  Google Cloud Documentation
@@ -101,8 +101,7 @@ To optimize the maintenance of your compute instances, complete the following st
 
 ## Understand and handle host maintenance
 
-During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the following:  
-
+During the [lifecycle of a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle), the host machine that your instance runs on undergoes multiple _host events_. A host event can include the following:
 
   * Planned maintenance of Compute Engine infrastructure.
   * Unplanned, emergency maintenance to repair Compute Engine infrastructure after a host error or a faulty host report.
@@ -116,11 +115,17 @@ Machine type | Typical scheduled maintenance event frequency | Maintenance behav
 A4X Max and A4X | Minimum of 90 days | Terminates with [ Local SSD data persistence](https://docs.cloud.google.com/compute/docs/instances/host-maintenance-overview#disk-persistence) | 90 days | If you [ enable emergency notifications](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/host-events-reservations#emergency-notifications), then 7 days. Otherwise, a few hours.  | Yes | No  
 A4 | Minimum of 90 days | Terminates with [ Local SSD data persistence](https://docs.cloud.google.com/compute/docs/instances/host-maintenance-overview#disk-persistence) | 90 days | If you [ enable emergency notifications](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/host-events-reservations#emergency-notifications), then 7 days. Otherwise, a few hours.  | Yes | No  
 A3 Ultra | Minimum of 90 days | Terminates with [ Local SSD data persistence](https://docs.cloud.google.com/compute/docs/instances/host-maintenance-overview#disk-persistence) | 90 days | If you [ enable emergency notifications](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/host-events-reservations#emergency-notifications), then 7 days. Otherwise, a few hours.  | Yes | No  
-A3 Mega and A3 High  
-(8 GPUs) | Minimum of 90 days | Terminates with [ Local SSD data persistence](https://docs.cloud.google.com/compute/docs/instances/host-maintenance-overview#disk-persistence) | 90 days | If you [ enable emergency notifications](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/host-events-reservations#emergency-notifications), then 7 days. Otherwise, a few hours.  | Yes | Yes  
+A3 Mega and A3 High (8 GPUs) | Minimum of 90 days | Terminates with [ Local SSD data persistence](https://docs.cloud.google.com/compute/docs/instances/host-maintenance-overview#disk-persistence) | 90 days | If you [ enable emergency notifications](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/host-events-reservations#emergency-notifications), then 7 days. Otherwise, a few hours.  | Yes | Yes  
 A3 Edge | Minimum of 30 days | Terminate and restart | 7 days | If you [ enable emergency notifications](https://docs.cloud.google.com/ai-hypercomputer/docs/manage/host-events-reservations#emergency-notifications), then 7 days. Otherwise, a few hours.  | Yes | Yes  
   
-The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently. 
+The following notes apply to the preceding table:
+
+  * **Typical scheduled maintenance event frequency** : 
+
+The maintenance frequencies shown in the previous table are approximations, not guarantees. Compute Engine might occasionally perform maintenance more frequently.
+
+
+
 
 To help prevent losing data or progress, configure your workloads to handle host maintenance. For example, use the following techniques to save your temporary data and progress before your workload is stopped:
 
@@ -492,6 +497,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

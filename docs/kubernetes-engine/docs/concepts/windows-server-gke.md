@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/windows-server-gke/
 title: Windows Server containers on GKE \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:01:52.809274+00:00
+fetched_at: 2026-10-21T12:23:01.626376+00:00
 ---
 
 # Windows Server containers on GKE  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -56,6 +56,7 @@ The following features aren't supported with Windows Server node pools:
     * [Machine series above the third generation](https://docs.cloud.google.com/compute/docs/machine-resource#vm_terminology)
     * [Z3 machine series](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z3_series)
     * [Z4D machine series](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4d_series)
+    * [Z4M machine series](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4m_series)
     * [Image streaming](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/image-streaming)
     * [Alpha clusters](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/alpha-clusters)
     * Accelerators, including [GPUs](https://docs.cloud.google.com/compute/docs/gpus) and [TPUs](https://docs.cloud.google.com/tpu/docs/tpus)
@@ -196,6 +197,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

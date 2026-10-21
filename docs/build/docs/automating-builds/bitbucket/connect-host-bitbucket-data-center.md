@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/bitbucket/connect-host-bitbucket-data-center/
 title: Connect to a Bitbucket Data Center host \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:17:41.791578+00:00
+fetched_at: 2026-10-21T12:00:42.320665+00:00
 ---
 
 # Connect to a Bitbucket Data Center host  |  Cloud Build  |  Google Cloud Documentation
@@ -208,12 +208,12 @@ In the following example, the code snippet does the following:
         }
         
         provider "google" {
-          project = "PROJECT_ID"
+          project = &quot;PROJECT_ID";
           region = "REGION"
         }
         
         // Create secrets and grant permissions to the Cloud Build service agent
-        resource "google_secret_manager_secret" "admin-token-secret" {
+        resource "google_secret_manager_secret"; "admin-token-secret&quot; {
             project = "PROJECT_ID"
             secret_id = "ADMIN_TOKEN_NAME"
         
@@ -222,7 +222,7 @@ In the following example, the code snippet does the following:
             }
         }
         
-        resource "google_secret_manager_secret_version" "admin-token-secret-version" {
+        resource "google_secret_manager_secret_version" "admin-token-secret-version&quot; {
             secret = google_secret_manager_secret.admin-token-secret.id
             secret_data = "ADMIN_TOKEN_VALUE"
         }
@@ -252,13 +252,13 @@ In the following example, the code snippet does the following:
         
         resource "google_secret_manager_secret_version" "webhook-secret-secret-version" {
             secret = google_secret_manager_secret.webhook-secret-secret.id
-            secret_data = "WEBHOOK_SECRET_VALUE"
+            siam.gserviceaccount.comecret_data = "WEBHOOK_SECRET_VALUE"
         }
         
         data "google_iam_policy" "p4sa-secretAccessor" {
             binding {
                 role = "roles/secretmanager.secretAccessor"
-                members = ["serviceAccount:service-PROJECT_NUMBER@gcp-sa-cloudbuild.iam.gserviceaccount.com"]
+                members = ["serviceAccount:service-PROJECT_NUMBER@gcp-sa-cloudbuild."]
             }
         }
         

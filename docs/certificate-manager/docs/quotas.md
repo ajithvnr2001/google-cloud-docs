@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/quotas/
 title: Quotas and limits \u00a0|\u00a0 Certificate Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:00:08.541720+00:00
+fetched_at: 2026-10-21T12:01:37.956900+00:00
 ---
 
 # Quotas and limits  |  Certificate Manager  |  Google Cloud Documentation
@@ -108,13 +108,14 @@ Item | Default quotas and limits | Description
   
 ## Domain name length limitations for Google-managed certificates
 
-The following table lists domain name length limitations specific to Google-managed certificates in Certificate Manager.
+The following table lists domain name length limitations specific to Google-managed certificates in Certificate Manager. These limits cannot be increased.
 
-Item | Characters | Domain  
----|---|---  
-**Load balancer authorization** | 253 | All  
-**DNS authorization** | 237 | All  
-**Per-project DNS authorization with Google CA** | 220 | All  
+Item | Character limit  
+---|---  
+**Single domain using load balancer authorization** | 253  
+**Single domain using DNS authorization** | 237  
+**Single domain using per-project DNS authorization with Google CA** | 220  
+**Total length of all domains in a certificate (regardless of authorization method)** | 6300  
   
 ## Additional resource limits for Google-managed certificates
 
@@ -221,6 +222,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-19 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 

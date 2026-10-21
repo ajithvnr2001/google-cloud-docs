@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/data-mesh/
 title: Architecture and functions in a data mesh \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:40.843980+00:00
+fetched_at: 2026-10-21T12:01:24.550631+00:00
 ---
 
 # Architecture and functions in a data mesh  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -53,7 +53,7 @@ The following diagram provides an overview of the key architectural components i
 The preceding diagram shows the following:
 
   * Central services enable the creation and management of data products, including organizational policies that affect the data mesh participants, access controls (through Identity and Access Management groups), and the infrastructure-specific artifacts. Examples of such commitments and reservations, and infrastructure that facilitates the functioning of the data mesh are described in [Create platform components and solutions](https://docs.cloud.google.com/architecture/design-self-service-data-platform-data-mesh#create_platform_components_and_solutions_using_iac_templates).
-  * Central services primarily supply the Data Catalog for all the data products in the data mesh and the discovery mechanism for potential customers of these products.
+  * Central services use [Knowledge Catalog](https://docs.cloud.google.com/knowledge-catalog/docs/introduction) to supply the data catalog for all the data products in the data mesh and the discovery mechanism for potential consumers of these products.
   * Data domains expose subsets of their data as data products through well-defined data consumption interfaces. These data products could be a table, view, structured file, topic, or stream. In BigQuery, it would be a dataset, and in Cloud Storage, it would be a folder or bucket. There can be different types of interfaces that can be exposed as a data product. An example of an interface is a BigQuery view over a BigQuery table. The types of interfaces most commonly used for analytical purposes are discussed in [Build data products in a data mesh](https://docs.cloud.google.com/architecture/build-data-products-data-mesh).
 
 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/reliability/build-highly-available-systems/
 title: Build highly available systems through resource redundancy \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:19.216845+00:00
+fetched_at: 2026-10-21T12:22:21.245484+00:00
 ---
 
 # Build highly available systems through resource redundancy  |  Cloud Architecture Center  |  Google Cloud Documentation
