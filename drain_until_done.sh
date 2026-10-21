@@ -14,7 +14,7 @@ REPO="ajithvnr2001/google-cloud-docs"
 TAG="docs-backlog-drain-2026-10-20"
 CAP=4000
 THRESHOLD=2000
-MAX_BATCHES=40
+MAX_BATCHES=80
 LOG=/data/opencode/gcpdocs/drain.log
 log() { echo "$(date -u +%FT%TZ) [drain] $*" | tee -a "$LOG"; }
 

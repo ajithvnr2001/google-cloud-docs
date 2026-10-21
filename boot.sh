@@ -8,6 +8,8 @@ UNIT_DST="/etc/systemd/system/gcp-crawl.service"
 UPDATE_UNIT_SRC="/data/opencode/gcpdocs/gcp-update.service"
 UPDATE_TIMER_SRC="/data/opencode/gcpdocs/gcp-update.timer"
 DRAIN_UNIT_SRC="/data/opencode/gcpdocs/gcp-drain.service"
+KICK_UNIT_SRC="/data/opencode/gcpdocs/gcp-drain-kick.service"
+KICK_TIMER_SRC="/data/opencode/gcpdocs/gcp-drain-kick.timer"
 
 if [ ! -f "$UNIT_SRC" ]; then
   echo "FATAL: $UNIT_SRC missing (/data not attached?)" >&2
@@ -18,6 +20,8 @@ cp -f "$UPDATE_UNIT_SRC" /etc/systemd/system/gcp-update.service
 cp -f "$UPDATE_TIMER_SRC" /etc/systemd/system/gcp-update.timer
 if [ -f "$DRAIN_UNIT_SRC" ]; then
   cp -f "$DRAIN_UNIT_SRC" /etc/systemd/system/gcp-drain.service
+  cp -f "$KICK_UNIT_SRC" /etc/systemd/system/gcp-drain-kick.service
+  cp -f "$KICK_TIMER_SRC" /etc/systemd/system/gcp-drain-kick.timer
 fi
 systemctl daemon-reload
 systemctl enable gcp-crawl.service
@@ -38,6 +42,7 @@ if [ -f "$DRAIN_UNIT_SRC" ]; then
   # backlog drain loop: no-ops when backlog is small, drains 4k batches otherwise
   systemctl enable gcp-drain.service
   systemctl start gcp-drain.service || true
+  systemctl enable --now gcp-drain-kick.timer
   echo "gcp-drain.service enabled/started."
 fi
 systemctl is-enabled gcp-crawl.service

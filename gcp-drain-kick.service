@@ -1,0 +1,9 @@
+[Unit]
+Description=Restart GCP backlog drain if work remains and it is not running
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+EnvironmentFile=/data/opencode/secrets/git.env
+ExecStart=/bin/bash /data/opencode/gcpdocs/drain_kick.sh

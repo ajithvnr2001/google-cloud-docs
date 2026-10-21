@@ -1,0 +1,10 @@
+[Unit]
+Description=Check every 4h whether the GCP backlog drain needs restarting
+
+[Timer]
+OnCalendar=*-*-* 00/4:15:00
+AccuracySec=1min
+Persistent=true
+
+[Install]
+WantedBy=timers.target
