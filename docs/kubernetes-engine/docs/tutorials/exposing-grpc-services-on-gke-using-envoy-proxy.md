@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/exposing-grpc-services-on-gke-using-envoy-proxy/
 title: Using Envoy Proxy to load-balance gRPC services on GKE \u00a0|\u00a0 GKE networking \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:12:35.543339+00:00
+fetched_at: 2026-10-21T12:25:26.184005+00:00
 ---
 
 # Using Envoy Proxy to load-balance gRPC services on GKE  |  GKE networking  |  Google Cloud Documentation

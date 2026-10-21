@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/applied-threat-intel-overview2/
 title: Applied Threat Intelligence overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:51:36.001712+00:00
+fetched_at: 2026-10-21T12:26:16.142245+00:00
 ---
 
 # Applied Threat Intelligence overview  |  Google Security Operations  |  Google Cloud Documentation
@@ -42,10 +42,10 @@ You can also view detailed information about the events that triggered the IoC m
 
 Google SecOps curated detections evaluate your event data against Google Threat Intelligence data, and generate an alert when one or more rules identify a match to an IoC with an active breach or high priority. In addition, ATI includes [composite rules](https://docs.cloud.google.com/chronicle/docs/detection/composite-rules-category#ati_composite_rules) that correlate multiple ATI alerts into a single, high-fidelity alert when a campaign, malware, or threat actor is identified.
 
-To use Applied Threat Intelligence, do the following:
+For Google SecOps Enterprise Plus instances, Applied Threat Intelligence curated detection rule sets are enabled by default. To use and manage this feature:
 
-  1. Enable the [Applied Threat Intelligence curated detections](https://docs.cloud.google.com/chronicle/docs/detection/ati-curated-detections).
-  2. Investigate alerts using the [IOC matches](https://docs.cloud.google.com/chronicle/docs/detection/ati-view-ioc-page) page.
+  1. **Verify settings** : You can review or customize the Status and Alerting configuration for these [curated detection rule sets](https://docs.cloud.google.com/chronicle/docs/detection/ati-curated-detections) on the Curated Detections page.
+  2. **Investigate alerts** : Use the [IOC matches](https://docs.cloud.google.com/chronicle/docs/detection/ati-view-ioc-page) page to prioritize and respond to threats.
 
 
 
@@ -57,6 +57,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

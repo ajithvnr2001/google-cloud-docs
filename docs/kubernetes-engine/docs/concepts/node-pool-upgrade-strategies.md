@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/node-pool-upgrade-strategies/
 title: Node upgrade strategies \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T16:07:16.039568+00:00
+fetched_at: 2026-10-21T12:26:17.842650+00:00
 ---
 
 # Node upgrade strategies  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -27,7 +27,7 @@ This document discusses the node upgrade strategies you can use with your Google
 
 In GKE Standard clusters, you can configure one of the following node upgrade strategies for each Standard node pool:
 
-  * **Surge upgrades** : Nodes are upgraded in a rolling window. You can control how many nodes can be upgraded at once and how disruptive upgrades are to the workloads.
+  * **Surge upgrades** : Nodes are upgraded in a rolling window. You can control how many nodes can be upgraded at once and how disruptive upgrades are to the workloads. You can also upgrade using fixed capacity for resource-constrained environments.
   * **Blue-green upgrades** : Existing nodes are kept available for rolling back while the workloads are validated on the new node configuration.
   * **Autoscaled blue-green upgrades** ([Preview](https://cloud.google.com/products#product-launch-stages)): Workloads can run for longer, while you minimize cost from idle or underutilized nodes.
 
@@ -49,7 +49,7 @@ By choosing an upgrade strategy for your Standard node pool, you can pick the pr
 
 
 
-With each of these strategies, you can configure upgrade settings to optimize the process based on your environment's needs. For more information, see [Configure your chosen upgrade strategy](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-pool-upgrade-strategies). Ensure that for the strategy that you pick, you have enough quota, resource availability, or reservation capacity to upgrade your nodes using that strategy. For more information, see [Ensure resources for node upgrades](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-upgrades-quota).
+With each of these strategies, you can configure upgrade settings to optimize the process based on your environment's needs. For more information, see [Configure your chosen upgrade strategy](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-pool-upgrade-strategies). Ensure that for the strategy that you pick, you have enough quota, resource availability, or reservation capacity to upgrade your nodes using that strategy. For more information about resource considerations, see [Ensure resources for node upgrades](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-upgrades-quota). When upgrading in a resource-constrained environment, see [Upgrade in a resource-constrained environment](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-upgrades-quota#upgrade-resource-constrained).
 
 **Note:** Node upgrade strategies are used for any type of node configuration change that requires the nodes to be recreated. For more information, see When GKE uses surge upgrades, When GKE uses blue-green upgrades, and When GKE uses autoscaled blue-green upgrades.
 
@@ -69,9 +69,10 @@ If cost optimization is important for you and your workload can tolerate being s
 
 Surge upgrades are optimal for the following scenarios:
 
-  * if you want to optimize for the speed of upgrades.
-  * if workloads are more tolerant of disruptions, where graceful termination up to 60 minutes is acceptable.
-  * if you want to control costs by minimizing the creation of new nodes.
+  * If you want to optimize for the speed of upgrades.
+  * If workloads are more tolerant of disruptions, where graceful termination up to 60 minutes is acceptable.
+  * If you want to control costs by minimizing the creation of new nodes.
+  * If you are performing upgrades in a resource-constrained environment.
 
 
 
@@ -99,11 +100,17 @@ Other changes, including [applying updates to node labels and taints of existing
 
 Use surge upgrade settings to select the appropriate balance between speed and disruption for your node pool during cluster maintenance using the surge settings. You can change how many nodes GKE attempts to upgrade at once by [changing](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-pool-upgrade-strategies#surge) the surge upgrade parameters on a Standard node pool.
 
-Surge upgrade behavior is determined by the `maxSurge` and `maxUnavailable` settings, which determine how many nodes are upgraded at the same time in a rolling window with the described steps.
+Surge upgrade behavior is determined by the `maxSurge` and `maxUnavailable` settings, which determine how many nodes are upgraded at the same time in a rolling window with the described steps. The following options are available:
+
+  * To upgrade with _surge nodes_ , use the `maxSurge` field and set it to a value greater than zero. Upgrading by using surge nodes is helpful when you want to minimize disruption to workloads. For more information, see the `maxSurge`: GKE creates a new surge node before removing an existing one section.
+  * To upgrade with _fixed capacity_ use the `maxUnavailable` field and set it to a value greater than zero. A fixed capacity upgrade is helpful when working in resource-constrained environments. For more information, see the `maxUnavailable`: GKE makes an existing node unavailable to recreate it section.
+  * You can also use a combination of surge nodes and fixed capacity to upgrade your nodes. For more information, see the Example use of `maxSurge` and `maxUnavailable` settings section.
+
+
 
 #### `maxSurge`: GKE creates a new surge node before removing an existing one
 
-Set `maxSurge` to choose the maximum number of additional, surge nodes that can be added to the node pool during an upgrade, per zone, increasing the likelihood that workloads running on the existing node can migrate to a new node immediately. The default is one. To upgrade one node, GKE does the following steps:
+Set `maxSurge` to choose the maximum number of additional, surge nodes that can be added to the node pool during an upgrade, per zone. By using surge nodes increases the likelihood that workloads running on the existing node can migrate to a new node immediately. The default for the `maxSurge` field is one. To upgrade one node, GKE performs the following steps:
 
   1. Provision a new node.
   2. Wait for the new node to be ready.
@@ -113,27 +120,47 @@ Set `maxSurge` to choose the maximum number of additional, surge nodes that can 
 
 
 
-For GKE to create surge nodes, your project must have the resources to temporarily create additional nodes. If you don't have additional capacity, GKE won't start upgrading a node until the resources are available. For more information, see [Resources for surge upgrades](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-upgrades-quota#quota-surge-upgrades).
+For GKE to create surge nodes, your project must have the resources to temporarily create additional nodes. If you don't have additional capacity and the `maxUnavailable` field is set to zero, then GKE won't start upgrading a node until the resources are available. For more information, see [Resources for surge upgrades](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-upgrades-quota#quota-surge-upgrades).
 
 #### `maxUnavailable`: GKE makes an existing node unavailable to recreate it
 
-Set `maxUnavailable` to choose the maximum number of nodes that can be simultaneously unavailable during an upgrade, per zone. The default is zero. Workloads running on the existing node might need to wait for the existing node to upgrade, if no other nodes have capacity. To upgrade one node, GKE does the following steps:
+Set `maxUnavailable` to a value greater than zero to upgrade using fixed capacity. The `maxUnavailable` field specifies the maximum number of nodes that can be simultaneously unavailable during an upgrade, per zone. The default is zero.
+
+To upgrade one node, GKE performs the following steps:
 
   1. [Cordon](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#cordon) the existing node.
-  2. [Drain](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#drain) the existing node, respecting [PodDisruptionBudget](https://kubernetes.io/docs/tasks/run-application/configure-pdb/) and [GracefulTerminationPeriod](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination) settings for up to one hour. After one hour, any remaining Pods are forcefully evicted so that the upgrade can proceed.
+  2. [Drain](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#drain) the existing node, with the following considerations: 
+     * The [PodDisruptionBudget](https://kubernetes.io/docs/tasks/run-application/configure-pdb/) and [GracefulTerminationPeriod](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination) settings are respected for up to one hour. After one hour, any remaining Pods are forcefully evicted so that the upgrade can proceed.
+     * If no other nodes have capacity, then workloads running on the existing node might need to wait for the existing node to upgrade. When these workloads wait, the Pods are in a pending state.
   3. Recreate the existing node with the new configuration.
   4. Wait for the existing node to be ready.
   5. Uncordon the existing, upgraded node.
 
 
 
-When GKE recreates the existing node, GKE temporarily releases the capacity of the node if the capacity isn't from a reservation. This means that if there is limited capacity, you risk losing the existing capacity. So, if your environment is resource-constrained, use this setting only if you're using reserved nodes. For more information, see [Upgrade in a resource-constrained environment](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-upgrades-quota#upgrade-resource-constrained).
+To help preserve existing capacity when performing version upgrades in a resource-constrained environment, set the `maxUnavailable` field to a value greater than zero. For example, you could set `maxSurge=0` and `maxUnavailable=1`. For GPUs and TPUs, see additional guidance in [Upgrade in a resource-constrained environment](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-upgrades-quota#upgrade-resource-constrained).
+
+When performing a version upgrade on CPU node pools, if the `maxUnavailable` field is set to a value greater than zero, then GKE reuses the same Compute Engine instance, which retains the existing capacity of the node.
+
+For all other node pool updates and upgrades, when GKE re-creates the existing node using `maxUnavailable`, GKE temporarily releases the capacity of the node if the capacity isn't from a reservation. This means that if there is limited capacity, you risk losing the existing capacity.
+
+For example, GKE doesn't reuse the existing Compute Engine instance and instead deletes and re-creates the instance in the following scenarios:
+
+  * Node pool updates other than version upgrades (such as machine type, disk type, or disk size changes).
+  * Version upgrades of node pools that contain GPUs or TPUs.
+  * Version upgrades of node pools that use Spot VMs or preemptible VMs.
+  * Rolling back an incomplete surge upgrade.
+  * Node auto-repairs.
+
+
 
 #### Example use of `maxSurge` and `maxUnavailable` settings
 
-For example, a GKE cluster has a single-zone node pool with 5 nodes and the following surge upgrade configuration: `maxSurge=2;maxUnavailable=1`.
+For example, a GKE cluster has a single-zone node pool with 30 nodes and the following surge upgrade configuration: `maxSurge=2;maxUnavailable=1`.
 
-During a surge upgrade with this node pool, in a rolling window, GKE creates two upgraded nodes, and disrupts at most one existing node at a time. GKE brings down at most three existing nodes after the upgraded nodes are ready. During the upgrade process, the node pool will include between four and seven nodes.
+During a surge upgrade with this node pool, in a rolling window, GKE creates two new surge nodes (`maxSurge=2`) and immediately takes down one existing node (`maxUnavailable=1`). Once the two surge nodes are ready, GKE takes down two more existing nodes, disrupting up to three existing nodes at a time while keeping the node pool between 29 and 32 nodes.
+
+For upgrades which support reusing the existing capacity of the node, the node upgraded using the `maxUnavailable=1` budget is upgraded in-place by reusing the existing instance, and if additional capacity is unavailable to create the two surge nodes, GKE still progresses the upgrade by upgrading one existing node at a time.
 
 #### Considerations for surge upgrade settings
 
@@ -153,9 +180,9 @@ The following table describes four different upgrade profiles as examples to hel
 Description | Configuration | Typical use case  
 ---|---|---  
 Balanced (Default), slower but least disruptive | `maxSurge=1 maxUnavailable=0` | Most workloads  
+Balanced, resource constrained environments, no surge resources | `maxSurge=0 maxUnavailable=1` | Resource-constrained node pool  
 Fast, no surge resources, most disruptive | `maxSurge=0 maxUnavailable=100` | Large node pools after jobs have to run to completion  
 Fast, most surge resources and less disruptive | `maxSurge=100 maxUnavailable=0` | Large node pools  
-Slowest, disruptive, no surge resources | `maxSurge=0 maxUnavailable=1` | Resource-constrained node pool with reservation  
   
 #### Balanced (Default)
 
@@ -169,7 +196,7 @@ If you have a large node pool and your workload isn't sensitive to disruption (f
 
 If your workload is sensitive to disruption and you have already set up [PodDisruptionBudgets](https://kubernetes.io/docs/tasks/run-application/configure-pdb/) (PDB) and you are not using `externalTrafficPolicy: Local`, which does not work with parallel node drains, you can increase the speed of the upgrade by using `maxSurge=100;maxUnavailable=0`. This configuration upgrades 100 nodes in parallel while the PDB limits the number of Pods that can be drained at a given time. Although the configurations of PDBs may vary, if you create a PDB with `maxUnavailable=1` for one or more workloads running on the node pool, then only one Pod of those workloads can be evicted at a time, limiting the parallelism of the entire upgrade. This configuration requires the resources to temporarily create 100 new nodes.
 
-#### Slow but no surge resources
+#### Balanced, resource constrained environments
 
 If you can't use any additional resources, you can use `maxSurge=0;maxUnavailable=1` to recreate one node at a time.
 
@@ -467,6 +494,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

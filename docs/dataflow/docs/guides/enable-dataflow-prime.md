@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/guides/enable-dataflow-prime/
 title: Use Dataflow Prime \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:34:55.645358+00:00
+fetched_at: 2026-10-21T12:25:43.246858+00:00
 ---
 
 # Use Dataflow Prime  |  Google Cloud Documentation
@@ -95,7 +95,7 @@ Dataflow Prime doesn't support the following:
   * Designating specific VM types or CPU platforms by using experimental parameters, such as `--additional-experiments=min_cpu_platform=...` or `--experiments=min_cpu_platform=...`. Attempting to set a minimum CPU platform with Dataflow Prime might result in an error such as: `Setting minimum CPU platform is not supported for the selected machine type e2-standard-2.`
   * Viewing or using SSH to log into worker VMs.
   * [Flexible Resource Scheduling (FlexRS)](https://docs.cloud.google.com/dataflow/docs/guides/flexrs).
-  * Auto VM Selection. When you use Dataflow Prime, Auto VM Selection isn't supported.
+  * [Auto VM Selection](https://docs.cloud.google.com/dataflow/docs/guides/auto-vm-selection) isn't supported when you use Dataflow Prime.
   * Using [VPC Service Controls](https://docs.cloud.google.com/vpc-service-controls/docs/overview) with Vertical Autoscaling. If you enable Dataflow Prime and launch a new job within a VPC Service Controls perimeter, the job uses Dataflow Prime without Vertical Autoscaling.
   * [NVIDIA Multi-Process Service (MPS)](https://docs.cloud.google.com/dataflow/docs/gpu/use-nvidia-mps).
   * Java pipelines that meet the following requirements can use the [`MapState`](https://beam.apache.org/releases/javadoc/current/index.html?org/apache/beam/sdk/state/MapState.html) and [`SetState`](https://beam.apache.org/releases/javadoc/current/index.html?org/apache/beam/sdk/state/SetState.html) classes: 
@@ -257,6 +257,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

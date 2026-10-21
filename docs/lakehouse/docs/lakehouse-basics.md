@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/lakehouse/docs/lakehouse-basics/
 title: How borderless Lakehouse works \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:19:41.508319+00:00
+fetched_at: 2026-10-21T12:25:54.364244+00:00
 ---
 
 # How borderless Lakehouse works  |  Google Cloud Documentation
@@ -61,7 +61,7 @@ The Lakehouse runtime catalog provides several endpoints to connect your data ac
 
   * **Custom Apache Iceberg catalog for BigQuery endpoint:** Lets engines interoperate directly with the BigQuery catalog. This interface is used primarily for _Apache Iceberg tables_ managed by BigQuery and existing workloads transitioning to the _Lakehouse_ architecture.
 
-  * **Apache Hive catalog endpoint (Preview):** Provides compatibility for open-source workloads that depend on the Apache Hive metastore (HMS) interface. This lets you run Apache Hive or Spark workloads against a fully managed metastore service on Google Cloud.
+  * **Apache Hive catalog endpoint:** Provides compatibility for open-source workloads that depend on the Apache Hive metastore (HMS) interface. This lets you run Apache Hive or Spark workloads against a fully managed metastore service on Google Cloud.
 
 
 
@@ -161,6 +161,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/load-balancing/docs/release-notes/
 title: Cloud Load Balancing release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:31:29.310012+00:00
+fetched_at: 2026-10-21T12:25:51.261388+00:00
 ---
 
 # Cloud Load Balancing release notes  |  Google Cloud Documentation
@@ -38,6 +38,14 @@ To align with modern industry-wide security standards and promote shorter certif
 This proactive rotation enhances the overall security posture of load balancers. Transition requires no manual intervention or configuration changes as Google Cloud automatically manages issuance and renewal for both Certificate Manager and Compute Engine SSL certificates.
 
 For more information, see [Renew a Google-managed SSL certificate](https://docs.cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs#renewal).
+
+Feature
+
+Service rate limiting policies are now available in **Preview** for regional internal Application Load Balancers and Secure Web Proxies.
+
+Service rate limiting policies let you maintain service availability among trusted clients that might consume an inordinate amount of resources.
+
+For more information, see the [Service rate limiting overview](https://docs.cloud.google.com/load-balancing/docs/srl-policy/service-rate-limiting-overview).
 
 ## October 12, 2026
 

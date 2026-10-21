@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-upgrades-quota/
 title: Ensure resources for node upgrades \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:08:59.803055+00:00
+fetched_at: 2026-10-21T12:26:17.208142+00:00
 ---
 
 # Ensure resources for node upgrades  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -109,23 +109,32 @@ If your upgrade failed due to insufficient resources, try these steps:
 
 **Note:** Your configuration determines resource requirements. For example, the [machine type](https://docs.cloud.google.com/compute/docs/machine-types) for your node pool implies resources requirements of a single node. If you create a private cluster, you won't need external IPs for your nodes.
 
-### Upgrade in a resource-constrained environment
+## Upgrade in a resource-constrained environment
 
-If Google Cloud has limited capacity for a specific resource (for example, GPUs, or TPUs) that your node pool is using, we recommend that you [use a reservation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/consuming-reservations) to ensure that you have adequate resources. If you don't have adequate resources, you might not be able to upgrade your nodes until you can access more capacity, if you don't have a reservation for your existing capacity.
+If Google Cloud has limited capacity for a specific resource that your node pool is using, then for GPUs and TPUs we recommend that you [use a reservation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/consuming-reservations). For node pools that only contain CPUs, we recommend that you upgrade CPUs using fixed capacity.
 
-If you can't get any additional capacity, you can't use blue-green upgrades. For surge upgrades, [`maxSurge`](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/node-pool-upgrade-strategies#max-surge) requires additional nodes. With, [`maxUnavailable`](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/node-pool-upgrade-strategies#max-unavailable), if the capacity isn't from a reservation, GKE temporarily releases the capacity of the node when upgrading it, meaning that if there is limited capacity, you risk losing the capacity.
+These two strategies can help ensure that you have adequate resources to perform a version upgrade. If you don't have adequate resources, you might not be able to upgrade your nodes until you can access more capacity.
+
+If you don't have additional capacity, then you can't use blue-green upgrades.
+
+When you use surge upgrades in a resource-constrained environment, note the following:
+
+  * When you use surge nodes for an upgrade requires additional nodes, which might be difficult to achieve in a resource-constrained environment. For more information about this setting, see [`maxSurge`: GKE creates a new surge node before removing an existing one](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/node-pool-upgrade-strategies#max-surge).
+  * When you set the `maxUnavailable` field to a value greater than zero and the capacity isn't from a reservation, then in some scenarios GKE temporarily releases the capacity of the node when upgrading it. This means that if there is limited capacity, you risk losing the capacity. For more information, see [`maxUnavailable`: GKE makes an existing node unavailable to recreate it](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/node-pool-upgrade-strategies#max-unavailable).
+
+
 
 Use the following guidance, depending on whether you have a reservation for your node pool that needs to be upgraded.
 
-#### Upgrade with limited capacity without a reservation
+### Upgrade with fixed capacity
 
-If you don't have a reservation for your node pool's nodes, we recommend creating a reservation. However, if you can't, we recommend using surge upgrades with the [default configuration](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/node-pool-upgrade-strategies#balanced-default) of `maxSurge=1;maxUnavailable=0`. With this configuration, you don't risk losing existing capacity. However, surge upgrades only creates a surge node if the capacity is available. So, if no capacity is available, upgrades might take longer and your node pool could remain in a partially upgraded state until capacity is secured to upgrade each node.
+For CPUs, to upgrade in a resource-constrained environment, use fixed capacity. To do so, use surge upgrades and set the `maxUnavailable` setting to a value greater than zero. For details, see [`maxUnavailable`: GKE makes an existing node unavailable to recreate it](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/node-pool-upgrade-strategies#max-unavailable).
 
-We recommend that you [create a reservation](https://docs.cloud.google.com/compute/docs/instances/reservations-single-project) or [increase the size of an existing reservation](https://docs.cloud.google.com/compute/docs/instances/reservations-modify#resizing_a_reservation).
+Upgrading using a fixed capacity lets you perform upgrades when you can't get any additional capacity, and helps prevent you from losing existing capacity during the upgrade.
 
-#### Upgrade with limited capacity with a reservation
+### Upgrade with limited capacity with a reservation
 
-If you have a reservation for your node pool's nodes, you can upgrade your node pools in a capacity-constrained environment, [tuning surge upgrade settings for speed and reliability](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/node-pool-upgrade-strategies#optimizing-surge).
+For GPUs and TPUs, to upgrade in a capacity-constrained environment, [use a reservation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/consuming-reservations) and [tune surge upgrade settings for speed and reliability](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/node-pool-upgrade-strategies#optimizing-surge).
 
 If you have additional capacity in the reservation, you can use `maxSurge` to create surge nodes. Set `maxSurge` depending on how many nodes you want to disrupt at one time, and how much additional capacity you have. For example, set `maxSurge=1;maxUnavailable=0` if you only want to disrupt one node at a time, or if you only have capacity to create one additional node.
 
@@ -143,6 +152,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

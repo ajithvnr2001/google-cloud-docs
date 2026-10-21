@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/extended-session-length-for-workforce-identity-federation/
 title: Configure Extended Session Length for Workforce Identity Federation \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:45:33.974004+00:00
+fetched_at: 2026-10-21T12:26:18.483069+00:00
 ---
 
 # Configure Extended Session Length for Workforce Identity Federation  |  Access Context Manager  |  Google Cloud Documentation
@@ -21,13 +21,20 @@ Send feedback
 
 #  Configure Extended Session Length for Workforce Identity Federation Stay organized with collections  Save and categorize content based on your preferences. 
 
-**Note:** **Extended session length for Workforce Identity Federation** is in **Preview** for Looker (Google Cloud core) customers.
+**Note:** Extended session length for Workforce Identity Federation is in [Preview](https://cloud.google.com/products#product-launch-stages) for Looker (Google Cloud core) and the Gemini Enterprise mobile app. Extended session length for the Gemini Enterprise mobile app is available by allowlist only. To request access to the allowlist during Preview, contact your Google Cloud Support point of contact (POC).
 
-By default, Workforce Identity Federation sessions have a maximum duration of 12 hours. **Extended session length** lets organizations configure long-lasting sessions of up to **90 days** for Looker (Google Cloud core) customers.
+By default, Workforce Identity Federation sessions have a maximum duration of 12 hours. Extended session length lets organizations configure long-lasting sessions of up to 90 days for Looker (Google Cloud core) and the Gemini Enterprise mobile app:
 
-With extended session length, your workforce users maintain an uninterrupted connection to Looker (Google Cloud core) without requiring daily reauthentication against your external identity provider (IdP). User interaction within Looker (Google Cloud core) remains governed by your Looker (Google Cloud core) session length configuration. To maintain security throughout extended sessions, Google Cloud periodically synchronizes user attributes and group memberships directly from your external identity provider (IdP) in the background.
+  * **Looker (Google Cloud core)** : Configured using project scopes (`restricted_project`). Extended sessions allow workforce users to maintain an uninterrupted connection to Looker (Google Cloud core) without requiring daily reauthentication against your external identity provider (IdP). User interaction within Looker (Google Cloud core) remains governed by your Looker (Google Cloud core) session length configuration.
 
-This document describes how to define extended session policies using the Access Context Manager API with project-scoped controls, configure your workforce pool provider, and manage active bindings.
+  * **The Gemini Enterprise mobile app** : Configured using application scopes (`restricted_client_application`). Extended sessions allow workforce users to maintain an uninterrupted connection to the Gemini Enterprise mobile app without requiring daily reauthentication against your external identity provider (IdP).
+
+
+
+
+To maintain security throughout extended sessions, Google Cloud periodically synchronizes user attributes and group memberships directly from your external identity provider (IdP) in the background.
+
+This document describes how to define extended session policies using the Access Context Manager API with project-scoped controls (for Looker (Google Cloud core)) and application-scoped controls (for the Gemini Enterprise mobile app), configure your workforce pool provider, and manage active bindings.
 
 * * *
 
@@ -35,11 +42,20 @@ This document describes how to define extended session policies using the Access
 
 Workforce Identity Federation uses Access Context Manager Google Cloud access bindings to configure extended session length:
 
-  * **Google Cloud access binding** : Administrators define a session length policy using Access Context Manager that applies organization-wide across all workforce pools in your organization. Using the `restricted_project` scope, the policy grants extended sessions of up to 90 days, only affecting Looker (Google Cloud core) instances owned by that project.
-  * **Background attribute synchronization** : 
+  * **Google Cloud access binding** : Administrators define a session length policy using Access Context Manager that applies organization-wide across all workforce pools in your organization. Policies grant extended sessions of up to 90 days using either one of the following:
+
+    * **Project scope (`restricted_project`)**: Applies extended sessions to Looker (Google Cloud core) instances in the designated project.
+
+    * **Application scope (`restricted_client_application`)**: Applies extended sessions to the Gemini Enterprise mobile app.
+
+  * **Background attribute synchronization** :
+
     * **OIDC** : Supported using either an OIDC Authorization Code flow with the `offline_access` scope (using refresh tokens to periodically refresh user attributes and group memberships from your external IdP in the background) or through SCIM provisioning.
+
     * **SAML** : For SAML providers, user attributes and group memberships are kept up-to-date using SCIM provisioning.
+
   * **Staleness protection** : If user attributes cannot be refreshed from the external IdP within 24 hours (for example, if the user is deprovisioned or credentials are revoked at the IdP), Google Cloud terminates the session.
+
 
 
 
@@ -74,23 +90,30 @@ Enable the Access Context Manager and IAM APIs in your project:
 
 Before configuring extended session length, review the following requirements and limitations:
 
-  * **Supported application** : Extended session length applies exclusively to **Looker (Google Cloud core)**.
-  * **Mandatory project scope (`restricted_project`)**: Session settings must be configured within `scopedAccessSettings` using the `restricted_project` client scope specifying the Google Cloud project that owns the Looker (Google Cloud core) instance (`projects/{PROJECT_NUMBER}`). 
-    * Only Looker (Google Cloud core) applications owned by the designated project are affected by the ESL policy.
-    * All other applications (and Looker (Google Cloud core) applications owned by other projects) experience no effect from the policy.
+  * **Supported applications** : Extended session length applies exclusively to the following: 
+    * **Looker (Google Cloud core)** (configured using project scopes)
+    * **The Gemini Enterprise mobile app** (configured using application scopes)
+  * **Allowlist requirement for the Gemini Enterprise mobile app** : Extended session length for the Gemini Enterprise mobile app is available by allowlist only. To request access to the allowlist during Preview, contact your Google Cloud Support point of contact (POC).
+  * **Scope types** : Session settings must be configured within `scopedAccessSettings` using one of the following client scopes: 
+    * **Project scope (`restricted_project`)**: Specifies the Google Cloud project that owns the Looker (Google Cloud core) instance (`projects/{PROJECT_NUMBER}`). Only Looker (Google Cloud core) instances owned by the designated project are affected.
+    * **Application scope (`restricted_client_application`)**: Specifies the application by its canonical display **`name`**.
+    * To configure application scopes for the Gemini Enterprise mobile app, you must explicitly use one or both of the following exact application names: 
+      * `"Gemini Enterprise mobile Android"`
+      * `"Gemini Enterprise mobile IOS"`
+    * Scoping by OAuth client ID (`clientId`) is **not supported** for Workforce Identity Federation bindings and will be rejected. You must identify the application using the `name` field.
   * **Session duration range** : Session duration must be between a minimum of **1 hour** (`3600s`) and a maximum of **90 days** (`7776000s`).
   * **Session settings parameter requirements** : 
     * `session_length_enabled`: Must be set to `true`.
     * `session_length`: Required duration between 1 hour (`3600s`) and 90 days (`7776000s`).
     * `session_reauth_method`: Must be unset or set to `LOGIN`.
     * `use_oidc_max_age`: Must be unset or set to `false`.
-    * `max_inactivity`: Must be unset (or default `0s`). Idle session timeouts are not supported for `restricted_project` bindings.
+    * `max_inactivity`: Must be unset (or default `0s`). Idle session timeouts are not supported for `restricted_project` bindings and `restricted_client_application` bindings.
   * **Supported identity providers** : 
     * **OIDC** : Requires an OIDC provider configured with **Authorization Code Flow** and the **`offline_access`** scope to issue refresh tokens, or configured with **SCIM provisioning**.
     * **SAML 2.0** : Requires **SCIM provisioning** enabled on the workforce pool provider.
   * **Attribute staleness threshold** : A fixed **24-hour staleness threshold** is enforced. If Google Cloud cannot refresh user attributes from your IdP within 24 hours, the session is invalidated and the user must reauthenticate.
   * **Access Context Manager constraints** : 
-    * **Single organizational binding** : Extended session length bindings for workforce pools must target the organization's "all workforce pools" principal (`principalSet://cloudresourcemanager.googleapis.com/organizations/{ORG_ID}/type/WorkforcePool`). Because this federated principal identifier applies organization-wide across all workforce pools in your organization, only one such binding can exist per organization. To configure extended sessions for multiple Looker (Google Cloud core) projects across workforce pools, include multiple `restricted_project` scope blocks within the single binding's `scopedAccessSettings` list.
+    * **Single organizational binding** : Extended session length bindings for workforce pools must target the organization's "all workforce pools" principal (`principalSet://cloudresourcemanager.googleapis.com/organizations/{ORG_ID}/type/WorkforcePool`). Because this federated principal identifier applies organization-wide across all workforce pools in your organization, only one such binding can exist per organization. To configure extended sessions for multiple Looker (Google Cloud core) projects, the Gemini Enterprise mobile app, or a combination of both, include multiple `restricted_project` and `restricted_client_application` scope blocks within the single binding's `scopedAccessSettings` list.
     * **Access levels** (`access_levels`, `dry_run_access_levels`) are **not supported** on workforce pool bindings.
     * Top-level `sessionSettings` directly on the `GcpUserAccessBinding` are **not supported** for workforce pool bindings; settings must be defined within `scopedAccessSettings.activeSettings.sessionSettings`.
 
@@ -264,6 +287,119 @@ Replace the following:
 
 
 
+## Example policy configuration for the Gemini Enterprise mobile app
+
+Create a `GcpUserAccessBinding` resource that assigns the extended session length policy to your organization's workforce pool, scoping the policy to the Gemini Enterprise mobile app using the `restricted_client_application` scope. You must identify the applications using their exact canonical display names: `"Gemini Enterprise mobile Android"` and `"Gemini Enterprise mobile IOS"`.
+
+**Note:** Because the federated principal `principalSet://cloudresourcemanager.googleapis.com/organizations/ORG_ID/type/WorkforcePool` applies to all workforce pools in an organization, only one binding of this type is allowed per organization. If an access binding already exists for your organization (for example, for Looker (Google Cloud core)), update that binding to add the `restricted_client_application` scopes instead of creating a new one.
+
+###  gcloud 
+
+Define the policy in a YAML file named `esl-app-binding.yaml`:
+    
+    
+    scopedAccessSettings:
+    - scope:
+        clientScope:
+          restrictedClientApplication:
+            name: "Gemini Enterprise mobile Android"
+      activeSettings:
+        sessionSettings:
+          sessionLength: 7776000s
+          sessionLengthEnabled: true
+          sessionReauthMethod: LOGIN
+    - scope:
+        clientScope:
+          restrictedClientApplication:
+            name: "Gemini Enterprise mobile IOS"
+      activeSettings:
+        sessionSettings:
+          sessionLength: 7776000s
+          sessionLengthEnabled: true
+          sessionReauthMethod: LOGIN
+    
+
+Create the access binding:
+    
+    
+    gcloud access-context-manager cloud-bindings create \
+        --organization=ORG_ID \
+        --federated-principal="principalSet://cloudresourcemanager.googleapis.com/organizations/ORG_ID/type/WorkforcePool" \
+        --binding-file="esl-app-binding.yaml"
+    
+
+Replace the following:
+
+  * `ORG_ID`: Your Google Cloud organization ID (for example, `123456789012`).
+  * `name`: Must be `"Gemini Enterprise mobile Android"` or `"Gemini Enterprise mobile IOS"`. Identifying applications by OAuth client ID (`clientId`) is not supported for workforce pools.
+  * `sessionLength`: The session duration in seconds followed by `s` (between `3600s` and `7776000s`).
+  * `sessionLengthEnabled`: Set to `true`.
+  * `sessionReauthMethod`: Set to `LOGIN` (or leave unset).
+
+
+
+###  REST API 
+
+Send a `POST` request to the Access Context Manager API:
+    
+    
+    POST https://accesscontextmanager.googleapis.com/v1/organizations/ORG_ID/gcpUserAccessBindings
+    
+
+JSON request body:
+    
+    
+    {
+      "principal": {
+        "federatedPrincipal": "principalSet://cloudresourcemanager.googleapis.com/organizations/ORG_ID/type/WorkforcePool"
+      },
+      "scopedAccessSettings": [
+        {
+          "scope": {
+            "clientScope": {
+              "restrictedClientApplication": {
+                "name": "Gemini Enterprise mobile Android"
+              }
+            }
+          },
+          "activeSettings": {
+            "sessionSettings": {
+              "sessionLength": "7776000s",
+              "sessionLengthEnabled": true,
+              "sessionReauthMethod": "LOGIN"
+            }
+          }
+        },
+        {
+          "scope": {
+            "clientScope": {
+              "restrictedClientApplication": {
+                "name": "Gemini Enterprise mobile IOS"
+              }
+            }
+          },
+          "activeSettings": {
+            "sessionSettings": {
+              "sessionLength": "7776000s",
+              "sessionLengthEnabled": true,
+              "sessionReauthMethod": "LOGIN"
+            }
+          }
+        }
+      ]
+    }
+    
+
+Replace the following:
+
+  * `ORG_ID`: Your Google Cloud organization ID (for example, `123456789012`).
+  * `name`: Must be `"Gemini Enterprise mobile Android"` or `"Gemini Enterprise mobile IOS"`. Identifying applications by OAuth client ID (`clientId`) is not supported for workforce pools.
+  * `sessionLength`: The session duration in seconds followed by `s`. For example, `7776000s` specifies a 90-day session.
+  * `sessionLengthEnabled`: Set to `true`.
+  * `sessionReauthMethod`: Set to `LOGIN` (or leave unset).
+
+
+
 * * *
 
 ## Viewing and listing bindings
@@ -318,7 +454,7 @@ Replace the following:
 
 ## Update an access binding
 
-You can update an existing workforce pool access binding to modify session lengths, add new project scopes, or remove existing project scopes.
+You can update an existing workforce pool access binding to modify session lengths, add new project or application scopes, or remove existing scopes.
 
 ###  gcloud 
 
@@ -338,14 +474,14 @@ You can update an existing workforce pool access binding to modify session lengt
 
   2. Apply the updated policy:
 
-     * **Replace scoped access settings** : To overwrite the existing project scopes with the configuration defined in `updated-esl-binding.yaml`:
+     * **Replace scoped access settings** : To overwrite the existing scopes with the configuration defined in `updated-esl-binding.yaml`:
     
     gcloud access-context-manager cloud-bindings update \
         --binding=BINDING_NAME \
         --binding-file="updated-esl-binding.yaml"
     
 
-     * **Append to existing settings** : To append the project scopes defined in `updated-esl-binding.yaml` to the binding's existing project scopes without overwriting them, pass the `--append` flag:
+     * **Append to existing settings** : To append the scopes defined in `updated-esl-binding.yaml` to the binding's existing scopes without overwriting them, pass the `--append` flag:
     
     gcloud access-context-manager cloud-bindings update \
         --binding=BINDING_NAME \
@@ -362,7 +498,7 @@ Replace the following: * `BINDING_NAME`: The full resource name of the binding (
 
 Send a `PATCH` request to update the binding.
 
-  * **Replace scoped access settings** : To overwrite existing project scopes:
+  * **Replace scoped access settings** : To overwrite existing scopes:
 
 
     
@@ -370,7 +506,7 @@ Send a `PATCH` request to update the binding.
     PATCH https://accesscontextmanager.googleapis.com/v1/organizations/ORG_ID/gcpUserAccessBindings/BINDING_ID?updateMask=scopedAccessSettings
     
 
-  * **Append to existing settings** : To append new project scopes without overwriting existing ones, set the `append=true` query parameter:
+  * **Append to existing settings** : To append new scopes without overwriting existing ones, set the `append=true` query parameter:
 
 
     
@@ -439,6 +575,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

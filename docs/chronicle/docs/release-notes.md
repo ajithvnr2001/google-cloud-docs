@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/release-notes/
 title: Google Security Operations SIEM release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:01.475257+00:00
+fetched_at: 2026-10-21T12:24:25.063083+00:00
 ---
 
 # Google Security Operations SIEM release notes  |  Google Cloud Documentation
@@ -26,6 +26,203 @@ This page documents production updates to Google Security Operations. You can pe
 You can see the latest product updates for all of Google Cloud on the [ Google Cloud](https://docs.cloud.google.com/release-notes) page, browse and filter all release notes in the [Google Cloud console](https://console.cloud.google.com/release-notes), or programmatically access release notes in [BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_cloud_release_notes&t=release_notes&page=table). 
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/chronicle-release-notes.xml) directly. 
+
+## October 12, 2026
+
+Feature
+
+**Applied Threat Intelligence curated rules now use the GTI_IOC feed**
+
+As a follow-up to the release of the `GTI_IOC` feed and the deprecation of the legacy `MANDIANT_ACTIVE_BREACH_IOC`, `MANDIANT_FUSION_IOC`, and `OPEN_SOURCE_INTEL_IOC` feeds, the Applied Threat Intelligence (ATI) curated detection rules are being updated to match against the `GTI_IOC` feed. You don't need to take any action for curated rules. Updated rules continue to match only on reviewed, stable indicators. If you have custom rules that still reference the legacy feeds, update them to use the `GTI_IOC` feed. For more information, see [Migrate to GTI_IOC](https://docs.cloud.google.com/chronicle/docs/detection/ati-fusion-feed#migrateToGTI).
+
+The update follows the standard Google SecOps rollout schedule. It starts on Monday, October 12, 2026 and rolls out to all regions during the week.
+
+## October 08, 2026
+
+Change
+
+Google SecOps has updated the list of [supported default parsers](https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/supported-default-parsers). Parsers are updated gradually, so it might take one to four days before you see the changes reflected in your region.
+
+The following supported default parsers have been updated. Each parser is listed by product name and `log_type` value, where applicable. This list includes both released default parsers and pending parser updates.
+
+  * AIX system (`AIX_SYSTEM`)
+  * Apache (`APACHE`)
+  * AppOmni (`APPOMNI`)
+  * Armis Activities (`ARMIS_ACTIVITIES`)
+  * Atlassian Cloud Admin Audit (`ATLASSIAN_AUDIT`)
+  * Atlassian Bitbucket (`ATLASSIAN_BITBUCKET`)
+  * Linux Auditing System (AuditD) (`AUDITD`)
+  * AWS Cloudtrail (`AWS_CLOUDTRAIL`)
+  * AWS Inspector (`AWS_INSPECTOR`)
+  * AWS RDS (`AWS_RDS`)
+  * Microsoft Azure Activity (`AZURE_ACTIVITY`)
+  * Azure AD Directory Audit (`AZURE_AD_AUDIT`)
+  * Azure AD Organizational Context (`AZURE_AD_CONTEXT`)
+  * Azure AD Sign-In (`AZURE_AD_SIGNIN`)
+  * Azure App Service (`AZURE_APP_SERVICE`)
+  * Azure Firewall (`AZURE_FIREWALL`)
+  * Azure Application Gateway (`AZURE_GATEWAY`)
+  * Azure Key Vault logging (`AZURE_KEYVAULT_AUDIT`)
+  * Bitdefender (`BITDEFENDER`)
+  * Blue Coat Proxy (`BLUECOAT_WEBPROXY`)
+  * Box (`BOX`)
+  * Zeek JSON (`BRO_JSON`)
+  * Check Point Sandblast (`CHECKPOINT_EDR`)
+  * Chrome Management (`CHROME_MANAGEMENT`)
+  * CipherTrust Manager (`CIPHERTRUST_MANAGER`)
+  * Cisco ACS (`CISCO_ACS`)
+  * Cisco ASA (`CISCO_ASA_FIREWALL`)
+  * Cisco Email Security (`CISCO_EMAIL_SECURITY`)
+  * Cisco Firepower NGFW (`CISCO_FIREPOWER_FIREWALL`)
+  * Cisco FireSIGHT Management Center (`CISCO_FIRESIGHT`)
+  * Cisco IronPort (`CISCO_IRONPORT`)
+  * Cisco Meraki (`CISCO_MERAKI`)
+  * Cisco Umbrella Audit (`CISCO_UMBRELLA_AUDIT`)
+  * Cisco WLC/WCS (`CISCO_WIRELESS`)
+  * Citrix Netscaler (`CITRIX_NETSCALER`)
+  * Claroty Xdome (`CLAROTY_XDOME`)
+  * Claude Compliance Logs (`CLAUDE_COMPLIANCE_LOGS`)
+  * Cloudflare Audit (`CLOUDFLARE_AUDIT`)
+  * Corelight (`CORELIGHT`)
+  * Palo Alto Cortex XDR Alerts (`CORTEX_XDR`)
+  * CrowdStrike Alerts API (`CS_ALERTS`)
+  * CrowdStrike Falcon (`CS_EDR`)
+  * CrowdStrike Falcon Stream (`CS_STREAM`)
+  * CyberArk (`CYBERARK`)
+  * CyberArk Privileged Access Manager (PAM) (`CYBERARK_PAM`)
+  * Darktrace (`DARKTRACE`)
+  * F5 Advanced Firewall Management (`F5_AFM`)
+  * F5 BIGIP LTM (`F5_BIGIP_LTM`)
+  * F5 VPN (`F5_VPN`)
+  * FireEye HX (`FIREEYE_HX`)
+  * FireEye NX (`FIREEYE_NX`)
+  * Forcepoint DLP (`FORCEPOINT_DLP`)
+  * Fortinet FortiAnalyzer (`FORTINET_FORTIANALYZER`)
+  * Fortinet Fortimanager (`FORTINET_FORTIMANAGER`)
+  * Fortinet FortiSandbox (`FORTINET_SANDBOX`)
+  * Fortinet Switch (`FORTINET_SWITCH`)
+  * Fortinet Proxy (`FORTINET_WEBPROXY`)
+  * Apigee (`GCP_APIGEE_X`)
+  * GCP Cloud Audit (`GCP_CLOUDAUDIT`)
+  * Cloud DNS (`GCP_DNS`)
+  * Security Command Center Threat (`GCP_SECURITYCENTER_THREAT`)
+  * GCP Secure Web Proxy (`GCP_SWP`)
+  * VPC Flow Logs (`GCP_VPC_FLOW`)
+  * Gemini Code Assist (`GEMINI_CODE_ASSIST`)
+  * Gitlab (`GITLAB`)
+  * AWS GuardDuty (`GUARDDUTY`)
+  * Huawei Switches (`HUAWEI_SWITCH`)
+  * IBM AS/400 (`IBM_AS400`)
+  * Microsoft IIS (`IIS`)
+  * Illumio Core (`ILLUMIO_CORE`)
+  * Imperva SecureSphere Management (`IMPERVA_SECURESPHERE`)
+  * Infoblox (`INFOBLOX`)
+  * Jenkins (`JENKINS`)
+  * JFrog Artifactory (`JFROG_ARTIFACTORY`)
+  * Journald (`JOURNALD`)
+  * Juniper (`JUNIPER_FIREWALL`)
+  * Juniper Junos (`JUNIPER_JUNOS`)
+  * Kiteworks (`KITEWORKS`)
+  * Kubernetes Node (`KUBERNETES_NODE`)
+  * McAfee IPS (`MCAFEE_IPS`)
+  * Microsoft Defender for Endpoint (`MICROSOFT_DEFENDER_ENDPOINT`)
+  * Microsoft Defender for Identity (`MICROSOFT_DEFENDER_IDENTITY`)
+  * Microsoft Defender for Office 365 (`MICROSOFT_DEFENDER_MAIL`)
+  * Microsoft Sentinel (`MICROSOFT_SENTINEL`)
+  * Microsoft SQL Server (`MICROSOFT_SQL`)
+  * Netskope CASB (`NETSKOPE_CASB`)
+  * Netskope Web Proxy (`NETSKOPE_WEBPROXY`)
+  * Netwrix (`NETWRIX`)
+  * NGINX (`NGINX`)
+  * Unix system (`NIX_SYSTEM`)
+  * Nutanix Prism (`NUTANIX_PRISM`)
+  * Office 365 (`OFFICE_365`)
+  * Okta (`OKTA`)
+  * Okta User Context (`OKTA_USER_CONTEXT`)
+  * Onapsis (`ONAPSIS`)
+  * Oracle (`ORACLE_DB`)
+  * Palo Alto Networks Firewall (`PAN_FIREWALL`)
+  * Palo Alto Panorama (`PAN_PANORAMA`)
+  * Palo Alto Prisma Cloud Alert payload (`PAN_PRISMA_CA`)
+  * Ping One (`PING_ONE`)
+  * Microsoft PowerShell (`POWERSHELL`)
+  * Proofpoint Tap Alerts (`PROOFPOINT_MAIL`)
+  * Pure Storage (`PURE_STORAGE`)
+  * Red Hat OpenShift (`REDHAT_OPENSHIFT`)
+  * RSA NetWitness (`RSA_NETWITNESS`)
+  * SailPoint IAM (`SAILPOINT_IAM`)
+  * Salesforce (`SALESFORCE`)
+  * Sangfor Next Generation Firewall (`SANGFOR_NGAF`)
+  * Sap Business Technology Platform (`SAP_BTP`)
+  * SAP Change Document (`SAP_CHANGE_DOCUMENT`)
+  * SecureLink (`SECURELINK`)
+  * Sentinelone Alerts (`SENTINELONE_ALERT`)
+  * Slack Audit (`SLACK_AUDIT`)
+  * Sourcefire (`SOURCEFIRE_IDS`)
+  * Squid Web Proxy (`SQUID_WEBPROXY`)
+  * STIX Threat Intelligence (`STIX`)
+  * Sublime Security (`SUBLIMESECURITY`)
+  * Symantec Event export (`SYMANTEC_EVENT_EXPORT`)
+  * Synology (`SYNOLOGY`)
+  * Sysdig (`SYSDIG`)
+  * Tableau (`TABLEAU`)
+  * Tanium Stream (`TANIUM_TH`)
+  * TCPWave DDI (`TCPWAVE_DDI`)
+  * Teleport Access Plane (`TELEPORT_ACCESS_PLANE`)
+  * Tenable Security Center (`TENABLE_SC`)
+  * Trellix HX Alerts (`TRELLIX_HX_ALERTS`)
+  * Trellix HX Audit Events (`TRELLIX_HX_AUDIT`)
+  * Trellix HX Event Streamer (`TRELLIX_HX_ES`)
+  * TrendMicro Apex Central (`TRENDMICRO_APEX_CENTRAL`)
+  * Trend Micro Email Security Advanced (`TRENDMICRO_EMAIL_SECURITY`)
+  * Trend Micro Vision One Audit (`TRENDMICRO_VISION_ONE_AUDIT`)
+  * Trend Micro Vision One (`TRENDMICRO_VISION_ONE`)
+  * Trend Micro Vision One Observerd Attack Techniques (`TRENDMICRO_VISION_ONE_OBSERVERD_ATTACK_TECHNIQUES`)
+  * Trend Micro Vision One Workbench (`TRENDMICRO_VISION_ONE_WORKBENCH`)
+  * Ubiquiti UniFi Switch (`UBIQUITI_SWITCH`)
+  * Uptycs EDR (`UPTYCS_EDR`)
+  * Upwind (`UPWIND`)
+  * Venafi ZTPKI (`VENAFI_ZTPKI`)
+  * Veritas NetBackup (`VERITAS_NETBACKUP`)
+  * Vmware Avinetworks iWAF (`VMWARE_AVINETWORKS_IWAF`)
+  * VMware ESXi (`VMWARE_ESX`)
+  * VMware vCenter (`VMWARE_VCENTER`)
+  * VMware vRealize Suite (VMware Aria) (`VMWARE_VREALIZE`)
+  * Wallix Bastion (`WALLIX_BASTION`)
+  * Microsoft AD (`WINDOWS_AD`)
+  * Windows Defender AV (`WINDOWS_DEFENDER_AV`)
+  * Windows DHCP (`WINDOWS_DHCP`)
+  * Windows DNS (`WINDOWS_DNS`)
+  * Windows Sysmon (`WINDOWS_SYSMON`)
+  * Windows Event (`WINEVTLOG`)
+  * Windows Event (XML) (`WINEVTLOG_XML`)
+  * wiz.io (`WIZ_IO`)
+  * Workspace Activities (`WORKSPACE_ACTIVITY`)
+  * Zoom Operation Logs (`ZOOM_OPERATION_LOGS`)
+
+
+
+The following log types were added without a default parser. Each parser is listed by product name and `log_type` value, where applicable.
+
+  * Amazon Bedrock Model Invocation Logging (`AMAZON_BEDROCK_MODEL_INVOCATION_LOGGING`)
+  * AppTrana Web Application Firewall (`AWS_APPTRANA`)
+  * Azure Machine Learning (`AZURE_MACHINE_LEARNING`)
+  * Bitstamp (`BITSTAMP`)
+  * Cloud 9 (`CLOUD9`)
+  * Cloudflare Brand Protection (`CLOUDFLARE_BRAND_PROTECTION`)
+  * Cloudflare Browser Isolation (`CLOUDFLARE_BROWSER_ISOLATION`)
+  * Delinea Cloud Platform (`DELINEA_CLOUD_PLATFORM`)
+  * Honeywell Cyber Proactive Defense (`HONEYWELL_CPD`)
+  * Huntress EDR (`HUNTRESS_EDR`)
+  * IBM Cloud Alert Notification (`IBM_CLOUD_ALERT_NOTIFICATION`)
+  * Meter Firewall NIDS (`METER_FIREWALL_NIDS`)
+  * OutSystems Cloud (`OUTSYSTEMS_CLOUD`)
+  * Staffbase Audit (`STAFFBASE_AUDIT`)
+  * Statsig (`STATSIG`)
+  * Temporal Cloud Audit Logs (`TEMPORAL_CLOUD_AUDIT_LOGS`)
+  * Twilio Segment (`TWILIO_SEGMENT`)
+
+
 
 ## September 21, 2026
 
@@ -12956,6 +13153,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

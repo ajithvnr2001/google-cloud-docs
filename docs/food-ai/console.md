@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/food-ai/console/
 title: Food Ordering AI Agent console overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:57:02.147135+00:00
+fetched_at: 2026-10-21T12:26:18.130472+00:00
 ---
 
 # Food Ordering AI Agent console overview  |  Google Cloud Documentation
@@ -42,6 +42,7 @@ After you select a Google Cloud project and brand in the Food Ordering AI Agent 
   * **Agent customization** : Configure brand-wide and store-specific agent behavior, including welcome greetings, voice characteristics, disambiguation rules, and upsell strategies.
   * **Stores and menus** : View and manage store locations, browse ingested menu items, modifier groups, and modifiers, and inspect menu ingestion logs.
   * **Agent preview** : Test ordering flows interactively using voice or text against a selected store and menu configuration before rolling out changes to production.
+  * **Evaluation** : Define test datasets and test cases, configure evaluation contexts and assertion matchers, run automated batch simulations, and review execution history.
 
 
 
@@ -124,10 +125,49 @@ Click **Start order** to launch the interactive simulation session:
 
 
 
+## Evaluation
+
+The **Evaluation** page lets you build and run automated test suites to validate your ordering agent's conversational behavior, cart accuracy, and business rules before deploying changes to customers.
+
+For more information about using the evaluation framework and APIs, see [Evaluate ordering agents using the evaluation framework](https://docs.cloud.google.com/food-ai/evaluation).
+
+### Manage datasets and test cases
+
+The **Datasets & cases** tab lets you organize and maintain your evaluation test scenarios:
+
+  * **Evaluation datasets** : Group related test cases into named datasets (such as regression suites, menu change suites, or upsell test suites). You can create new datasets, search datasets, and import or export datasets as YAML files.
+  * **Evaluation cases** : Manage independent test cases imported from YAML files or converted from production sessions. Cases can exist on their own or be organized into datasets by dragging them into a dataset.
+  * **Static text turn cases** : Define predictable, reproducible multi-turn conversations where specific customer text inputs are provided turn by turn.
+  * **Dynamic text turn cases** : Specify high-level natural language ordering instructions (for example, ordering a customized combo meal with special dietary requests) and use generative simulation to test how the agent handles varied customer phrasing.
+  * **Convert from historical sessions** : From the **Order history** page, you can convert completed customer sessions directly into evaluation cases to reproduce escalations and prevent regressions.
+
+
+
+### Configure evaluation contexts and matchers
+
+Evaluation cases rely on contexts to simulate realistic ordering environments and matchers to score agent performance:
+
+  * **Evaluation contexts** : Configure the operating environment for test cases in the **Contexts** tab, including the target store location, active menu, and daypart (such as Breakfast or Lunch).
+  * **Order result matchers** : Define expected final cart states in the **Matchers** tab. The evaluation compares the agent's final order against expected items, modifier selections, and item quantities.
+  * **Agent utterance string matchers** : Check whether the agent's spoken or text responses contain required keywords, disclaimers, or specific phrasing using substring or regular expression matching.
+  * **LLM judgement matchers** : Use LLM-as-a-judge assertions to evaluate qualitative criteria, such as whether the agent greeted the customer politely, clarified ambiguous requests appropriately, or adhered to brand tone guidelines.
+
+
+
+### Run evaluations and review history
+
+You can execute evaluation runs on an entire dataset or on individual test cases:
+
+  * **Dataset and case execution** : Click **Run dataset** next to any dataset to execute all contained cases, or select specific cases using checkboxes and click **Run** to test individual scenarios.
+  * **Run history** : The **History** tab tracks completed and in-progress evaluation runs, displaying the execution timestamp, dataset name, duration, and overall pass or fail rate.
+  * **Inspect run details** : Click any evaluation run to drill into case-by-case results. You can inspect turn-by-turn conversation transcripts, compare expected versus actual cart contents with visual diffs, and review matcher pass and fail explanations.
+
+
+
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

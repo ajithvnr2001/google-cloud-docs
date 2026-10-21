@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/callback-call-api/
 title: Callback call API \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:35:21.740186+00:00
+fetched_at: 2026-10-21T12:26:00.048913+00:00
 ---
 
 # Callback call API  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation
@@ -29,6 +29,8 @@ You can use the callback call API to schedule callback calls and cancel schedule
 
 ### Schedule a call
 
+If your instance is integrated with Salesforce, check the **Closed record options when initiating an API-scheduled call** setting under **Settings > Operation Management > CRM Record Creation Details**. Scheduling requests are rejected with `422` while **Don't check the record status** is selected. This does not apply to Zendesk or ServiceNow.
+
 To schedule a call, call `POST https://<subdomain>.<domain>/apps/api/v1/calls` and include a request body similar to the following:
     
     
@@ -48,17 +50,26 @@ To cancel a scheduled call, call `PATCH https://<subdomain>.<domain>/apps/api/v1
 
 A successful request returns information about the canceled call.
 
+**Note:** The `user_type` (string, required) - who is canceling: `agent` or `end_user` is a required field. Omitting it returns 400. The value is recorded as the cancellation reason.
+
 ### Cancel multiple scheduled calls
 
-To cancel multiple scheduled calls, call `PATCH https://<subdomain>.<domain>/apps/api/v1/calls/scheduled/cancel`. Include a request body that contains a `call_ids` array of the call IDs for the calls to be canceled.
+To cancel multiple scheduled calls, call `PATCH https://<subdomain>.<domain>/apps/api/v1/calls/scheduled/cancel`. Include a request body that contains a `call_ids` array of the call IDs, as integers, for the calls to be canceled. A value that is not an array, or that contains a non-integer entry, is rejected with `400`.
 
 See the following code sample:
     
     
     {
-        "call_ids": [123, 456, 789]
+        "call_ids": [123, 456, 789],
+        "user_type": "end_user"
     }
     
+
+Bulk cancel requires `user_type` exactly as the aforementioned single-cancel endpoint does.
+
+The `user_type` (string, required) accepts either `agent` or `end_user`.
+
+**Note:** `call_ids` (array of integers, required) - the scheduled call IDs to cancel (maximum 1,000). A value that is not an array, contains a non-integer entry, or lists more than 1,000 IDs is rejected with 400.
 
 A successful request returns a response with a response header that contains a `Location` URL for checking the status of the cancellation.
 
@@ -68,22 +79,13 @@ You can use the callback calls API with Salesforce, Zendesk, and ServiceNow CRM 
 
 ### General callback behavior
 
-If you're using any supported CRM (Salesforce, Zendesk, or ServiceNow), the following conditions affect scheduled callback behavior:
+If you're using any supported CRM (such as Salesforce), the following conditions affect scheduled callback behavior:
 
   * **A record is open and already has an active scheduled call** : If a ticket ID lookup indicates that the record is open and already has an active scheduled call, the call isn't scheduled. The following comment is attached to the CRM record: `A scheduled call was not created because the record already has an active scheduled call`.
 
   * **The CRM can't be reached** : If a ticket ID lookup indicates that the CRM can't be reached, the call is canceled. The following comment is attached to the CRM record: `A scheduled call was canceled because the CRM was unreachable`.
 
-
-
-
-#### Callback behavior with closed records
-
-The way callback calls are handled for closed records varies depending on which CRM you're using:
-
-  * **Zendesk and ServiceNow users** : If a ticket ID lookup indicates that the record is closed, the call isn't scheduled. The following comment is attached to the CRM record: `A scheduled call was not created because the record is closed`.
-
-  * **Salesforce users:** See Callback calls with Salesforce to configure how your instance handles scheduled calls for closed records.
+  * **A record is closed**.
 
 
 
@@ -103,7 +105,7 @@ If you've integrated CCAI Platform with [Salesforce](https://docs.cloud.google.c
 
 #### Don't check the record status
 
-You can configure CCAI Platform so that it doesn't check the record status before making a scheduled call. With this configuration, the call is made as scheduled regardless of whether the record is open or closed.
+You can configure CCAI Platform so that it doesn't check the record status before making a scheduled call. While this option is selected, requests to schedule a call through the callback call API are rejected with `422`.
 
 To configure CCAI Platform to not check the record status, follow these steps:
 
@@ -172,6 +174,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

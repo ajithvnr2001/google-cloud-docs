@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-topology/resources/
 title: Resources \u00a0|\u00a0 App Topology \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:12.282958+00:00
+fetched_at: 2026-10-21T12:25:16.915654+00:00
 ---
 
 # Resources  |  App Topology  |  Google Cloud Documentation
@@ -21,6 +21,7 @@ Send feedback
 
 #  Resources Stay organized with collections  Save and categorize content based on your preferences. 
 
+  * ### [Pricing Pricing details for App Topology.  ](http://cloud.google.com/products/app-topology/pricing)
   * ### [Billing questions Find common answers to billing questions.  ](https://docs.cloud.google.com/app-topology/billing-questions)
   * ### [Quotas and limits Usage policies for your App Topology resources.  ](https://docs.cloud.google.com/app-topology/quotas)
   * ### [Release notes Details about updates to App Topology.  ](https://docs.cloud.google.com/app-topology/release-notes)

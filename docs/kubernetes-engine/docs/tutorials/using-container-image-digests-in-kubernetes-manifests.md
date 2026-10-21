@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/using-container-image-digests-in-kubernetes-manifests/
 title: Using container image digests in Kubernetes manifests \u00a0|\u00a0 Kubernetes Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:45:47.744001+00:00
+fetched_at: 2026-10-21T12:25:39.778329+00:00
 ---
 
 # Using container image digests in Kubernetes manifests  |  Kubernetes Engine  |  Google Cloud Documentation

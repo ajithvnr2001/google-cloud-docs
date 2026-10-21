@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-ftp/create-internal-sftp-server/
 title: Create an internal SFTP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:17:50.181051+00:00
+fetched_at: 2026-10-21T12:24:47.559502+00:00
 ---
 
 # Create an internal SFTP server  |  Google Cloud Documentation
@@ -228,7 +228,7 @@ To create an internal server, run the [`gcloud alpha storage ftp servers create`
 
 Before using any of the command data below, make the following replacements: 
 
-  * SERVER_ID: a unique ID for the server. Must start with a lowercase letter, and end with a lowercase letter or number. Can contain lowercase letters, numbers, and hyphens. Maximum length is 30 characters.
+  * SERVER_ID: a unique ID for the server. Must start with a lowercase letter, and end with a lowercase letter or number. Can contain lowercase letters, numbers, and hyphens. Can't begin with the prefix `goog` or contain the string `google`, including close misspellings such as `g00gle`. Maximum length is 30 characters.
   * LOCATION_ID: the [Google Cloud location](https://docs.cloud.google.com/cloud-ftp/locations) of the server, such as `us-west1`.
 
 For the fastest data transfer speeds, create the server in the same location as the Cloud Storage bucket that stores your data. If the bucket's location isn't supported by Cloud FTP, then select the nearest available location.
@@ -291,7 +291,7 @@ Before using any of the request data, make the following replacements:
 
 For the fastest data transfer speeds, create the server in the same location as the Cloud Storage bucket that stores your data. If the bucket's location isn't supported by Cloud FTP, then select the nearest available location.
 
-  * SERVER_ID: a unique ID for the server. Must start with a lowercase letter, and end with a lowercase letter or number. Can contain lowercase letters, numbers, and hyphens. Maximum length is 30 characters.
+  * SERVER_ID: a unique ID for the server. Must start with a lowercase letter, and end with a lowercase letter or number. Can contain lowercase letters, numbers, and hyphens. Can't begin with the prefix `goog` or contain the string `google`, including close misspellings such as `g00gle`. Maximum length is 30 characters.
   * PROJECT_TO_ALLOW: the project ID or number of a consumer project that is allowed to connect to the server by using Private Service Connect. For example, `example-allowed-project`. You must specify at least one project.
 
 You can allow a maximum of 500 projects. 
@@ -369,6 +369,8 @@ The response identifies a [long-running operation](https://docs.cloud.google.com
 It takes about 10 minutes for the server to be created.
 
 ###  Client libraries 
+
+To create an internal server, set the access type to internal and provide an internal access configuration.
 
 ### C#
 
@@ -749,6 +751,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

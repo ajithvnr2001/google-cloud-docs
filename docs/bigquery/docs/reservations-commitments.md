@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/reservations-commitments/
 title: Manage workload commitments \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T11:22:03.509920+00:00
+fetched_at: 2026-10-21T12:26:22.270986+00:00
 ---
 
 # Manage workload commitments  |  BigQuery  |  Google Cloud Documentation
@@ -484,7 +484,9 @@ Commitments expire at the end of their duration. You can't delete a commitment w
 
 After renewing a commitment, the value of **Start time** isn't changed. It refers to the start time of the original commitment. The value of **End time** is the time the renewed commitment expires. For example, if you have one annual commitment created on December 13, 2022, and it's renewed on December 13, 2023. If you view the commitment details on December 14, 2023, the value of **Start time** would be December 13, 2022 and the value of **End time** would be December 12, 2024.
 
-Baseline slots are always charged. If a capacity commitment expires you might need to manually adjust the amount of baseline slots in your reservations to avoid any unwanted charges. For example, consider that you have a 1-year commitment with 100 slots and a reservation with 100 baseline slots. The commitment expires and doesn't have a renewal plan. Once the commitment expires, you pay for 100 baseline slots at the [pay as you go rate](https://cloud.google.com/bigquery/pricing#on_demand_pricing).
+Baseline slots are always charged. If a capacity commitment expires, then you might need to manually adjust the amount of baseline slots in your reservations to avoid any unwanted charges. For example, consider that you have a 1-year commitment with 100 slots and a reservation with 100 baseline slots. The commitment expires and doesn't have a renewal plan. Once the commitment expires, you pay for 100 baseline slots at the [pay-as-you-go rate](https://cloud.google.com/bigquery/pricing#on_demand_pricing).
+
+**Warning:** Canceling or allowing a slot commitment to expire doesn't delete or de-provision the associated reservations or assignments. To stop baseline slot-hour charges and transition back to on-demand billing, you must manually [delete all reservations](https://docs.cloud.google.com/bigquery/docs/reservations-tasks#delete_reservations) and [delete all reservation assignments](https://docs.cloud.google.com/bigquery/docs/reservations-assignments) in the Google Cloud console.
 
 ## Control the creation of capacity commitments
 
@@ -535,6 +537,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

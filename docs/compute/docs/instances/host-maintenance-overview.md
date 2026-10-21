@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/host-maintenance-overview/
 title: About host events \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T13:37:46.192895+00:00
+fetched_at: 2026-10-21T12:25:17.092792+00:00
 ---
 
 # About host events  |  Compute Engine  |  Google Cloud Documentation
@@ -28,8 +28,9 @@ During the lifespan of a virtual machine (VM) instance or bare metal instance, t
 By default, most instances are set to live migrate during host events. For all machine series except Z3, you can override this behavior and explicitly set the instances to terminate and optionally restart. Instances created using certain machine types or configurations don't support live migration, such as the following:
 
   * H4D instances
-  * Z3 instances with more than 18 TiB of attached Titanium SSD
-  * Z4D instances with more than 42 TiB of attached Titanium SSD
+  * Z3 instances with more than 18,000 GiB of attached Titanium SSD
+  * Z4D and Z4M instances with more than 42,000 GiB of attached Titanium SSD
+  * Instances that have a Cloud RDMA network interface
   * [Bare metal instances](https://docs.cloud.google.com/compute/docs/instances/bare-metal-instances)
   * Instances with attached GPUs
 
@@ -126,7 +127,7 @@ You can change an instance's [host maintenance policy](https://docs.cloud.google
   * **Maintenance behavior:** whether the instance is live migrated or stopped when there is a maintenance event.
   * **Restart behavior:** whether Compute Engine restarts or terminates the instance if the instance crashes, experiences a host error, or becomes unresponsive.
   * **Host error detection time:** the maximum amount of time that Compute Engine waits to restart or terminate an instance after detecting that the instance is unresponsive. 
-  * **Local SSD recovery time:** the maximum amount of time that Compute Engine spends recovering the data on Local SSD disks after detecting a host error. The Local SSD data is lost if the specified time elapses without a successful recovery.
+  * **Local SSD recovery time:** the maximum amount of time that Compute Engine spends in the `REPAIRING` state recovering the data on Local SSD disks after detecting a host error or during a maintenance event that requires instance termination. The Local SSD data is lost if the specified time elapses without a successful recovery.
 
 
 
@@ -139,8 +140,9 @@ When a host event occurs, the compute instance can either use live migration, or
 The following machine series might not support live migration, and instead require termination during host events:
 
   * Instances based on the following machine types terminate and restart in place: 
-    * [Z3](https://docs.cloud.google.com/compute/docs/storage-optimized-machines) with more than 18 TiB of Titanium SSD
-    * [Z4D](https://docs.cloud.google.com/compute/docs/storage-optimized-machines) with more than 42 TiB of Titanium SSD
+    * [Z3](https://docs.cloud.google.com/compute/docs/storage-optimized-machines) with more than 18,000 GiB of Titanium SSD
+    * [Z4D](https://docs.cloud.google.com/compute/docs/storage-optimized-machines) or [Z4M](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4m_series) with more than 42,000 GiB of Titanium SSD
+    * [Z4M](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4m_series) that have a Cloud RDMA network interface
     * [X5](https://docs.cloud.google.com/compute/docs/memory-optimized-machines#x5_series),
     * [X4](https://docs.cloud.google.com/compute/docs/memory-optimized-machines#x4_series)
     * [H4D](https://docs.cloud.google.com/compute/docs/compute-optimized-machines#h4d_series)
@@ -179,7 +181,7 @@ When Compute Engine stops an instance because of a host event, it reports a syst
 
 If your instance is configured to stop when there is a maintenance event, or if your instance crashes because of an underlying hardware issue, then Compute Engine can automatically restart the instance. The instance is either restarted on the same host server, or moved to another server in the same zone that isn't participating in the maintenance event.
 
-By default, Compute Engine tries to recover instances with attached Local SSD disks for one hour. If the time limit is reached, then Compute Engine attempts to restart the instance on a different host server in the same zone. Z4D, Z3, X4, and H4D instances have different default wait times. These instance types restart on the same host server after instance termination. 
+By default, Compute Engine tries to recover instances with attached Local SSD disks for one hour. If the time limit is reached, then Compute Engine attempts to restart the instance on a different host server in the same zone. Z4D, Z4M, Z3, X4, and H4D instances have different default wait times. These instance types restart on the same host server after instance termination. 
 
 To configure automatic restart, set the host maintenance policy field `automaticRestart` to `true`. This setting does not apply if the instance is taken offline due to a zonal outage or through manual operation, such as calling `sudo shutdown` within the guest OS.
 
@@ -218,24 +220,33 @@ Google Cloud uses a best-effort approach to keep your Local SSD data intact. How
 
 ### Local SSD recovery timeout
 
-When a host error occurs, Compute Engine tries to recover any Local SSD disks attached to the instance. You can control how much time Compute Engine spends trying to recover the data with the host policy `localSsdRecoveryTimeout` setting.
+When an instance with attached Local SSD disks enters the [`REPAIRING`](https://docs.cloud.google.com/compute/docs/instances/instance-lifecycle#repairing-state) state, Compute Engine tries to recover or preserve the Local SSD data. The instance and Local SSD disks are unavailable during this time.
 
-By default, Compute Engine spends 1 hour recovering the data, but valid values for this setting are between 0 and 168, in increments of 1 hour. The following machine types have different default values:
+An instance enters the `REPAIRING` state and starts the Local SSD recovery timeout countdown in the following scenarios:
 
-  * Z4D and Z3 VM machine types: the default value is 6, which means these instances try to recover the Local SSD data for 6 hours before reaching the timeout limit.
-  * Z3 bare metal `z3-highmem-192-highlssd-metal`: the default value is 168 hours (7 days).
+  * A host error occurs.
+  * Scheduled maintenance occurs on an instance that supports Local SSD data persistence after termination, and the instance is configured to both stop on host maintenance (`onHostMaintenance` set to `TERMINATE`) and automatically restart (`automaticRestart` set to `true`). During maintenance, Compute Engine preserves the data by either restarting the instance in place on the same host or migrating the instance and its Local SSD data to another host while stopped.
+
+
+
+You can control how much time Compute Engine spends trying to recover or preserve the data with the host policy `localSsdRecoveryTimeout` setting. By default, Compute Engine spends 1 hour recovering the data, but valid values for this setting are between 0 and 168, in increments of 1 hour. The following machine types have different default values:
+
+  * Z4D, Z4M, and Z3 VM machine types: the default value is 6, which means these instances try to recover the Local SSD data for 6 hours in the `REPAIRING` state before reaching the timeout limit.
+  * Z4M bare metal and Z3 bare metal: the default value is 168 hours (7 days).
 
 
 
 If you set the Local SSD recovery timeout to 0, then Compute Engine doesn't attempt to recover any attached Local SSD disks. The instance is restarted as soon as possible and the Local SSD data is unrecoverable. Use this configuration if resuming the workload is more important than recovering the Local SSD data.
 
-If the recovery timeout is not set to 0, but the time limit is reached before the Local SSD data is recovered, then Compute Engine restarts the instance without the Local SSD disk. Compute Engine attaches new, blank Local SSD disks to the restarted instance. You must [format and mount](https://docs.cloud.google.com/compute/docs/disks/add-local-ssd#formatandmount) these disks before the instance can use them.
+If the recovery timeout isn't set to 0, but the time limit is reached before the Local SSD data is recovered, then Compute Engine restarts the instance without the Local SSD disk. Compute Engine attaches new, blank Local SSD disks to the restarted instance. You must [format and mount](https://docs.cloud.google.com/compute/docs/disks/add-local-ssd#formatandmount) these disks before the instance can use them.
 
-The instance is in a [`REPAIRING`](https://docs.cloud.google.com/compute/docs/instances/instance-life-cycle) state while Compute Engine attempts to recover the Local SSD disks. The instance and Local SSD disks are unavailable during this time.
+**Caution:** If you set the Local SSD recovery timeout to less than four hours, then you risk losing data during scheduled maintenance.
 
 If you set the Local SSD recovery timeout to the maximum value of 168, then the instance remains in the `REPAIRING` state for up to 7 days while Compute Engine attempts to recover the Local SSD disks.
 
-**Note:** You're not charged for the instance while it is in the `REPAIRING` state, as described in [VM instance lifecycle](https://docs.cloud.google.com/compute/docs/instances/instance-life-cycle).**Important:** The time spent attempting to recover Local SSD data doesn't count towards instance availability SLA downtime. While the instance is in this recovery phase, the [Compute Engine Service Level Agreement (SLA)](https://cloud.google.com/compute/sla) doesn't cover the instance.
+You're not charged for the instance while it is in the `REPAIRING` state, as described in [VM instance lifecycle](https://docs.cloud.google.com/compute/docs/instances/instance-life-cycle).
+
+**Important:** The time spent attempting to recover Local SSD data doesn't count towards instance availability SLA downtime. While the instance is in this recovery phase, the [Compute Engine Service Level Agreement (SLA)](https://cloud.google.com/compute/sla) doesn't cover the instance.
 
 ### Stop Local SSD disk recovery
 
@@ -268,6 +279,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/lakehouse/docs/lakehouse-tables/
 title: Compare table types \u00a0|\u00a0 Lakehouse \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:19:45.140643+00:00
+fetched_at: 2026-10-21T12:25:55.647804+00:00
 ---
 
 # Compare table types  |  Lakehouse  |  Google Cloud Documentation
@@ -52,10 +52,6 @@ Key features include:
 
 
 ###  Hive metastore 
-
-**Preview**
-
-This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
 The _Lakehouse runtime catalog_ manages Apache Hive tables through an Apache Hive metastore (HMS) endpoint optimized for Apache Spark `ExternalCatalog` compatibility, letting you seamlessly share data across Apache Spark, Apache Hive, and BigQuery. You create these tables from open source engines and store them in Cloud Storage. This option is best if you want your ETL workflow to be managed by open source engines without needing a separate self-hosted Hive metastore, and only require read access from BigQuery.
 
@@ -137,6 +133,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

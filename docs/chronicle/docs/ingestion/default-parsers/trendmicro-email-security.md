@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/trendmicro-email-security/
 title: Collect Trend Micro Email Security logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T19:01:50.934942+00:00
+fetched_at: 2026-10-21T12:26:41.725021+00:00
 ---
 
 # Collect Trend Micro Email Security logs  |  Google Security Operations  |  Google Cloud Documentation

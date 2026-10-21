@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/valkey/manage-iam-auth/
 title: Manage IAM authentication \u00a0|\u00a0 Memorystore for Valkey \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:43:20.233967+00:00
+fetched_at: 2026-10-21T12:26:25.520608+00:00
 ---
 
 # Manage IAM authentication  |  Memorystore for Valkey  |  Google Cloud Documentation
@@ -92,14 +92,17 @@ Replace the following:
 
      * ACCESS_TOKEN: the access token that you retrieved in the previous step.
 
-Authenticated connections are valid for 12 hours. For more information, see [IAM access token timeframe](https://docs.cloud.google.com/memorystore/docs/valkey/about-iam-auth#iam_access_token_time_frame).
+If you specify a username, then you must use either the `default` username or the IAM principal email address. Also, authenticated connections remain valid after the token expires. For more information, see [IAM access token timeframe](https://docs.cloud.google.com/memorystore/docs/valkey/about-iam-auth#iam_access_token_time_frame).
 
 If you enable in-transit encryption on the instance, then you must append the Transport Layer Security (TLS) flags. For example:
     
     valkey-cli -h NETWORK_ADDRESS -p PORT -a ACCESS_TOKEN -c --tls --cacert /tmp/server_ca.pem
     
 
-  7. Run the `CLUSTER SHARDS` command to view your node topology. Note the IP address and port number of one of the nodes.
+**Important** : If you have a Cluster Mode Disabled instance, then don't use the `-c` flag.
+  7. Optional: If you have a Cluster Mode Enabled instance, then run the `CLUSTER SHARDS` command to view your node topology. Note one of the node's IP addresses and port numbers.
+
+If you have a Cluster Mode Disabled instance, then you can skip this step.
 
   8. To use `valkey-cli` to authenticate and connect to your node, use the following command:
          
@@ -161,15 +164,20 @@ To view a Valkey-compatible code sample on how to set up a client library to con
 
 Error message | Recommended action | Description  
 ---|---|---  
-` -WRONGPASS invalid username-password pair or user is disabled ` | Verify the username and access token provided to the Memorystore for Valkey server | The username or access token provided is invalid. "default" is the only supported username. If your application is already using the "default" username, verify that the access token is not expired and is retrieved following the instructions in [Connect to an instance that uses IAM authentication](https://docs.cloud.google.com/memorystore/docs/valkey/manage-iam-auth#connect_to_an_instance_that_uses_iam_authentication). IAM permissions may take a few minutes to propagate if recently changed.  
-` -NOAUTH Authentication required ` | Check that application is configured to provide an IAM access token to the Memorystore for Valkey server | The application is not providing an access token to the Memorystore for Valkey server. Verify that the application is configured to provide an access token. following the instructions in [Connect to an instance that uses IAM authentication](https://docs.cloud.google.com/memorystore/docs/valkey/manage-iam-auth#connect_to_an_instance_that_uses_iam_authentication)  
-` -ERR (ERR_IAM_EXHAUSTED) Memorystore IAM authentication backend quota exceeded. ` | Retry with exponential backoff | The IAM backend is overloaded and returned a quota exceeded error to the Memorystore for Valkey server. Applications should attempt to retry this error with exponential backoff to prevent further connection failures.  
-` -ERR (ERR_IAM_OTHER) Memorystore IAM authentication backend error. ` | Retry with exponential backoff | The IAM backend returned a transient error to the Memorystore for Valkey server. Applications should attempt to retry this error with exponential backoff to prevent further connection failures.  
+` -WRONGPASS invalid username-password pair or user is disabled ` | Verify the access token provided to the Memorystore for Valkey server and ensure that the matching ACL user is enabled. | The IAM principal lacks the required permissions, the access token that you provided is invalid, or the matching ACL user is disabled. Verify that the access token isn't expired and that you retrieved the token by following the instructions in [Connect to an instance that uses IAM authentication](https://docs.cloud.google.com/memorystore/docs/valkey/manage-iam-auth#connect_to_an_instance_that_uses_iam_authentication). If you recently changed the IAM permissions, then the permissions might take a few minutes to propagate.  
+` -NOAUTH Authentication required ` | Check that the application is configured to provide an IAM access token to the Memorystore for Valkey server. | The application isn't providing an access token to the Memorystore for Valkey server. Verify that the application is configured to provide an access token and that you retrieved the access token by following the instructions in [Connect to an instance that uses IAM authentication](https://docs.cloud.google.com/memorystore/docs/valkey/manage-iam-auth#connect_to_an_instance_that_uses_iam_authentication).  
+` -ERR (ERR_IAM_EXHAUSTED) Memorystore IAM authentication backend quota exceeded. ` | Retry with exponential backoff. | The IAM backend is overloaded and returned a quota exceeded error to the Memorystore for Valkey server.To prevent further connection failures, we recommend that applications retry this error with exponential backoff.  
+` -ERR (ERR_IAM_OTHER) Memorystore IAM authentication backend error. ` | Verify the username or retry with exponential backoff. | This error occurs for the following reasons:
+
+  * The username that you provided isn't valid. You can use the `default` username, omit the username, or use the IAM principal email address.
+  * The IAM backend returned a transient error to the Memorystore for Valkey server.
+
+If the username is valid, then we recommend that your application attempts to retry this error with exponential backoff to prevent further connection failures.  
   
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

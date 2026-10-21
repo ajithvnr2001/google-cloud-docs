@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/custom-roles-permissions-support/
 title: Support levels for permissions in custom roles \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:12:25.412646+00:00
+fetched_at: 2026-10-21T12:25:22.640933+00:00
 ---
 
 # Support levels for permissions in custom roles  |  Identity and Access Management (IAM)  |  Google Cloud Documentation
@@ -158,10 +158,18 @@ Permission name | Custom roles support level
 `aiplatform.agentExamples.get` | `SUPPORTED`  
 `aiplatform.agentExamples.list` | `SUPPORTED`  
 `aiplatform.agentExamples.update` | `SUPPORTED`  
+`aiplatform.agentMemories.delete` | `SUPPORTED`  
+`aiplatform.agentMemories.get` | `SUPPORTED`  
+`aiplatform.agentMemories.list` | `SUPPORTED`  
+`aiplatform.agentMemories.undelete` | `SUPPORTED`  
+`aiplatform.agentMemories.update` | `SUPPORTED`  
 `aiplatform.agents.create` | `SUPPORTED`  
 `aiplatform.agents.delete` | `SUPPORTED`  
 `aiplatform.agents.get` | `SUPPORTED`  
+`aiplatform.agents.getIamPolicy` | `SUPPORTED`  
 `aiplatform.agents.list` | `SUPPORTED`  
+`aiplatform.agents.suspend` | `SUPPORTED`  
+`aiplatform.agents.unsuspend` | `SUPPORTED`  
 `aiplatform.agents.update` | `SUPPORTED`  
 `aiplatform.analyzedInvocations.get` | `SUPPORTED`  
 `aiplatform.analyzedInvocations.list` | `SUPPORTED`  
@@ -2255,6 +2263,7 @@ Permission name | Custom roles support level
 `capacityplanner.capacityPlans.list` | `SUPPORTED`  
 `capacityplanner.capacityPlans.update` | `SUPPORTED`  
 `capacityplanner.forecasts.list` | `SUPPORTED`  
+`capacityplanner.messages.generate` | `SUPPORTED`  
 `capacityplanner.operations.get` | `SUPPORTED`  
 `capacityplanner.planAlertInsights.list` | `SUPPORTED`  
 `capacityplanner.usageAlertInsights.list` | `SUPPORTED`  
@@ -4743,6 +4752,13 @@ Permission name | Custom roles support level
 `compute.firewalls.listEffectiveTags` | `SUPPORTED`  
 `compute.firewalls.listTagBindings` | `SUPPORTED`  
 `compute.firewalls.update` | `SUPPORTED`  
+`compute.folderVmExtensionPolicies.create` | `SUPPORTED`  
+`compute.folderVmExtensionPolicies.delete` | `SUPPORTED`  
+`compute.folderVmExtensionPolicies.get` | `SUPPORTED`  
+`compute.folderVmExtensionPolicies.list` | `SUPPORTED`  
+`compute.folderVmExtensionPolicies.update` | `SUPPORTED`  
+`compute.folderVmExtensions.get` | `SUPPORTED`  
+`compute.folderVmExtensions.list` | `SUPPORTED`  
 `compute.forwardingRules.create` | `SUPPORTED`  
 `compute.forwardingRules.createTagBinding` | `SUPPORTED`  
 `compute.forwardingRules.delete` | `SUPPORTED`  
@@ -5148,6 +5164,13 @@ Permission name | Custom roles support level
 `compute.orgRollouts.list` | `SUPPORTED`  
 `compute.orgRollouts.pause` | `SUPPORTED`  
 `compute.orgRollouts.resume` | `SUPPORTED`  
+`compute.orgVmExtensionPolicies.create` | `SUPPORTED`  
+`compute.orgVmExtensionPolicies.delete` | `SUPPORTED`  
+`compute.orgVmExtensionPolicies.get` | `SUPPORTED`  
+`compute.orgVmExtensionPolicies.list` | `SUPPORTED`  
+`compute.orgVmExtensionPolicies.update` | `SUPPORTED`  
+`compute.orgVmExtensions.get` | `SUPPORTED`  
+`compute.orgVmExtensions.list` | `SUPPORTED`  
 `compute.organizations.disableXpnHost` | `SUPPORTED`  
 `compute.organizations.disableXpnResource` | `SUPPORTED`  
 `compute.organizations.enableXpnHost` | `SUPPORTED`  
@@ -5656,6 +5679,8 @@ Permission name | Custom roles support level
 `compute.vmExtensionPolicies.get` | `SUPPORTED`  
 `compute.vmExtensionPolicies.list` | `SUPPORTED`  
 `compute.vmExtensionPolicies.update` | `SUPPORTED`  
+`compute.vmExtensions.get` | `SUPPORTED`  
+`compute.vmExtensions.list` | `SUPPORTED`  
 `compute.vpnGateways.create` | `SUPPORTED`  
 `compute.vpnGateways.createTagBinding` | `SUPPORTED`  
 `compute.vpnGateways.delete` | `SUPPORTED`  
@@ -6580,26 +6605,72 @@ Permission name | Custom roles support level
 `databasecenter.userTags.list` | `SUPPORTED`  
 `databaseinsights.activeQueries.fetch` | `SUPPORTED`  
 `databaseinsights.activeQuery.terminate` | `SUPPORTED`  
+`databaseinsights.activeSessionHistory.query` | `SUPPORTED`  
 `databaseinsights.activitySummary.fetch` | `SUPPORTED`  
+`databaseinsights.agentPolicies.createAgentPolicy` | `SUPPORTED`  
+`databaseinsights.agentPolicies.deleteAgentPolicy` | `SUPPORTED`  
+`databaseinsights.agentPolicies.getAgentPolicy` | `SUPPORTED`  
+`databaseinsights.agentPolicies.updateAgentPolicy` | `SUPPORTED`  
 `databaseinsights.aggregatedEvents.query` | `SUPPORTED`  
 `databaseinsights.aggregatedStats.query` | `SUPPORTED`  
 `databaseinsights.clusterEvents.query` | `SUPPORTED`  
 `databaseinsights.databaseIssues.troubleshoot` | `SUPPORTED`  
 `databaseinsights.dbCenter.query` | `SUPPORTED`  
 `databaseinsights.dbPerformance.query` | `SUPPORTED`  
+`databaseinsights.genUiAgent.deleteBlueprint` | `SUPPORTED`  
+`databaseinsights.genUiAgent.getBlueprint` | `SUPPORTED`  
+`databaseinsights.genUiAgent.listBlueprints` | `SUPPORTED`  
+`databaseinsights.genUiAgent.query` | `SUPPORTED`  
+`databaseinsights.genUiAgent.saveBlueprint` | `SUPPORTED`  
+`databaseinsights.goals.applyTaskRemediation` | `SUPPORTED`  
+`databaseinsights.goals.createGoal` | `SUPPORTED`  
+`databaseinsights.goals.deleteGoal` | `SUPPORTED`  
+`databaseinsights.goals.dismissTask` | `SUPPORTED`  
+`databaseinsights.goals.fixTask` | `TESTING`  
+`databaseinsights.goals.getGoal` | `SUPPORTED`  
+`databaseinsights.goals.getTask` | `SUPPORTED`  
+`databaseinsights.goals.listGoals` | `SUPPORTED`  
+`databaseinsights.goals.listTasks` | `SUPPORTED`  
+`databaseinsights.goals.markTaskAsDone` | `SUPPORTED`  
+`databaseinsights.goals.restoreTask` | `SUPPORTED`  
+`databaseinsights.goals.updateGoal` | `SUPPORTED`  
 `databaseinsights.indexRecommendations.query` | `SUPPORTED`  
 `databaseinsights.instanceEvents.query` | `SUPPORTED`  
 `databaseinsights.locations.get` | `SUPPORTED`  
 `databaseinsights.locations.list` | `SUPPORTED`  
+`databaseinsights.logs.fetch` | `SUPPORTED`  
+`databaseinsights.operations.get` | `TESTING`  
 `databaseinsights.performanceIssues.detect` | `SUPPORTED`  
 `databaseinsights.performanceIssues.investigate` | `SUPPORTED`  
 `databaseinsights.queryMetrics.fetch` | `SUPPORTED`  
 `databaseinsights.queryStats.fetch` | `SUPPORTED`  
 `databaseinsights.queryTimeSeries.fetch` | `SUPPORTED`  
 `databaseinsights.recommendations.query` | `SUPPORTED`  
+`databaseinsights.resourceMetadata.fetch` | `SUPPORTED`  
 `databaseinsights.resourceRecommendations.query` | `SUPPORTED`  
 `databaseinsights.systemMetrics.fetch` | `SUPPORTED`  
+`databaseinsights.telemetryConfig.fetch` | `SUPPORTED`  
 `databaseinsights.timeSeries.query` | `SUPPORTED`  
+`databaseinsights.traces.fetch` | `SUPPORTED`  
+`databaseinsights.virtualDbaAgent.createAgentPolicy` | `TESTING`  
+`databaseinsights.virtualDbaAgent.createContextService` | `TESTING`  
+`databaseinsights.virtualDbaAgent.createGoal` | `TESTING`  
+`databaseinsights.virtualDbaAgent.deleteAgentPolicy` | `TESTING`  
+`databaseinsights.virtualDbaAgent.deleteContextService` | `TESTING`  
+`databaseinsights.virtualDbaAgent.deleteGoal` | `TESTING`  
+`databaseinsights.virtualDbaAgent.disable` | `TESTING`  
+`databaseinsights.virtualDbaAgent.enable` | `TESTING`  
+`databaseinsights.virtualDbaAgent.fetchContextService` | `TESTING`  
+`databaseinsights.virtualDbaAgent.getAgentPolicy` | `TESTING`  
+`databaseinsights.virtualDbaAgent.getGoal` | `TESTING`  
+`databaseinsights.virtualDbaAgent.getTask` | `TESTING`  
+`databaseinsights.virtualDbaAgent.listGoals` | `TESTING`  
+`databaseinsights.virtualDbaAgent.listTasks` | `TESTING`  
+`databaseinsights.virtualDbaAgent.listTodos` | `TESTING`  
+`databaseinsights.virtualDbaAgent.query` | `TESTING`  
+`databaseinsights.virtualDbaAgent.updateAgentPolicy` | `TESTING`  
+`databaseinsights.virtualDbaAgent.updateContextService` | `TESTING`  
+`databaseinsights.virtualDbaAgent.updateGoal` | `TESTING`  
 `databaseinsights.virtualDbxAgent.query` | `SUPPORTED`  
 `databaseinsights.waitEventStats.fetch` | `SUPPORTED`  
 `databaseinsights.waitEventTimeSeries.fetch` | `SUPPORTED`  
@@ -7010,6 +7081,15 @@ Permission name | Custom roles support level
 `datapipelines.pipelines.run` | `SUPPORTED`  
 `datapipelines.pipelines.stop` | `SUPPORTED`  
 `datapipelines.pipelines.update` | `SUPPORTED`  
+`dataplex.agentTasks.create` | `SUPPORTED`  
+`dataplex.agentTasks.delete` | `SUPPORTED`  
+`dataplex.agentTasks.get` | `SUPPORTED`  
+`dataplex.agentTasks.getData` | `SUPPORTED`  
+`dataplex.agentTasks.getIamPolicy` | `SUPPORTED`  
+`dataplex.agentTasks.list` | `SUPPORTED`  
+`dataplex.agentTasks.run` | `SUPPORTED`  
+`dataplex.agentTasks.setIamPolicy` | `SUPPORTED`  
+`dataplex.agentTasks.update` | `SUPPORTED`  
 `dataplex.aspectTypes.create` | `SUPPORTED`  
 `dataplex.aspectTypes.delete` | `SUPPORTED`  
 `dataplex.aspectTypes.get` | `SUPPORTED`  
@@ -7171,6 +7251,7 @@ Permission name | Custom roles support level
 `dataplex.entryGroups.useSecondaryIndexesAspect` | `SUPPORTED`  
 `dataplex.entryGroups.useStorageAspect` | `SUPPORTED`  
 `dataplex.entryGroups.useSynonymEntryLink` | `SUPPORTED`  
+`dataplex.entryGroups.useUsageAspect` | `SUPPORTED`  
 `dataplex.entryLinkTypes.create` | `SUPPORTED`  
 `dataplex.entryLinkTypes.delete` | `SUPPORTED`  
 `dataplex.entryLinkTypes.get` | `SUPPORTED`  
@@ -10668,12 +10749,6 @@ Permission name | Custom roles support level
 `modelarmor.templates.useToSanitizeUserPrompt` | `SUPPORTED`  
 `modelarmor.templates.useToStreamSanitizeModelResponse` | `SUPPORTED`  
 `modelarmor.templates.useToStreamSanitizeUserPrompt` | `SUPPORTED`  
-`modelarmor.topics.create` | `SUPPORTED`  
-`modelarmor.topics.delete` | `SUPPORTED`  
-`modelarmor.topics.get` | `SUPPORTED`  
-`modelarmor.topics.list` | `SUPPORTED`  
-`modelarmor.topics.test` | `SUPPORTED`  
-`modelarmor.topics.update` | `SUPPORTED`  
 `monitoring.alertPolicies.create` | `SUPPORTED`  
 `monitoring.alertPolicies.createTagBinding` | `SUPPORTED`  
 `monitoring.alertPolicies.delete` | `SUPPORTED`  
@@ -10934,6 +11009,7 @@ Permission name | Custom roles support level
 `networkconnectivity.spokes.listTagBindings` | `SUPPORTED`  
 `networkconnectivity.spokes.setIamPolicy` | `SUPPORTED`  
 `networkconnectivity.spokes.update` | `SUPPORTED`  
+`networkconnectivity.spokes.use` | `SUPPORTED`  
 `networkconnectivity.transports.create` | `SUPPORTED`  
 `networkconnectivity.transports.delete` | `SUPPORTED`  
 `networkconnectivity.transports.get` | `SUPPORTED`  
@@ -11441,6 +11517,13 @@ Permission name | Custom roles support level
 `oracledatabase.cloudVmClusters.list` | `SUPPORTED`  
 `oracledatabase.cloudVmClusters.update` | `SUPPORTED`  
 `oracledatabase.databaseCharacterSets.list` | `SUPPORTED`  
+`oracledatabase.databaseConnections.create` | `SUPPORTED`  
+`oracledatabase.databaseConnections.delete` | `SUPPORTED`  
+`oracledatabase.databaseConnections.executeSql` | `SUPPORTED`  
+`oracledatabase.databaseConnections.get` | `SUPPORTED`  
+`oracledatabase.databaseConnections.list` | `SUPPORTED`  
+`oracledatabase.databaseConnections.test` | `SUPPORTED`  
+`oracledatabase.databaseConnections.update` | `SUPPORTED`  
 `oracledatabase.databases.get` | `SUPPORTED`  
 `oracledatabase.databases.list` | `SUPPORTED`  
 `oracledatabase.dbNodes.list` | `SUPPORTED`  
@@ -11500,6 +11583,7 @@ Permission name | Custom roles support level
 `oracledatabase.odbNetworks.get` | `SUPPORTED`  
 `oracledatabase.odbNetworks.list` | `SUPPORTED`  
 `oracledatabase.odbNetworks.update` | `SUPPORTED`  
+`oracledatabase.odbNetworks.use` | `SUPPORTED`  
 `oracledatabase.odbSubnets.create` | `SUPPORTED`  
 `oracledatabase.odbSubnets.delete` | `SUPPORTED`  
 `oracledatabase.odbSubnets.get` | `SUPPORTED`  

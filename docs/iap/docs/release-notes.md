@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/release-notes/
 title: IAP release notes \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:38:30.873619+00:00
+fetched_at: 2026-10-21T12:25:52.635241+00:00
 ---
 
 # IAP release notes  |  Identity-Aware Proxy  |  Google Cloud Documentation

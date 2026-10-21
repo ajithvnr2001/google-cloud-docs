@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/cisco-stealthwatch/
 title: Collect Cisco Secure Network Analytics logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T19:11:36.358416+00:00
+fetched_at: 2026-10-21T12:26:26.273156+00:00
 ---
 
 # Collect Cisco Secure Network Analytics logs  |  Google Security Operations  |  Google Cloud Documentation

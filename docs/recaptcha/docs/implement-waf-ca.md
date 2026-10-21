@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/implement-waf-ca/
 title: Integrate with Google Cloud Armor for websites \u00a0|\u00a0 Google Cloud Fraud Defense \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:50:27.969924+00:00
+fetched_at: 2026-10-21T12:26:15.662509+00:00
 ---
 
 # Integrate with Google Cloud Armor for websites  |  Google Cloud Fraud Defense  |  Google Cloud Documentation
@@ -505,9 +505,9 @@ The following sample script shows how to implement a session-token on a web page
          <head>
           <meta charset="UTF-8">
           <title>reCAPTCHA WAF Session Token</title>
-          <script src="https://www.google.com/recaptcha/enterprise.js?render=SESSION_TOKEN_KEY&waf=session" async defer></script>
-          <body></body>
+          <script src="https://www.google.com/recaptcha/enterprise.js?render=SESSION_TOKEN_KEY&waf=session"></script>
          </head>
+         <body></body>
          </html>
 
 
@@ -742,6 +742,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

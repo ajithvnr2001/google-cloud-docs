@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/setting-vm-host-options/
 title: Set the host maintenance policy for a compute instance \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:20:39.049256+00:00
+fetched_at: 2026-10-21T12:25:22.904226+00:00
 ---
 
 # Set the host maintenance policy for a compute instance  |  Compute Engine  |  Google Cloud Documentation
@@ -44,8 +44,9 @@ For host maintenance policies, the following limitations apply:
 
     * Instances that [don't support live migration](https://docs.cloud.google.com/compute/docs/instances/live-migration-process#limitations), such as the following: 
       * H4D instances
-      * Z3 instances with more than 18 TiB of attached Titanium SSD
-      * Z4D instances with more than 42 TiB of attached Titanium SSD
+      * Z3 instances with more than 18,000 GiB of attached Titanium SSD
+      * Z4D and Z4M instances with more than 42,000 GiB of attached Titanium SSD
+      * Instances that have a Cloud RDMA network interface
       * Bare metal instances
       * VMs with GPUs or TPUs attached
     * Spot VMs or preemptible VMs.
@@ -133,7 +134,7 @@ You can configure the following host maintenance properties:
     * **Migrate** : Compute Engine automatically live migrates your instance to another host. This is the default setting for all types of instances, except Spot VMs and preemptible VMs.
 
 **Important:** You must configure instances that [don't support live migration](https://docs.cloud.google.com/compute/docs/instances/live-migration-process#limitations) to stop (**Terminate**) during maintenance events. Otherwise, you encounter errors.
-    * **Terminate** : Compute Engine stops your instance. This is the default setting for Spot VMs or preemptible VMs, and it's the only supported setting for H4D instances, Z3 instances with more than 18 TiB of attached Titanium SSD, Z4D instances with more than 42 TiB of attached Titanium SSD, bare metal instances, and instances with GPUs or TPUs attached.
+    * **Terminate** : Compute Engine stops your instance. This is the default setting for Spot VMs or preemptible VMs, and it's the only supported setting for H4D instances, Z3 instances with more than 18,000 GiB of attached Titanium SSD, Z4D and Z4M instances with more than 42,000 GiB of attached Titanium SSD, instances that have a Cloud RDMA network interface, bare metal instances, and instances with GPUs or TPUs attached.
 
   * **Automatic restart (`automaticRestart`)**: whether your instance restarts if it crashes or Compute Engine stops it for a programmed stop, such as a maintenance event. You can set this property to one of the following:
 
@@ -163,7 +164,9 @@ You can set the `localSsdRecoveryTimeout` property to one of the following:
 
     * **Unset** : Compute Engine uses the default wait time:
 
-      * For Z4D and Z3 VMs: 6 hours
+      * For Z4M bare metal instances and Z3 bare metal `z3-highmem-192-highlssd-metal`: 168 hours
+
+      * For Z4D, Z4M, and Z3 VMs: 6 hours
 
       * For all other types of instances: 1 hour
 
@@ -961,6 +964,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

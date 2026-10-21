@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/additional-lookml-basics/
 title: Common LookML patterns \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:33:44.819997+00:00
+fetched_at: 2026-10-21T12:25:52.735580+00:00
 ---
 
 # Common LookML patterns  |  Looker  |  Google Cloud Documentation
@@ -21,15 +21,7 @@ Send feedback
 
 #  Common LookML patterns Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes the following common patterns in LookML:
-
-  * Labeling fields (and names in the UI)
-  * Filtering counts by a dimension
-  * Percentages
-  * Using sets for drill-down details
-  * Filtering result sets
-
-
+LookML design patterns let you tailor your data model to present clear business metrics and guide how users query data. You can apply these techniques to relabel UI fields, filter counts by a dimension, compute percentages, define drill-down sets, and restrict Explore results.
 
 ## Labeling fields (and names in the UI)
 
@@ -303,6 +295,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

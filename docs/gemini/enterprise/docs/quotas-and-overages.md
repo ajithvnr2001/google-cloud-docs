@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/quotas-and-overages/
 title: Quotas and overages \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:51:07.024635+00:00
+fetched_at: 2026-10-21T12:25:07.608783+00:00
 ---
 
 # Quotas and overages  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -83,7 +83,7 @@ Image generation | 5 images per day | 10 images per day
 General purpose agents made by Google | Gemini Notebook - use | Gemini Notebook Enterprise limits1 | Gemini Notebook Enterprise limits1  
 Gemini Notebook - create & publish | Gemini Notebook Enterprise limits1 | Gemini Notebook Enterprise limits1  
 Deep Research | 3 per day | 10 per day  
-AI developer tools2 |  Included Antigravity, Antigravity for IDEs, and Android Studio credits  |  $10 credit per user per month3 |  $15 credit per user per month3  
+AI developer tools2 |  Included Google Antigravity, Antigravity for IDEs, and Android Studio credits  |  $10 credit per user per month3 |  $15 credit per user per month3  
   
 1 For information about Gemini Notebook Enterprise usage limits, see the [Gemini Notebook Enterprise documentation](https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview#usage-limits).
 
@@ -101,22 +101,81 @@ The Gemini Enterprise Pay-as-you-go edition has no feature quota limits, as you 
 
 The following table lists the rates and pricing for this edition:
 
+#### Pay-as-you-go charges for features
+
 Prices are listed in US Dollars (USD). If you pay in a currency other than USD, the prices listed in your currency on [Cloud Platform SKUs](https://cloud.google.com/skus/) apply. Charges are subject to a variable support fee depending on the support service. For more information on the support services, see [Compare support services](https://docs.cloud.google.com/support/docs/overview#compare-support).
 
 | Gemini Enterprise  
 Pay-as-you-go charges  
 ---|---  
 Foundational engagement layer | Storage + data indexing | $5 per GiB per month  
-Assistant | [Agent Platform prices](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing#cost-of-building-and-deploying-ai-models-in-agent-platform)  
+Assistant - Gemini models | [Agent Platform prices](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing#cost-of-building-and-deploying-ai-models-in-agent-platform)  
+Assistant - Claude models | Claude pricing  
 No-code agent building tools - create | n/a  
 No-code agent building tools - use | [Agent Platform prices](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing#cost-of-building-and-deploying-ai-models-in-agent-platform)  
 Video generation | [Agent Platform prices](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing#cost-of-building-and-deploying-ai-models-in-agent-platform)  
 Image generation | [Agent Platform prices](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing#cost-of-building-and-deploying-ai-models-in-agent-platform)  
 General purpose agents made by Google | Deep Research | [Agent Platform prices](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing#cost-of-building-and-deploying-ai-models-in-agent-platform)  
-AI developer tools1 |  Included Antigravity, Antigravity for IDEs, and Android Studio credits  | [Agent Platform prices](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing#cost-of-building-and-deploying-ai-models-in-agent-platform)  
+AI developer tools1 |  Gemini models  | [Agent Platform prices](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing#cost-of-building-and-deploying-ai-models-in-agent-platform)  
+Claude models  | Claude pricing  
   
 1 AI developer tools are available only for [invoiced Cloud Billing accounts](https://docs.cloud.google.com/billing/docs/concepts#billing_account_types), including accounts with a free-trial subscription.
 
+#### Claude pricing
+
+Pay-as-you-go charges for Claude models apply as defined in the following table: **Note:** Claude model pricing and discounts in the Gemini Enterprise app are distinct from pricing procured through Google Cloud Marketplace.
+
+### Global
+
+Model | Type | Model price (/1M tokens)  
+=< 200K input tokens | Model price (/1M tokens)  
+> 200K input tokens  
+---|---|---|---  
+Claude Opus 5.5 | Input | $4.00 | $4.00  
+Output | $20.00 | $20.00  
+5m Cache Write | $5.00 | $5.00  
+1h Cache Write | $8.00 | $8.00  
+Cache Hit | $0.20 | $0.20  
+Claude Sonnet 5.5 | Input | $2.00 | $2.00  
+Output | $10.00 | $10.00  
+5m Cache Write | $2.50 | $2.50  
+1h Cache Write | $4.00 | $4.00  
+Cache Hit | $0.20 | $0.20  
+  
+### US Multi-Region (US)
+
+Model | Type | Model price (/1M tokens)  
+=< 200K input tokens | Model price (/1M tokens)  
+> 200K input tokens  
+---|---|---|---  
+Claude Opus 5.5 | Input | $4.40 | $4.40  
+Output | $22.00 | $22.00  
+5m Cache Write | $5.50 | $5.50  
+1h Cache Write | $8.80 | $8.80  
+Cache Hit | $0.22 | $0.22  
+Claude Sonnet 5.5 | Input | $2.20 | $2.20  
+Output | $11.00 | $11.00  
+5m Cache Write | $2.75 | $2.75  
+1h Cache Write | $4.40 | $4.40  
+Cache Hit | $0.22 | $0.22  
+  
+### EU Multi-Region (EU)
+
+Model | Type | Model price (/1M tokens)  
+=< 200K input tokens | Model price (/1M tokens)  
+> 200K input tokens  
+---|---|---|---  
+Claude Opus 5.5 | Input | $4.40 | $4.40  
+Output | $22.00 | $22.00  
+5m Cache Write | $5.50 | $5.50  
+1h Cache Write | $8.80 | $8.80  
+Cache Hit | $0.22 | $0.22  
+Claude Sonnet 5.5 | Input | $2.20 | $2.20  
+Output | $11.00 | $11.00  
+5m Cache Write | $2.75 | $2.75  
+1h Cache Write | $4.40 | $4.40  
+Cache Hit | $0.22 | $0.22  
+  
 ### Quotas for EDU and EDU Pro editions
 
 **Note:** When your project reaches its pooled feature quota for EDU or EDU Pro editions, you can enable overages to allow uninterrupted usage at pay-as-you-go rates.
@@ -244,25 +303,30 @@ Quota | Value
 Complete query requests per minute per project | 300  
 Regional search requests per minute per project per location (Global, US, EU) | 300  
   
-## Overages
+## Pay-as-you-go usage above quota
 
-Feature usage is restricted when you exceed the feature quotas of your Gemini Enterprise edition. To avoid interruptions, a Gemini Enterprise administrator can turn on the **Overages** setting. Overages are available only if your project has an [invoiced Cloud Billing account](https://docs.cloud.google.com/billing/docs/concepts#billing_account_types) and at least one active, non-free-trial subscription. Free-trial subscriptions include the base pooled quotas for their edition, including AI developer tools credits, but aren't eligible for overages. To verify your account type, see [Find out your Cloud Billing account type and charging cycle](https://docs.cloud.google.com/billing/docs/how-to/billing-cycle#view-your-charging-cycle).
+Feature usage is restricted when you exceed the feature quotas of your Gemini Enterprise edition. To avoid interruptions, a Gemini Enterprise administrator can turn on the **Pay-as-you-go usage above quota** setting. Pay-as-you-go usage above quota is available only if your project has an [invoiced Cloud Billing account](https://docs.cloud.google.com/billing/docs/concepts#billing_account_types) and at least one active, non-free-trial subscription. Free-trial subscriptions include the base pooled quotas for their edition, including AI developer tools credits, but aren't eligible for overages. To verify your account type, see [Find out your Cloud Billing account type and charging cycle](https://docs.cloud.google.com/billing/docs/how-to/billing-cycle#view-your-charging-cycle).
 
-Overage charges apply as defined in the following table for all license-based editions (Standard, Plus, Frontline, EDU, and Emerging Market editions).
+**Note:** Claude models are available only with pay-as-you-go usage. Ensure that you have turned on **Pay-as-you-go usage above quota** for all editions where you turn on Claude models for your end users.
 
-If you have a Pay-as-you-go subscription, you pay for usage at the overage rates listed in the following table.
+Pay-as-you-go charges apply as defined in the following table for all license-based editions (Standard, Plus, Frontline, EDU, and Emerging Market editions).
+
+If you have a Pay-as-you-go subscription, you pay for usage at the Pay-as-you-go rates listed in the following table.
 
 **Note:** Usage that exceeds the quota for **storage + data indexing** automatically incurs overage charges. Because storage and data indexing quota is pooled per project and location across all editions, any usage exceeding the single shared pool for the project and location incurs overage charges. You pay storage and data indexing overage charges prorated by the duration you store the data. For example, if you store 30 GiB of excess data for one day in a 30-day month, you pay $5 (30 GiB / 30 days × $5 per GiB per month).
+
+### Pay-as-you-go charges for features above quota
 
 Prices are listed in US Dollars (USD). If you pay in a currency other than USD, the prices listed in your currency on [Cloud Platform SKUs](https://cloud.google.com/skus/) apply. Charges are subject to a variable support fee depending on the support service. For more information on the support services, see [Compare support services](https://docs.cloud.google.com/support/docs/overview#compare-support).
 
 | Gemini Enterprise  
 Quota units | Gemini Enterprise  
-Add-on overage charges  
+Pay-as-you-go charges  
 ---|---|---  
 Quotas (Pooled or Unpooled) | Pooled across users within the edition per project and location | Pooled across users within the edition per project and location  
 Foundational engagement layer | Storage + data indexing | GiB | $5 per GiB per month  
-Assistant | Queries per day | [Agent Platform prices](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing#cost-of-building-and-deploying-ai-models-in-agent-platform)  
+Assistant - Gemini models | Queries per day | [Agent Platform prices](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing#cost-of-building-and-deploying-ai-models-in-agent-platform)  
+Assistant - Claude models | n/a - only available through Pay-as-you-go above quota charges. | Claude pricing  
 No-code agent building tools - create | Agents per day | n/a  
 No-code agent building tools - use | Based on underlying agent actions | [Agent Platform prices](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing#cost-of-building-and-deploying-ai-models-in-agent-platform)  
 Video generation | Video generation requests per day | [Agent Platform prices](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing#cost-of-building-and-deploying-ai-models-in-agent-platform)  
@@ -270,17 +334,75 @@ Image generation | Images per day | [Agent Platform prices](https://cloud.google
 General purpose agents made by Google | Gemini Notebook Enterprise - use | Gemini Notebook Enterprise limits1 | n/a  
 Gemini Notebook Enterprise - create & publish | Gemini Notebook Enterprise limits1 | n/a  
 Deep Research | Queries per day | [Agent Platform prices](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing#cost-of-building-and-deploying-ai-models-in-agent-platform)  
-AI developer tools2 |  Included Antigravity, Antigravity for IDEs, and Android Studio credits  | Dollars per month3 | [Agent Platform prices](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing#cost-of-building-and-deploying-ai-models-in-agent-platform)  
+AI developer tools2 |  Gemini models  | Dollars per month3 in credits for Antigravity, Antigravity for IDEs, and Android Studio | [Agent Platform prices](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing#cost-of-building-and-deploying-ai-models-in-agent-platform)  
+Claude models  | n/a - only available through Pay-as-you-go above quota charges. | Claude pricing  
 1 For information about Gemini Notebook Enterprise usage limits, see the [Gemini Notebook Enterprise documentation](https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview#usage-limits). 
 
 2 AI developer tools are available only for [invoiced Cloud Billing accounts](https://docs.cloud.google.com/billing/docs/concepts#billing_account_types), including accounts with a free-trial subscription.
 
 3 Although quotas are listed as a monthly per-user amount, Gemini Enterprise enforces them on a rolling seven-day basis as a shared pool. Gemini Enterprise calculates your project's weekly quota by dividing the monthly per-user value by four and multiplying it by your project's total licensed seats, including free-trial seats. Any user in your edition can draw from this shared weekly pool. Unused quota doesn't roll over to the next week. 
 
+### Claude pricing
+
+Claude models are available on the Gemini Enterprise app only with pay-as-you-go usage. Ensure that you have turned on **Pay-as-you-go usage above quota** for all editions where you want to enable Claude models.
+
+Pay-as-you-go charges for Claude models apply as defined in the following table: **Note:** Claude model pricing and discounts in the Gemini Enterprise app are distinct from pricing procured through Google Cloud Marketplace.
+
+### Global
+
+Model | Type | Model price (/1M tokens)  
+=< 200K input tokens | Model price (/1M tokens)  
+> 200K input tokens  
+---|---|---|---  
+Claude Opus 5.5 | Input | $4.00 | $4.00  
+Output | $20.00 | $20.00  
+5m Cache Write | $5.00 | $5.00  
+1h Cache Write | $8.00 | $8.00  
+Cache Hit | $0.20 | $0.20  
+Claude Sonnet 5.5 | Input | $2.00 | $2.00  
+Output | $10.00 | $10.00  
+5m Cache Write | $2.50 | $2.50  
+1h Cache Write | $4.00 | $4.00  
+Cache Hit | $0.20 | $0.20  
+  
+### US Multi-Region (US)
+
+Model | Type | Model price (/1M tokens)  
+=< 200K input tokens | Model price (/1M tokens)  
+> 200K input tokens  
+---|---|---|---  
+Claude Opus 5.5 | Input | $4.40 | $4.40  
+Output | $22.00 | $22.00  
+5m Cache Write | $5.50 | $5.50  
+1h Cache Write | $8.80 | $8.80  
+Cache Hit | $0.22 | $0.22  
+Claude Sonnet 5.5 | Input | $2.20 | $2.20  
+Output | $11.00 | $11.00  
+5m Cache Write | $2.75 | $2.75  
+1h Cache Write | $4.40 | $4.40  
+Cache Hit | $0.22 | $0.22  
+  
+### EU Multi-Region (EU)
+
+Model | Type | Model price (/1M tokens)  
+=< 200K input tokens | Model price (/1M tokens)  
+> 200K input tokens  
+---|---|---|---  
+Claude Opus 5.5 | Input | $4.40 | $4.40  
+Output | $22.00 | $22.00  
+5m Cache Write | $5.50 | $5.50  
+1h Cache Write | $8.80 | $8.80  
+Cache Hit | $0.22 | $0.22  
+Claude Sonnet 5.5 | Input | $2.20 | $2.20  
+Output | $11.00 | $11.00  
+5m Cache Write | $2.75 | $2.75  
+1h Cache Write | $4.40 | $4.40  
+Cache Hit | $0.22 | $0.22  
+  
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

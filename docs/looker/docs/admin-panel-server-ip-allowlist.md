@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/admin-panel-server-ip-allowlist/
 title: Admin settings - IP Allowlist \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:44:17.518757+00:00
+fetched_at: 2026-10-21T12:25:53.838746+00:00
 ---
 
 # Admin settings - IP Allowlist  |  Looker  |  Google Cloud Documentation
@@ -23,13 +23,15 @@ Send feedback
 
 **Note:** [Looker (Google Cloud core)](https://docs.cloud.google.com/looker/docs/looker-core-overview) instances don't include this page. For Looker (Google Cloud core) instances that use public secure connections or hybrid connections, you can add particular IP ranges to an allowlist by [editing your Looker (Google Cloud core) instance](https://docs.cloud.google.com/looker/docs/looker-core-view-console#editing_settings) in the Google Cloud console or with the Google Cloud CLI.
 
-The **IP Allowlist** page lets you specify a list of IP addresses that can access your Looker instance. For a list of specific IP addresses to allow based on your region, see [Enabling secure database access](https://docs.cloud.google.com/looker/docs/enabling-secure-db-access#option_1_ip_address_allowlist). When the IP allowlist is enabled, your Looker instance filters IP addresses at the application level, allowing connections from _only_ the IP addresses on the allowlist. Looker refuses connection attempts from all other IP addresses. When the IP allowlist is disabled, your Looker instance can accept connections from any IP address.
+The **IP Allowlist** page in the **Admin** menu lets you specify which IP addresses and subnet masks can access your Looker instance. When the allowlist is enabled, it filters traffic at the application level to accept connections _only_ from approved IP addresses and refuses all other attempts. This feature is available only for Looker-hosted instances and doesn't appear on customer-hosted deployments. To enable regional IP addresses to allow for database connections, see [Enabling secure database access](https://docs.cloud.google.com/looker/docs/enabling-secure-db-access#option_1_ip_address_allowlist).
 
-The **IP Allowlist** page is available only for Looker-hosted instances. Customer-hosted instances won't see this option in the **Admin** menu. To view the **IP Allowlist** page, from the **Server** section of the **Admin** menu, select **IP Allowlist**.
+## Viewing the IP Allowlist page
+
+To view the **IP Allowlist** page, from the **Server** section of the **Admin** menu, select **IP Allowlist**.
 
 **Note:** If you have a permission that provides access to only select pages in the Admin panel, such as [`manage_schedules`](https://docs.cloud.google.com/looker/docs/admin-panel-users-roles#manage_schedules), [`manage_themes`](https://docs.cloud.google.com/looker/docs/admin-panel-users-roles#manage_themes), or [`see_admin`](https://docs.cloud.google.com/looker/docs/admin-panel-users-roles#see_admin), but you don't have the [Admin role](https://docs.cloud.google.com/looker/docs/admin-panel-users-roles#default_roles), the page or pages that are described here may not be visible to you in the Admin panel.
 
-The **IP Allowlist** page lists the rules that you use to configure which IP addresses and subnet masks can access your Looker instance. Each rule also defines whether users from those IP addresses can sign in only from the Looker UI, only from the Looker API, or from both sources.
+The **IP Allowlist** page lists the rules that configure which IP addresses and subnet masks can access your Looker instance. Each rule also defines whether users from those IP addresses can sign in only from the Looker UI, only from the Looker API, or from both sources. When the IP allowlist is disabled, your Looker instance can accept connections from any IP address.
 
 In addition to viewing existing IP allowlist rules, you can perform the following tasks:
 
@@ -83,6 +85,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

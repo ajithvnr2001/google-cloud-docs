@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/udm-search/
 title: Understand search \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:07.687790+00:00
+fetched_at: 2026-10-21T12:26:12.782263+00:00
 ---
 
 # Understand search  |  Google Security Operations  |  Google Cloud Documentation
@@ -52,6 +52,7 @@ For the following advanced search features, your user account or Identity and Ac
   * Saving searches and editing search views needs `chronicle.savedSearches.update` and `chronicle.searchViews.update`.
   * Viewing log parsers and schema needs `chronicle.parsers.list` and `chronicle.parsers.get`.
   * Searching Case History needs `chronicle.cases.get` and `chronicle.cases.list`.
+  * SQL search (specifically automatic query suggestions in the query editor) needs `chronicle.queries.suggestSql` when using custom IAM roles.
   * Creating, sharing, modifying, and managing saved custom column sets across your organization needs all five of the following permissions: `chronicle.googleapis.com/savedColumnSets.create`, `chronicle.googleapis.com/savedColumnSets.update`, `chronicle.googleapis.com/savedColumnSets.delete`, `chronicle.googleapis.com/savedColumnSets.list`, and `chronicle.googleapis.com/savedColumnSets.get`.
 
 
@@ -1739,6 +1740,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

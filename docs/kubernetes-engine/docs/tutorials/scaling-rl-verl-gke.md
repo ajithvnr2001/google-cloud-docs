@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/scaling-rl-verl-gke/
 title: Fine-tune and scale reinforcement learning with verl on GKE \u00a0|\u00a0 GKE AI/ML \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:26:14.666545+00:00
+fetched_at: 2026-10-21T12:26:02.178689+00:00
 ---
 
 # Fine-tune and scale reinforcement learning with verl on GKE  |  GKE AI/ML  |  Google Cloud Documentation
@@ -71,6 +71,10 @@ This tutorial shows you how set up reinforcement learning on GKE with verl, by c
 
 
 ## Before you begin
+
+  * This tutorial uses [Cloud Shell](https://docs.cloud.google.com/shell), which comes with the Google Cloud CLI and [`kubectl`](https://kubernetes.io/docs/tasks/tools/#kubectl) preinstalled. If you aren't using Cloud Shell, [install](https://docs.cloud.google.com/sdk/docs/install) and [initialize](https://docs.cloud.google.com/sdk/docs/initialize) the Google Cloud CLI, and [install `kubectl`](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl).
+
+
 
   * Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. 
   * [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. 
@@ -239,7 +243,7 @@ Replace the following values:
 
      * `YOUR_REGION`: the Compute Engine region for the GKE cluster control plane.
      * `YOUR_ZONE`: the zone where the nodes are reserved. For more information, see [GPU availability](https://docs.cloud.google.com/compute/docs/regions-zones/gpu-regions-zones#view-using-table).
-     * `YOUR_CLUSTER_NAME`: the name of your GKE cluster.
+     * `YOUR_CLUSTER_NAME`: the name of your GKE cluster. This name must be 40 characters or less and be composed of lowercase alphanumeric characters and hyphens.
      * `YOUR_KSA_NAME`: the name of your Kubernetes service account.
      * `YOUR_GCS_BUCKET`: the base name for your Cloud Storage bucket. You don't need to specify the `gs://` prefix.
      * `YOUR_GPU_TYPE`: the accelerator that you reserved in the Compute Engine capacity reservation. It must be one of the following values: 
@@ -259,6 +263,8 @@ Replace the following values:
   4. Clone the sample repository:
          
          git clone https://github.com/GoogleCloudSamples/AIHypercomputerSamples.git
+
+In the rest of the tutorial, look in your clone of the sample repository to find the specific files that you need to inspect or apply.
 
   5. Navigate to the working directory for your chosen GKE mode:
 
@@ -2083,6 +2089,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-12 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-12 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

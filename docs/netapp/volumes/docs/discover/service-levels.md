@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/netapp/volumes/docs/discover/service-levels/
 title: Google Cloud NetApp Volumes service levels \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:44:27.334469+00:00
+fetched_at: 2026-10-21T12:26:17.993246+00:00
 ---
 
 # Google Cloud NetApp Volumes service levels  |  Google Cloud Documentation
@@ -218,7 +218,7 @@ Region name | Region description | Flex Unified | Flex File | Standard or Premiu
 `europe-west3` | Frankfurt, Germany | Yes | Yes | Yes  
 `europe-west4` | Eemshaven, Netherlands | Yes | Yes | Yes  
 `europe-west6` | Zurich, Switzerland | No | Yes | Yes  
-`europe-west8` | Milan, Italy | No | Yes | No  
+`europe-west8` | Milan, Italy | Yes | Yes | No  
 `europe-west9` | Paris, France | Yes (limited performance) | Yes | No  
 `europe-west10` | Berlin, Germany | No | Yes | No  
 `europe-west12` | Turin, Italy | No | Yes | No  
@@ -272,6 +272,8 @@ Region name | Region description | Zone names
 `europe-west4` | Eemshaven, Netherlands |  `europe-west4-a`  
 `europe-west4-b`  
 `europe-west4-c`  
+`europe-west8` | Milan, Italy |  `europe-west8-b`  
+`europe-west8-c`  
 `me-central2` | Dammam, Saudi Arabia |  `me-central2-a`  
 `me-central2-b`  
 `me-central2-c`  
@@ -387,6 +389,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

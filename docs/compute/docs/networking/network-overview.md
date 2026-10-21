@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/networking/network-overview/
 title: Networking overview for VMs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:29:04.513642+00:00
+fetched_at: 2026-10-21T12:24:57.937955+00:00
 ---
 
 # Networking overview for VMs  |  Compute Engine  |  Google Cloud Documentation
@@ -53,7 +53,7 @@ When you configure the vNIC for a compute instance, you can specify the type of 
   * For [first and second generation machine series](https://docs.cloud.google.com/compute/docs/machine-resource#vm_terminology), the default is [VirtIO](https://ozlabs.org/%7Erusty/virtio-spec/virtio-0.9.5.pdf).
   * Third generation and newer machine series are configured to use [gVNIC](https://docs.cloud.google.com/compute/docs/networking/using-gvnic) by default and don't support VirtIO for the network interface.
   * Bare metal instances use [IDPF](https://docs.cloud.google.com/compute/docs/networking/using-idpf).
-  * With supported machine series, such as H4D, instances can optionally use [Cloud RDMA (IRDMA)](https://docs.cloud.google.com/compute/docs/networking/using-irdma). The remote data memory access (RDMA) network driver enables low-latency, reliable messaging capabilities for Compute Engine instances. Cloud RDMA transfers data between remote machines and local memory through the network interface without using host CPU or intermediate host buffers.
+  * With supported machine series, such as H4D and Z4M, compute instances can optionally use [Cloud RDMA (IRDMA)](https://docs.cloud.google.com/compute/docs/networking/using-irdma). The remote data memory access (RDMA) network driver enables low-latency, reliable messaging capabilities for Compute Engine instances. Cloud RDMA transfers data between remote machines and local memory through the network interface without using host CPU or intermediate host buffers.
 
 
 
@@ -107,7 +107,7 @@ If you have multiple services running on a single VM instance, you can give each
 
 [Network Service Tiers](https://docs.cloud.google.com/network-tiers/docs/overview) lets you optimize connectivity between systems on the internet and your Compute Engine instances. Premium Tier delivers traffic on Google's premium backbone, while Standard Tier uses regular ISP networks. Use Premium Tier to optimize for performance, and use Standard Tier to optimize for cost.
 
-Because you choose a network tier at the resource level—such as the external IP address for a VM—you can use Standard Tier for some resources and Premium Tier for others. If you don't specify a tier for a resource, it defaults to the subnet's tier. If you don't specify a tier for a subnet, it defaults to your project's default network tier.
+Because you choose a network tier at the resource level—such as the external IP address for a VM—you can use Standard Tier for some resources and Premium Tier for others. If you don't specify a tier, Premium Tier is used.
 
 Compute instances that use internal IP addresses to communicate within VPC networks always use the Premium Tier networking infrastructure.
 
@@ -191,6 +191,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

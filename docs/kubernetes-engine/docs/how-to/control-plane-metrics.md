@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/control-plane-metrics/
 title: Collect and view control plane metrics \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:26:34.330689+00:00
+fetched_at: 2026-10-21T12:26:13.481536+00:00
 ---
 
 # Collect and view control plane metrics  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -219,6 +219,14 @@ Labels
 1.28.3+ (1.26.11+, 1.27.8+ for prior minor versions)  |  _Nominal number of execution seats configured for each priority level._  
   
 `priority_level`  
+`apiserver_flowcontrol_priority_level_seat_utilization` BETA  
+`apiserver_flowcontrol_priority_level_seat_utilization/histogram`  
+`Cumulative`, `Distribution`, `1`   
+**prometheus_target**   
+1.37.0-gke.3503000+  |  _Observations, at the end of every nanosecond, of utilization of seats for any stage of execution (but only initial stage for WATCHes)._  
+  
+`phase` (a constant label with value `executing`)   
+`priority_level`  
 `apiserver_flowcontrol_rejected_requests_total` BETA  
 `apiserver_flowcontrol_rejected_requests_total/counter`  
 `Cumulative`, `Double`, `1`   
@@ -237,6 +245,19 @@ Labels
 `execute`   
 `flow_schema`   
 `priority_level`  
+`apiserver_longrunning_requests` GA  
+`apiserver_longrunning_requests/gauge`  
+`Gauge`, `Double`, `1`   
+**prometheus_target**   
+1.37.0-gke.3503000+  |  _Gauge of all active long-running apiserver requests broken out by`verb`, `group`, `version`, `resource`, `scope` and `component`. Not all requests are tracked this way._  
+  
+`component`   
+`group`   
+`resource`   
+`scope`   
+`subresource`   
+`verb`   
+`version`  
 `apiserver_request_duration_seconds` GA  
 `apiserver_request_duration_seconds/histogram`  
 `Cumulative`, `Distribution`, `s`   
@@ -301,6 +322,24 @@ Labels
 1.36.0-gke.1759000+  |  _Size of the storage database file physically allocated in bytes._  
   
 `storage_cluster_id`  
+`apiserver_watch_events_sizes` BETA  
+`apiserver_watch_events_sizes/histogram`  
+`Cumulative`, `Distribution`, `1`   
+**prometheus_target**   
+1.37.0-gke.3503000+  |  _Watch event size distribution in bytes._  
+  
+`group`   
+`resource`   
+`version`  
+`apiserver_watch_events_total` BETA  
+`apiserver_watch_events_total/counter`  
+`Cumulative`, `Double`, `1`   
+**prometheus_target**   
+1.37.0-gke.3503000+  |  _Number of events sent in watch clients._  
+  
+`group`   
+`resource`   
+`version`  
 `apiserver_watch_list_duration_seconds` BETA  
 `apiserver_watch_list_duration_seconds/histogram`  
 `Cumulative`, `Distribution`, `s`   
@@ -683,6 +722,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

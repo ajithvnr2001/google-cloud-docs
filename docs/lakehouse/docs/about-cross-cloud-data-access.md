@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/lakehouse/docs/about-cross-cloud-data-access/
 title: About cross-cloud data access \u00a0|\u00a0 Lakehouse \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:19:47.824989+00:00
+fetched_at: 2026-10-21T12:25:54.260894+00:00
 ---
 
 # About cross-cloud data access  |  Lakehouse  |  Google Cloud Documentation
@@ -33,10 +33,10 @@ The cross-cloud data access feature lets you query data stored in other cloud pr
 
 As part of _borderless Lakehouse_ , this capability lets you perform unified analytics and apply AI across your distributed datasets using BigQuery, standalone Apache Spark environments, or [Managed Service for Apache Spark](https://docs.cloud.google.com/dataproc/docs).
 
-In addition to analytical queries, you can use your federated data for AI-driven insights and governance:
+In addition to analytical queries, you can use your remote data for AI-driven insights and governance:
 
   * [**Conversational Analytics**](https://docs.cloud.google.com/lakehouse/docs/conversational-analytics): Build specialized agents grounded in your exact data sources, including cross-cloud tables, to analyze data across clouds from a single conversation.
-  * [**Knowledge Catalog**](https://docs.cloud.google.com/dataplex/docs/catalog-overview#supported-sources): Use Knowledge Catalog features for data profiling and insights with federated data sources.
+  * [**Knowledge Catalog**](https://docs.cloud.google.com/dataplex/docs/catalog-overview#supported-sources): Use Knowledge Catalog features for data profiling and insights with remote data sources.
 
 
 
@@ -50,11 +50,33 @@ Lakehouse supports several key use cases for accessing data across multiple clou
 
 
 
+## Architecture
+
+The following diagram illustrates the Lakehouse cross-cloud data access architecture:
+
+![Architecture of Lakehouse cross-cloud data access across
+      Google Cloud, Amazon Web Services \(AWS\), and SaaS partners.](https://docs.cloud.google.com/static/lakehouse/images/cross-cloud-data-access-diagram.svg)**Architecture of Lakehouse connects Google Cloud AI and analytics engines to external cloud catalogs, object storage, and SaaS partners.**
+
+The preceding diagram illustrates the architecture across Google Cloud and external cloud and SaaS environments:
+
+  * **Google Cloud** : provides AI, governance, analytics, and cross-cloud data access across remote datasets: 
+    * **AI agents and experiences** : builds autonomous agents in [Conversational Analytics](https://docs.cloud.google.com/lakehouse/docs/conversational-analytics) and Gemini Enterprise that search for data and semantic meaning in Knowledge Catalog and execute queries through analytics and processing engines.
+    * **Knowledge Catalog** : delivers [unified governance and data lineage](https://docs.cloud.google.com/dataplex/docs/catalog-overview#supported-sources), along with [data insights](https://docs.cloud.google.com/lakehouse/docs/dataplex-insights-support), profiling, and data products, by syncing metadata and lineage from Lakehouse.
+    * **Analytics and processing engines** : runs BigQuery SQL, BigQuery AI, and Looker workloads, or processes remote data with [Managed Service for Apache Spark](https://docs.cloud.google.com/dataproc/docs) and open engines (Apache Spark, Apache Flink, and Trino) by resolving metadata and reading tables through Lakehouse.
+    * **Lakehouse cross-cloud data access** : queries remote data in place without file migration or ETL pipelines: 
+      * **Metadata synchronization** : discovers and synchronizes table metadata over Apache Iceberg REST and Delta Sharing using the [Lakehouse runtime catalog](https://docs.cloud.google.com/lakehouse/docs/about-lakehouse-catalogs), authenticates through OpenID Connect (OIDC) or Secret Manager, and vends scoped temporary credentials.
+      * **Cross-cloud capabilities (AWS)** : caches read data blocks in Google Cloud using a block-level read-through cache (**Intelligent caching (local cache)**), and routes traffic over Dedicated Cross-Cloud Interconnect (CCI), Partner Interconnect, or the internet (with TLS) using **Cross-cloud network transport**.
+  * **External cloud and SaaS data sources** : hosts the remote catalogs, SaaS data clouds, and object storage: 
+    * **External cloud and SaaS catalogs** : synchronizes metadata from **Cloud data catalogs** (AWS Glue Data Catalog on AWS, and Databricks Unity Catalog and Snowflake Horizon Catalog on AWS or Google Cloud) and **SaaS data clouds** (Salesforce Data Cloud, Workday Data Lake on AWS or Google Cloud, and SAP Business Data Cloud (BDC)) over the Iceberg REST API and Delta Sharing (for SAP BDC).
+    * **External cloud object storage (AWS)** : stores Apache Iceberg tables (Parquet data files) and Amazon S3 Tables in Amazon S3 for direct block reads over CCI or the internet (with TLS).
+
+
+
 ## How accessing cross-cloud data works
 
 Lakehouse queries remote data using the following process:
 
-  1. **Metadata discovery:** Google Cloud's _Lakehouse_ connects to remote Apache Iceberg REST catalogs, such as Databricks Unity or AWS Glue. Lakehouse discovers the data without copying any files. Depending on the remote catalog provider, Lakehouse authenticates securely through Secret Manager or OpenID Connect token federation with Google as the identity provider (OIDC token federation).
+  1. **Metadata discovery:** Google Cloud's _Lakehouse_ connects to remote Apache Iceberg REST catalogs, such as Databricks Unity or AWS Glue. Lakehouse discovers the data without copying any files. Depending on the remote catalog provider, Lakehouse authenticates securely through Secret Manager or OIDC token federation with Google as the identity provider.
   2. **Secure transport:** Choosing to route traffic over a private interconnect (for example, Dedicated CCI or Partner Interconnect) significantly reduces data transfer costs compared to the public internet and makes latency highly predictable.
   3. **Optimized execution:** As queries read data from remote clouds, Lakehouse temporarily caches those data segments locally within Google Cloud on specialized storage. Subsequent queries use the local cache, which avoids a significant portion of cross-cloud egress charges.
 
@@ -64,11 +86,11 @@ Lakehouse queries remote data using the following process:
 
 Lakehouse supports querying data from the following remote catalog providers:
 
-  * **[Databricks Unity Catalog](https://docs.cloud.google.com/lakehouse/docs/set-up-cross-cloud-connection-databricks):** Hosted on AWS or Google Cloud.
+  * **[Databricks Unity Catalog](https://docs.cloud.google.com/lakehouse/docs/set-up-cross-cloud-connection-databricks):** Hosted on Amazon Web Services (AWS) or Google Cloud.
   * **[AWS Glue](https://docs.cloud.google.com/lakehouse/docs/set-up-cross-cloud-connection-aws-glue):** Hosted on AWS.
   * **[Snowflake Horizon Catalog](https://docs.cloud.google.com/lakehouse/docs/set-up-cross-cloud-connection-snowflake):** Hosted on AWS or Google Cloud.
   * **[Workday Data Lake](https://docs.cloud.google.com/lakehouse/docs/set-up-cross-cloud-connection-workday):** Hosted on AWS or Google Cloud.
-  * **[SAP Business Data Cloud (BDC)](https://docs.cloud.google.com/lakehouse/docs/set-up-cross-cloud-connection-sap-bdc):** Hosted using the SAP BDC connector.
+  * **[SAP Business Data Cloud (BDC)](https://docs.cloud.google.com/lakehouse/docs/set-up-cross-cloud-connection-sap-bdc):** Hosted on AWS, Microsoft Azure, or Google Cloud using the SAP BDC connector.
 
 
 
@@ -88,7 +110,7 @@ Select the transport method that matches your architectural and security require
 
 ###  Customer-owned (CCI) 
 
-You can configure BigQuery to query data stored in Amazon Web Services (AWS) Amazon S3 buckets over a private Cross-Cloud Interconnect using either [**Dedicated Cross-Cloud Interconnect**](https://docs.cloud.google.com/network-connectivity/docs/interconnect/concepts/cci-overview#setup-process) or [**Partner Cross-Cloud Interconnect**](https://docs.cloud.google.com/network-connectivity/docs/interconnect/concepts/partner-cci-for-aws-overview).
+You can configure BigQuery to query data stored in AWS Amazon S3 buckets over a private Cross-Cloud Interconnect using either [**Dedicated Cross-Cloud Interconnect**](https://docs.cloud.google.com/network-connectivity/docs/interconnect/concepts/cci-overview#setup-process) or [**Partner Cross-Cloud Interconnect**](https://docs.cloud.google.com/network-connectivity/docs/interconnect/concepts/partner-cci-for-aws-overview).
 
 Using a private interconnect provides the following benefits:
 
@@ -134,7 +156,7 @@ When querying data over the public internet, Lakehouse connects directly to your
 
 The public internet query workflow follows this process:
 
-  1. BigQuery initiates a query against a federated table defined in your Lakehouse catalog.
+  1. BigQuery initiates a query against a remote table defined in your Lakehouse catalog.
   2. Lakehouse authenticates securely with your remote Apache Iceberg catalog using credentials stored in Secret Manager or OIDC token federation.
   3. Lakehouse retrieves the table metadata and manifest files across the public internet to identify the relevant underlying data files (for example, in AWS Amazon S3).
   4. Data access requests for the underlying objects are sent directly from Google Cloud over the public internet using standard TLS encryption.
@@ -166,7 +188,7 @@ Each `object_storage_stats` entry reports the following metrics:
 
 **Data residency and jurisdiction considerations**
 
-Creating a federated catalog or connection in a Google Cloud region stores cached data at rest locally within that target region.
+Creating a remote catalog or connection in a Google Cloud region stores cached data at rest locally within that target region.
 
 If your remote cloud data resides in a different geographic region or jurisdiction (for example, AWS Amazon S3 in the European Union paired with BigQuery compute in `us-east4`), cross-cloud querying stores data-at-rest cached copies of remote data in the target Google Cloud region. The user or administrator creating the connection or catalog must ensure that cross-jurisdiction caching complies with their organization's data residency, sovereignty, and compliance requirements.
 
@@ -186,6 +208,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

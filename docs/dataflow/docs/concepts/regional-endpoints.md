@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/concepts/regional-endpoints/
 title: Dataflow regions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:02:48.245414+00:00
+fetched_at: 2026-10-21T12:25:07.510990+00:00
 ---
 
 # Dataflow regions  |  Google Cloud Documentation
@@ -91,7 +91,7 @@ The following limitations apply:
 
 ## View job resource zones
 
-Dataflow jobs depend on internal resources. Some of these backend job resources are zonal. If a single zone fails and a zonal resource necessary for your Dataflow job is in that zone, the job might fail.
+Dataflow jobs depend on internal resources. By default, some of these backend job resources are zonal. If a single zone fails and a zonal resource necessary for your Dataflow job is in that zone, the job might fail. To protect Streaming Engine jobs from single-zone failures, you can enable [streaming high availability](https://docs.cloud.google.com/dataflow/docs/guides/streaming-high-availability).
 
 To understand whether a job failed because of a zonal outage, review the service zones that your job's backend resources are using. This feature is only available for Streaming Engine jobs.
 
@@ -171,6 +171,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/resource-usage/
 title: Allocation quotas \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:35:47.499821+00:00
+fetched_at: 2026-10-21T12:25:23.142458+00:00
 ---
 
 # Allocation quotas  |  Compute Engine  |  Google Cloud Documentation
@@ -220,6 +220,7 @@ T2D | separate pool | `T2D_CPUS` | Not applicable | `Committed_T2D_CPUS`
 T2A | separate pool | `T2A_CPUS` | Not applicable | Not available for T2A  
 Z3 | separate pool | `CPUS_PER_VM_FAMILY` | `vm_family="Z3"` | `Committed_Z3_CPUS`  
 Z4D | separate pool | `CPUS_PER_VM_FAMILY` | `vm_family="Z4D"` | `Committed_Z4D_CPUS`  
+Z4M | separate pool | `CPUS_PER_VM_FAMILY` | `vm_family="Z4M"` | `Committed_Z4M_CPUS`  
 M1 | separate pool | `M1_CPUS` | Not applicable | `Committed_MEMORY-OPTIMIZED_CPUS`  
 M2 | separate pool | `M2_CPUS` | Not applicable | `Committed_MEMORY-OPTIMIZED_CPUS`  
 M3 | separate pool | `M3_CPUS` | Not applicable | `Committed_M3_CPUS`  
@@ -348,6 +349,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

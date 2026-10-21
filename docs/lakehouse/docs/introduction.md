@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/lakehouse/docs/introduction/
 title: What is borderless Lakehouse? \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:19:41.074404+00:00
+fetched_at: 2026-10-21T12:25:54.106256+00:00
 ---
 
 # What is borderless Lakehouse?  |  Google Cloud Documentation
@@ -46,7 +46,7 @@ By decoupling storage from compute, Google Cloud's _Lakehouse_ ensures seamless 
   * **Unified access:** Let different engines (Apache Spark, Apache Flink, BigQuery) interact with the same Apache Iceberg tables with consistent metadata.
   * **Cross-cloud analytics and AI:** Access cross-cloud data ([Preview](https://docs.cloud.google.com/lakehouse/docs/about-cross-cloud-data-access)) to synchronize metadata from other cloud providers, allowing you to query data with BigQuery or external open source engines through the Apache Iceberg REST catalog endpoint, all without migrating the data.
   * **Public dataset exploration:** Easily query high-quality public datasets using the Apache Iceberg REST catalog endpoint without managing infrastructure.
-  * **Hive Metastore:** Connect open-source engines such as Apache Spark and Apache Hive to the Lakehouse runtime catalog using the Hive catalog ([Preview](https://docs.cloud.google.com/lakehouse/docs/about-spark-hive-metastore)). This eliminates the operational overhead of maintaining a self-hosted Hive Metastore (HMS) while enabling seamless data sharing and direct table queries in BigQuery.
+  * **Hive Metastore:** Connect open-source engines such as Apache Spark and Apache Hive to the Lakehouse runtime catalog using the [Hive catalog](https://docs.cloud.google.com/lakehouse/docs/about-spark-hive-metastore). This eliminates the operational overhead of maintaining a self-hosted Hive Metastore (HMS) while enabling seamless data sharing and direct table queries in BigQuery.
 
 
 
@@ -74,6 +74,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

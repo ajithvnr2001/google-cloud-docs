@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli/
 title: Gemini CLI \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:02:45.381804+00:00
+fetched_at: 2026-10-21T12:24:50.858017+00:00
 ---
 
 # Gemini CLI  |  Gemini for Google Cloud  |  Google Cloud Documentation
@@ -20,6 +20,8 @@ fetched_at: 2026-10-14T08:02:45.381804+00:00
 Send feedback 
 
 #  Gemini CLI Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Important:** Gemini CLI is not optimized for the latest Gemini models. For the best coding experience with Gemini models, use [Antigravity CLI](https://antigravity.google/product/antigravity-cli).
 
 The [Gemini command line interface (CLI)](https://geminicli.com/docs/) is an open source AI agent that provides access to Gemini directly in your local or Cloud Shell terminal. The Gemini CLI uses a reason and act (ReAct) loop with your built-in tools and local or remote MCP servers to complete complex use cases like fixing bugs, creating new features, and improving test coverage. While the Gemini CLI excels at coding, it's also a versatile local utility that you can use for a wide range of tasks, from content generation and problem solving to deep research and task management.
 
@@ -43,6 +45,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

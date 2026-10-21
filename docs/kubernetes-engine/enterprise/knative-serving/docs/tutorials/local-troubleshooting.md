@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/enterprise/knative-serving/docs/tutorials/local-troubleshooting/
 title: Local troubleshooting \u00a0|\u00a0 Knative serving \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:21:32.470480+00:00
+fetched_at: 2026-10-21T12:25:43.520133+00:00
 ---
 
 # Local troubleshooting  |  Knative serving  |  Google Cloud Documentation
@@ -119,7 +119,7 @@ If you continue to evolve this service beyond the immediate tutorial, consider f
             pytest==9.0.3; python_version >= "3.10"
             Flask==3.1.3; python_version >= '3.9'
             gunicorn==23.0.0
-            Werkzeug==3.1.8; python_version >= '3.9'
+            Werkzeug==3.1.9; python_version >= '3.10'
             
 
 ###  Go 
@@ -920,6 +920,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

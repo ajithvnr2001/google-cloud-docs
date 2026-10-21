@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/instrument-web-pages-with-checkbox/
 title: Install checkbox keys (checkbox challenge) on websites \u00a0|\u00a0 Google Cloud Fraud Defense \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:50:25.045543+00:00
+fetched_at: 2026-10-21T12:26:15.310930+00:00
 ---
 
 # Install checkbox keys (checkbox challenge) on websites  |  Google Cloud Fraud Defense  |  Google Cloud Documentation
@@ -72,7 +72,7 @@ The following example is a snippet of sample code:
         <html>
           <head>
             <title>reCAPTCHA demo: Simple page</title>
-            <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+            <script src="https://www.google.com/recaptcha/enterprise.js"></script>
           </head>
           <body>
             <form action="?" method="POST">
@@ -88,12 +88,7 @@ The following example is a snippet of sample code:
 
 With this method, you can render the widget through an existing JavaScript script using the `grecaptcha.enterprise.render()` method. Use this method to avoid race conditions or if you want to show the widget based on the existing JavaScript logic.
 
-To ensure there are no race conditions when rendering the widget explicitly, review the following considerations:
-
-  * Order your scripts with the callback function first, and then the reCAPTCHA API.
-  * Use the `async` and `defer` parameters in the `script` tags.
-
-
+To avoid race conditions when rendering the widget explicitly, order your scripts with the callback function first and then the reCAPTCHA API.
 
 To render the widget explicitly, follow these steps:
 
@@ -128,8 +123,7 @@ To render the widget explicitly, follow these steps:
 
 reCAPTCHA uses the browser's language by default. If you want to specify a different language, use the `hl=LANG` attribute in your script. For example, to use French, specify the following: `<script src="https://www.google.com/recaptcha/enterprise.js?hl=fr"></script>`. To learn about the supported languages, see [language codes for reCAPTCHA](https://docs.cloud.google.com/recaptcha/docs/language).
          
-         <script src="https://www.google.com/recaptcha/enterprise.js?onload=onload_Callback_function&render=explicit"
-             async defer>
+         <script src="https://www.google.com/recaptcha/enterprise.js?onload=onload_Callback_function&render=explicit">
           </script>
          
 
@@ -159,8 +153,7 @@ The following code sample shows explicit rendering after an `onload` callback:
           <br>
           <input type="submit" value="Submit">
         </form>
-          <script src="https://www.google.com/recaptcha/enterprise.js?onload=onloadCallback&render=explicit"
-            async defer>
+          <script src="https://www.google.com/recaptcha/enterprise.js?onload=onloadCallback&render=explicit">
         </script>
       </body>
     </html>
@@ -222,8 +215,7 @@ The following code sample shows explicit rendering of multiple widgets:
           <br>
           <input type="submit" value="Submit">
         </form>
-         <script src="https://www.google.com/recaptcha/enterprise.js?onload=onloadCallback&render=explicit"
-            async defer>
+         <script src="https://www.google.com/recaptcha/enterprise.js?onload=onloadCallback&render=explicit">
         </script>
       </body>
     </html>
@@ -239,6 +231,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

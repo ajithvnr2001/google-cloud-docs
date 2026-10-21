@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/create-vm-with-rdma/
 title: Create an instance that uses Cloud RDMA \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:58.687344+00:00
+fetched_at: 2026-10-21T12:24:58.095985+00:00
 ---
 
 # Create an instance that uses Cloud RDMA  |  Compute Engine  |  Google Cloud Documentation
@@ -21,9 +21,17 @@ Send feedback
 
 #  Create an instance that uses Cloud RDMA Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page discusses how to create HPC instances with Cloud RDMA-enabled network interfaces. For instructions for creating A4 or A3 Ultra accelerator-optimized instances that use RDMA, see [Create an AI-optimized instance with A4 or A3 Ultra](https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-vm).
+This document explains how to create compute instances with [Cloud RDMA](https://docs.cloud.google.com/compute/docs/networking/using-irdma) (`IRDMA`) network interfaces for low-latency, high-throughput communication between instances.
 
-To create a compute instance that uses remote direct memory access (RDMA), you must configure at least two network interfaces (NICs) when creating the instance. One NIC must be an IRDMA NIC that attaches to a VPC network with a [Falcon RDMA network profile](https://docs.cloud.google.com/vpc/docs/rdma-network-profiles), and the other NIC must use [GVNIC](https://docs.cloud.google.com/compute/docs/networking/using-gvnic).
+Creating a Cloud RDMA-enabled instance involves the following steps:
+
+  1. Create a compact placement policy.
+  2. Create the Virtual Private Cloud networks, including a standard VPC network (`GVNIC` or `IDPF`) and a Falcon VPC network (`IRDMA`).
+  3. Create the instance with the network interfaces and placement policy.
+
+
+
+For instructions on creating accelerator-optimized instances (such as A4X Max, A4X, A4, or A3 Ultra) that use RDMA, see [Create an AI-optimized instance](https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-vm).
 
 ## Before you begin
 
@@ -93,7 +101,7 @@ You might also be able to get these permissions with [custom roles](https://docs
 Review the following rules for configuring a network interface for an instance:
 
   * To configure an IRDMA network interface, you must first create a VPC network with the Falcon RDMA network profile in the same region and zone as the instance.
-  * For the GVNIC network interface, you must use a regular VPC. If you don't specify a network or subnet, Compute Engine uses the default VPC network and the auto subnet that's in the same region as the instance.
+  * For the gVNIC or IDPF network interface, you must use a regular VPC. If you don't specify a network or subnet, Compute Engine uses the default VPC network and the auto subnet that's in the same region as the instance.
   * If you specify a subnet but don't specify a network, Compute Engine infers the network from the subnet specified.
   * If you specify a network, then you must specify a subnet and it must belong to the same network. Otherwise, instance creation fails.
 
@@ -101,23 +109,52 @@ Review the following rules for configuring a network interface for an instance:
 
 ## Limitations
 
-  * You can't use live migration with VMs that use Cloud RDMA. You must configure the instance to terminate during maintenance events.
+  * You can't use live migration with virtual machines (VMs) that use Cloud RDMA. You must configure the instance to terminate during maintenance events.
   * You can't use Cloud RDMA with managed instance groups (MIGs) (managed or unmanaged).
   * You can use only `IPv4_ONLY` network stack types with a Cloud RDMA-enabled instance.
-  * You can use only the [H4D machine series](https://docs.cloud.google.com/compute/docs/compute-optimized-machines#h4d_series) to create an instance that uses Cloud RDMA.
+  * You can use only machine series that support Cloud RDMA, such as the [H4D machine series](https://docs.cloud.google.com/compute/docs/compute-optimized-machines#h4d_series) or the [Z4M machine series](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4m_series).
+  * The instance must use an [OS image that supports IRDMA](https://docs.cloud.google.com/compute/docs/images/os-details#networking).
 
 
 
 ## Create a Cloud RDMA-enabled instance
 
-Cloud RDMA-enabled instances require a minimum of two network interfaces (NICs):
+Instances that use Cloud RDMA require at least two virtual network interfaces (vNICs) per physical NIC, configured from the following network interface types:
 
-  * NIC type `GVNIC`: uses the `gve` driver for TCP/IP and Internet traffic for normal VM-VM and VM-Internet communication
-  * NIC type `IRDMA`: uses IDPF/iRDMA drivers for RDMA based communication between instances
+  * Network interface type `GVNIC`: VMs use the `gve` driver for TCP/IP and Internet traffic for normal VM to VM and VM to Internet communication
+  * Network interface type `IDPF`: bare metal instances use an IDPF network interface type instead of `GVNIC` for normal instance to instance and instance to Internet communication.
+  * Network interface type `IRDMA`: uses IDPF/iRDMA drivers for RDMA-based communication between compute instances. This interface must use a [Falcon RDMA network profile](https://docs.cloud.google.com/vpc/docs/rdma-network-profiles).
 
 
 
-An instance can have only one `IRDMA` interface. Each instance can have from 1 to 10 network interfaces. For an overview of multiple network interfaces in Google Cloud, see [Multiple network interfaces](https://docs.cloud.google.com/vpc/docs/multiple-interfaces-concepts).
+The number of network interfaces of each type that you can configure for an instance depends on the machine series, as explained in the following table:
+
+Machine series | Network interface types | Number to configure  
+---|---|---  
+H4D | GVNIC only | GVNIC: 1 to 10  
+H4D | GVNIC and IRDMA | GVNIC: 1 to 9  
+IRDMA: 1  
+Z4M VMs | GVNIC only | GVNIC: 1 to 10  
+Z4M VMs (< 192 vCPUs) | GVNIC and IRDMA | GVNIC: 1 to 9  
+IRDMA: 1  
+Z4M VMs (192 vCPUs) | GVNIC and IRDMA | GVNIC: 1 to 9  
+IRDMA: 1 to 2  
+Z4M (bare metal) | IDPF only | IDPF: 1 to 2  
+Z4M (bare metal) | IDPF and IRDMA | 1 IDPF and 1 IRDMA or   
+2 IDPF and 1 or 2 IRDMA  
+  
+The number of IRDMA network interfaces for bare metal instances can't exceed the number of IDPF network interfaces. Also, for multi-NIC instances, to correctly assign the network interface types to each physical NIC, you must define a GVNIC or IDPF interface before each IRDMA interface. The following examples describe possible configurations:
+
+  * A multi-NIC VM with 1 IRDMA network interface and 4 GVNIC network interfaces: Configure the network interfaces in this order: GVNIC, IRDMA, GVNIC, GVNIC, GVNIC. This results in the following assignments: 
+    * NIC 0: GVNIC, IRDMA, GVNIC
+    * NIC 1: GVNIC, GVNIC
+  * A multi-NIC VM with 2 IRDMA network interfaces and 5 GVNIC network interfaces: Configure the network interfaces in this order: GVNIC, IRDMA, GVNIC, IRDMA, GVNIC, GVNIC, GVNIC. This results in the following assignments: 
+    * NIC 0: GVNIC, IRDMA, GVNIC, GVNIC
+    * NIC 1: GVNIC, IRDMA, GVNIC
+
+
+
+For an overview of multiple network interfaces in Google Cloud, see [Multiple network interfaces](https://docs.cloud.google.com/vpc/docs/multiple-interfaces-concepts).
 
 To create an instance that uses IRDMA, complete the steps in the following sections:
 
@@ -125,7 +162,7 @@ To create an instance that uses IRDMA, complete the steps in the following secti
 
   2. Create a new VPC network, or use an existing Falcon VPC network.
 
-  3. Create a Cloud RDMA-enabled instance, that has an `IRDMA` network interface, at least one `GVNIC` network interface, and uses a compact placement policy.
+  3. Create a Cloud RDMA-enabled instance that has at least one `GVNIC` or `IDPF` network interface, at least one `IRDMA` network interface, and uses a compact placement policy.
 
 
 
@@ -146,9 +183,9 @@ To set up the networks, you can either follow the documented instructions or use
 
 To create the networks, you can use the following instructions:
 
-  * To create the host networks for the `GVNIC` network interfaces, see [Create and manage VPC networks](https://docs.cloud.google.com/vpc/docs/create-modify-vpc-networks).
+  * To create the host networks for the `GVNIC` or `IDPF` network interfaces, see [Create and manage VPC networks](https://docs.cloud.google.com/vpc/docs/create-modify-vpc-networks).
 
-If you are configuring only one `GVNIC` network interface, you can use the default VPC network and the auto subnet that's in the same region as the instance.
+If you are configuring only one `GVNIC` or `IDPF` network interface, you can use the default VPC network and the auto subnet that's in the same region as the instance.
 
   * To create a network for the `IRDMA` network interface, see [Create a VPC network for RDMA NICs](https://docs.cloud.google.com/vpc/docs/create-vpc-network-rdma) and use a [Falcon RDMA network profile](https://docs.cloud.google.com/vpc/docs/rdma-network-profiles). Set the [maximum transmission unit (MTU)](https://docs.cloud.google.com/vpc/docs/mtu) to `8896` for the Falcon VPC network.
 
@@ -172,7 +209,7 @@ To create the networks, you can use the following script.
     
     #!/bin/bash
     
-    # Create standard VPC (network and subnet) for the GVNIC interface
+    # Create standard VPC (network and subnet) for the GVNIC or IDPF interface
       gcloud compute networks create GVNIC_NAME_PREFIX-net-0 \
         --subnet-mode=custom
     
@@ -194,7 +231,7 @@ To create the networks, you can use the following script.
       --rules=tcp:22 \
       --source-ranges=IP_RANGE
     
-    # Optional: Create an external IP for only the GVNIC interface
+    # Optional: Create an external IP for only the GVNIC or IDPF interface
     gcloud compute firewall-rules create GVNIC_NAME_PREFIX-allow-ping-net-0 \
       --network=GVNIC_NAME_PREFIX-net-0 \
       --action=ALLOW \
@@ -210,12 +247,12 @@ To create the networks, you can use the following script.
     gcloud compute networks subnets create RDMA_NAME_PREFIX-irdma-sub \
         --network=RDMA_NAME_PREFIX-irdma \
         --region=REGION \
-        --range=10.1.0.0/16  # offset to avoid overlap with GVNIC network
+        --range=10.1.0.0/16  # offset to avoid overlap with GVNIC or IDPF network
     
 
 Replace the following:
 
-  * `GVNIC_NAME_PREFIX`: the name prefix to use for the regular Virtual Private Cloud network and subnet that uses a GVNIC NIC type.
+  * `GVNIC_NAME_PREFIX`: the name prefix to use for the regular Virtual Private Cloud network and subnet that uses a GVNIC or IDPF NIC type.
   * `RDMA_NAME_PREFIX`: the name prefix to use for the Virtual Private Cloud network and subnet that uses the IRDMA NIC type.
   * `ZONE`: the [zone](https://docs.cloud.google.com/compute/docs/regions-zones#available) where you want to create the networks and compute instances. Use either `us-central1-a` or `europe-west4-b`.
   * `REGION`: the region where you want to create the networks. This must correspond to the zone specified. For example, if your zone is `europe-west4-b`, then your region is `europe-west4`.
@@ -225,7 +262,7 @@ Replace the following:
 
 ### Create a Cloud RDMA-enabled instance
 
-The following steps show how to create an instance with the first network interface configured as a gVNIC interface, and second network interface configured as an IRDMA network interface:
+The following steps show how to create an instance with the first network interface configured as a gVNIC or IDPF interface, and the second network interface configured as an IRDMA network interface:
 
 ###  Console 
 
@@ -244,11 +281,9 @@ The **Create an instance** page appears and displays the **Machine configuration
 
 Choose the zone that you used to set up the Falcon VPC network.
 
-     3. Choose the **Compute-optimized** machine family.
+     3. Choose a supported machine family and machine series.
 
-     4. In the **Series** column, select the **H4D** machine series.
-
-     5. In the **Machine type** section, select the machine type for your instance.
+     4. In the **Machine type** section, select the machine type for your instance.
 
   3. In the left-side navigation menu, click **OS and Storage**. In the **Operating system and storage** pane that appears, do the following:
 
@@ -281,9 +316,9 @@ Choose the zone that you used to set up the Falcon VPC network.
 
 At the bottom of the Google Cloud console, a [Cloud Shell](https://docs.cloud.google.com/shell/docs/how-cloud-shell-works) session starts and displays a command-line prompt. Cloud Shell is a shell environment with the Google Cloud CLI already installed and with values already set for your current project. It can take a few seconds for the session to initialize. 
 
-  2. Use the [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create) with at least two `--network-interface` flags, one for the GVNIC interface and one for the IRDMA interface. You can customize the rest of the command options, as needed.
+  2. Use the [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create) with at least two `--network-interface` flags, one for the GVNIC or IDPF interface and one for the IRDMA interface. You can customize the rest of the command options, as needed.
 
-**Note:** The gVNIC network interface can have only one IPv6 address, either internal or external, but not both. The IRDMA network interface can only use IPv4 addresses.
+**Note:** The gVNIC or IDPF network interface can have only one IPv6 address, either internal or external, but not both. The IRDMA network interface can only use IPv4 addresses.
          
          gcloud compute instances create INSTANCE_NAME \
              --zone=ZONE \
@@ -309,7 +344,7 @@ Replace the following:
 
      * `INSTANCE_NAME`: the [name](https://docs.cloud.google.com/compute/docs/naming-resources#resource-name-format) of the compute instance
      * `ZONE`: the zone where the instance is created, such as `europe-west1-b`. The instance's region is inferred from the zone.
-     * `MACHINE_TYPE`: Optional: the machine type to use for the instance.
+     * `MACHINE_TYPE`: a supported machine type to use for the instance.
      * `IMAGE_PROJECT`: Optional: the [image project](https://docs.cloud.google.com/compute/docs/images/os-details#general-info) that contains the image.
      * `IMAGE`: Optional: specify one of the following: 
        * A specific version of the OS image—for example, `hpc-rocky-linux-8-v20250721`.
@@ -318,9 +353,9 @@ Replace the following:
      * `NETWORK_NAME`: Optional: name of the network
      * `SUBNET_NAME`: name of the subnet to use for the network interface. To view a list of subnets in the network, use the [`gcloud compute networks subnets list` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/networks/list).
 
-For the GVNIC network interface, you can omit the `network` and `subnet` flags and use the `default` network instead.
+For the GVNIC or IDPF network interface, you can omit the `network` and `subnet` flags and use the `default` network instead.
 
-     * `STACK_TYPE`: Optional: the stack type for the GVNIC network interface. `STACK_TYPE` must be one of: `IPV4_ONLY`, `IPV4_IPV6`, or `IPV6_ONLY`. The default value is `IPV4_ONLY`.
+     * `STACK_TYPE`: Optional: the stack type for the GVNIC or IDPF network interface. `STACK_TYPE` must be one of: `IPV4_ONLY`, `IPV4_IPV6`, or `IPV6_ONLY`. The default value is `IPV4_ONLY`.
 
      * `INTERNAL_IPV4_ADDRESS`: Optional: the internal IPv4 address that you want the compute instance to use in the target subnet. Omit this flag if you don't need a specific IP address.
 
@@ -343,25 +378,25 @@ To specify an external IPv6 address, use the flag `--external-ipv6-address` inst
 
 ###  REST 
 
-To create an instance configured to use Cloud RDMA, make a `POST` request to the [`instances.insert` method](https://docs.cloud.google.com/compute/docs/reference/rest/v1/instances/insert). Include the `networkInterfaces` object with at least two network configurations, one for the gVNIC interface and one for the IRDMA interface. You can customize the rest of the instance properties, as needed.
+To create an instance configured to use Cloud RDMA, make a `POST` request to the [`instances.insert` method](https://docs.cloud.google.com/compute/docs/reference/rest/v1/instances/insert). Include the `networkInterfaces` object with at least two network configurations, one for the gVNIC or IDPF interface and one for the IRDMA interface. You can customize the rest of the instance properties, as needed.
 
-**Note:** The gVNIC network interface can have only one IPv6 address, either internal or external, but not both. The IRDMA network interface can only use IPv4 addresses.
+**Note:** The gVNIC or IDPF network interface can have only one IPv6 address, either internal or external, but not both. The IRDMA network interface can only use IPv4 addresses.
 
 Before using any of the request data, make the following replacements: 
 
   * `PROJECT_ID`: ID of the project to create the instance in
   * `ZONE`: zone to create the instance in
-  * `MACHINE_TYPE`: the machine type to use, for example, `h4d-highmem-192-lssd`
+  * `MACHINE_TYPE`: a supported machine type, for example, `h4d-highmem-192-lssd`
   * `INSTANCE_NAME`: a name for the new instance
   * `IMAGE_PROJECT`: Optional: the [image project](https://docs.cloud.google.com/compute/docs/images/os-details#general-info) that contains the image
   * `IMAGE`: Optional: specify one of the following:
 
     * A specific version of the OS image—for example, `debian-12-bookworm-v20250415`
     * An [image family](https://docs.cloud.google.com/compute/docs/images/os-details), which must be formatted as `family/IMAGE_FAMILY`. This creates the instance from the most recent, non-deprecated OS image. For example, if you specify `family/debian-12`, Compute Engine creates an instance using the latest version of the OS image in the Debian 12 image family. For more information about using image families, see [Image families best practices](https://docs.cloud.google.com/compute/docs/images/image-families-best-practices). 
-  * `NETWORK_NAME`: Optional: name of the network to use with the gVNIC network interface
-  * `SUBNET_NAME`: name of the subnet to use with the gVNIC network interface
+  * `NETWORK_NAME`: Optional: name of the network to use with the gVNIC or IDPF network interface
+  * `SUBNET_NAME`: name of the subnet to use with the gVNIC or IDPF network interface
 
-For the GVNIC network interface, you can omit the `network` and `subnet` properties and use the `default` network instead.
+For the GVNIC or IDPF network interface, you can omit the `network` and `subnet` properties and use the `default` network instead.
 
   * `INTERNAL_IPV4_ADDRESS`: Optional: the internal IPv4 address that you want the compute instance to use in the target subnet. Omit this flag if you don't need a specific IP address.
   * `EXTERNAL_IPV4_ADDRESS`: Optional: a static external IPv4 address to use with the network interface. You must have previously [reserved an external IPv4 address](https://docs.cloud.google.com/vpc/docs/reserve-static-external-ip-address). 
@@ -480,6 +515,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

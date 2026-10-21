@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/maintenance/
 title: Maintenance overview \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:39:16.805743+00:00
+fetched_at: 2026-10-21T12:26:24.413930+00:00
 ---
 
 # Maintenance overview  |  Apigee  |  Google Cloud Documentation
@@ -140,12 +140,12 @@ We recommend you take the following actions to ensure a smooth maintenance updat
 
 ### Why were my maintenance settings ignored?
 
-Apigee will make a best effort to respect maintenance windows and the order of update. However, to maintain compatibility and security across our fleet we may sometimes need to update your instance outside of your preferred times. You will not be notified in advance if this occurs, but instance update logs will still be generated for the instance.
+Apigee will make a best effort to respect maintenance windows and the order of update. However, to maintain compatibility and security across our fleet we may sometimes need to update your instance outside of your preferred times. You might not be notified in advance if this occurs, and the update might not appear in your [maintenance logs](https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/view-maintenance-logs).
 
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

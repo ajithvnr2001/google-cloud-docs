@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/hpe-ilo/
 title: Collect HPE iLO logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T18:46:47.654987+00:00
+fetched_at: 2026-10-21T12:26:39.223048+00:00
 ---
 
 # Collect HPE iLO logs  |  Google Security Operations  |  Google Cloud Documentation

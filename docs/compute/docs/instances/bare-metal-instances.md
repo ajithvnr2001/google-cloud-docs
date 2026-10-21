@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/bare-metal-instances/
 title: Bare metal instances \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:40.730208+00:00
+fetched_at: 2026-10-21T12:25:05.399200+00:00
 ---
 
 # Bare metal instances  |  Compute Engine  |  Google Cloud Documentation
@@ -56,14 +56,19 @@ The features not available with bare metal instances include:
 Feature | VM instances | Bare metal instances  
 ---|---|---  
 Network interface | VirtIO is the default interface type for [first and second generation](https://docs.cloud.google.com/compute/docs/machine-resource#vm_terminology) machine series and gVNIC is supported with some second generation machine series. GVNIC is required by third generation and later machine series.  | [Intel IDPF LAN PF device driver](https://docs.cloud.google.com/compute/docs/networking/using-idpf). Bare metal instances don't run a hypervisor and don't support gVNIC or VirtIO.  
-Multiple network interfaces | Each VM can have up to 10 network interfaces. |  Each bare metal instance has only a single network interface. You can use Dynamic Network Interfaces to configure additional network interfaces. For more information about using multiple network interfaces with a bare metal instance, see [Multiple network interfaces](https://docs.cloud.google.com/vpc/docs/multiple-interfaces-concepts).  
+Multiple network interfaces | Each VM can have up to 10 network interfaces. | 
+
+  * Z4M bare metal instances come with two physical NICs and support up to 10 network interfaces per instance.
+  * All other bare metal instances have a single network interface. You can use Dynamic Network Interfaces to configure additional network interfaces. For more information about using multiple network interfaces with a bare metal instance, see [Multiple network interfaces](https://docs.cloud.google.com/vpc/docs/multiple-interfaces-concepts). 
+
+  
 Disk interface | 
 
   * For first and second generation machine series, SCSI is the default for Persistent Disk but NVMe can be used for Local SSD disks. 
   * For third generation and later machine series, only NVMe is supported.
 
 | Only NVMe.  
-Attached disks | VM instances can use standard Persistent Disk, Hyperdisk storage, and Local SSD. | Bare metal instances use only Hyperdisk storage. Some machine series also support Local SSD disks with bare metal instances.  
+Attached disks | VM instances can use standard Persistent Disk, Hyperdisk storage, and Local SSD. | Bare metal instances don't support Persistent Disk.  
 Windows OS support | VM instances support Windows images. | Bare metal instances don't provide support for Windows images.  
 Virtual Trusted Platform Module (vTPM) | Features such as Secure Boot, vTPM-enabled Measured Boot, and other Shielded VM features are available. | vTPM features aren't available with bare metal instances with the exception of A4X Max and C4A bare metal.  
 On host maintenance | VM instances support live migration. | The maintenance behavior must be set to `TERMINATE`. Live migration is not feasible. Bare metal instances with attached Local SSD disks can be set to `RESTART IN PLACE` to preserve the Local SSD disk data.  
@@ -173,6 +178,26 @@ X4 instances are powered by the 4th generation Intel Xeon Scalable processor (co
 
 The X4 machine series is part of the [memory-optimized machine family](https://docs.cloud.google.com/compute/docs/memory-optimized-machines), which provides the most compute and memory resources of any Compute Engine machine family and higher memory-to-vCPU ratios than general-purpose machine types.
 
+### Z4D machine series
+
+[Z4D instances](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4d_series) are powered by AMD EPYC Turin processors, DDR5 memory, and [Titanium offload processors](https://cloud.google.com/titanium). Z4D machine types are optimized for the underlying NUMA architecture to deliver optimal, reliable, and consistent performance. Z4D also offers larger Titanium SSD disk sizes than Z3.
+
+Z4D offers only a single bare metal machine type: `z4d-highmem-384-standardlssd-metal`. This machine type comes with 384 vCPUs, 3,072 GB of memory, two physical NICs, and 84,000 GiB of local Titanium SSD storage.
+
+The Z4D machine series is part of the storage-optimized machine family, and provides high density, high performing Titanium SSD storage. Z4D provides high vCPU to Titanium SSD capacity ratios of any machine series offered by Google Cloud.
+
+You can attach Hyperdisk Balanced, Hyperdisk Balanced High Availability, Hyperdisk Extreme, Hyperdisk ML, and Hyperdisk Throughput disks to Z4D bare metal instances. Z4D bare metal instances offer up to 400 Gbps network bandwidth for standard networking.
+
+### Z4M machine series
+
+[Z4M](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4m_series) is a multi-NIC storage-optimized machine series. Z4M supports Cloud RDMA. Z4M instances are powered by 5th generation Intel Emerald Rapids Xeon Scalable processors. Bare metal instances require a dedicated host server. If you create a bare metal instance, then that compute instance is the only one that can run on the host server. 
+
+To create a Z4M bare metal instance, use the `z4m-highmem-192-metal` machine type. This machine type comes with 192 vCPUs, 1,536 GB of memory, 168,000 GiB of local Titanium SSD storage, and up to 400 Gbps network bandwidth.
+
+Z4M is built on [Titanium](https://cloud.google.com/titanium), which uses network offloads. You can attach any type of Hyperdisk disk to Z4M bare metal instances.
+
+The Z4M machine series is part of the storage-optimized machine family, and provides high density, high performing Titanium SSD storage. Z4M provides higher vCPU to Titanium SSD capacity ratios of any machine series offered by Google Cloud.
+
 ### Z3 machine series
 
 [Z3](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z3_series) is the first machine series to offer Titanium SSD disks with a bare metal machine type. Z3 instances are powered by 4th generation Intel Xeon Scalable processors (code-named Sapphire Rapids).
@@ -181,7 +206,7 @@ Z3 offers only a single bare metal machine type: `z3-highmem-192-highlssd-metal`
 
 Z3 is built on [Titanium](https://cloud.google.com/titanium), which uses network offloads. You can attach Hyperdisk Balanced and Hyperdisk Extreme disks to Z3 bare metal instances. Z3 bare metal instances offer up to 100 Gbps network bandwidth for standard networking and up to 200 Gbps with per VM Tier_1 networking performance.
 
-The Z3 machine series is part of the storage-optimized machine family, and provides high density, high performing Titanium SSD storage. Z3 provides high vCPU to Titanium SSD capacity ratios of any machine series offered by Google Cloud.
+The Z3 machine series is part of the storage-optimized machine family, and provides high density, high performing Titanium SSD storage.
 
 ## Supported OS images for bare metal instances
 
@@ -197,7 +222,7 @@ Machine type names that include an asterisk (`*`) symbol represent machine types
 
 For information about the regional availability of A4X Max bare metal instances, see [GPU locations](https://docs.cloud.google.com/compute/docs/regions-zones/gpu-regions-zones).
 
-APACNorth AmericaSouth AmericaEuropeMiddle EastAfricaA4X MaxC4 C4AC4DC3X4X5Z3
+APACNorth AmericaSouth AmericaEuropeMiddle EastAfricaA4X MaxC4 C4AC4DC3X4X5Z3Z4DZ4M
 
 Clear all
 
@@ -361,30 +386,35 @@ For X4 and X5 contact sales team
 `southamerica-west1-a` | Santiago, Chile, South America | Z3 | `z3-highmem-192-highlssd-metal`  
 `southamerica-west1-b`  
 `southamerica-west1-c` | Santiago, Chile, South America | N/A | N/A  
-`us-central1-a` | Council Bluffs, Iowa, North America | A4X Max, C4 , C4A, C3, X5, X4, Z3 | `a4x-maxgpu-4g-metal`  
+`us-central1-a` | Council Bluffs, Iowa, North America | A4X Max, C4 , C4A, C3, X5, X4, Z4D, Z4M, Z3 | `a4x-maxgpu-4g-metal`  
 `c3-standard-192-metal`  
 `c3-highmem-192-metal`  
 `c4-standard-288-*-metal`  
 `c4-highmem-288-*-metal`  
 `c4a-highmem-96-*-metal`  
 For X4 and X5, contact sales team  
+`z4d-highmem-384-standardlssd-metal`  
+`z4m-highmem-192-metal`  
 `z3-highmem-192-highlssd-metal`  
-`us-central1-b` | Council Bluffs, Iowa, North America | A4X Max, C4 , C4A, C4D, X4, Z3 | `a4x-maxgpu-4g-metal`  
+`us-central1-b` | Council Bluffs, Iowa, North America | A4X Max, C4 , C4A, C4D, X4, Z4D, Z3 | `a4x-maxgpu-4g-metal`  
 `c4-standard-288-*-metal`  
 `c4-highmem-288-*-metal`  
 `c4a-highmem-96-metal`  
 `c4d-standard-384-metal`  
 For X4, contact sales team  
+`z4d-highmem-384-standardlssd-metal`  
 `z3-highmem-192-highlssd-metal`  
-`us-central1-c` | Council Bluffs, Iowa, North America | C4 , C4A, C3, X4, X5, Z3 | `c4-standard-288-*-metal`  
+`us-central1-c` | Council Bluffs, Iowa, North America | C4 , C4A, C3, X4, X5, Z4D, Z3 | `c4-standard-288-*-metal`  
 `c4-highmem-288-*-metal`  
 `c4a-standard-96-metal`  
 `c4a-highmem-96-metal`  
 `c3-highcpu-192-metal`  
 For X4 and X5, contact sales team  
+`z4d-highmem-384-standardlssd-metal`  
 `z3-highmem-192-highlssd-metal`  
-`us-central1-f` | Council Bluffs, Iowa, North America | C4 | `c4-standard-288-*-metal`  
+`us-central1-f` | Council Bluffs, Iowa, North America | C4, Z4D | `c4-standard-288-*-metal`  
 `c4-highmem-288-*-metal`  
+`z4d-highmem-384-standardlssd-metal`  
 `us-east1-b` | Moncks Corner, South Carolina, North America | C4, Z3 | `c4-standard-288-*-metal`  
 `c4-highmem-288-*-metal`  
 `z3-highmem-192-highlssd-metal`  
@@ -399,43 +429,52 @@ For X4 and X5, contact sales team
 `c3-highmem-192-metal`  
 `c4-standard-288-*-metal`  
 `c4-highmem-288-*-metal`  
-`us-east4-a` | Ashburn, Virginia, North America | A4X Max, C4 , C3, X5, X4 | `a4x-maxgpu-4g-metal`  
+`us-east4-a` | Ashburn, Virginia, North America | A4X Max, C4 , C3, X5, X4, Z4D | `a4x-maxgpu-4g-metal`  
 `c4-standard-288-*-metal`  
 `c4-highmem-288-*-metal`  
 `c3-highcpu-192-metal`  
 `c3-standard-192-metal`  
 `c3-highmem-192-metal`  
 For X4 and X5, contact sales team  
-`us-east4-b` | Ashburn, Virginia, North America | A4X Max, C4 , C4D, X4, Z3 | `a4x-maxgpu-4g-metal`  
+`z4d-highmem-384-standardlssd-metal`  
+`us-east4-b` | Ashburn, Virginia, North America | A4X Max, C4 , C4D, X4, Z4D, Z3 | `a4x-maxgpu-4g-metal`  
 `c4-highmem-288-*-metal`  
 `c4-standard-288-*-metal`  
 `c4d-highcpu-384-metal`  
 `c4d-standard-384-metal`  
 `c4d-highmem-384-metal`  
 For X4, contact sales team  
+`z4d-highmem-384-standardlssd-metal`  
 `z3-highmem-192-highlssd-metal`  
-`us-east4-c` | Ashburn, Virginia, North America | C3, C4, C4A, X4, X5, Z3 | `c3-highcpu-192-metal`  
+`us-east4-c` | Ashburn, Virginia, North America | C3, C4, C4A, X4, X5, Z4D, Z3 | `c3-highcpu-192-metal`  
 `c3-standard-192-metal`  
 `c3-highmem-192-metal`  
 `c4-highmem-288-*-metal`  
 `c4-standard-288-*-metal`  
 `c4a-highmem-96-metal`  
 For X4 and X5, contact sales team  
+`z4d-highmem-384-standardlssd-metal`  
 `z3-highmem-192-highlssd-metal`  
-`us-east5-a` | Columbus, Ohio, North America | C3, C4, Z3 | `c3-highcpu-192-metal`  
+`us-east5-a` | Columbus, Ohio, North America | C3, C4, Z3, Z4D, Z4M | `c3-highcpu-192-metal`  
 `c3-standard-192-metal`  
 `c3-highmem-192-metal`  
 `c4-highmem-288-*-metal`  
 `c4-standard-288-*-metal`  
 `z3-highmem-192-highlssd-metal`  
-`us-east5-b` | Columbus, Ohio, North America | A4X Max, C3, C4A, Z3 | `a4x-maxgpu-4g-metal`  
+`z4d-highmem-384-standardlssd-metal`  
+`z4m-highmem-192-metal`  
+`us-east5-b` | Columbus, Ohio, North America | A4X Max, C3, C4A, Z3, Z4D, Z4M | `a4x-maxgpu-4g-metal`  
 `c3-highcpu-192-metal`  
 `c3-standard-192-metal`  
 `c3-highmem-192-metal`  
 `c4a-highmem-96-metal`  
 `z3-highmem-192-highlssd-metal`  
-`us-east5-c` | Columbus, Ohio, North America | A4X Max, Z3 | `a4x-maxgpu-4g-metal`  
+`z4d-highmem-384-standardlssd-metal`  
+`z4m-highmem-192-metal`  
+`us-east5-c` | Columbus, Ohio, North America | A4X Max, Z3, Z4D, Z4M | `a4x-maxgpu-4g-metal`  
 `z3-highmem-192-highlssd-metal`  
+`z4d-highmem-384-standardlssd-metal`  
+`z4m-highmem-192-metal`  
 `us-south1-a` | Dallas, Texas, North America | C4, Z3 | `c4-highmem-288-*-metal`  
 `z3-highmem-192-highlssd-metal`  
 `us-south1-b` | Dallas, Texas, North America | C4 | `c4-highmem-288-*-metal`  
@@ -471,6 +510,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

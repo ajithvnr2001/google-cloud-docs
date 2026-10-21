@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/placement-policies-overview/
 title: Placement policies overview \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:26:51.662930+00:00
+fetched_at: 2026-10-21T12:25:23.995051+00:00
 ---
 
 # Placement policies overview  |  Compute Engine  |  Google Cloud Documentation
@@ -61,11 +61,11 @@ Unspecified (Not recommended) | Compute Engine makes best-effort attempts to pla
   * **General-purpose machines** : C4D, C4, C3D, C3, N2D, and N2
   * **Network-optimized machines** : C4N, M4N
   * **Memory-optimized machines** : M4N, M4, M3, M2, and M1
-  * **Storage-optimized machines** : Z4D and Z3-metal
+  * **Storage-optimized machines** : Z4D, Z4M, and Z3-metal
 
 | 1,500 | 
 
-  * **For Z3-metal and Z4D instances with more than 42 TiB of Local SSD** : Terminate
+  * **For Z3-metal, Z4D, and Z4M instances with more than 42,000 GiB of Local SSD** : Terminate
   * **For all other supported machine series** : Migrate or Terminate
 
   
@@ -76,11 +76,11 @@ Unspecified (Not recommended) | Compute Engine makes best-effort attempts to pla
   * **General-purpose machines** : C4D, C4, C3D, and C3
   * **Network-optimized machines** : C4N, M4N
   * **Memory-optimized machines** : M4N, M4
-  * **Storage-optimized machines** : Z4D and Z3-metal
+  * **Storage-optimized machines** : Z4D, Z4M, and Z3-metal
 
 | 1,500 | 
 
-  * **For Z3-metal and Z4D instances with more than 42 TiB of Local SSD** : Terminate
+  * **For Z3-metal, Z4D, and Z4M instances with more than 42,000 GiB of Local SSD** : Terminate
   * **For all other supported machine series** : Migrate or Terminate
 
   
@@ -91,7 +91,7 @@ Unspecified (Not recommended) | Compute Engine makes best-effort attempts to pla
   * **General-purpose machines** : C4D, C4, C3D, and C3
   * **Network-optimized machines** : C4N
   * **Memory-optimized machines** : M4N, M4
-  * **Storage-optimized machines** : Z4D and Z3-metal
+  * **Storage-optimized machines** : Z4D, Z4M, and Z3-metal
 
 | 
 
@@ -106,9 +106,14 @@ Unspecified (Not recommended) | Compute Engine makes best-effort attempts to pla
   * **General-purpose machines** : C4D, C4, C3D, and C3
   * **Network-optimized machines** : C4N
   * **Memory-optimized machines** : M4N, M4
-  * **Storage-optimized machines** : Z4D and Z3-metal
+  * **Storage-optimized machines** : Z4D, Z4M, and Z3-metal
 
-| 22 | Terminate  
+| 
+
+  * **For Z4M** : 16
+  * **For all other supported machine series** : 22
+
+| Terminate  
   
 1 If you want to apply a compact placement policy to an A3 Mega, A3 High, or A3 Edge instance that was created before October 1, 2025, then contact your [account team](https://cloud.google.com/tam) or the [sales team](https://cloud.google.com/contact). 
 
@@ -209,6 +214,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

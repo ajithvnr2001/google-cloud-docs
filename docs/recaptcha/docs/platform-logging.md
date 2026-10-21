@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/platform-logging/
 title: Working with platform logs \u00a0|\u00a0 Google Cloud Fraud Defense \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T13:25:14.987202+00:00
+fetched_at: 2026-10-21T12:26:03.626288+00:00
 ---
 
 # Working with platform logs  |  Google Cloud Fraud Defense  |  Google Cloud Documentation
@@ -34,7 +34,7 @@ You can enable platform logging for reCAPTCHA specifically for the following ope
 
 
 
-Platform logging is available only when using the v1 API ([`CreateAssessment`](https://docs.cloud.google.com/recaptcha/docs/reference/rest/v1/projects.assessments#Assessment) and [`AnnotateAssessment`](https://docs.cloud.google.com/recaptcha/docs/reference/rest/v1/projects.assessments/annotate)) and not with the `v1beta1` API or the `SiteVerify` API
+Platform logging is available only when using the v1 API ([`CreateAssessment`](https://docs.cloud.google.com/recaptcha/docs/reference/rest/v1/projects.assessments#Assessment) and [`AnnotateAssessment`](https://docs.cloud.google.com/recaptcha/docs/reference/rest/v1/projects.assessments/annotate)) and not with the `v1beta1` API or the `SiteVerify` API.
 
 **Note:** The PII data for Fraud Prevention is not displayed in the platform logs.
 
@@ -69,6 +69,8 @@ If you don't see the name of your project, click the resource selector, then sel
 
 For more information about viewing, routing, and storing platform logs, see [Managing logs](https://docs.cloud.google.com/logging/docs/api/platform-logs#managing-logs).
 
+You can export reCAPTCHA platform logs to BigQuery using a log sink in Logs Router. For more information, see [Export logs to BigQuery](https://docs.cloud.google.com/recaptcha/docs/export-logs-bigquery).
+
 You can enable the collection of reCAPTCHA platform logs in Google Security Operations for analysis. For more information, see [Collect reCAPTCHA logs](https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/collect-gcp-recaptcha-logs).
 
 ## Pricing
@@ -81,6 +83,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

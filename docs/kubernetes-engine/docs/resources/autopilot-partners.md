@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/resources/autopilot-partners/
 title: Autopilot partners \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:02:11.282034+00:00
+fetched_at: 2026-10-21T12:26:18.236751+00:00
 ---
 
 # Autopilot partners  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -119,7 +119,7 @@ Virtana |  Virtana Container Observability provides visibility into Kubernetes, 
   * `Virtana/node-exporter/*`
 
 For more information, refer to [Deploy Virtana on GKE Autopilot clusters](https://docs.virtana.com/en/container-observability/deployment/deploy-virtana-co-south-on-gke-autopilot-clusters.html#deploy-virtana-co-south-on-gke-autopilot-clusters).  
-Wiz Runtime Sensor |  The Wiz Runtime Sensor provides detection and response capabilities for cloud workloads. It is an eBPF-based agent that can be deployed to GKE clusters to provide real-time visibility and monitoring of running processes, network connections, file activity, and system calls to detect, investigate, and respond to malicious behavior affecting the workload. Allowlist path: `Wiz/wiz-sensor/*` For more information, refer to the [Wiz Runtime Sensor overview](https://www.wiz.io/blog/wiz-expands-platform-with-the-runtime-sensor-to-provide-unified-cloud-security).  
+Wiz Runtime Sensor |  The Wiz Runtime Sensor provides detection and response capabilities for cloud workloads. It is an eBPF-based agent that can be deployed to GKE clusters to provide real-time visibility and monitoring of running processes, network connections, file activity, and system calls to detect, investigate, and respond to malicious behavior affecting the workload. You can install the Runtime Sensor as a managed GKE add-on ([Preview](https://cloud.google.com/products#product-launch-stages)), which doesn't require an allowlist. For more information, see [Install the Wiz Runtime Sensor in GKE clusters](https://docs.cloud.google.com/kubernetes-engine/security/install-wiz-sensor-addon). To install the Runtime Sensor manually, use the allowlist path `Wiz/wiz-sensor/*`.  
   
 ### Partners that don't support allowlists
 
@@ -140,6 +140,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

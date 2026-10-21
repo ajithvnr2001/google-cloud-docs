@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/secops/agentic-detection-engineering/
 title: Use the Detection Engineering Agent \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:16:35.348941+00:00
+fetched_at: 2026-10-21T12:26:15.193936+00:00
 ---
 
 # Use the Detection Engineering Agent  |  Google Security Operations  |  Google Cloud Documentation
@@ -175,7 +175,14 @@ Checks whether existing rules in your Google SecOps instance trigger on simulate
 
 ### Generate draft rules
 
-Codifies detection logic by creating draft YARA-L rules from user input or natural language to address gaps identified during coverage evaluation. This tool does not automatically upload the rule into your Google SecOps system. In order to add any rule, review the text and then manually create new rules from the tool output.
+The Detection Engineering Agent codifies detection logic by creating draft YARA-L rules from user input or natural language to address gaps identified during coverage evaluation. When you use the `detection-engineering-coverage-evaluation` skill, the agent generates draft rules only for TDOs that no existing rule matches, and only after coverage evaluation finishes for all TDOs. This prevents duplicate rules for threats that existing rules already cover.
+
+The `generate_rules` tool doesn't automatically add the draft rules to your Google SecOps instance. After you review the draft rules, you can add them in either of the following ways:
+
+  * **Use your AI client** : The `detection-engineering-coverage-evaluation` skill prompts you to approve or reject each draft rule. For each rule that you approve, the AI client calls the `create_rule` tool on the Google SecOps MCP server to create the rule in your instance.
+  * **Create the rule manually** : Copy the rule text from the tool output and create the rule in the [Rules Editor](https://docs.cloud.google.com/chronicle/docs/detection/manage-all-rules).
+
+
 
 ## Troubleshooting
 
@@ -200,6 +207,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

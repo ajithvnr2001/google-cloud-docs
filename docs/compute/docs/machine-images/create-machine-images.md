@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/machine-images/create-machine-images/
 title: Create machine images \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:45:23.748043+00:00
+fetched_at: 2026-10-21T12:25:23.870554+00:00
 ---
 
 # Create machine images  |  Compute Engine  |  Google Cloud Documentation
@@ -71,7 +71,7 @@ For more information, see [Authenticate for using REST](https://docs.cloud.googl
     * Have attached disks with a combined capacity exceeding 200 TiB.
     * Don't have any attached disks.
     * Have any attached Hyperdisk volumes.
-    * Use Z3 machine type except for `z3-highmem-192-highlssd-metal`.
+    * Use any Z4D, Z4M, or Z3 machine type except for `z3-highmem-192-highlssd-metal`.
     * Use a C3D, H3, or A3 machine type. 
 
 For instances that don't support the creation of machine images, you can instead create an OS image from the boot disk of the instance, as described in [Create custom images](https://docs.cloud.google.com/compute/docs/images/create-custom).
@@ -498,6 +498,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/guides/right-fitting/
 title: Right fitting \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:02:51.233644+00:00
+fetched_at: 2026-10-21T12:25:45.186452+00:00
 ---
 
 # Right fitting  |  Cloud Dataflow  |  Google Cloud Documentation
@@ -77,21 +77,11 @@ For more information about using GPUs, see [GPUs with Dataflow](https://docs.clo
   
 ### Auto VM Selection for worker machine types
 
-When you use `min_ram` or `cpu_count` resource hints for pipeline steps that don't require accelerators, [Instance Flexibility (Auto VM Selection)](https://docs.cloud.google.com/compute/docs/instance-groups/about-instance-flexibility) is enabled automatically. With Auto VM Selection, workers are provisioned from a selection of machine types that meet your RAM and CPU requirements.
+When you use `min_ram` or `cpu_count` resource hints for pipeline steps that don't require accelerators, [Auto VM Selection](https://docs.cloud.google.com/dataflow/docs/guides/auto-vm-selection) is enabled automatically.
 
-Auto VM Selection optimizes VM selection primarily for reliability and not performance. This means that you might experience reduced performance while using Auto VM Selection to improve the reliability of some of your highly-tuned jobs. We recommend that you test Auto VM Selection on a subset of your existing jobs before gradually deploying them more broadly.
+With Auto VM Selection, workers are provisioned from a selection of compatible machine types that meet your pipeline requirements, maximizing reliability and capacity availability.
 
-**Note:** When using Auto VM Selection, don't include step resource hints in your pipeline.
-
-If you use Compute Engine reservations with Auto VM Selection, note the following:
-
-  * If you have reservations that are [consumed automatically](https://docs.cloud.google.com/compute/docs/instances/reservations-consume#auto-reservations), they might be used if Compute Engine provisions VMs of a matching machine type.
-  * Auto VM Selection doesn't support [consuming instances from a specific reservation](https://docs.cloud.google.com/compute/docs/instances/reservations-consume#consuming_instances_from_a_specific_reservation).
-  * Auto VM Selection isn't supported with Vertical Autoscaling.
-
-
-
-For more information, see [Instance flexibility and reservations](https://docs.cloud.google.com/compute/docs/instance-groups/about-instance-flexibility#instance_flexibility_and_reservations).
+For detailed information about how Auto VM Selection works, its limitations, and recommendations regarding storage types, see [Auto VM Selection](https://docs.cloud.google.com/dataflow/docs/guides/auto-vm-selection).
 
 ## Resource hint nesting
 
@@ -282,12 +272,6 @@ When you try to use right fitting, the following error occurs:
 
 This error occurs when the GPU type selected isn't compatible with the machine type selected. To resolve this error, select a compatible GPU type and machine type. For compatibility details, see [GPU platforms](https://docs.cloud.google.com/compute/docs/gpus).
 
-### Unexpected parallelism with Auto VM Selection
-
-If you observe low CPU utilization or unexpected parallelism on worker VMs when using Auto VM Selection with right fitting, it might point to an issue where the number of threads per worker isn't automatically set to match the selected machine type's vCPU count.
-
-To work around this issue, explicitly set both the `numberOfWorkerHarnessThreads` [pipeline option](https://docs.cloud.google.com/dataflow/docs/reference/pipeline-options#resource_utilization) and the `cpu_count` pipeline resource hint to the same value. For example, if you require 2 vCPUs, set `--numberOfWorkerHarnessThreads=2` and `--resourceHints=cpu_count=2`. Note that the `numberOfWorkerHarnessThreads` option applies globally to all worker pools in the pipeline.
-
 ### Verify right fitting
 
 You can verify that right fitting is enabled by viewing the [autoscaling metrics](https://docs.cloud.google.com/dataflow/docs/guides/autoscaling-metrics) and verifying that the `Worker pool` column is visible and lists different pools:
@@ -310,6 +294,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

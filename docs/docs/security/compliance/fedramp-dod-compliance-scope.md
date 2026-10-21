@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/compliance/fedramp-dod-compliance-scope/
 title: FedRAMP and DoD compliance scope for Google Cloud and Google Workspace \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:22:41.423181+00:00
+fetched_at: 2026-10-21T12:26:03.395742+00:00
 ---
 
 # FedRAMP and DoD compliance scope for Google Cloud and Google Workspace  |  Security  |  Google Cloud Documentation
@@ -20,7 +20,7 @@ Send feedback
 
 #  FedRAMP and DoD compliance scope for Google Cloud and Google Workspace Stay organized with collections  Save and categorize content based on your preferences. 
 
-Last reviewed 2026-08-18 UTC
+Last reviewed 2026-10-15 UTC
 
 [Google Cloud](https://cloud.google.com/why-google-cloud) and [ Google Workspace](https://workspace.google.com/) services meet demanding US government compliance requirements that are verified through formal third-party authorizations, including the following:
 
@@ -53,7 +53,7 @@ This document uses the following terminology:
 
 ## Google Cloud services by audit scope
 
-_Last updated: August 2026_
+_Last updated: October 2026_
 
 Google's authorization strategy focuses on the top-level cloud services.
 
@@ -202,7 +202,8 @@ Service | FedRAMP High | DoD IL2 | DoD IL4 | DoD IL5
 [GKE Connect Agent](https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/connect-agent) |  |  |  |   
 [GKE connect gateway](https://docs.cloud.google.com/kubernetes-engine/enterprise/multicluster-management/gateway) |  |  |  |   
 [GKE Hub](https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/reference/rest) |  |  |  |   
-[ GKE Identity Service](https://cloud.google.com/kubernetes-engine/enterprise/identity) (formerly Anthos Identity Service) |  |  |  |   
+[GKE Identity Service](https://cloud.google.com/kubernetes-engine/enterprise/identity) (formerly Anthos Identity Service) |  |  |  |   
+[GKE Image streaming](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/image-streaming) |  |  |  |   
 [Google Security Operations SIEM (Google SecOps SIEM)](https://docs.cloud.google.com/chronicle/docs/overview) |  |  |  |   
 [ Google Security Operations SOAR (Google SecOps SOAR)](https://docs.cloud.google.com/chronicle/docs/soar/overview-and-introduction/soar-overview) |  |  |  |   
 [Identity and Access Management (IAM)](https://docs.cloud.google.com/iam/docs) |  |  |  |   
@@ -456,6 +457,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-08-18 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-18 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

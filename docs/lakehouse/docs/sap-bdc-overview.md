@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/lakehouse/docs/sap-bdc-overview/
 title: About SAP Business Data Cloud integration \u00a0|\u00a0 Lakehouse \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:19:48.767327+00:00
+fetched_at: 2026-10-21T12:25:54.208972+00:00
 ---
 
 # About SAP Business Data Cloud integration  |  Lakehouse  |  Google Cloud Documentation
@@ -25,7 +25,7 @@ Send feedback
 
 Borderless Lakehouse lets you connect Google Cloud analytics with your SAP environment. This integration unifies your data analytics by connecting external data sources with your existing Google Cloud environment.
 
-This integration lets you use BigQuery's analytical power directly on your SAP data without moving it. The SAP Business Data Cloud (BDC) instance acts as the central system that governs and provides data from all SAP applications, including finance, supply chain, and HR.
+This integration lets you use BigQuery's analytical power directly on your SAP data without moving it, whether your SAP Business Data Cloud (BDC) instance is hosted on Amazon Web Services (AWS), Microsoft Azure, or Google Cloud. The SAP BDC instance acts as the central system that governs and provides data from all SAP applications, including finance, supply chain, and HR.
 
 You can manage access to your federated data for several use cases:
 
@@ -42,7 +42,7 @@ The integration between Lakehouse and SAP BDC supports two workflows:
 
 ### SAP to Google Cloud (Federation)
 
-In this workflow, you query data residing in SAP BDC directly from BigQuery. This is handled using a Federated Delta Lake Catalog that communicates with SAP BDC using the Delta Sharing protocol.
+In this workflow, you query data residing in SAP BDC on AWS, Azure, or Google Cloud directly from BigQuery. This is handled using a Federated Delta Lake Catalog that communicates with SAP BDC using the Delta Sharing protocol.
 
   * Discover available tables and schemas live.
   * Run queries against live SAP data without moving it into Google Cloud.
@@ -100,6 +100,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

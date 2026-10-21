@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/custom-access-level-spec/
 title: Custom access level specification \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:52:20.951203+00:00
+fetched_at: 2026-10-21T12:26:14.433464+00:00
 ---
 
 # Custom access level specification  |  Access Context Manager  |  Google Cloud Documentation
@@ -313,7 +313,7 @@ Attributes
   
 `android_device_security.cts_profile_match` |  |  **Type** |  boolean   
 ---|---  
-**Description** |  Whether device passes [CTS profile compliance](https://developer.android.com/training/safetynet/attestation).  **Example:**
+**Description** |  Whether the device passes [CTS profile compliance](https://developer.android.com/training/safetynet/attestation).  **Example:**
     
     
     device.android_device_security.cts_profile_match == true  
@@ -348,7 +348,7 @@ Attributes
   
 `chrome.management_state` |  |  **Type** |  string   
 ---|---  
-**Description** |  Is the browser managed, at the browser level or at the profile level, and by the enterprise under the correct domain.  A browser is considered to be managed if the policies are centrally managed and pushed, and that the domain of the managed browser or profile matches the expected domain on the server side.  Following are the available Chrome management states: | State  
+**Description** |  Whether the browser is managed, at the browser level or at the profile level, and by the enterprise under the correct domain.  A browser is considered to be managed if the policies are centrally managed and pushed, and that the domain of the managed browser or profile matches the expected domain on the server side.  Following are the available Chrome management states: | State  
 ---  
 `UNMANAGED` | The browser or profile is not managed by any customer.  
 `MANAGED_BY_OTHER_DOMAIN` | The browser or profile is managed by some other customer.  
@@ -366,42 +366,42 @@ Attributes
   
 `chrome.versionAtLeast` |  |  **Type** |  string   
 ---|---  
-**Description** |  Is the browser above a certain minimum version.  **Example:**
+**Description** |  Whether the browser is above a certain minimum version.  **Example:**
     
     
     device.chrome.versionAtLeast("88.0.4321.44")  
   
 `chrome.is_realtime_url_check_enabled` |  |  **Type** |  boolean   
 ---|---  
-**Description** |  Is the real-time URL check connector enabled.  **Example:**
+**Description** |  Whether the real-time URL check connector is enabled.  **Example:**
     
     
     device.chrome.is_realtime_url_check_enabled == true | false  
   
 `chrome.is_file_upload_analysis_enabled` |  |  **Type** |  boolean   
 ---|---  
-**Description** |  Is the file upload analysis connector enabled.  **Example:**
+**Description** |  Whether the file upload analysis connector is enabled.  **Example:**
     
     
     device.chrome.is_file_upload_analysis_enabled == true | false  
   
 `chrome.is_file_download_analysis_enabled` |  |  **Type** |  boolean   
 ---|---  
-**Description** |  Is the file download analysis connector enabled.  **Example:**
+**Description** |  Whether the file download analysis connector is enabled.  **Example:**
     
     
     device.chrome.is_file_download_analysis_enabled == true | false  
   
 `chrome.is_bulk_data_entry_analysis_enabled` |  |  **Type** |  boolean   
 ---|---  
-**Description** |  Is the bulk text (paste) analysis connector enabled.  **Example:**
+**Description** |  Whether the bulk text (paste) analysis connector is enabled.  **Example:**
     
     
     device.chrome.is_bulk_data_entry_analysis_enabled == true | false  
   
 `chrome.is_security_event_analysis_enabled` |  |  **Type** |  boolean   
 ---|---  
-**Description** |  Is the security event reporting connector enabled.  **Example:**
+**Description** |  Whether the security event reporting connector is enabled.  **Example:**
     
     
     device.chrome.is_security_event_analysis_enabled == true | false  
@@ -496,6 +496,13 @@ Functions
     
     originatesFromProjects(origin, ["projects/1234567890", "projects/9876543210"])  
   
+`request.auth.matchesNetworkProject(origin)` |  |  **Type** |  Auth.(Origin) -> boolean   
+---|---  
+**Description** |  Checks whether the request originates from a network associated with the same Google Cloud project, or an associated tenant project, that owns the calling [workload identity](https://docs.cloud.google.com/iam/docs/workload-identities). A workload identity is a non-human identity that belongs to a Google Cloud project, such as a service account, Workload Identity Federation identity, managed workload identity, or agent identity.  **Example:** To allow requests only when the originating network project (or its associated tenant projects) match the project `my-project`, which owns the calling workload identity: 
+    
+    
+    request.auth.matchesNetworkProject(origin)  
+  
 ## Macros for CEL expressions
 
 You can use the following macros in the CEL expressions for custom access levels:
@@ -564,6 +571,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

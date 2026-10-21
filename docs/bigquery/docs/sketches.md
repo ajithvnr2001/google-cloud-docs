@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/sketches/
 title: Sketches \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:09.170093+00:00
+fetched_at: 2026-10-21T12:26:04.665071+00:00
 ---
 
 # Sketches  |  BigQuery  |  Google Cloud Documentation
@@ -34,7 +34,7 @@ Product | Number of users | Median visit duration
 Product A | 500 million | 10 minutes  
 Product B | 20 million | 2 minutes  
   
-Computing the total number of users for both products isn't possible because we don't know how many users used both products in the table. Likewise, computing the median visit duration isn't possible because the distribution of the visit durations has been lost.
+Computing the total number of users for both products isn't possible because the table doesn't show how many users used both products. Likewise, computing the median visit duration isn't possible because the distribution of the visit durations has been lost.
 
 A solution is to store sketches in the table instead. Each sketch is an approximate and compact representation of a particular input property, such as cardinality, that you can store, merge (or re-aggregate), and query for near-exact results. In the previous example, you can estimate the number of distinct users for Product A and Product B by creating and merging (re-aggregating) the sketches for each product. You can also estimate the median visit duration with quantile sketches that you can likewise merge and query.
 
@@ -103,7 +103,7 @@ In summary, a sketch has these main properties:
 
 ## Re-aggregation with sketch merging
 
-Sketches let you store and merge data for efficient re-aggregation. This makes sketches particularly useful for materialized views of data sets. You can merge sketches to construct a summary of multiple data streams based on partial sketches created for each stream.
+Sketches let you store and merge data for efficient re-aggregation. This makes sketches particularly useful for storing precomputed summaries of data sets, known as _materialized views_. You can merge sketches to construct a summary of multiple data streams based on partial sketches created for each stream.
 
 For example, if you create a sketch for the estimated number of distinct users every day, you can get the number of distinct users during the last seven days by merging daily sketches. Re-aggregating the merged daily sketches helps you avoid reading the full input of the data set.
 
@@ -248,6 +248,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

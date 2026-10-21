@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/lakehouse/docs/manage-tables/
 title: Overview of Apache Iceberg tables \u00a0|\u00a0 Lakehouse \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:19:45.607205+00:00
+fetched_at: 2026-10-21T12:26:01.369324+00:00
 ---
 
 # Overview of Apache Iceberg tables  |  Lakehouse  |  Google Cloud Documentation
@@ -26,6 +26,8 @@ Send feedback
 Apache Iceberg tables, managed by the [Lakehouse runtime catalog](https://docs.cloud.google.com/lakehouse/docs/about-lakehouse-catalogs) and the [Iceberg REST catalog endpoint](https://docs.cloud.google.com/lakehouse/docs/lakehouse-iceberg-rest-catalog), are open and interoperable Iceberg tables adhering to the [open source Apache Iceberg Table specification](https://iceberg.apache.org/spec/), which can be read and written by using any Iceberg-compatible processing engine or BigQuery.
 
 In this document, these tables are referred to as "managed Apache Iceberg tables" or "Iceberg tables".
+
+To compare table types, see [Compare table types](https://docs.cloud.google.com/lakehouse/docs/lakehouse-tables).
 
 ## Table options
 
@@ -75,6 +77,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

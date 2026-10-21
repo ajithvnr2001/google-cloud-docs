@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/lakehouse/docs/regions-capabilities-cross-cloud-connections/
 title: Supported regions and CCI capabilities \u00a0|\u00a0 Lakehouse \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:19:49.958894+00:00
+fetched_at: 2026-10-21T12:25:54.318883+00:00
 ---
 
 # Supported regions and CCI capabilities  |  Lakehouse  |  Google Cloud Documentation
@@ -65,21 +65,21 @@ AWS Region Name | AWS Region Metro | Closest Google Cloud Region Name | Closest 
 **`eu-west-3`** | Paris | `europe-west9` | Paris |  | ✓ | europe-west1, europe-west2, europe-west3  
 **`eu-central-1`** | Frankfurt | `europe-west3` | Frankfurt | ✓ | ✓ | europe-west4, europe-west1, europe-west6  
 **`eu-central-2`** | Zurich | `europe-west6` | Zurich |  |  | europe-west8, europe-west12, europe-west3  
-**`eu-north-1`** | Stockholm | `europe-north1` | Hamina, Finland |  |  | europe-west4, europe-central2, europe-west1  
+**`eu-north-1`** | Stockholm | `europe-north2` | Stockholm | ✓ | ✓ | europe-north1, europe-west4, europe-central2  
 **`eu-south-1`** | Milan | `europe-west8` | Milan |  |  | europe-west12, europe-west6, europe-west3  
 **`eu-south-2`** | Spain (Aragon) | `europe-southwest1` | Madrid |  |  | europe-west9, europe-west1, europe-west8  
 **`me-central-1`** | UAE | `me-central1` | Doha |  |  | me-central2, me-west1, asia-south1  
 **`me-south-1`** | Bahrain | `me-central2` | Dammam |  |  | me-central1, me-west1, asia-south1  
 **`af-south-1`** | Cape Town | `europe-southwest1` | Madrid |  |  | me-central2, me-west1, europe-west1  
-**`ap-east-1`** | Hong Kong | `asia-east2` | Hong Kong |  | ✓ | asia-east1, asia-southeast1, asia-northeast1  
+**`ap-east-1`** | Hong Kong | `asia-east2` | Hong Kong |  | ✓ | asia-east1, asia-southeast3, asia-southeast1  
 **`ap-northeast-1`** | Tokyo | `asia-northeast1` | Tokyo |  | ✓ | asia-northeast2, asia-northeast3, asia-east1  
 **`ap-northeast-2`** | Seoul | `asia-northeast3` | Seoul |  | ✓ | asia-northeast2, asia-northeast1, asia-east1  
 **`ap-northeast-3`** | Osaka | `asia-northeast2` | Osaka |  | ✓ | asia-northeast1, asia-northeast3, asia-east1  
 **`ap-south-1`** | Mumbai | `asia-south1` | Mumbai |  | ✓ | asia-south2, me-central1, asia-southeast1  
 **`ap-south-2`** | Hyderabad | `asia-south2` | Delhi |  |  | asia-south1, asia-southeast1, me-central1  
-**`ap-southeast-1`** | Singapore | `asia-southeast1` | Singapore | ✓ | ✓ | asia-southeast2, asia-east1, asia-south1  
-**`ap-southeast-2`** | Sydney | `australia-southeast1` | Sydney |  | ✓ | australia-southeast2, asia-southeast2, asia-southeast1  
-**`ap-southeast-3`** | Jakarta | `asia-southeast2` | Jakarta |  | ✓ | asia-southeast1, australia-southeast1, asia-east1  
+**`ap-southeast-1`** | Singapore | `asia-southeast1` | Singapore | ✓ | ✓ | asia-southeast2, asia-southeast3, asia-east1  
+**`ap-southeast-2`** | Sydney | `australia-southeast1` | Sydney | ✓ | ✓ | australia-southeast2, asia-southeast2, asia-southeast1  
+**`ap-southeast-3`** | Jakarta | `asia-southeast2` | Jakarta |  | ✓ | asia-southeast1, asia-southeast3, australia-southeast1  
   
 ## What's next
 
@@ -91,6 +91,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/looker/
 title: Create dashboards with Data Studio \u00a0|\u00a0 Google Cloud Fraud Defense \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:50:32.173934+00:00
+fetched_at: 2026-10-21T12:26:03.774698+00:00
 ---
 
 # Create dashboards with Data Studio  |  Google Cloud Fraud Defense  |  Google Cloud Documentation
@@ -43,7 +43,7 @@ reCAPTCHA provides a Data Studio template that gives you visibility into how reC
 
   2. [Enable platform logs](https://docs.cloud.google.com/recaptcha/docs/platform-logging#enable-disable-platform-logs) for [`assessment`](https://docs.cloud.google.com/recaptcha/docs/create-assessment) operations.
 
-  3. [Create a BigQuery sink](https://docs.cloud.google.com/logging/docs/export/configure_export_v2) to a [new partitioned BigQuery dataset](https://docs.cloud.google.com/logging/docs/export/configure_export_v2#creating_sink).
+  3. [Create a BigQuery sink](https://docs.cloud.google.com/recaptcha/docs/export-logs-bigquery#create-bigquery-sink) to a [new partitioned BigQuery dataset](https://docs.cloud.google.com/logging/docs/export/configure_export_v2#creating_sink).
 
   4. Open the [Data Studio dashboard template](https://lookerstudio.google.com/c/u/0/reporting/7c61319f-9d41-4996-bf5e-189ae1d8441e/preview).
 
@@ -71,6 +71,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

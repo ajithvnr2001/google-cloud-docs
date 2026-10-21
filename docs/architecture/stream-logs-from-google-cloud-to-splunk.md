@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/stream-logs-from-google-cloud-to-splunk/
 title: Stream logs from Google Cloud to Splunk \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:29.856568+00:00
+fetched_at: 2026-10-21T12:25:24.092033+00:00
 ---
 
 # Stream logs from Google Cloud to Splunk  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -308,19 +308,7 @@ For this reference architecture, set the `--worker-machine-type` flag to a value
 
 Dataflow autoscaling allows the service to adaptively change the number of workers used to execute your streaming pipeline when there are changes to resource usage and load. To avoid over-provisioning when autoscaling, we recommend that you always define the maximum number of virtual machines that are used as Dataflow workers. You define the maximum number of virtual machines with the `--max-workers` flag when you deploy the Dataflow pipeline.
 
-Dataflow statically provisions the storage component as follows:
-
-  * An autoscaling pipeline deploys one data persistent disk for each potential streaming worker. The default persistent disk size is 400 GB, and you set the maximum number of workers with the `--max-workers` flag. The disks are mounted to the running workers at any point in time, including startup.
-
-  * Because each worker instance is limited to 15 persistent disks, the minimum number of starting workers is `⌈--max-workers/15⌉`. So, if the default value is `--max-workers=20`, the pipeline usage (and cost) is as follows:
-
-    * **Storage:** static with 20 persistent disks.
-    * **Compute:** dynamic with minimum of 2 worker instances (⌈20/15⌉ = 2), and a maximum of 20.
-
-This value is equivalent to 8 TB of a Persistent Disk. This size of Persistent Disk could incur unnecessary cost if the disks are not fully used, especially if only one or two workers are running the majority of the time.
-
-
-
+To move the pipeline state storage off of the worker VMs and reduce storage costs, use [Dataflow streaming engine](https://docs.cloud.google.com/dataflow/docs/streaming-engine). To enable Dataflow streaming engine for your project, set the `--enableStreamingEngine` flag.
 
 To determine the maximum number of workers that you need for your pipeline, use the following formulas in sequence:
 

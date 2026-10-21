@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/valkey/use-acl-policies/
 title: Secure access to your instances by using ACL policies \u00a0|\u00a0 Memorystore for Valkey \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:49:54.196804+00:00
+fetched_at: 2026-10-21T12:26:25.628045+00:00
 ---
 
 # Secure access to your instances by using ACL policies  |  Memorystore for Valkey  |  Google Cloud Documentation
@@ -180,6 +180,8 @@ To create rules for an ACL policy that uses Identity and Access Management (IAM)
     --rules=rule="on ~* +@all",username="lucian@example.com" \
     --rules=rule="on +get",username="taylor@example.com"
     
+
+**Important** : If an IAM principal authenticates but doesn't have a matching ACL rule, then the principal receives the permissions of the `default` user. This grants the principal full access unless you restrict the user.
 
 To create a rule for an ACL policy that doesn't use authentication, the user must be the `default` user.
     
@@ -806,6 +808,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

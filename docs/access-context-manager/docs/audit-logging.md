@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/audit-logging/
 title: Access Context Manager audit logging information \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:39:16.696911+00:00
+fetched_at: 2026-10-21T12:26:04.879207+00:00
 ---
 
 # Access Context Manager audit logging information  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Access Context Manager audit logging information Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document describes audit logging for Access Context Manager. Google Cloud services generate audit logs that record administrative and access activities within your Google Cloud resources. For more information about Cloud Audit Logs, see the following: 
+This document lists the audited methods for Access Context Manager. Google Cloud services generate audit logs that record administrative and access activities within your Google Cloud resources. For more information about Cloud Audit Logs, see the following: 
 
   * [Types of audit logs](https://docs.cloud.google.com/logging/docs/audit#types)
   * [Audit log entry structure](https://docs.cloud.google.com/logging/docs/audit#audit_log_entry_structure)
@@ -33,11 +33,19 @@ This document describes audit logging for Access Context Manager. Google Cloud s
 
 ## Service name
 
-Access Context Manager audit logs use the service name `accesscontextmanager.googleapis.com`. Filter for this service: 
-    
-    
-        protoPayload.serviceName="accesscontextmanager.googleapis.com"
-      
+To view the Access Context Manager audit logs, do the following:
+
+  1. In the Google Cloud console, go to the Logs Explorer page:
+
+[Go to Logs Explorer](https://console.cloud.google.com/logs/query)
+
+  2. Copy and paste the following query into the **Query** field of the Logs Explorer, and then click **Run query**.
+         
+         protoPayload.serviceName="accesscontextmanager.googleapis.com"
+           
+
+
+
 
 ## Methods by permission type
 
@@ -57,11 +65,14 @@ API methods in the following list that are marked with (LRO) are long-running op
 `google.identity.accesscontextmanager.v1.AccessContextManager.ListGcpUserAccessBindings`  
 `google.identity.accesscontextmanager.v1.AccessContextManager.ListServicePerimeters`  
 `google.identity.accesscontextmanager.v1alpha.AccessContextManager.GetAccessLevel`  
+`google.identity.accesscontextmanager.v1alpha.AccessContextManager.GetAccessPolicy`  
+`google.identity.accesscontextmanager.v1alpha.AccessContextManager.GetAuthorizedOrgsDesc`  
 `google.identity.accesscontextmanager.v1alpha.AccessContextManager.GetGcpUserAccessBinding`  
-`google.identity.accesscontextmanager.v1alpha.AccessContextManager.GetIamPolicy`  
 `google.identity.accesscontextmanager.v1alpha.AccessContextManager.GetServicePerimeter`  
+`google.identity.accesscontextmanager.v1alpha.AccessContextManager.ListAccessLevels`  
 `google.identity.accesscontextmanager.v1alpha.AccessContextManager.ListAccessPolicies`  
 `google.identity.accesscontextmanager.v1alpha.AccessContextManager.ListGcpUserAccessBindings`  
+`google.identity.accesscontextmanager.v1alpha.AccessContextManager.ListServicePerimeters`  
 `google.longrunning.Operations.GetOperation`  
 `ADMIN_WRITE` | `google.identity.accesscontextmanager.v1.AccessContextManager.CommitServicePerimeters` (LRO)  
 `google.identity.accesscontextmanager.v1.AccessContextManager.CreateAccessLevel` (LRO)  
@@ -744,6 +755,36 @@ The following audit logs are associated with methods belonging to `google.identi
 
 
 
+#### `GetAccessPolicy`
+
+  * **Method** : `google.identity.accesscontextmanager.v1alpha.AccessContextManager.GetAccessPolicy`  
+
+  * **Audit log type** : [Data access](https://docs.cloud.google.com/logging/docs/audit#data-access)  
+
+  * **Permissions** : 
+    * `accesscontextmanager.policies.get - ADMIN_READ`
+  * **Method is a long-running or streaming operation** : No.  
+
+  * **Filter for this method** : ` protoPayload.methodName="google.identity.accesscontextmanager.v1alpha.AccessContextManager.GetAccessPolicy" `  
+
+
+
+
+#### `GetAuthorizedOrgsDesc`
+
+  * **Method** : `google.identity.accesscontextmanager.v1alpha.AccessContextManager.GetAuthorizedOrgsDesc`  
+
+  * **Audit log type** : [Data access](https://docs.cloud.google.com/logging/docs/audit#data-access)  
+
+  * **Permissions** : 
+    * `accesscontextmanager.authorizedOrgsDescs.get - ADMIN_READ`
+  * **Method is a long-running or streaming operation** : No.  
+
+  * **Filter for this method** : ` protoPayload.methodName="google.identity.accesscontextmanager.v1alpha.AccessContextManager.GetAuthorizedOrgsDesc" `  
+
+
+
+
 #### `GetGcpUserAccessBinding`
 
   * **Method** : `google.identity.accesscontextmanager.v1alpha.AccessContextManager.GetGcpUserAccessBinding`  
@@ -759,21 +800,6 @@ The following audit logs are associated with methods belonging to `google.identi
 
 
 
-#### `GetIamPolicy`
-
-  * **Method** : `google.identity.accesscontextmanager.v1alpha.AccessContextManager.GetIamPolicy`  
-
-  * **Audit log type** : [Data access](https://docs.cloud.google.com/logging/docs/audit#data-access)  
-
-  * **Permissions** : 
-    * `accesscontextmanager.policies.getIamPolicy - ADMIN_READ`
-  * **Method is a long-running or streaming operation** : No.  
-
-  * **Filter for this method** : ` protoPayload.methodName="google.identity.accesscontextmanager.v1alpha.AccessContextManager.GetIamPolicy" `  
-
-
-
-
 #### `GetServicePerimeter`
 
   * **Method** : `google.identity.accesscontextmanager.v1alpha.AccessContextManager.GetServicePerimeter`  
@@ -785,6 +811,21 @@ The following audit logs are associated with methods belonging to `google.identi
   * **Method is a long-running or streaming operation** : No.  
 
   * **Filter for this method** : ` protoPayload.methodName="google.identity.accesscontextmanager.v1alpha.AccessContextManager.GetServicePerimeter" `  
+
+
+
+
+#### `ListAccessLevels`
+
+  * **Method** : `google.identity.accesscontextmanager.v1alpha.AccessContextManager.ListAccessLevels`  
+
+  * **Audit log type** : [Data access](https://docs.cloud.google.com/logging/docs/audit#data-access)  
+
+  * **Permissions** : 
+    * `accesscontextmanager.accessLevels.list - ADMIN_READ`
+  * **Method is a long-running or streaming operation** : No.  
+
+  * **Filter for this method** : ` protoPayload.methodName="google.identity.accesscontextmanager.v1alpha.AccessContextManager.ListAccessLevels" `  
 
 
 
@@ -815,6 +856,21 @@ The following audit logs are associated with methods belonging to `google.identi
   * **Method is a long-running or streaming operation** : No.  
 
   * **Filter for this method** : ` protoPayload.methodName="google.identity.accesscontextmanager.v1alpha.AccessContextManager.ListGcpUserAccessBindings" `  
+
+
+
+
+#### `ListServicePerimeters`
+
+  * **Method** : `google.identity.accesscontextmanager.v1alpha.AccessContextManager.ListServicePerimeters`  
+
+  * **Audit log type** : [Data access](https://docs.cloud.google.com/logging/docs/audit#data-access)  
+
+  * **Permissions** : 
+    * `accesscontextmanager.servicePerimeters.list - ADMIN_READ`
+  * **Method is a long-running or streaming operation** : No.  
+
+  * **Filter for this method** : ` protoPayload.methodName="google.identity.accesscontextmanager.v1alpha.AccessContextManager.ListServicePerimeters" `  
 
 
 
@@ -974,9 +1030,11 @@ A method might not produce audit logs for one or more of the following reasons:
 The following methods don't produce audit logs:
 
   * `google.identity.accesscontextmanager.v1.AccessContextManager.GetSupportedService`
+  * `google.identity.accesscontextmanager.v1.AccessContextManager.ListSupportedPermissions`
   * `google.identity.accesscontextmanager.v1.AccessContextManager.ListSupportedServices`
   * `google.identity.accesscontextmanager.v1.AccessContextManager.TestIamPermissions`
   * `google.identity.accesscontextmanager.v1alpha.AccessContextManager.GetSupportedService`
+  * `google.identity.accesscontextmanager.v1alpha.AccessContextManager.ListSupportedPermissions`
   * `google.identity.accesscontextmanager.v1alpha.AccessContextManager.ListSupportedServices`
   * `google.identity.accesscontextmanager.v1alpha.AccessContextManager.TestIamPermissions`
   * `google.longrunning.Operations.CancelOperation`
@@ -990,6 +1048,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

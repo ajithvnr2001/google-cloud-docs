@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/logging/
 title: Monitor Knowledge Catalog logs \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:37:42.151834+00:00
+fetched_at: 2026-10-21T12:25:41.989794+00:00
 ---
 
 # Monitor Knowledge Catalog logs  |  Google Cloud Documentation
@@ -60,7 +60,7 @@ Knowledge Catalog publishes the following service logs to Cloud Logging.
 
 Log type | Log name | `logName` query | Log description  
 ---|---|---|---  
-Data scan event logs | `dataplex.googleapis.com/data_scan` | `logName=(projects/PROJECT_ID/logs/dataplex.googleapis.com%2Fdata_scan)` | Job-level event logs for data scan jobs (both data quality and data profile scans) indicating job state, results, and statistics  
+Data scan event logs | `dataplex.googleapis.com/data_scan` | `logName=(projects/PROJECT_ID/logs/dataplex.googleapis.com%2Fdata_scan)` | Job-level event logs for data scan jobs (data quality, data profile, and data insights scans) indicating job state, results, and statistics  
 Data quality scan rule result logs | `dataplex.googleapis.com/data_quality_scan_rule_result` | `logName=(projects/PROJECT_ID/logs/dataplex.googleapis.com%2Fdata_quality_scan_rule_result)` | Detailed rule-level evaluation results for each rule evaluated in a data quality scan job  
 Discovery logs | `dataplex.googleapis.com/discovery` | `logName=(projects/PROJECT_ID/logs/dataplex.googleapis.com%2Fdiscovery)` | Discovery progress and updates over assets in a zone  
 Metadata job logs | `dataplex.googleapis.com/metadata_job` | `logName=(projects/PROJECT_ID/logs/dataplex.googleapis.com%2Fmetadata_job)` | Logs about metadata import jobs and import items in the metadata import file  
@@ -134,9 +134,9 @@ The following examples show the JSON payload structures for different types of K
 
 ### Data scan event logs
 
-In Knowledge Catalog, data scans encompass both [data quality scans](https://docs.cloud.google.com/knowledge-catalog/docs/auto-data-quality-overview) and [data profile scans](https://docs.cloud.google.com/knowledge-catalog/docs/data-profiling-overview). When you run a data scan job of either type, Knowledge Catalog produces a `data_scan` event log in Logging that summarizes the overall job execution.
+In Knowledge Catalog, data scans encompass [data quality scans](https://docs.cloud.google.com/knowledge-catalog/docs/auto-data-quality-overview), [data profile scans](https://docs.cloud.google.com/knowledge-catalog/docs/data-profiling-overview), and [data insights scans](https://docs.cloud.google.com/knowledge-catalog/docs/data-insights-structured-data). When you run a data scan job, Knowledge Catalog produces a `data_scan` event log in Logging that summarizes the overall job execution. For succeeded data insights scans (`jsonPayload.type="DATA_DOCUMENTATION"`), the event log also includes a `billableTokenUsage` block. For information about querying and charting data insights token consumption, see [Monitor data insights token usage](https://docs.cloud.google.com/knowledge-catalog/docs/monitor-insights-token-usage).
 
-The following example shows event log payload for a data quality scan:
+The following example shows an event log payload for a data quality scan:
     
     
     {
@@ -309,6 +309,7 @@ For more detailed information, see [Create log-based alerts](https://cloud.googl
 
 ## What's next
 
+  * Learn how to [monitor data insights token usage](https://docs.cloud.google.com/knowledge-catalog/docs/monitor-insights-token-usage).
   * Learn more about [Cloud Logging](https://docs.cloud.google.com/logging/docs).
   * Learn about [Knowledge Catalog monitoring](https://docs.cloud.google.com/knowledge-catalog/docs/monitoring).
 
@@ -318,6 +319,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

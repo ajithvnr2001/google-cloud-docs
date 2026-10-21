@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/automate-git/
 title: Automate the deployment of Google Cloud resources \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:45:45.269920+00:00
+fetched_at: 2026-10-21T12:26:04.110162+00:00
 ---
 
 # Automate the deployment of Google Cloud resources  |  Infrastructure Manager  |  Google Cloud Documentation
@@ -21,9 +21,7 @@ Send feedback
 
 #  Automate the deployment of Google Cloud resources Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes the process to set up [Cloud Build triggers](https://docs.cloud.google.com/build/docs/triggers) to automate deployments of Google Cloud resources using your existing repositories and Infrastructure Manager.
-
-Once Infra Manager connects to your Git repository, pull requests invoke a preview of a deployment, and commits invoke [creating a deployment preview](https://docs.cloud.google.com/infrastructure-manager/docs/preview-deployment) or [updating the deployment](https://docs.cloud.google.com/infrastructure-manager/docs/update-deployment).
+Connecting [Cloud Build triggers](https://docs.cloud.google.com/build/docs/triggers) with Infrastructure Manager lets you automate infrastructure deployments directly from your Git repositories. In this workflow, pull requests generate a [deployment preview](https://docs.cloud.google.com/infrastructure-manager/docs/preview-deployment), and merged commits automatically [create](https://docs.cloud.google.com/infrastructure-manager/docs/deploy-resources) or [update the deployment](https://docs.cloud.google.com/infrastructure-manager/docs/update-deployment).
 
 ## Before you begin
 
@@ -132,6 +130,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

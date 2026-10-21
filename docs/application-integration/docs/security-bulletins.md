@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/security-bulletins/
 title: Security bulletins \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:02:00.149371+00:00
+fetched_at: 2026-10-21T12:26:18.171566+00:00
 ---
 
 # Security bulletins  |  Application Integration  |  Google Cloud Documentation
@@ -25,6 +25,22 @@ The following describes all security bulletins related to Application Integratio
 
 ## GCP-2026-068
 
+**Published:** 2026-10-15
+
+Description | Severity | Notes  
+---|---|---  
+Starting October 15, 2026, Application Integration requires `iam.serviceAccounts.actAs` on the run-as service account.
+
+#### What should I do?
+
+After October 15, 2026, the test feature and any new integrations require the correct permissions. Existing integrations and their new versions are unaffected. For more information, see [Prepare for upcoming authorization changes](https://docs.cloud.google.com/application-integration/docs/prepare-for-authorization-changes).
+
+#### What vulnerabilities are being addressed?
+
+An Incorrect Authorization vulnerability in the `AuthConfig` validation and integration execution runtime could allow an authenticated user to escalate privileges and impersonate a service account. | High |  [CVE-2026-85298](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-85298)  
+  
+## GCP-2026-067
+
 **Published:** 2026-10-14
 
 ### Description
@@ -39,7 +55,7 @@ No customer action is required. This vulnerability was patched on August 27, 202
 
 #### What vulnerabilities are being addressed?
 
-An authenticated user could escalate privileges and impersonate a service account in the Google Cloud project. | Critical |  [CVE-2026-85298](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-85298)  
+An authenticated user could escalate privileges and impersonate a service account in the Google Cloud project. | High |  [CVE-2026-85298](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-85298)  
   
 ## GCP-2026-066
 
@@ -109,6 +125,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

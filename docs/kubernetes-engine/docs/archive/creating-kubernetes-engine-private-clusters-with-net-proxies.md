@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/archive/creating-kubernetes-engine-private-clusters-with-net-proxies/
 title: Creating GKE private clusters with network proxies for controller access \u00a0|\u00a0 Kubernetes Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T18:24:15.439031+00:00
+fetched_at: 2026-10-21T12:25:52.576499+00:00
 ---
 
 # Creating GKE private clusters with network proxies for controller access  |  Kubernetes Engine  |  Google Cloud Documentation

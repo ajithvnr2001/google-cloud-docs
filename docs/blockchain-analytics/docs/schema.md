@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/blockchain-analytics/docs/schema/
 title: Dataset schemas \u00a0|\u00a0 Blockchain Analytics \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:13:13.581122+00:00
+fetched_at: 2026-10-21T12:25:16.416672+00:00
 ---
 
 # Dataset schemas  |  Blockchain Analytics  |  Google Cloud Documentation
@@ -31,6 +31,8 @@ This page describes Blockchain Analytics table schemas.
 
 ## Arbitrum One
 
+**Deprecated:** The Arbitrum One BigQuery sharing (formerly Analytics Hub) listings in the `EU` and `US` multi-regions, including the `goog-blockchain.arbitrum_one_us` dataset, are deprecated and stop receiving updates after October 31, 2026. Use the `bigquery-public-data.goog_blockchain_arbitrum_one_us` tables listed on this page instead. For more information, see [Blockchain Analytics locations](https://docs.cloud.google.com/blockchain-analytics/docs/locations).
+
 ### Tables available for analysis
 
   * **[blocks](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sbigquery-public-data!2sgoog_blockchain_arbitrum_one_us!3sblocks)** : Table holding Arbitrum block data.
@@ -42,6 +44,8 @@ This page describes Blockchain Analytics table schemas.
 **Caution:** Addresses in the Blockchain Analytics Arbitrum dataset are indexed in all lowercase. Use [`LOWER()`](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/string_functions#lower) when working with mixed case addresses.
 
 ## Avalanche Contract Chain
+
+**Deprecated:** The Avalanche Contract Chain BigQuery sharing (formerly Analytics Hub) listings in the `EU` and `US` multi-regions, including the `goog-blockchain.avalanche_contract_chain_us` dataset, are deprecated and stop receiving updates after October 31, 2026. Use the `bigquery-public-data.goog_blockchain_avalanche_contract_chain_us` tables listed on this page instead. For more information, see [Blockchain Analytics locations](https://docs.cloud.google.com/blockchain-analytics/docs/locations).
 
 ### Tables available for analysis
 
@@ -55,6 +59,8 @@ This page describes Blockchain Analytics table schemas.
 
 ## Cronos Mainnet
 
+**Deprecated:** The Cronos mainnet BigQuery sharing (formerly Analytics Hub) listings in the `EU` and `US` multi-regions, including the `goog-blockchain.cronos_mainnet_us` dataset, are deprecated and stop receiving updates after October 31, 2026. Use the `bigquery-public-data.goog_blockchain_cronos_mainnet_us` tables listed on this page instead. For more information, see [Blockchain Analytics locations](https://docs.cloud.google.com/blockchain-analytics/docs/locations).
+
 ### Tables available for analysis
 
   * **[blocks](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sbigquery-public-data!2sgoog_blockchain_cronos_mainnet_us!3sblocks)** : Table holding Cronos block data.
@@ -67,7 +73,7 @@ This page describes Blockchain Analytics table schemas.
 
 ## Ethereum Goerli
 
-**Warning:** Goerli has reached [end-of-life](https://blog.ethereum.org/2023/11/30/goerli-lts-update) status and is no longer maintained by the Ethereum Foundation.
+**Deprecated:** Goerli has reached [end-of-life](https://blog.ethereum.org/2023/11/30/goerli-lts-update) status and is no longer maintained by the Ethereum Foundation. The Ethereum Goerli BigQuery sharing (formerly Analytics Hub) listings in the `EU` and `US` multi-regions and the `goog-blockchain.ethereum_goerli_us` and `bigquery-public-data.goog_blockchain_ethereum_goerli_us` datasets are deprecated without a replacement.
 
 ### Tables available for analysis
 
@@ -80,6 +86,8 @@ This page describes Blockchain Analytics table schemas.
 **Caution:** Addresses in the Blockchain Analytics Ethereum Goerli dataset are indexed in all lowercase. Use [`LOWER()`](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/string_functions#lower) when working with mixed case addresses.
 
 ## Ethereum Mainnet
+
+**Deprecated:** The Ethereum mainnet BigQuery sharing (formerly Analytics Hub) listings in the `EU` and `US` multi-regions, including the `goog-blockchain.ethereum_mainnet_us` dataset, are deprecated and stop receiving updates after October 31, 2026. Use the `bigquery-public-data.goog_blockchain_ethereum_mainnet_us` tables listed on this page instead. For more information, see [Blockchain Analytics locations](https://docs.cloud.google.com/blockchain-analytics/docs/locations).
 
 ### Tables available for analysis
 
@@ -103,7 +111,8 @@ This page describes Blockchain Analytics table schemas.
 Field name | BigQuery type | Description  
 ---|---|---  
 `address` | STRING | Address identifying the account.  
-`code` | STRING |  Compiled runtime bytecode of this account, given the account is a smart contract.  | `code_hash` | STRING |  Hash of the code of the account. For all externally-owned accounts this will be `0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470`. This is the hash when there is no code present.   
+`code` | STRING |  Compiled runtime bytecode of this account, given the account is a smart contract.   
+`code_hash` | STRING |  Hash of the code of the account. For all externally-owned accounts this will be `0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470`. This is the hash when there is no code present.   
 `is_contract` | BOOLEAN |  Whether or not this address is a smart contract. True, if the address identifies a smart contract.   
   * **[accounts_state_by_address](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sbigquery-public-data!2sgoog_blockchain_ethereum_mainnet_us!3saccounts_state_by_address)** : Materialized view that has the same schema as the [**`accounts_state`**](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sbigquery-public-data!2sgoog_blockchain_ethereum_mainnet_us!3saccounts_state) table and clusters the data on the **`address`** column.
 
@@ -114,19 +123,9 @@ Field name | BigQuery type | Description
 
 
 
-## Fantom Opera
-
-### Tables available for analysis
-
-  * **[blocks](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sbigquery-public-data!2sgoog_blockchain_fantom_opera_us!3sblocks)** : Table holding Fantom block data.
-  * **[decoded_events](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sbigquery-public-data!2sgoog_blockchain_fantom_opera_us!3sdecoded_events)** : Table holding decoded event data for a variety of popular Fantom event types.
-  * **[logs](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sbigquery-public-data!2sgoog_blockchain_fantom_opera_us!3slogs)** : Table holding Fantom event logs emitted during on-chain activity.
-  * **[receipts](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sbigquery-public-data!2sgoog_blockchain_fantom_opera_us!3sreceipts)** : Table holding transaction receipts, data about outcomes of transactions.
-  * **[transactions](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sbigquery-public-data!2sgoog_blockchain_fantom_opera_us!3stransactions)** : Table holding transactions which are actions initiated by externally owned accounts.
-
-**Caution:** Addresses in the Blockchain Analytics Fantom dataset are indexed in all lowercase. Use [`LOWER()`](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/string_functions#lower) when working with mixed case addresses.
-
 ## Optimism Mainnet
+
+**Deprecated:** The Optimism mainnet BigQuery sharing (formerly Analytics Hub) listings in the `EU` and `US` multi-regions, including the `goog-blockchain.optimism_mainnet_us` dataset, are deprecated and stop receiving updates after October 31, 2026. Use the `bigquery-public-data.goog_blockchain_optimism_mainnet_us` tables listed on this page instead. For more information, see [Blockchain Analytics locations](https://docs.cloud.google.com/blockchain-analytics/docs/locations).
 
 ### Tables available for analysis
 
@@ -140,6 +139,8 @@ Field name | BigQuery type | Description
 
 ## Polygon Mainnet
 
+**Deprecated:** The Polygon mainnet BigQuery sharing (formerly Analytics Hub) listings in the `EU` and `US` multi-regions, including the `goog-blockchain.polygon_mainnet_us` dataset, are deprecated and stop receiving updates after October 31, 2026. Use the `bigquery-public-data.goog_blockchain_polygon_mainnet_us` tables listed on this page instead. For more information, see [Blockchain Analytics locations](https://docs.cloud.google.com/blockchain-analytics/docs/locations).
+
 ### Tables available for analysis
 
   * **[blocks](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sbigquery-public-data!2sgoog_blockchain_polygon_mainnet_us!3sblocks)** : Table holding Polygon block data.
@@ -152,7 +153,7 @@ Field name | BigQuery type | Description
 
 ## Tron Mainnet
 
-### Tables available for analysis
+**Deprecated:** The Tron mainnet BigQuery sharing (formerly Analytics Hub) listings in the `EU` and `US` multi-regions, including the `goog-blockchain.tron_mainnet_us` dataset, are deprecated and stop receiving updates after October 31, 2026. Use the `bigquery-public-data.goog_blockchain_tron_mainnet_us` tables listed on this page instead. For more information, see [Blockchain Analytics locations](https://docs.cloud.google.com/blockchain-analytics/docs/locations).
 
   * **[blocks](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sbigquery-public-data!2sgoog_blockchain_tron_mainnet_us!3sblocks)** : Table holding Tron block data.
   * **[decoded_events](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sbigquery-public-data!2sgoog_blockchain_tron_mainnet_us!3sdecoded_events)** : Table holding decoded event data for a variety of popular Tron event types.
@@ -164,7 +165,7 @@ Field name | BigQuery type | Description
 
 ## BigQuery schemas
 
-Please reference the **Schema** tab of each table in BigQuery:
+Reference the **Schema** tab of each table in BigQuery:
 
 [![Schema tab, BigQuery](https://docs.cloud.google.com/static/blockchain-analytics/images/schema-tab.png)](https://docs.cloud.google.com/static/blockchain-analytics/images/schema-tab.png)
 
@@ -175,6 +176,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/valkey/faq/
 title: Memorystore for Valkey FAQ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:27:40.922070+00:00
+fetched_at: 2026-10-21T12:26:14.198659+00:00
 ---
 
 # Memorystore for Valkey FAQ  |  Google Cloud Documentation
@@ -177,7 +177,7 @@ For more information about resource-intensive Valkey commands and their resource
 When your instance memory is full, and a new write comes in, Valkey evicts keys to make room for the write based on your instance's `maxmemory` policy. If the value of the  
 `maxmemory-policy` parameter is set to `noeviction`, then Memorystore for Valkey returns an error when your instance reaches its maximum memory. However, Memorystore for Valkey doesn't overwrite or evict data. To improve the availability of your instance, change the value of the `maxmemory-policy` parameter so that Memorystore for Valkey can evict keys.
 
-For more information about the different values that you can set for the `maxmemory-policy` parameter, see [Maxmemory policies](https://docs.cloud.google.com/memorystore/docs/valkey/supported-instance-configurations#maxmemory_policies). For more information about updating this parameter, see [Update a configuration parameter](https://docs.cloud.google.com/memorystore/docs/valkey/configure-instances#update_a_configuration_parameter).
+For more information about the different values that you can set for the `maxmemory-policy` parameter, see [Maxmemory policies](https://docs.cloud.google.com/memorystore/docs/valkey/supported-instance-configurations#maxmemory_policies). For more information about updating this parameter, see [Update a configuration parameter](https://docs.cloud.google.com/memorystore/docs/valkey/configure-instances#update-configuration-parameter).
 
   * Tune your Memorystore for Valkey instance so that it has the cache hit ratio that you want. This helps you make your database the right size so that it can handle the appropriate percentage of hits.
 
@@ -207,6 +207,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/lakehouse/docs/use-spark-hive-metastore/
 title: Set up Spark and Hive with the Lakehouse runtime catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:19:44.327984+00:00
+fetched_at: 2026-10-21T12:25:59.030981+00:00
 ---
 
 # Set up Spark and Hive with the Lakehouse runtime catalog  |  Google Cloud Documentation
@@ -23,11 +23,7 @@ Send feedback
 
 #  Set up Spark and Hive with the Lakehouse runtime catalog Stay organized with collections  Save and categorize content based on your preferences. 
 
-**Preview**
-
-This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
-
-This document explains how to set up and configure Apache Spark and Apache Hive to use the Lakehouse runtime catalog. You learn how to create an Apache Hive catalog, configure your Spark sessions to connect to the metastore, and run workloads to create tables that you can query directly in BigQuery.
+The Lakehouse runtime catalog lets you run Apache Spark and Apache Hive workloads with unified metadata so that you can query your tables directly in BigQuery. To manage these workloads, you create an Apache Hive catalog endpoint, configure your Spark sessions to connect to the metastore, and run Spark jobs to generate queryable tables.
 
 ## Before you begin
 
@@ -84,7 +80,7 @@ For instructions, see [Granting a single role](https://docs.cloud.google.com/iam
 
 To use the Lakehouse runtime catalog with Spark and Hive, you follow this general workflow:
 
-  1. Create a Lakehouse Hive catalog.
+  1. Create a Lakehouse Hive catalog endpoint.
   2. Configure your Spark session by using your preferred tool (such as Managed Service for Apache Spark or BigQuery Studio).
   3. Perform database and table operations within your Spark session.
   4. Submit batch workloads to Managed Service for Apache Spark and query the resulting tables directly from BigQuery.
@@ -125,7 +121,7 @@ A Lakehouse Hive catalog is a collection of Hive databases. Before you run Spark
 To create a Hive catalog, run the following command:
     
     
-    gcloud beta biglake hive catalogs create LAKEHOUSE_CATALOG_ID \
+    gcloud biglake hive catalogs create LAKEHOUSE_CATALOG_ID \
         --project=PROJECT_ID \
         --location-uri="gs://GCS_WAREHOUSE_PATH" \
         --primary-location=REGION \
@@ -155,8 +151,9 @@ Replace the following:
     
     
     curl -X POST -s -i -H "Authorization: Bearer $(gcloud auth print-access-token)" \
-    -d '{"locationUri": "gs://GCS_WAREHOUSE_PATH", "description": "DESCRIPTION"}' \
-    -H "Content-Type:application/json" \ "https://biglake.googleapis.com/hive/v1beta/projects/PROJECT_ID/catalogs?hiveCatalogId=LAKEHOUSE_CATALOG_ID&primary_location=REGION"
+        -d '{"locationUri": "gs://GCS_WAREHOUSE_PATH", "description": "DESCRIPTION"}' \
+        -H "Content-Type: application/json" \
+        "https://biglake.googleapis.com/hive/v1/projects/PROJECT_ID/catalogs?hiveCatalogId=LAKEHOUSE_CATALOG_ID&primary_location=REGION"
     
 
 Replace the following:
@@ -225,7 +222,7 @@ Replace the following:
 ### Jupyter Notebook
 
   1. Complete the instructions to [run a Jupyter notebook on a Managed Service for Apache Spark cluster](https://docs.cloud.google.com/dataproc/docs/concepts/components/jupyter#install_jupyter).
-  2. Access the Jupyter web interface from the **Web interfaces** tab the cluster's details page in the Google Cloud console.
+  2. Access the Jupyter web interface from the **Web interfaces** tab of the cluster's details page in the Google Cloud console.
   3. In a new notebook, create a Spark session and then run the following queries:
          
          from pyspark.sql import SparkSession
@@ -270,7 +267,7 @@ Replace the following:
 
 ###  BigQuery notebook 
 
-  1. In the Google Cloud console, go **BigQuery**.
+  1. In the Google Cloud console, go to **BigQuery**.
 
 [Go to BigQuery](https://console.cloud.google.com/bigquery)
 
@@ -492,6 +489,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

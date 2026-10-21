@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/non-prioritized-ioc-matching-threats-category/
 title: Non-prioritized IoC Matching threats \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:10:53.206322+00:00
+fetched_at: 2026-10-21T12:26:15.854016+00:00
 ---
 
 # Non-prioritized IoC Matching threats  |  Google Security Operations  |  Google Cloud Documentation
@@ -25,17 +25,28 @@ Supported in:
 
 Google SecOps  [ SIEM ](https://docs.cloud.google.com/chronicle/docs/secops/google-secops-siem-toc)
 
-**Warning:** These rules are not designed to be run in alerting mode. Google recommends setting **Alerting** to **Off**.
+This document outlines the expansion of curated detections through the integration of Google's Indicators of Compromise (IoC) feeds. These rule sets build on curated threat intelligence to identify malicious activities within Google Security Operations environments, specifically focusing on threats identifiable through high-fidelity indicators like IPs, domains, and file hashes.
 
-This document outlines the expansion of curated detections through the integration of Google's Indicators of Compromise (IoC) feeds. These rule sets build on curated threat intelligence to identify malicious activities within Google SecOps environments, specifically focusing on threats identifiable through high-fidelity indicators like IPs, domains, and file hashes.
+For Google SecOps Enterprise Plus customers, rule sets in this category are enabled by default. The status is set to **Enabled** for both Precise and Broad rules to support producer and composite detections and populate IOC metadata. However, these rules are not designed to generate noise in your alert queue. Consequently, Alerting is set to **Off** by default. This allows the system to match high-volume curated IoCs from Google's feeds and support deeper correlation without generating alert fatigue.
 
-The non-prioritized IoC Matching rules category provides comprehensive coverage for threats often missed by standard managed content, including cryptomining, Command and Control (C2) communications, and the use of malicious anonymization services. The [Applied Threat Intelligence curated detections](https://docs.cloud.google.com/chronicle/docs/detection/ati-curated-detections) are Mandiant-based and use prioritization logic for alerts ('Active Breach' or 'High' designations), while the non-prioritized IoC Matching category focuses on matching a high volume of curated IoCs from Google's feeds to exclusively identify specific threat activities.
+If you customize these settings, Google recommends keeping Alerting set to **Off** for this category.
+
+The non-prioritized IoC Matching rules category provides comprehensive coverage for threats often missed by standard managed content, including cryptomining, Command and Control (C2) communications, and the use of malicious anonymization services. The [Applied Threat Intelligence curated detections](https://docs.cloud.google.com/chronicle/docs/detection/ati-curated-detections) are Mandiant-based and use prioritization logic for alerts (`Active Breach` or `High` designations), while the non-prioritized IoC Matching category focuses on matching a high volume of curated IoCs from Google's feeds to exclusively identify specific threat activities.
 
 **Note:** These rules are available for **Google SecOps Enterprise Plus** customers only.
 
 ## Rule set descriptions
 
-This category includes detection logic for Singleton Identification and contains non-alerting logic designed to detect direct hits against specific IoC feeds. These serve as producer rules that populate metadata for deeper correlation.
+The **Applied Threat Intelligence - Non-prioritized IOC Matching** category includes the following rule sets:
+
+  * Applied Threat Intelligence - Non-prioritized Domain IOC Matching
+  * Applied Threat Intelligence - Non-prioritized File IOC Matching
+  * Applied Threat Intelligence - Non-prioritized IP IOC Matching
+  * Applied Threat Intelligence - Curated Composites
+
+
+
+These rule sets contain logic designed to detect direct hits against specific Google IoC feeds. They function as producer rules that tag security-relevant events and populate metadata for deeper correlation, rather than generating direct alerts.
 
 ## Understand Non-prioritized IoC Matching identification rules
 
@@ -74,6 +85,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

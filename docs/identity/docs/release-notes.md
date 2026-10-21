@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/release-notes/
 title: Cloud Identity release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:11:32.742163+00:00
+fetched_at: 2026-10-21T12:25:52.327732+00:00
 ---
 
 # Cloud Identity release notes  |  Google Cloud Documentation

@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/eventarc/standard/docs/gke/big-query-tutorial/
-title: Build a BigQuery processing pipeline for Knative serving with Eventarc \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
+title: Build a BigQuery processing pipeline for GKE with Eventarc \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:55.041109+00:00
+fetched_at: 2026-10-21T12:26:05.216744+00:00
 ---
 
-# Build a BigQuery processing pipeline for Knative serving with Eventarc  |  Eventarc Standard  |  Google Cloud Documentation
+# Build a BigQuery processing pipeline for GKE with Eventarc  |  Eventarc Standard  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/eventarc/standard/docs/gke/big-query-tutorial/
 
@@ -20,7 +20,7 @@ fetched_at: 2026-10-14T04:25:55.041109+00:00
 
 Send feedback 
 
-#  Build a BigQuery processing pipeline for Knative serving with Eventarc Stay organized with collections  Save and categorize content based on your preferences. 
+#  Build a BigQuery processing pipeline for GKE with Eventarc Stay organized with collections  Save and categorize content based on your preferences. 
 
 [ Standard ](https://docs.cloud.google.com/eventarc/standard/docs/overview)
 
@@ -32,7 +32,7 @@ This tutorial shows you how to use Eventarc to build a processing pipeline that 
 
 ## Objectives
 
-In this tutorial, you will build and deploy three Knative serving services running in a Google Kubernetes Engine (GKE) cluster and that receive events using Eventarc:
+In this tutorial, you build and deploy three Google Kubernetes Engine (GKE) services running in a GKE cluster that receive events using Eventarc:
 
   1. **Query runner** —Triggered when Cloud Scheduler jobs publish a message to a Pub/Sub topic; this service uses the BigQuery API to retrieve data from a public COVID-19 dataset, and saves the results in a new BigQuery table. 
   2. **Chart creator** —Triggered when the query runner service publishes a message to a Pub/Sub topic; this service generates charts using the Python plotting library, [Matplotlib](https://matplotlib.org/), and saves the charts to a Cloud Storage bucket.
@@ -42,7 +42,7 @@ In this tutorial, you will build and deploy three Knative serving services runni
 
 The following diagram shows the high-level architecture:
 
-![BigQuery processing pipeline](https://docs.cloud.google.com/static/eventarc/images/bigquery-pipeline-anthos.svg)
+![High-level architecture of BigQuery processing pipeline](https://docs.cloud.google.com/static/eventarc/images/bigquery-pipeline-anthos.svg)
 
 ## Costs
 
@@ -96,13 +96,13 @@ Replace `PROJECT_ID` with your Google Cloud project name.
 
   6. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). 
 
-  7. Enable the Artifact Registry, Cloud Build, Cloud Logging, Cloud Scheduler, Eventarc, GKE, Pub/Sub, and Resource Manager APIs, if any are not already enabled: 
+  7. Enable the Artifact Registry, BigQuery, Cloud Build, Cloud Logging, Cloud Scheduler, Eventarc, GKE, Pub/Sub, and Resource Manager APIs, if any are not already enabled: 
 
 **Roles required to enable APIs**
 
 To enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
          
-         gcloud services enable artifactregistry.googleapis.com cloudbuild.googleapis.com cloudresourcemanager.googleapis.com cloudscheduler.googleapis.com container.googleapis.com eventarc.googleapis.com pubsub.googleapis.com run.googleapis.com logging.googleapis.com
+         gcloud services enable artifactregistry.googleapis.com bigquery.googleapis.com cloudbuild.googleapis.com cloudresourcemanager.googleapis.com cloudscheduler.googleapis.com container.googleapis.com eventarc.googleapis.com pubsub.googleapis.com logging.googleapis.com
 
   8. [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. 
 
@@ -134,13 +134,13 @@ Replace `PROJECT_ID` with your Google Cloud project name.
 
   12. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). 
 
-  13. Enable the Artifact Registry, Cloud Build, Cloud Logging, Cloud Scheduler, Eventarc, GKE, Pub/Sub, and Resource Manager APIs, if any are not already enabled: 
+  13. Enable the Artifact Registry, BigQuery, Cloud Build, Cloud Logging, Cloud Scheduler, Eventarc, GKE, Pub/Sub, and Resource Manager APIs, if any are not already enabled: 
 
 **Roles required to enable APIs**
 
 To enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
          
-         gcloud services enable artifactregistry.googleapis.com cloudbuild.googleapis.com cloudresourcemanager.googleapis.com cloudscheduler.googleapis.com container.googleapis.com eventarc.googleapis.com pubsub.googleapis.com run.googleapis.com logging.googleapis.com
+         gcloud services enable artifactregistry.googleapis.com bigquery.googleapis.com cloudbuild.googleapis.com cloudresourcemanager.googleapis.com cloudscheduler.googleapis.com container.googleapis.com eventarc.googleapis.com pubsub.googleapis.com logging.googleapis.com
 
   14. For Cloud Storage, enable audit logging for the `ADMIN_READ`, `DATA_WRITE`, and `DATA_READ` data access types. 
 
@@ -174,10 +174,6 @@ If the preceding command reports a conflict with another change, then repeat the
          CLUSTER_LOCATION=us-central1
          PROJECT_ID=PROJECT_ID
          gcloud config set project $PROJECT_ID
-         gcloud config set run/region $CLUSTER_LOCATION
-         gcloud config set run/cluster $CLUSTER_NAME
-         gcloud config set run/cluster_location $CLUSTER_LOCATION
-         gcloud config set run/platform gke
          gcloud config set eventarc/location $CLUSTER_LOCATION
 
 Replace `PROJECT_ID` with your project ID. 
@@ -201,17 +197,17 @@ SendGrid is a cloud-based email provider that lets you send email without having
 
 Create a cluster with [Workload Identity Federation for GKE](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#enable_on_cluster) enabled so that it can access Google Cloud services from applications running within GKE. You also need Workload Identity Federation for GKE to forward events using Eventarc.
 
-  1. Create a GKE cluster for Knative serving with the `CloudRun`, `HttpLoadBalancing` and `HorizontalPodAutoscaling` addons enabled:
+  1. Create a GKE cluster with the `HttpLoadBalancing` and `HorizontalPodAutoscaling` add-ons enabled:
          
-         gcloud beta container clusters create $CLUSTER_NAME \
-             --addons=HttpLoadBalancing,HorizontalPodAutoscaling,CloudRun \
+         gcloud container clusters create $CLUSTER_NAME \
+             --addons=HttpLoadBalancing,HorizontalPodAutoscaling \
              --machine-type=n1-standard-4 \
              --enable-autoscaling --min-nodes=2 --max-nodes=10 \
-             --no-issue-client-certificate --num-nodes=2  \
+             --no-issue-client-certificate --num-nodes=2 \
              --logging=SYSTEM,WORKLOAD \
              --monitoring=SYSTEM \
              --scopes=cloud-platform,logging-write,monitoring-write,pubsub \
-             --zone us-central1 \
+             --region=$CLUSTER_LOCATION \
              --release-channel=rapid \
              --workload-pool=$PROJECT_ID.svc.id.goog
          
@@ -219,10 +215,15 @@ Create a cluster with [Workload Identity Federation for GKE](https://docs.cloud.
   2. Wait a few minutes for the cluster creation to complete. During the process, you might see warnings that you can safely ignore. When the cluster has been created, the output is similar to the following:
          
          Creating cluster ...done.
-         Created [https://container.googleapis.com/v1beta1/projects/my-project/zones/us-central1/clusters/events-cluster].
+         Created [https://container.googleapis.com/v1/projects/my-project/zones/us-central1/clusters/events-cluster].
          
 
-  3. Create an Artifact Registry standard repository to store your Docker container image:
+  3. Update the `kubeconfig` file with credentials and endpoint information to point `kubectl` at the GKE cluster:
+         
+         gcloud container clusters get-credentials $CLUSTER_NAME \
+             --region=$CLUSTER_LOCATION
+
+  4. Create an Artifact Registry standard repository to store your Docker container image:
          
          gcloud artifacts repositories create REPOSITORY \
              --repository-format=docker \
@@ -233,30 +234,43 @@ Replace `REPOSITORY` with a unique name for the repository.
 
 
 
-## Configure the GKE service account
+### Configure the service accounts
 
-Configure a GKE service account to act as the default compute service account.
-
-  1. Create an Identity and Access Management (IAM) binding between the service accounts:
+  1. To allow the GKE nodes to pull container images from Artifact Registry, grant the [Artifact Registry Reader](https://docs.cloud.google.com/iam/docs/roles-permissions/artifactregistry#artifactregistry.reader) (`roles/artifactregistry.reader`) role on the project to the Compute Engine default service account used by the cluster nodes:
          
          PROJECT_NUMBER="$(gcloud projects describe $(gcloud config get-value project) --format='value(projectNumber)')"
          
-         gcloud iam service-accounts add-iam-policy-binding \
-             --role roles/iam.workloadIdentityUser \
-             --member "serviceAccount:$PROJECT_ID.svc.id.goog[default/default]" \
-             $PROJECT_NUMBER-compute@developer.gserviceaccount.com
+         gcloud projects add-iam-policy-binding $PROJECT_ID \
+           --member "serviceAccount:$PROJECT_NUMBER-compute@developer.gserviceaccount.com" \
+           --condition=None \
+           --role "roles/artifactregistry.reader"
 
-  2. Add the `iam.gke.io/gcp-service-account` annotation to the GKE service account, using the email address of the compute service account:
+  2. To allow the GKE services to query and write to BigQuery, publish to Pub/Sub, and upload charts to Cloud Storage, grant the [BigQuery Data Editor](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.dataEditor) (`roles/bigquery.dataEditor`), [BigQuery Job User](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.jobUser) (`roles/bigquery.jobUser`), [Pub/Sub Publisher](https://docs.cloud.google.com/iam/docs/roles-permissions/pubsub#pubsub.publisher) (`roles/pubsub.publisher`), and [Storage Object Admin](https://docs.cloud.google.com/iam/docs/roles-permissions/storage#storage.objectAdmin) (`roles/storage.objectAdmin`) roles on the project to the `default` Kubernetes ServiceAccount in the `default` namespace:
          
-         kubectl annotate serviceaccount \
-             --namespace default \
-             default \
-             iam.gke.io/gcp-service-account=$PROJECT_NUMBER-compute@developer.gserviceaccount.com
+         gcloud projects add-iam-policy-binding $PROJECT_ID \
+           --member "principal://iam.googleapis.com/projects/$PROJECT_NUMBER/locations/global/workloadIdentityPools/$PROJECT_ID.svc.id.goog/subject/ns/default/sa/default" \
+           --condition=None \
+           --role "roles/bigquery.dataEditor"
+         
+         gcloud projects add-iam-policy-binding $PROJECT_ID \
+           --member "principal://iam.googleapis.com/projects/$PROJECT_NUMBER/locations/global/workloadIdentityPools/$PROJECT_ID.svc.id.goog/subject/ns/default/sa/default" \
+           --condition=None \
+           --role "roles/bigquery.jobUser"
+         
+         gcloud projects add-iam-policy-binding $PROJECT_ID \
+           --member "principal://iam.googleapis.com/projects/$PROJECT_NUMBER/locations/global/workloadIdentityPools/$PROJECT_ID.svc.id.goog/subject/ns/default/sa/default" \
+           --condition=None \
+           --role "roles/pubsub.publisher"
+         
+         gcloud projects add-iam-policy-binding $PROJECT_ID \
+           --member "principal://iam.googleapis.com/projects/$PROJECT_NUMBER/locations/global/workloadIdentityPools/$PROJECT_ID.svc.id.goog/subject/ns/default/sa/default" \
+           --condition=None \
+           --role "roles/storage.objectAdmin"
 
 
 
 
-## Enable GKE destinations
+### Enable GKE destinations
 
 To allow Eventarc to manage resources in the GKE cluster, enable GKE destinations and bind the Eventarc service account with the required roles.
 
@@ -274,43 +288,19 @@ The following roles are bound:
 
 
 
-## Create a service account and bind access roles
-
-Before creating the Eventarc trigger, set up a user-managed service account and grant it specific roles so that Eventarc can forward Pub/Sub events.
-
-  1. Create a service account called `TRIGGER_GSA`:
-         
-         TRIGGER_GSA=eventarc-bigquery-triggers
-         gcloud iam service-accounts create $TRIGGER_GSA
-
-  2. Grant the `pubsub.subscriber`, `monitoring.metricWriter`, and `eventarc.eventReceiver` roles to the service account:
-         
-         PROJECT_ID=$(gcloud config get-value project)
-         
-         gcloud projects add-iam-policy-binding $PROJECT_ID \
-             --member "serviceAccount:$TRIGGER_GSA@$PROJECT_ID.iam.gserviceaccount.com" \
-             --role "roles/pubsub.subscriber"
-         
-         gcloud projects add-iam-policy-binding $PROJECT_ID \
-             --member "serviceAccount:$TRIGGER_GSA@$PROJECT_ID.iam.gserviceaccount.com" \
-             --role "roles/monitoring.metricWriter"
-         
-         gcloud projects add-iam-policy-binding $PROJECT_ID \
-             --member "serviceAccount:$TRIGGER_GSA@$PROJECT_ID.iam.gserviceaccount.com" \
-             --role "roles/eventarc.eventReceiver"
-
-
-
-
 ## Create a Cloud Storage bucket
 
-Create a Cloud Storage bucket to save the charts. Make sure that the bucket and the charts are publicly available, and in the same region as your GKE service:
+Create a Cloud Storage bucket in the same region as your GKE service to save the charts, and grant your account read access (`roles/storage.objectViewer`) to view the generated charts:
     
     
     export BUCKET="$(gcloud config get-value core/project)-charts"
-    gcloud storage buckets create gs://${BUCKET} --location=$(gcloud config get-value run/region)
+    gcloud storage buckets create gs://${BUCKET} --location=$CLUSTER_LOCATION
     gcloud storage buckets update gs://${BUCKET} --uniform-bucket-level-access
-    gcloud storage buckets add-iam-policy-binding gs://${BUCKET} --member=allUsers --role=roles/storage.objectViewer
+    gcloud storage buckets add-iam-policy-binding gs://${BUCKET} \
+        --member="user:$(gcloud config get-value core/account)" \
+        --role=roles/storage.objectViewer
+
+**Note:** If you send the chart links to a different email address, grant the `roles/storage.objectViewer` role to that recipient (`--member="user:EMAIL_ADDRESS"`). Granting access to a specific principal instead of `allUsers` complies with [public access prevention](https://docs.cloud.google.com/storage/docs/public-access-prevention).
 
 ## Clone the repository
 
@@ -320,9 +310,40 @@ Clone the GitHub repository.
     git clone https://github.com/GoogleCloudPlatform/eventarc-samples
     cd eventarc-samples/processing-pipelines
 
+## Create a service account and bind access roles
+
+Before creating the Eventarc triggers, set up a user-managed service account and grant it specific roles so that Eventarc can forward Pub/Sub events.
+
+  1. Create a service account called `eventarc-triggers-test-sa`:
+         
+         TRIGGER_GSA=eventarc-triggers-test-sa
+         gcloud iam service-accounts create $TRIGGER_GSA
+
+  2. Grant the `pubsub.subscriber`, `monitoring.metricWriter`, and `eventarc.eventReceiver` roles to the service account:
+         
+         PROJECT_ID=$(gcloud config get-value project)
+         
+         gcloud projects add-iam-policy-binding $PROJECT_ID \
+             --member "serviceAccount:$TRIGGER_GSA@$PROJECT_ID.iam.gserviceaccount.com" \
+             --condition=None \
+             --role "roles/pubsub.subscriber"
+         
+         gcloud projects add-iam-policy-binding $PROJECT_ID \
+             --member "serviceAccount:$TRIGGER_GSA@$PROJECT_ID.iam.gserviceaccount.com" \
+             --condition=None \
+             --role "roles/monitoring.metricWriter"
+         
+         gcloud projects add-iam-policy-binding $PROJECT_ID \
+             --member "serviceAccount:$TRIGGER_GSA@$PROJECT_ID.iam.gserviceaccount.com" \
+             --condition=None \
+             --role "roles/eventarc.eventReceiver"
+
+
+
+
 ## Deploy the notifier service
 
-From the `bigquery/notifier/python` directory, deploy a Knative serving service that receives chart creator events and uses SendGrid to email links to the generated charts.
+From the `bigquery/notifier/python` directory, deploy a GKE service that receives chart creator events and uses SendGrid to email links to the generated charts.
 
   1. Build and push the container image:
          
@@ -332,50 +353,52 @@ From the `bigquery/notifier/python` directory, deploy a Knative serving service 
          docker push $CLUSTER_LOCATION-docker.pkg.dev/$(gcloud config get-value project)/REPOSITORY/${SERVICE_NAME}:v1
          popd
 
-  2. Deploy the container image to Knative serving, passing in an address to send emails to, and the SendGrid API key:
+  2. Create a Kubernetes deployment for the container image and set the required environment variables, including an address to send emails to and the SendGrid API key:
          
          export TO_EMAILS=EMAIL_ADDRESS
          export SENDGRID_API_KEY=YOUR_SENDGRID_API_KEY
-         gcloud run deploy ${SERVICE_NAME} \
-             --image $CLUSTER_LOCATION-docker.pkg.dev/$(gcloud config get-value project)/REPOSITORY/${SERVICE_NAME}:v1 \
-             --update-env-vars TO_EMAILS=${TO_EMAILS},SENDGRID_API_KEY=${SENDGRID_API_KEY},BUCKET=${BUCKET}
+         kubectl create deployment ${SERVICE_NAME} \
+             --image=$CLUSTER_LOCATION-docker.pkg.dev/$(gcloud config get-value project)/REPOSITORY/${SERVICE_NAME}:v1
+         kubectl set env deployment/${SERVICE_NAME} \
+             TO_EMAILS=${TO_EMAILS} \
+             SENDGRID_API_KEY=${SENDGRID_API_KEY} \
+             BUCKET=${BUCKET}
 
 Replace the following:
 
      * `EMAIL_ADDRESS`: an email address to send the links to the generated charts
      * `YOUR_SENDGRID_API_KEY`: the SendGrid API key you noted previously
+     * `REPOSITORY`: the name of your Artifact Registry repository
+  3. Expose the deployment as a Kubernetes service:
+         
+         kubectl expose deployment ${SERVICE_NAME} \
+             --type=ClusterIP --port=80 --target-port=8080
 
-
-
-When you see the service URL, the deployment is complete.
 
 **Note:** It can take a few minutes before permissions are propagated to the service and before you can create a trigger.
 
 ### Create a trigger for the notifier service
 
-The Eventarc trigger for the notifier service deployed on Knative serving filters for Cloud Storage audit logs where the methodName is `storage.objects.create`.
-
-  1. Create the trigger:
-         
-         gcloud eventarc triggers create trigger-${SERVICE_NAME}-gke \
-             --destination-gke-cluster=$CLUSTER_NAME \
-             --destination-gke-location=$CLUSTER_LOCATION \
-             --destination-gke-namespace=default \
-             --destination-gke-service=$SERVICE_NAME \
-             --destination-gke-path=/ \
-             --event-filters="type=google.cloud.audit.log.v1.written" \
-             --event-filters="serviceName=storage.googleapis.com" \
-             --event-filters="methodName=storage.objects.create" \
-             --service-account=$TRIGGER_GSA@$PROJECT_ID.iam.gserviceaccount.com
+Create an Eventarc trigger for the notifier service deployed on GKE that filters for Cloud Storage audit logs for the specified Cloud Storage bucket and where the `methodName` is `storage.objects.create`:
+    
+    
+    gcloud eventarc triggers create trigger-${SERVICE_NAME}-gke \
+          --destination-gke-cluster=$CLUSTER_NAME \
+          --destination-gke-location=$CLUSTER_LOCATION \
+          --destination-gke-namespace=default \
+          --destination-gke-service=$SERVICE_NAME \
+          --destination-gke-path=/ \
+          --event-filters="type=google.cloud.audit.log.v1.written" \
+          --event-filters="serviceName=storage.googleapis.com" \
+          --event-filters="methodName=storage.objects.create" \
+          --event-filters-path-pattern="resourceName=/projects/_/buckets/$BUCKET/objects/*" \
+          --service-account=$TRIGGER_GSA@$PROJECT_ID.iam.gserviceaccount.com
 
 This creates a trigger called `trigger-notifier-gke`.
 
-
-
-
 ## Deploy the chart creator service
 
-From the `bigquery/chart-creator/python` directory, deploy a Knative serving service that receives query runner events, retrieves data from a BigQuery table for a specific country, and then generates a chart, using Matplotlib, from the data. The chart is uploaded to a Cloud Storage bucket.
+From the `bigquery/chart-creator/python` directory, deploy a GKE service that receives query runner events, retrieves data from a BigQuery table for a specific country, and then generates a chart, using Matplotlib, from the data. The chart is uploaded to a Cloud Storage bucket.
 
   1. Build and push the container image:
          
@@ -385,20 +408,24 @@ From the `bigquery/chart-creator/python` directory, deploy a Knative serving ser
          docker push $CLUSTER_LOCATION-docker.pkg.dev/$(gcloud config get-value project)/REPOSITORY/${SERVICE_NAME}:v1
          popd
 
-  2. Deploy the container image to Knative serving, passing in `BUCKET`:
+  2. Create a Kubernetes deployment for the container image and set the `BUCKET` environment variable:
          
-         gcloud run deploy ${SERVICE_NAME} \
-             --image $CLUSTER_LOCATION-docker.pkg.dev/$(gcloud config get-value project)/REPOSITORY/${SERVICE_NAME}:v1 \
-             --update-env-vars BUCKET=${BUCKET}
+         kubectl create deployment ${SERVICE_NAME} \
+             --image=$CLUSTER_LOCATION-docker.pkg.dev/$(gcloud config get-value project)/REPOSITORY/${SERVICE_NAME}:v1
+         kubectl set env deployment/${SERVICE_NAME} \
+             BUCKET=${BUCKET}
+
+  3. Expose the deployment as a Kubernetes service:
+         
+         kubectl expose deployment ${SERVICE_NAME} \
+             --type=ClusterIP --port=80 --target-port=8080
 
 
 
-
-When you see the service URL, the deployment is complete.
 
 ### Create a trigger for the chart creator service
 
-The Eventarc trigger for the chart creator service deployed on Knative serving filters for messages published to a Pub/Sub topic.
+Create an Eventarc trigger for the chart creator service deployed on GKE that filters for messages published to a Pub/Sub topic.
 
   1. Create the trigger:
          
@@ -422,7 +449,7 @@ This creates a trigger called `trigger-chart-creator-gke`.
 
 ## Deploy the query runner service
 
-From the `processing-pipelines` directory, deploy a Knative serving service that receives Cloud Scheduler events, retrieves data from a public COVID-19 dataset, and saves the results in a new BigQuery table.
+From the `processing-pipelines` directory, deploy a GKE service that receives Cloud Scheduler events, retrieves data from a public COVID-19 dataset, and saves the results in a new BigQuery table.
 
   1. Build and push the container image:
          
@@ -430,20 +457,25 @@ From the `processing-pipelines` directory, deploy a Knative serving service that
          docker build -t $CLUSTER_LOCATION-docker.pkg.dev/$(gcloud config get-value project)/REPOSITORY/${SERVICE_NAME}:v1 -f Dockerfile .
          docker push $CLUSTER_LOCATION-docker.pkg.dev/$(gcloud config get-value project)/REPOSITORY/${SERVICE_NAME}:v1
 
-  2. Deploy the container image to Knative serving, passing in `PROJECT_ID` and `TOPIC_QUERY_COMPLETED`:
+  2. Create a Kubernetes deployment for the container image and set the `PROJECT_ID` and `TOPIC_ID` environment variables:
          
-         gcloud run deploy ${SERVICE_NAME} \
-             --image $CLUSTER_LOCATION-docker.pkg.dev/$(gcloud config get-value project)/REPOSITORY/${SERVICE_NAME}:v1 \
-             --update-env-vars PROJECT_ID=$(gcloud config get-value project),TOPIC_ID=${TOPIC_QUERY_COMPLETED}
+         kubectl create deployment ${SERVICE_NAME} \
+             --image=$CLUSTER_LOCATION-docker.pkg.dev/$(gcloud config get-value project)/REPOSITORY/${SERVICE_NAME}:v1
+         kubectl set env deployment/${SERVICE_NAME} \
+             PROJECT_ID=$(gcloud config get-value project) \
+             TOPIC_ID=${TOPIC_QUERY_COMPLETED}
+
+  3. Expose the deployment as a Kubernetes service:
+         
+         kubectl expose deployment ${SERVICE_NAME} \
+             --type=ClusterIP --port=80 --target-port=8080
 
 
 
-
-When you see the service URL, the deployment is complete.
 
 ### Create a trigger for the query runner service
 
-The Eventarc trigger for the query runner service deployed on Knative serving filters for messages published to a Pub/Sub topic.
+Create an Eventarc trigger for the query runner service deployed on GKE that filters for messages published to a Pub/Sub topic.
 
   1. Create the trigger:
          
@@ -460,36 +492,30 @@ This creates a trigger called `trigger-query-runner-gke`.
 
   2. Set an environment variable for the Pub/Sub topic.
          
-         export TOPIC_QUERY_SCHEDULED=$(gcloud eventarc triggers describe trigger-${SERVICE_NAME}-gke --format='value(transport.pubsub.topic)')
+         export TOPIC_QUERY_SCHEDULED=$(basename $(gcloud eventarc triggers describe trigger-${SERVICE_NAME}-gke --format='value(transport.pubsub.topic)'))
 
 
 
 
 ## Schedule the jobs
 
-The processing pipeline is triggered by two Cloud Scheduler jobs.
-
-  1. Create an App Engine app which is required by Cloud Scheduler and specify an appropriate [ location](https://docs.cloud.google.com/appengine/docs/locations) (for example, `europe-west`):
-         
-         export APP_ENGINE_LOCATION=LOCATION
-         gcloud app create --region=${APP_ENGINE_LOCATION}
-
-  2. Create two Cloud Scheduler jobs that publish to a Pub/Sub topic once per day:
-         
-         gcloud scheduler jobs create pubsub cre-scheduler-uk \
-             --schedule="0 16 * * *" \
-             --topic=${TOPIC_QUERY_SCHEDULED} \
-             --message-body="United Kingdom"
-         
-         gcloud scheduler jobs create pubsub cre-scheduler-cy \
-             --schedule="0 17 * * *" \
-             --topic=${TOPIC_QUERY_SCHEDULED} \
-             --message-body="Cyprus"
+The processing pipeline is triggered by two Cloud Scheduler jobs. Create two Cloud Scheduler jobs that publish to a Pub/Sub topic once per day:
+    
+    
+    gcloud scheduler jobs create pubsub cre-scheduler-uk \
+          --location=$CLUSTER_LOCATION \
+          --schedule="0 16 * * *" \
+          --topic=${TOPIC_QUERY_SCHEDULED} \
+          --message-body="United Kingdom"
+    
+    
+    gcloud scheduler jobs create pubsub cre-scheduler-cy \
+          --location=$CLUSTER_LOCATION \
+          --schedule="0 17 * * *" \
+          --topic=${TOPIC_QUERY_SCHEDULED} \
+          --message-body="Cyprus"
 
 The schedule is specified in [unix-cron format](https://docs.cloud.google.com/scheduler/docs/configuring/cron-job-schedules). For example, `0 16 * * *` means that the jobs runs at 16:00 (4 PM) UTC every day.
-
-
-
 
 ## Run the pipeline
 
@@ -509,7 +535,7 @@ The output should be similar to the following:
 
   2. Retrieve the Cloud Scheduler job IDs:
          
-         gcloud scheduler jobs list
+         gcloud scheduler jobs list --location=$CLUSTER_LOCATION
 
 The output should be similar to the following:
          
@@ -520,8 +546,9 @@ The output should be similar to the following:
 
   3. Although the jobs are scheduled to run daily at 4 and 5 PM, you can also run the Cloud Scheduler jobs manually:
          
-         gcloud scheduler jobs run cre-scheduler-cy
-         gcloud scheduler jobs run cre-scheduler-uk
+         gcloud scheduler jobs run cre-scheduler-cy --location=$CLUSTER_LOCATION
+         
+         gcloud scheduler jobs run cre-scheduler-uk --location=$CLUSTER_LOCATION
 
   4. After a few minutes, confirm that there are two charts in the Cloud Storage bucket:
          
@@ -557,13 +584,11 @@ Delete a Google Cloud project:
 
 ### Delete tutorial resources
 
-  1. Delete any Knative serving services you deployed in this tutorial:
+  1. Delete the Kubernetes services and deployments that you deployed in this tutorial, and delete the GKE cluster:
          
-         gcloud run services delete SERVICE_NAME
-
-Where `SERVICE_NAME` is your chosen service name.
-
-You can also delete Knative serving services from the [Google Cloud console](https://console.cloud.google.com/kubernetes/run).
+         kubectl delete service notifier chart-creator query-runner
+         kubectl delete deployment notifier chart-creator query-runner
+         gcloud container clusters delete $CLUSTER_NAME --region=$CLUSTER_LOCATION
 
   2. Delete any Eventarc triggers you created in this tutorial:
          
@@ -572,20 +597,16 @@ You can also delete Knative serving services from the [Google Cloud console](htt
 
 Replace `TRIGGER_NAME` with the name of your trigger.
 
-  3. Remove any Google Cloud CLI default configurations you added during the tutorial setup.
-         
-         gcloud config unset project
-         gcloud config unset run/cluster
-         gcloud config unset run/cluster_location
-         gcloud config unset run/platform
-         gcloud config unset eventarc/location
-         gcloud config unset compute/zone
-
-  4. Delete the images from Artifact Registry.
+  3. Delete the images from Artifact Registry:
          
          gcloud artifacts docker images delete $CLUSTER_LOCATION-docker.pkg.dev/$(gcloud config get-value project)/REPOSITORY/notifier:v1
          gcloud artifacts docker images delete $CLUSTER_LOCATION-docker.pkg.dev/$(gcloud config get-value project)/REPOSITORY/chart-creator:v1
          gcloud artifacts docker images delete $CLUSTER_LOCATION-docker.pkg.dev/$(gcloud config get-value project)/REPOSITORY/query-runner:v1
+
+  4. Delete the Artifact Registry repository:
+         
+         gcloud artifacts repositories delete REPOSITORY \
+             --location=$CLUSTER_LOCATION
 
   5. Delete the bucket, along with all the objects within the bucket:
          
@@ -593,8 +614,13 @@ Replace `TRIGGER_NAME` with the name of your trigger.
 
   6. Delete the Cloud Scheduler jobs:
          
-         gcloud scheduler jobs delete cre-scheduler-cy
-         gcloud scheduler jobs delete cre-scheduler-uk
+         gcloud scheduler jobs delete cre-scheduler-cy --location=$CLUSTER_LOCATION
+         gcloud scheduler jobs delete cre-scheduler-uk --location=$CLUSTER_LOCATION
+
+  7. Remove any Google Cloud CLI default configurations you added during the tutorial setup:
+         
+         gcloud config unset project
+         gcloud config unset eventarc/location
 
 
 
@@ -602,7 +628,7 @@ Replace `TRIGGER_NAME` with the name of your trigger.
 ## What's next
 
   * [Learn more about Eventarc](https://docs.cloud.google.com/eventarc/standard/docs/overview)
-  * [Learn more about Knative serving](https://docs.cloud.google.com/anthos/run/docs/architecture-overview)
+  * [Learn how to route Pub/Sub events to GKE](https://docs.cloud.google.com/eventarc/standard/docs/gke/route-trigger-cloud-pubsub)
 
 
 
@@ -610,6 +636,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

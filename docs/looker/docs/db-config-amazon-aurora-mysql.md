@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/db-config-amazon-aurora-mysql/
 title: Amazon Aurora MySQL \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:15:44.597311+00:00
+fetched_at: 2026-10-21T12:25:13.954436+00:00
 ---
 
 # Amazon Aurora MySQL  |  Looker  |  Google Cloud Documentation
@@ -122,7 +122,7 @@ For Amazon Aurora MySQL, Looker supports the following JDBC parameters in the [*
 
 For Looker to support some features, your database dialect must also support them.
 
-Amazon Aurora MySQL supports the following features as of Looker 26.18:
+Amazon Aurora MySQL supports the following features as of Looker 26.20:
 
 Feature | Supported?  
 ---|---  
@@ -167,6 +167,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

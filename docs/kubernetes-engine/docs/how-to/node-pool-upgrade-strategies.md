@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-pool-upgrade-strategies/
 title: Configure node upgrade strategies \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:11:04.310255+00:00
+fetched_at: 2026-10-21T12:26:16.887920+00:00
 ---
 
 # Configure node upgrade strategies  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -84,9 +84,9 @@ To create a cluster with specific settings for surge upgrades, use the `max-surg
     gcloud container clusters create CLUSTER_NAME \
         --max-surge-upgrade=SURGE_NODES --max-unavailable-upgrade=UNAVAILABLE_NODES
 
-####  Creating a cluster with surge upgrade disabled 
+####  Creating a cluster which uses fixed capacity to upgrade 
 
-To create a cluster without surge upgrades, set the value for the `max-surge-upgrade` flag to `0`.
+To create a cluster, which uses fixed capacity to upgrade, set the value for the `max-surge-upgrade` flag to `0`, and the `max-unavailable-upgrade` flag to a value greater than `0`.
     
     
     gcloud container clusters create CLUSTER_NAME \
@@ -120,9 +120,7 @@ To see if surge upgrades are enabled on a node pool, use `gcloud` to describe th
 
 If surge upgrades are enabled on the node pool, the strategy listed is `SURGE`.
 
-**Note:** While recreating nodes does not require additional Compute Engine resources, surge upgrading nodes does. Resource allocation is subjected to [Compute Engine quota](https://docs.cloud.google.com/compute/quotas). Depending on your configuration, this quota can limit the number of parallel upgrades or even cause the upgrade to fail. If you don't have any additional quota or reservation for the nodes in your node pool, don't use `maxSurge`.
-
-For more information about quota, go to [Ensure resources for node upgrades](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-upgrades-quota).
+**Note:** While recreating nodes does not require additional Compute Engine resources, surge upgrading nodes does. Resource allocation is subjected to [Compute Engine quota](https://docs.cloud.google.com/compute/quotas). Depending on your configuration, this quota can limit the number of parallel upgrades or even cause the upgrade to fail. If you don't have any additional quota or reservation for the nodes in your node pool, then use a fixed capacity by setting the `max-unavailable-upgrade` flag to a value greater than `0`. For more information about quota, go to [Ensure resources for node upgrades](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-upgrades-quota).
 
 ## Configure blue-green upgrades
 
@@ -343,6 +341,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

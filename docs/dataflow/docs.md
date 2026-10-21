@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/
 title: Dataflow documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:29:03.612644+00:00
+fetched_at: 2026-10-21T12:25:41.860283+00:00
 ---
 
 # Dataflow documentation  |  Google Cloud Documentation
@@ -63,6 +63,8 @@ format_list_numbered
   * [ Build and run a Flex Template ](https://docs.cloud.google.com/dataflow/docs/guides/templates/using-flex-templates)
 
   * [ Deploy Dataflow pipelines ](https://docs.cloud.google.com/dataflow/docs/guides/deploying-a-pipeline)
+
+  * [ Auto VM Selection ](https://docs.cloud.google.com/dataflow/docs/guides/auto-vm-selection)
 
   * [ Develop with notebooks ](https://docs.cloud.google.com/dataflow/docs/guides/interactive-pipeline-development)
 
@@ -151,6 +153,6 @@ ecommerce Streaming
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

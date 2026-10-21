@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/sandbox/
 title: Try BigQuery using the sandbox \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:35.758603+00:00
+fetched_at: 2026-10-21T12:26:25.137282+00:00
 ---
 
 # Try BigQuery using the sandbox  |  Google Cloud Documentation
@@ -31,7 +31,7 @@ Google Cloud offers public datasets that are stored in BigQuery and made availab
 
 To follow step-by-step guidance for this task directly in the Google Cloud console, click **Guide me** : 
 
-[Guide me](https://console.cloud.google.com/freetrial?redirectPath=/?walkthrough_id=bigquery--bigquery-quickstart-query-public-dataset)
+[Guide me](https://console.cloud.google.com/?walkthrough_id=bigquery--bigquery-quickstart-query-public-dataset)
 
 * * *
 
@@ -39,9 +39,9 @@ To follow step-by-step guidance for this task directly in the Google Cloud conso
 
 ### Enable the BigQuery sandbox
 
-  1. In the Google Cloud console, go to the **BigQuery** page.
+  1. In the Google Cloud console, go to **BigQuery Studio**.
 
-[Go to BigQuery](https://console.cloud.google.com/bigquery)
+[Go to BigQuery Studio](https://console.cloud.google.com/bigquery)
 
 You can also open BigQuery in the Google Cloud console by entering the following URL in your browser:
          
@@ -104,9 +104,9 @@ The BigQuery sandbox is subject to the following limits:
 
 BigQuery public datasets are available by default in BigQuery Studio in a project named `bigquery-public-data`. In this tutorial you query the NYC Citi Bike Trips dataset. Citi Bike is a large bike share program, with 10,000 bikes and 600 stations across Manhattan, Brooklyn, Queens, and Jersey City. This dataset includes Citi Bike trips since Citi Bike launched in September 2013.
 
-  1. In the Google Cloud console, go to the **BigQuery** page.
+  1. In the Google Cloud console, go to **BigQuery Studio**.
 
-[Go to BigQuery](https://console.cloud.google.com/bigquery)
+[Go to BigQuery Studio](https://console.cloud.google.com/bigquery)
 
   2. In the left pane, click explore **Explorer** :
 
@@ -133,9 +133,9 @@ In the following steps, you query the `citibike_trips` table to determine the 10
 
 The query uses the [ST_GEOGPOINT function](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/geography_functions#st_geogpoint) to create a point from each station's longitude and latitude parameters and returns that point in a `GEOGRAPHY` column. The `GEOGRAPHY` column is used to generate a heatmap in the integrated geography data viewer.
 
-  1. In the Google Cloud console, open the **BigQuery** page.
+  1. In the Google Cloud console, open **BigQuery Studio**.
 
-[Go to BigQuery](https://console.cloud.google.com/bigquery)
+[Go to BigQuery Studio](https://console.cloud.google.com/bigquery)
 
   2. Click add_box **SQL query**.
 
@@ -236,6 +236,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

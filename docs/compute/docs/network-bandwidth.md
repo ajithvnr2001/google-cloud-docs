@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/network-bandwidth/
 title: Network bandwidth \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:17.805819+00:00
+fetched_at: 2026-10-21T12:24:58.627359+00:00
 ---
 
 # Network bandwidth  |  Compute Engine  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback
 
 Most machine types provide only one physical NIC. When you create compute instances using these machine types, each virtual network interface (vNIC) that you configure uses the same physical NIC. For these instances, Google Cloud accounts for bandwidth per virtual machine (VM) instance or bare metal instance, not per virtual network interface (vNIC) or IP address. The instance's [machine type](https://docs.cloud.google.com/compute/docs/machine-resource) defines its maximum possible egress rate; however, you can only achieve that maximum possible egress rate in specific situations.
 
-Some machine types (for example `z4d-highmem-384-standardlssd`) provide two physical NICs. When you create compute instances using these machine types, each virtual network interface (vNIC) that you configure is assigned to a physical NIC in a round-robin fashion.
+Some machine types (for example `z4m-highmem-192`) provide multiple physical NICs. When you create compute instances using these machine types, Compute Engine assigns each virtual network interface (vNIC) that you configure to a physical NIC. For Z4D, Z4M, and C4N multi-NIC machine types, Compute Engine uses a round-robin distribution to assign vNICs to physical NICs.
 
 This page outlines the network bandwidth limits, which are useful when planning your deployments. It categorizes bandwidth using two dimensions:
 
@@ -58,9 +58,22 @@ Dynamic NICs aren't supported for Compute Engine instances that run a Windows OS
 
 ### Bandwidth sharing with Cloud RDMA
 
-Applications using Cloud RDMA typically use both TCP and RDMA traffic. For example, during high performance computing (HPC) jobs, applications commonly use TCP for communication during load and store phases, and RDMA for compute stages. H4D instances using GVNIC for TCP traffic provide up to 200 Gbps network bandwidth. If you also configure an H4D instance to use Cloud RDMA, then the network bandwidth is shared among the configured network interfaces.
+Applications using Cloud RDMA typically use both TCP and RDMA traffic. For example, during high performance computing (HPC) jobs, applications commonly use TCP for communication during load and store phases, and RDMA for compute stages. The following machine series support Cloud RDMA:
 
-Network bandwidth allocation between Cloud RDMA traffic and TCP traffic is done dynamically. Instead of limiting both Cloud RDMA and TCP traffic to 100 Gbps bandwidth each, the GVNIC network interface can use all of the available bandwidth when the Cloud RDMA network interface is not being used. Similarly, the Cloud RDMA network interface can use all of the available bandwidth when the GVNIC network interface is not being used. When both network interface types are in use, the bandwidth is shared between Cloud RDMA traffic and TCP traffic.
+  * H4D instances provide up to 200 Gbps network bandwidth.
+  * Z4M instances provide up to 400 Gbps network bandwidth with two physical NICs.
+
+
+
+When you configure a compute instance to use Cloud RDMA, the network bandwidth is shared among the configured network interfaces.
+
+Network bandwidth allocation between Cloud RDMA traffic and TCP traffic is done dynamically:
+
+  * When both network interface types are in use, the bandwidth is shared between Cloud RDMA traffic and TCP traffic.
+  * The gVNIC or IDPF network interface can use all of the available bandwidth when the Cloud RDMA network interface isn't being used.
+  * The Cloud RDMA network interface can use all of the available bandwidth when the gVNIC or IDPF network interface isn't being used.
+
+
 
 ## Bandwidth summary
 
@@ -82,7 +95,7 @@ a VPC network |
     * A4X instances support egress bandwidth limits up to 2,000 Gbps.
     * A4 and A3 instances support egress bandwidth limits up to 3,600 Gbps.
     * C4, C4D, C3, C3D, and Z3 instances support up to 200 Gbps egress bandwidth limits with Tier_1 networking.
-    * M4N instances with two physical NICs support up to 400 Gbps VM-to-VM egress bandwidth.
+    * Z4D, Z4M, and M4N instances with two physical NICs support up to 400 Gbps VM-to-VM egress bandwidth.
     * C4N instances with two physical NICs support up to 400 Gbps VM-to-VM egress bandwidth, up to 95,000,000 packets-per-second (PPS), and up to 50 Gbps single-flow bandwidth between C4N instances routed within the same VPC network.
   * For other factors, definitions, and scenarios, see Egress to destinations routable within a VPC network. 
 
@@ -99,8 +112,9 @@ a VPC network |
     * 3 Gbps per flow
     * When Tier_1 networking is enabled: 25 Gbps total
     * When Tier_1 networking isn't enabled or isn't supported, the following total bandwidth is available per machine series: 
-      * For Z4D instances, 25 Gbps total for instances with 192 vCPUs or less and 50 Gbps total for instances with 384 vCPUs.
-      * For G4 instances: 7 Gbps total for machine types with less than 48 vCPUs, and 25 Gbps total for machine types with 48 or more vCPUs
+      * For Z4M instances, 50 Gbps total for instances with 192 vCPUs and up to 25 Gbps total for instances with 96 vCPUs or fewer, depending on the machine type size.
+      * For Z4D instances, 50 Gbps total for instances with 384 vCPUs and up to 25 Gbps total for instances with 192 vCPUs or fewer, depending on the machine type size.
+      * For G4 instances: 25 Gbps total for machine types with 48 or more vCPUs, and 7 Gbps total for machine types with fewer than 48 vCPUs.
       * For machine series that support multiple physical NICs, such as M4N, A3, A4, A4X, and A4X Max instances, 7 Gbps per NIC
       * For all other machine series, 7 Gbps total
   * For other factors, definitions, and caveats, see Egress to destinations outside of a VPC network.
@@ -129,7 +143,7 @@ a VPC network |
   * For C4N instances, the limit is the first of the following rates encountered: 
     * 24,000,000 packets per second (PPS) per physical NIC or 48,000,000 PPS for dual-NIC instances
     * 90 Gbps per physical NIC or 180 Gbps for dual-NIC instances
-  * For a machine series that supports multiple physical NICs, such as M4N, A3, A4, A4X, and A4X Max instances, the limit is the first of the following rates encountered:
+  * For a machine series that supports multiple physical NICs, such as M4N, Z4D, Z4M, A3, A4, A4X, and A4X Max instances, the limit is the first of the following rates encountered:
     * 1,800,000 pps (packets per second) per physical NIC
     * 30 Gbps per physical NIC
   * For other factors, definitions, and scenarios, see Ingress to destinations outside of a VPC network.
@@ -175,8 +189,8 @@ N1 shared-core (f1-micro and g1-small) | 1 Gbps | Not available
 [X5](https://docs.cloud.google.com/compute/docs/memory-optimized-machines#x5_machine_types) | 200 Gbps | N/A  
 [X4](https://docs.cloud.google.com/compute/docs/memory-optimized-machines#x4_machine_types) | 100 Gbps | Not applicable  
 [Z3](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z3_machine_types) | 100 Gbps | 200 Gbps  
-[Z4D](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4d_machine_types) with 192 or less vCPUs | 200 Gbps | Not applicable  
-[Z4D](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4d_machine_types) with 384 vCPUs | 400 Gbps | Not applicable  
+[Z4D](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4d_machine_types) | 400 Gbps | Not applicable  
+[Z4M](https://docs.cloud.google.com/compute/docs/storage-optimized-machines#z4m_machine_types) | 400 Gbps | Not applicable  
   
 Per-instance maximum egress bandwidth is not a guarantee. The actual egress bandwidth can be lowered according to factors such as the following non-exhaustive list:
 
@@ -253,7 +267,8 @@ From the perspective of a sending instance and for destination IP addresses _out
     * If Tier_1 networking is enabled: 25 Gbps
     * If Tier_1 networking isn't enabled or isn't supported: 
       * For C4N instances: Up to 100 Gbps per physical NIC or 200 Gbps for dual-NIC instances
-      * For G4 instances: 7 Gbps total for machine types with less than 48 vCPUs, and 25 Gbps total for machine types with 48 or more vCPUs
+      * For Z4D and Z4M instances: 7 Gbps total for machine types with fewer than 48 vCPUs, and up to 25 Gbps per physical NIC for machine types with 48 or more vCPUs
+      * For G4 instances: 7 Gbps total for machine types with fewer than 48 vCPUs, and 25 Gbps total for machine types with 48 or more vCPUs
       * For H4D and H3 instances: 1 Gbps
       * For machine series that support multiple physical NICs, such as M4N, A3, A4, A4X, and A4X Max instances: 7 Gbps per physical NIC
       * For all other machine series: 7 Gbps
@@ -369,13 +384,13 @@ Each NIC (physical NIC or virtual NIC) for a compute instance is assigned a numb
 
 ### Default queue allocation
 
-Unless you explicitly assign queue counts for NICs, you can model the algorithm Google Cloud uses to assign a fixed number of RX and TX queues per vNIC in this way:
+Unless you explicitly assign queue counts for NICs, you can model the algorithm Google Cloud uses to assign a fixed number of RX and TX queues per vNIC as described in the following table:
 
-Network-optimized instances
-    For C4N, each vNIC can have a maximum of 64 queues. The maximum number of queues per instance is the number of vCPUs.
 Compute instance configuration | Maximum queue count per vNIC | Maximum queue count per instance  
 ---|---|---  
 Bare metal instances | 16 | 16  
+Network-optimized C4N instances | 64 | The number of vCPUs  
+Storage-optimized Z4D and Z4M instances (including bare metal machine types) | 16 | The number of vCPUs  
 C4 instances with 2 vCPUs | 1 | 2  
 C4 instances with 4 vCPUs | 2 | 8  
 Third generation (excluding M3) and later VM instances that use gVNIC with [Titanium](https://cloud.google.com/titanium), including Z4D  |  Divide the number of vCPUs by the number of vNICs (`num_vcpus/num_vnics`) and discard any remainder.
@@ -400,6 +415,7 @@ First and second generation VMs that use the VirtIO network interface or a custo
 
 | The number of vCPUs  
 H4D instances with Cloud RDMA | 16 | 16, or 32 if using Cloud RDMA  
+Confidential VM instances | 16 | 16  
   
 #### Examples
 
@@ -426,19 +442,21 @@ The number of custom queues you specify must adhere to the following rules:
 
   * The minimum queue count you can assign per vNIC is one.
 
-  * The maximum queue count you can assign to each vNIC of a VM instance is the lower of the vCPU count or the per vNIC maximum queue count, based on the driver type:
+  * The maximum queue count that you can assign to each vNIC of a compute instance is the lower of the vCPU count or the per-vNIC maximum queue count, based on the network interface type:
 
     * Using [virtIO](https://ozlabs.org/%7Erusty/virtio-spec/virtio-0.9.5.pdf) or a custom driver, the maximum queue count is `32`.
     * Using [gVNIC](https://docs.cloud.google.com/compute/docs/networking/using-gvnic), the maximum queue count is `16`, except for the following: 
-      * C4N instances have a maximum queue count of 64 per NIC.
+      * C4N, Z4D, and Z4M instances have a maximum queue count of 64 per NIC.
       * A2 or G2 instances have a maximum queue count of 32 per NIC.
       * [TPU instances](https://docs.cloud.google.com/tpu/docs/managing-tpus-compute) have a maximum queue count of 32.
       * C2, C2D, N2, or N2D instances with Tier_1 networking enabled have a maximum queue count of 32 per NIC.
+    * Using [IRDMA](https://docs.cloud.google.com/compute/docs/networking/using-irdma), the maximum queue count is 8.
+    * Using an [IDPF](https://docs.cloud.google.com/compute/docs/networking/using-idpf) network interface, the maximum queue count is 16, except for Z4D and Z4M bare metal instances, which have a maximum queue count of 64.
     * The following [Confidential VM](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/confidential-vm-overview) configurations have a maximum queue count of `8`:
 
       * AMD SEV on C2D and N2D machine types
       * AMD SEV-SNP on N2D machine types
-  * The sum of queue counts across _all_ NICs configured for the VM instance must adhere to one of the following rules:
+  * The sum of queue counts across _all_ NICs configured for the compute instance must adhere to one of the following rules:
 
     * The maximum value is the lesser of: 
       * `[number of vCPUS]`
@@ -676,6 +694,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-16 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

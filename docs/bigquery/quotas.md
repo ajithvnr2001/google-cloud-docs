@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/quotas/
 title: Quotas and limits \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:54:16.913965+00:00
+fetched_at: 2026-10-21T12:26:18.908423+00:00
 ---
 
 # Quotas and limits  |  BigQuery  |  Google Cloud Documentation
@@ -1114,20 +1114,26 @@ For additional streaming quota, see Request a quota increase.
 
 ## Bandwidth
 
-The following quotas apply to the replication bandwidth: 
+The following quotas apply to the [cross-region dataset replication](https://docs.cloud.google.com/bigquery/docs/data-replication#dataset_replication) bandwidth:
 
 Quota | Default | Notes  
 ---|---|---  
-Maximum initial backfill replication bandwidth for each [region](https://docs.cloud.google.com/bigquery/docs/locations#regions) that has cross-region data egress from the primary replica to secondary replicas.  | 10 physical GiBps per region per organization  |   
-Maximum ongoing replication bandwidth for each [region](https://docs.cloud.google.com/bigquery/docs/locations#regions) that has cross-region data egress from the primary replica to secondary replicas.  | 5 physical GiBps per region per organization  |   
-Maximum turbo replication bandwidth for each [region](https://docs.cloud.google.com/bigquery/docs/locations#regions) that has cross-region data egress from the primary replica to secondary replicas.  | 5 physical GiBps per region per organization  | Turbo replication bandwidth quota doesn't apply to the initial backfill operation.   
+Maximum initial backfill cross-region dataset replication bandwidth for each [region](https://docs.cloud.google.com/bigquery/docs/locations#regions) that has cross-region data egress from the primary replica to secondary replicas.  | 10 physical GiBps per region per organization  |   
+Maximum ongoing cross-region dataset replication bandwidth for each [region](https://docs.cloud.google.com/bigquery/docs/locations#regions) that has cross-region data egress from the primary replica to secondary replicas.  | 5 physical GiBps per region per organization  |   
+Maximum turbo cross-region dataset replication bandwidth for each [region](https://docs.cloud.google.com/bigquery/docs/locations#regions) that has cross-region data egress from the primary replica to secondary replicas.  | 5 physical GiBps per region per organization  | Turbo cross-region dataset replication bandwidth quota doesn't apply to the initial backfill operation.   
   
-When a project's replication bandwidth exceeds a certain quota, replication from affected projects might stop with the `rateLimitExceeded` error that includes details of the exceeded quota.
+When a project's cross-region dataset replication bandwidth exceeds a certain quota, cross-region dataset replication from affected projects might stop with the `rateLimitExceeded` error that includes details of the exceeded quota.
 
+The following quotas apply to the cross region table copy bandwidth: 
+
+Quota | Default | Notes  
+---|---|---  
+Maximum copy bandwidth for each [region](https://docs.cloud.google.com/bigquery/docs/locations#regions) that has cross-region data egress from the source table to the destination table.  | 2 physical GiBps per region pair per organization.  |   
+  
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

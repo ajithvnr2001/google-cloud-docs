@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/upgrading-a-cluster/
 title: Manually upgrade a cluster's control plane or node pools \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:25:38.204876+00:00
+fetched_at: 2026-10-21T12:26:17.119974+00:00
 ---
 
 # Manually upgrade a cluster's control plane or node pools  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -366,7 +366,9 @@ To learn how to add a persistent disk to an existing node instance, see [Adding 
 
 You can manually upgrade the version of a Standard node pool or Autopilot-managed node pool **in a Standard cluster**. You can match the version of the control plane or, use a previous version that is still available and is compatible with the control plane. You can manually upgrade multiple node pools in parallel, similarly to how GKE can upgrade multiple node pools in parallel if you [configure concurrent node pool upgrades](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/upgrading-a-cluster#concurrent-upgrades).
 
-When GKE upgrades a node pool, either manually or automatically, GKE removes any [labels you added to individual nodes using `kubectl`](https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/#add-a-label-to-a-node). Any other [types of changes to a GKE cluster](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/managing-clusters#types-of-changes) which recreate the nodes also remove the labels. To avoid losing labels, [apply labels to node pools](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/update-existing-nodepools#updating_node_labels) instead.
+When GKE upgrades a node pool, either manually or automatically, the [labels you added to individual nodes using `kubectl`](https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/#add-a-label-to-a-node) might not persist. For this reason, labels should be added at the node pool level.
+
+Any other [types of changes to a GKE cluster](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/managing-clusters#types-of-changes) which recreate the nodes also remove the labels. To avoid losing labels, [apply labels to node pools](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/update-existing-nodepools#updating_node_labels) instead.
 
 Before you manually upgrade your node pool, consider the following conditions:
 
@@ -722,6 +724,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

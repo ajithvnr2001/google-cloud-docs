@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/create-shared-future-reservations/
 title: Create shared future reservation requests \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:19.558364+00:00
+fetched_at: 2026-10-21T12:25:17.369357+00:00
 ---
 
 # Create shared future reservation requests  |  Compute Engine  |  Google Cloud Documentation
@@ -36,7 +36,7 @@ To learn more about the requirements and limitations that apply when you create 
 
 ## Before you begin
 
-  * Before you submit a future reservation request for GPU or H4D VMs, you must contact your account team or the sales team. Otherwise, Google Cloud is likely to decline it.
+  * Before you submit a future reservation request for GPU, H4D, or Z4M instances, you must contact your account team or the sales team to discuss your request. Otherwise, Google Cloud might decline your request.
   * Verify that you have sufficient quota for the resources that you want to reserve. If your quota is insufficient, then Google Cloud is likely to decline your future reservation request. Or, if the request is approved but you lack quota at the start time of your request, Compute Engine only delivers part, or none, of the reserved resources. For more information about the different types of quota in Compute Engine, see [Allocation quotas](https://docs.cloud.google.com/compute/resource-usage).
   * If you haven't already, set up [authentication](https://docs.cloud.google.com/compute/docs/authentication). Authentication verifies your identity for access to Google Cloud services and APIs. To run code or samples from a local development environment, you can authenticate to Compute Engine by selecting one of the following options: 
 
@@ -124,7 +124,7 @@ You can directly define the properties of a draft future reservation request. Th
 
 
 
-An auto-created reservation for a future reservation can be automatically consumed by any VM with matching properties. If you want to avoid a VM to consume any of these auto-created reservations, see how to [create VMs without consuming reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-prevent-consumption).
+An auto-created reservation for a future reservation can be consumed in the same way as an on-demand reservation that you created manually. To learn how to prevent a VM from consuming auto-created reservations, see [prevent consumption of reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-prevent-consumption).
 
 ### Specify an instance template
 
@@ -155,7 +155,7 @@ To create a shared future reservation by specifying an existing instance templat
 
   3. Click add_box **Create future reservation**. The **Create a future reservation** page appears.
 
-  4. In the **Machine configuration** section, do the following: 
+  4. In the **Configurations** section, do the following: 
 
      1. Select **Use instance template**.
 
@@ -191,13 +191,19 @@ To create a shared future reservation by specifying an existing instance templat
 
      2. Click add **Add projects** , and then select the projects from the current project's organization that you want to share the future reservation request with. You can select up to 100 projects.
 
-  11. Click **Next**.
+  11. In the **Use with VM instance** section, select one of the following options:
 
-  12. In the **Future reservation name** field, enter a name for your future reservation request.
+     * To let matching VMs automatically consume the auto-created reservations, select **Use reservation automatically**.
 
-  13. In the **Prefix** field, enter a name prefix. All auto-created reservations for this future reservation request use this prefix.
+     * To consume the auto-created reservations only when you create matching VMs that specifically target the reservations, select **Select specific reservation**.
 
-  14. To finish creating the draft future reservation request, click **Save a draft**. The **Reservations** page appears. Creating the future reservation request can take up to a minute to complete. To verify when Compute Engine finishes creating it, [view your future reservation requests](https://docs.cloud.google.com/compute/docs/instances/reservations-view#view-future-reservations).
+  12. Click **Next**.
+
+  13. In the **Future reservation name** field, enter a name for your future reservation request.
+
+  14. In the **Prefix** field, enter a name prefix. All auto-created reservations for this future reservation request use this prefix.
+
+  15. To finish creating the draft future reservation request, click **Save a draft**. The **Reservations** page appears. Creating the future reservation request can take up to a minute to complete. To verify when Compute Engine finishes creating it, [view your future reservation requests](https://docs.cloud.google.com/compute/docs/instances/reservations-view#view-future-reservations).
 
 
 
@@ -295,6 +301,36 @@ To create `fr-02`, run the following command:
 
 Optionally, you can do one or more of the following:
 
+  * To specify a name prefix for the auto-created reservations, include the `--name-prefix` flag.
+        
+        gcloud compute future-reservations create FUTURE_RESERVATION_NAME \
+            --auto-delete-auto-created-reservations \
+            **--name-prefix= NAME_PREFIX** \
+            --share-setting=projects \
+            --share-with=CONSUMER_PROJECT_IDS \
+            --source-instance-template=INSTANCE_TEMPLATE_URL \
+            --start-time=START_TIME \
+            --end-time=END_TIME \
+            --total-count=TOTAL_COUNT \
+            --zone=ZONE
+        
+
+Replace `NAME_PREFIX` with the name prefix for each auto-created reservation. To help you identify the auto-created reservations for this future reservation request, Google Cloud recommends that you specify a unique name prefix.
+
+  * To let only VMs that specifically target the auto-created reservations by name consume them, include the `--require-specific-reservation` flag.
+        
+        gcloud compute future-reservations create FUTURE_RESERVATION_NAME \
+            --auto-delete-auto-created-reservations \
+            --share-setting=projects \
+            --share-with=CONSUMER_PROJECT_IDS \
+            --source-instance-template=INSTANCE_TEMPLATE_URL \
+            **--require-specific-reservation** \
+            --start-time=START_TIME \
+            --end-time=END_TIME \
+            --total-count=TOTAL_COUNT \
+            --zone=ZONE
+        
+
   * To delete the auto-created reservations after the end time of the reservation period, select one of the following methods:
 
     * To delete the auto-created reservations at a specific date and time after the end time of the reservation period, include the `--auto-created-reservations-delete-time` flag.
@@ -344,24 +380,6 @@ Replace DURATION_BEFORE_DELETE with a duration in days, hours, minutes, or secon
 
 
 
-  * To specify a name prefix for the auto-created reservations, include the `--name-prefix` flag.
-        
-        gcloud compute future-reservations create FUTURE_RESERVATION_NAME \
-            --auto-delete-auto-created-reservations \
-            **--name-prefix= NAME_PREFIX** \
-            --share-setting=projects \
-            --share-with=CONSUMER_PROJECT_IDS \
-            --source-instance-template=INSTANCE_TEMPLATE_URL \
-            --start-time=START_TIME \
-            --end-time=END_TIME \
-            --total-count=TOTAL_COUNT \
-            --zone=ZONE
-        
-
-Replace `NAME_PREFIX` with the name prefix for each auto-created reservation. To help you identify the auto-created reservations for this future reservation request, Google Cloud recommends to specify a unique name prefix.
-
-
-
 
 ###  REST 
 
@@ -386,6 +404,7 @@ To create a draft future reservation request by specifying an instance template 
         "sourceInstanceTemplate": "INSTANCE_TEMPLATE_URL",
         "totalCount": TOTAL_COUNT
       },
+      "specificReservationRequired": RESERVATION_AFFINITY,
       "timeWindow": {
         "startTime": "START_TIME",
         "endTime": "END_TIME"
@@ -415,6 +434,8 @@ Replace the following:
 
 
   * `TOTAL_COUNT`: the [total count](https://docs.cloud.google.com/compute/docs/instances/future-reservations-overview#total-count) of VMs that you want reserved.
+
+  * `RESERVATION_AFFINITY`: whether VMs must target the auto-created reservations to consume them (`true`), or any matching VM can automatically consume them (`false`).
 
   * `START_TIME`: the start time of the reservation period as an [RFC 3339 timestamp](https://tools.ietf.org/html/rfc3339), which must be formatted as follows:
         
@@ -481,6 +502,7 @@ To create `fr-02`, make a `POST` request as follows:
         ],
         "shareType": "SPECIFIC_PROJECTS"
       },
+      "specificReservationRequired": RESERVATION_AFFINITY,
       "timeWindow": {
         "startTime": "2024-11-10T00:00:00Z",
         "endTime": "2024-12-10T00:00:00Z"
@@ -509,6 +531,7 @@ Optionally, you can do one or more of the following:
             "sourceInstanceTemplate": "INSTANCE_TEMPLATE_URL",
             "totalCount": TOTAL_COUNT
           },
+          "specificReservationRequired": RESERVATION_AFFINITY,
           "timeWindow": {
             "startTime": "START_TIME",
             "endTime": "END_TIME"
@@ -541,6 +564,7 @@ Replace `NAME_PREFIX` with the name prefix for each auto-created reservation. To
               "sourceInstanceTemplate": "INSTANCE_TEMPLATE_URL",
               "totalCount": TOTAL_COUNT
             },
+            "specificReservationRequired": RESERVATION_AFFINITY,
             "timeWindow": {
               "startTime": "START_TIME",
               "endTime": "END_TIME"
@@ -571,6 +595,7 @@ Replace `DELETE_TIME` with a date and time when Compute Engine deletes the auto-
               "sourceInstanceTemplate": "INSTANCE_TEMPLATE_URL",
               "totalCount": TOTAL_COUNT
             },
+            "specificReservationRequired": RESERVATION_AFFINITY,
             "timeWindow": {
               "startTime": "START_TIME",
               "endTime": "END_TIME"
@@ -621,7 +646,7 @@ To create a shared future reservation request that uses the properties of an exi
 
   3. Click add_box **Create future reservation**. The **Create a future reservation** page appears.
 
-  4. In the **Machine configuration** section, do the following: 
+  4. In the **Configurations** section, do the following: 
 
      1. Select **Use existing VM**.
 
@@ -657,13 +682,19 @@ To create a shared future reservation request that uses the properties of an exi
 
      2. Click add **Add projects** , and then select the projects from the current project's organization that you want to share the future reservation request with. You can select up to 100 projects.
 
-  11. Click **Next**.
+  11. In the **Use with VM instance** section, select one of the following options:
 
-  12. In the **Future reservation name** field, enter a name for your future reservation request.
+     * To let matching VMs automatically consume the auto-created reservations, select **Use reservation automatically**.
 
-  13. In the **Prefix** field, enter a name prefix. All auto-created reservations for this future reservation request use this prefix.
+     * To consume the auto-created reservations only when you create matching VMs that specifically target the reservations, select **Select specific reservation**.
 
-  14. To finish creating the draft future reservation request, click **Save a draft**. The **Reservations** page appears. Creating the future reservation request can take up to a minute to complete. To verify when Compute Engine finishes creating it, [view your future reservation requests](https://docs.cloud.google.com/compute/docs/instances/reservations-view#view-future-reservations).
+  12. Click **Next**.
+
+  13. In the **Future reservation name** field, enter a name for your future reservation request.
+
+  14. In the **Prefix** field, enter a name prefix. All auto-created reservations for this future reservation request use this prefix.
+
+  15. To finish creating the draft future reservation request, click **Save a draft**. The **Reservations** page appears. Creating the future reservation request can take up to a minute to complete. To verify when Compute Engine finishes creating it, [view your future reservation requests](https://docs.cloud.google.com/compute/docs/instances/reservations-view#view-future-reservations).
 
 
 
@@ -686,11 +717,11 @@ To create a shared future reservation request by specifying properties directly,
 
   3. Click add_box **Create future reservation**. The **Create a future reservation** page appears.
 
-  4. In the **Machine configuration** section, do the following: 
+  4. In the **Configurations** section, do the following: 
 
-     1. Select **Specify machine type** if it isn't already selected.
+     1. Select **Specify machine type**.
 
-     2. Specify the machine type to use for the reserved VMs.
+     2. Specify the machine family, series, and type to use for the reserved VMs.
 
   5. In the **Location** section, in the **Region** and **Zone** lists, select the region and zone in which to reserve resources.
 
@@ -722,13 +753,19 @@ To create a shared future reservation request by specifying properties directly,
 
      2. Click add **Add projects** , and then select the projects from the current project's organization that you want to share the future reservation request with. You can select up to 100 projects.
 
-  11. Click **Next**.
+  11. In the **Use with VM instance** section, select one of the following options:
 
-  12. In the **Future reservation name** field, enter a name for your future reservation request.
+     * To let matching VMs automatically consume the auto-created reservations, select **Use reservation automatically**.
 
-  13. In the **Prefix** field, enter a name prefix. All auto-created reservations for this future reservation request use this prefix.
+     * To consume the auto-created reservations only when you create matching VMs that specifically target the reservations, select **Select specific reservation**.
 
-  14. To finish creating the draft future reservation request, click **Save a draft**. The **Reservations** page appears. Creating the future reservation request can take up to a minute to complete. To verify when Compute Engine finishes creating it, [view your future reservation requests](https://docs.cloud.google.com/compute/docs/instances/reservations-view#view-future-reservations).
+  12. Click **Next**.
+
+  13. In the **Future reservation name** field, enter a name for your future reservation request.
+
+  14. In the **Prefix** field, enter a name prefix. All auto-created reservations for this future reservation request use this prefix.
+
+  15. To finish creating the draft future reservation request, click **Save a draft**. The **Reservations** page appears. Creating the future reservation request can take up to a minute to complete. To verify when Compute Engine finishes creating it, [view your future reservation requests](https://docs.cloud.google.com/compute/docs/instances/reservations-view#view-future-reservations).
 
 
 
@@ -821,12 +858,12 @@ To create `fr-02`, run the following command:
 
 Optionally, you can do one or more of the following:
 
-  * To attach GPUs to your reserved N1 VMs, include the `--accelerator` flag.
+  * To specify a name prefix for the auto-created reservations, include the `--name-prefix` flag.
         
         gcloud compute future-reservations create FUTURE_RESERVATION_NAME \
-            **--accelerator= NUMBER_OF_ACCELERATORS,type=ACCELERATOR_TYPE** \
             --auto-delete-auto-created-reservations \
             --machine-type=MACHINE_TYPE \
+            **--name-prefix= NAME_PREFIX** \
             --share-setting=projects \
             --share-with=CONSUMER_PROJECT_IDS \
             --start-time=START_TIME \
@@ -835,13 +872,21 @@ Optionally, you can do one or more of the following:
             --zone=ZONE
         
 
-Replace the following:
+Replace `NAME_PREFIX` with the name prefix for each auto-created reservation. To help you identify the auto-created reservations for this future reservation request, Google Cloud recommends that you specify a unique name prefix.
 
-    * `NUMBER_OF_ACCELERATORS`: the number of GPUs to add per reserved VM.
-
-    * `ACCELERATOR_TYPE`: a [supported GPU model for N1 VMs](https://docs.cloud.google.com/compute/docs/gpus#n1-gpus). To prevent errors, verify that your chosen GPU model is available in the zone where you're creating the future reservation request.
-
-
+  * To let only VMs that specifically target the auto-created reservations by name consume them, include the `--require-specific-reservation` flag.
+        
+        gcloud compute future-reservations create FUTURE_RESERVATION_NAME \
+            --auto-delete-auto-created-reservations \
+            --machine-type=MACHINE_TYPE \
+            --share-setting=projects \
+            --share-with=CONSUMER_PROJECT_IDS \
+            **--require-specific-reservation** \
+            --start-time=START_TIME \
+            --end-time=END_TIME \
+            --total-count=TOTAL_COUNT \
+            --zone=ZONE
+        
 
   * To delete the auto-created reservations after the end time of the reservation period, select one of the following methods:
 
@@ -892,6 +937,42 @@ Replace DURATION_BEFORE_DELETE with a duration in days, hours, minutes, or secon
 
 
 
+  * To have the reserved VMs use a specific minimum CPU platform instead of the zone's default CPU platform, include the `--min-cpu-platform` flag.
+        
+        gcloud compute future-reservations create FUTURE_RESERVATION_NAME \
+            --auto-delete-auto-created-reservations \
+            --machine-type=MACHINE_TYPE \
+            **--min-cpu-platform=" MIN_CPU_PLATFORM"** \
+            --share-setting=projects \
+            --share-with=CONSUMER_PROJECT_IDS \
+            --start-time=START_TIME \
+            --end-time=END_TIME \
+            --total-count=TOTAL_COUNT \
+            --zone=ZONE
+        
+
+Replace MIN_CPU_PLATFORM with a minimum CPU platform. To verify if a specific CPU platform is supported in the zone where you're reserving resources, [view the available CPU platforms by zone](https://docs.cloud.google.com/compute/docs/instances/specify-min-cpu-platform#cpusbyzone).
+
+  * To attach GPUs to your reserved N1 VMs, include the `--accelerator` flag.
+        
+        gcloud compute future-reservations create FUTURE_RESERVATION_NAME \
+            **--accelerator= NUMBER_OF_ACCELERATORS,type=ACCELERATOR_TYPE** \
+            --auto-delete-auto-created-reservations \
+            --machine-type=MACHINE_TYPE \
+            --share-setting=projects \
+            --share-with=CONSUMER_PROJECT_IDS \
+            --start-time=START_TIME \
+            --end-time=END_TIME \
+            --total-count=TOTAL_COUNT \
+            --zone=ZONE
+        
+
+Replace the following:
+
+    * `NUMBER_OF_ACCELERATORS`: the number of GPUs to add per reserved VM.
+
+    * `ACCELERATOR_TYPE`: a [supported GPU model for N1 VMs](https://docs.cloud.google.com/compute/docs/gpus#n1-gpus). To prevent errors, verify that your chosen GPU model is available in the zone where you're creating the future reservation request.
+
   * To attach Local SSD disks to a [machine type that doesn't include Local SSD disks by default](https://docs.cloud.google.com/compute/docs/disks/local-ssd#lssd_disk_options), include the `--local-ssd` flag. You can only attach Local SSD disk of 375 GB.
         
         gcloud compute future-reservations create FUTURE_RESERVATION_NAME \
@@ -915,40 +996,6 @@ Replace the following:
       * For the NVME disk interface: `nvme`
 
       * For the SCSI disk interface: `scsi`
-
-  * To have the reserved VMs use a specific minimum CPU platform instead of the zone's default CPU platform, include the `--min-cpu-platform` flag.
-        
-        gcloud compute future-reservations create FUTURE_RESERVATION_NAME \
-            --auto-delete-auto-created-reservations \
-            --machine-type=MACHINE_TYPE \
-            **--min-cpu-platform=" MIN_CPU_PLATFORM"** \
-            --share-setting=projects \
-            --share-with=CONSUMER_PROJECT_IDS \
-            --start-time=START_TIME \
-            --end-time=END_TIME \
-            --total-count=TOTAL_COUNT \
-            --zone=ZONE
-        
-
-Replace MIN_CPU_PLATFORM with a minimum CPU platform. To make sure that a CPU platform is available in the zone where you're reserving resources, [view the available CPU platforms by zone](https://docs.cloud.google.com/compute/docs/instances/specify-min-cpu-platform#cpusbyzone).
-
-
-
-  * To specify a name prefix for the auto-created reservations, include the `--name-prefix` flag.
-        
-        gcloud compute future-reservations create FUTURE_RESERVATION_NAME \
-            --auto-delete-auto-created-reservations \
-            --machine-type=MACHINE_TYPE \
-            **--name-prefix= NAME_PREFIX** \
-            --share-setting=projects \
-            --share-with=CONSUMER_PROJECT_IDS \
-            --start-time=START_TIME \
-            --end-time=END_TIME \
-            --total-count=TOTAL_COUNT \
-            --zone=ZONE
-        
-
-Replace `NAME_PREFIX` with the name prefix for each auto-created reservation. To help you identify the auto-created reservations for this future reservation request, Google Cloud recommends to specify a unique name prefix.
 
 
 
@@ -978,6 +1025,7 @@ To create a draft future reservation request by specifying properties directly w
         },
         "totalCount": TOTAL_COUNT
       },
+      "specificReservationRequired": RESERVATION_AFFINITY,
       "timeWindow": {
         "startTime": "START_TIME",
         "endTime": "END_TIME"
@@ -999,6 +1047,8 @@ Replace the following:
 
 
   * `TOTAL_COUNT`: the [total count](https://docs.cloud.google.com/compute/docs/instances/future-reservations-overview#total-count) of VMs that you want reserved.
+
+  * `RESERVATION_AFFINITY`: whether VMs must target the auto-created reservations to consume them (`true`), or any matching VM can automatically consume them (`false`).
 
   * `START_TIME`: the start time of the reservation period as an [RFC 3339 timestamp](https://tools.ietf.org/html/rfc3339), which must be formatted as follows:
         
@@ -1067,6 +1117,7 @@ To create `fr-02`, make a `POST` request as follows:
         ],
         "shareType": "SPECIFIC_PROJECTS"
       },
+      "specificReservationRequired": RESERVATION_AFFINITY,
       "timeWindow": {
         "startTime": "2024-11-10T00:00:00Z",
         "endTime": "2024-12-10T00:00:00Z"
@@ -1097,6 +1148,7 @@ Optionally, you can do one or more of the following:
             },
             "totalCount": TOTAL_COUNT
           },
+          "specificReservationRequired": RESERVATION_AFFINITY,
           "timeWindow": {
             "startTime": "START_TIME",
             "endTime": "END_TIME"
@@ -1134,6 +1186,7 @@ Replace `NAME_PREFIX` with the name prefix for each auto-created reservation. To
             },
             "totalCount": TOTAL_COUNT
           },
+          "specificReservationRequired": RESERVATION_AFFINITY,
           "timeWindow": {
             "startTime": "START_TIME",
             "endTime": "END_TIME"
@@ -1179,6 +1232,7 @@ For example, to specify two Local SSD disks when creating a draft future reserva
             },
             "totalCount": TOTAL_COUNT
           },
+          "specificReservationRequired": RESERVATION_AFFINITY,
           "timeWindow": {
             "startTime": "START_TIME",
             "endTime": "END_TIME"
@@ -1213,6 +1267,7 @@ Replace `INTERFACE_TYPE` with the type of disk interface that you want the Local
             },
             "totalCount": TOTAL_COUNT
           },
+          "specificReservationRequired": RESERVATION_AFFINITY,
           "timeWindow": {
             "startTime": "START_TIME",
             "endTime": "END_TIME"
@@ -1247,6 +1302,7 @@ Replace MIN_CPU_PLATFORM with a minimum CPU platform. To verify that a CPU platf
               },
               "totalCount": TOTAL_COUNT
             },
+            "specificReservationRequired": RESERVATION_AFFINITY,
             "timeWindow": {
               "startTime": "START_TIME",
               "endTime": "END_TIME"
@@ -1279,6 +1335,7 @@ Replace `DELETE_TIME` with a date and time when Compute Engine deletes the auto-
               },
               "totalCount": TOTAL_COUNT
             },
+            "specificReservationRequired": RESERVATION_AFFINITY,
             "timeWindow": {
               "startTime": "START_TIME",
               "endTime": "END_TIME"
@@ -1400,6 +1457,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

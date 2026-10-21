@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/fraud-prevention/
 title: Protect payment transactions with Transaction defense \u00a0|\u00a0 Google Cloud Fraud Defense \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:50:29.395323+00:00
+fetched_at: 2026-10-21T12:26:15.259631+00:00
 ---
 
 # Protect payment transactions with Transaction defense  |  Google Cloud Fraud Defense  |  Google Cloud Documentation
@@ -29,7 +29,7 @@ Transaction defense helps you protect payment transactions by identifying target
 
 As part of these models, Transaction defense examines transaction signals to detect carding and chargeback attacks. For example, a series of purchase attempts with low prices might indicate a carding attack. In the response, you receive risk scores for different types of fraud, which you can use to send the transaction to a manual review, or directly block sufficiently suspicious transactions.
 
-**Note:** Transaction defense is [PCI compliant](https://docs.cloud.google.com/security/compliance/pci-dss).
+**Note:** Transaction defense is [PCI compliant](https://cloud.google.com/security/compliance/pci-dss).
 
 To set up Transaction defense, you need to complete the following steps:
 
@@ -118,7 +118,7 @@ The following example shows how to integrate a score-based key on a credit card 
     </form>
     
     
-    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js"></script>
 
 You can experiment with this code in JSFiddle by clicking the `<>` icon in the top-right corner of the code window.
     
@@ -126,7 +126,7 @@ You can experiment with this code in JSFiddle by clicking the `<>` icon in the t
     <html>
       <head>
         <title>Protected Payment</title>
-        <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+        <script src="https://www.google.com/recaptcha/enterprise.js"></script>
         <script>
         function submitForm() {
           grecaptcha.enterprise.ready(function() {
@@ -296,6 +296,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 
