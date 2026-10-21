@@ -1,0 +1,14 @@
+[Unit]
+Description=Commit and push the tracked GCP product documentation
+Wants=network-online.target
+After=network-online.target
+RequiresMountsFor=/data
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/data/opencode/gcpdocs
+EnvironmentFile=/data/opencode/secrets/git.env
+ExecStart=/bin/bash /data/opencode/gcpdocs/gcp_git_ship.sh
+TimeoutStartSec=1800
+Nice=10

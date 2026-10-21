@@ -6,7 +6,7 @@ Crawls **https://docs.cloud.google.com/** completely (1,230,844 raw sitemap URLs
 
 - **607,307 pages crawled** (= 601,023 sitemap canonicals + link-discovered extras; only 364 sitemap gap URLs found by audit, fetched via `final_gapfill.py`; 64 PDFs are binary assets, recorded not converted).
 - 70/70 shards done — see `STATUS.json` (`"done": true`) / `STATUS.log`.
-- **Corpus is too large for git pushes** (GitHub pre-receive rejects >~5GB pushes / >100MB files), so `docs/` is intentionally **not in git**. **Full-corpus snapshots are published as GitHub Release assets** (tar.gz, ≤2GB each): see [Releases](https://github.com/ajithvnr2001/google-cloud-docs/releases).
+- **Docs are split by size:** product documentation (`docs/<product>/docs/...`, 82k guides/quickstarts) **is tracked in git and committed daily** at 08:20 UTC (see `gcp-git-ship.timer`). The versioned API reference (`/docs/reference/`, 1.06M files / 7.4 GB) and crawler sidecars are **not in git** — GitHub rejects >2 GB pushes and 1M+ files would make commits unusable. Full-corpus and reference updates are published as **GitHub Release assets** (tar.gz deltas): see [Releases](https://github.com/ajithvnr2001/google-cloud-docs/releases).
 
 ## Scale (measured)
 
@@ -36,8 +36,8 @@ State (all under `/data`, survives crashes): `crawl_state.db` (sqlite visited/fa
 inventory.py  crawl_gcp.py  final_gapfill.py  requirements.txt
 guide_code/   # coder guide + coder_scrape.py / coder_update.py
 seeds/        # git-ignored shard URL lists (regenerable)
-docs/         # git-ignored output (~12GB; published via Releases)
-releases/     # local staging for release tar.gz assets
+docs/         # product docs tracked in git + committed daily; API reference (~7.4GB) via Releases
+releases/     # local staging for release tar.gz assets (git-ignored)
 ```
 
 ## Key findings
@@ -47,4 +47,4 @@ releases/     # local staging for release tar.gz assets
 
 ## Status
 
-Crawl complete — 70/70 shards, `"done": true` in `STATUS.json`. Full-corpus snapshots published as GitHub Release assets. No GitHub Actions (manual durable runs, by design).
+Crawl complete — 70/70 shards, `"done": true` in `STATUS.json`. Product docs are committed to git daily (`gcp-git-ship.timer`); full-corpus snapshots and reference deltas are published as GitHub Release assets. No GitHub Actions (manual durable runs, by design).

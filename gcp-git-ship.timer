@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily git sync of GCP product docs (08:20 UTC)
+
+[Timer]
+OnCalendar=*-*-* 08:20:00 UTC
+AccuracySec=1min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

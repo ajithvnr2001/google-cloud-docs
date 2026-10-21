@@ -7,5 +7,16 @@
 .venv/
 __pycache__/
 crawl_state.json
-docs/
+seeds/
 tools/
+releases/
+
+# docs/: product documentation (guides) IS tracked in git and committed daily.
+# The huge versioned API reference and crawler sidecars are not.
+/docs/_d/
+/docs/_llms/
+/docs/_meta/
+/docs/_subdomains/
+/docs/_index*
+/docs/_manifest.json
+/docs/**/docs/reference/

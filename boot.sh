@@ -10,6 +10,8 @@ UPDATE_TIMER_SRC="/data/opencode/gcpdocs/gcp-update.timer"
 DRAIN_UNIT_SRC="/data/opencode/gcpdocs/gcp-drain.service"
 KICK_UNIT_SRC="/data/opencode/gcpdocs/gcp-drain-kick.service"
 KICK_TIMER_SRC="/data/opencode/gcpdocs/gcp-drain-kick.timer"
+SHIP_UNIT_SRC="/data/opencode/gcpdocs/gcp-git-ship.service"
+SHIP_TIMER_SRC="/data/opencode/gcpdocs/gcp-git-ship.timer"
 
 if [ ! -f "$UNIT_SRC" ]; then
   echo "FATAL: $UNIT_SRC missing (/data not attached?)" >&2
@@ -22,6 +24,10 @@ if [ -f "$DRAIN_UNIT_SRC" ]; then
   cp -f "$DRAIN_UNIT_SRC" /etc/systemd/system/gcp-drain.service
   cp -f "$KICK_UNIT_SRC" /etc/systemd/system/gcp-drain-kick.service
   cp -f "$KICK_TIMER_SRC" /etc/systemd/system/gcp-drain-kick.timer
+fi
+if [ -f "$SHIP_UNIT_SRC" ]; then
+  cp -f "$SHIP_UNIT_SRC" /etc/systemd/system/gcp-git-ship.service
+  cp -f "$SHIP_TIMER_SRC" /etc/systemd/system/gcp-git-ship.timer
 fi
 systemctl daemon-reload
 systemctl enable gcp-crawl.service
@@ -44,5 +50,9 @@ if [ -f "$DRAIN_UNIT_SRC" ]; then
   systemctl start gcp-drain.service || true
   systemctl enable --now gcp-drain-kick.timer
   echo "gcp-drain.service enabled/started."
+fi
+if [ -f "$SHIP_UNIT_SRC" ]; then
+  systemctl enable --now gcp-git-ship.timer
+  echo "gcp-git-ship.timer enabled."
 fi
 systemctl is-enabled gcp-crawl.service
