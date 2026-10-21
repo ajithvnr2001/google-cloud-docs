@@ -1,0 +1,236 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/tuning/video/
+title: Video tuning \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T02:51:16.120540+00:00
+---
+
+# Video tuning  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/tuning/video/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Video tuning Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page provides prerequisites and detailed instructions for fine-tuning Gemini on video data using supervised learning.
+
+## Use cases
+
+Fine-tuning lets you adapt base Gemini models for specialized tasks. Here are some video use cases:
+
+  * **Automated video summarization** : Tuning LLMs to generate concise and coherent summaries of long videos, capturing the main themes, events, and narratives. This is useful for content discovery, archiving, and quick reviews.
+
+  * **Detailed event recognition and localization** : Fine-tuning allows LLMs to identify and pinpoint specific actions, events, or objects within a video timeline with greater accuracy. For example, identifying all instances of a particular product in a marketing video or a specific action in sports footage.
+
+  * **Content moderation** : Specialized tuning can improve an LLM's ability to detect sensitive, inappropriate, or policy-violating content within videos, going beyond simple object detection to understand context and nuance.
+
+  * **Video captioning and subtitling** : While already a common application, tuning can improve the accuracy, fluency, and context-awareness of automatically generated captions and subtitles, including descriptions of nonverbal cues.
+
+
+
+
+## Limitations
+
+  * **Maximum video file size** : 100MB. This may not be sufficient for large video files. Some recommended workarounds are as follows: 
+    * If there are very few large files, drop those files from including those in the JSONL files.
+    * If there are many large files in your dataset and cannot be ignored, reduce visual resolution of the files. This may hurt performance.
+    * Chunk the videos to limit the files size to 100MB and use the chunked videos for tuning. Make sure to change any timestamp annotations corresponding to the original video to the new (chunked) video timeline.
+  * **Maximum video length per example** : Limit 1 video per example. It can be 5 minutes with `MEDIA_RESOLUTION_HIGH` or `MEDIA_RESOLUTION_MEDIUM` and 20 minutes with `MEDIA_RESOLUTION_LOW`.
+  * **Dropped examples** : If an example contains video that is longer than the supported maximum length, that example is dropped from the dataset. Dropped examples are not billed or used for training. If more than 10% of the dataset is dropped, the job will fail with an error message before the start of training.
+  * **Mixing different media resolutions isn't supported** : The value of `mediaResolution` for each example in the entire training dataset must be consistent. All lines in the JSONL files used for training and validation should have the same value of `mediaResolution`.
+
+
+
+## Dataset format
+
+The `fileUri` field specifies the location of your dataset. It can be the URI for a file in a Cloud Storage bucket, or it can be a publicly available HTTP or HTTPS URL.
+
+The `mediaResolution` field is used to specify the token count per frame for the input videos. The following describes token counts for supported models:
+
+  * **Gemini 2.5** :
+
+    * `MEDIA_RESOLUTION_LOW`: 64 tokens per frame
+
+    * `MEDIA_RESOLUTION_MEDIUM` and `MEDIA_RESOLUTION_HIGH` : 256 tokens per frame
+
+Model tuning with `MEDIA_RESOLUTION_LOW` is roughly 4 times faster than the ones tuned with `MEDIA_RESOLUTION_MEDIUM` or `MEDIA_RESOLUTION_HIGH` with minimal performance improvement.
+
+  * **Gemini 3** :
+
+Token counts are the same as the base model. For more information, see [Media resolution](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/start/get-started-with-gemini-3#media-resolution).
+
+
+
+
+When a video segment is used for training and validation, the video segment is in the `videoMetadata` field. During tuning, this data point is decoded to contain information from the segment extracted from the specified video file, starting from timestamp `startOffset` (the start offset, in seconds) until `endOffset`.
+
+To see the generic format example, see [Dataset example for Gemini](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini-supervised-tuning-prepare#dataset-example).
+
+The following sections present video dataset format examples.
+
+### JSON schema example for cases where the full video is used for training and validation
+
+This schema is added as a single line in the JSONL file.
+    
+    
+    {
+      "contents": [
+        {
+          "role": "user",
+          "parts": [
+            {
+              "fileData": {
+                "fileUri": "gs://<path to the mp4 video file>",
+                "mimeType": "video/mp4"
+              },
+            },
+            {
+              "text": "
+              You are a video analysis expert. Detect which animal appears in the
+              video.The video can only have one of the following animals: dog, cat,
+              rabbit.\n Output Format:\n Generate output in the following JSON
+              format:\n
+              [{\n
+                \"animal_name\": \"<CATEGORY>\",\n
+              }]\n"
+            }
+          ]
+        },
+        {
+          "role": "model",
+          "parts": [
+            {
+              "text": "```json\n[{\"animal_name\": \"dog\"}]\n```"
+            }
+           ]
+        },
+      ],
+      "generationConfig": {
+        "mediaResolution": "MEDIA_RESOLUTION_LOW"
+      }
+    }
+    
+
+(Gemini 3 and higher models only) Starting with the Gemini 3 models, you can also [set the media resolution per individual media `Part`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/start/get-started-with-gemini-3#media-resolution-by-part). This lets you mix resolutions in your dataset (for example, by setting `MEDIA_RESOLUTION_HIGH` for one item and `MEDIA_RESOLUTION_LOW` for another). For more information about part-level resolution and their corresponding token counts, see [Media resolution](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/start/get-started-with-gemini-3#media-resolution).
+
+`Part`-level media resolution settings take precedence over global settings.
+
+The following is an example dataset that sets the media resolution at both the `Part` and global levels:
+    
+    
+    {
+      "contents": [
+        {
+          "role": "user",
+          "parts": [
+            {
+              "fileData": {
+                "fileUri": "gs://<path to the mp4 video file>",
+                "mimeType": "video/mp4"
+              }
+            },
+            {
+              "fileData": {
+                "fileUri": "gs://<path to the mp4 video file>",
+                "mimeType": "video/mp4"
+              },
+              "mediaResolution": {
+                "level": "MEDIA_RESOLUTION_HIGH"
+              }
+            },
+            {
+              "text": "Describe these videos in detail."
+            }
+          ]
+        },
+        {
+          "role": "model",
+          "parts": [
+            {
+              "text": "Video 1 is low resolution while video 2 is sharp and clear"
+            }
+          ]
+        }
+      ],
+      "generationConfig": {
+        "mediaResolution": "MEDIA_RESOLUTION_LOW"
+      }
+    }
+    
+
+### JSON schema example for cases where a video segment is used for training and validation
+
+This schema is added as a single line in the JSONL file.
+    
+    
+    {
+      "contents": [
+        {
+          "role": "user",
+          "parts": [
+            {
+              "fileData": {
+                "fileUri": "gs://<path to the mp4 video file>",
+                "mimeType": "video/mp4"
+              },
+             "videoMetadata": {
+                "startOffset": "5s",
+                "endOffset": "25s"
+              }
+            },
+            {
+              "text": "
+              You are a video analysis expert. Detect which animal appears in the
+              video.The video can only have one of the following animals: dog, cat,
+              rabbit.\n Output Format:\n Generate output in the following JSON
+              format:\n
+              [{\n
+                \"animal_name\": \"<CATEGORY>\",\n
+              }]\n"
+           }
+          ]
+       },
+       {
+          "role": "model",
+          "parts": [
+            {
+              "text": "```json\n[{\"animal_name\": \"dog\"}]\n```"
+            }
+          ]
+        },
+      ],
+    "generationConfig": {
+         "mediaResolution": "MEDIA_RESOLUTION_LOW"
+      }
+    }
+    
+
+## What's next
+
+  * To learn more about video tuning, see [How to fine-tune Gemini 2.5 using videos via Agent Platform](https://cloud.google.com/blog/products/ai-machine-learning/how-to-fine-tune-video-outputs-using-vertex-ai?e=48754805).
+
+  * To learn more about the image understanding capability of Gemini, see our [Image understanding](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/image-understanding) documentation.
+
+  * To start tuning, see [Tune Gemini models by using supervised fine-tuning](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini-use-supervised-tuning)
+
+  * To learn how supervised fine-tuning can be used in a solution that builds a generative AI knowledge base, see [Jump Start Solution: Generative AI knowledge base](https://docs.cloud.google.com/architecture/ai-ml/generative-ai-knowledge-base).
+
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

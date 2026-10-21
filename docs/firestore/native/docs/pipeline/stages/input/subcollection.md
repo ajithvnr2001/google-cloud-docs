@@ -1,0 +1,116 @@
+---
+url: https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/input/subcollection/
+title: Subcollection (Input Stage) \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-17T10:25:18.960023+00:00
+---
+
+# Subcollection (Input Stage)  |  Firestore in Native mode  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/input/subcollection/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Firestore in Native mode ](https://docs.cloud.google.com/firestore/native/docs)
+  * [ Reference ](https://docs.cloud.google.com/firestore/native/docs/apis)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Subcollection (Input Stage)
+
+## Description
+
+The `subcollection(...)` input stage makes it easy to perform parent-child joins using the built-in `__name__` field.
+
+Additional stages can be chained onto the `subcollection(...)` stage to perform filtering or aggregation over the nested documents. Note that any field references used in subsequent stages refer to the documents from the nested collection, not the parent document. To refer to fields in the parent scope, first use the [`let(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/let) stage to define variables, then reference those variables in the local scope.
+
+## Examples
+
+### Node.js
+    
+    
+    db.pipeline()
+      .collection("/restaurants")
+      .add_fields(subcollection("reviews")
+        .aggregate(average("rating").as("avg_rating"))
+        .toScalarExpression()
+        .as("avg_rating"))
+    
+
+## Behavior
+
+The `subcollection(...)` stage must be used within the context of a subquery. It uses the `__name__` (the document reference) of the current document in the parent scope to determine which sub-collection to fetch. For example, if the parent document is `/restaurants/pizza-place`, then `subcollection("reviews")` returns all documents from the `/restaurants/pizza-place/reviews` collection.
+
+If the document reference has been renamed, or it is not possible to define a field with `__name__` then manually writing the join like:
+
+### Node.js
+    
+    
+    db.pipeline()
+      .collection("/restaurants")
+      .let(field("__name__").as("restaurant_name"))
+      .add_fields(db.pipeline()
+        .collectionGroup("reviews")
+        .where(field("__name__").parent().equals(variable("restaurant_name")))
+        .aggregate(average("rating").as("avg_rating"))
+        .toScalarExpression()
+        .as("avg_rating"))
+    
+
+is still possible as fundamentally this stage is just syntactic sugar over this more complex join format.
+
+For the following documents:
+
+### Node.js
+    
+    
+    const restaurant1 = db.collection("restaurants").document("pizza-place");
+    const restaurant2 = db.collection("restaurants").document("urban-bite");
+    const restaurant3 = db.collection("restaurants").document("nacho-house");
+    
+    await restaurant1.create({ name: "Pizza Place" });
+    await restaurant2.create({ name: "Urban Bite" });
+    await restaurant3.create({ name: "Nacho House" });
+    
+    await restaurant1.collection("reviews").doc("1").create({ rating: 5 });
+    await restaurant1.collection("reviews").doc("1").create({ rating: 2 });
+    
+    await restaurant2.collection("reviews").doc("1").create({ rating: 3 });
+    await restaurant2.collection("reviews").doc("1").create({ rating: 4 });
+    await restaurant2.collection("reviews").doc("1").create({ rating: 5 });
+    
+
+The following query retrieves each restaurant and summarizes its reviews in a new `review_summary` field:
+
+### Node.js
+    
+    
+    const results = await db.pipeline()
+      .collectionGroup("restaurants")
+      .add_fields(subcollection("reviews")
+        .aggregate(
+          countAll().as("review_count"),
+          average("rating").as("avg_rating"))
+        .asScalarExpression()
+        .as("review_summary"))
+      .execute();
+    
+
+and produces the following results:
+    
+    
+    { name: "Pizza Place", review_summary: { review_count: 2, avg_rating: 3.5 } },
+    { name: "Urban Bite",  review_summary: { review_count: 3, avg_rating: 4.0 } },
+    { name: "Nacho House", review_summary: { review_count: 0, avg_rating: null } },
+    
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-16 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

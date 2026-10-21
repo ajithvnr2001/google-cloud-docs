@@ -1,0 +1,152 @@
+---
+url: https://docs.cloud.google.com/gemini/docs/codeassist/supported-languages/
+title: Supported languages, IDEs, and interfaces \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T08:02:47.953018+00:00
+---
+
+# Supported languages, IDEs, and interfaces  |  Gemini for Google Cloud  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini/docs/codeassist/supported-languages/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini for Google Cloud ](https://docs.cloud.google.com/gemini/docs)
+  * [ Guides ](https://docs.cloud.google.com/gemini/docs/overview)
+
+
+
+Send feedback 
+
+#  Supported languages, IDEs, and interfaces Stay organized with collections  Save and categorize content based on your preferences. 
+
+This document describes the languages, IDEs, and code infrastructure interfaces that Gemini Code Assist supports.
+
+## Supported languages for prompts
+
+Gemini Code Assist supports the following languages:
+
+  * Arabic (ar)
+  * Bengali (bn)
+  * Bulgarian (bg)
+  * Chinese simplified and traditional (zh)
+  * Croatian (hr)
+  * Czech (cs)
+  * Danish (da)
+  * Dutch (nl)
+  * English (en)
+  * Estonian (et)
+  * Finnish (fi)
+  * French (fr)
+  * German (de)
+  * Greek (el)
+  * Hebrew (he)
+  * Hindi (hi)
+  * Hungarian (hu)
+  * Indonesian (id)
+  * Italian (it)
+  * Japanese (ja)
+  * Korean (ko)
+  * Latvian (lv)
+  * Lithuanian (lt)
+  * Norwegian (no)
+  * Polish (pl)
+  * Portuguese (pt)
+  * Romanian (ro)
+  * Russian (ru)
+  * Serbian (sr)
+  * Slovak (sk)
+  * Slovenian (sl)
+  * Spanish (es)
+  * Swahili (sw)
+  * Swedish (sv)
+  * Thai (th)
+  * Turkish (tr)
+  * Ukrainian (uk)
+  * Vietnamese (vi)
+
+
+
+## Verified coding languages
+
+The Gemini large language models (LLMs) that are used by Gemini Code Assist are trained on a vast set of coding examples within the public domain. Therefore, LLMs are often able to understand and provide assistance on a wide variety of coding languages. However, due to the large number of languages, the testing of the quality of the assistance varies by coding language. Therefore, Google chose a subset of coding languages to verify the quality of assistance and responses.
+
+Although Gemini Code Assist can offer assistance on a wide variety of coding languages, Google has _verified_ the following coding languages:
+
+  * [Bash](https://www.gnu.org/software/bash/)
+  * [C](https://www.open-std.org/JTC1/SC22/WG14/www/standards)
+  * [C++](https://isocpp.org/)
+  * [C#](https://learn.microsoft.com/en-us/dotnet/csharp/)
+  * [Dart](https://dart.dev/)
+  * [Go](https://go.dev/)
+  * [GoogleSQL](https://docs.cloud.google.com/bigquery/docs/introduction-sql)
+  * [Java](https://docs.oracle.com/javase/8/docs/technotes/guides/language/index.html)
+  * [JavaScript](https://www.javascript.com/)
+  * [Kotlin](https://kotlinlang.org/)
+  * [Lua](https://www.lua.org/)
+  * [MATLAB](https://www.mathworks.com/products/matlab.html)
+  * [PHP](https://www.php.net/)
+  * [Python](https://www.python.org/)
+  * [R](https://www.r-project.org/)
+  * [Ruby](https://www.ruby-lang.org/en/)
+  * [Rust](https://www.rust-lang.org/)
+  * [Scala](https://www.scala-lang.org/)
+  * [SQL](https://blog.ansi.org/sql-standard-iso-iec-9075-2023-ansi-x3-135/)
+  * [Swift](https://developer.apple.com/swift/)
+  * [TypeScript](https://www.typescriptlang.org/)
+  * [YAML](https://yaml.org/)
+
+
+
+## Supported IDEs
+
+Gemini Code Assist is available by default in the following IDEs:
+
+  * [Cloud Shell Editor](https://cloud.google.com/shell)
+  * [Cloud Workstations](https://cloud.google.com/workstations)
+  * [Android Studio](https://developer.android.com/studio/gemini/overview)
+
+
+
+The Gemini Code Assist extension is supported in the following IDEs:
+
+  * [VS Code](https://code.visualstudio.com/)
+  * JetBrains IDEs: 
+    * [CLion](https://www.jetbrains.com/clion/)
+    * [DataGrip](https://www.jetbrains.com/datagrip/)
+    * [GoLand](https://www.jetbrains.com/go/)
+    * [IntelliJ IDEA Community, Educational, and Ultimate](https://www.jetbrains.com/idea/download/)
+    * [PhpStorm](https://www.jetbrains.com/phpstorm/)
+    * [PyCharm Community and Professional](https://www.jetbrains.com/pycharm/)
+    * [Rider](https://www.jetbrains.com/rider/)
+    * [RubyMine](https://www.jetbrains.com/ruby/)
+    * [WebStorm](https://www.jetbrains.com/webstorm/)
+
+
+
+## Supported code infrastructure interfaces
+
+Gemini Code Assist can offer assistance with the following infrastructure as code interfaces:
+
+  * [Gemini CLI](https://geminicli.com)
+  * [Google Cloud CLI](https://cloud.google.com/cli)
+  * [Kubernetes Resource Model (KRM)](https://github.com/kubernetes/design-proposals-archive/blob/main/architecture/resource-management.md)
+
+
+
+## What's next
+
+  * Learn how to [set up Gemini Code Assist for a project](https://docs.cloud.google.com/gemini/docs/codeassist/set-up-gemini).
+  * Learn [how Gemini Code Assist uses your data](https://docs.cloud.google.com/gemini/docs/discover/data-governance).
+  * Learn more about [Google Cloud compliance](https://cloud.google.com/security/compliance/).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

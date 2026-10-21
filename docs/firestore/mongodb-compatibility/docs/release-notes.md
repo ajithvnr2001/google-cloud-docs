@@ -1,0 +1,335 @@
+---
+url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/release-notes/
+title: Firestore with MongoDB compatibility release notes \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T14:17:12.497849+00:00
+---
+
+# Firestore with MongoDB compatibility release notes  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/release-notes/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Firestore with MongoDB compatibility ](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs)
+  * [ Resources ](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/resources)
+
+
+
+Send feedback 
+
+#  Firestore with MongoDB compatibility release notes Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page documents production updates to Firestore with MongoDB compatibility. You can periodically check this page for announcements about new or updated features, bug fixes, known issues, and deprecated functionality. 
+
+You can see the latest product updates for all of Google Cloud on the [ Google Cloud](https://docs.cloud.google.com/release-notes) page, browse and filter all release notes in the [Google Cloud console](https://console.cloud.google.com/release-notes), or programmatically access release notes in [BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_cloud_release_notes&t=release_notes&page=table). 
+
+To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/firestore-with-mongodb-compatibility-release-notes.xml) directly. 
+
+## June 01, 2026
+
+Feature
+
+Support for searching for and managing your Firestore resources using Knowledge Catalog, which is a platform for storing, managing, and accessing your metadata. To learn more, see [View Knowledge Catalog insights](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/knowledge-catalog).
+
+## April 20, 2026
+
+Feature
+
+The maximum document size has been increased to 16 MiB. To learn more, see [Behavior differences](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/behavior-differences#documents).
+
+Feature
+
+Support for text and geospatial search. You can create text indexes, perform text and geospatial search queries using the `$text` and `$near` operators, handle language settings, and calculate relevance scores. To learn more, see [Text search](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/text-query) and [Geospatial search](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/geo-query).
+
+These features are available in [Preview](https://cloud.google.com/products#product-launch-stages).
+
+Feature
+
+`$lookup` now supports `let` and `pipeline`.
+
+Feature
+
+Support for [Change Streams](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/change-streams). Change streams let applications access real-time changes (inserts, updates, and deletes) made to a collection or to an entire database.
+
+This feature is available in [Preview](https://cloud.google.com/products#product-launch-stages).
+
+Feature
+
+Support for the `drop()` command to delete entire collections.
+
+This feature is available in [Preview](https://cloud.google.com/products#product-launch-stages).
+
+## April 09, 2026
+
+Feature
+
+You can now use Gemini Code Assist to get AI-powered assistance in Firestore to [generate MQL queries using natural language prompts](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/write-mql-gemini). This feature is available in [Preview](https://cloud.google.com/products#product-launch-stages).
+
+## March 16, 2026
+
+Feature
+
+Support for [managing TTL indexes](https://cloud.google.com/firestore/mongodb-compatibility/docs/ttl#create_ttl_index) in the MongoDB API.
+
+## February 02, 2026
+
+Feature
+
+The Firestore databases page in the Google Cloud console now includes a status column. Possible statuses include:
+
+  * Ready
+  * Cloning is in progress
+  * Restoring from backup is in progress
+  * Deleted
+  * Failed
+
+
+
+For the cloning and restore statuses, the status column updates upon completion.
+
+## November 21, 2025
+
+Feature
+
+Support for Object as document `_id` identifier.
+
+## October 27, 2025
+
+Feature
+
+The [database clone feature](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/create-databases#clone-database) is now supported at the General Availability ([GA](https://cloud.google.com/products#product-launch-stages)) level. 
+
+## October 08, 2025
+
+Feature
+
+You can [create, save, and manage queries](https://cloud.google.com/firestore/mongodb-compatibility/docs/create-manage-saved-queries) in Firestore Studio. This feature is available in [Preview](https://cloud.google.com/products#product-launch-stages).
+
+## September 17, 2025
+
+Feature
+
+The `$lookup` operator now supports the following fields:
+
+  * `from`
+  * `localField`
+  * `foreignField`
+  * `as`
+
+
+
+For the full list of supported operators see [Supported features](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/supported-features-80).
+
+## September 05, 2025
+
+Feature
+
+Support for the following query features. For the full list of supported operators see [Supported features](https://cloud.google.com/firestore/mongodb-compatibility/docs/supported-features-80).
+
+  * `$facet`
+  * `$unionWith`
+  * `$minN`
+  * `$firstN`
+  * `$lastN`
+  * `$toString`
+  * `$median`
+  * `$percentile`
+
+
+
+## September 02, 2025
+
+Feature
+
+Use [Query insights](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/query-insights) to view query performance metrics for your database. This feature is now generally available ([GA](https://cloud.google.com/products#product-launch-stages)).
+
+## August 26, 2025
+
+Feature
+
+Support for [Private Google Access](https://cloud.google.com/firestore/mongodb-compatibility/docs/configure-private-google-access).
+
+Feature
+
+General Availability (GA) release of [Firestore with MongoDB compatibility](https://cloud.google.com/firestore/mongodb-compatibility/docs/overview).
+
+Feature
+
+Support for Firebase interfaces, including console, CLIs, and documentation.
+
+Feature
+
+Support for [Firestore Triggers (Events)](https://cloud.google.com/firestore/mongodb-compatibility/docs/eventarc) with Firestore with MongoDB compatibility databases.
+
+Feature
+
+Support for [explaining queries](https://cloud.google.com/firestore/mongodb-compatibility/docs/query-explain#use_query_explain) and [managing indexes](https://cloud.google.com/firestore/mongodb-compatibility/docs/indexing#create_an_index) in the MongoDB API.
+
+Feature
+
+Support for `int32`, binary, and double types as document `_id` identifier.
+
+Feature
+
+Support for [Point-In-Time-Recovery](https://cloud.google.com/firestore/mongodb-compatibility/docs/pitr) features, including reading data at a specific snapshot through the MongoDB APIs.
+
+Feature
+
+Support for [unique indexes](https://cloud.google.com/firestore/mongodb-compatibility/docs/index-overview#unique_indexes).
+
+Feature
+
+New [billing metrics](https://cloud.google.com/firestore/mongodb-compatibility/docs/use-monitoring-dashboard#billing_metrics) which allow customers to easily attribute Firestore Enterprise costs to database and RPC methods in Cloud Monitoring.
+
+Feature
+
+Support for [managed bulk delete](https://cloud.google.com/firestore/mongodb-compatibility/docs/bulk-delete) and [import and export](https://cloud.google.com/firestore/mongodb-compatibility/docs/export-import).
+
+Feature
+
+A range of performance improvements to support more performant queries on arrays and larger bulk operations with fewer transient errors.
+
+Feature
+
+Support for the following query features. For the full list of supported operators see [Supported features](https://cloud.google.com/firestore/mongodb-compatibility/docs/supported-features-80).
+
+  * `$` projection operator
+  * Update array operators: 
+    * `$`
+    * `$[]`
+    * `$[<identifier>]`
+    * `$addToSet`
+    * `$pop`
+    * `$pullAll`
+  * Update modifiers:
+    * `$each`
+    * `$position`
+    * `$slice`
+    * `$sort`
+  * `$addToSet` aggregation pipeline accumulator expression
+  * Aggregation pipeline arithmetic operators:
+    * `$exp`
+    * `$ln`
+    * `$log`
+    * `$log10`
+    * `$pow`
+    * `$sqrt`
+    * `$trunc `
+  * Aggregation pipeline array operators
+    * `$filter`
+    * `$firstN`
+    * `$in`
+    * `$indexOfArray`
+    * `$lastN`
+    * `$maxN`
+    * `$minN`
+    * `$objectToArray`
+    * `$range`
+    * `$reduce`
+    * `$sortArray`
+    * `$zip`
+  * `$binarySize` and `$bsonSize` aggregation pipeline data size operators
+  * `$dateTrunc` aggregation pipeline date operator
+  * Aggregation pipeline operators:
+    * `$mergeObjects`
+    * `$natural` (ascending)
+  * Aggregation pipeline set operators:
+    * `$allElementsTrue`
+    * `$anyElementsTrue`
+    * `$anyElementTrue`
+    * `$setDifference`
+    * `$setEquals`
+    * `$setIntersection`
+    * `$setIsSubset`
+    * `$setIntersection`
+    * `$setIsSubset`
+    * `$setUnion `
+  * `$bucket` aggregation pipeline stage operator
+  * Aggregation pipeline type conversion operators:
+    * `$convert`
+    * `$toDate`
+    * `$toDecimal`
+    * `$toDouble`
+    * `$toInt`
+    * `$toLong`
+    * `$toObjectId`
+    * `$toString`
+    * `$type`
+  * `$let` and `$map` aggregation pipeline variable operators
+  * `$lookup` aggregation pipeline stage operator, limited to `_id` in the `foreignField`
+
+
+
+Feature
+
+You can [clone an existing database](https://cloud.google.com/firestore/mongodb-compatibility/docs/create-databases#clone-database) at a selected timestamp into a new database. This feature is available in [Preview](https://cloud.google.com/products#product-launch-stages).
+
+Feature
+
+Usage dashboard in the Google Cloud console.
+
+Feature
+
+New JSON results viewer and JSON export tool in the Google Cloud console.
+
+## August 01, 2025
+
+Feature
+
+You can [clone an existing database](https://cloud.google.com/firestore/mongodb-compatibility/docs/create-databases#clone-database) at a selected timestamp into a new database. This feature is available in [Preview](https://cloud.google.com/products#product-launch-stages).
+
+## July 31, 2025
+
+Feature
+
+Support for [`explain()`](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/query-explain#use_query_explain) in the Firestore with MongoDB compatibility API is now available in [Preview](https://cloud.google.com/products#product-launch-stages). You can now use `explain()` in tools such as MongoDB Shell and Compass.
+
+## July 21, 2025
+
+Feature
+
+[Managed import and export](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/export-import) for Firestore with MongoDB compatibility is now available in [Preview](https://cloud.google.com/products#product-launch-stages).
+
+Feature
+
+[Cloud Monitoring billing metrics for Firestore with MongoDB compatibility](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/use-monitoring-dashboard#billing_metrics) databases are now available in [Preview](https://cloud.google.com/products#product-launch-stages). Limitations: These metrics don't reflect admin operations like import, export, bulk delete, indexing, and restore.
+
+Feature
+
+[Point-in-time recovery](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/pitr) and snapshot reads for Firestore with MongoDB compatibility are now available in [Preview](https://cloud.google.com/products#product-launch-stages).
+
+Feature
+
+[Bulk delete](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/bulk-delete) for Firestore with MongoDB compatibility is now available in [Preview](https://cloud.google.com/products#product-launch-stages).
+
+## July 10, 2025
+
+Feature
+
+Array update operators `$push` and `$pull` are now available in Preview.
+
+Feature
+
+Performance improvements:
+
+  * Performance improvements on disjunction `$in` queries and keys only index scans due to query optimizer tuning is now available in Preview.
+  * Performance improvements on bulk insertions is now available in Preview.
+  * Performance improvements on `$elemMatch` queries with indexes due to query optimizer tuning is now available in Preview.
+
+
+
+## April 09, 2025
+
+Feature
+
+Preview release of [Firestore with MongoDB compatibility](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/overview). 
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

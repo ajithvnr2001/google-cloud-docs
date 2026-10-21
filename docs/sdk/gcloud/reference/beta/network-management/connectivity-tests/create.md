@@ -1,0 +1,165 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/network-management/connectivity-tests/create/
+title: gcloud beta network-management connectivity-tests create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T11:49:19.035749+00:00
+---
+
+# gcloud beta network-management connectivity-tests create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/network-management/connectivity-tests/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta network-management connectivity-tests create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta network-management connectivity-tests create - create a new connectivity test 
+SYNOPSIS
+    
+
+`gcloud beta network-management connectivity-tests create` `CONNECTIVITY_TEST` (`--destination-cloud-sql-instance`=`DESTINATION_CLOUD_SQL_INSTANCE` `--destination-forwarding-rule`=`DESTINATION_FORWARDING_RULE` `--destination-gke-master-cluster`=`DESTINATION_GKE_MASTER_CLUSTER` `--destination-gke-pod`=`DESTINATION_GKE_POD` `--destination-instance`=`DESTINATION_INSTANCE` `--destination-ip-address`=`DESTINATION_IP_ADDRESS` `--destination-redis-cluster`=`DESTINATION_REDIS_CLUSTER` `--destination-redis-instance`=`DESTINATION_REDIS_INSTANCE`) (`--source-app-engine-version`=`SOURCE_APP_ENGINE_VERSION` `--source-cloud-function`=`SOURCE_CLOUD_FUNCTION` `--source-cloud-run-job`=`SOURCE_CLOUD_RUN_JOB` `--source-cloud-run-revision`=`SOURCE_CLOUD_RUN_REVISION` `--source-cloud-sql-instance`=`SOURCE_CLOUD_SQL_INSTANCE` `--source-dms-private-connection`=`SOURCE_DMS_PRIVATE_CONNECTION` `--source-gke-master-cluster`=`SOURCE_GKE_MASTER_CLUSTER` `--source-gke-pod`=`SOURCE_GKE_POD` `--source-instance`=`SOURCE_INSTANCE` `--source-ip-address`=`SOURCE_IP_ADDRESS`) [`--async`] [`--bypass-firewall-checks`] [`--description`=`DESCRIPTION`] [`--destination-fqdn`=`DESTINATION_FQDN`] [`--destination-network`=`DESTINATION_NETWORK`] [`--destination-port`=`DESTINATION_PORT`] [`--destination-project`=`DESTINATION_PROJECT`] [`--labels`=[`KEY`=`VALUE`,…]] [`--other-projects`=[`OTHER_PROJECTS`,…]] [`--protocol`=`PROTOCOL`] [`--round-trip`] [`--source-network`=`SOURCE_NETWORK`] [`--source-network-type`=`SOURCE_NETWORK_TYPE`; default="unspecified"] [`--source-project`=`SOURCE_PROJECT`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` Create a new connectivity test with the given name. 
+EXAMPLES
+     The following command creates a connectivity test with the name my-test, and the test between a source VM and a destination IP address in a peering network. 
+    
+    
+    gcloud beta network-management connectivity-tests create my-test --source-instance=projects/my-project/zones/us-west-1/instances/my-instance --destination-ip-address=10.142.0.2 --destination-network=projects/my-project/global/networks/peering-network --round-trip
+
+POSITIONAL ARGUMENTS
+    
+
+Connectivity test resource - Name of the connectivity test you want to create. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `connectivity_test` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`CONNECTIVITY_TEST`
+     ID of the connectivity test or fully qualified identifier for the connectivity test. 
+
+To set the `connectivity_test` attribute: 
+
+  * provide the argument `connectivity_test` on the command line. 
+
+
+REQUIRED FLAGS
+    
+
+At least one of these must be specified: 
+
+`--destination-cloud-sql-instance`=`DESTINATION_CLOUD_SQL_INSTANCE`
+     A Cloud SQL instance URI as the destination endpoint. 
+`--destination-forwarding-rule`=`DESTINATION_FORWARDING_RULE`
+     A forwarding rule URI as the destination endpoint. 
+`--destination-gke-master-cluster`=`DESTINATION_GKE_MASTER_CLUSTER`
+     A cluster URI for Google Kubernetes Engine master as the destination endpoint. 
+`--destination-gke-pod`=`DESTINATION_GKE_POD`
+     A GKE Pod URI as the destination endpoint. 
+`--destination-instance`=`DESTINATION_INSTANCE`
+     A Compute Engine instance URI as the destination endpoint. 
+`--destination-ip-address`=`DESTINATION_IP_ADDRESS`
+     The IP address of the destination which can be an external or internal IP. 
+`--destination-redis-cluster`=`DESTINATION_REDIS_CLUSTER`
+     A Redis cluster URI as the destination endpoint. 
+`--destination-redis-instance`=`DESTINATION_REDIS_INSTANCE`
+     A Redis instance URI as the destination endpoint. 
+At least one of these must be specified: 
+
+`--source-app-engine-version`=`SOURCE_APP_ENGINE_VERSION`
+     App Engine version URI as the source endpoint. 
+`--source-cloud-function`=`SOURCE_CLOUD_FUNCTION`
+     A Cloud function URI as the source endpoint. 
+`--source-cloud-run-job`=`SOURCE_CLOUD_RUN_JOB`
+     Cloud Run job URI as the source endpoint. 
+`--source-cloud-run-revision`=`SOURCE_CLOUD_RUN_REVISION`
+     Cloud Run revision URI as the source endpoint. 
+`--source-cloud-sql-instance`=`SOURCE_CLOUD_SQL_INSTANCE`
+     A Cloud SQL instance URI as the source endpoint. 
+`--source-dms-private-connection`=`SOURCE_DMS_PRIVATE_CONNECTION`
+     DMS private connection URI as the source endpoint. 
+`--source-gke-master-cluster`=`SOURCE_GKE_MASTER_CLUSTER`
+     A cluster URI for Google Kubernetes Engine master as the source endpoint. 
+`--source-gke-pod`=`SOURCE_GKE_POD`
+     A GKE Pod URI as the source endpoint. 
+`--source-instance`=`SOURCE_INSTANCE`
+     A Compute Engine instance URI as the source endpoint. 
+`--source-ip-address`=`SOURCE_IP_ADDRESS`
+     The IP address of the source which can be an external or internal IP. 
+OPTIONAL FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--bypass-firewall-checks`
+     This boolean controls whether to skip firewall checking. 
+`--description`=`DESCRIPTION`
+     The description of the connectivity test. 
+`--destination-fqdn`=`DESTINATION_FQDN`
+     A hostname as the destination endpoint. Only applicable for Google Kubernetes Engine. 
+`--destination-network`=`DESTINATION_NETWORK`
+     A VPC network URI for the destination endpoint. Used only when the source is an external IP address endpoint, and the destination is an internal IP address endpoint. 
+`--destination-port`=`DESTINATION_PORT`
+     The IP protocol port of the destination. Only applicable when protocol is TCP or UDP. 
+`--destination-project`=`DESTINATION_PROJECT`
+     Project ID of the destination endpoint. 
+`--labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to add. 
+`--other-projects`=[`OTHER_PROJECTS`,…]
+     IDs of other projects involved in the connectivity test, besides the source and destination project. 
+`--protocol`=`PROTOCOL`
+     Type of protocol for the test. When not provided, "TCP" is assumed. 
+`--round-trip`
+     This boolean controls whether return traces (from the destination to the source) will be additionally calculated if packet successfully reaches the destination from the source. 
+`--source-network`=`SOURCE_NETWORK`
+     A VPC network URI for the source endpoint. Used according to the `source-network-type` flag. 
+`--source-network-type`=`SOURCE_NETWORK_TYPE`; default="unspecified"
+     Type of the network where the source is located. `SOURCE_NETWORK_TYPE` must be one of: 
+
+`gcp-network`
+     A VPC network. Should be used for internal IP addresses in VPC networks. The `source-network` field should be set to the URI of this network. Only endpoints within this network will be considered. 
+`internet`
+     Internet. Should be used for internet-routable external IP addresses or IP addresses for global Google APIs and services. 
+`non-gcp-network`
+     A network outside of Google Cloud (for example, an on-premises network or another cloud provider network). Should be used for internal IP addresses outside of Google Cloud. The `source-network` field should be set to the URI of the VPC network containing a corresponding Cloud VPN tunnel, Cloud Interconnect VLAN attachment, or a router appliance instance. Only endpoints reachable from the provided VPC network via the routes to networks outside of Google Cloud will be considered. 
+`unspecified`
+     Unspecified. The test will analyze all possible IP address locations. This might take longer and produce inaccurate or ambiguous results, so prefer specifying an explicit network type. The `source-project` field should be set to the project where the Google Cloud endpoint is located, or where the endpoint outside of Google Cloud should be reachable from (via routes to networks outside of Google Cloud). The project might also be inferred from the Connectivity Test project or other projects referenced in the request. 
+`--source-project`=`SOURCE_PROJECT`
+     Project ID of the source endpoint. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `networkmanagement/v1beta1` API. The full documentation for this API can be found at: <https://cloud.google.com/>
+NOTES
+     This command is currently in beta and might change without notice. This variant is also available: 
+    
+    
+    [gcloud network-management connectivity-tests create](https://docs.cloud.google.com/sdk/gcloud/reference/network-management/connectivity-tests/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-06 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-06 UTC."],[],[]] 

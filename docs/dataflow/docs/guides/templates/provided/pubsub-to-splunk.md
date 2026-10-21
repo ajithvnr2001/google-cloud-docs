@@ -1,0 +1,715 @@
+---
+url: https://docs.cloud.google.com/dataflow/docs/guides/templates/provided/pubsub-to-splunk/
+title: Pub/Sub to Splunk template \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T09:06:18.872379+00:00
+---
+
+# Pub/Sub to Splunk template  |  Cloud Dataflow  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/dataflow/docs/guides/templates/provided/pubsub-to-splunk/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Data analytics ](https://docs.cloud.google.com/docs/data)
+  * [ Cloud Dataflow ](https://docs.cloud.google.com/dataflow/docs)
+  * [ Reference ](https://docs.cloud.google.com/dataflow/docs/apis)
+
+
+
+Send feedback 
+
+#  Pub/Sub to Splunk template Stay organized with collections  Save and categorize content based on your preferences. 
+
+The Pub/Sub to Splunk template is a streaming pipeline that reads messages from a Pub/Sub subscription and writes the message payload to Splunk using Splunk's HTTP Event Collector (HEC). The most common use case of this template is to export logs to Splunk. To see an example of the underlying workflow, see [Deploying production-ready log exports to Splunk using Dataflow](https://docs.cloud.google.com/architecture/deploying-production-ready-log-exports-to-splunk-using-dataflow).
+
+Before writing to Splunk, you can also apply a JavaScript user-defined function to the message payload. Any messages that experience processing failures are forwarded to a Pub/Sub unprocessed topic for further troubleshooting and reprocessing.
+
+As an extra layer of protection for your HEC token, you can also pass in a Cloud KMS key along with the base64-encoded HEC token parameter encrypted with the Cloud KMS key. See the [Cloud KMS API encryption endpoint](https://docs.cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys/encrypt) for additional details on encrypting your HEC token parameter.
+
+## Pipeline requirements
+
+  * The source Pub/Sub subscription must exist prior to running the pipeline.
+  * The Pub/Sub unprocessed topic must exist prior to running the pipeline.
+  * The Splunk HEC endpoint must be accessible from the Dataflow workers' network.
+  * The Splunk HEC token must be generated and available.
+
+
+
+## Template parameters
+
+### Required parameters
+
+  * **inputSubscription** : The Pub/Sub subscription to read the input from. For example, `projects/your-project-id/subscriptions/your-subscription-name`.
+  * **url** : The Splunk HEC URL. The URL must be routable from the VPC that the pipeline runs in. For example, `https://splunk-hec-host:8088`.
+  * **outputDeadletterTopic** : The Pub/Sub topic to forward undeliverable messages to. For example, `projects/<PROJECT_ID>/topics/<TOPIC_NAME>`.
+
+
+
+### Optional parameters
+
+  * **token** : The Splunk HEC authentication token. Must be provided if the `tokenSource` parameter is set to `PLAINTEXT` or `KMS`.
+  * **batchCount** : The batch size for sending multiple events to Splunk. Defaults to `1` (no batching).
+  * **disableCertificateValidation** : Disable SSL certificate validation. Default `false` (validation enabled). If `true`, the certificates are not validated (all certificates are trusted) and `rootCaCertificatePath` parameter is ignored.
+  * **parallelism** : The maximum number of parallel requests. Defaults to `1` (no parallelism).
+  * **includePubsubMessage** : Include the full Pub/Sub message in the payload. Default `false` (only the data element is included in the payload).
+  * **tokenKMSEncryptionKey** : The Cloud KMS key to use to decrypt the HEC token string. This parameter must be provided when tokenSource is set to KMS. If the Cloud KMS key is provided, the HEC token string must be passed in encrypted. For example, `projects/your-project-id/locations/global/keyRings/your-keyring/cryptoKeys/your-key-name`.
+  * **tokenSecretId** : The Secret Manager secret ID for the token. This parameter must provided when the tokenSource is set to `SECRET_MANAGER`. For example, `projects/your-project-id/secrets/your-secret/versions/your-secret-version`.
+  * **tokenSource** : The source of the token. The following values are allowed: `PLAINTEXT`, `KMS`, and `SECRET_MANAGER`. You must provide this parameter when Secret Manager is used. If `tokenSource` is set to `KMS`, `tokenKMSEncryptionKey`, and encrypted, then `token` must be provided. If `tokenSource` is set to `SECRET_MANAGER`, then `tokenSecretId` must be provided. If `tokenSource` is set to `PLAINTEXT`, then `token` must be provided.
+  * **rootCaCertificatePath** : The full URL to the root CA certificate in Cloud Storage. The certificate provided in Cloud Storage must be DER-encoded and can be supplied in binary or printable (Base64) encoding. If the certificate is provided in Base64 encoding, it must be bounded at the beginning by -----BEGIN CERTIFICATE-----, and must be bounded at the end by -----END CERTIFICATE-----. If this parameter is provided, this private CA certificate file is fetched and added to the Dataflow worker's trust store in order to verify the Splunk HEC endpoint's SSL certificate. If this parameter is not provided, the default trust store is used. For example, `gs://mybucket/mycerts/privateCA.crt`.
+  * **enableBatchLogs** : Specifies whether logs should be enabled for batches written to Splunk. Default: `true`.
+  * **enableGzipHttpCompression** : Specifies whether HTTP requests sent to Splunk HEC should be compressed (gzip content encoded). Default: `true`.
+  * **javascriptTextTransformGcsPath** : The Cloud Storage URI of the .js file that defines the JavaScript user-defined function (UDF) to use. For example, `gs://my-bucket/my-udfs/my_file.js`.
+  * **javascriptTextTransformFunctionName** : The name of the JavaScript user-defined function (UDF) to use. For example, if your JavaScript function code is `myTransform(inJson) { /*...do stuff...*/ }`, then the function name is `myTransform`. For sample JavaScript UDFs, see UDF Examples (<https://github.com/GoogleCloudPlatform/DataflowTemplates#udf-examples>).
+  * **javascriptTextTransformReloadIntervalMinutes** : Define the interval that workers may check for JavaScript UDF changes to reload the files. Defaults to: 0.
+  * **unwrapHecForDeadletter** : When enabled, if a message fails to write to Splunk and is sent to the deadletter queue, the original payload will be extracted from the Splunk HEC format before writing to the deadletter topic. This prevents event nesting when messages are replayed. Default: `false`.
+
+
+
+## User-defined function
+
+Optionally, you can extend this template by writing a user-defined function (UDF). The template calls the UDF for each input element. Element payloads are serialized as JSON strings. For more information, see [Create user-defined functions for Dataflow templates](https://docs.cloud.google.com/dataflow/docs/guides/templates/create-template-udf).
+
+### Function specification
+
+The UDF has the following specification:
+
+  * **Input** : the Pub/Sub message data field, serialized as a JSON string.
+  * **Output** : the event data to be sent to the Splunk HEC events endpoint. The output must be a string or a stringified JSON object. 
+
+
+
+## Run the template
+
+### Console
+
+  1. Go to the Dataflow **Create job from template** page.
+[Go to Create job from template](https://console.cloud.google.com/dataflow/createjob)
+  2. In the **Job name** field, enter a unique job name. 
+  3. Optional: For **Regional endpoint** , select a value from the drop-down menu. The default region is `us-central1`. 
+
+For a list of regions where you can run a Dataflow job, see [Dataflow locations](https://docs.cloud.google.com/dataflow/docs/resources/locations). 
+
+  4. From the **Dataflow template** drop-down menu, select the **Pub/Sub to Splunk** template.
+  5. In the provided parameter fields, enter your parameter values.
+  6. Optional: To switch from exactly-once processing to [at-least-once streaming mode](https://docs.cloud.google.com/dataflow/docs/guides/streaming-modes), select **At Least Once**.
+  7. Click **Run job**.
+
+
+
+### gcloud
+
+**Note:** To use the Google Cloud CLI to run classic templates, you must have [Google Cloud CLI](https://docs.cloud.google.com/sdk/docs/install) version 138.0.0 or later. 
+
+In your shell or terminal, run the template:
+    
+    
+    gcloud dataflow jobs run JOB_NAME \
+        --gcs-location gs://dataflow-templates/VERSION/Cloud_PubSub_to_Splunk \
+        --region REGION_NAME \
+        --staging-location STAGING_LOCATION \
+        --parameters \
+    inputSubscription=projects/PROJECT_ID/subscriptions/INPUT_SUBSCRIPTION_NAME,\
+    token=TOKEN,\
+    url=URL,\
+    outputDeadletterTopic=projects/PROJECT_ID/topics/DEADLETTER_TOPIC_NAME,\
+    javascriptTextTransformGcsPath=PATH_TO_JAVASCRIPT_UDF_FILE,\
+    javascriptTextTransformFunctionName=JAVASCRIPT_FUNCTION,\
+    batchCount=BATCH_COUNT,\
+    parallelism=PARALLELISM,\
+    disableCertificateValidation=DISABLE_VALIDATION,\
+    rootCaCertificatePath=ROOT_CA_CERTIFICATE_PATH
+
+Replace the following:
+
+  * `JOB_NAME`: a unique job name of your choice 
+  * `REGION_NAME`: the [region](https://docs.cloud.google.com/dataflow/docs/resources/locations) where you want to deploy your Dataflow job—for example, `us-central1`
+  * `VERSION`: the version of the template that you want to use 
+
+You can use the following values:
+
+    * `latest` to use the latest version of the template, which is available in the **non-dated** parent folder in the bucket— [gs://dataflow-templates/latest/](https://console.cloud.google.com/storage/browser/dataflow-templates/latest)
+    * the version name, like `2023-09-12-00_RC00`, to use a specific version of the template, which can be found nested in the respective dated parent folder in the bucket— [gs://dataflow-templates/](https://console.cloud.google.com/storage/browser/dataflow-templates)
+**Caution:** The **latest** version of templates might update with breaking changes. Your production environments should use templates kept in the most recent **dated** parent folder to prevent these breaking changes from affecting your production workflows. 
+  * `STAGING_LOCATION`: the location for staging local files (for example, `gs://your-bucket/staging`)
+  * `INPUT_SUBSCRIPTION_NAME`: the Pub/Sub subscription name
+  * `TOKEN`: Splunk's Http Event Collector token
+  * `URL`: the URL path for Splunk's Http Event Collector (for example, `https://splunk-hec-host:8088`)
+  * `DEADLETTER_TOPIC_NAME`: the Pub/Sub topic name
+  * `JAVASCRIPT_FUNCTION`: the name of the JavaScript user-defined function (UDF) that you want to use 
+
+For example, if your JavaScript function code is `myTransform(inJson) { /*...do stuff...*/ }`, then the function name is `myTransform`. For sample JavaScript UDFs, see [UDF Examples](https://github.com/GoogleCloudPlatform/DataflowTemplates#udf-examples). 
+
+  * `PATH_TO_JAVASCRIPT_UDF_FILE`: the Cloud Storage URI of the `.js` file that defines the JavaScript user-defined function (UDF) you want to use—for example, `gs://my-bucket/my-udfs/my_file.js`
+  * `BATCH_COUNT`: the batch size to use for sending multiple events to Splunk
+  * `PARALLELISM`: the number of parallel requests to use for sending events to Splunk
+  * `DISABLE_VALIDATION`: `true` if you want to disable SSL certificate validation
+  * `ROOT_CA_CERTIFICATE_PATH`: the path to root CA certificate in Cloud Storage (for example, `gs://your-bucket/privateCA.crt`)
+
+
+
+### API
+
+To run the template using the REST API, send an HTTP POST request. For more information on the API and its authorization scopes, see [`projects.templates.launch`](https://docs.cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.templates/launch).
+    
+    
+    POST https://dataflow.googleapis.com/v1b3/projects/PROJECT_ID/locations/LOCATION/templates:launch?gcsPath=gs://dataflow-templates/VERSION/Cloud_PubSub_to_Splunk
+    {
+       "jobName": "JOB_NAME",
+       "environment": {
+           "ipConfiguration": "WORKER_IP_UNSPECIFIED",
+           "additionalExperiments": []
+       },
+       "parameters": {
+           "inputSubscription": "projects/PROJECT_ID/subscriptions/INPUT_SUBSCRIPTION_NAME",
+           "token": "TOKEN",
+           "url": "URL",
+           "outputDeadletterTopic": "projects/PROJECT_ID/topics/DEADLETTER_TOPIC_NAME",
+           "javascriptTextTransformGcsPath": "PATH_TO_JAVASCRIPT_UDF_FILE",
+           "javascriptTextTransformFunctionName": "JAVASCRIPT_FUNCTION",
+           "batchCount": "BATCH_COUNT",
+           "parallelism": "PARALLELISM",
+           "disableCertificateValidation": "DISABLE_VALIDATION",
+           "rootCaCertificatePath": "ROOT_CA_CERTIFICATE_PATH"
+       }
+    }
+
+Replace the following:
+
+  * `PROJECT_ID`: the Google Cloud project ID where you want to run the Dataflow job 
+  * `JOB_NAME`: a unique job name of your choice 
+  * `LOCATION`: the [region](https://docs.cloud.google.com/dataflow/docs/resources/locations) where you want to deploy your Dataflow job—for example, `us-central1`
+  * `VERSION`: the version of the template that you want to use 
+
+You can use the following values:
+
+    * `latest` to use the latest version of the template, which is available in the **non-dated** parent folder in the bucket— [gs://dataflow-templates/latest/](https://console.cloud.google.com/storage/browser/dataflow-templates/latest)
+    * the version name, like `2023-09-12-00_RC00`, to use a specific version of the template, which can be found nested in the respective dated parent folder in the bucket— [gs://dataflow-templates/](https://console.cloud.google.com/storage/browser/dataflow-templates)
+**Caution:** The **latest** version of templates might update with breaking changes. Your production environments should use templates kept in the most recent **dated** parent folder to prevent these breaking changes from affecting your production workflows. 
+  * `STAGING_LOCATION`: the location for staging local files (for example, `gs://your-bucket/staging`)
+  * `INPUT_SUBSCRIPTION_NAME`: the Pub/Sub subscription name
+  * `TOKEN`: Splunk's Http Event Collector token
+  * `URL`: the URL path for Splunk's Http Event Collector (for example, `https://splunk-hec-host:8088`)
+  * `DEADLETTER_TOPIC_NAME`: the Pub/Sub topic name
+  * `JAVASCRIPT_FUNCTION`: the name of the JavaScript user-defined function (UDF) that you want to use 
+
+For example, if your JavaScript function code is `myTransform(inJson) { /*...do stuff...*/ }`, then the function name is `myTransform`. For sample JavaScript UDFs, see [UDF Examples](https://github.com/GoogleCloudPlatform/DataflowTemplates#udf-examples). 
+
+  * `PATH_TO_JAVASCRIPT_UDF_FILE`: the Cloud Storage URI of the `.js` file that defines the JavaScript user-defined function (UDF) you want to use—for example, `gs://my-bucket/my-udfs/my_file.js`
+  * `BATCH_COUNT`: the batch size to use for sending multiple events to Splunk
+  * `PARALLELISM`: the number of parallel requests to use for sending events to Splunk
+  * `DISABLE_VALIDATION`: `true` if you want to disable SSL certificate validation
+  * `ROOT_CA_CERTIFICATE_PATH`: the path to root CA certificate in Cloud Storage (for example, `gs://your-bucket/privateCA.crt`)
+
+
+
+## Template source code
+
+### Java
+    
+    
+    /*
+     * Copyright (C) 2019 Google LLC
+     *
+     * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+     * use this file except in compliance with the License. You may obtain a copy of
+     * the License at
+     *
+     *   http://www.apache.org/licenses/LICENSE-2.0
+     *
+     * Unless required by applicable law or agreed to in writing, software
+     * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+     * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+     * License for the specific language governing permissions and limitations under
+     * the License.
+     */
+    package com.google.cloud.teleport.templates;
+    
+    import com.google.cloud.teleport.coders.FailsafeElementCoder;
+    import com.google.cloud.teleport.metadata.Template;
+    import com.google.cloud.teleport.metadata.TemplateCategory;
+    import com.google.cloud.teleport.metadata.TemplateParameter;
+    import com.google.cloud.teleport.splunk.SplunkEvent;
+    import com.google.cloud.teleport.splunk.SplunkEventCoder;
+    import com.google.cloud.teleport.splunk.SplunkIO;
+    import com.google.cloud.teleport.splunk.SplunkWriteError;
+    import com.google.cloud.teleport.templates.PubSubToSplunk.PubSubToSplunkOptions;
+    import com.google.cloud.teleport.templates.common.ErrorConverters;
+    import com.google.cloud.teleport.templates.common.JavascriptTextTransformer.FailsafeJavascriptUdf;
+    import com.google.cloud.teleport.templates.common.JavascriptTextTransformer.JavascriptTextTransformerOptions;
+    import com.google.cloud.teleport.templates.common.PubsubConverters.PubsubReadSubscriptionOptions;
+    import com.google.cloud.teleport.templates.common.PubsubConverters.PubsubWriteDeadletterTopicOptions;
+    import com.google.cloud.teleport.templates.common.SplunkConverters;
+    import com.google.cloud.teleport.templates.common.SplunkConverters.SplunkOptions;
+    import com.google.cloud.teleport.util.TokenNestedValueProvider;
+    import com.google.cloud.teleport.values.FailsafeElement;
+    import com.google.common.annotations.VisibleForTesting;
+    import com.google.gson.Gson;
+    import com.google.gson.JsonObject;
+    import com.google.gson.JsonSyntaxException;
+    import java.nio.charset.StandardCharsets;
+    import java.util.Map;
+    import org.apache.beam.sdk.Pipeline;
+    import org.apache.beam.sdk.PipelineResult;
+    import org.apache.beam.sdk.coders.CoderRegistry;
+    import org.apache.beam.sdk.coders.StringUtf8Coder;
+    import org.apache.beam.sdk.io.gcp.pubsub.PubsubIO;
+    import org.apache.beam.sdk.io.gcp.pubsub.PubsubMessage;
+    import org.apache.beam.sdk.metrics.Counter;
+    import org.apache.beam.sdk.metrics.Metrics;
+    import org.apache.beam.sdk.options.PipelineOptionsFactory;
+    import org.apache.beam.sdk.options.ValueProvider;
+    import org.apache.beam.sdk.transforms.DoFn;
+    import org.apache.beam.sdk.transforms.Flatten;
+    import org.apache.beam.sdk.transforms.MapElements;
+    import org.apache.beam.sdk.transforms.PTransform;
+    import org.apache.beam.sdk.transforms.ParDo;
+    import org.apache.beam.sdk.values.PBegin;
+    import org.apache.beam.sdk.values.PCollection;
+    import org.apache.beam.sdk.values.PCollectionList;
+    import org.apache.beam.sdk.values.PCollectionTuple;
+    import org.apache.beam.sdk.values.TupleTag;
+    import org.apache.beam.vendor.guava.v32_1_2_jre.com.google.common.base.MoreObjects;
+    import org.apache.beam.vendor.guava.v32_1_2_jre.com.google.common.collect.ImmutableList;
+    import org.json.JSONException;
+    import org.json.JSONObject;
+    import org.slf4j.Logger;
+    import org.slf4j.LoggerFactory;
+    
+    /**
+     * The {@link PubSubToSplunk} pipeline is a streaming pipeline which ingests data from Cloud
+     * Pub/Sub, executes a UDF, converts the output to {@link SplunkEvent}s and writes those records
+     * into Splunk's HEC endpoint. Any errors which occur in the execution of the UDF, conversion to
+     * {@link SplunkEvent} or writing to HEC will be streamed into a Pub/Sub topic.
+     *
+     * <p><b>Pipeline Requirements</b>
+     *
+     * <ul>
+     *   <li>The source Pub/Sub subscription exists.
+     *   <li>HEC end-point is routable from the VPC where the Dataflow job executes.
+     *   <li>Deadletter topic exists.
+     * </ul>
+     *
+     * <p>Check out <a
+     * href="https://github.com/GoogleCloudPlatform/DataflowTemplates/blob/main/v1/README_Cloud_PubSub_to_Splunk.md">README</a>
+     * for instructions on how to use or modify this template.
+     */
+    @Template(
+        name = "Cloud_PubSub_to_Splunk",
+        category = TemplateCategory.STREAMING,
+        displayName = "Pub/Sub to Splunk",
+        description = {
+          "The Pub/Sub to Splunk template is a streaming pipeline that reads messages from a Pub/Sub subscription and writes the message payload to Splunk via Splunk's HTTP Event Collector (HEC). The most common use case of this template is to export logs to Splunk. "
+              + "To see an example of the underlying workflow, see <a href=\"https://cloud.google.com/architecture/deploying-production-ready-log-exports-to-splunk-using-dataflow\">Deploying production-ready log exports to Splunk using Dataflow</a>.\n",
+          "Before writing to Splunk, you can also apply a JavaScript user-defined function to the message payload. "
+              + "Any messages that experience processing failures are forwarded to a Pub/Sub unprocessed topic for further troubleshooting and reprocessing.\n",
+          "As an extra layer of protection for your HEC token, you can also pass in a Cloud KMS key along with the base64-encoded HEC token parameter encrypted with the Cloud KMS key. "
+              + "See the <a href=\"https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys/encrypt\">Cloud KMS API encryption endpoint</a> for additional details on encrypting your HEC token parameter."
+        },
+        optionsClass = PubSubToSplunkOptions.class,
+        optionsOrder = {
+          PubsubReadSubscriptionOptions.class,
+          SplunkOptions.class,
+          JavascriptTextTransformerOptions.class,
+          PubsubWriteDeadletterTopicOptions.class
+        },
+        documentation =
+            "https://cloud.google.com/dataflow/docs/guides/templates/provided/pubsub-to-splunk",
+        contactInformation = "https://cloud.google.com/support",
+        requirements = {
+          "The source Pub/Sub subscription must exist prior to running the pipeline.",
+          "The Pub/Sub unprocessed topic must exist prior to running the pipeline.",
+          "The Splunk HEC endpoint must be accessible from the Dataflow workers' network.",
+          "The Splunk HEC token must be generated and available."
+        },
+        streaming = true,
+        supportsAtLeastOnce = true,
+        supportsExactlyOnce = true)
+    public class PubSubToSplunk {
+    
+      /** String/String Coder for FailsafeElement. */
+      public static final FailsafeElementCoder<String, String> FAILSAFE_ELEMENT_CODER =
+          FailsafeElementCoder.of(StringUtf8Coder.of(), StringUtf8Coder.of());
+    
+      /** Counter to track inbound messages from source. */
+      private static final Counter INPUT_MESSAGES_COUNTER =
+          Metrics.counter(PubSubToSplunk.class, "inbound-pubsub-messages");
+    
+      /** The tag for successful {@link SplunkEvent} conversion. */
+      private static final TupleTag<SplunkEvent> SPLUNK_EVENT_OUT = new TupleTag<SplunkEvent>() {};
+    
+      /** The tag for failed {@link SplunkEvent} conversion. */
+      private static final TupleTag<FailsafeElement<String, String>> SPLUNK_EVENT_DEADLETTER_OUT =
+          new TupleTag<FailsafeElement<String, String>>() {};
+    
+      /** The tag for the main output for the UDF. */
+      private static final TupleTag<FailsafeElement<String, String>> UDF_OUT =
+          new TupleTag<FailsafeElement<String, String>>() {};
+    
+      /** The tag for the dead-letter output of the udf. */
+      private static final TupleTag<FailsafeElement<String, String>> UDF_DEADLETTER_OUT =
+          new TupleTag<FailsafeElement<String, String>>() {};
+    
+      /** GSON to process a {@link PubsubMessage}. */
+      private static final Gson GSON = new Gson();
+    
+      /** Logger for class. */
+      private static final Logger LOG = LoggerFactory.getLogger(PubSubToSplunk.class);
+    
+      private static final Boolean DEFAULT_INCLUDE_PUBSUB_MESSAGE = false;
+    
+      @VisibleForTesting protected static final String PUBSUB_MESSAGE_ATTRIBUTE_FIELD = "attributes";
+      @VisibleForTesting protected static final String PUBSUB_MESSAGE_DATA_FIELD = "data";
+      private static final String PUBSUB_MESSAGE_ID_FIELD = "messageId";
+    
+      /**
+       * The main entry-point for pipeline execution. This method will start the pipeline but will not
+       * wait for it's execution to finish. If blocking execution is required, use the {@link
+       * PubSubToSplunk#run(PubSubToSplunkOptions)} method to start the pipeline and invoke {@code
+       * result.waitUntilFinish()} on the {@link PipelineResult}.
+       *
+       * @param args The command-line args passed by the executor.
+       */
+      public static void main(String[] args) {
+    
+        PubSubToSplunkOptions options =
+            PipelineOptionsFactory.fromArgs(args).withValidation().as(PubSubToSplunkOptions.class);
+    
+        run(options);
+      }
+    
+      /**
+       * Runs the pipeline to completion with the specified options. This method does not wait until the
+       * pipeline is finished before returning. Invoke {@code result.waitUntilFinish()} on the result
+       * object to block until the pipeline is finished running if blocking programmatic execution is
+       * required.
+       *
+       * @param options The execution options.
+       * @return The pipeline result.
+       */
+      public static PipelineResult run(PubSubToSplunkOptions options) {
+    
+        Pipeline pipeline = Pipeline.create(options);
+    
+        // Register coders.
+        CoderRegistry registry = pipeline.getCoderRegistry();
+        registry.registerCoderForClass(SplunkEvent.class, SplunkEventCoder.of());
+        registry.registerCoderForType(
+            FAILSAFE_ELEMENT_CODER.getEncodedTypeDescriptor(), FAILSAFE_ELEMENT_CODER);
+    
+        /*
+         * Steps:
+         *  1) Read messages in from Pub/Sub
+         *  2) Convert message to FailsafeElement for processing.
+         *  3) Apply user provided UDF (if any) on the input strings.
+         *  4) Convert successfully transformed messages into SplunkEvent objects
+         *  5) Write SplunkEvents to Splunk's HEC end point.
+         *  5a) Wrap write failures into a FailsafeElement.
+         *  6) Collect errors from UDF transform (#3), SplunkEvent transform (#4)
+         *     and writing to Splunk HEC (#5) and stream into a Pub/Sub deadletter topic.
+         */
+    
+        // 1) Read messages in from Pub/Sub
+        PCollection<String> stringMessages =
+            pipeline.apply(
+                "ReadMessages",
+                new ReadMessages(options.getInputSubscription(), options.getIncludePubsubMessage()));
+    
+        // 2) Convert message to FailsafeElement for processing.
+        PCollectionTuple transformedOutput =
+            stringMessages
+                .apply(
+                    "ConvertToFailsafeElement",
+                    MapElements.into(FAILSAFE_ELEMENT_CODER.getEncodedTypeDescriptor())
+                        .via(input -> FailsafeElement.of(input, input)))
+    
+                // 3) Apply user provided UDF (if any) on the input strings.
+                .apply(
+                    "ApplyUDFTransformation",
+                    FailsafeJavascriptUdf.<String>newBuilder()
+                        .setFileSystemPath(options.getJavascriptTextTransformGcsPath())
+                        .setFunctionName(options.getJavascriptTextTransformFunctionName())
+                        .setReloadIntervalMinutes(
+                            options.getJavascriptTextTransformReloadIntervalMinutes())
+                        .setLoggingEnabled(ValueProvider.StaticValueProvider.of(true))
+                        .setSuccessTag(UDF_OUT)
+                        .setFailureTag(UDF_DEADLETTER_OUT)
+                        .build());
+    
+        // 4) Convert successfully transformed messages into SplunkEvent objects
+        PCollectionTuple convertToEventTuple =
+            transformedOutput
+                .get(UDF_OUT)
+                .apply(
+                    "ConvertToSplunkEvent",
+                    SplunkConverters.failsafeStringToSplunkEvent(
+                        SPLUNK_EVENT_OUT, SPLUNK_EVENT_DEADLETTER_OUT));
+    
+        // 5) Write SplunkEvents to Splunk's HEC end point.
+        PCollection<SplunkWriteError> writeErrors =
+            convertToEventTuple
+                .get(SPLUNK_EVENT_OUT)
+                .apply(
+                    "WriteToSplunk",
+                    SplunkIO.writeBuilder()
+                        .withToken(
+                            new TokenNestedValueProvider(
+                                options.getTokenSecretId(),
+                                options.getTokenKMSEncryptionKey(),
+                                options.getToken(),
+                                options.getTokenSource()))
+                        .withUrl(options.getUrl())
+                        .withBatchCount(options.getBatchCount())
+                        .withParallelism(options.getParallelism())
+                        .withDisableCertificateValidation(options.getDisableCertificateValidation())
+                        .withRootCaCertificatePath(options.getRootCaCertificatePath())
+                        .withEnableBatchLogs(options.getEnableBatchLogs())
+                        .withEnableGzipHttpCompression(options.getEnableGzipHttpCompression())
+                        .build());
+    
+        final ValueProvider<Boolean> unwrapHecProvider = options.getUnwrapHecForDeadletter();
+    
+        // 5a) Wrap write failures into a FailsafeElement.
+        PCollection<FailsafeElement<String, String>> wrappedSplunkWriteErrors =
+            writeErrors.apply(
+                "WrapSplunkWriteErrors",
+                ParDo.of(
+                    new DoFn<SplunkWriteError, FailsafeElement<String, String>>() {
+    
+                      private boolean unwrapHecForDeadletter = false;
+    
+                      @Setup
+                      public void setup() {
+                        if (unwrapHecProvider != null) {
+                          unwrapHecForDeadletter =
+                              MoreObjects.firstNonNull(unwrapHecProvider.get(), false);
+                        }
+                        LOG.info("unwrapHecForDeadletter set to: {}", unwrapHecForDeadletter);
+                      }
+    
+                      @ProcessElement
+                      public void processElement(ProcessContext context) {
+                        SplunkWriteError error = context.element();
+    
+                        // Extract original payload if unwrap is enabled
+                        String payload = error.payload();
+                        if (unwrapHecForDeadletter) {
+                          payload = extractOriginalPayloadFromHec(payload);
+                        }
+    
+                        FailsafeElement<String, String> failsafeElement =
+                            FailsafeElement.of(payload, payload);
+    
+                        if (error.statusMessage() != null) {
+                          failsafeElement.setErrorMessage(error.statusMessage());
+                        }
+    
+                        if (error.statusCode() != null) {
+                          failsafeElement.setErrorMessage(
+                              String.format("Splunk write status code: %d", error.statusCode()));
+                        }
+                        context.output(failsafeElement);
+                      }
+                    }));
+    
+        // 6) Collect errors from UDF transform (#4), SplunkEvent transform (#5)
+        //     and writing to Splunk HEC (#6) and stream into a Pub/Sub deadletter topic.
+        PCollectionList.of(
+                ImmutableList.of(
+                    convertToEventTuple.get(SPLUNK_EVENT_DEADLETTER_OUT),
+                    wrappedSplunkWriteErrors,
+                    transformedOutput.get(UDF_DEADLETTER_OUT)))
+            .apply("FlattenErrors", Flatten.pCollections())
+            .apply(
+                "WriteFailedRecords",
+                ErrorConverters.WriteStringMessageErrorsToPubSub.newBuilder()
+                    .setErrorRecordsTopic(options.getOutputDeadletterTopic())
+                    .build());
+    
+        return pipeline.run();
+      }
+    
+      /**
+       * The {@link PubSubToSplunkOptions} class provides the custom options passed by the executor at
+       * the command line.
+       */
+      public interface PubSubToSplunkOptions
+          extends SplunkOptions,
+              PubsubReadSubscriptionOptions,
+              PubsubWriteDeadletterTopicOptions,
+              JavascriptTextTransformerOptions {
+    
+        @TemplateParameter.Boolean(
+            optional = true,
+            description = "Unwrap Splunk HEC format from deadletter messages.",
+            helpText =
+                "When enabled, if a message fails to write to Splunk and is sent to the deadletter "
+                    + "queue, the original payload will be extracted from the Splunk HEC format before "
+                    + "writing to the deadletter topic. This prevents event nesting when messages are "
+                    + "replayed. Default: `false`.")
+        ValueProvider<Boolean> getUnwrapHecForDeadletter();
+    
+        void setUnwrapHecForDeadletter(ValueProvider<Boolean> unwrapHecForDeadletter);
+      }
+    
+      /**
+       * A {@link PTransform} that reads messages from a Pub/Sub subscription, increments a counter and
+       * returns a {@link PCollection} of {@link String} messages.
+       */
+      private static class ReadMessages extends PTransform<PBegin, PCollection<String>> {
+        private final ValueProvider<String> subscriptionName;
+        private final ValueProvider<Boolean> inputIncludePubsubMessageFlag;
+        private Boolean includePubsubMessage;
+    
+        ReadMessages(
+            ValueProvider<String> subscriptionName,
+            ValueProvider<Boolean> inputIncludePubsubMessageFlag) {
+          this.subscriptionName = subscriptionName;
+          this.inputIncludePubsubMessageFlag = inputIncludePubsubMessageFlag;
+        }
+    
+        @Override
+        public PCollection<String> expand(PBegin input) {
+          return input
+              .apply(
+                  "ReadPubsubMessage",
+                  PubsubIO.readMessagesWithAttributes().fromSubscription(subscriptionName))
+              .apply(
+                  "ExtractMessageIfRequired",
+                  ParDo.of(
+                      new DoFn<PubsubMessage, String>() {
+    
+                        @Setup
+                        public void setup() {
+                          if (inputIncludePubsubMessageFlag != null) {
+                            includePubsubMessage = inputIncludePubsubMessageFlag.get();
+                          }
+                          includePubsubMessage =
+                              MoreObjects.firstNonNull(
+                                  includePubsubMessage, DEFAULT_INCLUDE_PUBSUB_MESSAGE);
+                          LOG.info("includePubsubMessage set to: {}", includePubsubMessage);
+                        }
+    
+                        @ProcessElement
+                        public void processElement(ProcessContext context) {
+                          if (includePubsubMessage) {
+                            context.output(formatPubsubMessage(context.element()));
+                          } else {
+                            context.output(
+                                new String(context.element().getPayload(), StandardCharsets.UTF_8));
+                          }
+                        }
+                      }))
+              .apply(
+                  "CountMessages",
+                  ParDo.of(
+                      new DoFn<String, String>() {
+                        @ProcessElement
+                        public void processElement(ProcessContext context) {
+                          INPUT_MESSAGES_COUNTER.inc();
+                          context.output(context.element());
+                        }
+                      }));
+        }
+      }
+    
+      /**
+       * Utility method that formats {@link org.apache.beam.sdk.io.gcp.pubsub.PubsubMessage} according
+       * to the model defined in {@link com.google.pubsub.v1.PubsubMessage}.
+       *
+       * @param pubsubMessage {@link org.apache.beam.sdk.io.gcp.pubsub.PubsubMessage}
+       * @return JSON String that adheres to the model defined in {@link
+       *     com.google.pubsub.v1.PubsubMessage}
+       */
+      @VisibleForTesting
+      protected static String formatPubsubMessage(PubsubMessage pubsubMessage) {
+        JsonObject messageJson = new JsonObject();
+    
+        String payload = new String(pubsubMessage.getPayload(), StandardCharsets.UTF_8);
+        try {
+          JsonObject data = GSON.fromJson(payload, JsonObject.class);
+          messageJson.add(PUBSUB_MESSAGE_DATA_FIELD, data);
+        } catch (JsonSyntaxException e) {
+          messageJson.addProperty(PUBSUB_MESSAGE_DATA_FIELD, payload);
+        }
+    
+        JsonObject attributes = getAttributesJson(pubsubMessage.getAttributeMap());
+        messageJson.add(PUBSUB_MESSAGE_ATTRIBUTE_FIELD, attributes);
+    
+        if (pubsubMessage.getMessageId() != null) {
+          messageJson.addProperty(PUBSUB_MESSAGE_ID_FIELD, pubsubMessage.getMessageId());
+        }
+    
+        return messageJson.toString();
+      }
+    
+      /**
+       * Constructs a {@link JsonObject} from a {@link Map} of Pub/Sub attributes.
+       *
+       * @param attributesMap {@link Map} of Pub/Sub attributes
+       * @return {@link JsonObject} of Pub/Sub attributes
+       */
+      private static JsonObject getAttributesJson(Map<String, String> attributesMap) {
+        JsonObject attributesJson = new JsonObject();
+        for (String key : attributesMap.keySet()) {
+          attributesJson.addProperty(key, attributesMap.get(key));
+        }
+    
+        return attributesJson;
+      }
+    
+      /**
+       * Extracts the original payload from a Splunk HEC-formatted JSON string.
+       *
+       * <p>When a SplunkEvent fails to write to Splunk, it's stored in HEC format like: {"event":
+       * "original payload", "time": ..., "host": ..., etc.}
+       *
+       * <p>This method extracts just the "event" field to prevent nesting when replaying messages from
+       * the deadletter queue.
+       *
+       * @param hecPayload The HEC-formatted JSON string
+       * @return The original event payload, or the input if extraction fails
+       */
+      @VisibleForTesting
+      protected static String extractOriginalPayloadFromHec(String hecPayload) {
+        try {
+          JSONObject json = new JSONObject(hecPayload);
+    
+          // Check if this looks like HEC format (has "event" field)
+          if (json.has("event")) {
+            Object eventObj = json.get("event");
+    
+            // The event field could be a JSON object/array or a string
+            if (eventObj instanceof String) {
+              return (String) eventObj;
+            } else {
+              // If it's a JSONObject or JSONArray, return its string
+              // representation
+              return eventObj.toString();
+            }
+          }
+        } catch (JSONException e) {
+          // If parsing fails, log and return the original
+          LOG.debug("Failed to parse payload as HEC JSON, returning as-is. Error: {}", e.getMessage());
+        }
+    
+        // If no "event" field found or parsing failed, return original
+        return hecPayload;
+      }
+    }
+    
+
+## What's next
+
+  * Learn about [Dataflow templates](https://docs.cloud.google.com/dataflow/docs/concepts/dataflow-templates).
+  * See the list of [Google-provided templates](https://docs.cloud.google.com/dataflow/docs/guides/templates/provided-templates).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

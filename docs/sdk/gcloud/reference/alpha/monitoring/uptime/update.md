@@ -1,0 +1,350 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/monitoring/uptime/update/
+title: gcloud alpha monitoring uptime update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T07:49:16.785520+00:00
+---
+
+# gcloud alpha monitoring uptime update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/monitoring/uptime/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha monitoring uptime update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha monitoring uptime update - update an existing uptime check or synthetic monitor 
+SYNOPSIS
+    
+
+`gcloud alpha monitoring uptime update` `CHECK_ID` [`--body`=`BODY` `--content-type`=`CONTENT_TYPE` `--custom-content-type`=`CUSTOM_CONTENT_TYPE` `--mask-headers`=`MASK_HEADERS` `--password`=`PASSWORD` `--path`=`PATH` `--pings-count`=`PINGS_COUNT` `--port`=`PORT` `--request-method`=`REQUEST_METHOD` `--service-agent-auth`=`SERVICE_AGENT_AUTH` `--username`=`USERNAME` `--validate-ssl`=`VALIDATE_SSL` `--add-status-classes`=[`status-class`,…] | `--clear-status-classes`=`CLEAR_STATUS_CLASSES` | `--remove-status-classes`=[`status-class`,…] | `--set-status-classes`=[`status-class`,…] | `--add-status-codes`=[`status-code`,…] | `--clear-status-codes`=`CLEAR_STATUS_CODES` | `--remove-status-codes`=[`status-code`,…] | `--set-status-codes`=[`status-code`,…] `--update-headers`=[`KEY`=`VALUE`,…] `--clear-headers`=`CLEAR_HEADERS` | `--remove-headers`=[`KEY`,…]] [`--display-name`=`DISPLAY_NAME` `--period`=`PERIOD` `--timeout`=`TIMEOUT` `--add-regions`=[`region`,…] | `--clear-regions`=`CLEAR_REGIONS` | `--remove-regions`=[`region`,…] | `--set-regions`=[`region`,…] `--update-user-labels`=[`KEY`=`VALUE`,…] `--clear-user-labels` | `--remove-user-labels`=[`KEY`,…]] [`--matcher-content`=`MATCHER_CONTENT` : `--matcher-type`=`MATCHER_TYPE` [`--json-path`=`JSON_PATH` : `--json-path-matcher-type`=`JSON_PATH_MATCHER_TYPE`]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` Updates an existing uptime check or synthetic monitor. 
+
+Flags only apply to uptime checks unless noted that they apply to synthetic monitors. 
+
+For information about the JSON/YAML format of an uptime check: <https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.uptimeCheckConfigs>
+
+EXAMPLES
+     To update an uptime check or synthetic monitor, run: 
+    
+    
+    gcloud alpha monitoring uptime update CHECK_ID --period=5 --timeout=30
+
+POSITIONAL ARGUMENTS
+    
+
+Uptime check or synthetic monitor resource - Name of the uptime check or synthetic monitor to be updated. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `check_id` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`CHECK_ID`
+     ID of the uptime check or synthetic monitor or fully qualified identifier for the uptime check or synthetic monitor. 
+
+To set the `check_id` attribute: 
+
+  * provide the argument `check_id` on the command line. 
+
+
+FLAGS
+    
+
+Uptime check protocol settings. 
+`--body`=`BODY`
+     The request body associated with the HTTP POST request. Can only be set if `--protocol` is `http` or `https`. 
+`--content-type`=`CONTENT_TYPE`
+     The content type header to use for the check, defaults to `unspecified`. Can only be set if `--protocol` is `http` or `https`. 
+
+`CONTENT_TYPE` must be one of: 
+
+`unspecified`
+     Not specified 
+`url-encoded`
+     URL encoded 
+`user-provided`
+     User provided 
+`--custom-content-type`=`CUSTOM_CONTENT_TYPE`
+     A user-provided content type header to use for the check. Can only be set if `--protocol` is `http` or `https`. 
+`--mask-headers`=`MASK_HEADERS`
+     Whether to encrypt the header information, defaults to `false`. Can only be set if `--protocol` is `http` or `https`. 
+`--password`=`PASSWORD`
+     The password to use when authenticating with the HTTP server. Can only be set if `--protocol` is `http` or `https`. 
+`--path`=`PATH`
+     The path to the page against which to run the check, defaults to `/`. Can only be set if `--protocol` is `http` or `https`. 
+`--pings-count`=`PINGS_COUNT`
+     Number of ICMP pings to send alongside the request. 
+`--port`=`PORT`
+     The port on the server against which to run the check. Defaults to `80` when `--protocol` is `http`. Defaults to `443` when `--protocol` is `https`. Required if `--protocol` is `tcp`. 
+`--request-method`=`REQUEST_METHOD`
+     The HTTP request method to use, defaults to `get`. Can only be set if `--protocol` is `http` or `https`. 
+
+`REQUEST_METHOD` must be one of: 
+
+`get`
+     HTTP GET method 
+`post`
+     HTTP POST method 
+Uptime check service agent authorization. 
+`--service-agent-auth`=`SERVICE_AGENT_AUTH`
+     The type of authentication to use for the HTTP request. Can only be set if `--protocol` is `https`. 
+
+`SERVICE_AGENT_AUTH` must be (only one value is supported): 
+
+`oidc-token`
+     OIDC Token authentication 
+`--username`=`USERNAME`
+     The username to use when authenticating with the HTTP server. Can only be set if `--protocol` is `http` or `https`. 
+`--validate-ssl`=`VALIDATE_SSL`
+     Whether to include SSL certificate validation as a part of the uptime check, defaults to `false`. Can only be set if `--protocol` is `http` or `https`. 
+Uptime check status. 
+
+At most one of these can be specified: 
+
+Uptime check status classes. 
+
+At most one of these can be specified: 
+
+`--add-status-classes`=[`status-class`,…]
+     The list of HTTP status classes to add to the uptime check. `status-class` must be one of: 
+
+`1xx`
+     Any response code from 100-199 inclusive 
+`2xx`
+     Any response code from 200-299 inclusive 
+`3xx`
+     Any response code from 300-399 inclusive 
+`4xx`
+     Any response code from 400-499 inclusive 
+`5xx`
+     Any response code from 500-599 inclusive 
+`any`
+     Any response code 
+`--clear-status-classes`=`CLEAR_STATUS_CLASSES`
+     Clear all HTTP status classes on the uptime check. Setting this flag is the same as selecting only the `2xx` status class. 
+`--remove-status-classes`=[`status-class`,…]
+     The list of HTTP status classes to remove from the uptime check. `status-class` must be one of: 
+
+`1xx`
+     Any response code from 100-199 inclusive 
+`2xx`
+     Any response code from 200-299 inclusive 
+`3xx`
+     Any response code from 300-399 inclusive 
+`4xx`
+     Any response code from 400-499 inclusive 
+`5xx`
+     Any response code from 500-599 inclusive 
+`any`
+     Any response code 
+`--set-status-classes`=[`status-class`,…]
+     List of HTTP status classes. The uptime check will only pass if the response code is contained in this list. 
+
+`status-class` must be one of: 
+
+`1xx`
+     Any response code from 100-199 inclusive 
+`2xx`
+     Any response code from 200-299 inclusive 
+`3xx`
+     Any response code from 300-399 inclusive 
+`4xx`
+     Any response code from 400-499 inclusive 
+`5xx`
+     Any response code from 500-599 inclusive 
+`any`
+     Any response code 
+Uptime check status codes. 
+
+At most one of these can be specified: 
+
+`--add-status-codes`=[`status-code`,…]
+     The list of HTTP status codes to add to the uptime check. 
+`--clear-status-codes`=`CLEAR_STATUS_CODES`
+     Clear all HTTP status codes on the uptime check. Setting this flag is the same as selecting only the `2xx` status class. 
+`--remove-status-codes`=[`status-code`,…]
+     The list of HTTP status codes to remove from the uptime check. 
+`--set-status-codes`=[`status-code`,…]
+     List of HTTP status codes. The uptime check will only pass if the response code is present in this list. 
+Uptime check headers. 
+`--update-headers`=[`KEY`=`VALUE`,…]
+     The list of headers to add to the uptime check. Any existing headers with matching "key" are overridden by the provided values. 
+Uptime check remove headers. 
+
+At most one of these can be specified: 
+
+`--clear-headers`=`CLEAR_HEADERS`
+     Clear all headers on the uptime check. 
+`--remove-headers`=[`KEY`,…]
+     The list of header keys to remove from the uptime check. 
+Settings. 
+`--display-name`=`DISPLAY_NAME`
+     The display name for the uptime check or synthetic monitor. 
+`--period`=`PERIOD`
+     The time between uptime check or synthetic monitor executions in minutes, defaults to `1`. Can be set for synthetic monitors. 
+
+`PERIOD` must be one of: 
+
+`1`
+     One minute 
+`10`
+     Ten minutes 
+`15`
+     Fifteen minutes 
+`5`
+     Five minutes 
+`--timeout`=`TIMEOUT`
+     The maximum amount of time in seconds to wait for the request to complete, defaults to `60`. Can be set for synthetic monitors. 
+Uptime check selected regions. 
+
+At most one of these can be specified: 
+
+`--add-regions`=[`region`,…]
+     The list of regions to add to the uptime check. `region` must be one of: 
+
+`asia-pacific`
+     asia-southeast1 
+`europe`
+     europe-west1 
+`south-america`
+     southamerica-east1 
+`usa-iowa`
+     us-central1 
+`usa-oregon`
+     us-west1 
+`usa-virginia`
+     us-east4 
+`--clear-regions`=`CLEAR_REGIONS`
+     Clear all regions on the uptime check. This setting acts the same as if all available regions were selected. 
+`--remove-regions`=[`region`,…]
+     The list of regions to remove from the uptime check. `region` must be one of: 
+
+`asia-pacific`
+     asia-southeast1 
+`europe`
+     europe-west1 
+`south-america`
+     southamerica-east1 
+`usa-iowa`
+     us-central1 
+`usa-oregon`
+     us-west1 
+`usa-virginia`
+     us-east4 
+`--set-regions`=[`region`,…]
+     The list of regions from which the check is run. At least 3 regions must be selected. 
+
+`region` must be one of: 
+
+`asia-pacific`
+     asia-southeast1 
+`europe`
+     europe-west1 
+`south-america`
+     southamerica-east1 
+`usa-iowa`
+     us-central1 
+`usa-oregon`
+     us-west1 
+`usa-virginia`
+     us-east4 
+User labels. Can be set for synthetic monitors. 
+`--update-user-labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to update. If a label exists, its value is modified. Otherwise, a new label is created. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+At most one of these can be specified: 
+
+`--clear-user-labels`
+     Remove all labels. If `--update-user-labels` is also specified then `--clear-user-labels` is applied first. 
+
+For example, to remove all labels: 
+    
+    
+    gcloud alpha monitoring uptime update --clear-user-labels
+
+To remove all existing labels and create two new labels, ``foo`` and ``baz``: 
+    
+    
+    gcloud alpha monitoring uptime update --clear-user-labels --update-user-labels foo=bar,baz=qux
+
+`--remove-user-labels`=[`KEY`,…]
+     List of label keys to remove. If a label does not exist it is silently ignored. If `--update-user-labels` is also specified then `--update-user-labels` is applied first. 
+Uptime check matcher settings. 
+`--matcher-content`=`MATCHER_CONTENT`
+     String, regex or JSON content to match. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--matcher-type`=`MATCHER_TYPE`
+     The type of content matcher that is applied to the server output, defaults to `contains-string`. 
+
+`MATCHER_TYPE` must be one of: 
+
+`contains-string`
+     Response contains string 
+`matches-json-path`
+     Response matches at JSONPath 
+`matches-regex`
+     Response matches regex 
+`not-contains-string`
+     Response does not contain string 
+`not-matches-json-path`
+     Response does not match at JSONPath 
+`not-matches-regex`
+     Response does not match regex 
+Uptime check matcher settings for JSON responses. 
+`--json-path`=`JSON_PATH`
+     JSONPath within the response output pointing to the expected content to match. Only used if `--matcher-type` is `matches-json-path` or `not-matches-json-path`. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--json-path-matcher-type`=`JSON_PATH_MATCHER_TYPE`
+     The type of JSONPath match that is applied to the JSON output, defaults to `exact-match`. Only used if `--matcher-type` is `matches-json-path` or `not-matches-json-path`. 
+
+`JSON_PATH_MATCHER_TYPE` must be one of: 
+
+`exact-match`
+     Response matches exact string at JSONPath 
+`regex-match`
+     Response matches regex at JSONPath 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. These variants are also available: 
+    
+    
+    [gcloud monitoring uptime update](https://docs.cloud.google.com/sdk/gcloud/reference/monitoring/uptime/update)
+    
+    
+    [gcloud beta monitoring uptime update](https://docs.cloud.google.com/sdk/gcloud/reference/beta/monitoring/uptime/update)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

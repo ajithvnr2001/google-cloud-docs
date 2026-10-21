@@ -1,0 +1,589 @@
+---
+url: https://docs.cloud.google.com/spanner/docs/samples/spanner-read-write-transaction/
+title: Read/write transaction \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T04:29:59.838583+00:00
+---
+
+# Read/write transaction  |  Spanner  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/docs/samples/spanner-read-write-transaction/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Samples ](https://docs.cloud.google.com/spanner/docs/samples)
+
+
+
+#  Read/write transaction Stay organized with collections  Save and categorize content based on your preferences. 
+
+Use a read/write transaction.
+
+## Explore further
+
+For detailed documentation that includes this code sample, see the following: 
+
+  * [Insert, update, and delete data using mutations](https://docs.cloud.google.com/spanner/docs/modify-mutation-api)
+  * [Transactions overview](https://docs.cloud.google.com/spanner/docs/transactions)
+
+
+
+## Code sample
+
+### C++
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    void ReadWriteTransaction(google::cloud::spanner::Client client) {
+      namespace spanner = ::google::cloud::spanner;
+      using ::google::cloud::Status;
+      using ::google::cloud::StatusCode;
+      using ::google::cloud::StatusOr;
+    
+      // A helper to read a single album MarketingBudget.
+      auto get_current_budget =
+          [](spanner::Client client, spanner::Transaction txn,
+             std::int64_t singer_id,
+             std::int64_t album_id) -> StatusOr<std::int64_t> {
+        auto key = spanner::KeySet().AddKey(spanner::MakeKey(singer_id, album_id));
+        auto rows = client.Read(std::move(txn), "Albums", std::move(key),
+                                {"MarketingBudget"});
+        using RowType = std::tuple<std::int64_t>;
+        auto row = spanner::GetSingularRow(spanner::StreamOf<RowType>(rows));
+        if (!row) return std::move(row).status();
+        return std::get<0>(*std::move(row));
+      };
+    
+      auto constexpr kInsufficientFundsMessage =
+          "The second album does not have enough funds to transfer";
+      auto commit = client.Commit(
+          [&](spanner::Transaction const& txn) -> StatusOr<spanner::Mutations> {
+            auto b1 = get_current_budget(client, txn, 1, 1);
+            if (!b1) return std::move(b1).status();
+            auto b2 = get_current_budget(client, txn, 2, 2);
+            if (!b2) return std::move(b2).status();
+            std::int64_t transfer_amount = 200000;
+    
+            if (*b2 < transfer_amount) {
+              return Status(StatusCode::kFailedPrecondition,
+                            kInsufficientFundsMessage);
+            }
+    
+            return spanner::Mutations{
+                spanner::UpdateMutationBuilder(
+                    "Albums", {"SingerId", "AlbumId", "MarketingBudget"})
+                    .EmplaceRow(1, 1, *b1 + transfer_amount)
+                    .EmplaceRow(2, 2, *b2 - transfer_amount)
+                    .Build()};
+          });
+    
+      if (!commit) throw std::move(commit).status();
+      std::cout << "Transfer was successful [spanner_read_write_transaction]\n";
+    }
+
+### C#
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    using [Google.Cloud.Spanner.Data](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.html);
+    using System;
+    using System.Threading.Tasks;
+    using System.Transactions;
+    
+    public class ReadWriteWithTransactionAsyncSample
+    {
+        public async Task<int> ReadWriteWithTransactionAsync(string projectId, string instanceId, string databaseId)
+        {
+            // This sample transfers 200,000 from the MarketingBudget
+            // field of the second Album to the first Album. Make sure to run
+            // the Add Column and Write Data To New Column samples first,
+            // in that order.
+    
+            string connectionString = $"Data Source=projects/{projectId}/instances/{instanceId}/databases/{databaseId}";
+    
+            using TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled);
+            decimal transferAmount = 200000;
+            decimal secondBudget = 0;
+            decimal firstBudget = 0;
+    
+            using var connection = new [SpannerConnection](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerConnection.html)(connectionString);
+            using var cmdLookup1 = connection.[CreateSelectCommand](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerConnection.html#Google_Cloud_Spanner_Data_SpannerConnection_CreateSelectCommand_System_String_Google_Cloud_Spanner_Data_SpannerParameterCollection_)("SELECT * FROM Albums WHERE SingerId = 2 AND AlbumId = 2");
+    
+            using (var reader = await cmdLookup1.[ExecuteReaderAsync](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync)())
+            {
+                while (await reader.[ReadAsync](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerDataReader.html#Google_Cloud_Spanner_Data_SpannerDataReader_ReadAsync_System_Threading_CancellationToken_)())
+                {
+                    // Read the second album's budget.
+                    secondBudget = reader.GetFieldValue<decimal>("MarketingBudget");
+                    // Confirm second Album's budget is sufficient and
+                    // if not raise an exception. Raising an exception
+                    // will automatically roll back the transaction.
+                    if (secondBudget < transferAmount)
+                    {
+                        throw new Exception($"The second album's budget {secondBudget} is less than the amount to transfer.");
+                    }
+                }
+            }
+    
+            // Read the first album's budget.
+            using var cmdLookup2 = connection.[CreateSelectCommand](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerConnection.html#Google_Cloud_Spanner_Data_SpannerConnection_CreateSelectCommand_System_String_Google_Cloud_Spanner_Data_SpannerParameterCollection_)("SELECT * FROM Albums WHERE SingerId = 1 and AlbumId = 1");
+            using (var reader = await cmdLookup2.[ExecuteReaderAsync](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync)())
+            {
+                while (await reader.[ReadAsync](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerDataReader.html#Google_Cloud_Spanner_Data_SpannerDataReader_ReadAsync_System_Threading_CancellationToken_)())
+                {
+                    firstBudget = reader.GetFieldValue<decimal>("MarketingBudget");
+                }
+            }
+    
+            // Specify update command parameters.
+            using var cmdUpdate = connection.[CreateUpdateCommand](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerConnection.html#Google_Cloud_Spanner_Data_SpannerConnection_CreateUpdateCommand_System_String_Google_Cloud_Spanner_Data_SpannerParameterCollection_)("Albums", new [SpannerParameterCollection](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerParameterCollection.html)
+            {
+                { "SingerId", [SpannerDbType](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerDbType.html).[Int64](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerDbType.html#Google_Cloud_Spanner_Data_SpannerDbType_Int64) },
+                { "AlbumId", [SpannerDbType](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerDbType.html).[Int64](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerDbType.html#Google_Cloud_Spanner_Data_SpannerDbType_Int64) },
+                { "MarketingBudget", [SpannerDbType](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerDbType.html).[Int64](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerDbType.html#Google_Cloud_Spanner_Data_SpannerDbType_Int64) },
+            });
+    
+            // Update second album to remove the transfer amount.
+            secondBudget -= transferAmount;
+            cmdUpdate.[Parameters](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_Parameters)["SingerId"].Value = 2;
+            cmdUpdate.[Parameters](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_Parameters)["AlbumId"].Value = 2;
+            cmdUpdate.[Parameters](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_Parameters)["MarketingBudget"].Value = secondBudget;
+            var rowCount = await cmdUpdate.ExecuteNonQueryAsync();
+    
+            // Update first album to add the transfer amount.
+            firstBudget += transferAmount;
+            cmdUpdate.[Parameters](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_Parameters)["SingerId"].Value = 1;
+            cmdUpdate.[Parameters](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_Parameters)["AlbumId"].Value = 1;
+            cmdUpdate.[Parameters](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest/Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_Parameters)["MarketingBudget"].Value = firstBudget;
+            rowCount += await cmdUpdate.ExecuteNonQueryAsync();
+            scope.Complete();
+            Console.WriteLine("Transaction complete.");
+            return rowCount;
+        }
+    }
+
+### Go
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import (
+    	"context"
+    	"fmt"
+    	"io"
+    
+    	"cloud.google.com/go/spanner"
+    )
+    
+    func writeWithTransaction(w io.Writer, db string) error {
+    	ctx := context.Background()
+    	client, err := spanner.NewClient(ctx, db)
+    	if err != nil {
+    		return err
+    	}
+    	defer client.Close()
+    
+    	_, err = client.ReadWriteTransaction(ctx, func(ctx context.Context, txn *spanner.ReadWriteTransaction) error {
+    		getBudget := func(key spanner.Key) (int64, error) {
+    			row, err := txn.ReadRow(ctx, "Albums", key, []string{"MarketingBudget"})
+    			if err != nil {
+    				return 0, err
+    			}
+    			var budget int64
+    			if err := row.Column(0, &budget); err != nil {
+    				return 0, err
+    			}
+    			return budget, nil
+    		}
+    		album2Budget, err := getBudget(spanner.Key{2, 2})
+    		if err != nil {
+    			return err
+    		}
+    		const transferAmt = 200000
+    		if album2Budget >= transferAmt {
+    			album1Budget, err := getBudget(spanner.Key{1, 1})
+    			if err != nil {
+    				return err
+    			}
+    			album1Budget += transferAmt
+    			album2Budget -= transferAmt
+    			cols := []string{"SingerId", "AlbumId", "MarketingBudget"}
+    			txn.BufferWrite([]*spanner.Mutation{
+    				spanner.Update("Albums", cols, []interface{}{1, 1, album1Budget}),
+    				spanner.Update("Albums", cols, []interface{}{2, 2, album2Budget}),
+    			})
+    			fmt.Fprintf(w, "Moved %d from Album2's MarketingBudget to Album1's.", transferAmt)
+    		}
+    		return nil
+    	})
+    	return err
+    }
+    
+
+### Java
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    static void writeWithTransaction(DatabaseClient dbClient) {
+      dbClient
+          .readWriteTransaction()
+          .run(transaction -> {
+            // Transfer marketing budget from one album to another. We do it in a transaction to
+            // ensure that the transfer is atomic.
+            Struct row =
+                transaction.readRow("Albums", Key.of(2, 2), Arrays.asList("MarketingBudget"));
+            long album2Budget = row.getLong(0);
+            // Transaction will only be committed if this condition still holds at the time of
+            // commit. Otherwise it will be aborted and the callable will be rerun by the
+            // client library.
+            long transfer = 200000;
+            if (album2Budget >= transfer) {
+              long album1Budget =
+                  transaction
+                      .readRow("Albums", Key.of(1, 1), Arrays.asList("MarketingBudget"))
+                      .getLong(0);
+              album1Budget += transfer;
+              album2Budget -= transfer;
+              transaction.buffer(
+                  Mutation.newUpdateBuilder("Albums")
+                      .set("SingerId")
+                      .to(1)
+                      .set("AlbumId")
+                      .to(1)
+                      .set("MarketingBudget")
+                      .to(album1Budget)
+                      .build());
+              transaction.buffer(
+                  Mutation.newUpdateBuilder("Albums")
+                      .set("SingerId")
+                      .to(2)
+                      .set("AlbumId")
+                      .to(2)
+                      .set("MarketingBudget")
+                      .to(album2Budget)
+                      .build());
+            }
+            return null;
+          });
+    }
+
+### Node.js
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    // This sample transfers 200,000 from the MarketingBudget field
+    // of the second Album to the first Album, as long as the second
+    // Album has enough money in its budget. Make sure to run the
+    // addColumn and updateData samples first (in that order).
+    
+    // Imports the Google Cloud client library
+    const {Spanner} = require('[@google-cloud/spanner](https://docs.cloud.google.com/nodejs/docs/reference/spanner/latest/overview.html)');
+    
+    /**
+     * TODO(developer): Uncomment the following lines before running the sample.
+     */
+    // const projectId = 'my-project-id';
+    // const instanceId = 'my-instance';
+    // const databaseId = 'my-database';
+    
+    // Creates a client
+    const spanner = new [Spanner](https://docs.cloud.google.com/nodejs/docs/reference/spanner/latest/spanner/spanner.html)({
+      projectId: projectId,
+    });
+    
+    let database;
+    const transferAmount = 200000;
+    
+    try {
+      // Gets a reference to a Cloud Spanner instance and database
+      const instance = spanner.instance(instanceId);
+      database = instance.database(databaseId);
+    
+      await database.[runTransactionAsync](https://docs.cloud.google.com/nodejs/docs/reference/spanner/latest/spanner/database.html)(async transaction => {
+        let firstBudget, secondBudget;
+        const queryOne = {
+          columns: ['MarketingBudget'],
+          keys: [[2, 2]], // SingerId: 2, AlbumId: 2
+        };
+    
+        const queryTwo = {
+          columns: ['MarketingBudget'],
+          keys: [[1, 1]], // SingerId: 1, AlbumId: 1
+        };
+    
+        // Reads the second album's budget
+        const [resultsOne] = await transaction.read('Albums', queryOne);
+        const rowsOne = resultsOne.map(row => row.toJSON());
+        secondBudget = rowsOne[0].MarketingBudget;
+        console.log(`The second album's marketing budget: ${secondBudget}`);
+    
+        // Makes sure the second album's budget is large enough
+        if (secondBudget < transferAmount) {
+          throw new Error(
+            `The second album's budget (${secondBudget}) is less than the transfer amount (${transferAmount}).`
+          );
+        }
+    
+        // Reads the first album's budget
+        const [resultsTwo] = await transaction.read('Albums', queryTwo);
+        const rowsTwo = resultsTwo.map(row => row.toJSON());
+        firstBudget = rowsTwo[0].MarketingBudget;
+        console.log(`The first album's marketing budget: ${firstBudget}`);
+    
+        console.log(firstBudget, secondBudget);
+        // Transfers the budgets between the albums
+        firstBudget += transferAmount;
+        secondBudget -= transferAmount;
+        console.log(firstBudget, secondBudget);
+    
+        // Updates the database
+        // Note: Cloud Spanner interprets Node.js numbers as FLOAT64s, so they
+        // must be converted (back) to strings before being inserted as INT64s.
+        transaction.update('Albums', [
+          {
+            SingerId: '1',
+            AlbumId: '1',
+            MarketingBudget: firstBudget.toString(),
+          },
+          {
+            SingerId: '2',
+            AlbumId: '2',
+            MarketingBudget: secondBudget.toString(),
+          },
+        ]);
+    
+        // Commits the transaction and send the changes to the database
+        await transaction.commit();
+    
+        console.log(
+          `Successfully executed read-write transaction to transfer ${transferAmount} from Album 2 to Album 1.`
+        );
+      });
+    } catch (err) {
+      console.error('ERROR:', err);
+    } finally {
+      // Closes the database when finished
+      if (database) {
+        await database.close();
+      }
+    }
+
+### PHP
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    use Google\Cloud\Spanner\SpannerClient;
+    use Google\Cloud\Spanner\Transaction;
+    use UnexpectedValueException;
+    
+    /**
+     * Performs a read-write transaction to update two sample records in the
+     * database.
+     *
+     * This will transfer 200,000 from the `MarketingBudget` field for the second
+     * Album to the first Album. If the `MarketingBudget` for the second Album is
+     * too low, it will raise an exception.
+     *
+     * Before running this sample, you will need to run the `update_data` sample
+     * to populate the fields.
+     * Example:
+     * ```
+     * read_write_transaction($instanceId, $databaseId);
+     * ```
+     *
+     * @param string $instanceId The Spanner instance ID.
+     * @param string $databaseId The Spanner database ID.
+     */
+    function read_write_transaction(string $instanceId, string $databaseId): void
+    {
+        $spanner = new SpannerClient();
+        $instance = $spanner->instance($instanceId);
+        $database = $instance->database($databaseId);
+    
+        $database->runTransaction(function (Transaction $t) use ($spanner) {
+            $transferAmount = 200000;
+    
+            // Read the second album's budget.
+            $secondAlbumKey = [2, 2];
+            $secondAlbumKeySet = $spanner->keySet(['keys' => [$secondAlbumKey]]);
+            $secondAlbumResult = $t->read(
+                'Albums',
+                $secondAlbumKeySet,
+                ['MarketingBudget'],
+                ['limit' => 1]
+            );
+    
+            $firstRow = $secondAlbumResult->rows()->current();
+            $secondAlbumBudget = $firstRow['MarketingBudget'];
+            if ($secondAlbumBudget < $transferAmount) {
+                // Throwing an exception will automatically roll back the transaction.
+                throw new UnexpectedValueException(
+                    'The second album\'s budget is lower than the transfer amount: ' . $transferAmount
+                );
+            }
+    
+            $firstAlbumKey = [1, 1];
+            $firstAlbumKeySet = $spanner->keySet(['keys' => [$firstAlbumKey]]);
+            $firstAlbumResult = $t->read(
+                'Albums',
+                $firstAlbumKeySet,
+                ['MarketingBudget'],
+                ['limit' => 1]
+            );
+    
+            // Read the first album's budget.
+            $firstRow = $firstAlbumResult->rows()->current();
+            $firstAlbumBudget = $firstRow['MarketingBudget'];
+    
+            // Update the budgets.
+            $secondAlbumBudget -= $transferAmount;
+            $firstAlbumBudget += $transferAmount;
+            printf('Setting first album\'s budget to %s and the second album\'s ' .
+                'budget to %s.' . PHP_EOL, $firstAlbumBudget, $secondAlbumBudget);
+    
+            // Update the rows.
+            $t->updateBatch('Albums', [
+                ['SingerId' => 1, 'AlbumId' => 1, 'MarketingBudget' => $firstAlbumBudget],
+                ['SingerId' => 2, 'AlbumId' => 2, 'MarketingBudget' => $secondAlbumBudget],
+            ]);
+    
+            // Commit the transaction!
+            $t->commit();
+    
+            print('Transaction complete.' . PHP_EOL);
+        });
+    }
+
+### Python
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    def read_write_transaction(instance_id, database_id):
+        """Performs a read-write transaction to update two sample records in the
+        database.
+    
+        This will transfer 200,000 from the `MarketingBudget` field for the second
+        Album to the first Album. If the `MarketingBudget` is too low, it will
+        raise an exception.
+    
+        Before running this sample, you will need to run the `update_data` sample
+        to populate the fields.
+        """
+        spanner_client = spanner.Client()
+        instance = spanner_client.instance(instance_id)
+        database = instance.database(database_id)
+    
+        def update_albums(transaction):
+            # Read the second album budget.
+            second_album_keyset = spanner.KeySet(keys=[(2, 2)])
+            second_album_result = transaction.read(
+                table="Albums",
+                columns=("MarketingBudget",),
+                keyset=second_album_keyset,
+                limit=1,
+            )
+            second_album_row = list(second_album_result)[0]
+            second_album_budget = second_album_row[0]
+    
+            transfer_amount = 200000
+    
+            if second_album_budget < transfer_amount:
+                # Raising an exception will automatically roll back the
+                # transaction.
+                raise ValueError("The second album doesn't have enough funds to transfer")
+    
+            # Read the first album's budget.
+            first_album_keyset = spanner.KeySet(keys=[(1, 1)])
+            first_album_result = transaction.read(
+                table="Albums",
+                columns=("MarketingBudget",),
+                keyset=first_album_keyset,
+                limit=1,
+            )
+            first_album_row = list(first_album_result)[0]
+            first_album_budget = first_album_row[0]
+    
+            # Update the budgets.
+            second_album_budget -= transfer_amount
+            first_album_budget += transfer_amount
+            print(
+                "Setting first album's budget to {} and the second album's "
+                "budget to {}.".format(first_album_budget, second_album_budget)
+            )
+    
+            # Update the rows.
+            transaction.update(
+                table="Albums",
+                columns=("SingerId", "AlbumId", "MarketingBudget"),
+                values=[(1, 1, first_album_budget), (2, 2, second_album_budget)],
+            )
+    
+        database.run_in_transaction(update_albums)
+    
+        print("Transaction complete.")
+    
+    
+
+### Ruby
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    # project_id  = "Your Google Cloud project ID"
+    # instance_id = "Your Spanner instance ID"
+    # database_id = "Your Spanner database ID"
+    
+    require "google/cloud/spanner"
+    
+    spanner         = Google::Cloud::[Spanner](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-spanner-admin-instance-v1/latest/Google-Cloud-Spanner.html).new project: project_id
+    client          = spanner.[client](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-spanner/latest/Google-Cloud-Spanner-Project.html) instance_id, database_id
+    transfer_amount = 200_000
+    
+    client.transaction do |transaction|
+      first_album  = transaction.read("Albums", [:MarketingBudget], keys: [[1, 1]]).rows.first
+      second_album = transaction.read("Albums", [:MarketingBudget], keys: [[2, 2]]).rows.first
+    
+      raise "The second album does not have enough funds to transfer" if second_album[:MarketingBudget] < transfer_amount
+    
+      new_first_album_budget  = first_album[:MarketingBudget] + transfer_amount
+      new_second_album_budget = second_album[:MarketingBudget] - transfer_amount
+    
+      transaction.update "Albums", [
+        { SingerId: 1, AlbumId: 1, MarketingBudget: new_first_album_budget  },
+        { SingerId: 2, AlbumId: 2, MarketingBudget: new_second_album_budget }
+      ]
+    end
+    
+    puts "Transaction complete"
+
+## What's next
+
+To search and filter code samples for other Google Cloud products, see the [Google Cloud sample browser](https://docs.cloud.google.com/docs/samples?product=cloudspanner). 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],[],[],[]] 

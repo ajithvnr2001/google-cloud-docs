@@ -1,0 +1,105 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/grok-4-7/
+title: Grok 4.7 \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T00:09:14.165071+00:00
+---
+
+# Grok 4.7  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/grok-4-7/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Grok 4.7 Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Preview**
+
+This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+
+A high-capability model from xAI, built for coding and knowledge work. It works longer on difficult tasks and checks its own work.
+
+[View model card in Model Garden](https://console.cloud.google.com/agent-platform/publishers/xai/model-garden/grok-4.7)
+
+Model ID | `grok-4.7`  
+---|---  
+Launch stage | Preview  
+Supported inputs & outputs | 
+
+  * Inputs: Text, Image
+  * Outputs: Text
+
+  
+Capabilities | 
+
+  * Supported
+    * [Function calling](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/capabilities/function-calling) previewPreview feature
+    * [Structured output](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/capabilities/structured-output) previewPreview feature
+    * [Reasoning](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/capabilities/reasoning) previewPreview feature
+  * Not supported
+    * [Batch predictions](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/maas/capabilities/batch-prediction) previewPreview feature
+
+  
+Usage types | 
+
+  * Supported
+    * [Fixed quota](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok#quota) previewPreview feature
+  * Not supported
+    * [Standard pay-as-you-go](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/standard-paygo) previewPreview feature
+    * [Provisioned Throughput](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/provisioned-throughput) previewPreview feature
+
+  
+Versions | 
+
+  * `grok-4.7`
+    * **Launch stage:** Preview
+    * **Release date:** September 30, 2026
+
+  
+Supported regions  
+Model availability | 
+
+  * United States
+    * `Multi-region`
+  * Global
+    * `global endpoint`
+
+  
+ML processing | 
+
+  * United States
+    * `Multi-region`
+
+  
+Quota limits |  Multi-region: 
+
+  * QPM: 13
+  * Input TPM: 188,000
+  * Output TPM: 16,000
+  * Context length: 524,288
+
+global endpoint: 
+
+  * QPM: 13
+  * Input TPM: 188,000
+  * Output TPM: 16,000
+  * Context length: 524,288
+
+  
+Pricing | See [Pricing](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing).  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

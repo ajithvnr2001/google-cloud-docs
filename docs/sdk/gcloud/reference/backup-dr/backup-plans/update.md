@@ -1,0 +1,283 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/backup-dr/backup-plans/update/
+title: gcloud backup-dr backup-plans update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T20:41:25.667370+00:00
+---
+
+# gcloud backup-dr backup-plans update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/backup-dr/backup-plans/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud backup-dr backup-plans update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud backup-dr backup-plans update - update a specific backup plan 
+SYNOPSIS
+    
+
+`gcloud backup-dr backup-plans update` (`BACKUP_PLAN` : `--location`=`LOCATION`) [`--add-backup-rule`=[`PROPERTY`=`VALUE`,…]] [`--async`] [`--backup-rule`=[`PROPERTY`=`VALUE`,…]] [`--backup-rules-from-file`=`PATH_TO_FILE`] [`--compute-instance-properties`=[`PROPERTY`=`VALUE`,…]] [`--description`=`DESCRIPTION`] [`--disk-properties`=[`PROPERTY`=`VALUE`,…]] [`--log-retention-days`=`LOG_RETENTION_DAYS`] [`--max-custom-on-demand-retention-days`=`MAX_CUSTOM_ON_DEMAND_RETENTION_DAYS`] [`--remove-backup-rule`=`RULE-ID`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     Update a specific backup plan in the project. It can only be updated in regions supported by the Backup and DR Service. 
+EXAMPLES
+     To update 2 backup rules and description of an existing backup plan ``sample-backup-plan`` in project ``sample-project``, at location ``us-central1``: 
+
+run: 
+    
+    
+    gcloud backup-dr backup-plans update sample-backup-plan --project=sample-project --location=us-central1 --backup-rule <BACKUP-RULE> --backup-rule <BACKUP-RULE> --description "This is a sample backup plan"
+
+To add backup rules to an existing backup plan ``sample-backup-plan`` in project ``sample-project``, at location ``us-central1``: 
+
+run: 
+    
+    
+    gcloud backup-dr backup-plans update sample-backup-plan --project=sample-project --location=us-central1 --add-backup-rule <BACKUP-RULE> --add-backup-rule <BACKUP-RULE>
+
+To remove a backup rule with id ``sample-daily-rule`` from an existing backup plan ``sample-backup-plan`` in project ``sample-project``, at location ``us-central1``: 
+
+run: 
+    
+    
+    gcloud backup-dr backup-plans update sample-backup-plan --project=sample-project --location=us-central1 --remove-backup-rule sample-daily-rule
+
+To override backup rules in an existing backup plan ``sample-backup-plan`` in project ``sample-project``, at location ``us-central1``, pass a file path containing backup rules in YAML or JSON format: This flag is mutually exclusive with \--add-backup-rule, --remove-backup-rule and --backup-rule flags. 
+
+run:
+    
+    
+    gcloud backup-dr backup-plans update sample-backup-plan --project=sample-project --location=us-central1 --backup-rules-fom-file <FILE_PATH>
+
+Backup Rule Examples: 
+
+1\. Hourly backup rule with hourly backup frequency of 6 hours and store it for 30 days, and expect the backups to run only between 10:00 to 20:00 UTC 
+
+<BACKUP-RULE>: rule-id=sample-hourly-rule,retention-days=30,recurrence=HOURLY,hourly-frequency=6,time-zone=UTC,backup-window-start=10,backup-window-end=20 
+
+Properties: 
+
+  * rule-id = "sample-hourly-rule" 
+  * retention-days = 30 
+  * recurrence = HOURLY 
+  * hourly-frequency = 6 
+  * time-zone = UTC 
+  * backup-window-start = 10 
+  * backup-window-end = 20 
+
+
+
+2\. Daily backup rule with daily backup frequency of 6 hours and store it for 7 days 
+
+<BACKUP-RULE>: rule-id=sample-daily-rule,retention-days=7,recurrence=DAILY,backup-window-start=1,backup-window-end=14 
+
+Properties: 
+
+  * rule-id = "sample-daily-rule" 
+  * retention-days = 7 
+  * recurrence = DAILY 
+  * backup-window-start = 1 
+  * backup-window-end = 14 
+
+
+
+3\. Weekly backup rule with weekly backup frequency on every MONDAY & FRIDAY and store it for 21 days 
+
+<BACKUP-RULE>: rule-id=sample-weekly-rule,retention-days=21,recurrence=WEEKLY,days-of-week="MONDAY FRIDAY",backup-window-start=10,backup-window-end=20 
+
+Properties: 
+
+  * rule-id = "sample-weekly-rule" 
+  * retention-days: 21 
+  * recurrence = WEEKLY 
+  * days-of-week = "MONDAY FRIDAY" 
+  * backup-window-start = 10 
+  * backup-window-end = 20 
+
+
+
+YAML and JSON file examples: 
+
+YAML file example: 
+    
+    
+    backup-rules:
+    - rule-id: weekly-rule
+      retention-days: 7
+      recurrence: WEEKLY
+      backup-window-start: 0
+      backup-window-end: 23
+      days-of-week: [MONDAY, TUESDAY]
+      time-zone: UTC
+    - rule-id: daily-rule
+      retention-days: 1
+      recurrence: DAILY
+      backup-window-start: 1
+      backup-window-end: 24
+      time-zone: UTC
+
+JSON file example:
+    
+    
+    {
+      "backup-rules": [
+        {
+          "rule-id": "weekly-rule",
+          "retention-days": 7,
+          "recurrence": "WEEKLY",
+          "backup-window-start": 0,
+          "backup-window-end": 23,
+          "days-of-week": ["MONDAY", "TUESDAY"],
+          "time-zone": "UTC"
+        },
+        {
+          "rule-id": "daily-rule",
+          "retention-days": 1,
+          "recurrence": "DAILY",
+          "backup-window-start": 1,
+          "backup-window-end": 24,
+          "time-zone": "UTC"
+        }
+      ]
+    }
+
+POSITIONAL ARGUMENTS
+    
+
+Backup Plan resource - Name of the backup plan to be updated. The name must be unique for a project and location. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `backup_plan` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`BACKUP_PLAN`
+     ID of the Backup Plan or fully qualified identifier for the Backup Plan. 
+
+To set the `name` attribute: 
+
+  * provide the argument `backup_plan` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     The location of the Backup Plan. 
+
+To set the `location` attribute: 
+
+  * provide the argument `backup_plan` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line. 
+
+
+FLAGS
+    
+
+`--add-backup-rule`=[`PROPERTY`=`VALUE`,…]
+     Parameters of backup rule to be added to the Backup Plan. This flag can be repeated to add more backup rules. 
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. The default is `True`. Enabled by default, use `--no-async` to disable. 
+`--backup-rule`=[`PROPERTY`=`VALUE`,…]
+     Full definition of an existing backup rule with updated values. The existing backup rule is replaced by this new set of values. This flag can be repeated to update multiple backup rules. It is not allowed to pass the same rule-id in this flag more than once in the same command. Parameters for the backup rule include: 
+
+`rule-id`
+     Name of the backup rule. The name must be unique and start with a lowercase letter followed by up to 62 lowercase letters, numbers, or hyphens. 
+`retention-days`
+     Duration for which backup data should be retained. It must be defined in "days". The value should be greater than or equal to the enforced retention period set for the backup vault. 
+`recurrence`
+     Frequency for the backup schedule. It must be either: HOURLY, DAILY, WEEKLY, MONTHLY or YEARLY. 
+`backup-window-start`
+     Start time of the interval during which backup jobs should be executed. It can be defined as backup-window-start=2, that means backup window starts at 2 a.m. The start time and end time must have an interval of 6 hours. 
+`backup-window-end`
+     End time of the interval during which backup jobs should be executed. It can be defined as backup-window-end=14, that means backup window ends at 2 p.m. The start time and end time must have an interval of 6 hours. 
+
+Jobs are queued at the beginning of the window and will be marked as `SKIPPED` if they do not start by the end time. Jobs that are in progress will not be canceled at the end time. 
+
+`time-zone`
+     The time zone to be used for the backup schedule. The value must exist in the [IANA tz database](https://www.iana.org/time-zones). The default value is UTC. E.g., Europe/Paris 
+Following flags are mutually exclusive: 
+`hourly-frequency`
+     Frequency for hourly backups. An hourly frequency of 2 means backup jobs will run every 2 hours from start time till the end time defined. The hourly frequency must be between 4 and 23. The value is needed only if recurrence type is HOURLY. 
+`days-of-week`
+     Days of the week when the backup job should be executed. The value is needed if recurrence type is WEEKLY. E.g., MONDAY,TUESDAY 
+`days-of-month`
+     Days of the month when the backup job should be executed. The value is needed only if recurrence type is YEARLY. E.g.,"1,5,14" 
+`months`
+     Month for the backup schedule. The value is needed only if recurrence type is YEARLY. E.g., JANUARY, MARCH 
+`week-day-of-month`
+     Recurring day of the week in the month or year when the backup job should be executed. E.g. FIRST-SUNDAY, THIRD-MONDAY. The value can only be provided if the recurrence type is MONTHLY or YEARLY. Allowed values for the number of week - FIRST, SECOND, THIRD, FOURTH, LAST. Allowed values for days of the week - MONDAY to SUNDAY. 
+E.g., "rule-id=sample-daily-rule,recurrence=WEEKLY,backup-window-start=2,backup-window-end=14,retention-days=20,days-of-week='SUNDAY MONDAY'" 
+`--backup-rules-from-file`=`PATH_TO_FILE`
+     Path to a YAML or JSON file containing backup rules. Use a full or relative path to a local file containing the value of backup_rules. 
+`--compute-instance-properties`=[`PROPERTY`=`VALUE`,…]
+     Workload-specific properties for Compute Engine instance backups generated by this plan. 
+
+`guest-flush`
+     Indicates whether to perform a guest flush operation before taking a compute backup. When set to true, the system will attempt to ensure application-consistent backups. When set to false, the system will create crash-consistent backups. Default value is false. 
+Following properties are mutually exclusive: 
+`boot-disk-only`
+     Indicates whether to backup only the boot disk of the compute instance. When set to true, only the boot disk is backed up. 
+`disk-exclusion-labels`
+     Key-value pairs of labels used to identify disks to be excluded from backup for the compute instance. 
+
+Examples: --compute-instance-properties=guest-flush=true,boot-disk-only=true \--compute-instance-properties=disk-exclusion-labels=backup=exclude 
+
+`--description`=`DESCRIPTION`
+     Provide a description of the backup plan, such as specific use cases and relevant details, in 2048 characters or less. 
+
+E.g., This is a backup plan that performs a daily backup at 6 p.m. and retains data for 3 months. 
+
+`--disk-properties`=[`PROPERTY`=`VALUE`,…]
+     Workload-specific properties for disk backups generated by this plan. 
+
+`guest-flush`
+     Indicates whether to perform a guest flush operation before taking a disk backup. When set to true, the system will attempt to ensure application-consistent backups. When set to false, the system will create crash-consistent backups. Default value is false. 
+
+Example: --disk-properties=guest-flush=true 
+
+`--log-retention-days`=`LOG_RETENTION_DAYS`
+     Configures how long logs will be stored. It is defined in "days". This value should be greater than or equal to minimum enforced retention duration of the backup vault. 
+`--max-custom-on-demand-retention-days`=`MAX_CUSTOM_ON_DEMAND_RETENTION_DAYS`
+     Configure the maximum retention period for on-demand backups. The value must be greater than or equal to the minimum enforced retention period set on the backup vault. 
+`--remove-backup-rule`=`RULE-ID`
+     Name of an existing backup rule to be removed from the Backup Plan. This flag can be repeated to remove more backup rules. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+BRIEF
+     Update a specific backup plan 
+NOTES
+     These variants are also available: 
+    
+    
+    [gcloud alpha backup-dr backup-plans update](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/backup-dr/backup-plans/update)
+    
+    
+    [gcloud beta backup-dr backup-plans update](https://docs.cloud.google.com/sdk/gcloud/reference/beta/backup-dr/backup-plans/update)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-08-11 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-11 UTC."],[],[]] 

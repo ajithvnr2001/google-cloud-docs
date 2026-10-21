@@ -1,0 +1,101 @@
+---
+url: https://docs.cloud.google.com/alloydb/omni/linux/17.5.0/docs/database-users/overview/
+title: AlloyDB Omni user role overview \u00a0|\u00a0 AlloyDB Omni for Linux: 17.5.0 \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T11:41:00.181222+00:00
+---
+
+# AlloyDB Omni user role overview  |  AlloyDB Omni for Linux: 17.5.0  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/alloydb/omni/linux/17.5.0/docs/database-users/overview/
+
+This page documents AlloyDB Omni version **17.5.0** using the **Linux** deployment option. [Choose a different deployment option](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment). 
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ AlloyDB Omni ](https://docs.cloud.google.com/alloydb/omni/docs)
+  * [ For Linux: 17.5.0 ](https://docs.cloud.google.com/alloydb/omni/linux/17.5.0/docs/overview)
+
+
+
+Send feedback 
+
+#  AlloyDB Omni user role overview Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Preview**
+
+This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+
+For information about access to this release, see the [ access request page](https://forms.gle/zxuHekMtV67Bw9Av9). 
+
+Select a documentation version: 17.5.0keyboard_arrow_down
+
+  * [ Current (18.3.0) ](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/database-users/overview)
+  * [ 18.3.0 ](https://docs.cloud.google.com/alloydb/omni/linux/18.3.0/docs/database-users/overview)
+  * [ 18.1.1 ](https://docs.cloud.google.com/alloydb/omni/linux/18.1.1/docs/database-users/overview)
+  * [ 18.1.0 ](https://docs.cloud.google.com/alloydb/omni/linux/18.1.0/docs/database-users/overview)
+  * [ 17.5.0 ](https://docs.cloud.google.com/alloydb/omni/linux/17.5.0/docs/database-users/overview)
+
+This page describes how AlloyDB Omni works with PostgreSQL roles. This page assumes that you are familiar with PostgreSQL. 
+
+An AlloyDB Omni database uses [the standard PostgreSQL concept of roles](https://www.postgresql.org/docs/current/database-roles.html). A role can act as a database user, a group of users, or both.
+
+A _user role_ has the `LOGIN` privilege that lets users sign in to the AlloyDB Omni system. A _group role_ has member roles with various privileges, which you can grant to or revoke from all members at once.
+
+## AlloyDB Omni predefined PostgreSQL roles
+
+PostgreSQL has a set of [predefined roles](https://www.postgresql.org/docs/current/predefined-roles.html) with various privileges. AlloyDB Omni adds several user and group roles to this set of PostgreSQL's predefined roles.
+
+The following table lists the PostgreSQL roles that AlloyDB Omni predefines:
+
+Role name | Privileges  
+---|---  
+`alloydbadmin` | `SUPERUSER` (which includes `CREATEROLE`, `CREATEDB`, and `LOGIN`).  
+`alloydbmetadata` | By default, this role does not have any privileges.  
+In addition, AlloyDB Omni reserves the following role name that is unused but might be used in the future. Role name | Privileges  
+---|---  
+`alloydbsuperuser` | `NOLOGIN`  
+  
+### The `alloydbadmin` user role
+
+The `alloydbadmin` role is a predefined role that sets up the database system and performs other superuser tasks. This role has the following privileges:
+
+  * Create extensions that require superuser privileges
+  * Create event triggers
+  * Create replication users
+  * Create replication publications and subscriptions
+
+
+
+This role is only used by AlloyDB Omni internal tools and shouldn't be used by users.
+
+### The `alloydbmetadata` role
+
+The `alloydbmetadata` role is a predefined role with fewer privileges, also used by AlloyDB Omni internally. Similar to `alloydbadmin`, this role shouldn't be used by other users.
+
+## Other important roles
+
+In addition to the predefined roles, there are other important roles that you use for administration and to set up specific features in AlloyDB Omni for Linux.
+
+### The `postgres` role
+
+The `postgres` role is the default superuser in PostgreSQL. You use this user for the initial setup and for administrative tasks. For example, after installing AlloyDB Omni for Linux, you connect as the `postgres` user to initialize the database.
+
+### The `replicator` role
+
+The `replicator` role is used to set up high-availability and read-replica clusters. This role has replication privileges, which are required for streaming data from a primary to a replica instance. You must create this role manually when you configure replication. 
+
+## What's next
+
+  * [Manage AlloyDB Omni users and roles](https://docs.cloud.google.com/alloydb/omni/linux/17.5.0/docs/database-users/manage-users).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

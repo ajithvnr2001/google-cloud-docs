@@ -1,0 +1,149 @@
+---
+url: https://docs.cloud.google.com/firestore/docs/samples/firestore-setup-dataset-read/
+title: Getting Firestore documents from a collection \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-17T10:25:44.579257+00:00
+---
+
+# Getting Firestore documents from a collection  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/firestore/docs/samples/firestore-setup-dataset-read/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Firestore ](https://docs.cloud.google.com/firestore/docs)
+  * [ Samples ](https://docs.cloud.google.com/firestore/docs/samples)
+
+
+
+#  Getting Firestore documents from a collection Stay organized with collections  Save and categorize content based on your preferences. 
+
+Getting Firestore documents from a collection
+
+## Explore further
+
+For detailed documentation that includes this code sample, see the following: 
+
+  * [Quickstart: Create a Firestore database by using a server client library](https://docs.cloud.google.com/firestore/native/docs/create-database-server-client-library)
+
+
+
+## Code sample
+
+### C#
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    CollectionReference usersRef = db.Collection("users");
+    QuerySnapshot snapshot = await usersRef.GetSnapshotAsync();
+    foreach (DocumentSnapshot document in snapshot.Documents)
+    {
+        Console.WriteLine("User: {0}", document.Id);
+        Dictionary<string, object> documentDictionary = document.ToDictionary();
+        Console.WriteLine("First: {0}", documentDictionary["First"]);
+        if (documentDictionary.ContainsKey("Middle"))
+        {
+            Console.WriteLine("Middle: {0}", documentDictionary["Middle"]);
+        }
+        Console.WriteLine("Last: {0}", documentDictionary["Last"]);
+        Console.WriteLine("Born: {0}", documentDictionary["Born"]);
+        Console.WriteLine();
+    }
+
+### Go
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    iter := client.Collection("users").Documents(ctx)
+    for {
+    	doc, err := iter.Next()
+    	if err == iterator.Done {
+    		break
+    	}
+    	if err != nil {
+    		log.Fatalf("Failed to iterate: %v", err)
+    	}
+    	fmt.Println(doc.Data())
+    }
+
+### Java
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    // asynchronously retrieve all users
+    ApiFuture<QuerySnapshot> query = db.collection("users").get();
+    // ...
+    // query.get() blocks on response
+    QuerySnapshot querySnapshot = query.get();
+    List<QueryDocumentSnapshot> documents = querySnapshot.getDocuments();
+    for (QueryDocumentSnapshot document : documents) {
+      System.out.println("User: " + document.getId());
+      System.out.println("First: " + document.getString("first"));
+      if (document.contains("middle")) {
+        System.out.println("Middle: " + document.getString("middle"));
+      }
+      System.out.println("Last: " + document.getString("last"));
+      System.out.println("Born: " + document.getLong("born"));
+    }
+
+### Node.js
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    const snapshot = await db.collection('users').get();
+    snapshot.forEach((doc) => {
+      console.log(doc.id, '=>', doc.data());
+    });
+
+### PHP
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    $usersRef = $db->collection('samples/php/users');
+    $snapshot = $usersRef->documents();
+    foreach ($snapshot as $user) {
+        printf('User: %s' . PHP_EOL, $user->id());
+        printf('First: %s' . PHP_EOL, $user['first']);
+        if (!empty($user['middle'])) {
+            printf('Middle: %s' . PHP_EOL, $user['middle']);
+        }
+        printf('Last: %s' . PHP_EOL, $user['last']);
+        printf('Born: %d' . PHP_EOL, $user['born']);
+        printf(PHP_EOL);
+    }
+    printf('Retrieved and printed out all documents from the users collection.' . PHP_EOL);
+
+### Python
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    users_ref = db.collection("users")
+    docs = users_ref.stream()
+    
+    for doc in docs:
+        print(f"{doc.id} => {doc.to_dict()}")
+
+### Ruby
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    users_ref = firestore.col collection_path
+    users_ref.get do |user|
+      puts "#{user.document_id} data: #{user.data}."
+    end
+
+## What's next
+
+To search and filter code samples for other Google Cloud products, see the [Google Cloud sample browser](https://docs.cloud.google.com/docs/samples?product=firestore). 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],[],[],[]] 

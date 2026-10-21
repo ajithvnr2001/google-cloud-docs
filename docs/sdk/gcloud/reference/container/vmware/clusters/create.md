@@ -1,0 +1,386 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/container/vmware/clusters/create/
+title: gcloud container vmware clusters create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T22:21:45.321226+00:00
+---
+
+# gcloud container vmware clusters create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/container/vmware/clusters/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud container vmware clusters create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud container vmware clusters create - create an Anthos cluster on VMware 
+SYNOPSIS
+    
+
+`gcloud container vmware clusters create` (`CLUSTER` : `--location`=`LOCATION`) `--version`=`VERSION` (`--admin-cluster-membership`=`ADMIN_CLUSTER_MEMBERSHIP` : `--admin-cluster-membership-location`=`ADMIN_CLUSTER_MEMBERSHIP_LOCATION` `--admin-cluster-membership-project`=`ADMIN_CLUSTER_MEMBERSHIP_PROJECT`) ((`--control-plane-vip`=`CONTROL_PLANE_VIP` `--ingress-vip`=`INGRESS_VIP`) (`--metal-lb-config-address-pools`=[`addresses`=`ADDRESSES`],[`avoid-buggy-ips`=`AVOID-BUGGY-IPS`],[`manual-assign`=`MANUAL-ASSIGN`],[`pool`=`POOL`] | `--control-plane-node-port`=`CONTROL_PLANE_NODE_PORT` `--ingress-http-node-port`=`INGRESS_HTTP_NODE_PORT` `--ingress-https-node-port`=`INGRESS_HTTPS_NODE_PORT` `--konnectivity-server-node-port`=`KONNECTIVITY_SERVER_NODE_PORT` | [`--f5-config-address`=`F5_CONFIG_ADDRESS` `--f5-config-partition`=`F5_CONFIG_PARTITION` : `--f5-config-snat-pool`=`F5_CONFIG_SNAT_POOL`])) (`--pod-address-cidr-blocks`=`POD_ADDRESS` `--service-address-cidr-blocks`=`SERVICE_ADDRESS` : `--control-plane-ip-block`=[`gateway`=`GATEWAY`],[`ips`=`IPS`],[`netmask`=`NETMASK`] `--dns-search-domains`=[`DNS_SEARCH_DOMAINS`,…] `--dns-servers`=[`DNS_SERVERS`,…] `--ntp-servers`=[`NTP_SERVERS`,…] `--enable-dhcp` | `--static-ip-config-ip-blocks`=[`gateway`=`GATEWAY`],[`ips`=`IPS`],[`netmask`=`NETMASK`]) [`--admin-users`=`ADMIN_USERS`] [`--annotations`=[`KEY`=`VALUE`,…]] [`--async`] [`--description`=`DESCRIPTION`] [`--disable-aag-config`] [`--disable-vsphere-csi`] [`--enable-auto-repair`] [`--enable-vm-tracking`] [`--upgrade-policy`=[`control-plane-only`=`CONTROL-PLANE-ONLY`]] [`--validate-only`] [`--cpus`=`CPUS` `--enable-auto-resize` `--memory`=`MEMORY` `--replicas`=`REPLICAS`] [`--disable-control-plane-v2` | `--enable-control-plane-v2`] [`--enable-advanced-networking` `--enable-dataplane-v2`] [`--vcenter-ca-cert-data`=`VCENTER_CA_CERT_DATA` `--vcenter-cluster`=`VCENTER_CLUSTER` `--vcenter-datacenter`=`VCENTER_DATACENTER` `--vcenter-datastore`=`VCENTER_DATASTORE` `--vcenter-folder`=`VCENTER_FOLDER` `--vcenter-resource-pool`=`VCENTER_RESOURCE_POOL` `--vcenter-storage-policy-name`=`VCENTER_STORAGE_POLICY_NAME`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     Create an Anthos cluster on VMware. 
+EXAMPLES
+     To create a cluster named ``my-cluster`` managed in location ``us-west1``, run: 
+    
+    
+    gcloud container vmware clusters create my-cluster --location=us-west1
+
+POSITIONAL ARGUMENTS
+    
+
+Cluster resource - cluster to create The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `cluster` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`CLUSTER`
+     ID of the cluster or fully qualified identifier for the cluster. 
+
+To set the `cluster` attribute: 
+
+  * provide the argument `cluster` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     Google Cloud location for the cluster. 
+
+To set the `location` attribute: 
+
+  * provide the argument `cluster` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `container_vmware/location`. 
+
+
+REQUIRED FLAGS
+    
+
+`--version`=`VERSION`
+     Anthos Cluster on VMware version for the cluster resource 
+Admin cluster membership resource - membership of the admin cluster. Membership name is the same as the admin cluster name. 
+
+Examples: 
+    
+    
+    gcloud container vmware clusters create
+          --admin-cluster-membership=projects/example-project-12345/locations/us-west1/memberships/example-admin-cluster-name
+
+or 
+    
+    
+    gcloud container vmware clusters create
+          --admin-cluster-membership-project=example-project-12345
+          --admin-cluster-membership-location=us-west1
+          --admin-cluster-membership=example-admin-cluster-name
+    
+    
+    The arguments in this group can be used to specify the attributes of this resource.
+
+This must be specified. 
+
+`--admin-cluster-membership`=`ADMIN_CLUSTER_MEMBERSHIP`
+     ID of the admin_cluster_membership or fully qualified identifier for the admin_cluster_membership. 
+
+To set the `admin_cluster_membership` attribute: 
+
+  * provide the argument `--admin-cluster-membership` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--admin-cluster-membership-location`=`ADMIN_CLUSTER_MEMBERSHIP_LOCATION`
+     Google Cloud location for the admin_cluster_membership. 
+
+To set the `location` attribute: 
+
+  * provide the argument `--admin-cluster-membership` on the command line with a fully specified name; 
+  * provide the argument `--admin-cluster-membership-location` on the command line. 
+
+
+`--admin-cluster-membership-project`=`ADMIN_CLUSTER_MEMBERSHIP_PROJECT`
+     Google Cloud project for the admin_cluster_membership. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--admin-cluster-membership` on the command line with a fully specified name; 
+  * provide the argument `--admin-cluster-membership-project` on the command line. 
+
+
+Anthos on VMware cluster load balancer configurations 
+
+This must be specified. 
+
+VIPs used by the load balancer 
+
+This must be specified. 
+
+`--control-plane-vip`=`CONTROL_PLANE_VIP`
+     VIP for the Kubernetes API of this cluster. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--ingress-vip`=`INGRESS_VIP`
+     VIP for ingress traffic into this cluster. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+Populate one of the load balancers. 
+
+Exactly one of these must be specified: 
+
+MetalLB Configuration 
+
+At most one of these can be specified: 
+
+`--metal-lb-config-address-pools`=[`addresses`=`ADDRESSES`],[`avoid-buggy-ips`=`AVOID-BUGGY-IPS`],[`manual-assign`=`MANUAL-ASSIGN`],[`pool`=`POOL`]
+     MetalLB load balancer configurations. 
+
+Examples: 
+
+To specify MetalLB load balancer configurations for two address pools `pool1` and `pool2`, 
+    
+    
+    [gcloud](https://docs.cloud.google.com/sdk/gcloud/reference) gcloud container vmware clusters create
+        --metal-lb-config-address-pools 'pool=pool1,avoid-buggy-ips=True,manual-assign=True,addresses=192.168.1.1/32;192.168.1.2-192.168.1.3'
+        --metal-lb-config-address-pools 'pool=pool2,avoid-buggy-ips=False,manual-assign=False,addresses=192.168.2.1/32;192.168.2.2-192.168.2.3'
+
+Use quote around the flag value to escape semicolon in the terminal. 
+
+Manual load balancer configuration. 
+
+With manual load balancing mode, DHCP is not supported. Specify static IP addresses for cluster nodes instead. For more details, see <https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/manual-load-balance#setting_aside_node_ip_addresses>. 
+
+`--control-plane-node-port`=`CONTROL_PLANE_NODE_PORT`
+     NodePort for control plane service. 
+`--ingress-http-node-port`=`INGRESS_HTTP_NODE_PORT`
+     NodePort for ingress service's http. 
+`--ingress-https-node-port`=`INGRESS_HTTPS_NODE_PORT`
+     NodePort for ingress service's https. 
+`--konnectivity-server-node-port`=`KONNECTIVITY_SERVER_NODE_PORT`
+     NodePort for konnectivity service running as a sidecar in each kube-apiserver pod. 
+F5 Big IP Configuration 
+`--f5-config-address`=`F5_CONFIG_ADDRESS`
+     F5 Big IP load balancer address. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--f5-config-partition`=`F5_CONFIG_PARTITION`
+     F5 Big IP load balancer partition. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--f5-config-snat-pool`=`F5_CONFIG_SNAT_POOL`
+     F5 Big IP load balancer pool name if using SNAT. 
+VMware User Cluster network configurations 
+
+This must be specified. 
+
+`--pod-address-cidr-blocks`=`POD_ADDRESS`
+     IPv4 address range for all pods in the cluster. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--service-address-cidr-blocks`=`SERVICE_ADDRESS`
+     IPv4 address range for all services in the cluster. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+Control plane v2 mode configurations. 
+`--control-plane-ip-block`=[`gateway`=`GATEWAY`],[`ips`=`IPS`],[`netmask`=`NETMASK`]
+     Static IP addresses for the control plane nodes. The number of IP addresses should match the number of replicas for the control plane nodes, specified by `--replicas`. 
+
+To specify the control plane IP block, 
+    
+    
+    [gcloud](https://docs.cloud.google.com/sdk/gcloud/reference) gcloud container vmware clusters create
+        --control-plane-ip-block 'gateway=192.168.0.1,netmask=255.255.255.0,ips=192.168.1.1;0.0.0.0 localhost;'
+
+Common parameters for all hosts irrespective of their IP address 
+`--dns-search-domains`=[`DNS_SEARCH_DOMAINS`,…]
+     DNS search domains. 
+`--dns-servers`=[`DNS_SERVERS`,…]
+     DNS server IP address. 
+`--ntp-servers`=[`NTP_SERVERS`,…]
+     NTP server IP address. 
+IP configuration used by the VMware User Cluster 
+
+At most one of these can be specified: 
+
+DHCP configuration group. 
+`--enable-dhcp`
+     Enable DHCP IP allocation for VMware user clusters. 
+
+While using DHCP, manual load balancing mode is not supported. For more details, see <https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/manual-load-balance#setting_aside_node_ip_addresses>. 
+
+Static IP configuration group 
+
+At most one of these can be specified: 
+
+`--static-ip-config-ip-blocks`=[`gateway`=`GATEWAY`],[`ips`=`IPS`],[`netmask`=`NETMASK`]
+     Static IP configurations. 
+
+Expect an individual IP address, an individual IP address with an optional hostname, or a CIDR block. 
+
+Example: 
+
+To specify two Static IP blocks, 
+    
+    
+    [gcloud](https://docs.cloud.google.com/sdk/gcloud/reference) gcloud container vmware clusters create
+        --static-ip-config-ip-blocks 'gateway=192.168.0.1,netmask=255.255.255.0,ips=192.168.1.1;0.0.0.0 localhost;192.168.1.2/16'
+        --static-ip-config-ip-blocks 'gateway=192.168.1.1,netmask=255.255.0.0,ips=8.8.8.8;4.4.4.4'
+
+Use quote around the flag value to escape semicolon in the terminal. 
+
+OPTIONAL FLAGS
+    
+
+User cluster authorization configurations to bootstrap onto the admin cluster 
+`--admin-users`=`ADMIN_USERS`
+     Users that will be granted the cluster-admin role on the cluster, providing full access to the cluster. 
+
+To add multiple users, specify one in each flag. When updating, the update command overwrites the whole grant list. Specify all existing and new users that you want to be cluster administrators. 
+
+Examples: 
+    
+    
+    gcloud container vmware clusters create
+        --admin-users alice@example.com
+        --admin-users bob@example.com
+
+`--annotations`=[`KEY`=`VALUE`,…]
+     Annotations on the VMware user cluster. 
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--description`=`DESCRIPTION`
+     Description for the resource. 
+Anti-affinity group configurations 
+`--disable-aag-config`
+     If set, spread nodes across at least three physical hosts (requires at least three hosts). Enabled by default. 
+Storage configurations 
+`--disable-vsphere-csi`
+     If set, vSphere CSI components are not deployed in the VMware User Cluster. Enabled by default. 
+Auto-repair configurations 
+`--enable-auto-repair`
+     If set, deploy the cluster-health-controller. 
+`--enable-vm-tracking`
+     If set, enable VM tracking. 
+Upgrade policy for the cluster. 
+`--upgrade-policy`=[`control-plane-only`=`CONTROL-PLANE-ONLY`]
+     If not specified, control-plane-only is set to False. In the next upgrade operation, all worker node pools will be upgraded together with the control plane. 
+
+Example: 
+    
+    
+    To upgrade the control plane only and keep worker node pools version unchanged, first specify the policy:
+    
+    
+    gcloud container vmware clusters create CLUSTER --upgrade-policy control-plane-only=True
+    
+    
+    Then to start the upgrade operation using the specified policy, run:
+    
+    
+    [gcloud container vmware clusters upgrade](https://docs.cloud.google.com/sdk/gcloud/reference/container/vmware/clusters/upgrade) CLUSTER --version=VERSION
+    
+    
+    After upgrading only the cluster control plane, to upgrade an individual node pool, run:
+    
+    
+    [gcloud container vmware node-pools update](https://docs.cloud.google.com/sdk/gcloud/reference/container/vmware/node-pools/update) NODE_POOL --version=VERSION
+
+Example: 
+    
+    
+    Alternatively, to upgrade both the control plane and all worker node pools, first specify the policy:
+    
+    
+    gcloud container vmware clusters create CLUSTER --upgrade-policy control-plane-only=False
+    
+    
+    Then to start the upgrade operation using the specified policy, run:
+    
+    
+    [gcloud container vmware clusters upgrade](https://docs.cloud.google.com/sdk/gcloud/reference/container/vmware/clusters/upgrade) CLUSTER --version=VERSION
+
+`--validate-only`
+     If set, only validate the request, but do not actually perform the operation. 
+Control plane node configurations 
+`--cpus`=`CPUS`
+     Number of CPUs for each admin cluster node that serve as control planes for this VMware user cluster. (default: 4 CPUs) 
+Auto resize configurations 
+`--enable-auto-resize`
+     Enable controle plane node auto resize. 
+`--memory`=`MEMORY`
+     Megabytes of memory for each admin cluster node that serves as a control plane for this VMware User Cluster (default: 8192 MB memory). 
+`--replicas`=`REPLICAS`
+     Number of control plane nodes for this VMware user cluster. (default: 1 replica). 
+At most one of these can be specified: 
+
+`--disable-control-plane-v2`
+     If set, disable control plane v2. 
+`--enable-control-plane-v2`
+     If set, enable control plane v2. 
+Dataplane V2 configurations 
+`--enable-advanced-networking`
+     If set, enable advanced networking. Requires dataplane_v2_enabled to be set true. 
+`--enable-dataplane-v2`
+     If set, enables Dataplane V2. 
+vCenter configurations for the cluster. If not specified, it is inherited from the admin cluster. 
+`--vcenter-ca-cert-data`=`VCENTER_CA_CERT_DATA`
+     Name of the vCenter CA certificate public key for SSL verification. 
+`--vcenter-cluster`=`VCENTER_CLUSTER`
+     Name of the vCenter cluster for the user cluster. 
+`--vcenter-datacenter`=`VCENTER_DATACENTER`
+     Name of the vCenter datacenter for the user cluster. 
+`--vcenter-datastore`=`VCENTER_DATASTORE`
+     Name of the vCenter datastore for the user cluster. 
+`--vcenter-folder`=`VCENTER_FOLDER`
+     Name of the vCenter folder for the user cluster. 
+`--vcenter-resource-pool`=`VCENTER_RESOURCE_POOL`
+     Name of the vCenter resource pool for the user cluster. 
+`--vcenter-storage-policy-name`=`VCENTER_STORAGE_POLICY_NAME`
+     Name of the vCenter storage policy for the user cluster. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     These variants are also available: 
+    
+    
+    [gcloud alpha container vmware clusters create](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/container/vmware/clusters/create)
+    
+    
+    [gcloud beta container vmware clusters create](https://docs.cloud.google.com/sdk/gcloud/reference/beta/container/vmware/clusters/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

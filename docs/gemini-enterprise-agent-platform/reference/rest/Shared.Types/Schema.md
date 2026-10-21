@@ -1,0 +1,88 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Schema/
+title: Schema \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-15T00:46:21.998423+00:00
+---
+
+# Schema  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Schema/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ API reference ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/apis)
+
+
+
+Send feedback 
+
+#  Schema Stay organized with collections  Save and categorize content based on your preferences. 
+
+Defines the schema of input and output data. This is a subset of the [OpenAPI 3.0 Schema Object](https://spec.openapis.org/oas/v3.0.3#schema-object).
+
+Fields  
+  
+`type` `enum (`Type`)` Optional. data type of the schema field. | `format` `string` Optional. The format of the data. For `NUMBER` type, format can be `float` or `double`. For `INTEGER` type, format can be `int32` or `int64`. For `STRING` type, format can be `email`, `byte`, `date`, `date-time`, `password`, and other formats to further refine the data type. | `title` `string` Optional. title for the schema. | `description` `string` Optional. Describes the data. The model uses this field to understand the purpose of the schema and how to use it. It is a best practice to provide a clear and descriptive explanation for the schema and its properties here, rather than in the prompt. | `nullable` `boolean` Optional. Indicates if the value of this field can be null. | `default` `value (`[Value](https://protobuf.dev/reference/protobuf/google.protobuf/#value)` format)` Optional. Default value to use if the field is not specified. | `items` `object (`[Schema](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Schema)`)` Optional. If type is `ARRAY`, `items` specifies the schema of elements in the array. | `minItems` `string ([int64](https://developers.google.com/discovery/v1/type-format) format)` Optional. If type is `ARRAY`, `minItems` specifies the minimum number of items in an array. | `maxItems` `string ([int64](https://developers.google.com/discovery/v1/type-format) format)` Optional. If type is `ARRAY`, `maxItems` specifies the maximum number of items in an array. | `enum[]` `string` Optional. Possible values of the field. This field can be used to restrict a value to a fixed set of values. To mark a field as an enum, set `format` to `enum` and provide the list of possible values in `enum`. For example: 1. To define directions: `{type:STRING, format:enum, enum:["EAST", "NORTH", "SOUTH", "WEST"]}` 2\. To define apartment numbers: `{type:INTEGER, format:enum, enum:["101", "201", "301"]}` | `properties` `map (key: string, value: object (`[Schema](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Schema)`))` Optional. If type is `OBJECT`, `properties` is a map of property names to schema definitions for each property of the object. | `propertyOrdering[]` `string` Optional. Order of properties displayed or used where order matters. This is not a standard field in OpenAPI specification, but can be used to control the order of properties. | `required[]` `string` Optional. If type is `OBJECT`, `required` lists the names of properties that must be present. | `minProperties` `string ([int64](https://developers.google.com/discovery/v1/type-format) format)` Optional. If type is `OBJECT`, `minProperties` specifies the minimum number of properties that can be provided. | `maxProperties` `string ([int64](https://developers.google.com/discovery/v1/type-format) format)` Optional. If type is `OBJECT`, `maxProperties` specifies the maximum number of properties that can be provided. | `minimum` `number` Optional. If type is `INTEGER` or `NUMBER`, `minimum` specifies the minimum allowed value. | `maximum` `number` Optional. If type is `INTEGER` or `NUMBER`, `maximum` specifies the maximum allowed value. | `minLength` `string ([int64](https://developers.google.com/discovery/v1/type-format) format)` Optional. If type is `STRING`, `minLength` specifies the minimum length of the string. | `maxLength` `string ([int64](https://developers.google.com/discovery/v1/type-format) format)` Optional. If type is `STRING`, `maxLength` specifies the maximum length of the string. | `pattern` `string` Optional. If type is `STRING`, `pattern` specifies a regular expression that the string must match. | `example` `value (`[Value](https://protobuf.dev/reference/protobuf/google.protobuf/#value)` format)` Optional. Example of an instance of this schema. | `anyOf[]` `object (`[Schema](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Schema)`)` Optional. The instance must be valid against any (one or more) of the subschemas listed in `anyOf`. | `additionalProperties` `value (`[Value](https://protobuf.dev/reference/protobuf/google.protobuf/#value)` format)` Optional. If `type` is `OBJECT`, specifies how to handle properties not defined in `properties`. If it is a boolean `false`, no additional properties are allowed. If it is a schema, additional properties are allowed if they conform to the schema. | `ref` `string` Optional. Allows referencing another schema definition to use in place of this schema. The value must be a valid reference to a schema in `defs`.For example, the following schema defines a reference to a schema node named "Pet":type: object properties: pet: ref: #/defs/Pet defs: Pet: type: object properties: name: type: stringThe value of the "pet" property is a reference to the schema node named "Pet". See details in <https://json-schema.org/understanding-json-schema/structuring> | `defs` `map (key: string, value: object (`[Schema](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Schema)`))` Optional. `defs` provides a map of schema definitions that can be reused by `ref` elsewhere in the schema. Only allowed at root level of the schema. | JSON representation  
+---  
+      
+    
+    {
+      "type": enum (Type),
+      "format": string,
+      "title": string,
+      "description": string,
+      "nullable": boolean,
+      "default": value,
+      "items": {
+        object ([Schema](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Schema))
+      },
+      "minItems": string,
+      "maxItems": string,
+      "enum": [
+        string
+      ],
+      "properties": {
+        string: {
+          object ([Schema](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Schema))
+        },
+        ...
+      },
+      "propertyOrdering": [
+        string
+      ],
+      "required": [
+        string
+      ],
+      "minProperties": string,
+      "maxProperties": string,
+      "minimum": number,
+      "maximum": number,
+      "minLength": string,
+      "maxLength": string,
+      "pattern": string,
+      "example": value,
+      "anyOf": [
+        {
+          object ([Schema](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Schema))
+        }
+      ],
+      "additionalProperties": value,
+      "ref": string,
+      "defs": {
+        string: {
+          object ([Schema](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Schema))
+        },
+        ...
+      }
+    }  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-12 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-12 UTC."],[],[]] 

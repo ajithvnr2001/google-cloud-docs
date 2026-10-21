@@ -1,0 +1,123 @@
+---
+url: https://docs.cloud.google.com/bigquery/docs/graph-chat/
+title: Chat with a graph \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T00:40:20.141518+00:00
+---
+
+# Chat with a graph  |  BigQuery  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/bigquery/docs/graph-chat/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Data analytics ](https://docs.cloud.google.com/docs/data)
+  * [ BigQuery ](https://docs.cloud.google.com/bigquery/docs)
+  * [ Guides ](https://docs.cloud.google.com/bigquery/docs/introduction)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Chat with a graph
+
+**Note:** This feature may not be available when using reservations that are created with certain BigQuery editions. For more information about which features are enabled in each edition, see [Introduction to BigQuery editions](https://docs.cloud.google.com/bigquery/docs/editions-intro).
+
+You can use [conversational analytics](https://docs.cloud.google.com/bigquery/docs/conversational-analytics#graphs) to ask questions about a graph. Agents can write SQL queries and provide visualizations of your output. Agents can also use descriptions, synonyms, and [measures](https://docs.cloud.google.com/bigquery/docs/graph-measures) defined on your graph to improve the quality of the results. Depending on your graph schema and the question that you ask, the agent queries a graph by using either Graph Query Language (GQL) or the [`GRAPH_EXPAND`](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/graph-sql-queries#graph_expand) table-valued function in SQL. GQL queries require a [BigQuery Enterprise or Enterprise Plus edition](https://docs.cloud.google.com/bigquery/docs/editions-intro) reservation. In projects with on-demand pricing, GQL queries fail with an error. Queries that contain the `GRAPH_EXPAND` function can run using on-demand pricing, but the function doesn't support all types of graphs. For requirements and limitations, see [`GRAPH_EXPAND`](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/graph-sql-queries#graph_expand).
+
+Graphs encode the relationships between your tables. Providing a graph to an agent removes ambiguity about how your tables relate. This clarity reduces hallucinations and can improve the efficiency of your conversations.
+
+For example, to try asking an agent about the publicly available Look Ecommerce graph, do the following:
+
+  1. In the Google Cloud console, go to the BigQuery **Agents** page.
+
+[Go to Agents](https://console.cloud.google.com/bigquery/agents_hub)
+
+  2. Select the **Agent catalog** tab.
+
+  3. In the **Sample agents by Google** section, click **The Look Graph**.
+
+  4. A conversation opens. You can enter questions about the [`bigquery-public-data.thelook_ecommerce.graph`](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!18m3!1sbigquery-public-data!2sthelook_ecommerce!3sgraph) graph.
+
+
+
+
+## Chat with a graph
+
+To chat with a graph, you can either [create a data agent](https://docs.cloud.google.com/bigquery/docs/create-data-agents) with your graph as its data source, or you can [create a direct conversation](https://docs.cloud.google.com/bigquery/docs/create-conversations#create_a_direct_conversation_with_a_data_source) with your graph. If you're not sure what to ask, try asking `What questions can I ask about this data?` For example, if you ask this question about the Look Ecommerce graph, the response contains an overview of the graph schema and suggested questions. The following questions might appear in the response:
+
+  * Business Performance
+
+    * `What is the total revenue for each product category, sorted from highest to lowest?`
+    * `What are the top 5 brands by total revenue among users from 'Brasil'?`
+    * `Rank the product categories based on their total revenue for each product department (Men/Women).`
+  * User & Logistics Insights
+
+    * `How many users do we have in each country?`
+    * `What is the distribution of user ages in the United States?`
+    * `Which distribution centers handle the most orders with a 'Complete' status?`
+  * Relationship Analysis
+
+    * `Show the connection between users and the distribution centers their products are shipped from.`
+    * `Find all products that have been ordered by users who came from a 'Search' traffic source.`
+
+
+
+## Create graph queries and visualizations
+
+Conversational analytics can write GQL queries to answer questions about your graph and display the output as a visualization. For example, you can enter `Show the connection between Tina Fletcher's orders and distribution centers` into the chat. The agent might run a GQL query similar to the following:
+    
+    
+    GRAPH `bigquery-public-data.thelook_ecommerce.graph`
+    MATCH p = (u:User {id: 32})
+              <-[:placed_order]-(o:`Order`)
+              <-[:belongs_to_order]-(oi:OrderItem)
+              -[:includes_product]->(pr:Product)
+              -[:product_stocked_at]->(dc:DistributionCenter)
+    RETURN TO_JSON(p) AS path;
+    
+
+The agent might also provide an interactive visualization.
+
+![A visualization of orders connecting a user to distribution centers.](https://docs.cloud.google.com/static/bigquery/images/look-graph-visualization.png)
+
+## Use graph measures
+
+Conversational analytics can use measures defined on your graph to help accurately answer questions that involve aggregations. For example, you can ask the following question to the `Look Graph` agent: `Which distribution centers process orders from the largest number of distinct customers?`
+
+The agent uses the `user_count` measure on the `User` node to avoid overcounting the number of customers. The query used to calculate the response might look similar to the following:
+    
+    
+    SELECT
+      DistributionCenter_id,
+      DistributionCenter_name,
+      AGG(User_user_count) AS distinct_customer_count
+    FROM
+      GRAPH_EXPAND("bigquery-public-data.thelook_ecommerce.graph")
+    GROUP BY
+      DistributionCenter_id,
+      DistributionCenter_name
+    ORDER BY
+      distinct_customer_count DESC;
+    
+
+The agent might also provide a chart visualization.
+
+![A visualization of distinct users by distribution center.](https://docs.cloud.google.com/static/bigquery/images/look-graph-distinct-users-visualization.png)
+
+## What's next
+
+  * Learn more about [conversational analytics](https://docs.cloud.google.com/bigquery/docs/conversational-analytics).
+  * Learn more about [writing graph queries](https://docs.cloud.google.com/bigquery/docs/graph-query-overview).
+  * Learn more about designing your [graph schema](https://docs.cloud.google.com/bigquery/docs/graph-schema-overview).
+  * Learn more about [visualizing your graphs](https://docs.cloud.google.com/bigquery/docs/graph-visualization).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

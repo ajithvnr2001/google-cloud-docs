@@ -1,0 +1,318 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content/
+title: Content \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-15T03:59:25.016452+00:00
+---
+
+# Content  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ API reference ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/apis)
+
+
+
+Send feedback 
+
+#  Content Stay organized with collections  Save and categorize content based on your preferences. 
+
+The structured data content of a message.
+
+A `Content` message contains a `role` field, which indicates the producer of the content, and a `parts` field, which contains the multi-part data of the message.
+
+Fields  
+  
+`role` `string` Optional. The producer of the content. Must be either 'user' or 'model'.If not set, the service will default to 'user'. | `parts[]` `object (`[Part](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#Part)`)` Required. A list of `Part` objects that make up a single message. Parts of a message can have different MIME types.A `Content` message must have at least one `Part`. | JSON representation  
+---  
+      
+    
+    {
+      "role": string,
+      "parts": [
+        {
+          object ([Part](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#Part))
+        }
+      ]
+    }  
+  
+## Part
+
+A datatype containing media that is part of a multi-part `Content` message.
+
+A `Part` consists of data which has an associated datatype. A `Part` must contain one of the accepted types in `Part.data`.
+
+For media types that are not text, `Part` must have a fixed IANA MIME type identifying the type and subtype of the media if `inlineData` or `fileData` field is filled with raw bytes.
+
+Fields  
+  
+`thought` `boolean` Optional. Indicates whether the `part` represents the model's thought process or reasoning. | `thoughtSignature` `string ([bytes](https://developers.google.com/discovery/v1/type-format) format)` Optional. An opaque signature for the thought so it can be reused in subsequent requests.A base64-encoded string. | `mediaResolution` `object (`[MediaResolution](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#MediaResolution)`)` per part media resolution. Media resolution for the input media. | `mediaProcessing` `enum (`[MediaProcessing](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/MediaProcessing)`)` Optional. How the model processes this part's media for understanding. Only meaningful for video parts (`inlineData` or `fileData` with video mime). Non-video parts ignore this field. | `data` `Union type`  
+  
+Required. The data which has an associated datatype. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:
+
+`text` `string` Optional. The text content of the part. When sent from the VSCode Gemini code Assist extension, references to @mentioned items will be converted to markdown boldface text. For example `@my-repo` will be converted to and sent as `**my-repo**` by the IDE agent. | `inlineData` `object (`[Blob](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Blob)`)` Optional. The inline data content of the part. This can be used to include images, audio, or video in a request. | `fileData` `object (`[FileData](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#FileData)`)` Optional. The URI-based data of the part. This can be used to include files from Google Cloud Storage. | `functionCall` `object (`[FunctionCall](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#FunctionCall)`)` Optional. A predicted function call returned from the model. This contains the name of the function to call and the arguments to pass to the function. | `functionResponse` `object (`[FunctionResponse](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#FunctionResponse)`)` Optional. The result of a function call. This is used to provide the model with the result of a function call that it predicted. | `executableCode` `object (`[ExecutableCode](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#ExecutableCode)`)` Optional. code generated by the model that is intended to be executed. | `codeExecutionResult` `object (`[CodeExecutionResult](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/CodeExecutionResult)`)` Optional. The result of executing the `ExecutableCode`. End of mutually exclusive fields. | `metadata` `Union type`  
+  
+The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:
+
+`videoMetadata` `object (`[VideoMetadata](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#VideoMetadata)`)` Optional. Video metadata. The metadata should only be specified while the video data is presented in inlineData or fileData. End of mutually exclusive fields. | JSON representation  
+---  
+      
+    
+    {
+      "thought": boolean,
+      "thoughtSignature": string,
+      "mediaResolution": {
+        object ([MediaResolution](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#MediaResolution))
+      },
+      "mediaProcessing": enum ([MediaProcessing](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/MediaProcessing)),
+    
+      // data
+      "text": string,
+      "inlineData": {
+        object ([Blob](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Blob))
+      },
+      "fileData": {
+        object ([FileData](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#FileData))
+      },
+      "functionCall": {
+        object ([FunctionCall](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#FunctionCall))
+      },
+      "functionResponse": {
+        object ([FunctionResponse](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#FunctionResponse))
+      },
+      "executableCode": {
+        object ([ExecutableCode](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#ExecutableCode))
+      },
+      "codeExecutionResult": {
+        object ([CodeExecutionResult](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/CodeExecutionResult))
+      }
+      // Union type
+    
+      // metadata
+      "videoMetadata": {
+        object ([VideoMetadata](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#VideoMetadata))
+      }
+      // Union type
+    }  
+  
+## FileData
+
+URI-based data.
+
+A `FileData` message contains a URI pointing to data of a specific media type. It is used to represent images, audio, and video stored in Google Cloud Storage.
+
+Fields  
+  
+`mimeType` `string` Required. The IANA standard MIME type of the source data. | `fileUri` `string` Required. The URI of the file in Google Cloud Storage. | `displayName` `string` Optional. The display name of the file. Used to provide a label or filename to distinguish files.This field is only returned in `PromptMessage` for prompt management. It is used in the Gemini calls only when server side tools (`codeExecution`, `googleSearch`, and `urlContext`) are enabled. | JSON representation  
+---  
+      
+    
+    {
+      "mimeType": string,
+      "fileUri": string,
+      "displayName": string
+    }  
+  
+## FunctionCall
+
+A predicted `[FunctionCall](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#Part.FIELDS.function_call)` returned from the model that contains a string representing the `[FunctionDeclaration.name](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/FunctionDeclaration#FIELDS.name)` and a structured JSON object containing the parameters and their values.
+
+Fields  
+  
+`id` `string` Optional. The unique id of the function call. If populated, the client to execute the `functionCall` and return the response with the matching `id`. | `name` `string` Optional. The name of the function to call. Matches `[FunctionDeclaration.name](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/FunctionDeclaration#FIELDS.name)`. | `args` `object (`[Struct](https://protobuf.dev/reference/protobuf/google.protobuf/#struct)` format)` Optional. The function parameters and values in JSON object format. See `[FunctionDeclaration.parameters](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/FunctionDeclaration#FIELDS.parameters)` for parameter details. | `partialArgs[]` `object (`[PartialArg](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#PartialArg)`)` Optional. The partial argument value of the function call. If provided, represents the arguments/fields that are streamed incrementally. | `willContinue` `boolean` Optional. Whether this is the last part of the FunctionCall. If true, another partial message for the current FunctionCall is expected to follow. | JSON representation  
+---  
+      
+    
+    {
+      "id": string,
+      "name": string,
+      "args": {
+        object
+      },
+      "partialArgs": [
+        {
+          object ([PartialArg](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#PartialArg))
+        }
+      ],
+      "willContinue": boolean
+    }  
+  
+## PartialArg
+
+Partial argument value of the function call.
+
+Fields  
+  
+`jsonPath` `string` Required. A JSON Path (RFC 9535) to the argument being streamed. <https://datatracker.ietf.org/doc/html/rfc9535>. e.g. "$.foo.bar[0].data". | `willContinue` `boolean` Optional. Whether this is not the last part of the same jsonPath. If true, another PartialArg message for the current jsonPath is expected to follow. | `delta` `Union type`  
+  
+The delta of field value being streamed. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:
+
+`nullValue` `null` Optional. Represents a null value. | `numberValue` `number` Optional. Represents a double value. | `stringValue` `string` Optional. Represents a string value. | `boolValue` `boolean` Optional. Represents a boolean value. End of mutually exclusive fields. | JSON representation  
+---  
+      
+    
+    {
+      "jsonPath": string,
+      "willContinue": boolean,
+    
+      // delta
+      "nullValue": null,
+      "numberValue": number,
+      "stringValue": string,
+      "boolValue": boolean
+      // Union type
+    }  
+  
+## FunctionResponse
+
+The result output from a `[FunctionCall](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#Part.FIELDS.function_call)` that contains a string representing the `[FunctionDeclaration.name](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/FunctionDeclaration#FIELDS.name)` and a structured JSON object containing any output from the function is used as context to the model. This should contain the result of a `FunctionCall` made based on model prediction.
+
+Fields  
+  
+`id` `string` Optional. The id of the function call this response is for. Populated by the client to match the corresponding function call `id`. | `name` `string` Required. The name of the function to call. Matches `[FunctionDeclaration.name](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/FunctionDeclaration#FIELDS.name)` and `[FunctionCall.name](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#FunctionCall.FIELDS.name)`. | `response` `object (`[Struct](https://protobuf.dev/reference/protobuf/google.protobuf/#struct)` format)` Required. The function response in JSON object format. Use "output" key to specify function output and "error" key to specify error details (if any). If "output" and "error" keys are not specified, then whole "response" is treated as function output. | `parts[]` `object (`[FunctionResponsePart](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#FunctionResponsePart)`)` Optional. Ordered `Parts` that constitute a function response. Parts may have different IANA MIME types. | JSON representation  
+---  
+      
+    
+    {
+      "id": string,
+      "name": string,
+      "response": {
+        object
+      },
+      "parts": [
+        {
+          object ([FunctionResponsePart](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#FunctionResponsePart))
+        }
+      ]
+    }  
+  
+## FunctionResponsePart
+
+A datatype containing media that is part of a `FunctionResponse` message.
+
+A `FunctionResponsePart` consists of data which has an associated datatype. A `FunctionResponsePart` can only contain one of the accepted types in `FunctionResponsePart.data`.
+
+A `FunctionResponsePart` must have a fixed IANA MIME type identifying the type and subtype of the media if the `inlineData` field is filled with raw bytes.
+
+Fields  
+  
+`data` `Union type`  
+  
+The data of the function response part. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:
+
+`inlineData` `object (`[FunctionResponseBlob](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#FunctionResponseBlob)`)` Inline media bytes. | `fileData` `object (`[FunctionResponseFileData](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#FunctionResponseFileData)`)` URI based data. End of mutually exclusive fields. | JSON representation  
+---  
+      
+    
+    {
+    
+      // data
+      "inlineData": {
+        object ([FunctionResponseBlob](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#FunctionResponseBlob))
+      },
+      "fileData": {
+        object ([FunctionResponseFileData](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Content#FunctionResponseFileData))
+      }
+      // Union type
+    }  
+  
+## FunctionResponseBlob
+
+Raw media bytes for function response.
+
+Text should not be sent as raw bytes, use the 'text' field.
+
+Fields  
+  
+`mimeType` `string` Required. The IANA standard MIME type of the source data. | `data` `string ([bytes](https://developers.google.com/discovery/v1/type-format) format)` Required. Raw bytes.A base64-encoded string. | `displayName` `string` Optional. Display name of the blob.Used to provide a label or filename to distinguish blobs.This field is only returned in PromptMessage for prompt management. It is currently used in the Gemini GenerateContent calls only when server side tools (codeExecution, googleSearch, and urlContext) are enabled. | JSON representation  
+---  
+      
+    
+    {
+      "mimeType": string,
+      "data": string,
+      "displayName": string
+    }  
+  
+## FunctionResponseFileData
+
+URI based data for function response.
+
+Fields  
+  
+`mimeType` `string` Required. The IANA standard MIME type of the source data. | `fileUri` `string` Required. URI. | `displayName` `string` Optional. Display name of the file data.Used to provide a label or filename to distinguish file datas.This field is only returned in PromptMessage for prompt management. It is currently used in the Gemini GenerateContent calls only when server side tools (codeExecution, googleSearch, and urlContext) are enabled. | JSON representation  
+---  
+      
+    
+    {
+      "mimeType": string,
+      "fileUri": string,
+      "displayName": string
+    }  
+  
+## ExecutableCode
+
+code generated by the model that is meant to be executed, and the result returned to the model.
+
+Generated when using the `CodeExecution` tool, in which the code will be automatically executed, and a corresponding `[CodeExecutionResult](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/CodeExecutionResult)` will also be generated.
+
+Fields  
+  
+`language` `enum (`[Language](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Language)`)` Required. Programming language of the `code`. | `code` `string` Required. The code to be executed. | `id` `string` Optional. Unique identifier of the `ExecutableCode` part. The server returns the `CodeExecutionResult` with the matching `id`. | JSON representation  
+---  
+      
+    
+    {
+      "language": enum ([Language](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Language)),
+      "code": string,
+      "id": string
+    }  
+  
+## VideoMetadata
+
+Provides metadata for a video, including the start and end offsets for clipping and the frame rate.
+
+Fields  
+  
+`startOffset` `string (`[Duration](https://protobuf.dev/reference/protobuf/google.protobuf/#duration)` format)` Optional. The start offset of the video.A duration in seconds with up to nine fractional digits, ending with '`s`'. Example: `"3.5s"`. | `endOffset` `string (`[Duration](https://protobuf.dev/reference/protobuf/google.protobuf/#duration)` format)` Optional. The end offset of the video.A duration in seconds with up to nine fractional digits, ending with '`s`'. Example: `"3.5s"`. | `fps` `number` Optional. The frame rate of the video sent to the model. If not specified, the default value is 1.0. The valid range is (0.0, 24.0]. | JSON representation  
+---  
+      
+    
+    {
+      "startOffset": string,
+      "endOffset": string,
+      "fps": number
+    }  
+  
+## MediaResolution
+
+per part media resolution. Media resolution for the input media.
+
+Fields  
+  
+`value` `Union type`  
+  
+The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:
+
+`level` `enum (`[Level](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Level)`)` The tokenization quality used for given media. End of mutually exclusive fields. | JSON representation  
+---  
+      
+    
+    {
+    
+      // value
+      "level": enum ([Level](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/Level))
+      // Union type
+    }  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-09 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 

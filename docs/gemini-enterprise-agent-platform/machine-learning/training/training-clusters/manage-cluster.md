@@ -1,0 +1,240 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/training-clusters/manage-cluster/
+title: Manage cluster \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T00:16:38.778291+00:00
+---
+
+# Manage cluster  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/training-clusters/manage-cluster/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Manage cluster Stay organized with collections  Save and categorize content based on your preferences. 
+
+If you're interested in Gemini Enterprise Agent Platform training clusters, contact your sales representative for access. 
+
+Once a cluster is deployed, you can change or remove it using the following Agent Platform API endpoints:
+
+  * `Update`: Modifies an existing cluster configuration.
+  * `Delete`: Permanently removes a cluster and its resources.
+
+
+
+Updating a cluster is available only through the Agent Platform API. You can delete a cluster from either the Agent Platform API or the Google Cloud console.
+
+For instructions on listing all clusters or viewing individual clusters, see [View clusters](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/training-clusters/view-clusters).
+
+## Authentication
+    
+    
+    alias gcurl='curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json"'
+    
+
+## Update a cluster
+
+`UPDATE_PAYLOAD` specifies the local path to a JSON file that defines the full `ModelDevelopmentCluster` you want to update to.
+
+For example, to update the node count of a pool of a [CPU-only cluster](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/training-clusters/create-cluster#cpu-only-cluster), use the following JSON payload: 
+    
+    
+    {
+      "display_name": "DISPLAY_NAME",
+      "network": {
+        "network": "projects/PROJECT_ID/global/networks/NETWORK",
+        "subnetwork": "projects/PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK"
+      },
+      "node_pools": [
+        {
+          "id": "cpu",
+          "machine_spec": {
+            "machine_type": "n2-standard-8"
+          },
+          "scaling_spec": {
+            "min_node_count": UPDATED_MIN_NODE_COUNT,
+            "max_node_count": UPDATED_MAX_NODE_COUNT
+          },
+          "zone": "ZONE",
+          "enable_public_ips": true,
+          "boot_disk": {
+            "boot_disk_type": "pd-standard",
+            "boot_disk_size_gb": 120
+          }
+        },
+        {
+          "id": "login",
+          "machine_spec": {
+            "machine_type": "n2-standard-8"
+          },
+          "scaling_spec": {
+            "min_node_count": 1,
+            "max_node_count": 1
+          },
+          "zone": "ZONE",
+          "enable_public_ips": true,
+          "boot_disk": {
+            "boot_disk_type": "pd-standard",
+            "boot_disk_size_gb": 120
+          }
+        }
+      ],
+      "orchestrator_spec": {
+        "slurm_spec": {
+          "home_directory_storage": "projects/PROJECT_ID/locations/ZONE/instances/FILESTORE",
+          "partitions": [
+            {
+              "id": "cpu",
+              "node_pool_ids": [
+                "cpu"
+              ]
+            }
+          ],
+          "login_node_pool_id": "login"
+        }
+      }
+    }
+    
+    
+    gcurl -X PATCH -d @UPDATE_PAYLOAD https://REGION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/REGION/modelDevelopmentClusters/CLUSTER_ID
+
+**Query Parameters**
+
+  * `updateMask` (string, optional): A [FieldMask](https://protobuf.dev/reference/protobuf/google.protobuf/#field-mask) that specifies which fields of the Model Development cluster resource to update. Only the fields listed in the `updateMask` are changed. 
+
+The following fields within the `ModelDevelopmentCluster` resource can be specified in the `updateMask`: 
+
+    * `labels`
+    * `node_pools`
+    * `orchestrator_spec.slurm_spec.partitions`
+    * `orchestrator_spec.slurm_spec.default_partition_id`
+    * `orchestrator_spec.slurm_spec.login_node_pool_id`
+    * `orchestrator_spec.slurm_spec.prolog_bash_scripts`
+    * `orchestrator_spec.slurm_spec.epilog_bash_scripts`
+    * `orchestrator_spec.slurm_spec.config`
+    * `orchestrator_spec.slurm_spec.scheduling` and `orchestrator_spec.slurm_spec.accounting`: legacy fields that `config` supersedes. A cluster uses one or the other. See Update Slurm configuration settings. 
+    * `orchestrator_spec.slurm_spec.node_sets`
+  * `updateMode` (enum, optional): Specifies the update mode. Possible values are: 
+
+    * `UPDATE_MODE_UNSPECIFIED`: The default value, treated as `USER_AND_SERVICE`.
+    * `USER_ONLY`: Apply only user-specified field changes from the request. The service won't refresh service-managed fields, like startup, prolog, or epilog scripts. Each node pool also stays on the image it is currently running unless you set `node_image` yourself, so a `USER_ONLY` update that omits `node_image` won't recreate your nodes. 
+    * `USER_AND_SERVICE`: Apply user-specified field changes and let the service refresh service-managed fields. 
+We recommend using `USER_AND_SERVICE` to ensure your cluster is up-to-date. 
+
+
+
+The command below updates both the node pool configuration and the Slurm partitions. 
+    
+    
+    gcurl -X PATCH -d @update-payload.json \
+    'https://REGION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/REGION/modelDevelopmentClusters/CLUSTER_ID?updateMask=orchestrator_spec.slurm_spec.partitions,node_pools&updateMode=USER_AND_SERVICE'
+
+**Important note on repeated fields**
+
+For repeated fields, such as `node_pools`, `prolog_bash_scripts`, and `epilog_bash_scripts`, the API only supports a full replacement operation. The user must provide the entire, expected list of items in the request payload to replace the existing list completely.
+
+**Change the default partition**
+
+To change the default partition without resending `partitions`, set `default_partition_id` and specify only `orchestrator_spec.slurm_spec.default_partition_id` in the `updateMask`. An update that removes or renames the partition that `default_partition_id` specifies is rejected.
+
+**Update Slurm configuration settings**
+
+You can change Slurm configuration on a running cluster. Applying these settings doesn't restart or drain any nodes: the service regenerates `slurm.conf` and reloads the Slurm controller, so queued and running jobs are unaffected.
+
+There is always a risk that nodes may reboot after running jobs complete due to underlying dependency changes. However, that risk is minimized with the `USER_ONLY` update mode. 
+
+The new settings might take a short time to appear in `scontrol show config` after the operation completes.
+
+**Caution:** An update with an invalid Slurm setting can succeed but leave the Slurm controller unable to start, so Slurm commands on the cluster fail. See [Slurm configuration maps](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/training-clusters/create-cluster#slurm-config-maps). 
+
+Cluster-scoped settings are named by `orchestrator_spec.slurm_spec.config`, node-pool settings by `orchestrator_spec.slurm_spec.node_sets`, and partition settings by `orchestrator_spec.slurm_spec.partitions`, which carries each partition's `config` along with its membership. Each map is replaced in full, in the same way as the repeated fields described earlier. Send the complete set of parameters you want; a parameter you leave out is removed. To clear a map, name its path in the `updateMask` and send it empty.
+
+The command below turns on partition-priority preemption for an existing cluster.
+    
+    
+    gcurl -X PATCH -d @update-payload.json \
+    'https://REGION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/REGION/modelDevelopmentClusters/CLUSTER_ID?updateMask=orchestrator_spec.slurm_spec.config&updateMode=USER_ONLY'
+
+Where `update-payload.json` contains, in part:
+    
+    
+    {
+      ...,
+      "orchestrator_spec": {
+        "slurm_spec": {
+          ...,
+          "config": {
+            "PriorityType": "priority/multifactor",
+            "PriorityWeightAge": "1000",
+            "PreemptType": "preempt/partition_prio",
+            "PreemptMode": "REQUEUE",
+            "PreemptExemptTime": "1:01",
+            "SchedulerParameters": "bf_continue,bf_window=1440"
+          }
+        }
+      }
+    }
+
+Set cluster-wide parameters in `config` rather than in `scheduling` and `accounting`, which it supersedes. A cluster uses one or the other; a request that sets both is rejected.
+
+If you call `PATCH` without an `updateMask`, the service diffs your entire payload against the current cluster, so a payload that omits these settings clears whatever the cluster already has. Pass an `updateMask` to scope the update to the fields you intend to change. A field you name but leave out of the payload is cleared.
+
+To move an existing cluster from `scheduling` and `accounting` to `config`, send every setting in `config` using its `slurm.conf` name, for example `AccountingStorageEnforce` or `PriorityWeightQOS`, leave `scheduling` and `accounting` out of the payload, and name all three in the `updateMask` so the older fields are cleared. After that, an `updateMask` of `orchestrator_spec.slurm_spec.config` alone is enough.
+
+**Node image selection**
+
+Because `node_pools` is replaced in full, a node pool in your update payload that omits `node_image` resolves to the current default image for its machine type. That default advances over time, so omitting `node_image` moves the node pool to the latest available image, which is often what you want: it picks up driver, security, and bug fixes.
+
+**Caution:** Moving a node pool to a different image recreates its nodes. Compute nodes in the pool are drained and replaced, and the login nodes are recreated, which ends active SSH sessions and discards data stored on the login node's boot disk. Because the image is resolved on every `USER_AND_SERVICE` update, an unrelated change such as editing a label is enough to trigger this once a newer default image is available. To apply your changes without moving any node pool off its current image, use `updateMode=USER_ONLY`. 
+
+To keep a node pool on a specific image across updates, set `node_image` to that image. If you read the current value from `Get` in order to send it back, note that a cluster that has never been updated reports an empty `node_image`.
+
+**Post-update behavior and cluster status**
+
+A successful request returns a Long Running Operation (LRO). You can then monitor the status of this operation using the following command: 
+    
+    
+    gcurl https://REGION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/REGION/operations/OPERATION_ID
+
+Once the update operation completes successfully, most modifications take effect immediately (or within the 15s Slurm sync time) and require no further action. Only changes to the underlying cluster compute infrastructure—including modifications to storage sources and startup scripts—require the resources to be recreated. 
+
+## Delete a cluster
+    
+    
+      gcurl -X DELETE https://REGION-aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/REGION/modelDevelopmentClusters/CLUSTER_ID
+      
+
+This command returns a Long-Running Operation on success, which you can then monitor using the `operations describe` command.
+    
+    
+    gcurl https://REGION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/REGION/operations/OPERATION_ID
+
+## What's next
+
+Managing your Gemini Enterprise Agent Platform training cluster lets you optimize its usage, integrate it into automated workflows, and prepare your trained models for deployment.
+
+  * Orchestrate your training with Gemini Enterprise Agent Platform Pipelines: Automate the entire lifecycle of your training jobs, from data preparation to model registration, using pipelines that target your managed cluster. 
+    * [Learn about orchestrating jobs on a training cluster](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/training-clusters/orchestration)
+  * Monitor and debug your training jobs: Track progress and resource usage, and identify issues with your distributed training jobs running on the cluster. 
+    * [Monitor training jobs on Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/monitoring-metrics)
+  * Deploy your model for inference: After your models are trained and registered, deploy them to a Gemini Enterprise Agent Platform endpoint to serve online inference requests at scale. 
+    * [Deploy a model to an endpoint](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/deployment)
+  * Optimize costs: Regularly review your cluster utilization and delete the cluster when it's not actively in use to minimize billing for reserved hardware.
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

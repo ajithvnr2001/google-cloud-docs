@@ -1,0 +1,233 @@
+---
+url: https://docs.cloud.google.com/run/docs/testing/local/
+title: Test a Cloud Run service locally \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T01:01:55.662179+00:00
+---
+
+# Test a Cloud Run service locally  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/run/docs/testing/local/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Application hosting ](https://docs.cloud.google.com/docs/application-hosting)
+  * [ Cloud Run ](https://docs.cloud.google.com/run/docs)
+  * [ Guides ](https://docs.cloud.google.com/run/docs/overview/what-is-cloud-run)
+
+
+
+Send feedback 
+
+#  Test a Cloud Run service locally Stay organized with collections  Save and categorize content based on your preferences. 
+
+During development, you can run and test your container image locally, prior to deploying. You can use [Cloud Code](https://docs.cloud.google.com/code) or [Docker installed locally](https://docs.docker.com/install/) to run and test locally, including running locally with access to Google Cloud services.
+
+## Before you begin
+
+If this is the first time you're trying to run locally, you might not have all the permissions needed to access the image from your [supported container registry](https://docs.cloud.google.com/run/docs/deploying#images) you're using.
+
+Check your supported container registry documentation about to how to get access. You can configure Docker to get access to Artifact Registry using the [gcloud CLI credential helper](https://docs.cloud.google.com/artifact-registry/docs/docker/authentication#gcloud-helper): 
+    
+    
+    gcloud auth configure-docker LOCATION-docker.pkg.dev
+
+Replace `LOCATION` with the region name of your container repository, for example, `us-west2`. 
+
+## Test locally
+
+You can test locally using Docker, Docker with Google Cloud Access, the Cloud Code emulator or the Google Cloud CLI. Select the appropriate tab for instructions.
+
+### Docker
+
+To test your container image locally using Docker:
+
+  1. Use the Docker command:
+         
+         PORT=8080 && docker run -p 9090:${PORT} -e PORT=${PORT} IMAGE_URL
+
+Replace `IMAGE_URL` with a reference to the container image, for example, `us-docker.pkg.dev/cloudrun/container/hello:latest`. If you use Artifact Registry, the [repository](https://docs.cloud.google.com/artifact-registry/docs/repositories/create-repos#docker) REPO_NAME must already be created. The URL follows the format of `LOCATION-docker.pkg.dev/PROJECT_ID/REPO_NAME/PATH:TAG` .
+
+The `PORT` environment variable specifies the port your application will use to listen for HTTP or HTTPS requests. This is a requirement from the [Container runtime contract](https://docs.cloud.google.com/run/docs/reference/container-contract). In this example, we use port 8080.
+
+**Caution:** Using the default service account: 
+
+If you rely on the [default service account](https://docs.cloud.google.com/run/docs/securing/service-identity#about_the_default_service_account) when deploying to Cloud Run, be aware that it is not available locally, so you need a service account along with a public/private key-pair saved locally in order to run that image locally with Docker. For more info, see the next tab [Docker with Google Cloud access](https://docs.cloud.google.com/run/docs/testing/local#docker-with-gcp-access).
+
+  2. Open <http://localhost:9090> in your browser.
+
+
+
+
+If you are new to working with containers, you may want to review the [Docker Getting Started](https://docs.docker.com/get-started/) guide. To learn more about Docker commands, refer to the [Docker documentation](https://docs.docker.com/engine/reference/run/).
+
+### Docker with Google Cloud Access
+
+If you are using Google Cloud client libraries to integrate your application with Google Cloud services, and have not yet secured those services to control external access, you can set up your local container to authenticate with Google Cloud services using [Application Default Credentials](https://docs.cloud.google.com/docs/authentication/application-default-credentials).
+
+To run locally:
+
+  1. Refer to the instructions for [setting up a service account key](https://docs.cloud.google.com/docs/authentication/set-up-adc-on-premises#wlif-key).
+
+**Note:** Service account keys are a security risk if not managed correctly. You should [ choose a more secure alternative to service account keys](https://docs.cloud.google.com/docs/authentication#auth-decision-tree) whenever possible. If you must authenticate with a service account key, you are responsible for the security of the private key and for other operations described by [ Best practices for managing service account keys](https://docs.cloud.google.com/iam/docs/best-practices-for-managing-service-account-keys). If you are prevented from creating a service account key, service account key creation might be disabled for your organization. For more information, see [ Managing secure-by-default organization resources](https://docs.cloud.google.com/resource-manager/docs/secure-by-default-organizations). 
+
+If you acquired the service account key from an external source, you must validate it before use. For more information, see [ Security requirements for externally sourced credentials](https://docs.cloud.google.com/docs/authentication/external/externally-sourced-credentials). 
+
+  2. The following Docker run flags inject the credentials and configuration from your local system into the local container:
+
+     1. Use the `--volume` (`-v`) flag to inject the credential file into the container (assumes you have already set your `GOOGLE_APPLICATION_CREDENTIALS` environment variable on your machine): 
+            
+            -v $GOOGLE_APPLICATION_CREDENTIALS:/tmp/keys/FILE_NAME.json:ro
+
+     2. Use the `--environment` (`-e`) flag to set the `GOOGLE_APPLICATION_CREDENTIALS` variable inside the container: 
+            
+            -e GOOGLE_APPLICATION_CREDENTIALS=/tmp/keys/FILE_NAME.json
+
+  3. Optionally, use this fully configured Docker `run` command:
+         
+         PORT=8080 && docker run \
+         -p 9090:${PORT} \
+         -e PORT=${PORT} \
+         -e K_SERVICE=dev \
+         -e K_CONFIGURATION=dev \
+         -e K_REVISION=dev-00001 \
+         -e GOOGLE_APPLICATION_CREDENTIALS=/tmp/keys/FILE_NAME.json \
+         -v $GOOGLE_APPLICATION_CREDENTIALS:/tmp/keys/FILE_NAME.json:ro \
+         IMAGE_URL
+
+Note that the path 
+         
+         /tmp/keys/FILE_NAME.json
+
+shown in the example above is a reasonable location to place your credentials inside the container. 
+
+However, other directory locations will also work. The crucial requirement is that the `GOOGLE_APPLICATION_CREDENTIALS` environment variable must match the bind mount location inside the container.
+
+Note also, that with some Google Cloud services, you may want to use an alternate configuration to isolate local troubleshooting from production performance and data.
+
+
+
+
+### Cloud Code emulator
+
+The [Cloud Code](https://cloud.google.com/code) plugin for [VS Code](https://code.visualstudio.com/) and [JetBrains IDEs](https://www.jetbrains.com/) lets you locally run and debug your container image in a Cloud Run emulator within your IDE. The emulator allows you configure an environment that is representative of your service running on Cloud Run.
+
+You can configure properties like CPU and memory allocation, specify environment variables, and set Cloud SQL database connections.
+
+  1. Install Cloud Code for [VS Code](https://docs.cloud.google.com/code/docs/vscode/install) or a [JetBrains IDE](https://docs.cloud.google.com/code/docs/intellij/install).
+  2. Follow the instructions for locally developing and debugging within your IDE.
+  3. **VS Code** : Locally [developing](https://docs.cloud.google.com/code/docs/vscode/developing-a-cloud-run-app) and [debugging](https://docs.cloud.google.com/code/docs/vscode/debugging-a-cloud-run-app)
+  4. **IntelliJ** : Locally [developing](https://docs.cloud.google.com/code/docs/intellij/developing-a-cloud-run-app) and [debugging](https://docs.cloud.google.com/code/docs/intellij/debugging-a-cloud-run-app)
+
+
+
+### gcloud CLI
+
+Google Cloud CLI contains a [local development environment](https://docs.cloud.google.com/sdk/gcloud/reference/beta/code/dev) for emulating Cloud Run that can build a container from source, run the container on your local machine, and automatically rebuild the container upon source code changes.
+
+To start the local development environment:
+
+  1. Change directory to the directory containing the source code of your service.
+
+  2. Invoke the command: 
+         
+         gcloud beta code dev
+
+If a Dockerfile is present in the local directory, it is used to build the container. If no Dockerfile is present, the container is built with [Google Cloud's buildpacks](https://docs.cloud.google.com/docs/buildpacks/overview).
+
+
+
+To see your service running, visit http://localhost:8080/ in your browser. If you specified a custom port with the `--local-port` option, remember to open your browser to that port.
+
+To stop the local server:
+
+  * Mac OS and Linux: Control-C
+  * Windows: Control-Break
+
+
+
+### Customize the service configuration
+
+You can customize the Cloud Run configuration of the service running locally using a YAML file. The YAML format is the same that can be used to deploy a [Cloud Run service](https://docs.cloud.google.com/run/docs/deploying#yaml), but only supports a subset of the Cloud Run service settings. `gcloud beta code dev` looks for and uses any file ending in `*.service.dev.yaml` in the current directory. If none are found, it will use any file ending with `*.service.yaml`.
+
+You can configure the following settings for local development:
+
+  * [Environment variables](https://docs.cloud.google.com/run/docs/configuring/services/environment-variables#yaml)
+  * [Container memory limits](https://docs.cloud.google.com/run/docs/configuring/services/memory-limits#yaml)
+  * [Container CPU limits](https://docs.cloud.google.com/run/docs/configuring/services/cpu)
+  * [Service name](https://docs.cloud.google.com/run/docs/deploying#yaml)
+  * [Service accounts](https://docs.cloud.google.com/run/docs/securing/service-identity#yaml)
+
+
+
+The container `image` field is not required for local development, because the image is built and provided to the service when the command is run.
+
+You can use the following example `service.dev.yaml` file for local development: 
+    
+    
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      metadata:
+        name: my-service-name
+      spec:
+        template:
+          spec:
+            containers:
+            - env:
+              - name: FOO
+                value: bar
+
+### Test using credentials
+
+To give permission to the container to use Google Cloud services, you must give the container an access credential.
+
+  * To give the container access to a credential using your own account, log in using gcloud and use the `--application-default-credential` flag: 
+        
+        gcloud auth application-default login
+        gcloud beta code dev --dockerfile=PATH_TO_DOCKERFILE --application-default-credential
+
+  * To give the application credentials as a service account, use the `--service-account` flag: 
+        
+        gcloud beta code dev --dockerfile=PATH_TO_DOCKERFILE --service-account=SERVICE_ACCOUNT_EMAIL
+
+**Note:** The `--service-account` flag causes a service account key to be downloaded and cached locally. Service account keys are a security risk if not managed correctly. You should [ choose a more secure alternative to service account keys](https://docs.cloud.google.com/docs/authentication#auth-decision-tree) whenever possible. If you must authenticate with a service account key, you are responsible for the security of the private key and for other operations described by [ Best practices for managing service account keys](https://docs.cloud.google.com/iam/docs/best-practices-for-managing-service-account-keys). If you are prevented from creating a service account key, service account key creation might be disabled for your organization. For more information, see [ Managing secure-by-default organization resources](https://docs.cloud.google.com/resource-manager/docs/secure-by-default-organizations). 
+
+If you acquired the service account key from an external source, you must validate it before use. For more information, see [ Security requirements for externally sourced credentials](https://docs.cloud.google.com/docs/authentication/external/externally-sourced-credentials). 
+
+
+
+
+## Confirm that your code is running locally
+
+When you test locally on Cloud Run, you can confirm in your code that your container is running locally by checking the `K_REVISION` environment variable, which Cloud Run makes available to all containers.
+
+### Docker
+
+To confirm you are running your code locally on Google Cloud CLI you can attempt to query the `K_REVISION` environment variable but as it has not been set no value will be present.
+
+### Docker with Google Cloud Access
+
+If you used the exact values from the above section in Step 3 to confirm you are running your code locally on Google Cloud CLI you can query the `K_REVISION` environment variable and look for the value `dev-00001` to confirm it is running locally.
+
+### Cloud Code emulator
+
+To confirm you are running your code locally on Cloud Code you can query the `K_REVISION` environment variable and look for a value of `local` to confirm it is running locally.
+
+### gcloud CLI
+
+To confirm you are running your code locally on Google Cloud CLI you can query the `K_REVISION` environment variable and look for a value that begins with `dev-` to confirm it is running locally.
+
+## What's next
+
+  * To learn how to troubleshoot a broken Cloud Run application locally, see the [Local troubleshooting of a Cloud Run service](https://docs.cloud.google.com/run/docs/tutorials/local-troubleshooting) tutorial.
+  * To learn how to deploy your built containers, follow [Deploying services](https://docs.cloud.google.com/run/docs/deploying).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

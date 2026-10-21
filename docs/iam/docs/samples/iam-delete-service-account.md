@@ -1,0 +1,181 @@
+---
+url: https://docs.cloud.google.com/iam/docs/samples/iam-delete-service-account/
+title: Delete a service account \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T11:40:09.931554+00:00
+---
+
+# Delete a service account  |  Identity and Access Management (IAM)  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/iam/docs/samples/iam-delete-service-account/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Security ](https://docs.cloud.google.com/docs/security)
+  * [ IAM ](https://docs.cloud.google.com/iam/docs)
+  * [ Samples ](https://docs.cloud.google.com/iam/docs/samples)
+
+
+
+#  Delete a service account Stay organized with collections  Save and categorize content based on your preferences. 
+
+Demonstrates deleting a service account.
+
+## Explore further
+
+For detailed documentation that includes this code sample, see the following: 
+
+  * [Delete and undelete service accounts](https://docs.cloud.google.com/iam/docs/service-accounts-delete-undelete)
+
+
+
+## Code sample
+
+### C++
+
+To learn how to install and use the client library for IAM, see [IAM client libraries](https://docs.cloud.google.com/iam/docs/reference/libraries). For more information, see the [IAM C++ API reference documentation](https://docs.cloud.google.com/cpp/docs/reference/iam/latest). 
+
+To authenticate to IAM, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    namespace iam = ::google::cloud::iam_admin_v1;
+    [](std::string const& name) {
+      iam::IAMClient client(iam::MakeIAMConnection());
+      auto response = client.DeleteServiceAccount(name);
+      if (!response.ok()) throw std::runtime_error(response.message());
+      std::cout << "ServiceAccount successfully deleted.\n";
+    }
+
+### C#
+
+To learn how to install and use the client library for IAM, see [IAM client libraries](https://docs.cloud.google.com/iam/docs/reference/libraries). For more information, see the [IAM C# API reference documentation](https://developers.google.com/api-client-library/dotnet/apis/iam/v1). 
+
+To authenticate to IAM, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    using System;
+    using [Google.Apis.Auth.OAuth2](https://docs.cloud.google.com/dotnet/docs/reference/Google.Apis/latest/Google.Apis.Auth.OAuth2.html);
+    using Google.Apis.Iam.v1;
+    
+    public partial class ServiceAccounts
+    {
+        public static void DeleteServiceAccount(string email)
+        {
+            var credential = [GoogleCredential](https://docs.cloud.google.com/dotnet/docs/reference/Google.Apis/latest/Google.Apis.Auth.OAuth2.GoogleCredential.html).[GetApplicationDefault](https://docs.cloud.google.com/dotnet/docs/reference/Google.Apis/latest/Google.Apis.Auth.OAuth2.GoogleCredential.html#Google_Apis_Auth_OAuth2_GoogleCredential_GetApplicationDefault)()
+                .[CreateScoped](https://docs.cloud.google.com/dotnet/docs/reference/Google.Apis/latest/Google.Apis.Auth.OAuth2.GoogleCredential.html#Google_Apis_Auth_OAuth2_GoogleCredential_CreateScoped_System_Collections_Generic_IEnumerable_System_String__)(IamService.Scope.CloudPlatform);
+            var service = new IamService(new IamService.Initializer
+            {
+                HttpClientInitializer = credential
+            });
+    
+            string resource = "projects/-/serviceAccounts/" + email;
+            service.Projects.ServiceAccounts.Delete(resource).Execute();
+            Console.WriteLine("Deleted service account: " + email);
+        }
+    }
+    
+
+### Go
+
+To learn how to install and use the client library for IAM, see [IAM client libraries](https://docs.cloud.google.com/iam/docs/reference/libraries). For more information, see the [IAM Go API reference documentation](https://pkg.go.dev/cloud.google.com/go/iam/admin/apiv1). 
+
+To authenticate to IAM, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import (
+    	"context"
+    	"fmt"
+    	"io"
+    
+    	iam "google.golang.org/api/iam/v1"
+    )
+    
+    // deleteServiceAccount deletes a service account.
+    func deleteServiceAccount(w io.Writer, email string) error {
+    	ctx := context.Background()
+    	service, err := iam.NewService(ctx)
+    	if err != nil {
+    		return fmt.Errorf("iam.NewService: %w", err)
+    	}
+    
+    	_, err = service.Projects.ServiceAccounts.Delete("projects/-/serviceAccounts/" + email).Do()
+    	if err != nil {
+    		return fmt.Errorf("Projects.ServiceAccounts.Delete: %w", err)
+    	}
+    	fmt.Fprintf(w, "Deleted service account: %v", email)
+    	return nil
+    }
+    
+
+### Java
+
+To learn how to install and use the client library for IAM, see [IAM client libraries](https://docs.cloud.google.com/iam/docs/reference/libraries). For more information, see the [IAM Java API reference documentation](https://developers.google.com/api-client-library/java/apis/iam/v1). 
+
+To authenticate to IAM, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import com.google.cloud.iam.admin.v1.[IAMClient](https://docs.cloud.google.com/java/docs/reference/google-iam-admin/latest/com.google.cloud.iam.admin.v1.IAMClient.html);
+    import com.google.iam.admin.v1.[DeleteServiceAccountRequest](https://docs.cloud.google.com/java/docs/reference/google-iam-admin/latest/com.google.iam.admin.v1.DeleteServiceAccountRequest.html);
+    import com.google.iam.admin.v1.[ServiceAccountName](https://docs.cloud.google.com/java/docs/reference/google-iam-admin/latest/com.google.iam.admin.v1.ServiceAccountName.html);
+    import java.io.IOException;
+    
+    public class DeleteServiceAccount {
+    
+      public static void main(String[] args) throws IOException {
+        // TODO(developer): Replace the variables before running the sample.
+        String projectId = "your-project-id";
+        String serviceAccountName = "my-service-account-name";
+    
+        deleteServiceAccount(projectId, serviceAccountName);
+      }
+    
+      // Deletes a service account.
+      public static void deleteServiceAccount(String projectId, String serviceAccountName)
+              throws IOException {
+        // Initialize client that will be used to send requests.
+        // This client only needs to be created once, and can be reused for multiple requests.
+        try ([IAMClient](https://docs.cloud.google.com/java/docs/reference/google-iam-admin/latest/com.google.cloud.iam.admin.v1.IAMClient.html) client = [IAMClient](https://docs.cloud.google.com/java/docs/reference/google-iam-admin/latest/com.google.cloud.iam.admin.v1.IAMClient.html).create()) {
+          String accountName = [ServiceAccountName](https://docs.cloud.google.com/java/docs/reference/google-iam-admin/latest/com.google.iam.admin.v1.ServiceAccountName.html).of(projectId, serviceAccountName).toString();
+          String accountEmail = String.format("%s@%s.iam.gserviceaccount.com", accountName, projectId);
+          [DeleteServiceAccountRequest](https://docs.cloud.google.com/java/docs/reference/google-iam-admin/latest/com.google.iam.admin.v1.DeleteServiceAccountRequest.html) request = [DeleteServiceAccountRequest](https://docs.cloud.google.com/java/docs/reference/google-iam-admin/latest/com.google.iam.admin.v1.DeleteServiceAccountRequest.html).newBuilder()
+                  .setName(accountEmail)
+                  .build();
+          client.deleteServiceAccount(request);
+    
+          System.out.println("Deleted service account: " + serviceAccountName);
+        }
+      }
+    }
+
+### Python
+
+To learn how to install and use the client library for IAM, see [IAM client libraries](https://docs.cloud.google.com/iam/docs/reference/libraries). For more information, see the [IAM Python API reference documentation](https://developers.google.com/api-client-library/python/apis/iam/v1). 
+
+To authenticate to IAM, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    from google.cloud import iam_admin_v1
+    from google.cloud.iam_admin_v1 import [types](https://docs.cloud.google.com/python/docs/reference/iam/latest/google.cloud.iam_admin_v1.types.html)
+    
+    
+    def delete_service_account(project_id: str, account: str) -> None:
+        """Deletes a service account.
+    
+        project_id: ID or number of the Google Cloud project you want to use.
+        account: ID or email which is unique identifier of the service account.
+        """
+    
+        iam_admin_client = iam_admin_v1.[IAMClient](https://docs.cloud.google.com/python/docs/reference/iam/latest/google.cloud.iam_admin_v1.services.iam.IAMClient.html)()
+        request = [types](https://docs.cloud.google.com/python/docs/reference/iam/latest/google.cloud.iam_admin_v1.types.html).[DeleteServiceAccountRequest](https://docs.cloud.google.com/python/docs/reference/iam/latest/google.cloud.iam_admin_v1.types.DeleteServiceAccountRequest.html)()
+        request.name = f"projects/{project_id}/serviceAccounts/{account}"
+    
+        iam_admin_client.[delete_service_account](https://docs.cloud.google.com/python/docs/reference/iam/latest/google.cloud.iam_admin_v1.services.iam.IAMClient.html#google_cloud_iam_admin_v1_services_iam_IAMClient_delete_service_account)(request=request)
+        print(f"Deleted a service account: {account}")
+
+## What's next
+
+To search and filter code samples for other Google Cloud products, see the [Google Cloud sample browser](https://docs.cloud.google.com/docs/samples?product=identityandaccessmanagement). 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],[],[],[]] 

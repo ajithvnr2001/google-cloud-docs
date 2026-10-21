@@ -1,0 +1,13510 @@
+---
+url: https://docs.cloud.google.com/anthos/clusters/docs/on-prem/1.8/release-notes/
+title: Google Distributed Cloud release notes \u00a0|\u00a0 Anthos clusters on VMware \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T18:38:29.541128+00:00
+---
+
+# Google Distributed Cloud release notes  |  Anthos clusters on VMware  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/anthos/clusters/docs/on-prem/1.8/release-notes/
+
+**Version 1.8**. This version is no longer supported. For more information see the [ version support policy](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/getting-support#version_support_policy). 
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Google Kubernetes Engine (GKE) ](https://docs.cloud.google.com/kubernetes-engine)
+  * [ GKE Enterprise ](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs)
+  * [ Clusters ](https://docs.cloud.google.com/anthos/clusters)
+  * [ Documentation ](https://docs.cloud.google.com/anthos/clusters/docs)
+  * [ Anthos clusters on VMware 1.8 ](https://docs.cloud.google.com/anthos/clusters/docs/on-prem/1.8)
+  * [ Resources ](https://docs.cloud.google.com/anthos/clusters/docs/on-prem/1.8/resources-index)
+
+
+
+Send feedback 
+
+#  Google Distributed Cloud release notes Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page documents production updates to Google Distributed Cloud. You can periodically check this page for announcements about new or updated features, bug fixes, known issues, and deprecated functionality.
+
+See also: 
+
+  * [Downloads](https://docs.cloud.google.com/anthos/clusters/docs/on-prem/1.8/downloads)
+  * [Version history](https://docs.cloud.google.com/anthos/clusters/docs/on-prem/1.8/version-history)
+  * [Upgrading](https://docs.cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/upgrading)
+
+
+
+You can see the latest product updates for all of Google Cloud on the [ Google Cloud](https://docs.cloud.google.com/release-notes) page, browse and filter all release notes in the [Google Cloud console](https://console.cloud.google.com/release-notes), or programmatically access release notes in [BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_cloud_release_notes&t=release_notes&page=table). 
+
+To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/gkeonprem-release-notes.xml) directly. 
+
+## December 05, 2025
+
+The following issues were fixed in 1.33.300-gke.60:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+Google Distributed Cloud (software only) for VMware 1.33.300-gke.60 is available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.33.300-gke.60 runs on Kubernetes v1.33.5-gke.900.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+## December 02, 2025
+
+Google Distributed Cloud (software only) for VMware 1.32.700-gke.64 is available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.32.700-gke.64 runs on Kubernetes v1.32.9-gke.700.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues were fixed in 1.32.700-gke.64:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+## November 12, 2025
+
+The following issues were fixed in 1.33.200-gke.70:
+
+  * Fixed [an issue](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#nonha-to-ha-adv-update-fail) that `gkectl update` blocks updating a non-HA non-advanced cluster to HA advanced cluster
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+
+Google Distributed Cloud (software only) for VMware 1.31.1100-gke.40 is available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.31.1100-gke.40 runs on Kubernetes v1.31.12-gke.600.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues were fixed in 1.31.1100-gke.40:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+Google Distributed Cloud (software only) for VMware 1.33.200-gke.70 is available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.33.200-gke.70 runs on Kubernetes v1.33.5-gke.600.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+## October 29, 2025
+
+Google Distributed Cloud (software only) for VMware 1.32.600-gke.53 is available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.32.600-gke.53 runs on Kubernetes v1.32.9-gke.200.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues were fixed in 1.32.600-gke.53:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+## October 15, 2025
+
+Google Distributed Cloud (software only) for VMware 1.31.1000-gke.44 is available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.31.1000-gke.44 runs on Kubernetes v1.31.12-gke.600.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues were fixed in 1.31.1000-gke.44:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+## October 02, 2025
+
+The following issues were fixed in 1.33.100-gke.89:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+Google Distributed Cloud (software only) for VMware 1.33.100-gke.89 is now available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.33.100-gke.89 runs on Kubernetes v1.33.4-gke.900.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+## September 24, 2025
+
+Google Distributed Cloud (software only) for VMware 1.32.500-gke.48 is now available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.32.500-gke.48 runs on Kubernetes v1.32.8-gke.500.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues were fixed in 1.32.500-gke.48:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+## September 15, 2025
+
+The following issues were fixed in 1.31.900-gke.38:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+Google Distributed Cloud (software only) for VMware 1.31.900-gke.38 is now available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.31.900-gke.38 runs on Kubernetes v1.31.12-gke.200.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+## September 02, 2025
+
+Google Distributed Cloud (software only) for VMware 1.33.0-gke.799 is now available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.33.0-gke.799 runs on Kubernetes v1.33.2-gke.700.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+  * GA: Changed the cluster creation process so that all new clusters are [advanced clusters](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/concepts/advanced-clusters).
+  * Clusters are automatically converted to advanced clusters when you upgrade to version 1.33.
+  * You must use the `gkectl` command line tool to upgrade non-advanced clusters to version 1.33. The GKE On-Prem API clients, Terraform, the Google Cloud console, and the gcloud CLI, aren't supported.
+  * Upgraded the `etcd` component to version 3.4.33.
+
+
+
+  * GA: Enabled the `vsphere-metrics-exporter` component for advanced clusters. This exporter provides greater visibility into the VMware vSphere environment by collecting key performance and health metrics.
+  * GA: Added support for VM-Host affinity groups in advanced clusters. This feature allows for the creation of rules that constrain cluster nodes to run on specific, predefined groups of hosts.
+  * GA: Added support for automatic node resizing in advanced clusters. This feature optimizes resource use by automatically adjusting the CPU and memory allocated to control plane nodes in response to workload demands.
+  * Public Preview: Added support for Virtual Machine (VM) tracking using vSphere tags in advanced clusters. This feature simplifies resource management by automatically applying identifying tags to cluster VMs.
+  * GA: Introduced an Envoy proxy sidecar to the GKE Identity Service for clusters that use Controlplane V2. This change enhances the security, reliability, and performance of the authentication service.
+
+
+
+The following issues were fixed in 1.33.0-gke.799:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+## August 28, 2025
+
+Google Distributed Cloud (software only) for VMware 1.32.400-gke.68 is now available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.32.400-gke.68 runs on Kubernetes v1.32.7-gke.200.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues were fixed in 1.32.400-gke.68:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+## August 13, 2025
+
+Google Distributed Cloud (software only) for VMware 1.31.800-gke.32 is now available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.31.800-gke.32 runs on Kubernetes v1.31.10-gke.300.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+## August 12, 2025
+
+The following issues were fixed in 1.30.1200-gke.63:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+Google Distributed Cloud (software only) for VMware 1.30.1200-gke.63 is now available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.30.1200-gke.63 runs on Kubernetes v1.30.12-gke.1200. This is the final patch for the 1.30 minor release.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+## August 08, 2025
+
+Google Distributed Cloud (software only) for VMware 1.32.300-gke.85 is now available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.32.300-gke.85 runs on Kubernetes v1.32.6-gke.200.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues were fixed in 1.32.300-gke.85:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+## July 22, 2025
+
+Google Distributed Cloud (software only) for VMware 1.31.700-gke.72 is now available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.31.700-gke.72 runs on Kubernetes v1.31.10-gke.200.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues were fixed in 1.31.700-gke.72:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+## July 21, 2025
+
+Google Distributed Cloud (software only) for VMware 1.30.1100-gke.67 is now available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.30.1100-gke.67 runs on Kubernetes v1.30.12-gke.800.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues were fixed in 1.30.1100-gke.67:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+## July 17, 2025
+
+Google Distributed Cloud (software only) for VMware 1.32.200-gke.104 is now available for [download](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Distributed Cloud 1.32.200-gke.104 runs on Kubernetes v1.32.4-gke.1000.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues were fixed in 1.32.200-gke.104:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+## June 23, 2025
+
+Google Distributed Cloud (software only) for VMware 1.31.600-gke.85 is now available for [download](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Google Distributed Cloud 1.31.600-gke.85 runs on Kubernetes v1.31.8-gke.100.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues were fixed in 1.31.600-gke.85:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+## June 10, 2025
+
+Google Distributed Cloud (software only) for VMware 1.30.1000-gke.83 is now available for [download](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Google Distributed Cloud 1.30.1000-gke.83 runs on Kubernetes v1.30.12-gke.100.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues were fixed in 1.30.1000-gke.83:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+## June 04, 2025
+
+Google Distributed Cloud (software only) for VMware 1.32.100-gke.106 is now available for [download](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Google Distributed Cloud 1.32.100-gke.106 runs on Kubernetes v1.32.4-gke.200.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+For clusters configured with [advanced clusters](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/concepts/advanced-clusters), introduced an Envoy sidecar into the GKE Identity Service to increase security, reliability, and performance.
+
+## May 22, 2025
+
+Google Distributed Cloud (software only) for VMware 1.31.500-gke.68 is now available for [download](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Google Distributed Cloud 1.31.500-gke.68 runs on Kubernetes v1.31.7-gke.1000.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following functional changes were made in 1.31.500-gke.68:
+
+  * Upgraded etcd to v3.4.33.
+
+
+
+The following issues were fixed in 1.31.500-gke.68:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+## May 16, 2025
+
+Google Distributed Cloud (software only) for VMware 1.30.900-gke.57 is now available for [download](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Google Distributed Cloud 1.30.900-gke.57 runs on Kubernetes v1.30.11-gke.700.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following functional changes were made in 1.30.900-gke.57:
+
+  * Upgraded etcd to v3.4.33-0-gke.3.
+
+
+
+The following issues were fixed in 1.30.900-gke.57:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+
+
+## May 14, 2025
+
+**Preview** : You can use the Google Cloud console to create admin clusters and view admin cluster details. For more information, see [Create an admin cluster](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/create-admin-cluster).
+
+## May 06, 2025
+
+Google Distributed Cloud (software only) for VMware 1.32.0-gke.1087 is now available for [download](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Google Distributed Cloud 1.32.0-gke.1087 runs on Kubernetes v1.32.3-gke.1000.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+  * GA: Advanced clusters. By default, new clusters are created as [advanced clusters](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/user-cluster-configuration-file-latest#enable-advanced-cluster-field). For more information, see [Differences when running advanced clusters](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/concepts/advanced-clusters#adv-clusters-feature-support).
+
+  * [GKE Identity Service](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/concepts/authentication) supports a new diagnosis mode that surfaces diagnostic information related to the login flow. This makes it easier to troubleshoot login and OIDC configuration issues. For details, see [GKE Identity Service diagnostic utility](https://cloud.google.com/kubernetes-engine/enterprise/identity/setup/anthos-v2-diagnostic-utility).
+
+  * Support configuring cluster-level default topology spread constraints when creating a cluster for use with [topology domains](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/topology-domains-set-up). For details, see [schedulerConfiguration](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/user-cluster-configuration-file-latest#scheduler-configuration-section).
+
+
+
+
+Version changes in 1.32.0-gke.1087:
+
+  * The etcd version upgraded to 3.4.33
+  * COS upgraded to milestone 117
+  * containerd upgraded to 1.7
+  * Cilium upgraded to 1.15.6
+
+
+
+Other changes in 1.32.0-gke.1087:
+
+  * The following legacy features are blocked during cluster upgrade:
+
+    * Dataplane V1 (Calico)
+    * Integrated F5 Big IP load balancer configuration
+    * Non-HA admin cluster
+    * Kubeception user cluster
+    * Seesaw load balancer
+
+You must [migrate your clusters to recommended features](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/concepts/migrate-recommended-features) before upgrading to 1.32.
+
+  * The following changes to [MetalLB address pools](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/user-cluster-configuration-file-latest#loadbalancer-metallb-section) were made to behave the same as advanced clusters:
+
+    * Can't remove existing address pools
+    * Can't remove addresses in an existing address pool
+    * Can't change address pool name
+  * The cert-manager component is available on advanced clusters.
+
+  * Allow changing `stackdriver.projectID` to be the same as `gkeconnect.projectID`.
+
+  * Removed support in the Konnectivity server (`konnectivity-server`) for the following weak cryptographic cipher suites: TLS_RSA_WITH_AES_256_GCM_SHA384 and TLS_RSA_WITH_AES_128_GCM_SHA256.
+
+
+
+
+  * [Windows Server OS node pools](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/user-guide-for-windows-server-os-node-pools) are deprecated in version 1.32 and will be unavailable in version 1.33 and higher. Support for Windows Server OS node pools ends May 25, 2026. We recommend that you begin migration planning immediately to ensure a smooth transition before the support period ends.
+
+
+
+The 1.32.0-gke.1087 release includes many vulnerability fixes. For a list of all vulnerabilities fixed in this release, see [Vulnerability fixes](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+The following issues were fixed in 1.32.0-gke.1087:
+
+  * Fixed an issue that prevented user cluster upgrades when Dataplane V2 was explicitly configured with forward mode.
+  * Skip checking additional IP address requirements for HA admin cluster upgrade.
+
+  * Fixed missing validators for HA admin cluster and Controlplane V2 user control plane.
+
+  * Fixed [an issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#admin-add-on-nodes-stuck-at-notready-during-non-ha-to-ha-admin-cluster-migration) during non-HA to HA admin cluster migration that prevented the migration from completing.
+
+  * Fixed an issue where the VM template wasn't updated when HA admin control-plane machines were recreated.
+
+  * Fixed an issue where resource validation counted customer workloads and reported warnings when customers ran high resource request workloads.
+
+
+
+
+## April 25, 2025
+
+Google Distributed Cloud (software only) for VMware 1.31.400-gke.110 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.31.400-gke.110 runs on Kubernetes v1.31.7-gke.800.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+Upgraded etcd to v3.4.33-0-gke.3.
+
+Fixed an issue that prevented user cluster upgrades when Dataplane V2 was explicitly configured with forward mode.
+
+The 1.31.400-gke.110 release includes many vulnerability fixes. For a list of all vulnerabilities fixed in this release, see [Vulnerability fixes](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+## April 14, 2025
+
+Google Distributed Cloud (software only) for VMware 1.30.800-gke.66 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.30.800-gke.66 runs on Kubernetes v1.30.11-gke.500.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following functional change was made in 1.30.800-gke.66:
+
+  * Removed support in the Konnectivity server (`konnectivity-server`) for the following weak cryptographic cipher suites: TLS_RSA_WITH_AES_256_GCM_SHA384 and TLS_RSA_WITH_AES_128_GCM_SHA256.
+
+
+
+The 1.30.800-gke.66 release includes many vulnerability fixes. For a list of all vulnerabilities fixed in this release, see [Vulnerability fixes](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+Fixed an issue that prevented user cluster upgrades when Dataplane V2 was explicitly configured with forward mode.
+
+## March 28, 2025
+
+Google Distributed Cloud (software only) for VMware 1.29.1200-gke.99 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.29.1200-gke.99 runs on Kubernetes v1.29.13-gke.500. This is the final patch for the 1.29 minor release.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The 1.29.1200-gke.99 release includes many vulnerability fixes. For a list of all vulnerabilities fixed in this release, see [Vulnerability fixes](https://cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/vulnerabilities).
+
+## March 25, 2025
+
+Since release 1.30.0-gke.1930, the `featureGates.enableGMPForSystemMetrics` field in the `stackdriver` custom resource is always on and can't be disabled. It has been enabled by default since 1.16. If you have manually turned this feature off, upgrading clusters to version 1.30 means a breaking change in the format of some system metrics. For information on this feature, see [Using Managed Service for Prometheus](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/logging-and-monitoring#using-managed-service-for-prometheus).
+
+## March 18, 2025
+
+Google Distributed Cloud (software only) for VMware 1.31.300-gke.81 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.31.300-gke.81 runs on Kubernetes v1.30.9-gke.500.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The 1.31.300-gke.81 release includes many vulnerability fixes. For a list of all vulnerabilities fixed in this release, see [Vulnerability fixes](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+## March 13, 2025
+
+Google Distributed Cloud (software only) for VMware 1.30.700-gke.56 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.30.700-gke.56 runs on Kubernetes v1.30.9-gke.500.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The 1.30.700-gke.56 release includes many vulnerability fixes. For a list of all vulnerabilities fixed in this release, see [Vulnerability fixes](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+## March 05, 2025
+
+The Envoy project recently announced several new security vulnerabilities ([CVE-2024-53269](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-53269), [CVE-2024-53270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-53270), and [CVE-2024-53271](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-53271)) that could allow an attacker to crash Envoy.
+
+For more details, see the [GCP-2025-009 security bulletin](https://cloud.google.com/kubernetes-engine/security-bulletins#gcp-2025-009).
+
+## February 27, 2025
+
+Google Distributed Cloud (software only) for VMware 1.29.1100-gke.82 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.29.1100-gke.82 runs on Kubernetes v1.29.13-gke.500.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The 1.29.1100-gke.82 release includes many vulnerability fixes. For a list of all vulnerabilities fixed in this release, see [Vulnerability fixes](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+## February 19, 2025
+
+Google Distributed Cloud (software only) for VMware 1.30.600-gke.68 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.30.600-gke.68 runs on Kubernetes v1.30.9-gke.100.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues are fixed in 1.30.600-gke.68:
+
+  * Fixed [an issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#runtime:-out-of-memory-error-after-running-gkeadm-create-or-upgrade) that caused `Runtime: out of memory` errors after running `gkeadm` to create or upgrade clusters.
+
+  * Fixed an issue to prevent checking for add-on node IP addresses for HA admin clusters with three control-plane nodes and no add-on nodes.
+
+
+
+
+The 1.30.600-gke.68 release includes many vulnerability fixes. For a list of all vulnerabilities fixed in this release, see [Vulnerability fixes](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+## February 13, 2025
+
+Google Distributed Cloud (software only) for VMware 1.31.200-gke.58 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.31.200-gke.58 runs on Kubernetes v1.31.5-gke.300.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues are fixed in 1.31.200-gke.58:
+
+  * Fixed [an issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#runtime:-out-of-memory-error-after-running-gkeadm-create-or-upgrade) that caused `Runtime: out of memory` errors after running `gkeadm` to create or upgrade clusters.
+
+  * Fixed the issue that caused Node CIDR based Network Policies to not get enforced.
+
+
+
+
+The 1.31.200-gke.58 release includes many vulnerability fixes. For a list of all vulnerabilities fixed in this release, see [Vulnerability fixes](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+## February 05, 2025
+
+The following issues are fixed in 1.31.100-gke.136:
+
+  * Fixed an issue to prevent checking for add-on node IP addresses for HA admin clusters with three control-plane nodes and no add-on nodes.
+
+  * Fixed an issue where DNS and NTP servers weren't checked for HA admin clusters or for user clusters configured for Controlplane V2.
+
+  * Fixed an issue where the VM template used for the HA admin control plane node repair isn't refreshed in vCenter after an upgrade.
+
+  * Fixed an issue where a race condition during migration caused admin add-on nodes to get stuck at a NotReady status.
+
+
+
+
+The following functional change was made in 1.31.100-gke.136:
+
+  * Removed support in the Konnectivity server (`konnectivity-server`) for the following weak cryptographic cipher suites: TLS_RSA_WITH_AES_256_GCM_SHA384 and TLS_RSA_WITH_AES_128_GCM_SHA256
+
+
+
+The 1.31.100-gke.136 release includes many vulnerability fixes. For a list of all vulnerabilities fixed in this release, see [Vulnerability fixes](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+Google Distributed Cloud (software only) for VMware 1.31.100-gke.136 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.31.100-gke.136 runs on Kubernetes v1.31.4-gke.900.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues are fixed in 1.30.500-gke.126:
+
+  * Fixed [an issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#non-ha-admin-cluster-upgrade-stuck-at-creating-or-updating-cluster-control-plane-workloads) that caused non-HA cluster upgrades to get stuck creating or updating cluster control plane workloads.
+
+  * Fixed an issue where DNS and NTP servers weren't checked for HA admin clusters or for user clusters configured for Controlplane V2.
+
+  * Fixed [an issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#admin-add-on-nodes-stuck-at-notready-during-non-ha-to-ha-admin-cluster-migration) where a race condition during migration caused admin add-on nodes to get stuck at a `NotReady` status.
+
+  * Fixed an issue where customer workloads with high resource requests triggered irrelevant resource validation warnings.
+
+  * Fixed [an issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#ha-admin-control-plane-node-shows-older-version-after-running-gkectl-repair-admin-master) where the VM template used for the HA admin control plane node repair isn't refreshed in vCenter after an upgrade.
+
+
+
+
+The 1.30.500-gke.126 release includes many vulnerability fixes. For a list of all vulnerabilities fixed in this release, see [Vulnerability fixes](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+Google Distributed Cloud (software only) for VMware 1.30.500-gke.126 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.30.500-gke.126 runs on Kubernetes v1.30.8-gke.200.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+## February 04, 2025
+
+The 1.29.1000-gke.94 release includes many vulnerability fixes. For a list of all vulnerabilities fixed in this release, see [Vulnerability fixes](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+
+The following issues are fixed in 1.29.1000-gke.94:
+
+  * Fixed an issue to prevent checking for add-on node IP addresses for HA admin clusters with three control-plane nodes and no add-on nodes.
+
+  * Fixed an issue where DNS and NTP servers weren't checked for HA admin clusters or for user clusters configured for Controlplane V2.
+
+
+
+
+Google Distributed Cloud (software only) for VMware 1.29.1000-gke.94 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.29.1000-gke.94 runs on Kubernetes v1.29.12-gke.800.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+## January 09, 2025
+
+Google Distributed Cloud (software only) for VMware 1.29.900-gke.181 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.29.900-gke.181 runs on Kubernetes v1.29.11-gke.300.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+Added support for configuring the GKE Identity Service to enforce a minimum transport layer security (TLS) version of 1.2 for HTTPS connections. By default, the GKE Identity Service allows TLS 1.1 and higher connections. If you require enforcement for a minimum of TLS 1.2, reach out to [Cloud Customer Care](https://cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/getting-support) for assistance.
+
+  * Fixed an issue where customer workloads with high resource requests triggered irrelevant resource validation warnings.
+
+  * Fixed [an issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#admin-add-on-nodes-stuck-at-notready-during-non-ha-to-ha-admin-cluster-migration) where a race condition during migration caused admin add-on nodes to get stuck at a `NotReady` status.
+
+  * Fixed [an issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#ha-admin-control-plane-node-shows-older-version-after-running-gkectl-repair-admin-master) where the VM template used for the HA admin control plane node repair isn't refreshed in vCenter after an upgrade.
+
+
+
+
+The following high-severity container vulnerabilities are fixed in 1.29.900-gke.181:
+
+  * High-severity container vulnerabilities:
+
+[CVE-2023-3676](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3676), [CVE-2023-3955](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3955), [CVE-2023-5528](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5528), [CVE-2024-6232](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6232)
+
+  * Container-optimized OS vulnerabilities:
+
+[CVE-2024-38538](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38538), [CVE-2024-47696](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47696), [CVE-2024-47701](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47701), [CVE-2024-47742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47742), [CVE-2024-49860](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49860), [CVE-2024-49882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49882), [CVE-2024-49883](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49883), [CVE-2024-49884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49884), [CVE-2024-49889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49889), [CVE-2024-49936](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49936), [CVE-2024-49967](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49967), [CVE-2024-49983](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49983), [CVE-2024-50033](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50033), [CVE-2024-50035](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50035), [CVE-2024-50036](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50036), [CVE-2024-50083](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50083), [CVE-2024-50131](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50131), [CVE-2024-50143](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50143), [CVE-2024-50151](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50151), [CVE-2024-50154](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50154), [CVE-2024-50186](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50186), [CVE-2024-50228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50228), [CVE-2024-50257](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50257), [CVE-2024-50262](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50262), [CVE-2024-50264](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50264), [CVE-2024-50278](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50278), [CVE-2024-50279](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50279), [CVE-2024-53057](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-53057)
+
+  * Ubuntu vulnerabilities:
+
+[CVE-2022-48666](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48666), [CVE-2023-52889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52889), [CVE-2023-52918](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52918), [CVE-2024-25744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25744), [CVE-2024-26607](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26607), [CVE-2024-26661](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26661), [CVE-2024-26669](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26669), [CVE-2024-26800](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26800), [CVE-2024-26893](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26893), [CVE-2024-36484](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36484), [CVE-2024-38577](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38577), [CVE-2024-38602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38602), [CVE-2024-38611](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38611), [CVE-2024-39472](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39472), [CVE-2024-40915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40915), [CVE-2024-41011](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41011), [CVE-2024-41012](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41012), [CVE-2024-41015](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41015), [CVE-2024-41017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41017), [CVE-2024-41019](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41019), [CVE-2024-41020](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41020), [CVE-2024-41022](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41022), [CVE-2024-41042](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41042), [CVE-2024-41059](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41059), [CVE-2024-41060](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41060), [CVE-2024-41063](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41063), [CVE-2024-41064](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41064), [CVE-2024-41065](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41065), [CVE-2024-41068](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41068), [CVE-2024-41070](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41070), [CVE-2024-41071](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41071), [CVE-2024-41072](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41072), [CVE-2024-41073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41073), [CVE-2024-41077](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41077), [CVE-2024-41078](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41078), [CVE-2024-41081](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41081), [CVE-2024-41090](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41090), [CVE-2024-41091](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41091), [CVE-2024-41098](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41098), [CVE-2024-42114](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42114), [CVE-2024-42126](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42126), [CVE-2024-42246](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42246), [CVE-2024-42259](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42259), [CVE-2024-42265](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42265), [CVE-2024-42267](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42267), [CVE-2024-42269](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42269), [CVE-2024-42270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42270), [CVE-2024-42271](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42271), [CVE-2024-42272](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42272), [CVE-2024-42274](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42274), [CVE-2024-42276](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42276), [CVE-2024-42277](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42277), [CVE-2024-42280](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42280), [CVE-2024-42281](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42281), [CVE-2024-42283](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42283), [CVE-2024-42284](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42284), [CVE-2024-42285](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42285), [CVE-2024-42286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42286), [CVE-2024-42287](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42287), [CVE-2024-42288](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42288), [CVE-2024-42289](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42289), [CVE-2024-42290](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42290), [CVE-2024-42292](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42292), [CVE-2024-42295](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42295), [CVE-2024-42296](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42296), [CVE-2024-42297](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42297), [CVE-2024-42299](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42299), [CVE-2024-42301](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42301), [CVE-2024-42302](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42302), [CVE-2024-42304](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42304), [CVE-2024-42305](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42305), [CVE-2024-42306](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42306), [CVE-2024-42309](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42309), [CVE-2024-42310](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42310), [CVE-2024-42311](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42311), [CVE-2024-42312](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42312), [CVE-2024-42313](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42313), [CVE-2024-42318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42318), [CVE-2024-43817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43817), [CVE-2024-43828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43828), [CVE-2024-43829](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43829), [CVE-2024-43830](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43830), [CVE-2024-43834](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43834), [CVE-2024-43835](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43835), [CVE-2024-43839](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43839), [CVE-2024-43841](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43841), [CVE-2024-43846](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43846), [CVE-2024-43849](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43849), [CVE-2024-43853](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43853), [CVE-2024-43854](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43854), [CVE-2024-43856](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43856), [CVE-2024-43858](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43858), [CVE-2024-43860](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43860), [CVE-2024-43861](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43861), [CVE-2024-43863](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43863), [CVE-2024-43867](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43867), [CVE-2024-43869](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43869), [CVE-2024-43870](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43870), [CVE-2024-43871](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43871), [CVE-2024-43873](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43873), [CVE-2024-43875](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43875), [CVE-2024-43879](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43879), [CVE-2024-43880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43880), [CVE-2024-43882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43882), [CVE-2024-43883](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43883), [CVE-2024-43884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43884), [CVE-2024-43889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43889), [CVE-2024-43890](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43890), [CVE-2024-43892](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43892), [CVE-2024-43893](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43893), [CVE-2024-43894](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43894), [CVE-2024-43902](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43902), [CVE-2024-43905](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43905), [CVE-2024-43907](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43907), [CVE-2024-43908](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43908), [CVE-2024-43909](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43909), [CVE-2024-43914](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43914), [CVE-2024-44934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44934), [CVE-2024-44935](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44935), [CVE-2024-44944](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44944), [CVE-2024-44946](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44946), [CVE-2024-44947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44947), [CVE-2024-44948](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44948), [CVE-2024-44954](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44954), [CVE-2024-44958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44958), [CVE-2024-44960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44960), [CVE-2024-44965](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44965), [CVE-2024-44966](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44966), [CVE-2024-44969](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44969), [CVE-2024-44971](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44971), [CVE-2024-44974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44974), [CVE-2024-44982](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44982), [CVE-2024-44983](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44983), [CVE-2024-44985](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44985), [CVE-2024-44986](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44986), [CVE-2024-44987](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44987), [CVE-2024-44988](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44988), [CVE-2024-44989](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44989), [CVE-2024-44990](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44990), [CVE-2024-44995](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44995), [CVE-2024-44998](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44998), [CVE-2024-44999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44999), [CVE-2024-45003](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45003), [CVE-2024-45006](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45006), [CVE-2024-45007](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45007), [CVE-2024-45008](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45008), [CVE-2024-45009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45009), [CVE-2024-45011](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45011), [CVE-2024-45018](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45018), [CVE-2024-45021](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45021), [CVE-2024-45025](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45025), [CVE-2024-45026](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45026), [CVE-2024-45028](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45028), [CVE-2024-46673](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46673), [CVE-2024-46675](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46675), [CVE-2024-46676](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46676), [CVE-2024-46677](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46677), [CVE-2024-46679](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46679), [CVE-2024-46685](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46685), [CVE-2024-46689](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46689), [CVE-2024-46702](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46702), [CVE-2024-46707](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46707), [CVE-2024-46713](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46713), [CVE-2024-46714](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46714), [CVE-2024-46719](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46719), [CVE-2024-46721](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46721), [CVE-2024-46722](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46722), [CVE-2024-46723](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46723), [CVE-2024-46724](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46724), [CVE-2024-46725](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46725), [CVE-2024-46731](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46731), [CVE-2024-46732](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46732), [CVE-2024-46737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46737), [CVE-2024-46738](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46738), [CVE-2024-46739](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46739), [CVE-2024-46740](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46740), [CVE-2024-46743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46743), [CVE-2024-46744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46744), [CVE-2024-46745](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46745), [CVE-2024-46746](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46746), [CVE-2024-46747](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46747), [CVE-2024-46750](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46750), [CVE-2024-46752](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46752), [CVE-2024-46755](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46755), [CVE-2024-46756](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46756), [CVE-2024-46757](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46757), [CVE-2024-46758](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46758), [CVE-2024-46759](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46759), [CVE-2024-46761](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46761), [CVE-2024-46763](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46763), [CVE-2024-46771](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46771), [CVE-2024-46777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46777), [CVE-2024-46780](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46780), [CVE-2024-46781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46781), [CVE-2024-46782](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46782), [CVE-2024-46783](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46783), [CVE-2024-46791](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46791), [CVE-2024-46795](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46795), [CVE-2024-46798](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46798), [CVE-2024-46800](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46800), [CVE-2024-46804](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46804), [CVE-2024-46805](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46805), [CVE-2024-46807](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46807), [CVE-2024-46810](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46810), [CVE-2024-46814](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46814), [CVE-2024-46815](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46815), [CVE-2024-46817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46817), [CVE-2024-46818](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46818), [CVE-2024-46819](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46819), [CVE-2024-46822](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46822), [CVE-2024-46828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46828), [CVE-2024-46829](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46829), [CVE-2024-46832](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46832), [CVE-2024-46840](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46840), [CVE-2024-46844](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46844), [CVE-2024-47659](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47659), [CVE-2024-47660](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47660), [CVE-2024-47663](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47663), [CVE-2024-47665](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47665), [CVE-2024-47667](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47667), [CVE-2024-47668](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47668), [CVE-2024-47669](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47669)
+
+
+
+
+## January 07, 2025
+
+The original 1.31.0-gke.889 release notes _stated incorrectly_ that the GKE Identity Service allows TLS 1.1 and higher connections, by default. Here is the correct change description:
+
+  * GKE Identity Service now requires that all HTTPS connections use transport layer security (TLS) 1.2 or 1.3. For versions 1.31.0 and higher, TLS 1.1 is disabled by default, however it can be re-enabled if needed.
+
+If you require support for TLS 1.1, reach out to [Cloud Customer Care](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/getting-support) for assistance.
+
+
+
+
+The 1.31.0-gke.889 release notes have been updated to reflect the correct default behavior.
+
+## December 18, 2024
+
+Google Distributed Cloud (software only) for VMware 1.31.0-gke.889 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.31.0-gke.889 runs on Kubernetes v1.31.3-gke.100.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+Announcing an early look at two preview features:
+
+  * A new architecture called [advanced clusters](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/concepts/advanced-clusters). When advanced cluster is enabled, the underlying Google Distributed Cloud software deploys controllers that allow for a more extensible architecture. Enabling advanced clusters gives you access to new features and capabilities, such as topology domains.
+
+  * A [topology domain](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/topology-domains-set-up) is a pool of cluster nodes that are considered to be part of the same logical or physical grouping. Topology domains correspond to some underlying hardware or software that has the possibility of correlated failure, like networking equipment in a rack. As part of setting up a topology domain, you create a topology label that is set on all the nodes in the topology domain during cluster creation. This label lets you set up [Pod Topology Spread Constraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/).
+
+
+
+
+Note the following limitations of the preview:
+
+  * You can enable the features only on new 1.31 clusters.
+  * You won't be able to upgrade the clusters to 1.32, so only enable the features in a test environment.
+  * To test topology domains, we recommend that you configure the [cluster-wide built-in default spread constraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/#internal-default-constraints) because configuring your own [cluster-wide spread constraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/#cluster-level-default-constraints) isn't available.
+
+
+
+Upgrade changes:
+
+  * Dataplane V2 is required for all user clusters. Before upgrading a user cluster to 1.31, follow the steps in [Enable Dataplane V2](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading#enable-dataplane-v2).
+
+  * To upgrade clusters to 1.31, you must upgrade your admin cluster first and then user clusters. For more information, see [Version rules](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading#verson_rules).
+
+
+
+
+Version changes:
+
+  * COS was upgraded to [milestone 113](https://cloud.google.com/container-optimized-os/docs/release-notes/m113).
+
+
+
+Other changes:
+
+  * (Edited: January 7, 2025) GKE Identity Service now requires that all HTTPS connections use transport layer security (TLS) 1.2 or 1.3. For versions 1.31.0 and higher, TLS 1.1 is disabled by default, however it can be re-enabled if needed.
+
+If you require support for TLS 1.1, reach out to [Cloud Customer Care](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/getting-support) for assistance.
+
+  * Removed TLS/SSL weak message authentication code cipher suites in the vSphere cloud controller manager.
+
+
+
+
+The following issues are fixed in 1.31.0-gke.889:
+
+  * Fixed the issue that additional manual steps are needed after disabling always-on secrets encryption with `gkectl update cluster`.
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#migrating-a-user-cluster-to-controlplane-v2-fails-if-secrets-encryption-has-ever-been-enabled) that caused migrating a user cluster to Controlplane V2 to fail if secrets encryption has ever been enabled on the user cluster, even if it's already disabled.
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#gkectl-returns-false-error-on-netapp-storageclass) where the `gkectl upgrade` command returned an incorrect error about the netapp storageclass.
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#updating-dataplanev2-forwardmode-doesnt-automatically-trigger-anetd-daemonset-restart) where updating DataplaneV2 ForwardMode doesn't automatically trigger anetd DaemonSet restart.
+
+
+
+The following high-severity container vulnerabilities are fixed in 1.31.0-gke.889:
+
+  * [CVE-2023-47108](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-47108)
+  * [CVE-2023-28642](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28642)
+  * [CVE-2021-39293](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39293)
+  * [CVE-2022-30580](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30580)
+  * [CVE-2022-30633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30633)
+  * [CVE-2022-30631](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30631)
+  * [CVE-2022-2879](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2879)
+  * [CVE-2022-30632](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30632)
+  * [CVE-2022-28131](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28131)
+  * [CVE-2022-24675](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24675)
+  * [CVE-2022-2880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2880)
+  * [CVE-2021-44716](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44716)
+  * [CVE-2022-30630](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30630)
+  * [CVE-2024-1975](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1975)
+  * [CVE-2022-24921](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24921)
+  * [CVE-2024-1737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1737)
+  * [CVE-2021-29923](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29923)
+  * [CVE-2022-41715](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41715)
+  * [CVE-2021-41772](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41772)
+  * [CVE-2023-27561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27561)
+  * [CVE-2022-23772](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23772)
+  * [CVE-2024-6345](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6345)
+  * [CVE-2022-32189](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32189)
+  * [CVE-2022-23773](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23773)
+  * [CVE-2021-41771](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41771)
+  * [CVE-2022-30635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30635)
+  * [CVE-2022-28327](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28327)
+  * [CVE-2024-6232](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6232)
+  * [CVE-2024-0793](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0793)
+  * [CVE-2024-7348](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7348)
+  * [CVE-2023-3676](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3676)
+  * [CVE-2023-5528](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5528)
+  * [CVE-2023-3955](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3955)
+  * [GHSA-87m9-rv8p-rgmg](https://github.com/advisories/GHSA-87m9-rv8p-rgmg)
+  * [CVE-2024-0567](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0567)
+  * [CVE-2020-22218](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-22218)
+
+
+
+The following Ubuntu vulnerabilities: are fixed in 1.31.0-gke.889:
+
+  * [CVE-2022-48666](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48666)
+  * [CVE-2023-52889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52889)
+  * [CVE-2023-52918](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52918)
+  * [CVE-2024-25744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25744)
+  * [CVE-2024-26607](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26607)
+  * [CVE-2024-26661](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26661)
+  * [CVE-2024-26669](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26669)
+  * [CVE-2024-26800](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26800)
+  * [CVE-2024-26893](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26893)
+  * [CVE-2024-36484](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36484)
+  * [CVE-2024-38577](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38577)
+  * [CVE-2024-38602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38602)
+  * [CVE-2024-38611](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38611)
+  * [CVE-2024-39472](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39472)
+  * [CVE-2024-40915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40915)
+  * [CVE-2024-41011](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41011)
+  * [CVE-2024-41012](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41012)
+  * [CVE-2024-41015](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41015)
+  * [CVE-2024-41017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41017)
+  * [CVE-2024-41019](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41019)
+  * [CVE-2024-41020](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41020)
+  * [CVE-2024-41022](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41022)
+  * [CVE-2024-41042](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41042)
+  * [CVE-2024-41059](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41059)
+  * [CVE-2024-41060](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41060)
+  * [CVE-2024-41063](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41063)
+  * [CVE-2024-41064](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41064)
+  * [CVE-2024-41065](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41065)
+  * [CVE-2024-41068](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41068)
+  * [CVE-2024-41070](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41070)
+  * [CVE-2024-41071](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41071)
+  * [CVE-2024-41072](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41072)
+  * [CVE-2024-41073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41073)
+  * [CVE-2024-41077](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41077)
+  * [CVE-2024-41078](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41078)
+  * [CVE-2024-41081](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41081)
+  * [CVE-2024-41090](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41090)
+  * [CVE-2024-41091](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41091)
+  * [CVE-2024-41098](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41098)
+  * [CVE-2024-42114](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42114)
+  * [CVE-2024-42126](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42126)
+  * [CVE-2024-42246](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42246)
+  * [CVE-2024-42259](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42259)
+  * [CVE-2024-42265](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42265)
+  * [CVE-2024-42267](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42267)
+  * [CVE-2024-42269](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42269)
+  * [CVE-2024-42270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42270)
+  * [CVE-2024-42271](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42271)
+  * [CVE-2024-42272](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42272)
+  * [CVE-2024-42274](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42274)
+  * [CVE-2024-42276](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42276)
+  * [CVE-2024-42277](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42277)
+  * [CVE-2024-42280](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42280)
+  * [CVE-2024-42281](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42281)
+  * [CVE-2024-42283](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42283)
+  * [CVE-2024-42284](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42284)
+  * [CVE-2024-42285](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42285)
+  * [CVE-2024-42286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42286)
+  * [CVE-2024-42287](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42287)
+  * [CVE-2024-42288](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42288)
+  * [CVE-2024-42289](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42289)
+  * [CVE-2024-42290](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42290)
+  * [CVE-2024-42292](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42292)
+  * [CVE-2024-42295](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42295)
+  * [CVE-2024-42296](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42296)
+  * [CVE-2024-42297](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42297)
+  * [CVE-2024-42299](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42299)
+  * [CVE-2024-42301](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42301)
+  * [CVE-2024-42302](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42302)
+  * [CVE-2024-42304](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42304)
+  * [CVE-2024-42305](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42305)
+  * [CVE-2024-42306](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42306)
+  * [CVE-2024-42309](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42309)
+  * [CVE-2024-42310](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42310)
+  * [CVE-2024-42311](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42311)
+  * [CVE-2024-42312](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42312)
+  * [CVE-2024-42313](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42313)
+  * [CVE-2024-42318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42318)
+  * [CVE-2024-43817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43817)
+  * [CVE-2024-43828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43828)
+  * [CVE-2024-43829](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43829)
+  * [CVE-2024-43830](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43830)
+  * [CVE-2024-43834](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43834)
+  * [CVE-2024-43835](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43835)
+  * [CVE-2024-43839](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43839)
+  * [CVE-2024-43841](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43841)
+  * [CVE-2024-43846](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43846)
+  * [CVE-2024-43849](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43849)
+  * [CVE-2024-43853](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43853)
+  * [CVE-2024-43854](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43854)
+  * [CVE-2024-43856](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43856)
+  * [CVE-2024-43858](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43858)
+  * [CVE-2024-43860](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43860)
+  * [CVE-2024-43861](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43861)
+  * [CVE-2024-43863](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43863)
+  * [CVE-2024-43867](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43867)
+  * [CVE-2024-43869](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43869)
+  * [CVE-2024-43870](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43870)
+  * [CVE-2024-43871](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43871)
+  * [CVE-2024-43873](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43873)
+  * [CVE-2024-43875](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43875)
+  * [CVE-2024-43879](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43879)
+  * [CVE-2024-43880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43880)
+  * [CVE-2024-43882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43882)
+  * [CVE-2024-43883](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43883)
+  * [CVE-2024-43884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43884)
+  * [CVE-2024-43889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43889)
+  * [CVE-2024-43890](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43890)
+  * [CVE-2024-43892](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43892)
+  * [CVE-2024-43893](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43893)
+  * [CVE-2024-43894](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43894)
+  * [CVE-2024-43902](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43902)
+  * [CVE-2024-43905](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43905)
+  * [CVE-2024-43907](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43907)
+  * [CVE-2024-43908](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43908)
+  * [CVE-2024-43909](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43909)
+  * [CVE-2024-43914](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43914)
+  * [CVE-2024-44934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44934)
+  * [CVE-2024-44935](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44935)
+  * [CVE-2024-44944](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44944)
+  * [CVE-2024-44946](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44946)
+  * [CVE-2024-44947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44947)
+  * [CVE-2024-44948](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44948)
+  * [CVE-2024-44954](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44954)
+  * [CVE-2024-44958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44958)
+  * [CVE-2024-44960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44960)
+  * [CVE-2024-44965](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44965)
+  * [CVE-2024-44966](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44966)
+  * [CVE-2024-44969](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44969)
+  * [CVE-2024-44971](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44971)
+  * [CVE-2024-44974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44974)
+  * [CVE-2024-44982](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44982)
+  * [CVE-2024-44983](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44983)
+  * [CVE-2024-44985](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44985)
+  * [CVE-2024-44986](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44986)
+  * [CVE-2024-44987](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44987)
+  * [CVE-2024-44988](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44988)
+  * [CVE-2024-44989](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44989)
+  * [CVE-2024-44990](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44990)
+  * [CVE-2024-44995](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44995)
+  * [CVE-2024-44998](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44998)
+  * [CVE-2024-44999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44999)
+  * [CVE-2024-45003](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45003)
+  * [CVE-2024-45006](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45006)
+  * [CVE-2024-45007](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45007)
+  * [CVE-2024-45008](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45008)
+  * [CVE-2024-45009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45009)
+  * [CVE-2024-45011](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45011)
+  * [CVE-2024-45018](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45018)
+  * [CVE-2024-45021](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45021)
+  * [CVE-2024-45025](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45025)
+  * [CVE-2024-45026](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45026)
+  * [CVE-2024-45028](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45028)
+  * [CVE-2024-46673](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46673)
+  * [CVE-2024-46675](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46675)
+  * [CVE-2024-46676](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46676)
+  * [CVE-2024-46677](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46677)
+  * [CVE-2024-46679](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46679)
+  * [CVE-2024-46685](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46685)
+  * [CVE-2024-46689](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46689)
+  * [CVE-2024-46702](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46702)
+  * [CVE-2024-46707](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46707)
+  * [CVE-2024-46713](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46713)
+  * [CVE-2024-46714](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46714)
+  * [CVE-2024-46719](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46719)
+  * [CVE-2024-46721](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46721)
+  * [CVE-2024-46722](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46722)
+  * [CVE-2024-46723](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46723)
+  * [CVE-2024-46724](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46724)
+  * [CVE-2024-46725](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46725)
+  * [CVE-2024-46731](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46731)
+  * [CVE-2024-46732](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46732)
+  * [CVE-2024-46737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46737)
+  * [CVE-2024-46738](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46738)
+  * [CVE-2024-46739](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46739)
+  * [CVE-2024-46740](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46740)
+  * [CVE-2024-46743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46743)
+  * [CVE-2024-46744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46744)
+  * [CVE-2024-46745](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46745)
+  * [CVE-2024-46746](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46746)
+  * [CVE-2024-46747](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46747)
+  * [CVE-2024-46750](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46750)
+  * [CVE-2024-46752](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46752)
+  * [CVE-2024-46755](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46755)
+  * [CVE-2024-46756](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46756)
+  * [CVE-2024-46757](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46757)
+  * [CVE-2024-46758](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46758)
+  * [CVE-2024-46759](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46759)
+  * [CVE-2024-46761](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46761)
+  * [CVE-2024-46763](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46763)
+  * [CVE-2024-46771](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46771)
+  * [CVE-2024-46777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46777)
+  * [CVE-2024-46780](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46780)
+  * [CVE-2024-46781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46781)
+  * [CVE-2024-46782](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46782)
+  * [CVE-2024-46783](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46783)
+  * [CVE-2024-46791](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46791)
+  * [CVE-2024-46795](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46795)
+  * [CVE-2024-46798](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46798)
+  * [CVE-2024-46800](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46800)
+  * [CVE-2024-46804](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46804)
+  * [CVE-2024-46805](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46805)
+  * [CVE-2024-46807](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46807)
+  * [CVE-2024-46810](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46810)
+  * [CVE-2024-46814](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46814)
+  * [CVE-2024-46815](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46815)
+  * [CVE-2024-46817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46817)
+  * [CVE-2024-46818](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46818)
+  * [CVE-2024-46819](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46819)
+  * [CVE-2024-46822](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46822)
+  * [CVE-2024-46828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46828)
+  * [CVE-2024-46829](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46829)
+  * [CVE-2024-46832](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46832)
+  * [CVE-2024-46840](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46840)
+  * [CVE-2024-46844](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46844)
+  * [CVE-2024-47659](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47659)
+  * [CVE-2024-47660](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47660)
+  * [CVE-2024-47663](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47663)
+  * [CVE-2024-47665](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47665)
+  * [CVE-2024-47667](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47667)
+  * [CVE-2024-47668](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47668)
+  * [CVE-2024-47669](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47669)
+  * [CVE-2024-27397](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27397)
+  * [CVE-2024-38630](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38630)
+  * [CVE-2024-45016](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45016)
+  * [CVE-2022-48772](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48772)
+  * [CVE-2023-52884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52884)
+  * [CVE-2023-52887](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52887)
+  * [CVE-2024-23848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23848)
+  * [CVE-2024-25741](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25741)
+  * [CVE-2024-31076](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31076)
+  * [CVE-2024-33621](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33621)
+  * [CVE-2024-33847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33847)
+  * [CVE-2024-34027](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34027)
+  * [CVE-2024-34777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34777)
+  * [CVE-2024-35247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35247)
+  * [CVE-2024-35927](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35927)
+  * [CVE-2024-36014](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36014)
+  * [CVE-2024-36015](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36015)
+  * [CVE-2024-36032](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36032)
+  * [CVE-2024-36270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36270)
+  * [CVE-2024-36286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36286)
+  * [CVE-2024-36489](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36489)
+  * [CVE-2024-36894](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36894)
+  * [CVE-2024-36971](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36971)
+  * [CVE-2024-36972](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36972)
+  * [CVE-2024-36974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36974)
+  * [CVE-2024-36978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36978)
+  * [CVE-2024-37078](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37078)
+  * [CVE-2024-37356](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37356)
+  * [CVE-2024-38381](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38381)
+  * [CVE-2024-38546](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38546)
+  * [CVE-2024-38547](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38547)
+  * [CVE-2024-38548](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38548)
+  * [CVE-2024-38549](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38549)
+  * [CVE-2024-38550](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38550)
+  * [CVE-2024-38552](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38552)
+  * [CVE-2024-38555](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38555)
+  * [CVE-2024-38558](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38558)
+  * [CVE-2024-38559](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38559)
+  * [CVE-2024-38560](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38560)
+  * [CVE-2024-38565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38565)
+  * [CVE-2024-38567](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38567)
+  * [CVE-2024-38571](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38571)
+  * [CVE-2024-38573](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38573)
+  * [CVE-2024-38578](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38578)
+  * [CVE-2024-38579](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38579)
+  * [CVE-2024-38580](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38580)
+  * [CVE-2024-38582](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38582)
+  * [CVE-2024-38583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38583)
+  * [CVE-2024-38586](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38586)
+  * [CVE-2024-38587](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38587)
+  * [CVE-2024-38588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38588)
+  * [CVE-2024-38589](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38589)
+  * [CVE-2024-38590](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38590)
+  * [CVE-2024-38591](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38591)
+  * [CVE-2024-38596](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38596)
+  * [CVE-2024-38597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38597)
+  * [CVE-2024-38598](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38598)
+  * [CVE-2024-38599](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38599)
+  * [CVE-2024-38601](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38601)
+  * [CVE-2024-38605](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38605)
+  * [CVE-2024-38607](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38607)
+  * [CVE-2024-38610](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38610)
+  * [CVE-2024-38612](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38612)
+  * [CVE-2024-38613](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38613)
+  * [CVE-2024-38615](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38615)
+  * [CVE-2024-38618](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38618)
+  * [CVE-2024-38619](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38619)
+  * [CVE-2024-38621](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38621)
+  * [CVE-2024-38623](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38623)
+  * [CVE-2024-38624](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38624)
+  * [CVE-2024-38627](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38627)
+  * [CVE-2024-38633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38633)
+  * [CVE-2024-38634](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38634)
+  * [CVE-2024-38635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38635)
+  * [CVE-2024-38637](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38637)
+  * [CVE-2024-38659](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38659)
+  * [CVE-2024-38661](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38661)
+  * [CVE-2024-38662](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38662)
+  * [CVE-2024-38780](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38780)
+  * [CVE-2024-39276](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39276)
+  * [CVE-2024-39277](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39277)
+  * [CVE-2024-39301](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39301)
+  * [CVE-2024-39466](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39466)
+  * [CVE-2024-39467](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39467)
+  * [CVE-2024-39468](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39468)
+  * [CVE-2024-39469](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39469)
+  * [CVE-2024-39471](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39471)
+  * [CVE-2024-39475](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39475)
+  * [CVE-2024-39480](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39480)
+  * [CVE-2024-39482](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39482)
+  * [CVE-2024-39487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39487)
+  * [CVE-2024-39488](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39488)
+  * [CVE-2024-39489](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39489)
+  * [CVE-2024-39490](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39490)
+  * [CVE-2024-39493](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39493)
+  * [CVE-2024-39495](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39495)
+  * [CVE-2024-39499](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39499)
+  * [CVE-2024-39500](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39500)
+  * [CVE-2024-39501](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39501)
+  * [CVE-2024-39502](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39502)
+  * [CVE-2024-39503](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39503)
+  * [CVE-2024-39505](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39505)
+  * [CVE-2024-39506](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39506)
+  * [CVE-2024-39507](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39507)
+
+
+
+The following Container-Optimized OS vulnerabilities are fixed in 1.31.0-gke.889:
+
+  * [CVE-2024-41073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41073)
+  * [CVE-2024-36979](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36979)
+  * [CVE-2024-49889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49889)
+  * [CVE-2024-38577](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38577)
+  * [CVE-2024-41087](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41087)
+  * [CVE-2024-49882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49882)
+  * [CVE-2024-38538](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38538)
+  * [CVE-2024-44940](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44940)
+  * [CVE-2024-53057](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-53057)
+  * [CVE-2024-39487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39487)
+  * [CVE-2024-48958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-48958)
+  * [CVE-2024-41049](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41049)
+  * [CVE-2024-50035](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50035)
+  * [CVE-2024-49883](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49883)
+  * [CVE-2024-41058](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41058)
+  * [CVE-2024-47685](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47685)
+  * [CVE-2024-46743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46743)
+  * [CVE-2024-38555](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38555)
+  * [CVE-2024-45490](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45490)
+  * [CVE-2024-46800](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46800)
+  * [CVE-2024-42285](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42285)
+  * [CVE-2024-44934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44934)
+  * [CVE-2024-37407](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37407)
+  * [CVE-2024-47727](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47727)
+  * [CVE-2024-49936](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49936)
+  * [CVE-2024-38588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38588)
+  * [CVE-2024-36978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36978)
+  * [CVE-2024-41057](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41057)
+  * [CVE-2024-42136](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42136)
+  * [CVE-2024-50033](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50033)
+  * [CVE-2024-44983](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44983)
+  * [CVE-2024-37371](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37371)
+  * [CVE-2024-49967](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49967)
+  * [CVE-2024-41000](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41000)
+  * [CVE-2024-43873](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43873)
+  * [CVE-2024-37370](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37370)
+  * [CVE-2024-47742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47742)
+  * [CVE-2024-39494](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39494)
+  * [CVE-2024-26256](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26256)
+  * [CVE-2024-39463](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39463)
+  * [CVE-2024-44985](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44985)
+  * [CVE-2024-6119](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6119)
+  * [CVE-2024-40994](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40994)
+  * [CVE-2024-44987](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44987)
+  * [CVE-2024-45491](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45491)
+  * [CVE-2024-46744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46744)
+  * [CVE-2024-42302](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42302)
+  * [CVE-2024-50083](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50083)
+  * [CVE-2024-40906](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40906)
+  * [CVE-2024-46738](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46738)
+  * [CVE-2024-40954](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40954)
+  * [CVE-2024-6232](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6232)
+  * [CVE-2024-44986](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44986)
+  * [CVE-2024-49884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49884)
+  * [CVE-2024-40958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40958)
+  * [CVE-2024-49860](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49860)
+  * [CVE-2024-49983](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49983)
+  * [CVE-2024-45492](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45492)
+  * [CVE-2024-47701](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47701)
+  * [CVE-2024-43882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43882)
+  * [CVE-2024-48957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-48957)
+  * [CVE-2024-47682](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47682)
+
+
+
+Additional Ubuntu vulnerabilities fixed in 1.31.0-gke.889:
+
+  * [CVE-2024-39509](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39509)
+  * [CVE-2024-40901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40901)
+  * [CVE-2024-40902](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40902)
+  * [CVE-2024-40904](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40904)
+  * [CVE-2024-40905](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40905)
+  * [CVE-2024-40908](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40908)
+  * [CVE-2024-40911](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40911)
+  * [CVE-2024-40912](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40912)
+  * [CVE-2024-40914](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40914)
+  * [CVE-2024-40916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40916)
+  * [CVE-2024-40927](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40927)
+  * [CVE-2024-40929](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40929)
+  * [CVE-2024-40931](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40931)
+  * [CVE-2024-40932](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40932)
+  * [CVE-2024-40934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40934)
+  * [CVE-2024-40937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40937)
+  * [CVE-2024-40941](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40941)
+  * [CVE-2024-40942](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40942)
+  * [CVE-2024-40943](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40943)
+  * [CVE-2024-40945](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40945)
+  * [CVE-2024-40954](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40954)
+  * [CVE-2024-40956](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40956)
+  * [CVE-2024-40957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40957)
+  * [CVE-2024-40958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40958)
+  * [CVE-2024-40959](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40959)
+  * [CVE-2024-40960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40960)
+  * [CVE-2024-40961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40961)
+  * [CVE-2024-40963](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40963)
+  * [CVE-2024-40967](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40967)
+  * [CVE-2024-40968](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40968)
+  * [CVE-2024-40970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40970)
+  * [CVE-2024-40971](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40971)
+  * [CVE-2024-40974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40974)
+  * [CVE-2024-40976](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40976)
+  * [CVE-2024-40978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40978)
+  * [CVE-2024-40980](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40980)
+  * [CVE-2024-40981](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40981)
+  * [CVE-2024-40983](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40983)
+  * [CVE-2024-40984](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40984)
+  * [CVE-2024-40987](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40987)
+  * [CVE-2024-40988](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40988)
+  * [CVE-2024-40990](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40990)
+  * [CVE-2024-40994](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40994)
+  * [CVE-2024-40995](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40995)
+  * [CVE-2024-41000](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41000)
+  * [CVE-2024-41002](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41002)
+  * [CVE-2024-41004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41004)
+  * [CVE-2024-41005](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41005)
+  * [CVE-2024-41006](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41006)
+  * [CVE-2024-41007](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41007)
+  * [CVE-2024-41027](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41027)
+  * [CVE-2024-41034](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41034)
+  * [CVE-2024-41035](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41035)
+  * [CVE-2024-41040](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41040)
+  * [CVE-2024-41041](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41041)
+  * [CVE-2024-41044](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41044)
+  * [CVE-2024-41046](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41046)
+  * [CVE-2024-41047](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41047)
+  * [CVE-2024-41048](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41048)
+  * [CVE-2024-41049](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41049)
+  * [CVE-2024-41055](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41055)
+  * [CVE-2024-41087](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41087)
+  * [CVE-2024-41089](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41089)
+  * [CVE-2024-41092](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41092)
+  * [CVE-2024-41093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41093)
+  * [CVE-2024-41095](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41095)
+  * [CVE-2024-41097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41097)
+  * [CVE-2024-42068](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42068)
+  * [CVE-2024-42070](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42070)
+  * [CVE-2024-42076](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42076)
+  * [CVE-2024-42077](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42077)
+  * [CVE-2024-42080](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42080)
+  * [CVE-2024-42082](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42082)
+  * [CVE-2024-42084](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42084)
+  * [CVE-2024-42085](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42085)
+  * [CVE-2024-42086](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42086)
+  * [CVE-2024-42087](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42087)
+  * [CVE-2024-42089](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42089)
+  * [CVE-2024-42090](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42090)
+  * [CVE-2024-42092](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42092)
+  * [CVE-2024-42093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42093)
+  * [CVE-2024-42094](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42094)
+  * [CVE-2024-42095](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42095)
+  * [CVE-2024-42096](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42096)
+  * [CVE-2024-42097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42097)
+  * [CVE-2024-42098](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42098)
+  * [CVE-2024-42101](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42101)
+  * [CVE-2024-42102](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42102)
+  * [CVE-2024-42104](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42104)
+  * [CVE-2024-42105](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42105)
+  * [CVE-2024-42106](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42106)
+  * [CVE-2024-42109](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42109)
+  * [CVE-2024-42115](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42115)
+  * [CVE-2024-42119](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42119)
+  * [CVE-2024-42120](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42120)
+  * [CVE-2024-42121](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42121)
+  * [CVE-2024-42124](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42124)
+  * [CVE-2024-42127](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42127)
+  * [CVE-2024-42130](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42130)
+  * [CVE-2024-42131](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42131)
+  * [CVE-2024-42137](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42137)
+  * [CVE-2024-42140](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42140)
+  * [CVE-2024-42145](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42145)
+  * [CVE-2024-42148](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42148)
+  * [CVE-2024-42152](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42152)
+  * [CVE-2024-42153](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42153)
+  * [CVE-2024-42154](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42154)
+  * [CVE-2024-42157](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42157)
+  * [CVE-2024-42161](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42161)
+  * [CVE-2024-42223](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42223)
+  * [CVE-2024-42224](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42224)
+  * [CVE-2024-42225](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42225)
+  * [CVE-2024-42229](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42229)
+  * [CVE-2024-42232](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42232)
+  * [CVE-2024-42236](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42236)
+  * [CVE-2024-42240](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42240)
+  * [CVE-2024-42244](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42244)
+  * [CVE-2024-42247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42247)
+  * [CVE-2023-52629](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52629)
+  * [CVE-2023-52760](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52760)
+  * [CVE-2024-26680](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26680)
+  * [CVE-2024-26830](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26830)
+  * [CVE-2024-26921](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26921)
+  * [CVE-2024-36901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36901)
+  * [CVE-2024-39292](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39292)
+  * [CVE-2024-39484](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39484)
+  * [CVE-2023-52585](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52585)
+  * [CVE-2023-52882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52882)
+  * [CVE-2024-26900](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26900)
+  * [CVE-2024-26936](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26936)
+  * [CVE-2024-26980](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26980)
+  * [CVE-2024-27398](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27398)
+  * [CVE-2024-27399](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27399)
+  * [CVE-2024-27401](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27401)
+  * [CVE-2024-35848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35848)
+  * [CVE-2024-35947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35947)
+  * [CVE-2024-36017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36017)
+  * [CVE-2024-36031](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36031)
+  * [CVE-2024-36880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36880)
+  * [CVE-2024-36883](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36883)
+  * [CVE-2024-36886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36886)
+  * [CVE-2024-36889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36889)
+  * [CVE-2024-36897](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36897)
+  * [CVE-2024-36902](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36902)
+  * [CVE-2024-36904](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36904)
+  * [CVE-2024-36905](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36905)
+  * [CVE-2024-36906](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36906)
+  * [CVE-2024-36916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36916)
+  * [CVE-2024-36919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36919)
+  * [CVE-2024-36928](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36928)
+  * [CVE-2024-36929](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36929)
+  * [CVE-2024-36931](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36931)
+  * [CVE-2024-36933](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36933)
+  * [CVE-2024-36934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36934)
+  * [CVE-2024-36937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36937)
+  * [CVE-2024-36938](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36938)
+  * [CVE-2024-36939](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36939)
+  * [CVE-2024-36940](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36940)
+  * [CVE-2024-36941](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36941)
+  * [CVE-2024-36944](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36944)
+  * [CVE-2024-36946](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36946)
+  * [CVE-2024-36947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36947)
+  * [CVE-2024-36950](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36950)
+  * [CVE-2024-36952](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36952)
+  * [CVE-2024-36953](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36953)
+  * [CVE-2024-36954](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36954)
+  * [CVE-2024-36955](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36955)
+  * [CVE-2024-36957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36957)
+  * [CVE-2024-36959](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36959)
+  * [CVE-2024-36960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36960)
+  * [CVE-2024-36964](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36964)
+  * [CVE-2024-36965](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36965)
+  * [CVE-2024-36967](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36967)
+  * [CVE-2024-36969](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36969)
+  * [CVE-2024-36975](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36975)
+  * [CVE-2024-38600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38600)
+  * [CVE-2023-52752](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52752)
+  * [CVE-2024-25742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25742)
+  * [CVE-2024-26886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26886)
+  * [CVE-2024-26952](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26952)
+  * [CVE-2024-27017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27017)
+  * [CVE-2024-36016](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36016)
+  * [CVE-2022-38096](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38096)
+  * [CVE-2023-52488](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52488)
+  * [CVE-2023-52699](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52699)
+  * [CVE-2023-52880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52880)
+  * [CVE-2024-23307](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23307)
+  * [CVE-2024-24857](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24857)
+  * [CVE-2024-24858](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24858)
+  * [CVE-2024-24859](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24859)
+  * [CVE-2024-24861](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24861)
+  * [CVE-2024-25739](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25739)
+  * [CVE-2024-26629](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26629)
+  * [CVE-2024-26642](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26642)
+  * [CVE-2024-26654](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26654)
+  * [CVE-2024-26687](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26687)
+  * [CVE-2024-26810](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26810)
+  * [CVE-2024-26811](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26811)
+  * [CVE-2024-26812](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26812)
+  * [CVE-2024-26813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26813)
+  * [CVE-2024-26814](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26814)
+  * [CVE-2024-26817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26817)
+  * [CVE-2024-26828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26828)
+  * [CVE-2024-26922](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26922)
+  * [CVE-2024-26923](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26923)
+  * [CVE-2024-26925](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26925)
+  * [CVE-2024-26926](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26926)
+  * [CVE-2024-26929](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26929)
+  * [CVE-2024-26931](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26931)
+  * [CVE-2024-26934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26934)
+  * [CVE-2024-26935](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26935)
+  * [CVE-2024-26937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26937)
+  * [CVE-2024-26950](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26950)
+  * [CVE-2024-26951](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26951)
+  * [CVE-2024-26955](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26955)
+  * [CVE-2024-26956](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26956)
+  * [CVE-2024-26957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26957)
+  * [CVE-2024-26958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26958)
+  * [CVE-2024-26960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26960)
+  * [CVE-2024-26961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26961)
+  * [CVE-2024-26964](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26964)
+  * [CVE-2024-26965](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26965)
+  * [CVE-2024-26966](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26966)
+  * [CVE-2024-26969](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26969)
+  * [CVE-2024-26970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26970)
+  * [CVE-2024-26973](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26973)
+  * [CVE-2024-26974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26974)
+  * [CVE-2024-26976](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26976)
+  * [CVE-2024-26977](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26977)
+  * [CVE-2024-26981](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26981)
+  * [CVE-2024-26984](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26984)
+  * [CVE-2024-26988](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26988)
+  * [CVE-2024-26989](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26989)
+  * [CVE-2024-26993](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26993)
+  * [CVE-2024-26994](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26994)
+  * [CVE-2024-26996](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26996)
+  * [CVE-2024-26999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26999)
+  * [CVE-2024-27000](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27000)
+  * [CVE-2024-27001](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27001)
+  * [CVE-2024-27004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27004)
+  * [CVE-2024-27008](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27008)
+  * [CVE-2024-27009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27009)
+  * [CVE-2024-27013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27013)
+  * [CVE-2024-27015](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27015)
+  * [CVE-2024-27016](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27016)
+  * [CVE-2024-27018](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27018)
+  * [CVE-2024-27019](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27019)
+  * [CVE-2024-27020](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27020)
+  * [CVE-2024-27059](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27059)
+  * [CVE-2024-27393](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27393)
+  * [CVE-2024-27395](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27395)
+  * [CVE-2024-27396](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27396)
+  * [CVE-2024-27437](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27437)
+  * [CVE-2024-35785](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35785)
+  * [CVE-2024-35789](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35789)
+  * [CVE-2024-35791](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35791)
+  * [CVE-2024-35796](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35796)
+  * [CVE-2024-35804](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35804)
+  * [CVE-2024-35805](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35805)
+  * [CVE-2024-35806](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35806)
+  * [CVE-2024-35807](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35807)
+  * [CVE-2024-35809](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35809)
+  * [CVE-2024-35813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35813)
+  * [CVE-2024-35815](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35815)
+  * [CVE-2024-35817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35817)
+  * [CVE-2024-35819](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35819)
+  * [CVE-2024-35821](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35821)
+  * [CVE-2024-35822](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35822)
+  * [CVE-2024-35823](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35823)
+  * [CVE-2024-35825](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35825)
+  * [CVE-2024-35847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35847)
+  * [CVE-2024-35849](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35849)
+  * [CVE-2024-35851](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35851)
+  * [CVE-2024-35852](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35852)
+  * [CVE-2024-35853](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35853)
+  * [CVE-2024-35854](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35854)
+  * [CVE-2024-35855](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35855)
+  * [CVE-2024-35857](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35857)
+  * [CVE-2024-35871](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35871)
+  * [CVE-2024-35872](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35872)
+  * [CVE-2024-35877](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35877)
+  * [CVE-2024-35879](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35879)
+  * [CVE-2024-35884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35884)
+  * [CVE-2024-35885](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35885)
+  * [CVE-2024-35886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35886)
+  * [CVE-2024-35888](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35888)
+  * [CVE-2024-35890](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35890)
+  * [CVE-2024-35893](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35893)
+  * [CVE-2024-35895](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35895)
+  * [CVE-2024-35896](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35896)
+  * [CVE-2024-35897](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35897)
+  * [CVE-2024-35898](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35898)
+  * [CVE-2024-35899](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35899)
+  * [CVE-2024-35900](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35900)
+  * [CVE-2024-35902](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35902)
+  * [CVE-2024-35905](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35905)
+  * [CVE-2024-35907](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35907)
+  * [CVE-2024-35910](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35910)
+  * [CVE-2024-35912](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35912)
+  * [CVE-2024-35915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35915)
+  * [CVE-2024-35922](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35922)
+  * [CVE-2024-35925](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35925)
+  * [CVE-2024-35930](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35930)
+  * [CVE-2024-35933](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35933)
+  * [CVE-2024-35934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35934)
+  * [CVE-2024-35935](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35935)
+  * [CVE-2024-35936](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35936)
+  * [CVE-2024-35938](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35938)
+  * [CVE-2024-35940](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35940)
+  * [CVE-2024-35944](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35944)
+  * [CVE-2024-35950](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35950)
+  * [CVE-2024-35955](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35955)
+  * [CVE-2024-35958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35958)
+  * [CVE-2024-35960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35960)
+  * [CVE-2024-35969](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35969)
+  * [CVE-2024-35970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35970)
+  * [CVE-2024-35973](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35973)
+  * [CVE-2024-35976](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35976)
+  * [CVE-2024-35978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35978)
+  * [CVE-2024-35982](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35982)
+  * [CVE-2024-35984](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35984)
+  * [CVE-2024-35988](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35988)
+  * [CVE-2024-35989](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35989)
+  * [CVE-2024-35990](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35990)
+  * [CVE-2024-35997](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35997)
+  * [CVE-2024-36004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36004)
+  * [CVE-2024-36005](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36005)
+  * [CVE-2024-36006](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36006)
+  * [CVE-2024-36007](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36007)
+  * [CVE-2024-36008](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36008)
+  * [CVE-2024-36020](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36020)
+  * [CVE-2024-36025](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36025)
+  * [CVE-2024-36029](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36029)
+
+
+
+## December 17, 2024
+
+The following critical container vulnerabilities are fixed in 1.31.0-gke.889:
+
+  * [CVE-2024-41110](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41110)
+  * [CVE-2024-45490](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45490)
+  * [CVE-2024-37371](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37371)
+  * [CVE-2024-45492](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45492)
+  * [CVE-2024-37370](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37370)
+  * [CVE-2024-45491](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45491)
+  * [CVE-2022-23806](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23806)
+  * [CVE-2021-38297](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-38297)
+  * [CVE-2024-24557](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24557)
+
+
+
+## December 10, 2024
+
+Google Distributed Cloud (software only) for VMware 1.30.400-gke.133 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.30.400-gke.133 runs on Kubernetes v1.30.6-gke.300.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+Added support for configuring the GKE Identity Service to enforce a minimum transport layer security (TLS) version of 1.2 for HTTPS connections. By default, the GKE Identity Service allows TLS 1.1 and higher connections. If you require enforcement for a minimum of TLS 1.2, reach out to [Cloud Customer Care](https://cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/getting-support) for assistance.
+
+The following vulnerabilities are fixed in 1.30.400-gke.133:
+
+High-severity container vulnerabilities:
+
+  * [CVE-2021-33194](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33194)
+  * [CVE-2023-3676](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3676)
+  * [CVE-2023-3955](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3955)
+  * [CVE-2023-5528](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5528)
+  * [CVE-2024-0793](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0793)
+  * [CVE-2024-6232](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6232)
+
+
+
+Container-optimized OS vulnerabilities:
+
+  * [CVE-2024-47682](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47682)
+  * [CVE-2024-47685](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47685)
+  * [CVE-2024-47696](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47696)
+  * [CVE-2024-47701](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47701)
+  * [CVE-2024-47727](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47727)
+  * [CVE-2024-47742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47742)
+  * [CVE-2024-48957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-48957)
+  * [CVE-2024-48958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-48958)
+  * [CVE-2024-49860](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49860)
+  * [CVE-2024-49882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49882)
+  * [CVE-2024-49883](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49883)
+  * [CVE-2024-49884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49884)
+  * [CVE-2024-49889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49889)
+  * [CVE-2024-49936](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49936)
+  * [CVE-2024-49967](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49967)
+  * [CVE-2024-49983](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-49983)
+  * [CVE-2024-50033](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50033)
+  * [CVE-2024-50035](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50035)
+  * [CVE-2024-50083](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50083)
+  * [CVE-2024-50115](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50115)
+  * [CVE-2024-50131](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50131)
+  * [CVE-2024-53057](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-53057)
+
+
+
+Ubuntu vulnerabilities:
+
+  * [CVE-2022-48666](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48666)
+  * [CVE-2023-52889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52889)
+  * [CVE-2023-52918](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52918)
+  * [CVE-2024-25744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25744)
+  * [CVE-2024-26607](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26607)
+  * [CVE-2024-26661](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26661)
+  * [CVE-2024-26669](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26669)
+  * [CVE-2024-26800](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26800)
+  * [CVE-2024-26893](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26893)
+  * [CVE-2024-27397](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27397)
+  * [CVE-2024-36484](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36484)
+  * [CVE-2024-38577](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38577)
+  * [CVE-2024-38602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38602)
+  * [CVE-2024-38611](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38611)
+  * [CVE-2024-38630](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38630)
+  * [CVE-2024-39472](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39472)
+  * [CVE-2024-40915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40915)
+  * [CVE-2024-41011](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41011)
+  * [CVE-2024-41012](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41012)
+  * [CVE-2024-41015](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41015)
+  * [CVE-2024-41017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41017)
+  * [CVE-2024-41019](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41019)
+  * [CVE-2024-41020](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41020)
+  * [CVE-2024-41022](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41022)
+  * [CVE-2024-41042](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41042)
+  * [CVE-2024-41059](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41059)
+  * [CVE-2024-41060](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41060)
+  * [CVE-2024-41063](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41063)
+  * [CVE-2024-41064](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41064)
+  * [CVE-2024-41065](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41065)
+  * [CVE-2024-41068](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41068)
+  * [CVE-2024-41070](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41070)
+  * [CVE-2024-41071](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41071)
+  * [CVE-2024-41072](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41072)
+  * [CVE-2024-41073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41073)
+  * [CVE-2024-41077](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41077)
+  * [CVE-2024-41078](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41078)
+  * [CVE-2024-41081](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41081)
+  * [CVE-2024-41090](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41090)
+  * [CVE-2024-41091](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41091)
+  * [CVE-2024-41098](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41098)
+  * [CVE-2024-42114](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42114)
+  * [CVE-2024-42126](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42126)
+  * [CVE-2024-42246](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42246)
+  * [CVE-2024-42259](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42259)
+  * [CVE-2024-42265](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42265)
+  * [CVE-2024-42267](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42267)
+  * [CVE-2024-42269](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42269)
+  * [CVE-2024-42270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42270)
+  * [CVE-2024-42271](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42271)
+  * [CVE-2024-42272](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42272)
+  * [CVE-2024-42274](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42274)
+  * [CVE-2024-42276](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42276)
+  * [CVE-2024-42277](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42277)
+  * [CVE-2024-42280](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42280)
+  * [CVE-2024-42281](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42281)
+  * [CVE-2024-42283](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42283)
+  * [CVE-2024-42284](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42284)
+  * [CVE-2024-42285](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42285)
+  * [CVE-2024-42286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42286)
+  * [CVE-2024-42287](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42287)
+  * [CVE-2024-42288](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42288)
+  * [CVE-2024-42289](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42289)
+  * [CVE-2024-42290](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42290)
+  * [CVE-2024-42292](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42292)
+  * [CVE-2024-42295](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42295)
+  * [CVE-2024-42296](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42296)
+  * [CVE-2024-42297](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42297)
+  * [CVE-2024-42299](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42299)
+  * [CVE-2024-42301](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42301)
+  * [CVE-2024-42302](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42302)
+  * [CVE-2024-42304](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42304)
+  * [CVE-2024-42305](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42305)
+  * [CVE-2024-42306](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42306)
+  * [CVE-2024-42309](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42309)
+  * [CVE-2024-42310](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42310)
+  * [CVE-2024-42311](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42311)
+  * [CVE-2024-42312](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42312)
+  * [CVE-2024-42313](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42313)
+  * [CVE-2024-42318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42318)
+  * [CVE-2024-43817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43817)
+  * [CVE-2024-43828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43828)
+  * [CVE-2024-43829](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43829)
+  * [CVE-2024-43830](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43830)
+  * [CVE-2024-43834](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43834)
+  * [CVE-2024-43835](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43835)
+  * [CVE-2024-43839](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43839)
+  * [CVE-2024-43841](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43841)
+  * [CVE-2024-43846](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43846)
+  * [CVE-2024-43849](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43849)
+  * [CVE-2024-43853](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43853)
+  * [CVE-2024-43854](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43854)
+  * [CVE-2024-43856](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43856)
+  * [CVE-2024-43858](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43858)
+  * [CVE-2024-43860](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43860)
+  * [CVE-2024-43861](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43861)
+  * [CVE-2024-43863](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43863)
+  * [CVE-2024-43867](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43867)
+  * [CVE-2024-43869](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43869)
+  * [CVE-2024-43870](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43870)
+  * [CVE-2024-43871](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43871)
+  * [CVE-2024-43873](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43873)
+  * [CVE-2024-43875](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43875)
+  * [CVE-2024-43879](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43879)
+  * [CVE-2024-43880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43880)
+  * [CVE-2024-43882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43882)
+  * [CVE-2024-43883](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43883)
+  * [CVE-2024-43884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43884)
+  * [CVE-2024-43889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43889)
+  * [CVE-2024-43890](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43890)
+  * [CVE-2024-43892](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43892)
+  * [CVE-2024-43893](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43893)
+  * [CVE-2024-43894](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43894)
+  * [CVE-2024-43902](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43902)
+  * [CVE-2024-43905](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43905)
+  * [CVE-2024-43907](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43907)
+  * [CVE-2024-43908](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43908)
+  * [CVE-2024-43909](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43909)
+  * [CVE-2024-43914](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43914)
+  * [CVE-2024-44934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44934)
+  * [CVE-2024-44935](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44935)
+  * [CVE-2024-44944](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44944)
+  * [CVE-2024-44946](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44946)
+  * [CVE-2024-44947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44947)
+  * [CVE-2024-44948](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44948)
+  * [CVE-2024-44954](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44954)
+  * [CVE-2024-44958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44958)
+  * [CVE-2024-44960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44960)
+  * [CVE-2024-44965](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44965)
+  * [CVE-2024-44966](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44966)
+  * [CVE-2024-44969](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44969)
+  * [CVE-2024-44971](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44971)
+  * [CVE-2024-44974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44974)
+  * [CVE-2024-44982](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44982)
+  * [CVE-2024-44983](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44983)
+  * [CVE-2024-44985](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44985)
+  * [CVE-2024-44986](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44986)
+  * [CVE-2024-44987](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44987)
+  * [CVE-2024-44988](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44988)
+  * [CVE-2024-44989](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44989)
+  * [CVE-2024-44990](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44990)
+  * [CVE-2024-44995](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44995)
+  * [CVE-2024-44998](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44998)
+  * [CVE-2024-44999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44999)
+  * [CVE-2024-45003](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45003)
+  * [CVE-2024-45006](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45006)
+  * [CVE-2024-45007](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45007)
+  * [CVE-2024-45008](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45008)
+  * [CVE-2024-45009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45009)
+  * [CVE-2024-45011](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45011)
+  * [CVE-2024-45016](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45016)
+  * [CVE-2024-45018](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45018)
+  * [CVE-2024-45021](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45021)
+  * [CVE-2024-45025](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45025)
+  * [CVE-2024-45026](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45026)
+  * [CVE-2024-45028](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45028)
+  * [CVE-2024-46673](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46673)
+  * [CVE-2024-46675](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46675)
+  * [CVE-2024-46676](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46676)
+  * [CVE-2024-46677](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46677)
+  * [CVE-2024-46679](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46679)
+  * [CVE-2024-46685](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46685)
+  * [CVE-2024-46689](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46689)
+  * [CVE-2024-46702](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46702)
+  * [CVE-2024-46707](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46707)
+  * [CVE-2024-46713](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46713)
+  * [CVE-2024-46714](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46714)
+  * [CVE-2024-46719](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46719)
+  * [CVE-2024-46721](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46721)
+  * [CVE-2024-46722](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46722)
+  * [CVE-2024-46723](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46723)
+  * [CVE-2024-46724](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46724)
+  * [CVE-2024-46725](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46725)
+  * [CVE-2024-46731](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46731)
+  * [CVE-2024-46732](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46732)
+  * [CVE-2024-46737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46737)
+  * [CVE-2024-46738](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46738)
+  * [CVE-2024-46739](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46739)
+  * [CVE-2024-46740](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46740)
+  * [CVE-2024-46743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46743)
+  * [CVE-2024-46744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46744)
+  * [CVE-2024-46745](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46745)
+  * [CVE-2024-46746](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46746)
+  * [CVE-2024-46747](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46747)
+  * [CVE-2024-46750](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46750)
+  * [CVE-2024-46752](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46752)
+  * [CVE-2024-46755](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46755)
+  * [CVE-2024-46756](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46756)
+  * [CVE-2024-46757](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46757)
+  * [CVE-2024-46758](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46758)
+  * [CVE-2024-46759](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46759)
+  * [CVE-2024-46761](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46761)
+  * [CVE-2024-46763](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46763)
+  * [CVE-2024-46771](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46771)
+  * [CVE-2024-46777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46777)
+  * [CVE-2024-46780](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46780)
+  * [CVE-2024-46781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46781)
+  * [CVE-2024-46782](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46782)
+  * [CVE-2024-46783](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46783)
+  * [CVE-2024-46791](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46791)
+  * [CVE-2024-46795](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46795)
+  * [CVE-2024-46798](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46798)
+  * [CVE-2024-46800](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46800)
+  * [CVE-2024-46804](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46804)
+  * [CVE-2024-46805](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46805)
+  * [CVE-2024-46807](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46807)
+  * [CVE-2024-46810](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46810)
+  * [CVE-2024-46814](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46814)
+  * [CVE-2024-46815](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46815)
+  * [CVE-2024-46817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46817)
+  * [CVE-2024-46818](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46818)
+  * [CVE-2024-46819](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46819)
+  * [CVE-2024-46822](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46822)
+  * [CVE-2024-46828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46828)
+  * [CVE-2024-46829](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46829)
+  * [CVE-2024-46832](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46832)
+  * [CVE-2024-46840](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46840)
+  * [CVE-2024-46844](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46844)
+  * [CVE-2024-47659](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47659)
+  * [CVE-2024-47660](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47660)
+  * [CVE-2024-47663](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47663)
+  * [CVE-2024-47665](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47665)
+  * [CVE-2024-47667](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47667)
+  * [CVE-2024-47668](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47668)
+  * [CVE-2024-47669](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47669)
+
+
+
+## November 22, 2024
+
+Google Distributed Cloud (software only) for VMware 1.30.300-gke.84 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.30.300-gke.84 runs on Kubernetes v1.30.5-gke.600.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues are fixed in 1.30.300-gke.84:
+
+  * Fixed the issue that additional manual steps are needed after disabling always-on secrets encryption with `gkectl update cluster`.
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#gkectl-displays-false-warnings-on-version-skew) that caused `gkectl` to display false warnings on admin cluster version skew.
+
+
+
+The following vulnerabilities are fixed in 1.30.300-gke.84:
+
+High-severity container vulnerabilities:
+
+  * [CVE-2024-6345](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6345)
+  * [CVE-2024-0567](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0567)
+  * [CVE-2020-22218](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-22218)
+
+
+
+Container-optimized OS vulnerabilities:
+
+  * [CVE-2024-46738](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46738)
+  * [CVE-2024-46744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46744)
+  * [CVE-2024-46800](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46800)
+  * [CVE-2024-46743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46743)
+  * [CVE-2024-44940](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44940)
+
+
+
+## November 14, 2024
+
+Google Distributed Cloud (software only) for VMware 1.29.800-gke.108 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.29.800-gke.108 runs on Kubernetes 1.29.10-gke.100.
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+Added support for configuring the GKE Identity Service to enforce a minimum transport layer security (TLS) version of 1.2 for HTTPS connections. By default, the GKE Identity Service allows TLS 1.1 and higher connections. If you require enforcement for a minimum of TLS 1.2, reach out to [Cloud Customer Care](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/getting-support) for assistance.
+
+The following issue is fixed in 1.29.800-gke.108:
+
+Fixed the issue that additional manual steps are needed after disabling always-on secrets encryption with `gkectl update cluster`.
+
+The following vulnerabilities are fixed in 1.29.800-gke.108:
+
+Container-optimized OS vulnerabilities:
+
+  * [CVE-2024-47685](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47685)
+  * [CVE-2024-39463](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39463)
+  * [CVE-2024-48958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-48958)
+  * [CVE-2024-48957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-48957)
+
+
+
+Ubuntu vulnerabilities:
+
+  * [CVE-2024-27397](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27397)
+  * [CVE-2024-38630](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38630)
+  * [CVE-2024-45016](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45016)
+
+
+
+## November 07, 2024
+
+Google Distributed Cloud (software only) for VMware 1.28.1200-gke.83 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.28.1200-gke.83 runs on Kubernetes v1.28.14-gke.700.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issue is fixed in 1.28.1200-gke.83:
+
+  * Fixed the issue that additional manual steps are needed after disabling always-on secrets encryption with `gkectl update cluster`.
+
+
+
+The following vulnerabilities are fixed in 1.28.1200-gke.83:
+
+Container-optimized OS vulnerabilities:
+
+  * [CVE-2024-39463](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39463)
+  * [CVE-2024-48958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-48958)
+  * [CVE-2024-47685](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47685)
+  * [CVE-2024-48957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-48957)
+
+
+
+## October 25, 2024
+
+Google Distributed Cloud (software only) for VMware 1.29.700-gke.110 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.29.700-gke.110 runs on Kubernetes v1.29.8-gke.1800.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues are fixed in 1.29.700-gke.110:
+
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#gkectl-displays-false-warnings-on-version-skew) that caused `gkectl` to display false warnings on admin cluster version skew.
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#migrating-a-user-cluster-to-controlplane-v2-fails-if-secrets-encryption-has-ever-been-enabled) that caused migrating a user cluster to Controlplane V2 to fail if secrets encryption has ever been enabled on the user cluster, even if it's already disabled.
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#migrating-an-admin-cluster-from-non-ha-to-ha-fails-if-secrets-encryption-is-enabled) that caused migrating an admin cluster from non-HA to HA to fail if the admin cluster had enabled secret encryption at 1.14 or earlier, and upgraded all the way from that version.
+
+
+
+The following vulnerabilities are fixed in 1.29.700-gke.110:
+
+High-severity container vulnerabilities:
+
+  * [CVE-2024-6345](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6345)
+
+
+
+Container-optimized OS vulnerabilities:
+
+  * [CVE-2024-46743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46743)
+  * [CVE-2024-46738](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46738)
+  * [CVE-2024-44983](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44983)
+  * [CVE-2024-44940](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44940)
+  * [CVE-2024-46800](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46800)
+  * [CVE-2024-46744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46744)
+
+
+
+## October 17, 2024
+
+Google Distributed Cloud (software only) for VMware 1.28.1100-gke.91 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.28.1100-gke.91 runs on Kubernetes v1.28.14-gke.200.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issue is fixed in 1.28.1100-gke.91:
+
+Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#gkectl-displays-false-warnings-on-version-skew) that caused `gkectl` to display false warnings on admin cluster version skew.
+
+The following vulnerabilities are fixed in 1.28.1100-gke.91:
+
+Critical container vulnerabilities:
+
+  * [CVE-2024-45492](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45492)
+  * [CVE-2024-45491](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45491)
+  * [CVE-2024-45490](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45490)
+
+
+
+Container-optimized OS vulnerabilities:
+
+  * [CVE-2024-44985](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44985)
+  * [CVE-2024-46800](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46800)
+  * [CVE-2024-43882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43882)
+  * [CVE-2024-44986](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44986)
+  * [CVE-2024-37371](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37371)
+  * [CVE-2024-44934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44934)
+  * [CVE-2024-45490](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45490)
+  * [CVE-2024-46744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46744)
+  * [CVE-2024-37370](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37370)
+  * [CVE-2024-44940](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44940)
+  * [CVE-2024-46738](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46738)
+  * [CVE-2024-45492](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45492)
+  * [CVE-2024-6232](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6232)
+  * [CVE-2024-45491](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45491)
+  * [CVE-2024-46743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46743)
+  * [CVE-2024-44983](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44983)
+  * [CVE-2024-41073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41073)
+  * [CVE-2024-44987](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44987)
+  * [CVE-2024-42302](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42302)
+
+
+
+Ubuntu vulnerabilities:
+
+  * [CVE-2022-48772](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48772)
+  * [CVE-2023-52884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52884)
+  * [CVE-2023-52887](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52887)
+  * [CVE-2024-23848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23848)
+  * [CVE-2024-25741](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25741)
+  * [CVE-2024-31076](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31076)
+  * [CVE-2024-33621](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33621)
+  * [CVE-2024-33847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33847)
+  * [CVE-2024-34027](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34027)
+  * [CVE-2024-34777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34777)
+  * [CVE-2024-35247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35247)
+  * [CVE-2024-35927](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35927)
+  * [CVE-2024-36014](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36014)
+  * [CVE-2024-36015](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36015)
+  * [CVE-2024-36032](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36032)
+  * [CVE-2024-36270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36270)
+  * [CVE-2024-36286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36286)
+  * [CVE-2024-36489](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36489)
+  * [CVE-2024-36894](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36894)
+  * [CVE-2024-36971](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36971)
+  * [CVE-2024-36972](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36972)
+  * [CVE-2024-36974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36974)
+  * [CVE-2024-36978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36978)
+  * [CVE-2024-37078](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37078)
+  * [CVE-2024-37356](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37356)
+  * [CVE-2024-38381](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38381)
+  * [CVE-2024-38546](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38546)
+  * [CVE-2024-38547](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38547)
+  * [CVE-2024-38548](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38548)
+  * [CVE-2024-38549](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38549)
+  * [CVE-2024-38550](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38550)
+  * [CVE-2024-38552](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38552)
+  * [CVE-2024-38555](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38555)
+  * [CVE-2024-38558](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38558)
+  * [CVE-2024-38559](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38559)
+  * [CVE-2024-38560](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38560)
+  * [CVE-2024-38565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38565)
+  * [CVE-2024-38567](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38567)
+  * [CVE-2024-38571](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38571)
+  * [CVE-2024-38573](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38573)
+  * [CVE-2024-38578](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38578)
+  * [CVE-2024-38579](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38579)
+  * [CVE-2024-38580](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38580)
+  * [CVE-2024-38582](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38582)
+  * [CVE-2024-38583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38583)
+  * [CVE-2024-38586](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38586)
+  * [CVE-2024-38587](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38587)
+  * [CVE-2024-38588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38588)
+  * [CVE-2024-38589](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38589)
+  * [CVE-2024-38590](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38590)
+  * [CVE-2024-38591](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38591)
+  * [CVE-2024-38596](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38596)
+  * [CVE-2024-38597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38597)
+  * [CVE-2024-38598](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38598)
+  * [CVE-2024-38599](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38599)
+  * [CVE-2024-38601](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38601)
+  * [CVE-2024-38605](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38605)
+  * [CVE-2024-38607](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38607)
+  * [CVE-2024-38610](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38610)
+  * [CVE-2024-38612](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38612)
+  * [CVE-2024-38613](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38613)
+  * [CVE-2024-38615](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38615)
+  * [CVE-2024-38618](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38618)
+  * [CVE-2024-38619](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38619)
+  * [CVE-2024-38621](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38621)
+  * [CVE-2024-38623](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38623)
+  * [CVE-2024-38624](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38624)
+  * [CVE-2024-38627](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38627)
+  * [CVE-2024-38633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38633)
+  * [CVE-2024-38634](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38634)
+  * [CVE-2024-38635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38635)
+  * [CVE-2024-38637](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38637)
+  * [CVE-2024-38659](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38659)
+  * [CVE-2024-38661](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38661)
+  * [CVE-2024-38662](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38662)
+  * [CVE-2024-38780](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38780)
+  * [CVE-2024-39276](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39276)
+  * [CVE-2024-39277](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39277)
+  * [CVE-2024-39301](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39301)
+  * [CVE-2024-39466](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39466)
+  * [CVE-2024-39467](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39467)
+  * [CVE-2024-39468](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39468)
+  * [CVE-2024-39469](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39469)
+  * [CVE-2024-39471](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39471)
+  * [CVE-2024-39475](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39475)
+  * [CVE-2024-39480](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39480)
+  * [CVE-2024-39482](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39482)
+  * [CVE-2024-39487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39487)
+  * [CVE-2024-39488](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39488)
+  * [CVE-2024-39489](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39489)
+  * [CVE-2024-39490](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39490)
+  * [CVE-2024-39493](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39493)
+  * [CVE-2024-39495](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39495)
+  * [CVE-2024-39499](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39499)
+  * [CVE-2024-39500](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39500)
+  * [CVE-2024-39501](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39501)
+  * [CVE-2024-39502](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39502)
+  * [CVE-2024-39503](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39503)
+  * [CVE-2024-39505](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39505)
+  * [CVE-2024-39506](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39506)
+  * [CVE-2024-39507](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39507)
+  * [CVE-2024-39509](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39509)
+  * [CVE-2024-40901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40901)
+  * [CVE-2024-40902](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40902)
+  * [CVE-2024-40904](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40904)
+  * [CVE-2024-40905](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40905)
+  * [CVE-2024-40908](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40908)
+  * [CVE-2024-40911](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40911)
+  * [CVE-2024-40912](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40912)
+  * [CVE-2024-40914](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40914)
+  * [CVE-2024-40916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40916)
+  * [CVE-2024-40927](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40927)
+  * [CVE-2024-40929](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40929)
+  * [CVE-2024-40931](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40931)
+  * [CVE-2024-40932](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40932)
+  * [CVE-2024-40934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40934)
+  * [CVE-2024-40937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40937)
+  * [CVE-2024-40941](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40941)
+  * [CVE-2024-40942](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40942)
+  * [CVE-2024-40943](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40943)
+  * [CVE-2024-40945](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40945)
+  * [CVE-2024-40954](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40954)
+  * [CVE-2024-40956](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40956)
+  * [CVE-2024-40957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40957)
+  * [CVE-2024-40958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40958)
+  * [CVE-2024-40959](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40959)
+  * [CVE-2024-40960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40960)
+  * [CVE-2024-40961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40961)
+  * [CVE-2024-40963](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40963)
+  * [CVE-2024-40967](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40967)
+  * [CVE-2024-40968](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40968)
+  * [CVE-2024-40970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40970)
+  * [CVE-2024-40971](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40971)
+  * [CVE-2024-40974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40974)
+  * [CVE-2024-40976](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40976)
+  * [CVE-2024-40978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40978)
+  * [CVE-2024-40980](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40980)
+  * [CVE-2024-40981](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40981)
+  * [CVE-2024-40983](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40983)
+  * [CVE-2024-40984](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40984)
+  * [CVE-2024-40987](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40987)
+  * [CVE-2024-40988](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40988)
+  * [CVE-2024-40990](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40990)
+  * [CVE-2024-40994](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40994)
+  * [CVE-2024-40995](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40995)
+  * [CVE-2024-41000](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41000)
+  * [CVE-2024-41002](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41002)
+  * [CVE-2024-41004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41004)
+  * [CVE-2024-41005](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41005)
+  * [CVE-2024-41006](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41006)
+  * [CVE-2024-41007](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41007)
+  * [CVE-2024-41027](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41027)
+  * [CVE-2024-41034](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41034)
+  * [CVE-2024-41035](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41035)
+  * [CVE-2024-41040](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41040)
+  * [CVE-2024-41041](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41041)
+  * [CVE-2024-41044](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41044)
+  * [CVE-2024-41046](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41046)
+  * [CVE-2024-41047](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41047)
+  * [CVE-2024-41048](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41048)
+  * [CVE-2024-41049](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41049)
+  * [CVE-2024-41055](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41055)
+  * [CVE-2024-41087](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41087)
+  * [CVE-2024-41089](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41089)
+  * [CVE-2024-41092](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41092)
+  * [CVE-2024-41093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41093)
+  * [CVE-2024-41095](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41095)
+  * [CVE-2024-41097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41097)
+  * [CVE-2024-42068](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42068)
+  * [CVE-2024-42070](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42070)
+  * [CVE-2024-42076](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42076)
+  * [CVE-2024-42077](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42077)
+  * [CVE-2024-42080](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42080)
+  * [CVE-2024-42082](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42082)
+  * [CVE-2024-42084](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42084)
+  * [CVE-2024-42085](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42085)
+  * [CVE-2024-42086](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42086)
+  * [CVE-2024-42087](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42087)
+  * [CVE-2024-42089](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42089)
+  * [CVE-2024-42090](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42090)
+  * [CVE-2024-42092](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42092)
+  * [CVE-2024-42093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42093)
+  * [CVE-2024-42094](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42094)
+  * [CVE-2024-42095](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42095)
+  * [CVE-2024-42096](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42096)
+  * [CVE-2024-42097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42097)
+  * [CVE-2024-42098](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42098)
+  * [CVE-2024-42101](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42101)
+  * [CVE-2024-42102](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42102)
+  * [CVE-2024-42104](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42104)
+  * [CVE-2024-42105](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42105)
+  * [CVE-2024-42106](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42106)
+  * [CVE-2024-42109](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42109)
+  * [CVE-2024-42115](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42115)
+  * [CVE-2024-42119](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42119)
+  * [CVE-2024-42120](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42120)
+  * [CVE-2024-42121](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42121)
+  * [CVE-2024-42124](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42124)
+  * [CVE-2024-42127](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42127)
+  * [CVE-2024-42130](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42130)
+  * [CVE-2024-42131](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42131)
+  * [CVE-2024-42137](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42137)
+  * [CVE-2024-42140](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42140)
+  * [CVE-2024-42145](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42145)
+  * [CVE-2024-42148](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42148)
+  * [CVE-2024-42152](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42152)
+  * [CVE-2024-42153](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42153)
+  * [CVE-2024-42154](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42154)
+  * [CVE-2024-42157](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42157)
+  * [CVE-2024-42161](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42161)
+  * [CVE-2024-42223](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42223)
+  * [CVE-2024-42224](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42224)
+  * [CVE-2024-42225](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42225)
+  * [CVE-2024-42229](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42229)
+  * [CVE-2024-42232](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42232)
+  * [CVE-2024-42236](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42236)
+  * [CVE-2024-42240](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42240)
+  * [CVE-2024-42244](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42244)
+  * [CVE-2024-42247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42247)
+
+
+
+## October 10, 2024
+
+Google Distributed Cloud (software only) for VMware 1.30.200-gke.101 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.30.200-gke.101 runs on Kubernetes v1.30.4-gke.1800.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+Removed TLS/SSL weak message authentication code cipher suites in the vSphere cloud controller manager.
+
+The following issues are fixed in 1.30.200-gke.101:
+
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#migrating-a-user-cluster-to-controlplane-v2-fails-if-secrets-encryption-has-ever-been-enabled) that caused migrating a user cluster to Controlplane V2 to fail if secrets encryption had ever been enabled.
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#migrating-an-admin-cluster-from-non-ha-to-ha-fails-if-secrets-encryption-is-enabled) that caused migrating an admin cluster from non-HA to HA to fail if secret encryption was enabled.
+  * Fixed the issue that caused the Pre-upgrade tool to block upgrading a user cluster to version 1.30 or higher because of an incorrect storage driver validator check.
+
+
+
+The following vulnerabilities are fixed in 1.30.200-gke.101:
+
+Critical container vulnerabilities:
+
+  * [CVE-2023-29405](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29405)
+  * [CVE-2023-29404](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29404)
+  * [CVE-2023-24538](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24538)
+  * [CVE-2023-24540](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24540)
+  * [CVE-2021-38297](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-38297)
+  * [CVE-2022-23806](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23806)
+  * [CVE-2023-29402](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29402)
+
+
+
+High-severity container vulnerabilities:
+
+  * [CVE-2022-30635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30635)
+  * [CVE-2022-23772](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23772)
+  * [CVE-2022-24921](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24921)
+  * [CVE-2022-2879](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2879)
+  * [CVE-2021-39293](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39293)
+  * [CVE-2022-2880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2880)
+  * [CVE-2023-29400](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29400)
+  * [CVE-2022-30631](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30631)
+  * [CVE-2022-24675](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24675)
+  * [CVE-2022-30633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30633)
+  * [CVE-2021-41772](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41772)
+  * [CVE-2023-27561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27561)
+  * [CVE-2022-23773](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23773)
+  * [CVE-2022-32189](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32189)
+  * [CVE-2022-28327](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28327)
+  * [CVE-2021-29923](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29923)
+  * [CVE-2023-24536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24536)
+  * [CVE-2024-1737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1737)
+  * [CVE-2024-1975](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1975)
+  * [CVE-2022-30632](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30632)
+  * [CVE-2021-44716](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44716)
+  * [CVE-2023-39323](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39323)
+  * [CVE-2023-24539](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24539)
+  * [CVE-2022-30580](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30580)
+  * [CVE-2022-41724](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41724)
+  * [CVE-2022-30630](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30630)
+  * [CVE-2022-41715](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41715)
+  * [CVE-2023-29403](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29403)
+  * [CVE-2023-28642](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28642)
+  * [CVE-2022-41725](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41725)
+  * [CVE-2022-28131](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28131)
+  * [CVE-2023-45287](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45287)
+  * [CVE-2021-41771](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41771)
+  * [CVE-2023-24537](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24537)
+  * [CVE-2023-24534](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24534)
+
+
+
+Container-optimized OS vulnerabilities:
+
+  * [CVE-2024-43873](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43873)
+  * [CVE-2024-44983](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44983)
+  * [CVE-2024-45492](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45492)
+  * [CVE-2024-6232](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6232)
+
+
+
+Ubuntu vulnerabilities:
+
+  * [CVE-2022-48772](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48772)
+  * [CVE-2023-52884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52884)
+  * [CVE-2023-52887](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52887)
+  * [CVE-2024-23848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23848)
+  * [CVE-2024-25741](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25741)
+  * [CVE-2024-31076](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31076)
+  * [CVE-2024-33621](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33621)
+  * [CVE-2024-33847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33847)
+  * [CVE-2024-34027](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34027)
+  * [CVE-2024-34777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34777)
+  * [CVE-2024-35247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35247)
+  * [CVE-2024-35927](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35927)
+  * [CVE-2024-36014](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36014)
+  * [CVE-2024-36015](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36015)
+  * [CVE-2024-36032](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36032)
+  * [CVE-2024-36270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36270)
+  * [CVE-2024-36286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36286)
+  * [CVE-2024-36489](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36489)
+  * [CVE-2024-36894](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36894)
+  * [CVE-2024-36971](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36971)
+  * [CVE-2024-36972](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36972)
+  * [CVE-2024-36974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36974)
+  * [CVE-2024-36978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36978)
+  * [CVE-2024-37078](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37078)
+  * [CVE-2024-37356](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37356)
+  * [CVE-2024-38381](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38381)
+  * [CVE-2024-38546](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38546)
+  * [CVE-2024-38547](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38547)
+  * [CVE-2024-38548](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38548)
+  * [CVE-2024-38549](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38549)
+  * [CVE-2024-38550](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38550)
+  * [CVE-2024-38552](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38552)
+  * [CVE-2024-38555](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38555)
+  * [CVE-2024-38558](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38558)
+  * [CVE-2024-38559](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38559)
+  * [CVE-2024-38560](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38560)
+  * [CVE-2024-38565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38565)
+  * [CVE-2024-38567](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38567)
+  * [CVE-2024-38571](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38571)
+  * [CVE-2024-38573](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38573)
+  * [CVE-2024-38578](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38578)
+  * [CVE-2024-38579](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38579)
+  * [CVE-2024-38580](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38580)
+  * [CVE-2024-38582](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38582)
+  * [CVE-2024-38583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38583)
+  * [CVE-2024-38586](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38586)
+  * [CVE-2024-38587](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38587)
+  * [CVE-2024-38588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38588)
+  * [CVE-2024-38589](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38589)
+  * [CVE-2024-38590](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38590)
+  * [CVE-2024-38591](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38591)
+  * [CVE-2024-38596](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38596)
+  * [CVE-2024-38597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38597)
+  * [CVE-2024-38598](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38598)
+  * [CVE-2024-38599](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38599)
+  * [CVE-2024-38601](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38601)
+  * [CVE-2024-38605](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38605)
+  * [CVE-2024-38607](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38607)
+  * [CVE-2024-38610](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38610)
+  * [CVE-2024-38612](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38612)
+  * [CVE-2024-38613](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38613)
+  * [CVE-2024-38615](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38615)
+  * [CVE-2024-38618](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38618)
+  * [CVE-2024-38619](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38619)
+  * [CVE-2024-38621](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38621)
+  * [CVE-2024-38623](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38623)
+  * [CVE-2024-38624](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38624)
+  * [CVE-2024-38627](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38627)
+  * [CVE-2024-38633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38633)
+  * [CVE-2024-38634](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38634)
+  * [CVE-2024-38635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38635)
+  * [CVE-2024-38637](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38637)
+  * [CVE-2024-38659](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38659)
+  * [CVE-2024-38661](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38661)
+  * [CVE-2024-38662](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38662)
+  * [CVE-2024-38780](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38780)
+  * [CVE-2024-39276](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39276)
+  * [CVE-2024-39277](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39277)
+  * [CVE-2024-39301](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39301)
+  * [CVE-2024-39466](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39466)
+  * [CVE-2024-39467](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39467)
+  * [CVE-2024-39468](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39468)
+  * [CVE-2024-39469](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39469)
+  * [CVE-2024-39471](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39471)
+  * [CVE-2024-39475](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39475)
+  * [CVE-2024-39480](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39480)
+  * [CVE-2024-39482](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39482)
+  * [CVE-2024-39487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39487)
+  * [CVE-2024-39488](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39488)
+  * [CVE-2024-39489](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39489)
+  * [CVE-2024-39490](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39490)
+  * [CVE-2024-39493](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39493)
+  * [CVE-2024-39495](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39495)
+  * [CVE-2024-39499](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39499)
+  * [CVE-2024-39500](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39500)
+  * [CVE-2024-39501](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39501)
+  * [CVE-2024-39502](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39502)
+  * [CVE-2024-39503](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39503)
+  * [CVE-2024-39505](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39505)
+  * [CVE-2024-39506](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39506)
+  * [CVE-2024-39507](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39507)
+  * [CVE-2024-39509](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39509)
+  * [CVE-2024-40901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40901)
+  * [CVE-2024-40902](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40902)
+  * [CVE-2024-40904](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40904)
+  * [CVE-2024-40905](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40905)
+  * [CVE-2024-40908](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40908)
+  * [CVE-2024-40911](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40911)
+  * [CVE-2024-40912](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40912)
+  * [CVE-2024-40914](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40914)
+  * [CVE-2024-40916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40916)
+  * [CVE-2024-40927](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40927)
+  * [CVE-2024-40929](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40929)
+  * [CVE-2024-40931](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40931)
+  * [CVE-2024-40932](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40932)
+  * [CVE-2024-40934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40934)
+  * [CVE-2024-40937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40937)
+  * [CVE-2024-40941](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40941)
+  * [CVE-2024-40942](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40942)
+  * [CVE-2024-40943](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40943)
+  * [CVE-2024-40945](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40945)
+  * [CVE-2024-40954](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40954)
+  * [CVE-2024-40956](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40956)
+  * [CVE-2024-40957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40957)
+  * [CVE-2024-40958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40958)
+  * [CVE-2024-40959](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40959)
+  * [CVE-2024-40960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40960)
+  * [CVE-2024-40961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40961)
+  * [CVE-2024-40963](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40963)
+  * [CVE-2024-40967](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40967)
+  * [CVE-2024-40968](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40968)
+  * [CVE-2024-40970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40970)
+  * [CVE-2024-40971](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40971)
+  * [CVE-2024-40974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40974)
+  * [CVE-2024-40976](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40976)
+  * [CVE-2024-40978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40978)
+  * [CVE-2024-40980](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40980)
+  * [CVE-2024-40981](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40981)
+  * [CVE-2024-40983](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40983)
+  * [CVE-2024-40984](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40984)
+  * [CVE-2024-40987](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40987)
+  * [CVE-2024-40988](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40988)
+  * [CVE-2024-40990](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40990)
+  * [CVE-2024-40994](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40994)
+  * [CVE-2024-40995](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40995)
+  * [CVE-2024-41000](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41000)
+  * [CVE-2024-41002](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41002)
+  * [CVE-2024-41004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41004)
+  * [CVE-2024-41005](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41005)
+  * [CVE-2024-41006](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41006)
+  * [CVE-2024-41007](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41007)
+  * [CVE-2024-41027](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41027)
+  * [CVE-2024-41034](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41034)
+  * [CVE-2024-41035](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41035)
+  * [CVE-2024-41040](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41040)
+  * [CVE-2024-41041](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41041)
+  * [CVE-2024-41044](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41044)
+  * [CVE-2024-41046](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41046)
+  * [CVE-2024-41047](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41047)
+  * [CVE-2024-41048](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41048)
+  * [CVE-2024-41049](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41049)
+  * [CVE-2024-41055](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41055)
+  * [CVE-2024-41087](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41087)
+  * [CVE-2024-41089](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41089)
+  * [CVE-2024-41092](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41092)
+  * [CVE-2024-41093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41093)
+  * [CVE-2024-41095](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41095)
+  * [CVE-2024-41097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41097)
+  * [CVE-2024-42068](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42068)
+  * [CVE-2024-42070](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42070)
+  * [CVE-2024-42076](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42076)
+  * [CVE-2024-42077](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42077)
+  * [CVE-2024-42080](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42080)
+  * [CVE-2024-42082](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42082)
+  * [CVE-2024-42084](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42084)
+  * [CVE-2024-42085](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42085)
+  * [CVE-2024-42086](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42086)
+  * [CVE-2024-42087](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42087)
+  * [CVE-2024-42089](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42089)
+  * [CVE-2024-42090](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42090)
+  * [CVE-2024-42092](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42092)
+  * [CVE-2024-42093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42093)
+  * [CVE-2024-42094](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42094)
+  * [CVE-2024-42095](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42095)
+  * [CVE-2024-42096](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42096)
+  * [CVE-2024-42097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42097)
+  * [CVE-2024-42098](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42098)
+  * [CVE-2024-42101](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42101)
+  * [CVE-2024-42102](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42102)
+  * [CVE-2024-42104](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42104)
+  * [CVE-2024-42105](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42105)
+  * [CVE-2024-42106](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42106)
+  * [CVE-2024-42109](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42109)
+  * [CVE-2024-42115](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42115)
+  * [CVE-2024-42119](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42119)
+  * [CVE-2024-42120](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42120)
+  * [CVE-2024-42121](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42121)
+  * [CVE-2024-42124](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42124)
+  * [CVE-2024-42127](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42127)
+  * [CVE-2024-42130](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42130)
+  * [CVE-2024-42131](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42131)
+  * [CVE-2024-42137](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42137)
+  * [CVE-2024-42140](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42140)
+  * [CVE-2024-42145](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42145)
+  * [CVE-2024-42148](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42148)
+  * [CVE-2024-42152](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42152)
+  * [CVE-2024-42153](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42153)
+  * [CVE-2024-42154](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42154)
+  * [CVE-2024-42157](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42157)
+  * [CVE-2024-42161](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42161)
+  * [CVE-2024-42223](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42223)
+  * [CVE-2024-42224](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42224)
+  * [CVE-2024-42225](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42225)
+  * [CVE-2024-42229](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42229)
+  * [CVE-2024-42232](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42232)
+  * [CVE-2024-42236](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42236)
+  * [CVE-2024-42240](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42240)
+  * [CVE-2024-42244](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42244)
+  * [CVE-2024-42247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42247)
+
+
+
+## October 03, 2024
+
+Google Distributed Cloud (software only) for VMware 1.29.600-gke.109 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.29.600-gke.109 runs on Kubernetes v1.29.8-gke.1800.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+Removed TLS/SSL weak message authentication code cipher suites in the vSphere cloud controller manager.
+
+Fixed the following vulnerabilities in 1.29.600-gke.109:
+
+Critical container vulnerabilities:
+
+  * [CVE-2021-38297](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-38297)
+  * [CVE-2023-24540](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24540)
+  * [CVE-2023-29405](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29405)
+  * [CVE-2023-29404](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29404)
+  * [CVE-2023-24538](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24538)
+  * [CVE-2024-37371](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37371)
+  * [CVE-2023-29402](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29402)
+  * [CVE-2022-23806](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23806)
+
+
+
+High-severity container vulnerabilities:
+
+  * [CVE-2023-24537](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24537)
+  * [CVE-2023-29400](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29400)
+  * [CVE-2022-41715](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41715)
+  * [CVE-2022-23773](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23773)
+  * [CVE-2022-30633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30633)
+  * [CVE-2024-1975](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1975)
+  * [CVE-2021-39293](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39293)
+  * [CVE-2022-28327](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28327)
+  * [CVE-2022-30580](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30580)
+  * [CVE-2024-1737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1737)
+  * [CVE-2021-29923](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29923)
+  * [CVE-2021-41771](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41771)
+  * [CVE-2022-23772](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23772)
+  * [CVE-2023-24536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24536)
+  * [CVE-2024-37370](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37370)
+  * [CVE-2021-41772](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41772)
+  * [CVE-2023-24534](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24534)
+  * [CVE-2022-24675](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24675)
+  * [CVE-2022-28131](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28131)
+  * [CVE-2023-24539](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24539)
+  * [CVE-2023-28642](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28642)
+  * [CVE-2022-30632](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30632)
+  * [CVE-2022-24921](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24921)
+  * [CVE-2022-32189](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32189)
+  * [CVE-2023-27561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27561)
+  * [CVE-2022-41725](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41725)
+  * [CVE-2022-30630](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30630)
+  * [CVE-2022-2880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2880)
+  * [CVE-2023-45287](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45287)
+  * [CVE-2022-30631](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30631)
+  * [CVE-2021-44716](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44716)
+  * [CVE-2022-2879](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2879)
+  * [CVE-2022-30635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-30635)
+  * [CVE-2023-29403](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29403)
+  * [CVE-2022-41724](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41724)
+
+
+
+Container-optimized OS vulnerabilities:
+
+  * [CVE-2024-6232](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6232)
+  * [CVE-2024-44987](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44987)
+  * [CVE-2024-37370](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37370)
+  * [CVE-2024-44934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44934)
+  * [CVE-2024-45490](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45490)
+  * [CVE-2024-42285](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42285)
+  * [CVE-2024-41073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41073)
+
+
+
+Ubuntu vulnerabilities:
+
+  * [CVE-2022-48772](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48772)
+  * [CVE-2023-52884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52884)
+  * [CVE-2023-52887](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52887)
+  * [CVE-2024-23848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23848)
+  * [CVE-2024-25741](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25741)
+  * [CVE-2024-31076](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31076)
+  * [CVE-2024-33621](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33621)
+  * [CVE-2024-33847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33847)
+  * [CVE-2024-34027](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34027)
+  * [CVE-2024-34777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34777)
+  * [CVE-2024-35247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35247)
+  * [CVE-2024-35927](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35927)
+  * [CVE-2024-36014](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36014)
+  * [CVE-2024-36015](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36015)
+  * [CVE-2024-36032](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36032)
+  * [CVE-2024-36270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36270)
+  * [CVE-2024-36286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36286)
+  * [CVE-2024-36489](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36489)
+  * [CVE-2024-36894](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36894)
+  * [CVE-2024-36971](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36971)
+  * [CVE-2024-36972](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36972)
+  * [CVE-2024-36974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36974)
+  * [CVE-2024-36978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36978)
+  * [CVE-2024-37078](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37078)
+  * [CVE-2024-37356](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37356)
+  * [CVE-2024-38381](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38381)
+  * [CVE-2024-38546](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38546)
+  * [CVE-2024-38547](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38547)
+  * [CVE-2024-38548](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38548)
+  * [CVE-2024-38549](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38549)
+  * [CVE-2024-38550](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38550)
+  * [CVE-2024-38552](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38552)
+  * [CVE-2024-38555](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38555)
+  * [CVE-2024-38558](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38558)
+  * [CVE-2024-38559](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38559)
+  * [CVE-2024-38560](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38560)
+  * [CVE-2024-38565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38565)
+  * [CVE-2024-38567](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38567)
+  * [CVE-2024-38571](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38571)
+  * [CVE-2024-38573](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38573)
+  * [CVE-2024-38578](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38578)
+  * [CVE-2024-38579](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38579)
+  * [CVE-2024-38580](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38580)
+  * [CVE-2024-38582](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38582)
+  * [CVE-2024-38583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38583)
+  * [CVE-2024-38586](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38586)
+  * [CVE-2024-38587](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38587)
+  * [CVE-2024-38588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38588)
+  * [CVE-2024-38589](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38589)
+  * [CVE-2024-38590](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38590)
+  * [CVE-2024-38591](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38591)
+  * [CVE-2024-38596](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38596)
+  * [CVE-2024-38597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38597)
+  * [CVE-2024-38598](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38598)
+  * [CVE-2024-38599](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38599)
+  * [CVE-2024-38601](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38601)
+  * [CVE-2024-38605](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38605)
+  * [CVE-2024-38607](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38607)
+  * [CVE-2024-38610](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38610)
+  * [CVE-2024-38612](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38612)
+  * [CVE-2024-38613](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38613)
+  * [CVE-2024-38615](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38615)
+  * [CVE-2024-38618](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38618)
+  * [CVE-2024-38619](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38619)
+  * [CVE-2024-38621](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38621)
+  * [CVE-2024-38623](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38623)
+  * [CVE-2024-38624](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38624)
+  * [CVE-2024-38627](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38627)
+  * [CVE-2024-38633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38633)
+  * [CVE-2024-38634](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38634)
+  * [CVE-2024-38635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38635)
+  * [CVE-2024-38637](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38637)
+  * [CVE-2024-38659](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38659)
+  * [CVE-2024-38661](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38661)
+  * [CVE-2024-38662](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38662)
+  * [CVE-2024-38780](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38780)
+  * [CVE-2024-39276](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39276)
+  * [CVE-2024-39277](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39277)
+  * [CVE-2024-39301](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39301)
+  * [CVE-2024-39466](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39466)
+  * [CVE-2024-39467](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39467)
+  * [CVE-2024-39468](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39468)
+  * [CVE-2024-39469](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39469)
+  * [CVE-2024-39471](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39471)
+  * [CVE-2024-39475](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39475)
+  * [CVE-2024-39480](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39480)
+  * [CVE-2024-39482](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39482)
+  * [CVE-2024-39487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39487)
+  * [CVE-2024-39488](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39488)
+  * [CVE-2024-39489](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39489)
+  * [CVE-2024-39490](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39490)
+  * [CVE-2024-39493](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39493)
+  * [CVE-2024-39495](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39495)
+  * [CVE-2024-39499](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39499)
+  * [CVE-2024-39500](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39500)
+  * [CVE-2024-39501](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39501)
+  * [CVE-2024-39502](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39502)
+  * [CVE-2024-39503](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39503)
+  * [CVE-2024-39505](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39505)
+  * [CVE-2024-39506](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39506)
+  * [CVE-2024-39507](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39507)
+  * [CVE-2024-39509](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39509)
+  * [CVE-2024-40901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40901)
+  * [CVE-2024-40902](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40902)
+  * [CVE-2024-40904](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40904)
+  * [CVE-2024-40905](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40905)
+  * [CVE-2024-40908](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40908)
+  * [CVE-2024-40911](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40911)
+  * [CVE-2024-40912](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40912)
+  * [CVE-2024-40914](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40914)
+  * [CVE-2024-40916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40916)
+  * [CVE-2024-40927](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40927)
+  * [CVE-2024-40929](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40929)
+  * [CVE-2024-40931](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40931)
+  * [CVE-2024-40932](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40932)
+  * [CVE-2024-40934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40934)
+  * [CVE-2024-40937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40937)
+  * [CVE-2024-40941](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40941)
+  * [CVE-2024-40942](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40942)
+  * [CVE-2024-40943](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40943)
+  * [CVE-2024-40945](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40945)
+  * [CVE-2024-40954](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40954)
+  * [CVE-2024-40956](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40956)
+  * [CVE-2024-40957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40957)
+  * [CVE-2024-40958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40958)
+  * [CVE-2024-40959](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40959)
+  * [CVE-2024-40960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40960)
+  * [CVE-2024-40961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40961)
+  * [CVE-2024-40963](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40963)
+  * [CVE-2024-40967](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40967)
+  * [CVE-2024-40968](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40968)
+  * [CVE-2024-40970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40970)
+  * [CVE-2024-40971](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40971)
+  * [CVE-2024-40974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40974)
+  * [CVE-2024-40976](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40976)
+  * [CVE-2024-40978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40978)
+  * [CVE-2024-40980](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40980)
+  * [CVE-2024-40981](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40981)
+  * [CVE-2024-40983](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40983)
+  * [CVE-2024-40984](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40984)
+  * [CVE-2024-40987](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40987)
+  * [CVE-2024-40988](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40988)
+  * [CVE-2024-40990](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40990)
+  * [CVE-2024-40994](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40994)
+  * [CVE-2024-40995](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40995)
+  * [CVE-2024-41000](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41000)
+  * [CVE-2024-41002](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41002)
+  * [CVE-2024-41004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41004)
+  * [CVE-2024-41005](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41005)
+  * [CVE-2024-41006](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41006)
+  * [CVE-2024-41007](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41007)
+  * [CVE-2024-41027](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41027)
+  * [CVE-2024-41034](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41034)
+  * [CVE-2024-41035](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41035)
+  * [CVE-2024-41040](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41040)
+  * [CVE-2024-41041](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41041)
+  * [CVE-2024-41044](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41044)
+  * [CVE-2024-41046](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41046)
+  * [CVE-2024-41047](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41047)
+  * [CVE-2024-41048](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41048)
+  * [CVE-2024-41049](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41049)
+  * [CVE-2024-41055](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41055)
+  * [CVE-2024-41087](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41087)
+  * [CVE-2024-41089](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41089)
+  * [CVE-2024-41092](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41092)
+  * [CVE-2024-41093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41093)
+  * [CVE-2024-41095](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41095)
+  * [CVE-2024-41097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41097)
+  * [CVE-2024-42068](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42068)
+  * [CVE-2024-42070](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42070)
+  * [CVE-2024-42076](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42076)
+  * [CVE-2024-42077](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42077)
+  * [CVE-2024-42080](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42080)
+  * [CVE-2024-42082](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42082)
+  * [CVE-2024-42084](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42084)
+  * [CVE-2024-42085](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42085)
+  * [CVE-2024-42086](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42086)
+  * [CVE-2024-42087](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42087)
+  * [CVE-2024-42089](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42089)
+  * [CVE-2024-42090](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42090)
+  * [CVE-2024-42092](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42092)
+  * [CVE-2024-42093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42093)
+  * [CVE-2024-42094](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42094)
+  * [CVE-2024-42095](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42095)
+  * [CVE-2024-42096](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42096)
+  * [CVE-2024-42097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42097)
+  * [CVE-2024-42098](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42098)
+  * [CVE-2024-42101](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42101)
+  * [CVE-2024-42102](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42102)
+  * [CVE-2024-42104](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42104)
+  * [CVE-2024-42105](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42105)
+  * [CVE-2024-42106](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42106)
+  * [CVE-2024-42109](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42109)
+  * [CVE-2024-42115](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42115)
+  * [CVE-2024-42119](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42119)
+  * [CVE-2024-42120](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42120)
+  * [CVE-2024-42121](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42121)
+  * [CVE-2024-42124](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42124)
+  * [CVE-2024-42127](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42127)
+  * [CVE-2024-42130](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42130)
+  * [CVE-2024-42131](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42131)
+  * [CVE-2024-42137](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42137)
+  * [CVE-2024-42140](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42140)
+  * [CVE-2024-42145](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42145)
+  * [CVE-2024-42148](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42148)
+  * [CVE-2024-42152](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42152)
+  * [CVE-2024-42153](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42153)
+  * [CVE-2024-42154](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42154)
+  * [CVE-2024-42157](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42157)
+  * [CVE-2024-42161](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42161)
+  * [CVE-2024-42223](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42223)
+  * [CVE-2024-42224](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42224)
+  * [CVE-2024-42225](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42225)
+  * [CVE-2024-42229](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42229)
+  * [CVE-2024-42232](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42232)
+  * [CVE-2024-42236](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42236)
+  * [CVE-2024-42240](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42240)
+  * [CVE-2024-42244](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42244)
+  * [CVE-2024-42247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42247)
+
+
+
+## October 02, 2024
+
+Google Distributed Cloud (software only) for VMware 1.30.100-gke.96 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.30.100-gke.96 runs on Kubernetes v1.30.4-gke.1800.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+Fixed the following issues in 1.30.100-gke.96:
+
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#updating-dataplanev2-forwardmode-doesnt-automatically-trigger-anetd-daemonset-restart) where updating `dataplaneV2.forwardMode` didn't automatically trigger anetd DaemonSet restart.
+
+
+
+Fixed the following vulnerabilities in 1.30.100-gke.96:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2024-7348](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7348)
+
+    * [GHSA-87m9-rv8p-rgmg](https://github.com/advisories/GHSA-87m9-rv8p-rgmg)
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2024-36979](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36979)
+
+    * [CVE-2024-38538](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38538)
+
+    * [CVE-2024-38577](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38577)
+
+    * [CVE-2024-39487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39487)
+
+    * [CVE-2024-41073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41073)
+
+    * [CVE-2024-41087](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41087)
+
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2022-38096](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38096)
+
+    * [CVE-2023-52488](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52488)
+
+    * [CVE-2023-52585](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52585)
+
+    * [CVE-2023-52629](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52629)
+
+    * [CVE-2023-52699](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52699)
+
+    * [CVE-2023-52752](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52752)
+
+    * [CVE-2023-52760](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52760)
+
+    * [CVE-2023-52880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52880)
+
+    * [CVE-2023-52882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52882)
+
+    * [CVE-2024-23307](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23307)
+
+    * [CVE-2024-24857](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24857)
+
+    * [CVE-2024-24858](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24858)
+
+    * [CVE-2024-24859](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24859)
+
+    * [CVE-2024-24861](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24861)
+
+    * [CVE-2024-25739](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25739)
+
+    * [CVE-2024-25742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25742)
+
+    * [CVE-2024-26629](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26629)
+
+    * [CVE-2024-26642](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26642)
+
+    * [CVE-2024-26654](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26654)
+
+    * [CVE-2024-26680](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26680)
+
+    * [CVE-2024-26687](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26687)
+
+    * [CVE-2024-26810](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26810)
+
+    * [CVE-2024-26811](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26811)
+
+    * [CVE-2024-26812](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26812)
+
+    * [CVE-2024-26813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26813)
+
+    * [CVE-2024-26814](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26814)
+
+    * [CVE-2024-26817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26817)
+
+    * [CVE-2024-26828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26828)
+
+    * [CVE-2024-26830](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26830)
+
+    * [CVE-2024-26886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26886)
+
+    * [CVE-2024-26900](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26900)
+
+    * [CVE-2024-26921](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26921)
+
+    * [CVE-2024-26922](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26922)
+
+    * [CVE-2024-26923](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26923)
+
+    * [CVE-2024-26925](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26925)
+
+    * [CVE-2024-26926](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26926)
+
+    * [CVE-2024-26929](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26929)
+
+    * [CVE-2024-26931](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26931)
+
+    * [CVE-2024-26934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26934)
+
+    * [CVE-2024-26935](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26935)
+
+    * [CVE-2024-26936](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26936)
+
+    * [CVE-2024-26937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26937)
+
+    * [CVE-2024-26950](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26950)
+
+    * [CVE-2024-26951](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26951)
+
+    * [CVE-2024-26952](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26952)
+
+    * [CVE-2024-26955](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26955)
+
+    * [CVE-2024-26956](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26956)
+
+    * [CVE-2024-26957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26957)
+
+    * [CVE-2024-26958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26958)
+
+    * [CVE-2024-26960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26960)
+
+    * [CVE-2024-26961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26961)
+
+    * [CVE-2024-26964](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26964)
+
+    * [CVE-2024-26965](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26965)
+
+    * [CVE-2024-26966](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26966)
+
+    * [CVE-2024-26969](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26969)
+
+    * [CVE-2024-26970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26970)
+
+    * [CVE-2024-26973](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26973)
+
+    * [CVE-2024-26974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26974)
+
+    * [CVE-2024-26976](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26976)
+
+    * [CVE-2024-26977](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26977)
+
+    * [CVE-2024-26980](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26980)
+
+    * [CVE-2024-26981](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26981)
+
+    * [CVE-2024-26984](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26984)
+
+    * [CVE-2024-26988](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26988)
+
+    * [CVE-2024-26989](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26989)
+
+    * [CVE-2024-26993](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26993)
+
+    * [CVE-2024-26994](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26994)
+
+    * [CVE-2024-26996](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26996)
+
+    * [CVE-2024-26999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26999)
+
+    * [CVE-2024-27000](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27000)
+
+    * [CVE-2024-27001](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27001)
+
+    * [CVE-2024-27004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27004)
+
+    * [CVE-2024-27008](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27008)
+
+    * [CVE-2024-27009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27009)
+
+    * [CVE-2024-27013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27013)
+
+    * [CVE-2024-27015](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27015)
+
+    * [CVE-2024-27016](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27016)
+
+    * [CVE-2024-27017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27017)
+
+    * [CVE-2024-27018](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27018)
+
+    * [CVE-2024-27019](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27019)
+
+    * [CVE-2024-27020](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27020)
+
+    * [CVE-2024-27059](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27059)
+
+    * [CVE-2024-27393](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27393)
+
+    * [CVE-2024-27395](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27395)
+
+    * [CVE-2024-27396](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27396)
+
+    * [CVE-2024-27398](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27398)
+
+    * [CVE-2024-27399](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27399)
+
+    * [CVE-2024-27401](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27401)
+
+    * [CVE-2024-27437](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27437)
+
+    * [CVE-2024-35785](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35785)
+
+    * [CVE-2024-35789](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35789)
+
+    * [CVE-2024-35791](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35791)
+
+    * [CVE-2024-35796](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35796)
+
+    * [CVE-2024-35804](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35804)
+
+    * [CVE-2024-35805](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35805)
+
+    * [CVE-2024-35806](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35806)
+
+    * [CVE-2024-35807](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35807)
+
+    * [CVE-2024-35809](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35809)
+
+    * [CVE-2024-35813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35813)
+
+    * [CVE-2024-35815](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35815)
+
+    * [CVE-2024-35817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35817)
+
+    * [CVE-2024-35819](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35819)
+
+    * [CVE-2024-35821](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35821)
+
+    * [CVE-2024-35822](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35822)
+
+    * [CVE-2024-35823](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35823)
+
+    * [CVE-2024-35825](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35825)
+
+    * [CVE-2024-35847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35847)
+
+    * [CVE-2024-35848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35848)
+
+    * [CVE-2024-35849](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35849)
+
+    * [CVE-2024-35851](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35851)
+
+    * [CVE-2024-35852](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35852)
+
+    * [CVE-2024-35853](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35853)
+
+    * [CVE-2024-35854](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35854)
+
+    * [CVE-2024-35855](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35855)
+
+    * [CVE-2024-35857](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35857)
+
+    * [CVE-2024-35871](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35871)
+
+    * [CVE-2024-35872](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35872)
+
+    * [CVE-2024-35877](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35877)
+
+    * [CVE-2024-35879](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35879)
+
+    * [CVE-2024-35884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35884)
+
+    * [CVE-2024-35885](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35885)
+
+    * [CVE-2024-35886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35886)
+
+    * [CVE-2024-35888](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35888)
+
+    * [CVE-2024-35890](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35890)
+
+    * [CVE-2024-35893](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35893)
+
+    * [CVE-2024-35895](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35895)
+
+    * [CVE-2024-35896](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35896)
+
+    * [CVE-2024-35897](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35897)
+
+    * [CVE-2024-35898](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35898)
+
+    * [CVE-2024-35899](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35899)
+
+    * [CVE-2024-35900](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35900)
+
+    * [CVE-2024-35902](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35902)
+
+    * [CVE-2024-35905](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35905)
+
+    * [CVE-2024-35907](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35907)
+
+    * [CVE-2024-35910](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35910)
+
+    * [CVE-2024-35912](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35912)
+
+    * [CVE-2024-35915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35915)
+
+    * [CVE-2024-35922](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35922)
+
+    * [CVE-2024-35925](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35925)
+
+    * [CVE-2024-35930](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35930)
+
+    * [CVE-2024-35933](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35933)
+
+    * [CVE-2024-35934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35934)
+
+    * [CVE-2024-35935](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35935)
+
+    * [CVE-2024-35936](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35936)
+
+    * [CVE-2024-35938](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35938)
+
+    * [CVE-2024-35940](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35940)
+
+    * [CVE-2024-35944](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35944)
+
+    * [CVE-2024-35947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35947)
+
+    * [CVE-2024-35950](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35950)
+
+    * [CVE-2024-35955](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35955)
+
+    * [CVE-2024-35958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35958)
+
+    * [CVE-2024-35960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35960)
+
+    * [CVE-2024-35969](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35969)
+
+    * [CVE-2024-35970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35970)
+
+    * [CVE-2024-35973](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35973)
+
+    * [CVE-2024-35976](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35976)
+
+    * [CVE-2024-35978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35978)
+
+    * [CVE-2024-35982](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35982)
+
+    * [CVE-2024-35984](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35984)
+
+    * [CVE-2024-35988](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35988)
+
+    * [CVE-2024-35989](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35989)
+
+    * [CVE-2024-35990](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35990)
+
+    * [CVE-2024-35997](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35997)
+
+    * [CVE-2024-36004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36004)
+
+    * [CVE-2024-36005](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36005)
+
+    * [CVE-2024-36006](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36006)
+
+    * [CVE-2024-36007](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36007)
+
+    * [CVE-2024-36008](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36008)
+
+    * [CVE-2024-36016](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36016)
+
+    * [CVE-2024-36017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36017)
+
+    * [CVE-2024-36020](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36020)
+
+    * [CVE-2024-36025](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36025)
+
+    * [CVE-2024-36029](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36029)
+
+    * [CVE-2024-36031](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36031)
+
+    * [CVE-2024-36880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36880)
+
+    * [CVE-2024-36883](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36883)
+
+    * [CVE-2024-36886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36886)
+
+    * [CVE-2024-36889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36889)
+
+    * [CVE-2024-36897](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36897)
+
+    * [CVE-2024-36901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36901)
+
+    * [CVE-2024-36902](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36902)
+
+    * [CVE-2024-36904](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36904)
+
+    * [CVE-2024-36905](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36905)
+
+    * [CVE-2024-36906](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36906)
+
+    * [CVE-2024-36916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36916)
+
+    * [CVE-2024-36919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36919)
+
+    * [CVE-2024-36928](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36928)
+
+    * [CVE-2024-36929](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36929)
+
+    * [CVE-2024-36931](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36931)
+
+    * [CVE-2024-36933](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36933)
+
+    * [CVE-2024-36934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36934)
+
+    * [CVE-2024-36937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36937)
+
+    * [CVE-2024-36938](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36938)
+
+    * [CVE-2024-36939](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36939)
+
+    * [CVE-2024-36940](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36940)
+
+    * [CVE-2024-36941](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36941)
+
+    * [CVE-2024-36944](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36944)
+
+    * [CVE-2024-36946](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36946)
+
+    * [CVE-2024-36947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36947)
+
+    * [CVE-2024-36950](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36950)
+
+    * [CVE-2024-36952](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36952)
+
+    * [CVE-2024-36953](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36953)
+
+    * [CVE-2024-36954](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36954)
+
+    * [CVE-2024-36955](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36955)
+
+    * [CVE-2024-36957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36957)
+
+    * [CVE-2024-36959](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36959)
+
+    * [CVE-2024-36960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36960)
+
+    * [CVE-2024-36964](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36964)
+
+    * [CVE-2024-36965](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36965)
+
+    * [CVE-2024-36967](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36967)
+
+    * [CVE-2024-36969](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36969)
+
+    * [CVE-2024-36975](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36975)
+
+    * [CVE-2024-38600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38600)
+
+    * [CVE-2024-39292](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39292)
+
+    * [CVE-2024-39484](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39484)
+
+
+
+
+## September 25, 2024
+
+Google Distributed Cloud (software only) for VMware 1.28.1000-gke.59 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.28.1000-gke.59 runs on Kubernetes v1.28.13-gke.600.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+Removed TLS/SSL weak message authentication code cipher suites in the vSphere cloud controller manager.
+
+Fixed the following vulnerabilities in 1.28.1000-gke.59:
+
+High-severity container vulnerabilities:
+
+  * [CVE-2023-28642](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28642)
+  * [CVE-2023-27561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27561)
+  * [GHSA-87m9-rv8p-rgmg](https://osv.dev/vulnerability/GHSA-87m9-rv8p-rgmg)
+
+
+
+Container-optimized OS vulnerabilities:
+
+  * [CVE-2024-44987](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44987)
+  * [CVE-2024-42302](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42302)
+  * [CVE-2024-45491](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45491)
+
+
+
+## September 23, 2024
+
+A security issue was discovered in Kubernetes clusters with Windows nodes where `BUILTIN\Users` may be able to read container logs and `AUTHORITY\Authenticated` Users may be able to modify container logs. For more information, see the [GCP-2024-054 security bulletin](https://cloud.google.com/kubernetes-engine/security-bulletins#gcp-2024-054).
+
+## September 19, 2024
+
+Google Distributed Cloud (software only) for VMware 1.29.500-gke.160 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.29.500-gke.160 runs on Kubernetes v1.29.7-gke.1200.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+Fixed the following issues in 1.29.500-gke.160:
+
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#updating-dataplanev2-forwardmode-doesnt-automatically-trigger-anetd-daemonset-restart) where updating DataplaneV2 ForwardMode didn't automatically trigger anetd DaemonSet restart.
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#credential.yaml-regenerated-incorrectly-during-admin-workstation-upgrade) where the `credential.yaml` file regenerated incorrectly during admin workstation upgrade.
+
+
+
+Fixed the following vulnerabilities in 1.29.500-gke.160:
+
+High-severity container vulnerabilities:
+
+  * [CVE-2024-7348](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7348)
+  * [GHSA-87m9-rv8p-rgmg](https://osv.dev/vulnerability/GHSA-87m9-rv8p-rgmg)
+
+
+
+Container-optimized OS vulnerabilities:
+
+  * [CVE-2024-38577](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38577)
+  * [CVE-2024-38555](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38555)
+  * [CVE-2024-40954](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40954)
+
+
+
+Ubuntu vulnerabilities:
+
+  * [CVE-2022-48772](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48772)
+  * [CVE-2023-52884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52884)
+  * [CVE-2023-52887](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52887)
+  * [CVE-2024-23848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23848)
+  * [CVE-2024-25741](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25741)
+  * [CVE-2024-31076](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31076)
+  * [CVE-2024-33621](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33621)
+  * [CVE-2024-33847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33847)
+  * [CVE-2024-34027](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34027)
+  * [CVE-2024-34777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34777)
+  * [CVE-2024-35247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35247)
+  * [CVE-2024-35927](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35927)
+  * [CVE-2024-36014](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36014)
+  * [CVE-2024-36015](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36015)
+  * [CVE-2024-36032](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36032)
+  * [CVE-2024-36270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36270)
+  * [CVE-2024-36286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36286)
+  * [CVE-2024-36489](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36489)
+  * [CVE-2024-36894](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36894)
+  * [CVE-2024-36971](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36971)
+  * [CVE-2024-36972](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36972)
+  * [CVE-2024-36974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36974)
+  * [CVE-2024-36978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36978)
+  * [CVE-2024-37078](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37078)
+  * [CVE-2024-37356](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37356)
+  * [CVE-2024-38381](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38381)
+  * [CVE-2024-38546](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38546)
+  * [CVE-2024-38547](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38547)
+  * [CVE-2024-38548](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38548)
+  * [CVE-2024-38549](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38549)
+  * [CVE-2024-38550](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38550)
+  * [CVE-2024-38552](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38552)
+  * [CVE-2024-38555](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38555)
+  * [CVE-2024-38558](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38558)
+  * [CVE-2024-38559](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38559)
+  * [CVE-2024-38560](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38560)
+  * [CVE-2024-38565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38565)
+  * [CVE-2024-38567](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38567)
+  * [CVE-2024-38571](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38571)
+  * [CVE-2024-38573](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38573)
+  * [CVE-2024-38578](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38578)
+  * [CVE-2024-38579](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38579)
+  * [CVE-2024-38580](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38580)
+  * [CVE-2024-38582](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38582)
+  * [CVE-2024-38583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38583)
+  * [CVE-2024-38586](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38586)
+  * [CVE-2024-38587](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38587)
+  * [CVE-2024-38588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38588)
+  * [CVE-2024-38589](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38589)
+  * [CVE-2024-38590](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38590)
+  * [CVE-2024-38591](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38591)
+  * [CVE-2024-38596](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38596)
+  * [CVE-2024-38597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38597)
+  * [CVE-2024-38598](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38598)
+  * [CVE-2024-38599](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38599)
+  * [CVE-2024-38601](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38601)
+  * [CVE-2024-38605](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38605)
+  * [CVE-2024-38607](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38607)
+  * [CVE-2024-38610](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38610)
+  * [CVE-2024-38612](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38612)
+  * [CVE-2024-38613](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38613)
+  * [CVE-2024-38615](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38615)
+  * [CVE-2024-38618](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38618)
+  * [CVE-2024-38619](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38619)
+  * [CVE-2024-38621](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38621)
+  * [CVE-2024-38623](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38623)
+  * [CVE-2024-38624](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38624)
+  * [CVE-2024-38627](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38627)
+  * [CVE-2024-38633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38633)
+  * [CVE-2024-38634](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38634)
+  * [CVE-2024-38635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38635)
+  * [CVE-2024-38637](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38637)
+  * [CVE-2024-38659](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38659)
+  * [CVE-2024-38661](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38661)
+  * [CVE-2024-38662](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38662)
+  * [CVE-2024-38780](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38780)
+  * [CVE-2024-39276](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39276)
+  * [CVE-2024-39277](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39277)
+  * [CVE-2024-39301](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39301)
+  * [CVE-2024-39466](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39466)
+  * [CVE-2024-39467](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39467)
+  * [CVE-2024-39468](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39468)
+  * [CVE-2024-39469](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39469)
+  * [CVE-2024-39471](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39471)
+  * [CVE-2024-39475](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39475)
+  * [CVE-2024-39480](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39480)
+  * [CVE-2024-39482](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39482)
+  * [CVE-2024-39487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39487)
+  * [CVE-2024-39488](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39488)
+  * [CVE-2024-39489](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39489)
+  * [CVE-2024-39490](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39490)
+  * [CVE-2024-39493](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39493)
+  * [CVE-2024-39495](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39495)
+  * [CVE-2024-39499](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39499)
+  * [CVE-2024-39500](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39500)
+  * [CVE-2024-39501](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39501)
+  * [CVE-2024-39502](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39502)
+  * [CVE-2024-39503](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39503)
+  * [CVE-2024-39505](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39505)
+  * [CVE-2024-39506](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39506)
+  * [CVE-2024-39507](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39507)
+  * [CVE-2024-39509](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39509)
+  * [CVE-2024-40901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40901)
+  * [CVE-2024-40902](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40902)
+  * [CVE-2024-40904](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40904)
+  * [CVE-2024-40905](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40905)
+  * [CVE-2024-40908](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40908)
+  * [CVE-2024-40911](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40911)
+  * [CVE-2024-40912](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40912)
+  * [CVE-2024-40914](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40914)
+  * [CVE-2024-40916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40916)
+  * [CVE-2024-40927](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40927)
+  * [CVE-2024-40929](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40929)
+  * [CVE-2024-40931](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40931)
+  * [CVE-2024-40932](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40932)
+  * [CVE-2024-40934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40934)
+  * [CVE-2024-40937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40937)
+  * [CVE-2024-40941](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40941)
+  * [CVE-2024-40942](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40942)
+  * [CVE-2024-40943](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40943)
+  * [CVE-2024-40945](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40945)
+  * [CVE-2024-40954](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40954)
+  * [CVE-2024-40956](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40956)
+  * [CVE-2024-40957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40957)
+  * [CVE-2024-40958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40958)
+  * [CVE-2024-40959](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40959)
+  * [CVE-2024-40960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40960)
+  * [CVE-2024-40961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40961)
+  * [CVE-2024-40963](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40963)
+  * [CVE-2024-40967](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40967)
+  * [CVE-2024-40968](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40968)
+  * [CVE-2024-40970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40970)
+  * [CVE-2024-40971](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40971)
+  * [CVE-2024-40974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40974)
+  * [CVE-2024-40976](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40976)
+  * [CVE-2024-40978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40978)
+  * [CVE-2024-40980](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40980)
+  * [CVE-2024-40981](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40981)
+  * [CVE-2024-40983](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40983)
+  * [CVE-2024-40984](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40984)
+  * [CVE-2024-40987](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40987)
+  * [CVE-2024-40988](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40988)
+  * [CVE-2024-40990](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40990)
+  * [CVE-2024-40994](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40994)
+  * [CVE-2024-40995](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40995)
+  * [CVE-2024-41000](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41000)
+  * [CVE-2024-41002](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41002)
+  * [CVE-2024-41004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41004)
+  * [CVE-2024-41005](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41005)
+  * [CVE-2024-41006](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41006)
+  * [CVE-2024-41007](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41007)
+  * [CVE-2024-41027](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41027)
+  * [CVE-2024-41034](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41034)
+  * [CVE-2024-41035](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41035)
+  * [CVE-2024-41040](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41040)
+  * [CVE-2024-41041](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41041)
+  * [CVE-2024-41044](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41044)
+  * [CVE-2024-41046](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41046)
+  * [CVE-2024-41047](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41047)
+  * [CVE-2024-41048](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41048)
+  * [CVE-2024-41049](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41049)
+  * [CVE-2024-41055](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41055)
+  * [CVE-2024-41087](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41087)
+  * [CVE-2024-41089](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41089)
+  * [CVE-2024-41092](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41092)
+  * [CVE-2024-41093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41093)
+  * [CVE-2024-41095](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41095)
+  * [CVE-2024-41097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41097)
+  * [CVE-2024-42068](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42068)
+  * [CVE-2024-42070](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42070)
+  * [CVE-2024-42076](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42076)
+  * [CVE-2024-42077](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42077)
+  * [CVE-2024-42080](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42080)
+  * [CVE-2024-42082](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42082)
+  * [CVE-2024-42084](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42084)
+  * [CVE-2024-42085](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42085)
+  * [CVE-2024-42086](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42086)
+  * [CVE-2024-42087](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42087)
+  * [CVE-2024-42089](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42089)
+  * [CVE-2024-42090](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42090)
+  * [CVE-2024-42092](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42092)
+  * [CVE-2024-42093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42093)
+  * [CVE-2024-42094](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42094)
+  * [CVE-2024-42095](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42095)
+  * [CVE-2024-42096](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42096)
+  * [CVE-2024-42097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42097)
+  * [CVE-2024-42098](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42098)
+  * [CVE-2024-42101](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42101)
+  * [CVE-2024-42102](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42102)
+  * [CVE-2024-42104](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42104)
+  * [CVE-2024-42105](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42105)
+  * [CVE-2024-42106](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42106)
+  * [CVE-2024-42109](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42109)
+  * [CVE-2024-42115](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42115)
+  * [CVE-2024-42119](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42119)
+  * [CVE-2024-42120](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42120)
+  * [CVE-2024-42121](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42121)
+  * [CVE-2024-42124](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42124)
+  * [CVE-2024-42127](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42127)
+  * [CVE-2024-42130](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42130)
+  * [CVE-2024-42131](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42131)
+  * [CVE-2024-42137](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42137)
+  * [CVE-2024-42140](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42140)
+  * [CVE-2024-42145](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42145)
+  * [CVE-2024-42148](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42148)
+  * [CVE-2024-42152](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42152)
+  * [CVE-2024-42153](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42153)
+  * [CVE-2024-42154](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42154)
+  * [CVE-2024-42157](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42157)
+  * [CVE-2024-42161](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42161)
+  * [CVE-2024-42223](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42223)
+  * [CVE-2024-42224](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42224)
+  * [CVE-2024-42225](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42225)
+  * [CVE-2024-42229](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42229)
+  * [CVE-2024-42232](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42232)
+  * [CVE-2024-42236](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42236)
+  * [CVE-2024-42240](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42240)
+  * [CVE-2024-42244](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42244)
+  * [CVE-2024-42247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42247)
+  * [CVE-2023-52629](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52629)
+  * [CVE-2023-52760](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52760)
+  * [CVE-2024-26680](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26680)
+  * [CVE-2024-26830](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26830)
+  * [CVE-2024-26921](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26921)
+  * [CVE-2024-36901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36901)
+  * [CVE-2024-39292](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39292)
+  * [CVE-2024-39484](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39484)
+  * [CVE-2023-52585](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52585)
+  * [CVE-2023-52882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52882)
+  * [CVE-2024-26900](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26900)
+  * [CVE-2024-26936](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26936)
+  * [CVE-2024-26980](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26980)
+  * [CVE-2024-27398](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27398)
+  * [CVE-2024-27399](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27399)
+  * [CVE-2024-27401](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27401)
+  * [CVE-2024-35848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35848)
+  * [CVE-2024-35947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35947)
+  * [CVE-2024-36017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36017)
+  * [CVE-2024-36031](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36031)
+  * [CVE-2024-36880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36880)
+  * [CVE-2024-36883](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36883)
+  * [CVE-2024-36886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36886)
+  * [CVE-2024-36889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36889)
+  * [CVE-2024-36897](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36897)
+  * [CVE-2024-36902](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36902)
+  * [CVE-2024-36904](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36904)
+  * [CVE-2024-36905](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36905)
+  * [CVE-2024-36906](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36906)
+  * [CVE-2024-36916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36916)
+  * [CVE-2024-36919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36919)
+  * [CVE-2024-36928](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36928)
+  * [CVE-2024-36929](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36929)
+  * [CVE-2024-36931](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36931)
+  * [CVE-2024-36933](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36933)
+  * [CVE-2024-36934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36934)
+  * [CVE-2024-36937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36937)
+  * [CVE-2024-36938](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36938)
+  * [CVE-2024-36939](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36939)
+  * [CVE-2024-36940](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36940)
+  * [CVE-2024-36941](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36941)
+  * [CVE-2024-36944](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36944)
+  * [CVE-2024-36946](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36946)
+  * [CVE-2024-36947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36947)
+  * [CVE-2024-36950](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36950)
+  * [CVE-2024-36952](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36952)
+  * [CVE-2024-36953](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36953)
+  * [CVE-2024-36954](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36954)
+  * [CVE-2024-36955](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36955)
+  * [CVE-2024-36957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36957)
+  * [CVE-2024-36959](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36959)
+  * [CVE-2024-36960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36960)
+  * [CVE-2024-36964](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36964)
+  * [CVE-2024-36965](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36965)
+  * [CVE-2024-36967](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36967)
+  * [CVE-2024-36969](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36969)
+  * [CVE-2024-36975](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36975)
+  * [CVE-2024-38600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38600)
+
+
+
+## September 09, 2024
+
+Google Distributed Cloud (software only) for VMware 1.28.900-gke.113 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.28.900-gke.113 runs on Kubernetes v1.28.12-gke.1100.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+The following issues are fixed in 1.28.900-gke.113:
+
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#updating-dataplanev2-forwardmode-doesnt-automatically-trigger-anetd-daemonset-restart) where updating DataplaneV2 ForwardMode doesn't automatically trigger anetd DaemonSet restart.
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#credential.yaml-regenerated-incorrectly-during-admin-workstation-upgrade) where the `credential.yaml` file was regenerated incorrectly during an admin workstation upgrade.
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#etcdctl-command-not-found-during-cluster-upgrade-at-the-admin-cluster-backup-stage) where the `etcdctl` command was not found during cluster upgrade at the admin cluster backup stage.
+
+
+
+Fixed the following vulnerabilities in 1.28.900-gke.113:
+
+High-severity container vulnerabilities:
+
+  * [CVE-2024-7348](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7348)
+  * [CVE-2021-43816](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43816)
+  * [CVE-2019-16884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-16884)
+  * [CVE-2022-23648](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23648)
+  * [CVE-2021-30465](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-30465)
+
+
+
+Ubuntu vulnerabilities:
+
+  * [CVE-2023-52629](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52629)
+  * [CVE-2023-52760](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52760)
+  * [CVE-2024-26680](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26680)
+  * [CVE-2024-26830](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26830)
+  * [CVE-2024-26921](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26921)
+  * [CVE-2024-36901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36901)
+  * [CVE-2024-39292](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39292)
+  * [CVE-2024-39484](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39484)
+  * [CVE-2023-52585](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52585)
+  * [CVE-2023-52882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52882)
+  * [CVE-2024-26900](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26900)
+  * [CVE-2024-26936](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26936)
+  * [CVE-2024-26980](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26980)
+  * [CVE-2024-27398](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27398)
+  * [CVE-2024-27399](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27399)
+  * [CVE-2024-27401](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27401)
+  * [CVE-2024-35848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35848)
+  * [CVE-2024-35947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35947)
+  * [CVE-2024-36017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36017)
+  * [CVE-2024-36031](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36031)
+  * [CVE-2024-36880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36880)
+  * [CVE-2024-36883](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36883)
+  * [CVE-2024-36886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36886)
+  * [CVE-2024-36889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36889)
+  * [CVE-2024-36897](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36897)
+  * [CVE-2024-36902](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36902)
+  * [CVE-2024-36904](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36904)
+  * [CVE-2024-36905](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36905)
+  * [CVE-2024-36906](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36906)
+  * [CVE-2024-36916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36916)
+  * [CVE-2024-36919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36919)
+  * [CVE-2024-36928](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36928)
+  * [CVE-2024-36929](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36929)
+  * [CVE-2024-36931](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36931)
+  * [CVE-2024-36933](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36933)
+  * [CVE-2024-36934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36934)
+  * [CVE-2024-36937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36937)
+  * [CVE-2024-36938](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36938)
+  * [CVE-2024-36939](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36939)
+  * [CVE-2024-36940](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36940)
+  * [CVE-2024-36941](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36941)
+  * [CVE-2024-36944](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36944)
+  * [CVE-2024-36946](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36946)
+  * [CVE-2024-36947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36947)
+  * [CVE-2024-36950](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36950)
+  * [CVE-2024-36952](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36952)
+  * [CVE-2024-36953](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36953)
+  * [CVE-2024-36954](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36954)
+  * [CVE-2024-36955](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36955)
+  * [CVE-2024-36957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36957)
+  * [CVE-2024-36959](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36959)
+  * [CVE-2024-36960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36960)
+  * [CVE-2024-36964](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36964)
+  * [CVE-2024-36965](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36965)
+  * [CVE-2024-36967](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36967)
+  * [CVE-2024-36969](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36969)
+  * [CVE-2024-36975](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36975)
+  * [CVE-2024-38600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38600)
+  * [CVE-2023-52752](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52752)
+  * [CVE-2024-25742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25742)
+  * [CVE-2024-26886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26886)
+  * [CVE-2024-26952](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26952)
+  * [CVE-2024-27017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27017)
+  * [CVE-2024-36016](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36016)
+  * [CVE-2022-38096](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38096)
+  * [CVE-2023-52488](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52488)
+  * [CVE-2023-52699](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52699)
+  * [CVE-2023-52880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52880)
+  * [CVE-2024-23307](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23307)
+  * [CVE-2024-24857](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24857)
+  * [CVE-2024-24858](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24858)
+  * [CVE-2024-24859](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24859)
+  * [CVE-2024-24861](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24861)
+  * [CVE-2024-25739](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25739)
+  * [CVE-2024-26629](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26629)
+  * [CVE-2024-26642](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26642)
+  * [CVE-2024-26654](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26654)
+  * [CVE-2024-26687](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26687)
+  * [CVE-2024-26810](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26810)
+  * [CVE-2024-26811](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26811)
+  * [CVE-2024-26812](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26812)
+  * [CVE-2024-26813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26813)
+  * [CVE-2024-26814](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26814)
+  * [CVE-2024-26817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26817)
+  * [CVE-2024-26828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26828)
+  * [CVE-2024-26922](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26922)
+  * [CVE-2024-26923](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26923)
+  * [CVE-2024-26925](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26925)
+  * [CVE-2024-26926](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26926)
+  * [CVE-2024-26929](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26929)
+  * [CVE-2024-26931](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26931)
+  * [CVE-2024-26934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26934)
+  * [CVE-2024-26935](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26935)
+  * [CVE-2024-26937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26937)
+  * [CVE-2024-26950](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26950)
+  * [CVE-2024-26951](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26951)
+  * [CVE-2024-26955](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26955)
+  * [CVE-2024-26956](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26956)
+  * [CVE-2024-26957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26957)
+  * [CVE-2024-26958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26958)
+  * [CVE-2024-26960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26960)
+  * [CVE-2024-26961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26961)
+  * [CVE-2024-26964](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26964)
+  * [CVE-2024-26965](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26965)
+  * [CVE-2024-26966](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26966)
+  * [CVE-2024-26969](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26969)
+  * [CVE-2024-26970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26970)
+  * [CVE-2024-26973](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26973)
+  * [CVE-2024-26974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26974)
+  * [CVE-2024-26976](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26976)
+  * [CVE-2024-26977](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26977)
+  * [CVE-2024-26981](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26981)
+  * [CVE-2024-26984](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26984)
+  * [CVE-2024-26988](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26988)
+  * [CVE-2024-26989](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26989)
+  * [CVE-2024-26993](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26993)
+  * [CVE-2024-26994](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26994)
+  * [CVE-2024-26996](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26996)
+  * [CVE-2024-26999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26999)
+  * [CVE-2024-27000](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27000)
+  * [CVE-2024-27001](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27001)
+  * [CVE-2024-27004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27004)
+  * [CVE-2024-27008](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27008)
+  * [CVE-2024-27009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27009)
+  * [CVE-2024-27013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27013)
+  * [CVE-2024-27015](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27015)
+  * [CVE-2024-27016](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27016)
+  * [CVE-2024-27018](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27018)
+  * [CVE-2024-27019](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27019)
+  * [CVE-2024-27020](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27020)
+  * [CVE-2024-27059](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27059)
+  * [CVE-2024-27393](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27393)
+  * [CVE-2024-27395](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27395)
+  * [CVE-2024-27396](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27396)
+  * [CVE-2024-27437](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27437)
+  * [CVE-2024-35785](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35785)
+  * [CVE-2024-35789](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35789)
+  * [CVE-2024-35791](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35791)
+  * [CVE-2024-35796](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35796)
+  * [CVE-2024-35804](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35804)
+  * [CVE-2024-35805](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35805)
+  * [CVE-2024-35806](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35806)
+  * [CVE-2024-35807](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35807)
+  * [CVE-2024-35809](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35809)
+  * [CVE-2024-35813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35813)
+  * [CVE-2024-35815](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35815)
+  * [CVE-2024-35817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35817)
+  * [CVE-2024-35819](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35819)
+  * [CVE-2024-35821](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35821)
+  * [CVE-2024-35822](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35822)
+  * [CVE-2024-35823](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35823)
+  * [CVE-2024-35825](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35825)
+  * [CVE-2024-35847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35847)
+  * [CVE-2024-35849](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35849)
+  * [CVE-2024-35851](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35851)
+  * [CVE-2024-35852](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35852)
+  * [CVE-2024-35853](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35853)
+  * [CVE-2024-35854](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35854)
+  * [CVE-2024-35855](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35855)
+  * [CVE-2024-35857](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35857)
+  * [CVE-2024-35871](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35871)
+  * [CVE-2024-35872](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35872)
+  * [CVE-2024-35877](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35877)
+  * [CVE-2024-35879](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35879)
+  * [CVE-2024-35884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35884)
+  * [CVE-2024-35885](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35885)
+  * [CVE-2024-35886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35886)
+  * [CVE-2024-35888](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35888)
+  * [CVE-2024-35890](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35890)
+  * [CVE-2024-35893](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35893)
+  * [CVE-2024-35895](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35895)
+  * [CVE-2024-35896](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35896)
+  * [CVE-2024-35897](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35897)
+  * [CVE-2024-35898](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35898)
+  * [CVE-2024-35899](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35899)
+  * [CVE-2024-35900](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35900)
+  * [CVE-2024-35902](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35902)
+  * [CVE-2024-35905](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35905)
+  * [CVE-2024-35907](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35907)
+  * [CVE-2024-35910](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35910)
+  * [CVE-2024-35912](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35912)
+  * [CVE-2024-35915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35915)
+  * [CVE-2024-35918](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35918)
+  * [CVE-2024-35922](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35922)
+  * [CVE-2024-35925](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35925)
+  * [CVE-2024-35930](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35930)
+  * [CVE-2024-35933](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35933)
+  * [CVE-2024-35934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35934)
+  * [CVE-2024-35935](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35935)
+  * [CVE-2024-35936](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35936)
+  * [CVE-2024-35938](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35938)
+  * [CVE-2024-35940](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35940)
+  * [CVE-2024-35944](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35944)
+  * [CVE-2024-35950](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35950)
+  * [CVE-2024-35955](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35955)
+  * [CVE-2024-35958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35958)
+  * [CVE-2024-35960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35960)
+  * [CVE-2024-35969](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35969)
+  * [CVE-2024-35970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35970)
+  * [CVE-2024-35973](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35973)
+  * [CVE-2024-35976](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35976)
+  * [CVE-2024-35978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35978)
+  * [CVE-2024-35982](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35982)
+  * [CVE-2024-35984](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35984)
+  * [CVE-2024-35988](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35988)
+  * [CVE-2024-35989](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35989)
+  * [CVE-2024-35990](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35990)
+  * [CVE-2024-35997](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35997)
+  * [CVE-2024-36004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36004)
+  * [CVE-2024-36005](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36005)
+  * [CVE-2024-36006](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36006)
+  * [CVE-2024-36007](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36007)
+  * [CVE-2024-36008](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36008)
+  * [CVE-2024-36020](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36020)
+  * [CVE-2024-36025](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36025)
+  * [CVE-2024-36029](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36029)
+
+
+
+## August 29, 2024
+
+Google Distributed Cloud (software only) for VMware 1.30.0-gke.1930 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.30.0-gke.1930 runs on Kubernetes v1.30.3-gke.200.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for installations or upgrades with the [GKE On-Prem API clients](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/cluster-lifecycle-management-tools): the Google Cloud console, the gcloud CLI, and Terraform.
+
+  * GA: [StatefulSet CSI Migration Tool](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/using-statefulset-csi-migration-tool)
+  * GA: [Migrate clusters to use recommended features](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/concepts/migrate-recommended-features)
+  * Preview: The `gcloud beta container fleet memberships get-credentials` command uses a preview feature of the Connect gateway that lets you run the `kubectl` `attach`, `cp`, and `exec` commands. For more information, see [Limitations](https://cloud.google.com/kubernetes-engine/enterprise/multicluster-management/gateway/using#limitations) in the Connect gateway documentation.
+
+
+
+  * For admin and user clusters created at 1.30 and later versions, `loadBalancer.Kind` needs to be set to either `MetalLB` or `ManualLB`. 
+  * For user clusters created at 1.30 and later versions, `enableControlplaneV2` needs to be set to `true`.
+  * The `featureGates.GMPForSystemMetrics` field in the stackdriver CR is now always on and can't be disabled. It has been default on since 1.16. If you have manually turned it off, this upgrade means a breaking change in some system metrics format. For information on changing this field, see [Enabling and disabling Managed Service for Prometheus](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/logging-and-monitoring#enabling_and_disabling). **The field name in this note is incorrect, it should be`enableGMPForSystemMetrics`, instead of `GMPForSystemMetrics`; see updated entry for March 25, 2025.**
+
+
+
+Version changes in 1.30.0-gke.1930:
+
+  * Existing Seesaw load balancers now require TLS 1.2.
+  * COS was upgraded to m109
+  * Updated Dataplane V2 to use Cilium 1.13
+
+
+
+Other changes in1.30.0-gke.1930:
+
+  * Enhanced the upgrade process to include an automatic pre-upgrade check. Before you upgrade your admin or user cluster, the system runs this check to detect known issues. The check also provides guidance to ensure a smooth upgrade experience.
+  * Ingress node ports are optional for ControlplaneV2 clusters.
+  * Admin clusters created in 1.30 will use Dataplane V2, Google's Container Network Interface (CNI) implementation, which is based on [Cilium](https://github.com/cilium/cilium). 
+  * Admin clusters upgraded to 1.30 from 1.29 will use Dataplane V2.
+  * Removed mTLS on system metrics scrape endpoints, which makes it easier to integrate with 3rd party monitoring systems.
+  * Stopped bundling cert-manager and removed the monitoring-operator because system components no longer depend on them. Cert-manager from existing 1.29 clusters will continue running, but stop being managed by Google after upgrading to 1.30. If you don't use cert-manager, you can delete cert-manager after upgrade. New clusters in 1.30 and higher won't come with cert-manager. If you rely on the bundled cert-manager for their own use case, you should install their own in new clusters.
+
+  * We recommend that you don't use the preview feature [usage metering](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/user-cluster-configuration-file-latest#usagemetering-section) when you create new clusters. However, existing clusters using this feature will continue to function. As the alternative, we recommend that you use the predefined dashboard, [Anthos Cluster Utilization Metering](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/reference/predefined-dashboards), to understand resource usage at different levels.
+
+
+
+
+​​The following issues were fixed in 1.30.0-gke.1930:
+
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#cluster-creation-failure-due-to-control-plane-vip-in-different-subnet) where cluster creation failed due to the control plane VIP in a different subnet.
+  * Fixed the [known issue ](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#binary-authorization-webook-blocks-cni-plugin-to-start-causing-one-of-nodepool-failed-to-come-up)where a user cluster with Binary Authorization failed to come up.
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#connect-agent-loses-connection-to-google-cloud-after-non-ha-to-ha-admin-cluster-migration) that caused the Connect Agent to lose connection to Google Cloud after a non-HA to HA admin cluster migration.
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#admin-cluster-upgrade-fails-for-clusters-created-on-versions-1.10-or-earlier) where the admin cluster upgrade failed for clusters created on versions 1.10 or earlier.
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#docker-bridge-ip-uses-172.17.0.116-for-cos-cluster-control-plane-nodes) where the Docker bridge IP used 172.17.0.1/16 for COS cluster control plane nodes.
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#ha-admin-cluster-installation-preflight-check-reports-wrong-number-of-required-static-ips) where the HA admin cluster installation preflight check reported the wrong number of required static IPs.
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#using-multiple-network-interfaces-with-standard-cni-does-not-work) that caused multiple network interfaces with the standard CNI didn't work.
+  * Fixed a `gkeadm` preflight check that wasn't validating the VM folder.
+
+
+
+The following vulnerabilities were fixed in 1.30.0-gke.1930:
+
+Critical container vulnerabilities:
+
+  * [CVE-2024-2961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2961)
+  * [CVE-2024-33599](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33599)
+  * [CVE-2024-33601](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33601)
+  * [CVE-2024-33602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33602)
+
+
+
+High-severity container vulnerabilities:
+
+  * [CVE-2024-21626](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21626)
+  * [CVE-2023-47038](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-47038)
+  * [CVE-2024-0985](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0985)
+  * [CVE-2021-43816](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43816)
+  * [CVE-2022-23648](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23648)
+  * [CVE-2019-16884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-16884)
+  * [CVE-2021-33194](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33194)
+  * [CVE-2021-30465](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-30465)
+  * [CVE-2022-48622](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48622)
+
+
+
+Container-optimized OS vulnerabilities:
+
+  * [CVE-2022-41903](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41903)
+  * [CVE-2024-0743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0743)
+  * [CVE-2022-43680](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43680)
+  * [CVE-2024-27020](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27020)
+  * [CVE-2022-4904](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4904)
+  * [CVE-2023-22809](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-22809)
+
+
+
+Ubuntu vulnerabilities:
+
+  * [CVE-2024-21823](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21823)
+  * [CVE-2024-26643](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26643)
+  * [CVE-2024-26924](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26924)
+  * [CVE-2023-52434](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52434)
+  * [CVE-2023-52447](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52447)
+  * [CVE-2023-52497](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52497)
+  * [CVE-2023-52620](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52620)
+  * [CVE-2023-52640](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52640)
+  * [CVE-2023-52641](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52641)
+  * [CVE-2023-52644](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52644)
+  * [CVE-2023-52645](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52645)
+  * [CVE-2023-52650](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52650)
+  * [CVE-2023-52652](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52652)
+  * [CVE-2023-52656](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52656)
+  * [CVE-2023-52662](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52662)
+  * [CVE-2023-6270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6270)
+  * [CVE-2023-7042](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7042)
+  * [CVE-2024-0841](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0841)
+  * [CVE-2024-22099](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22099)
+  * [CVE-2024-26583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26583)
+  * [CVE-2024-26584](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26584)
+  * [CVE-2024-26585](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26585)
+  * [CVE-2024-26601](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26601)
+  * [CVE-2024-26603](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26603)
+  * [CVE-2024-26651](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26651)
+  * [CVE-2024-26659](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26659)
+  * [CVE-2024-26688](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26688)
+  * [CVE-2024-26733](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26733)
+  * [CVE-2024-26735](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26735)
+  * [CVE-2024-26736](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26736)
+  * [CVE-2024-26737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26737)
+  * [CVE-2024-26743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26743)
+  * [CVE-2024-26744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26744)
+  * [CVE-2024-26747](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26747)
+  * [CVE-2024-26748](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26748)
+  * [CVE-2024-26749](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26749)
+  * [CVE-2024-26750](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26750)
+  * [CVE-2024-26751](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26751)
+  * [CVE-2024-26752](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26752)
+  * [CVE-2024-26754](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26754)
+  * [CVE-2024-26763](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26763)
+  * [CVE-2024-26764](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26764)
+  * [CVE-2024-26766](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26766)
+  * [CVE-2024-26769](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26769)
+  * [CVE-2024-26771](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26771)
+  * [CVE-2024-26772](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26772)
+  * [CVE-2024-26773](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26773)
+  * [CVE-2024-26774](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26774)
+  * [CVE-2024-26776](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26776)
+  * [CVE-2024-26777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26777)
+  * [CVE-2024-26778](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26778)
+  * [CVE-2024-26779](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26779)
+  * [CVE-2024-26782](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26782)
+  * [CVE-2024-26787](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26787)
+  * [CVE-2024-26788](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26788)
+  * [CVE-2024-26790](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26790)
+  * [CVE-2024-26791](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26791)
+  * [CVE-2024-26792](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26792)
+  * [CVE-2024-26793](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26793)
+  * [CVE-2024-26795](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26795)
+  * [CVE-2024-26798](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26798)
+  * [CVE-2024-26801](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26801)
+  * [CVE-2024-26802](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26802)
+  * [CVE-2024-26803](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26803)
+  * [CVE-2024-26804](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26804)
+  * [CVE-2024-26805](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26805)
+  * [CVE-2024-26809](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26809)
+  * [CVE-2024-26816](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26816)
+  * [CVE-2024-26820](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26820)
+  * [CVE-2024-26833](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26833)
+  * [CVE-2024-26835](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26835)
+  * [CVE-2024-26838](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26838)
+  * [CVE-2024-26839](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26839)
+  * [CVE-2024-26840](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26840)
+  * [CVE-2024-26843](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26843)
+  * [CVE-2024-26845](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26845)
+  * [CVE-2024-26846](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26846)
+  * [CVE-2024-26851](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26851)
+  * [CVE-2024-26852](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26852)
+  * [CVE-2024-26855](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26855)
+  * [CVE-2024-26856](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26856)
+  * [CVE-2024-26857](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26857)
+  * [CVE-2024-26859](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26859)
+  * [CVE-2024-26861](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26861)
+  * [CVE-2024-26862](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26862)
+  * [CVE-2024-26863](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26863)
+  * [CVE-2024-26870](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26870)
+  * [CVE-2024-26872](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26872)
+  * [CVE-2024-26874](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26874)
+  * [CVE-2024-26875](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26875)
+  * [CVE-2024-26877](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26877)
+  * [CVE-2024-26878](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26878)
+  * [CVE-2024-26879](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26879)
+  * [CVE-2024-26880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26880)
+  * [CVE-2024-26881](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26881)
+  * [CVE-2024-26882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26882)
+  * [CVE-2024-26883](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26883)
+  * [CVE-2024-26884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26884)
+  * [CVE-2024-26885](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26885)
+  * [CVE-2024-26889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26889)
+  * [CVE-2024-26891](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26891)
+  * [CVE-2024-26894](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26894)
+  * [CVE-2024-26895](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26895)
+  * [CVE-2024-26897](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26897)
+  * [CVE-2024-26898](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26898)
+  * [CVE-2024-26901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26901)
+  * [CVE-2024-26903](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26903)
+  * [CVE-2024-26906](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26906)
+  * [CVE-2024-26907](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26907)
+  * [CVE-2024-26915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26915)
+  * [CVE-2024-27024](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27024)
+  * [CVE-2024-27028](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27028)
+  * [CVE-2024-27030](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27030)
+  * [CVE-2024-27034](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27034)
+  * [CVE-2024-27037](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27037)
+  * [CVE-2024-27038](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27038)
+  * [CVE-2024-27039](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27039)
+  * [CVE-2024-27043](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27043)
+  * [CVE-2024-27044](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27044)
+  * [CVE-2024-27045](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27045)
+  * [CVE-2024-27046](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27046)
+  * [CVE-2024-27047](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27047)
+  * [CVE-2024-27051](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27051)
+  * [CVE-2024-27052](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27052)
+  * [CVE-2024-27053](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27053)
+  * [CVE-2024-27054](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27054)
+  * [CVE-2024-27065](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27065)
+  * [CVE-2024-27073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27073)
+  * [CVE-2024-27074](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27074)
+  * [CVE-2024-27075](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27075)
+  * [CVE-2024-27076](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27076)
+  * [CVE-2024-27077](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27077)
+  * [CVE-2024-27078](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27078)
+  * [CVE-2024-27388](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27388)
+  * [CVE-2024-27390](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27390)
+  * [CVE-2024-27403](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27403)
+  * [CVE-2024-27405](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27405)
+  * [CVE-2024-27410](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27410)
+  * [CVE-2024-27412](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27412)
+  * [CVE-2024-27413](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27413)
+  * [CVE-2024-27414](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27414)
+  * [CVE-2024-27415](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27415)
+  * [CVE-2024-27416](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27416)
+  * [CVE-2024-27417](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27417)
+  * [CVE-2024-27419](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27419)
+  * [CVE-2024-27431](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27431)
+  * [CVE-2024-27432](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27432)
+  * [CVE-2024-27436](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27436)
+  * [CVE-2024-35811](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35811)
+  * [CVE-2024-35828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35828)
+  * [CVE-2024-35829](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35829)
+  * [CVE-2024-35830](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35830)
+  * [CVE-2024-35844](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35844)
+  * [CVE-2024-35845](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35845)
+  * [CVE-2023-52435](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52435)
+  * [CVE-2023-52486](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52486)
+  * [CVE-2023-52489](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52489)
+  * [CVE-2023-52491](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52491)
+  * [CVE-2023-52492](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52492)
+  * [CVE-2023-52493](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52493)
+  * [CVE-2023-52494](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52494)
+  * [CVE-2023-52498](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52498)
+  * [CVE-2023-52583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52583)
+  * [CVE-2023-52587](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52587)
+  * [CVE-2023-52588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52588)
+  * [CVE-2023-52594](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52594)
+  * [CVE-2023-52595](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52595)
+  * [CVE-2023-52597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52597)
+  * [CVE-2023-52598](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52598)
+  * [CVE-2023-52599](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52599)
+  * [CVE-2023-52601](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52601)
+  * [CVE-2023-52602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52602)
+  * [CVE-2023-52604](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52604)
+  * [CVE-2023-52606](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52606)
+  * [CVE-2023-52607](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52607)
+  * [CVE-2023-52608](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52608)
+  * [CVE-2023-52614](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52614)
+  * [CVE-2023-52615](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52615)
+  * [CVE-2023-52616](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52616)
+  * [CVE-2023-52617](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52617)
+  * [CVE-2023-52618](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52618)
+  * [CVE-2023-52619](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52619)
+  * [CVE-2023-52622](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52622)
+  * [CVE-2023-52623](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52623)
+  * [CVE-2023-52627](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52627)
+  * [CVE-2023-52631](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52631)
+  * [CVE-2023-52633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52633)
+  * [CVE-2023-52635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52635)
+  * [CVE-2023-52637](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52637)
+  * [CVE-2023-52638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52638)
+  * [CVE-2023-52642](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52642)
+  * [CVE-2023-52643](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52643)
+  * [CVE-2024-1151](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1151)
+  * [CVE-2024-2201](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2201)
+  * [CVE-2024-23849](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23849)
+  * [CVE-2024-26592](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26592)
+  * [CVE-2024-26593](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26593)
+  * [CVE-2024-26594](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26594)
+  * [CVE-2024-26600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26600)
+  * [CVE-2024-26602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26602)
+  * [CVE-2024-26606](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26606)
+  * [CVE-2024-26608](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26608)
+  * [CVE-2024-26610](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26610)
+  * [CVE-2024-26614](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26614)
+  * [CVE-2024-26615](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26615)
+  * [CVE-2024-26625](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26625)
+  * [CVE-2024-26627](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26627)
+  * [CVE-2024-26635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26635)
+  * [CVE-2024-26636](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26636)
+  * [CVE-2024-26640](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26640)
+  * [CVE-2024-26641](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26641)
+  * [CVE-2024-26644](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26644)
+  * [CVE-2024-26645](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26645)
+  * [CVE-2024-26660](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26660)
+  * [CVE-2024-26663](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26663)
+  * [CVE-2024-26664](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26664)
+  * [CVE-2024-26665](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26665)
+  * [CVE-2024-26668](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26668)
+  * [CVE-2024-26671](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26671)
+  * [CVE-2024-26673](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26673)
+  * [CVE-2024-26675](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26675)
+  * [CVE-2024-26676](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26676)
+  * [CVE-2024-26679](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26679)
+  * [CVE-2024-26684](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26684)
+  * [CVE-2024-26685](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26685)
+  * [CVE-2024-26689](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26689)
+  * [CVE-2024-26695](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26695)
+  * [CVE-2024-26696](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26696)
+  * [CVE-2024-26697](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26697)
+  * [CVE-2024-26698](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26698)
+  * [CVE-2024-26702](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26702)
+  * [CVE-2024-26704](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26704)
+  * [CVE-2024-26707](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26707)
+  * [CVE-2024-26712](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26712)
+  * [CVE-2024-26715](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26715)
+  * [CVE-2024-26717](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26717)
+  * [CVE-2024-26720](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26720)
+  * [CVE-2024-26722](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26722)
+  * [CVE-2024-26808](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26808)
+  * [CVE-2024-26825](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26825)
+  * [CVE-2024-26826](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26826)
+  * [CVE-2024-26829](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26829)
+  * [CVE-2024-26910](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26910)
+  * [CVE-2024-26916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26916)
+  * [CVE-2024-26920](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26920)
+  * [CVE-2023-24023](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24023)
+  * [CVE-2023-52600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52600)
+  * [CVE-2023-52603](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52603)
+  * [CVE-2024-26581](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26581)
+  * [CVE-2023-1194](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1194)
+  * [CVE-2023-32254](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32254)
+  * [CVE-2023-32258](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32258)
+  * [CVE-2023-38427](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38427)
+  * [CVE-2023-38430](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38430)
+  * [CVE-2023-38431](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38431)
+  * [CVE-2023-3867](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3867)
+  * [CVE-2023-46838](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-46838)
+  * [CVE-2023-52340](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52340)
+  * [CVE-2023-52429](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52429)
+  * [CVE-2023-52436](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52436)
+  * [CVE-2023-52438](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52438)
+  * [CVE-2023-52439](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52439)
+  * [CVE-2023-52441](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52441)
+  * [CVE-2023-52442](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52442)
+  * [CVE-2023-52443](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52443)
+  * [CVE-2023-52444](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52444)
+  * [CVE-2023-52445](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52445)
+  * [CVE-2023-52448](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52448)
+  * [CVE-2023-52449](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52449)
+  * [CVE-2023-52451](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52451)
+  * [CVE-2023-52454](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52454)
+  * [CVE-2023-52456](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52456)
+  * [CVE-2023-52457](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52457)
+  * [CVE-2023-52458](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52458)
+  * [CVE-2023-52462](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52462)
+  * [CVE-2023-52463](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52463)
+  * [CVE-2023-52464](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52464)
+  * [CVE-2023-52467](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52467)
+  * [CVE-2023-52469](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52469)
+  * [CVE-2023-52470](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52470)
+  * [CVE-2023-52480](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52480)
+  * [CVE-2023-52609](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52609)
+  * [CVE-2023-52610](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52610)
+  * [CVE-2023-52612](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52612)
+  * [CVE-2024-22705](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22705)
+  * [CVE-2024-23850](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23850)
+  * [CVE-2024-23851](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23851)
+  * [CVE-2024-24860](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24860)
+  * [CVE-2024-26586](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26586)
+  * [CVE-2024-26589](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26589)
+  * [CVE-2024-26591](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26591)
+  * [CVE-2024-26597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26597)
+  * [CVE-2024-26598](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26598)
+  * [CVE-2024-26631](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26631)
+  * [CVE-2024-26633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26633)
+
+
+
+## August 26, 2024
+
+The following vulnerabilities were discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes:
+
+  * CVE-2024-39503 For more details, see the [GCP-2024-047 security bulletin](https://cloud.google.com/kubernetes-engine/security-bulletins#gcp-2024-047).
+
+  * CVE-2024-41009 For more details, see the [GCP-2024-048 security bulletin](https://cloud.google.com/kubernetes-engine/security-bulletins#gcp-2024-048).
+
+  * CVE-2024-36978 For more details, see the [GCP-2024-049 security bulletin](https://cloud.google.com/kubernetes-engine/security-bulletins#gcp-2024-049).
+
+
+
+
+## August 13, 2024
+
+Google Distributed Cloud for VMware 1.29.400-gke.81 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.29.400-gke.81 runs on Kubernetes v1.29.6-gke.1800.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+Existing Seesaw load balancers now require TLS 1.2.
+
+The following vulnerabilities are fixed in 1.29.400-gke.81:
+
+High-severity container vulnerabilities:
+
+  * [CVE-2024-0567](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0567)
+  * [CVE-2021-43816](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43816)
+  * [CVE-2022-23648](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23648)
+  * [CVE-2021-33194](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33194)
+  * [CVE-2021-30465](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-30465)
+  * [CVE-2019-16884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-16884)
+  * [CVE-2022-48622](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48622)
+  * [CVE-2020-22218](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-22218)
+
+
+
+Ubuntu vulnerabilities:
+
+  * [CVE-2023-52752](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52752)
+  * [CVE-2024-25742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25742)
+  * [CVE-2024-26886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26886)
+  * [CVE-2024-26952](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26952)
+  * [CVE-2024-27017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27017)
+  * [CVE-2024-36016](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36016)
+  * [CVE-2022-38096](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38096)
+  * [CVE-2023-52488](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52488)
+  * [CVE-2023-52699](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52699)
+  * [CVE-2023-52880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52880)
+  * [CVE-2024-23307](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23307)
+  * [CVE-2024-24857](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24857)
+  * [CVE-2024-24858](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24858)
+  * [CVE-2024-24859](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24859)
+  * [CVE-2024-24861](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24861)
+  * [CVE-2024-25739](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25739)
+  * [CVE-2024-26629](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26629)
+  * [CVE-2024-26642](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26642)
+  * [CVE-2024-26654](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26654)
+  * [CVE-2024-26687](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26687)
+  * [CVE-2024-26810](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26810)
+  * [CVE-2024-26811](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26811)
+  * [CVE-2024-26812](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26812)
+  * [CVE-2024-26813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26813)
+  * [CVE-2024-26814](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26814)
+  * [CVE-2024-26817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26817)
+  * [CVE-2024-26828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26828)
+  * [CVE-2024-26922](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26922)
+  * [CVE-2024-26923](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26923)
+  * [CVE-2024-26925](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26925)
+  * [CVE-2024-26926](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26926)
+  * [CVE-2024-26929](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26929)
+  * [CVE-2024-26931](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26931)
+  * [CVE-2024-26934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26934)
+  * [CVE-2024-26935](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26935)
+  * [CVE-2024-26937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26937)
+  * [CVE-2024-26950](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26950)
+  * [CVE-2024-26951](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26951)
+  * [CVE-2024-26955](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26955)
+  * [CVE-2024-26956](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26956)
+  * [CVE-2024-26957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26957)
+  * [CVE-2024-26958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26958)
+  * [CVE-2024-26960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26960)
+  * [CVE-2024-26961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26961)
+  * [CVE-2024-26964](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26964)
+  * [CVE-2024-26965](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26965)
+  * [CVE-2024-26966](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26966)
+  * [CVE-2024-26969](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26969)
+  * [CVE-2024-26970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26970)
+  * [CVE-2024-26973](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26973)
+  * [CVE-2024-26974](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26974)
+  * [CVE-2024-26976](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26976)
+  * [CVE-2024-26977](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26977)
+  * [CVE-2024-26981](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26981)
+  * [CVE-2024-26984](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26984)
+  * [CVE-2024-26988](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26988)
+  * [CVE-2024-26989](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26989)
+  * [CVE-2024-26993](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26993)
+  * [CVE-2024-26994](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26994)
+  * [CVE-2024-26996](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26996)
+  * [CVE-2024-26999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26999)
+  * [CVE-2024-27000](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27000)
+  * [CVE-2024-27001](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27001)
+  * [CVE-2024-27004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27004)
+  * [CVE-2024-27008](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27008)
+  * [CVE-2024-27009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27009)
+  * [CVE-2024-27013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27013)
+  * [CVE-2024-27015](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27015)
+  * [CVE-2024-27016](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27016)
+  * [CVE-2024-27018](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27018)
+  * [CVE-2024-27019](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27019)
+  * [CVE-2024-27020](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27020)
+  * [CVE-2024-27059](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27059)
+  * [CVE-2024-27393](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27393)
+  * [CVE-2024-27395](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27395)
+  * [CVE-2024-27396](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27396)
+  * [CVE-2024-27437](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27437)
+  * [CVE-2024-35785](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35785)
+  * [CVE-2024-35789](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35789)
+  * [CVE-2024-35791](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35791)
+  * [CVE-2024-35796](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35796)
+  * [CVE-2024-35804](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35804)
+  * [CVE-2024-35805](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35805)
+  * [CVE-2024-35806](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35806)
+  * [CVE-2024-35807](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35807)
+  * [CVE-2024-35809](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35809)
+  * [CVE-2024-35813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35813)
+  * [CVE-2024-35815](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35815)
+  * [CVE-2024-35817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35817)
+  * [CVE-2024-35819](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35819)
+  * [CVE-2024-35821](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35821)
+  * [CVE-2024-35822](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35822)
+  * [CVE-2024-35823](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35823)
+  * [CVE-2024-35825](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35825)
+  * [CVE-2024-35847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35847)
+  * [CVE-2024-35849](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35849)
+  * [CVE-2024-35851](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35851)
+  * [CVE-2024-35852](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35852)
+  * [CVE-2024-35853](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35853)
+  * [CVE-2024-35854](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35854)
+  * [CVE-2024-35855](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35855)
+  * [CVE-2024-35857](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35857)
+  * [CVE-2024-35871](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35871)
+  * [CVE-2024-35872](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35872)
+  * [CVE-2024-35877](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35877)
+  * [CVE-2024-35879](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35879)
+  * [CVE-2024-35884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35884)
+  * [CVE-2024-35885](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35885)
+  * [CVE-2024-35886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35886)
+  * [CVE-2024-35888](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35888)
+  * [CVE-2024-35890](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35890)
+  * [CVE-2024-35893](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35893)
+  * [CVE-2024-35895](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35895)
+  * [CVE-2024-35896](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35896)
+  * [CVE-2024-35897](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35897)
+  * [CVE-2024-35898](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35898)
+  * [CVE-2024-35899](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35899)
+  * [CVE-2024-35900](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35900)
+  * [CVE-2024-35902](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35902)
+  * [CVE-2024-35905](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35905)
+  * [CVE-2024-35907](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35907)
+  * [CVE-2024-35910](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35910)
+  * [CVE-2024-35912](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35912)
+  * [CVE-2024-35915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35915)
+  * [CVE-2024-35918](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35918)
+  * [CVE-2024-35922](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35922)
+  * [CVE-2024-35925](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35925)
+  * [CVE-2024-35930](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35930)
+  * [CVE-2024-35933](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35933)
+  * [CVE-2024-35934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35934)
+  * [CVE-2024-35935](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35935)
+  * [CVE-2024-35936](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35936)
+  * [CVE-2024-35938](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35938)
+  * [CVE-2024-35940](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35940)
+  * [CVE-2024-35944](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35944)
+  * [CVE-2024-35950](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35950)
+  * [CVE-2024-35955](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35955)
+  * [CVE-2024-35958](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35958)
+  * [CVE-2024-35960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35960)
+  * [CVE-2024-35969](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35969)
+  * [CVE-2024-35970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35970)
+  * [CVE-2024-35973](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35973)
+  * [CVE-2024-35976](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35976)
+  * [CVE-2024-35978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35978)
+  * [CVE-2024-35982](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35982)
+  * [CVE-2024-35984](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35984)
+  * [CVE-2024-35988](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35988)
+  * [CVE-2024-35989](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35989)
+  * [CVE-2024-35990](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35990)
+  * [CVE-2024-35997](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35997)
+  * [CVE-2024-36004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36004)
+  * [CVE-2024-36005](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36005)
+  * [CVE-2024-36006](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36006)
+  * [CVE-2024-36007](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36007)
+  * [CVE-2024-36008](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36008)
+  * [CVE-2024-36020](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36020)
+  * [CVE-2024-36025](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36025)
+  * [CVE-2024-36029](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36029)
+
+
+
+## August 07, 2024
+
+Google Distributed Cloud for VMware 1.28.800-gke.109 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.28.800-gke.109 runs on Kubernetes v1.28.11-gke.2200.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+Existing Seesaw load balancers now require TLS 1.2.
+
+Fixed  
+The following vulnerabilities are fixed in 1.28.800-gke.109:
+
+High-severity container vulnerabilities:
+
+  * [CVE-2020-22218](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-22218)
+  * [CVE-2022-48622](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48622)
+  * [CVE-2024-0567](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0567)
+
+
+
+Ubuntu vulnerabilities:
+
+  * [CVE-2023-52752](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52752)
+  * [CVE-2024-25742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25742)
+  * [CVE-2024-26886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26886)
+  * [CVE-2024-26952](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26952)
+  * [CVE-2024-27017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27017)
+  * [CVE-2024-36016](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36016)
+
+
+
+## August 01, 2024
+
+Google Distributed Cloud for VMware 1.16.11-gke.25 is now available for [download](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Google Distributed Cloud 1.16.11-gke.25 runs on Kubernetes v1.27.15-gke.1200. 
+
+If you are using a third-party storage vendor, check the [GDC Ready storage partners](https://cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+Existing Seesaw load balancers now require TLS 1.2.
+
+The following vulnerabilities are fixed in 1.16.11-gke.25:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2022-48622](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48622)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2015-20107](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-20107)
+
+    * [CVE-2018-1060](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1060)
+
+    * [CVE-2018-1061](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1061)
+
+    * [CVE-2018-14647](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14647)
+
+    * [CVE-2018-20406](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20406)
+
+    * [CVE-2018-20852](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20852)
+
+    * [CVE-2019-5010](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-5010)
+
+    * [CVE-2019-9636](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9636)
+
+    * [CVE-2019-9674](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9674)
+
+    * [CVE-2019-9740](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9740)
+
+    * [CVE-2019-9947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9947)
+
+    * [CVE-2019-9948](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9948)
+
+    * [CVE-2019-10160](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-10160)
+
+    * [CVE-2019-16056](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-16056)
+
+    * [CVE-2019-16935](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-16935)
+
+    * [CVE-2019-17514](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-17514)
+
+    * [CVE-2019-18348](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18348)
+
+    * [CVE-2019-20907](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-20907)
+
+    * [CVE-2020-8492](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8492)
+
+    * [CVE-2020-14422](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14422)
+
+    * [CVE-2020-26116](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-26116)
+
+    * [CVE-2020-27619](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-27619)
+
+    * [CVE-2021-3177](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3177)
+
+    * [CVE-2021-3426](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3426)
+
+    * [CVE-2021-3733](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3733)
+
+    * [CVE-2021-3737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3737)
+
+    * [CVE-2021-4189](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4189)
+
+    * [CVE-2021-29921](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29921)
+
+    * [CVE-2022-0391](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0391)
+
+    * [CVE-2022-42919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42919)
+
+    * [CVE-2022-45061](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45061)
+
+    * [CVE-2022-48560](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48560)
+
+    * [CVE-2022-48564](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48564)
+
+    * [CVE-2022-48565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48565)
+
+    * [CVE-2022-48566](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48566)
+
+    * [CVE-2023-6270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6270)
+
+    * [CVE-2023-6507](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6507)
+
+    * [CVE-2023-6597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6597)
+
+    * [CVE-2023-7042](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7042)
+
+    * [CVE-2023-24329](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24329)
+
+    * [CVE-2023-40217](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40217)
+
+    * [CVE-2023-41105](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-41105)
+
+    * [CVE-2023-52434](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52434)
+
+    * [CVE-2023-52447](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52447)
+
+    * [CVE-2023-52497](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52497)
+
+    * [CVE-2023-52620](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52620)
+
+    * [CVE-2023-52640](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52640)
+
+    * [CVE-2023-52641](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52641)
+
+    * [CVE-2023-52644](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52644)
+
+    * [CVE-2023-52645](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52645)
+
+    * [CVE-2023-52650](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52650)
+
+    * [CVE-2023-52652](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52652)
+
+    * [CVE-2023-52656](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52656)
+
+    * [CVE-2023-52662](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52662)
+
+    * [CVE-2024-0450](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0450)
+
+    * [CVE-2024-0841](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0841)
+
+    * [CVE-2024-21823](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21823)
+
+    * [CVE-2024-22099](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22099)
+
+    * [CVE-2024-26583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26583)
+
+    * [CVE-2024-26584](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26584)
+
+    * [CVE-2024-26585](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26585)
+
+    * [CVE-2024-26601](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26601)
+
+    * [CVE-2024-26603](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26603)
+
+    * [CVE-2024-26643](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26643)
+
+    * [CVE-2024-26651](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26651)
+
+    * [CVE-2024-26659](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26659)
+
+    * [CVE-2024-26688](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26688)
+
+    * [CVE-2024-26733](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26733)
+
+    * [CVE-2024-26735](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26735)
+
+    * [CVE-2024-26736](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26736)
+
+    * [CVE-2024-26737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26737)
+
+    * [CVE-2024-26743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26743)
+
+    * [CVE-2024-26744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26744)
+
+    * [CVE-2024-26747](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26747)
+
+    * [CVE-2024-26748](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26748)
+
+    * [CVE-2024-26749](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26749)
+
+    * [CVE-2024-26750](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26750)
+
+    * [CVE-2024-26751](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26751)
+
+    * [CVE-2024-26752](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26752)
+
+    * [CVE-2024-26754](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26754)
+
+    * [CVE-2024-26763](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26763)
+
+    * [CVE-2024-26764](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26764)
+
+    * [CVE-2024-26766](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26766)
+
+    * [CVE-2024-26769](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26769)
+
+    * [CVE-2024-26771](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26771)
+
+    * [CVE-2024-26772](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26772)
+
+    * [CVE-2024-26773](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26773)
+
+    * [CVE-2024-26774](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26774)
+
+    * [CVE-2024-26776](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26776)
+
+    * [CVE-2024-26777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26777)
+
+    * [CVE-2024-26778](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26778)
+
+    * [CVE-2024-26779](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26779)
+
+    * [CVE-2024-26782](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26782)
+
+    * [CVE-2024-26787](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26787)
+
+    * [CVE-2024-26788](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26788)
+
+    * [CVE-2024-26790](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26790)
+
+    * [CVE-2024-26791](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26791)
+
+    * [CVE-2024-26792](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26792)
+
+    * [CVE-2024-26793](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26793)
+
+    * [CVE-2024-26795](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26795)
+
+    * [CVE-2024-26798](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26798)
+
+    * [CVE-2024-26801](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26801)
+
+    * [CVE-2024-26802](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26802)
+
+    * [CVE-2024-26803](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26803)
+
+    * [CVE-2024-26804](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26804)
+
+    * [CVE-2024-26805](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26805)
+
+    * [CVE-2024-26809](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26809)
+
+    * [CVE-2024-26816](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26816)
+
+    * [CVE-2024-26820](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26820)
+
+    * [CVE-2024-26833](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26833)
+
+    * [CVE-2024-26835](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26835)
+
+    * [CVE-2024-26838](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26838)
+
+    * [CVE-2024-26839](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26839)
+
+    * [CVE-2024-26840](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26840)
+
+    * [CVE-2024-26843](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26843)
+
+    * [CVE-2024-26845](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26845)
+
+    * [CVE-2024-26846](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26846)
+
+    * [CVE-2024-26851](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26851)
+
+    * [CVE-2024-26852](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26852)
+
+    * [CVE-2024-26855](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26855)
+
+    * [CVE-2024-26856](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26856)
+
+    * [CVE-2024-26857](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26857)
+
+    * [CVE-2024-26859](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26859)
+
+    * [CVE-2024-26861](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26861)
+
+    * [CVE-2024-26862](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26862)
+
+    * [CVE-2024-26863](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26863)
+
+    * [CVE-2024-26870](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26870)
+
+    * [CVE-2024-26872](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26872)
+
+    * [CVE-2024-26874](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26874)
+
+    * [CVE-2024-26875](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26875)
+
+    * [CVE-2024-26877](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26877)
+
+    * [CVE-2024-26878](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26878)
+
+    * [CVE-2024-26879](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26879)
+
+    * [CVE-2024-26880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26880)
+
+    * [CVE-2024-26881](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26881)
+
+    * [CVE-2024-26882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26882)
+
+    * [CVE-2024-26883](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26883)
+
+    * [CVE-2024-26884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26884)
+
+    * [CVE-2024-26885](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26885)
+
+    * [CVE-2024-26889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26889)
+
+    * [CVE-2024-26891](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26891)
+
+    * [CVE-2024-26894](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26894)
+
+    * [CVE-2024-26895](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26895)
+
+    * [CVE-2024-26897](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26897)
+
+    * [CVE-2024-26898](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26898)
+
+    * [CVE-2024-26901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26901)
+
+    * [CVE-2024-26903](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26903)
+
+    * [CVE-2024-26906](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26906)
+
+    * [CVE-2024-26907](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26907)
+
+    * [CVE-2024-26915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26915)
+
+    * [CVE-2024-26924](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26924)
+
+    * [CVE-2024-27024](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27024)
+
+    * [CVE-2024-27028](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27028)
+
+    * [CVE-2024-27030](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27030)
+
+    * [CVE-2024-27034](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27034)
+
+    * [CVE-2024-27037](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27037)
+
+    * [CVE-2024-27038](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27038)
+
+    * [CVE-2024-27039](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27039)
+
+    * [CVE-2024-27043](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27043)
+
+    * [CVE-2024-27044](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27044)
+
+    * [CVE-2024-27045](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27045)
+
+    * [CVE-2024-27046](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27046)
+
+    * [CVE-2024-27047](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27047)
+
+    * [CVE-2024-27051](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27051)
+
+    * [CVE-2024-27052](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27052)
+
+    * [CVE-2024-27053](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27053)
+
+    * [CVE-2024-27054](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27054)
+
+    * [CVE-2024-27065](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27065)
+
+    * [CVE-2024-27073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27073)
+
+    * [CVE-2024-27074](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27074)
+
+    * [CVE-2024-27075](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27075)
+
+    * [CVE-2024-27076](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27076)
+
+    * [CVE-2024-27077](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27077)
+
+    * [CVE-2024-27078](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27078)
+
+    * [CVE-2024-27388](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27388)
+
+    * [CVE-2024-27390](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27390)
+
+    * [CVE-2024-27403](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27403)
+
+    * [CVE-2024-27405](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27405)
+
+    * [CVE-2024-27410](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27410)
+
+    * [CVE-2024-27412](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27412)
+
+    * [CVE-2024-27413](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27413)
+
+    * [CVE-2024-27414](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27414)
+
+    * [CVE-2024-27415](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27415)
+
+    * [CVE-2024-27416](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27416)
+
+    * [CVE-2024-27417](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27417)
+
+    * [CVE-2024-27419](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27419)
+
+    * [CVE-2024-27431](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27431)
+
+    * [CVE-2024-27432](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27432)
+
+    * [CVE-2024-27436](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27436)
+
+    * [CVE-2024-35811](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35811)
+
+    * [CVE-2024-35828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35828)
+
+    * [CVE-2024-35829](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35829)
+
+    * [CVE-2024-35830](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35830)
+
+    * [CVE-2024-35844](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35844)
+
+    * [CVE-2024-35845](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35845)
+
+
+
+
+## July 26, 2024
+
+Google Distributed Cloud for VMware 1.29.300-gke.184 is now available for [download](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Google Distributed Cloud 1.29.300-gke.184 runs on Kubernetes v1.29.6-gke.600. 
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+The following vulnerabilities are fixed In 1.29.300-gke.184:
+
+  * Medium-severity container vulnerabilities:
+
+    * [CVE-2024-28122](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-28122)
+
+    * [CVE-2024-33599](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33599)
+
+    * [CVE-2024-33600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33600)
+
+    * [CVE-2024-33601](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33601)
+
+    * [CVE-2024-33602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33602)
+
+  * Low-severity container vulnerabilities:
+
+    * [CVE-2023-6597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6597)
+
+    * [CVE-2023-24329](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24329)
+
+    * [CVE-2023-40217](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40217)
+
+    * [CVE-2023-41105](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-41105)
+
+    * [CVE-2024-0450](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0450)
+
+
+
+
+## July 17, 2024
+
+The following vulnerabilities were discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes:
+
+  * CVE-2024-26925
+
+
+
+For more details, see the [GCP-2024-045 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-045).
+
+## July 16, 2024
+
+The following vulnerabilities were discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes:
+
+  * CVE-2024-26921
+  * CVE-2024-36972
+
+
+
+For more details, see the [GCP-2024-043](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-043) and [GCP-2024-044](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-044) security bulletins.
+
+## July 15, 2024
+
+The following vulnerabilities were discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes:
+
+  * [CVE-2024-26809](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26809)
+
+
+
+For more details, see the [GCP-2024-042](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-042) security bulletin.
+
+## July 09, 2024
+
+The following vulnerabilities are fixed In 1.29.200-gke.245:
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2024-6387](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6387)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2024-6387](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6387)
+
+
+
+Google Distributed Cloud for VMware 1.29.200-gke.245 is now available for [download](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Google Distributed Cloud 1.29.200-gke.245 runs on Kubernetes v1.29.5-gke.800. 
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+The following issues are fixed in 1.28.700-gke.151:
+
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#binary-authorization-webook-blocks-cni-plugin-to-start-causing-one-of-nodepool-failed-to-come-up) where the Binary Authorization webhook blocked the CNI plugin, which caused user cluster creation to stall.
+
+  * Fixed the [known issue](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#cluster-creation-failure-due-to-control-plane-vip-in-different-subnet) that caused cluster creation to fail because the control plane VIP was in a different subnet from other cluster nodes.
+
+
+
+
+The following vulnerabilities are fixed In 1.28.700-gke.151:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2022-28948](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28948)
+
+    * [CVE-2024-0985](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0985)
+
+    * [CVE-2024-2961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2961)
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2021-3520](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3520)
+
+    * [CVE-2024-6387](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6387)
+
+    * [CVE-2024-26256](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26256)
+
+    * [CVE-2024-27018](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27018)
+
+    * [CVE-2024-27020](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27020)
+
+    * [CVE-2024-32004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-32004)
+
+    * [CVE-2024-32465](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-32465)
+
+    * [CVE-2024-36971](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36971)
+
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-6270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6270)
+
+    * [CVE-2023-7042](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7042)
+
+    * [CVE-2023-52434](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52434)
+
+    * [CVE-2023-52447](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52447)
+
+    * [CVE-2023-52497](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52497)
+
+    * [CVE-2023-52620](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52620)
+
+    * [CVE-2023-52640](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52640)
+
+    * [CVE-2023-52641](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52641)
+
+    * [CVE-2023-52644](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52644)
+
+    * [CVE-2023-52645](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52645)
+
+    * [CVE-2023-52650](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52650)
+
+    * [CVE-2023-52652](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52652)
+
+    * [CVE-2023-52656](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52656)
+
+    * [CVE-2023-52662](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52662)
+
+    * [CVE-2024-0841](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0841)
+
+    * [CVE-2024-6387](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6387)
+
+    * [CVE-2024-21823](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21823)
+
+    * [CVE-2024-22099](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22099)
+
+    * [CVE-2024-26583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26583)
+
+    * [CVE-2024-26584](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26584)
+
+    * [CVE-2024-26585](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26585)
+
+    * [CVE-2024-26601](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26601)
+
+    * [CVE-2024-26603](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26603)
+
+    * [CVE-2024-26643](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26643)
+
+    * [CVE-2024-26651](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26651)
+
+    * [CVE-2024-26659](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26659)
+
+    * [CVE-2024-26688](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26688)
+
+    * [CVE-2024-26733](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26733)
+
+    * [CVE-2024-26735](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26735)
+
+    * [CVE-2024-26736](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26736)
+
+    * [CVE-2024-26737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26737)
+
+    * [CVE-2024-26743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26743)
+
+    * [CVE-2024-26744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26744)
+
+    * [CVE-2024-26747](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26747)
+
+    * [CVE-2024-26748](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26748)
+
+    * [CVE-2024-26749](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26749)
+
+    * [CVE-2024-26750](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26750)
+
+    * [CVE-2024-26751](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26751)
+
+    * [CVE-2024-26752](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26752)
+
+    * [CVE-2024-26754](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26754)
+
+    * [CVE-2024-26763](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26763)
+
+    * [CVE-2024-26764](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26764)
+
+    * [CVE-2024-26766](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26766)
+
+    * [CVE-2024-26769](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26769)
+
+    * [CVE-2024-26771](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26771)
+
+    * [CVE-2024-26772](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26772)
+
+    * [CVE-2024-26773](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26773)
+
+    * [CVE-2024-26774](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26774)
+
+    * [CVE-2024-26776](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26776)
+
+    * [CVE-2024-26777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26777)
+
+    * [CVE-2024-26778](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26778)
+
+    * [CVE-2024-26779](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26779)
+
+    * [CVE-2024-26782](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26782)
+
+    * [CVE-2024-26787](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26787)
+
+    * [CVE-2024-26788](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26788)
+
+    * [CVE-2024-26790](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26790)
+
+    * [CVE-2024-26791](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26791)
+
+    * [CVE-2024-26792](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26792)
+
+    * [CVE-2024-26793](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26793)
+
+    * [CVE-2024-26795](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26795)
+
+    * [CVE-2024-26798](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26798)
+
+    * [CVE-2024-26801](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26801)
+
+    * [CVE-2024-26802](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26802)
+
+    * [CVE-2024-26803](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26803)
+
+    * [CVE-2024-26804](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26804)
+
+    * [CVE-2024-26805](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26805)
+
+    * [CVE-2024-26809](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26809)
+
+    * [CVE-2024-26816](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26816)
+
+    * [CVE-2024-26820](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26820)
+
+    * [CVE-2024-26833](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26833)
+
+    * [CVE-2024-26835](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26835)
+
+    * [CVE-2024-26838](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26838)
+
+    * [CVE-2024-26839](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26839)
+
+    * [CVE-2024-26840](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26840)
+
+    * [CVE-2024-26843](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26843)
+
+    * [CVE-2024-26845](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26845)
+
+    * [CVE-2024-26846](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26846)
+
+    * [CVE-2024-26851](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26851)
+
+    * [CVE-2024-26852](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26852)
+
+    * [CVE-2024-26855](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26855)
+
+    * [CVE-2024-26856](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26856)
+
+    * [CVE-2024-26857](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26857)
+
+    * [CVE-2024-26859](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26859)
+
+    * [CVE-2024-26861](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26861)
+
+    * [CVE-2024-26862](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26862)
+
+    * [CVE-2024-26863](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26863)
+
+    * [CVE-2024-26870](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26870)
+
+    * [CVE-2024-26872](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26872)
+
+    * [CVE-2024-26874](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26874)
+
+    * [CVE-2024-26875](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26875)
+
+    * [CVE-2024-26877](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26877)
+
+    * [CVE-2024-26878](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26878)
+
+    * [CVE-2024-26879](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26879)
+
+    * [CVE-2024-26880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26880)
+
+    * [CVE-2024-26881](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26881)
+
+    * [CVE-2024-26882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26882)
+
+    * [CVE-2024-26883](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26883)
+
+    * [CVE-2024-26884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26884)
+
+    * [CVE-2024-26885](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26885)
+
+    * [CVE-2024-26889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26889)
+
+    * [CVE-2024-26891](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26891)
+
+    * [CVE-2024-26894](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26894)
+
+    * [CVE-2024-26895](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26895)
+
+    * [CVE-2024-26897](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26897)
+
+    * [CVE-2024-26898](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26898)
+
+    * [CVE-2024-26901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26901)
+
+    * [CVE-2024-26903](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26903)
+
+    * [CVE-2024-26906](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26906)
+
+    * [CVE-2024-26907](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26907)
+
+    * [CVE-2024-26915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26915)
+
+    * [CVE-2024-26924](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26924)
+
+    * [CVE-2024-27024](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27024)
+
+    * [CVE-2024-27028](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27028)
+
+    * [CVE-2024-27030](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27030)
+
+    * [CVE-2024-27034](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27034)
+
+    * [CVE-2024-27037](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27037)
+
+    * [CVE-2024-27038](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27038)
+
+    * [CVE-2024-27039](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27039)
+
+    * [CVE-2024-27043](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27043)
+
+    * [CVE-2024-27044](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27044)
+
+    * [CVE-2024-27045](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27045)
+
+    * [CVE-2024-27046](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27046)
+
+    * [CVE-2024-27047](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27047)
+
+    * [CVE-2024-27051](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27051)
+
+    * [CVE-2024-27052](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27052)
+
+    * [CVE-2024-27053](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27053)
+
+    * [CVE-2024-27054](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27054)
+
+    * [CVE-2024-27065](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27065)
+
+    * [CVE-2024-27073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27073)
+
+    * [CVE-2024-27074](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27074)
+
+    * [CVE-2024-27075](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27075)
+
+    * [CVE-2024-27076](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27076)
+
+    * [CVE-2024-27077](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27077)
+
+    * [CVE-2024-27078](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27078)
+
+    * [CVE-2024-27388](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27388)
+
+    * [CVE-2024-27390](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27390)
+
+    * [CVE-2024-27403](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27403)
+
+    * [CVE-2024-27405](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27405)
+
+    * [CVE-2024-27410](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27410)
+
+    * [CVE-2024-27412](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27412)
+
+    * [CVE-2024-27413](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27413)
+
+    * [CVE-2024-27414](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27414)
+
+    * [CVE-2024-27415](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27415)
+
+    * [CVE-2024-27416](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27416)
+
+    * [CVE-2024-27417](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27417)
+
+    * [CVE-2024-27419](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27419)
+
+    * [CVE-2024-27431](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27431)
+
+    * [CVE-2024-27432](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27432)
+
+    * [CVE-2024-27436](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27436)
+
+    * [CVE-2024-35811](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35811)
+
+    * [CVE-2024-35828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35828)
+
+    * [CVE-2024-35829](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35829)
+
+    * [CVE-2024-35830](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35830)
+
+    * [CVE-2024-35844](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35844)
+
+    * [CVE-2024-35845](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35845)
+
+
+
+
+Google Distributed Cloud for VMware 1.28.700-gke.151 is now available for [download](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Google Distributed Cloud 1.28.700-gke.151 runs on Kubernetes v1.28.10-gke.2100. 
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+Google Distributed Cloud for VMware 1.16.10-gke.36 is now available for [download](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Google Distributed Cloud 1.16.10-gke.36 runs on Kubernetes v1.27.14-gke.1600. 
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+The following vulnerabilities are fixed In 1.16.10-gke.36:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2022-28948](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28948)
+
+    * [CVE-2024-0985](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0985)
+
+    * [CVE-2024-2961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2961)
+
+    * [CVE-2024-33599](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33599)
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2021-3520](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3520)
+
+    * [CVE-2024-6387](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6387)
+
+    * [CVE-2024-27018](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27018)
+
+    * [CVE-2024-32004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-32004)
+
+    * [CVE-2024-32465](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-32465)
+
+
+
+
+## July 08, 2024
+
+The following vulnerabilities were discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes:
+
+  * [CVE-2023-52654](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52654)
+
+  * [CVE-2023-52656](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52656)
+
+
+
+
+For more information, see the [GCP-2024-041](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-041) security bulletin.
+
+## July 03, 2024
+
+A remote code execution vulnerability, [CVE-2024-6387](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6387), was recently discovered in OpenSSH. The vulnerability exploits a race condition that can be used to obtain access to a remote shell, enabling attackers to gain root access. At the time of publication, exploitation is believed to be difficult and take several hours per machine being attacked. We are not aware of any exploitation attempts. This vulnerability has a Critical severity. 
+
+For mitigation steps and more details, see the [GCP-2024-040](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-040) security bulletin.
+
+## July 01, 2024
+
+A vulnerability (CVE-2024-26923) was discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes.
+
+For more information, see the [GCP-2024-039 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-039).
+
+## June 27, 2024
+
+Google Distributed Cloud for VMware 1.29.200-gke.242 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.29.200-gke.242 runs on Kubernetes v1.29.5-gke.800.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+The following issues are fixed in 1.29.200-gke.242:
+
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#cluster-creation-failure-due-to-control-plane-vip-in-different-subnet) that caused cluster creation to fail because the control plane VIP was in a different subnet from other cluster nodes.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#binary-authorization-webook-blocks-cni-plugin-to-start-causing-one-of-nodepool-failed-to-come-up) where the Binary Authorization webook blocked the CNI plugin, which caused user cluster creation to stall.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#connect-agent-loses-connection-to-google-cloud-after-non-ha-to-ha-admin-cluster-migration) that caused the Connect Agent to lose connection to Google Cloud after a non-HA to HA admin cluster migration.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#admin-cluster-upgrade-fails-for-clusters-created-on-versions-1.10-or-earlier) that caused an admin cluster upgrade to fail for clusters created on versions 1.10 or earlier.
+  * Added back the CNI binaries to the OS image so that multiple network interfaces with standard CNI will work (see this [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#using-multiple-network-interfaces-with-standard-cni-does-not-work)).
+
+
+
+The following vulnerabilities are fixed in 1.29.200-gke.242:
+
+High-severity container vulnerabilities:
+
+  * [CVE-2024-2961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2961)
+  * [CVE-2024-0985](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0985)
+
+
+
+Container-optimized OS vulnerabilities:
+
+  * [CVE-2024-32465](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-32465)
+  * [CVE-2024-24557](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24557)
+  * [CVE-2022-24765](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24765)
+  * [CVE-2022-43995](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43995)
+  * [CVE-2024-26907](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26907)
+  * [CVE-2024-26882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26882)
+  * [CVE-2024-26885](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26885)
+  * [CVE-2023-25652](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25652)
+  * [CVE-2022-4904](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4904)
+
+
+
+Ubuntu vulnerabilities:
+
+  * [CVE-2023-52434](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52434)
+  * [CVE-2023-52435](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52435)
+  * [CVE-2023-52447](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52447)
+  * [CVE-2023-52486](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52486)
+  * [CVE-2023-52489](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52489)
+  * [CVE-2023-52491](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52491)
+  * [CVE-2023-52492](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52492)
+  * [CVE-2023-52493](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52493)
+  * [CVE-2023-52494](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52494)
+  * [CVE-2023-52497](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52497)
+  * [CVE-2023-52498](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52498)
+  * [CVE-2023-52583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52583)
+  * [CVE-2023-52587](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52587)
+  * [CVE-2023-52588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52588)
+  * [CVE-2023-52594](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52594)
+  * [CVE-2023-52595](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52595)
+  * [CVE-2023-52597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52597)
+  * [CVE-2023-52598](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52598)
+  * [CVE-2023-52599](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52599)
+  * [CVE-2023-52601](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52601)
+  * [CVE-2023-52602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52602)
+  * [CVE-2023-52604](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52604)
+  * [CVE-2023-52606](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52606)
+  * [CVE-2023-52607](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52607)
+  * [CVE-2023-52608](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52608)
+  * [CVE-2023-52614](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52614)
+  * [CVE-2023-52615](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52615)
+  * [CVE-2023-52616](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52616)
+  * [CVE-2023-52617](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52617)
+  * [CVE-2023-52618](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52618)
+  * [CVE-2023-52619](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52619)
+  * [CVE-2023-52620](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52620)
+  * [CVE-2023-52622](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52622)
+  * [CVE-2023-52623](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52623)
+  * [CVE-2023-52627](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52627)
+  * [CVE-2023-52631](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52631)
+  * [CVE-2023-52633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52633)
+  * [CVE-2023-52635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52635)
+  * [CVE-2023-52637](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52637)
+  * [CVE-2023-52638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52638)
+  * [CVE-2023-52640](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52640)
+  * [CVE-2023-52641](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52641)
+  * [CVE-2023-52642](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52642)
+  * [CVE-2023-52643](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52643)
+  * [CVE-2023-52644](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52644)
+  * [CVE-2023-52645](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52645)
+  * [CVE-2023-52650](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52650)
+  * [CVE-2023-52652](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52652)
+  * [CVE-2023-52656](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52656)
+  * [CVE-2023-52662](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52662)
+  * [CVE-2023-6270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6270)
+  * [CVE-2023-7042](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7042)
+  * [CVE-2024-0841](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0841)
+  * [CVE-2024-1151](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1151)
+  * [CVE-2024-2201](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2201)
+  * [CVE-2024-22099](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22099)
+  * [CVE-2024-23849](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23849)
+  * [CVE-2024-26583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26583)
+  * [CVE-2024-26584](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26584)
+  * [CVE-2024-26585](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26585)
+  * [CVE-2024-26592](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26592)
+  * [CVE-2024-26593](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26593)
+  * [CVE-2024-26594](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26594)
+  * [CVE-2024-26600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26600)
+  * [CVE-2024-26601](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26601)
+  * [CVE-2024-26602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26602)
+  * [CVE-2024-26603](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26603)
+  * [CVE-2024-26606](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26606)
+  * [CVE-2024-26608](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26608)
+  * [CVE-2024-26610](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26610)
+  * [CVE-2024-26614](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26614)
+  * [CVE-2024-26615](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26615)
+  * [CVE-2024-26625](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26625)
+  * [CVE-2024-26627](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26627)
+  * [CVE-2024-26635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26635)
+  * [CVE-2024-26636](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26636)
+  * [CVE-2024-26640](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26640)
+  * [CVE-2024-26641](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26641)
+  * [CVE-2024-26644](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26644)
+  * [CVE-2024-26645](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26645)
+  * [CVE-2024-26651](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26651)
+  * [CVE-2024-26659](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26659)
+  * [CVE-2024-26660](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26660)
+  * [CVE-2024-26663](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26663)
+  * [CVE-2024-26664](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26664)
+  * [CVE-2024-26665](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26665)
+  * [CVE-2024-26668](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26668)
+  * [CVE-2024-26671](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26671)
+  * [CVE-2024-26673](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26673)
+  * [CVE-2024-26675](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26675)
+  * [CVE-2024-26676](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26676)
+  * [CVE-2024-26679](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26679)
+  * [CVE-2024-26684](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26684)
+  * [CVE-2024-26685](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26685)
+  * [CVE-2024-26688](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26688)
+  * [CVE-2024-26689](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26689)
+  * [CVE-2024-26695](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26695)
+  * [CVE-2024-26696](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26696)
+  * [CVE-2024-26697](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26697)
+  * [CVE-2024-26698](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26698)
+  * [CVE-2024-26702](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26702)
+  * [CVE-2024-26704](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26704)
+  * [CVE-2024-26707](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26707)
+  * [CVE-2024-26712](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26712)
+  * [CVE-2024-26715](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26715)
+  * [CVE-2024-26717](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26717)
+  * [CVE-2024-26720](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26720)
+  * [CVE-2024-26722](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26722)
+  * [CVE-2024-26733](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26733)
+  * [CVE-2024-26735](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26735)
+  * [CVE-2024-26736](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26736)
+  * [CVE-2024-26737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26737)
+  * [CVE-2024-26743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26743)
+  * [CVE-2024-26744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26744)
+  * [CVE-2024-26747](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26747)
+  * [CVE-2024-26748](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26748)
+  * [CVE-2024-26749](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26749)
+  * [CVE-2024-26750](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26750)
+  * [CVE-2024-26751](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26751)
+  * [CVE-2024-26752](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26752)
+  * [CVE-2024-26754](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26754)
+  * [CVE-2024-26763](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26763)
+  * [CVE-2024-26764](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26764)
+  * [CVE-2024-26766](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26766)
+  * [CVE-2024-26769](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26769)
+  * [CVE-2024-26771](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26771)
+  * [CVE-2024-26772](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26772)
+  * [CVE-2024-26773](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26773)
+  * [CVE-2024-26774](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26774)
+  * [CVE-2024-26776](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26776)
+  * [CVE-2024-26777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26777)
+  * [CVE-2024-26778](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26778)
+  * [CVE-2024-26779](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26779)
+  * [CVE-2024-26782](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26782)
+  * [CVE-2024-26787](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26787)
+  * [CVE-2024-26788](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26788)
+  * [CVE-2024-26790](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26790)
+  * [CVE-2024-26791](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26791)
+  * [CVE-2024-26792](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26792)
+  * [CVE-2024-26793](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26793)
+  * [CVE-2024-26795](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26795)
+  * [CVE-2024-26798](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26798)
+  * [CVE-2024-26801](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26801)
+  * [CVE-2024-26802](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26802)
+  * [CVE-2024-26803](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26803)
+  * [CVE-2024-26804](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26804)
+  * [CVE-2024-26805](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26805)
+  * [CVE-2024-26808](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26808)
+  * [CVE-2024-26809](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26809)
+  * [CVE-2024-26816](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26816)
+  * [CVE-2024-26820](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26820)
+  * [CVE-2024-26825](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26825)
+  * [CVE-2024-26826](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26826)
+  * [CVE-2024-26829](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26829)
+  * [CVE-2024-26833](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26833)
+  * [CVE-2024-26835](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26835)
+  * [CVE-2024-26838](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26838)
+  * [CVE-2024-26839](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26839)
+  * [CVE-2024-26840](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26840)
+  * [CVE-2024-26843](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26843)
+  * [CVE-2024-26845](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26845)
+  * [CVE-2024-26846](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26846)
+  * [CVE-2024-26851](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26851)
+  * [CVE-2024-26852](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26852)
+  * [CVE-2024-26855](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26855)
+  * [CVE-2024-26856](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26856)
+  * [CVE-2024-26857](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26857)
+  * [CVE-2024-26859](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26859)
+  * [CVE-2024-26861](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26861)
+  * [CVE-2024-26862](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26862)
+  * [CVE-2024-26863](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26863)
+  * [CVE-2024-26870](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26870)
+  * [CVE-2024-26872](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26872)
+  * [CVE-2024-26874](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26874)
+  * [CVE-2024-26875](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26875)
+  * [CVE-2024-26877](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26877)
+  * [CVE-2024-26878](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26878)
+  * [CVE-2024-26879](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26879)
+  * [CVE-2024-26880](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26880)
+  * [CVE-2024-26881](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26881)
+  * [CVE-2024-26882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26882)
+  * [CVE-2024-26883](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26883)
+  * [CVE-2024-26884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26884)
+  * [CVE-2024-26885](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26885)
+  * [CVE-2024-26889](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26889)
+  * [CVE-2024-26891](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26891)
+  * [CVE-2024-26894](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26894)
+  * [CVE-2024-26895](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26895)
+  * [CVE-2024-26897](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26897)
+  * [CVE-2024-26898](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26898)
+  * [CVE-2024-26901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26901)
+  * [CVE-2024-26903](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26903)
+  * [CVE-2024-26906](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26906)
+  * [CVE-2024-26907](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26907)
+  * [CVE-2024-26910](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26910)
+  * [CVE-2024-26915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26915)
+  * [CVE-2024-26916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26916)
+  * [CVE-2024-26920](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26920)
+  * [CVE-2024-27024](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27024)
+  * [CVE-2024-27028](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27028)
+  * [CVE-2024-27030](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27030)
+  * [CVE-2024-27034](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27034)
+  * [CVE-2024-27037](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27037)
+  * [CVE-2024-27038](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27038)
+  * [CVE-2024-27039](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27039)
+  * [CVE-2024-27043](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27043)
+  * [CVE-2024-27044](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27044)
+  * [CVE-2024-27045](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27045)
+  * [CVE-2024-27046](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27046)
+  * [CVE-2024-27047](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27047)
+  * [CVE-2024-27051](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27051)
+  * [CVE-2024-27052](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27052)
+  * [CVE-2024-27053](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27053)
+  * [CVE-2024-27054](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27054)
+  * [CVE-2024-27065](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27065)
+  * [CVE-2024-27073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27073)
+  * [CVE-2024-27074](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27074)
+  * [CVE-2024-27075](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27075)
+  * [CVE-2024-27076](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27076)
+  * [CVE-2024-27077](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27077)
+  * [CVE-2024-27078](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27078)
+  * [CVE-2024-27388](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27388)
+  * [CVE-2024-27390](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27390)
+  * [CVE-2024-27403](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27403)
+  * [CVE-2024-27405](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27405)
+  * [CVE-2024-27410](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27410)
+  * [CVE-2024-27412](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27412)
+  * [CVE-2024-27413](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27413)
+  * [CVE-2024-27414](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27414)
+  * [CVE-2024-27415](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27415)
+  * [CVE-2024-27416](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27416)
+  * [CVE-2024-27417](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27417)
+  * [CVE-2024-27419](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27419)
+  * [CVE-2024-27431](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27431)
+  * [CVE-2024-27432](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27432)
+  * [CVE-2024-27436](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27436)
+  * [CVE-2024-35811](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35811)
+  * [CVE-2024-35828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35828)
+  * [CVE-2024-35829](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35829)
+  * [CVE-2024-35830](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35830)
+  * [CVE-2024-35844](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35844)
+  * [CVE-2024-35845](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35845)
+
+
+
+## June 26, 2024
+
+A vulnerability (CVE-2024-26924) was discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes.
+
+For more information, see the [GCP-2024-038 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-038).
+
+## June 18, 2024
+
+A vulnerability, CVE-2024-26584, was discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS nodes.
+
+For more information, see the [GCP-2024-036 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-036).
+
+## June 12, 2024
+
+A vulnerability, CVE-2024-26584, was discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes.
+
+For more information, see the [GCP-2024-035 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-035).
+
+A vulnerability, CVE-2022-23222, was discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS nodes.
+
+For more information, see the [GCP-2024-033 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-033).
+
+Google Distributed Cloud on VMware 1.28.600-gke.154 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.28.600-gke.154 runs on Kubernetes v1.28.9-gke.1800.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+The following issues are fixed in 1.28.600-gke.154:
+
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#admin-cluster-upgrade-fails-for-clusters-created-on-versions-1.10-or-earlier) that caused admin cluster upgrades to fail for clusters created on versions 1.10 or earlier.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#docker-bridge-ip-uses-172.17.0.116-for-cos-cluster-control-plane-nodes) where the Docker bridge IP uses 172.17.0.1/16 for COS cluster control plane nodes.
+
+
+
+The following vulnerabilities are fixed in 1.28.600-gke.154:
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2024-24557](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24557)
+
+    * [CVE-2022-24765](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24765)
+
+    * [CVE-2022-43995](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43995)
+
+    * [CVE-2024-26907](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26907)
+
+    * [CVE-2024-26882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26882)
+
+    * [CVE-2024-26885](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26885)
+
+    * [CVE-2023-25652](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25652)
+
+    * [CVE-2022-4904](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4904)
+
+    * [CVE-2023-32067](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32067)
+
+    * [CVE-2023-52425](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52425)
+
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-52435](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52435)
+
+    * [CVE-2023-52486](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52486)
+
+    * [CVE-2023-52489](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52489)
+
+    * [CVE-2023-52491](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52491)
+
+    * [CVE-2023-52492](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52492)
+
+    * [CVE-2023-52493](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52493)
+
+    * [CVE-2023-52494](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52494)
+
+    * [CVE-2023-52498](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52498)
+
+    * [CVE-2023-52583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52583)
+
+    * [CVE-2023-52587](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52587)
+
+    * [CVE-2023-52588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52588)
+
+    * [CVE-2023-52594](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52594)
+
+    * [CVE-2023-52595](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52595)
+
+    * [CVE-2023-52597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52597)
+
+    * [CVE-2023-52598](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52598)
+
+    * [CVE-2023-52599](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52599)
+
+    * [CVE-2023-52601](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52601)
+
+    * [CVE-2023-52602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52602)
+
+    * [CVE-2023-52604](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52604)
+
+    * [CVE-2023-52606](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52606)
+
+    * [CVE-2023-52607](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52607)
+
+    * [CVE-2023-52608](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52608)
+
+    * [CVE-2023-52614](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52614)
+
+    * [CVE-2023-52615](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52615)
+
+    * [CVE-2023-52616](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52616)
+
+    * [CVE-2023-52617](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52617)
+
+    * [CVE-2023-52618](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52618)
+
+    * [CVE-2023-52619](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52619)
+
+    * [CVE-2023-52622](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52622)
+
+    * [CVE-2023-52623](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52623)
+
+    * [CVE-2023-52627](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52627)
+
+    * [CVE-2023-52631](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52631)
+
+    * [CVE-2023-52633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52633)
+
+    * [CVE-2023-52635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52635)
+
+    * [CVE-2023-52637](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52637)
+
+    * [CVE-2023-52638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52638)
+
+    * [CVE-2023-52642](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52642)
+
+    * [CVE-2023-52643](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52643)
+
+    * [CVE-2024-1151](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1151)
+
+    * [CVE-2024-2201](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2201)
+
+    * [CVE-2024-23849](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23849)
+
+    * [CVE-2024-26592](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26592)
+
+    * [CVE-2024-26593](https://cve.mitre.org/cgi-bin/cvename.cgi?name=%20CVE-2024-26593)
+
+    * [CVE-2024-26594](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26594)
+
+    * [CVE-2024-26600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26600)
+
+    * [CVE-2024-26602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26602)
+
+    * [CVE-2024-26606](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26606)
+
+    * [CVE-2024-26608](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26608)
+
+    * [CVE-2024-26610](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26610)
+
+    * [CVE-2024-26614](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26614)
+
+    * [CVE-2024-26615](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26615)
+
+    * [CVE-2024-26625](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26625)
+
+    * [CVE-2024-26627](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26627)
+
+    * [CVE-2024-26635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26635)
+
+    * [CVE-2024-26636](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26636)
+
+    * [CVE-2024-26640](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26640)
+
+    * [CVE-2024-26641](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26641)
+
+    * [CVE-2024-26644](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26644)
+
+    * [CVE-2024-26645](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26645)
+
+    * [CVE-2024-26660](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26660)
+
+    * [CVE-2024-26663](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26663)
+
+    * [CVE-2024-26664](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26664)
+
+    * [CVE-2024-26665](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26665)
+
+    * [CVE-2024-26668](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26668)
+
+    * [CVE-2024-26671](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26671)
+
+    * [CVE-2024-26673](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26673)
+
+    * [CVE-2024-26675](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26675)
+
+    * [CVE-2024-26676](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26676)
+
+    * [CVE-2024-26679](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26679)
+
+    * [CVE-2024-26684](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26684)
+
+    * [CVE-2024-26685](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26685)
+
+    * [CVE-2024-26689](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26689)
+
+    * [CVE-2024-26695](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26695)
+
+    * [CVE-2024-26696](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26696)
+
+    * [CVE-2024-26697](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26697)
+
+    * [CVE-2024-26698](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26698)
+
+    * [CVE-2024-26702](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26702)
+
+    * [CVE-2024-26704](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26704)
+
+    * [CVE-2024-26707](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26707)
+
+    * [CVE-2024-26712](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26712)
+
+    * [CVE-2024-26715](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26715)
+
+    * [CVE-2024-26717](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26717)
+
+    * [CVE-2024-26720](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26720)
+
+    * [CVE-2024-26722](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26722)
+
+    * [CVE-2024-26808](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26808)
+
+    * [CVE-2024-26825](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26825)
+
+    * [CVE-2024-26826](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26826)
+
+    * [CVE-2024-26829](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26829)
+
+    * [CVE-2024-26910](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26910)
+
+    * [CVE-2024-26916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26916)
+
+    * [CVE-2024-26920](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26920)
+
+    * [CVE-2023-24023](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24023)
+
+    * [CVE-2023-52600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52600)
+
+    * [CVE-2023-52603](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52603)
+
+    * [CVE-2024-26581](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26581)
+
+
+
+
+## June 10, 2024
+
+A vulnerability (CVE-2022-23222) was discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS nodes:
+
+For more information, see the [GCP-2024-033 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-033).
+
+## June 03, 2024
+
+Google Distributed Cloud for VMware 1.16.9-gke.40 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.16.9-gke.40 runs on Kubernetes v1.27.13-gke.500. 
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+The following vulnerabilities are fixed in 1.16.9-gke.40:
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2024-26907](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26907)
+
+    * [CVE-2024-26882](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26882)
+
+    * [CVE-2023-50387](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-50387)
+
+    * [CVE-2017-18342](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18342)
+
+    * [CVE-2024-26883](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26883)
+
+    * [CVE-2023-29007](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29007)
+
+    * [CVE-2024-0743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0743)
+
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-52435](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52435)
+
+    * [CVE-2023-52486](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52486)
+
+    * [CVE-2023-52489](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52489)
+
+    * [CVE-2023-52491](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52491)
+
+    * [CVE-2023-52492](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52492)
+
+    * [CVE-2023-52493](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52493)
+
+    * [CVE-2023-52494](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52494)
+
+    * [CVE-2023-52498](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52498)
+
+    * [CVE-2023-52583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52583)
+
+    * [CVE-2023-52587](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52587)
+
+    * [CVE-2023-52588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52588)
+
+    * [CVE-2023-52594](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52594)
+
+    * [CVE-2023-52595](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52595)
+
+    * [CVE-2023-52597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52597)
+
+    * [CVE-2023-52598](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52598)
+
+    * [CVE-2023-52599](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52599)
+
+    * [CVE-2023-52601](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52601)
+
+    * [CVE-2023-52602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52602)
+
+    * [CVE-2023-52604](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52604)
+
+    * [CVE-2023-52606](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52606)
+
+    * [CVE-2023-52607](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52607)
+
+    * [CVE-2023-52608](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52608)
+
+    * [CVE-2023-52614](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52614)
+
+    * [CVE-2023-52615](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52615)
+
+    * [CVE-2023-52616](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52616)
+
+    * [CVE-2023-52617](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52617)
+
+    * [CVE-2023-52618](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52618)
+
+    * [CVE-2023-52619](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52619)
+
+    * [CVE-2023-52622](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52622)
+
+    * [CVE-2023-52623](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52623)
+
+    * [CVE-2023-52627](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52627)
+
+    * [CVE-2023-52631](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52631)
+
+    * [CVE-2023-52633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52633)
+
+    * [CVE-2023-52635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52635)
+
+    * [CVE-2023-52637](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52637)
+
+    * [CVE-2023-52638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52638)
+
+    * [CVE-2023-52642](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52642)
+
+    * [CVE-2023-52643](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52643)
+
+    * [CVE-2024-1151](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1151)
+
+    * [CVE-2024-2201](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2201)
+
+    * [CVE-2024-23849](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23849)
+
+    * [CVE-2024-26592](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26592)
+
+    * [CVE-2024-26593](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26593)
+
+    * [CVE-2024-26594](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26594)
+
+    * [CVE-2024-26600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26600)
+
+    * [CVE-2024-26602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26602)
+
+    * [CVE-2024-26606](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26606)
+
+    * [CVE-2024-26608](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26608)
+
+    * [CVE-2024-26610](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26610)
+
+    * [CVE-2024-26614](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26614)
+
+    * [CVE-2024-26615](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26615)
+
+    * [CVE-2024-26625](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26625)
+
+    * [CVE-2024-26627](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26627)
+
+    * [CVE-2024-26635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26635)
+
+    * [CVE-2024-26636](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26636)
+
+    * [CVE-2024-26640](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26640)
+
+    * [CVE-2024-26641](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26641)
+
+    * [CVE-2024-26644](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26644)
+
+    * [CVE-2024-26645](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26645)
+
+    * [CVE-2024-26660](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26660)
+
+    * [CVE-2024-26663](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26663)
+
+    * [CVE-2024-26664](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26664)
+
+    * [CVE-2024-26665](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26665)
+
+    * [CVE-2024-26668](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26668)
+
+    * [CVE-2024-26671](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26671)
+
+    * [CVE-2024-26673](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26673)
+
+    * [CVE-2024-26675](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26675)
+
+    * [CVE-2024-26676](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26676)
+
+    * [CVE-2024-26679](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26679)
+
+    * [CVE-2024-26684](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26684)
+
+    * [CVE-2024-26685](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26685)
+
+    * [CVE-2024-26689](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26689)
+
+    * [CVE-2024-26695](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26695)
+
+    * [CVE-2024-26696](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26696)
+
+    * [CVE-2024-26697](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26697)
+
+    * [CVE-2024-26698](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26698)
+
+    * [CVE-2024-26702](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26702)
+
+    * [CVE-2024-26704](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26704)
+
+    * [CVE-2024-26707](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26707)
+
+    * [CVE-2024-26712](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26712)
+
+    * [CVE-2024-26715](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26715)
+
+    * [CVE-2024-26717](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26717)
+
+    * [CVE-2024-26720](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26720)
+
+    * [CVE-2024-26722](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26722)
+
+    * [CVE-2024-26808](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26808)
+
+    * [CVE-2024-26825](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26825)
+
+    * [CVE-2024-26826](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26826)
+
+    * [CVE-2024-26829](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26829)
+
+    * [CVE-2024-26910](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26910)
+
+    * [CVE-2024-26916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26916)
+
+    * [CVE-2024-26920](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26920)
+
+    * [CVE-2023-24023](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24023)
+
+    * [CVE-2023-52600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52600)
+
+    * [CVE-2023-52603](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52603)
+
+    * [CVE-2024-26581](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2658)
+
+
+
+
+## May 28, 2024
+
+A new vulnerability (CVE-2024-4323) has been discovered in Fluent Bit that could result in remote code execution. Fluent Bit versions 2.0.7 through 3.0.3 are affected.
+
+Google Distributed Cloud doesn't use a vulnerable version of Fluent Bit and is unaffected.
+
+## May 16, 2024
+
+**Release 1.29.100-gke.248**
+
+Google Distributed Cloud on VMware 1.29.100-gke.248 is now available for [download](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/downloads). To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Google Distributed Cloud 1.29.100-gke.248 runs on Kubernetes v1.29.4-gke.200.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release.
+
+Updated Dataplane V2 to use Cilium 1.13.
+
+The following issues are fixed in 1.29.100-gke.248:
+
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#docker-bridge-ip-uses-172.17.0.116-for-cos-cluster-control-plane-nodes) that after a user cluster upgrade, the user master nodes with COS OS image used `172.17.0.1/16` as the Docker bridge IP addresses.
+  * Fixed the static IP count validator for HA admin clusters.
+  * Fixed `gkeadm` preflight not validating VM folder.
+
+
+
+The following vulnerabilities are fixed in 1.29.100-gke.248:
+
+Ubuntu vulnerabilities:
+
+  * [CVE-2023-1194](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1194)
+
+  * [CVE-2023-32254](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32254)
+
+  * [CVE-2023-32258](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32258)
+
+  * [CVE-2023-38427](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38427)
+
+  * [CVE-2023-38430](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38430)
+
+  * [CVE-2023-38431](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38431)
+
+  * [CVE-2023-3867](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3867)
+
+  * [CVE-2023-46838](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-46838)
+
+  * [CVE-2023-52340](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52340)
+
+  * [CVE-2023-52429](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52429)
+
+  * [CVE-2023-52436](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52436)
+
+  * [CVE-2023-52438](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52438)
+
+  * [CVE-2023-52439](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52439)
+
+  * [CVE-2023-52441](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52441)
+
+  * [CVE-2023-52442](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52442)
+
+  * [CVE-2023-52443](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52443)
+
+  * [CVE-2023-52444](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52444)
+
+  * [CVE-2023-52445](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52445)
+
+  * [CVE-2023-52448](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52448)
+
+  * [CVE-2023-52449](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52449)
+
+  * [CVE-2023-52451](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52451)
+
+  * [CVE-2023-52454](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52454)
+
+  * [CVE-2023-52456](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52456)
+
+  * [CVE-2023-52457](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52457)
+
+  * [CVE-2023-52458](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52458)
+
+  * [CVE-2023-52462](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52462)
+
+  * [CVE-2023-52463](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52463)
+
+  * [CVE-2023-52464](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52464)
+
+  * [CVE-2023-52467](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52467)
+
+  * [CVE-2023-52469](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52469)
+
+  * [CVE-2023-52470](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52470)
+
+  * [CVE-2023-52480](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52480)
+
+  * [CVE-2023-52609](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52609)
+
+  * [CVE-2023-52610](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52610)
+
+  * [CVE-2023-52612](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52612)
+
+  * [CVE-2024-22705](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22705)
+
+  * [CVE-2024-23850](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23850)
+
+  * [CVE-2024-23851](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23851)
+
+  * [CVE-2024-24860](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24860)
+
+  * [CVE-2024-26586](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26586)
+
+  * [CVE-2024-26589](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26589)
+
+  * [CVE-2024-26591](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26591)
+
+  * [CVE-2024-26597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26597)
+
+  * [CVE-2024-26598](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26598)
+
+  * [CVE-2024-26631](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26631)
+
+  * [CVE-2024-26633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26633)
+
+
+
+
+## May 15, 2024
+
+A vulnerability (CVE-2023-52620) was discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes. 
+
+For more information, see the [GCP-2024-030 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-030).
+
+## May 14, 2024
+
+A vulnerability (CVE-2024-26642) was discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes. 
+
+For more information, see the [GCP-2024-029 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-029).
+
+## May 13, 2024
+
+A vulnerability (CVE-2024-26581) was discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes. 
+
+For more information, see the [GCP-2024-028 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-028).
+
+## May 09, 2024
+
+The following issues are fixed in 1.28.500-gke.121:
+
+  * Added the CNI binaries back to the OS image, so that clusters using multiple network interfaces with these CNI binaries can continue working.
+
+  * Fixed the static IP count validator for HA admin clusters.
+
+
+
+
+The following vulnerabilities are fixed in1.28.500-gke.121:
+
+  * Ubuntu vulnerabilities
+
+    * [CVE-2023-1194](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1194)
+    * [CVE-2023-32254](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32254)
+    * [CVE-2023-32258](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32258)
+    * [CVE-2023-38427](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38427)
+    * [CVE-2023-38430](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38430)
+    * [CVE-2023-38431](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38431)
+    * [CVE-2023-3867](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3867)
+    * [CVE-2023-46838](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-46838)
+    * [CVE-2023-52340](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52340)
+    * [CVE-2023-52429](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52429)
+    * [CVE-2023-52436](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52436)
+    * [CVE-2023-52438](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52438)
+    * [CVE-2023-52439](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52439)
+    * [CVE-2023-52441](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52441)
+    * [CVE-2023-52442](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52442)
+    * [CVE-2023-52443](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52443)
+    * [CVE-2023-52444](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52444)
+    * [CVE-2023-52445](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52445)
+    * [CVE-2023-52448](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52448)
+    * [CVE-2023-52449](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52449)
+    * [CVE-2023-52451](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52451)
+    * [CVE-2023-52454](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52454)
+    * [CVE-2023-52456](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52456)
+    * [CVE-2023-52457](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52457)
+    * [CVE-2023-52458](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52458)
+    * [CVE-2023-52462](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52462)
+    * [CVE-2023-52463](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52463)
+    * [CVE-2023-52464](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52464)
+    * [CVE-2023-52467](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52467)
+    * [CVE-2023-52469](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52469)
+    * [CVE-2023-52470](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52470)
+    * [CVE-2023-52480](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52480)
+    * [CVE-2023-52609](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52609)
+    * [CVE-2023-52610](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52610)
+    * [CVE-2023-52612](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52612)
+    * [CVE-2024-22705](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22705)
+    * [CVE-2024-23850](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23850)
+    * [CVE-2024-23851](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23851)
+    * [CVE-2024-24860](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24860)
+    * [CVE-2024-26586](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26586)
+    * [CVE-2024-26589](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26589)
+    * [CVE-2024-26591](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26591)
+    * [CVE-2024-26597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26597)
+    * [CVE-2024-26598](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26598)
+    * [CVE-2024-26631](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26631)
+    * [CVE-2024-26633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=%5BCVE-2024-26633)
+
+
+
+GKE on VMware 1.28.500-gke.121 is now available. To upgrade, see [Upgrading GKE on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). GKE on VMware 1.28.500-gke.121 runs on Kubernetes v1.28.8-gke.2000. 
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+## May 08, 2024
+
+A vulnerability (CVE-2024-26643) was discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes. 
+
+For more information, see the [GCP-2024-026 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-026).
+
+A vulnerability (CVE-2024-26808) was discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes. 
+
+For more information, see the [GCP-2024-027 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-027).
+
+## April 29, 2024
+
+GKE on VMware 1.29.0-gke.1456 is now available. To upgrade, see [Upgrade a cluster or a node pool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). GKE on VMware 1.29.0-gke.1456 runs on Kubernetes v1.29.3-gke.600.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+  * **Preview** : Support [migrating a vSphere datastore to SPBM](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/migrate-datastore-spbm).
+  * **Preview** : Support [migrating the configuration for integrated F5 BIG-IP to manual load balancing mode](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/migrate-f5-manual).
+  * **Preview** : Support [migrating a user cluster to Controlplane V2](https://cloud.google.com//anthos/clusters/docs/on-prem/latest/how-to/migrate-kubeception-controlplane-v2).
+  * **Preview** : Support [migrating a non-HA admin cluster to HA](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/migrate-admin-cluster-ha).
+  * **GA** : Support [migrating disks from one vSphere datastore to another vSphere datastore with SPBM](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/storage-migration-spbm).
+  * **GA** : Support updating multiple service account keys together with `gkectl update credentials`.
+  * **GA** : A user cluster control plane can be [two minor versions later](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrade-overview#version_skew) than its node pools and admin cluster.
+  * **GA** : Support for [cgroupv2 Linux images](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/user-cluster-configuration-file#nodepool-osimagetype-field) for cluster nodes.
+  * **GA** : Support [GKE Identity Service v2 capability](https://cloud.google.com/kubernetes-engine/enterprise/identity/setup/user-access#alternativeuserloginaccess) for an improved security flow when you authenticate with third-party identity solutions.
+
+**Warning** : GKE Identity Service v2 requires ports 11001 and 11002 on the user cluster control plane nodes. Ensure these ports are open and available before you upgrade a cluster to version 1.29.0-gke.1456 and higher.
+
+
+
+
+Server-side preflight checks are enabled by default for admin and user cluster create, update, and upgrade. Server-side preflight checks require the following additional firewall rules from your admin cluster control-plane nodes:
+
+  * Admin cluster F5 BIG_IP API (only if using the F5 BIG-IP load balancer)
+  * User cluster F5 BIG_IP API (only if using the F5 BIG-IP load balancer)
+  * Admin cluster NTP servers
+  * User cluster NTP servers
+  * Admin cluster DNS servers
+  * User cluster DNS servers
+  * User cluster on-premises local Docker registry (if your user cluster is configured to use a local private Docker registry instead of `gcr.io`)
+  * Admin cluster nodes
+  * User cluster nodes
+  * Admin cluster Load Balancer VIPs
+  * User cluster Load Balancer VIPs
+  * User cluster worker nodes
+
+
+
+For the complete list of firewall rules required for server-side preflight checks, see [Firewall rules for admin clusters](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/firewall-rules#firewall_rules_for_admin_clusters) and search for "Preflight checks".
+
+Version changes in GKE on VMware 1.29.0-gke.1456:
+
+  * Updated Dataplane V2 to use Cilium 1.13.
+  * Bumped the AIS version to hybrid_identity_charon_20240331_0730_RC00.
+
+
+
+Other changes in GKE on VMware 1.29.0-gke.1456:
+
+  * The `gkectl create cluster` command prompts for confirmation if the cluster configuration file enables legacy features.
+  * The `gkectl prepare` command always prepares cgroup v2 images.
+  * Cluster configuration files are prepopulated with `ubuntu_cgv2` (cgroupv2) as the `osImageType`.
+  * The `gkeadm` tool isn't supported on macOS and Windows.
+  * A lightweight version of [`gkectl diagnose snapshot`](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/snapshots#overview_diagnose_snapshot) is available for both admin and user clusters. 
+  * User cluster upgrades: the `--dry-run` flag for `gkectl upgrade cluster` runs preflight checks but doesn't doesn't start the upgrade process.
+  * The `--async` flag for `gkectl upgrade cluster` to run an asynchronous upgrade is now supported for admin clusters
+
+
+
+The following issues are fixed in 1.29.0-gke.1456:
+
+  * Fixed the issue where the admin cluster backup did a retry on non-idempotent operations.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#controlplanenodeport-field-defaults-to-30968-when-manuallb-spec-is-empty) where the `controlPlaneNodePort` field defaults to 30968 when the `manualLB` spec is empty`
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#preflight-check-fails-when-the-hostname-isnt-in-the-ip-block-file.) that caused the preflight check to fail when the hostname wasn't in the IP block file.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#kubelet-is-flooded-with-logs-stating-that-etckubernetesmanifests-does-not-exist-on-the-worker-nodes) that caused Kubelet to be flooded with logs stating that "/etc/kubernetes/manifests" does not exist on the worker nodes.
+  * Fixed the manual load balancer issue where the IngressIP is overwritten with the `Spec.LoadBalancerIP` even if it is empty.
+  * Fixed the issue that preflight jobs might be stuck in the pending state.
+  * Fixed an issue where egress NAT erroneously broke long-lived connections.
+  * Fixed Seesaw crashing on duplicated service IP.
+  * Fixed a warning in the storage preflight check.
+
+
+
+Fixed the following vulnerabilities GKE on VMware 1.29.0-gke.1456:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2022-1996](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1996)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2022-41721](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41721)
+
+    * [CVE-2024-24806](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24806)
+
+    * [CVE-2023-4408](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4408)
+
+    * [CVE-2021-33196](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33196)
+
+    * [CVE-2021-33195](https://cve.mitre.org/cgi-bin/cvename.cgi?name=%20CVE-2021-33195)
+
+    * [CVE-2021-33198](https://cve.mitre.org/cgi-bin/cvename.cgi?name=%20CVE-2021-33198)
+
+    * [CVE-2023-2253](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2253)
+
+    * [CVE-2022-28948](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28948)
+
+    * [CVE-2023-29499](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29499)
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-40547](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40547)
+
+    * [CVE-2023-6040](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6040)
+
+    * [CVE-2023-6531](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6531)
+
+    * [CVE-2023-52447](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52447)
+
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-1194 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1194)
+    * [CVE-2023-32254](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32254)
+
+    * [CVE-2023-32258](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32258)
+
+    * [CVE-2023-38427](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38427)
+
+    * [CVE-2023-38430](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38430)
+
+    * [CVE-2023-38431](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38431)
+
+    * [CVE-2023-3867](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3867)
+
+    * [CVE-2023-46838](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-46838)
+
+    * [CVE-2023-52340](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52340)
+
+    * [CVE-2023-52429](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52429)
+
+    * [CVE-2023-52436](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52436)
+
+    * [CVE-2023-52438](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52438)
+
+    * [CVE-2023-52439](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52439)
+
+    * [CVE-2023-52441](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52441)
+
+    * [CVE-2023-52442](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52442)
+
+    * [CVE-2023-52443](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52443)
+
+    * [CVE-2023-52444](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52444)
+
+    * [CVE-2023-52445](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52445)
+
+    * [CVE-2023-52448](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52448)
+
+    * [CVE-2023-52449](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52449)
+
+    * [CVE-2023-52451](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52451)
+
+    * [CVE-2023-52454](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52454)
+
+    * [CVE-2023-52456](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52456)
+
+    * [CVE-2023-52457](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52457)
+
+    * [CVE-2023-52458](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52458)
+
+    * [CVE-2023-52462](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52462)
+
+    * [CVE-2023-52463](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52463)
+
+    * [CVE-2023-52464](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52464)
+
+    * [CVE-2023-52467](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52467)
+
+    * [CVE-2023-52469](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52469)
+
+    * [CVE-2023-52470](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52470)
+
+    * [CVE-2023-52480](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52480)
+
+    * [CVE-2023-52609](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52609)
+
+    * [CVE-2023-52610](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52610)
+
+    * [CVE-2023-52612](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52612)
+
+    * [CVE-2024-22705](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22705)
+
+    * [CVE-2024-23850](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23850)
+
+    * [CVE-2024-23851](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23851)
+
+    * [CVE-2024-24860](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24860)
+
+    * [CVE-2024-26586](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26586)
+
+    * [CVE-2024-26589](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26589)
+
+    * [CVE-2024-26591](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26591)
+
+    * [CVE-2024-26597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26597)
+
+    * [CVE-2024-26598](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26598)
+
+    * [CVE-2024-26631](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26631)
+
+    * [CVE-2024-26633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26633)
+
+    * [CVE-2023-23000](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23000)
+
+    * [CVE-2023-32247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32247)
+
+    * [CVE-2024-1085](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1085)
+
+    * [CVE-2024-1086](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1086)
+
+    * [CVE-2024-24855](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24855)
+
+    * [CVE-2023-51780](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-51780)
+
+    * [CVE-2023-51781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-51781)
+
+    * [CVE-2023-6915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6915)
+
+    * [CVE-2024-0565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0565)
+
+    * [CVE-2024-0646](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0646)
+
+    * [CVE-2023-32250](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32250)
+
+    * [CVE-2023-32252](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32252)
+
+    * [CVE-2023-32257](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32257)
+
+    * [CVE-2023-34324](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-34324)
+
+    * [CVE-2023-35827](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-35827)
+
+    * [CVE-2023-46813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-46813)
+
+    * [CVE-2023-6039](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6039)
+
+    * [CVE-2023-6176](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6176)
+
+    * [CVE-2023-6622](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6622)
+
+    * [CVE-2024-0641](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0641)
+
+    * [CVE-2023-6040](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6040)
+
+    * [CVE-2023-6606](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6606)
+
+    * [CVE-2023-6817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6817)
+
+    * [CVE-2023-6931](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6931)
+
+    * [CVE-2023-6932](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6932)
+
+    * [CVE-2024-0193](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0193)
+
+    * [CVE-2023-23583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23583)
+
+
+
+
+## April 26, 2024
+
+A vulnerability (CVE-2024-26585) was discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes.
+
+For more information, see the [GCP-2024-024 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-024).
+
+## April 25, 2024
+
+GKE on VMware 1.16.8-gke.19 is now available. To upgrade, see [Upgrading GKE on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.16/how-to/upgrading). GKE on VMware 1.16.8-gke.19 runs on Kubernetes v1.27.12-gke.1000. 
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The following vulnerabilities are fixed in 1.16.8-gke.19:
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-52434](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52434)
+
+    * [CVE-2023-52439](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52439)
+
+    * [CVE-2024-26589](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26589)
+
+    * [CVE-2023-52447](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52447)
+
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-1194](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1194)
+
+    * [CVE-2023-32254](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32254)
+
+    * [CVE-2023-32258](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32258)
+
+    * [CVE-2023-38427](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38427)
+
+    * [CVE-2023-38430](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38430)
+
+    * [CVE-2023-38431](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38431)
+
+    * [CVE-2023-3867](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3867)
+
+    * [CVE-2023-46838](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-46838)
+
+    * [CVE-2023-52340](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5234)
+
+    * [CVE-2023-52429](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52429)
+
+    * [CVE-2023-52436](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52436)
+
+    * [CVE-2023-52438](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52438)
+
+    * [CVE-2023-52439](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52439)
+
+    * [CVE-2023-52441](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52441)
+
+    * [CVE-2023-52442](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52442)
+
+    * [CVE-2023-52443](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52443)
+
+    * [CVE-2023-52444](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52444)
+
+    * [CVE-2023-52445](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52445)
+
+    * [CVE-2023-52448](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52448)
+
+    * [CVE-2023-52449](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52449)
+
+    * [CVE-2023-52451](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52451)
+
+    * [CVE-2023-52454](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52454)
+
+    * [CVE-2023-52456](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52456)
+
+    * [CVE-2023-52457](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52457)
+
+    * [CVE-2023-52458](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52458)
+
+    * [CVE-2023-52462](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52462)
+
+    * [CVE-2023-52463](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52463)
+
+    * [CVE-2023-52464](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52464)
+
+    * [CVE-2023-52467](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52467)
+
+    * [CVE-2023-52469](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52469)
+
+    * [CVE-2023-52470](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52470)
+
+    * [CVE-2023-52480](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52480)
+
+    * [CVE-2023-52609](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52609)
+
+    * [CVE-2023-52610](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52610)
+
+    * [CVE-2023-52612](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52612)
+
+    * [CVE-2024-22705](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22705)
+
+    * [CVE-2024-23850](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23850)
+
+    * [CVE-2024-23851](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23851)
+
+    * [CVE-2024-24860](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24860)
+
+    * [CVE-2024-26586](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26586)
+
+    * [CVE-2024-26589](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26589)
+
+    * [CVE-2024-26591](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26591)
+
+    * [CVE-2024-26597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26597)
+
+    * [CVE-2024-26598](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26598)
+
+    * [CVE-2024-26631](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26631)
+
+    * [CVE-2024-26633](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26633)
+
+
+
+
+## April 17, 2024
+
+GKE on VMware 1.28.400-gke.75 is now available. To upgrade, see [Upgrading GKE on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). GKE on VMware 1.28.400-gke.75 runs on Kubernetes v1.28.7-gke.1700. 
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The following vulnerabilities are fixed in1.28.400-gke.75:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2024-24806](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24806)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-52447](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52447)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-23000](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23000)
+
+    * [CVE-2023-32247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32247)
+
+    * [CVE-2024-1085](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1085)
+
+    * [CVE-2024-1086](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1086)
+
+    * [CVE-2024-24855](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24855)
+
+
+
+
+## April 09, 2024
+
+GKE on VMware 1.16.7-gke.46 is now available. To upgrade, see [Upgrading GKE on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.16/how-to/upgrading). GKE on VMware 1.16.7-gke.46 runs on Kubernetes v1.27.10-gke.500. 
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The following issues are fixed in 1.16.7-gke.46.
+
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#controlplanenodeport-field-defaults-to-30968-when-manuallb-spec-is-empty) where the `controlPlaneNodePort` field defaults to 30968 when the `manualLB` spec is empty.
+
+
+
+The following vulnerabilities are fixed in 1.16.7-gke.46:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2024-24806](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24806)
+
+    * [CVE-2022-28948](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28948)
+
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-23000](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23000)
+
+    * [CVE-2023-32247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32247)
+
+    * [CVE-2024-1085](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1085)
+
+    * [CVE-2024-1086](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1086)
+
+    * [CVE-2024-24855](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24855)
+
+    * [CVE-2023-51780](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-51780)
+
+    * [CVE-2023-51781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-51781)
+
+    * [CVE-2023-6915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6915)
+
+    * [CVE-2024-0565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0565)
+
+    * [CVE-2024-0646](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0646)
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2022-3566](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3566)
+
+    * [CVE-2023-40547](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40547)
+
+    * [CVE-2024-1086](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1086)
+
+    * [CVE-2023-46838](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-46838)
+
+    * [CVE-2024-24557](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24557)
+
+    * [CVE-2024-0553](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0553)
+
+
+
+
+## April 03, 2024
+
+A Denial-of-Service (DoS) vulnerability (CVE-2023-45288) was recently discovered in multiple implementations of the HTTP/2 protocol, including the golang HTTP server used by Kubernetes. The vulnerability could lead to a DoS of the Google Kubernetes Engine (GKE) control plane. For more information, see the [GCP-2024-022 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-022).
+
+## March 27, 2024
+
+GKE on VMware 1.15.10-gke.32 is now available. To upgrade, see [Upgrading GKE on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/how-to/upgrading). GKE on VMware 1.15.10-gke.32 runs on Kubernetes v1.26.13-gke.1100. 
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The following issue is fixed in 1.15.10-gke.32:
+
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#controlplanenodeport-field-defaults-to-30968-when-manuallb-spec-is-empty) where the `controlPlaneNodePort` field defaults to 30968 when the `manualLB` spec is empty.
+
+
+
+The following vulnerabilities are fixed in 1.15.10-gke.32:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2024-24806](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24806)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-51780](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-51780)
+
+    * [CVE-2023-51781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-51781)
+
+    * [CVE-2023-6915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6915)
+
+    * [CVE-2024-0565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0565)
+
+    * [CVE-2024-0646](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0646)
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2024-25062](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25062)
+
+    * [CVE-2022-3566](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3566)
+
+    * [CVE-2024-1086](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1086)
+
+    * [CVE-2024-24557](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24557)
+
+
+
+
+## March 21, 2024
+
+GKE on VMware 1.28.300-gke.123 is now available. To upgrade, see [Upgrading GKE on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). GKE on VMware 1.28.300-gke.123 runs on Kubernetes v1.28.4-gke.1400. 
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+  * Increased the default memory limit for node-exporter.
+  * Updated the AIS version to hybrid_identity_charon_20240228_0730_RC00.
+
+
+
+The following issues are fixed in 1.28.300-gke.123:
+
+  * Fixed the issue where the admin cluster backup did a retry on non-idempotent operations.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#controlplanenodeport-field-defaults-to-30968-when-manuallb-spec-is-empty) where the `controlPlaneNodePort` field defaulted to 30968 when the manualLB spec was empty.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#preflight-check-fails-when-the-hostname-isnt-in-the-ip-block-file.) that caused the preflight check to fail when the hostname wasn't in the IP block file.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#kubelet-is-flooded-with-logs-stating-that-etckubernetesmanifests-does-not-exist-on-the-worker-nodes) that caused Kubelet to be flooded with logs stating that "/etc/kubernetes/manifests" does not exist on the worker nodes.
+
+
+
+The following vulnerabilities are fixed in 1.28.300-gke.123:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2023-5517](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5517)
+
+    * [CVE-2023-4408](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4408)
+
+    * [CVE-2023-29499](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29499)
+
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-51780](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-51780)
+
+    * [CVE-2023-51781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-51781)
+
+    * [CVE-2023-6915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6915)
+
+    * [CVE-2024-0565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0565)
+
+    * [CVE-2024-0646](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0646)
+
+    * [CVE-2023-32250](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32250)
+
+    * [CVE-2023-32252](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32252)
+
+    * [CVE-2023-32257](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32257)
+
+    * [CVE-2023-34324](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-34324)
+
+    * [CVE-2023-35827](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-35827)
+
+    * [CVE-2023-46813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-46813)
+
+    * [CVE-2023-6039](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6039)
+
+    * [CVE-2023-6176](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6176)
+
+    * [CVE-2023-6622](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6622)
+
+    * [CVE-2024-0641](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0641)
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-40547](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40547)
+
+
+
+## February 29, 2024
+
+GKE on VMware 1.16.6-gke.40 is now available. To upgrade, see [Upgrading GKE on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.16/how-to/upgrading). GKE on VMware 1.16.6-gke.40 runs on Kubernetes v1.27.8-gke.1500.
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The following issues are fixed in1.16.6-gke.40:
+
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#kubelet-is-flooded-with-logs-stating-that-etckubernetesmanifests-does-not-exist-on-the-worker-nodes) that caused kubelet to be flooded with logs stating that `/etc/kubernetes/manifests` does not exist on the worker nodes.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#preflight-check-fails-when-the-hostname-isnt-in-the-ip-block-file.) that caused a preflight check to fail when the hostname isn't in the IP block file.
+  * Fixed the manual load balancer issue where the IngressIP is overwritten with the Spec.LoadBalancerIP even if it is empty.
+  * Fixed the[ known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#1.15-user-master-machine-encounters-an-unexpected-recreation-when-the-user-cluster-controller-is-upgraded-to-1.16) where a 1.15 user master machine encountered an unexpected recreation when the user cluster controller was upgraded to 1.16.
+
+
+
+The following vulnerabilities are fixed in1.16.6-gke.40:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2022-1996](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1996)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2023-5517](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5517)
+
+    * [CVE-2023-4408 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4408)
+
+    * [CVE-2024-26147](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26147)
+
+    * [CVE-2023-29499](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29499)
+
+    * [CVE-2023-27533](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27533)
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-6531](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6531)
+
+    * [CVE-2023-6915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6915)
+
+    * [CVE-2024-0646 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0646)
+
+    * [CVE-2023-7104 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7104)
+
+    * [CVE-2023-6040 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6040)
+
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-6040](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6040)
+
+    * [CVE-2023-6606](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6606)
+
+    * [CVE-2023-6817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6817)
+
+    * [CVE-2023-6931](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6931)
+
+    * [CVE-2023-6932](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6932)
+
+    * [CVE-2024-0193](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0193)
+
+
+
+
+## February 27, 2024
+
+The following vulnerabilities were discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes:
+
+  * CVE-2023-3776
+
+For more information, see the [GCP-2024-014 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-014).
+
+
+
+
+GKE on VMware 1.15.9-gke.20 is now available. To upgrade, see [Upgrading GKE on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/how-to/upgrading). GKE on VMware 1.15.9-gke.20 runs on Kubernetes v1.26.10-gke.2000. 
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The following vulnerabilities are fixed in 1.15.9-gke.20:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2023-5517](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5517)
+
+    * [CVE-2023-50387](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-50387)
+
+    * [CVE-2023-4408](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4408)
+
+    * [CVE-2024-26147](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26147)
+
+    * [CVE-2023-29499](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29499)
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2024-0567](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0567)
+
+    * [CVE-2023-6531](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6531)
+
+    * [CVE-2024-1085](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1085)
+
+    * [CVE-2024-0646](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0646)
+
+    * [CVE-2023-6915](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6915)
+
+    * [CVE-2023-40551](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40551)
+
+    * [CVE-2023-46838](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-46838)
+
+    * [CVE-2023-6040](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6040)
+
+    * [CVE-2024-0553](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0553)
+
+    * [CVE-2023-40548](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40548)
+
+    * [CVE-2023-40547](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40547)
+
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2024-21626](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21626)
+
+    * [CVE-2023-6040](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6040)
+
+    * [CVE-2023-6606](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6606)
+
+    * [CVE-2023-6817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6817)
+
+    * [CVE-2023-6931](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6817)
+
+    * [CVE-2023-6932](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6932)
+
+    * [CVE-2024-0193](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0193)
+
+
+
+
+## February 26, 2024
+
+GKE on VMware 1.28.200-gke.111 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). GKE on VMware 1.28.200-gke.111 runs on Kubernetes v1.28.4-gke.1400. 
+
+If you are using a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The following issues are fixed in 1.28.200-gke.111:
+
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#preflight-check-fails-when-the-hostname-isnt-in-the-ip-block-file.) that caused a preflight check to fail when the hostname isn't in the IP block file.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#storage-policy-field-is-missing-in-the-admin-cluster-configuration-template) where the storage policy field is missing in the admin cluster configuration template.
+  * Fixed the manual load balancer issue where the IngressIP is overwritten with the Spec.LoadBalancerIP even if it is empty.
+  * Fixed the issue that preflight jobs might be stuck in the pending state.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#nfs-common-is-missing-from-ubuntu-os-image) where nfs-common is missing from the Ubuntu OS image.
+
+
+
+The following vulnerabilities are fixed in 1.28.200-gke.111:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2022-1996](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1996)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2023-2253 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2253)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-6531 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6531)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-6040](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6040)
+
+    * [CVE-2023-6606 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6606)
+
+    * [CVE-2023-6817 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6817)
+
+    * [CVE-2023-6931 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6931)
+
+    * [CVE-2023-6932](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6932)
+
+    * [CVE-2024-0193 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0193)
+
+    * [CVE-2023-23583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23583)
+
+
+
+
+## February 24, 2024
+
+The following vulnerabilities were discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes:
+
+  * CVE-2024-0193
+
+
+
+For more information, see the [GCP-2024-013 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-013).
+
+## February 16, 2024
+
+The following vulnerability was discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes:
+
+  * CVE-2023-6932
+
+
+
+For more information, see the [GCP-2024-011 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-011).
+
+## February 14, 2024
+
+The following vulnerability was discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes:
+
+  * CVE-2023-6931
+
+
+
+For more information, see the [GCP-2024-010 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-010).
+
+## February 01, 2024
+
+GKE on VMware 1.15.8-gke.41 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/how-to/upgrading). GKE on VMware 1.15.8-gke.41 runs on Kubernetes v1.26.10-gke.2000. 
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+Upgraded etcd to v3.4.27-0-gke.1.
+
+The following issues are fixed in 1.15.8-gke.41:
+
+  * Fixed Seesaw crashing on duplicated service IP.
+  * Fixed a warning in the storage preflight check.
+
+
+
+The following vulnerabilities are fixed in 1.15.8-gke.41:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2021-41617](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41617)
+
+    * [CVE-2023-39417](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39417)
+
+    * [CVE-2023-5869](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5869)
+
+    * [CVE-2023-27533](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27533)
+
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-23583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23583)
+
+
+
+## January 31, 2024
+
+A security vulnerability, CVE-2024-21626, has been discovered in runc where a user with permission to create Pods on Container-Optimized OS and Ubuntu nodes might be able to gain full access to the node filesystem.
+
+For instructions and more details, see the [GCP-2024-005 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2024-005).
+
+## January 25, 2024
+
+GKE for VMware 1.28.100-gke.131 is now available. To upgrade, see [Upgrading GKE on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.28/how-to/upgrading). GDCV for VMware 1.28.100-gke.131 runs on Kubernetes v1.28.3-gke.1600.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The following issues are fixed in 1.28.100-gke.131:
+
+  * Fixed an issue where duplicate Service IP addresses caused the Seesaw load balancer to fail.
+
+  * Fixed an issue where egress NAT erroneously broke long-lived connections.
+
+
+
+
+The following vulnerabilities are fixed in 1.28.100-gke.131:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2023-28642](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28642)
+
+    * [CVE-2023-39320](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39320)
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2019-16884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-16884)
+
+    * [CVE-2021-30465](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-30465)
+
+    * [CVE-2021-41617](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41617)
+
+    * [CVE-2021-43816](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43816)
+
+    * [CVE-2022-23648](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23648)
+
+    * [CVE-2023-5869](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5869)
+
+    * [CVE-2023-39321](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39321)
+
+    * [CVE-2023-39322](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39322)
+
+    * [CVE-2023-39417](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39417)
+
+    * [CVE-2023-51767](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-51767)
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-6111](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6111)
+
+    * [CVE-2023-6817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6817)
+
+    * [CVE-2023-7104](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7104)
+
+
+
+
+GKE for VMware 1.16.5-gke.28 is now available. To upgrade, see [Upgrading GKE on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.16/how-to/upgrading). GDCV for VMware 1.16.5-gke.28 runs on Kubernetes 1.27.6-gke.2500.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+There is an [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#nfs-common-is-missing-from-ubuntu-os-image) that affects upgrading from 1.16.x to 1.28.100. If the 1.16.x cluster relies on an NFS volume, the upgrade will fail. Clusters that don't use an NFS volume are not affected.
+
+The following issues are fixed in 1.16.5-gke.28:
+
+  * Fixed an issue where duplicate Service IP addresses caused the Seesaw load balancer to fail.
+
+
+
+The following vulnerabilities are fixed in 1.16.5-gke.28:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2021-41617](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41617)
+
+    * [CVE-2023-4911](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4911)
+
+    * [CVE-2023-5869](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5869)
+
+    * [CVE-2023-39417](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39417)
+
+
+
+
+## December 18, 2023
+
+GKE on VMware, formerly Anthos clusters on VMware, is a component of Google Distributed Cloud Virtual, software that brings [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview) to on-premises data centers. We are in the process of updating documentation and the Google Cloud Console UI with the new name.
+
+GKE on VMware 1.28.0-gke.651 is now available. GKE on VMware 1.28.0-gke.651 runs on Kubernetes v1.28.3-gke.700. To upgrade, see [Upgrading GKE on VMware clusters](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading).
+
+For easier identification of the Kubernetes version for a given release, we are aligning GKE on VMware version numbering with GKE version numbering. This change starts with the December 2023 minor release, which is version 1.28. Additionally, GKE on VMware patch versions (`z` in the semantic version numbering scheme `x.y.z-gke.N`) will increment by 100.
+
+Example version numbers for GKE on VMware:
+
+  * Minor release: 1.28.0-gke.651
+  * First patch release (example): 1.28.100-gke.27
+  * Second patch release (example): 1.28.200-gke.19
+
+
+
+This change affects numbering only. Upgrades from 1.16 to 1.28 follow the same process as upgrades between prior minor releases.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+New features in GKE on VMware 1.28.0-gke.651:
+
+  * **Preview** : Support for [max surge](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/user-cluster-configuration-file#nodepool-updatestrategy-rollingupdate-maxsurge-field) configuration for node pool rolling updates.
+  * **Preview** : Support for [cgroupv2 Linux images](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/user-cluster-configuration-file#nodepool-osimagetype-field) for cluster nodes.
+  * **Preview** : Support for [GKE Identity Service](https://cloud.google.com/anthos/identity) in Controlplane V2 user clusters.
+  * **Preview** : Support [storage vMotion for SPBM clusters](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/configure-storage-policy).
+  * **Preview** : [The StatefulSet CSI Migration Tool ](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/using-statefulset-csi-migration-tool)is available to help convert your PersistentVolumes with in-tree vSphere volume plugin spec to vSphere CSI Driver spec.
+  * **Preview** : A [storage migration tool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/datastore-migration-tool) is available for migrating from one datastore to another in non-SPBM clusters.
+  * **Preview** : A user cluster control plane can be[ two minor versions later](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrade-overview#version_skew) (n+2 version skew) than its node pools and admin cluster.
+  * **GA** : Support for the [pre-upgrade tool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/pre-upgrade-tool). We recommend that you run the pre-upgrade tool to check the health and configuration of a cluster before upgrading. 
+  * **GA** : High availability (HA) admin cluster now has [three control plane nodes](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/admin-cluster-configuration-file#adminmaster-replicas-field) and no add-on nodes and becomes the default.
+  * **GA** : Support for user-managed [admin workstation](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/create-admin-workstation).
+  * **GA** : Support for [regional fleet membership](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/user-cluster-configuration-file#gkeconnect-location-field).
+  * **GA** : Support for [prepared credentials](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/prepared-credentials-admin) for admin clusters
+  * **GA** : Support for migrating a cluster load balancer from [Seesaw to MetalLB](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/migrate-seesaw-metallb)
+  * **GA** : Support for [DSR mode](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/user-cluster-configuration-file#dataplanev2-forwardmode-field) and support for updating from SNAT mode to DSR mode. Deprecated the `lbMode` field and added the `forwardMode` field.
+  * **GA** : Support for built-in [Binary Authorization](https://cloud.google.com//anthos/clusters/docs/on-prem/latest/how-to/binary-authorization-policy) in Controlplane V2 user clusters.
+  * **GA** : Support for SNI in Controlplane V2 user clusters.
+  * **GA** : Support for [SPBM](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/configure-storage-policy) in admin clusters.
+
+
+
+The following issues are fixed in 1.28.0-gke.651:
+
+  * Fixed an issue where disable_bundled_ingress failed user cluster load balancer validation. 
+  * Fixed an issue where the cluster-health-controller sometimes leaked vSphere sessions.
+  * Fixed an etcd hostname mismatch issue when using FQDN.
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#admin-cluster-update-or-upgrade-fails-if-the-projects-or-locations-of-add-on-services-dont-match-each-other) where admin cluster update or upgrade failed if the projects or locations of add-on services didn't match each other.
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#csi-workload-preflight-check-fails-due-to-pod-startup-failure) where the CSI workload preflight check failed due to a Pod startup failure.
+  * Fixed an issue where deleting a user cluster with a volume attached might get stuck.
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#non-ha-controlplane-v2-cluster-deletion-stuck-until-timeout) where deleting a Controlplane V2 user cluster might get stuck.
+  * Fixed a logrotate error on the ubuntu_containerd image.
+  * Fixed a disk full issue on Seesaw VMs due to no log rotation for fluent-bit.
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#garp-reply-sent-by-seesaw-doesnt-set-target-ip) where Seesaw didn't set the target IP in GARP replies.
+  * Fixed a flaky SSH error on non-HA admin control-plane nodes after update/upgrade.
+
+
+
+The following vulnerabilities are fixed in 1.28.0-gke.651:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2023-38408](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38408)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2022-29190](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29190)
+
+    * [CVE-2023-29002 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29002)
+
+    * [CVE-2023-28840](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28840)
+
+    * [CVE-2021-25741](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25741)
+
+    * [CVE-2023-27533](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27533)
+
+    * [CVE-2023-3341](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3341)
+
+    * [CVE-2023-4911](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4911)
+
+    * [CVE-2022-3064](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3064)
+
+    * [CVE-2021-20206](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20206)
+
+    * [GHSA-74fp-r6jw-h4mp](https://github.com/advisories/GHSA-74fp-r6jw-h4mp)
+
+    * [CVE-2020-9283](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-9283)
+
+    * [CVE-2020-7919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7919)
+
+    * [CVE-2023-43787](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-43787)
+
+    * [CVE-2020-28367](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28367)
+
+    * [CVE-2020-28366](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28366)
+
+    * [CVE-2020-16845](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16845)
+
+    * [CVE-2020-28362](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28362)
+
+    * [CVE-2021-27918](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27918)
+
+    * [CVE-2023-34241](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-34241)
+
+    * [CVE-2023-38403](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38403)
+
+    * [CVE-2023-0464 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0464)
+
+    * [GHSA-m425-mq94-257g](https://secalerts.co/vulnerability/GHSA-m425-mq94-257g)
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2022-28737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28737)
+
+    * [CVE-2023-4206](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4206)
+
+    * [CVE-2023-4622](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4622)
+
+    * [CVE-2023-42753](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-42753)
+
+  * Windows vulnerabilities:
+
+    * [CVE-2022-1996](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1996)
+
+    * [CVE-2023-29404](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29404)
+
+    * [CVE-2023-24540](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24540)
+
+    * [CVE-2023-29402](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29402)
+
+    * [CVE-2023-29405](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29405)
+
+    * [CVE-2023-24538](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24538)
+
+    * [CVE-2022-32149](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32149)
+
+    * [CVE-2021-38561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-38561)
+
+    * [CVE-2022-29190](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29190)
+
+    * [CVE-2022-27191](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27191)
+
+    * [CVE-2023-39533](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39533)
+
+    * [CVE-2023-24539](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24539)
+
+    * [CVE-2023-24534](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24534)
+
+    * [CVE-2023-24536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24536)
+
+    * [CVE-2022-21698](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21698)
+
+    * [CVE-2023-29400](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29400)
+
+    * [CVE-2023-29403](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29403)
+
+    * [CVE-2021-43565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43565)
+
+    * [CVE-2023-24537](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24537)
+
+    * [CVE-2022-27664](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27664)
+
+    * [CVE-2021-33194](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33194)
+
+    * [CVE-2022-41723](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41723)
+
+    * [CVE-2023-29406](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29406)
+
+    * [CVE-2022-29222](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29222)
+
+    * [CVE-2023-39319](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39319)
+
+    * [CVE-2023-39318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39318)
+
+    * [CVE-2022-29526](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29526)
+
+    * [CVE-2022-29189](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29189)
+
+    * [CVE-2022-29189](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29189)
+
+    * [CVE-2023-24532](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24532)
+
+    * [CVE-2023-3893](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3893)
+
+
+
+
+Breaking changes in GKE on VMware 1.28.0-gke.651:
+
+  * Cloud Monitoring now requires projects to enable the `kubernetesmetadata.googleapis.com` API and grant the `kubernetesmetadata.publisher` IAM role to the [logging-monitoring service account](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/service-accounts#logging_monitoring_service_account). This applies to both creating new 1.28 clusters and upgrading existing clusters to 1.28. If your organization has set up an [allowlist](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/firewall-rules) that lets traffic from Google APIs and other addresses pass through your proxy server, add `kubernetesmetadata.googleapis.com` to the allowlist.
+
+  * The admin workstation must have at least 100 GB of disk space. If you are upgrading to 1.28, check the `adminWorkstation.diskGB` field in the [admin workstation configuration file](https://cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/admin-workstation-configuration-file#adminworkstationdiskgb) and make sure that the specified size is at least 100.
+
+
+
+
+Version changes in GKE on VMware 1.28.0-gke.651:
+
+  * Bumped etcd to version v3.4.27-0-gke.1.
+  * Bumped istio-ingress to version 1.19.3.
+  * Bumped the AIS version to hybrid_identity_charon_20230830_0730_RC00.
+
+
+
+Other changes in GKE on VMware 1.28.0-gke.651:
+
+  * Creating non-HA admin clusters isn't allowed. New admin clusters are required to be highly available. Non-HA admin clusters have 1 control plane node and 2 add-on nodes. An HA admin cluster has 3 control plane nodes with no add-on nodes, so the number of VMs that a new admin cluster requires hasn't changed.
+  * HA admin clusters now have a long running controller to perform reconciliation periodically.
+  * The command `gkectl repair admin-master --restore-from-backup` now supports restoration of etcd data for HA admin clusters.
+  * When upgrading user clusters to version 1.28, we validate all changes made in the configuration file, and return an error for unsupported changes. See [Remove unsupported changes to unblock upgrade](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshoot-cluster-creation-upgrade#remove_unsupported_changes_to_unblock_upgrade).
+  * The vSphere cloud controller manager is enabled in Controlplane V2 user clusters.
+  * We now always write the local k8s audit log file, even when Cloud audit logging is enabled. This allows for easier third party logging system integration.
+  * MetalLB will be the default load balancer for 1.29 user and admin clusters. The ability to use Seesaw as a load balancer will be removed with 1.29. We recommend migrating to the MetalLB load-balancer. Upgrades from existing Seesaw clusters will continue to work for a few more releases. 
+  * The `loadBalancer.manualLB.addonsNodePort` field is deprecated. The field was used for the in-cluster Prometheus and Grafana add-ons, which was deprecated in version 1.16.
+  * The `loadBalancer.vips.addonsVIP` field is deprecated. The field was used for the in-cluster Prometheus and Grafana add-ons, which was deprecated in version 1.16.
+  * yq is no longer pre-installed on the admin workstation.
+  * Control-plane nodes now have the `node-role.kubernetes.io/control-plane` taint.
+  * In-tree GlusterFS is removed from Kuberentes 1.27. Add storage validation to detect in-tree GlusterFS volumes.
+  * Metrics data are now gzip compressed when they are sent to Cloud monitoring.
+
+
+
+There is an [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshooting/known-issues#nfs-common-is-missing-from-ubuntu-os-image) that affects upgrading from 1.16.x to 1.28.0. If the 1.16.x cluster relies on an NFS volume, the upgrade will fail. Clusters that don't use an NFS volume are not affected.
+
+Anthos clusters on VMware 1.16.4-gke.37 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.16.4-gke.37 runs on Kubernetes 1.27.6-gke.2500.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The following issues are fixed in 1.16.4-gke.37:
+
+  * Fixed a warning in the storage preflight check.
+  * Fixed an issue where control plane creation failed for a user cluster when using a FQDN hostname for a HA admin cluster.
+  * Fixed an issue where the cluster-health-controller might leak vSphere sessions.
+  * Fixed an issue where disable_bundled_ingress failed user cluster load balancer validation.
+
+
+
+The following vulnerabilities are fixed in 1.16.4-gke.37:
+
+  * High-severity container vulnerabilities:
+
+    * [GHSA-m425-mq94-257g](https://github.com/advisories/GHSA-m425-mq94-257g)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-5717](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5717)
+
+    * [CVE-2023-46813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-46813)
+
+    * [CVE-2023-44487](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-44487)
+
+
+
+
+## December 12, 2023
+
+Anthos clusters on VMware 1.15.7-gke.40 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/how-to/upgrading). Anthos clusters on VMware 11.15.7-gke.40 runs on Kubernetes 1.26.9-gke.700. 
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The following issues are fixed in 1.15.7-gke.40:
+
+  * Fixed the etcd hostname mismatch issue when using a FQDN.
+  * Fixed an issue where the cluster-health-controller might leak vSphere sessions.  
+Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#csi-workload-preflight-check-fails-due-to-pod-startup-failure) where the CSI workload preflight check fails due to Pod startup failure.
+
+
+
+The following vulnerabilities are fixed in 1.15.7-gke.40:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2022-29155](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29155)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2020-7712](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7712)
+
+    * [CVE-2015-3276](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3276)
+
+    * [CVE-2020-8032](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8032)
+
+    * [CVE-2022-3064](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3064)
+
+    * [CVE-2021-20206](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20206)
+
+    * [CVE-2022-29190](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29190)
+
+    * [CVE-2023-4911](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4911)
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-46813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-46813)
+
+    * [CVE-2023-5717](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5717)
+
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-34319](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-34319)
+
+    * [CVE-2023-4244](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4244)
+
+    * [CVE-2023-42752](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-42752)
+
+    * [CVE-2023-42753](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-42753)
+
+    * [CVE-2023-42755](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-42755)
+
+    * [CVE-2023-42756](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-42756)
+
+    * [CVE-2023-4622](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4622)
+
+    * [CVE-2023-4623](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4623)
+
+    * [CVE-2023-4881](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4881)
+
+    * [CVE-2023-4921](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4921)
+
+    * [CVE-2023-5197](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5197)
+
+  * Windows vulnerabilities:
+
+    * [CVE-2022-1996](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1996)
+
+    * [CVE-2023-29404](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29404)
+
+    * [CVE-2023-24540](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24540)
+
+    * [CVE-2023-29402](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29402)
+
+    * [CVE-2023-29405](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29405)
+
+    * [CVE-2023-24538](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24538)
+
+    * [CVE-2022-32149](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32149)
+
+    * [CVE-2021-38561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-38561)
+
+    * [CVE-2022-29190](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29190)
+
+    * [CVE-2022-27191](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27191)
+
+    * [CVE-2023-39533](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39533)
+
+    * [CVE-2023-24539](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24539)
+
+    * [CVE-2023-24534](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24534)
+
+    * [CVE-2023-24536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24536)
+
+    * [CVE-2022-21698](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21698)
+
+    * [CVE-2023-29400](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29400)
+
+    * [CVE-2023-29403](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29403)
+
+    * [CVE-2021-43565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43565)
+
+    * [CVE-2023-24537](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24537)
+
+    * [CVE-2022-27664](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27664)
+
+    * [CVE-2021-33194](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33194)
+
+    * [CVE-2022-41723](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41723)
+
+    * [CVE-2023-29406](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29406)
+
+    * [CVE-2022-29222](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29222)
+
+    * [CVE-2023-39319](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39319)
+
+    * [CVE-2023-39318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39318)
+
+    * [CVE-2022-29526](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29526)
+
+    * [CVE-2023-29409](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29409)
+
+    * [CVE-2022-29189](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29189)
+
+    * [CVE-2023-24532](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24532)
+
+
+
+
+## December 04, 2023
+
+The StatefulSet CSI Migration Tool is now available. To learn how to migrate stateful workloads from an in-tree vSphere volume plugin to the vSphere CSI Driver, see [Using the StatefulSet CSI Migration Tool](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/using-statefulset-csi-migration-tool).
+
+## November 22, 2023
+
+A vulnerability (CVE-2023-5717) has been discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes.
+
+For more information, see the [GCP-2023-046 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2023-046).
+
+## November 20, 2023
+
+Anthos clusters on VMware 1.14.10-gke.35 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.14/how-to/upgrading). Anthos clusters on VMware 1.14.8-gke.37 runs on Kubernetes v1.25.13-gke.200.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The following issues are fixed in 1.14.10-gke.35:
+
+  * Fixed the etcd hostname mismatch issue when using FQDN
+  * Fixed the issue where deleting a user cluster with a volume attached stalls, in which case the cluster can't be deleted and can't be used.
+
+
+
+The following vulnerabilities are fixed in 1.14.10-gke.35:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2023-4911](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4911)
+
+    * [CVE-2021-25741](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25741)
+
+    * [CVE-2023-28840](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28840)
+
+    * [CVE-2023-43787](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-43787)
+
+    * [CVE-2023-34241](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-34241)
+
+    * [CVE-2023-3341](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3341)
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-42753](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-42753)
+
+    * [CVE-2022-48560](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48560)
+
+    * [CVE-2023-38545](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38545)
+
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-38545](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38545)
+
+    * [CVE-2023-38546](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38546)
+
+
+
+
+## November 16, 2023
+
+Anthos clusters on VMware 1.16.3-gke.45 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.16.1-gke.44 runs on Kubernetes 1.27.4-gke.1600.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The Prometheus and Grafana add-ons field, `loadBalancer.vips.addonsVIP`, is deprecated. This change is because [Google Managed Service for Prometheus](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/logging-and-monitoring#using-managed-service-for-prometheus) replaced the Prometheus and Grafana add-ons.
+
+The following issues are fixed in 1.16.3-gke.45:
+
+  * Fixed a Cilium issue causing egress NAT to erroneously break long-lived connections.
+  * Fixed the etcd hostname mismatch issue when using a FQDN.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#admin-cluster-update-or-upgrade-fails-if-the-projects-or-locations-of-add-on-services-dont-match-each-other) that caused admin cluster updates or upgrades to fail if the projects or locations of add-on services don't match each other.
+  * Fixed the issue that external cluster snapshot won't be taken after `gkectl update admin` fails.
+  * Fixed an issue that caused the CSI workload preflight to fail when Istio is enabled.
+  * Fixed the issue that deleting a user cluster with a volume attached may be stuck forever.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#user-cluster-deletion-fails-when-using-a-user-managed-admin-workstation) that caused user cluster deletion to fail when using a user-managed admin workstation.
+
+
+
+The following vulnerabilities are fixed in 1.16.3-gke.45:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2023-38408](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38408)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2021-20206](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20206)
+
+    * [CVE-2022-3064](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3064)
+
+    * [GHSA-74fp-r6jw-h4mp](https://github.com/advisories/GHSA-74fp-r6jw-h4mp)
+
+    * [CVE-2022-29190](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29190)
+
+    * [CVE-2023-28840](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28840)
+
+    * [CVE-2023-43787](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-43787)
+
+    * [CVE-2023-34241](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-34241)
+
+    * [CVE-2023-3341](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3341)
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2022-48560](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48560)
+
+    * [CVE-2023-42753](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-42753)
+
+    * [CVE-2023-38545](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38545)
+
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-38545](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38545)
+
+    * [CVE-2023-38546](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38546)
+
+    * [CVE-2023-1206](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1206)
+
+    * [CVE-2023-20569](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-20569)
+
+    * [CVE-2023-2156](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2156)
+
+    * [CVE-2023-3338](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3338)
+
+    * [CVE-2023-38432](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38432)
+
+    * [CVE-2023-3863](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3863)
+
+    * [CVE-2023-3865](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3865)
+
+    * [CVE-2023-3866](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3866)
+
+    * [CVE-2023-4132](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4132)
+
+    * [CVE-2023-4155](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4155)
+
+    * [CVE-2023-4194](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4194)
+
+    * [CVE-2023-4273](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4273)
+
+    * [CVE-2023-44466](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-44466)
+
+  * Windows vulnerabilities:
+
+    * [CVE-2022-1996](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1996)
+
+    * [CVE-2023-29404](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29404)
+
+    * [CVE-2023-24540](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24540)
+
+    * [CVE-2023-29402](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29402)
+
+    * [CVE-2023-29405](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29405)
+
+    * [CVE-2023-24538](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24538)
+
+    * [CVE-2022-32149](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32149)
+
+    * [CVE-2021-38561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-38561)
+
+    * [CVE-2022-29190](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29190)
+
+    * [CVE-2022-27191](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27191)
+
+    * [CVE-2023-39533](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39533)
+
+    * [CVE-2023-24539](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24539)
+
+    * [CVE-2023-24534](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24534)
+
+    * [CVE-2023-24536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24536)
+
+    * [CVE-2022-21698](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21698)
+
+    * [CVE-2023-29400](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29400)
+
+    * [CVE-2023-29403](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29403)
+
+    * [CVE-2021-43565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43565)
+
+    * [CVE-2023-24537](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24537)
+
+    * [CVE-2022-27664](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27664)
+
+    * [CVE-2021-33194](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33194)
+
+    * [CVE-2022-41723](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41723)
+
+    * [CVE-2023-29406](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29406)
+
+    * [CVE-2022-29222](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29222)
+
+    * [CVE-2023-39319](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39319)
+
+    * [CVE-2023-39318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39318)
+
+    * [CVE-2022-29526](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29526)
+
+    * [CVE-2023-29409](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29409)
+
+    * [CVE-2022-29189](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29189)
+
+    * [CVE-2023-24532](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24532)
+
+
+
+
+## November 13, 2023
+
+The following vulnerabilities were discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes.
+
+  * CVE-2023-4147
+
+
+
+For more information, see [the GCP-2023-042 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2023-042).
+
+## November 08, 2023
+
+A vulnerability (CVE-2023-4004) has been discovered in the Linux kernel that can lead to a privilege escalation on Container-Optimized OS and Ubuntu nodes. For more information, see the [GCP-2023-041 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2023-041).
+
+## October 31, 2023
+
+Anthos clusters on VMware 1.15.6-gke.25 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/how-to/upgrading). Anthos clusters on VMware 1.15.6-gke.25 runs on Kubernetes 1.26.9-gke.700.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The following vulnerabilities are fixed in 1.15.6-gke.25:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2023-38408](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38408)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2023-43787](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-43787)
+    * [CVE-2023-28840](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28840)
+    * [CVE-2023-34241](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-34241)
+    * [CVE-2023-3341](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3341)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-4623](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4623)
+    * [CVE-2023-42753](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-42753)
+    * [CVE-2023-4622](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4622)
+    * [CVE-2023-38545](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38545)
+    * [CVE-2022-48560](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48560)
+    * [CVE-2023-4921](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4921)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-38545](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38545)
+    * [CVE-2023-38546](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38546)
+    * [CVE-2023-1206](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1206)
+    * [CVE-2023-20569](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-20569)
+    * [CVE-2023-2156](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2156)
+    * [CVE-2023-3338](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3338)
+    * [CVE-2023-38432](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38432)
+    * [CVE-2023-3863](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3863)
+    * [CVE-2023-3865](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3865)
+    * [CVE-2023-3866](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3866)
+    * [CVE-2023-4132](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4132)
+    * [CVE-2023-4155](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4155)
+    * [CVE-2023-4194](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4194)
+    * [CVE-2023-4273](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4273)
+    * [CVE-2023-44466](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-44466)
+  * Windows vulnerabilities:
+
+    * [CVE-2023-3893](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3893)
+
+
+
+## October 19, 2023
+
+Anthos clusters on VMware 1.16.2-gke.28 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.16.2-gke.28 runs on Kubernetes 1.27.4-gke.1600.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The following issue is fixed in 1.16.2-gke.28:
+
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#non-ha-controlplane-v2-cluster-deletion-stuck-until-timeout) where a non-HA Controlplane V2 cluster is stuck at node deletion until it timesout.
+
+
+
+The following vulnerabilities are fixed in 1.16.2-gke.28:
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-4623](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4623)
+    * [CVE-2023-4208](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4208)
+    * [CVE-2023-4921](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4921)
+    * [CVE-2023-4207](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4207)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-20588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-20588)
+    * [CVE-2023-40283](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40283)
+    * [CVE-2023-4128](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4128)
+    * [CVE-2023-4569](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4569)
+  * Windows vulnerabilities:
+
+    * [CVE-2023-3893](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3893)
+
+
+
+Anthos clusters on VMware 1.14.9-gke.21 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.14/how-to/upgrading). Anthos clusters on VMware 1.14.9-gke.21 runs on Kubernetes 1.25.13-gke.200.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The following issues are fixed in 1.14.9-gke.21:
+
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#non-ha-controlplane-v2-cluster-deletion-stuck-until-timeout) where a non-HA Controlplane V2 cluster is stuck at node deletion until it timesout.
+
+
+
+The following vulnerabilities are fixed in 1.14.9-gke.21:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2023-38408](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38408)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2022-3064](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3064)
+    * [CVE-2021-20206](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20206)
+    * [CVE-2022-29190](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29190)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-4921](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4921)
+    * [CVE-2023-4622](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4622)
+    * [CVE-2023-4623](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4623)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-20588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-20588)
+    * [CVE-2023-40283](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40283)
+    * [CVE-2023-4128](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4128)
+    * [CVE-2023-4569](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4569)
+  * Windows vulnerabilities:
+
+    * [CVE-2023-3893](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3893)
+
+
+
+## October 12, 2023
+
+Anthos clusters on VMware 1.15.5-gke.41 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/how-to/upgrading). Anthos clusters on VMware 1.15.5-gke.41 runs on Kubernetes 1.26.7-gke.2500.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The following issues are fixed in 1.15.5-gke.41:
+
+  * Fixed the issue that server-side preflight checks fail to validate container registry access on clusters with a private network and no private registry.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#non-ha-controlplane-v2-cluster-deletion-stuck-until-timeout) where a non-HA Controlplane V2 cluster is stuck at node deletion until it timesout.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#upgrading-or-updating-an-admin-cluster-with-a-ca-version-greater-than-1-fails) where upgrading or updating an admin cluster with a CA version greater than 1 fails.
+  * Fixed the issue where the Controlplane V1 stackdriver operator has `--is-kubeception-less=true` specified by mistake.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#upgrading-an-admin-cluster-with-always-on-secrets-encryption-enabled-fails) that causes the secrets encryption key to be regenerated when upgrading the admin cluster from 1.14 to 1.15, resulting in the upgrade being blocked. 
+
+
+
+The following vulnerabilities are fixed in 1.15.5-gke.41:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2023-0464](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0464)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-4208](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4208)
+    * [CVE-2023-4207](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4207)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2022-40982](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40982)
+    * [CVE-2023-20593](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-20593)
+    * [CVE-2023-21400](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-21400)
+    * [CVE-2023-3609](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3609)
+    * [CVE-2023-3610](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3610)
+    * [CVE-2023-3611](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3611)
+    * [CVE-2023-3776](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3776)
+    * [CVE-2023-3777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3777)
+    * [CVE-2023-3995](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3995)
+    * [CVE-2023-4004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4004)
+    * [CVE-2023-4015](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4015)
+
+
+
+## October 02, 2023
+
+Upgrading an admin cluster with always-on secrets encryption enabled might fail.
+
+An admin cluster upgrade from 1.14.x to 1.15.0 - 1.15.4 with [always-on secrets encryption](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/always-on-secrets-encryption) enabled might fail depending on whether the feature was enabled during cluster creation or during cluster update.
+
+We recommend that you don't upgrade your admin cluster until a fix is available in 1.15.5. If you must upgrade to 1.15.0-1.15.4, do the steps in [Preventing the upgrade failure](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#preventing-the-upgrade-failure) before upgrading the cluster.
+
+For information on working around an admin cluster failure because of this issue, see [Upgrading an admin cluster with always-on secrets encryption enabled fails](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#upgrading-an-admin-cluster-with-always-on-secrets-encryption-enabled-fails). Note that the workaround relies on you having the old encryption key backed up. If the old key is no longer available, you will have to recreate the admin cluster and all user clusters.
+
+## September 29, 2023
+
+Anthos clusters on VMware 1.16.1-gke.45 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.16.1-gke.44 runs on Kubernetes 1.27.4-gke.1600.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The Prometheus and Grafana add-ons field, `loadBalancer.vips.addonsVIP` is deprecated in 1.16 and later. This change is because [Google Managed Service for Prometheus](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/logging-and-monitoring#using-managed-service-for-prometheus) replaced the Prometheus and Grafana add-ons in 1.16.
+
+The following issues are fixed in 1.16.1-gke.45:
+
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#gkectl-repair-admin-master-returns-kubeconfig-unmarshall-error) that `gkectl repair admin-master` returns kubeconfig unmarshall error.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#garp-reply-sent-by-seesaw-doesnt-set-target-ip) that GARP reply sent by Seesaw doesn't set target IP
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#seesaw-vm-broken-due-to-disk-space-low) that Seesaw VM may be broken due to low disk space
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#seesaw-vm-broken-due-to-disk-space-low) that false warnings might be generated against persistent volume claims.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#constant-cns-attachvolume-tasks-appear-every-minute-for-in-tree-pvcpv-after-upgrading-to-anthos-1.15+) that caused CNS `attachvolume` tasks to appear every minute for in-tree PVC/PV after upgrading to Anthos 1.15+.
+
+
+
+The following vulnerabilities are fixed in 1.16.1-gke.44:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2023-29002](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29002)
+    * [CVE-2020-9283](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-9283)
+    * [CVE-2020-7919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7919)
+    * [CVE-2022-32190](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32190)
+    * [CVE-2020-28367](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28367)
+    * [CVE-2020-28366](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28366)
+    * [CVE-2020-16845](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16845)
+    * [CVE-2020-28362](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28362)
+    * [CVE-2021-27918](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27918)
+    * [CVE-2023-38403](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38403)
+    * [CVE-2023-0464](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0464)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2022-28737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28737)
+    * [CVE-2015-8863](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8863)
+    * [CVE-2023-3777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3777)
+    * [CVE-2016-4074](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-4074)
+    * [CVE-2023-3776](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3776)
+
+
+
+Anthos clusters on VMware 1.14.8-gke.37 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.14/how-to/upgrading). Anthos clusters on VMware 1.14.8-gke.37 runs on Kubernetes 1.25.12-gke.2400.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+The following issues are fixed in 1.14.8-gke.37:
+
+  * Fixed the disk full [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.14/known-issues#seesaw-vm-broken-due-to-disk-space-low) on Seesaw VM due to no log rotation for fluent-bit.
+
+
+
+The following vulnerabilities are fixed in 1.14.8-gke.37:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2023-29002](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29002)
+    * [CVE-2022-32190](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32190)
+    * [CVE-2023-38403](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38403)
+    * [CVE-2023-0464](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0464)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2016-4074](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-4074)
+    * [CVE-2023-4206](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4206)
+    * [CVE-2018-14647](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14647)
+    * [CVE-2023-3611](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3611)
+    * [CVE-2023-3777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3777)
+    * [CVE-2018-1000802](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1000802)
+    * [CVE-2015-8863](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8863)
+    * [CVE-2023-29491](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29491)
+    * [CVE-2023-4128](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4128)
+    * [CVE-2023-4208](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4208)
+
+
+
+## September 14, 2023
+
+A standalone tool that you run before upgrading an admin or user cluster is now available. The pre-upgrade tool is supported for Anthos clusters on VMware **version 1.9 through 1.13**. The tool runs the applicable preflight checks for the version that you are upgrading to and also checks for specific known issues. Before upgrading a **1.9 - 1.13** cluster, we recommend that you run the pre-upgrade tool.
+
+For details on running the tool, see the documentation for the version that you are upgrading to:
+
+  * [1.9 Run the pre-upgrade tool](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/how-to/pre-upgrade-tool)
+  * [1.10 Run the pre-upgrade tool](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/how-to/pre-upgrade-tool)
+  * [1.11 Run the pre-upgrade tool](https://cloud.google.com/anthos/clusters/docs/on-prem/1.11/how-to/pre-upgrade-tool)
+  * [1.12 Run the pre-upgrade tool](https://cloud.google.com/anthos/clusters/docs/on-prem/1.12/how-to/pre-upgrade-tool)
+  * [1.13 Run the pre-upgrade tool](https://cloud.google.com/anthos/clusters/docs/on-prem/1.13/how-to/pre-upgrade-tool)
+
+
+
+## September 01, 2023
+
+Anthos clusters on VMware 1.15.4-gke.37 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/how-to/upgrading). Anthos clusters on VMware 1.15.4-gke.37 runs on Kubernetes 1.26.7-gke.2500.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+Upgrading an admin cluster with always-on secrets encryption enabled might fail.
+
+An admin cluster upgrade from 1.14.x to 1.15.0 - 1.15.4 with [always-on secrets encryption](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/always-on-secrets-encryption) enabled might fail depending on whether the feature was enabled during cluster creation or during cluster update.
+
+We recommend that you don't upgrade your admin cluster until a fix is available in 1.15.5. If you must upgrade to 1.15.0-1.15.4, do the steps in [Preventing the upgrade failure](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#preventing-the-upgrade-failure) before upgrading the cluster.
+
+For information on working around an admin cluster failure because of this issue, see [Upgrading an admin cluster with always-on secrets encryption enabled fails](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#upgrading-an-admin-cluster-with-always-on-secrets-encryption-enabled-fails). Note that the workaround relies on you having the old encryption key backed up. If the old key is no longer available, you will have to recreate the admin cluster and all user clusters.
+
+The following issues are fixed in 1.15.4-gke.37:
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/known-issues#seesaw-vm-broken-due-to-disk-space-low) where incorrect log rotation configuration for fluent-bit caused low disk space on the Seesaw VM.
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/known-issues#garp-reply-sent-by-seesaw-doesnt-set-target-ip) that GARP reply sent by Seesaw doesn't set target IP.
+
+  * Fixed an issue where `/etc/vsphere/certificate/ca.crt` wasn't updated after vsphere CA rotation on the Controlplane v2 user cluster control plane machines.
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/known-issues#admin-ssh-public-key-error-after-admin-cluster-upgrade-or-update) where the admin SSH public key has error after admin cluster upgrade or update.
+
+
+
+
+The following vulnerabilities are fixed in 1.15.4-gke.37:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2022-32190](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32190)
+
+    * [CVE-2023-29002](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29002)
+
+    * [CVE-2023-38403](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38403)
+
+  * Container-Optimized OS vulnerabilities:
+
+    * [CVE-2015-8863](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8863)
+
+    * [CVE-2016-4074](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-4074)
+
+    * [CVE-2018-14647](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14647)
+
+    * [CVE-2018-1000802](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1000802)
+
+    * [CVE-2022-28737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28737)
+
+    * [CVE-2023-3611](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3611)
+
+    * [CVE-2023-3776](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3776)
+
+    * [CVE-2023-3777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3777)
+
+    * [CVE-2023-29491](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29491)
+
+    * [CVE-2023-38408](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38408)
+
+
+
+
+## August 23, 2023
+
+Anthos clusters on VMware 1.16.0-gke.669 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.16.0-gke.669 runs on Kubernetes 1.27.4-gke.1600.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+  * **Preview** : You can [migrate from the Seesaw load balancer to MetalLB](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/migrate-seesaw-metallb).
+  * **Preview** : Support [the direct server return (DSR) load balancing mode for a cluster that has Dataplane V2 enabled](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/user-cluster-configuration-file#dataplanev2-lbmode-field).
+  * **Preview** : Support [user-managed admin workstations](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/create-admin-workstation).
+  * **Preview** : Support [preparing credentials as Kubernetes secrets for admin clusters](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/prepared-credentials-admin). See also the [Secrets configuration file](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/secrets-configuration-file) reference.
+  * **GA** : Support for vSphere 8.0.
+  * **GA** : Support enrolling admin and user clusters in the Anthos On-Prem API automatically to enable cluster lifecycle management from the Google Cloud CLI, the Google Cloud console, and Terraform when the Anthos On-Prem API is enabled. If needed, you have the option to disable enrollment. For more information, see [Admin cluster configuration file](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/admin-cluster-configuration-file#gkeOnPremAPI-section) and [User cluster configuration file](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/user-cluster-configuration-file#gkeOnPremAPI-section).
+  * **GA** : Logging and monitoring agents on each cluster now include [kube-state-metrics and node-exporter](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/concepts/logging-and-monitoring#stackdriver_gkeop).
+  * **GA** : Support for [high-availability control plane for admin clusters](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/admin-cluster-configuration-file#adminmaster-replicas-field).
+  * **GA** : Support for [VM-Host affinity ](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/configure-vm-host-affinity)for user cluster node pools.
+  * **GA** : Support for [user cluster storage policy based management (SPBM) ](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/configure-storage-policy).
+  * **GA** : [Google managed service for Prometheus](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/logging-and-monitoring#using-managed-service-for-prometheus) supports system metrics.
+  * **GA** : Support [disabling bundled Istio ingress controller](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/user-cluster-configuration-file#disablebundledingress-field) in the user cluster configuration.
+  * **GA** : Enforce [the same project ID and location](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/multiple-gcp-projects#fleet_host_project) for new cluster creation.
+  * **GA** : Support for using `gkectl` to update secret encryption.
+  * **GA** : Support for [enabling or disabling antiAffinityGroups](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/admin-cluster-configuration-file#antiaffinitygroups-enabled-field).
+
+
+
+The following issues are fixed in 1.16.0-gke.669:
+
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#admin-ssh-public-key-error-after-admin-cluster-upgrade-or-update) that caused intermittent ssh errors on non-HA admin master after update or upgrade.
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#upgrading-an-admin-cluster-enrolled-in-the-anthos-on-prem-api-could-fail) where upgrading enrolled admin cluster could fail due to membership update failure.
+  * Fixed the issue where the CPv1 stackdriver operator had `--is-kubeception-less=true` specified by mistake.
+
+  * Fixed the issue where clusters used the non-high-availability (HA) Connect Agent after an upgrade to 1.15.
+
+  * Fixed the [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#cloud-audit-logging-failure-due-to-permission-denied) of Cloud Audit Logging failure due to permission denied.
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#update-user-cluster-failed-after-ksa-signing-key-rotation) where the update operation cannot be fulfilled due to KSA signing key version unmatched.
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#in-the-private-registry-username-causes-admin-control-plane-machine-startup-failure) where $ in the private registry username caused admin control plane machine startup failure.
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#gkectl-diagnose-snapshot---log-since-fails-to-limit-the-time-window-for-journalctl-commands-running-on-the-cluster-nodes) where `gkectl diagnose snapshot` failed to limit the time window for `journalctl`commands running on the cluster nodes when you take a cluster snapshot with the `--log-since` flag.
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#nodes-fail-to-register-if-configured-hostname-contains-a-period) where node ID verification failed to handle hostnames with dots.
+
+  * Fixed continuous increase of logging agent memory.
+
+  * Fixed the issue that caused `gcloud` to fail to update the platform when the `required-platform-version` is already the current platform version.
+
+  * Fixed an issue where `cluster-api-controllers` in a high-availability admin cluster had no Pod anti-affinity. This could allow the three `clusterapi-controllers` Pods not to be scheduled on different control-plane nodes.
+
+  * Fixed the wrong admin cluster resource link annotation key that can cause the cluster to be enrolled again by mistake.
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#node-pool-creation-fails-because-of-redundant-vm-host-affinity-rules) where node pool creation failed because of duplicated VM-Host affinity rules.
+
+  * The preflight check for StorageClass parameter validations now throws a warning instead of a failure on ignored parameters after CSI Migration. StorageClass parameter `diskformat=thin` is now allowed and does not generate a warning.
+
+  * Fixed a false error message for `gkectl prepare` when using a high-availability admin cluster.
+
+  * Fixed an issue during the migration from the Seesaw load balancer to MetalLB that caused 'DeprecatedKubeception' always shows up in the diff.
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#unsuccessful-failover-on-ha-controlplane-v2-user-cluster-and-admin-cluster-when-the-network-filters-out-duplicate-garp-requests) where some cluster nodes couldn't access the HA control plane when the underlying network performs ARP suppression.
+
+  * Removed unused Pod disruption budgets (such as `kube-apiserver-pdb`, `kube-controller-manager-pdb`, and `kube-etcd-pdb`) for Controlplane V2 user clusters
+
+
+
+
+**Version changes:**
+
+  * Upgraded VMware vSphere Container Storage Plug-in from 3.0 to 3.0.2.
+  * The `crictl` command-line tool was updated to 1.27.
+  * The `containerd` config was updated to version 2.
+
+
+
+**Other changes:**
+
+  * The output of the [`gkectl diagnose cluster` command](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/diagnose) has been updated to provide a summary that customers can copy and paste when opening support cases.
+  * In-tree GlusterFS is removed from Kuberentes 1.27. Add storage validation to detect in-tree glusterFS volumes.
+
+  * Metrics data are now gzip compressed when sending to Cloud Monitoring.
+
+  * The stackdriver-log-forwarder (fluent-bit) now sends logs to Cloud Logging with gzip compression to reduce egress bandwidth needed.
+
+  * Prometheus and Grafana are no longer bundled for in-cluster monitoring and they are replaced with Google Cloud Managed Service for Prometheus.
+
+  * The following flags in the [stackdriver custom resource](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/application-logging-monitoring) are deprecated and changes to their values aren't honored: 
+
+    * `scalableMonitoring`
+    * `enableStackdriverForApplications` (replaced by `enableGMPForApplications` and `enableCloudLoggingForApplications`)
+    * `enableCustomMetricsAdapter`
+  * Deploying the vSphere cloud controller manager in both admin and user clusters, and enabling it for admin and kubeception user clusters is now supported.
+
+  * The audit-proxy now sends audit logs to Cloud Audit Logging with gzip compressed to reduce egress bandwidth needed.
+
+  * Removed `accounts.google.com` from the internet preflight check requirement.
+
+  * The [pre-defined dashboards](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/reference/predefined-dashboards) are automatically present based on the presence of metrics.
+
+  * Enabled auto repair on ReadonlyFilesystem node condition
+
+  * Support the `d` character when using `--log-since` flag to take cluster snapshot. For example: `gkectl diagnose snapshot --log-since=1d`
+
+  * A new CSI Workload preflight check was added to verify that workloads using vSphere PVs can work through CSI.
+
+  * Preflight check failures for `gkectl prepare` now block install and upgrade operations.
+
+  * The kubelet readonly port is now disabled by default for security enhancement. See [Enable kubelet readonly port](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/enable-kubelet-readonly-port) for instructions if you need to re-enable it for legacy reasons.
+
+  * AIS Pods are now scheduled to run on control plane nodes instead of worker nodes.
+
+
+
+
+The following vulnerabilities are fixed in 1.16.0-gke.669:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2022-29155](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29155)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2023-0286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0286)
+
+    * [CVE-2023-2828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2828)
+
+    * [CVE-2023-27561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27561)
+
+    * [CVE-2022-29458](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29458)
+
+    * [CVE-2023-3138](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3138)
+
+    * [CVE-2020-7712](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7712)
+
+    * [CVE-2015-3276](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3276)
+
+    * [CVE-2020-8032](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8032)
+
+    * [CVE-2023-0215](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0215)
+
+    * [CVE-2023-0361](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0361)
+
+    * [CVE-2022-4450](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4450)
+
+    * [CVE-2023-2454](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2454)
+
+    * [CVE-2022-29154](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29154)
+
+    * [CVE-2023-1999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1999)
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-2609](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2609)
+
+    * [CVE-2023-0386](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0386)
+
+    * [CVE-2023-1872](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1872)
+
+    * [CVE-2023-27561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27561)
+
+    * [CVE-2023-3090](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3090)
+
+    * [CVE-2023-24329](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24329)
+
+  * Windows vulnerabilities:
+
+    * [CVE-2022-41723](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41723)
+
+    * [CVE-2022-41725](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41725)
+
+
+
+
+## August 17, 2023
+
+Anthos clusters on VMware 1.14.7-gke.42 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.14/how-to/upgrading). Anthos clusters on VMware 1.14.7-gke.42 runs on Kubernetes 1.25.10-gke.2100.
+
+Upgraded VMware vSphere Container Storage Plug-in from 2.7.0 to 2.7.2.
+
+The following vulnerabilities are fixed in 1.14.7-gke.42:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2023-2828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2828)
+    * [CVE-2023-3138](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3138)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-3090](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3090)
+    * [CVE-2023-35001](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-35001)
+    * [CVE-2023-3567](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3567)
+    * [CVE-2023-31248](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-31248)
+    * [CVE-2023-27534](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27534)
+    * [CVE-2023-24329](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24329)
+    * [CVE-2023-28840](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28840)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-35788](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-35788)
+  * Windows vulnerabilities:
+
+    * [CVE-2022-41723](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41723)
+    * [CVE-2022-41725](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41725)
+
+
+
+The following issues are fixed in 1.14.7-gke.42:
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#admin-ssh-public-key-error-after-admin-cluster-upgrade-or-update) that admin SSH public key has error after admin cluster upgrade or update.
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#garp-reply-sent-by-seesaw-doesnt-set-target-ip) that GARP reply sent by Seesaw doesn't set target IP.
+  * Fixed an issue that `/etc/vsphere/certificate/ca.crt` was not updated after vsphere CA rotation on the Controlplane v2 user cluster control plane machines.
+  * Fixed an issue that the CPv1 stackdriver operator had `--is-kubeception-less=true` specified by mistake.
+
+
+
+## August 10, 2023
+
+Anthos clusters on VMware 1.15.3-gke.47 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.13/how-to/upgrading). Anthos clusters on VMware 1.15.3-gke.47 runs on Kubernetes 1.26.5-gke.2100.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+Upgrading an admin cluster with always-on secrets encryption enabled might fail.
+
+An admin cluster upgrade from 1.14.x to 1.15.0 - 1.15.4 with [always-on secrets encryption](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/always-on-secrets-encryption) enabled might fail depending on whether the feature was enabled during cluster creation or during cluster update.
+
+We recommend that you don't upgrade your admin cluster until a fix is available in 1.15.5. If you must upgrade to 1.15.0-1.15.4, do the steps in [Preventing the upgrade failure](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#preventing-the-upgrade-failure) before upgrading the cluster.
+
+For information on working around an admin cluster failure because of this issue, see [Upgrading an admin cluster with always-on secrets encryption enabled fails](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#upgrading-an-admin-cluster-with-always-on-secrets-encryption-enabled-fails). Note that the workaround relies on you having the old encryption key backed up. If the old key is no longer available, you will have to recreate the admin cluster and all user clusters.
+
+Anthos clusters on VMware 1.15.3 supports adding the `gkeOnPremAPI` section to your [admin cluster configuration file](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/admin-cluster-configuration-file#gkeOnPremAPI-section) and [user cluster configuration file](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/user-cluster-configuration-file#gkeOnPremAPI-section) to enroll the clusters in the Anthos On-Prem API.
+
+Upgraded VMware vSphere Container Storage Plug-in from 3.0 to 3.0.2. For more information, see the [Plug-in release notes](https://docs.vmware.com/en/VMware-vSphere-Container-Storage-Plug-in/3.0/rn/vmware-vsphere-container-storage-plugin-30-release-notes/index.html).
+
+The following vulnerabilities are fixed in 1.15.3-gke.47:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2023-2454](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2454)
+
+    * [CVE-2022-29154](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29154)
+
+    * [CVE-2023-27561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27561)
+
+    * [CVE-2023-2828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2828)
+
+    * [CVE-2023-3138](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3138)
+
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-35001](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-35001)
+
+    * [CVE-2023-24329](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24329)
+
+    * [CVE-2023-3389](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3389)
+
+    * [CVE-2022-37454](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-37454)
+
+    * [CVE-2023-31248](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-31248)
+
+    * [CVE-2023-3090 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3090)
+
+    * [CVE-2023-3268 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3268)
+
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2023-35788](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-35788)
+  * Windows vulnerabilities:
+
+    * [CVE-2022-41723](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41723)
+
+    * [CVE-2022-41725](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41725)
+
+
+
+
+The following issues are fixed in 1.15.3-gke.47:
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#upgrading-an-admin-cluster-enrolled-in-the-anthos-on-prem-api-could-fail). that caused upgrading an admin cluster enrolled in the Anthos On-Prem API to fail.
+  * Fixed an issue where audit logs are duplicated into an offline buffer even when they are successfully sent to Cloud Audit Logging.
+
+
+
+## July 20, 2023
+
+Anthos clusters on VMware 1.13.10-gke.42 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.13/how-to/upgrading). Anthos clusters on VMware 1.13.10-gke.42 runs on Kubernetes 1.24.14-gke.2100.
+
+  * Upgraded VMware vSphere Container Storage Plug-in from 2.6.2 to 2.7.2.
+  * Added short names for Volume Snapshot CRDs.
+
+
+
+The following issues are fixed in 1.13.10-gke.42:
+
+  * Fixed an issue that CPv1 stackdriver operator has `--is-kubeception-less=true` specified by mistake.
+  * Fixed an issue that `/etc/vsphere/certificate/ca.crt` is not updated after vsphere CA rotation on the Controlplane v2 user cluster control plane machines.
+  * Fixed an issue where audit logs are duplicated into an offline buffer even when they are successfully sent to Cloud Audit Logs.
+  * Fixed a[ known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#in-the-private-registry-username-causes-admin-control-plane-machine-startup-failure) where `$` in the private registry user name would cause admin control plane machine startup failure.
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#update-user-cluster-failed-after-ksa-signing-key-rotation) where the update operation cannot be fulfilled due to KSA signing key version unmatched.
+
+
+
+The following vulnerabilities are fixed in 1.13.10-gke.42: 
+
+  * **High-severity container vulnerabilities:**
+
+    * [CVE-2023-3138](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3138)
+    * [CVE-2023-2828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2828)
+    * [CVE-2023-2454](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2454)
+    * [CVE-2023-0215](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0215)
+    * [CVE-2023-0286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0286)
+    * [CVE-2023-0361](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0361)
+    * [CVE-2022-4450](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4450)
+    * [CVE-2023-1999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1999)
+  * **Container-optimized OS vulnerabilities:**
+
+    * [CVE-2023-28642](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28642)
+  * **Ubuntu vulnerabilities:**
+
+    * [CVE-2023-1380](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1380)
+    * [CVE-2023-2612](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2612)
+    * [CVE-2023-30456](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30456)
+    * [CVE-2023-31436](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-31436)
+    * [CVE-2023-32233](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32233)
+  * **Windows vulnerabilities:**
+
+    * [CVE-2022-41723](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41723)
+    * [CVE-2022-41725](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41725)
+
+
+
+## July 10, 2023
+
+Anthos clusters on VMware 1.15.2-gke.44 is now available. To upgrade, see [Upgrading Anthos clusters on VMware. Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). 1.15.2-gke.44 runs on Kubernetes 1.26.2-gke.1001.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+Upgrading an admin cluster with always-on secrets encryption enabled might fail.
+
+An admin cluster upgrade from 1.14.x to 1.15.0 - 1.15.4 with [always-on secrets encryption](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/always-on-secrets-encryption) enabled might fail depending on whether the feature was enabled during cluster creation or during cluster update.
+
+We recommend that you don't upgrade your admin cluster until a fix is available in 1.15.5. If you must upgrade to 1.15.0-1.15.4, do the steps in [Preventing the upgrade failure](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#preventing-the-upgrade-failure) before upgrading the cluster.
+
+For information on working around an admin cluster failure because of this issue, see [Upgrading an admin cluster with always-on secrets encryption enabled fails](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#upgrading-an-admin-cluster-with-always-on-secrets-encryption-enabled-fails). Note that the workaround relies on you having the old encryption key backed up. If the old key is no longer available, you will have to recreate the admin cluster and all user clusters.
+
+The following issues are fixed in 1.15.2-gke.44:
+
+  * Fixed a bug where after an upgrade to 1.15, clusters used the non-high-availability (HA) Connect Agent.
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#in-the-private-registry-username-causes-admin-control-plane-machine-startup-failure) where `$` in the private registry username caused admin control plane machine startup failure.
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#update-user-cluster-failed-after-ksa-signing-key-rotation) where user cluster update failed after KSA signing key rotation.
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#gkectl-diagnose-snapshot---log-since-fails-to-limit-the-time-window-for-journalctl-commands-running-on-the-cluster-nodes) where `gkectl diagnose snapshot` failed to limit the time window for `journalctl` commands running on the cluster nodes when you take a cluster snapshot with the `--log-since` flag.
+
+
+
+The following vulnerabilities are fixed in 1.15.2-gke.44: 
+
+  * **High-severity container vulnerabilities:**
+
+    * [CVE-2023-1999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1999)
+  * **Container-optimized OS vulnerabilities:**
+
+    * [CVE-2023-2609](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2609)
+
+
+
+## July 06, 2023
+
+Anthos clusters on VMware 1.14.6-gke.23 is now available. To upgrade, see [Upgrading Anthos clusters on VMware. Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.14/how-to/upgrading) 1.14.6-gke.23 runs on Kubernetes 1.25.10-gke.1200.
+
+The following issues are fixed in 1.14.6-gke.23:
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#in-the-private-registry-username-causes-admin-control-plane-machine-startup-failure) where `$` in the private registry username caused admin control plane machine startup failure.
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#gkectl-diagnose-snapshot---log-since-fails-to-limit-the-time-window-for-journalctl-commands-running-on-the-cluster-nodes) where `gkectl diagnose snapshot` failed to limit the time window for `journalctl` commands running on the cluster nodes when you take a cluster snapshot with the `--log-since` flag.
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#update-user-cluster-failed-after-ksa-signing-key-rotation) where user cluster update failed after KSA signing key rotation.
+
+
+
+The following vulnerabilities are fixed in 1.14.6-gke.23: 
+
+**High-severity container vulnerabilities:**
+
+  * [CVE-2023-2454](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2454)
+  * [CVE-2023-27561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27561)
+  * [CVE-2022-29154](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29154)
+
+
+
+## June 27, 2023
+
+**Security bulletin**
+
+A number of vulnerabilities have been discovered in Envoy, which is used in Anthos Service Mesh (ASM). These were reported separately as [GCP-2023-002](https://cloud.google.com/support/bulletins#gcp-2023-002).
+
+For more information, see the [GCP-2023-016 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2023-016).
+
+**Security bulletin**
+
+With CVE-2023-31436, an out-of-bounds memory access flaw was found in the Linux kernel's traffic control (QoS) subsystem in how a user triggers the qfq_change_class function with an incorrect MTU value of the network device used as lmax. This flaw allows a local user to crash or potentially escalate their privileges on the system.
+
+For more information, see the [GCP-2023-017 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2023-017).
+
+**Security bulletin**
+
+A new vulnerability (CVE-2023-2235) has been discovered in the Linux kernel that can lead to a privilege escalation on the node. For more information, see the [GCP-2023-018 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2023-018).
+
+## June 20, 2023
+
+**Security bulletin**
+
+A new vulnerability, CVE-2023-0468, has been discovered in the Linux kernel that could allow an unprivileged user to escalate privileges to root when io_poll_get_ownership will keep increasing req->poll_refs on every io_poll_wake then overflow to 0 which will fput req->file twice and cause a struct file refcount issue. GKE clusters, including Autopilot clusters, with Container-Optimized OS using Linux Kernel version 5.15 are affected. GKE clusters using Ubuntu images or using GKE Sandbox are unaffected.
+
+For more information, see the [GCP-2023-015 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2023-015).
+
+## June 16, 2023
+
+**Security bulletin**
+
+Two new security issues were discovered in Kubernetes where users may be able to launch containers that bypass policy restrictions when using ephemeral containers and either ImagePolicyWebhook (CVE-2023-2727) or the ServiceAccount admission plugin (CVE-2023-2728).
+
+For more information, see the [GCP-2023-014 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2023-014)
+
+## June 14, 2023
+
+Anthos clusters on VMware 1.14.5-gke.41 is now available. To upgrade, see [Upgrading Anthos clusters on VMware. Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.14/how-to/upgrading) 1.14.5-gke.41 runs on Kubernetes 1.25.8-gke.1500.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.15, 1.14, and 1.13.
+
+The component access service account key for an admin cluster using a private registry can be updated in 1.14.5 and later. See  
+[Rotating service account keys](https://cloud.google.com/anthos/clusters/docs/on-prem/1.14/how-to/rotating-service-account-keys) for details.
+
+The following issues are fixed in 1.14.5-gke.41:
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#kind-cluster-pulls-container-images-from-docker.io) where the kind cluster downloads container images from [docker.io](http://docker.io). These container images are now preloaded in the kind cluster container image.
+  * Fixed a bug where disks may be out of order in the first boot, causing node bootstrap failure.
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#nodes-fail-to-register-if-configured-hostname-contains-a-period) where node ID verification failed to handle hostnames with dots.
+  * Fixed an issue where gcloud fails to update the platform when the `required-platform-version` is already the current platform version.
+  * Fixed the Anthos Config Management `gcloud` issue that the policy controller state might be falsely reported as pending.
+  * Fixed continuously increasing memory usage of the logging agent `stackdriver-log-forwarder`.
+  * Fixed the wrong admin cluster resource link annotation key that can cause the cluster to be enrolled in the Anthos On-Prem API again by mistake.
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#unsuccessful-failover-on-ha-controlplane-v2-user-cluster-and-admin-cluster-when-the-network-filters-out-duplicate-garp-requests) where some cluster nodes couldn't access the HA control plane when the underlying network performs ARP suppression.
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#vsphere-csi-secret-is-not-updated-after-gkectl-update-credentials-vsphere---admin-cluster) where `vsphere-csi-secret` is not updated during `gkectl update credentials vsphere` for admin cluster
+
+
+
+The following vulnerabilities are fixed in 1.14.5-gke.41
+
+  * **High-severity container vulnerabilities:**
+
+    * [CVE-2023-0286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0286)
+    * [CVE-2022-4450](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4450)
+    * [CVE-2023-0215](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0215)
+
+
+
+Anthos clusters on VMware 1.13.9-gke.29 is now available. To upgrade, see [Upgrading Anthos clusters on VMware. Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.13/how-to/upgrading) 1.13.9-gke.29 runs on Kubernetes 1.24.11-gke.1200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.15, 1.14, and 1.13.
+
+The following high-severity container vulnerabilities are fixed in 1.13.9-gke.29:
+
+  * [CVE-2023-27561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27561)
+  * [CVE-2023-29013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29013)
+
+
+
+The following issues are fixed in 1.13.9-gke.29:
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#kind-cluster-pulls-container-images-from-docker.io) where the kind cluster downloads container images from [docker.io](http://docker.io). These container images are now preloaded in the kind cluster container image.
+  * Fixed the issue where `gkectl` failed to limit the time window for `journalctl` commands running on the cluster nodes when you take a cluster snapshot with the `--log-since` flag.
+  * Fixed an issue where gcloud fails to update the platform when the `required-platform-version` is already the current platform version.
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#nodes-fail-to-register-if-configured-hostname-contains-a-period) where nodes fail to register if the configured hostname contains a period.
+  * Fixed the wrong admin cluster resource link annotation key that can cause the cluster to be enrolled again by mistake.
+
+
+
+## June 06, 2023
+
+**Security bulletin**
+
+A new vulnerability (CVE-2023-2878) has been discovered in the secrets-store-csi-driver where an actor with access to the driver logs could observe service account tokens. These tokens could then potentially be exchanged with external cloud providers to access secrets stored in cloud vault solutions. The severity of this Security Bulletin is None. For more information, see the [GCP-2023-009 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2023-009).
+
+## June 05, 2023
+
+**Known issue**
+
+If you create a version 1.13.8 or version 1.14.4 admin cluster, or upgrade an admin cluster to version 1.13.8 or 1.14.4, the kind cluster pulls the following container images from `docker.io`:
+
+  * `docker.io/kindest/kindnetd`
+  * `docker.io/kindest/local-path-provisioner`
+  * `docker.io/kindest/local-path-helper`
+
+
+
+If `docker.io` isn't accessible from your admin workstation, the admin cluster creation or upgrade fails to bring up the kind cluster.
+
+This issue affects the following versions of Anthos clusters on VMware:
+
+  * 1.14.4
+  * 1.13.8
+
+
+
+For more information, including a workaround, see [kind cluster pulls container images from `docker.io`](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#kind-cluster-pulls-container-images-from-docker.io) on the Known issues page.
+
+**Security bulletin**
+
+A new vulnerability (CVE-2023-1872) has been discovered in the Linux kernel that can lead to a privilege escalation to root on the node. For more information, see the [GCP-2023-008](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2023-008).
+
+## June 01, 2023
+
+Anthos clusters on VMware 1.15.1-gke.40 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/how-to/upgrading). Anthos clusters on VMware 1.15.1-gke.40 runs on Kubernetes 1.26.2-gke.1001.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.15, 1.14, and 1.13.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+Upgrading an admin cluster with always-on secrets encryption enabled might fail.
+
+An admin cluster upgrade from 1.14.x to 1.15.0 - 1.15.4 with [always-on secrets encryption](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/always-on-secrets-encryption) enabled might fail depending on whether the feature was enabled during cluster creation or during cluster update.
+
+We recommend that you don't upgrade your admin cluster until a fix is available in 1.15.5. If you must upgrade to 1.15.0-1.15.4, do the steps in [Preventing the upgrade failure](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#preventing-the-upgrade-failure) before upgrading the cluster.
+
+For information on working around an admin cluster failure because of this issue, see [Upgrading an admin cluster with always-on secrets encryption enabled fails](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#upgrading-an-admin-cluster-with-always-on-secrets-encryption-enabled-fails). Note that the workaround relies on you having the old encryption key backed up. If the old key is no longer available, you will have to recreate the admin cluster and all user clusters.
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#nodes-fail-to-register-if-configured-hostname-contains-a-period) where node ID verification failed to handle hostnames with dots.
+
+  * Fixed continuous increase of logging agent memory.
+
+  * Fixed an issue where `cluster-api-controllers` in a high-availability admin cluster had no Pod anti-affinity. This could allow the three `clusterapi-controllers` Pods not to be scheduled on different control-plane nodes.
+
+  * Fixed the wrong admin cluster resource link annotation key that can cause the cluster to be enrolled again by mistake.
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#node-pool-creation-fails-because-of-redundant-vm-host-affinity-rules) where node pool creation failed because of duplicated VM-Host affinity rules.
+
+  * The preflight check for StorageClass parameter validations now throws a warning instead of a failure on ignored parameters after CSI Migration. StorageClass parameter `diskformat=thin` is now allowed and does not generate a warning.
+
+  * Fixed an issue where `gkectl repair admin-master` might fail with `Failed to repair: failed to delete the admin master node object and reboot the admin master VM`.
+
+  * Fixed a race condition where some cluster nodes couldn't access the high-availability control plane when the underlying network performed ARP suppression.
+
+  * Fixed a false error message for `gkectl prepare` when using a high-availability admin cluster.
+
+  * Fixed an issue where during user cluster update, `DeprecatedKubeception` always shows up in the diff.
+
+  * Fixed an issue where there were leftover Pods with failed status due to `Predicate NodeAffinity failed` during node re-creation.
+
+
+
+
+Fixed the following vulnerabilities:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2023-0286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0286)
+    * [CVE-2023-0215](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0215)
+    * [CVE-2023-0361](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0361)
+    * [CVE-2022-4450](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4450)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-2235](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2235)
+    * [CVE-2023-27534](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27534)
+    * [CVE-2023-0386](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0386)
+    * [CVE-2023-2248](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2248)
+    * [CVE-2023-0464](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0464)
+    * [CVE-2023-1652](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1652)
+    * [CVE-2023-27561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27561)
+
+
+
+## May 18, 2023
+
+**Security bulletin**
+
+Two new vulnerabilities (CVE-2023-1281, CVE-2023-1829) have been discovered in the Linux kernel that can lead to a privilege escalation to root on the node. For more information, see the [GCP-2023-005 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2023-005).
+
+## May 15, 2023
+
+Anthos clusters on VMware 1.13.8-gke.42 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.13/how-to/upgrading). Anthos clusters on VMware 1.13.8-gke.42 runs on Kubernetes 1.24.11-gke.1200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.15, 1.14, and 1.13.
+
+  * Fixed a race condition where some cluster nodes couldn't access the HA control plane when the underlying network performed ARP suppression.
+
+  * Fixed an issue where `vsphere-csi-secret` was not updated during `gkectl update credentials vsphere` for an admin cluster.
+
+  * Disabled motd news on the ubuntu_containerd image to avoid unexpected connections to Canonical.
+
+  * Fixed an issue where the Connect Agent continued using the older image after registry credential update.
+
+  * Fixed an issue where cluster autoscaler ClusterRoleBindings in the admin cluster were accidentally deleted upon user cluster deletion. This fix removes dependency on ClusterRole, ClusterRoleBinding and ServiceAccount objects in the admin cluster.
+
+  * Fixed an issue where Connect Agent in admin clusters might fail to be upgraded during cluster upgrade.
+
+  * Fixed an issue where a cluster might not be registered when the initial membership creation attempt failed.
+
+
+
+
+Fixed the following vulnerabilities:
+
+  * High-severity container vulnerabilities: 
+    * [CVE-2023-26604](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-26604)
+    * [CVE-2022-29154](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29154)
+
+
+
+## May 02, 2023
+
+Anthos clusters on VMware [1.15.0-gke.581](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/version-history) is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/how-to/upgrading). Anthos clusters on VMware 1.15.0-gke.581 runs on Kubernetes 1.26.2-gke.1001.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.15, 1.14, and 1.13.
+
+If you use a third-party storage vendor, check the [GDCV Ready storage partners](https://cloud.google.com/anthos/docs/resources/partner-storage) document to make sure the storage vendor has already passed the qualification for this release of GKE on VMware.
+
+Upgrading an admin cluster with always-on secrets encryption enabled might fail.
+
+An admin cluster upgrade from 1.14.x to 1.15.0 - 1.15.4 with [always-on secrets encryption](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/always-on-secrets-encryption) enabled might fail depending on whether the feature was enabled during cluster creation or during cluster update.
+
+We recommend that you don't upgrade your admin cluster until a fix is available in 1.15.5. If you must upgrade to 1.15.0-1.15.4, do the steps in [Preventing the upgrade failure](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#preventing-the-upgrade-failure) before upgrading the cluster.
+
+For information on working around an admin cluster failure because of this issue, see [Upgrading an admin cluster with always-on secrets encryption enabled fails](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#upgrading-an-admin-cluster-with-always-on-secrets-encryption-enabled-fails). Note that the workaround relies on you having the old encryption key backed up. If the old key is no longer available, you will have to recreate the admin cluster and all user clusters.
+
+  * [CSI migration](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/concepts/storage#csi_migration_for_the_vsphere_storage_driver) for the vSphere storage driver is enabled by default. A new storage preflight check and a new CSI workload preflight check verify that PersistentVolumes that used the old in-tree vSphere storage driver will continue to work with the vSphere CSI driver. There is a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/known-issues#upgrade-storageclass-diskformat) during admin cluster upgrade. If you see a preflight check about a StorageClass `diskformat` parameter, you can use `--skip-validation-cluster-health` to skip the check. This issue will be fixed in a future release.
+
+  * The minimum required version of vCenter and ESXi is 7.0 Update 2.
+
+
+
+
+  * **Preview** : Support for vSphere 8.0
+
+  * **Preview** : Support for [VM-Host affinity](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/how-to/configure-vm-host-affinity) for user cluster node pools
+
+  * **Preview** : Support for [High availability control plane](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/how-to/admin-cluster-configuration-file#adminmaster-replicas-field) for admin clusters
+
+  * **Preview** : Support for [system metrics collection](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/how-to/logging-and-monitoring) using Google Cloud Managed Service for Prometheus
+
+  * **Preview** : You can now filter application logs by namespace, Pod labels and content regex.
+
+  * **Preview** : Support for [storage policy in user clusters](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/how-to/configure-storage-policy)
+
+  * **Preview** : You can now use `gkectl diagnose snapshot --upload=true` to upload a snapshot. And `gkectl` helps generate the Cloud Storage bucket with the format gs://anthos-snapshot[uuid]/vmware/$snapshot-name.
+
+  * **GA** : Support for [upgrade and rollback of node pool version](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/how-to/upgrade-node-pools)
+
+  * **GA** : `gkectl get-config` is a new command that locally [generates cluster configuration files](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/how-to/get-configuration-file-from-cluster) from an existing admin or user cluster.
+
+  * **GA** : Support for multi-line parsing of Go and Java logs
+
+  * **GA** : Support for manual load balancing in user clusters that enable ControlplaneV2
+
+  * **GA** : Support for update of private registry credentials
+
+  * **GA** : Metrics and logs in the bootstrap cluster are now uploaded to Google Cloud through Google Cloud's operations suite to provide better observability on admin cluster operations.
+
+  * **GA** : vSphere CSI is now enabled for Windows node pools.
+
+  * Fully managed Cloud Monitoring Integration dashboards. The new Integration Dashboard is automatically installed. You cannot make changes to the following dashboards, because they are fully managed by Google. However, you can make a copy of a dashboard and customize the copied version:
+
+    * Anthos Cluster Control Plane Uptime
+    * Anthos Cluster Node Status
+    * Anthos Cluster Pod Status
+    * Anthos Cluster Utilization Metering
+    * Anthos Cluster on VMware VM Status
+
+
+
+**Deprecations**
+
+  * Support for `gkeadm` on MAC and Windows is deprecated.
+
+  * The `enableWindowsDataplaneV2` field in the user cluster configuration file is deprecated.
+
+  * The `gkectl enroll cluster` command is deprecated. Use `gcloud` to enroll a user cluster instead.
+
+  * The following dashboards in the Cloud Monitoring Sample Library will be deprecated in a future release:
+
+    * Anthos cluster control plane uptime
+    * Anthos cluster node status
+    * Anthos cluster pod status
+    * Anthos utilization metering
+    * GKE on-prem node status
+    * GKE on-prem control plane uptime
+    * GKE on-prem pod status
+    * GKE on-prem vSphere vm health status
+  * In a future release, the following customized dashboards will not be created when you create a new cluster:
+
+    * GKE on-prem node status
+    * GKE on-prem control plane uptime
+    * GKE on-prem pod status
+    * GKE on-prem vSphere vm health status
+    * GKE on-prem Windows pod status
+    * GKE on-prem Windows node status
+
+
+
+  * Admin cluster update operations are now managed by an admin cluster controller.
+
+  * The Connect Agent now runs in high availability mode.
+
+  * The metrics server now runs in high-availability mode.
+
+  * Upgraded the [VMware vSphere Container Storage Plug-in](https://docs.vmware.com/en/VMware-vSphere-Container-Storage-Plug-in/index.html) from 2.7 to 3.0. This includes support for Kubernetes version 1.26. For more information, see the plug-in [release notes](https://docs.vmware.com/en/VMware-vSphere-Container-Storage-Plug-in/3.0/rn/vmware-vsphere-container-storage-plugin-30-release-notes/index.html).
+
+  * Upgraded Anthos Identity Service to hybrid_identity_charon_20230313_0730_RC00.
+
+  * Switched the node selector from `node-role.kubernetes.io/master` to `node-role.kubernetes.io/control-plane` and added toleration `node-role.kubernetes.io/control-plane` to system components.
+
+  * Controlplane V2 is now the default for new user clusters.
+
+  * Now when you delete a Controlplane V2 user cluster , the data disk is automatically deleted.
+
+  * Cluster DNS now supports ordering policy for upstream servers.
+
+  * Added admin cluster CA certificate validation to the admin cluster upgrade preflight check.
+
+  * Upgraded Anthos Network Gateway to 1.4.4.
+
+  * Updated `anthos-multinet`.
+
+  * When you upload and share a snapshot using `gkectl diagnose snapshot` with a Google Support team service account `service-[GOOGLE_CLOUD_PROJECT_NUMBER]@gcp-sa-anthossupport.iam.gserviceaccount.com`, `gkectl` helps provision the service account automatically.
+
+  * Upgraded `node-exporter` from 1.0.1 to 1.4.1.
+
+  * Upgraded Managed Service for Prometheus for application metrics from 0.4 to 0.6.
+
+  * We now allow storage DRS to be enabled in manual mode.
+
+  * GKE connect is now required for admin clusters, and you cannot skip the corresponding validation. You can register existing admin clusters by using `gkectl update admin`.
+
+  * We no longer silently skip saving empty files in diagnose snapshots, but instead collect the names of those files in a new `empty_snapshots` file in the snapshot tarball.
+
+  * We now mount `/opt/data` using disk label `data`.
+
+  * In the vSphere CSI driver, enabled `improved-csi-idempotency` and `async-query-volume`, and disabled `trigger-csi-fullsync`. This enhances the vSphere CSI driver to ensure volume operations are idempotent.
+
+  * Changed the relative file path fields in the admin cluster configuration file to use absolute paths 
+
+  * Removed `kubectl describe` events in cluster snapshots for a better user experience. `kubectl describe` events fail when the target event expires. In contrast `kubectl get` events survive and provide enough debugging information.
+
+
+
+
+  * Fixed the false error message generated by the cluster autoscaler about a missing ClusterRoleBinding. After a user cluster is deleted, that ClusterRoleBinding is no longer needed.
+
+  * Fixed an issue where `gkectl check-config` failed (nil pointer error) during validation for Manual load balancing.
+
+  * Fixed an issue where the cluster autoscaler did not work when Controlplane V2 was enabled.
+
+  * Fixed an issue where using `gkectl update` to enable Cloud Audit Logs did not work.
+
+  * Fixed an issue where a preflight check for Seesaw load balancer creation failed if the Seesaw group file already existed.
+
+  * We now backfill the OnPremAdminCluster OSImageType field to prevent an unexpected diff during update.
+
+  * Fixed an issue where disks might be out of order during the first boot.
+
+  * Fixed an issue where the private registry credentials file for the user cluster could not be loaded.
+
+  * Fixed an issue where the user-cluster node options and startup script used the cluster version instead of the node pool version.
+
+  * Fixed an issue where `gkectl diagnose cluster` didn't check the health of control-plane Pods for kubeception user clusters.
+
+  * Fixed an issue where KSASigningKeyRotation always showed as an unsupported change during user cluster update.
+
+  * Fixed an issue where a cluster might not be registered when the initial membership creation attempt failed.
+
+  * Fixed an issue where user cluster data disk validation used the cluster-level `vCenter.datastore` instead of `masterNode.vsphere.datastore`.
+
+  * Fixed an issue where `component-access-sa-key` was missing in the `admin-cluster-creds` Secret after admin cluster upgrade.
+
+  * Fixed an issue where during user cluster upgrade, the cluster state indicated that upgrade had completed before CA rotation had completed.
+
+  * Fixed an issue where advanced networking components were evicted or not scheduled on nodes because of Pod priority.
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.14/known-issues#pod-create-or-delete-errors-due-to-calico-cni-service-account-auth-token-issue) where the `calico-node` Pod was unable to renew the auth token in the calico CNI kubeconfig file.
+
+  * Fixed Anthos Identity Service metric exporting issues.
+
+  * During preflight checks and cluster diagnosis, we now skip PersistentVolumes and PersistentVolumeClaims that use non-vSphere drivers.
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.14/known-issues#pod-create-or-delete-errors-due-to-calico-cni-service-account-auth-token-issue) where CIDR ranges could not be used in the IP block file.
+
+  * Fixed an issue where auto resizing of CPU and memory for an admin cluster add-on node got reset by an admin cluster controller.
+
+  * `anet-operator` can now be scheduled to a Windows node in a user cluster that has Controlplane V2 enabled.
+
+
+
+
+Known issues:
+
+  * [You might see a false error message about `vCenter.dataDisk`](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/known-issues#false-error-message-about-vcenter.datadisk).
+
+  * [Node pool creation might fail because of redundant VM-Host affinity rules](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/known-issues#node-pool-creation-fails-because-of-redundant-vm-host-affinity-rules).
+
+  * [`gkectl repair admin-master` might fail because of failure to delete the admin master node object](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/known-issues#gkectl-repair-admin-master-may-fail-due-to-failed-to-delete-the-admin-master-node-object-and-reboot-the-admin-master-vm).
+
+  * [Pods might remain in Failed state after re-creation or update of a control-plane node](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/known-issues#pods-remain-in-failed-state-afer-re-creation-or-update-of-a-control-plane-node).
+
+  * [OnPremUserCluster might not become ready because private registry credentials aren't in a prepared Secret](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/known-issues#onpremusercluster-not-ready-because-of-private-registry-credentials).
+
+  * [`gkectl upgrade admin` might fail because of `diskformat` parameter in StorageClass](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/known-issues#upgrade-storageclass-diskformat).
+
+  * [Migrated in-tree vSphere volumes using the Windows file system can't be used with vSphere CSI driver](https://cloud.google.com/anthos/clusters/docs/on-prem/1.15/known-issues#migrated-in-tree-vsphere-volumes-using-the-windows-file-system-cant-be-used-with-vsphere-csi-driver).
+
+
+
+
+Fixed the following vulnerabilities:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2022-32221](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32221)
+    * [CVE-2022-47629](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-47629)
+    * [CVE-2021-46848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46848)
+    * [CVE-2022-41903](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41903)
+    * [CVE-2022-23521](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23521)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2022-3094](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3094)
+    * [CVE-2023-23916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23916)
+    * [CVE-2022-42898](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42898)
+    * [CVE-2021-3449](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3449)
+    * [CVE-2023-26604](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-26604)
+    * [CVE-2023-23946](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23946)
+    * [CVE-2022-39260](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39260)
+    * [CVE-2022-3970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3970)
+    * [CVE-2022-23218](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23218)
+    * [CVE-2022-23219](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23219)
+    * [CVE-2021-3999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3999)
+    * [CVE-2019-25013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-25013)
+    * [CVE-2021-33574](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33574)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-28466](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28466)
+    * [CVE-2023-0461](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0461)
+    * [CVE-2020-17437](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-17437)
+    * [CVE-2022-32149](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32149)
+    * [CVE-2022-40320](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40320)
+    * [CVE-2019-18276](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18276)
+    * [CVE-2022-40304](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40304)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2022-4203](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4203)
+    * [CVE-2022-4304](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4304)
+    * [CVE-2022-4450](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4450)
+    * [CVE-2023-0215](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0215)
+    * [CVE-2023-0216](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0216)
+    * [CVE-2023-0217](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0217)
+    * [CVE-2023-0286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0286)
+    * [CVE-2023-0401](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0401)
+    * [CVE-2022-28321](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28321)
+    * [CVE-2022-3328](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3328)
+
+
+
+## May 01, 2023
+
+Anthos clusters on VMware 1.14.4-gke.54 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.14/how-to/upgrading). Anthos clusters on VMware 1.14.4-gke.54 runs on Kubernetes 1.25.8-gke.1500.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.14, 1.13, and 1.12.
+
+Added admin cluster CA certificate validation to the admin cluster upgrade preflight check.
+
+  * Fixed an issue where the Connect Agent continued using the older image after registry credential update.
+
+  * Fixed an issue where the cluster autoscaler did not work when Controlplane V2 was enabled.
+
+  * Fixed an issue where a cluster might not be registered when the initial membership creation attempt failed.
+
+  * Fixed an issue where ClusterRoleBindings in the admin cluster were accidentally deleted upon user cluster deletion. This fix removes dependency on ClusterRole, ClusterRoleBinding and ServiceAccount objects in the admin cluster.
+
+  * Fixed an issue where a preflight check for Seesaw load balancer creation failed if the Seesaw group file already existed.
+
+  * Disabled motd news on the ubuntu_containerd image.
+
+  * Fixed an issue where `gkectl check-config` failed at Manual LB slow validation with a nil pointer error.
+
+  * Fix an issue where enabling Cloud Audit Logs with `gkectl update` did not work.
+
+
+
+
+Fixed the following vulnerabilities:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2023-26604](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-26604)
+    * [CVE-2023-0361](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0361)
+    * [CVE-2022-29154](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29154)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-0386](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0386)
+    * [CVE-2023-23916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23916)
+    * [CVE-2023-0464](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0464)
+    * [CVE-2023-27561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27561)
+    * [CVE-2022-40320](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40320)
+    * [CVE-2023-1652](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1652)
+    * [CVE-2023-28466](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28466)
+
+
+
+## April 13, 2023
+
+Anthos clusters on VMware 1.12.7-gke.20 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.12/how-to/upgrading). Anthos clusters on VMware 1.12.7-gke.20 runs on Kubernetes 1.23.17-gke.900.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.14, 1.13, and 1.12.
+
+  * Added admin cluster CA certificate validation to the admin cluster upgrade preflight check.
+
+  * We now allow storage DRS to be enabled in manual mode.
+
+
+
+
+  * Fixed an issue where using `gkectl update` to enable Cloud Audit Logs did not work.
+
+  * We now backfill the OnPremAdminCluster OSImageType field to prevent an unexpected diff during update.
+
+  * Fixed an issue where a preflight check for Seesaw load balancer creation failed if the Seesaw group file already existed.
+
+
+
+
+Fixed the following vulnerabilities:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2023-23916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23916)
+    * [CVE-2022-3970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3970)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2022-27239](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27239)
+    * [CVE-2022-46663](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-46663)
+    * [CVE-2020-17437](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-17437)
+    * [CVE-2022-32149](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32149)
+    * [CVE-2019-18276](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18276)
+    * [CVE-2022-48303](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48303)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2022-3169](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3169)
+    * [CVE-2022-3424](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3424)
+    * [CVE-2022-3435](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3435)
+    * [CVE-2022-3521](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3521)
+    * [CVE-2022-3545](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3545)
+    * [CVE-2022-3623](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3623)
+    * [CVE-2022-36280](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36280)
+    * [CVE-2022-41218](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41218)
+    * [CVE-2022-4139](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4139)
+    * [CVE-2022-42328](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42328)
+    * [CVE-2022-42329](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42329)
+    * [CVE-2022-47520](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-47520)
+    * [CVE-2022-47929](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-47929)
+    * [CVE-2023-0045](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0045)
+    * [CVE-2023-0266](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0266)
+    * [CVE-2023-0394](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0394)
+    * [CVE-2023-0461](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0461)
+
+
+
+## April 12, 2023
+
+### Kubernetes image registry redirect
+
+As of March 21, 2023, traffic to `k8s.gcr.io` is redirected to `registry.k8s.io`, following the [community announcement](https://kubernetes.io/blog/2023/03/10/image-registry-redirect/). This change is happening gradually to reduce disruption, and should be transparent for most Anthos clusters.
+
+To check for edge cases and mitigate potential impact to your clusters, follow the step-by-step guidance in [k8s.gcr.io Redirect to registry.k8s.io - What You Need to Know](https://kubernetes.io/blog/2023/03/10/image-registry-redirect/#how-can-i-check-if-i-am-impacted).
+
+## April 11, 2023
+
+**1.13.7 patch release**
+
+Anthos clusters on VMware 1.13.7-gke.29 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.13/how-to/upgrading). Anthos clusters on VMware 1.13.7-gke.29 runs on Kubernetes 1.24.11-gke.1200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.14, 1.13, and 1.12.
+
+**Fixed for 1.13.7**
+
+Fixed the following vulnerabilities:
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2021-3449](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3449)
+    * [CVE-2023-23916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23916)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2022-27239](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27239)
+    * [CVE-2023-28466](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28466)
+    * [CVE-2021-38561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-38561)
+    * [CVE-2022-46663](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-46663)
+    * [CVE-2020-17437](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-17437)
+    * [CVE-2022-32149](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32149)
+    * [CVE-2019-18276](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18276)
+    * [CVE-2022-48303](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48303)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2022-3169](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3169)
+    * [CVE-2022-3424](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3424)
+    * [CVE-2022-3435](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3435)
+    * [CVE-2022-3521](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3521)
+    * [CVE-2022-3545](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3545)
+    * [CVE-2022-3623](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3623)
+    * [CVE-2022-36280](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36280)
+    * [CVE-2022-41218](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41218)
+    * [CVE-2022-4139](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4139)
+    * [CVE-2022-42328](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42328)
+    * [CVE-2022-42329](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42329)
+    * [CVE-2022-47520](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-47520)
+    * [CVE-2022-47929](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-47929)
+    * [CVE-2023-0045](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0045)
+    * [CVE-2023-0266](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0266)
+    * [CVE-2023-0394](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0394)
+    * [CVE-2023-0461](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0461)
+    * [CVE-2023-20938](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-20938)
+    * [CVE-2023-23454](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23454)
+    * [CVE-2023-23455](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23455)
+
+
+
+**Fixed for 1.13.7**
+
+  * Fixed an issue where `gkectl check-config` fails at Manual LB slow validation with a nil pointer error.
+
+  * Fixed a bug where enabling Cloud Audit Logs with `gkectl update` did not work.
+
+  * Fixed an issue where a preflight check for Seesaw load balancer creation failed if the Seesaw group file already existed.
+
+  * We now backfill the OnPremAdminCluster OSImageType field to prevent an unexpected diff during update.
+
+
+
+
+**Security bulletin**
+
+Two new vulnerabilities, CVE-2023-0240 and CVE-2023-23586, have been discovered in the Linux kernel that could allow an unprivileged user to escalate privileges. For more information, see the [GCP-2023-003 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2023-003).
+
+**1.12.7-gke.19 bad release**
+
+Anthos clusters on VMware 1.12.7-gke.19 is a bad release and you should not use it. The artifacts have been removed from the Cloud Storage bucket.
+
+## April 03, 2023
+
+Anthos clusters on VMware 1.14.3-gke.25 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.14/how-to/upgrading). Anthos clusters on VMware 1.14.3-gke.25 runs on Kubernetes 1.25.5-gke.100.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.14, 1.13, and 1.12.
+
+We now allow storage DRS to be enabled in manual mode.
+
+Fixed the following vulnerabilities:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2022-32221](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32221)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2021-3449](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3449)
+    * [CVE-2022-3970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3970)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2022-27239](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27239)
+    * [CVE-2019-18276](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18276)
+    * [CVE-2022-46663](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-46663)
+    * [CVE-2022-48303](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48303)
+    * [CVE-2020-17437](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-17437)
+    * [CVE-2022-1304](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1304)
+
+
+
+  * We now backfill the `OnPremAdminCluster` `OSImageType` field to prevent an unexpected diff during cluster update.
+
+  * Fixed an issue where `gkectl diagnose cluster` didn't check the health of control-plane Pods for kubeception user clusters.
+
+  * Fixed an issue where the user-cluster node options and startup script used the cluster version instead of the node pool version.
+
+
+
+
+## March 17, 2023
+
+Anthos clusters on VMware 1.13.6-gke.32 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.13/how-to/upgrading). Anthos clusters on VMware 1.13.6-gke.32 runs on Kubernetes 1.24.10-gke.2200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.14, 1.13, and 1.12.
+
+  * Fixed an issue with Anthos Identity Service to better scale and handle concurrent authentication requests.
+
+  * Fixed an issue where `component-access-sa-key` was missing in the `admin-cluster-creds` Secret after admin cluster upgrade.
+
+
+
+
+Fixed the following vulnerabilities:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2021-46848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46848)
+    * [CVE-2022-32221](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32221)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2023-23946](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23946)
+    * [CVE-2022-3094](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3094)
+    * [CVE-2022-3970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3970)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-0286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0286)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2022-4203](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4203)
+    * [CVE-2022-4304](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4304)
+    * [CVE-2022-4450](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4450)
+    * [CVE-2023-0215](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0215)
+    * [CVE-2023-0216](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0216)
+
+
+
+## March 07, 2023
+
+Anthos clusters on VMware 1.14.2-gke.37 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.14/how-to/upgrading). Anthos clusters on VMware 1.14.2-gke.37 runs on Kubernetes 1.25.5-gke.100.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.14, 1.13, and 1.12.
+
+We no longer silently skip saving empty files in diagnose snapshots, but instead collect the names of those files in a new `empty_snapshots` file in the snapshot tarball.
+
+  * Fixed an issue where user cluster data disk validation used the cluster-level datastore `vsphere.datastore` instead of `masterNode.vsphere.datastore`. 
+
+  * Fixed an issue with Anthos Identity Service to better scale and handle concurrent authentication requests.
+
+  * Fixed an issue where `component-access-sa-key` was missing in the `admin-cluster-creds` Secret after admin cluster upgrade.
+
+  * Fixed an issue where user cluster upgrade triggered through the Google Cloud console might flap between ready and non-ready states until CA rotation fully completes.
+
+  * Fixed an issue where `gkectl diagnose cluster` might generate false failure signals with non-vSphere CSI drivers.
+
+  * Fixed an issue where admin cluster update doesn't wait for user control-plane machines to be re-created when using ControlPlaneV2.
+
+
+
+
+Fixed the following vulnerabilities:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2021-46848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46848)
+    * [CVE-2022-23521](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23521)
+    * [CVE-2022-41903](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41903)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2022-39260](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39260)
+    * [CVE-2023-23946](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23946)
+    * [CVE-2022-3094](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3094)
+    * [CVE-2022-42898](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42898)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-0286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0286)
+    * [CVE-2023-0461](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0461)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2022-4203](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4203)
+    * [CVE-2022-4304](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4304)
+    * [CVE-2022-4450](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4450)
+    * [CVE-2023-0215](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0215%5D)
+    * [CVE-2023-0216](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0216)
+    * [CVE-2023-0217](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0217)
+    * [CVE-2023-0286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0286)
+    * [CVE-2023-0401](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0401)
+    * [CVE-2022-28321](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28321)
+
+
+
+## March 06, 2023
+
+**Cluster lifecycle improvements versions 1.13.1 and later**
+
+You can use the Google Cloud console or the gcloud CLI to upgrade user clusters managed by the Anthos On-Prem API. The upgrade steps differ depending on your admin cluster version. For more information, see the version of the documentation that corresponds to your admin cluster version:
+
+  * [Upgrade user cluster when admin cluster is version 1.13.1+ ](https://cloud.google.com/anthos/clusters/docs/on-prem/1.13/how-to/upgrade-on-prem-api)
+  * [Upgrade user cluster when admin cluster is version 1.14.0+](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrade-on-prem-api)
+
+
+
+**1.12.6 patch release**
+
+Anthos clusters on VMware 1.12.6-gke.35 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.12/how-to/upgrading). Anthos clusters on VMware 1.12.6-gke.35 runs on Kubernetes v1.23.16-gke.2400.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.14, 1.13, and 1.12.
+
+  * Fixed a bug where KSASigningKeyRotation always shows as an unsupported change during user cluster update.
+  * Fixed an issue with Anthos Identity Service to better scale and handle concurrent authentication requests.
+
+  * Fixed an issue where `component-access-sa-key` was missing in the `admin-cluster-creds` Secret after admin cluster upgrade.
+
+
+
+
+Fixed the following vulnerabilities:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2022-32221](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32221)
+    * [CVE-2022-23521](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23521)
+    * [CVE-2022-41903](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41903)
+    * [CVE-2021-46848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46848)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2022-39260](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39260)
+    * [CVE-2023-23946](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23946)
+    * [CVE-2022-3094](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3094)
+    * [CVE-2022-42898](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42898)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2023-0286](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0286)
+    * [CVE-2023-0461](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0461)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2022-28321](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28321)
+    * [CVE-2022-3643](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3643)
+    * [CVE-2022-42896](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42896)
+    * [CVE-2022-43945](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43945)
+    * [CVE-2022-45934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45934)
+
+
+
+## March 01, 2023
+
+A new vulnerability (CVE-2022-4696) has been discovered in the Linux kernel that can lead to a privilege escalation on the node. Anthos clusters on VMware running v1.12 and v1.13 are impacted. Anthos clusters on VMware running v1.14 or later are not affected.
+
+For instructions and more details, see the [Anthos clusters on VMware security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2023-001-anthosvmware).
+
+## February 13, 2023
+
+Anthos clusters on VMware 1.13.5-gke.27 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.13/how-to/upgrading). Anthos clusters on VMware 1.13.5-gke.27 runs on Kubernetes 1.24.9-gke.2500.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.14, 1.13, and 1.12.
+
+  * Updated the Ubuntu image to ubuntu-gke-op-2004-1-13-v20230201 using node kernel version 5.4.0.1062.60.
+
+  * Instead of ignoring snapshots files with empty content, we save their names in a new file named `empty_snapshots`.
+
+
+
+
+During preflight checks and cluster diagnosis, we now skip PVs and PVCs that use non-vSphere drivers.
+
+Fixed the following vulnerabilities:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2022-41903](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41903)
+    * [CVE-2022-23521](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23521)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2022-42898](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42898)
+    * [CVE-2022-39260](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39260)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2022-3643](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3643)
+    * [CVE-2022-42896](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42896)
+    * [CVE-2022-43945](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43945)
+    * [CVE-2022-45934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45934)
+
+
+
+## January 31, 2023
+
+Anthos clusters on VMware 1.14.1-gke.39 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.14.1-gke.39 runs on Kubernetes 1.25.5-gke.100.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.14, 1.13, and 1.12.
+
+  * In the admin cluster configuration file, `gkeadm` now prepopulates `caCertPath` and the service account key paths with absolute paths instead of relative paths.
+
+  * In the vSphere CSI driver, enabled `improved-csi-idempotency`, and `async-query-volume`, and disabled `trigger-csi-fullsync`. This enhances the vSphere CSI driver to ensure volume operations are idempotent.
+
+
+
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#pod-create-or-delete-errors-due-to-calico-cni-service-account-auth-token-issue) where the `calico-node` Pod is unable to renew the auth token in the calico CNI kubeconfig file.
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#cidr-is-not-allowed-in-the-ip-block-file) where CIDR ranges cannot be used in the IP block file.
+
+
+
+
+Fixed the following vulnerabilities:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2022-47629](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-47629)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2022-23218](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23218)
+    * [CVE-2022-23219](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23219)
+    * [CVE-2021-3999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3999)
+    * [CVE-2019-25013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-25013)
+    * [CVE-2021-33574](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33574)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2022-32149](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32149)
+    * [CVE-2022-40304](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40304)
+    * [CVE-2022-40303](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40303)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2022-3328](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3328)
+
+
+
+## January 26, 2023
+
+Anthos clusters on VMware 1.12.5-gke.34 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.12/how-to/upgrading). Anthos clusters on VMware 1.12.5-gke.34 runs on Kubernetes 1.23.15-gke.2400.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.14, 1.13, and 1.12.
+
+In the vSphere CSI driver, enabled `improved-csi-idempotency`, and `async-query-volume`, and disabled `trigger-csi-fullsync`. This enhances the vSphere CSI driver to ensure volume operations are idempotent.
+
+  * If you specify a CIDR range (subnet) in the IP block file for your cluster nodes, the broadcast IP of the subnet, the network CIDR IP, and the network gateway IP will be excluded from the pool of addresses that get assigned to nodes.
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#cidr-is-not-allowed-in-the-ip-block-file) where CIDR ranges cannot be used in the IP block file.
+
+  * Fixed a bug where CA rotation appeared as an unsupported change during admin cluster update.
+
+
+
+
+Fixed the following vulnerabilities:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2022-47629](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-47629)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2022-23218](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23218)
+    * [CVE-2021-33574](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33574)
+    * [CVE-2021-3999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3999)
+    * [CVE-2022-23219](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-%0A23219)
+    * [CVE-2019-25013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-25013)
+  * Container-optimized OS vulnerabilities:
+
+    * [CVE-2022-40303](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40303)
+    * [CVE-2022-40304](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40304)
+
+
+
+## January 25, 2023
+
+Anthos clusters on VMware version 1.14.0 has a known issue where the `calico-node` Pod is unable to renew the auth token in the calico CNI kubeconfig file. For more information, see [Pod create or delete errors due to Calico CNI service account auth token issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#pod-create-or-delete-errors-due-to-calico-cni-service-account-auth-token-issue).
+
+Because of this issue, you cannot use [Anthos On-Prem API clients](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/create-user-cluster-api) (Google Cloud console and gcloud CLI) to create and manage 1.14.0 clusters.
+
+## January 12, 2023
+
+Anthos clusters on VMware 1.13.4-gke.19 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.13/how-to/upgrading). Anthos clusters on VMware 1.13.4-gke.19 runs on Kubernetes 1.24.9-gke.100
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.14, 1.13, and 1.12.
+
+  * If you specify a CIDR range (subnet) in the IP block file for your cluster nodes, the broadcast IP of the subnet, the network CIDR IP, and the network gateway IP will be excluded from the pool of addresses that get assigned to nodes.
+  * Fixed a bug where CIDR ranges cannot be used in an IP block file.
+
+
+
+  * In the vSphere CSI driver, enabled `improved-csi-idempotency`, and `async-query-volume`, and disabled `trigger-csi-fullsync`. This enhances the vSphere CSI driver to ensure volume operations are idempotent.
+
+  * In the admin cluster configuration file, `gkeadm` now prepopulates `caCertPath` and the service account key paths with absolute paths instead of relative paths.
+
+
+
+
+Fixed the following vulnerabilities:
+
+  * Critical container vulnerabilities:
+
+    * [CVE-2022-47629](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-47629)
+    * [CVE-2022-3649](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3649)
+    * [CVE-2022-3643](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3643)
+  * High-severity container vulnerabilities:
+
+    * [CVE-2022-45934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45934)
+    * [CVE-2022-3566](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3566)
+    * [CVE-2022-3554](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3554)
+    * [CVE-2021-3714](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3714)
+    * [CVE-2022-3565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3565)
+    * [CVE-2022-3176](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3176)
+    * [CVE-2022-3594](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3594)
+    * [CVE-2022-45885](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45885)
+    * [CVE-2019-15794](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15794)
+    * [CVE-2022-1247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1247)
+    * [CVE-2022-40304](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40304)
+    * [CVE-2022-3567](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3567)
+    * [CVE-2022-45919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45919)
+    * [CVE-2022-42896](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42896)
+    * [CVE-2022-43750](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43750)
+    * [CVE-2022-39189](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39189)
+    * [CVE-2022-20421](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-20421)
+    * [CVE-2022-45884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45884)
+    * [CVE-2022-3640](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3640)
+    * [CVE-2021-3847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3847)
+    * [CVE-2022-43680](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43680)
+    * [CVE-2022-47520](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-47520)
+    * [CVE-2021-4037](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4037)
+    * [CVE-2022-47518](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-47518)
+    * [CVE-2022-47519](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-47519)
+    * [CVE-2022-3564](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3564)
+    * [CVE-2022-44638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-44638)
+    * [CVE-2022-3621](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3621)
+    * [CVE-2022-45886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45886)
+    * [CVE-2022-0400](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0400)
+    * [CVE-2022-40303](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40303)
+    * [CVE-2022-3555](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3555)
+    * [CVE-2022-43945](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43945)
+    * [CVE-2022-3524](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3524)
+    * [CVE-2022-2978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2978)
+    * [CVE-2022-47521](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-47521)
+    * [CVE-2022-2625](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2625)
+    * [CVE-2021-3864](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021--3864)
+    * [CVE-2022-3545](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3545)
+    * [CVE-2013-7445](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7445)
+    * [CVE-2022-2961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2961)
+    * [CVE-2022-23218](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23218)
+    * [CVE-2021-33574](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33574)
+    * [CVE-2021-3999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3999)
+    * [CVE-2022-23219](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23219)
+    * [CVE-2019-25013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-25013)
+  * Container-Optimized OS vulnerabilities:
+
+    * [CVE-2022-40304](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40304)
+    * [CVE-2022-40303](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40303)
+  * Ubuntu vulnerabilities:
+
+    * [CVE-2022-3524](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3524)
+    * [CVE-2022-3564](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3564)
+    * [CVE-2022-3565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3565)
+    * [CVE-2022-3566](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3566)
+    * [CVE-2022-3567](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3567)
+    * [CVE-2022-3594](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3594)
+    * [CVE-2022-3621](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3621)
+    * [CVE-2022-42703](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42703)
+    * [CVE-2022-3328](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3328)
+    * [CVE-2022-20422](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-20422)
+    * [CVE-2022-2153](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2153)
+    * [CVE-2022-2978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2978)
+    * [CVE-2022-29901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29901)
+    * [CVE-2022-3028](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3028)
+    * [CVE-2022-3625](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3625)
+    * [CVE-2022-3635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3635)
+    * [CVE-2022-39188](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39188)
+    * [CVE-2022-40768](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40768)
+    * [CVE-2022-41222](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41222)
+    * [CVE-2022-42719](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42719)
+
+
+
+## December 22, 2022
+
+A new vulnerability (CVE-2022-2602) has been discovered in the io_uring subsystem in the Linux kernel that can allow an attacker to potentially execute arbitrary code. 
+
+For more information see the [GCP-2022-025 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2022-025).
+
+## December 21, 2022
+
+Anthos clusters on VMware 1.14.0-gke.430 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.14.0-gke.430 runs on Kubernetes 1.25.5-gke.100.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.14, 1.13, and 1.12.
+
+  * Support for user cluster creation with Controlplane V2 enabled is now generally available. For more details on how to create a user cluster with this model, see [Create a user cluster with Controlplane V2](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/create-user-cluster-controlplane-v2).
+  * **Preview** : You can now roll back node pools to a previous working version if you detect an issue in the new version after a cluster upgrade. For more information, see [Rolling back a node pool after an upgrade](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/troubleshoot-cluster-creation-upgrade#roll-back-node-pool).
+  * **Preview** : The following private registry updates are now available: 
+    * Support for private registry credentials using prepared Secrets is now available as a preview feature. A new `privateRegistry` field has been added in the [Secrets configuration file](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/secrets-configuration-file).
+    * Added a new [`privateRegistry` section](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/user-cluster-configuration-file#privateregistry-section) in the user cluster configuration file. You can use different private registry credentials for the user cluster and admin cluster. You can also use a different private registry address for user clusters with Controlplane V2 enabled.
+    * You can also update private registry credentials for an admin cluster or user cluster with the `gkectl update credentials` command. For more information, see [Update private registry credentials](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/updating-cluster-credentials#update_private_registry_credentials).
+  * Cluster names are now included in kubeconfig files when creating a new admin cluster or user cluster. If you are upgrading your existing cluster to 1.14.0 or higher, the existing kubeconfig file is updated with the cluster name.
+  * `cluster-health-controller` is now integrated with `health-check-exporter` to emit metrics based on the periodic health check results, making it easy to monitor and detect cluster health problems.
+  * **GA** : The node pool update policy is generally available. With this feature, you can configure the value of `maximumConcurrentNodePoolUpdate` in the user cluster configuration file to `1`. This will configure the maximum number of additional nodes spawned during cluster upgrade or update, which can potentially avoid two issues — resource quota limit issue and PDB deadlock issue. For more information, see [Configure node pool update policy](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/node-pool-update-policy).
+  * Support for vSphere cluster/host/network/datastore folders is generally available. You can use folders to group objects of the same type for easier management. For more information, see [Specify vSphere folders in cluster configuration](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/vsphere-folders) and the relevant sections in the [admin cluster](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/admin-cluster-configuration-file#vcenter-section) and [user cluster](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/user-cluster-configuration-file#vcenter-section) configuration files. 
+  * Added a feature enabling cluster administrators to configure RBAC policies based on [Azure Active Directory (AD) groups](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/how-to-manage-groups). Group information for users belonging to more than 200 groups can now be retrieved.
+
+
+
+  * Upgraded Kubernetes from 1.24 to 1.25: 
+    * Migrated PDB API version from policy/v1beta1 to policy/v1. You must ensure that any workload PDB API version is updated to policy/v1 before upgrading your cluster to 1.14.0.
+    * Migrated autoscaling/v2beta1 to autoscaling/v2. 
+    * Disabled CSI Migration for vSphere as this is enabled by default in Kubernetes 1.25.
+  * Added storage validation that checks if in-use Kubernetes PersistentVolumes (PV) have disks present in the configured datastore, and if `node.Status.VolumesAttached` is consistent with the actual PV/disk attachment states during admin and user cluster upgrade preflight checks.
+  * Updated gcloud version to 410.0.0 on the admin workstation.
+  * Upgraded VMware vSphere Container Storage Plug-in from 2.5 to 2.7. This version bump includes support for Kubernetes version 1.25. For more information, see [VMware vSphere Container Storage Plug-in 2.7 Release Notes](https://docs.vmware.com/en/VMware-vSphere-Container-Storage-Plug-in/2.7/rn/vmware-vsphere-container-storage-plugin-27-release-notes/index.html).
+  * In the generated user cluster configuration template, the prepopulated value for `enableDataplaneV2` is now `true`.
+  * Removed unnecessary RBAC policies for managing the lifecycle of user clusters in the Google Cloud console.
+  * Updated the parser of container logs to extract severity level.
+  * Simplified the cluster snapshot uploading process by automatically retrieving GKE connect-register service account key, and making the flag `--service-account-key-file` optional. When the cluster is not registered correctly, and no additional service account key file is passed in through the flag, the `gkectl diagnose snapshot` command will use the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to authenticate the request.
+  * Upgraded Container-Optimized OS to [m101](https://cloud.google.com/container-optimized-os/docs/release-notes/m101).
+  * In the admin cluster and user cluster configuration file templates, `loadbalancer.kind` field is now prepopulated with `MetalLB`.
+
+
+
+A known issue has been discovered. See the [January 25, 2023 release note](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/release-notes#January_25_2023).
+
+  * Fixed an issue where `anet-operator` could be scheduled to a Windows node with `enableControlplaneV2: true`.
+  * Buggy IPs are excluded in node IPAM when a CIDR range is specified in the IP block file.
+  * Increased memory limit of `monitoring-operator-` Pods 1 GB to avoid potential OOM events under certain configurations.
+  * Fixed the issue of missing control plane metrics for user clusters that have Controlplane V2 enabled.
+  * Switched the scraping port of `metrics-agent` from 10255 to 10250 (secure port) to collect `kubelet` summary API metrics.
+  * Fixed the issue where nodes fail to register if the configured hostname in the IP block file contains one or more periods.
+  * Fixed the issue where deleting a user cluster also deleted `cluster-health-controller` and `vsphere-metrics-exporter` ClusterRole objects.
+  * Fixed the unspecified Internal Server error in ClientConfig when using the [AIS](https://cloud.google.com/anthos/identity/setup/fleet-cluster) hub feature to manage the OpenID Connect (OIDC) configuration.
+  * Fixed a bug where running `gkectl diagnose snapshot` using `system` scenario did not capture Cluster API resources in the `default` namespace.
+  * Fixed an issue where cluster deletion may be stuck at node draining when the user cluster control plane and node pools are on different datastores.
+  * Fixed the issue of `/var/log/audit/` filling up disk space on the admin workstation.
+  * Fixed the issue where the Connect Agent in the admin cluster does not upgrade after failures to upgrade nodes in the user cluster control plane.
+  * Improved the preflight check error message by including the project ID that requires the permission.
+  * Fixed the issue during admin cluster creation where `gkectl check-config` fails due to missing OS images, if `gkectl prepare` is not run first.
+  * Fixed the issue where updating a cluster to enable or disable anti-affinity does not work when Controlplane V2 is enabled.
+  * Replaced `text/template` library with `safetext/yamltemplate` library to fix YAML injection vulnerabilities.
+  * Converted the resource type of certain `stackdriver-operator` metrics from `k8s_pod` to `k8s_container`. If you keep the default setting of `scalablemonitoring` to `true`, the old resource type `k8s_pod` will remain.
+  * Fixed the following vulnerabilities: 
+    * Critical container vulnerabilities: 
+      * [CVE-2022-37434](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-37434)
+      * [CVE-2022-40674](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40674)
+      * [CVE-2020-35527](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35527)
+      * [CVE-2021-20223](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20223)
+      * [CVE-2022-39377](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39377)
+      * [CVE-2022-3649](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3649)
+      * [CVE-2019-19814](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19814)
+    * High-severity container vulnerabilities: 
+      * [CVE-2021-46828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46828)
+      * [CVE-2022-2509](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2509)
+      * [CVE-2022-40303](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40303)
+      * [CVE-2022-43680](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43680)
+      * [CVE-2022-3555](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3555)
+      * [CVE-2022-3554](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3554)
+      * [CVE-2022-40304](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40304)
+      * [CVE-2020-35525](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35525)
+      * [CVE-2022-2795](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2795)
+      * [CVE-2022-1247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1247)
+      * [CVE-2022-3621](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3621)
+      * [CVE-2022-1679](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1679)
+      * [CVE-2022-3545](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3545)
+      * [CVE-2022-45885](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45885)
+      * [CVE-2022-3564](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3564)
+      * [CVE-2019-15794](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15794)
+      * [CVE-2022-43945](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43945)
+      * [CVE-2022-3635](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3635)
+      * [CVE-2022-3623](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3623)
+      * [CVE-2022-3324](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3324)
+      * [CVE-2013-7445](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7445)
+      * [CVE-2022-3028](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3028)
+      * [CVE-2022-3522](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3522)
+      * [CVE-2021-3714](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3714)
+      * [CVE-2022-45886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45886)
+      * [CVE-2022-20421](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-20421)
+      * [CVE-2022-3134](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3134)
+      * [CVE-2022-3566](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3566)
+      * [CVE-2021-4037](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4037)
+      * [CVE-2022-0400](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0400)
+      * [CVE-2022-3176](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3176)
+      * [CVE-2022-2625](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2625)
+      * [CVE-2022-3099](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3099)
+      * [CVE-2022-45884](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45884)
+      * [CVE-2022-42896](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42896)
+      * [CVE-2022-3567](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3567)
+      * [CVE-2021-3864](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3864)
+      * [CVE-2022-38178](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38178)
+      * [CVE-2022-3524](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3524)
+      * [CVE-2022-2961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2961)
+      * [CVE-2022-44638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-44638)
+      * [CVE-2022-43750](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43750)
+      * [CVE-2022-3565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3565)
+      * [CVE-2022-38177](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38177)
+      * [CVE-2022-3640](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3640)
+      * [CVE-2021-3847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3847)
+      * [CVE-2022-39189](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39189)
+      * [CVE-2022-3594](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3594)
+      * [CVE-2022-45919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45919)
+      * [CVE-2022-20422](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-20422)
+      * [CVE-2022-2978](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2978)
+    * Container-optimized OS vulnerabilities: 
+      * [CVE-2022-2602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2602)
+      * [CVE-2022-20409](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-20409)
+      * [CVE-2021-4037](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4037)
+
+
+
+## December 20, 2022
+
+  * Changed the relative file path fields in the admin cluster configuration file to use absolute paths.
+  * Added [`yq`](https://github.com/mikefarah/yq#yq) tool in the admin workstation.
+
+
+
+  * Increased memory limit of `monitoring-operator-` Pods to 1 GB to avoid potential OOM events under certain configurations.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.12/known-issues#admin-cluster-cluster-health-controller-and-vsphere-metrics-exporter-do-not-work-after-deleting-user-cluster) where deleting a user cluster also deleted `cluster-health-controller` and `vsphere-metrics-exporter` ClusterRole objects.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.12/known-issues#gkectl-check-config-fails-at-os-image-validation) during admin cluster creation where `gkectl check-config` fails due to missing OS images, if `gkectl prepare` is not run first.
+  * Fixed an issue where cluster deletion may be stuck at node draining when the user cluster control plane and node pools are on different datastores.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.12/known-issues#varlogaudit-filling-up-disk-space-on-admin-workstation) of `/var/log/audit/` filling up disk space on the admin workstation.
+  * Fixed the following vulnerabilities: 
+    * Critical container vulnerabilities: 
+      * [CVE-2022-40674](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40674)
+    * High-severity container vulnerabilities: 
+      * [CVE-2021-46828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46828)
+      * [CVE-2022-2509](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2509)
+      * [CVE-2022-43680](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43680)
+      * [CVE-2022-3554](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3554)
+      * [CVE-2022-3555](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3555)
+      * [CVE-2022-40303](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40303)
+      * [CVE-2022-40304](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40304)
+      * [CVE-2022-3602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3602)
+      * [CVE-2022-3786](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3786)
+      * [CVE-2022-42919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42919)
+      * [CVE-2022-44638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-44638)
+    * Container-optimized OS vulnerabilities: 
+      * [CVE-2022-2602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2602)
+    * Ubuntu vulnerabilities: 
+      * [CVE-2022-41674](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41674)
+      * [CVE-2022-42720](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42720)
+      * [CVE-2022-42721](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42721)
+      * [CVE-2022-2602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2602)
+      * [CVE-2022-3515](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3515)
+
+
+
+Anthos clusters on VMware 1.12.4-gke.42 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.12/how-to/upgrading). Anthos clusters on VMware 1.12.4-gke.42 runs on Kubernetes 1.23.13-gke.1700.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.13, 1.12, and 1.11.
+
+## December 15, 2022
+
+  * Added [`yq`](https://github.com/mikefarah/yq#yq) tool in the admin workstation to simplify troubleshooting.
+  * Upgraded VMware vSphere Container Storage Plug-in from 2.5 to 2.6.2. This version bump includes support for Kubernetes version 1.24. For more information, see [VMware vSphere Container Storage Plug-in 2.6 Release Notes](https://docs.vmware.com/en/VMware-vSphere-Container-Storage-Plug-in/2.6/rn/vmware-vsphere-container-storage-plugin-26-release-notes/index.html).
+  * Added storage validation that checks Kubernetes PersistentVolumes and vSphere virtual disks as part of admin and user cluster upgrade preflight checks.
+
+
+
+  * Fixed an issue where `anet-operator` could be scheduled to a Windows node with `enableControlplaneV2: true`.
+  * Fixed OOM events associated with `monitoring-operator-` Pods by increasing memory limit to 1GB.
+  * Fixed the issue where deleting a user cluster also deleted `cluster-health-controller` and `vsphere-metrics-exporter` ClusterRole objects.
+  * Fixed the following vulnerabilities: 
+    * High-severity container vulnerabilities: 
+      * [CVE-2022-3786](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3786)
+      * [CVE-2022-3602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3602)
+      * [CVE-2022-42919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42919)
+
+
+
+Anthos clusters on VMware 1.13.3-gke.26 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.13.3-gke.26 runs on Kubernetes 1.24.7-gke.1700.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.13, 1.12, and 1.11.
+
+## December 08, 2022
+
+  * Fixed OOM events associated with `monitoring-operator-` Pods by increasing memory limit to 1 GB.
+  * Fixed the issue where deleting a user cluster also deleted `cluster-health-controller` and `vsphere-metrics-exporter` ClusterRole objects.
+  * Fixed the following vulnerabilities: 
+    * Critical container vulnerabilities: 
+      * [CVE-2022-37434](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-37434)
+      * [CVE-2022-40674](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40674)
+    * High-severity container vulnerabilities: 
+      * [CVE-2021-46828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46828)
+      * [CVE-2022-2509](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2509)
+      * [CVE-2021-40303](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-40303)
+      * [CVE-2021-43680](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43680)
+      * [CVE-2021-42919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42919)
+      * [CVE-2021-3786](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3786)
+      * [CVE-2021-3602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3602)
+      * [CVE-2021-3555](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3555)
+      * [CVE-2021-3554](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3554)
+      * [CVE-2021-44638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44638)
+    * Container-optimized OS vulnerabilities: 
+      * [CVE-2022-46848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-46848)
+      * [CVE-2022-3524](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3524)
+
+
+
+Anthos clusters on VMware 1.11.6-gke.18 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.11/how-to/upgrading). Anthos clusters on VMware 1.11.6-gke.18 runs on Kubernetes 1.22.15-gke.3300.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.13, 1.12, and 1.11.
+
+## November 17, 2022
+
+  * Fixed a validation error where the GKE Hub membership is not found when using a gcloud version that is not bundled with the admin workstation.
+  * Fixed the issue where the admin cluster might fail to register due to naming conflicts.
+  * Fixed the issue where the Connect Agent in the admin cluster does not upgrade after a failure to upgrade nodes in the user cluster control plane.
+  * Fixed a bug where running `gkectl diagnose snapshot` using `system` scenario did not capture Cluster API resources in the `default` namespace.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#gkectl-check-config-fails-at-os-image-validation) during admin cluster creation where `gkectl check-config` fails due to missing OS images, if `gkectl prepare` is not run first.
+  * Fixed the unspecified Internal Server error in ClientConfig when using the [Anthos Identity Service](https://cloud.google.com/anthos/identity/setup/fleet-cluster) (AIS) hub feature to manage the OpenID Connect (OIDC) configuration.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#varlogaudit-filling-up-disk-space-on-admin-workstation) of `/var/log/audit/` filling up disk space on the admin workstation.
+  * Fixed an issue where cluster deletion may be stuck at node draining when the user cluster control plane and node pools are on different datastores.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#nodes-fail-to-register-if-configured-hostname-contains-a-period) where nodes fail to register if the configured hostname in the IP block file contains one or more periods.
+  * Fixed the following vulnerabilities: 
+    * Critical container vulnerabilities: 
+      * [CVE-2022-37434](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-37434)
+      * [CVE-2022-40674](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40674)
+    * High-severity container vulnerabilities: 
+      * [CVE-2021-46828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46828)
+      * [CVE-2022-2509](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2509)
+    * Container-optimized OS vulnerabilities: 
+      * [CVE-2022-2602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2602)
+    * Ubuntu vulnerabilities: 
+      * [CVE-2022-41674](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41674)
+      * [CVE-2022-42720](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42720)
+      * [CVE-2022-42721](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42721)
+      * [CVE-2022-2602](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2602)
+      * [CVE-2022-3515](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3515)
+
+
+
+Anthos clusters on VMware 1.13.2-gke.26 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.13.2-gke.26 runs on Kubernetes 1.24.7-gke.1400.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.13, 1.12, and 1.11.
+
+## November 10, 2022
+
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.11/known-issues#varlogaudit-filling-up-disk-space-on-admin-workstation) where `/var/log/audit/` is using up disk space on the admin workstation.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.11/known-issues#admin-control-plane-machine-startup-failure-caused-by-private-registry-certificate-bundle) where the admin control plane machine may fail to start up when the private registry certificate is too large.
+  * Fixed the following vulnerabilities: 
+    * Critical container vulnerabilities: 
+      * [CVE-2022-37434](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-37434)
+      * [CVE-2022-2509](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2509)
+      * [CVE-2022-3999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3999)
+      * [CVE-2022-46828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-46828)
+    * High-severity Istio vulnerabilities: 
+      * [CVE-2022-39278](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39278)
+    * Ubuntu vulnerabilities: 
+      * [CVE-2022-3176](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3176)
+
+
+
+Anthos clusters on VMware 1.11.5-gke.14 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.11/how-to/upgrading). Anthos clusters on VMware 1.11.5-gke.14 runs on Kubernetes 1.22.15-gke.2200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.13, 1.12, and 1.11.
+
+## November 09, 2022
+
+Two new vulnerabilities, [CVE-2022-2585 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2585) and [CVE-2022-2588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2588), have been discovered in the Linux kernel that can lead to a full container break out to root on the node.
+
+For more information, see the [GCP-2022-024 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2022-024).
+
+## November 07, 2022
+
+A security vulnerability, [CVE-2022-39278](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39278), has been discovered in Istio, which is used in Anthos Service Mesh, that allows a malicious attacker to crash the control plane.
+
+For instructions and more details, see the [Anthos clusters on VMware security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2022-023-anthosvmware).
+
+## November 01, 2022
+
+  * Increased logging granularity for the cluster backup operation including indicating status for each step of the process.
+
+
+
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#race_condition_blocks_machine_object_deletion_during_updateupgrade) of a race condition that blocks the deletion of an old machine object during cluster upgrade or update.
+  * Set the pre-populated, commented-out value of the `kubeception` field in the user cluster configuration file to `true`.
+  * Fixed the following vulnerabilities: 
+    * Critical container vulnerabilities: 
+      * [CVE-2020-35527](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35527)
+      * [CVE-2020-40674](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-40674)
+      * [CVE-2020-37434](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-37434)
+      * [CVE-2020-20223](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-20223)
+    * High-severity container vulnerabilities: 
+      * [CVE-2022-2509](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2509)
+      * [CVE-2021-3999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3999)
+      * [CVE-2021-46828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46828)
+      * [CVE-2020-35525](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35525)
+
+
+
+Anthos clusters on VMware 1.13.1-gke.35 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.13.1-gke.35 runs on Kubernetes 1.24.2-gke.1900.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.13, 1.12, and 1.11.
+
+## October 28, 2022
+
+A new vulnerability, [CVE-2022-20409](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-20409), has been discovered in the Linux kernel that could allow an unprivileged user to escalate to system execution privilege.
+
+For instructions and more details, see the [Anthos clusters on VMware security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2022-022-anthosvmware).
+
+## October 27, 2022
+
+A new vulnerability, [CVE-2022-3176](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3176), has been discovered in the Linux kernel that can lead to local privilege escalation. This vulnerability allows an unprivileged user to achieve full container breakout to root on the node.
+
+For instructions and more details, see the [Anthos clusters on VMware security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2022-021-anthosvmware).
+
+## October 25, 2022
+
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.12/known-issues#race_condition_blocks_machine_object_deletion_during_updateupgrade) of a race condition that blocks the deletion of an old machine object during cluster upgrade or update.
+  * Fixed an [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.12/known-issues#networkgatewaynodes_marked_unhealthy_from_concurrent_status_update_conflict) for clusters enabled with Anthos Network Gateway where the `NetworkGatewayGroup` object may erroneously report nodes as having `NotHealthy` status. 
+  * Fixed an [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.12/known-issues#networkgatewaygroup_floating_ip_conflicts_with_node_address) where creating or updating `NetworkGatewayGroup` objects fails because of a webhook IP conflict error.
+  * Fixed the following vulnerabilities:
+
+    * High-severity container vulnerabilities:
+
+      * [CVE-2022-2509](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2509)
+      * [CVE-2021-3999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3999)
+      * [CVE-2021-46828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46828)
+      * [CVE-2020-35525](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35525)
+      * [CVE-2022-39278](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39278)
+    * Critical container vulnerabilities:
+
+      * [CVE-2020-35527](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35527)
+
+
+
+Anthos clusters on VMware 1.12.3-gke.23 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.12/how-to/upgrading). Anthos clusters on VMware 1.12.3-gke.23 runs on Kubernetes 1.23.8-gke.1900.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.13, 1.12, and 1.11.
+
+## October 13, 2022
+
+Anthos clusters on VMware 1.11.4-gke.32 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.11/how-to/upgrading). Anthos clusters on VMware 1.11.4-gke.32 runs on Kubernetes 1.22.8-gke.204.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.13, 1.12, and 1.11.
+
+  * Fixed the gkectl prepare panic [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.11/known-issues#gkectl_prepare_panic_on_utilcheckfileexists) caused by the wrong permission setting on the private registry certificate directory.
+  * Fixed the following vulnerabilities: 
+    * High-severity container vulnerabilities: 
+      * [CVE-2022-2509](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2509)
+      * [CVE-2021-3999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3999)
+      * [CVE-2021-46828](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46828)
+      * [CVE-2022-38178](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38178)
+      * [CVE-2022-3080](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3080)
+      * [CVE-2022-2795](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2795)
+      * [CVE-2022-38177](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38177)
+      * [CVE-2020-35527](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35527)
+      * [CVE-2021-20223](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20223)
+      * [CVE-2020-35525](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35525)
+      * [CVE-2022-2526](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2526)
+    * Container-optimized OS vulnerabilities: 
+      * [CVE-2022-20409](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-20409)
+      * [CVE-2022-39278](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39278)
+
+
+
+## October 12, 2022
+
+The Connect Agent version used in Anthos clusters on VMware versions 1.8 and earlier is no longer supported. If you upgrade your user cluster to these versions, the `gkectl updgrade cluster` command may fail. If you encounter this [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/known-issues#user_cluster_upgradeupdate_fails_due_to_failed_to_register_user_cluster) and need further assistance, you should contact Google Support.
+
+## October 11, 2022
+
+If you use `gcloud anthos` version 1.4.2, and authenticate an Anthos cluster on VMware with [`gcloud anthos auth`](https://cloud.google.com/sdk/gcloud/reference/anthos/auth), the command fails with the following error:
+
+`Decryption failed, no keys in the current key set could decrypt the payload.`
+
+To resolve this, you must upgrade `gcloud anthos` to 1.4.3 or above ([`gcloud` SDK](https://cloud.google.com/sdk/docs/install-sdk) 397.0.0 or above) to authenticate clusters with `gcloud anthos auth`.
+
+## September 29, 2022
+
+Anthos clusters on VMware 1.13.0-gke.525 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.13.0-gke.525 runs on Kubernetes 1.24.2-gke.1900.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.13, 1.12, and 1.11.
+
+vSphere versions below 7.0 Update 1 are no longer supported in Anthos clusters on VMware. You must upgrade vSphere (both ESXi and vCenter) to version 7.0 Update 1 or above before you can upgrade to Anthos clusters on VMware 1.13.0. If you want to use the [vSphere Container Storage Interface driver](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/using-vsphere-csi-driver) or [NFSv3](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/concepts/storage), then you must upgrade to vSphere 7.0 Update 2 or a later update of version 7.0.
+
+**Cluster life-cycle Improvements:**
+
+  * **GA** : A new asynchronous variation of the user cluster upgrade is now supported. With this variation, the `gkectl upgrade cluster` command starts the upgrade and completes. You don't need to watch the output of the command for the entire duration of the upgrade. For more details, see [Upgrade a user cluster](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading#upgrade_user_cluster).
+  * **Preview** : You can now update node pools either sequentially or maintain the default parallel behavior by specifying the value of `maximumConcurrentNodePoolUpdate` in your user cluster configuration file. Setting the value to `1` will configure the node pool update to be sequential, which can potentially avoid two issues — resource quota limit issue and PDB deadlock issue.
+  * Introduced an admin cluster controller for managing the admin cluster lifecycle.
+  * Added new preflight checks: 
+    * Check that node IPs are in the subnet for IPAM.
+    * A new preflight check was added to validate the `clusterLocation` field under `stackdriver` and `cloudAuditLogging`. This preflight check requires the component access service account to have the `compute.viewer` role, and the `compute.googleapis.com` to be allowlisted in the HTTP proxy and firewall settings. If you use an invalid value in the `clusterLocation`, the preflight check will fail. You can correct the invalid `clusterLocation` by removing the `stackdriver` and/or `cloudAuditLogging` configurations from the admin or user cluster configuration files, applying the changes with `gkectl update`, and then add the corrected configurations back. Or, you can use `--skip-validation-gcp` to skip the check. Note that having an invalid `clusterLocation` will cause a failure to export logs and metrics.
+    * For a cluster in static IP mode, you need to have one IP address for each node and an additional IP address. This additional IP address will be used for a temporary node during cluster update, upgrade and auto-repair. 
+    * Validate that IP addresses are not in docker IP range in IPAM mode. 
+    * Check to make sure there is no node port collision among different user clusters in manual load balancing mode.
+    * Check datastore size to ensure it has enough capacity for surge machine.
+    * Check for an available IP address for creating Windows VM template in IPAM mode.
+    * PDB preflight check to prevent multiple PDBs from matching with the same pod.
+
+
+
+**Platform enhancements:**
+
+  * **GA** : Support for `cos` OS image type in admin cluster nodes is now generally available. You can [update the admin node image type](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/update-admin-node-image-type) with the `gkectl update admin` command.
+  * **Preview** : A new user cluster deployment model with support for multi-vCenter deployments is available as a preview feature. For more details on how to create a user cluster with this new model, see [Create a user cluster with a new installation model](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/create-user-cluster-new-model).
+  * **Preview** : vSphere CSI volume snapshot is now available as a preview feature. This feature provides the ability to create volume snapshots and restore volumes from snapshots using VMware Cloud Native Storage. To use this feature, you must update both vCenter Server and ESXi to version 7.0 Update 3 or later.
+
+
+
+**Security enhancements:**
+
+  * **GA** : Support for storing credentials for user clusters as Kubernetes Secrets is generally available. 
+
+    * With this feature, users can prepare credentials for the user cluster, and store them as Kubernetes Secrets in the admin cluster before a user cluster is created. After credential preparation, users can delete the Secrets configuration file which contains the user cluster credentials from the admin workstation. When creating a user cluster, the prepared credentials will be used. For more details, see [Configure prepared credentials for user clusters](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/prepared-credentials).
+  * Kubernetes service account (KSA) Signing Key rotation is supported on user clusters. For more details, see [Rotate KSA signing keys](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/rotate-ksa-signing-key).
+
+  * **GA** : [Component access SA key rotation](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/rotating-service-account-keys) for both admin and user clusters is generally available.
+
+  * **GA** : You can set up Connect gateway to use Google Group membership for authorization. For more information, see [Set up the Connect gateway with Google Groups](https://cloud.google.com/anthos/multicluster-management/gateway/setup-groups).
+
+  * Changed `kube-scheduler`, `kube-etcd`, `kube-apiserver` and Key Management Service (KMS) components to run in rootless mode in the user cluster.
+
+
+
+
+**Simplify day-2 operations:**
+
+  * **Preview** : Added support of multi-line parsing for Go and Java logs.
+  * **GA** : Launched the enablement of Google Cloud Managed Service for Prometheus to track metrics in Anthos on vSphere clusters, and introduced two separate flags to enable logging and monitoring for user applications separately: `EnableCloudLoggingForApplications` and `EnableGMPForApplications`. You can monitor and alert on the applications using Prometheus with Google-managed Prometheus without managing and operating Prometheus. You can set `enableGMPForApplications` in the Stackdriver spec to enable Google Managed Prometheus for application metrics without any other manual steps, and the Google Managed Prometheus components are then set up automatically. See [Enable Managed Service for Prometheus for user applications](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/application-logging-monitoring) for details.
+
+  * Added a new [Anthos Utilization Metering dashboard](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/logging-and-monitoring#anthos-utilization-dashboard) in Cloud Monitoring to monitor cluster health. The dashboard shows CPU and memory utilization in the clusters by namespace and Pod labels.
+
+
+
+
+  * Fixed the issue of cloud-init log not showing in the serial console for Ubuntu.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.12/known-issues#user_cluster_check-config_does_not_work_when_using_cos_as_admin_cluster) where user cluster `check-config` fails when the admin cluster uses `cos` as the `osImageType`.
+  * Updated virtual hardware version to version 15 for creating VMs in Anthos cluster on VMware 1.13.0.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.12/known-issues#missing_scheduler_and_controller-manager_metrics_in_admin_cluster) of two missing metrics, scheduler and controller-manager, in the admin and user cluster.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.12/known-issues#replace_deprecated_metrics_in_dashboard) of an empty `CPU readiness` chart in OOTB dashboards that was caused by deprecated metrics. 
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.12/known-issues#failure_to_add_new_user_cluster_when_admin_cluster_is_using_metallb_load_balancer) where you may not be able to add a new user cluster if a user cluster is stuck in the deletion process, and your admin cluster is set up with a MetalLB load balancer configuration.
+  * Fixed the following vulnerabilities: 
+    * Critical container vulnerabilities: 
+      * [CVE-2022-2068](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2068)
+      * [CVE-2022-34903](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-34903)
+      * [CVE-2022-1664](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1664)
+      * [CVE-2022-4160](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4160)
+      * [CVE-2022-27781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27781)
+    * High-severity container vulnerabilities: 
+      * [CVE-2022-2526](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2526)
+      * [CVE-2022-29155](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29155)
+      * [CVE-2022-0778](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0778)
+      * [CVE-2022-1292](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1292)
+
+
+
+  * In the configuration file template generated by `gkectl create-config cluster`, the pre-populated value for the commented field `kubeception` is shown as `false`, while the default value is `true`.
+  * In the configuration file template generated by `gkectl create-config admin`, `gkeConnect` is shown as an optional section, however it is actually a required section.
+
+
+
+  * Upgraded to Ubuntu 20.04 and containerd 1.6.
+  * `connectgateway.googleapis.com` API is now required to create new clusters in 1.13.0.
+  * Updated the gcloud version in the admin workstation to 401.0.0.
+  * Increased the default boot disk size for the admin workstation to 100GB.
+  * SImplified the `gkectl diagnose snapshot` scenario usage. The `--scenario` flag is no longer needed for the admin cluster snapshot. Use `system` (default) or `all` values to specify scenarios for the user cluster snapshot. For more details, see [Diagnosing cluster issues](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/diagnose).
+  * Improved `gkectl diagnose cluster` to detect and diagnose two general issues: 
+    * Node draining issues can block cluster upgrade
+    * Kubernetes Cluster API resource managed by an Anthos clusters on VMware bundle might be accidentally modified which can cause failure of system components, or cluster upgrade or update failure.
+  * Enforced [admin cluster registration](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/updating-general#register_an_admin_cluster) with preflight checks.
+
+    * This also applies to admin clusters to be upgraded to 1.13. You can run `gkectl update admin` to register existing 1.12 admin clusters.
+    * You can skip this check with the `--skip-validation-config` flag if you cannot register admin clusters for certain reasons. 
+  * Configuration for Logging and Monitoring is now enforced in admin and user cluster configuration files during creation preflight checking. You can run `gkectl update cluster` and `gkectl update admin` to enable Logging and Monitoring in existing 1.12 user or admin clusters before upgrading to 1.13. Otherwise, upgrade preflight checks will emit a warning. You can skip these checks with the `--skip-validation-stackdriver` flag if you cannot enable Logging and Monitoring for certain reasons. However, enabling Logging and Monitoring is strongly recommended to get better Google support, and there is no charge for this service on Anthos.
+
+  * When Logging and Monitoring is enabled, the values of the `gkeConnect.projectID` field, `stackdriver.projectID` field, and `cloudAuditLogging.projectID` field must all be the same in the cluster configuration files. Otherwise, cluster creation preflight checks would fail with an error, and upgrade preflight checks would emit a warning. You can also skip these checks with the `--skip-validation-stackdriver` flag, but this is not recommended as using different project IDs for `stackdriver` and `gkeconnect` may cause friction during support and fleet management. Note you can still send logs and metrics to a different project through [Cloud Logging sinks](https://cloud.google.com/logging/docs/export/configure_export_v2) and [metric viewer scoping](https://cloud.google.com/monitoring/settings/multiple-projects).
+
+  * Migrated metrics-server and addon-resizer to a new namespace: `gke-managed-metrics-server`.
+
+  * Refined `kube-state-metrics` so that only core metrics are collected by default. Fewer resources are needed to collect this optimized set of metrics, which improves overall performance and scalability.
+
+
+
+
+## September 28, 2022
+
+Anthos clusters on VMware 1.12.2-gke.21 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.12.2-gke.21 runs on Kubernetes 1.23.8-gke.1900.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.12, 1.11, and 1.10.
+
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#failure_to_add_new_user_cluster_when_admin_cluster_is_using_metallb_load_balancer) where you may not be able to add a new user cluster if a user cluster is stuck in the deletion process, and your admin cluster is set up with a MetalLB load balancer configuration.
+  * Fixed an issue where [`istiod`](https://istio.io/v1.14/blog/2020/istiod/) starts up very slowly when connectivity to the Google Cloud metadata service is partially broken.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#resumed_admin_cluster_upgrade_can_lead_to_missing_admin_control_plane_vm_template) where the admin control plane VM template is deleted after a resumed admin cluster upgrade attempt.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#user_cluster_check-config_does_not_work_when_using_cos_as_admin_cluster) where user cluster `check-config` fails when the admin cluster uses `cos` as the `osImageType`.
+  * Fixed the following vulnerabilities: 
+    * Critical container vulnerabilities: 
+      * [CVE-2022-2526](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2526)
+    * Container-optimized OS vulnerabilities: 
+      * [CVE-2022-29901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29901)
+      * [CVE-2022-28693](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28693)
+      * [CVE-2022-29900](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29900)
+      * [CVE-2022-23825](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23825)
+    * Ubuntu vulnerabilities: 
+      * [CVE-2022-2588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2588)
+      * [CVE-2022-2586](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2586)
+      * [CVE-2022-2585](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2585)
+
+
+
+## September 08, 2022
+
+**Fixed for v1.10.7**
+
+  * Fixed the `gkectl prepare` [panic issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/known-issues) caused by the wrong permission setting on the private registry certificate directory.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/known-issues#resumed_admin_cluster_upgrade_can_lead_to_missing_admin_control_plane_vm_template) where the admin control plane VM template is deleted after a resumed admin cluster upgrade attempt.
+  * Fixed the following vulnerabilities: 
+    * Container-optimized OS vulnerabilities: 
+      * [CVE-2022-29901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29901)
+      * [CVE-2022-28693](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28693)
+      * [CVE-2022-29900](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29900)
+      * [CVE-2022-23825](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23825)
+    * Ubuntu vulnerabilities: 
+      * [CVE-2022-2588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2588)
+      * [CVE-2022-2586](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2586)
+      * [CVE-2022-2585](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2585)
+
+
+
+The `gkectl diagnose cluster` command automatically runs when `gkectl diagnose snapshot` is run, and the output is saved in a new folder in the snapshot called `/diagnose-report`.
+
+Anthos clusters on VMware 1.11.3-gke.45 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.11.3-gke.45 runs on Kubernetes 1.22.8-gke.204.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.12, 1.11, and 1.10.
+
+**Fixed for v1.11.3**
+
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.11/known-issues#failure_to_mount_emptydir_volume_as_exec_into_pod_running_on_cos_nodes) where mounting emptyDir volume with `exec` option on Container-Optimized OS (COS) nodes fails with permission error.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.11/known-issues#resumed_admin_cluster_upgrade_can_lead_to_missing_admin_control_plane_vm_template) where the admin control plane VM template is deleted after a resumed admin cluster upgrade attempt.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.11/known-issues#cluster_node_pool_replica_update_does_not_work_after_autoscaling_has_been_disabled_on_the_node_pool) where enabling and disabling cluster autoscaler sometimes prevents nodepool replicas from being updated.
+  * Fixed the following vulnerabilities: 
+    * Critical container vulnerabilities: 
+      * [CVE-2022-1644](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1644)
+      * [CVE-2022-2068](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2068)
+    * Container-optimized OS vulnerabilities: 
+      * [CVE-2022-29901](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29901)
+      * [CVE-2022-28693](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28693)
+      * [CVE-2022-29900](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29900)
+      * [CVE-2022-23825](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23825)
+    * Ubuntu vulnerabilities: 
+      * [CVE-2022-2588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2588)
+      * [CVE-2022-2586](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2586)
+      * [CVE-2022-2585](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2585)
+
+
+
+Anthos clusters on VMware 1.10.7-gke.15 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.10.7-gke.15 runs on Kubernetes 1.21.14-gke.2100.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.12, 1.11, and 1.10.
+
+## August 25, 2022
+
+  * **GA** : You can now have your GKE clusters in separate vSphere clusters. With this feature, you can deploy the admin cluster in one vSphere cluster, and a user cluster in a different vSphere cluster.
+
+
+
+Anthos clusters on VMware 1.12.1-gke.57 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.12.1-gke.57 runs on Kubernetes 1.23.5-gke.1505.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.12, 1.11, and 1.10.
+
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#failure_to_mount_emptydir_volume_as_exec_into_pod_running_on_cos_nodes) where mounting emptyDir volume with `exec` option on Container-Optimized OS (COS) nodes fails with permission error.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#cluster_node_pool_replica_update_does_not_work_after_autoscaling_has_been_disabled_on_the_node_pool) where enabling and disabling cluster autoscaler sometimes prevents nodepool replicas from being updated.
+  * Fixed the [manual node repair](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/node-auto-repair#manual_node_repair) issue where manually adding the `onprem.cluster.gke.io/repair-machine` Machine annotation can trigger VM recreation without deleting the Machine object.
+  * Switched back to cgroup v1 (hybrid) for Container Optimized OS (COS) nodes because cgroup v2 (unified) could [potentially cause instability](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#cgroup_v2_could_affect_workloads) for your workloads in a COS cluster. 
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#gkectl_repair_admin-master_and_resumable_admin_upgrade_do_not_work_together) where running `gkectl repair admin-master` after a failed admin cluster upgrade attempt caused subsequent admin upgrade attempts to fail. A preflight check has been added for `gkectl repair admin-master` to prevent the process from using a template that doesn't match the admin cluster checkpoint.
+  * Fixed the issue where `kubectl describe` might error or timeout if resource number is too high during a cluster snapshot.
+  * Fixed the following vulnerabilities:
+
+    * Container-optimized OS vulnerabilities: 
+      * [CVE-2022-2327](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2327)
+
+
+
+## August 12, 2022
+
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/known-issues#failure_to_mount_emptydir_volume_as_exec_into_pod_running_on_cos_nodes) where mounting emptyDir volume with `exec` option on Container-Optimized OS (COS) nodes fails with permission error.
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/known-issues#cluster_node_pool_replica_update_does_not_work_after_autoscaling_has_been_disabled_on_the_node_pool) where enabling and disabling cluster autoscaler sometimes prevents nodepool replicas from being updated.
+  * Fixed the following vulnerabilities:
+
+    * Critical container vulnerabilities:
+
+      * [CVE-2022-1664](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1664)
+    * High-severity container vulnerabilities:
+
+      * [CVE-2022-1271](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1271)
+    * Container-optimized OS and Ubuntu vulnerabilities:
+
+      * [CVE-2022-2327](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2327)
+
+
+
+Anthos clusters on VMware 1.10.6-gke.36 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.10.6-gke.36 runs on Kubernetes 1.21.14-gke.2100.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.12, 1.11, and 1.10.
+
+## August 02, 2022
+
+A new vulnerability [CVE-2022-2327](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2327) has been discovered in the Linux kernel that can lead to local privilege escalation. This vulnerability allows an unprivileged user to achieve a full container breakout to root on the node. 
+
+For more information, see the [GCP-2022-018 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2022-018).
+
+## July 27, 2022
+
+  * Fixed a known issue in which the cluster backup feature affected the inclusion of always-on secrets encryption keys in the backup.
+  * Fixed a known issue of high-resource usage when AIDE runs as a cron job, by disabling AIDE by default. This fix affects compliance with CIS L1 Server benchmark 1.4.2: `Ensure filesystem integrity is regularly checked`. Customers can opt in to re-enable the AIDE if needed. To re-enable the AIDE cron job, see [Configure AIDE cron job](https://cloud.google.com/anthos/clusters/docs/on-prem/1.11/concepts/cis-ubuntu-benchmark#configure_aide_cron_job).
+  * Fixed a known issue where `gke-metrics-agent` DaemonSet has frequent CrashLoopBackOff errors by upgrading to gke-metrics-agent v1.1.0-anthos.14.
+  * Fixed the following vulnerabilities:
+
+    * Critical container vulnerabilities:
+
+      * [CVE-2022-23218](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23218)
+      * [CVE-2022-23219](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23219)
+      * [CVE-2021-33574](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33574)
+    * High-severity container vulnerabilities:
+
+      * [CVE-2022-29155](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29155)
+      * [CVE-2021-1271](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-1271)
+    * Container-optimized OS and Ubuntu vulnerabilities:
+
+      * [CVE-2022-29581](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29581)
+      * [CVE-2022-29582](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29582)
+      * [CVE-2022-1116](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1116)
+      * [CVE-2022-1786](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-1786) on COS. Ubuntu versions used on Anthos clusters on VMware are not affected by this CVE.
+
+
+
+Anthos clusters on VMware 1.11.2-gke.53 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.11/how-to/upgrading). Anthos clusters on VMware 1.11.2-gke.53 runs on Kubernetes 1.22.8-gke.204.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.12, 1.11, and 1.10.
+
+## July 19, 2022
+
+Anthos clusters on VMware 1.9.7-gke.8 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.9.7-gke.8 runs on Kubernetes 1.21.5-gke.1200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.12, 1.11, and 1.10.
+
+  * Fixed a known issue in which the cluster backup feature affected the inclusion of always-on secrets encryption keys in the backup.
+  * Fixed a known issue of high-resource usage when AIDE runs as a cron job, by disabling AIDE by default. This fix affects compliance with CIS L1 Server benchmark 1.4.2: `Ensure filesystem integrity is regularly checked`. Customers can opt in to re-enable the AIDE if needed. To re-enable the AIDE cron job, see [Configure AIDE cron job](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/concepts/cis-ubuntu-benchmark#configure_aide_cron_job).
+  * Fixed the following vulnerabilities:
+
+    * Critical container vulnerabilities:
+
+      * [CVE-2022-23218](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23218)
+      * [CVE-2022-23219](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23219)
+      * [CVE-2021-33574](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33574)
+    * High-severity container vulnerabilities:
+
+      * [CVE-2022-29155](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29155)
+    * Container-optimized OS and Ubuntu vulnerabilities:
+
+      * [CVE-2022-29581](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29581)
+      * [CVE-2022-29582](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29582)
+      * [CVE-2022-1116](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1116)
+
+
+
+## July 07, 2022
+
+Anthos clusters on VMware v1.12.0-gke.446 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware v1.12.0-gke.446 runs on Kubernetes v1.23.5-gke.1504.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.12, 1.11, and 1.10.
+
+**Breaking changes:**
+
+In Kubernetes 1.23, the rbac.authorization.k8s.io/v1alpha1 API version is removed. Instead, use the rbac.authorization.k8s.io/v1 API. See the [Kubernetes 1.23.5 release notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md#v1235).
+
+**Announcements**
+
+  * vSphere releases for versions lower than version 7.0 Update 2 are deprecated in Kubernetes 1.24. VMware's General Support for vSphere 6.7 will end on October 15, 2022. Customers are recommended to upgrade vSphere (both ESXi and vCenter) to version 7.0 Update 2 or above. vSphere versions less than version 7.0 Update 2 will no longer be supported in Anthos clusters on VMware in an upcoming version. You must upgrade vSphere to 7.0 Update 2 or above before you can upgrade to Anthos clusters on VMware 1.13.0.
+
+  * Beta versions of VolumeSnapshot CRDs are deprecated in Kubernetes v1.20 and are unsupported in the Kubernetes v1.24 release.  
+The upcoming Anthos clusters on VMware version 1.13 release will no longer serve v1beta1 VolumeSnapshot CRDs. Make sure that you migrate manifests and API clients to use snapshot.storage.k8s.io/v1 API version, available since Kubernetes v1.20. All existing persisted objects remain accessible via the new snapshot.storage.k8s.io/v1 APIs.
+
+  * The [dockershim](https://kubernetes.io/blog/2022/05/03/dockershim-historical-context/) component in Kubernetes enables cluster nodes to use the Docker Engine container runtime. However, Kubernetes 1.24 removed the dockershim component. Starting from Anthos clusters on VMware version 1.12.0, you cannot create new clusters that use the Docker Engine container runtime. All new clusters must use the default container runtime Containerd. A cluster update will also be blocked if you want to switch from containerd node pool to docker node pool, or if you add new docker node pools. For existing version 1.11.x clusters with docker node pools, you can continue upgrading it to version 1.12.0, but you must update the node pools to use containerd before you can upgrade to version 1.13.0 in the future.
+
+
+
+
+**Platform enhancements:**
+
+  * **General Availability (GA)** : Separate vSphere data centers for the admin cluster and the user clusters are supported.
+  * **GA:** Anthos Identity service LDAP authentication is supported.
+  * **GA:** User cluster control-plane node and admin cluster add-on node auto sizing is supported.
+
+
+
+**Security enhancements:**
+
+  * **Preview:** Preparing credentials for user clusters as Kubernetes secrets before cluster creation.
+
+    * The credential preparation feature prepares the credentials before a user cluster is created. After credential preparation, user cluster credentials are saved as versioned Kubernetes secrets in the admin cluster, and the template which is used for credential preparation can be deleted from the admin workstation. When creating a user cluster, it only needs to configure the namespace and the versions of the prepared secrets in the user cluster config file. Using this feature can help protect user cluster credentials.
+  * **Preview:** The `gkectl update credentials` command supports rotating the component access SA key for both the admin and the user clusters. 
+
+  * The COS node image shipped in version 1.12.0 is qualified with the [Center for Internet Security (CIS) L1 Server Benchmark](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/concepts/cis-cos-benchmark). 
+
+  * The `gkectl update credentials` command supports register service account key rotation. 
+
+
+
+
+**Cluster lifecycle Improvements:**
+
+  * **Preview:** You can configure the time duration of Pod Disruption Budget (PDB) violation timeout during a node drain. The default behavior is to always block on a PDB violation and to not force-delete pods during node drain, to avoid unexpected data corruption, and this default is unchanged. In certain cases, when users want to unblock the PDB violation deadlock with the bound timeout during cluster upgrade, they can apply the special annotation `onprem.cluster.gke.io/pdb-violation-timeout: TIMEOUT` on the machine objects. 
+
+
+
+**Simplify day-2 operations**
+
+  * **Preview:** Launched the enablement of Google Cloud Managed Service for Prometheus to track metrics in Anthos on vSphere clusters, and introduced two separate flags to enable logging and monitoring for user applications separately: `EnableCloudLoggingForApplications` and `EnableGMPForApplications`. The legacy flag `EnableStackdriverForApplications` is deprecated, and will be removed in a future release. Customers can monitor and alert on the applications using Prometheus with Google-managed Prometheus without managing and operating Prometheus. Customers can set `enableGMPForApplications` in the Stackdriver spec to enable Google Managed Prometheus for application metrics without any other manual steps, and the Google Managed Prometheus components are then set up automatically. See [Enable Managed Service for Prometheus for user applications](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/application-logging-monitoring) for details.
+
+  * All sample dashboards to monitor cluster health are available in Cloud Monitoring sample dashboards. Customers can install the dashboards with one click. See [Install sample dashboards](https://cloud.google.com/monitoring/dashboards/dashboard-templates).
+
+  * Improvements to cluster diagnosis: The `gkectl diagnose cluster` command automatically runs when `gkectl diagnose snapshot` is run, and the output is saved in a new folder in the snapshot called `/diagnose-report`. 
+
+  * The `gkectl diagnose cluster` command surfaces more detailed information for issues arising from virtual machine creation.
+
+  * A validation check for the existence of an OS image has been added to the `gkectl update admin` and `gkectl diagnose cluster` commands. 
+
+  * A blocking preflight check has been added. This check validates that the vCenter.datastore specified in the cluster configuration file doesn't belong to a DRS-enabled datastore cluster.
+
+
+
+
+**Functionality changes:**
+
+  * Upgraded COS from [m93](https://cloud.google.com/container-optimized-os/docs/release-notes/m93) to [m97](https://cloud.google.com/container-optimized-os/docs/release-notes/m97), and containerd to 1.6 on COS.
+
+  * Metrics agent: Upgraded `gke-metrics-agent` from 1.1.0 to 1.8.3, which fixes some application metrics issues. The offline buffer in the metrics agent can now discard old data based on the age of metrics data, in addition to the total size of buffer. Metrics data is stored in an offline buffer for at most 22 hours in case of a network outage.
+
+  * New metrics: Added 7 resource utilization metrics.
+
+    * k8s_container: 
+      * `container/cpu/request_utilization`
+      * `container/cpu/limit_utilization`
+      * `container/memory/request_utilization`
+      * `container/memory/limit_utilization`
+    * k8s_node: 
+      * `node/cpu/allocatable_utilization`
+      * `node/memory/allocatable_utilization`
+    * k8s_pod: 
+      * `pod/volume/utilization`
+
+
+
+In version 1.12.0, cgroup v2 (unified) is enabled by default for Container Optimized OS (COS) nodes. This could potentially cause instability for your workloads in a COS cluster. We will switch back to cgroup v1 (hybrid) in version 1.12.1. If you are considering using version 1.12 with COS nodes, we suggest that you wait until the 1.12.1 release.
+
+**Fixes**
+
+  * Fixed a [known issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.11/known-issues#admin_cluster_backup_fails_to_include_always_on_encryption_keys_and_configuration) in which the cluster backup feature affected the inclusion of always-on secrets encryption keys in the backup.
+
+  * Fixed a known issue of high-resource usage when AIDE runs as a cron job, by disabling AIDE by default. This fix affects compliance with CIS L1 Server benchmark 1.4.2: `Ensure filesystem integrity is regularly checked.` Customers can opt in to re-enable the AIDE if needed. To re-enable the AIDE cron job, see [Configure AIDE cron job](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/concepts/cis-ubuntu-benchmark#configure_aide_cron_job).
+
+  * The connect register service account uses `gkehub.editor` instead of `gkehub.admin`.
+
+  * Fixed the following vulnerabilities:
+
+    * Critical container vulnerabilities:
+
+      * [CVE-2022-1292](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1292)
+      * [CVE-2022-23218](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23218)
+      * [CVE-2022-23219](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23219)
+      * [CVE-2021-33574](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33574)
+      * [CVE-2021-4160](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4160)
+    * High-severity container vulnerabilities:
+
+      * [CVE-2022-29155](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29155)
+      * [CVE-2022-0778](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0778)
+      * [CVE-2018-25032](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-25032)
+      * [CVE-2022-24407](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24407)
+      * [CVE-2021-43618](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43618)
+      * [CVE-2021-1271](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-1271)
+    * Container-optimized OS and Ubuntu vulnerabilities:
+
+      * [CVE-2022-29581](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29581)
+      * [CVE-2022-29582](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29582)
+      * [CVE-2022-1116](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1116)
+      * [CVE-2022-1786](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1786) on COS. Ubuntu versions used by Anthos clusters on VMware are not affected by this vulnerability.
+
+
+
+**Known issues:**
+
+  * On the out-of-the-box monitoring dashboards, the GKE on-prem Windows pod status and GKE on-prem Windows node status also show data from Linux clusters.
+
+  * The scheduler metrics, such as `scheduler_pod_scheduling_attempts`, are not collected in version 1.12.0 due to a configuration issue in the metric collector.
+
+
+
+
+## June 24, 2022
+
+Three new memory corruption vulnerabilities ([CVE-2022-29581](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29581), [CVE-2022-29582](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29582), [CVE-2022-1116](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1116)) have been discovered in the Linux kernel. These vulnerabilities allow an unprivileged user with local access to the cluster to achieve a full container breakout to root on the node. For more information, refer to the [GCP-2022-016 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2022-016).
+
+## June 16, 2022
+
+**Fixed for version 1.10.5**
+
+  * Fixed the issue where admin cluster backup did not back up always-on secrets encryption keys. This caused repairing an admin cluster using `gkectl repair master --restore-from-backup` to fail when always-on secrets encryption was enabled.
+
+  * Fixed the issue of high resource usage when AIDE runs as a cron job by disabling AIDE by default. This fix will affect compliance with CIS L1 Server benchmark 1.4.2: `Ensure filesystem integrity is regularly checked.`
+
+To re-enable the AIDE cron job, see [Configure AIDE cron job](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/concepts/cis-ubuntu-benchmark#configure_aide_cron_job). 
+
+
+
+
+**Fixed the following vulnerabilities**
+
+  * High-severity container vulnerabilities:
+
+    * [CVE-2022-29155](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29155)
+    * [CVE-2022-0778](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0778)
+    * [CVE-2018-25032](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-25032)
+    * [CVE-2022-24407](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24407)
+    * [CVE-2021-43618](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43618)
+  * Critical container vulnerabilities:
+
+    * [CVE-2022-1292](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1292)
+    * [CVE-2022-23218](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23218)
+    * [CVE-2022-23219](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23219)
+    * [CVE-2021-33574](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33574)
+  * Container-optimized OS and Ubuntu vulnerabilities:
+
+    * [CVE-2022-29581](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29581)
+    * [CVE-2022-29582](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29582)
+    * [CVE-2022-1116](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1116)
+    * [CVE-2022-1786](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1786) on COS. Ubuntu versions used by Anthos clusters on VMware are not affected by this vulnerability.
+
+
+
+Anthos clusters on VMware 1.10.5-gke.26 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.10.5-gke.26 runs on Kubernetes 1.21.5-gke.1200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.11, 1.10, and 1.9.
+
+## June 03, 2022
+
+**Cluster lifecycle improvements**
+
+**GA** : You can use the Cloud console to create, update, and delete Anthos on VMware user clusters. For more information, see [Create a user cluster in the Cloud console](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/create-user-cluster-api).
+
+## May 26, 2022
+
+Anthos clusters on VMware 1.11.1-gke.53 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.11.1-gke.53 runs on Kubernetes 1.22.8-gke.200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.11, 1.10, and 1.9.
+
+**Fixed for v1.11.1**
+
+  * Fixed the known issue where v1.11.0 user clusters cannot be created with a v1.10.x admin cluster.
+
+  * Fixed the issue where the gkectl logs might be truncated when admin cluster creation has failed.
+
+  * Fixed the issue that Anthos Identity Service with LDAP failed to authenticate against some older Active Directory servers when the user id contains a comma.
+
+
+
+
+**Fixed the following vulnerabilities**
+
+**High-severity CVEs**
+
+  * [CVE-2022-1271](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1271)
+  * [CVE-2022-23219 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23219)
+  * [CVE-2022-23218](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23218)
+  * [CVE-2021-3999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3999)
+
+
+
+**Medium-severity CVEs**
+
+  * [CVE-2018-25032](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-25032)
+  * [CVE-2022-1271](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1271)
+  * ,[CVE-2021-43618](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43618)
+  * [CVE-2022-22576](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22576)
+  * [CVE-2022-27774](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27774)
+  * [CVE-2021-4160](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4160)
+
+
+
+Anthos clusters on VMware 1.10.4-gke.32 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/how-to/upgrading). Anthos clusters on VMware 1.10.4-gke.32 runs on Kubernetes 1.21.5-gke.1200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.11, 1.10, and 1.9.
+
+**Fixed for v1.10.4**
+
+**Fixed the following vulnerabilities**
+
+**High-severity CVEs**
+
+  * [CVE-2022-1271](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1271)
+  * [CVE-2021-4160](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4160)
+  * [CVE-2022-27666](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27666)
+  * [CVE-2018-25032](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-25032)
+  * [CVE-2022-1055](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1055)
+  * [CVE-2022-23219 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23219)
+  * [CVE-2022-23218](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23218)
+  * [CVE-2021-3999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3999)
+  * [CVE-2018-25032](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-25032)
+
+
+
+**RBAC fixes**
+
+  * anetd
+
+    * Changed to use kubelet kubeconfig to only allow the anetd to update its own node resource, and the pod resources that are running on the node.
+  * antrea-controller / anetd-win
+
+    * Instead of reusing the RBAC config for anetd, created a dedicated RBAC config for antrea and reduced the unnecessary permissions. 
+  * clusterdns-controller
+
+    * Scoped down clusterdns permissions to `default` resource name.
+    * Scoped down configmap permissions to `coredns` resource name.
+    * Removed create/delete permissions for configmaps. The `coredns` configmap is now created by the bundle, with `create-only` annotation to ensure we don't overwrite existing config on upgrade.
+  * dns-autoscaler
+
+    * Removed unneeded permissions, and scoped down needed permissions to a particular resource using `resourceNames`.
+    * Restricted `get configmap` for dns autoscaler.
+  * gke-usage-metering
+
+    * Restricted the permission to the kube-system namespace where possible
+  * seesaw-load-balancer
+
+    * Restricted the permission by setting resource names.
+
+
+
+## May 19, 2022
+
+Anthos clusters on VMware 1.9.6-gke.1 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/how-to/upgrading). Anthos clusters on VMware 1.9.6-gke.1 runs on Kubernetes 1.21.5-gke.1200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.11, 1.10, and 1.9.
+
+Secret encryption key rotation does not fail when the cluster has more than 1000 secrets.
+
+**Fixed the following vulnerabilities**
+
+  * [CVE-2022-1055](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1055), [CVE-2022-27666 ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27666), [CVE-2022-0492](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0492)
+
+  * [CVE-2021-3999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3999), [CVE-2021-4160](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4160), [CVE-2022-27666](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27666), [CVE-2018-25032](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-25032), [CVE-2022-0778](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0778), [CVE-2022-1271](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1271)
+
+
+
+
+**Changed scope of certain RBAC permissions**
+
+We have scoped down the over-privileged RBAC permissions for the following components in this release:
+
+  * clusterdns-controller: 
+
+    * Scope down clusterdns permissions to 'default' resource name.
+    * Scope down configmap permissions to 'coredns' resource name.
+    * Remove create/delete permissions for configmaps.
+  * seesaw-load-balancer:
+
+    * Restrict the permission to access secrets by specifying certain secret names instead of allowing the access for all secrets.
+  * coredns-autoscaler:
+
+    * Reduce the get configmap permission to a specific configmap resource name.
+  * anetd / anet-operator:
+
+    * Changed to use kubelet kubeconfig to restrict the anetd to only update its own node resource, and the pod resources that are running on the node.
+  * gke-usage-metering:
+
+    * Restrict the permission to only kube-system namespace.
+  * ANG (Anthos Network Gateway)
+
+    * Remove/modify RBAC roles and lower the use of kube-rbac proxy in ANG.
+
+
+
+## May 02, 2022
+
+Creating a 1.11.0 user cluster with a 1.10 admin cluster fails. If you need a 1.11.0 user cluster, use the following workaround:
+
+  1. Create a 1.10 user cluster.
+
+  2. Upgrade the user cluster to 1.11.0.
+
+  3. Optionally, upgrade the admin cluster to 1.11.0. After the admin cluster is upgraded, you can create 1.11.0 user clusters.
+
+
+
+
+For details on how to upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading).
+
+## April 28, 2022
+
+Two security vulnerabilities, [CVE-2022-1055](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1055) and [CVE-2022-27666](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27666), have been discovered in the Linux kernel. Each can lead to a local attacker being able to perform a container breakout, privilege escalation on the host, or both. These vulnerabilities affect all Linux node operating systems (Container-Optimized OS and Ubuntu). For instructions and more details, see the [GCP-2022-014](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2022-014) security bulletin.
+
+## April 27, 2022
+
+  * The structure of the Anthos clusters on VMware documentation is substantially different from previous versions. For details, see [New documentation structure](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/overview#new-doc-structure-1-11).
+
+  * Dockershim, the Docker Engine integration code in Kubernetes, was [deprecated in Kubernetes 1.20](https://kubernetes.io/blog/2020/12/02/dockershim-faq/), and will be removed in Kubernetes 1.24. Thus, the `ubuntu` OS node image type will not be supported at that time. You should plan to convert your node pools to use either the `ubuntu_containerd` or the `cos` OS image type as soon as possible. For more details, see [Using containerd for the container runtime](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/concepts/using-containerd).
+
+  * The _connect project_ is now called _fleet host project_. For more information, see [Fleet host project](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/multiple-gcp-projects#fleet_host_project).
+
+
+
+
+Anthos clusters on VMware 1.11.0-gke.543 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/upgrading). Anthos clusters on VMware 1.11.0-gke.543 runs on Kubernetes v1.22.8-gke.200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.11, 1.10, and 1.9.
+
+  * Kubernetes 1.22 has deprecated certain APIs, a list of which can be found in [Kubernetes 1.22 deprecated APIs](https://cloud.google.com/kubernetes-engine/docs/deprecations/apis-1-22). In your manifests and API clients, you need to replace references to the deprecated APIs with references to the newer API calls. For more information, see the [What to do](https://kubernetes.io/docs/reference/using-api/deprecation-guide/#what-to-do) section in the Deprecated API Migration Guide.
+
+  * Several Anthos metrics have been deprecated for which data is no longer collected. For a list of deprecated metrics, including instructions to migrate to replacement metrics, see [Replace deprecated metrics in dashboard](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/known-issues#replace_deprecated_metrics_in_dashboard).
+
+
+
+
+We have removed the over-privileged RBAC permissions for the following components.
+
+  * RBAC fixes:
+
+    * coredns-autoscaler:
+    * Removed `configmaps create` permission.
+    * Removed `replicasets/scale` permissions.
+    * Removed `replicationcontrollers/scale` permissions.
+    * Scoped down `deployments/scale` permissions to `coredns` resource name.
+
+    * clusterdns-controller:
+
+      * Scoped down clusterdns permissions to `default` resource name.
+      * Scoped down configmap permissions to `coredns` resource name.
+      * Removed create/delete permissions for configmaps. The `coredns` configmap is now created by the bundle, with `create-only` annotation to ensure we don't overwrite existing config on upgrade.
+    * auto-resize controller:
+
+    * Scoped down leases permissions to `onprem-auto-resize-leader-election` resource name.
+
+    * Scoped down configmaps permissions to `onprem-auto-resize-leader-election` resource name.
+
+    * load-balancer-f5:
+
+    * Removed `get list watch create patch delete` permissions for `configmaps`.
+
+    * Removed `update create patch` for `events nodes`.
+
+    * Removed `create` permissions for `services/status` and `services`.
+
+    * Removed view permission for secret `bigip-login-9t8mzp`.
+
+  * Fixed high-severity CVEs:
+
+    * [CVE-2022-23648](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23648)
+    * [CVE-2021-45960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45960)
+    * [CVE-2021-46143](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46143)
+    * [CVE-2022-22825](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22825)
+    * [CVE-2022-22826](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22826)
+    * [CVE-2022-22827](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22827)
+    * [CVE-2022-24407](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24407)
+    * [CVE-2022-0778](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0778)
+    * [CVE-2022-25314](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25314)
+    * [CVE-2022-23606](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23606)
+    * [CVE-2022-21655](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21655)
+    * [CVE-2021-43826](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43826)
+    * [CVE-2021-43825](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43825)
+    * [CVE-2021-43824](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43824)
+    * [CVE-2022-21654](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21654)
+    * [CVE-2022-21657](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21657)
+    * [CVE-2022-21656](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21656)
+    * [CVE-2022-1055](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1055)
+    * [CVE-2022-0886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0886)
+  * Fixed critical CVEs: 
+
+    * [CVE-2022-25235](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25235)
+    * [CVE-2022-25236](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25236)
+    * [CVE-2022-25315](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25315)
+    * [CVE-2022-23852](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23852)
+    * [CVE-2022-22823](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22823)
+    * [CVE-2022-23990](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23990)
+    * [CVE-2022-22822](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22822)
+    * [CVE-2022-22824](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22824)
+  * Fixed issue where the state of an admin cluster that uses a COS image is lost during an admin cluster upgrade or admin cluster control plane repair.
+
+
+
+
+**Cluster lifecycle Improvements** :
+
+  * Admin cluster creation is now resumable. If admin cluster creation fails at any step, you can now rerun `gkectl create admin` to resume the admin cluster creation.
+
+
+
+**Platform enhancements** :
+
+  * Windows Node Pool:
+
+    * **GA** : Support for Windows Dataplane V2 is generally available. Windows Dataplane V2 is now enabled by default for Windows node pools. This means that `containerd` is also enabled by default for Windows node pools.
+    * Added deprecation notice for Windows nodes that Docker and Flannel will be removed in a subsequent version. If you are using Docker container runtime, you should [update your user cluster configuration](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/user-cluster-configuration-file#enablewindowsdataplanev2-field) with `gkectl update cluster` to use `containerd` and Windows Dataplane V2 instead.
+    * Added support for idempotent Windows startup script execution after node reboot.
+    * New Windows Server 2019 OS build version 10.0.17763.2565 has been qualified for Anthos 1.11.0.
+  * Egress NAT Gateway:
+
+    * **GA:** Egress NAT Gateway is now generally available. With this feature, you can configure source network address translation (SNAT) so that certain egress traffic from user clusters is given a predictable source IP address. This enables return traffic from workloads outside the originating cluster to reach the cluster. For more information, see [Configuring an egress NAT gateway](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/egress-nat-gateway).
+  * MetalLB:
+
+    * **GA:** The new load balancer option, [MetalLB](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/bundled-load-balance-metallb), is now generally available as another bundled software load balancer in addition to Seesaw. 
+  * Multinic logs:
+
+    * The Fluent Bit Logging agent can now collect logs for Pods with multiple network interfaces, and send them to [Cloud Logging](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/logging-and-monitoring). Logs will be collected as system logs and no extra charges will apply.
+
+
+
+**Security enhancements** : \- Admin cluster CA Certificate Rotation:
+
+  * **GA** : You can now use `gkectl` to rotate system root CA certificates for admin clusters.
+
+
+
+**Simplify day-2 operations:**
+
+  * **GA:** `gkectl update admin` supports registering an existing admin cluster.
+  * Cluster diagnosis improvements: 
+    * `gkectl diagnose cluster` automatically runs during admin or user cluster upgrade failure.
+    * `gkectl diagnose cluster` searches and surfaces related events for any validation failure. 
+  * **GA:** `gkectl update` supports enabling and disabling of Cloud Logging and Cloud Monitoring in an existing cluster. You can also enable or disable logging to [Cloud Audit Logs](https://cloud.google.com/logging/docs/audit) with `gkectl update` on both admin and user clusters.
+  * Changes made to the `metrics-server-config` ConfigMap are now preserved across cluster upgrades.
+
+
+
+**Terminology changes:**
+
+The _connect project_ is now called _fleet host project_. For more information, see [Fleet host project](https://cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/multiple-gcp-projects#fleet_host_project).
+
+**RBAC policies applied to service account on the admin cluster**
+
+When you register a 1.11.0+ admin cluster to a fleet, a service account is created with the needed role-based access control (RBAC) policies that lets the Connect agent send requests to the admin cluster's Kubernetes API server on behalf of the service account. The service account and RBAC policies are needed so that you can manage the lifecycle of your user clusters in the Google Cloud console. For more information, see [Admin cluster RBAC policies](https://cloud.google.com/anthos/clusters/docs/on-prem/1.11/reference/admin-cluster-rbac-policies).
+
+## April 18, 2022
+
+Anthos clusters on VMware 1.10.3-gke.49 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/how-to/upgrading). Anthos clusters on VMware 1.10.3-gke.49 runs on Kubernetes 1.21.5-gke.1200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.10, 1.9, and 1.8.
+
+  * Fixed issue where scale down sometimes took longer than expected when cluster autoscaling is enabled in a Dataplane-v2 cluster.
+  * Fixed issue where the state of an admin cluster that uses a COS image is lost during an admin cluster upgrade or admin cluster control plane repair.
+  * Added keep-alive configuration to avoid timeout issues for long running vSphere operations in `gkeadm`.
+  * RBAC fixes:
+
+    * coredns-autoscaler:
+    * Removed `configmaps create` permission.
+    * Removed `replicasets/scale` permissions.
+    * Removed `replicationcontrollers/scale` permissions.
+    * Scoped down `deployments/scale` permissions to `coredns` resource name.
+
+    * clusterdns-controller:
+
+      * Scoped down clusterdns permissions to `default` resource name.
+      * Scoped down configmap permissions to `coredns` resource name.
+      * Removed create/delete permissions for configmaps. The `coredns` configmap is now created by the bundle, with `create-only` annotation to ensure we don't overwrite existing config on upgrade.
+    * auto-resize controller:
+
+    * Scoped down leases permissions to `onprem-auto-resize-leader-election` resource name.
+
+    * Scoped down configmaps permissions to `onprem-auto-resize-leader-election` resource name.
+
+    * load-balancer-f5:
+
+    * Removed `get list watch create patch delete` permissions for `configmaps`.
+
+    * Removed `update create patch` for `events nodes`.
+
+    * Removed `create` permissions for `services/status` and `services`.
+
+    * Removed view permission for secret `bigip-login-9t8mzp`.
+
+  * Fixed high-severity CVEs:
+
+    * [CVE-2022-23648](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23648)
+    * [CVE-2022-0778](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0778)
+    * [CVE-2022-25235](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25235)
+    * [CVE-2022-25236](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25236)
+    * [CVE-2022-25315](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25315)
+    * [CVE-2022-0847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0847)
+    * [CVE-2022-1055](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1055)
+    * [CVE-2022-0886](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0886)
+    * [CVE-2022-23606](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23606)
+    * [CVE-2022-21655](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21655)
+    * [CVE-2021-43826](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43826)
+    * [CVE-2021-43825](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43825)
+    * [CVE-2021-43824](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43824)
+    * [CVE-2022-21654](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21654)
+    * [CVE-2022-21657](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21657)
+    * [CVE-2022-21656](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21656)
+
+
+
+## April 12, 2022
+
+A security vulnerability, [CVE-2022-23648](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23648), has been discovered in containerd's handling of path traversal in the OCI image volume specification. Containers launched through containerd's CRI implementation with a specially-crafted image configuration could gain full read access to arbitrary files and directories on the host.
+
+For more information, see the [GCP-2022-013 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2022-013).
+
+## April 11, 2022
+
+A security vulnerability, [CVE-2022-0847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0847), has been discovered in the Linux kernel version 5.8 and later that can potentially escalate container privileges to root. 
+
+For more information, see the [GCP-2022-012 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2022-012).
+
+## March 24, 2022
+
+  * Fixed issue: [Failure to register admin cluster during creation](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/known-issues#failure_to_register_admin_cluster_during_creation).
+
+    * If the cluster registration failed when creating a 1.9.5 admin cluster, you can upgrade to later versions after version 1.9.5 without applying the documented mitigation.
+  * Fixed high-severity CVEs:
+
+    * [CVE-2022-24407](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24407)
+    * [CVE-2021-41190](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41190)
+
+
+
+Anthos clusters on VMware 1.9.5-gke.2 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/how-to/upgrading). Anthos clusters on VMware 1.9.5-gke.2 runs on Kubernetes v1.21.5-gke.1200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.10, 1.9, and 1.8.
+
+## March 15, 2022
+
+  * Fixed high-severity CVEs:
+
+    * Container vulnerabilities:
+
+      * [CVE-2021-41190](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41190)
+      * [CVE-2021-45960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45960)
+      * [CVE-2021-46143](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46143)
+      * [CVE-2022-22825](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22825)
+      * [CVE-2022-22826](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22826)
+      * [CVE-2022-22827](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22827)
+      * [CVE-2022-24407](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24407)
+      * [CVE-2022-25235](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25235)
+      * [CVE-2022-25236](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25236)
+      * [CVE-2022-25313](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25313)
+      * [CVE-2022-25314](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25314)
+      * [CVE-2022-25315](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25315)
+    * Kernel vulnerabilities (ubuntu only):
+
+      * [CVE-2022-0001](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0001)
+      * [CVE-2022-0002](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0002)
+      * [CVE-2022-23960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23960)
+    * Containerd vulnerabilities:
+
+      * [CVE-2022-23648](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23648)
+  * Fixed critical CVEs:
+
+    * Container vulnerabilities: 
+      * [CVE-2022-23852](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23852)
+      * [CVE-2022-22823](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22823)
+      * [CVE-2022-23990](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23990)
+      * [CVE-2022-22822](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22822)
+      * [CVE-2022-22824](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22824)
+  * Fixed issue where `osImage` field is not updated for Windows Server OS node pools during cluster upgrade.
+
+
+
+
+  * Clusters with `enableDataplaneV2` set to `true` can experience connectivity issues between Pods due to `anetd` daemons (running as a Daemonset) entering a software deadlock. While in this state, `anetd` daemons will see stale nodes (previously deleted nodes) as peers and miss newly added nodes as new peers. If you have experienced this issue, [follow these instructions](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/known-issues#connectivity_issues_between_pods_due_to_anetd_daemons_in_software_deadlock) to restart the `anetd` daemons and restore connectivity.
+
+
+
+Anthos clusters on VMware 1.8.8-gke.1 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/upgrading). Anthos clusters on VMware 1.8.8-gke.1 runs on Kubernetes v1.20.12-gke.1500.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.10, 1.9, and 1.8.
+
+## March 03, 2022
+
+Anthos clusters on VMware 1.10.2-gke.34 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/how-to/upgrading). Anthos clusters on VMware 1.10.2-gke.34 runs on Kubernetes 1.21.5-gke.1200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.10, 1.9, and 1.8.
+
+**Changes**
+
+  * `gkectl diagnose` now reports a broken cluster caused by an admin cluster registration error during creation.
+
+
+
+**Fixes**
+
+  * Fixed issue: [Failure to register admin cluster during creation](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/known-issues#failure_to_register_admin_cluster_during_creation)
+
+    * You can upgrade an admin cluster to version 1.10.2 without applying the documented mitigation, even if the cluster failed to register with the provided gkeConnect configuration during its creation. You can fix the registration issue by running `gkectl update admin` with the correct gkeConnect configuration after upgrade.
+    * If the cluster registration failed when creating a version 1.10.2 admin cluster, no mitigation is needed to upgrade to later versions after version 1.10.2. 
+  * Fixed [".local" DNS lookup issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/known-issues#systemd-resolved_failed_dns_lookup_on_local_domains) caused by Ubuntu 20.04 systemd-resolved configuration changes.
+
+  * Fixed issue where [Docker bridge IP incorrectly used 172.17.0.1/16 instead of 169.254.123.1/24](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/known-issues#docker_bridge_ip_uses_172170116_instead_of_169254123124).
+
+  * Fixed unexpectedly high network traffic to monitoring.googleapis.com in a newly created cluster.
+
+  * Fixed an issue that admin cluster creation or upgrade might be interrupted by temporary vCenter connection issue.
+
+  * Fixed critical CVEs: 
+
+    * [CVE-2022-23990](https://cve.mitre.org/cgi-bin/cvename.cgi?name=2022-23990)
+    * [CVE-2021-45960](https://cve.mitre.org/cgi-bin/cvename.cgi?name=2021-45960)
+    * [CVE-2022-25236](https://cve.mitre.org/cgi-bin/cvename.cgi?name=2022-25236)
+  * Fixed this high-severity CVE: 
+
+    * [CVE-2021-22600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=2021-22600)
+
+
+
+When cluster autoscaling is enabled in a Dataplane-v2 cluster, scale down may sometimes take longer than expected. For example, it may take approximately 20 minutes instead of 10 minutes as in a normal case.
+
+## February 24, 2022
+
+The Envoy project recently discovered a set of vulnerabilities. All issues listed in the security bulletin are fixed in Envoy release 1.21.1. For more information, see the [GCP-2022-008 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2022-008).
+
+## February 23, 2022
+
+Anthos clusters on VMware 1.9.4-gke.3 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/how-to/upgrading). Anthos clusters on VMware 1.9.4-gke.3 runs on Kubernetes v1.21.5-gke.1200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.10, 1.9, and 1.8.
+
+**Fixes**
+
+  * Upgraded Cilium to version 1.10.5. 
+
+    * This upgrade also fixed the issue where unreachable node endpoints caused application 503 errors. Previously, when `cilium-health status` was run in anetd daemons, the output showed stale remote nodes.
+  * Fixed unexpectedly high network traffic to monitoring.googleapis.com in a newly created cluster.
+
+  * Fixed these high-severity CVEs: 
+
+    * [CVE-2022-0185](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0185)
+    * [CVE-2021-22600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22600)
+
+
+
+When cluster autoscaling is enabled in a Dataplane-v2 cluster, scale down may sometimes take longer. For example, it may take approximately 20 minutes instead of 10 minutes as in a normal case.
+
+## February 17, 2022
+
+Anthos clusters on VMware 1.8.7-gke.0 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/upgrading). Anthos clusters on VMware 1.8.7-gke.0 runs on Kubernetes v1.20.12-gke.1500.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.10, 1.9, and 1.8.
+
+**Fixes:**
+
+  * Fixed high-severity CVEs: 
+
+    * [CVE-2022-0185](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0185)
+
+    * [CVE-2021-22600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22600)
+
+
+
+
+## February 14, 2022
+
+A security vulnerability, [CVE-2022-0492](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0492), has been discovered in the Linux kernel's `cgroup_release_agent_write` function. The attack uses unprivileged user namespaces, and under certain circumstances, this vulnerability can be exploitable for container breakout. For more information, see the [GCP-2022-006 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2022-006).
+
+## February 11, 2022
+
+A security vulnerability, [CVE-2021-43527](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43527), has been discovered in any binary that links to the vulnerable versions of libnss3 found in NSS (Network Security Services) versions prior to 3.73 or 3.68.1. Applications using NSS for certificate validation or other TLS, X.509, OCSP or CRL functionality may be impacted, depending on how they configure NSS. 
+
+For more information, see the [GCP-2022-005 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2022-005).
+
+## February 10, 2022
+
+  * Removed unintentional infrastructure log lines from the cluster snapshot. 
+  * Upgraded the Connect Agent version to 20211210-01-00. 
+
+    * This upgrade also fixed the issue where the Connect Agent restarts unexpectedly on either a newly-created cluster or an existing cluster that uses [Anthos Identity Service](https://cloud.google.com/anthos/identity/setup/fleet-cluster) to manage the Anthos Identity Service ClientConfig.
+  * Fixed two high severity CVEs: 
+
+    * [CVE-2022-0185](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0185)
+    * [CVE-2021-41190](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41190)
+  * Fixed the short metric probing interval issue that sends a high volume of traffic to the monitoring.googleapis.com endpoint in a cluster.
+
+
+
+
+Anthos clusters on VMware 1.10.1-gke.19 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/how-to/upgrading). Anthos clusters on VMware 1.10.1-gke.19 runs on Kubernetes v1.21.5-gke.1200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.10, 1.9, and 1.8.
+
+  * If your admin cluster failed to register with the provided `gkeConnect` spec during creation, upgrading to a later 1.9 or 1.10 release will fail with the following error:
+
+`failed to migrate to first admin trust chain: failed to parse current version "": invalid version: "" failed to migrate to first admin trust chain: failed to parse current version "": invalid version: ""`
+
+If you have experienced this issue, [follow these instructions](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/known-issues#failure_to_register_admin_cluster_during_creation) to fix the gkeConnect registration issue before you upgrade your admin cluster.
+
+
+
+
+## February 07, 2022
+
+A security vulnerability, [CVE-2021-4034](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4034), has been discovered in pkexec, a part of the Linux policy kit package (polkit), that allows an authenticated user to perform a privilege escalation attack. PolicyKit is generally used only on Linux desktop systems to allow non-root users to perform actions such as rebooting the system, installing packages, restarting services, and so forth, as governed by a policy.
+
+For instructions and more details, see the [GCP-2022-004 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2022-004).
+
+## February 01, 2022
+
+Three security vulnerabilities, [CVE-2021-4154](https://access.redhat.com/security/cve/cve-2021-4154), [CVE-2021-22600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=2021-22600), and [CVE-2022-0185](https://ubuntu.com/security/CVE-2022-0185), have been discovered in the Linux kernel, each of which can lead to either a container breakout, privilege escalation on the host, or both. These vulnerabilities affect all Linux node operating systems (COS and Ubuntu) on Anthos clusters on VMware.
+
+For instructions and more details, see the [GCP-2022-02](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2022-002) security bulletin.
+
+## January 24, 2022
+
+**Changes in version 1.9.3:**
+
+  * Upgraded the Connect Agent version to 20211210-01-00. 
+
+    * This upgrade also fixed the issue where the Connect Agent restarts unexpectedly on a newly-created cluster that uses [Anthos Identity Service](https://cloud.google.com/anthos/identity/setup/fleet-cluster) to manage the Anthos Identity Service ClientConfig.
+
+
+
+**Anthos clusters on VMware 1.9.3-gke.4 is now available.** To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/how-to/upgrading). Anthos clusters on VMware 1.9.3-gke.4 runs on Kubernetes v1.21.5-gke.1200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.10, 1.9, and 1.8.
+
+**Fixes for version 1.9.3:**
+
+  * Fixed issue where special characters in the vSphere username are not properly escaped.
+
+
+
+**Known issue in version 1.9.3:**
+
+  * The Connect Agent restarts unexpectedly on an existing cluster that uses [Anthos Identity Service](https://cloud.google.com/anthos/identity/setup/fleet-cluster) to manage the Anthos Identity Service ClientConfig. If you have experienced this issue, [follow these instructions](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/known-issues#anthos_identity_service_usage_can_cause_connect_agent_to_restart_unpredictably) to upgrade the Connect Agent version.
+
+
+
+**Fixes for version 1.8.6:**
+
+  * Fixed issue where special characters in the vSphere username are not properly escaped.
+
+
+
+**Anthos clusters on VMware 1.8.6-gke.4 is now available.** To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/upgrading). Anthos clusters on VMware 1.8.6-gke.4 runs on Kubernetes 1.20.12-gke.1500.
+
+## December 23, 2021
+
+  * When deploying Anthos clusters on VMware releases with a version number of 1.9.0 or higher, that have the Seesaw bundled load balancer in an environment that uses NSX-T stateful distributed firewall rules, `stackdriver-operator` might fail to create `gke-metrics-agent-conf` ConfigMap and cause `gke-connect-agent` Pods to be in a crash loop. The underlying issue is that stateful NSX-T distributed firewall rules terminate the connection from a client to the user cluster API server through the Seesaw load balancer because Seesaw uses asymmetric connection flows. The integration issue with NSX-T distributed firewall rules affect all Anthos clusters on VMWare releases that use Seesaw. You might see similar connection problems on your own applications when they create large Kubernetes objects whose sizes are bigger than 32K. Follow [these instructions](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/how-to/bundled-load-balance#configuring_stateless_nsx-t_distributed_firewall_policies_for_use_with_seesaw_load_balancer) to disable NSX-T distributed firewall rules, or to use stateless distributed firewall rules for Seesaw VMs.
+
+  * If your clusters use a manual load balancer, follow [these instructions](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/how-to/manual-load-balance#resetting_connections_to_failed_nodes_recommended) to configure your load balancer to reset client connections when it detects a backend node failure. Without this configuration, clients of the Kubernetes API server might stop responding for several minutes when a server instance goes down.
+
+
+
+
+## December 22, 2021
+
+Anthos clusters on VMware 1.10.0-gke.194 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/how-to/upgrading). Anthos clusters on VMware 1.10.0-gke.194 runs on Kubernetes v1.21.5-gke.1200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.10, 1.9, and 1.8.
+
+**Functionality changes:**
+
+  * Replaced the [SSH tunnel](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service) with [Konnectivity service](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service) for communication between the user cluster control plane and the user cluster nodes. The Kubernetes SSH tunnel has been deprecated. 
+
+    * You must create two additional [firewall rules](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/how-to/firewall-rules) so that user worker nodes can access ports 8132 on the user control-plane VIP address and get return packets. This is required for the Konnectivity service.
+
+    * Introduced a new `konnectivityServerNodePort` field in the user cluster manual load balancer configuration. This field is required when creating or upgrading a user cluster, with manual load balancer mode, to version 1.10. 
+
+  * The Ubuntu OS image is upgraded from 18.04 to 20.04 LTS.
+
+    * The `python` command is no longer available. Any `python` command should be updated to `python3` instead, and the syntax should be updated to Python 3.
+
+    * `/etc/resolv.conf` now points to `/run/systemd/resolve/stub-resolv.conf`, instead of `/run/systemd/resolve/resolv.conf`.
+
+    * The Ubuntu CIS benchmark version changed from v2.0.1 for Ubuntu 18.04 LTS to v1.0.0 for Ubuntu 20.04 LTS.
+
+  * Upgraded COS from [m89](https://cloud.google.com/container-optimized-os/docs/release-notes/m89) to [m93](https://cloud.google.com/container-optimized-os/docs/release-notes/m93).
+
+  * Upgraded containerd from 1.4 to 1.5 on Ubuntu and COS.
+
+  * Changed `gkectl diagnose snapshot` to use the `--all-with-logs` scenario by default.
+
+  * The `gkeadm` command copies the admin workstation configuration file to the admin workstation during creation so it can be used as a backup to re-create the admin workstation later.
+
+  * Increased the Pod priority of kube-state-metrics to improve its reliability when the cluster is under resource contention.
+
+
+
+
+  * vCenter/ESXi host 6.7u2 and below is no longer supported. Upgrade your vCenter environment to a supported version (6.7U3 and above) before upgrading your clusters.
+
+  * The `diskformat` parameter is removed from the standard vSphere driver StorageClass as the parameter has been deprecated in Kubernetes 1.21.
+
+  * **Preview: Egress NAT gateway:**
+
+    * To enable an egress NAT gateway, the `advancedNetworking` section in the user cluster configuration file replaces the now-deprecated `enableAnthosNetworkGateway` section.
+
+    * You must create a NetworkGatewayGroup object (previously AnthosNetworkGateway) to configure the egress NAT gateway. 
+
+    * Any admin or user clusters that are version 1.9 or earlier, and that are enabled with Anthos Network Gateway, cannot be upgraded. You must delete and recreate those clusters following [these instructions](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/how-to/egress-nat-gateway).
+
+
+
+
+**Cluster lifecycle Improvements:**
+
+  * An admin cluster upgrade is resumable after a previous failed admin cluster upgrade attempt.
+
+  * **GA:** Admin cluster registration during new cluster creation is generally available. 
+
+  * **Preview:** Admin cluster registration when updating existing clusters is available as a preview feature.
+
+
+
+
+**Platform enhancements:**
+
+  * **Preview:** A new load balancer option, MetalLB, is available as another bundled software load balancer in addition to Seesaw.This will be the default load balancer choice instead of Seesaw when GA. 
+
+  * **GA:** Support for user cluster node pool autoscaling is generally available.
+
+  * **Preview:** You can create admin cluster nodes and user cluster control-plane nodes with Container-Optimized OS by specifying the `osImageType` as `cos` in the admin cluster configuration file.
+
+  * Windows Node Pool: 
+
+    * **Preview:** The containerd runtime is now available for Windows node pools when Dataplane V2 for Windows is enabled. 
+    * Node Problem Detector checks containerd service health on the nodes and surfaces problems to the API Server. For version 1.10.0, NPD does not attempt to repair the containerd service. 
+    * Containerd logs are exported to the Cloud Console. 
+
+    * CSI proxy is deployed automatically onto Windows nodes. You can install and use a Windows CSI driver of your choice, such as the [SMB CSI driver](https://github.com/kubernetes-csi/csi-driver-smb/blob/master/deploy/example/e2e_usage.md).
+
+  * **GA:** The [multi-NIC](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/how-to/multi-nic) capability to provide additional network interfaces to your Pods is generally available.
+
+  * **GA:** You can upgrade to Ubuntu 20.04 and containerd 1.5.
+
+
+
+
+**Security enhancements:**
+
+  * User cluster control plane certificates are automatically rotated at each cluster upgrade. 
+
+
+
+**Simplify day-2 operations:**
+
+  * **Preview:** `gkectl update admin` supports the enabling and disabling of Cloud Monitoring and Cloud Logging in the admin cluster. 
+
+  * Changed the collection of application metrics to use a more scalable monitoring pipeline based on OpenTelemetry. This change significantly reduces the amount of resources required to collect metrics.
+
+  * Updated the parser of containerd and kubelet node logs to extract severity level.
+
+  * Introduced the `--share-with` optional flag in the `gkectl diagnose snapshot` command to share the read permission after uploading the snapshot to a Google Cloud Storage bucket.
+
+
+
+
+  * Fixed an issue that the Windows nodes were assigned with duplicated IP addresses.
+
+  * Fixed [CVE-2021-32760](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32760). Because of [Ubuntu PPA version pinning](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/known-issues#false_positives_in_docker_containerd_and_runc_vulnerability_scanning), this vulnerability might still be reported by certain vulnerability scanning tools, and thus appear as a false positive even though the underlying vulnerability has been patched.
+
+
+
+
+  * Because of the change to use an OpenTelemetry-based scalable monitoring pipeline for application metrics, [Horizontal Pod Autoscaling with user-defined metrics](https://cloud.google.com/anthos/clusters/docs/on-prem/1.10/how-to/custom-metrics) does not work in 1.10.0 unless you explicitly set `scalableMonitoring` to `false`, while also ensuring that both `enableStackdriverForApplications` and `enableCustomMetricsAdapter` are set to `true`, in the Stackdriver object. 
+
+As a workaround, you can install a custom Prometheus adapter if you want to use [Horizontal Pod Autoscaling with user-defined metrics](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/how-to/custom-metrics) while still keeping the scalable monitoring default setting for application metrics. 
+
+  * Because of a COS 93 configuration issue, IPv6 dualstack does not work correctly for COS node pool nodes in version 1.10.0. If you are using IPv6 dualstack with a COS node pool, wait for an upcoming patch release that addresses this issue.
+
+  * If an admin cluster is created with `osImagetype` of `cos`, and you have rotated the audit logging service account key with `gkectl update admin`, the changes are overridden after the admin cluster control-plane node reboot. In that case, re-run the update command after the admin cluster control-plane node reboot to apply those changes.
+
+  * On COS nodes, the NTP server is configured to `time.google.com` by default. In DHCP mode, this setting cannot be overridden to use the NTP server provided by your DHCP server. The issue will be fixed in an upcoming patch release. Before then, you can deploy a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) to override the NTP setting if you want to use a different NTP server in your COS node pool.
+
+
+
+
+## November 30, 2021
+
+Anthos clusters on VMware 1.7.6-gke.6 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/how-to/upgrading). Anthos clusters on VMware 1.7.6-gke.6 runs on Kubernetes v1.19.15-gke.1900.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.9, 1.8, and 1.7.
+
+  * Fixed issue where special characters in the vSphere username are not properly escaped.
+  * Alleviated the high CPU and memory usage by /etc/cron.daily/aide discussed in [this issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/known-issues#etccrondailyaide_cpu_and_memory_spike_issue).
+  * Fixed issue where user cluster node is not synching time.
+  * Fixed [CVE-2021-41103](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41103). Because of [Ubuntu PPA version pinning](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/known-issues#false_positives_in_docker_containerd_and_runc_vulnerability_scanning), this vulnerability might still be reported by certain vulnerability scanning tools, and appear as a false positive even though the underlying vulnerability has been patched.
+
+
+
+## November 29, 2021
+
+  * Fixed issue where special characters in the vSphere username are not properly escaped.
+  * Alleviated the high CPU and memory usage by /etc/cron.daily/aide discussed in [this issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/known-issues#etccrondailyaide_cpu_and_memory_spike_issue).
+  * Fixed issue where user cluster node is not synching time.
+  * Fixed [CVE-2021-41103](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41103). Because of [Ubuntu PPA version pinning](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/known-issues#false_positives_in_docker_containerd_and_runc_vulnerability_scanning), this vulnerability might still be reported by certain vulnerability scanning tools, and appear as a false positive even though the underlying vulnerability has been patched.
+
+
+
+Anthos clusters on VMware 1.8.5-gke.3 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/upgrading). Anthos clusters on VMware 1.8.5-gke.3 runs on Kubernetes v1.20.9-gke.701.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.9, 1.8, and 1.7.
+
+## November 18, 2021
+
+Anthos clusters on VMware 1.9.2-gke.4 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/how-to/upgrading). Anthos clusters on VMware 1.9.2-gke.4 runs on Kubernetes v1.21.5-gke.1200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.9, 1.8, and 1.7.
+
+With version 1.9.2, cert-manager is installed in the cert-manager namespace. Previously, for versions 1.8.2 to 1.9.1, cert-manager was installed in the kube-system namespace.
+
+The cert-manager version is upgraded from 1.0.3 to 1.5.4. 
+
+If you already use any ClusterIssuer with a different cluster resource namespace from the default `cert-manager` namespace, follow these steps if you upgrade to version 1.9.2.
+
+* Manually copy the related certificates, secrets, or issuers to the `cert-manager` namespace to use the installed cert-manager after upgrading to 1.9.2. 
+
+* If you need to use a different version of cert-manager, or if you need to install it in a different namespace, follow [these instructions](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/known-issues#conflict_with_cert-manager_when_upgrading_to_version_182_or_above) each time that you upgrade your cluster.
+
+**Fixes:**
+
+  * Fixed issue with cilium-operator not reconciling CiliumNode for Windows nodes when updating the cluster to add Windows node pools.
+  * Fixed issue which could temporarily result in no healthy CoreDNS pods present during cluster operations.
+  * Fixed issue where you cannot run `gkectl upgrade loadbalancer` on a user cluster seesaw load balancer.
+  * Fixed issue where node_filesystem metrics report gives wrong size for `/run`.
+  * Fixed [CVE-2021-37159](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-37159). Because of [Ubuntu PPA version pinning](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/known-issues#false_positives_in_docker_containerd_and_runc_vulnerability_scanning), this vulnerability might still be reported as a false positive by certain vulnerability scanning tools, although the underlying vulnerability has been patched in the 1.9.2 release.
+  * Fixed issue where user cluster node is not synching time.
+  * Alleviated the high CPU and memory usage by /etc/cron.daily/aide discussed in [this issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/known-issues#etccrondailyaide_cpu_and_memory_spike_issue).
+
+
+
+## October 29, 2021
+
+The security community recently disclosed a new security vulnerability [CVE-2021-30465](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-30465) found in `runc` that has the potential to allow full access to a node filesystem.
+
+For more information, see the [GCP-2021-011 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2021-011).
+
+## October 27, 2021
+
+**Known issue in version 1.8.4:**
+
+If you have already installed your own cert-manager in your cluster, read the [suggested mitigation](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/known-issues#conflict_with_cert-manager_when_upgrading_to_version_182_or_above) before upgrading to a version >=1.8.2 in order to avoid an installation conflict with the cert-manager deployed by Anthos clusters on VMware.
+
+  * Installing your cert-manager with Apigee may also result in a conflict with the cert-manager deployed by Anthos clusters on VMware. To avoid this, read the [suggested mitigation](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/known-issues#conflict_with_cert-manager_when_upgrading_to_version_182_or_above) before upgrading to this version.
+
+
+
+**Anthos clusters on VMware 1.8.4-gke.1 is now available.** To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/upgrading). Anthos clusters on VMware 1.8.4-gke.1 runs on Kubernetes v1.20.9-gke.701.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.9, 1.8, and 1.7.
+
+**Fixes for version 1.8.4:**
+
+  * Fixed high-severity [CVE-2021-3711](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3711).
+  * Fixed `gkectl check-config` failure when Anthos clusters are configured with a proxy whose url contains special characters.
+  * Fixed "cert-manager" cainjector leader-election failure.
+
+
+
+**Anthos clusters on VMware 1.7.5-gke.0 is now available.** To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/how-to/upgrading). Anthos clusters on VMware 1.7.5-gke.0 runs on Kubernetes v1.19.12-gke.2101.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.9, 1.8, and 1.7.
+
+**Fixes for version 1.7.5:**
+
+Fixed `gkectl check-config` failure when Anthos clusters are configured with a proxy whose url contains special characters.
+
+## October 21, 2021
+
+A security issue was discovered in the Kubernetes ingress-nginx controller, [CVE-2021-25742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25742). Ingress-nginx custom snippets allow retrieval of ingress-nginx service account tokens and secrets across all namespaces. For more information, see the [GCP-2021-024 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2021-024).
+
+## October 20, 2021
+
+Anthos clusters on VMware 1.9.1-gke.6 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/how-to/upgrading). Anthos clusters on VMware 1.9.1-gke.6 runs on Kubernetes v1.21.5-gke.400.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.9, 1.8, and 1.7.
+
+  * In version 1.9.0, there was a known issue with restoring an admin cluster using a backup when using a private registry. That has been fixed in version 1.9.1.
+  * Fixed `gkectl check-config` failure that occurs when Anthos clusters are configured with a proxy whose url contains special characters.
+  * Fixed "cert-manager" cainjector leader-election failure.
+
+
+
+If you have already installed your own cert-manager in your cluster, read the [suggested mitigation](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/known-issues#conflict_with_cert-manager_when_upgrading_to_version_182_or_above) before upgrading to a version >=1.8.2 in order to avoid an installation conflict with the cert-manager deployed by Anthos clusters on VMware. 
+
+  * Installing your cert-manager with Apigee may also result in a conflict with the cert-manager deployed by Anthos clusters on VMware. To avoid this, read the [suggested mitigation](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/known-issues#conflict_with_cert-manager_when_upgrading_to_version_182_or_above) before upgrading to this version.
+
+
+
+## October 04, 2021
+
+A security vulnerability, [CVE-2020-8561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8561), has been discovered in Kubernetes where certain webhooks can be made to redirect `kube-apiserver` requests to private networks of that API server. For more information, see the [GCP-2021-021 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2021-021).
+
+## September 29, 2021
+
+Anthos clusters on VMware 1.9.0-gke.8 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/how-to/upgrading). Anthos clusters on VMware 1.9.0-gke.8 runs on Kubernetes v1.21.4-gke.200.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.9, 1.8, and 1.7.
+
+**Features:**
+
+**Cluster lifecycle Improvements:**
+
+  * **GA:** You can register an admin cluster during its creation by filling in the `gkeConnect` section in the admin cluster configuration file, similar to [user cluster registration](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/how-to/connecting-to-a-cluster#cluster_registration). 
+
+
+
+**Platform enhancements:**
+
+  * **Preview:** User clusters can now be in a different vSphere datacenter from the admin cluster, resulting in datacenter isolation between the admin cluster and user clusters. This provides greater resiliency in the case of vSphere environment failures.
+
+  * **GA:** Support for Windows node pools is generally available.This release adds:
+
+    * **Preview:** Windows DataplaneV2 support, which allows for using Windows Network Policy
+    * Node Problem Detector (NPD) support on Windows 
+    * Streamlined process for preparing Windows images in a private registry
+    * Enhanced Flannel CNI support on Windows 
+
+The upstream fixes for the ["Windows Pod stuck at terminating status" error](https://github.com/microsoft/Windows-Containers/issues/106) are also applied to this release, which improves the stability of running Windows workloads.
+
+  * **GA:** Support for Container-Optimized OS (COS) node pools is generally available. 
+
+  * **GA:** CoreDNS is now the cluster DNS provider. 
+
+    * Clusters that are upgraded to 1.9 will have their KubeDNS provider replaced with CoreDNS. During the upgrade, CoreDNS is first deployed and then KubeDNS is removed, so applications should not observe DNS unavailability. However before upgrading, ensure that your cluster has enough additional resources to deploy CoreDNS. CoreDNS requires 100 millicpu and 170 MiB of memory per instance, all clusters require a minimum of 2 instances, and there is an additional instance deployed for every 16 nodes in the cluster.
+    * You can configure cluster DNS options such as upstream name servers by using the new [ClusterDNS custom resource](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/how-to/configure-dns). 
+
+
+
+**Security enhancements:**
+
+  * **GA:** Always-on secrets encryption: You can enable secrets encryption with internally generated keys instead of a hardware security module (HSM). Use the `gkectl update` command to rotate these keys or to enable or disable secrets encryption after cluster creation. 
+  * **Preview:** Windows network policy support. This release introduces a new network plugin, Antrea, for Windows nodes. In addition to network connectivity and services support, it provides network policy support. When creating a user cluster, you can set `enableWindowsDataplaneV2` to `true` to enable this feature. Enabling this feature replaces Flannel with Antrea on Windows nodes.
+  * **Preview:** Azure AD group support for Authentication: This feature allows cluster admins to configure RBAC policies based on Azure AD groups for authorization in clusters. This supports retrieval of groups information for users belonging to more than 200 groups, thus overcoming a limitation of regular OIDC configured with Azure AD as the identity provider.
+
+
+
+**Simplify day-2 operations:**
+
+  * **Preview:** When creating a user cluster, you can set `enableVMTracking` in the configuration file to `true` to enable vSphere tag creation and attachment to the VMs in the user cluster. This allows easy mapping of VMs to clusters and node pools. See [Enable VM tracking](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/how-to/vm-track-tags). 
+  * **GA:** New metrics agents based on open telemetry are introduced to improve reliability, scalability and resource usage.
+  * **Preview:** You can enable or disable Stackdriver with `gkectl update` on existing user clusters. You can enable or disable cloud audit logging and monitoring with `gkectl update` on both admin and user clusters.
+
+
+
+**Changes:**
+
+  * There is now a checkpoint file for the admin cluster, located in the same datastore folder as the admin cluster data disk, with the name `DATA_DISK_NAME-checkpoint.yaml`, or `DATA_DISK_NAME.yaml` if the length of DATA_DISK_NAME is greater than the filename length limit. This file is required for future upgrades and should be considered as important as the admin cluster data disk.
+
+**Note:** If you have enabled VM encryption in vCenter, you must grant `Cryptographer.Access` permission to the vCenter credentials specified in your admin cluster configuration file, before trying to create or upgrade your admin cluster.
+
+  * The [admin cluster backup with gkectl](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/how-to/back-up-and-restore-an-admin-cluster-with-gkectl) preview feature introduced in 1.8 now allows updates to `clusterBackup.datastore`. This datastore may be different from `vCenter.datastore` so long as it is in the same datacenter as the cluster.
+
+  * The k8s 1.21 release includes the following metrics changes:
+
+    * Add new field status for `storage_operation_duration_seconds`, so that you can know about all status storage operation latency.
+    * The storage metrics `storage_operation_errors_total` and `storage_operation_status_count` are marked deprecated. In both cases, the `storage_operation_duration_seconds` metric can be used to recover equivalent counts (using `status=fail-unknown` in the case of `storage_operations_errors_total`).
+
+    * Rename the metric `etcd_object_counts` to `apiserver_storage_object_counts` and mark it as stable. The original `etcd_object_counts metrics` name is marked as "Deprecated" and will be removed in the future.
+
+  * A new GKE on-prem control plane uptime dashboard is introduced with a new metric, `kubernetes.io/anthos/container/uptime`, for component availability. The old GKE on-prem control plane status dashboard and old `kubernetes.io/anthos/up` metric are deprecated. New alerts for admin cluster control plane components availability and user cluster control plane components availability are introduced with a new `kubernetes.io/anthos/container/uptime` metric to replace deprecated alerts and the old `kubernetes.io/anthos/up` metric.
+
+  * You can now skip certain health checks performed by `gkectl diagnose cluster` with the `–skip-validation-xxx` flag.
+
+
+
+
+**Breaking changes:**
+
+  * User cluster registration is now required and enforced. You must fill in the `gkeConnect` section of the user cluster configuration file before creating a new user cluster. You cannot upgrade a user cluster unless that cluster is registered. To unblock the cluster upgrade, add the `gkeConnect` section to the configuration file and run `gkectl update cluster` to register an existing 1.8 user cluster.
+
+  * User clusters must be upgraded before the admin cluster. The flag `--force-upgrade-admin` to allow the old upgrade flow (admin cluster upgrade first) is no longer supported.
+
+  * The following requirements are now enforced when you create a cluster that has [logging and monitoring](https://cloud.google.com/anthos/clusters/docs/on-prem/1.9/how-to/user-cluster-configuration-file#stackdriver-section) enabled. 
+
+    * The Config Monitoring for Ops API is enabled in your logging-monitoring project. 
+    * The Ops Config Monitoring Resource Metadata Writer role is granted to your logging-monitoring service account. 
+    * The URL opsconfigmonitoring.googleapis.com is added to your proxy allowlist (if applicable).
+**Note:** Although the preceding requirements are not enforced for upgrading clusters to 1.9, we strongly recommended that you fulfill the requirements.
+
+
+
+**Fixes:**
+
+  * Fixed the issue of gkeadm trying to set permissions for the component access service account when `--auto-create-service-accounts=false`.
+  * Fixed the [timeout issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/known-issues#creatingupgrading_admin_cluster_timeout) for admin cluster creation or upgrade that was caused by high network latency to reach the container registry.
+  * Fixed the `gkectl create-config admin` and `gkectl create-config cluster` [panic issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/known-issues#gkectl_create-config_admin_and_gkectl_create-config_cluster_panic) in the 1.8.0-1.8.3 releases.
+  * Fixed the [`/run/aide` disk usage issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/known-issues#etccrondailyaide_script_uses_up_all_space_in_run_causing_a_crashloop_in_pods) that was caused by the accumulated cron log for aide.
+
+
+
+Restoring an admin cluster from a backup using `gkectl repair admin-master –restore-from-backup` fails when using a private registry. The issue will be resolved in a future release.
+
+## September 23, 2021
+
+Anthos clusters on VMware 1.7.4-gke.2 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/how-to/upgrading). Anthos clusters on VMware 1.7.4-gke.2 runs on Kubernetes v1.19.12-gke.2101.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.8, 1.7, and 1.6.
+
+**Fixes:**
+
+  * Fixed high-severity [CVE-2021-3711](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3711).
+  * Fixed [CVE-2021-25741](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25741) mentioned in the [GCP-2021-018](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2021-018) security bulletin.
+  * Fixed the Istio security vulnerabilities listed in the [GCP-2021-016](https://cloud.google.com/service-mesh/docs/security-bulletins#gcp-2021-016) security bulletin.
+  * Fixed the issue that `gkeadm` tries to set permissions for the component access service account when `--auto-create-service-accounts=false`.
+
+
+
+## September 21, 2021
+
+Anthos clusters on VMware 1.8.3-gke.0 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/upgrading). Anthos clusters on VMware 1.8.3-gke.0 runs on Kubernetes v1.20.9-gke.701.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.8, 1.7, and 1.6.
+
+**Fixes:**
+
+  * Fixed high-severity [CVE-2021-3711](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3711).
+  * Fixed [CVE-2021-25741](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25741) mentioned in the [GCP-2021-018](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2021-018) security bulletin.
+  * Fixed the Istio security vulnerabilities listed in the [GCP-2021-016](https://cloud.google.com/service-mesh/docs/security-bulletins#gcp-2021-016) security bulletin.
+  * Fixed the issue that `gkeadm` tries to set permissions for the component access service account when `--auto-create-service-accounts=false`.
+
+
+
+In versions 1.8.0-1.8.3, the `gkectl create-config admin/cluster` command panics with the message `panic: invalid version: "latest"`. As a workaround, use `gkectl create-config admin/cluster --gke-on-prem-version=$DESIRED_CLUSTER_VERSION`. Replace `DESIRED_CLUSTER_VERSION` with the desired version.
+
+## September 17, 2021
+
+A security issue was discovered in Kubernetes, [CVE-2021-25741](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25741), where a user may be able to create a container with subpath volume mounts to access files and directories outside of the volume, including on the host filesystem. For more information, see the [GCP-2021-018 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2021-018).
+
+## September 16, 2021
+
+Anthos clusters on VMware 1.6.5-gke.0 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.6/how-to/upgrading). Anthos clusters on VMware 1.6.5-gke.0 runs on Kubernetes 1.18.20-gke.4501.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.8, 1.7, and 1.6.
+
+**Fixes:**
+
+  * Fixed high-severity [CVE-2021-3711](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3711).
+  * Fixed [CVE-2021-25741](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25741) mentioned in the [GCP-2021-018](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2021-018) security bulletin.
+  * Fixed the Istio security vulnerabilities listed in the [GCP-2021-016](https://cloud.google.com/service-mesh/docs/security-bulletins#gcp-2021-016) security bulletin.
+
+
+
+## September 03, 2021
+
+Anthos clusters on VMware 1.7.3-gke.6 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/how-to/upgrading). Anthos clusters on VMware 1.7.3-gke.X runs on Kubernetes v1.19.12-gke.1100
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.8, 1.7, and 1.6.
+
+**Fixes:**
+
+  * Fixed the [Ubuntu user password expiration issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/known-issues#cannot_log_in_to_admin_workstation_due_to_password_expiry_issue). **This is a required fix for customers running 1.7.2 or 1.7.3-gke.2. Either use the suggested workaround to fix this issue, or upgrade to get this fix.**
+
+  * Fixed the issue that the stackdriver-log-forwarder pod was sometimes in crashloop because of [fluent-bit segfault](https://github.com/fluent/fluent-bit/issues/3224).
+
+
+
+
+## August 31, 2021
+
+Anthos clusters on VMware 1.8.2-gke.11 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/upgrading). Anthos clusters on VMware 1.8.2-gke.11 runs on Kubernetes 1.20.9-gke.701.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.8, 1.7, and 1.6.
+
+Starting from version 1.8.2, Anthos clusters on VMware uses [cert-manager](https://cert-manager.io/) instead of Istio Citadel for issuing TLS certificates used by metrics endpoints.
+
+**Fixes:**
+
+  * Fixed the [Ubuntu user password expiration issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/known-issues#cannot_log_in_to_admin_workstation_due_to_password_expiry_issue). **You must get this fix. Either use the suggested workaround to fix this issue, or upgrade to get this fix.**
+  * Enhanced the admin cluster upgrade logic to prevent the admin cluster state (that is, the admin master data disk) from being lost in those cases when the disk is renamed or migrated accidentally.
+  * Fixed the issue that the GKE connect-register service account key is printed in the klog in 1.8.0 and 1.8.1 when users run `gkectl update cluster` to update the GKE connect spec, such as to register an existing user cluster. 
+  * Fixed issue that when ESXi hosts were unavailable in the vCenter cluster (such as when disconnected from vCenter or in maintenance mode), the [Cluster API](https://cluster-api.sigs.k8s.io/) controller and cluster health controllers would crash loop, and the `gkectl diagnose cluster` command would crash.
+  * Fixed the issue that an admin cluster upgrade might be blocked indefinitely if admin node machines are upgraded before the new Cluster API controller is ready.
+  * Fixed the issue that the onprem-user-cluster-controller might leak vCenter sessions over time.
+
+  * Fixed the issue that the gateway IP was assigned to a Windows Pod, which made it unable to have network connectivity.
+
+  * Fixed [CVE-2021-33909](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33909) and [CVE-2021-33910](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33910) on Ubuntu and COS.
+
+
+
+
+[HPA with custom metrics](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/custom-metrics) doesn't work in version 1.8.2 due to the migration from Istio to cert-manager for the monitoring pipeline. Customers using the HPA custom metrics with the monitoring pipeline should wait for a future release that will include this fix.
+
+## August 09, 2021
+
+Anthos clusters on VMware 1.7.3-gke.2 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/how-to/upgrading). Anthos clusters on VMware 1.7.3-gke.2 runs on Kubernetes 1.19.12-gke.1100.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.8, 1.7, and 1.6.
+
+**Fixes:**
+
+  * These security vulnerabilities have been fixed: [CVE-2021-3520](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3520), [CVE-2021-33909](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33909), and [CVE-2021-33910](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33910). 
+
+  * Fixed the [issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/known-issues#etccrondailyaide_script_uses_up_all_space_in_run_causing_a_crashloop_in_pods) that the /etc/cron.daily/aide` script uses up all existing space in /run, causing a crash loop in Pods.
+
+  * Fixed the issue that admin cluster upgrade may fail due to an expired front-proxy-client certificate on the admin cluster control plane node.
+
+
+
+
+## August 05, 2021
+
+Anthos clusters on VMware 1.6.4-gke.7 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.6/how-to/upgrading). Anthos clusters on VMware 1.6.4-gke.7 runs on Kubernetes 1.18.20-gke.2900.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.8, 1.7, and 1.6.
+
+**Fixes:**
+
+  * These security vulnerabilities have been fixed: [CVE-2021-3520](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3520), [CVE-2021-33909](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33909), and [CVE-2021-33910](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33910). 
+
+  * Fixed the issue that admin cluster upgrade may fail due to an expired front-proxy-client certificate on the admin cluster control plane node.
+
+
+
+
+## July 22, 2021
+
+Anthos clusters on VMware 1.8.1-gke.7 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/upgrading). Anthos clusters on VMware 1.8.1-gke.7 runs on Kubernetes v1.20.8-gke.1500.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.8, 1.7, and 1.6.
+
+**Fixes:**
+
+  * The issue that the [etc/cron.daily/aide script](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/known-issues) uses up all existing space in /run, causing a crashloop in Pods, has been fixed. The files located under `/run/aide/` will be cleaned up periodically. 
+  * If you use the `gkectl upgrade loadbalancer` to attempt to update some parameters of the Seesaw load balancer in version 1.8.0, this will not work in either DHCP or IPAM mode. If your setup includes this configuration, do not upgrade to version 1.8.0, but instead to version 1.8.1 or later. If you are already at version 1.8.0, you can upgrade to 1.8.1 first before updating any parameters. See [Upgrading Seesaw load balancer with version 1.8.0](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/known-issues).
+  * For Windows nodes, fixed an issue by adding a step for automatically detecting the network interface name instead of hard-coding it, since this name might be different depending on the network adapter being used in the base VM template.
+  * Fixed an issue for building a Windows VM template that avoids retrying the VM shutdown in the `gkectl prepare windows` command, as this retrying caused the command to be stuck for a long time.
+  * Fixed an issue where snapshot.storage.k8s.io/v1 resources were rejected by the snapshot admission webhook.
+  * The [CVE-2021-3520](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3520) security vulnerability has been fixed.
+
+
+
+## July 08, 2021
+
+Anthos clusters on VMware 1.8.0-gke.25 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/upgrading). Anthos clusters on VMware 1.8.0-gke.25 runs on Kubernetes v1.20.5-gke.1301.
+
+**Fixes:**
+
+Fixed [CVE-2021-34824](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34824) that could expose private keys and certificates from Kubernetes secrets through the `credentialName` field when using `Gateway` or `DestinationRule`. This vulnerability affects all clusters created or upgraded with Anthos clusters on VMware version 1.8.0.21. For more information, see the [GCP-2021-012](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2021-012) security bulletin.
+
+## July 07, 2021
+
+Anthos clusters on VMware 1.8.0-gke.25 is now available to resolve this issue. 
+
+The Istio project recently [disclosed](https://istio.io/latest/news/security/istio-security-2021-007/) a new security vulnerability, [CVE-2021-34824](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34824), affecting [Istio](https://cloud.google.com/learn/what-is-istio). Istio contains a remotely exploitable vulnerability where credentials specified in the `credentialName` field for `Gateway` or `DestinationRule` can be accessed from different namespaces.
+
+For more information, see the [GCP-2021-012 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2021-012).
+
+## June 28, 2021
+
+Anthos clusters on VMware 1.8.0-gke.21 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/upgrading). Anthos clusters on VMware 1.8.0-gke.21 runs on Kubernetes v1.20.5-gke.1301.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.8, 1.7, and 1.6.
+
+**Platform enhancements:**
+
+  * **Preview:** [Cluster autoscaling](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/concepts/cluster-autoscaler) is now available in preview. With cluster autoscaling, you can horizontally scale node pools in proportion to workload demand. When demand is high, the cluster autoscaler adds nodes to the node pool. When demand is low, the cluster autoscaler removes nodes from the node pool, scaling back down to a minimum size that you designate. Cluster autoscaling can increase the availability of your workloads while controlling costs.
+
+  * **Preview:** [User cluster control-plane node and admin cluster add-on node auto sizing](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/node-auto-resize) are now available in preview. The features can be enabled separately in user cluster or admin cluster configurations. When you enable user cluster control-plane node auto sizing, user cluster control-plane nodes are automatically resized in proportion to the number of node pool nodes in the given user cluster. When you enable admin cluster add-on node auto sizing, admin cluster add-on nodes are automatically resized in proportion to the number nodes in the admin cluster.
+
+  * **Preview:** Windows Server container support for Anthos clusters on VMware is now available in preview. This allows you to modernize and run your Windows-based apps more efficiently in your data centers without having to go through risky application rewrites. You can use Windows containers alongside Linux containers for your container workloads. The same experience and benefits that you have come to enjoy with Anthos clusters on VMware using Linux--application portability, consolidation, cost savings, and agility--can now be applied to Windows Server applications also.
+
+  * **Preview:** [Admin cluster backup](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/back-up-and-restore-an-admin-cluster-with-gkectl) is now available in preview. With this feature enabled, admin cluster backups are automatically performed before and after user and admin cluster creation, update, and upgrade. A new `gkectl backup admin` command performs manual backup. Upon admin cluster storage failure, you can restore the admin cluster from a backup with the `gkectl repair admin-cluster --restore-from-backup` command.
+
+
+
+
+**Cluster lifecycle improvements:**
+
+You should no longer use `gcloud` to unregister a user cluster, because clusters are registered automatically. Instead, register existing user clusters by using `gkectl update cluster`. You can also use `gkectl update cluster` to consolidate out-of-band registration that was done using `gcloud`. For more information, see [Cluster registration](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/connecting-to-a-cluster#cluster_registration).
+
+**Security enhancements:**
+
+  * The Ubuntu node image is qualified with the CIS (Center for Internet Security) L1/L2 Server Benchmark.
+
+  * **Generally available:** Workload identity support is now generally available. For more information, see [Fleet workload identity](https://cloud.google.com/anthos/multicluster-management/fleets/workload-identity). The connect-agent service account key is no longer required during installation. The connect agent uses workload identity to authenticate to Google Cloud instead of an exported Google Cloud service account key.
+
+  * You can now use `gkectl` to rotate system root CA certificates for user clusters.
+
+  * You can now use `gkectl` to update vCenter CA certificates for both admin clusters and user clusters.
+
+
+
+
+**Storage enhancements:**
+
+  * The Anthos vSphere CSI driver now supports both offline and online volume expansion for dynamically and statically created block volumes only. 
+
+    * Offline volume expansion is available in vSphere 7.0 and later. Online expansion is available in vSphere 7.0u2 and later.
+
+    * The vSphere CSI driver StorageClass `standard-rwo`, which is installed in user clusters automatically, sets `allowVolumeExpansion` to `true` by default for newly created clusters running on vSphere 7.0 or later. You can use both online and offline expansion for volumes using this StorageClass.
+
+  * The volume snapshot feature now supports v1 versions of VolumeSnapshot, VolumeSnapshotContent, and VolumeSnapshotClass objects. The v1beta1 versions are deprecated and will soon stop being served.
+
+
+
+
+**Simplify day-2 operations:**
+
+  * You can now use Anthos Identity Service (AIS) and OpenID Connect (OIDC) for authentication to admin clusters in addition to user clusters.
+
+  * **Preview:** Anthos Identity Service can now resolve groups with [Okta](https://www.okta.com) as identity provider. This allows administrators to write RBAC policy with Okta groups.
+
+  * **Preview:** Anthos Identity service now supports LDAP authentication methods in addition to OIDC. You can use AIS with Microsoft Active Directory without the need for provisioning Active Directory Federation Services.
+
+  * The Anthos metadata agent replaces the original metadata agent to collect and send Anthos metadata to Google Cloud Platform, so that Google Cloud Platform can use this metadata to build a better user interface for Anthos clusters. You must 1) enable the Config Monitoring for Ops API in your [logging-monitoring project](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/multiple-gcp-projects), 2) grant the [`Ops Config Monitoring Resource Metadata Writer`](https://cloud.google.com/iam/docs/understanding-roles#ops-config-monitoring-roles) role to your logging-monitoring [service account](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/service-accounts), and 3) add `opsconfigmonitoring.googleapis.com` to your proxy allowlist (if applicable).
+
+  * You can use `gkectl diagnose snapshot --upload-to [GCS_BUCKET] --service-account-key-file [SA_KEY_FILE]` to automatically upload snapshots to a Google Cloud Storage (GCS) bucket. The provided service account must have the `roles/storage.admin` IAM role enabled.
+
+
+
+
+**Network feature enhancements:**
+
+**Preview:** [Egress NAT gateway](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/egress-nat-gateway) is now available in preview. To be able to access off-cluster workloads, traffic originating within the cluster that is related to specific flows must have deterministic source IP addresses. Egress NAT gateway gives you fine-grained control over which traffic gets a deterministic source IP address, and then provides that address. The Egress NAT Gateway functionality is built on top of Dataplane V2.
+
+**Functionality changes:**
+
+  * The admin cluster now uses `containerd` on all nodes, including the admin cluster control-plane node, admin cluster add-on nodes, and user cluster control-plane nodes. This applies to both new admin clusters and existing admin clusters upgraded from 1.7.x. On user cluster node pools, `containerd` is the default container runtime for new node pools, but existing node pools that are upgraded from 1.7.x will continue using Docker Engine. You can continue to use Docker Engine for a new node pool by setting its `osImageType` to `ubuntu`.
+
+  * A new [`ubuntu_containerd` OS image type](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/concepts/using-containerd) is introduced. `ubuntu_containerd` uses an identical OS image as `ubuntu`, but the node is configured to use `containerd` as the container runtime instead. The `ubuntu_containerd` OS is used for new node pools by default, but existing node pools upgraded from 1.7.x continue using Docker Engine. Docker Engine support will be removed in Kubernetes 1.24, and you should start converting your node pools to `ubuntu_containerd` as soon as possible.
+
+  * When installing or upgrading to 1.8.0-gke.21 on a vCenter with a vSphere version older than 6.7 Update 3, you may receive a notification. Note that vSphere versions older than 6.7 Update 3 will no longer be supported in Anthos clusters on VMware in an upcoming version.
+
+  * The create-config Secret is removed in both the admin and the user clusters. If you previously relied on workarounds that modify the secret(s), contact Cloud Support for updates.
+
+  * You can update the CPU and memory configuration for the user cluster control-plane node with `gkectl update cluster`.
+
+  * You can configure the CPU and memory configurations for the admin control-plane node to non-default settings during admin cluster creation through the newly introduced admin cluster configuration fields.
+
+  * Node auto repairs are throttled at the node pool level. The number of repairs per hour for a node pool is limited to the either 3, or 10% of the number of nodes in the node pool, whichever is greater.
+
+  * Starting from Kubernetes 1.20, timeouts on exec probes are honored, and default to one second if unspecified. If you have Pods using exec probes, ensure they can easily complete in one second or explicitly set an appropriate timeout. See [Configure Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes) for more details.
+
+  * Starting from Kubernetes 1.20, Kubelet no longer creates the target_path for NodePublishVolume in accordance with the CSI spec. If you have self-managed CSI drivers deployed in your cluster, ensure they are idempotent and do any necessary mount creation/verification. See [Kubernetes issue #88759](https://github.com/kubernetes/kubernetes/pull/88759) for details.
+
+  * Non-deterministic treatment of objects with invalid ownerReferences was fixed in Kubernetes 1.20. You can run the kubectl-check-ownerreferences tool prior to upgrade to locate existing objects with invalid ownerReferences. The `metadata.selfLink` field, deprecated since Kubernetes 1.16, is no longer populated in Kubernetes 1.20. See [Kubernetes issue #1164](https://github.com/kubernetes/enhancements/issues/1164) for details.
+
+
+
+
+**Breaking changes:**
+
+  * The Istio components have been upgraded to handle ingress support. Previously, using HTTPS for ingress required both an Istio Gateway and Kubernetes Ingress. With this release, the full ingress spec is natively supported. See [Ingress migration](https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/how-to/ingress-migration) to manage this upgrade for Istio components. 
+
+  * The Cloud Run for Anthos user cluster configuration option is no longer supported. Cloud Run for Anthos is now installed as part of registration with a fleet. This allows for configuring and upgrading Cloud Run separately from Anthos clusters on VMware. To upgrade to the newest version of Cloud Run for Anthos, see [Installing Cloud Run for Anthos](https://cloud.google.com/anthos/run/docs/install).
+
+
+
+
+**Fixes:**
+
+  * Previously, the admin cluster upgrade could be affected by the expired front-proxy-client certificate that persists in the data disk for the admin cluster control-plane node. Now the front-proxy-client certificate is renewed during an upgrade.
+
+  * Fixed an issue where logs are sent to the parent project of the service account specified in the `stackdriver.serviceAccountKeyPath` field of your cluster configuration file while the value of `stackdriver.projectID` is ignored.
+
+  * Fixed an issue that Calico-node Pods sometimes use an excessive amount of CPU in large-scale clusters.
+
+
+
+
+The `stackdriver-metadata-agent-cluster-level-*` Pod might have logs that look like this: 
+
+`reflector.go:131] third_party/golang/kubeclient/tools/cache/reflector.go:99: Failed to list *unstructured.Unstructured: the server could not find the requested resource`
+
+You can safely ignore these logs.
+
+## June 17, 2021
+
+When you upgrade an unregistered Anthos cluster on VMware from a version earlier than 1.7.0 to a version 1.7.0 or later, you need to manually install and configure the Anthos Config Management operator. If you had previously installed Anthos Config Management, you need to re-install it. For details on how to do this, see [Installing Anthos Config Management](https://cloud.google.com/anthos-config-management/docs/how-to/installing).
+
+If you are using a private registry for software images, upgrading an Anthos cluster on VMware will always require special steps, described in [Updating Anthos Config Management](https://cloud.google.com/anthos-config-management/docs/how-to/updating-private-registry) using a private registry. Upgrading from a version earlier than 1.7.0 to a version 1.7.0 or later additionally requires that you manually install and configure the Anthos Config Management operator as described in [Installing Anthos Config Management](https://cloud.google.com/anthos-config-management/docs/how-to/installing).
+
+## June 08, 2021
+
+**Fixes**
+
+These security vulnerabilities have been fixed:
+
+Fixed [CVE-2021-25735](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25735) mentioned in the [GCP-2021-003 Security Bulletin](https://cloud.google.com/support/bulletins#gcp-2021-003), [CVE-2021-31535](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-31535), and other medium and low vulnerability CVEs with fixes available.
+
+Anthos clusters on VMware 1.5.4-gke.2 is now available. To upgrade, see Upgrading Anthos clusters on VMware. Anthos clusters on VMware 1.5.4-gke.2 runs on Kubernetes v.1.17.9-gke.4400. The supported versions that offer the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.7, 1.6, and 1.5.
+
+## June 07, 2021
+
+Anthos clusters on VMware 1.6.3-gke.3 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.6/how-to/upgrading). Anthos clusters on VMware 1.6.3-gke.3 runs on Kubernetes v1.18.18-gke.100. The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.7, 1.6, and 1.5.
+
+**Fixes**
+
+These security vulnerabilities have been fixed:
+
+Fixed [CVE-2021-25735](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25735) mentioned in the [GCP-2021-003 Security Bulletin](https://cloud.google.com/support/bulletins#gcp-2021-003), [CVE-2021-31535](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-31535), and other medium and low vulnerability CVEs with fixes available.
+
+## May 27, 2021
+
+Anthos clusters on VMware 1.7.2-gke.2 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/how-to/upgrading). Anthos clusters on VMware 1.7.2-gke.2 runs on Kubernetes 1.19.10-gke.1602. 
+
+The supported versions that offer the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.7, 1.6, and 1.5.
+
+The Ubuntu node image shipped in version 1.7.2 is qualified with the CIS (Center for Internet Security) L1 Server Benchmark.
+
+**Fixes:**
+
+  * These security vulnerabilities have been fixed: 
+
+    * [CVE-2021-25735](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25735), which is mentioned in the [GCP-2021-001 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2021-001). [CVE-2020-29362](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-29362), [CVE-2020-29361](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-29361), [CVE-2021-24031](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-24031), [CVE-2021-31535](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-31535)
+  * [Fixed the 1.7.1 issue](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/known-issues#log_forwarder_makes_an_excessive_number_of_oauth_20_requests) where Log Forwarder sends an excessive number of OAuth 2.0 requests.
+
+
+
+
+An admin cluster upgrade may fail due to an expired `front-proxy-client` certificate on the admin control plane node. Make sure that the certificate is not expired, and recreate it if needed. See: [Renew an expired certificate](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/known-issues#renewal_of_certificates_might_be_required_before_an_admin_cluster_upgrade).
+
+## May 21, 2021
+
+In Anthos clusters on VMware 1.7, logs are sent to the parent project of your logging-monitoring service account. That is, logs are sent to the parent project of the service account specified in the `stackdriver.serviceAccountKeyPath` field of your cluster configuration file. The value of `stackdriver.projectID` is ignored. This issue will be fixed in an upcoming release.
+
+As a workaround, view logs in the parent project of your logging-monitoring service account.
+
+## May 20, 2021
+
+In version 1.7.1, the `stackdriver-log-forwarder` starts to consume significantly increasing memory after a period of time, and the logs show an excessive number of OAuth 2.0 token requests. [Follow these steps](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/known-issues#stackdriver_log_forwarder_makes_an_excessive_number_of_oauth2_requests) to mitigate this issue.
+
+## May 11, 2021
+
+A recently discovered vulnerability, [CVE-2021-31920](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-31920), affects Istio in respect to its authorization policies. Istio contains a remotely exploitable vulnerability where an HTTP request with multiple slashes or escaped slash characters can bypass Istio authorization policy when path-based authorization rules are used. While Anthos clusters on VMware uses an Istio Gateway object for network ingress traffic into clusters, authorization policies are not a supported or intended use case for Istio as part of the Anthos clusters on VMware prerequisites. For more details, refer to the [Istio security bulletin](https://istio.io/latest/news/security/).
+
+## May 06, 2021
+
+The Envoy and Istio projects recently [announced](https://istio.io/latest/news/security/istio-security-2021-003) several new security vulnerabilities ([CVE-2021-28683](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28683), [CVE-2021-28682](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28682), and [CVE-2021-29258](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29258)) that could allow an attacker to crash Envoy.
+
+For more information, see the [GCP-2021-004 security bulletin](https://cloud.google.com/anthos/clusters/docs/security-bulletins#gcp-2021-004).
+
+## May 05, 2021
+
+If you upgrade the admin cluster before you upgrade the associated user clusters within the same minor version, such as from 1.7.0 to 1.7.1, the user cluster control-planes will be upgraded together with the admin cluster. This applies even if you use the flag `--force-upgrade-admin`. This behavior, in versions 1.7.0 and later, is different from versions 1.6 and earlier, and is expected behavior.
+
+**Fixes:**
+
+  * Fixed a bug, so that the hardware version of a virtual machine is determined based on the ESXi host apiVersion instead of the host version. When host ESXi apiVersion is at least 6.7U2, VMs with version vmx-15 are created. Also, the CSI preflight checks validate the ESXi host API version instead of the host version. 
+
+  * Fixed a bug, so that if `vSphereCSIDisabled` is set to `true`, Container Storage Interface (CSI) preflight checks do not run when you execute commands such as `gkectl check-config` or `create loadbalancer` or `create cluster`.
+
+  * Fixed [CVE-2021-3444](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3444), [CVE-2021-3449](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3449), [CVE-2021-3450](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3450), [CVE-2021-3492](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3492), [CVE-2021-3493](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3493), and [CVE-2021-29154](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29154) on the Ubuntu operating system used by the admin workstation, cluster nodes, and Seesaw.
+
+  * Fixed a bug where attempting to install or upgrade GKE on-prem 1.7.0 failed with an "/STSService/ 400 Bad Request" when the vCenter is installed with the external platform services controller. Installations where the vCenter server is a single appliance are not affected. Note that VMware deprecated the [external platform services controller](https://blogs.vmware.com/vsphere/2018/11/external-platform-services-controller-a-thing-of-the-past.html) in 2018.
+
+  * Fixed a bug where auto repair failed to trigger for unhealthy nodes if the cluster-health-controller was restarted while a previously issued repair was in progress.
+
+  * Fixed a bug so that the command `gkectl diagnose snapshot` output includes the list of containers and the containerd daemon log on Container-Optimized OS (COS) nodes.
+
+  * Fixed a bug that caused `gkectl update admin` to generate an `InternalFields` diff unexpectedly.
+
+  * Fixed the issue that the stackdriver-log-forwarder pod was sometimes in crashloop because of [fluent-bit segfault](https://github.com/fluent/fluent-bit/issues/3224).
+
+
+
+
+Anthos clusters on VMware 1.7.1-gke.4 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/how-to/upgrading). Anthos clusters on VMware 1.7.1-gke.4 runs on Kubernetes 1.19.7-gke.2400. 
+
+The supported versions that offer the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.7, 1.6, and 1.5.
+
+## April 20, 2021
+
+The Kubernetes project recently [announced](https://groups.google.com/forum/#!topic/kubernetes-security-announce/FKAGqT4jx9Y) a new security vulnerability, [CVE-2021-25735](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25735), that could allow node updates to bypass a Validating Admission Webhook. For more details, see the [GCP-2021-003 security bulletin](https://cloud.google.com/anthos/clusters/docs/on-prem/security-bulletins#gcp-2021-003).
+
+## March 25, 2021
+
+Anthos clusters on VMware 1.7.0-gke.16 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/how-to/upgrading). Anthos clusters on VMware 1.7.0-gke.16 runs on Kubernetes 1.19.7-gke.2400.
+
+The supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting GKE On-Prem are 1.6, 1.5, and 1.4.
+
+**Storage enhancements** :
+
+**GA** : The [vSphere CSI driver](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/how-to/using-vsphere-csi-driver) is now generally available. Your vCenter server and ESXi hosts must both be running 6.7 update 3 or newer. The preflight checks and `gkectl diagnose cluster` have been enhanced to cover the CSI prerequisites.
+
+**Security enhancements** :
+
+  * **Preview** : You can run Container-Optimized OS on your user cluster worker nodes.
+
+
+
+**Anthos Config Management** :
+
+Anthos Config Management (ACM) is now decoupled from Anthos clusters on VMware. This provides multiple benefits including decoupling the ACM release cadence from Anthos clusters on VMware, simplifying the testing and qualification process, and providing a consistent installation and upgrade flow.
+
+**Cluster lifecycle improvements**
+
+  * The cluster upgrade process has changed. Instead of upgrading the admin cluster first, you can upgrade user clusters to the newer version without upgrading the admin cluster. The new flow, which requires upgrading `gkeadm`, allows you to preview new features before performing a full upgrade with the admin cluster. In addition, the 1.7.0 version of `gkectl` can perform operations on both 1.6.X and 1.7.0 clusters.
+
+  * Starting with version 1.7.0, you can deploy Anthos clusters on vSphere 7.0 environments in addition to vSphere 6.5 and 6.7. Note that Anthos clusters on VMware will phase out vSphere 6.5 support following VMware [end of general support](https://kb.vmware.com/s/article/66977) timelines.
+
+  * Published the [minimum hardware resource requirements](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/how-to/vsphere-requirements#minimum-hardware-requirements-for-demonstration-purposes) for a proof-of-concept cluster.
+
+
+
+
+**Simplify Day-2 operations** :
+
+  * **GA** : Support for vSphere folders is now generally available. This allows you to install Anthos clusters on VMware in a vSphere folder, reducing the scope of the permission required for the vSphere user.
+
+  * A new `gkectl update admin` command supports updating certain admin cluster configurations including adding static IP addresses.
+
+  * The central log aggregator component has been removed from the logging pipeline to improve reliability, scalability and resource usage.
+
+  * [Cluster scalability](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/concepts/scalability) has been improved:
+
+    * 50 user clusters per admin cluster
+
+    * With Seesaw, 500 nodes, 15,000 Pods, and 500 LoadBalancer Services per user cluster
+
+    * With F5 BIG-IP, 250 nodes, 7,500 Pods, and 250 LoadBalancer Services per user cluster
+
+
+
+
+**Platform enhancements**
+
+  * **GA** : Node auto repair is now generally available and enabled by default for newly created clusters. When the feature is enabled, `cluster-health-controller` performs periodic health checks, surfaces problems as events on cluster objects, and automatically repairs unhealthy nodes.
+
+  * **GA** : vSphere resource metrics is now generally available and enabled by default for newly created clusters. When the feature is enabled, VM level resource contention metrics are collected and displayed in the VM health dashboards automatically created through out-of-the-box monitoring. You can use these dashboards to track VM resource contention issues.
+
+  * **GA** : Dataplane V2 is now generally available and can be enabled in newly created clusters.
+
+  * **GA** : [Network Policy Logging](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/how-to/network-policy-logging) is now generally available. Network policy logging is available only for clusters running Dataplane V2.
+
+  * You can attach vSphere tags to user cluster node pools during cluster creation and update. You can use tags to organize and select VMs in vCenter.
+
+
+
+
+**Breaking changes** :
+
+  * The following Google Cloud API endpoints must be allowlisted in network proxies and firewalls. These are now required for Connect Agent to authenticate to Google when the cluster is registered in Hub:
+
+    * securetoken.googleapis.com
+    * sts.googleapis.com
+    * Iamcredentials.googleapis.com
+  * `gkectl` now accepts only v1 cluster configuration files. For instructions on converting your v0 configuration files, see [Converting configuration files](https://cloud.google.com/anthos/clusters/docs/on-prem/1.7/how-to/old-configuration-file#converting_configuration_files).
+
+
+
+
+**Functionality changes** :
+
+  * `gkectl diagnose cluster` now includes validation load balancing, including F5, Seesaw, and manual mode.
+
+  * `gkectl diagnose snapshot` now provides an HTML index file in the snapshot, and collects extra container information from the admin cluster control-plane node when the Kubernetes API server is inaccessible.
+
+  * `gkectl update admin` has been updated to:
+
+    * Enable or disable auto repair in the admin cluster
+    * Add static IP addresses to the admin cluster 
+    * Enable/disable vSphere resource metrics in the admin cluster
+  * `gkectl update cluster` has been enhanced to enable or disable vSphere resource metrics in a user cluster.
+
+  * Given that we no longer need an allowlisted service account in the admin workstation configuration file, we deprecated the `gcp.whitelistedServiceAccountKeyPath` field and added a new `gcp.componentAccessServiceAccountKeyPath` field. For consistency, we also renamed the corresponding `gcrKeyPath` field in the admin cluster configuration file.
+
+
+
+
+**Fixes** :
+
+  * Fixed a bug where Grafana dashboards based on the `container_cpu_usage_seconds_total` metric show no data.
+
+  * Fixed an issue where scheduling Stackdriver components on user cluster control-plane nodes caused resource contention issues.
+
+  * Fixed Stackdriver Daemonsets to tolerate NoSchedule and NoExecute taints.
+
+  * Fixed an HTTP/2 connection issue that sometimes caused problems with connections from the `kubelet` to the Kubernetes API server. This issue also could lead to nodes becoming not ready.
+
+
+
+
+**Known issues** :
+
+  * Calico-node Pods sometimes use an excessive amount of CPU in large-scale clusters. You can mitigate the issue by killing such Pods.
+
+  * When running `gkectl update admin` against a cluster upgraded from 1.6, you might get the following diff:
+        
+        - InternalFields: nil,
+        - InternalFields: map[string]string{"features.onprem.cluster.gke.io/bundle- 
+        vsphere-credentials": "enabled"},
+        
+
+You can safely ignore this and proceed with the update.
+
+
+
+
+## February 26, 2021
+
+Anthos clusters on VMware (GKE on-prem) 1.6.2-gke.0 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/clusters/docs/on-prem/1.6/how-to/upgrading). Anthos clusters on VMware 1.6.2-gke.0 clusters run on Kubernetes 1.18.13-gke.400.
+
+**Fixed in 1.6.2-gke.0:**
+
+  * Fixed a `kubelet` restarting issue that was found when running workloads that rely on `kubectl exec/port-forward/attach`, such as Jenkins.
+
+  * Fixed [CVE-2021-3156](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3156) in the node operating system image. CVE-2021-3156 is described in [Security bulletins](https://cloud.google.com/anthos/clusters/docs/on-prem/security-bulletins#gcp-2021-001).
+
+
+
+
+GKE on-prem 1.4.5-gke.0 is now available. To upgrade, see [Upgrading GKE on-prem](https://cloud.google.com/anthos/clusters/docs/on-prem/1.4/how-to/upgrading). GKE on-prem 1.4.5-gke.0 clusters run on Kubernetes 1.16.11-gke.11.
+
+**Fixed in 1.4.5-gke.0:**
+
+  * Fixed [CVE-2020-1971](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-1971) and [CVE-2021-3156](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3156) in the node operating system image. CVE-2021-3156 is described in [Security bulletins](https://cloud.google.com/anthos/clusters/docs/on-prem/security-bulletins#gcp-2021-001). 
+
+  * Fixed [CVE-2020-15157](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15157) and [CVE-2020-15257](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15257) in containerd.
+
+
+
+
+## January 27, 2021
+
+Anthos clusters on VMware (GKE on-prem) 1.6.1-gke.1 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/gke/docs/on-prem/how-to/upgrading). Anthos clusters on VMware 1.6.1-gke.1 clusters run on Kubernetes 1.18.13-gke.400.
+
+Fixes:
+
+  * Fixed a bug where the user cluster upgrade is blocked if the vcenter resource pool is neither directly nor indirectly specified (that is, if the vcenter resource pool is inherited and is the one used by the admin cluster) in the configs.
+  * Fixed [CVE-2020-15157](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15157) and [CVE-2020-15257](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15257) in `containerd`.
+  * Fixed an issue where upgrading the admin cluster from 1.5 to 1.6.0 breaks 1.5 user clusters that use any OIDC provider and that have no value for `authentication.oidc.capath` in the [user cluster configuration file](https://cloud.google.com/anthos/gke/docs/on-prem/1.6/how-to/user-cluster-configuration-file).
+
+
+
+## January 21, 2021
+
+Anthos GKE on-prem 1.5.3-gke.0 is now available. To upgrade, see [Upgrading GKE on-prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.5/how-to/upgrading). GKE on-prem 1.5.3-gke.0 clusters run on Kubernetes 1.17.9-gke.4400.
+
+Fixes:
+
+  * Fixed [CVE-2020-15157](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15157) and [CVE-2020-15257](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15257) in `containerd`.
+
+  * Cloud Run Operator is now able to successfully update custom resource definitions (CRDs).
+
+
+
+
+## December 10, 2020
+
+Anthos clusters on VMware 1.6.0-gke.7 is now available. To upgrade, see [Upgrading Anthos clusters on VMware](https://cloud.google.com/anthos/gke/docs/on-prem/1.6/how-to/upgrading). Anthos clusters on VMware 1.6.0-gke.7 clusters run on Kubernetes 1.18.6-gke.6600.
+
+**Note:** The fully supported versions offering the latest patches and updates for security vulnerabilities, exposures, and issues impacting Anthos clusters on VMware are 1.6, 1.5, and 1.4.
+
+Node Problem Detector and Node Auto Repair automatically detect and repair additional failures, such as Kubelet-API server connection loss (an [OSS issue](https://github.com/kubernetes/kubernetes/issues/87615)) and long-lasting DiskPressure conditions.
+
+Users can use a credential configuration file with gkeadm (credential.yaml), which is generated during running the `gkeadm create config` command, to improve security by removing credentials from `admin-ws-config.yaml`.
+
+CSI volume snapshots
+
+The CSI snapshot controllers are now automatically deployed in user clusters, enabling the users to create snapshots of persistent volumes and restore the volumes' data by provisioning new volumes from these snapshots.
+
+Added support for [CIDR in IP block file for static IP](https://cloud.google.com/anthos/gke/docs/on-prem/1.6/how-to/ip-block-file).
+
+Google Cloud's operations suite support for bundled Seesaw load balancing:
+
+Metrics and logs of bundled Seesaw load balancers are now uploaded to Google Cloud through Google Cloud's operations suite to provide the best observability experience.
+
+Cloud Audit Logs
+
+Offline buffer for Cloud Audit Logs: Audit logs are now buffered on disk if not able to reach Cloud Audit Logs and can withstand at least 4 hours of network outage.
+
+**Preview:** Service Account Key Rotation in `gkectl` for Usage Metering, Cloud Audit Logs, and Google Cloud's operations suite service accounts.
+
+**Preview:** Repair administrator master VM failures by using the new command, `gkectl repair admin-master`.
+
+**Preview:** Secrets Encryption for user clusters using Thales Luna Network HSM Devices.
+
+Anthos Identity Service enables dynamic configuration changes for OpenID Connect (OIDC) configuration without needing to recreate user clusters.
+
+**Fixes:**
+
+  * Security fix: Resolve credential file references when only a subset of credentials are specified by reference.
+
+  * Fixed vSphere credential update when CSI storage is not enabled.
+
+  * Fixed a bug in Fluent Bit in which the buffer for logs might fill up node disk space.
+
+
+
+
+**Breaking changes:**
+
+  * [kubernetes.io/anthos/apiserver_request_total](https://cloud.google.com/monitoring/api/metrics_anthos) is deprecated; instead, use kubernetes.io/anthos/apiserver_aggregated_request_total.
+
+  * All metrics collected by [kube-state-metrics (full list in link)](https://github.com/kubernetes/kube-state-metrics/tree/master/docs):
+
+    * Alerts based on these metrics are now limited to use 1 hour of data, instead of 1 day.
+
+    * Dashboards and graphs continue to show up to 7 weeks of history.
+
+
+
+
+**Functionality changes:**
+
+  * Gkectl diagnose cluster and snapshot enhancements:
+
+    * Added a `--log-since` flag to `gkectl diagnose snapshot`. Users can use it to collect logs of containers and nodes within a relative time duration in the snapshot.
+
+    * Replaced the `--seed-config` flag with the `--config` flag in the `gkectl diagnose cluster` command. Users can use this command with the seed configuration to rule out the VIP issue and provide more debugging information of the cluster.
+
+    * Added more validations in `gkectl diagnose cluster`.
+
+  * Added iscsid support: Qualified storage drivers that previously required additional steps benefit from the default iscsi service deployment on the worker nodes.
+
+  * On each cluster node, Anthos clusters on VMware now reserves 330 MiB + 5% of the node's memory capacity for operating system components and core Kubernetes components. This is an increase of 50 MiB. For more information see [Resources available for your workloads](https://cloud.google.com/anthos/gke/docs/on-prem/1.6/how-to/resources-available-pods).
+
+
+
+
+**Known issues:**
+
+  * `gkectl update` reverts your edits on `clientconfig` CR in 1.6.0. We strongly suggest that customers back up the `clientconfig` CR after every manual change.
+
+  * `Kubectl describe CSINode` and `gkectl diagnose snapshot` might sometimes fail due to [the OSS Kubernetes issue](https://github.com/kubernetes/kubectl/issues/848) on dereferencing nil pointer fields.
+
+  * The OIDC provider doesn't use the common CA by default. You must explicitly supply the CA certificate.
+
+  * Upgrading the admin cluster from 1.5 to 1.6.0 breaks 1.5 user clusters that use any OIDC provider and that have no value for `authentication.oidc.capath` in the [user cluster configuration file](https://cloud.google.com/anthos/gke/docs/on-prem/1.6/how-to/user-cluster-configuration-file).
+
+To work around this issue, run the following script, using your OIDC provider address as the `IDENTITY_PROVIDER`, `YOUR_OIDC_PROVIDER_ADDRESS` in the following script: 
+
+`USER_CLUSTER_KUBECONFIG=usercluster-kubeconfig`
+
+`IDENTITY_PROVIDER=YOUR_OIDC_PROVIDER_ADDRESS`
+
+`openssl s_client -showcerts -verify 5 -connect $IDENTITY_PROVIDER:443 < /dev/null | awk '/BEGIN CERTIFICATE/,/END CERTIFICATE/{ if(/BEGIN CERTIFICATE/){i++}; out="tmpcert"i".pem"; print >out}'`
+
+`ROOT_CA_ISSUED_CERT=$(ls tmpcert*.pem | tail -1)`
+
+`ROOT_CA_CERT="/etc/ssl/certs/$(openssl x509 -in $ROOT_CA_ISSUED_CERT -noout -issuer_hash).0"`
+
+`cat tmpcert*.pem $ROOT_CA_CERT > certchain.pem CERT=$(echo $(base64 certchain.pem) | sed 's\ \\g') rm tmpcert1.pem tmpcert2.pem`
+
+`kubectl --kubeconfig $USER_CLUSTER_KUBECONFIG patch clientconfig default -n kube-public --type json -p "[{ \"op\": \"replace\", \"path\": \"/spec/authentication/0/oidc/certificateAuthorityData\", \"value\":\"${CERT}\"}]"`
+
+
+
+
+## November 16, 2020
+
+Binary Authorization for GKE on-prem 0.2.1 is now available.
+
+  * Binary Authorization for GKE on-prem 0.2.1 adds a proxy side cache that caches AdmissionReview responses. This can improve the reliability of the webhook.
+
+
+
+**Known issues:**
+
+Cloud Run Operator is unable to update custom resource definitions (CRDs). Applying the CRDs manually either before or during the upgrade lets the operator continue the upgrade.
+
+Workaround:
+
+`gsutil cat gs://gke-on-prem-release/hotfixes/1.5/cloudrun/crds.yaml | kubectl apply -f -`
+
+**Fixes:**
+
+  * Fixed false warning in `gkectl` check-config for admin cluster for manual load balancing category.
+  * Updated Istio Ingress (Kubernetes) Custom Resource Definitions (CRDs) to use v1beta1.
+  * Fixed issue where GKE on-prem upgrade is stuck because of Cloud Run for Anthos on-prem pods crash looping. Cloud Run for Anthos on-prem causes an operational outage of GKE on-prem when Cloud Run for Anthos on-prem is enabled in upgrade of GKE on-prem 1.4 to 1.5. Fixed webhook; custom resource definition (CRD) is not fixed.
+
+
+
+GKE on-prem 1.5.2-gke.3 is now available. To upgrade, see [Upgrading GKE on-prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.5/how-to/upgrading). GKE on-prem 1.5.2-gke.3 clusters run on Kubernetes 1.17.9-gke.4400.
+
+GKE Data Plane V2 Preview is now available.
+
+  * GKE Data Plane V2 is a new programmable data path that enables Google to offer new network security features like Network Policy Logging and Node Network Policy.
+
+
+
+For information about enabling Dataplane V2, see [User cluster configuration file](https://cloud.google.com/anthos/gke/docs/on-prem/1.5/how-to/user-cluster-configuration-file#enabledataplanev2). For information about Network Policy Logging, see [Logging network policy events](https://cloud.google.com/anthos/gke/docs/on-prem/1.5/how-to/network-policy-logging).
+
+## November 02, 2020
+
+**Fixes:**
+
+  * Updated Istio Ingress (Kubernetes) Custom Resource Definitions (CRDs) to use v1beta1.
+
+
+
+GKE on-prem 1.4.4-gke.1 is now available. To upgrade, see [Upgrading GKE on-prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.4/how-to/upgrading). GKE on-prem 1.4.4-gke.1 clusters run on Kubernetes 1.16.11-gke.11.
+
+GKE on-prem 1.3.5-gke.2 is now available. To upgrade, see [Upgrading GKE on-prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.3/how-to/upgrading). GKE on-prem 1.3.5-gke.2 clusters run on Kubernetes 1.15.12-gke.6400.
+
+**Fixes:**
+
+  * Fixed [CVE-2020-8558](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8558) described in [Security Bulletin](https://cloud.google.com/anthos/gke/docs/on-prem/security-bulletins#gcp-2020-011).
+
+
+
+## October 23, 2020
+
+GKE on-prem 1.5.1-gke.8 is now available. To upgrade, see [Upgrading GKE on-prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.5/how-to/upgrading). GKE on-prem 1.5.1-gke.8 clusters run on Kubernetes 1.17.9-gke.4400.
+
+Binary Authorization for GKE on-prem Preview is now available:
+
+  * [Binary Authorization for GKE on-prem](https://cloud.google.com/binary-authorization/docs/overview-on-prem) extends centralized Binary Authorization enforcement policies to GKE on-prem user clusters.
+  * [Set up Binary Authorization for GKE on-prem](https://cloud.google.com/binary-authorization/docs/setting-up-on-prem)
+
+
+
+Published the best practices for how to set up GKE on-prem components for [high availability and how to recover from disasters](https://cloud.google.com/anthos/gke/docs/on-prem/1.5/concepts/high-availability-disaster-recovery).
+
+Published the best practices for creating, configuring, and operating [GKE on-prem clusters at large scale](https://cloud.google.com/anthos/gke/docs/on-prem/1.5/concepts/scalability).
+
+This release enables customers to generate credential configuration templates by using the `gkectl create-config credential` command.
+
+**Known issues:**
+
+The version of Anthos Configuration Management included in the GKE on-prem release 1.5.1-gke.8 had initially referenced a version of the `nomos` image that had not been moved into the gcr.io/gke-on-prem-release repository, thus preventing a successful installation or upgrade of Anthos Configuration Management. This image has since been pushed to the repository to correct the issue for customers not using private registries. Customers using private registries will need to upgrade to 1.5.2 when it is available (scheduled for November 16, 2020) or manually copy the `nomos:v1.5.1-rc.7` image into their private repository.
+
+**Fixes:**
+
+  * Fixed cluster creation issue when Cloud Run is enabled.
+  * Fixed the false positive error in docker registry preflight check where `REGISTRY_ADDRESS/NAMESPACE` might be mistakenly used as the registry address to store the certs on a test VM, causing authentication errors.
+
+
+
+## September 24, 2020
+
+**Fixes:**
+
+  * Fixed an issue that caused approximately 50 seconds of downtime for the user cluster API service during cluster upgrade or update.
+  * Corrected the default log verbosity setting in `gkectl` and `gkeadm` help messages.
+
+
+
+**Enhanced monitoring with Cloud Monitoring:**
+
+  * Introduces [out-of-the-box alerts](https://cloud.google.com/anthos/gke/docs/on-prem/1.5/how-to/alerting-policies) for critical cluster metrics and events in preview.
+  * Out-of-the-box [monitoring dashboards](https://cloud.google.com/anthos/gke/docs/on-prem/1.5/how-to/logging-and-monitoring#dashboards) are automatically created during installation when Cloud Monitoring is enabled.
+  * Lets users modify CPU or memory resource settings for Cloud Monitoring components.
+
+
+
+**Improved support for Day-2 operations:**
+
+  * The `gkectl update cluster` command is now generally available. Users can use it to change supported features in the user cluster configurations after cluster creation.
+  * The `gkectl update credentials` command for vSphere and F5 credentials is now generally available.
+  * Improves scalability with 20 user clusters per admin cluster, and 250 nodes, 7500 pods, 500 load balancing services (using Seesaw), and 250 load balancing services (using F5) per user cluster.
+  * Introduces vSphere CSI driver in preview.
+
+
+
+GKE on-prem 1.5.0-gke.27 is now available. To upgrade, see [Upgrading GKE on-prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.5/how-to/upgrading). GKE on-prem 1.5.0-gke.27 clusters run on Kubernetes 1.17.9-gke.4400.
+
+**Functionality changes:**
+
+  * Preflight check failures now block `gkectl create loadbalancer` for the [bundled load balancer with Seesaw](https://cloud.google.com/anthos/gke/docs/on-prem/1.5/how-to/load-balance-basic).
+  * Adds a blocking preflight check for the anthos.googleapis.com API of a configured [gkeConnect](https://cloud.google.com/anthos/gke/docs/on-prem/1.5/how-to/user-cluster-configuration-file#gkeconnect-section) project.
+  * Adds a blocking preflight check on proxy IP and service/pod CIDR overlapping.
+  * Adds a non-blocking preflight check on cluster health before an admin or user cluster upgrade.
+  * Updates the `gkectl` diagnose snapshot: 
+    * Fixes the _all_ scenario to collect all supported Kubernetes resources for the target cluster.
+    * Collects F5 load balancer information, including Virtual Server, Virtual Address, Pool, Node, and Monitor.
+    * Collects vSphere information, including VM objects and their events based on the resource pool and the Datacenter, Cluster, Network, and Datastore objects that are associated with VMs.
+  * Fixes the OIDC proxy configuration issue. Users no longer need to edit NO_PROXY env settings in the cluster configuration to include new node IPs.
+  * Adds monitoring.dashboardEditor to the roles granted to the logging-monitoring service account during admin workstation creation with `--auto-create-service-accounts`.
+  * [Bundled load balancing with Seesaw](https://cloud.google.com/anthos/gke/docs/on-prem/1.5/how-to/bundled-load-balance) switches to the IPVS maglev hashing algorithm, achieving stateless, seamless failover. There is no connection sync daemon anymore.
+  * The hostconfig section of the ipBlock file can be specified directly in the cluster yaml file network section and has a streamlined format.
+
+
+
+**Improved upgrade and installation:**
+
+  * Preflight checks are now blocking with v1 configs for installation and upgrades. Users can use `--skip-preflight-check-blocking` to unblock the operation.
+  * Added support for running `gkeadm` on macOS Catalina, v10.14.
+  * Enabled installation and upgrade by using any Google Cloud–authenticated service account. This removes the need for allowlisting.
+  * Improved security by adding support for using an external credential file in admin or user configuration. This enables customers to check in their cluster configuration files in source code repositories without exposing confidential credential information.
+
+
+
+**Known issues:**
+
+  * Due to [a 1.17 Kubernetes issue](https://github.com/kubernetes/kubernetes/issues/89685), `kube-apiserver` and `kube-scheduler` don't expose kubernetes_build_info on the /metrics endpoint in the 1.5 release. Customers can use `Kubernetes_build_info` from `kube-controller-manager` to get similar information like the Kubernetes major version, minor version, and build date.
+  * Cloud Run for Anthos on-prem causes an operational outage of GKE on-prem when Cloud Run for Anthos on-prem is enabled in both installation and upgrade of GKE on-prem 1.5.0.
+
+
+
+**Breaking changes:**
+
+  * Starting with version 1.5, instead of using `kubectl patch machinedeployment` to resize the user cluster and `kubectl edit cluster` to add static IPs to user clusters, use `gkectl update cluster` to resize the worker node in user clusters and to add static IPs to user clusters.
+  * Starting with version 1.5, the `gkectl` log is saved in a single file instead of multiple files by log verbosity levels. By default, the `gkectl` log is saved in the `/home/ubuntu/.config/gke-on-prem/logs` directory with a symlink created under the `./logs` directory for easy access. Users can use `--log_dir` or `--log_file` to change this default setting.
+  * Starting with version 1.5, the `gkeadm` log is saved in a single file instead of multiple files by log verbosity levels. By default, the `gkeadm` log is saved under `./logs`. Users can use `--log_dir` or `--log_file` to change this default setting.
+  * In version 1.5 only, the etcd version is updated from 3.3 to 3.4, which means the etcd image becomes smaller for improved performance and security (distroless), and the admin and user cluster etcd restore process is changed.
+  * In 1.5 and later releases, a new firewall rule needs to be enabled from admin cluster add-on nodes to vCenter server API port 443.
+
+
+
+**Improved HA and failure recovery:**
+
+  * The [user cluster control plane HA feature](https://cloud.google.com/anthos/gke/docs/on-prem/1.5/concepts/ha) is now generally available.
+  * Added kubelet and Docker health monitoring and auto repair to the [Node Problem Detector](https://cloud.google.com/anthos/gke/docs/on-prem/1.5/toolbox#npd).
+  * Introduces the [Node Auto Repair](https://cloud.google.com/anthos/gke/docs/on-prem/1.5/how-to/node-auto-repair) feature in preview to continuously detect and repair unhealthy nodes. This feature is disabled by default (opt-in) in this release.
+
+
+
+## September 17, 2020
+
+**Fixes:**
+
+  * Fixed [CVE-2020-14386](https://www.openwall.com/lists/oss-security/2020/09/03/3) described in [Security Bulletin](https://cloud.google.com/anthos/gke/docs/on-prem/security-bulletins#gcp-2020-012).
+
+  * Preflight check for hostname validation was too strict. We updated the hostname validation following the [RFC 1123](https://datatracker.ietf.org/doc/rfc1123/) DNS subdomain definition.
+
+  * There was an issue in the 1.4.0 and 1.4.2 releases where the node problem detector didn't start when the node restarted. This is fixed in this version.
+
+
+
+
+GKE on-prem 1.4.3-gke.3 is now available. To upgrade, see [Upgrading GKE on-prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.4/how-to/upgrading). GKE on-prem 1.4.3-gke.3 clusters run on Kubernetes 1.16.11-gke.11.
+
+GKE on-prem 1.3.4-gke.3 is now available. To upgrade, see [Upgrading GKE on-prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.3/how-to/upgrading). GKE on-prem 1.3.4-gke.3 clusters run on Kubernetes 1.15.12-gke.15.
+
+**Fixes:**
+
+  * Fixed [CVE-2020-14386](https://www.openwall.com/lists/oss-security/2020/09/03/3) described in [Security Bulletin](https://cloud.google.com/anthos/gke/docs/on-prem/security-bulletins#gcp-2020-012).
+
+
+
+## August 20, 2020
+
+GKE on-prem 1.4.2-gke.3 is now available. To upgrade, see [Upgrading GKE on-prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.4/how-to/upgrading). GKE on-prem 1.4.2-gke.3 clusters run on Kubernetes 1.16.11-gke.11.
+
+GPU support (beta solution in collaboration with Nvidia)
+
+[In partnership with Nvidia](https://cloud.google.com/blog/products/compute/anthos-supports-nvidia-gpus), users can now manually attach a GPU to a worker node VM to run GPU workloads. This requires using the [open source Nvidia GPU operator](https://github.com/NVIDIA/gpu-operator).
+
+**Note:** Manually attached GPUs do not persist through node lifecycle events. You must manually re-attach them. This is a beta solution and can be used for evaluation and proof of concept.
+
+The Ubuntu image is upgraded to include the newest packages.
+
+`gkectl delete loadbalancer` is updated to support the new version of configuration files for admin and user clusters.
+
+**Fixes:**
+
+  * Resolved a few incorrect Kubelet Metrics' names collected by Prometheus.
+  * Updated restarting machines process during admin cluster upgrade to make the upgrade process more resilient to transient connection issues.
+  * Resolved a preflight check OS image validation error when using a non-default vSphere folder for cluster creation; the OS image template is expected to be in that folder.
+  * Resolved a `gkectl upgrade loadbalancer` issue to avoid validating the upgraded SeesawGroup. This fix lets the existing SeesawGroup config be updated without negatively affecting the upgrade process.
+  * Resolved an issue where ClientConfig CRD is deleted when the upgrade to the latest version is run multiple times.
+  * Resolved a `gkectl update credentials vsphere` issue where the vsphere-metrics-exporter was using the old credentials even after updating the credentials.
+  * Resolved an issue where the VIP preflight check reported a user cluster add-on load balancer IP false positive.
+  * Fixed `gkeadm` updating config after upgrading on Windows, specifically for the `gkeOnPremVersion` and `bundlePath` fields.
+  * Automatically mount the data disk after rebooting on admin workstations created using `gkeadm` 1.4.0 and later.
+  * Reverted thin disk provisioning change for boot disks in 1.4.0 and 1.4.1 on all normal (excludes test VMs) cluster nodes.
+  * Removed vCenter Server access check from user cluster nodes.
+
+
+
+## July 30, 2020
+
+Anthos clusters on VMware 1.3.3-gke.0 is now available. To upgrade, see [Upgrading GKE on-prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.3/how-to/upgrading). GKE on-prem 1.3.3-gke.0 clusters run on Kubernetes 1.15.12-gke.9.
+
+**Fixes:**
+
+  * Fixed [CVE-2020-8559](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8559) described in [Security bulletins](https://cloud.google.com/anthos/gke/docs/on-prem/security-bulletins#gcp-2020-009).
+  * Updated the git-sync image to fix security vulnerability [CVE-2019-5482](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-5482).
+  * Updated the kindest/node image to fix security vulnerability [CVE-2020-13777](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13777).
+
+
+
+## June 25, 2020
+
+Anthos clusters on VMware 1.4.0-gke.13 is now available. To upgrade, see [Upgrading GKE on-prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.4/how-to/upgrading). GKE on-prem 1.4.0-gke.13 clusters run on Kubernetes 1.16.8-gke.6.
+
+**Improved scale:**
+
+  * This release improves the cluster scalability by supporting [a maximum of 10 instead of 5 user clusters for each admin cluster](https://cloud.google.com/anthos/gke/docs/on-prem/1.4/quotas).
+
+
+
+**Improved disaster recovery capabilities:**
+
+  * This release provides enhanced disaster recovery functionality to [support backup and restore](https://cloud.google.com/anthos/gke/docs/on-prem/1.4/how-to/backing-up) HA user cluster with etcd.
+  * This release also provides a manual process to recover a single etcd replica failure in a HA cluster without any data loss.
+
+
+
+**Known issues:**
+
+  * If a user cluster is created without any node pool named the same as the cluster, managing the node pools using `gkectl update cluster` would fail. To avoid this issue, when creating a user cluster, you need to name one node pool the same as the cluster.
+  * The `gkectl` command might exit with panic when converting config from "/path/to/config.yaml" to v1 config files. When that occurs, you can resolve the issue by removing the unused bundled load balancer section ("loadbalancerconfig") in the config file.
+  * When using gkeadm to upgrade an admin workstation on Windows, the info file filled out from this template needs to have the line endings converted to use Unix line endings (LF) instead of Windows line endings (CRLF). You can use Notepad++ to convert the line endings.
+  * After upgrading an admin workstation with a static IP using gkeadm, you need to run `ssh-keygen -R <admin-workstation-ip>` to remove the IP from the known hosts, because the host identification changed after VM re-creation.
+  * We have added Horizontal Pod Autoscaler for istio-ingress and istio-pilot deployments. HPA can scale up unnecessarily for istio-ingress and istio-pilot deployments during cluster upgrades. This happens because the metrics server is not able to report usage of some pods (newly created and terminating; for more information, see [this Kubernetes issue](https://github.com/kubernetes/kubernetes/issues/72775)). No actions are needed; scale down will happen five minutes after the upgrade finishes.
+  * When running a preflight check for `config.yaml` that contains both `admincluster` and `usercluster` sections, the "data disk" check in the "user cluster vCenter" category might fail with the message: `[FAILURE] Data Disk: Data disk is not in a folder. Use a data disk in a folder when using vSAN datastore.` User clusters don't use data disks, and it's safe to ignore the failure.
+  * When upgrading the admin cluster, the preflight check for the user cluster OS image validation will fail. The user cluster OS image is not used in this case, and it's safe to ignore the "User Cluster OS Image Exists" failure in this case.
+  * A Calico-node pod might be stuck in an unready state after node IP changes. To resolve this issue, you need to delete any unready Calico-node pods.
+  * The BIG-IP controller might fail to update F5 VIP after any admin cluster master IP changes. To resolve this, you need to use the admin cluster master node IP in kubeconfig and delete the bigip-controller pod from the admin master.
+  * The stackdriver-prometheus-k8s pod could enter a crashloop after host failure. To resolve this, you need to remove any corrupted PersistentVolumes that the stackdriver-prometheus-k8s pod uses.
+  * After node IP change, pods running with hostNetwork don't get podIP corrected until Kubelet restarts. To resolve this, you need to restart Kubelet or delete those pods using previous IPs.
+  * An admin cluster fails after any admin cluster master node IP address changes. To avoid this, you should avoid changing the admin master IP address if possible by using a static IP or a non-expired DHCP lease instead. If you encounter this issue and need further assistance, please contact Google Support.
+  * User cluster upgrade might be stuck with the error: `Failed to update machine status: no matches for kind "Machine" in version "cluster.k8s.io/v1alpha1".` To resolve this, you need to delete the clusterapi pod in the user cluster namespace in the admin cluster.
+
+
+
+**Fixes:**
+
+  * Fixed the issue of the user cluster's Kubernetes API server not being able to connect to kube-etcd after admin nodes and user cluster master reboot. In previous versions, kube-dns in admin clusters was configured through kubeadm. In 1.4, this configuration is moved from kubeadm to bundle, which enables deploying two kube-dns replicas on two admin nodes. As a result, a single admin node reboot/failure won't disrupt user cluster API access.
+  * Fixed the issue that controllers such as calico-typha can't be scheduled on an admin cluster master node, when the admin cluster master node is under disk pressure.
+  * Resolved pods failure with MatchNodeSelector on admin cluster master after node reboot or kubelet restart.
+  * Tuned etcd quota limit settings based on the etcd data disk size and the settings in GKE Classic.
+
+
+
+**Improved installation and cluster configuration:**
+
+  * The user cluster [node pools](https://cloud.google.com/anthos/gke/docs/on-prem/1.4/how-to/user-cluster-basic#nodepoolsname) feature is now generally available.
+  * This release improves the installation experience via the following changes:
+
+    * Supports `gkeadm` for Windows OS.
+    * Introduces a standalone command for creating admin clusters.
+  * Introduce a new version of configuration files to separate admin and user cluster configurations and commands. This is designed to provide a consistent user experience and better configuration management.
+
+
+
+
+**Simplified upgrade:**
+
+  * This release provides a simplified upgrade experience via the following changes:
+
+    * Automatically migrate information from the previous version of admin workstation using `gkeadm`.
+    * Extend preflight checks to better prepare for upgrades.
+    * Support skip version upgrade to enable users to upgrade the cluster from any patch release of a minor release to any patch release of the next minor release. For more information about the detailed upgrade procedure and limitations, see [upgrading GKE on-prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.4/how-to/upgrading).
+    * The [alternate upgrade scenario for Common Vulnerabilities and Exposures](https://cloud.google.com/anthos/gke/docs/on-prem/1.4/how-to/upgrading) has been deprecated. All upgrades starting with version 1.3.2 need to upgrade the entire admin workstation.
+    * The bundled load balancer is now automatically upgraded during cluster upgrade.
+
+
+
+**Functionality changes:**
+
+  * Enabled Horizontal Pod Autoscaler (HPA) for the Istio ingress gateway.
+  * Removed ingress controller from admin cluster.
+  * Consolidated sysctl configs with Google Kubernetes Engine.
+  * Added etcd defrag pod in admin cluster and user cluster, which will be responsible for monitoring etcd's database size and defragmenting it as needed. This helps reclaim etcd database size and recover etcd when its disk space is exceeded.
+
+
+
+**Enhanced monitoring with Cloud Monitoring (formerly Stackdriver):**
+
+  * This release provides better product monitoring and resource usage management via the following changes:
+
+    * Introduces a [default monitoring dashboard](https://cloud.google.com/anthos/gke/docs/on-prem/1.4/how-to/logging-and-monitoring#dashboards).
+    * Enables vSphere resource metrics collection by default.
+  * Ubuntu Image now conforms with PCI DSS, NIST Baseline High, and DoD SRG IL2 compliance configurations.
+
+
+
+
+**Updated to Kubernetes 1.16:**
+
+  * Please note that Kubernetes 1.16 has deprecated some of its APIs. For more information, see [Kubernetes 1.16 deprecated APIs](https://cloud.google.com/kubernetes-engine/docs/deprecations/apis-1-16).
+
+
+
+**Support for a vSphere folder (Preview):**
+
+  * This release allows customers to install GKE on-prem in a vSphere folder, reducing the scope of the permission required for the vSphere user.
+
+
+
+If your vSphere environment has fewer than three hosts, user cluster upgrade might fail. To resolve this, you need to disable `antiAffinityGroups` in the cluster config before upgrading the user cluster. For v1 config, please set `antiAffinityGroups.enabled = false`; for v0 config, please set `usercluster.antiaffinitygroups.enabled = false`. 
+
+**Note:** Disabling `antiAffinityGroups` in the cluster config during upgrade is only allowed for the 1.3.2 to 1.4._x_ upgrade to resolve the upgrade issue; the support might be removed in the future.
+
+## May 21, 2020
+
+Workload Identity is now available in Alpha for GKE on-prem. Please contact support if you are interested in a trial of Workload Identity in GKE on-prem.
+
+Preflight check for VM internet and Docker Registry access validation is updated.
+
+Preflight check for internet validation is updated to not follow redirect. If your organization requires outbound traffic to pass through a proxy server, you no longer need to allowlist the following addresses in your proxy server:
+
+  * console.cloud.google.com
+  * cloud.google.com
+
+
+
+Upgraded the Istio image to version 1.4.7 to fix a security vulnerability.
+
+The Ubuntu image is upgraded to include the newest packages.
+
+Some ConfigMaps in the admin cluster were refactored to Secrets to allow for more granular access control of sensitive configuration data.
+
+## April 23, 2020
+
+Rename `gkeadm` automatically created service accounts.
+
+Admin workstation provisioned by `gkeadm` uses thin disk provisioning.
+
+Preflight check for internet access includes additional URL `www.googleapis.com`.
+
+OVA download displays download progress.
+
+Improved user cluster Istio ingress gateway reliability.
+
+Before downloading and creating VM templates from OVAs, GKE on-prem checks if the VM template already exists in vCenter.
+
+Update the vCenter credentials for your clusters using the preview command [`gkectl update credentials vsphere`](https://cloud.google.com/anthos/gke/docs/on-prem/1.3/how-to/updating-cluster-credentials).
+
+`gkeadm` prepopulates `bundlepath` in the seed config on the admin workstation.
+
+Preflight check for test VM NTP availability.
+
+Preflight check for test VM F5 access.
+
+Ubuntu image is upgraded to include newest packages.
+
+Preflight check in `gkeadm` for access to the Cloud Storage bucket that holds the admin workstation OVA.
+
+Preflight check for test VM DNS availability.
+
+Fix for Docker failed DNS resolution on admin workstation at startup.
+
+Upgraded Calico to version 3.8.8 to fix several security vulnerabilities.
+
+Fixed `gkeadm` admin workstation `gcloud` proxy username and password configuration.
+
+Upgraded F5 BIG-IP Controller Docker image to version 1.14.0 to fix a security vulnerability.
+
+Fixed an admin workstation upgrade failure when the upgrade process was unable to retrieve SSH keys, which would cause a Golang segmentation fault.
+
+Test VMs wait until the network is ready before starting preflight checks.
+
+Improve the error message in preflight check failure for F5 BIG-IP.
+
+Skip VIP check in preflight check in manual load balancing mode.
+
+The `gkeadm` configuration file, `admin-ws-config.yaml`, accepts paths that are prefixed with `~/` for the Certificate Authority (CA) certificate.
+
+Fixed the bug that was preventing `gkectl check-config` from automatically using the proxy that you set in your configuration file when running the full set of [preflight validation checks](https://cloud.google.com/anthos/gke/docs/on-prem/1.3/how-to/preflight-checks) with any GKE on-prem [download image](https://cloud.google.com/anthos/gke/docs/on-prem/1.3/downloads).
+
+## April 01, 2020
+
+When upgrading from version 1.2.2 to 1.3.0 by using the Bundle download in the [alternate upgrade method](https://cloud.google.com/anthos/gke/docs/on-prem/1.2/how-to/upgrading#alternate_upgrade_scenario), a timeout might occur that will cause your user cluster upgrade to fail. To avoid this issue, you must perform the [full upgrade process](https://cloud.google.com/anthos/gke/docs/on-prem/1.2/how-to/upgrading) that includes upgrading your admin workstation with the OVA file.
+
+## March 23, 2020
+
+Anthos clusters on VMware 1.3.0-gke.16 is now available. To upgrade, see [Upgrading GKE on-prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.3/how-to/upgrading). GKE on-prem 1.3.0-gke.16 clusters run on Kubernetes 1.15.7-gke.32.
+
+The [Authentication Plugin for Anthos](https://cloud.google.com/anthos/gke/docs/on-prem/1.3/how-to/oidc) has been integrated into and replaced with the Google Cloud command-line interface, which improves the authentication process and provides the user consent flow through `gcloud` commands.
+
+A new installer helps you [create and prepare the admin workstation](https://cloud.google.com/anthos/gke/docs/on-prem/1.3/how-to/admin-workstation).
+
+Support for [vSAN](https://docs.vmware.com/en/VMware-vSAN/index.html) datastore on your admin and user clusters.
+
+Added support for up to [100 nodes per user cluster](https://cloud.google.com/anthos/gke/docs/on-prem/1.3/quotas).
+
+In bundled load balancing mode, GKE on-prem provides and manages the [Seesaw load balancer](https://github.com/google/seesaw).
+
+Fixed an issue in the vSphere storage plugin that prevented vSphere storage policies from working. [This is an example](https://github.com/kubernetes/examples/blob/master/staging/volumes/vsphere/vsphere-volume-spbm-policy.yaml) of how you might use this feature.
+
+The Cluster CA now signs the TLS certificates that the Kubelet API serves, and the TLS certificates are auto-rotated.
+
+All OOM events for containers trigger a SystemOOM event, even if they are container/pod OOM events. To check whether an OOM is actually a SystemOOM, check the kernel log for a message `oom-kill:…`. If `oom_memcg=/` (instead of `oom_memcg=/kubepods/…`), then it's a SystemOOM. If it's not a SystemOOM, it's safe to ignore.
+
+The metric `kubelet_containers_per_pod_count` is changed to a [histogram metric](https://prometheus.io/docs/concepts/metric_types/#histogram).
+
+vSphere credential rotation is enabled. Users can now use Solution User Certificates to authenticate to GKE deployed on-prem.
+
+Prometheus + Grafana: two graphs on the **Machine** dashboard don't work because of missing metrics: **Disk Usage** and **Disk Available**.
+
+Running the 1.3 version of the [`gkectl diagnose`](http://cloud.google.com/anthos/gke/docs/on-prem/1.3/reference/gkectl/diagnose) command might fail if your clusters:
+
+  * Are older than Anthos clusters on VMware version 1.3.
+  * Include manually installed add-ons in the `kube-system` namespace.
+
+
+
+Preview Feature: Introducing User cluster Nodepools. A _node pool_ is a group of nodes within a cluster that all have the same configuration. In GKE on-prem 1.3.0, node pools are a preview feature in the user clusters. This feature lets users create multiple node pools in a cluster, and update them as needed.
+
+**Affected versions: 1.3.0-gke.16**
+
+If you configured a proxy in the `config.yaml` and also used a bundle other than the full bundle ([static IP](http://cloud.google.com/anthos/gke/docs/on-prem/1.3/how-to/install-static-ips#bundlepath) | [DHCP](http://cloud.google.com/anthos/gke/docs/on-prem/1.3/how-to/install-dhcp#bundlepath)), you must append the `--fast` flag to run `gkectl check-config`. For example: `gkectl check-config --config config.yaml --fast`.
+
+`gkectl` automatically uses the proxy URL from `config.yaml` to configure the proxy on the admin workstation.
+
+## February 21, 2020
+
+You need to use vSphere provider version 1.15 when using [Terraform to create the admin workstation](https://cloud.google.com/anthos/gke/docs/on-prem/1.2/how-to/admin-workstation#copy_terraform). vSphere provider version 1.16 introduces [breaking changes](https://github.com/terraform-providers/terraform-provider-vsphere/issues/966) that would affect all Anthos versions.
+
+Improved `gkectl check-config` to validate any valid Google Cloud service accounts regardless of whether an IAM role is set.
+
+Fixed `gktctl check-config` so that it cleans up F5 BIG-IP resources on exit.
+
+Skip the preflight check when resuming cluster creation/upgrade.
+
+Fixed the BigQuery API service name for the preflight check service requirements validation.
+
+Fixed `gktctl prepare` to skip checking the data disk.
+
+Resolved the following warning when uploading an OS image with the VMware `enableMPTSupport` configuration flag set. This flag is used to indicate whether the virtual video card supports mediated passthrough.
+
+`Warning: Line 102: Unable to parse 'enableMPTSupport' for attribute 'key' on element 'Config'.`
+
+Resolved a known issue of cluster upgrade when using a vSAN datastore associated with a GKE on-prem version before 1.2
+
+Fixed the preflight check to correctly validate the default resource pool in the case where the `resourcepool` field in the GKE on-prem configuration file is empty.
+
+Fixed a comment about the `workernode.replicas` field in the GKE on-prem [configuration file](https://cloud.google.com/anthos/gke/docs/on-prem/1.2/reference/config) to say that the minimum number of worker nodes is three.
+
+GKE on-prem version 1.2.2-gke.2 is now available. To upgrade, see [Upgrading GKE on-prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.2/how-to/upgrading).
+
+## January 31, 2020
+
+Fixes a [known issue](https://cloud.google.com/anthos/gke/docs/on-prem/1.2/how-to/preflight-checks#known_issue) from 1.2.0-gke.6 that prevented `gkectl check-config` from performing all of its validations against clusters in nested resource pools or the default resource pool.
+
+Fixes an issue that caused cluster upgrades to overwrite changes to add-on configurations.
+
+Adds a `--cleanup` flag for `gkectl check-config`. The flag's default value is `true`.
+
+Passing in `--cleanup=false` preserves the test VM and associated SSH keys that `gkectl check-config` creates for its preflight checks. Preserving the VM can be helpful for debugging.
+
+Adds `searchdomainsfordns` field to static IPs host configuration file. `searchdomainsfordns` is an array of DNS search domains to use in the cluster. These domains are used as part of a domain search list.
+
+`gkectl check-config` now automatically uploads GKE on-prem's node OS image to vSphere. You no longer need to run `gkectl prepare` before `gkectl check-config`.
+
+Adds a [preflight check](https://cloud.google.com/anthos/gke/docs/on-prem/1.2/how-to/preflight-checks) that validates an NTP server is available.
+
+Fixes an issue that caused F5 BIG-IP VIP validation to fail due to timing out. The timeout window for F5 BIG-IP VIP validation is now longer.
+
+GKE on-prem version 1.2.1-gke.4 is now available. To upgrade, see [Upgrading GKE on-prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.2/how-to/upgrading).
+
+This patch version includes the following changes:
+
+Fixes the [known issue](https://cloud.google.com/anthos/gke/docs/on-prem/release-notes#January_28_2020) from 1.2.0-gke.6 that affects routing updates due to the route reflector configuration.
+
+## January 28, 2020
+
+**Affected versions:** 1.2.0-gke.6
+
+In some cases, certain nodes in a user cluster fail to get routing updates from the route reflector. Consequently Pods on a node may not be able to communicate with Pods on other nodes. One possible symptom is a `kube-dns` resolution error.
+
+To work around this issue, follow these steps to create a BGPPeer object in your user cluster.
+
+Save the following BGPPeer manifest as `full-mesh.yaml`:
+    
+    
+    apiVersion: crd.projectcalico.org/v1
+    kind: BGPPeer
+    metadata:
+      name: full-mesh
+    spec:
+      nodeSelector: "!has(route-reflector)"
+      peerSelector: "!has(route-reflector)" 
+    
+
+Create the BGPPeer in your user cluster:
+
+`kubectl --kubeconfig [USER_CLUSTER_KUBECONFIG] apply -f full-mesh.yaml`
+
+Verify that the `full-mesh` BGPPeer was created:
+
+`kubectl --kubeconfig [USER_CLUSTER_KUBECONFIG] get bgppeer`
+
+The output shows `full-mesh` in the list of BGPPeers:
+    
+    
+    NAME            AGE
+      full-mesh       61s
+      gke-group-1     3d21h
+      ...
+    
+
+This issue will be fixed in version 1.2.1.
+
+## January 03, 2020
+
+**Affected versions:** 1.1.0-gke.6 and later
+
+Starting with [version 1.1.0-gke.6](https://cloud.google.com/anthos/clusters/docs/on-prem/1.1/release-notes#September_26_2019), the `gkeconnect.proxy` field is no longer in the GKE on-prem [configuration file](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/reference/config).
+
+If you include `gkeconnect.proxy` in the configuration file, the [`gkectl check-config`](https://cloud.google.com/anthos/gke/docs/on-prem/1.2/how-to/preflight-checks) command can fail with this error:
+    
+    
+    [FAILURE] Config: Could not parse config file: error unmarshaling JSON: 
+    while decoding JSON: json: unknown field "proxy"
+    
+
+To correct this issue, remove `gkeconnect.proxy` from the configuration file.
+
+In versions prior to 1.1.0-gke.6, the Connect Agent used the proxy server specified in `gkeconnect.proxy`. Starting with version 1.1.0-gke.6, the Connect Agent uses the proxy server specified in the global `proxy` field.
+
+## December 20, 2019
+
+GKE on-prem now supports vSphere 6.7 Update 3. [Read its release notes.](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u3-release-notes.html)
+
+You can now create admin and user clusters separately from one another.
+
+From the admin workstation, gcloud now requires that you log in to gcloud with a Google Cloud user account. The user account should have at least the Viewer IAM role in all Google Cloud projects associated with your clusters.
+
+Updated documentation for [authenticating using OpenID Connect (OIDC)](https://cloud.google.com/anthos/gke/docs/on-prem/1.2/how-to/oidc) with the Anthos Plugin for Kubectl. GKE on-prem's OIDC integration is now generally available.
+
+The default Kubernetes version for cluster nodes is now version 1.14.7-gke.24 (previously 1.13.7-gke.20).
+
+**Affected versions:** 1.1.0-gke.6, 1.2.0-gke.6
+
+The `stackdriver.proxyconfigsecretname` field was removed in version 1.1.0-gke.6. GKE on-prem's preflight checks will return an error if the field is present in your configuration file.
+
+To work around this, before you install or upgrade to 1.2.0-gke.6, delete the `proxyconfigsecretname` field from your configuration file.
+
+**Affected versions:** 1.2.0-6-gke.6
+
+In user clusters, Prometheus and Grafana get automatically disabled during upgrade. However, the configuration and metrics data are not lost. In admin clusters, Prometheus and Grafana stay enabled.
+
+To work around this issue, after the upgrade, open `monitoring-sample` for editing and set `enablePrometheus` to `true`:
+
+1.`kubectl edit monitoring --kubeconfig [USER_CLUSTER_KUBECONFIG] \ -n kube-system monitoring-sample`
+
+2\. Set the field `enablePrometheus` to `true`.
+
+Expanded [preflight checks](https://cloud.google.com/anthos/gke/docs/on-prem/1.2/how-to/preflight-checks) for validating your GKE on-prem configuration file before your create your clusters. These new checks can validate that your Google Cloud project, vSphere network, and other elements of your environment are correctly configured.
+
+Any user cluster, even your first use cluster, can now use a datastore that is separate from the admin cluster's datastore. If you specify a separate datastore for a user cluster, the user cluster nodes, PersistentVolumes (PVs) for the user cluster nodes, user control plane VMs, and PVs for the user control plane VMs all use the separate datastore.
+
+Published guidelines for [installing Container Storage Interface](https://cloud.google.com/anthos/gke/docs/on-prem/1.2/how-to/install-csi-driver) (CSI) drivers. CSI enables using storage devices not natively supported by Kubernetes.
+
+Fixes an issue that prevented resuming cluster creation for HA user clusters.
+
+Published [basic installation](https://cloud.google.com/anthos/gke/docs/on-prem/1.2/how-to/install-overview-basic) workflow. This workflow offers a simplified workflow for quickly installing GKE on-prem using static IPs.
+
+**Warning:** If you installed GKE on-prem versions before 1.2, and you use a vSAN datastore, you should contact Google Support before attempting an upgrade to 1.2.0-gke.6.
+
+GKE on-prem version 1.2.0-gke.6 is now available. To upgrade, see [Upgrading GKE on-prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.2/how-to/upgrading).
+
+This minor version includes the following changes:
+
+**Affected versions:** All versions
+
+Before version 1.2.0-gke.6, a known issue prevents Stackdriver from updating its configuration after cluster upgrades. Stackdriver still references an old version, which prevents Stackdriver from receiving the latest features of its telemetry pipeline. This issue can make it difficult for Google Support to troubleshoot clusters.
+
+After you upgrade clusters to 1.2.0-gke.6, run the following command against admin and user clusters:
+    
+    
+    kubectl --kubeconfig=[KUBECONFIG] \
+    -n kube-system --type=json patch stackdrivers stackdriver \
+    -p '[{"op":"remove","path":"/spec/version"}]'
+    
+
+where **[KUBECONFIG]** is the path to the cluster's kubeconfig file.
+
+GKE on-prem now supports [VMware NSX-T version 2.4.2](https://cloud.google.com/gke-on-prem/docs/concepts/networking#support_for_vmware_nsx-t).
+
+## November 19, 2019
+
+Fixed the known issue from [November 5](https://cloud.google.com/anthos/clusters/docs/on-prem/1.1/release-notes#November_05_2019).
+
+Fixed the known issue from [November 8](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/release-notes#November_08_2019).
+
+Published [Managing clusters](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/administration/managing-clusters).
+
+If you are running a vSAN datastore, running `gkectl diagnose cluster` might return the following error, which you can safely ignore:
+
+`PersistentVolume [NAME]: virtual disk "[[DATASTORE_NAME]] [PVC]" IS NOT attached to machine "[MACHINE_NAME]" but IS listed in the Node.Status`
+
+### Fixes
+
+Published [Hardening your cluster](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/security/hardening-your-cluster).
+
+If you are running multiple data centers in vSphere, running `gkectl diagnose cluster` might return the following error, which you can safely ignore:
+
+`Checking storage...FAIL path '*' resolves to multiple datacenters`
+
+### New Features
+
+GKE On-Prem version 1.1.2-gke.0 is now available. To download version 1.1.2-gke.0's OVA, `gkectl`, and upgrade bundle, see [Downloads](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/downloads#112gke0). Then, see [Upgrading admin workstation](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/upgrading#adminws) and [Upgrading clusters](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/upgrading#clusters).
+
+This patch version includes the following changes:
+
+### Known Issues
+
+## November 08, 2019
+
+In GKE On-Prem version 1.1.1-gke.2, a known issue prevents creation of clusters configured to use a Docker registry. You configure a Docker registry by populating the GKE On-Prem configuration file's `privateregistryconfig` field. Cluster creation fails with an error such as `Failed to create root cluster: could not create external client: could not create external control plane: docker run error: exit status 125`
+
+A fix is targeted for version 1.1.2. In the meantime, if you want to create a cluster configured to use a Docker registry, pass in the `--skip-validation-docker` flag to `gkectl create cluster`.
+
+## November 05, 2019
+
+GKE On-Prem's configuration file has a field, `vcenter.datadisk`, which looks for a path to a virtual machine disk (VMDK) file. During installation, you choose a name for the VMDK. By default, GKE On-Prem creates a VMDK and saves it to the root of your vSphere datastore.
+
+If you are using a vSAN datastore, you need to create a folder in the datastore in which to save the VMDK. You provide the full path to the field—for example, `datadisk: gke-on-prem/datadisk.vmdk`—and GKE On-Prem saves the VMDK in that folder.
+
+When you create the folder, vSphere assigns the folder a universally unique identifier (UUID). Although you provide the folder path to the GKE On-Prem config, the vSphere API looks for the folder's UUID. Currently, this mismatch can cause cluster creation and upgrades to fail.
+
+A fix is targeted for version 1.1.2. In the meantime, you need to provide the folder's UUID instead of the folder's path. Follow the workaround instructions currently available in the [upgrading clusters](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/how-to/administration/upgrading-clusters) and installation topics.
+
+## October 25, 2019
+
+Fixed [CVE-2019-11253](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11253) described in [Security bulletins](https://cloud.google.com/anthos/clusters/docs/security-bulletins-archive#october_16_2019).
+
+For user clusters that are using static IPs and a different network than their admin cluster: If you overwrite the user cluster's network configuration, the user control plane might not be able to start. This occurs because it's using the user cluster's network, but allocates an IP address and gateway from the admin cluster.
+
+As a workaround, you can update each user control plane's MachineDeployment specification to use the correct network. Then, delete each user control plane Machine, causing the MachineDeployment to create new Machines:
+
+  1. #### List MachineDeployments in the admin cluster
+         
+         kubectl get machinedeployments --kubeconfig [ADMIN_CLUSTER_KUBECONFIG]
+         
+
+  2. #### Update a user control plane MachineDeployment from your shell
+         
+         kubectl edit machinedeployment --kubeconfig [ADMIN_CLUSTER_KUBECONFIG] [MACHINEDEPLOYMENT_NAME]
+         
+
+  3. #### List Machines in the admin cluster
+         
+         kubectl get machines --kubeconfig [ADMIN_CLUSTER_KUBECONFIG]
+         
+
+  4. #### Delete user control plane Machines in the admin cluster
+         
+         kubectl delete machines --kubeconfig [ADMIN_CLUSTER_KUBECONFIG] [MACHINE_NAME]
+         
+
+
+
+
+Fixed an issue that caused ingestion of admin cluster metrics to be slower than ingesting user cluster metrics.
+
+### Known Issues
+
+### New Features
+
+GKE On-Prem version 1.1.1-gke.2 is now available. To download version 1.1.1-gke.2's OVA, `gkectl`, and upgrade bundle, see [Downloads](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/downloads#111gke2). Then, see [Upgrading admin workstation](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/upgrading#adminws) and [Upgrading clusters](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/upgrading#clusters).
+
+This patch version includes the following changes:
+
+The open source [CoreOS toolbox](https://github.com/coreos/toolbox) is now included in all GKE On-Prem cluster nodes. This suite of tools is useful for troubleshooting node issues. See [Debugging node issues using toolbox](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/support/toolbox).
+
+Fixed an issue that caused cluster metrics to be lost due to a lost connection to Google Cloud. When a GKE On-Prem cluster's connection to Google Cloud is lost for a period of time, that cluster's metrics are now fully recovered.
+
+### Fixes
+
+**Action required:** This version upgrades the minimum `gcloud` version on the admin workstation to 256.0.0. You should [upgrade your admin workstation](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/upgrading#adminws). Then, you should [upgrade your clusters](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/upgrading#clusters).
+
+Fixed an issue that prevented clusters configured with OIDC from being upgraded.
+
+## September 26, 2019
+
+You can now use [Container Storage Interface (CSI) 1.0](https://github.com/container-storage-interface/spec) as a storage class for your clusters.
+
+Cloud Console now notifies you when an upgrade is available for a registered user cluster.
+
+A known issue prevents version 1.0.11, 1.0.1-gke.5, and 1.0.2-gke.3 clusters using OIDC from being upgraded to version 1.1. A fix is targeted for version 1.1.1. If you configured a version 1.0.11, 1.0.1-gke.5, or 1.0.2-gke.3 cluster with OIDC, [you are not able to upgrade it](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/upgrading.md#11_oidc). Create a version 1.1 cluster by following [Installing GKE On-Prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/installation/install-overview#whats_next).
+
+The tarball that `gkectl diagnose snapshot` creates now includes a log of the command's output by default.
+
+**Action required:** As of version 1.1.0-gke.6, GKE On-Prem now creates vSphere [Distributed Resource Scheduler (DRS)](https://www.vmware.com/products/vsphere/drs-dpm.html) rules for your user cluster's nodes (vSphere VMs), causing them to be spread across at least three physical hosts in your datacenter.
+
+**This feature is enabled by default for all new and existing user clusters running version 1.1.0-gke.6.**
+
+The feature requires that your vSphere environment meet the following conditions:
+
+  * VMware DRS must be enabled. VMware DRS requires vSphere Enterprise Plus license edition. To learn how to enable DRS, see [Creating a DRS Cluster](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.resmgmt.doc/GUID-8ACF3502-5314-469F-8CC9-4A9BD5925BC2.html).
+  * The vSphere user account provided in your GKE On-Prem configuration file's `vcenter` field must have the `Host.Inventory.EditCluster` permission.
+  * There are at least three physical hosts available.
+
+
+
+If you _do not_ want to enable this feature for your existing user clusters—for example, if you don't have enough hosts to accommodate the feature—perform the following steps _before_ you upgrade your user clusters:
+
+  1. Open your existing GKE On-Prem configuration file.
+  2. Under the `usercluster` specification, add the `antiaffinitygroups` field as described in the [`antiaffinitygroups` documentation](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/installation/install-dhcp#antiaffinitygroups): `usercluster: ... antiaffinitygroups: enabled: false`
+
+  3. Save the file.
+
+  4. Use the configuration file to upgrade. Your clusters are upgraded, but the feature is not enabled.
+
+
+
+
+You can now [diagnose node issues](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/support/toolbox) using the `debug-toolbox` container image.
+
+You now specify a configuration file in `gkectl diagnose snapshot` by passing the `--snapshot-config` (previously `--config`). See [Diagnosing cluster issues](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/support/diagnose#overview_diagnose_snapshot).
+
+You now capture your cluster's configuration file with `gkectl diagnose snapshot` by passing `--snapshot-config` (previously `--config`). See [Diagnosing cluster issues](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/support/diagnose#overview_diagnose_snapshot).
+
+You can now [skip validatations](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/installation/install-dhcp#skip_validate) run by `gkectl` commands.
+
+Adds `gkectl diagnose snapshot` flag `--seed-config`. When you pass the flag, it includes your clusters' GKE On-Prem configuration file in the tarball procduced by `snapshot`.
+
+You can now [delete broken or unhealthy user clusters](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/administration/deleting-a-user-cluster#delete_unhealthy_cluster) with `gkectl delete cluster --force`
+
+The default Kubernetes version for cluster nodes is now version 1.13.7-gke.20 (previously 1.12.7-gke.19).
+
+GKE On-Prem version 1.1.0-gke.6 is now available. To download version 1.1.0-gke.6's `gkectl` and upgrade bundle, see [Downloads](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/downloads#110gke6). Then, see [Upgrading clusters](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/upgrading#clusters).
+
+This minor version includes the following changes:
+
+`gkectl diagnose` commands now return an error if you provide a user cluster's kubeconfig, rather than an admin cluster's kubeconfig.
+
+You can now set the [default storage class](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/administration/default-storage-class) for your clusters.
+
+The `gkeplatformversion` field has been removed from the GKE On-Prem configuration file. To specify a cluster's version, provide the version's bundle to the `bundlepath` field.
+
+You need to add the vSphere permission, `Host.Inventory.EditCluster`, before you can use [`antiaffinitygroups`](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/installation/install-dhcp#antiaffinitygroups).
+
+## August 22, 2019
+
+Stackdriver Monitoring's system metrics prefixed changed from `external.googleapis.com/prometheus/` to `kubernetes.io/anthos/`. If you are tracking metrics or alerts, update your dashbaords with the next prefix.
+
+[Fixed a vulnerability in RBAC proxy](https://cloud.google.com/anthos/clusters/docs/security-bulletins-archive#august-05-2019-update2).
+
+Seesaw is now supported for manual load balancing.
+
+You can now delete user clusters using `gkectl`. See [Deleting a user cluster](https://cloud.google.com/gke-on-prem/docs/1.0/how-to/administration/deleting-a-user-cluster).
+
+GKE On-Prem OIDC specification has been updated with several new fields: `kubectlredirecturl`, `scopes`, `extraparams`, and `usehttpproxy`.
+
+You can now specify a different vSphere network for admin and user clusters.
+
+GKE On-Prem version 1.0.2-gke.3 is now available. This patch release includes the following changes:
+
+`gkectl diagnose snapshot` now gets logs from the user cluster control planes.
+
+Calico updated to version 3.7.4.
+
+[Fixed a vulnerability from CVE-2019-11247](https://cloud.google.com/anthos/clusters/docs/security-bulletins-archive#august-05-2019).
+
+## July 30, 2019
+
+Fixes registry data persistence issues with the admin workstation's Docker registry.
+
+`gkectl check-config` now also checks node IP availability if you are using static IPs.
+
+Published [GKE On-Prem cheatsheet](https://cloud.google.com/gke-on-prem/docs/reference/cheatsheet).
+
+Upgrades Istio ingress controller to version 1.2.2.
+
+### Fixes
+
+### Changes
+
+Adds support for specifying a vCenter cluster, and resource pool in that cluster.
+
+`gkectl prepare` now checks if a VM exists and is marked as a template in vSphere before attempting to upload the VM's OVA image.
+
+GKE On-Prem version 1.0.1-gke.5 is now available. This patch release includes the following changes:
+
+Fixes validation that checks whether a user cluster's name is already in use.
+
+### New Features
+
+Upgrades F5 BIG-IP controller to version 1.9.0.
+
+## July 25, 2019
+
+GKE On-Prem version 1.0.11 is now available.
+
+## June 17, 2019
+
+Upgrades Kubernetes version to 1.12.7-gke.19. You can now [upgrade your clusters](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/how-to/administration/upgrading-clusters#upgrade_clusters) to this version. You can no longer create clusters that run Kubernetes version 1.11.2-gke.19.
+
+We recommend upgrading your admin cluster before you upgrade your user clusters.
+
+You might not be able to upgrade beta clusters that use the [Manual load balancing mode](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/how-to/installation/manual-lb) to GKE On-Prem version 1.0.10. To upgrade and continue using your own load balancer with these clusters, you need to recreate the clusters.
+
+### Changes
+
+Adds `gkectl check-config`, which validates the GKE On-Prem configuration file. See the updated documentation for [installing GKE On-Prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/reference/gkectl/check-config).
+
+vCenter certificate verification is now required. `vsphereinsecure` is no longer supported). You provide the certificate in the GKE On-Prem configration file's `cacertpath` field.
+
+When a client calls the vCenter server, the vCenter server must prove its identity to the client by presenting a certificate. That certificate must be signed by a certificate authority (CA). The certificate is must not be self-signed.
+
+If you're upgrading your beta 1.4 clusters to 1.0.10, you need to provide a vCenter trusted root CA public certificate in the upgrade configuration file.
+
+### New Features
+
+[Upgrading clusters](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/how-to/administration/upgrading-clusters#upgrade_clusters) can cause disruption or downtime for workloads that use [PodDisruptionBudgets](https://kubernetes.io/docs/concepts/workloads/pods/disruptions) (PDBs).
+
+### Upgrading from beta-1.4 to 1.0.10
+
+Before upgrading your beta clusters to the first general availability version, perform the steps described in [Installing GKE On-Prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/how-to/installation/install), and review the following points:
+
+  * If you are running a beta version before beta-1.4, be sure to upgrade to beta-1.4 first.
+
+  * If your beta clusters are running their own L4 load balancers (not the default, F5 BIG-IP), you need to delete and recreate your clusters to run the latest GKE On-Prem version.
+
+  * If your clusters were upgraded to beta-1.4 from beta-1.3, run the following command _for each user cluster_ before upgrading:
+
+`kubectl delete crd networkpolicies.crd.projectcalico.org`
+
+  * vCenter certificate verification is now required. (`vsphereinsecure` is no longer supported.) If you're upgrading your beta 1.4 clusters to 1.0.10, you need to provide a vCenter trusted root CA public certificate in the upgrade configuration file.
+
+  * You need to upgrade _all_ of your running clusters. For this upgrade to succeed, your clusters can't run in a mixed version state.
+
+  * You need to upgrade your admin clusters to the latest version first, then upgrade your user clusters.
+
+
+
+
+GKE On-Prem is now generally available. Version 1.0.10 includes the following changes:
+
+Adds an optional `--validate-attestations` flag to `gkectl prepare`. This flag verifies that the container images included in your admin workstationwere built and signed by Google and are ready for deployment. See the updated documentation for [installing GKE On-Prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/reference/gkectl/prepare).
+
+GKE On-Prem's configuration-driven installation process has been updated. You now declaratively install using a singular [configuration file](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/how-to/installation/install#generate_config).
+
+Upgrades Istio ingress controller to version 1.1.7.
+
+You can now enable the [Manual load balancing mode](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/how-to/installation/manual-lb) to configure a L4 load balancer. You can still choose to use the default load balancer, F5 BIG-IP.
+
+### Known Issues
+
+Adds `gkectl create-config`, which generates a configuration file for installing GKE On-Prem, upgrading existing clusters, and for creating additional user clusters in an existing installation. This replaces the installation wizard and `create-config.yaml` from previous versions. See the updated documentation for [installing GKE On-Prem](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/reference/gkectl/create-config).
+
+## May 24, 2019
+
+### New Features
+
+### Known Issues
+
+GKE On-Prem beta version 1.4.7 is now available. This release includes the following changes:
+
+On May 8, 2019, we introduced a change to Connect, the service that enables you to interact with your GKE On-Prem clusters using Cloud Console. To use the new Connect agent, you must re-register your clusters with Cloud Console, or you must upgrade to GKE On-Prem beta-1.4.
+
+Your GKE On-Prem clusters and the workloads running on them will continue to operate uninterrupted. However, your clusters will not be visible in Cloud Console until you re-register them or upgrade to beta-1.4.
+
+Before you re-register or upgrade, make sure your service account has the `gkehub.connect` role. Also, if your service account has the old clusterregistry.connect role, it's a good idea to remove that role.
+
+Grant your service account the gkehub.connect role:
+    
+    
+    gcloud projects add-iam-policy-binding [PROJECT_ID] \
+        --member="serviceAccount:[SERVICE_ACCOUNT_NAME]@[PROJECT_ID].iam.gserviceaccount.com" \
+        --role="roles/gkehub.connect"
+    
+
+If your service account has the old `clusterregistry.connect` role, remove the old role:
+    
+    
+    gcloud projects remove-iam-policy-binding [PROJECT_ID] \
+        --member="serviceAccount:[SERVICE_ACCOUNT_NAME]@[PROJECT_ID].iam.gserviceaccount.com" \
+        --role="roles/clusterregistry.connect"
+    
+
+Re-register your cluster, or upgrade to GKE On-Prem beta-1.4.
+
+To [re-register your cluster](https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster):
+    
+    
+    gcloud alpha container hub register-cluster [CLUSTER_NAME] \
+        --context=[USER_CLUSTER_CONTEXT] \
+        --service-account-key-file=[LOCAL_KEY_PATH] \
+        --kubeconfig-file=[KUBECONFIG_PATH] \
+        --project=[PROJECT_ID]
+    
+
+To [upgrade to GKE On-Prem beta-1.4](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/reference/gkectl/upgrade):
+
+`gkectl upgrade --kubeconfig [ADMIN_CLUSTER_KUBECONFIG]`
+
+There is an issue that prevents the Connect agent from being updated to the new version during an upgrade. To work around this issue, run the following command after you upgrade a cluster:
+
+`kubectl delete pod gke-connect-agent-install -n gke-connect`
+
+### Changes
+
+In the [`gkectl diagnose snapshot`](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/reference/gkectl/diagnose#gkectl_diagnose_snapshot) command, the `--admin-ssh-key-path` parameter is now optional.
+
+## May 13, 2019
+
+Clusters upgraded from version beta-1.2 to beta-1.3 might be affected by a known issue that damages the cluster's configuration file and prevents future cluster upgrades. This issue affects all future cluster upgrades.
+
+You can resolve this issue by deleting and recreating clusters upgraded from beta-1.2 to beta-1.3.
+
+To resolve the issue without deleting and recreating the cluster, you need to re-encode and apply each cluster's Secrets. Perform the following steps:
+
+  1. Get the contents of the `create-config` Secrets stored in the admin cluster. This must be done for the `create-config` Secret in the kube-system namespace, and for the `create-config` Secrets in each user cluster's namespace:
+
+`kubectl get secret create-config -n [USER_CLUSTER_NAME] -o jsonpath={.data.cfg} | base64 -d > [USER_CLUSTER_NAME]_create_secret.yaml`
+
+For example:
+
+`kubectl get secret create-config -n kube-system -o jsonpath={.data.cfg} | base64 -d > kube-system_create_secret.yaml`
+
+  2. For each user cluster, open the `[USER_CLUSTER_NAME]_create_secret.yaml` file in an editor.
+
+If the values for `registerserviceaccountkey` and `connectserviceaccountkey` are not `REDACTED`, no further action is required: the Secrets do not need to be re-encoded and written to the cluster.
+
+  3. Open the original `create_config.yaml` file in another editor.
+
+  4. In `[USER_CLUSTER_NAME]_create_secret.yaml`, replace the `registerserviceaccountkey` and `connectserviceaccountkey` values with the values from the original `create_config.yaml` file. Save the changed file.
+
+  5. Repeat steps 2-4 for each `[USER_CLUSTER_NAME]_create_secret.yaml`, and for the `kube-system_create_secret.yaml` file.
+
+  6. Base64-encode each `[USER_CLUSTER_NAME]_create_secret.yaml` file and the `kube-system_create_secret.yaml` file:
+
+`cat [USER_CLUSTER_NAME]_create_secret.yaml | base64 > [USER_CLUSTER_NAME]_create_secret_create_secret.b64`
+
+`cat kube-system-cluster_create_secret.yaml | base64 > kube-system-cluster_create_secret.b64`
+
+  7. Replace the `data[cfg]` field in each Secret in the cluster with the contents of the corresponding file:
+         
+         kubectl edit secret create-config -n [USER_CLUSTER_NAME]
+           # kubectl edit opens the file in the shell's default text editor
+           # Open `first-user-cluster_create_secret.b64` in another editor, and replace
+           # the `cfg` value with the copied value
+           # Make sure the copied string has no newlines in it
+         
+
+  8. Repeat step 7 for each `[USER_CLUSTER_NAME]_create_secret.yaml` Secret, and for the `kube-system_create_secret.yaml` Secret.
+
+  9. To ensure that the update was successful, repeat step 1.
+
+
+
+
+### Known Issues
+
+## May 07, 2019
+
+On May 8, 2019, we introduced a change to Connect, the service that enables you to interact with your GKE On-Prem clusters using Cloud Console. To use the new Connect agent, you must re-register your clusters with Cloud Console, or you must upgrade to GKE On-Prem beta-1.4.
+
+Your GKE On-Prem clusters and the workloads running on them will continue to operate uninterrupted. However, your clusters will not be visible in Cloud Console until you re-register them or upgrade to beta-1.4.
+
+Before your re-register or upgrade, make sure your service account has the `gkehub.connect` role. Also, if your service account has the old `clusterregistry.connect` role, it's a good idea to remove that role.
+
+Grant your service account the `gkehub.connect` role:
+    
+    
+    gcloud projects add-iam-policy-binding [PROJECT_ID] \
+        --member="serviceAccount:[SERVICE_ACCOUNT_NAME]@[PROJECT_ID].iam.gserviceaccount.com" \
+        --role="roles/gkehub.connect"
+    
+
+If your service account has the old `clusterregistry.connect` role, remove the old role:
+    
+    
+    gcloud projects remove-iam-policy-binding [PROJECT_ID] \
+        --member="serviceAccount:[SERVICE_ACCOUNT_NAME]@[PROJECT_ID].iam.gserviceaccount.com" \
+        --role="roles/clusterregistry.connect"
+    
+
+Re-register you cluster, or upgrade to GKE On-Prem beta-1.4.
+
+To re-register your cluster:
+    
+    
+    gcloud alpha container hub register-cluster [CLUSTER_NAME] \
+        --context=[USER_CLUSTER_CONTEXT] \
+        --service-account-key-file=[LOCAL_KEY_PATH] \
+        --kubeconfig-file=[KUBECONFIG_PATH] \
+        --project=[PROJECT_ID]
+    
+
+To [upgrade to GKE On-Prem beta-1.4](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/reference/gkectl/upgrade#gkectl_upgrade_admin):
+
+`gkectl upgrade --kubeconfig [ADMIN_CLUSTER_KUBECONFIG]`
+
+### Changes
+
+### New Features
+
+In the [`gkectl diagnose snapshot`](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/reference/gkectl/diagnose#gkectl_diagnose_snapshot) command, the `--admin-ssh-key-path` parameter is now optional.
+
+GKE On-Prem beta version 1.4.1 is now available. This release includes the following changes:
+
+### Known Issues
+
+There is an issue that prevents the Connect agent from being updated to the new version during an upgrade. To work around this issue, run the following command after you upgrade a cluster:
+
+`kubectl delete pod gke-connect-agent-install -n gke-connect`
+
+## April 25, 2019
+
+GKE On-Prem's ingress controller uses Istio 1.1 with automatic Secret discovery. However, the node agent for Secret discovery may fail to get Secret updates after Secret deletion. So avoid deleting Secrets. If you must delete a Secret and Ingress TLS fails afterwards, manually restart the Ingress Pod in the gke-system namespace.
+
+The `gkectl diagnose snapshot` command now supports regular expressions for specifying namespaces.
+
+GKE On-Prem beta version 1.3.1 is now available. This release includes the following changes:
+
+The `gkectl diagnose snapshot` command now supports four [scenarios](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/support/diagnose#snapshot_scenarios).
+
+### New Features
+
+Istio 1.1 is now the default [ingress controller](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/how-to/add-ons/istio). The ingress controller runs in the `gke-system` namespace for both admin and user clusters. This enables easier TLS management for Ingress. To enable ingress, or to re-enable ingress after an upgrade, follow the instructions under [Enabling ingress](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/how-to/installation/install#enabling_ingress).
+
+### Changes
+
+The `gkectl` tool no longer uses Minikube and KVM for bootstrapping. This means you do not have to enable nested virtualization on your admin workstation VM.
+
+### Known Issues
+
+The `gkectl diagnose snapshot` command now has a [`--dry-run`](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/support/diagnose#performing_a_dry_run_for_a_snapshot) flag.
+
+## April 11, 2019
+
+### Known Issues
+
+A regression causes `gkectl diagnose snapshot` commands to use the wrong SSH key, which prevents the command from collecting information from user clusters. As a workaround for support cases, you might need to SSH into individual user cluster nodes and manually gather data.
+
+`gkectl` now validates vSphere and F5 BIG-IP credentials creating clusters.
+
+### Changes
+
+You can now run up to three control planes per user cluster.
+
+### New Features
+
+GKE On-Prem beta version 1.2.1 is now available. This release includes the following changes:
+
+GKE On-Prem clusters now automatically connect back to Google using [Connect](https://cloud.google.com/kubernetes-engine/connect/).
+
+## April 02, 2019
+
+### Changes
+
+You now must use an admin cluster's private key to run `gkectl diagnose snapshot`.
+
+[Connect documentation](https://cloud.google.com/kubernetes-engine/connect/) has been migrated.
+
+You can now configure authentication for clusters using OIDC and ADFS. To learn more, refer to [Authenticating with OIDC and AD FS](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/how-to/security/oidc-adfs) and [Authentication](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/concepts/authentication).
+
+GKE On-Prem beta version 1.1.1 is now available. This release includes the following changes:
+
+Added a configuration option during installation for deploying multi-master user clusters.
+
+### Fixes
+
+You now install GKE On-Prem with an [Open Virtual Appliance (OVA)](https://cloud.google.com/anthos/gke/docs/on-prem/1.1/how-to/installation/admin-workstation), a pre-configured virtual machine image that includes several command-line interface tools. This change makes installations easier and removes a layer of virtualization. You no longer need to run `gkectl` inside a Docker container.
+
+If you installed GKE On-Prem versions before beta-1.1.1, you should create a new admin workstation following the documented instructions. After you install the new admin workstation, copy over any SSH keys, configuration files, kubeconfigs, and any other files you need, from your previous workstation to the new one.
+
+Fixed an issue where cluster networking could be interrupted when a node is removed unexpectedly.
+
+GKE On-Prem's Configuration Management has been upgraded from version 0.11 to 0.13. Several components of the system have been renamed. You need to take some steps to clean up the previous versions' resources and install a new instance.
+
+If you have an active instance of Configuration Management:
+
+  1. Uninstall the instance:
+
+`kubectl -n=nomos-system delete nomos --all`
+
+  2. Make sure that the instance's namespace has no resources:
+
+`kubectl -n nomos-system get all`
+
+  3. Delete the namespace:
+
+`kubectl delete ns nomos-system`
+
+  4. Delete the CRD:
+
+`kubectl delete crd nomos.addons.sigs.k8s.io`
+
+  5. Delete all kube-system resources for the operator:
+
+`kubectl -n kube-system delete all -l k8s-app=nomos-operator`
+
+
+
+
+If you don't have an active instance of Configuration Management:
+
+  1. Delete the Configuration Management namespace:
+
+`kubectl delete ns nomos-system`
+
+  2. Delete the CRD:
+
+`kubectl delete crd nomos.addons.sigs.k8s.io`
+
+  3. Delete all kube-system resources for the operator:
+
+`kubectl -n kube-system delete all -l k8s-app=nomos-operator`
+
+
+
+
+### New Features
+
+Added documentation for backing up and restoring clusters.
+
+### Known Issues
+
+## March 12, 2019
+
+GKE On-Prem beta version 1.0.3 is now available. This release includes the following changes:
+
+Fixed an issue that caused Docker certificates to be saved to the wrong location.
+
+### Fixes
+
+## March 04, 2019
+
+You can now run `gkectl version` to check which version of `gkectl` you're running.
+
+[Getting started](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/how-to/installation/getting-started) has been updated with steps for activating your service account and running [`gkectl prepare`](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/reference/gkectl/prepare).
+
+### Changes
+
+### Fixes
+
+`gkectl diagnose snapshot` now only collects configuration data and excludes logs. This tool is used to capture details of your environment prior to opening a support case.
+
+You can now update IP blocks in the cluster specification to expand the IP range for a given cluster.
+
+[Kubernetes Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) are now supported.
+
+If clusters you installed during alpha were disconnected from Google after beta, you might need to connect them again. Refer to [Registering a cluster](https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster).
+
+Cluster resizing operations improved to prevent unintended node deletion.
+
+You can now [upgrade user clusters](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/how-to/administration/upgrading-clusters) to future beta versions.
+
+GKE On-Prem beta version 1.0.2 is now available. This release includes the following changes:
+
+[Anthos Config Management](https://cloud.google.com/anthos-config-management/docs/release-notes#March_04_2019) version 0.11.6 is now available.
+
+Stackdriver Prometheus Sidecar captures metrics for the same components as the logging agent.
+
+### New Features
+
+Stackdriver Logging is now enabled on each node. By default, the logging agent replicates logs to your project for only control plane services, cluster API, vSphere controller, Calico, BIG-IP controller, Envoy proxy, Connect, Anthos Config Management, Prometheus and Grafana services, Istio control plane, and Docker. Application container logs are excluded by default, but can be optionally enabled.
+
+Support for optional SNAT pool name configuration for F5 BIG-IP at cluster-creation time. This can be used to configure "--vs-snat-pool-name" value on [F5 BIG-IP controller](https://clouddocs.f5.com/products/connectors/k8s-bigip-ctlr/v1.8/).
+
+You now need to provide a VIP for add-ons that run in the admin cluster.
+
+## February 07, 2019
+
+Improvements to Prometheus and Alertmanager health-checking.
+
+Prometheus now uses secured port for scraping metrics.
+
+Metrics endpoints and APIs that use Istio endpoints are now secured using mTLS and role-based access control.
+
+External communication by Grafana is disabled.
+
+### New Features
+
+### Changes
+
+GKE On-Prem alpha version 1.3 is now available. This release includes the following changes:
+
+If your vCenter user account uses a format like `DOMAINUSER`, you might need to escape the backslash (`DOMAIN\USER`). Be sure to do this when prompted to enter the user account during installation.
+
+### Known Issues
+
+GKE On-Prem now enforces unique names for user clusters.
+
+Several updates to Grafana dashboards.
+
+During installation, you can now provide YAML files with `nodeip` blocks to configure static IPAM.
+
+You now need to provision a 100GB disk in vSphere Datastore. GKE On-Prem uses the disk to store some of its vital data, such as etcd. See [Data center requirements](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/how-to/installation/requirements#license-edition-and-version-requirements).
+
+You can now only provide lowercase hostnames to `nodeip` blocks.
+
+## January 23, 2019
+
+[`gkectl diagnose snapshot`](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/support/diagnose#overview_diagnose_snapshot) commands now allow you to specify nodes while capturing snapshots of remote command results and files.
+
+GKE On-Prem alpha version 1.2.1 is now available. This release includes the following changes:
+
+### Changes
+
+You can now use `gkectl` to [delete admin clusters](https://cloud.google.com/anthos/gke/docs/on-prem/1.0/how-to/administration/deleting-an-admin-cluster).
+
+### New Features
+
+## January 14, 2019
+
+Fixed issues with minikube caching that caused unexpected network calls.
+
+### Fixes
+
+`gkectl diagnose snapshot` now allows you to specify words to be excluded from the snapshot results.
+
+PersistentVolumes can fail to mount, producing the error `devicePath is empty`. As a workaround, delete and re-create the associated PersistentVolumeClaim.
+
+GKE On-Prem alpha version 1.1.2 is now available. This release includes the following changes:
+
+`gkectl prepare` now prompts you to enter information about your vSphere cluster and resource pool.
+
+You can now use the `gkectl create` command to create and add user clusters to existing admin control planes by passing in an existing kubeconfig file when prompted during cluster creation.
+
+`gkectl diagnose` commands now work with both admin and user clusters.
+
+You can now pass in a Ingress TLS Secret for admin and user clusters at cluster creation time. You will see the following new prompt:
+
+`Do you want to use TLS for Admin Control Plane/User Cluster ingress?`
+
+Providing the TLS Secret and certs allows `gkectl` to set up the Ingress TLS. HTTP is not automatically disabled with TLS installation.
+
+The default footprint for GKE On-Prem has changed:
+
+  * Minimum memory requirement for user cluster nodes is now 8192M.
+
+
+
+### New Features
+
+kube-apiserver events now live in their own etcd. You can see kube-etcd-events in your user cluster's namespace.
+
+There are three new ConfigMap resources in the user cluster namespace: `cluster-api-etcd-metrics-config`, `kube-etcd-metrics-config`, and `kube-apiserver-config`. GKE On-Prem uses these files to quickly bootstrap the metrics proxy container.
+
+You might encounter the following [`govmomi`](https://github.com/vmware/govmomi) warning when you run `gkectl prepare`:
+
+`Warning: Line 102: Unable to parse 'enableMPTSupport' for attribute 'key' on element 'Config'`
+
+### Known Issues
+
+GKE On-Prem now runs Kubernetes version **1.11.2-gke.19**.
+
+Resizing user clusters can cause inadvertent node deletion or recreation.
+
+`gkectl` no longer prompts you to provide a proxy configuration by default.
+
+GKE On-Prem now runs minikube version **0.28.0**.
+
+Cluster API controllers now use leader election.
+
+Resizing IPAM address blocks if using static IP allocation for nodes, is not supported in alpha. To work around this, consider allocating more IP addresses than you currently need.
+
+`gkectl diagnose snapshot` can now take snapshots in multiple parallel threads.
+
+`gkectl diagnose snapshot` can now take snapshots of remote files on the node, results of remote commands on the nodes, and Prometheus queries.
+
+You can now use the `gkectl prepare` command to pull and push GKE On-Prem's container images, which deprecates the `populate_registry.sh` script.
+
+On slow disks, VM creation can timeout and cause deployments to fail. If this occurs, delete all resources and try again.
+
+GKE Policy Management has been upgraded to version **0.11.1**.
+
+### Changes
+
+vSphere credentials are now pulled from credential files.
+
+Fixed an issue with pulling F5 BIG-IP credentials. Credentials are now read from a credentials file instead of using environment variables.
+
+## December 19, 2018
+
+The vulnerability caused by [CVE-2018-1002105](https://github.com/kubernetes/kubernetes/issues/71411) has been patched.
+
+GKE On-Prem alpha 1.0.4 is now available. This release includes the following changes:
+
+### Fixes
+
+## November 30, 2018
+
+Grafana upgraded from **5.0.4** to **5.3.4**.
+
+GKE On-Prem alpha 1.0 runs Kubernetes 1.11.
+
+node_exporter upgraded from **1.15.2** to **1.16.0**.
+
+GKE On-Prem alpha 1.0 does not yet pass all conformance tests.
+
+The vulnerability caused by [CVE-2018-1002103](https://github.com/kubernetes/minikube/issues/3208) has been patched.
+
+### Fixes
+
+### Known Issues
+
+kube-state-metrics upgraded from **1.3.1** to **1.4.0**.
+
+GKE On-Prem alpha 1.0 is now available. The following changes are included in this release:
+
+Prometheus upgraded from **2.3.2** to **2.4.3**.
+
+PersistentVolumes can fail to mount, producing the error `devicePath is empty`. As a workaround, delete and re-create the associated PersistentVolumeClaim.
+
+Only one user cluster per admin cluster can be created. To create additional user clusters, create another admin cluster.
+
+Support for custom Alert Manager configuration.
+
+Alert Manager upgraded from **1.14.0** to **1.15.2**.
+
+Resizing IPAM address blocks if using static IP allocation for nodes, is not supported in alpha. To work around this, consider allocating more IP addresses than you currently need.
+
+### Changes
+
+The default footprint for GKE On-Prem has changed:
+
+  * The admin control plane runs three nodes, which use 4 CPUs and 16GB memory.
+  * The user control plane runs one node that uses 4 CPUs 16GB memory.
+  * User clusters run a minimum of three nodes, which use 4 CPUs and 16GB memory.
+
+
+
+Support for high-availability Prometheus setup.
+
+## October 31, 2018
+
+### Changes
+
+F5 BIG-IP controller upgraded to use the latest OSS version, 1.7.0.
+
+When you create admin and user clusters at the same time, you can now re-use the admin cluster's F5 BIG-IP credentials to create the user cluster. Also, the CLI now requires that BIG-IP credentials be provided; this requirement cannot be skipped using `--dry-run`.
+
+GKE On-Prem EAP 2.1 is now available. The following changes are included in this release:
+
+To improve stability for slow vSphere machines, cluster machine creation timeout is now 15 minutes (previously five minutes).
+
+## October 17, 2018
+
+Support for front-ending the L7 load-balancer as a L4 VIP on F5 BIG-IP.
+
+Only one user cluster per admin cluster can be created. To create additional user clusters, create another admin cluster.
+
+Support for static IP allocation for nodes during cluster bootstrap.
+
+On slow disks, VM creation can timeout and cause deployments to fail. If this occurs, delete all resources and try again.
+
+Support for Monitoring.
+
+As part of the cluster bootstrapping process, a short-lived minikube instance is run. The minikube version used has security vulnerability [CVE-2018-1002103](https://github.com/kubernetes/minikube/issues/3208).
+
+### Known Issues
+
+Support for GKE Connect.
+
+### Changes
+
+Cluster upgrades are not supported in EAP 2.0.
+
+Support for installation using private registries.
+
+GKE On-Prem EAP 2.0 is now available. The following changes are included in this release:
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

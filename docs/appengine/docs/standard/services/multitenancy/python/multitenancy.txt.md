@@ -1,0 +1,16 @@
+---
+url: https://docs.cloud.google.com/appengine/docs/standard/services/multitenancy/python/multitenancy.txt
+title: https://docs.cloud.google.com/appengine/docs/standard/services/multitenancy/python/multitenancy.txt
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T18:00:09.047726+00:00
+---
+
+# https://docs.cloud.google.com/appengine/docs/standard/services/multitenancy/python/multitenancy.txt
+
+> Source: https://docs.cloud.google.com/appengine/docs/standard/services/multitenancy/python/multitenancy.txt
+
+// [START setting_the_current_namespace] from google.appengine.api import namespace_manager # Called only if the current namespace is not set. def namespace_manager_default_namespace_for_request(): # The returned string will be used as the Google Apps domain. return namespace_manager.google_apps_namespace() // [END setting_the_current_namespace] // [START creating_namespaces_on_a_per_user_basis] from google.appengine.api import users def namespace_manager_default_namespace_for_request(): # assumes the user is logged in. return users.get_current_user().user_id() // [END creating_namespaces_on_a_per_user_basis] // [START using_namespaces_with_the_Memcache_1] from google.appengine.api import memcache from google.appengine.api import namespace_manager // Set memcache using the current namespace from the namespace manager. namespace = namespace_manager.get_namespace(); namespace_manager.set("abc"); try: memcache.add("key", value) finally: namespace_manager.set(namespace) // [END using_namespaces_with_the_Memcache_1] // [START using_namespaces_with_the_Memcache_2] // Store an entry to the memcache explicitly memcache.add("key", data, namespace='abc') // [END using_namespaces_with_the_Memcache_2] // [START using_namespaces_with_the_Task_Queue] import webapp2 from google.appengine.api import namespace_manager from google.appengine.api import taskqueue from google.appengine.ext import ndb class Counter(ndb.Model): """Model for containing a count.""" count = ndb.IntegerProperty() @ndb.transactional def update_counter(name): """Increment the named counter by 1 in a transaction.""" counter = Counter.get_by_id(name) if counter is None: counter = Counter(id=name); counter.count = 0 counter.count += 1 counter.put() class TaskQueueHandler(webapp2.RequestHandler): # TaskQueueHandler is mapped to '/_ah/counter' """Task queue handler for update_counter.""" def post(self): name = self.request.get('counter_name') update_counter(name) class SomeRequestViaTaskQueue(webapp2.RequestHandler): """Perform asynchronous requests to update counter.""" def get(self): # Asynchronously updates counter. taskqueue.add(url='/_ah/counter', params={'counter_name': 'SomeRequestViaTaskQueue'}) # try/finally pattern to temporarily set the namespace. # Save the current namespace. namespace = namespace_manager.get_namespace() try: # Asynchronously updates counter. namespace_manager.set_namespace('-global-') taskqueue.add(url='/_ah/counter', params={'counter_name': 'SomeRequestViaTaskQueue'}) finally: # Restore the saved namespace. namespace_manager.set_namespace(namespace) self.response.write('
+
+') self.response.write('Counters will be updated') self.response.write('
+
+') app = webapp2.WSGIApplication([('/_ah/counter', TaskQueueHandler), ('/some_request', SomeRequestViaTaskQueue)], debug=True) // [END using_namespaces_with_the_Task_Queue] 

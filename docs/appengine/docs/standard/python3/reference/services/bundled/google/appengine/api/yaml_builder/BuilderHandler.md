@@ -1,0 +1,258 @@
+---
+url: https://docs.cloud.google.com/appengine/docs/standard/python3/reference/services/bundled/google/appengine/api/yaml_builder/BuilderHandler/
+title: google.appengine.api.yaml_builder.BuilderHandler \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T22:34:28.342393+00:00
+---
+
+# google.appengine.api.yaml_builder.BuilderHandler  |  App Engine standard environment  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/appengine/docs/standard/python3/reference/services/bundled/google/appengine/api/yaml_builder/BuilderHandler/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Application hosting ](https://docs.cloud.google.com/docs/application-hosting)
+  * [ App Engine ](https://docs.cloud.google.com/appengine/docs)
+  * [ Standard environment ](https://docs.cloud.google.com/appengine/docs/standard)
+  * [ Reference ](https://docs.cloud.google.com/appengine/docs/standard/apis)
+
+
+
+Send feedback 
+
+#  google.appengine.api.yaml_builder.BuilderHandler Stay organized with collections  Save and categorize content based on your preferences. 
+
+[ ![](https://www.tensorflow.org/images/GitHub-Mark-32px.png) View source on GitHub ](https://github.com/GoogleCloudPlatform/appengine-python-standard/tree/main/src/google/appengine/api/yaml_builder.py#L163-L469) PyYAML event handler used to build objects. Inherits From: [`EventHandler`](https://docs.cloud.google.com/appengine/docs/standard/python3/reference/services/bundled/google/appengine/api/yaml_listener/EventHandler), [`expected_type`](https://docs.cloud.google.com/appengine/docs/standard/python3/reference/services/bundled/google/appengine/api/validation/Validator/expected_type)
+    
+    
+    google.appengine.api.yaml_builder.BuilderHandler(
+        builder
+    )
+    
+
+Maintains state information as it receives parse events so that object nesting is maintained. Uses the provided `builder` object to construct and assemble objects as it goes. As it receives events from the YAML parser, it builds a stack of data representing structural tokens. As the scope of documents, mappings, and sequences end, those token and value pairs are popped from the top of the stack so that the original scope can resume processing. A special case is made for the `_KEY` token. It represents a temporary value which only occurs inside mappings. It is immediately popped off the stack when it's associated value is encountered in the parse stream. It is necessary to do this because the YAML parser does not combine key and value information into a single event. | 
+
+## Args  
+  
+---  
+  
+`builder` |  Instance of `Builder` class.   
+  
+## Raises  
+  
+---  
+`ListenerConfigurationError` when `builder` is not a `Builder` class.   
+  
+## Methods
+
+### `Alias`
+
+[View source](https://github.com/GoogleCloudPlatform/appengine-python-standard/tree/main/src/google/appengine/api/yaml_builder.py#L340-L346)
+    
+    
+    Alias(
+        event, loader
+    )
+    
+
+Not implemented yet.
+
+Args  
+---  
+  
+`event` |  Ignored.   
+  
+### `DocumentEnd`
+
+[View source](https://github.com/GoogleCloudPlatform/appengine-python-standard/tree/main/src/google/appengine/api/yaml_builder.py#L331-L338)
+    
+    
+    DocumentEnd(
+        event, loader
+    )
+    
+
+End of document.
+
+Args  
+---  
+  
+`event` |  Ignored.   
+  
+### `DocumentStart`
+
+[View source](https://github.com/GoogleCloudPlatform/appengine-python-standard/tree/main/src/google/appengine/api/yaml_builder.py#L320-L329)
+    
+    
+    DocumentStart(
+        event, loader
+    )
+    
+
+Build a new document.
+
+Pushes a new document onto the stack.
+
+Args  
+---  
+  
+`event` |  Ignored.   
+  
+### `GetResults`
+
+[View source](https://github.com/GoogleCloudPlatform/appengine-python-standard/tree/main/src/google/appengine/api/yaml_builder.py#L455-L469)
+    
+    
+    GetResults()
+    
+
+Get results of document stream processing.
+
+This method can be invoked after fully parsing the entire YAML file to retrieve constructed contents of YAML file. Called after `EndStream`.
+
+Returns  
+---  
+A `tuple` of all `document` objects that were parsed from YAML stream.   
+  
+Raises  
+---  
+`InternalError` if the builder stack is not empty by the end of parsing.   
+  
+### `MappingEnd`
+
+[View source](https://github.com/GoogleCloudPlatform/appengine-python-standard/tree/main/src/google/appengine/api/yaml_builder.py#L443-L453)
+    
+    
+    MappingEnd(
+        event, loader
+    )
+    
+
+End of mapping.
+
+Args  
+---  
+  
+`event` |  Ignored.   
+`loader` |  Ignored.   
+  
+### `MappingStart`
+
+[View source](https://github.com/GoogleCloudPlatform/appengine-python-standard/tree/main/src/google/appengine/api/yaml_builder.py#L419-L441)
+    
+    
+    MappingStart(
+        event, loader
+    )
+    
+
+Start of the mapping scope.
+
+Create a mapping from `builder` and then handle in the context of its parent.
+
+Args  
+---  
+  
+`event` |  `MappingStartEvent` generated by `loader`.   
+`loader` |  Loader that generated the event.   
+  
+### `Scalar`
+
+[View source](https://github.com/GoogleCloudPlatform/appengine-python-standard/tree/main/src/google/appengine/api/yaml_builder.py#L348-L385)
+    
+    
+    Scalar(
+        event, loader
+    )
+    
+
+Handles the scalar value.
+
+Since scalars are simple values that are passed in directly by the parser, this handles the scalar value like any other value with no additional processing.
+
+However, key values will be handled differently. A key value is recognized when the top token is `_TOKEN_MAPPING`.
+
+Args  
+---  
+  
+`event` |  Event containing scalar value.   
+  
+### `SequenceEnd`
+
+[View source](https://github.com/GoogleCloudPlatform/appengine-python-standard/tree/main/src/google/appengine/api/yaml_builder.py#L407-L417)
+    
+    
+    SequenceEnd(
+        event, loader
+    )
+    
+
+End of the sequence.
+
+Args  
+---  
+  
+`event` |  Ignored.   
+`loader` |  Ignored.   
+  
+### `SequenceStart`
+
+[View source](https://github.com/GoogleCloudPlatform/appengine-python-standard/tree/main/src/google/appengine/api/yaml_builder.py#L387-L405)
+    
+    
+    SequenceStart(
+        event, loader
+    )
+    
+
+Start of the sequence scope.
+
+Create a new sequence from the `builder` and then handle in the context of its parent.
+
+Args  
+---  
+  
+`event` |  `SequenceStartEvent` generated by `loader`.   
+`loader` |  Loader that generated event.   
+  
+### `StreamEnd`
+
+[View source](https://github.com/GoogleCloudPlatform/appengine-python-standard/tree/main/src/google/appengine/api/yaml_builder.py#L311-L318)
+    
+    
+    StreamEnd(
+        event, loader
+    )
+    
+
+Cleans up internal state of handler after parsing.
+
+Args  
+---  
+  
+`event` |  Ignored.   
+  
+### `StreamStart`
+
+[View source](https://github.com/GoogleCloudPlatform/appengine-python-standard/tree/main/src/google/appengine/api/yaml_builder.py#L300-L309)
+    
+    
+    StreamStart(
+        event, loader
+    )
+    
+
+Initializes internal state of handler.
+
+Args  
+---  
+  
+`event` |  Ignored.   
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2025-06-16 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2025-06-16 UTC."],[],[]] 

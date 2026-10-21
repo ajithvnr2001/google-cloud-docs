@@ -1,0 +1,65 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tutorials/
+title: Tutorials overview \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T11:30:58.773820+00:00
+---
+
+# Tutorials overview  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tutorials/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Tutorials overview Stay organized with collections  Save and categorize content based on your preferences. 
+
+Each of the tutorials presented here walks you through a specific artificial intelligence (AI) workflow, created to represent the most common tasks and to illustrate the capabilities of Gemini Enterprise Agent Platform. Choose the tutorial that best matches your data type and AI task. After following the tutorial, you can use the patterns that you have learned to solve your own AI problem. Gemini Enterprise Agent Platform offers Google Cloud console tutorials and notebook tutorials that use the Python SDK. You can open a notebook tutorial directly in Colab, download the notebook to your preferred environment, or open the notebook tutorial in Vertex AI Workbench.
+
+## Train a classification model for tabular data
+
+![Tabular classification training introduction](https://docs.cloud.google.com/static/gemini-enterprise-agent-platform/machine-learning/images/automl-tables.svg) |  Create a Gemini Enterprise Agent Platform dataset from tabular data, and then train a classification model with AutoML. Deploy the model to an endpoint and make online predictions.  **Google Cloud console** : You can choose tutorial guides with step-by-step instructions for the Google Cloud console.  
+[Show on cloud.google.com](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tutorials/tabular-automl/overview) | [Show in an interactive format in Google Cloud console](https://console.cloud.google.com/?walkthrough_id=vertex_tabular_part1) **Notebook** : You can choose to run this tutorial as a notebook.  
+[Run in Colab](https://colab.sandbox.google.com/github/GoogleCloudPlatform/vertex-ai-samples/blob/main/notebooks/official/automl/automl-tabular-classification.ipynb) | [Open in Colab Enterprise](https://console.cloud.google.com/agent-platform/colab/import/https:%2F%2Fraw.githubusercontent.com%2FGoogleCloudPlatform%2Fvertex-ai-samples%2Fmain%2Fnotebooks%2Fofficial%2Fautoml%2Fautoml-tabular-classification.ipynb) | [View on GitHub](https://github.com/GoogleCloudPlatform/vertex-ai-samples/blob/main/notebooks/official/automl/automl-tabular-classification.ipynb) | [Open in Gemini Enterprise Agent Platform Workbench](https://console.cloud.google.com/agent-platform/notebooks/deploy-notebook?download_url=https://raw.githubusercontent.com/GoogleCloudPlatform/vertex-ai-samples/main/notebooks/official/)
+
+## Train a regression model for tabular data
+
+|  ![Tabular regression training introduction](https://docs.cloud.google.com/static/gemini-enterprise-agent-platform/machine-learning/images/automl-tables.svg) |  Create a Gemini Enterprise Agent Platform dataset from tabular data, and then train a regression model with AutoML. Deploy the model to an endpoint and make online predictions or make predictions in batch format.  **Notebook** : You can choose to run this tutorial and make **online predictions** using a notebook.  
+[Run in Colab](https://colab.sandbox.google.com/github/GoogleCloudPlatform/vertex-ai-samples/blob/main/notebooks/official/automl/sdk_automl_tabular_regression_online_bq.ipynb) | [Open in Colab Enterprise](https://console.cloud.google.com/agent-platform/colab/import/https:%2F%2Fraw.githubusercontent.com%2FGoogleCloudPlatform%2Fvertex-ai-samples%2Fmain%2Fnotebooks%2Fofficial%2Fautoml%2Fsdk_automl_tabular_regression_online_bq.ipynb) | [View on GitHub](https://github.com/GoogleCloudPlatform/vertex-ai-samples/blob/main/notebooks/official/automl/sdk_automl_tabular_regression_online_bq.ipynb) | [Open in Gemini Enterprise Agent Platform Workbench](https://console.cloud.google.com/agent-platform/notebooks/deploy-notebook?download_url=https://raw.githubusercontent.com/GoogleCloudPlatform/vertex-ai-samples/main/notebooks/official/) **Notebook** : You can choose to run this tutorial and make **batch predictions** using a notebook.  
+[Run in Colab](https://colab.sandbox.google.com/github/GoogleCloudPlatform/vertex-ai-samples/blob/main/notebooks/official/automl/sdk_automl_tabular_regression_batch_bq.ipynb) | [Open in Colab Enterprise](https://console.cloud.google.com/agent-platform/colab/import/https:%2F%2Fraw.githubusercontent.com%2FGoogleCloudPlatform%2Fvertex-ai-samples%2Fmain%2Fnotebooks%2Fofficial%2Fautoml%2Fsdk_automl_tabular_regression_batch_bq.ipynb) | [View on GitHub](https://github.com/GoogleCloudPlatform/vertex-ai-samples/blob/main/notebooks/official/automl/sdk_automl_tabular_regression_batch_bq.ipynb) | [Open in Gemini Enterprise Agent Platform Workbench](https://console.cloud.google.com/agent-platform/notebooks/deploy-notebook?download_url=https://raw.githubusercontent.com/GoogleCloudPlatform/vertex-ai-samples/main/notebooks/official/)
+
+## Train a time-series forecasting model for tabular data
+
+|  ![Tabular forecasting training introduction](https://docs.cloud.google.com/static/gemini-enterprise-agent-platform/machine-learning/images/automl-tables.svg) |  Create a Gemini Enterprise Agent Platform dataset from tabular data, and then train a forecasting model with AutoML. Make predictions in batch format.  **Notebook** : You can choose to run this tutorial as a notebook.  
+[Run in Colab](https://colab.sandbox.google.com/github/GoogleCloudPlatform/vertex-ai-samples/blob/main/notebooks/official/automl/sdk_automl_tabular_forecasting_batch.ipynb) | [Open in Colab Enterprise](https://console.cloud.google.com/agent-platform/colab/import/https:%2F%2Fraw.githubusercontent.com%2FGoogleCloudPlatform%2Fvertex-ai-samples%2Fmain%2Fnotebooks%2Fofficial%2Fautoml%2Fsdk_automl_tabular_forecasting_batch.ipynb) | [View on GitHub](https://github.com/GoogleCloudPlatform/vertex-ai-samples/blob/main/notebooks/official/automl/sdk_automl_tabular_forecasting_batch.ipynb) | [Open in Gemini Enterprise Agent Platform Workbench](https://console.cloud.google.com/agent-platform/notebooks/deploy-notebook?download_url=https://raw.githubusercontent.com/GoogleCloudPlatform/vertex-ai-samples/main/notebooks/official/)
+
+## Train a classification model for image data
+
+|  ![Image classification training introduction](https://docs.cloud.google.com/static/gemini-enterprise-agent-platform/machine-learning/images/automl-vision.svg) |  Create a Gemini Enterprise Agent Platform dataset for image data, and then train a classification model with AutoML. Deploy the model to an endpoint and make online predictions.  **Google Cloud console** : You can choose tutorial guides with step-by-step instructions for the Google Cloud console.  
+[Show on cloud.google.com](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tutorials/image-classification-automl/overview)
+
+## How to open a notebook in Gemini Enterprise Agent Platform Workbench
+
+To open a notebook tutorial in a Vertex AI Workbench instance: 
+
+  1. Click the **Vertex AI Workbench** link in the [notebook list](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tutorials/jupyter-notebooks). The link opens the Vertex AI Workbench console. 
+  2. In the **Deploy to notebook** screen, type a name for your new Vertex AI Workbench instance and click **Create**. 
+  3. In the **Ready to open notebook** dialog that appears after the instance starts, click **Open**. 
+  4. On the **Confirm deployment to notebook server** page, select **Confirm**. 
+  5. Before running the notebook, select **Kernel > Restart Kernel and Clear all Outputs**. 
+
+
+
+## What's next
+
+  * View the full list of [Gemini Enterprise Agent Platform notebook tutorials](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tutorials/jupyter-notebooks).
+  * Learn more about [model training](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training-overview).
+
+Send feedback  Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates. Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],[],[],[]] 

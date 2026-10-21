@@ -1,0 +1,189 @@
+---
+url: https://docs.cloud.google.com/run/docs/configuring/concurrency/
+title: Set maximum concurrent requests per instance \u00a0|\u00a0 Cloud Run \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T00:15:51.311475+00:00
+---
+
+# Set maximum concurrent requests per instance  |  Cloud Run  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/run/docs/configuring/concurrency/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Application hosting ](https://docs.cloud.google.com/docs/application-hosting)
+  * [ Cloud Run ](https://docs.cloud.google.com/run/docs)
+  * [ Guides ](https://docs.cloud.google.com/run/docs/overview/what-is-cloud-run)
+
+
+
+Send feedback 
+
+#  Set maximum concurrent requests per instance Stay organized with collections  Save and categorize content based on your preferences. 
+
+Cloud Run concurrency settings let you define the maximum number of simultaneous requests a single instance processes. Tuning this value helps you balance request throughput, manage memory usage, and optimize costs.
+
+To understand how concurrency affects autoscaling and instance behavior, see [About concurrency](https://docs.cloud.google.com/run/docs/about-concurrency).
+
+## Required roles
+
+To get the permissions that you need to configure and deploy Cloud Run services, ask your administrator to grant you the following IAM roles: 
+
+  * [Cloud Run Developer ](https://docs.cloud.google.com/iam/docs/roles-permissions/run#run.developer) (`roles/run.developer`) on the Cloud Run service
+  * [Service Account User ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`) on the service identity
+
+
+
+If you are deploying a [service](https://docs.cloud.google.com/run/docs/deploying-source-code#required_roles) or [function](https://docs.cloud.google.com/run/docs/deploy-functions#required-roles) from source code, you must also have additional roles granted to you on your project and Cloud Build service account.
+
+For a list of IAM roles and permissions that are associated with Cloud Run, see [Cloud Run IAM roles](https://docs.cloud.google.com/run/docs/reference/iam/roles) and [Cloud Run IAM permissions](https://docs.cloud.google.com/run/docs/reference/iam/permissions). If your Cloud Run service interfaces with Google Cloud APIs, such as Cloud Client Libraries, see the [service identity configuration guide](https://docs.cloud.google.com/run/docs/configuring/services/service-identity). For more information about granting roles, see [deployment permissions](https://docs.cloud.google.com/run/docs/reference/iam/roles#additional-configuration) and [manage access](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access).
+
+## Configure maximum concurrent requests per instance
+
+Any configuration change leads to the creation of a new revision. Subsequent revisions will also automatically get this configuration setting unless you make explicit updates to change it.
+
+For Cloud Run services, you can set maximum concurrent requests per instance using the Google Cloud console, the gcloud command line, or using a .yaml file when you [create a new service](https://docs.cloud.google.com/run/docs/deploying#service) or [deploy a new revision](https://docs.cloud.google.com/run/docs/deploying#revision):
+
+### Console
+
+  1. In the Google Cloud console, go to Cloud Run:
+
+[Go to Cloud Run](https://console.cloud.google.com/run)
+
+  2. Select **Services** from the Cloud Run navigation menu, and click **Deploy container** to configure a new service. If you are configuring an existing service, click the service.
+
+  3. If you are configuring a new service, fill out the initial service settings page, then click **Containers, Networking, Security** to expand the service configuration page.
+
+  4. If you are configuring an existing service, click the **Scaling** tab.
+
+  5. In the **Requests** section, specify the maximum number of container instances in the **Maximum concurrent requests per instance** field.
+
+  6. Click **Create** for a new service. Click **View diff & redeploy**, then **Deploy changes** for an existing service.
+
+
+
+
+###  gcloud 
+
+To set maximum concurrent requests per instance, use the following command:
+    
+    
+    gcloud run services update SERVICE --concurrency CONCURRENCY
+
+Replace the following:
+
+  * SERVICE: the name of your service.
+  * CONCURRENCY: the maximum number of concurrent requests per instance. For example, the following sets a maximum of 1 concurrent requests:
+        
+        gcloud run services update SERVICE --concurrency 1
+
+
+
+
+Changing the maximum concurrent requests per instance of a given service will capture this setting in a new revision.
+
+To revert to the default maximum concurrent requests per instance (`80`), use the command
+    
+    
+    gcloud run services update SERVICE --concurrency default
+
+Replace SERVICE with the name of the service you are configuring.
+
+### YAML
+
+  1. If you are creating a new service, skip this step. If you are updating an existing service, download its [YAML configuration](https://docs.cloud.google.com/run/docs/reference/yaml/v1):
+         
+         gcloud run services describe SERVICE --format export > service.yaml
+
+  2. Update the `containerConcurrency` attribute:
+         
+         apiVersion: serving.knative.dev/v1
+         kind: Service
+         metadata:
+           name: SERVICE
+         spec:
+           template:
+             metadata:
+               name: REVISION
+             spec:
+               containerConcurrency: CONCURRENCY
+
+Replace the following:
+
+     * SERVICE: the name of your Cloud Run service
+     * `IMAGE_URL`: a reference to the container image, for example, `us-docker.pkg.dev/cloudrun/container/hello:latest`. If you use Artifact Registry, the [repository](https://docs.cloud.google.com/artifact-registry/docs/repositories/create-repos#docker) REPO_NAME must already be created. The URL follows the format of `LOCATION-docker.pkg.dev/PROJECT_ID/REPO_NAME/PATH:TAG` .
+     * CONCURRENCY: the maximum number of concurrent requests per instance.
+     * `REVISION`: a new revision name or delete it (if present). If you supply a new revision name, it **must** meet the following criteria:
+       * Starts with `SERVICE-`
+       * Contains only lowercase letters, numbers and `-`
+       * Does not end with a `-`
+       * Does not exceed 63 characters
+  3. Create or update the service using the following command:
+         
+         gcloud run services replace service.yaml
+
+The `gcloud run services replace` command defaults to using `service.yaml` file if present.
+
+
+
+
+### Terraform
+
+To learn how to apply or remove a Terraform configuration, see [Basic Terraform commands](https://docs.cloud.google.com/docs/terraform/basic-commands).
+
+Add the following to a [`google_cloud_run_v2_service`](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/cloud_run_v2_service) resource in your Terraform configuration:  
+
+    
+    
+    resource "google_cloud_run_v2_service" "default" {
+      name     = "cloudrun-service-concurrency"
+      location = "us-central1"
+    
+      deletion_protection = false # set to "true" in production
+    
+      template {
+        containers {
+    ** image = "us-docker.pkg.dev/cloudrun/container/hello"**
+    **}**
+        # Maximum concurrent requests
+        max_instance_request_concurrency = 80
+      }
+    }
+
+Replace `80` with your desired maximum number of concurrent requests.
+
+## View concurrency settings
+
+To view the current concurrency settings for your Cloud Run service:
+
+### Console
+
+  1. In the Google Cloud console, go to the Cloud Run **Services** page:
+
+[Go to Cloud Run](https://console.cloud.google.com/run/services)
+
+  2. Click the service you are interested in to open the **Service details** page.
+
+  3. Click the **Scaling** tab to view the settings.
+
+
+
+
+###  gcloud 
+
+  1. Use the following command:
+         
+         gcloud run services describe SERVICE
+
+  2. Locate the concurrency setting in the returned configuration.
+
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

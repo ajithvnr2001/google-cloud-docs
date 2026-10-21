@@ -1,0 +1,29 @@
+---
+url: https://docs.cloud.google.com/appengine/docs/standard/python3/reference/services/bundled/google/appengine/api/urlfetch/DownloadError/
+title: google.appengine.api.urlfetch.DownloadError \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-15T16:14:19.963442+00:00
+---
+
+# google.appengine.api.urlfetch.DownloadError  |  App Engine standard environment  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/appengine/docs/standard/python3/reference/services/bundled/google/appengine/api/urlfetch/DownloadError/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Application hosting ](https://docs.cloud.google.com/docs/application-hosting)
+  * [ App Engine ](https://docs.cloud.google.com/appengine/docs)
+  * [ Standard environment ](https://docs.cloud.google.com/appengine/docs/standard)
+  * [ Reference ](https://docs.cloud.google.com/appengine/docs/standard/apis)
+
+
+
+Send feedback 
+
+#  google.appengine.api.urlfetch.DownloadError Stay organized with collections  Save and categorize content based on your preferences. 
+
+[ ![](https://www.tensorflow.org/images/GitHub-Mark-32px.png) View source on GitHub ](https://github.com/GoogleCloudPlatform/appengine-python-standard/tree/main/src/google/appengine/api/urlfetch_errors.py#L34-L40) The URL could not be retrieved. Inherits From: [`Error`](https://docs.cloud.google.com/appengine/docs/standard/python3/reference/services/bundled/google/appengine/api/urlfetch/Error), [`expected_type`](https://docs.cloud.google.com/appengine/docs/standard/python3/reference/services/bundled/google/appengine/api/validation/Validator/expected_type)
+
+#### View aliases
+
+**Main aliases** `google.appengine.api.urlfetch_errors.DownloadError` This exception is only raised when we cannot contact the server. HTTP errors (such as `404`) are returned in the `status_code` field in the return value of `fetch`, and no exception is raised. Send feedback  Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates. Last updated 2025-06-16 UTC. Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2025-06-16 UTC."],[],[]] 

@@ -1,0 +1,103 @@
+---
+url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api/
+title: Apps API \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T21:43:54.017821+00:00
+---
+
+# Apps API  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Google Cloud CCaaS ](https://docs.cloud.google.com/contact-center/ccai-platform/docs)
+  * [ User Guides ](https://docs.cloud.google.com/contact-center/ccai-platform/docs/get-started)
+
+
+
+Send feedback 
+
+#  Apps API Stay organized with collections  Save and categorize content based on your preferences. 
+
+The Contact Center AI Platform (CCAI Platform) provides API endpoints to support integration with the platform. The Apps API extends features of the channels that the platform supports, including calls, chats and SMS. The endpoints are grouped into the following categories:
+
+  * [Agent status](https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-agent-status)
+
+  * [Bulk user management](https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-bulk-user-management)
+
+  * [Calls](https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-call)
+
+  * [Campaigns](https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-campaign)
+
+  * [Chats](https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-chat)
+
+  * [Co-browse](https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-cobrowse)
+
+  * [Company Do Not Call list](https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-dnc)
+
+  * [Contact data](https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-contact-data)
+
+  * [End users](https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-end-user)
+
+  * [Force agent logout](https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-agent-logout)
+
+  * [SMS](https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-sms)
+
+  * [Wait times](https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-wait-time)
+
+
+
+
+## Basic authentication
+
+Requests use basic authentication. To create API credentials follow these steps:
+
+  1. Go to the CCAI Platform portal.
+
+  2. Go to **Settings > Developer Settings > API Credentials**.
+
+  3. Add a new APi credentials and provide a name.
+
+
+**Note:** The API key that you provide can't be retrieved later. Be sure to store it securely.
+
+The credentials for API calls are as follows:
+
+  * The subdomain is used as the `{username}` variable.
+
+  * The token is used as the`{​password}` variable.
+
+
+
+
+Every installation has its own subdomain. To find the subdomain, locate the URL in your browser. It should look similar to the following:
+
+`https://customer.uc1.ccaiplatform.com`
+
+Substitute the subdomain (`customer`, in this example) for the `{subdomain}` variable. Substitute the remainder of the URL (`rest.of.url.com`, in this example) for the `{domain}` variable.
+
+## Base URL
+
+The API uses the following base URL for all of its API requests
+
+`https://{subdomain}.{domain​}/apps/api/v1`
+
+where a mention to `/calls` means `https://{subdomain​}.​{domain​}/apps/api/v1/calls`
+
+## Rate Limits
+
+The system limits requests to a rate of 10 request per second per customer.
+
+## Expect unrecognized JSON keys in API responses
+
+All API updates are backward compatible. We reserve the right to introduce new JSON keys in existing API responses at any time. We recommend handling responses defensively by disregarding any unrecognized keys to maintain continued functionality.
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

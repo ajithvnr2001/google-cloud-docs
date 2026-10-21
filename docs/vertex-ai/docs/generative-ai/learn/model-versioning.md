@@ -1,0 +1,142 @@
+---
+url: https://docs.cloud.google.com/vertex-ai/docs/generative-ai/learn/model-versioning/
+title: Model versions and lifecycle \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T17:13:09.532375+00:00
+---
+
+# Model versions and lifecycle  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/vertex-ai/docs/generative-ai/learn/model-versioning/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Model versions and lifecycle Stay organized with collections  Save and categorize content based on your preferences. 
+
+This document defines key terms related to the lifecycle stages and important dates for Gemini and embedding models that are available on Google Cloud Gemini Enterprise Agent Platform. It also gives you the recommended upgrades for the models and points you to available migration paths. 
+
+## Latest available models
+
+The following tables list the available models and their retirement dates. While retirement timelines may be extended, they won't be moved to an earlier date than what is listed.
+
+### Models available for at least 12 months after release
+
+The following table lists the models that will be available for at least 12 months after initial release:
+
+### Gemini models
+
+Model ID | Release date | Retirement date | Replacement model ID  
+---|---|---|---  
+[`gemini-4-argon`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon) | October 13, 2026 |  No retirement date announced  |   
+[`gemini-3.8-live`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-live) | September 24, 2026 |  No retirement date announced  |   
+[`gemini-3.5-flash-lite`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite) | July 21, 2026 |  July 21, 2027 or later  |   
+[`gemini-3.5-flash`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash) | May 19, 2026 |  May 19, 2027 or later  |   
+[`gemini-3.1-flash-lite`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite) | May 7, 2026 |  May 7, 2027 or later  |   
+[`gemini-2.5-pro`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-pro) | June 17, 2025 |  October 20, 2026  |  [`gemini-3.8-flash`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash) or [`gemini-3.5-flash`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash)  
+[`gemini-2.5-flash`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash) | June 17, 2025 |  October 20, 2026  |  [`gemini-3.8-flash`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash) or [`gemini-3.5-flash-lite`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite) or [`gemini-3.1-flash-lite`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite)  
+[`gemini-2.5-flash-lite`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite) | July 22, 2025 |  October 20, 2026  |  [`gemini-3.8-flash`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash) or [`gemini-3.1-flash-lite`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite) or [Gemma 4](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/gemma4)  
+[`gemini-live-2.5-flash-native-audio`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-live-api) | December 12, 2025 |  December 13, 2026  |   
+  
+### Gemini image models
+
+Model ID | Release date | Retirement date | Replacement model ID  
+---|---|---|---  
+[`gemini-3.1-flash-lite-image`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite-image) | June 23, 2026 |  June 28, 2027 or later  |   
+[`gemini-3-pro-image`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-pro-image) | May 28, 2026 |  May 28, 2027 or later  |   
+[`gemini-3.1-flash-image`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-image) | May 28, 2026 |  May 28, 2027 or later  |   
+[`gemini-2.5-flash-image`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-image) | October 2, 2025 |  March 15, 2027  |  [`gemini-3.1-flash-lite-image`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite-image)  
+  
+### Veo models
+
+Model ID | Release date | Retirement date | Replacement model ID  
+---|---|---|---  
+[`veo-3.0-generate-001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-generate-001) | July 29, 2025 |  June 30, 2026  |  [`veo-3.1-generate-001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-generate-001)  
+[`veo-3.0-fast-generate-001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-fast-generate-001) | July 29, 2025 |  June 30, 2026  |  [`veo-3.1-fast-generate-001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-fast-generate-001)  
+[`veo-3.1-generate-001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-generate-001) | November 17, 2025 |  November 17, 2026 or later  |   
+[`veo-3.1-fast-generate-001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-fast-generate-001) | November 17, 2025 |  November 17, 2026 or later  |   
+  
+### Embeddings models
+
+Model ID | Release date | Retirement date | Replacement model ID  
+---|---|---|---  
+[`gemini-embedding-2`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/embedding-2) | April 22, 2026 |  |   
+[`gemini-embedding-001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/embeddings/get-text-embeddings) | May 20, 2025 | No sooner than May 20, 2028 |   
+[`text-embedding-005`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/embeddings/get-text-embeddings) | November 18, 2024 | April 1, 2027 |   
+[`text-embedding-004`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/embeddings/get-text-embeddings) | May 14, 2024 | April 1, 2027 |   
+[`text-multilingual-embedding-002`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/embeddings/get-text-embeddings) | May 14, 2024 | April 1, 2027 |   
+[`multimodalembedding@001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/embeddings/get-multimodal-embeddings) | February 12, 2024 | April 1, 2027 |   
+  
+### Models available for shorter availability periods
+
+Short-term availability models remain active until a replacement model is released and a retirement date is announced. When we schedule a model for retirement, we post a fixed date in the following table that gives you at least 45 days to migrate. Even after a replacement launches, a model remains active until we announce its retirement date.
+
+The following table lists models available for shorter terms:
+
+Model ID | Release date | Retirement date | Replacement model ID  
+---|---|---|---  
+[`gemini-4-argon-cyber-permissive`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon#cyber) | October 13, 2026 |  No retirement date announced  |   
+[`gemini-3.8-flash-cyber`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-cyber) | September 16, 2026 |  No retirement date announced  |   
+[`gemini-3.8-flash`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash) | September 2, 2026 |  No retirement date announced  |   
+[`gemini-3.7-flash`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-7-flash) | August 13, 2026 |  January 28, 2027  |  [`gemini-3.8-flash`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash)  
+[`gemini-3.6-flash`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-6-flash) | July 21, 2026 |  November 19, 2026  |  [`gemini-3.8-flash`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash)  
+[`gemini-nano-banana-2.1`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/nano-banana-2-1) | October 6, 2026 |  No retirement date announced  |   
+  
+### Retired models
+
+#### The following table lists the retired models (click to expand)
+
+Model ID | Release date | Retirement date | Recommended upgrade  
+---|---|---|---  
+`gemini-2.0-flash` | February 5, 2025 | June 1, 2026 | [`gemini-3.1-flash-lite`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite)  
+`gemini-2.0-flash-lite` | February 25, 2025 | June 1, 2026 | [`gemini-3.1-flash-lite`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite)  
+`gemini-1.5-pro-001` | May 24, 2024 | May 24, 2025 | [`gemini-2.5-flash`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash)  
+`gemini-1.5-pro-002` | September 24, 2024 | September 24, 2025 | [`gemini-2.5-flash`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash)  
+`gemini-1.5-flash-001` | May 24, 2024 | May 24, 2025 | [`gemini-2.5-flash-lite`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite)  
+`gemini-1.5-flash-002` | September 24, 2024 | September 24, 2025 | [`gemini-2.5-flash-lite`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite)  
+`textembedding-gecko@003*` | December 12, 2023 | May 24, 2025 | [`gemini-embedding-001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/embeddings/get-text-embeddings)  
+`textembedding-gecko-multilingual@001` | November 2, 2023 | May 24, 2025 | [`gemini-embedding-001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/embeddings/get-text-embeddings)  
+`gemini-1.0-pro-001` | February 15, 2024 | April 21, 2025 | [`gemini-2.5-flash`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash)  
+`gemini-1.0-pro-002` | April 9, 2024 | April 21, 2025 | [`gemini-2.5-flash`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash)  
+`gemini-1.0-pro-vision-001` | February 15, 2024 | April 21, 2025 | [`gemini-2.5-flash`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash)  
+`text-bison` | May 2023 | April 21, 2025 | [`gemini-2.5-flash-lite`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite)  
+`chat-bison` | May 2023 | April 21, 2025 | [`gemini-2.5-flash-lite`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite)  
+`code-gecko` | May 2023 | April 21, 2025 | [`gemini-2.5-flash-lite`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite)  
+`textembedding-gecko@002` | November 2, 2023 | April 21, 2025 | [`gemini-embedding-001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/embeddings/get-text-embeddings)  
+`textembedding-gecko@001` | June 7, 2023 | April 21, 2025 | [`gemini-embedding-001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/embeddings/get-text-embeddings)  
+`imagetext` | June 7, 2023 | September 24, 2025 | [`gemini-2.5-flash-image`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-image)  
+  
+## Migrate to a latest available model
+
+To learn how to migrate to a latest stable model, see [Migrate to the latest Gemini models](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate). This guide gives you a set of migration steps that aims to minimize some potential risks involved in model migration and helps you use new models in an optimal way.
+
+However, if you don't have time to follow the guide and just need to quickly resolve the errors caused by models reaching their retirement dates, do the following:
+
+  1. Update your application to point to the recommended upgrades.
+  2. Test all mission critical features to make sure everything works as expected.
+  3. Deploy the updates like you normally would.
+
+
+
+## What's next
+
+Resource 
+
+###  [ Deployment and endpoint locations ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations)
+
+Learn about deployment and endpoint locations for models in Agent Platform. 
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

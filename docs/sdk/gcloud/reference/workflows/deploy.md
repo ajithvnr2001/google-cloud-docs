@@ -1,0 +1,204 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/workflows/deploy/
+title: gcloud workflows deploy \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T05:50:01.123294+00:00
+---
+
+# gcloud workflows deploy  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/workflows/deploy/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud workflows deploy Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud workflows deploy - create or update a workflow 
+SYNOPSIS
+    
+
+`gcloud workflows deploy` (`WORKFLOW` : `--location`=`LOCATION`) [`--async`] [`--call-log-level`=`CALL_LOG_LEVEL`; default="none"] [`--description`=`DESCRIPTION`] [`--execution-history-level`=`EXECUTION_HISTORY_LEVEL`; default="none"] [`--labels`=[`KEY`=`VALUE`,…]] [`--service-account`=`SERVICE_ACCOUNT`] [`--source`=`SOURCE`] [`--tags`=[`KEY`=`VALUE`,…]] [`--clear-env-vars` | `--env-vars-file`=`FILE_PATH` | `--remove-env-vars`=[`KEY`,…] | `--set-env-vars`=[`KEY`=`VALUE`,…] | `--update-env-vars`=[`KEY`=`VALUE`,…]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     Create or update a workflow. 
+EXAMPLES
+     To deploy a workflow with source code myWorkflow.yaml on Workflows: 
+    
+    
+    gcloud workflows deploy my-workflow --source=myWorkflow.yaml
+
+You may also skip waiting for the operation to finish: 
+    
+    
+    gcloud workflows deploy my-workflow --source=myWorkflow.yaml --async
+
+To specify a service account as the workflow identity: 
+    
+    
+    gcloud workflows deploy my-workflow --source=myWorkflow.yaml --service-account=my-account@my-project.iam.gserviceaccount.com
+
+POSITIONAL ARGUMENTS
+    
+
+Workflow resource - Name of the workflow to deploy. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `workflow` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`WORKFLOW`
+     ID of the workflow or fully qualified identifier for the workflow. 
+
+To set the `workflow` attribute: 
+
+  * provide the argument `workflow` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     Cloud location for the workflow. Alternatively, set the property [workflows/location]. 
+
+To set the `location` attribute: 
+
+  * provide the argument `workflow` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `workflows/location`. 
+
+
+FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--call-log-level`=`CALL_LOG_LEVEL`; default="none"
+     Level of call logging to apply by default for the workflow. `CALL_LOG_LEVEL` must be one of: 
+
+`log-all-calls`
+     Log all calls to subworkflows or library functions and their results. 
+`log-errors-only`
+     Log when a call is stopped due to an exception. 
+`log-none`
+     Perform no call logging. 
+`none`
+     No logging level specified. 
+`--description`=`DESCRIPTION`
+     The description of the workflow to deploy. 
+`--execution-history-level`=`EXECUTION_HISTORY_LEVEL`; default="none"
+     Level of execution history to apply for the workflow. `EXECUTION_HISTORY_LEVEL` must be one of: 
+
+`execution-history-basic`
+     Enable basic execution history. 
+`execution-history-detailed`
+     Enable detailed execution history, including expected iterations and in-scope variable values. 
+`none`
+     No execution history level specified. 
+`--labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to add. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+`--service-account`=`SERVICE_ACCOUNT`
+     The service account that should be used as the workflow identity. "projects/PROJECT_ID/serviceAccounts/" prefix may be skipped from the full resource name, in that case "projects/-/serviceAccounts/" is prepended to the service account ID. 
+`--source`=`SOURCE`
+     Location of a workflow source code to deploy. Required on first deployment. Location needs to be defined as a path to a local file with the source code. 
+`--tags`=[`KEY`=`VALUE`,…]
+     List of tags KEY=VALUE pairs to bind. Each item must be expressed as "<tag-key-namespaced-name>=<tag-value-short-name>". 
+
+Example: 123/environment=production,123/costCenter=marketing 
+
+Flags to configure user-defined environment variables for a workflow. 
+    
+    
+    Keys can't be empty strings and can't start with `GOOGLE`
+    or `WORKFLOWS`. We recommend that environment variable keys consist
+    solely of uppercase letters, digits, and underscores (`_`), and that
+    they don't begin with a digit. Consider prefixing your user-defined
+    environment variables with a unique key to avoid conflicts with other
+    variables.
+    
+    
+    If your value contains commas, prefix the mapping with a different
+    delimiter character enclosed between `^` (example 1). Use special
+    characters in your shell with caution as they might not work as
+    intended or need escaping (example 2 escapes a `$` in Bash).
+    
+    
+    Example 1: --set-env-vars ^@^KEY1=ONE,VALUE,WITH,COMMAS@KEY2=VALUE2
+    
+    
+    Example 2: --set-env-vars ^$^KEY1=VALUE1\$KEY2=VALUE,WITH,COMMAS,TOO
+    
+    
+    A maximum of 20 user-defined environment variables can be defined.
+    Each definition string (`KEY=value`) is limited to 4 KiB.
+    All keys and values are converted to strings.
+
+At most one of these can be specified: 
+
+`--clear-env-vars`
+     Clears all user-defined environment variables previously set for the workflow. 
+
+Example: gcloud workflows deploy ${workflow_name} --clear-env-vars 
+
+`--env-vars-file`=`FILE_PATH`
+     Sets environment variables for the workflow to those stored in a local YAML file at the given path. All existing environment variables are removed before the new environment variables are added. 
+
+Example: gcloud workflows deploy ${workflow_name} \--env-vars-file=/path/to/env_vars.yaml 
+
+Inside env_vars.yaml: 
+
+policy: global 
+
+retry_count: 5 # Service converts this to string "5" 
+
+`--remove-env-vars`=[`KEY`,…]
+     Removes user-defined environment variables from a workflow based on a list of environment variable keys to be removed. 
+
+Example: gcloud workflows deploy ${workflow_name} --remove-env-vars policy,retry_count… 
+
+`--set-env-vars`=[`KEY`=`VALUE`,…]
+     Sets environment variables for the workflow based on a comma-separated list of key-value pairs. Will overwrite a workflow's existing environment variables. 
+
+Example: gcloud workflows deploy ${workflow_name} --set-env-vars policy=global,retry_count=5 
+
+`--update-env-vars`=[`KEY`=`VALUE`,…]
+     Updates existing or adds new user-defined environment variables based on a comma-separated list of key-value pairs. 
+
+Example: gcloud workflows deploy ${workflow_name} --update-env-vars policy=regional,retry_count=2 
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This variant is also available: 
+    
+    
+    [gcloud beta workflows deploy](https://docs.cloud.google.com/sdk/gcloud/reference/beta/workflows/deploy)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

@@ -1,0 +1,218 @@
+---
+url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/delete-connector/
+title: Delete a connector \u00a0|\u00a0 Managed Service for Apache Kafka \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T05:28:17.004760+00:00
+---
+
+# Delete a connector  |  Managed Service for Apache Kafka  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/delete-connector/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Data analytics ](https://docs.cloud.google.com/docs/data)
+  * [ Managed Service for Apache Kafka ](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs)
+  * [ Guides ](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/overview)
+
+
+
+Send feedback 
+
+#  Delete a connector Stay organized with collections  Save and categorize content based on your preferences. 
+
+Deleting a connector permanently removes it from the Connect cluster. This action stops the flow of data between the source and target systems. Ensure you understand the implications for your data pipeline before deleting a connector.
+
+To delete a connector in a Connect cluster, you can use the Google Cloud console, the gcloud CLI, the Managed Service for Apache Kafka client library, or the Managed Kafka API. You can't use the open source Apache Kafka API to delete connectors.
+
+## Required roles and permissions to delete a connector
+
+To get the permissions that you need to delete a connector, ask your administrator to grant you the [Managed Kafka Connector Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/managedkafka#managedkafka.connectorEditor) (`roles/managedkafka.connectorEditor`) IAM role on the project containing the Connect cluster. For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+This predefined role contains the permissions required to delete a connector. To see the exact permissions that are required, expand the **Required permissions** section: 
+
+#### Required permissions
+
+The following permissions are required to delete a connector:
+
+  * Grant the delete connector permission on the requested connector: `managedkafka.connectors.delete`
+  * Grant the list connectors permission on the Connect cluster containing the connector. This is only required for console deletion: `managedkafka.connectors.list`
+
+
+
+You might also be able to get these permissions with [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
+
+## Delete a connector
+
+###  Console 
+
+  1. In the Google Cloud console, go to the **Connect Clusters** page.
+
+[Go to Connect Clusters](https://console.cloud.google.com/managedkafka/connectClusters)
+
+  2. Click the Connect cluster that hosts the connector that you want to delete.
+
+The **Connect cluster details** page is displayed.
+
+  3. On the **Resources** tab, find the connector in the list and click its name.
+
+You are redirected to the **Connector details** page.
+
+  4. Click **Delete**.
+
+
+
+
+###  gcloud 
+
+  1. In the Google Cloud console, activate Cloud Shell.
+
+[Activate Cloud Shell](https://console.cloud.google.com/?cloudshell=true)
+
+At the bottom of the Google Cloud console, a [Cloud Shell](https://docs.cloud.google.com/shell/docs/how-cloud-shell-works) session starts and displays a command-line prompt. Cloud Shell is a shell environment with the Google Cloud CLI already installed and with values already set for your current project. It can take a few seconds for the session to initialize. 
+
+  2. Use the [`gcloud managed-kafka connectors delete`](https://docs.cloud.google.com/sdk/gcloud/reference/managed-kafka/connectors/delete) command to delete a connector:
+         
+         gcloud managed-kafka connectors delete CONNECTOR_ID \
+             --location=LOCATION \
+             --connect-cluster=CONNECT_CLUSTER_ID
+         
+
+Replace the following:
+
+     * CONNECTOR_ID: Required. The ID of the connector you want to delete.
+     * LOCATION: Required. The location of the [Connect cluster](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-connect-cluster) containing the connector.
+     * CONNECT_CLUSTER_ID: Required. The ID of the Connect cluster containing the connector.
+
+Example command:
+    
+    gcloud managed-kafka connectors delete test-connector \
+        --location=us-central1 \
+        --connect-cluster=test-connect-cluster
+    
+
+
+
+
+### Go
+
+Before trying this sample, follow the Go setup instructions in [ Install the client libraries](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/reference/libraries#install). For more information, see the [ Managed Service for Apache Kafka Go API reference documentation](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/managedkafka/latest/apiv1).
+
+To authenticate to Managed Service for Apache Kafka, set up Application Default Credentials(ADC). For more information, see [Set up ADC for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment).
+    
+    
+    import (
+    	"context"
+    	"fmt"
+    	"io"
+    
+    	"cloud.google.com/go/managedkafka/apiv1/managedkafkapb"
+    	"google.golang.org/api/option"
+    
+    	managedkafka "cloud.google.com/go/managedkafka/apiv1"
+    )
+    
+    func deleteConnector(w io.Writer, projectID, region, connectClusterID, connectorID string, opts ...option.ClientOption) error {
+    	// projectID := "my-project-id"
+    	// region := "us-central1"
+    	// connectClusterID := "my-connect-cluster"
+    	// connectorID := "my-connector"
+    	ctx := context.Background()
+    	client, err := managedkafka.NewManagedKafkaConnectClient(ctx, opts...)
+    	if err != nil {
+    		return fmt.Errorf("managedkafka.NewManagedKafkaConnectClient got err: %w", err)
+    	}
+    	defer client.Close()
+    
+    	connectorPath := fmt.Sprintf("projects/%s/locations/%s/connectClusters/%s/connectors/%s", projectID, region, connectClusterID, connectorID)
+    	req := &managedkafkapb.DeleteConnectorRequest{
+    		Name: connectorPath,
+    	}
+    	err = client.DeleteConnector(ctx, req)
+    	if err != nil {
+    		return fmt.Errorf("client.DeleteConnector got err: %w", err)
+    	}
+    	fmt.Fprint(w, "Deleted connector\n")
+    	return nil
+    }
+    
+
+### Java
+
+Before trying this sample, follow the Java setup instructions in [ Install the client libraries](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/reference/libraries#install). For more information, see the [ Managed Service for Apache Kafka Java API reference documentation](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/overview).
+
+To authenticate to Managed Service for Apache Kafka, set up Application Default Credentials. For more information, see [ Set up ADC for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment).
+    
+    
+    import com.google.api.gax.rpc.[ApiException](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.ApiException.html);
+    import com.google.cloud.managedkafka.v1.[ConnectorName](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/com.google.cloud.managedkafka.v1.ConnectorName.html);
+    import com.google.cloud.managedkafka.v1.[ManagedKafkaConnectClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/com.google.cloud.managedkafka.v1.ManagedKafkaConnectClient.html);
+    import java.io.IOException;
+    
+    public class DeleteConnector {
+    
+      public static void main(String[] args) throws Exception {
+        // TODO(developer): Replace these variables before running the example.
+        String projectId = "my-project-id";
+        String region = "my-region"; // e.g. us-east1
+        String clusterId = "my-connect-cluster";
+        String connectorId = "my-connector";
+        deleteConnector(projectId, region, clusterId, connectorId);
+      }
+    
+      public static void deleteConnector(
+          String projectId, String region, String clusterId, String connectorId) throws IOException {
+        try ([ManagedKafkaConnectClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/com.google.cloud.managedkafka.v1.ManagedKafkaConnectClient.html) managedKafkaConnectClient = [ManagedKafkaConnectClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/com.google.cloud.managedkafka.v1.ManagedKafkaConnectClient.html).create()) {
+          [ConnectorName](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/com.google.cloud.managedkafka.v1.ConnectorName.html) name = [ConnectorName](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/com.google.cloud.managedkafka.v1.ConnectorName.html).of(projectId, region, clusterId, connectorId);
+          // This operation is handled synchronously.
+          managedKafkaConnectClient.deleteConnector(name);
+          System.out.printf("Deleted connector: %s\n", name);
+        } catch (IOException | [ApiException](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.ApiException.html) e) {
+          System.err.printf("managedKafkaConnectClient.deleteConnector got err: %s\n", e.[getMessage](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.ErrorDetails.html#com_google_api_gax_rpc_ErrorDetails__T_getMessage_java_lang_Class_T__)());
+        }
+      }
+    }
+
+### Python
+
+Before trying this sample, follow the Python setup instructions in [ Install the client libraries](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/reference/libraries#install). For more information, see the [ Managed Service for Apache Kafka Python API reference documentation](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest).
+
+To authenticate to Managed Service for Apache Kafka, set up Application Default Credentials. For more information, see [Set up ADC for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment).
+    
+    
+    from google.api_core.exceptions import GoogleAPICallError
+    from google.cloud.managedkafka_v1.services.managed_kafka_connect import (
+        [ManagedKafkaConnectClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest/google.cloud.managedkafka_v1.services.managed_kafka_connect.ManagedKafkaConnectClient.html),
+    )
+    from google.cloud import [managedkafka_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest)
+    
+    # TODO(developer)
+    # project_id = "my-project-id"
+    # region = "us-central1"
+    # connect_cluster_id = "my-connect-cluster"
+    # connector_id = "my-connector"
+    
+    connect_client = ManagedKafkaConnectClient()
+    
+    request = [managedkafka_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest).[DeleteConnectorRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest/google.cloud.managedkafka_v1.types.DeleteConnectorRequest.html)(
+        name=connect_client.[connector_path](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest/google.cloud.managedkafka_v1.services.managed_kafka_connect.ManagedKafkaConnectClient.html#google_cloud_managedkafka_v1_services_managed_kafka_connect_ManagedKafkaConnectClient_connector_path)(project_id, region, connect_cluster_id, connector_id),
+    )
+    
+    try:
+        operation = connect_client.[delete_connector](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest/google.cloud.managedkafka_v1.services.managed_kafka_connect.ManagedKafkaConnectClient.html#google_cloud_managedkafka_v1_services_managed_kafka_connect_ManagedKafkaConnectClient_delete_connector)(request=request)
+        print(f"Waiting for operation {operation.operation.name} to complete...")
+        operation.result()
+        print("Deleted connector")
+    except GoogleAPICallError as e:
+        print(f"The operation failed with error: {e}")
+    
+
+_Apache Kafka® is a registered trademark of The Apache Software Foundation or its affiliates in the United States and/or other countries._
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-09 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 

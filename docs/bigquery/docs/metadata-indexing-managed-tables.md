@@ -1,0 +1,251 @@
+---
+url: https://docs.cloud.google.com/bigquery/docs/metadata-indexing-managed-tables/
+title: Metadata indexing for BigQuery tables \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T18:53:07.909373+00:00
+---
+
+# Metadata indexing for BigQuery tables  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/bigquery/docs/metadata-indexing-managed-tables/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Data analytics ](https://docs.cloud.google.com/docs/data)
+  * [ BigQuery ](https://docs.cloud.google.com/bigquery/docs)
+  * [ Guides ](https://docs.cloud.google.com/bigquery/docs/introduction)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+#  Metadata indexing for BigQuery tables 
+
+This document describes column metadata indexing in BigQuery and explains how to allocate dedicated resources to improve index freshness and query performance.
+
+BigQuery automatically indexes metadata for BigQuery tables exceeding 1 GiB. This metadata includes file location, partitioning information, and column-level attributes, which BigQuery uses to optimize and accelerate your queries.
+
+By default, metadata indexing in BigQuery is a free background operation and requires no action on your part. However, index freshness depends on available free resources and doesn't have performance service level objectives (SLOs). If index freshness is critical for your use case, we recommend configuring a [`BACKGROUND` reservation](https://docs.cloud.google.com/bigquery/docs/reservations-workload-management#assignments), which shares resources across background optimization jobs.
+
+## View the metadata index refresh time
+
+To see the last metadata index refresh time of a table, query the `LAST_METADATA_INDEX_REFRESH_TIME` column of the [`INFORMATION_SCHEMA.TABLE_STORAGE` view](https://docs.cloud.google.com/bigquery/docs/information-schema-table-storage). To do so, do the following:
+
+  1. In the Google Cloud console, go to the **BigQuery** page.
+
+[Go to BigQuery](https://console.cloud.google.com/bigquery)
+
+  2. In the query editor, enter the following statement: 
+         
+         SELECT
+           project_id,
+           project_number,
+           table_name,
+           last_metadata_index_refresh_time
+         FROM
+           [PROJECT_ID.]region-REGION.INFORMATION_SCHEMA.TABLE_STORAGE;
+
+Replace the following:
+
+     * `PROJECT_ID`: the ID of your Google Cloud project. If not specified, the default project is used.
+     * `REGION`: the [region](https://docs.cloud.google.com/bigquery/docs/locations) where the project is located—for example, `region-us`.
+  3. Click play_circle **Run**.
+
+
+
+
+## View column metadata index usage
+
+To view whether the column metadata index was used after a job completes, check the [`TableMetadataCacheUsage` property](https://docs.cloud.google.com/bigquery/docs/reference/rest/v2/Job#tablemetadatacacheusage) of the [Job](https://docs.cloud.google.com/bigquery/docs/reference/rest/v2/Job) resource. If the `unusedReason` field is empty (not populated), the column metadata index was used. If it is populated, the accompanying `explanation` field provides a reason why the column metadata index wasn't used.
+
+You can also view column metadata index usage with the `metadata_cache_statistics` field in the [`INFORMATION_SCHEMA.JOBS` view](https://docs.cloud.google.com/bigquery/docs/information-schema-jobs).
+
+For example, the following displays column metadata index usage for the `my-job` job:
+    
+    
+    SELECT metadata_cache_statistics
+    FROM `region-US`.INFORMATION_SCHEMA.JOBS
+    WHERE job_id = 'my-job';
+
+As another example, the following displays the number of jobs that used column metadata index for the `my-table` table:
+    
+    
+    SELECT COUNT(*)
+    FROM
+      `region-US`.INFORMATION_SCHEMA.JOBS,
+      UNNEST(metadata_cache_statistics.table_metadata_cache_usage) AS stats
+    WHERE
+      stats.table_reference.table_id='my-table' AND
+      stats.table_reference.dataset_id='my-dataset' AND
+      stats.table_reference.project_id='my-project' AND
+      stats.unusedReason IS NULL;
+
+## Set up dedicated indexing resources
+
+To set up resources for metadata indexing updates in your project, you first need to have a reservation assigned to your project. To do so, do the following:
+
+  1. [Create a `BACKGROUND` reservation](https://docs.cloud.google.com/bigquery/docs/reservations-tasks).
+  2. [Assign your project to the reservation](https://docs.cloud.google.com/bigquery/docs/reservations-assignments#assign_my_prod_project_to_prod_reservation).
+
+
+
+After setting up your reservation, select one of the following methods to assign slots to your metadata indexing job. By default, slots that you allocate in this manner are shared with other jobs if the slots are idle. For more information, see [Idle slots](https://docs.cloud.google.com/bigquery/docs/slots#idle_slots).
+
+###  Console 
+
+  1. In the Google Cloud console, go to the **Workload management** page.
+
+[Go to Workload management](https://console.cloud.google.com/bigquery/admin/reservations)
+
+  2. Click more_vert **Reservation actions > Create assignment**.
+
+  3. Select your reservation project.
+
+  4. Set **Job Type** to **Background**.
+
+  5. Click **Create**.
+
+
+
+
+###  bq 
+
+Use the [`bq mk` command](https://docs.cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq_mk).
+    
+    
+    bq mk \
+      --project_id=ADMIN_PROJECT_ID \
+      --location=LOCATION \
+      --reservation_assignment \
+      --reservation_id=RESERVATION_NAME \
+      --assignee_id=PROJECT_ID \
+      --job_type=BACKGROUND \
+      --assignee_type=PROJECT
+
+Replace the following:
+
+  * `ADMIN_PROJECT_ID`: the project ID of the [administration project](https://docs.cloud.google.com/bigquery/docs/reservations-workload-management#admin-project) that owns the reservation resource.
+  * `LOCATION`: the [location](https://docs.cloud.google.com/bigquery/docs/locations) of the reservation.
+  * `RESERVATION_NAME`: the name of the reservation.
+  * `PROJECT_ID`: the project ID to assign to this reservation.
+
+
+
+###  SQL 
+
+To assign a reservation to a project, use the [`CREATE ASSIGNMENT` DDL statement](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#create_assignment_statement).
+
+  1. In the Google Cloud console, go to the **BigQuery** page.
+
+[Go to BigQuery](https://console.cloud.google.com/bigquery/)
+
+  2. In the query editor, enter the following statement: 
+         
+         CREATE ASSIGNMENT
+         ADMIN_PROJECT_ID.region-LOCATION.RESERVATION_NAME.ASSIGNMENT_ID
+         OPTIONS (
+           assignee = 'projects/PROJECT_ID',
+           job_type = 'BACKGROUND');
+
+Replace the following: 
+     * `ADMIN_PROJECT_ID`: the project ID of the [administration project](https://docs.cloud.google.com/bigquery/docs/reservations-workload-management#admin-project) that owns the reservation resource.
+     * `LOCATION`: the [location](https://docs.cloud.google.com/bigquery/docs/locations) of the reservation.
+     * `RESERVATION_NAME`: the name of the reservation.
+     * `ASSIGNMENT_ID`: the ID of the assignment. The ID must be unique to the project and location, start and end with a lowercase letter or a number, and contain only lowercase letters, numbers, and dashes.
+     * `PROJECT_ID`: the project ID containing the tables. This project is assigned to the reservation.
+  3. Click play_circle **Run**.
+
+
+
+
+## View indexing job information
+
+After you set up your dedicated indexing jobs, you can view information about the indexing jobs with the [`JOBS` view](https://docs.cloud.google.com/bigquery/docs/information-schema-jobs). The following SQL sample shows the five most recent refresh jobs in PROJECT_NAME.
+    
+    
+    SELECT *
+    FROM
+      region-us.INFORMATION_SCHEMA.JOBS
+    WHERE
+      project_id = 'PROJECT_NAME'
+      AND SEARCH(job_id, '`metadata_cache_refresh`')
+    ORDER BY
+      creation_time DESC
+    LIMIT 5;
+
+Replace `PROJECT_NAME` with the name of the project containing your metadata indexing jobs.
+
+## Configure metadata indexing alerts
+
+The Cloud Monitoring alerting process notifies you when your BigQuery performance doesn't meet defined criteria. For more information, see [Alerting overview](https://docs.cloud.google.com/monitoring/alerts). With metadata indexing, you can configure alerts for slot usage and staleness.
+
+### Slot usage alert
+
+This alert notifies you when your background reservation exceeds a defined percentage of its allocation. The default value is 95%. You can configure this alert for a specific reservation or for every background reservation. When this alert triggers, we recommend that you [increase your reservation size](https://docs.cloud.google.com/bigquery/docs/reservations-tasks#update_reservations).
+
+To configure this alert for every background reservation, do the following:
+
+  1. Set up a [Monitoring notification channel](https://docs.cloud.google.com/monitoring/support/notification-options#creating_channels) if you haven't already.
+  2. Go to the **Integrations** page.
+
+[Go to Integrations](https://console.cloud.google.com/monitoring/integrations)
+
+  3. Find the **BigQuery** integration and click **View details**.
+
+  4. In the **Alerts** tab, select **Slot Usage - Background Metadata Cache Slot Usage Too High**.
+
+  5. Optional: To customize this alert further, click **Show options > Customize alert policy**.
+
+  6. For **Configure notifications** , select your notification channel.
+
+  7. Click **Create**.
+
+
+
+
+### Staleness alert
+
+This alert notifies you when the average column metadata index staleness increases too much compared to the existing average. The default threshold is if the average over 4 hours is more than double the previous average for more than 30 minutes. When this alert triggers, we recommend that you [increase your reservation size](https://docs.cloud.google.com/bigquery/docs/reservations-tasks#update_reservations) or create a [background reservation](https://docs.cloud.google.com/bigquery/docs/reservations-workload-management#assignments) if you don't have one.
+
+To configure this alert, do the following:
+
+  1. Set up a [Monitoring notification channel](https://docs.cloud.google.com/monitoring/support/notification-options#creating_channels) if you haven't already.
+  2. Go to the **Integrations** page.
+
+[Go to Integrations](https://console.cloud.google.com/monitoring/integrations)
+
+  3. Find the **BigQuery** integration and click **View details**.
+
+  4. In the **Alerts** tab, select **Column Metadata Index Staleness - Too Much Percent Increase**.
+
+  5. Optional: To customize this alert further, click **Show options > Customize alert policy**.
+
+  6. For **Configure notifications** , select your notification channel.
+
+  7. Click **Create**.
+
+
+
+
+## Performance considerations
+
+While BigQuery automatically prunes data using partitioning and clustering, metadata indexing can further optimize queries by pruning data based on columns that aren't used for partitioning or clustering. The effectiveness of this pruning increases when there is an ordering dependency between the filter column and the table's partitioning or clustering columns. In these cases, you might observe fewer bytes scanned than expected, even when filtering on columns that are not explicitly part of the table's clustering configuration. If a table is only partitioned but not clustered, pruning effectiveness is limited for on-demand queries, and you might not see a reduction in bytes scanned.
+
+## Limitations
+
+Metadata query performance enhancements only apply to `SELECT`, `INSERT`, and `CREATE TABLE AS SELECT` statements. Data manipulation language (DML) statements won't see improvements from metadata indexing.
+
+## What's next
+
+  * Learn how to see all jobs in your project with the [`JOBS` view](https://docs.cloud.google.com/bigquery/docs/information-schema-jobs).
+  * Learn how to [view slot capacity and utilization](https://docs.cloud.google.com/bigquery/docs/slot-estimator#view_slot_capacity_and_utilization).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

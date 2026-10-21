@@ -1,0 +1,136 @@
+---
+url: https://docs.cloud.google.com/datastore/docs/keyvis-patterns-index/
+title: Heatmap patterns for index keys \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T07:23:13.691843+00:00
+---
+
+# Heatmap patterns for index keys  |  Firestore in Datastore mode  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/datastore/docs/keyvis-patterns-index/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Firestore in Datastore mode ](https://docs.cloud.google.com/datastore/docs)
+  * [ Guides ](https://docs.cloud.google.com/datastore/docs/concepts/overview)
+
+
+
+Send feedback 
+
+#  Heatmap patterns for index keys Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page shows examples of patterns that you might see in a Key Visualizer heatmap. These patterns can help you troubleshoot specific performance issues.
+
+### Edition and mode requirements
+
+This document applies to Firestore Standard edition in Firestore in Native mode. 
+
+## Evenly distributed usage
+
+![Heatmap showing evenly distributed reads and writes](https://docs.cloud.google.com/static/datastore/docs/images/keyvis-patterns-ideal.png)
+
+If a heatmap shows a fine-grained mix of dark and bright colors, then write/delete operations for index keys are evenly distributed throughout the database. This heatmap likely represents an effective usage pattern for Datastore mode.
+
+## Indexes on sequential keys
+
+A heatmap with a single bright diagonal line can indicate an index that is on a key that is strictly increasing or decreasing, such as timestamp. Indexes on sequential keys are not recommended and can create hotspots. When hotspotting, you might observe corresponding elevated latencies.
+
+Some examples of common hotspots on index are as follows:
+
+**Note:** In the following heatmap example, for Datastore mode, the x-axis of the heatmap represents time, and the y-axis represents index keys.
+
+### Hotspotting due to increasing timestamp
+
+![Heatmap showing hotspotting due to increasing timestamp](https://docs.cloud.google.com/static/datastore/docs/images/keyvis-patterns-timestamp.png)
+
+In this example, a heatmap with a single bright diagonal line can indicate a database that uses strictly increasing or decreasing index write/delete operations on a timestamp property.
+
+### Hotspotting due to increasing property names
+
+![Heatmap showing hotspotting due to increasing property](https://docs.cloud.google.com/static/datastore/docs/images/keyvis-patterns-property.png)
+
+In this example, a heatmap with a single bright diagonal line can indicate a database that uses strictly increasing or decreasing index write/delete operations on an incremental property, such as auto-generated invoice numbers.
+
+To identify the hotspotting issue, use the Key Visualizer tool and [understand the index key structure](https://docs.cloud.google.com/datastore/docs/keyvis-patterns-index#understand_index_key_structure) to determine which index causes the issue and exempt those indexes with [best practices](https://docs.cloud.google.com/datastore/docs/best-practices#high_read_write_and_delete_rates_to_a_narrow_document_range).
+
+## Understand the index key structure
+
+Before you understand the structure of index keys that you see in Key Visualizer tool, learn about [indexes](https://docs.cloud.google.com/datastore/docs/concepts/indexes) in Datastore mode.
+
+The following code shows an example index key format that you see when you hover over the affected key-range on the heatmap.
+    
+    
+    NAMESPACE: NS KIND: Users 
+    PROPERTIES: (Timestamp: DESC, Name: DESC)
+    ANCESTOR: KEY(PROJECT('PROJECT_ID'),NAMESPACE('NS'),`UserList`,1)
+    VALUES: (16500000000000001,'Alice')
+    ENTITY:KEY(PROJECT('PROJECT_ID'),NAMESPACE(''),`UserList`,1,`User`,5000000000000001)
+    
+
+Where:
+
+  * **NAMESPACE** : [namespace](https://docs.cloud.google.com/datastore/docs/concepts/multitenancy) of the entity.
+  * **KIND** : [kind](https://docs.cloud.google.com/datastore/docs/concepts/entities#kinds_and_identifiers) of entity that categorizes the entities.
+  * **PROPERTIES** : [properties](https://docs.cloud.google.com/datastore/docs/concepts/entities#properties_and_value_types) related to the entity. The `__key__` ordering property is only shown for index definitions that modify the default ordering.
+  * **ANCESTOR** : optional [ancestor path](https://docs.cloud.google.com/datastore/docs/concepts/entities#ancestor_paths) to locate the entity within the database hierarchy.
+  * **VALUES** : value of each property.
+  * **ENTITY** : ID of the entity updated in an operation.
+
+
+
+From the earlier example, identify the properties from the **PROPERTIES** value to find the affected index. 
+
+To find the index, complete the following steps:
+
+  1. Go to the **Datastore mode Indexes** page in Google Cloud console.
+
+[Go to Datastore mode Indexes](https://console.cloud.google.com/datastore/indexes)
+
+You can identify the type of index by analyzing the **PROPERTIES** field. See [examples of index keys](https://docs.cloud.google.com/datastore/docs/keyvis-patterns-index#examples_of_index_key_entries_on_the_heatmap) for more information.
+
+  2. Click **Filter** , select **Fields** , and enter the name of the field.
+
+Use the **OR** operator to add more properties in case of composite indexes.
+
+
+
+
+After you have identified the index that is causing issues, you can use the following solutions:
+
+  * Built-in index: Exclude the property such that the index doesn't maintain index entries for that property. See [Excluded properties](https://docs.cloud.google.com/datastore/docs/concepts/indexes#unindexed_properties) for more information.
+  * Composite index: Either modify the index in the `index.yaml` file to ensure that the field whose value monotonically increases or decreases is not selected as the first field for indexing, or delete the index. See [About index.yaml](https://docs.cloud.google.com/datastore/docs/tools/indexconfig#Datastore_About_index_yaml) for more information.
+
+
+
+### Examples of index key entries on the heatmap
+
+Type | Description | Example  
+---|---|---  
+Built-in index entry | Index entry for the single property index on the `Timestamp` property, in descending order for the `NS` namespace. | `NAMESPACE: NS` `KIND: Users``PROPERTIES: (Timestamp: DESC)``ANCESTOR: NONE``VALUES: (16500000000000001)``ENTITY: KEY(PROJECT('PROJECT_ID'), NAMESPACE('NS'),`Users`, 5000000000000001)`  
+Built-in index entry | Index entry for the single property index in the default namespace. | `NAMESPACE: ' '``KIND: Users``PROPERTIES: (Timestamp: DESC)``ANCESTOR: NONE``VALUES: (16500000000000001)``ENTITY: KEY(PROJECT('PROJECT_ID'), NAMESPACE('NS'),`Users`, 5000000000000001)`  
+Composite index entry | Index entry for the composite index on the `Timestamp` property and the `Name` property in descending order without ancestor enabled. | `NAMESPACE: NS``KIND: Users``PROPERTIES: (Timestamp: DESC, Name: DESC)``ANCESTOR: NONE``VALUES: (16500000000000001, 'Alice')``ENTITY: KEY(PROJECT('PROJECT_ID'),NAMESPACE('NS'),`Users`,5000000000000001)`  
+Composite index entry with ancestor | Index entry for the composite index on the `Timestamp` property in descending order and the `Name` property in descending order with ancestor enabled. | `NAMESPACE: NS``KIND: Users``PROPERTIES: (Timestamp: DESC, Name: ASC)``ANCESTOR: KEY(PROJECT('PROJECT_ID'),NAMESPACE('NS'),`UserList`,1,`User`,5000000000000001``VALUES: (16500000000000001, 'Alice')``ENTITY: KEY(PROJECT('PROJECT_ID'),NAMESPACE('NS'),`UserList`,1,`User`,5000000000000001)`  
+Composite index entry with `__key__` | Index entry for the composite index on the `Timestamp` property in ascending order and the `__key__` in descending order without ancestor enabled. You can use `__key__` as the final property in an index definition to change the default ordering of results. | `NAMESPACE: NS`  
+`KIND: Users`  
+`PROPERTIES: (Timestamp: ASC, __key__ DESC)`  
+`ANCESTOR: NONE`  
+`VALUES: (16500000000000001)`  
+`ENTITY: KEY(PROJECT('PROJECT_ID'),NAMESPACE('NS'),`UserList`,1,`User`,5000000000000001)`  
+  
+## What's next
+
+  * Learn how to [get started with Key Visualizer](https://docs.cloud.google.com/datastore/docs/keyvis-getting-started).
+  * Find out how to [explore a heatmap in detail](https://docs.cloud.google.com/datastore/docs/keyvis-exploring-heatmaps).
+  * Read about the [metrics you can view in a heatmap](https://docs.cloud.google.com/datastore/docs/key-visualizer#metrics).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

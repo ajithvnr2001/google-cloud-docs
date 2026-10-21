@@ -1,0 +1,230 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/network-management/connectivity-tests/update/
+title: gcloud network-management connectivity-tests update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T04:34:50.218100+00:00
+---
+
+# gcloud network-management connectivity-tests update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/network-management/connectivity-tests/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud network-management connectivity-tests update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud network-management connectivity-tests update - update an existing connectivity test 
+SYNOPSIS
+    
+
+`gcloud network-management connectivity-tests update` `CONNECTIVITY_TEST` [`--async`] [`--bypass-firewall-checks`] [`--description`=`DESCRIPTION`] [`--destination-fqdn`=`DESTINATION_FQDN`] [`--destination-network`=`DESTINATION_NETWORK`] [`--destination-port`=`DESTINATION_PORT`] [`--destination-project`=`DESTINATION_PROJECT`] [`--labels`=[`KEY`=`VALUE`,…]] [`--other-projects`=[`OTHER_PROJECTS`,…]] [`--protocol`=`PROTOCOL`] [`--round-trip`] [`--source-network`=`SOURCE_NETWORK`] [`--source-network-type`=`SOURCE_NETWORK_TYPE`; default="unspecified"] [`--source-project`=`SOURCE_PROJECT`] [`--clear-destination-cloud-sql-instance` | `--destination-cloud-sql-instance`=`DESTINATION_CLOUD_SQL_INSTANCE`] [`--clear-destination-forwarding-rule` | `--destination-forwarding-rule`=`DESTINATION_FORWARDING_RULE`] [`--clear-destination-gke-master-cluster` | `--destination-gke-master-cluster`=`DESTINATION_GKE_MASTER_CLUSTER`] [`--clear-destination-gke-pod` | `--destination-gke-pod`=`DESTINATION_GKE_POD`] [`--clear-destination-instance` | `--destination-instance`=`DESTINATION_INSTANCE`] [`--clear-destination-ip-address` | `--destination-ip-address`=`DESTINATION_IP_ADDRESS`] [`--clear-destination-redis-cluster` | `--destination-redis-cluster`=`DESTINATION_REDIS_CLUSTER`] [`--clear-destination-redis-instance` | `--destination-redis-instance`=`DESTINATION_REDIS_INSTANCE`] [`--clear-source-app-engine-version` | `--source-app-engine-version`=`SOURCE_APP_ENGINE_VERSION`] [`--clear-source-cloud-function` | `--source-cloud-function`=`SOURCE_CLOUD_FUNCTION`] [`--clear-source-cloud-run-job` | `--source-cloud-run-job`=`SOURCE_CLOUD_RUN_JOB`] [`--clear-source-cloud-run-revision` | `--source-cloud-run-revision`=`SOURCE_CLOUD_RUN_REVISION`] [`--clear-source-cloud-sql-instance` | `--source-cloud-sql-instance`=`SOURCE_CLOUD_SQL_INSTANCE`] [`--clear-source-dms-private-connection` | `--source-dms-private-connection`=`SOURCE_DMS_PRIVATE_CONNECTION`] [`--clear-source-gke-master-cluster` | `--source-gke-master-cluster`=`SOURCE_GKE_MASTER_CLUSTER`] [`--clear-source-gke-pod` | `--source-gke-pod`=`SOURCE_GKE_POD`] [`--clear-source-instance` | `--source-instance`=`SOURCE_INSTANCE`] [`--clear-source-ip-address` | `--source-ip-address`=`SOURCE_IP_ADDRESS`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     Update an existing connectivity test with the given name. 
+EXAMPLES
+     The following command updates a connectivity test with the name my-test, modifying the description and destination IP address. 
+    
+    
+    gcloud network-management connectivity-tests update my-test --description='update dst addr' --destination-ip-address='10.142.0.3' --round-trip
+
+POSITIONAL ARGUMENTS
+    
+
+Connectivity test resource - Name of the connectivity test you want to update. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `connectivity_test` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`CONNECTIVITY_TEST`
+     ID of the connectivity test or fully qualified identifier for the connectivity test. 
+
+To set the `connectivity_test` attribute: 
+
+  * provide the argument `connectivity_test` on the command line. 
+
+
+FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--bypass-firewall-checks`
+     This boolean controls whether to skip firewall checking. Use \--no-bypass-firewall-checks to disable. 
+`--description`=`DESCRIPTION`
+     The description of the connectivity test. 
+`--destination-fqdn`=`DESTINATION_FQDN`
+     A hostname as the destination endpoint. Only applicable for Google Kubernetes Engine. 
+`--destination-network`=`DESTINATION_NETWORK`
+     A VPC network URI for the destination endpoint. Used only when the source is an external IP address endpoint, and the destination is an internal IP address endpoint. 
+`--destination-port`=`DESTINATION_PORT`
+     The IP protocol port of the destination. Only applicable when protocol is TCP or UDP. 
+`--destination-project`=`DESTINATION_PROJECT`
+     Project ID of the destination endpoint. 
+`--labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to add. 
+`--other-projects`=[`OTHER_PROJECTS`,…]
+     IDs of other projects involved in the connectivity test, besides the source and destination project. 
+`--protocol`=`PROTOCOL`
+     Type of protocol for the test. When not provided, "TCP" is assumed. 
+`--round-trip`
+     This boolean controls whether return traces (from the destination to the source) will be additionally calculated if packet successfully reaches the destination from the source. Use --no-round-trip to disable. 
+`--source-network`=`SOURCE_NETWORK`
+     A VPC network URI for the source endpoint. Used according to the `source-network-type` flag. 
+`--source-network-type`=`SOURCE_NETWORK_TYPE`; default="unspecified"
+     Type of the network where the source is located. `SOURCE_NETWORK_TYPE` must be one of: 
+
+`gcp-network`
+     A VPC network. Should be used for internal IP addresses in VPC networks. The `source-network` field should be set to the URI of this network. Only endpoints within this network will be considered. 
+`internet`
+     Internet. Should be used for internet-routable external IP addresses or IP addresses for global Google APIs and services. 
+`non-gcp-network`
+     A network outside of Google Cloud (for example, an on-premises network or another cloud provider network). Should be used for internal IP addresses outside of Google Cloud. The `source-network` field should be set to the URI of the VPC network containing a corresponding Cloud VPN tunnel, Cloud Interconnect VLAN attachment, or a router appliance instance. Only endpoints reachable from the provided VPC network via the routes to networks outside of Google Cloud will be considered. 
+`unspecified`
+     Unspecified. The test will analyze all possible IP address locations. This might take longer and produce inaccurate or ambiguous results, so prefer specifying an explicit network type. The `source-project` field should be set to the project where the Google Cloud endpoint is located, or where the endpoint outside of Google Cloud should be reachable from (via routes to networks outside of Google Cloud). The project might also be inferred from the Connectivity Test project or other projects referenced in the request. 
+`--source-project`=`SOURCE_PROJECT`
+     Project ID of the source endpoint. 
+At most one of these can be specified: 
+
+`--clear-destination-cloud-sql-instance`
+     Clear existing destination Cloud SQL instance. 
+`--destination-cloud-sql-instance`=`DESTINATION_CLOUD_SQL_INSTANCE`
+     A Cloud SQL instance URI as the destination endpoint. 
+At most one of these can be specified: 
+
+`--clear-destination-forwarding-rule`
+     Clear existing destination forwarding rule. 
+`--destination-forwarding-rule`=`DESTINATION_FORWARDING_RULE`
+     A forwarding rule URI as the destination endpoint. 
+At most one of these can be specified: 
+
+`--clear-destination-gke-master-cluster`
+     Clear existing destination cluster for Google Kubernetes Engine master. 
+`--destination-gke-master-cluster`=`DESTINATION_GKE_MASTER_CLUSTER`
+     A cluster URI for Google Kubernetes Engine master as the destination endpoint. 
+At most one of these can be specified: 
+
+`--clear-destination-gke-pod`
+     Clear existing destination GKE Pod. 
+`--destination-gke-pod`=`DESTINATION_GKE_POD`
+     A GKE Pod URI as the destination endpoint. 
+At most one of these can be specified: 
+
+`--clear-destination-instance`
+     Clear existing destination instance. 
+`--destination-instance`=`DESTINATION_INSTANCE`
+     A Compute Engine instance URI as the destination endpoint. 
+At most one of these can be specified: 
+
+`--clear-destination-ip-address`
+     Clear existing destination IP address. 
+`--destination-ip-address`=`DESTINATION_IP_ADDRESS`
+     The IP address of the destination which can be an external or internal IP. 
+At most one of these can be specified: 
+
+`--clear-destination-redis-cluster`
+     Clear existing destination Redis Cluster. 
+`--destination-redis-cluster`=`DESTINATION_REDIS_CLUSTER`
+     A Redis cluster URI as the destination endpoint. 
+At most one of these can be specified: 
+
+`--clear-destination-redis-instance`
+     Clear existing destination Redis Instance. 
+`--destination-redis-instance`=`DESTINATION_REDIS_INSTANCE`
+     A Redis instance URI as the destination endpoint. 
+At most one of these can be specified: 
+
+`--clear-source-app-engine-version`
+     Clear existing source App Engine version. 
+`--source-app-engine-version`=`SOURCE_APP_ENGINE_VERSION`
+     App Engine version URI as the source endpoint. 
+At most one of these can be specified: 
+
+`--clear-source-cloud-function`
+     Clear existing source Cloud function. 
+`--source-cloud-function`=`SOURCE_CLOUD_FUNCTION`
+     A Cloud function URI as the source endpoint. 
+At most one of these can be specified: 
+
+`--clear-source-cloud-run-job`
+     Clear existing source Cloud Run job. 
+`--source-cloud-run-job`=`SOURCE_CLOUD_RUN_JOB`
+     Cloud Run job URI as the source endpoint. 
+At most one of these can be specified: 
+
+`--clear-source-cloud-run-revision`
+     Clear existing source Cloud Run revision. 
+`--source-cloud-run-revision`=`SOURCE_CLOUD_RUN_REVISION`
+     Cloud Run revision URI as the source endpoint. 
+At most one of these can be specified: 
+
+`--clear-source-cloud-sql-instance`
+     Clear existing source Cloud SQL instance. 
+`--source-cloud-sql-instance`=`SOURCE_CLOUD_SQL_INSTANCE`
+     A Cloud SQL instance URI as the source endpoint. 
+At most one of these can be specified: 
+
+`--clear-source-dms-private-connection`
+     Clear existing source DMS private connection. 
+`--source-dms-private-connection`=`SOURCE_DMS_PRIVATE_CONNECTION`
+     DMS private connection URI as the source endpoint. 
+At most one of these can be specified: 
+
+`--clear-source-gke-master-cluster`
+     Clear existing source cluster for Google Kubernetes Engine master. 
+`--source-gke-master-cluster`=`SOURCE_GKE_MASTER_CLUSTER`
+     A cluster URI for Google Kubernetes Engine master as the source endpoint. 
+At most one of these can be specified: 
+
+`--clear-source-gke-pod`
+     Clear existing source GKE Pod. 
+`--source-gke-pod`=`SOURCE_GKE_POD`
+     A GKE Pod URI as the source endpoint. 
+At most one of these can be specified: 
+
+`--clear-source-instance`
+     Clear existing source instance. 
+`--source-instance`=`SOURCE_INSTANCE`
+     A Compute Engine instance URI as the source endpoint. 
+At most one of these can be specified: 
+
+`--clear-source-ip-address`
+     Clear existing source IP address. 
+`--source-ip-address`=`SOURCE_IP_ADDRESS`
+     The IP address of the source which can be an external or internal IP. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `networkmanagement/v1` API. The full documentation for this API can be found at: <https://cloud.google.com/>
+NOTES
+     This variant is also available: 
+    
+    
+    [gcloud beta network-management connectivity-tests update](https://docs.cloud.google.com/sdk/gcloud/reference/beta/network-management/connectivity-tests/update)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-06 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-06 UTC."],[],[]] 

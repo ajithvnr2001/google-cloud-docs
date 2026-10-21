@@ -1,0 +1,157 @@
+---
+url: https://docs.cloud.google.com/spanner/docs/full-text-search/mix-full-text-and-non-text-queries/
+title: Mix full-text and non-text queries \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T04:28:26.614588+00:00
+---
+
+# Mix full-text and non-text queries  |  Spanner  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/docs/full-text-search/mix-full-text-and-non-text-queries/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Guides ](https://docs.cloud.google.com/spanner/docs/create-query-database-console)
+
+
+
+Send feedback 
+
+#  Mix full-text and non-text queries Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Note:** This feature is available with the Spanner Enterprise edition and Enterprise Plus edition. For more information, see the [Spanner editions overview](https://docs.cloud.google.com/spanner/docs/editions-overview). 
+
+This page describes how to perform a search that mixes full-text and non-text data.
+
+## Perform a mixed full-text and non-text search
+
+[Search indexes](https://docs.cloud.google.com/spanner/docs/full-text-search/search-indexes) support full-text, exact match, numeric columns, and JSON/JSONB columns. You can combine text and non-text conditions in the `WHERE` clause similarly to multi-column search queries. The query optimizer tries to optimize non-text predicates with a search index. If that's not possible, Spanner evaluates the condition for every row that matches the search index. Referenced columns not stored in the search index are fetched from the base table.
+
+Consider the following example:
+
+###  GoogleSQL 
+    
+    
+    CREATE TABLE Albums (
+      AlbumId STRING(MAX) NOT NULL,
+      Title STRING(MAX),
+      Rating FLOAT64,
+      Genres ARRAY<STRING(MAX)>,
+      Likes INT64,
+      Cover BYTES(MAX),
+      Title_Tokens TOKENLIST AS (TOKENIZE_FULLTEXT(Title)) HIDDEN,
+      Rating_Tokens TOKENLIST AS (TOKENIZE_NUMBER(Rating)) HIDDEN,
+      Genres_Tokens TOKENLIST AS (TOKEN(Genres)) HIDDEN
+    ) PRIMARY KEY(AlbumId);
+    
+    CREATE SEARCH INDEX AlbumsIndex
+    ON Albums(Title_Tokens, Rating_Tokens, Genres_Tokens)
+    STORING (Likes);
+    
+
+###  PostgreSQL 
+
+Spanner PostgreSQL support has the following limitations:
+
+  * `spanner.tokenize_number` function only supports the `bigint` type.
+  * `spanner.token` doesn't support tokenizing arrays.
+
+
+    
+    
+    CREATE TABLE albums (
+      albumid character varying NOT NULL,
+      title character varying,
+      rating bigint,
+      genres character varying NOT NULL,
+      likes bigint,
+      cover bytea,
+      title_tokens spanner.tokenlist AS (spanner.tokenize_fulltext(title)) VIRTUAL HIDDEN,
+      rating_tokens spanner.tokenlist AS (spanner.tokenize_number(rating)) VIRTUAL HIDDEN,
+      genres_tokens spanner.tokenlist AS (spanner.token(genres)) VIRTUAL HIDDEN,
+    PRIMARY KEY(albumid));
+    
+    CREATE SEARCH INDEX albumsindex
+    ON albums(title_tokens, rating_tokens, genres_tokens)
+    INCLUDE (likes);
+    
+
+The behavior of queries on this table include the following:
+
+  * `Rating` and `Genres` are included in the search index. Spanner accelerates conditions using search index posting lists. `ARRAY_INCLUDES_ANY`, `ARRAY_INCLUDES_ALL` are GoogleSQL functions and are not supported for PostgreSQL dialect.
+        
+        SELECT Album
+        FROM Albums
+        WHERE Rating > 4
+          AND ARRAY_INCLUDES_ANY(Genres, ['jazz'])
+        
+
+  * The query can combine conjunctions, disjunctions, and negations in any way, including mixing full-text and non-text predicates. This query is fully accelerated by the search index.
+        
+        SELECT Album
+        FROM Albums
+        WHERE (SEARCH(Title_Tokens, 'car')
+              OR Rating > 4)
+          AND NOT ARRAY_INCLUDES_ANY(Genres, ['jazz'])
+        
+
+  * `Likes` is stored in the index, but the schema doesn't request Spanner to build a token index for its possible values. Therefore, the full-text predicate on `Title` and non-text predicate on `Rating` is accelerated, but the predicate on `Likes` isn't. In Spanner, the query fetches all documents with the term "car" in the `Title` and a rating more than 4, then it filters documents that don't have at least 1000 likes. This query uses a lot of resources if almost all albums have the term "car" in their title and almost all of them have a rating of 5, but few albums have 1000 likes. In such cases, indexing `Likes` similarly to `Rating` saves resources.
+
+###  GoogleSQL 
+        
+        SELECT Album
+        FROM Albums
+        WHERE SEARCH(Title_Tokens, 'car')
+          AND Rating > 4
+          AND Likes >= 1000
+        
+
+###  PostgreSQL 
+        
+        SELECT album
+        FROM albums
+        WHERE spanner.search(title_tokens, 'car')
+          AND rating > 4
+          AND likes >= 1000
+        
+
+  * `Cover` isn't stored in the index. The following query does a [back join](https://docs.cloud.google.com/spanner/docs/query-execution-plans#index_and_back_join_queries) between `AlbumsIndex` and `Albums` to fetch `Cover` for all matching albums.
+
+###  GoogleSQL 
+        
+        SELECT AlbumId, Cover
+        FROM Albums
+        WHERE SEARCH(Title_Tokens, 'car')
+          AND Rating > 4
+        
+
+###  PostgreSQL 
+        
+        SELECT albumid, cover
+        FROM albums
+        WHERE spanner.search(title_tokens, 'car')
+          AND rating > 4
+        
+
+
+
+
+## What's next
+
+  * Learn about [full-text search queries](https://docs.cloud.google.com/spanner/docs/full-text-search/query-overview).
+  * Learn how to [rank search results](https://docs.cloud.google.com/spanner/docs/full-text-search/ranked-search).
+  * Learn how to [perform a substring search](https://docs.cloud.google.com/spanner/docs/full-text-search/substring-search).
+  * Learn how to [paginate search results](https://docs.cloud.google.com/spanner/docs/full-text-search/paginate-search-results).
+  * Learn how to [search multiple columns](https://docs.cloud.google.com/spanner/docs/full-text-search/search-multiple-columns).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

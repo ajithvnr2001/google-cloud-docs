@@ -1,0 +1,77 @@
+---
+url: https://docs.cloud.google.com/spanner/docs/vector-search-embeddings/
+title: Export embeddings from Spanner to Agent Platform Vector Search \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T01:01:26.756750+00:00
+---
+
+# Export embeddings from Spanner to Agent Platform Vector Search  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/docs/vector-search-embeddings/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Guides ](https://docs.cloud.google.com/spanner/docs/create-query-database-console)
+
+
+
+Send feedback 
+
+#  Export embeddings from Spanner to Agent Platform Vector Search Stay organized with collections  Save and categorize content based on your preferences. 
+
+[Gemini Enterprise Agent Platform Vector Search](https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview) lets users search for semantically similar items using vector embeddings. Using the [Spanner to Agent Platform Vector Search workflow](https://github.com/cloudspannerecosystem/spanner-ai/tree/main/vertex-vector-search/workflows#readme), you can integrate your Spanner database with Vector Search to perform a vector similarity search on your Spanner data.
+
+The following diagram shows the end-to-end application workflow of how you can enable and use Vector Search on your Spanner data:
+
+![Spanner to Vector Search workflow.](https://docs.cloud.google.com/static/spanner/docs/images/spanner-to-vector-search-flow.png)
+
+The general workflow is as follows:
+
+  1. **Generate and store vector embeddings.**
+
+You can generate vector embeddings of your data, then store and manage them in Spanner with your operational data. You can generate embeddings with Spanner's `ML.PREDICT` SQL function to [access the Agent Platform text embedding model](https://docs.cloud.google.com/spanner/docs/ml-tutorial-embeddings#generate-store-embeddings) or [use other embedding models deployed to Agent Platform](https://docs.cloud.google.com/spanner/docs/ml-tutorial).
+
+  2. **Sync embeddings to Vector Search.**
+
+Use the [Spanner to Agent Platform Vector Search workflow](https://github.com/cloudspannerecosystem/spanner-ai/tree/main/vertex-vector-search/workflows#readme), which is deployed using [Workflows](https://docs.cloud.google.com/workflows/docs/overview) to export and upload embeddings into a Vector Search index. You can use Cloud Scheduler to periodically schedule this workflow to keep your Vector Search index up to date with the latest changes to your embeddings in Spanner.
+
+  3. **Perform vector similarity search using your Vector Search index.**
+
+Query the Vector Search index to search and find results for semantically similar items. You can query using a [public endpoint](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/vector-search/query-index-public-endpoint) or through [VPC peering](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/vector-search/query-index-vpc).
+
+
+
+
+## Example use case
+
+An illustrative use case for Vector Search is an online retailer who has an inventory of hundreds of thousands of items. In this scenario, you are a developer for an online retailer, and you would like to use vector similarity search on your product catalog in Spanner to help your customers find relevant products based on their search queries.
+
+Follow step 1 and step 2 presented in the general workflow to generate vector embeddings for your product catalog, and sync these embeddings to Vector Search.
+
+Now imagine a customer browsing your application performs a search such as "best, quick-drying sports shorts that I can wear in the water". When your application receives this query, you need to generate a request embedding for this search request using the Spanner [`ML.PREDICT`](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/ml-functions#mlpredict) SQL function. Make sure to use the same embedding model used to generate the embeddings for your product catalog.
+
+Next, query the Vector Search index for product IDs whose corresponding embeddings are similar to the request embedding generated from your customer's search request. The search index might recommend product IDs for semantically similar items such as wakeboarding shorts, surfing apparel, and swimming trunks.
+
+After Vector Search returns these similar product IDs, you can query Spanner for the products' descriptions, inventory count, price, and other metadata that are relevant, and display them to your customer.
+
+You can also use [generative AI](https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview) to process the returned results from Spanner before displaying them to your customer. For example, you might use Google's large generative AI models to generate a concise summary of the recommended products. For more information, see this tutorial on how to [use Generative AI to get personalized recommendations in an ecommerce application](https://docs.cloud.google.com/spanner/docs/ml-tutorial-generative-ai).
+
+## What's next
+
+  * Learn how to [generate embeddings](https://docs.cloud.google.com/spanner/docs/ml-tutorial-embeddings) using Spanner.
+  * Learn more about [AI's multitool: Vector embeddings](https://cloud.google.com/blog/topics/developers-practitioners/meet-ais-multitool-vector-embeddings)
+  * Learn more about machine learning and embeddings in our [crash course on embeddings](https://developers.google.com/machine-learning/crash-course/embeddings/video-lecture).
+  * Learn more about the Spanner to Agent Platform Vector Search workflow, see the [GitHub repository](https://github.com/cloudspannerecosystem/spanner-ai/tree/main/vertex-vector-search/workflows).
+  * Learn more about the [open source spanner-analytics package](https://github.com/cloudspannerecosystem/spanner-analytics/) that facilitates common data-analytic operations in Python and includes integrations with Jupyter Notebooks.
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

@@ -1,0 +1,129 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/access-approval/settings/update/
+title: gcloud access-approval settings update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T11:01:57.878741+00:00
+---
+
+# gcloud access-approval settings update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/access-approval/settings/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud access-approval settings update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud access-approval settings update - update Access Approval settings 
+SYNOPSIS
+    
+
+`gcloud access-approval settings update` [`--active_key_version`=`ACTIVE_KEY_VERSION`] [`--approval_policy`=`APPROVAL_POLICY`] [`--enrolled_services`=`ENROLLED_SERVICES`] [`--notification_emails`=`NOTIFICATION_EMAILS`] [`--notification_pubsub_topic`=`NOTIFICATION_PUBSUB_TOPIC`] [`--prefer_no_broad_approval_requests`=`PREFER_NO_BROAD_APPROVAL_REQUESTS`] [`--preferred_request_expiration_days`=`PREFERRED_REQUEST_EXPIRATION_DAYS`] [`--request_scope_max_width_preference`=`REQUEST_SCOPE_MAX_WIDTH_PREFERENCE`] [`--require_customer_visible_justification`=`REQUIRE_CUSTOMER_VISIBLE_JUSTIFICATION`] [`--folder`=`FOLDER` | `--organization`=`ORGANIZATION` | `--project`=`PROJECT`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     Update the Access Approval settings associated with a project, a folder, or organization. Partial updates are supported (for example, you can update the notification emails without modifying the enrolled services). 
+EXAMPLES
+     Update notification emails associated with project `p1`, run: 
+    
+    
+    gcloud access-approval settings update --project=p1 --notification_emails='foo@example.com, bar@example.com'
+
+Enable Access Approval enforcement for folder `f1`: 
+    
+    
+    gcloud access-approval settings update --folder=f1 --enrolled_services=all
+
+Enable Access Approval enforcement for organization `org1` for only Cloud Storage and Compute products and set the notification emails at the same time: 
+    
+    
+    gcloud access-approval settings update --organization=org1 --enrolled_services='storage.googleapis.com,compute.googleapis.com' --notification_emails='security_team@example.com'
+
+Update active key version for project `p1`: 
+    
+    
+    gcloud access-approval settings update --project=p1 --active_key_version='projects/p1/locations/global/keyRings/signing-keys/cryptoKeys/signing-key/cryptoKeyVersions/1'
+
+Update preferred request expiration days for project `p1`: 
+    
+    
+    gcloud access-approval settings update --project=p1 --preferred_request_expiration_days=5
+
+Enable prefer no broad approval requests for project `p1`: 
+    
+    
+    gcloud access-approval settings update --project=p1 --prefer_no_broad_approval_requests=true
+
+Update notification pubsub topic for project `p1`: 
+    
+    
+    gcloud access-approval settings update --project=p1 --notification_pubsub_topic='exampleTopic'
+
+Update request scope max width preference for project `p1`: 
+    
+    
+    gcloud access-approval settings update --project=p1 --request_scope_max_width_preference=PROJECT
+
+Update approval policy for project `p1`: 
+    
+    
+    gcloud access-approval settings update --project=p1 --approval_policy=transparency
+
+FLAGS
+    
+
+`--active_key_version`=`ACTIVE_KEY_VERSION`
+     The asymmetric crypto key version to use for signing approval requests. Use '' to remove the custom signing key. 
+`--approval_policy`=`APPROVAL_POLICY`
+     The preference to configure the approval policy for access requests. `APPROVAL_POLICY` must be one of: `transparency`, `streamlined-support`, `access-approval`, `inherit-policy-from-parent`. 
+`--enrolled_services`=`ENROLLED_SERVICES`
+     Comma-separated list of services to enroll for Access Approval or 'all' for all supported services. Note for project and folder enrollments, only 'all' is supported. Use '' to clear all enrolled services. 
+`--notification_emails`=`NOTIFICATION_EMAILS`
+     Comma-separated list of email addresses to which notifications relating to approval requests should be sent or '' to clear all saved notification emails. 
+`--notification_pubsub_topic`=`NOTIFICATION_PUBSUB_TOPIC`
+     The pubsub topic to publish notifications to when approval requests are made. 
+`--prefer_no_broad_approval_requests`=`PREFER_NO_BROAD_APPROVAL_REQUESTS`
+     If set to true it will communicate the preference to Google personnel to request access with as targeted a resource scope as possible. 
+`--preferred_request_expiration_days`=`PREFERRED_REQUEST_EXPIRATION_DAYS`
+     The default expiration time for approval requests. This value must be between 1 and 30. Note that this can be overridden at time of Approval Request creation and modified by the customer at approval time. 
+`--request_scope_max_width_preference`=`REQUEST_SCOPE_MAX_WIDTH_PREFERENCE`
+     The preference for the broadest scope of access for access requests without a specific method. `REQUEST_SCOPE_MAX_WIDTH_PREFERENCE` must be one of: `ORGANIZATION`, `FOLDER`, `PROJECT`. 
+`--require_customer_visible_justification`=`REQUIRE_CUSTOMER_VISIBLE_JUSTIFICATION`
+     The preference to configure if a customer visible justification (i.e. Vector Case) is required for a Googler to create an Access Ticket to send to the customer when attempting to access customer resources. 
+At most one of these can be specified: 
+
+`--folder`=`FOLDER`
+     Folder number. Only one of --project, --folder, or --organization can be provided. If none are provided then it uses config property [core/project]. 
+`--organization`=`ORGANIZATION`
+     Organization number. Either --project, --folder, or --organization must be provided. If none are provided then it uses config property [core/project]. 
+`--project`=`PROJECT`
+     Project number or id. Only one of --project, --folder, or --organization can be provided. If none are provided then it uses config property [core/project]. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     These variants are also available: 
+    
+    
+    [gcloud alpha access-approval settings update](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/access-approval/settings/update)
+    
+    
+    [gcloud beta access-approval settings update](https://docs.cloud.google.com/sdk/gcloud/reference/beta/access-approval/settings/update)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

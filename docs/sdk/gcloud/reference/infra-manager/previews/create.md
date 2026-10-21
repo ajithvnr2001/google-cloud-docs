@@ -1,0 +1,213 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/infra-manager/previews/create/
+title: gcloud infra-manager previews create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T09:17:24.472302+00:00
+---
+
+# gcloud infra-manager previews create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/infra-manager/previews/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud infra-manager previews create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud infra-manager previews create - create a preview 
+SYNOPSIS
+    
+
+`gcloud infra-manager previews create` [`PREVIEW`] [`--annotations`=[`KEY`=`VALUE`,…]] [`--artifacts-gcs-bucket`=`ARTIFACTS_GCS_BUCKET`] [`--async`] [`--deployment`=`DEPLOYMENT`] [`--labels`=[`KEY`=`VALUE`,…]] [`--location`=`LOCATION`] [`--preview-mode`=`PREVIEW_MODE`] [`--service-account`=`SERVICE_ACCOUNT`] [`--tf-version-constraint`=`TF_VERSION_CONSTRAINT`] [`--worker-pool`=`WORKER_POOL`] [`--gcs-source`=`GCS_SOURCE` | `--git-source-directory`=`GIT_SOURCE_DIRECTORY` `--git-source-ref`=`GIT_SOURCE_REF` `--git-source-repo`=`GIT_SOURCE_REPO` | `--ignore-file`=`IGNORE_FILE` `--local-source`=`LOCAL_SOURCE` `--input-values`=[`KEY`=`VALUE`,…] | `--inputs-file`=`INPUTS_FILE`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     This command creates a preview. 
+EXAMPLES
+     Create a preview named `my-preview` from a storage `my-bucket`: 
+    
+    
+    gcloud infra-manager previews create projects/p1/locations/us-central1/previews/my-preview --gcs-source="gs://my-bucket" --input-values="project=p1,region=us-central1"
+
+Create a preview named `my-preview` from git repo "https://github.com/examples/repository.git", "staging/compute" folder, "mainline" branch: 
+    
+    
+    gcloud infra-manager previews create projects/p1/locations/us-central1/previews/my-preview --git-source-repo="https://github.com/examples/repository.git" --git-source-directory="staging/compute" --git-source-ref="mainline"
+
+POSITIONAL ARGUMENTS
+    
+
+Preview resource - the preview to be used as parent. It is optional and will be generated if not specified with a fully specified name. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `PREVIEW` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `location` attribute: 
+
+  * provide the argument `PREVIEW` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `infra-manager/location`. 
+
+
+`PREVIEW`
+     ID of the preview or fully qualified identifier for the preview. 
+
+To set the `preview` attribute: 
+
+  * provide the argument `PREVIEW` on the command line. 
+
+
+FLAGS
+    
+
+`--annotations`=[`KEY`=`VALUE`,…]
+     Preview annotations cannot be updated after creation. 
+`--artifacts-gcs-bucket`=`ARTIFACTS_GCS_BUCKET`
+     user-defined location of Cloud Build logs, artifacts, and Terraform state files in Google Cloud Storage. Format: `gs://{bucket}/{folder}` A default bucket will be bootstrapped if the field is not set or empty 
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--deployment`=`DEPLOYMENT`
+     Deployment reference for preview. 
+`--labels`=[`KEY`=`VALUE`,…]
+     Preview labels cannot be updated after creation. 
+Location resource - the location to be used as parent. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--location` on the command line with a fully specified name; 
+  * set the property `infra-manager/location` with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+`--location`=`LOCATION`
+     ID of the location or fully qualified identifier for the location. 
+
+To set the `location` attribute: 
+
+  * provide the argument `--location` on the command line; 
+  * set the property `infra-manager/location`. 
+
+
+`--preview-mode`=`PREVIEW_MODE`
+     Preview mode to set it to either default or delete. 
+`--service-account`=`SERVICE_ACCOUNT`
+     User-specified Service Account (SA) to be used as credential to manage resources. Format: `projects/{projectID}/serviceAccounts/{serviceAccount}`
+`--tf-version-constraint`=`TF_VERSION_CONSTRAINT`
+     User-specified Terraform version constraint, for example "=1.3.10". 
+`--worker-pool`=`WORKER_POOL`
+     User-specified Worker Pool resource in which the Cloud Build job will execute. Format: projects/{project}/locations/{location}/workerPools/{workerPoolId} 
+At most one of these can be specified: 
+
+`--gcs-source`=`GCS_SOURCE`
+     URI of an object in Google Cloud Storage. e.g. `gs://{bucket}/{object}`
+
+Examples: 
+
+Create a deployment from a storage my-bucket: 
+    
+    
+    gcloud infra-manager previews create projects/p1/location/us-central1/deployments/my-deployment --gcs-source="gs://my-bucket"
+
+Or at least one of these can be specified: 
+
+`--git-source-directory`=`GIT_SOURCE_DIRECTORY`
+     Subdirectory inside the repository. Example: 'staging/my-package' 
+
+Use in conjunction with `--git-source-repo` and `--git-source-ref`
+
+Examples: 
+
+Create a deployment from the "https://github.com/examples/repository.git" repo, "staging/compute" folder, "mainline" branch: 
+    
+    
+    gcloud infra-manager previews create projects/p1/location/us-central1/deployments/my-deployment --git-source-repo="https://github.com/examples/repository.git"
+      --git-source-directory="staging/compute" --git-source-ref="mainline"
+
+`--git-source-ref`=`GIT_SOURCE_REF`
+     Subdirectory inside the repository. Example: 'staging/my-package' 
+
+Use in conjunction with `--git-source-repo` and `--git-source-directory`
+
+Examples: 
+
+Create a deployment from the "https://github.com/examples/repository.git" repo, "staging/compute" folder, "mainline" branch: 
+    
+    
+    gcloud infra-manager previews create projects/p1/location/us-central1/deployments/my-deployment --git-source-repo="https://github.com/examples/repository.git"
+      --git-source-directory="staging/compute" --git-source-ref="mainline"
+
+`--git-source-repo`=`GIT_SOURCE_REPO`
+     Repository URL. Example: 'https://github.com/examples/repository.git' 
+
+Use in conjunction with `--git-source-directory` and `--git-source_ref`
+
+Examples: 
+
+Create a deployment from the "https://github.com/examples/repository.git" repo, "staging/compute" folder, "mainline" branch: 
+    
+    
+    gcloud infra-manager previews create projects/p1/location/us-central1/deployments/my-deployment --git-source-repo="https://github.com/examples/repository.git"
+      --git-source-directory="staging/compute" --git-source-ref="mainline"
+
+Or at least one of these can be specified: 
+
+`--ignore-file`=`IGNORE_FILE`
+     Override the `.gcloudignore` file and use the specified file instead. See `[gcloud topic gcloudignore](https://docs.cloud.google.com/sdk/gcloud/reference/topic/gcloudignore)` for more information. 
+`--local-source`=`LOCAL_SOURCE`
+     Local storage path where config files are stored. When using this option, Terraform config file references outside this storage path is not supported. e.g. `./path/to/blueprint`
+
+Examples: 
+
+Create a deployment from a local storage path `./path/to/blueprint`: 
+    
+    
+    gcloud infra-manager previews create projects/p1/location/us-central1/deployments/my-deployment --local-source="./path/to/blueprint"
+
+At most one of these can be specified: 
+
+`--input-values`=[`KEY`=`VALUE`,…]
+     Input variable values for the Terraform blueprint. It only accepts (key, value) pairs where value is a scalar value. 
+
+Examples: 
+
+Pass input values on command line: 
+    
+    
+    gcloud infra-manager previews create projects/p1/location/us-central1/deployments/my-deployment --gcs-source="gs://my-bucket" --input-values=projects=p1,region=r
+
+`--inputs-file`=`INPUTS_FILE`
+     A .tfvars file containing terraform variable values. --inputs-file flag is supported for python version 3.6 and above. 
+
+Examples: 
+
+Pass input values on the command line: 
+    
+    
+    gcloud infra-manager previews create projects/p1/location/us-central1/deployments/my-deployment --gcs-source="gs://my-bucket" --inputs-file=path-to-tfvar-file.tfvar
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

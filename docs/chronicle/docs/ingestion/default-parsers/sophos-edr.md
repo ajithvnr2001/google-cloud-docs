@@ -1,0 +1,318 @@
+---
+url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/sophos-edr/
+title: Collect Sophos Extended Detection and Response logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T22:38:17.473459+00:00
+---
+
+# Collect Sophos Extended Detection and Response logs  |  Google Security Operations  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/sophos-edr/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Security ](https://docs.cloud.google.com/docs/security)
+  * [ Google Security Operations ](https://docs.cloud.google.com/chronicle/docs)
+  * [ Guides ](https://docs.cloud.google.com/chronicle/docs/secops/secops-overview)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Collect Sophos Extended Detection and Response logs
+
+Supported in:
+
+Google SecOps  [ SIEM ](https://docs.cloud.google.com/chronicle/docs/secops/google-secops-siem-toc)
+
+This document explains how to collect Sophos Extended Detection and Response (formerly Sophos EDR/Intercept X) logs by using Bindplane. The parser transforms JSON logs into a unified data model (UDM). It extracts fields from nested JSON structures, maps them to UDM fields, and performs event categorization based on the type field, enriching the data with specific details and actions for different Sophos EDR event types.
+
+## Before you begin
+
+Make sure that you have the following prerequisites:
+
+  * A Google SecOps instance.
+  * You are using Windows 2016 or later, or a Linux host with systemd.
+  * You have an additional Windows or Linux machine, capable of continuously running Python.
+  * If running behind a proxy, ensure firewall ports are open per the Bindplane agent requirements.
+  * Privileged access to Sophos Central Admin console.
+
+
+
+## Get Google SecOps ingestion authentication file
+
+  1. Sign in to the Google SecOps console.
+  2. Go to **SIEM Settings > Collection Agents**.
+  3. Download the **Ingestion Authentication File**.
+
+     * Save the file securely on the system where the Bindplane agent will be installed.
+
+
+
+## Get Google SecOps customer ID
+
+  1. Sign in to the Google SecOps console.
+  2. Go to **SIEM Settings > Profile**.
+  3. Copy and save the **Customer ID** from the **Organization Details** section.
+
+
+
+## Install the Bindplane agent
+
+Install the Bindplane agent on your Windows or Linux operating system according to the following instructions.
+
+### Windows installation
+
+  1. Open the **Command Prompt** or **PowerShell** as an administrator.
+  2. Run the following command:
+         
+         msiexec /i "[https://github.com/observIQ/bindplane-agent/releases/latest/download/observiq-otel-collector.msi](https://github.com/observIQ/bindplane-agent/releases/latest/download/observiq-otel-collector.msi)" /quiet
+         
+
+
+
+
+### Linux installation
+
+  1. Open a terminal with root or sudo privileges.
+  2. Run the following command:
+         
+         sudo sh -c "$(curl -fsSlL [https://github.com/observiq/bindplane-agent/releases/latest/download/install_unix.sh](https://github.com/observiq/bindplane-agent/releases/latest/download/install_unix.sh))" install_unix.sh
+         
+
+
+
+
+### Additional installation resources
+
+For additional installation options, consult this [installation guide](https://docs.cloud.google.com/chronicle/docs/ingestion/use-bindplane-agent#install_the_bindplane_agent).
+
+## Configure the Bindplane agent to ingest Syslog and send to Google SecOps
+
+  1. Access the Configuration File:
+
+     * Locate the `config.yaml` file. Typically, it's in the `/opt/observiq-otel-collector/config.yaml` directory on Linux or in the installation directory on Windows.
+     * Open the file using a text editor (for example, `nano`, `vi`, or Notepad).
+  2. Edit the `config.yaml` file as follows:
+         
+         receivers:
+           udplog:
+             # Replace the port and IP address as required
+             listen_address: "0.0.0.0:514"
+         
+         exporters:
+           chronicle/chronicle_w_labels:
+             compression: gzip
+             # Adjust the path to the credentials file you downloaded in Step 1
+             creds_file_path: '/path/to/ingestion-authentication-file.json'
+             # Replace with your actual customer ID from Step 2
+             customer_id: <customer_id>
+             endpoint: malachiteingestion-pa.googleapis.com
+             # Add optional ingestion labels for better organization
+             log_type: 'SOPHOS_EDR'
+             raw_log_field: body
+             ingestion_labels:
+         
+         service:
+           pipelines:
+             logs/source0__chronicle_w_labels-0:
+               receivers:
+                 - udplog
+               exporters:
+                 - chronicle/chronicle_w_labels
+         
+
+
+
+  * Replace the port and IP address as required in your infrastructure.
+  * Replace `<customer_id>` with the actual Customer ID.
+  * Update `/path/to/ingestion-authentication-file.json` to the file path where the authentication file was saved in Step 1.
+
+
+
+## Restart the Bindplane Agent to apply the changes
+
+  1. To restart the Bindplane agent in Linux, run the following command:
+         
+         sudo systemctl restart bindplane-agent
+         
+
+  2. To restart the Bindplane agent in Windows, you can either use the **Services** console or enter the following command:
+         
+         net stop BindPlaneAgent && net start BindPlaneAgent
+         
+
+
+
+
+## Configure Sophos Central API access
+
+  1. Sign in to **Sophos Central Admin**.
+  2. Select **Global Settings > API Token Management**.
+  3. Click **Add Token** to create a new token.
+  4. Enter a token name and click **Save**. The **API Token Summary** for the provided token is displayed.
+  5. In the **API Token Summary** section, click **Copy** to copy the API access URL and headers.
+
+
+
+## Install Python on the additional machine
+
+  1. Open the web browser and go to the [Python website](https://www.python.org).
+  2. Click **Download Python** for your operating system (Windows or Mac).
+  3. Install Python.
+
+     * On Windows:
+
+       1. Run the installer.
+       2. Check the box that says **Add Python to PATH**.
+       3. Click **Install Now**.
+     * On Mac:
+
+       1. Python may already be installed, if not you can install the latest version using the terminal.
+       2. Open **Terminal** and type the following command:
+    
+    python --version
+    
+
+
+
+
+## Download the Sophos integration script
+
+  1. Go to the GitHub page for [Sophos Central SIEM Integration GitHub Repository](https://github.com/sophos/Sophos-Central-SIEM-Integration).
+  2. Click the green **Code button > Download ZIP**.
+  3. Extract the ZIP file.
+
+
+
+## Set up the script configuration
+
+  1. **Find** and **Open** the `config.ini` file with a text editor.
+  2. Edit the configuration file:
+
+     * **API Token** : Enter the API Key copied earlier from Sophos Central.
+     * **Syslog Server Details** : Enter the details of your syslog server.
+     * **Host** : Enter the Bindplane agent IP address.
+     * **Port** : Enter the Bindplane port number.
+     * **Protocol** : Enter UDP (you can also use **TCP** or **TLS** depending on your setup).
+  3. **Save** the file.
+
+
+
+
+## Run the script
+
+  1. Go to the script folder.
+
+     * On Windows:
+
+       1. Press the **Windows** key and type `cmd`.
+       2. Click **Command Prompt**.
+       3. Go to the script folder:
+    
+    cd C:UsersYourNameDownloadsSophos-Central-SIEM-Integration
+    
+
+     * On macOS:
+
+       1. Go to **Applications > Utilities**.
+       2. Open **Terminal**.
+       3. Go to the script folder:
+    
+    cd /Users/YourName/Downloads/Sophos-Central-SIEM-Integration
+    
+
+  2. **Run the script:**
+
+     * Type the following command to start the script:
+           
+           python siem.py
+           
+
+
+**Note:** The script will start fetching logs from Sophos Central and forwarding them to your syslog server in JSON format.
+
+## Automate the script to run continuously on Windows (using Task Scheduler):
+
+  1. Open the Task Scheduler by typing **Task Scheduler** in the Start menu.
+  2. Click **Create Task**.
+
+  3. In the **General** tab:
+
+     * Name your task; for example, `Sophos EDR Log Export`.
+  4. In the **Triggers** tab:
+
+     * Click **New** and set the task to run **Daily** or **At startup** (depending on your preference).
+  5. In the **Actions** tab:
+
+     * Click **New** and select **Start a program**.
+     * Browse for the `python.exe` executable (usually found at `C:PythonXXpython.exe`).
+     * In the **Add arguments** field, type the path to the script; for example, `C:UsersYourNameDownloadsSophos-Central-SIEM-Integrationsiem.py`.
+  6. Click **OK** to save the task.
+
+
+
+
+## Automate the script to run continuously on Mac (using Cron Jobs):
+
+  1. Open the Terminal.
+  2. Type `crontab -e` and press **Enter**.
+  3. Add a new line at the end of the file:
+         
+         * * * * * /usr/bin/python /Users/YourName/Downloads/Sophos-Central-SIEM-Integration/siem.py
+         
+
+  4. **Save** and exit the editor.
+
+
+**Note:** This will run the script **every minute**. Adjust the time based on your needs.
+
+## UDM mapping table
+
+Log Field | UDM Mapping | Logic  
+---|---|---  
+`name` | `metadata.description` | Directly mapped  
+`rt` | `metadata.event_timestamp` | Parsed as `ISO8601`  
+`has_principal` | `metadata.event_type` | Mapped: `true` → `NETWORK_UNCATEGORIZED`, `true` → `STATUS_UPDATE`, `true` → `STATUS_STARTUP...  
+`has_principal_user` | `metadata.event_type` | Mapped: `true` → `USER_UNCATEGORIZED`  
+`has_target_user` | `metadata.event_type` | Mapped: `true` → `USER_CREATION`  
+`type` | `metadata.event_type` | Mapped values (9 total, e.g. `ADSync` → `FILE_SYNC`, `UpdateRebootRequired/RESTARTING/Update...  
+`type` | `metadata.product_event_type` | Directly mapped  
+`source_info.ip` | `principal.asset.ip` | Merged  
+`group` | `principal.group.group_display_name` | Directly mapped  
+`source_info.ip` | `principal.ip` | Merged  
+`item.descriptor` | `principal.process.file.names` | Merged  
+`appSha256` | `principal.process.file.sha256` | Directly mapped  
+`suser` | `principal.user.userid` | Directly mapped  
+`sr_action` | `security_result.action` | Merged  
+`severity` | `security_result.severity` | Directly mapped  
+`detection_identity_name` | `security_result.threat_feed_name` | Directly mapped  
+`threat` | `security_result.threat_name` | Directly mapped  
+`dhost` | `target.asset.hostname` | Directly mapped  
+`data.fileName` | `target.file.full_path` | Directly mapped  
+`filePath` | `target.file.full_path` | Directly mapped  
+`dhost` | `target.hostname` | Directly mapped  
+`id` | `target.process.pid` | Directly mapped  
+`endpoint_id_label` | `target.resource.attribute.labels` | Merged  
+`endpoint_type_label` | `target.resource.attribute.labels` | Merged  
+`customer_id` | `target.resource.id` | Directly mapped  
+`type` | `target.resource.resource_type` | Mapped: `ScheduledDataUploadResumed` → `TASK`, `ScheduledDailyLimitExceeded` → `TASK`  
+`duid` | `target.user.userid` | Directly mapped  
+N/A | `metadata.event_type` | Constant: `NETWORK_UNCATEGORIZED`  
+N/A | `metadata.product_name` | Constant: `Sophos EDR`  
+N/A | `metadata.vendor_name` | Constant: `SOPHOS`  
+N/A | `target.resource.resource_type` | Constant: `TASK`  
+  
+## Change Log
+
+[View the Change Log for this parser](https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/sophos-edr-changelog)
+
+**Need more help?** [Get answers from Community members and Google SecOps professionals.](https://security.googlecloudcommunity.com/)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

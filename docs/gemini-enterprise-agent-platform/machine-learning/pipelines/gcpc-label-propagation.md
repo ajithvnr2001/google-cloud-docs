@@ -1,0 +1,193 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/gcpc-label-propagation/
+title: Resource labeling by Gemini Enterprise Agent Platform Pipelines \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T02:38:11.600391+00:00
+---
+
+# Resource labeling by Gemini Enterprise Agent Platform Pipelines  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/gcpc-label-propagation/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Resource labeling by Gemini Enterprise Agent Platform Pipelines Stay organized with collections  Save and categorize content based on your preferences. 
+
+Depending on the type of component, resource, and the Google Cloud Pipeline Components SDK version, Agent Platform Pipelines either automatically propagates the labels from your pipeline run to the resources generated from Google Cloud Pipeline Components or requires you to label the generated resources. For user-defined components, you need to author your component code to attach the labels from an environment variable. For more information, see Resources generated from user-defined components.
+
+## Resources with automatic labeling
+
+Agent Platform Pipelines automatically labels the following resources, regardless of the Google Cloud Pipeline Components SDK version:
+
+### `CustomJob` resources
+
+Agent Platform Pipelines automatically propagates the labels from your pipeline run to [`CustomJob`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/customjob-component) resources. This is supported by the following components in all versions of the Google Cloud Pipeline Components SDK:
+
+  * [`CustomTrainingJobOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/custom_job.html#v1.custom_job.CustomTrainingJobOp)
+
+  * [`create_custom_training_job_from_component`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/custom_job.html#v1.custom_job.create_custom_training_job_from_component)
+
+  * [`ForecastingValidationOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/forecasting.html#v1.forecasting.ForecastingValidationOp)
+
+  * [`ForecastingPrepareDataForTrainOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/forecasting.html#v1.forecasting.ForecastingPrepareDataForTrainOp)
+
+
+
+
+## Resources with automatic labeling in Google Cloud Pipeline Components SDK v1.0.31 or later
+
+Agent Platform Pipelines automatically labels the following resources if you use Google Cloud Pipeline Components SDK v1.0.31 or later:
+
+### `BatchPredictionJob` resources
+
+Agent Platform Pipelines automatically propagates labels from your pipeline run to `BatchPredictionJob` resources generated from the [`ModelBatchPredictOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/batch_predict_job.html#v1.batch_predict_job.ModelBatchPredictOp) component if you use v1.0.31 or later of the Google Cloud Pipeline Components SDK.
+
+### Gemini Enterprise `endpoint` resources
+
+Agent Platform Pipelines automatically propagates labels from your pipeline run to Gemini Enterprise API `endpoint` resources generated from the [`EndpointCreateOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/endpoint.html#v1.endpoint.EndpointCreateOp) component if you use v1.0.31 or later of the Google Cloud Pipeline Components SDK.
+
+### `HyperparameterTuningJob` resources
+
+Agent Platform Pipelines automatically propagates labels from your pipeline run to `HyperparameterTuningJob` resources generated from the [`HyperparameterTuningJobRunOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/hyperparameter_tuning_job.html#v1.hyperparameter_tuning_job.HyperparameterTuningJobRunOp) component if you use v1.0.31 or later of the Google Cloud Pipeline Components SDK.
+
+### Gemini Enterprise API dataset resources
+
+Agent Platform Pipelines automatically propagates labels from your pipeline run to Gemini Enterprise API dataset resources generated from the following [Gemini Enterprise API components](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/vertex-automl-component#dataset_operators) if you use v1.0.31 or later of the Google Cloud Pipeline Components SDK:
+
+  * [`ImageDatasetCreateOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/dataset.html#v1.dataset.ImageDatasetCreateOp)
+
+  * [`TabularDatasetCreateOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/dataset.html#v1.dataset.TabularDatasetCreateOp)
+
+  * [`TextDatasetCreateOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/dataset.html#v1.dataset.TextDatasetCreateOp)
+
+  * [`TimeSeriesDatasetCreateOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/dataset.html#v1.dataset.TimeSeriesDatasetCreateOp)
+
+  * [`VideoDatasetCreateOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/dataset.html#v1.dataset.VideoDatasetCreateOp)
+
+
+
+
+### Google Cloud BigQuery Job resources
+
+Agent Platform Pipelines automatically propagates labels from your pipeline run to Google Cloud BigQuery Job resources resources generated from any of the [BigQuery ML components](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/gcpc-list#bqml_components) if you use v1.0.31 or later of the Google Cloud Pipeline Components SDK.
+
+### Google Cloud Managed Service for Apache Spark Job resources
+
+Agent Platform Pipelines automatically propagates labels from your pipeline run to Google Cloud Managed Service for Apache Spark Job resources resources generated from any of the [Managed Service for Apache Spark components](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/gcpc-list#dataproc_sl_components) if you use v1.0.31 or later of the Google Cloud Pipeline Components SDK.
+
+### `TrainingPipeline` and `Model` resources
+
+Agent Platform Pipelines automatically propagates labels from your pipeline run to `TrainingPipeline` and `Model` resources resources generated from the following [AutoML components](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/gcpc-list#experimental_automl_components) if you use v1.0.31 or later of the Google Cloud Pipeline Components SDK:
+
+  * [`AutoMLImageTrainingJobRunOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/automl/training_job.html#v1.automl.training_job.AutoMLImageTrainingJobRunOp)
+
+  * [`AutoMLTextTrainingJobRunOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/automl/training_job.html#v1.automl.training_job.AutoMLTextTrainingJobRunOp)
+
+  * [`AutoMLVideoTrainingJobRunOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/automl/training_job.html#v1.automl.training_job.AutoMLVideoTrainingJobRunOp)
+
+  * [`AutoMLForecastingTrainingJobRunOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/automl/training_job.html#v1.automl.training_job.AutoMLForecastingTrainingJobRunOp)
+
+
+
+
+### Google Cloud BigQuery table resources
+
+Agent Platform Pipelines automatically propagates labels from your pipeline run Google Cloud BigQuery table resources resources generated from the [`ForecastingPreprocessingOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/forecasting.html#v1.forecasting.ForecastingPreprocessingOp) component if you use v1.0.31 or later of the Google Cloud Pipeline Components SDK.
+
+## Resources without automatic labeling
+
+Agent Platform Pipelines doesn't label the following resources automatically, regardless of the Google Cloud Pipeline Components SDK version:
+
+### Google Cloud Dataflow resources
+
+Agent Platform Pipelines doesn't automatically label Dataflow resources generated by the [`DataflowPythonJobOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/dataflow.html#v1.dataflow.DataflowPythonJobOp) component. You can include instructions in your code to label the resources.
+
+Use the following code sample to propagate billing labels from your pipeline run to any Google Cloud Dataflow resource generated using the [`DataflowPythonJobOp`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/dataflow.html#v1.dataflow.DataflowPythonJobOp) component:
+    
+    
+      import argparse
+      import apache_beam as beam
+      ...
+      def run(argv=None):
+        parser = argparse.ArgumentParser()
+        # Don't add `--labels` to the argument list, so that they will be passed to the pipeline_options 
+        parser.add_argument('--input', …)
+        parser.add_argument('--output', …)
+      ...
+        known_args, pipeline_args = parser.parse_known_args(argv)
+        pipeline_options = PipelineOptions(pipeline_args)
+        with beam.Pipeline(options=pipeline_options) as p:
+    
+
+### Resources generated from user-defined components
+
+Agent Platform Pipelines doesn't automatically label Google Cloud resources generated from user-defined components. You can include instructions in your code to retrieve the labels from the environment variable `VERTEX_AI_PIPELINES_RUN_LABELS` and attach those labels to the Google Cloud resources generated using the component at runtime.
+
+The environment variable `VERTEX_AI_PIPELINE_RUN_LABELS` contains the labels in JSON format as key-value pairs.
+
+For example: `{ "label1_key": "label1_value", "label2_key": "label2_value", ...}`
+
+If you're using the Agent Platform SDK for Python, use the following code sample in your component code to propagate labels from the environment variable to a new resource generated from the component:
+    
+    
+    import os
+    import json
+    from google.cloud import aiplatform
+    
+    aiplatform.[init](https://docs.cloud.google.com/python/docs/reference/aiplatform/latest/google.cloud.aiplatform.html)(
+      project='PROJECT_ID',
+      location='LOCATION'
+    )
+    
+    aiplatform.RESOURCE.create(
+      ...
+      json.loads(os.getenv("VERTEX_AI_PIPELINES_RUN_LABELS"))
+    )
+    
+
+Replace the following:
+
+  * PROJECT_ID: The Google Cloud project containing the pipeline run.
+
+  * LOCATION: The location of the pipeline run.
+
+  * RESOURCE: Google Cloud resource generated from the component, for example, `CustomJob` or `Model`.
+
+
+
+
+You can also use the `gcp_labels_util.attach_system_labels` utility if you want to use Python to parse the environment variable. You can use this utility only if you have access to the Google Cloud Pipeline Components library and are using Python. For more information, see the [source code of the utility function in GitHub](https://github.com/kubeflow/pipelines/blob/master/components/google-cloud/google_cloud_pipeline_components/container/v1/gcp_launcher/utils/gcp_labels_util.py).
+
+## Resources without labeling support
+
+Agent Platform Pipelines doesn't support billing label propagation to the following resources:
+
+### ML Metadata resources
+
+ML Metadata resources are billed at the store level. You can't use billing labels to understand the resource-level cost.
+
+### Cloud Storage resources
+
+Agent Platform Pipelines doesn't propagate billing labels to Cloud Storage resources, such as Cloud Storage buckets.
+
+## What's next
+
+  * [Understand pipeline run costs](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/understand-pipeline-cost-labels)
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

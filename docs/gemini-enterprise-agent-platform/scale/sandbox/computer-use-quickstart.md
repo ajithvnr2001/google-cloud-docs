@@ -1,0 +1,250 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/computer-use-quickstart/
+title: Computer Use quickstart \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T06:45:57.611971+00:00
+---
+
+# Computer Use quickstart  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/computer-use-quickstart/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Agents ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agents)
+
+
+
+Send feedback 
+
+#  Computer Use quickstart Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page demonstrates how to make direct API calls to create and use a Computer Use sandbox environment. In this quickstart, you perform the follow tasks:
+
+  * Create an Agent Platform instance to access the sandbox.
+  * Create a Computer Use sandbox.
+  * Generate an access token for the sandbox.
+  * Send a request to check status.
+  * Clean up resources.
+
+
+
+## Before you begin
+
+Set up your project and environment.
+
+### Set up your project
+
+  1. Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. 
+  2. In the Google Cloud console, on the project selector page, select or create a Google Cloud project.
+
+**Roles required to select or create a project**
+
+     * **Select a project** : Selecting a project doesn't require a specific IAM role—you can select any project that you've been granted a role on. 
+     * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.
+
+[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)
+
+  3. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). 
+
+  4. Enable the Gemini Enterprise Agent Platform API, if it is not already enabled. 
+
+**Roles required to enable APIs**
+
+To enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=aiplatform.googleapis.com)
+
+  5. In the Google Cloud console, on the project selector page, select or create a Google Cloud project.
+
+**Roles required to select or create a project**
+
+     * **Select a project** : Selecting a project doesn't require a specific IAM role—you can select any project that you've been granted a role on. 
+     * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.
+
+[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)
+
+  6. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). 
+
+  7. Enable the Gemini Enterprise Agent Platform API, if it is not already enabled. 
+
+**Roles required to enable APIs**
+
+To enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=aiplatform.googleapis.com)
+
+
+
+
+### Get the required roles
+
+To use the sandbox and generate tokens, you need the following roles:
+
+  * Agent Platform User (`roles/aiplatform.user`) on the project.
+  * Service Account Token Creator (`roles/iam.serviceAccountTokenCreator`) on the service account used for token generation.
+  * The service account used for token generation must also have the Agent Platform User (`roles/aiplatform.user`) role on the project.
+
+
+
+### Install libraries
+
+Install the Agent Platform SDK:
+    
+    
+    pip install google-cloud-agentplatform>=2.0.1
+
+## Create an Agent Platform instance
+
+To use the sandbox, first create an Agent Platform instance.
+    
+    
+    import agentplatform
+    client = agentplatform.Client(
+        project='PROJECT_ID',
+        location='LOCATION',
+        http_options={
+            "api_version": "v1beta1",
+        }
+    )
+    remote_agent = client.runtimes.create()
+    remote_agent_name = remote_agent.api_resource.name
+    
+
+Replace the following:
+
+  * `PROJECT_ID`: Your Google Cloud project ID.
+  * `LOCATION`: The region for your instance (such as `us-central1`).
+
+
+
+To encrypt your sandbox data using customer-managed encryption keys (CMEK), you must configure CMEK when you create your Agent Platform instance. For more information, see [Configure customer-managed encryption keys (CMEK)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/configure-cmek).
+
+## Create a template for Computer Use
+
+Create a sandbox template that you'll use when you create a Computer Use sandbox.
+    
+    
+    # Create a default Computer Use sandbox template
+    templates_client = client.sandboxes.templates
+    tmplt_operation = templates_client.create(
+        name=remote_agent_name,
+        display_name='DISPLAY_NAME',
+        config={
+            "default_container_environment": {
+                "default_container_category": "DEFAULT_CONTAINER_CATEGORY_COMPUTER_USE",
+            },
+            "egress_control_config": {
+                "internet_access": True,
+            },
+        },
+    )
+    template_name = tmplt_operation.response.name
+    print(f"Created template: {template_name}")
+    
+
+## Create a Computer Use sandbox
+
+Create a sandbox environment from the template.
+
+**Note:** By default, sandboxes expire after 2 hours. You can customize the sandbox lifetime by setting the `ttl` field when creating a sandbox.
+    
+    
+    # Create a sandbox environment referencing the template.
+    # To customize the lifetime, set `ttl` to a duration string in seconds (for example, "3600s" for 1 hour).
+    create_operation = client.sandboxes.create(
+        name=remote_agent_name,
+        config={
+            "sandbox_environment_template": template_name,
+            "display_name": 'DISPLAY_NAME',
+            "ttl": "3600s",  # Optional. Overrides the default 2-hour sandbox lifetime.
+        }
+    )
+    sandbox = create_operation.response
+    print(f"Created sandbox environment: {sandbox.name}")
+    print(f"Sandbox will expire at: {sandbox.expire_time}")
+    
+
+## Generate an access token
+
+To interact with the sandbox, generate a JSON web token (JWT) access token by using a service account.
+    
+    
+    service_account_email = "SERVICE_ACCOUNT_EMAIL"
+    access_token = client.sandboxes.generate_access_token(
+        service_account_email=service_account_email,
+    )
+    
+
+Replace `SERVICE_ACCOUNT_EMAIL` with the email of the service account that has the Service Account Token Creator role.
+
+## Send a request to the sandbox
+
+Send an HTTP GET request to the sandbox API server to check its status.
+    
+    
+    response = client.sandboxes.send_command(
+        http_method="GET",
+        access_token=access_token,
+        sandbox_environment=sandbox
+    )
+    print(f"Sandbox response: {response.body}")
+    
+
+Send an HTTP POST request to navigate to a specific page.
+    
+    
+    data = {"command": "Page.navigate", "params": {"url": "https://example.com"}}
+    
+    response = client.sandboxes.send_command(
+        http_method="POST",
+        path="cdp",
+        access_token=access_token,
+        request_dict=data,
+        sandbox_environment=sandbox
+    )
+    
+
+The following table lists additional methods and paths you can send to your sandbox:
+
+Method | Path | Description  
+---|---|---  
+GET | / | Gets sandbox health check  
+POST | /tabs | Creates a new tab and returns its details.  
+GET | /tabs | Lists details for all open tabs.  
+POST | /tabs/{tab_id}/activate | Sets a tab as active and brings it to the foreground.  
+DELETE | /tabs/{tab_id} | Closes a specific tab.  
+GET | /cdp_ws_endpoint | Returns the CDP WebSocket endpoint path.  
+POST | /cdp | Runs a CDP command on the active tab.  
+POST | /cdps | Runs multiple CDP commands on the active tab.  
+  
+For more information about the supported CDP commands and format, see the [CDP site](https://chromedevtools.github.io/devtools-protocol/).
+
+## Clean up
+
+To avoid incurring charges, delete the resources created in this quickstart.
+    
+    
+    client.sandboxes.delete(name=sandbox.name)
+    remote_agent.delete()
+    
+
+## What's next
+
+  * [Overview of Computer Use sandboxes](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/computer-use)
+  * [Configure VPC Service Controls](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/configure-vpc-sc)
+  * [Configure customer-managed encryption keys (CMEK)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/configure-cmek)
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

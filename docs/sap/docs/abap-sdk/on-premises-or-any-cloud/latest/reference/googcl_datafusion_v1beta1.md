@@ -1,0 +1,822 @@
+---
+url: https://docs.cloud.google.com/sap/docs/abap-sdk/on-premises-or-any-cloud/latest/reference/googcl_datafusion_v1beta1/
+title: Class /GOOG/CL_DATAFUSION_V1BETA1 \u00a0|\u00a0 SAP on Google Cloud \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T00:14:18.566523+00:00
+---
+
+# Class /GOOG/CL_DATAFUSION_V1BETA1  |  SAP on Google Cloud  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sap/docs/abap-sdk/on-premises-or-any-cloud/latest/reference/googcl_datafusion_v1beta1/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Compute ](https://docs.cloud.google.com/docs/compute-area)
+  * [ SAP on Google Cloud ](https://docs.cloud.google.com/sap/docs)
+  * [ Reference ](https://docs.cloud.google.com/sap/docs/abap-sdk/btp/latest/reference/overview)
+
+
+
+Send feedback 
+
+#  Class /GOOG/CL_DATAFUSION_V1BETA1 Stay organized with collections  Save and categorize content based on your preferences. 
+
+On-premises or any cloud edition v1.14keyboard_arrow_down
+
+  * [ SAP BTP edition v1.1 ](https://docs.cloud.google.com/sap/docs/abap-sdk/btp/latest/reference/googcl_datafusion_v1beta1)
+  * [ On-premises or any cloud edition v1.14 ](https://docs.cloud.google.com/sap/docs/abap-sdk/on-premises-or-any-cloud/latest/reference/googcl_datafusion_v1beta1)
+
+
+
+## Class
+    
+    
+    /GOOG/CL_DATAFUSION_V1BETA1
+
+  * Inheriting from:`/GOOG/CL_HTTP_CLIENT`
+  * Description:`Cloud Data Fusion API v1beta1`
+
+For general information about a class in ABAP SDK for Google Cloud, see [API client stub](https://docs.cloud.google.com/sap/docs/abap-sdk/latest/developer#client_stub). 
+
+## Types
+
+Type | Description | Visibility  
+---|---|---  
+`TY_001` | `Accelerator` | PUBLIC  
+`TY_002` | `AuditConfig` | PUBLIC  
+`TY_003` | `AuditLogConfig` | PUBLIC  
+`TY_004` | `Binding` | PUBLIC  
+`TY_006` | `CryptoKeyConfig` | PUBLIC  
+`TY_007` | `DnsPeering` | PUBLIC  
+`TY_009` | `EventPublishConfig` | PUBLIC  
+`TY_010` | `Expr` | PUBLIC  
+`TY_011` | `IAMPolicy` | PUBLIC  
+`TY_012` | `Instance` | PUBLIC  
+`TY_013` | `ListAvailableVersionsResponse` | PUBLIC  
+`TY_014` | `ListDnsPeeringsResponse` | PUBLIC  
+`TY_015` | `ListInstancesResponse` | PUBLIC  
+`TY_016` | `ListLocationsResponse` | PUBLIC  
+`TY_017` | `ListNamespacesResponse` | PUBLIC  
+`TY_018` | `ListOperationsResponse` | PUBLIC  
+`TY_019` | `Location` | PUBLIC  
+`TY_020` | `Namespace` | PUBLIC  
+`TY_021` | `NetworkConfig` | PUBLIC  
+`TY_022` | `Operation` | PUBLIC  
+`TY_024` | `Policy` | PUBLIC  
+`TY_025` | `PrivateServiceConnectConfig` | PUBLIC  
+`TY_030` | `SetIamPolicyRequest` | PUBLIC  
+`TY_031` | `Status` | PUBLIC  
+`TY_032` | `TestIamPermissionsRequest` | PUBLIC  
+`TY_033` | `TestIamPermissionsResponse` | PUBLIC  
+`TY_035` | `Version` | PUBLIC  
+`TY_036` | `LoggingConfig` | PUBLIC  
+`TY_037` | `MaintenanceEvent` | PUBLIC  
+`TY_038` | `MaintenancePolicy` | PUBLIC  
+`TY_039` | `MaintenanceWindow` | PUBLIC  
+`TY_040` | `RecurringTimeWindow` | PUBLIC  
+`TY_041` | `TimeWindow` | PUBLIC  
+`TY_T_001` | `Accelerator` | PUBLIC  
+`TY_T_002` | `AuditConfig` | PUBLIC  
+`TY_T_003` | `AuditLogConfig` | PUBLIC  
+`TY_T_004` | `Binding` | PUBLIC  
+`TY_T_007` | `DnsPeering` | PUBLIC  
+`TY_T_012` | `Instance` | PUBLIC  
+`TY_T_019` | `Location` | PUBLIC  
+`TY_T_020` | `Namespace` | PUBLIC  
+`TY_T_022` | `Operation` | PUBLIC  
+`TY_T_035` | `Version` | PUBLIC  
+`TY_T_037` | `MaintenanceEvent` | PUBLIC  
+`TY_T_STRING` | `Table of Strings` | PUBLIC  
+  
+## Constants
+
+Name | Type | Description | Value | Visibility  
+---|---|---|---|---  
+`C_SUPPORTED_AUTH` | `/GOOG/SUPP_AUTH` | Supported Auth Types | IJIJWW | PUBLIC  
+`C_SERVICE_NAME` | `/GOOG/SERVICE_NAME` | Google Service Name | datafusion:v1beta1 | PUBLIC  
+`C_ROOT_URL` | `STRING` | API Root URL | https://datafusion.googleapis.com | PUBLIC  
+`C_REVISION_DATE` | `DATUM` | Discovery Document revision Date | 20250224 | PUBLIC  
+`C_PATH_PREFIX` | `STRING` | API Path Prefix |  | PUBLIC  
+`C_CLOUD_VERSION` | `/GOOG/SDK_VERSION` | Lowest Cloud Version |  | PUBLIC  
+`C_ON_PREM_VERSION` | `/GOOG/SDK_VERSION` | Lowest On-premises Version | 1.7 | PUBLIC  
+  
+## Methods
+
+For general information about a method in ABAP SDK for Google Cloud, see [API method](https://docs.cloud.google.com/sap/docs/abap-sdk/latest/developer#api_method). 
+
+### CONSTRUCTOR
+
+  * Description: Constructor 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_KEY_NAME` | IMPORTING | `/GOOG/KEYNAME` | Google Cloud Key Name  
+`IV_LOG_OBJ` | IMPORTING | `BALOBJ_D` | Application log: Object name (Application code)  
+`IV_LOG_SUBOBJ` | IMPORTING | `BALSUBOBJ` | Application Log: Subobject  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### CANCEL_OPERATIONS
+
+  * Description: datafusion.projects.locations.operations.cancel 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_OPERATIONS_ID` | IMPORTING | `STRING` | operationsId  
+`IS_INPUT` | IMPORTING | `DATA` | Input Data  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `DATA` | Output Data  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### CREATE_DNS_PEERINGS
+
+  * Description: datafusion.projects.locations.instances.dnsPeerings.create 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_Q_DNSPEERINGID` | IMPORTING | `STRING` | dnsPeeringId  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_INSTANCES_ID` | IMPORTING | `STRING` | instancesId  
+`IS_INPUT` | IMPORTING | `TY_007` | DnsPeering  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_007` | DnsPeering  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### CREATE_INSTANCES
+
+  * Description: datafusion.projects.locations.instances.create 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_Q_INSTANCEID` | IMPORTING | `STRING` | instanceId  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IS_INPUT` | IMPORTING | `TY_012` | Instance  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_022` | Operation  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### DELETE_DNS_PEERINGS
+
+  * Description: datafusion.projects.locations.instances.dnsPeerings.delete 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_INSTANCES_ID` | IMPORTING | `STRING` | instancesId  
+`IV_P_DNS_PEERINGS_ID` | IMPORTING | `STRING` | dnsPeeringsId  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `DATA` | Output Data  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### DELETE_INSTANCES
+
+  * Description: datafusion.projects.locations.instances.delete 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_INSTANCES_ID` | IMPORTING | `STRING` | instancesId  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_022` | Operation  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### DELETE_OPERATIONS
+
+  * Description: datafusion.projects.locations.operations.delete 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_OPERATIONS_ID` | IMPORTING | `STRING` | operationsId  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `DATA` | Output Data  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### GET_IAM_POLICY_INSTANCES
+
+  * Description: datafusion.projects.locations.instances.getIamPolicy 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_Q_OPTIONSREQUESTEDPOLICYVER` | IMPORTING | `STRING` | options.requestedPolicyVersion  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_INSTANCES_ID` | IMPORTING | `STRING` | instancesId  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_024` | Policy  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### GET_IAM_POLICY_NAMESPACES
+
+  * Description: projects.locations.instances.namespaces.getIamPolicy 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_Q_OPTIONSREQUESTEDPOLICYVER` | IMPORTING | `STRING` | options.requestedPolicyVersion  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_INSTANCES_ID` | IMPORTING | `STRING` | instancesId  
+`IV_P_NAMESPACES_ID` | IMPORTING | `STRING` | namespacesId  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_024` | Policy  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### GET_INSTANCES
+
+  * Description: datafusion.projects.locations.instances.get 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_INSTANCES_ID` | IMPORTING | `STRING` | instancesId  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_012` | Instance  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### GET_LOCATIONS
+
+  * Description: datafusion.projects.locations.get 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_019` | Location  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### GET_OPERATIONS
+
+  * Description: datafusion.projects.locations.operations.get 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_OPERATIONS_ID` | IMPORTING | `STRING` | operationsId  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_022` | Operation  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### LIST_DNS_PEERINGS
+
+  * Description: datafusion.projects.locations.instances.dnsPeerings.list 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_Q_PAGESIZE` | IMPORTING | `STRING` | pageSize  
+`IV_Q_PAGETOKEN` | IMPORTING | `STRING` | pageToken  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_INSTANCES_ID` | IMPORTING | `STRING` | instancesId  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_014` | ListDnsPeeringsResponse  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### LIST_INSTANCES
+
+  * Description: datafusion.projects.locations.instances.list 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_Q_FILTER` | IMPORTING | `STRING` | filter  
+`IV_Q_ORDERBY` | IMPORTING | `STRING` | orderBy  
+`IV_Q_PAGESIZE` | IMPORTING | `STRING` | pageSize  
+`IV_Q_PAGETOKEN` | IMPORTING | `STRING` | pageToken  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_015` | ListInstancesResponse  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### LIST_LOCATIONS
+
+  * Description: datafusion.projects.locations.list 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_Q_FILTER` | IMPORTING | `STRING` | filter  
+`IV_Q_PAGESIZE` | IMPORTING | `STRING` | pageSize  
+`IV_Q_PAGETOKEN` | IMPORTING | `STRING` | pageToken  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_016` | ListLocationsResponse  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### LIST_NAMESPACES
+
+  * Description: datafusion.projects.locations.instances.namespaces.list 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_Q_PAGESIZE` | IMPORTING | `STRING` | pageSize  
+`IV_Q_PAGETOKEN` | IMPORTING | `STRING` | pageToken  
+`IV_Q_VIEW` | IMPORTING | `STRING` | view  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_INSTANCES_ID` | IMPORTING | `STRING` | instancesId  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_017` | ListNamespacesResponse  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### LIST_OPERATIONS
+
+  * Description: datafusion.projects.locations.operations.list 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_Q_FILTER` | IMPORTING | `STRING` | filter  
+`IV_Q_PAGESIZE` | IMPORTING | `STRING` | pageSize  
+`IV_Q_PAGETOKEN` | IMPORTING | `STRING` | pageToken  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_018` | ListOperationsResponse  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### LIST_VERSIONS
+
+  * Description: datafusion.projects.locations.versions.list 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_Q_LATESTPATCHONLY` | IMPORTING | `STRING` | latestPatchOnly  
+`IV_Q_PAGESIZE` | IMPORTING | `STRING` | pageSize  
+`IV_Q_PAGETOKEN` | IMPORTING | `STRING` | pageToken  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_013` | ListAvailableVersionsResponse  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### PATCH_INSTANCES
+
+  * Description: datafusion.projects.locations.instances.patch 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_Q_UPDATEMASK` | IMPORTING | `STRING` | updateMask  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_INSTANCES_ID` | IMPORTING | `STRING` | instancesId  
+`IS_INPUT` | IMPORTING | `TY_012` | Instance  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_022` | Operation  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### REMOVE_IAM_POLICY_LOCATIONS
+
+  * Description: datafusion.projects.locations.removeIamPolicy 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_LOCATIONS_ID1` | IMPORTING | `STRING` | locationsId1  
+`IS_INPUT` | IMPORTING | `DATA` | Input Data  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `DATA` | Output Data  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### RESTART_INSTANCES
+
+  * Description: datafusion.projects.locations.instances.restart 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_INSTANCES_ID` | IMPORTING | `STRING` | instancesId  
+`IS_INPUT` | IMPORTING | `DATA` | Input Data  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_022` | Operation  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### SET_IAM_POLICY_INSTANCES
+
+  * Description: datafusion.projects.locations.instances.setIamPolicy 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_INSTANCES_ID` | IMPORTING | `STRING` | instancesId  
+`IS_INPUT` | IMPORTING | `TY_030` | SetIamPolicyRequest  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_024` | Policy  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### SET_IAM_POLICY_NAMESPACES
+
+  * Description: projects.locations.instances.namespaces.setIamPolicy 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_INSTANCES_ID` | IMPORTING | `STRING` | instancesId  
+`IV_P_NAMESPACES_ID` | IMPORTING | `STRING` | namespacesId  
+`IS_INPUT` | IMPORTING | `TY_030` | SetIamPolicyRequest  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_024` | Policy  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### TEST_IAM_PERMISSIONS_INSTAN
+
+  * Description: datafusion.projects.locations.instances.testIamPermissions 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_INSTANCES_ID` | IMPORTING | `STRING` | instancesId  
+`IS_INPUT` | IMPORTING | `TY_032` | TestIamPermissionsRequest  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_033` | TestIamPermissionsResponse  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### TEST_IAM_PERMISSIONS_NAMESP
+
+  * Description: projects.locations.instances.namespaces.testIamPermissions 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_INSTANCES_ID` | IMPORTING | `STRING` | instancesId  
+`IV_P_NAMESPACES_ID` | IMPORTING | `STRING` | namespacesId  
+`IS_INPUT` | IMPORTING | `TY_032` | TestIamPermissionsRequest  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_033` | TestIamPermissionsResponse  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### UPGRADE_INSTANCES
+
+  * Description: datafusion.projects.locations.instances.upgrade 
+  * Visibility: PUBLIC 
+
+
+
+#### Parameters
+
+Name | Category | Type | Description  
+---|---|---|---  
+`IV_P_PROJECTS_ID` | IMPORTING | `STRING` | projectsId  
+`IV_P_LOCATIONS_ID` | IMPORTING | `STRING` | locationsId  
+`IV_P_INSTANCES_ID` | IMPORTING | `STRING` | instancesId  
+`IS_INPUT` | IMPORTING | `DATA` | Input Data  
+`ES_RAW` | EXPORTING | `DATA` | Raw Output Data  
+`ES_OUTPUT` | EXPORTING | `TY_022` | Operation  
+`EV_RET_CODE` | EXPORTING | `I` | Return Code  
+`EV_ERR_TEXT` | EXPORTING | `STRING` | Error Text  
+`ES_ERR_RESP` | EXPORTING | `/GOOG/ERR_RESP` | Error Response  
+  
+#### Exception
+
+Name | Description  
+---|---  
+`/GOOG/CX_SDK` | ABAP SDK for Google Cloud: Exception Class  
+  
+### CLOSE
+
+  * Description: Close Connection 
+  * Visibility: PUBLIC 
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

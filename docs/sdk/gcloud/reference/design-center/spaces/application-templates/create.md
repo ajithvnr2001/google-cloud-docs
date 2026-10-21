@@ -1,0 +1,212 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/design-center/spaces/application-templates/create/
+title: gcloud design-center spaces application-templates create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T03:20:51.418501+00:00
+---
+
+# gcloud design-center spaces application-templates create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/design-center/spaces/application-templates/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud design-center spaces application-templates create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud design-center spaces application-templates create - create an application template 
+SYNOPSIS
+    
+
+`gcloud design-center spaces application-templates create` (`APPLICATION_TEMPLATE` : `--location`=`LOCATION` `--space`=`SPACE`) [`--application-parameters`=[`key`=`KEY`],[`value`=`VALUE`]] [`--composition-type`=`COMPOSITION_TYPE`] [`--description`=`DESCRIPTION`] [`--display-name`=`DISPLAY_NAME`] [`--root-input-variables`=[`componentUri`=`COMPONENTURI`],[`variable`=`VARIABLE`]] [`--root-output-variables`=[`componentUri`=`COMPONENTURI`],[`variable`=`VARIABLE`]] [`--saas-runtime-context-names`=[`SAAS_RUNTIME_CONTEXT_NAMES`,…]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     Create an application template. 
+EXAMPLES
+     To create the application template `my-app-template` in space `my-space`, project `my-project` and location `us-central1`, run: 
+    
+    
+    gcloud design-center spaces application-templates create my-app-template --space=my-space --project=my-project --location=us-central1
+
+Or run: 
+    
+    
+    gcloud design-center spaces application-templates create projects/my-project/locations/us-central1/spaces/my-space/applicationTemplates/my-app-template
+
+To create the application template `my-app-template` with a display name of `My App Template` and description of `My app template description`, run: 
+    
+    
+    gcloud design-center spaces application-templates create my-app-template --space=my-space --project=my-project --location=us-central1 --display-name="My App Template" --description="My app template description"
+
+To create the application template `my-app-template` with application parameters key-value pair of `project_id:my-project` and `region:us-central1`, run the following shorthand example: 
+    
+    
+    gcloud design-center spaces application-templates create my-app-template --space=my-space --project=my-project --location=us-central1 --application-parameters=key=project_id,value=my-project --application-parameters=key=region,value=us-central1
+
+Or run the following JSON example: 
+    
+    
+    gcloud design-center spaces application-templates create my-app-template --space=my-space --project=my-project --location=us-central1 --application-parameters='[{"key": "project_id", "value":
+     "my-project"}, {"key": "region", "value": "us-central1"}]'
+
+Or create a YAML or JSON file with the parameters and run the following file example: 
+    
+    
+    gcloud design-center spaces application-templates create my-app-template --space=my-space --project=my-project --location=us-central1 --application-parameters=my-parameters.yaml
+
+POSITIONAL ARGUMENTS
+    
+
+ApplicationTemplate resource - Identifier. Application template name. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `application_template` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`APPLICATION_TEMPLATE`
+     ID of the applicationTemplate or fully qualified identifier for the applicationTemplate. 
+
+To set the `application_template` attribute: 
+
+  * provide the argument `application_template` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     The location id of the applicationTemplate resource. 
+
+To set the `location` attribute: 
+
+  * provide the argument `application_template` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line. 
+
+
+`--space`=`SPACE`
+     The space id of the applicationTemplate resource. 
+
+To set the `space` attribute: 
+
+  * provide the argument `application_template` on the command line with a fully specified name; 
+  * provide the argument `--space` on the command line. 
+
+
+FLAGS
+    
+
+`--application-parameters`=[`key`=`KEY`],[`value`=`VALUE`]
+     Parameters to apply to all components in an application. You can specify projectID and region. 
+
+`key`
+     The key of the parameter. 
+`value`
+     The value of the parameter. 
+`Shorthand Example:`
+    
+    
+    --application-parameters=key=string,value={…} --application-parameters=key=string,value={…}
+
+`JSON Example:`
+    
+    
+    --application-parameters='[{"key": "string", "value": {…}}]'
+
+`File Example:`
+    
+    
+    --application-parameters=path_to_file.(yaml|json)
+
+`--composition-type`=`COMPOSITION_TYPE`
+     The composition type of the applicationTemplate: STANDARD OR COMPOSITE. This is a create time only param. `COMPOSITION_TYPE` must be one of: 
+
+`composite`
+     ApplicationCompositionType is COMPOSITE. The template is composed of STANDARD applicationTemplate(s) and might be having multiple root modules in terraform code. 
+`standard`
+     ApplicationCompositionType is STANDARD. The applicationTemplate or application is composed of components only of type service/workload/asset and has a single root module in terraform code. 
+`--description`=`DESCRIPTION`
+     Application template description. 
+`--display-name`=`DISPLAY_NAME`
+     Application template display name. 
+`--root-input-variables`=[`componentUri`=`COMPONENTURI`],[`variable`=`VARIABLE`]
+     Root level input variables of the application template. 
+
+`componentUri`
+     Component to which this variable belongs. 
+`variable`
+     Name of the variable. 
+`Shorthand Example:`
+    
+    
+    --root-input-variables=componentUri=string,variable=string --root-input-variables=componentUri=string,variable=string
+
+`JSON Example:`
+    
+    
+    --root-input-variables='[{"componentUri": "string", "variable": "string"}]'
+
+`File Example:`
+    
+    
+    --root-input-variables=path_to_file.(yaml|json)
+
+`--root-output-variables`=[`componentUri`=`COMPONENTURI`],[`variable`=`VARIABLE`]
+     Root level output variables of the application template. 
+
+`componentUri`
+     Component to which this variable belongs. 
+`variable`
+     Name of the variable. 
+`Shorthand Example:`
+    
+    
+    --root-output-variables=componentUri=string,variable=string --root-output-variables=componentUri=string,variable=string
+
+`JSON Example:`
+    
+    
+    --root-output-variables='[{"componentUri": "string", "variable": "string"}]'
+
+`File Example:`
+    
+    
+    --root-output-variables=path_to_file.(yaml|json)
+
+SaaS runtime context. 
+`--saas-runtime-context-names`=[`SAAS_RUNTIME_CONTEXT_NAMES`,…]
+     The SaaS names. Format for each SaaS: projects/{project}/locations/{location}/saas/{saas} 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `designcenter/v1` API. The full documentation for this API can be found at: <http://cloud.google.com/application-design-center/docs>
+NOTES
+     This variant is also available: 
+    
+    
+    [gcloud alpha design-center spaces application-templates create](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/design-center/spaces/application-templates/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-06-09 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-06-09 UTC."],[],[]] 

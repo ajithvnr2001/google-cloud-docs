@@ -1,0 +1,273 @@
+---
+url: https://docs.cloud.google.com/spanner/docs/find-approximate-nearest-neighbors/
+title: Find approximate nearest neighbors (ANN) and query vector embeddings \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T04:49:38.285133+00:00
+---
+
+# Find approximate nearest neighbors (ANN) and query vector embeddings  |  Spanner  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/docs/find-approximate-nearest-neighbors/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Guides ](https://docs.cloud.google.com/spanner/docs/create-query-database-console)
+
+
+
+Send feedback 
+
+#  Find approximate nearest neighbors (ANN) and query vector embeddings Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Note:** This feature is available with the Spanner Enterprise edition and Enterprise Plus edition. For more information, see the [Spanner editions overview](https://docs.cloud.google.com/spanner/docs/editions-overview). 
+
+This page describes how to find approximate nearest neighbors (ANN) and query vector embeddings using the ANN distance functions.
+
+When a dataset is small, you can use [K-nearest neighbors (KNN)](https://docs.cloud.google.com/spanner/docs/find-k-nearest-neighbors) to find the exact k-nearest vectors. However, as your dataset grows, the latency and cost of a KNN search also increase. You can use ANN to find the approximate k-nearest neighbors with significantly reduced latency and cost.
+
+In an ANN search, the k-returned vectors aren't the true top k-nearest neighbors because the ANN search calculates approximate distances and might not look at all the vectors in the dataset. Occasionally, a few vectors that aren't among the top k-nearest neighbors are returned. This is known as _recall loss_. How much recall loss is acceptable to you depends on the use case, but in most cases, losing a bit of recall in return for improved database performance is an acceptable tradeoff.
+
+For more details about the approximate distance functions supported in Spanner, see the following reference pages for your database dialect:
+
+  * **GoogleSQL**
+    * [`APPROX_COSINE_DISTANCE`](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/mathematical_functions#approx_cosine_distance)
+    * [`APPROX_EUCLIDEAN_DISTANCE`](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/mathematical_functions#approx_euclidean_distance)
+    * [`APPROX_DOT_PRODUCT`](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/mathematical_functions#approx_dot_product)
+  * **PostgreSQL**
+    * [`spanner.approx_cosine_distance()`](https://docs.cloud.google.com/spanner/docs/reference/postgresql/functions#mathematical)
+    * [`spanner.approx_euclidean_distance()`](https://docs.cloud.google.com/spanner/docs/reference/postgresql/functions#mathematical)
+    * [`spanner.approx_dot_product()`](https://docs.cloud.google.com/spanner/docs/reference/postgresql/functions#mathematical)
+
+
+
+## Query vector embeddings
+
+Spanner accelerates approximate nearest neighbor (ANN) vector searches by using a [vector index](https://docs.cloud.google.com/spanner/docs/vector-indexes). You can use a vector index to query vector embeddings. To query vector embeddings, you must first [create a vector index](https://docs.cloud.google.com/spanner/docs/vector-indexes#create-vector-index). You can then use any one of the three approximate distance functions to find the ANN.
+
+Restrictions when using the approximate distance functions include the following:
+
+  * The approximate distance function must calculate the distance between an embedding column and a constant expression (for example, a parameter or a literal).
+  * The approximate distance function output must be used in a `ORDER BY` clause as the sole sort key, and a `LIMIT` must be specified after the `ORDER BY`.
+  * The query must explicitly filter out rows that aren't indexed. In most cases, this means that the query must include a `WHERE <column_name> IS NOT NULL` clause that matches the vector index definition, unless the column is already marked as `NOT NULL` in the table definition.
+
+
+
+For a detailed list of limitations, see the [approximate distance function reference page](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/mathematical_functions).
+
+**Examples**
+
+Consider a `Documents` table that has a `DocEmbedding` column of precomputed text embeddings from the `DocContents` bytes column, and a `NullableDocEmbedding` column populated from other sources that might be null.
+
+###  GoogleSQL 
+    
+    
+    CREATE TABLE Documents (
+      UserId       INT64 NOT NULL,
+      DocId        INT64 NOT NULL,
+      Author       STRING(1024),
+      DocContents  BYTES(MAX),
+      DocEmbedding ARRAY<FLOAT32> NOT NULL,
+      NullableDocEmbedding ARRAY<FLOAT32>,
+      WordCount    INT64
+    ) PRIMARY KEY (UserId, DocId);
+    
+
+###  PostgreSQL 
+    
+    
+    CREATE TABLE documents (
+      user_id      bigint not null,
+      doc_id       bigint not null,
+      author       varchar(1024),
+      doc_contents bytea,
+      doc_embedding float4[] not null,
+      nullable_doc_embedding float4[],
+      word_count   bigint,
+      PRIMARY KEY (user_id, doc_id)
+    );
+    
+
+To search for the nearest 100 vectors to `[1.0, 2.0, 3.0]`, specify one of the following search options in the approximate distance function:
+
+  * `num_leaves_to_search`: The number of leaves to search. The value must be a positive integer.
+  * `pct_leaves_to_search`: The percentage of leaves to search. The value must be a double between `0.0` and `100.0` with an explicit decimal point (for example, `10.0`). **Vector indexes created before Nov, 2025 may not support this search option.**
+
+
+
+You cannot specify both options in the same approximate distance function.
+
+**Option 1. Use search option`num_leaves_to_search`**
+
+###  GoogleSQL 
+    
+    
+    SELECT DocId
+    FROM Documents
+    WHERE WordCount > 1000
+    ORDER BY APPROX_EUCLIDEAN_DISTANCE(
+      ARRAY<FLOAT32>[1.0, 2.0, 3.0], DocEmbedding,
+      options => JSON '{"num_leaves_to_search": 10}')
+    LIMIT 100
+    
+
+###  PostgreSQL 
+    
+    
+    SELECT doc_id
+    FROM documents
+    WHERE word_count > 1000
+    ORDER BY spanner.approx_euclidean_distance(
+      ARRAY[1.0, 2.0, 3.0]::float4[], doc_embedding,
+      options=>jsonb'{"num_leaves_to_search": 10}'
+    )
+    LIMIT 100;
+    
+
+**Option 2. Use search option`pct_leaves_to_search`**
+
+###  GoogleSQL 
+    
+    
+    SELECT DocId
+    FROM Documents
+    WHERE WordCount > 1000
+    ORDER BY APPROX_EUCLIDEAN_DISTANCE(
+      ARRAY<FLOAT32>[1.0, 2.0, 3.0], DocEmbedding,
+      options => JSON '{"pct_leaves_to_search": 10.0}')
+    LIMIT 100
+    
+
+###  PostgreSQL 
+    
+    
+    SELECT doc_id
+    FROM documents
+    WHERE word_count > 1000
+    ORDER BY spanner.approx_euclidean_distance(
+      ARRAY[1.0, 2.0, 3.0]::float4[], doc_embedding,
+      options=>jsonb'{"pct_leaves_to_search": 10.0}'
+    )
+    LIMIT 100;
+    
+
+To search for the nearest 100 vectors to an embedding that is generated by a SQL expression, use the following pattern. In this example, the query is finding the documents that are most similar to the embedding of UserId = 1 and DocId = 1:
+
+###  GoogleSQL 
+    
+    
+    WITH emb AS (
+      SELECT DocEmbedding AS value
+      FROM Documents
+      WHERE UserId = 1 AND DocId = 1
+      LIMIT 1
+    )
+    SELECT DocId
+    FROM Documents, emb
+    ORDER BY APPROX_EUCLIDEAN_DISTANCE(
+      emb.value, DocEmbedding,
+      options => JSON '{"num_leaves_to_search": 10}')
+    LIMIT 100
+    
+
+###  PostgreSQL 
+    
+    
+    SELECT documents.doc_id
+    FROM
+      documents,
+      (
+        SELECT doc_embedding AS value
+        FROM documents
+        WHERE user_id = 1 AND doc_id = 1
+        LIMIT 1
+      ) vector
+    WHERE documents.doc_embedding IS NOT NULL
+    ORDER BY spanner.APPROX_EUCLIDEAN_DISTANCE(documents.doc_embedding,
+             vector.value, options=>'{"num_leaves_to_search": 10}'::jsonb)
+    LIMIT 100
+    
+
+If the embedding column is nullable:
+
+###  GoogleSQL 
+    
+    
+    SELECT DocId
+    FROM Documents
+    WHERE NullableDocEmbedding IS NOT NULL AND WordCount > 1000
+    ORDER BY APPROX_EUCLIDEAN_DISTANCE(
+      ARRAY<FLOAT32>[1.0, 2.0, 3.0], NullableDocEmbedding,
+      options => JSON '{"num_leaves_to_search": 10}')
+    LIMIT 100
+    
+
+###  PostgreSQL 
+    
+    
+    SELECT doc_id
+    FROM documents
+    WHERE nullable_doc_embedding IS NOT NULL AND word_count > 1000
+    ORDER BY spanner.approx_euclidean_distance(
+      ARRAY[1.0, 2.0, 3.0]::float4[], nullable_doc_embedding,
+      options=>jsonb'{"num_leaves_to_search": 10}'
+    )
+    LIMIT 100;
+    
+
+### Add the distance to the query results
+
+In the previous examples the ANN distance is used to order the query results, but is not displayed in those results. To add the distance to the results place the distance function in the `SELECT` clause and alias it, then use that alias as your sole ordering key in the `ORDER BY` clause.
+
+**Examples**
+
+###  GoogleSQL 
+    
+    
+    SELECT DocId,
+      APPROX_EUCLIDEAN_DISTANCE(
+        ARRAY<FLOAT32>[1.0, 2.0, 3.0], NullableDocEmbedding,
+        options => JSON '{"num_leaves_to_search": 10}') AS distance
+    FROM Documents
+    WHERE NullableDocEmbedding IS NOT NULL AND WordCount > 1000
+    ORDER BY distance
+    LIMIT 100
+    
+
+###  PostgreSQL 
+    
+    
+    SELECT doc_id,
+      spanner.approx_euclidean_distance(
+        ARRAY[1.0, 2.0, 3.0]::float4[], nullable_doc_embedding,
+        options=>jsonb'{"num_leaves_to_search": 10}'
+      ) AS distance
+    FROM documents
+    WHERE nullable_doc_embedding IS NOT NULL AND word_count > 1000
+    ORDER BY distance
+    LIMIT 100;
+    
+
+## What's next
+
+  * Learn more about Spanner [vector indexes](https://docs.cloud.google.com/spanner/docs/vector-indexes).
+
+  * Learn more about the approximate distance functions in [GoogleSQL](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/mathematical_functions) and [PostgreSQL](https://docs.cloud.google.com/spanner/docs/reference/postgresql/functions#mathematical).
+
+  * Learn more about index statements for [GoogleSQL `VECTOR INDEX`](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/data-definition-language#vector_index_statements) and [PostgreSQL `INDEX`](https://docs.cloud.google.com/spanner/docs/reference/postgresql/data-definition-language#index-statements).
+
+  * Learn more about [vector index best practices](https://docs.cloud.google.com/spanner/docs/vector-index-best-practices).
+
+  * Try the [Getting started with Spanner Vector Search](https://codelabs.developers.google.com/codelabs/spanner-getting-started-vector-search) for a step-by-step example of using ANN.
+
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

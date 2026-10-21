@@ -1,0 +1,110 @@
+---
+url: https://docs.cloud.google.com/spanner/docs/modify-data/
+title: Insert and modify data using the Google Cloud console \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T04:28:53.381193+00:00
+---
+
+# Insert and modify data using the Google Cloud console  |  Spanner  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/docs/modify-data/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Guides ](https://docs.cloud.google.com/spanner/docs/create-query-database-console)
+
+
+
+Send feedback 
+
+#  Insert and modify data using the Google Cloud console Stay organized with collections  Save and categorize content based on your preferences. 
+
+The Google Cloud console provides an interface for inserting, editing, and deleting data in a Spanner table.
+
+## Find a table
+
+To get started, select to view a Spanner table in the Google Cloud console.
+
+  1. Go to the **Spanner** page in the Google Cloud console.
+
+[Go to the Spanner page](https://console.cloud.google.com/spanner)
+
+  2. Click the name of an instance. The instance overview page is displayed.
+
+![Screenshot of databases listed in instance overview](https://docs.cloud.google.com/static/spanner/docs/images/cloud-spanner-instance-overview.png)
+
+  3. Under the **Databases** list on this page, click the name of a database.
+
+  4. Under **Tables** , click the name of a table.
+
+![Screenshot of tables listed in database detail page](https://docs.cloud.google.com/static/spanner/docs/images/select_table.png)
+
+  5. In the left pane of the Google Cloud console, click **Data**.
+
+![Screenshot of table details page](https://docs.cloud.google.com/static/spanner/docs/images/select_data_menu_item.png)
+
+
+
+
+## Insert data
+
+**Note:** Spanner Studio (formerly labeled **Query** in the Google Cloud console) supports SQL, DML, and DDL operations in a single editor. For more information, see [Manage your data using the Google Cloud console](https://docs.cloud.google.com/spanner/docs/manage-data-using-console).
+
+  1. On the table's **Data** page, click **Insert**.
+
+The Google Cloud console displays the table's Spanner Studio page with a new query tab containing template `INSERT` and `SELECT` statements that you edit to insert a row in the table and view the result of that insertion.
+
+  2. Edit the `INSERT` statement to the values you want, and edit the `SELECT` statement's `WHERE` clause to match the primary key value of the row you are inserting.
+
+See [INSERT statement](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/dml-syntax#insert-statement) and [Literals](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/lexical#literals) for information about the syntax Spanner supports.
+
+  3. Click **Run**.
+
+Spanner runs the statements.
+
+
+
+
+## Edit data
+
+  1. On the table's **Data** page, select the row you want to edit, then click **Edit**.
+
+The Google Cloud console displays the table's **Spanner Studio** page with a new query tab containing template `UPDATE` and `SELECT` statements that you edit to update the row in the table and view the result of that update. Note that the `WHERE` clauses of both statements denote the row you selected to edit.
+
+  2. Edit the `UPDATE` statement to reflect the updates you want to make.
+
+See [UPDATE statement](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/dml-syntax#update-statement) and [Literals](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/lexical#literals) for information about the syntax Spanner supports.
+
+  3. Click **Run**.
+
+Spanner runs the statements.
+
+
+
+
+## Delete data
+
+**Note:** Deleting a row will also delete its child rows if the child rows have `ON DELETE CASCADE` enabled. However, if the child rows do not have this setting enabled, you will first have to delete all the child rows in order to delete the parent row.
+
+  1. On the table's **Data** page, select one or more rows that you want to delete, then click **Delete**.
+
+Need help finding a row? Type its primary key into the filter box.
+
+  2. In the dialog that appears after you click **Delete** , click **CONFIRM**.
+
+The Google Cloud console displays the data from your table, which no longer contains the deleted rows.
+
+
+
+
+For an interactive example of inserting and modifying data in a Spanner table, see the [Quickstart using the console](https://docs.cloud.google.com/spanner/docs/create-query-database-console).
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

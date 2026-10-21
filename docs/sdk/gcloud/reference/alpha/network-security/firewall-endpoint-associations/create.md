@@ -1,0 +1,186 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/network-security/firewall-endpoint-associations/create/
+title: gcloud alpha network-security firewall-endpoint-associations create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T00:56:51.175851+00:00
+---
+
+# gcloud alpha network-security firewall-endpoint-associations create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/network-security/firewall-endpoint-associations/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha network-security firewall-endpoint-associations create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha network-security firewall-endpoint-associations create - create a Firewall Plus endpoint association 
+SYNOPSIS
+    
+
+`gcloud alpha network-security firewall-endpoint-associations create` [`ASSOCIATION_ID`] `--network`=`NETWORK` (`--endpoint`=`ENDPOINT` : `--endpoint-project`=`ENDPOINT_PROJECT` `--endpoint-zone`=`ENDPOINT_ZONE` `--organization`=`ORGANIZATION`) (`--location`=`LOCATION` | `--zone`=`ZONE`) [`--async`] [`--labels`=[`KEY`=`VALUE`,…]] [`--max-wait`=`MAX_WAIT`; default="60m"] [`--tls-inspection-policy`=`TLS_INSPECTION_POLICY` : `--tls-inspection-policy-project`=`TLS_INSPECTION_POLICY_PROJECT` `--tls-inspection-policy-region`=`TLS_INSPECTION_POLICY_REGION`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` Associate the specified network with the firewall endpoint. Successful creation of a firewall endpoint association results in an association in READY state. Check the progress of association creation by using `[gcloud network-security firewall-endpoint-associations list](https://docs.cloud.google.com/sdk/gcloud/reference/network-security/firewall-endpoint-associations/list)`. 
+
+For more examples, refer to the EXAMPLES section below. 
+
+EXAMPLES
+     To associate a network with a firewall endpoint, run: 
+    
+    
+    [gcloud alpha network-security firewall-endpoint-associations](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/network-security/firewall-endpoint-associations) create --network=projects/my-project/networks/global/myNetwork --endpoint=organizations/1234/locations/us-central1-a/firewallEndpoints/my-endpoint --zone=us-central1-a --project=my-project
+
+POSITIONAL ARGUMENTS
+    
+
+[`ASSOCIATION_ID`]
+     Name to give the association. If not specified, an auto-generated UUID will be used. 
+REQUIRED FLAGS
+    
+
+Network resource - Firewall Plus. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--network` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`--network`=`NETWORK`
+     ID of the network or fully qualified identifier for the network. 
+
+To set the `network-name` attribute: 
+
+  * provide the argument `--network` on the command line. 
+
+
+Firewall endpoint resource - Firewall Plus. The arguments in this group can be used to specify the attributes of this resource. This resource can be one of the following types: [networksecurity.organizations.locations.firewallEndpoints, networksecurity.projects.locations.firewallEndpoints]. 
+
+This must be specified. 
+
+`--endpoint`=`ENDPOINT`
+     ID of the firewall endpoint or fully qualified identifier for the firewall endpoint. 
+
+To set the `endpoint-name` attribute: 
+
+  * provide the argument `--endpoint` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--endpoint-project`=`ENDPOINT_PROJECT`
+     Project ID of the firewall endpoint. 
+
+To set the `endpoint-project` attribute: 
+
+  * provide the argument `--endpoint` on the command line with a fully specified name; 
+  * provide the argument `--endpoint-project` on the command line; 
+  * set the property `core/project`; 
+  * provide the argument `FIREWALL_ENDPOINT_ASSOCIATION` on the command line with a fully specified name. Must be specified for resource of type [networksecurity.projects.locations.firewallEndpoints]. 
+
+
+`--endpoint-zone`=`ENDPOINT_ZONE`
+     Zone of the firewall endpoint. 
+
+To set the `endpoint-zone` attribute: 
+
+  * provide the argument `--endpoint` on the command line with a fully specified name; 
+  * provide the argument `--endpoint-zone` on the command line; 
+  * provide the argument `--zone` on the command line; 
+  * provide the argument `--location` on the command line; 
+  * provide the argument `FIREWALL_ENDPOINT_ASSOCIATION` on the command line with a fully specified name. 
+
+
+`--organization`=`ORGANIZATION`
+     Organization ID to which the changes should apply. 
+
+To set the `organization` attribute: 
+
+  * provide the argument `--endpoint` on the command line with a fully specified name; 
+  * provide the argument `--organization` on the command line. Must be specified for resource of type [networksecurity.organizations.locations.firewallEndpoints]. 
+
+
+Exactly one of these must be specified: 
+
+`--location`=`LOCATION`
+     Location of the firewall endpoint association 
+`--zone`=`ZONE`
+     Zone of the firewall endpoint association 
+OPTIONAL FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. The default is `True`. Enabled by default, use `--no-async` to disable. 
+`--labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to add. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+`--max-wait`=`MAX_WAIT`; default="60m"
+     Time to synchronously wait for the operation to complete, after which the operation continues asynchronously. Ignored if --no-async isn't specified. See $ [gcloud topic datetimes](https://docs.cloud.google.com/sdk/gcloud/reference/topic/datetimes) for information on time formats. 
+TLS Inspection Policy resource - Path to TLS Inspection Policy configuration to use for intercepting TLS-encrypted traffic in this network. The arguments in this group can be used to specify the attributes of this resource. 
+`--tls-inspection-policy`=`TLS_INSPECTION_POLICY`
+     ID of the TLS Inspection Policy or fully qualified identifier for the TLS Inspection Policy. 
+
+To set the `tls_inspection_policy` attribute: 
+
+  * provide the argument `--tls-inspection-policy` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--tls-inspection-policy-project`=`TLS_INSPECTION_POLICY_PROJECT`
+     Project of the TLS Inspection Policy. 
+
+To set the `tls-inspection-policy-project` attribute: 
+
+  * provide the argument `--tls-inspection-policy` on the command line with a fully specified name; 
+  * provide the argument `--tls-inspection-policy-project` on the command line; 
+  * provide the argument `--project` on the command line; 
+  * provide the argument `FIREWALL_ENDPOINT_ASSOCIATION` on the command line with a fully specified name. 
+
+
+`--tls-inspection-policy-region`=`TLS_INSPECTION_POLICY_REGION`
+     Region of the TLS Inspection Policy. NOTE: TLS Inspection Policy needs to be in the same region as Firewall Plus endpoint resource. To set the `tls-inspection-policy-region` attribute: 
+
+  * provide the argument `--tls-inspection-policy` on the command line with a fully specified name; 
+  * provide the argument `--tls-inspection-policy-region` on the command line. 
+
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. These variants are also available: 
+    
+    
+    [gcloud network-security firewall-endpoint-associations create](https://docs.cloud.google.com/sdk/gcloud/reference/network-security/firewall-endpoint-associations/create)
+    
+    
+    [gcloud beta network-security firewall-endpoint-associations create](https://docs.cloud.google.com/sdk/gcloud/reference/beta/network-security/firewall-endpoint-associations/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

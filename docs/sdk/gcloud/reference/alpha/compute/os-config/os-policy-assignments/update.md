@@ -1,0 +1,116 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/os-config/os-policy-assignments/update/
+title: gcloud alpha compute os-config os-policy-assignments update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-15T07:47:58.883650+00:00
+---
+
+# gcloud alpha compute os-config os-policy-assignments update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/os-config/os-policy-assignments/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha compute os-config os-policy-assignments update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha compute os-config os-policy-assignments update - update an OS policy assignment 
+SYNOPSIS
+    
+
+`gcloud alpha compute os-config os-policy-assignments update` (`OS_POLICY_ASSIGNMENT` : `--location`=`LOCATION`) `--file`=`FILE` [`--allow-missing`] [`--async`] [`--endpoint-mode`=`ENDPOINT_MODE`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` Update an OS policy assignment 
+EXAMPLES
+     To update an OS policy assignment `my-assignment` in location `us-central1-a` with config file `/path/to/file/config.yaml`, run: 
+    
+    
+    gcloud alpha compute os-config os-policy-assignments update my-assignment --location=us-central1-a --file=/path/to/file/config.yaml
+
+POSITIONAL ARGUMENTS
+    
+
+OS policy assignment resource - OS policy assignment to update. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `os_policy_assignment` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`OS_POLICY_ASSIGNMENT`
+     ID of the OS policy assignment or fully qualified identifier for the OS policy assignment. 
+
+To set the `os_policy_assignment` attribute: 
+
+  * provide the argument `os_policy_assignment` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     Location of the OS policy assignment. To set the `location` attribute: 
+
+  * provide the argument `os_policy_assignment` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `compute/zone`. 
+
+
+REQUIRED FLAGS
+    
+
+`--file`=`FILE`
+     Absolute path to the OS policy assignment file on your local client. File must be in either JSON or YAML format. This file defines the OS policies that you want to apply to your VMs, the target VMs that you want to apply the policies to, and the rollout rate at which to apply the OS policies. For more information about this resource and sample OS policy assignment files, see <https://cloud.google.com/compute/docs/os-configuration-management/working-with-os-policies#os-policy-assignment>. 
+OPTIONAL FLAGS
+    
+
+`--allow-missing`
+     If set to true, and the OS policy assignment is not found, the new policy assignment resource will be created. 
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--endpoint-mode`=`ENDPOINT_MODE`
+     Specifies endpoint mode for a given command. Regional endpoints provide enhanced data residency and reliability by ensuring your request is handled entirely within the specified Google Cloud region. This differs from global endpoints, which may process parts of the request outside the target region. Overrides the default `regional/endpoint_mode` property value for this command invocation. `ENDPOINT_MODE` must be one of: 
+
+`global`
+     (Default) Use global rather than regional endpoints. 
+`regional`
+     Only use regional endpoints. An error will be raised if a regional endpoint is not available for a given command. 
+`regional-preferred`
+     Use regional endpoints when available, otherwise use global endpoints. Recommended for most users. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `osconfig/v1alpha` API. The full documentation for this API can be found at: <https://cloud.google.com/compute/docs/osconfig/rest>
+REGIONAL ENDPOINTS
+     This command supports regional endpoints. To use regional endpoints for this command, use the `--endpoint-mode=regional-preferred` flag. To use regional endpoints by default, run `$ [gcloud config set](https://docs.cloud.google.com/sdk/gcloud/reference/config/set) regional/endpoint_mode regional-preferred`. 
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. This variant is also available: 
+    
+    
+    [gcloud compute os-config os-policy-assignments update](https://docs.cloud.google.com/sdk/gcloud/reference/compute/os-config/os-policy-assignments/update)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-09-15 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-09-15 UTC."],[],[]] 

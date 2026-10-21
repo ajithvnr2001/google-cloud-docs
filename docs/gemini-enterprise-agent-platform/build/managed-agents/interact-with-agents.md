@@ -1,0 +1,837 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents/interact-with-agents/
+title: Interact with agents \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-20T23:38:56.477397+00:00
+---
+
+# Interact with agents  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents/interact-with-agents/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Agents ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agents)
+
+
+
+Send feedback 
+
+#  Interact with agents Stay organized with collections  Save and categorize content based on your preferences. 
+
+This product is a Pre-GA offering, subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://cloud.google.com/terms/service-terms#1), the "Agentic AI Services" terms in the [Service Specific Terms](https://cloud.google.com/terms/service-terms#1), and the [Additional Terms for Generative AI Preview Products](https://cloud.google.com/trustedtester/aitos). Pre-GA products and features may have limited support, and changes to pre-GA products and features may not be compatible with other pre-GA versions. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages).
+
+These Pre-GA products are in various stages of internal testing and review. As such, **do not use proprietary, sensitive, or other confidential data with these products**. These products are available to Customers solely for limited testing and evaluation, and you may not use them for commercial or production purposes.
+
+To see an example of interacting with agents, run the "Introduction to Managed Agents in Python" notebook in one of the following environments: 
+
+[![](https://docs.cloud.google.com/static/vertex-ai/images/colab-logo-32px.png)Open in Colab](https://colab.research.google.com/github/GoogleCloudPlatform/generative-ai/blob/main/agents/managed-agents/intro_managed_agents_python.ipynb) | [![](https://docs.cloud.google.com/static/vertex-ai/images/colab-enterprise-logo-32px.png)Open in Colab Enterprise](https://console.cloud.google.com/agent-platform/colab/import/https%3A%2F%2Fraw.githubusercontent.com%2FGoogleCloudPlatform%2Fgenerative-ai%2Fmain%2Fagents%2Fmanaged-agents%2Fintro_managed_agents_python.ipynb) | [![](https://docs.cloud.google.com/static/vertex-ai/images/vertex-ai-workbench-logo-32px.png)Open in Agent Platform Workbench](https://console.cloud.google.com/agent-platform/workbench/deploy-notebook?download_url=https%3A%2F%2Fraw.githubusercontent.com%2FGoogleCloudPlatform%2Fgenerative-ai%2Fmain%2Fagents%2Fmanaged-agents%2Fintro_managed_agents_python.ipynb) | [![](https://docs.cloud.google.com/static/vertex-ai/images/github-logo-32px.png)View on GitHub](https://github.com/GoogleCloudPlatform/generative-ai/blob/main/agents/managed-agents/intro_managed_agents_python.ipynb)
+
+This guide explains how to interact with deployed agents in Managed Agents API on Agent Platform using the **Interactions API**. You'll learn how to engage with custom agents built using the **Agents API** and the prebuilt **Antigravity** base agent, including configuring it dynamically. It also explains how to manage and reuse sandbox environments with environment IDs (`env_id`) and dynamically override configurations, for example Model Context Protocol (MCP) servers, during interactions.
+
+For more information about the API, see the [Interaction API](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/interactions-api) reference documentation.
+
+**Note:** Model usage during the preview is billed at standard rates. For more information, see the [pricing page](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing).
+
+## Before you begin
+
+Before starting interactions with agents, set up your environment:
+
+  1. Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. 
+  2. In the Google Cloud console, on the project selector page, select or create a Google Cloud project.
+
+**Roles required to select or create a project**
+
+     * **Select a project** : Selecting a project doesn't require a specific IAM role—you can select any project that you've been granted a role on. 
+     * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.
+
+[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)
+
+  3. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). 
+
+  4. Enable the Agent Platform API, if it is not already enabled. 
+
+**Roles required to enable APIs**
+
+To enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=aiplatform.googleapis.com)
+
+  5. Make sure that you have the following role or roles on the project: Agent Platform User (`roles/aiplatform.user`) or Agent Platform Administrator (`roles/aiplatform.admin`) 
+
+#### Check for the roles
+
+     1. In the Google Cloud console, go to the **IAM** page. 
+
+[Go to IAM](https://console.cloud.google.com/projectselector/iam-admin/iam?supportedpurview=project)
+     2. Select the project. 
+     3. In the **Principal** column, find all rows that identify you or a group that you're included in. To learn which groups you're included in, contact your administrator. 
+
+     4. For all rows that specify or include you, check the **Role** column to see whether the list of roles includes the required roles. 
+
+#### Grant the roles
+
+     1. In the Google Cloud console, go to the **IAM** page. 
+
+[Go to IAM](https://console.cloud.google.com/projectselector/iam-admin/iam?supportedpurview=project)
+     2. Select the project. 
+     3. Click person_add **Grant access**. 
+     4. In the **New principals** field, enter your user identifier. This is typically the email address for a Google Account.
+
+     5. Click **Select a role** , then search for the role. 
+     6. To grant additional roles, click add **Add another role** and add each additional role. 
+     7. Click **Save**. 
+
+  6. In the Google Cloud console, on the project selector page, select or create a Google Cloud project.
+
+**Roles required to select or create a project**
+
+     * **Select a project** : Selecting a project doesn't require a specific IAM role—you can select any project that you've been granted a role on. 
+     * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.
+
+[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)
+
+  7. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). 
+
+  8. Enable the Agent Platform API, if it is not already enabled. 
+
+**Roles required to enable APIs**
+
+To enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=aiplatform.googleapis.com)
+
+  9. Make sure that you have the following role or roles on the project: Agent Platform User (`roles/aiplatform.user`) or Agent Platform Administrator (`roles/aiplatform.admin`) 
+
+#### Check for the roles
+
+     1. In the Google Cloud console, go to the **IAM** page. 
+
+[Go to IAM](https://console.cloud.google.com/projectselector/iam-admin/iam?supportedpurview=project)
+     2. Select the project. 
+     3. In the **Principal** column, find all rows that identify you or a group that you're included in. To learn which groups you're included in, contact your administrator. 
+
+     4. For all rows that specify or include you, check the **Role** column to see whether the list of roles includes the required roles. 
+
+#### Grant the roles
+
+     1. In the Google Cloud console, go to the **IAM** page. 
+
+[Go to IAM](https://console.cloud.google.com/projectselector/iam-admin/iam?supportedpurview=project)
+     2. Select the project. 
+     3. Click person_add **Grant access**. 
+     4. In the **New principals** field, enter your user identifier. This is typically the email address for a Google Account.
+
+     5. Click **Select a role** , then search for the role. 
+     6. To grant additional roles, click add **Add another role** and add each additional role. 
+     7. Click **Save**. 
+
+  10. If your agent uses Google Cloud Model Context Protocol (MCP) tools, grant the MCP Tool User (`roles/mcp.toolUser`) role to both your user account and the associated service account. 
+
+
+
+## Interact with Antigravity agents
+
+The simplest way to use Managed Agents API on Agent Platform is to interact directly with the first-party **Antigravity** base agent. You don't need to create a custom agent resource; you can invoke the agent on the fly.
+
+To initiate an interaction, specify the base agent target, such as `antigravity-preview-05-2026` (or the latest preview variant), and request an on-the-fly remote environment:
+
+###  REST 
+
+### Request variables
+
+Before calling the API, replace the following variables:
+
+  * PROJECT_ID: Your Google Cloud project ID.
+  * LOCATION: The regional location for your interactions. Only the `global` region is supported.
+
+
+
+### HTTP method and URL
+    
+    
+    POST https://aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/interactions
+    
+
+### Request JSON body
+    
+    
+    {
+      "stream": true,
+      "background": true,
+      "store": true,
+      "agent": "antigravity-preview-05-2026",
+      "environment": {
+        "type": "remote"
+      },
+      "input": [
+        {
+          "type": "user_input",
+          "content": [
+            {
+              "type": "text",
+              "text": "Who are you, can you execute python code? Show me an example."
+            }
+          ]
+        }
+      ]
+    }
+    
+
+### `curl` command
+    
+    
+    curl -X POST "https://aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/interactions" \
+      -H "Content-Type: application/json" \
+      -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+      -H "Api-Revision: 2026-05-20" \
+      -d '{
+          "stream": true,
+          "background": true,
+          "store": true,
+          "agent": "antigravity-preview-05-2026",
+          "environment": {"type": "remote"},
+          "input": [
+              {
+                  "type": "user_input",
+                  "content": [
+                      {
+                          "type": "text",
+                          "text": "Who are you, can you execute python code? Show me an example."
+                      }
+                  ]
+              }
+          ]
+      }'
+    
+
+### Example response
+
+After the initial interaction, the service returns a streaming response. The `interaction.id` and `environment_id`, included in the `interaction.complete` data, can be used in subsequent calls to maintain the session state. The `interaction.id` is used to continue the conversation history, while the `environment_id` allows reusing the same sandbox environment. For more information, see Manage session state.
+    
+    
+    event: interaction.complete
+    data: {
+      "interaction": {
+        "id": "1234567890",
+        "status": "completed",
+        "usage": {
+          "total_tokens": 51132,
+          "total_input_tokens": 48984,
+          "input_tokens_by_modality": [
+            {
+              "modality": "text",
+              "tokens": 48984
+            }
+          ],
+          "total_output_tokens": 769,
+          "output_tokens_by_modality": [
+            {
+              "modality": "text",
+              "tokens": 769
+            }
+          ],
+          "total_thought_tokens": 1379
+        },
+        "created": "2026-05-15T22:26:05Z",
+        "updated": "2026-05-15T22:26:05Z",
+        "environment_id": "env_CAE1234567890",
+        "object": "interaction"
+      },
+      "event_type": "interaction.complete"
+    }
+    
+
+###  Python 
+
+Before running this code, set the variables described in the REST tab.
+    
+    
+    from google import genai
+    
+    client = genai.Client(
+        vertexai=True,
+        project="PROJECT_ID",
+        location="global",
+    )
+    
+    stream = client.interactions.create(
+        agent="antigravity-preview-05-2026",
+        input="Who are you, can you execute python code? Show me an example.",
+        environment={"type": "remote"},
+        stream=True,
+        background=True,
+        store=True,
+    )
+    
+    for event in stream:
+        print(event)
+    
+
+The streaming response yields `InteractionSSEEvent` objects. The final `interaction.complete` event contains the `environment_id` and interaction `id`, which you can reuse in subsequent calls to maintain session state and conversation history. For more information, see Manage session state.
+
+###  JavaScript 
+
+Before running this code, set the variables described in the REST tab.
+    
+    
+    import { GoogleGenAI } from "@google/genai";
+    
+    const client = new GoogleGenAI({
+        vertexai: true,
+        project: "PROJECT_ID",
+        location: "global",
+    });
+    
+    const stream = await client.interactions.create({
+        agent: "antigravity-preview-05-2026",
+        input: "Who are you, can you execute python code? Show me an example.",
+        environment: { type: "remote" },
+        stream: true,
+        background: true,
+        store: true,
+    });
+    
+    for await (const event of stream) {
+        console.log(event);
+    }
+    
+
+The streaming response yields event objects. The final `interaction.complete` event contains the `environment_id` and interaction `id`, which you can reuse in subsequent calls to maintain session state and conversation history. For more information, see Manage session state.
+
+## Interact with a custom agent created using Agents API
+
+To interact with a custom agent created as described in [Create and manage agents](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents/create-manage), you must specify it by using its agent ID.
+
+For more information on how to retrieve or list custom agents to find their IDs, see [List agents](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents/create-manage#list-agents).
+
+**Note:** The service does not pre-provision compute resources when you create a custom agent configuration. Instead, the configuration acts as a blueprint. The service provisions the actual containers on demand when you first call the Interactions API.
+
+### Environment configuration and initialization
+
+When interacting with a custom agent:
+
+  * **Default behavior** : If you [create the agent](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents/create-manage#create-an-agent) with a default environment, specify the `AGENT_ID` in your request.
+
+  * **Explicitly define the environment** : If you didn't define the environment configuration when creating the agent, you need to explicitly define the environment in the `environment` block of your initial interaction request.
+
+For example:
+        
+        "environment": {"type": "remote"}
+        
+
+
+
+
+You can dynamically configure features in the sandbox environment during your initial interaction API call to meet specific task requirements. For example:
+
+  * **Attach skill using Cloud Storage** : Attach Cloud Storage buckets to load large data volumes or persistent file directories into the container file system.
+
+  * **Attach skills using Skill Registry** : Provide a list of custom tools, scripts, or prepackaged agent skills to supply specific functional capabilities or your runtime workflow. See [Skill Registry](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/skill-registry).
+
+
+
+
+For a list of environment configuration structures and examples of how to maintain multi-turn conversation state, see Manage session state with environment IDs.
+
+### Send an interaction to a custom agent
+
+Send an interaction to your custom agent by specifying the agent ID:
+
+###  REST 
+
+### Request variables
+
+Before calling the API, replace the following variables:
+
+  * PROJECT_ID: Your Google Cloud project ID.
+  * LOCATION: Only the `global` region is supported.
+  * AGENT_ID: The custom identifier of your registered agent resource. For more information on how to retrieve or list custom agents to find their IDs, see [List agents](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents/create-manage#list-agents).
+
+
+
+### HTTP method and URL
+    
+    
+    POST https://aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/interactions
+    
+
+### Request JSON body
+    
+    
+    {
+      "stream": true,
+      "background": true,
+      "store": true,
+      "agent": "AGENT_ID",
+      "input": [
+        {
+          "type": "user_input",
+          "content": [
+            {
+              "type": "text",
+              "text": "Tell me the name of python packages used for data analysis."
+            }
+          ]
+        }
+      ]
+    }
+    
+
+### `curl` command
+    
+    
+    curl -X POST "https://aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/interactions" \
+      -H "Content-Type: application/json" \
+      -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+      -H "Api-Revision: 2026-05-20" \
+      -d '{
+          "stream": true,
+          "background": true,
+          "store": true,
+          "agent": "AGENT_ID",
+          "input": [
+              {
+                  "type": "user_input",
+                  "content": [
+                      {
+                          "type": "text",
+                          "text": "Tell me the name of python packages used for data analysis."
+                      }
+                  ]
+              }
+          ]
+      }'
+    
+
+### Example Response
+
+After the initial interaction, the service returns a streaming response. The `interaction.id` and `environment_id`, included in the `interaction.complete` data, can be used in subsequent calls to maintain the session state. The `interaction.id` is used to continue the conversation history, while the `environment_id` allows reusing the same sandbox environment. For more information, see Manage session state.
+    
+    
+    data: {
+      "interaction": {
+        "id": "1234567890",
+        "status": "completed",
+        "usage": {
+          "total_tokens": 7558,
+          "total_input_tokens": 6822,
+          "input_tokens_by_modality": [
+            {
+              "modality": "text",
+              "tokens": 6822
+            }
+          ],
+          "total_output_tokens": 278,
+          "output_tokens_by_modality": [
+            {
+              "modality": "text",
+              "tokens": 278
+            }
+          ],
+          "total_thought_tokens": 458
+        },
+        "created": "2026-05-15T22:38:56Z",
+        "updated": "2026-05-15T22:38:56Z",
+        "environment_id": "env_CAE1234567890",
+        "object": "interaction"
+      },
+      "event_type": "interaction.complete"
+    }
+    
+
+###  Python 
+
+Before running this code, set the variables described in the REST tab.
+    
+    
+    from google import genai
+    
+    client = genai.Client(
+        vertexai=True,
+        project="PROJECT_ID",
+        location="global",
+    )
+    
+    stream = client.interactions.create(
+        agent="AGENT_ID",
+        input="Tell me the name of python packages used for data analysis.",
+        stream=True,
+        background=True,
+        store=True,
+    )
+    
+    for event in stream:
+        print(event)
+    
+
+###  JavaScript 
+
+Before running this code, set the variables described in the REST tab.
+    
+    
+    import { GoogleGenAI } from "@google/genai";
+    
+    const client = new GoogleGenAI({
+        vertexai: true,
+        project: "PROJECT_ID",
+        location: "global",
+    });
+    
+    const stream = await client.interactions.create({
+        agent: "AGENT_ID",
+        input: "Tell me the name of python packages used for data analysis.",
+        stream: true,
+        background: true,
+        store: true,
+    });
+    
+    for await (const event of stream) {
+        console.log(event);
+    }
+    
+
+## Manage session state and multi-turn interactions
+
+By default, interactions are stateless unless you target a specific environment container or conversation history. In multi-turn assistant flows, you can retain local files, code execution context, system modifications, runtime-installed open source software libraries, and conversation history across conversations:
+
+  * **To continue a conversation** : Pass the ID from the previous interaction to the `previous_interaction_id` parameter.
+  * **To continue using a created environment** : Pass the environment ID returned from the previous interaction to the `environment` parameter.
+
+**Note:** It is highly recommended to reuse environments using the environment ID (`environment`) to reduce provisioning latency. Custom environments have a standard time to live (TTL) of 7 days, and any new interaction referencing the environment automatically resets this timer to ensure active sandboxes remain operational. For more details on sandbox settings and pre-installed libraries, see the [Sandbox environment reference](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents/sandbox-environment).
+
+You can select key environment configurations using the following parameters in the `environment` field:
+
+JSON structure | Description  
+---|---  
+`"environment": {"type": "remote"}` | Provisions a fresh, standard sandbox environment. Use this option during initial interactions.  
+`"environment": "env_CAEQ..."` |  Reuses the existing, persistent sandbox container, preserving all libraries, scripts, files, and state associated with this environment ID.   
+`"environment": {"type": "remote", "sources": [{"type": "gcs", "source": "gs://YOUR_BUCKET/YOUR_FILE", "target": "YOUR_TARGET_PATH"}]}` |  Provisions a new remote sandbox and preloads it with custom skills or files from the specified `sources`, such as those stored in Google Cloud Storage.   
+  
+To send a subsequent interaction request that reuses the same sandbox container and continues a conversation, pass the returned `environment_id` in the `environment` field and specify `previous_interaction_id`. The following examples demonstrate how to continue a stateful session when interacting with the agent.
+
+###  REST 
+
+### Request variables
+
+Before calling the API, replace the following variables:
+
+  * PROJECT_ID: Your Google Cloud project ID.
+  * LOCATION: Only the `global` region is supported.
+  * AGENT_ID: The custom identifier of your registered agent resource (or `antigravity-preview-05-2026`).
+  * PREVIOUS_INTERACTION_ID: The interaction ID returned from the previous interaction.
+  * ENV_ID: The environment ID returned from the previous interaction.
+
+
+
+### HTTP method and URL
+    
+    
+    POST https://aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/interactions
+    
+
+### Request JSON body
+    
+    
+    {
+      "stream": true,
+      "background": true,
+      "store": true,
+      "agent": "AGENT_ID",
+      "previous_interaction_id": "PREVIOUS_INTERACTION_ID",
+      "environment": "ENV_ID",
+      "input": [
+        {
+          "type": "user_input",
+          "content": [
+            {
+              "type": "text",
+              "text": "What did I ask you before and what did you do?"
+            }
+          ]
+        }
+      ]
+    }
+    
+
+### `curl` command
+    
+    
+    curl -X POST "https://aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/interactions" \
+      -H "Content-Type: application/json" \
+      -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+      -H "Api-Revision: 2026-05-20" \
+      -d '{
+          "stream": true,
+          "background": true,
+          "store": true,
+          "agent": "AGENT_ID",
+          "previous_interaction_id": "PREVIOUS_INTERACTION_ID",
+          "environment": "ENV_ID",
+          "input": [
+              {
+                  "type": "user_input",
+                  "content": [
+                      {
+                          "type": "text",
+                          "text": "What did I ask you before and what did you do?"
+                      }
+                  ]
+              }
+          ]
+      }'
+    
+
+###  Python 
+
+Before running this code, set the variables described in the REST tab.
+    
+    
+    from google import genai
+    
+    client = genai.Client(
+        vertexai=True,
+        project="PROJECT_ID",
+        location="global",
+    )
+    
+    stream = client.interactions.create(
+        agent="AGENT_ID",
+        input="What did I ask you before and what did you do?",
+        previous_interaction_id="PREVIOUS_INTERACTION_ID",
+        environment="ENV_ID",
+        stream=True,
+        background=True,
+        store=True,
+    )
+    
+    for event in stream:
+        print(event)
+    
+
+In the Python SDK, pass the `environment_id` string directly as the `environment` parameter to reuse an existing sandbox container. Use `previous_interaction_id` to continue the conversation history.
+
+###  JavaScript 
+
+Before running this code, set the variables described in the REST tab.
+    
+    
+    import { GoogleGenAI } from "@google/genai";
+    
+    const client = new GoogleGenAI({
+        vertexai: true,
+        project: "PROJECT_ID",
+        location: "global",
+    });
+    
+    const stream = await client.interactions.create({
+        agent: "AGENT_ID",
+        input: "What did I ask you before and what did you do?",
+        previous_interaction_id: "PREVIOUS_INTERACTION_ID",
+        environment: "ENV_ID",
+        stream: true,
+        background: true,
+        store: true,
+    });
+    
+    for await (const event of stream) {
+        console.log(event);
+    }
+    
+
+In the JavaScript SDK, pass the `environment_id` string directly as the `environment` parameter to reuse an existing sandbox container. Use `previous_interaction_id` to continue the conversation history.
+
+## Override configurations during interaction
+
+While custom agent definitions typically include default configurations for tools, skills, and third-party connections, you can dynamically adjust these definitions on a per-interaction basis without modifying the underlying agent resource configuration.
+
+A common use case is dynamically overriding connections to **Model Context Protocol (MCP)** servers at runtime. Any tools or MCP servers specified in the interaction request body completely override the agent's preconfigured tools for the duration of that interaction turn.
+
+To override or define an MCP server at interaction time, add an `mcp_server` type tool inside the `tools` list of your interaction request:
+
+###  REST 
+
+### Request variables
+
+Before calling the API, replace the following variables:
+
+  * PROJECT_ID: Your Google Cloud project ID.
+  * LOCATION: The location for your interaction. Only the `global` region is supported.
+  * AGENT_ID: The custom identifier of your agent resource.
+  * MCP_SERVER_URL: The remote HTTP gateway URL of the new MCP server.
+  * MCP_SERVER_NAME: A descriptive label for the target MCP host domain.
+  * MCP_HEADER_KEY: Optional. The header key name (for example, `Authorization`).
+  * MCP_HEADER_VALUE: Optional. The credential value (for example, `Bearer <token>`).
+
+
+
+### HTTP method and URL
+    
+    
+    POST https://aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/interactions
+    
+
+### Request JSON body
+    
+    
+    {
+      "stream": true,
+      "background": true,
+      "store": true,
+      "agent": "agents/AGENT_ID",
+      "input": [
+        {
+          "type": "user_input",
+          "content": [
+            {
+              "type": "text",
+              "text": "Analyze our database and summarize recent purchase events."
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "type": "mcp_server",
+          "url": "MCP_SERVER_URL",
+          "name": "MCP_SERVER_NAME",
+          "headers": {
+            "MCP_HEADER_KEY": "MCP_HEADER_VALUE"
+          }
+        }
+      ]
+    }
+    
+
+### `curl` command
+    
+    
+    curl -X POST "https://aiplatform.googleapis.com/v1beta1/projects/PROJECT_ID/locations/LOCATION/interactions" \
+      -H "Content-Type: application/json" \
+      -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+      -H "Api-Revision: 2026-05-20" \
+      -d '{
+         "stream": true,
+         "background": true,
+         "store": true,
+         "agent": "agents/AGENT_ID",
+         "input": [
+             {
+                 "type": "user_input",
+                 "content": [
+                     {
+                         "type": "text",
+                         "text": "Analyze our database and summarize recent purchase events."
+                     }
+                 ]
+             }
+         ],
+         "tools": [
+             {
+                 "type": "mcp_server",
+                 "url": "MCP_SERVER_URL",
+                 "name": "MCP_SERVER_NAME",
+                 "headers": {
+                     "MCP_HEADER_KEY": "MCP_HEADER_VALUE"
+                 }
+             }
+         ]
+      }'
+    
+
+###  Python 
+
+Before running this code, set the variables described in the REST tab.
+    
+    
+    from google import genai
+    
+    client = genai.Client(
+        vertexai=True,
+        project="PROJECT_ID",
+        location="global",
+    )
+    
+    stream = client.interactions.create(
+        agent="AGENT_ID",
+        input="Analyze our database and summarize recent purchase events.",
+        tools=[
+            {
+                "type": "mcp_server",
+                "url": "MCP_SERVER_URL",
+                "name": "MCP_SERVER_NAME",
+                "headers": {
+                    "MCP_HEADER_KEY": "MCP_HEADER_VALUE"
+                },
+            }
+        ],
+        stream=True,
+        background=True,
+        store=True,
+    )
+    
+    for event in stream:
+        print(event)
+    
+
+###  JavaScript 
+
+Before running this code, set the variables described in the REST tab.
+    
+    
+    import { GoogleGenAI } from "@google/genai";
+    
+    const client = new GoogleGenAI({
+        vertexai: true,
+        project: "PROJECT_ID",
+        location: "global",
+    });
+    
+    const stream = await client.interactions.create({
+        agent: "AGENT_ID",
+        input: "Analyze our database and summarize recent purchase events.",
+        tools: [
+            {
+                type: "mcp_server",
+                url: "MCP_SERVER_URL",
+                name: "MCP_SERVER_NAME",
+                headers: {
+                    "MCP_HEADER_KEY": "MCP_HEADER_VALUE",
+                },
+            },
+        ],
+        stream: true,
+        background: true,
+        store: true,
+    });
+    
+    for await (const event of stream) {
+        console.log(event);
+    }
+    
+
+## What's next
+
+Overview 
+
+###  [ Managed Agents API on Agent Platform overview ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents)
+
+Learn about Managed Agents API on Agent Platform, a config-driven, REST-first environment for building autonomous agents. 
+
+Reference 
+
+###  [ Managed Agents API on Agent Platform sandbox environment ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents/sandbox-environment)
+
+Learn about the isolated sandbox container, permissions, and pre-installed packages/tools. 
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

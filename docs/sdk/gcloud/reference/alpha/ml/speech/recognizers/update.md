@@ -1,0 +1,127 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/ml/speech/recognizers/update/
+title: gcloud alpha ml speech recognizers update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T11:47:22.273267+00:00
+---
+
+# gcloud alpha ml speech recognizers update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/ml/speech/recognizers/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha ml speech recognizers update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha ml speech recognizers update - update a Speech-to-text recognizer 
+SYNOPSIS
+    
+
+`gcloud alpha ml speech recognizers update` (`RECOGNIZER` : `--location`=`LOCATION`) [`--async`] [`--display-name`=`DISPLAY_NAME`] [`--language-codes`=[`LANGUAGE_CODE`,…]] [`--model`=`MODEL`] [`--audio-channel-count`=`AUDIO_CHANNEL_COUNT` `--encoding`=`ENCODING` `--sample-rate`=`SAMPLE_RATE`] [`--[no-]enable-automatic-punctuation` `--[no-]enable-spoken-emojis` `--[no-]enable-spoken-punctuation` `--[no-]enable-word-confidence` `--[no-]enable-word-time-offsets` `--max-alternatives`=`MAX_ALTERNATIVES` `--[no-]profanity-filter` `--[no-]separate-channel-recognition` `--max-speaker-count`=`MAX_SPEAKER_COUNT` `--min-speaker-count`=`MIN_SPEAKER_COUNT`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` Update a Speech-to-text recognizer. 
+POSITIONAL ARGUMENTS
+    
+
+Recognizer resource - recognizer. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `recognizer` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`RECOGNIZER`
+     ID of the recognizer or fully qualified identifier for the recognizer. 
+
+To set the `recognizer` attribute: 
+
+  * provide the argument `recognizer` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     Location of the recognizer. To set the `location` attribute: 
+
+  * provide the argument `recognizer` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line. 
+
+
+FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. The default is `False`. 
+`--display-name`=`DISPLAY_NAME`
+     Name of this recognizer as it appears in UIs. 
+`--language-codes`=[`LANGUAGE_CODE`,…]
+     Language code is one of `en-US`, `en-GB`, `fr-FR`. Check [documentation](https://cloud.google.com/speech-to-text/docs/multiple-languages) for using more than one language code. 
+`--model`=`MODEL`
+     Which model to use for recognition requests. Select the model best suited to your domain to get best results. Guidance for choosing which model to use can be found in the [Transcription Models Documentation](https://cloud.google.com/speech-to-text/v2/docs/transcription-model) and the models supported in each region can be found in the [Table Of Supported Models](https://cloud.google.com/speech-to-text/v2/docs/speech-to-text-supported-languages). 
+Encoding format 
+`--audio-channel-count`=`AUDIO_CHANNEL_COUNT`
+     Number of channels present in the audio data sent for recognition. Required if \--encoding flag is specified and is not AUTO. Must be set to a value between 1 and 8. 
+`--encoding`=`ENCODING`
+     Encoding format of the provided audio. For headerless formats, must be set to `LINEAR16`, `MULAW,` or `ALAW`. For other formats, set to `AUTO`. Overrides the recognizer configuration if present, else uses recognizer encoding. 
+`--sample-rate`=`SAMPLE_RATE`
+     Sample rate in Hertz of the audio data sent for recognition. Required if \--encoding flag is specified and is not AUTO. Must be set to a value between 8000 and 48000. 
+ASR Features 
+`--[no-]enable-automatic-punctuation`
+     If set, adds punctuation to recognition result hypotheses. Use `--enable-automatic-punctuation` to enable and `--no-enable-automatic-punctuation` to disable. 
+`--[no-]enable-spoken-emojis`
+     If set, adds spoken emoji formatting. Use `--enable-spoken-emojis` to enable and `--no-enable-spoken-emojis` to disable. 
+`--[no-]enable-spoken-punctuation`
+     If set, replaces spoken punctuation with the corresponding symbols in the request. Use `--enable-spoken-punctuation` to enable and `--no-enable-spoken-punctuation` to disable. 
+`--[no-]enable-word-confidence`
+     If set, the top result includes a list of words and the confidence for those words. Use `--enable-word-confidence` to enable and `--no-enable-word-confidence` to disable. 
+`--[no-]enable-word-time-offsets`
+     If set, the top result includes a list of words and their timestamps. Use `--enable-word-time-offsets` to enable and `--no-enable-word-time-offsets` to disable. 
+`--max-alternatives`=`MAX_ALTERNATIVES`
+     Maximum number of recognition hypotheses to be returned. Must be set to a value between 1 and 30. 
+`--[no-]profanity-filter`
+     If set, the server will censor profanities. Use `--profanity-filter` to enable and `--no-profanity-filter` to disable. 
+`--[no-]separate-channel-recognition`
+     Mode for recognizing multi-channel audio using Separate Channel Recognition. When set, the service will recognize each channel independently. Use `--separate-channel-recognition` to enable and `--no-separate-channel-recognition` to disable. 
+Speaker Diarization 
+`--max-speaker-count`=`MAX_SPEAKER_COUNT`
+     Maximum number of speakers in the conversation. Must be greater than or equal to \--min-speaker-count. Must be set to a value between 1 and 6. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--min-speaker-count`=`MIN_SPEAKER_COUNT`
+     Minimum number of speakers in the conversation. Must be less than or equal to \--max-speaker-count. Must be set to a value between 1 and 6. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. 
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

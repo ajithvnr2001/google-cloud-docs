@@ -1,0 +1,225 @@
+---
+url: https://docs.cloud.google.com/spanner/docs/create-manage-views/
+title: Create and manage views \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T04:29:16.775889+00:00
+---
+
+# Create and manage views  |  Spanner  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/docs/create-manage-views/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Guides ](https://docs.cloud.google.com/spanner/docs/create-query-database-console)
+
+
+
+Send feedback 
+
+#  Create and manage views Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page describes how to create and manage Spanner views for GoogleSQL-dialect databases and PostgreSQL-dialect databases. For more information about Spanner views, see [Views overview](https://docs.cloud.google.com/spanner/docs/views).
+
+## Permissions
+
+To create, grant, and revoke access to a view, you must have the [`spanner.database.updateDdl`](https://docs.cloud.google.com/spanner/docs/iam#databases) permission.
+
+## Create a view
+
+To create a view, use the DDL statement [`CREATE VIEW`](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/data-definition-language#create-view) to name the view and provide the query that defines it. This statement has two forms:
+
+  * `CREATE VIEW` defines a new view in the current database. If a view named `_view_name_` already exists, the `CREATE VIEW` statement fails.
+
+  * `CREATE OR REPLACE VIEW` defines a new view in the current database. If a view named `_view_name_` already exists, its definition is replaced.
+
+
+
+
+The syntax for the CREATE VIEW statement is:
+    
+    
+    {CREATE | CREATE OR REPLACE } VIEW  **_view_name_**
+    SQL SECURITY { INVOKER | DEFINER }
+    AS **_query_**
+
+Because a view is a virtual table, the `**_query_**` that you specify must provide names for all the columns in that virtual table.
+
+Additionally, Spanner checks the `**_query_**` you specify using _strict name resolution_ , meaning that all schema object names used in the query must be qualified such that they unambiguously identify a single schema object. For example, in the examples that follow the `SingerId` column in the `Singers` table must be qualified as `Singers.SingerId`.
+
+You must specify the `SQL SECURITY` as either `INVOKER` or `DEFINER` in the `CREATE VIEW` or `CREATE OR REPLACE VIEW` statement. For more information about the difference between the two security types, see [Views overview](https://docs.cloud.google.com/spanner/docs/views).
+
+For example, assume the `Singers` table is defined as shown in the following:
+
+###  GoogleSQL 
+    
+    
+    CREATE TABLE Singers (
+      SingerId   INT64 NOT NULL,
+      FirstName  STRING(1024),
+      LastName   STRING(1024),
+      SingerInfo BYTES(MAX)
+    ) PRIMARY KEY (SingerId);
+
+###  PostgreSQL 
+    
+    
+    CREATE TABLE Singers (
+      SingerId   BIGINT PRIMARY KEY,
+      FirstName  VARCHAR(1024),
+      LastName   VARCHAR(1024),
+      SingerInfo BYTEA
+    );
+
+You can define the `SingerNames` view with invoker's rights as shown in the following:
+    
+    
+    CREATE VIEW SingerNames
+    SQL SECURITY INVOKER
+    AS SELECT
+       Singers.SingerId AS SingerId,
+       Singers.FirstName || ' ' || Singers.LastName AS Name
+    FROM Singers;
+
+The virtual table created when the `SingerNames` view is used in a query has two columns, `SingerId` and `Name`.
+
+While this definition of the `SingerNames` view is valid, it does not abide by the best practice of casting data types to ensure stability across schema changes, as described in the next section.
+
+### Best practices when creating views
+
+To minimize the need to update a view's definition, explicitly cast the data type of all table columns in the query that defines the view. When you do so, the view's definition can remain valid across schema changes to a column's type.
+
+For example, the following definition of the `SingerNames` view might become invalid as the result of changing a column's data type in the `Singers` table.
+    
+    
+    CREATE VIEW SingerNames
+    SQL SECURITY INVOKER
+    AS SELECT
+       Singers.SingerId AS SingerId,
+       Singers.FirstName || ' ' || Singers.LastName AS Name
+    FROM Singers;
+
+You can avoid the view becoming invalid by explicitly casting the columns to the needed data types, as shown in the following example:
+
+###  GoogleSQL 
+    
+    
+    CREATE OR REPLACE VIEW SingerNames
+    SQL SECURITY INVOKER
+    AS SELECT
+     CAST(Singers.SingerId AS INT64) AS SingerId,
+     CAST(Singers.FirstName AS STRING) || " " || CAST(Singers.LastName AS STRING) AS Name
+    FROM Singers;
+
+###  PostgreSQL 
+    
+    
+    CREATE OR REPLACE VIEW SingerNames
+    SQL SECURITY INVOKER
+    AS SELECT
+     CAST(Singers.SingerId AS bigint) AS SingerId,
+     CAST(Singers.FirstName AS varchar) || ' ' || CAST(Singers.LastName AS varchar) AS Name
+    FROM Singers;
+
+## Grant and revoke access to a view
+
+**Note:** If you create a definer's rights view, use [fine-grained access control](https://docs.cloud.google.com/spanner/docs/fgac-about) alongside the view, otherwise the definer's rights view doesn't add any additional access control.
+
+As a fine-grained access control user, you must have the `SELECT` privilege on a view. To grant `SELECT` privilege on a view to a database role:
+
+###  GoogleSQL 
+    
+    
+    GRANT SELECT ON VIEW SingerNames TO ROLE Analyst;
+
+###  PostgreSQL 
+    
+    
+    GRANT SELECT ON TABLE SingerNames TO Analyst;
+
+To revoke `SELECT` privilege on a view from a database role:
+
+###  GoogleSQL 
+    
+    
+    REVOKE SELECT ON VIEW SingerNames FROM ROLE Analyst;
+
+###  PostgreSQL 
+    
+    
+    REVOKE SELECT ON TABLE SingerNames FROM Analyst;
+
+## Query a view
+
+The way to query an invoker's rights or a definer's rights view is the same. However, depending on the security type of the view, Spanner may or may not need to check the schema objects referenced in the view against the database role of the principal who invoked the query.
+
+### Query an invoker's rights view
+
+If a view has invoker's rights, the user must have privileges on all underlying schema objects of the view in order to query it.
+
+For example, if a database role has access to all objects referenced by the `SingerNames` view, they can query the `SingerNames` view:
+    
+    
+    SELECT COUNT(SingerID) as SingerCount
+    FROM SingerNames;
+
+### Query a definer's rights view
+
+If a view has definer's rights, a user can query the view without needing privileges on the underlying objects as long as you grant the required role the `SELECT` privilege on the view.
+
+In the following example, a user with the Analyst database role wants to query the `SingerNames` view. However, the user is denied access because `SingerNames` is an invoker's rights view and the Analyst role does not have access to all the underlying objects. In this case, if you decide to provide the Analyst with access to the view, but don't want to provide them access to the `Singers` table, you can replace the security type of the view to definer's rights. After you replace the security type of the view, grant the Analyst role access to the view. The user can now query the `SingerNames` view even though they don't have access to the `Singers` table.
+    
+    
+    SELECT COUNT(SingerID) as SingerCount
+    FROM SingerNames;
+
+## Replace a view
+
+You can replace a view by using the `CREATE OR REPLACE VIEW` statement to change the view definition or the security type of the view.
+
+Replacing a view is similar to dropping and recreating the view. Any access grants given to the initial view has to be granted again after replacing the view.
+
+To replace an invoker's rights view with a definer's rights view:
+    
+    
+    CREATE OR REPLACE VIEW SingerNames
+    SQL SECURITY DEFINER
+    AS SELECT
+       Singers.SingerId AS SingerId,
+       Singers.FirstName || ' ' || Singers.LastName AS Name
+    FROM Singers;
+
+## Delete a view
+
+After a view is dropped, database roles with privileges on it no longer have access. To delete a view, use the `DROP VIEW` statement.
+    
+    
+    DROP VIEW SingerNames;
+
+## Get information about a view
+
+You can get information about views in a database by querying tables in its `INFORMATION_SCHEMA` schema.
+
+  * The `[INFORMATION_SCHEMA.TABLES](https://docs.cloud.google.com/spanner/docs/information-schema#information_schematables)` table provides the names of all defined views.
+
+  * The `[INFORMATION_SCHEMA.VIEWS](https://docs.cloud.google.com/spanner/docs/information-schema#information_schemaviews)` table provides the names, view definition, security type, and query text of all defined views. FGAC users who have `SELECT` privilege on the view can get information about the view from the `INFORMATION_SCHEMA.VIEWS` table. Other FGAC users need the `spanner_info_reader` role if they don't have `SELECT` privilege for the view.
+
+
+
+
+To check the view definition and security type of a view called `ProductSoldLastWeek`:
+    
+    
+      SELECT *
+      FROM INFORMATION_SCHEMA.VIEWS
+      WHERE TABLE_NAME = 'ProductSoldLastWeek';
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

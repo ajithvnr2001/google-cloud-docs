@@ -1,0 +1,154 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/asset/search-all-resources/
+title: gcloud beta asset search-all-resources \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T00:04:46.760304+00:00
+---
+
+# gcloud beta asset search-all-resources  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/asset/search-all-resources/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta asset search-all-resources Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta asset search-all-resources - searches all Cloud resources within the specified accessible scope, such as a project, folder or organization 
+SYNOPSIS
+    
+
+`gcloud beta asset search-all-resources` [`--asset-types`=[`ASSET_TYPES`,…]] [`--order-by`=`ORDER_BY`] [`--query`=`QUERY`] [`--scope`=`SCOPE`] [`--filter`=`EXPRESSION`] [`--limit`=`LIMIT`] [`--page-size`=`PAGE_SIZE`] [`--sort-by`=[`FIELD`,…]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` Searches all Cloud resources within the specified scope, such as a project, folder or organization. The caller must be granted the ``cloudasset.assets.searchAllResources`` permission on the desired scope. 
+EXAMPLES
+     To search all Cloud resources whose full resource name contains ``xyz`` as a prefix of any word, within ``organizations/123456``, ensure the caller has been granted the ``cloudasset.assets.searchAllResources`` permission on the organization and run: 
+    
+    
+    gcloud beta asset search-all-resources --scope='organizations/123456' --query='name:xyz*'
+
+FLAGS
+    
+
+`--asset-types`=[`ASSET_TYPES`,…]
+     A list of asset types that this request searches for. If empty, it will search all the [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-types). 
+
+Regular expressions are also supported. For example: 
+
+  * ``compute.googleapis.com.*`` snapshots resources whose asset type starts with ``compute.googleapis.com``. 
+  * ``.*Instance`` snapshots resources whose asset type ends with ``Instance``. 
+  * ``.*Instance.*`` snapshots resources whose asset type contains ``Instance``. 
+
+
+
+See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression syntax. If the regular expression does not match any supported asset type, an ``INVALID_ARGUMENT`` error will be returned. 
+
+`--order-by`=`ORDER_BY`
+     A comma-separated list of fields specifying the sorting order of the results. The default order is ascending. Add `` DESC`` after the field name to indicate descending order. Redundant space characters are ignored. Example: ``location DESC, name``. Only singular primitive fields in the response are sortable: 
+
+  * `name`
+  * `assetType`
+  * `project`
+  * `displayName`
+  * `description`
+  * `location`
+  * `createTime`
+  * `updateTime`
+  * `state`
+  * `parentFullResourceName`
+  * `parentAssetType`
+
+
+
+All the other fields such as repeated fields (e.g., `networkTags`, `kmsKeys`), map fields (e.g., `labels`) and struct fields (e.g., `additionalAttributes`) are not supported. 
+
+Both `--order-by` and `--sort-by` flags can be used to sort the output, with the following differences: 
+
+  * The `--order-by` flag performs server-side sorting (better performance), while the `--sort-by` flag performs client-side sorting. 
+  * The `--sort-by` flag supports all the fields in the output, while the `--order-by` flag only supports limited fields as shown above. 
+
+
+`--query`=`QUERY`
+     The query statement. See [how to construct a query](https://cloud.google.com/asset-inventory/docs/searching-resources#how_to_construct_a_query) for more details. If not specified or empty, it will search all the resources within the specified `scope`. 
+
+Examples: 
+
+  * `name:Important` to find Cloud resources whose name contains ``Important`` as a word. 
+  * `name=Important` to find the Cloud resource whose name is exactly ``Important``. 
+  * `displayName:Impor*` to find Cloud resources whose display name contains ``Impor`` as a prefix of any word. 
+  * `location:us-west*` to find Cloud resources whose location contains both ``us`` and ``west`` as prefixes. 
+  * `labels:prod` to find Cloud resources whose labels contain ``prod`` as a key or value. 
+  * `labels.env:prod` to find Cloud resources that have a label ``env`` and its value is ``prod``. 
+  * `labels.env:*` to find Cloud resources that have a label ``env``. 
+  * `tagKeys:env` to find Cloud resources that are directly attached to tags where the [`TagKey.namespacedName`](https://cloud.google.com/resource-manager/reference/rest/v3/tagKeys#resource:-tagkey) contains `env`. 
+  * `tagValues:prod*` to find Cloud resources that are directly attached to tags where the [`TagValue.namespacedName`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue) contains a word prefixed by `prod`. 
+  * `tagValueIds=tagValues/123` to find Cloud resources that are directly attached to tags where the [`TagValue.name`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue) is exactly `tagValues/123`. 
+  * `effectiveTagKeys:env` to find Cloud resources that are directly attached to or inherited tags where the [`TagKey.namespacedName`](https://cloud.google.com/resource-manager/reference/rest/v3/tagKeys#resource:-tagkey) contains `env`. 
+  * `effectiveTagValues:prod*` to find Cloud resources that are directly attached to or inherited tags where the [`TagValue.namespacedName`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue) contains a word prefixed by `prod`. 
+  * `effectiveTagValueIds=tagValues/123` to find Cloud resources that are directly attached to or inherited tags where the [`TagValue.name`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue) is exactly `tagValues/123`. 
+  * `kmsKey:key` to find Cloud resources encrypted with a customer-managed encryption key whose name contains ``key`` as a word. This field is deprecated. Please use the `kmsKeys` field to retrieve KMS key information. 
+  * `kmsKeys:key` to find Cloud resources encrypted with customer-managed encryption keys whose name contains the word ``key``. 
+  * `relationships:instance-group-1` to find Cloud resources that have relationships with ``instance-group-1`` in the related resource name. 
+  * `relationships:INSTANCE_TO_INSTANCEGROUP` to find Compute instances that have relationships of type ``INSTANCE_TO_INSTANCEGROUP``. 
+  * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find Compute instances that have relationships with ``instance-group-1`` in the Compute instance group resource name, for relationship type ``INSTANCE_TO_INSTANCEGROUP``. 
+  * `sccSecurityMarks.key=value` to find Cloud resources that are attached with security marks whose key is ``key`` and value is ``value``. 
+  * `sccSecurityMarks.key:*` to find Cloud resources that are attached with security marks whose key is ``key``. 
+  * `state:ACTIVE` to find Cloud resources whose state contains ``ACTIVE`` as a word. 
+  * `NOT state:ACTIVE` to find Cloud resources whose state doesn't contain ``ACTIVE`` as a word. 
+  * `createTime<1609459200` or `createTime<2021-01-01` or `createTime<"2021-01-01T00:00:00"` to find Cloud resources that were created before ``2021-01-01 00:00:00 UTC``. 1609459200 is the epoch timestamp of ``2021-01-01 00:00:00 UTC`` in seconds. 
+  * `updateTime>1609459200` or `updateTime>2021-01-01` or `updateTime>"2021-01-01T00:00:00"` to find Cloud resources that were updated after ``2021-01-01 00:00:00 UTC``. 1609459200 is the epoch timestamp of ``2021-01-01 00:00:00 UTC`` in seconds. 
+  * `Important` to find Cloud resources that contain ``Important`` as a word in any of the searchable fields. 
+  * `Impor*` to find Cloud resources that contain ``Impor`` as a prefix of any word in any of the searchable fields. 
+  * `Important location:(us-west1 OR global)` to find Cloud resources that contain ``Important`` as a word in any of the searchable fields and are also located in the ``us-west1`` region or the ``global`` location. 
+
+
+`--scope`=`SCOPE`
+     A scope can be a project, a folder, or an organization. The search is limited to the Cloud resources within this scope. The caller must be granted the ``cloudasset.assets.searchAllResources`` permission on the desired scope. If not specified, the [configured project property](https://cloud.google.com//sdk/docs/configurations#setting_configuration_properties) will be used. To find the configured project, run: `gcloud config get project`. To change the setting, run: `gcloud config set project PROJECT_ID`. 
+
+The allowed values are: 
+
+  * `projects/{PROJECT_ID}` (e.g., ``projects/foo-bar``) 
+  * `projects/{PROJECT_NUMBER}` (e.g., ``projects/12345678``) 
+  * `folders/{FOLDER_NUMBER}` (e.g., ``folders/1234567``) 
+  * `organizations/{ORGANIZATION_NUMBER}` (e.g. ``organizations/123456``) 
+
+
+LIST COMMAND FLAGS
+    
+
+`--filter`=`EXPRESSION`
+     Apply a Boolean filter `EXPRESSION` to each resource item to be listed. If the expression evaluates `True`, then that item is listed. For more details and examples of filter expressions, run $ [gcloud topic filters](https://docs.cloud.google.com/sdk/gcloud/reference/topic/filters). This flag interacts with other flags that are applied in this order: `--flatten`, `--sort-by`, `--filter`, `--limit`. 
+`--limit`=`LIMIT`
+     Maximum number of resources to list. The default is `unlimited`. This flag interacts with other flags that are applied in this order: `--flatten`, `--sort-by`, `--filter`, `--limit`. 
+`--page-size`=`PAGE_SIZE`
+     Some services group resource list output into pages. This flag specifies the maximum number of resources per page. The default is determined by the service if it supports paging, otherwise it is `unlimited` (no paging). Paging may be applied before or after `--filter` and `--limit` depending on the service. 
+`--sort-by`=[`FIELD`,…]
+     Comma-separated list of resource field key names to sort by. The default order is ascending. Prefix a field with ``~´´ for descending order on that field. This flag interacts with other flags that are applied in this order: `--flatten`, `--sort-by`, `--filter`, `--limit`. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in beta and might change without notice. This variant is also available: 
+    
+    
+    [gcloud asset search-all-resources](https://docs.cloud.google.com/sdk/gcloud/reference/asset/search-all-resources)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

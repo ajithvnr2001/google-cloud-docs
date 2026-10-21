@@ -1,0 +1,224 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/design-center/spaces/catalogs/templates/revisions/create/
+title: gcloud alpha design-center spaces catalogs templates revisions create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T10:20:51.293706+00:00
+---
+
+# gcloud alpha design-center spaces catalogs templates revisions create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/design-center/spaces/catalogs/templates/revisions/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha design-center spaces catalogs templates revisions create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha design-center spaces catalogs templates revisions create - create a new catalog template revision 
+SYNOPSIS
+    
+
+`gcloud alpha design-center spaces catalogs templates revisions create` (`REVISION` : `--catalog`=`CATALOG` `--location`=`LOCATION` `--space`=`SPACE` `--template`=`TEMPLATE`) (`--application-template-revision-source`=`APPLICATION_TEMPLATE_REVISION_SOURCE` | `--gcs-source-uri`=`GCS_SOURCE_URI` | `--developer-connect-repo`=`DEVELOPER_CONNECT_REPO` `--developer-connect-repo-dir`=`DEVELOPER_CONNECT_REPO_DIR` `--developer-connect-repo-ref`=`DEVELOPER_CONNECT_REPO_REF` | [`--git-source-ref-tag`=`GIT_SOURCE_REF_TAG` `--git-source-repo`=`GIT_SOURCE_REPO` : `--git-source-dir`=`GIT_SOURCE_DIR`] | [`--oci-repo-uri`=`OCI_REPO_URI` : `--oci-repo-version`=`OCI_REPO_VERSION`]) [`--async`] [`--description`=`DESCRIPTION`] [`--metadata`=`METADATA`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` Create a new catalog template revision. 
+EXAMPLES
+     To create a new catalog template revision named `my-revision` for the template `my-template`, within the catalog `my-catalog` and space `my-space`, in location `us-central1` and project `my-project`, using a Developer Connect repository as the source, run: 
+    
+    
+    [gcloud alpha design-center spaces catalogs templates revisions](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/design-center/spaces/catalogs/templates/revisions) create my-revision --project=my-project --location=us-central1 --space=my-space --catalog=my-catalog --template=my-template --description="My test revision description" --developer-connect-repo=projects/my-project/locations/us-central1/connections/my-connection/gitRepositoryLinks/my-repo --developer-connect-repo-ref=refs/tags/v1.0.0 --developer-connect-repo-dir=modules/my-product
+    
+    
+    Or run using the full resource name:
+    
+    
+    [gcloud alpha design-center spaces catalogs templates revisions](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/design-center/spaces/catalogs/templates/revisions) create projects/my-project/locations/us-central1/spaces/my-space/catalogs/my-catalog/templates/my-template/revisions/my-revision --description="My test revision description" --developer-connect-repo=projects/my-project/locations/us-central1/connections/my-connection/gitRepositoryLinks/my-repo --developer-connect-repo-ref=refs/tags/v1.0.0 --developer-connect-repo-dir=modules/my-product
+    
+    
+    To create a revision using a metadata file from a local path, run:
+    
+    
+    [gcloud alpha design-center spaces catalogs templates revisions](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/design-center/spaces/catalogs/templates/revisions) create my-revision --project=my-project --location=us-central1 --space=my-space --catalog=my-catalog --template=my-template --developer-connect-repo=projects/my-project/locations/us-central1/connections/my-connection/gitRepositoryLinks/my-repo --developer-connect-repo-ref=refs/tags/v1.0.0 --developer-connect-repo-dir=modules/my-product --metadata=/path/to/metadata.yaml
+    
+    
+    To create a revision using a Git repository as the source, run:
+    
+    
+    [gcloud alpha design-center spaces catalogs templates revisions](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/design-center/spaces/catalogs/templates/revisions) create my-revision --project=my-project --location=us-central1 --space=my-space --catalog=my-catalog --template=my-template --git-source-repo=GoogleCloudPlatform/terraform-google-cloud-run --git-source-ref-tag=v1.0.0 --git-source-dir=modules/my-product
+    
+    
+    To create a revision using a Google Cloud Storage URI as the source, run:
+    
+    
+    [gcloud alpha design-center spaces catalogs templates revisions](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/design-center/spaces/catalogs/templates/revisions) create my-revision --project=my-project --location=us-central1 --space=my-space --catalog=my-catalog --template=my-template --gcs-source-uri=gs://my-bucket/my-template
+    
+    
+    To create a revision using an OCI repository as the source, run:
+    
+    
+    [gcloud alpha design-center spaces catalogs templates revisions](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/design-center/spaces/catalogs/templates/revisions) create my-revision --project=my-project --location=us-central1 --space=my-space --catalog=my-catalog --template=my-template --oci-repo-uri=oci://us-west1-docker.pkg.dev/my-project/my-repo/my-chart --oci-repo-version=1.0.0
+    
+    
+    To create a revision using an Application Template Revision as the source, run:
+    
+    
+    [gcloud alpha design-center spaces catalogs templates revisions](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/design-center/spaces/catalogs/templates/revisions) create my-revision --project=my-project --location=us-central1 --space=my-space --catalog=my-catalog --template=my-template --application-template-revision-source=projects/my-project/locations/us-central1/spaces/my-space/applicationTemplates/my-app-template/revisions/a1
+    
+    
+    To create a revision using Git source and a metadata file from a local path, run:
+    
+    
+    [gcloud alpha design-center spaces catalogs templates revisions](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/design-center/spaces/catalogs/templates/revisions) create my-revision --project=my-project --location=us-central1 --space=my-space --catalog=my-catalog --template=my-template --git-source-repo=GoogleCloudPlatform/terraform-google-cloud-run --git-source-ref-tag=v1.0.0 --git-source-dir=modules/my-product --metadata=/path/to/metadata.yaml
+
+POSITIONAL ARGUMENTS
+    
+
+Revision resource - The revision to create. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `revision` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`REVISION`
+     ID of the revision or fully qualified identifier for the revision. 
+
+To set the `revision` attribute: 
+
+  * provide the argument `revision` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--catalog`=`CATALOG`
+     The ID of the catalog. 
+
+To set the `catalog` attribute: 
+
+  * provide the argument `revision` on the command line with a fully specified name; 
+  * provide the argument `--catalog` on the command line. 
+
+
+`--location`=`LOCATION`
+     The Cloud location for the revision. 
+
+To set the `location` attribute: 
+
+  * provide the argument `revision` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line. 
+
+
+`--space`=`SPACE`
+     The ID of the space. 
+
+To set the `space` attribute: 
+
+  * provide the argument `revision` on the command line with a fully specified name; 
+  * provide the argument `--space` on the command line. 
+
+
+`--template`=`TEMPLATE`
+     The ID of the template. 
+
+To set the `template` attribute: 
+
+  * provide the argument `revision` on the command line with a fully specified name; 
+  * provide the argument `--template` on the command line. 
+
+
+REQUIRED FLAGS
+    
+
+Exactly one of these must be specified: 
+
+`--application-template-revision-source`=`APPLICATION_TEMPLATE_REVISION_SOURCE`
+     Application template revision to use as source. Example: `projects/my-project/locations/us-central1/spaces/my-space/catalogs/my-catalog/templates/my-template/revisions/r1`
+`--gcs-source-uri`=`GCS_SOURCE_URI`
+     Google Cloud Storage URI for source. Example: `gs://my-bucket/my-template`. 
+Or at least one of these can be specified: 
+
+Flags for Developer Connect source. 
+`--developer-connect-repo`=`DEVELOPER_CONNECT_REPO`
+     The Developer Connect repository to use as a source. Example: `projects/my-project/locations/us-central1/connections/my-connection/gitRepositoryLinks/my-repo`
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--developer-connect-repo-dir`=`DEVELOPER_CONNECT_REPO_DIR`
+     The directory within the repository to use. Example: `"modules/my-product"`
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--developer-connect-repo-ref`=`DEVELOPER_CONNECT_REPO_REF`
+     The Git ref (branch or tag) within the repository to use. Example: `"refs/tags/v1.0.0"` or `"refs/heads/main"` or `"refs/commits/269b518b99d06b31ff938a2d182e75f5e41941c7"`. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+Or at least one of these can be specified: 
+
+Flags for Git source. 
+`--git-source-ref-tag`=`GIT_SOURCE_REF_TAG`
+     Git reference tag for Git source. Example: `"v1.0.0"`
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--git-source-repo`=`GIT_SOURCE_REPO`
+     Git repository for Git source. Example: `GoogleCloudPlatform/terraform-google-cloud-run`
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--git-source-dir`=`GIT_SOURCE_DIR`
+     Git directory for Git source. Example: `"modules/my-product"`. This field is optional. 
+Or at least one of these can be specified: 
+
+Flags for OCI Repo source. 
+`--oci-repo-uri`=`OCI_REPO_URI`
+     OCI Repo URI for OCI Repo source. Example: `oci://us-west1-docker.pkg.dev/my-project/my-repo/my-chart`
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--oci-repo-version`=`OCI_REPO_VERSION`
+     OCI Repo version for OCI Repo source. Example: `"1.0.0"`. This field is optional. 
+OPTIONAL FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--description`=`DESCRIPTION`
+     A description for the revision. 
+`--metadata`=`METADATA`
+     Path to a local YAML file containing the template metadata. Example: `"path/to/metadata.yaml"`. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the designcenter/v1alpha API. The full documentation for this API can be found at: <http://cloud.google.com/application-design-center/docs>
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. This variant is also available: 
+    
+    
+    [gcloud design-center spaces catalogs templates revisions create](https://docs.cloud.google.com/sdk/gcloud/reference/design-center/spaces/catalogs/templates/revisions/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

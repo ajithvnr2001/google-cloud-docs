@@ -1,0 +1,218 @@
+---
+url: https://docs.cloud.google.com/bigquery/docs/dataframes-sessions-io/
+title: Manage BigQuery DataFrames sessions and I/O \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T00:40:12.021095+00:00
+---
+
+# Manage BigQuery DataFrames sessions and I/O  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/bigquery/docs/dataframes-sessions-io/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Data analytics ](https://docs.cloud.google.com/docs/data)
+  * [ BigQuery ](https://docs.cloud.google.com/bigquery/docs)
+  * [ Guides ](https://docs.cloud.google.com/bigquery/docs/introduction)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Manage BigQuery DataFrames sessions and I/O
+
+This document explains how to manage sessions and perform input and output (I/O) operations when you use BigQuery DataFrames. You will learn how to create and use sessions, work with in-memory data, and read from and write to files and BigQuery tables.
+
+## BigQuery sessions
+
+BigQuery DataFrames uses a local session object internally to manage metadata. Each [`DataFrame`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.DataFrame.html) and [`Series`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.Series.html) object connects to a session, each session connects to a [location](https://docs.cloud.google.com/bigquery/docs/locations), and each query in a session runs in the location where you created the session. Use the following code sample to manually create a session and use it for loading data:
+    
+    
+    import [bigframes](https://docs.cloud.google.com/python/docs/reference/bigframes/latest)
+    import bigframes.pandas as bpd
+    
+    # Create session object
+    context = [bigframes](https://docs.cloud.google.com/python/docs/reference/bigframes/latest).BigQueryOptions(
+        project=YOUR_PROJECT_ID,
+        location=YOUR_LOCATION,
+    )
+    session = [bigframes](https://docs.cloud.google.com/python/docs/reference/bigframes/latest).Session(context)
+    
+    # Load a BigQuery table into a dataframe
+    df1 = session.[read_gbq](https://docs.cloud.google.com/python/docs/reference/bigframes/latest/bigframes.pandas.html)("bigquery-public-data.ml_datasets.penguins")
+    
+    # Create a dataframe with local data:
+    df2 = bpd.DataFrame({"my_col": [1, 2, 3]}, session=session)
+
+You can't combine data from multiple session instances, even if you initialize them with the same settings. The following code sample shows that trying to combine data from different session instances causes an error:
+    
+    
+    import [bigframes](https://docs.cloud.google.com/python/docs/reference/bigframes/latest)
+    import bigframes.pandas as bpd
+    
+    context = [bigframes](https://docs.cloud.google.com/python/docs/reference/bigframes/latest).BigQueryOptions(location=YOUR_LOCATION, project=YOUR_PROJECT_ID)
+    
+    session1 = [bigframes](https://docs.cloud.google.com/python/docs/reference/bigframes/latest).Session(context)
+    session2 = [bigframes](https://docs.cloud.google.com/python/docs/reference/bigframes/latest).Session(context)
+    
+    series1 = bpd.Series([1, 2, 3, 4, 5], session=session1)
+    series2 = bpd.Series([1, 2, 3, 4, 5], session=session2)
+    
+    try:
+        series1 + series2
+    except ValueError as e:
+        print(e)  # Error message: Cannot use combine sources from multiple sessions
+
+### Global session
+
+BigQuery DataFrames provides a default global session that you can access with the [`bigframes.pandas.get_global_session()`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.get_global_session.html) method. In Colab, you must provide a project ID for the [`bigframes.pandas.options.bigquery.project`](https://dataframes.bigquery.dev/reference/api/bigframes._config.BigQueryOptions.html#bigframes._config.BigQueryOptions.project) attribute before you use it. You can also set a location with the [`bigframes.pandas.options.bigquery.location`](https://dataframes.bigquery.dev/reference/api/bigframes._config.BigQueryOptions.html#bigframes._config.BigQueryOptions.location) attribute, which defaults to the `US` multi-region.
+
+The following code sample shows how to set options for the global session:
+    
+    
+    import bigframes.pandas as bpd
+    
+    # Set project ID for the global session
+    bpd.options.bigquery.project = YOUR_PROJECT_ID
+    # Update the global default session location
+    bpd.options.bigquery.location = YOUR_LOCATION
+
+To reset the global session's location or project, close the current session by running the [`bigframes.pandas.close_session()`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.close_session.html) method.
+
+Many BigQuery DataFrames built-in functions use the global session by default. The following code sample shows how built-in functions use the global session:
+    
+    
+    # The following two statements are essentially the same
+    df = bpd.read_gbq("bigquery-public-data.ml_datasets.penguins")
+    df = bpd.get_global_session().read_gbq("bigquery-public-data.ml_datasets.penguins")
+
+## In-memory data
+
+You can create [`DataFrames`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.DataFrame.html) and [`Series`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.Series.html) objects with built-in Python or NumPy data structures, similar to how you create objects with pandas. Use the following code sample to create an object:
+    
+    
+    import numpy as np
+    
+    import bigframes.pandas as bpd
+    
+    s = bpd.Series([1, 2, 3])
+    
+    # Create a dataframe with Python dict
+    df = bpd.DataFrame(
+        {
+            "col_1": [1, 2, 3],
+            "col_2": [4, 5, 6],
+        }
+    )
+    
+    # Create a series with Numpy
+    s = bpd.Series(np.arange(10))
+
+To convert `pandas` objects to [`DataFrames`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.DataFrame.html) objects using the [`read_pandas()`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.read_pandas.html) method or constructors, use the following code sample:
+    
+    
+    import numpy as np
+    import pandas as pd
+    
+    import bigframes.pandas as bpd
+    
+    pd_df = pd.DataFrame(np.random.randn(4, 2))
+    
+    # Convert Pandas dataframe to BigQuery DataFrame with read_pandas()
+    df_1 = bpd.read_pandas(pd_df)
+    # Convert Pandas dataframe to BigQuery DataFrame with the dataframe constructor
+    df_2 = bpd.DataFrame(pd_df)
+
+To use the [`to_pandas()`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.DataFrame.to_pandas.html) method to load BigQuery DataFrames data into your memory, use the following code sample:
+    
+    
+    import bigframes.pandas as bpd
+    
+    bf_df = bpd.DataFrame({"my_col": [1, 2, 3]})
+    # Returns a Pandas Dataframe
+    bf_df.to_pandas()
+    
+    bf_s = bpd.Series([1, 2, 3])
+    # Returns a Pandas Series
+    bf_s.to_pandas()
+
+### Cost estimation with the `dry_run` parameter
+
+Loading a large amount of data can take a lot of time and resources. To see how much data is being processed, use the `dry_run=True` parameter in the [`to_pandas()`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.DataFrame.to_pandas.html) call. Use the following code sample to perform a dry run:
+    
+    
+    import bigframes.pandas as bpd
+    
+    df = bpd.read_gbq("bigquery-public-data.ml_datasets.penguins")
+    
+    # Returns a Pandas series with dry run stats
+    df.to_pandas(dry_run=True)
+
+## Read and write files
+
+You can read data from compatible files into a BigQuery DataFrames. These files can be on your local machine or in Cloud Storage. Use the following code sample to read data from a CSV file:
+    
+    
+    import bigframes.pandas as bpd
+    
+    # Read a CSV file from GCS
+    df = bpd.read_csv("gs://cloud-samples-data/bigquery/us-states/us-states.csv")
+
+To save your BigQuery DataFrames to local files or Cloud Storage files using the [`to_csv`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.DataFrame.to_csv.html) method, use the following code sample:
+    
+    
+    import bigframes.pandas as bpd
+    
+    df = bpd.DataFrame({"my_col": [1, 2, 3]})
+    # Write a dataframe to a CSV file in GCS
+    df.to_csv(f"gs://{YOUR_BUCKET}/myfile*.csv")
+
+## Read and write BigQuery tables
+
+To create BigQuery DataFrames using BigQuery table references and the [`bigframes.pandas.read_gbq`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.read_gbq.html) function, use the following code sample:
+    
+    
+    import bigframes.pandas as bpd
+    
+    df = bpd.read_gbq("bigquery-public-data.ml_datasets.penguins")
+
+To use a SQL string with the [`read_gbq()`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.read_gbq.html) function to read data into BigQuery DataFrames, use the following code sample:
+    
+    
+    import bigframes.pandas as bpd
+    
+    sql = """
+    SELECT species, island, body_mass_g
+    FROM bigquery-public-data.ml_datasets.penguins
+    WHERE sex = 'MALE'
+    """
+    
+    df = bpd.read_gbq(sql)
+
+**Note:** If you specify a table when calling the [`read_gbq()`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.read_gbq.html), [`read_gbq_table()`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.read_gbq_table.html), or [`read_gbq_query()`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.read_gbq_query.html) function, and you haven't set the [`bigframes.pandas.options.bigquery.location`](https://dataframes.bigquery.dev/reference/api/bigframes._config.BigQueryOptions.html#bigframes._config.BigQueryOptions.location) attribute before the function call, then BigQuery DataFrames automatically sets the [`bigframes.pandas.options.bigquery.location`](https://dataframes.bigquery.dev/reference/api/bigframes._config.BigQueryOptions.html#bigframes._config.BigQueryOptions.location) attribute to the table's location. For information on how to manually specify the location, see Global session.
+
+To save your [`DataFrame`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.DataFrame.html) object to a BigQuery table, use the [`to_gbq()`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.DataFrame.to_gbq.html) method of your [`DataFrame`](https://dataframes.bigquery.dev/reference/api/bigframes.pandas.DataFrame.html) object. The following code sample shows how to do that:
+    
+    
+    import bigframes.pandas as bpd
+    
+    df = bpd.DataFrame({"my_col": [1, 2, 3]})
+    
+    df.to_gbq(f"{YOUR_PROJECT_ID}.{YOUR_DATASET_ID}.{YOUR_TABLE_NAME}")
+
+## What's next
+
+  * Learn about [BigQuery DataFrames](https://docs.cloud.google.com/bigquery/docs/bigquery-dataframes-introduction).
+  * Learn how to [work with data types in BigQuery DataFrames](https://docs.cloud.google.com/bigquery/docs/dataframes-data-types).
+  * Learn how to [visualize graphs using BigQuery DataFrames](https://docs.cloud.google.com/bigquery/docs/dataframes-visualizations).
+  * Explore the [BigQuery DataFrames API reference](https://dataframes.bigquery.dev/reference/index.html).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

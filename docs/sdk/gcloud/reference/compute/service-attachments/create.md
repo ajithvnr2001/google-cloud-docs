@@ -1,0 +1,173 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/compute/service-attachments/create/
+title: gcloud compute service-attachments create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-15T04:05:31.672626+00:00
+---
+
+# gcloud compute service-attachments create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/compute/service-attachments/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud compute service-attachments create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud compute service-attachments create - create a Google Compute Engine service attachment 
+SYNOPSIS
+    
+
+`gcloud compute service-attachments create` `NAME` `--nat-subnets`=`NAT_SUBNETS`,[`NAT_SUBNETS`,…] (`--producer-forwarding-rule`=`PRODUCER_FORWARDING_RULE` | `--target-service`=`TARGET_SERVICE`) [`--connection-preference`=`CONNECTION_PREFERENCE`; default=`"ACCEPT_AUTOMATIC"`] [`--consumer-accept-list`=[`PROJECT_OR_NETWORK`=`LIMIT`,…]] [`--consumer-reject-list`=[`REJECT_LIST`,…]] [`--description`=`DESCRIPTION`] [`--domain-names`=[`DOMAIN_NAMES`,…]] [`--enable-proxy-protocol`] [`--nat-ips-per-endpoint`=`NAT_IPS_PER_ENDPOINT`] [`--nat-subnets-region`=`NAT_SUBNETS_REGION`] [`--propagated-connection-limit`=`PROPAGATED_CONNECTION_LIMIT`] [`--reconcile-connections`] [`--region`=`REGION`] [`--global-producer-forwarding-rule` | `--producer-forwarding-rule-region`=`PRODUCER_FORWARDING_RULE_REGION`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `gcloud compute service-attachments create` is used to create service attachments. A service producer creates service attachments to make a service available to consumers. Service consumers use Private Service Connect endpoints to privately forward traffic to the service attachment. 
+EXAMPLES
+     If there is an already-created internal load balancer (ILB) with the name MY_ILB in region us-central1 and there is an already-created Private Service Connect subnets MY_SUBNET1 and MY_SUBNET2, create a service attachment pointing to the ILB by running: 
+    
+    
+    gcloud compute service-attachments create SERVICE_ATTACHMENT_NAME --region=us-central1 --producer-forwarding-rule=MY_ILB --connection-preference=ACCEPT_AUTOMATIC --nat-subnets=MY_SUBNET1,MY_SUBNET2
+
+To create a service attachment with a textual description, run: 
+    
+    
+    gcloud compute service-attachments create SERVICE_ATTACHMENT_NAME --region=us-central1 --producer-forwarding-rule=MY_ILB --connection-preference=ACCEPT_AUTOMATIC --nat-subnets=MY_SUBNET1,MY_SUBNET2 --description='default service attachment'
+
+POSITIONAL ARGUMENTS
+    
+
+`NAME`
+     Name of the service attachment to create. 
+REQUIRED FLAGS
+    
+
+`--nat-subnets`=`NAT_SUBNETS`,[`NAT_SUBNETS`,…]
+     The subnetworks provided by service producer to use for NAT 
+Exactly one of these must be specified: 
+
+`--producer-forwarding-rule`=`PRODUCER_FORWARDING_RULE`
+     Target forwarding rule that receives forwarded traffic. 
+`--target-service`=`TARGET_SERVICE`
+     URL of the target service that receives forwarded traffic. 
+OPTIONAL FLAGS
+    
+
+`--connection-preference`=`CONNECTION_PREFERENCE`; default=`"ACCEPT_AUTOMATIC"`
+     This defines the service attachment's connection preference. `CONNECTION_PREFERENCE` must be one of: 
+
+`ACCEPT_AUTOMATIC`
+     Always accept connection requests from consumers automatically. 
+`ACCEPT_MANUAL`
+     Only accept connection requests from consumers with the approval of the service provider. 
+`--consumer-accept-list`=[`PROJECT_OR_NETWORK`=`LIMIT`,…]
+     Specifies which consumer projects or networks are allowed to connect to the service attachment. Each project or network has a connection limit. A given service attachment can manage connections at either the project or network level. Therefore, both the accept and reject lists for a given service attachment must contain either only projects or only networks. 
+
+For example, `--consumer-accept-list myProjectId1=20` accepts a consumer project myProjectId1 with connection limit 20; `--consumer-accept-list projects/myProjectId1/global/networks/myNet1=20` accepts a consumer network myNet1 with connection limit 20 
+
+  * `PROJECT_OR_NETWORK` \- Consumer project ID, project number or network URL. 
+  * `CONNECTION_LIMIT` \- The maximum number of allowed connections. 
+
+
+`--consumer-reject-list`=[`REJECT_LIST`,…]
+     Specifies a comma-separated list of projects/networks/endpoints that are not allowed to connect to this service attachment. The project can be specified using its project ID or project number and the network or endpoint can be specified using its URL. For a given service attachment, consumer accept and reject lists must contain entries of the same type: all projects, all networks, or all endpoints. 
+`--description`=`DESCRIPTION`
+     An optional, textual description for the service attachment. 
+`--domain-names`=[`DOMAIN_NAMES`,…]
+     Specifies a comma separated list of DNS domain names that are used during DNS integration on PSC connected endpoints. 
+`--enable-proxy-protocol`
+     If True, then enable the proxy protocol which is for supplying client TCP/IP address data in TCP connections that traverse proxies on their way to destination servers. 
+`--nat-ips-per-endpoint`=`NAT_IPS_PER_ENDPOINT`
+     The number of NAT IP addresses to be allocated per connected endpoint. 
+`--nat-subnets-region`=`NAT_SUBNETS_REGION`
+     Region of the subnetworks to operate on. If not specified, it will be set to the region of the service attachment. Overrides the default `compute/region` property value for this command invocation. 
+`--propagated-connection-limit`=`PROPAGATED_CONNECTION_LIMIT`
+     The number of consumer spokes that connected Private Service Connect endpoints can be propagated to through Network Connectivity Center. This limit lets the service producer limit how many propagated Private Service Connect connections can be established to this service attachment from a single consumer. 
+
+If the connection preference of the service attachment is ACCEPT_MANUAL, the limit applies to each project or network that is listed in the consumer accept list. If the connection preference of the service attachment is ACCEPT_AUTOMATIC, the limit applies to each project that contains a connected endpoint. 
+
+If unspecified, the default propagated connection limit is 250. 
+
+`--reconcile-connections`
+     Determines whether to apply changes to consumer accept or reject lists to existing connections or only to new connections. 
+
+If false, existing endpoints with a connection status of ACCEPTED or REJECTED are not updated. 
+
+If true, existing endpoints with a connection status of ACCEPTED or REJECTED are updated based on the connection policy update. For example, if a project or network is removed from the --consumer-accept-list and added to \--consumer-reject-list, all the endpoints in that project or network with the ACCEPTED state are set to REJECTED. 
+
+`--region`=`REGION`
+     Region of the service attachment to create. If not specified, you might be prompted to select a region (interactive mode only). 
+
+To avoid prompting when this flag is omitted, you can set the ``compute/region`` property: 
+    
+    
+    [gcloud config set](https://docs.cloud.google.com/sdk/gcloud/reference/config/set) compute/region REGION
+
+A list of regions can be fetched by running: 
+    
+    
+    [gcloud compute regions list](https://docs.cloud.google.com/sdk/gcloud/reference/compute/regions/list)
+
+To unset the property, run: 
+    
+    
+    [gcloud config unset](https://docs.cloud.google.com/sdk/gcloud/reference/config/unset) compute/region
+
+Alternatively, the region can be stored in the environment variable ``CLOUDSDK_COMPUTE_REGION``. 
+
+At most one of these can be specified: 
+
+`--global-producer-forwarding-rule`
+     If set, the forwarding rule is global. 
+`--producer-forwarding-rule-region`=`PRODUCER_FORWARDING_RULE_REGION`
+     Region of the forwarding rule to operate on. If not specified, you might be prompted to select a region (interactive mode only). 
+
+To avoid prompting when this flag is omitted, you can set the ``compute/region`` property: 
+    
+    
+    [gcloud config set](https://docs.cloud.google.com/sdk/gcloud/reference/config/set) compute/region REGION
+
+A list of regions can be fetched by running: 
+    
+    
+    [gcloud compute regions list](https://docs.cloud.google.com/sdk/gcloud/reference/compute/regions/list)
+
+To unset the property, run: 
+    
+    
+    [gcloud config unset](https://docs.cloud.google.com/sdk/gcloud/reference/config/unset) compute/region
+
+Alternatively, the region can be stored in the environment variable ``CLOUDSDK_COMPUTE_REGION``. 
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     These variants are also available: 
+    
+    
+    [gcloud alpha compute service-attachments create](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/service-attachments/create)
+    
+    
+    [gcloud beta compute service-attachments create](https://docs.cloud.google.com/sdk/gcloud/reference/beta/compute/service-attachments/create)
+    
+    
+    [gcloud preview compute service-attachments create](https://docs.cloud.google.com/sdk/gcloud/reference/preview/compute/service-attachments/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-07-14 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-07-14 UTC."],[],[]] 

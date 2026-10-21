@@ -1,0 +1,241 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/network-management/vpc-flow-logs-configs/create/
+title: gcloud beta network-management vpc-flow-logs-configs create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T11:49:20.820236+00:00
+---
+
+# gcloud beta network-management vpc-flow-logs-configs create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/network-management/vpc-flow-logs-configs/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta network-management vpc-flow-logs-configs create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta network-management vpc-flow-logs-configs create - creates a new VPC Flow Logs configuration 
+SYNOPSIS
+    
+
+`gcloud beta network-management vpc-flow-logs-configs create` (`VPC_FLOW_LOGS_CONFIG` : `--location`=`LOCATION` `--organization`=`ORGANIZATION`) [`--aggregation-interval`=`AGGREGATION_INTERVAL`] [`--async`] [`--connection-logging`=`CONNECTION_LOGGING`] [`--cross-project-metadata`=`CROSS_PROJECT_METADATA`] [`--description`=`DESCRIPTION`] [`--filter-expr`=`FILTER_EXPR`] [`--flow-sampling`=`FLOW_SAMPLING`] [`--labels`=[`LABELS`,…]] [`--metadata`=`METADATA`] [`--metadata-fields`=[`METADATA_FIELDS`,…]] [`--state`=`STATE`] [`--interconnect-attachment`=`INTERCONNECT_ATTACHMENT` | `--network`=`NETWORK` | `--subnet`=`SUBNET` | `--vpn-tunnel`=`VPN_TUNNEL`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` Creates a new VPC Flow Logs configuration. 
+
+Project-level configuration: Specify a target resource, either: --subnet, \--network, --interconnect-attachment, or --vpn-tunnel 
+
+Organization-level configuration: Specify the --organization flag without a target resource to apply the configuration across an entire organization. 
+
+The --location=global flag is always required. 
+
+EXAMPLES
+     To create a new VPC Flow Logs configuration `my-config` in organization `my-org-number`, run: 
+    
+    
+    gcloud beta network-management vpc-flow-logs-configs create my-config --location=global --organization=<my-org-number>
+
+To create a new VPC Flow Logs configuration `my-config` in project `my-project` for a VLAN attachment for Cloud Interconnect, run: 
+    
+    
+    gcloud beta network-management vpc-flow-logs-configs create my-config --location=global --interconnect-attachment="projects/{project_id}/regions/{region}/interconnectAttachments/{interconnect_attachment_id}"
+
+To create a new VPC Flow Logs configuration `my-config` in project `my-project` for a Cloud VPN tunnel, run: 
+    
+    
+    gcloud beta network-management vpc-flow-logs-configs create my-config --location=global --subnet="projects/{project_id}/regions/{region}/vpnTunnels/{vpn_tunnel_id}"
+
+To create a new VPC Flow Logs configuration `my-config` in project `my-project` for a subnet, run: 
+    
+    
+    gcloud beta network-management vpc-flow-logs-configs create my-config --location=global --subnet="projects/{project_id}/regions/{region}/subnets/{subnet_id}"
+
+To create a new VPC Flow Logs configuration `my-config` in project `my-project` for a VPC network, run: 
+    
+    
+    gcloud beta network-management vpc-flow-logs-configs create my-config --location=global --network="projects/{project_id}/global/networks/{network_id}"
+
+POSITIONAL ARGUMENTS
+    
+
+VpcFlowLogsConfig resource - Identifier. Unique name of the configuration. The name can have one of the following forms: 
+
+  * For project-level configurations: `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+
+
+  * For organization-level configurations: `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+
+
+To set the `project` attribute: 
+
+  * provide the argument `vpc_flow_logs_config` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. This resource can be one of the following types: [networkmanagement.organizations.locations.vpcFlowLogsConfigs, networkmanagement.projects.locations.vpcFlowLogsConfigs]. 
+
+
+
+This must be specified. 
+
+`VPC_FLOW_LOGS_CONFIG`
+     ID of the vpcFlowLogsConfig or fully qualified identifier for the vpcFlowLogsConfig. 
+
+To set the `vpc_flow_logs_config` attribute: 
+
+  * provide the argument `vpc_flow_logs_config` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     The location id of the vpcFlowLogsConfig resource. 
+
+To set the `location` attribute: 
+
+  * provide the argument `vpc_flow_logs_config` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line. 
+
+
+`--organization`=`ORGANIZATION`
+     The organization id of the vpcFlowLogsConfig resource. 
+
+To set the `organization` attribute: 
+
+  * provide the argument `vpc_flow_logs_config` on the command line with a fully specified name; 
+  * provide the argument `--organization` on the command line. Must be specified for resource of type [networkmanagement.organizations.locations.vpcFlowLogsConfigs]. 
+
+
+FLAGS
+    
+
+Arguments for the aggregation interval. 
+`--aggregation-interval`=`AGGREGATION_INTERVAL`
+     The aggregation interval for the logs. Default value is INTERVAL_5_SEC. `AGGREGATION_INTERVAL` must be one of: 
+
+`interval-1-min`
+     Aggregate logs in 1m intervals. 
+`interval-10-min`
+     Aggregate logs in 10m intervals. 
+`interval-15-min`
+     Aggregate logs in 15m intervals. 
+`interval-30-sec`
+     Aggregate logs in 30s intervals. 
+`interval-5-min`
+     Aggregate logs in 5m intervals. 
+`interval-5-sec`
+     Aggregate logs in 5s intervals. 
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+Arguments for connection logging. 
+`--connection-logging`=`CONNECTION_LOGGING`
+     Whether to enable connection logging. Default value is CONNECTION_LOGGING_DISABLED when unspecified. Not valid for VPN Tunnel or Interconnect Attachment targets. `CONNECTION_LOGGING` must be one of: 
+
+`connection-logging-disabled`
+     When CONNECTION_LOGGING_DISABLED, connection logging is disabled. 
+`connection-logging-enabled`
+     When CONNECTION_LOGGING_ENABLED, connection logs are generated for connection attempts. 
+`disabled`
+     When disabled, connection logging is disabled. 
+`enabled`
+     When enabled, connection logs are generated for connection attempts. 
+Arguments for the cross project metadata. 
+`--cross-project-metadata`=`CROSS_PROJECT_METADATA`
+     Determines whether to include cross project annotations in the logs. This field is available only for organization configurations. If not specified in org configs will be set to CROSS_PROJECT_METADATA_ENABLED. `CROSS_PROJECT_METADATA` must be one of: 
+
+`cross-project-metadata-disabled`
+     When CROSS_PROJECT_METADATA_DISABLED, metadata from other projects will not be included in the logs. 
+`cross-project-metadata-enabled`
+     When CROSS_PROJECT_METADATA_ENABLED, metadata from other projects will be included in the logs. 
+Arguments for the description. 
+`--description`=`DESCRIPTION`
+     The user-supplied description of the VPC Flow Logs configuration. Maximum of 512 characters. 
+Arguments for the filter expr. 
+`--filter-expr`=`FILTER_EXPR`
+     Export filter used to define which VPC Flow Logs should be logged. 
+Arguments for the flow sampling. 
+`--flow-sampling`=`FLOW_SAMPLING`
+     The value of the field must be in (0, 1]. The sampling rate of VPC Flow Logs where 1.0 means all collected logs are reported. Setting the sampling rate to 0.0 is not allowed. If you want to disable VPC Flow Logs, use the state field instead. Default value is 1.0. 
+`--labels`=[`LABELS`,…]
+     Resource labels to represent user-provided metadata. 
+
+`KEY`
+     Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+`VALUE`
+     Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+`Shorthand Example:`
+    
+    
+    --labels=string=string
+
+`JSON Example:`
+    
+    
+    --labels='{"string": "string"}'
+
+`File Example:`
+    
+    
+    --labels=path_to_file.(yaml|json)
+
+Arguments for the metadata. 
+`--metadata`=`METADATA`
+     Configures whether all, none or a subset of metadata fields should be added to the reported VPC flow logs. Default value is INCLUDE_ALL_METADATA. `METADATA` must be one of: 
+
+`custom-metadata`
+     Include only custom fields (specified in metadata_fields). 
+`exclude-all-metadata`
+     Exclude all metadata fields. 
+`include-all-metadata`
+     Include all metadata fields. 
+`--metadata-fields`=[`METADATA_FIELDS`,…]
+     Custom metadata fields to include in the reported VPC flow logs. Can only be specified if "metadata" was set to CUSTOM_METADATA. 
+Arguments for the state. 
+`--state`=`STATE`
+     The state of the VPC Flow Log configuration. Default value is ENABLED. When creating a new configuration, it must be enabled. Setting state=DISABLED will pause the log generation for this config. `STATE` must be one of: 
+
+`disabled`
+     When DISABLED, this configuration will not generate logs. 
+`enabled`
+     When ENABLED, this configuration will generate logs. 
+Arguments for the target resource. 
+
+At most one of these can be specified: 
+
+`--interconnect-attachment`=`INTERCONNECT_ATTACHMENT`
+     Traffic will be logged from the Interconnect Attachment. Format: projects/{project_id}/regions/{region}/interconnectAttachments/{name} 
+`--network`=`NETWORK`
+     Traffic will be logged from VMs, VPN tunnels and Interconnect Attachments within the network. Format: projects/{project_id}/global/networks/{name} 
+`--subnet`=`SUBNET`
+     Traffic will be logged from VMs within the subnetwork. Format: projects/{project_id}/regions/{region}/subnetworks/{name} 
+`--vpn-tunnel`=`VPN_TUNNEL`
+     Traffic will be logged from the VPN Tunnel. Format: projects/{project_id}/regions/{region}/vpnTunnels/{name} 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `networkmanagement/v1beta1` API. The full documentation for this API can be found at: <https://cloud.google.com/>
+NOTES
+     This command is currently in beta and might change without notice. This variant is also available: 
+    
+    
+    [gcloud network-management vpc-flow-logs-configs create](https://docs.cloud.google.com/sdk/gcloud/reference/network-management/vpc-flow-logs-configs/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-06 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-06 UTC."],[],[]] 

@@ -1,0 +1,299 @@
+---
+url: https://docs.cloud.google.com/spanner/docs/samples/spanner-read-data/
+title: Read data \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T04:30:10.707011+00:00
+---
+
+# Read data  |  Spanner  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/docs/samples/spanner-read-data/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Samples ](https://docs.cloud.google.com/spanner/docs/samples)
+
+
+
+#  Read data Stay organized with collections  Save and categorize content based on your preferences. 
+
+Read data.
+
+## Explore further
+
+For detailed documentation that includes this code sample, see the following: 
+
+  * [Getting started with Spanner in C++](https://docs.cloud.google.com/spanner/docs/getting-started/cpp)
+  * [Getting started with Spanner in Go](https://docs.cloud.google.com/spanner/docs/getting-started/go)
+  * [Getting started with Spanner in Java](https://docs.cloud.google.com/spanner/docs/getting-started/java)
+  * [Getting started with Spanner in Node.js](https://docs.cloud.google.com/spanner/docs/getting-started/nodejs)
+  * [Getting started with Spanner in PHP](https://docs.cloud.google.com/spanner/docs/getting-started/php)
+  * [Getting started with Spanner in Python](https://docs.cloud.google.com/spanner/docs/getting-started/python)
+  * [Getting started with Spanner in Ruby](https://docs.cloud.google.com/spanner/docs/getting-started/ruby)
+  * [Reads outside of transactions](https://docs.cloud.google.com/spanner/docs/reads)
+
+
+
+## Code sample
+
+### C++
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    void ReadData(google::cloud::spanner::Client client) {
+      namespace spanner = ::google::cloud::spanner;
+    
+      auto rows = client.Read("Albums", google::cloud::spanner::KeySet::All(),
+                              {"SingerId", "AlbumId", "AlbumTitle"});
+      using RowType = std::tuple<std::int64_t, std::int64_t, std::string>;
+      for (auto& row : spanner::StreamOf<RowType>(rows)) {
+        if (!row) throw std::move(row).status();
+        std::cout << "SingerId: " << std::get<0>(*row) << "\t";
+        std::cout << "AlbumId: " << std::get<1>(*row) << "\t";
+        std::cout << "AlbumTitle: " << std::get<2>(*row) << "\n";
+      }
+    
+      std::cout << "Read completed for [spanner_read_data]\n";
+    }
+
+### Go
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import (
+    	"context"
+    	"fmt"
+    	"io"
+    
+    	"cloud.google.com/go/spanner"
+    	"google.golang.org/api/iterator"
+    )
+    
+    func read(w io.Writer, db string) error {
+    	ctx := context.Background()
+    	client, err := spanner.NewClient(ctx, db)
+    	if err != nil {
+    		return err
+    	}
+    	defer client.Close()
+    
+    	iter := client.[Single](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/spanner/latest/index.html#cloud_google_com_go_spanner_Client_Single)().Read(ctx, "Albums", spanner.[AllKeys](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/spanner/latest/index.html#cloud_google_com_go_spanner_KeySet_AllKeys)(),
+    		[]string{"SingerId", "AlbumId", "AlbumTitle"})
+    	defer iter.Stop()
+    	for {
+    		row, err := iter.Next()
+    		if err == iterator.Done {
+    			return nil
+    		}
+    		if err != nil {
+    			return err
+    		}
+    		var singerID, albumID int64
+    		var albumTitle string
+    		if err := row.[Columns](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/spanner/latest/index.html#cloud_google_com_go_spanner_Row_Columns)(&singerID, &albumID, &albumTitle); err != nil {
+    			return err
+    		}
+    		fmt.Fprintf(w, "%d %d %s\n", singerID, albumID, albumTitle)
+    	}
+    }
+    
+
+### Java
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    static void read(DatabaseClient dbClient) {
+      try (ResultSet resultSet =
+          dbClient
+              .singleUse()
+              .read(
+                  "Albums",
+                  KeySet.all(), // Read all rows in a table.
+                  Arrays.asList("SingerId", "AlbumId", "AlbumTitle"))) {
+        while (resultSet.next()) {
+          System.out.printf(
+              "%d %d %s\n", resultSet.getLong(0), resultSet.getLong(1), resultSet.getString(2));
+        }
+      }
+    }
+
+### Node.js
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    // Imports the Google Cloud client library
+    const {Spanner} = require('[@google-cloud/spanner](https://docs.cloud.google.com/nodejs/docs/reference/spanner/latest/overview.html)');
+    
+    /**
+     * TODO(developer): Uncomment the following lines before running the sample.
+     */
+    // const projectId = 'my-project-id';
+    // const instanceId = 'my-instance';
+    // const databaseId = 'my-database';
+    
+    // Creates a client
+    const spanner = new [Spanner](https://docs.cloud.google.com/nodejs/docs/reference/spanner/latest/spanner/spanner.html)({
+      projectId: projectId,
+    });
+    
+    // Gets a reference to a Cloud Spanner instance and database
+    const instance = spanner.instance(instanceId);
+    const database = instance.database(databaseId);
+    
+    // Reads rows from the Albums table
+    const albumsTable = database.table('Albums');
+    
+    const query = {
+      columns: ['SingerId', 'AlbumId', 'AlbumTitle'],
+      keySet: {
+        all: true,
+      },
+    };
+    
+    try {
+      const [rows] = await albumsTable.read(query);
+    
+      rows.forEach(row => {
+        const json = row.toJSON();
+        console.log(
+          `SingerId: ${json.SingerId}, AlbumId: ${json.AlbumId}, AlbumTitle: ${json.AlbumTitle}`
+        );
+      });
+    } catch (err) {
+      console.error('ERROR:', err);
+    } finally {
+      // Close the database when finished.
+      await database.close();
+    }
+
+### PHP
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    use Google\Cloud\Spanner\SpannerClient;
+    
+    /**
+     * Reads sample data from the database.
+     * Example:
+     * ```
+     * read_data($instanceId, $databaseId);
+     * ```
+     *
+     * @param string $instanceId The Spanner instance ID.
+     * @param string $databaseId The Spanner database ID.
+     */
+    function read_data(string $instanceId, string $databaseId): void
+    {
+        $spanner = new SpannerClient();
+        $instance = $spanner->instance($instanceId);
+        $database = $instance->database($databaseId);
+    
+        $keySet = $spanner->keySet(['all' => true]);
+        $results = $database->read(
+            'Albums',
+            $keySet,
+            ['SingerId', 'AlbumId', 'AlbumTitle']
+        );
+    
+        foreach ($results->rows() as $row) {
+            printf('SingerId: %s, AlbumId: %s, AlbumTitle: %s' . PHP_EOL,
+                $row['SingerId'], $row['AlbumId'], $row['AlbumTitle']);
+        }
+    }
+
+### Python
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    def read_data(instance_id, database_id):
+        """Reads sample data from the database."""
+        spanner_client = spanner.Client()
+        instance = spanner_client.instance(instance_id)
+        database = instance.database(database_id)
+    
+        with database.snapshot() as snapshot:
+            keyset = spanner.KeySet(all_=True)
+            results = snapshot.read(
+                table="Albums", columns=("SingerId", "AlbumId", "AlbumTitle"), keyset=keyset
+            )
+    
+            for row in results:
+                print("SingerId: {}, AlbumId: {}, AlbumTitle: {}".format(*row))
+    
+    
+
+### Ruby
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    # project_id  = "Your Google Cloud project ID"
+    # instance_id = "Your Spanner instance ID"
+    # database_id = "Your Spanner database ID"
+    
+    require "google/cloud/spanner"
+    
+    spanner = Google::Cloud::[Spanner](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-spanner-admin-instance-v1/latest/Google-Cloud-Spanner.html).new project: project_id
+    client  = spanner.[client](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-spanner/latest/Google-Cloud-Spanner-Project.html) instance_id, database_id
+    
+    client.read("Albums", [:SingerId, :AlbumId, :AlbumTitle]).rows.[each](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-spanner/latest/Google-Cloud-Spanner-BatchWriteResults.html) do |row|
+      puts "#{row[:SingerId]} #{row[:AlbumId]} #{row[:AlbumTitle]}"
+    end
+
+### Rust
+    
+    
+    use google_cloud_spanner::client::DatabaseClient;
+    use google_cloud_spanner::key::KeySet;
+    use google_cloud_spanner::read::ReadRequest;
+    
+    pub async fn sample(client: &DatabaseClient) -> anyhow::Result<()> {
+        // Build a read request to read all rows in the Albums table
+        let read_request = ReadRequest::builder("Albums", ["SingerId", "AlbumId", "AlbumTitle"])
+            .with_keys(KeySet::all())
+            .build();
+    
+        let transaction = client.single_use().build();
+        let mut result_set = transaction.execute_read(read_request).await?;
+    
+        println!("Reading albums data:");
+        while let Some(row) = result_set.next().await.transpose()? {
+            let singer_id: i64 = row.get("SingerId")?;
+            let album_id: i64 = row.get("AlbumId")?;
+            let album_title: String = row.get("AlbumTitle")?;
+            println!("SingerId: {singer_id}, AlbumId: {album_id}, AlbumTitle: {album_title}");
+        }
+        println!("Done reading albums.");
+    
+        Ok(())
+    }
+
+## What's next
+
+To search and filter code samples for other Google Cloud products, see the [Google Cloud sample browser](https://docs.cloud.google.com/docs/samples?product=cloudspanner). 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],[],[],[]] 

@@ -1,0 +1,12 @@
+---
+url: https://docs.cloud.google.com/alloydb/omni/kubernetes/17.7.0/docs/samples/v1_dbcluster_vault.yaml.txt
+title: https://docs.cloud.google.com/alloydb/omni/kubernetes/17.7.0/docs/samples/v1_dbcluster_vault.yaml.txt
+method: scrapling+scrapegraph
+fetched_at: 2026-10-16T10:56:39.817871+00:00
+---
+
+# https://docs.cloud.google.com/alloydb/omni/kubernetes/17.7.0/docs/samples/v1_dbcluster_vault.yaml.txt
+
+> Source: https://docs.cloud.google.com/alloydb/omni/kubernetes/17.7.0/docs/samples/v1_dbcluster_vault.yaml.txt
+
+apiVersion: v1 kind: Secret metadata: name: db-pw-dbcluster-sample type: Opaque data: # dbcluster-sample: "Q2hhbmdlTWUxMjM=" # Password is ChangeMe123 dbcluster-sample: "ZGhhcm1hbGluZ2FtCg==" \--- apiVersion: v1 kind: Secret metadata: name: alloydbadmin-pw-dbcluster-sample type: Opaque data: dbcluster-sample: "Q2hhbmdlTWUxMjM=" # dbcluster-sample: "ZGhhcm1hbGluZ2FtCg==" # dbcluster-sample: "YXJhdmluZGFuCg==" \--- apiVersion: alloydbomni.dbadmin.goog/v1 kind: DBCluster metadata: name: dbcluster-sample spec: databaseVersion: "17.7.0" # availability: # numberOfStandbys: 1 # enableStandbyAsReadReplica: true primarySpec: adminUser: passwordRef: name: db-pw-dbcluster-sample agentPassword: passwordRef: name: alloydbadmin-pw-dbcluster-sample resources: memory: 5Gi cpu: 1 disks: \- name: DataDisk size: 10Gi 

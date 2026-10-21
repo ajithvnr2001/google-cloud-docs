@@ -1,0 +1,203 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/container/bare-metal/standalone-clusters/update/
+title: gcloud alpha container bare-metal standalone-clusters update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T21:59:40.367367+00:00
+---
+
+# gcloud alpha container bare-metal standalone-clusters update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/container/bare-metal/standalone-clusters/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha container bare-metal standalone-clusters update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha container bare-metal standalone-clusters update - update an Anthos on bare metal standalone cluster 
+SYNOPSIS
+    
+
+`gcloud alpha container bare-metal standalone-clusters update` (`STANDALONE_CLUSTER` : `--location`=`LOCATION`) [`--admin-users`=`ADMIN_USERS`] [`--allow-missing`] [`--async`] [`--binauthz-evaluation-mode`=`BINAUTHZ_EVALUATION_MODE`] [`--description`=`DESCRIPTION`] [`--enable-application-logs`] [`--login-user`=`LOGIN_USER`] [`--maintenance-address-cidr-blocks`=[`MAINTENANCE_ADDRESS_CIDR_BLOCKS`,…]] [`--validate-only`] [`--version`=`VERSION`] [`--add-annotations`=[`KEY1`=`VALUE1`,`KEY2`=`VALUE2`,…] | `--remove-annotations`=[`KEY1`,`KEY2`,…]] [`--api-server-args`=[`KEY`=`VALUE`,…] `--control-plane-node-configs`=[`labels`=`LABELS`],[`node-ip`=`NODE-IP`] `--control-plane-node-labels`=[`KEY`=`VALUE`,…] `--control-plane-node-taints`=[`KEY`=`VALUE`:`EFFECT`,…]] [`--bgp-lb-address-pools`=[`addresses`=`ADDRESSES`],[`avoid-buggy-ips`=`AVOID-BUGGY-IPS`],[`manual-assign`=`MANUAL-ASSIGN`],[`pool`=`POOL`] `--bgp-lb-asn`=`BGP_LB_ASN` `--bgp-lb-peer-configs`=[`asn`=`ASN`],[`control-plane-nodes`=`CONTROL-PLANE-NODES`],[`ip-address`=`IP-ADDRESS`] `--bgp-lb-load-balancer-node-configs`=[`labels`=`LABELS`],[`node-ip`=`NODE-IP`] `--bgp-lb-load-balancer-node-labels`=[`KEY`=`VALUE`,…] `--bgp-lb-load-balancer-node-taints`=[`KEY`=`VALUE`:`EFFECT`,…] | `--metal-lb-address-pools`=[`addresses`=`ADDRESSES`],[`avoid-buggy-ips`=`AVOID-BUGGY-IPS`],[`manual-assign`=`MANUAL-ASSIGN`],[`pool`=`POOL`] `--metal-lb-load-balancer-node-configs`=[`labels`=`LABELS`],[`node-ip`=`NODE-IP`] `--metal-lb-load-balancer-node-labels`=[`KEY`=`VALUE`,…] `--metal-lb-load-balancer-node-taints`=[`KEY`=`VALUE`:`EFFECT`,…]] [`--island-mode-service-address-cidr-blocks`=`SERVICE_ADDRESS`,[…] `--disable-sr-iov-config` | `--enable-sr-iov-config`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` Update an Anthos on bare metal standalone cluster. 
+EXAMPLES
+     To update a standalone cluster named ``my-cluster`` managed in location ``us-west1``, run: 
+    
+    
+    gcloud alpha container bare-metal standalone-clusters update my-cluster --location=us-west1
+
+POSITIONAL ARGUMENTS
+    
+
+Standalone cluster resource - standalone cluster to update The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `standalone_cluster` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`STANDALONE_CLUSTER`
+     ID of the standalone_cluster or fully qualified identifier for the standalone_cluster. 
+
+To set the `standalone_cluster` attribute: 
+
+  * provide the argument `standalone_cluster` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     Google Cloud location for the standalone_cluster. 
+
+To set the `location` attribute: 
+
+  * provide the argument `standalone_cluster` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `container_bare_metal/location`. 
+
+
+FLAGS
+    
+
+Anthos on bare metal standalone cluster security configuration. 
+Cluster authorization configurations to bootstrap onto the standalone cluster 
+`--admin-users`=`ADMIN_USERS`
+     Users that will be granted the cluster-admin role on the cluster, providing full access to the cluster. 
+`--allow-missing`
+     If set, and the Anthos standalone cluster on bare metal is not found, the update request will try to create a new standalone cluster with the provided configuration. 
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--binauthz-evaluation-mode`=`BINAUTHZ_EVALUATION_MODE`
+     Set Binary Authorization evaluation mode for this cluster. `BINAUTHZ_EVALUATION_MODE` must be one of: `DISABLED`, `PROJECT_SINGLETON_POLICY_ENFORCE`. 
+`--description`=`DESCRIPTION`
+     Description for the resource. 
+Anthos on bare metal standalone cluster operations configuration. 
+`--enable-application-logs`
+     Whether collection of application logs/metrics should be enabled (in addition to system logs/metrics). 
+Anthos on bare metal node access related settings for the standalone cluster. 
+`--login-user`=`LOGIN_USER`
+     User name used to access node machines. 
+Anthos on bare metal standalone cluster maintenance configuration. 
+`--maintenance-address-cidr-blocks`=[`MAINTENANCE_ADDRESS_CIDR_BLOCKS`,…]
+     IPv4 addresses to be placed into maintenance mode. 
+`--validate-only`
+     If set, only validate the request, but do not actually perform the operation. 
+`--version`=`VERSION`
+     Anthos on bare metal version for the standalone cluster resource. 
+At most one of these can be specified: 
+
+`--add-annotations`=[`KEY1`=`VALUE1`,`KEY2`=`VALUE2`,…]
+     Add the given key-value pairs to the current annotations, or update its value if the key already exists. 
+`--remove-annotations`=[`KEY1`,`KEY2`,…]
+     Remove annotations of the given keys. 
+Anthos on bare metal standalone cluster control plane configuration. 
+`--api-server-args`=[`KEY`=`VALUE`,…]
+     API Server argument configuration. 
+Anthos on bare metal standalone cluster control plane node pool configuration. 
+Anthos on bare metal node pool configuration for control plane nodes. 
+Anthos on bare metal node configuration for control plane nodes. 
+Populate control plane node config. 
+
+At most one of these can be specified: 
+
+`--control-plane-node-configs`=[`labels`=`LABELS`],[`node-ip`=`NODE-IP`]
+     Control plane node configuration. 
+`--control-plane-node-labels`=[`KEY`=`VALUE`,…]
+     Labels assigned to nodes of a node pool. 
+`--control-plane-node-taints`=[`KEY`=`VALUE`:`EFFECT`,…]
+     Node taint applied to every Kubernetes node in a node pool. 
+Anthos on bare metal standalone cluster load balancer configuration. 
+Populate one of the load balancers. 
+
+At most one of these can be specified: 
+
+BGP LB Configuration 
+BGP LB address pools configuration. 
+
+At most one of these can be specified: 
+
+`--bgp-lb-address-pools`=[`addresses`=`ADDRESSES`],[`avoid-buggy-ips`=`AVOID-BUGGY-IPS`],[`manual-assign`=`MANUAL-ASSIGN`],[`pool`=`POOL`]
+     BGP LB address pools configuration. 
+`--bgp-lb-asn`=`BGP_LB_ASN`
+     BGP autonomous system number (ASN) of the cluster. 
+BGP LB peer configuration. 
+
+At most one of these can be specified: 
+
+`--bgp-lb-peer-configs`=[`asn`=`ASN`],[`control-plane-nodes`=`CONTROL-PLANE-NODES`],[`ip-address`=`IP-ADDRESS`]
+     BGP LB peer configuration. 
+Anthos on bare metal node pool configuration for BGP LB load balancer nodes. 
+BGP LB Node Pool configuration. 
+Populate BGP LB load balancer node config. 
+
+At most one of these can be specified: 
+
+`--bgp-lb-load-balancer-node-configs`=[`labels`=`LABELS`],[`node-ip`=`NODE-IP`]
+     BGP LB load balancer node configuration. 
+`--bgp-lb-load-balancer-node-labels`=[`KEY`=`VALUE`,…]
+     Labels assigned to nodes of a BGP LB node pool. 
+`--bgp-lb-load-balancer-node-taints`=[`KEY`=`VALUE`:`EFFECT`,…]
+     Node taint applied to every node in a BGP LB node pool. 
+MetalLB Configuration 
+MetalLB address pools configuration. 
+
+At most one of these can be specified: 
+
+`--metal-lb-address-pools`=[`addresses`=`ADDRESSES`],[`avoid-buggy-ips`=`AVOID-BUGGY-IPS`],[`manual-assign`=`MANUAL-ASSIGN`],[`pool`=`POOL`]
+     MetalLB address pools configuration. 
+Anthos on bare metal node pool configuration for MetalLB load balancer nodes. 
+MetalLB Node Pool configuration. 
+Populate MetalLB load balancer node config. 
+
+At most one of these can be specified: 
+
+`--metal-lb-load-balancer-node-configs`=[`labels`=`LABELS`],[`node-ip`=`NODE-IP`]
+     MetalLB load balancer node configuration. 
+`--metal-lb-load-balancer-node-labels`=[`KEY`=`VALUE`,…]
+     Labels assigned to nodes of a MetalLB node pool. 
+`--metal-lb-load-balancer-node-taints`=[`KEY`=`VALUE`:`EFFECT`,…]
+     Node taint applied to every node in a MetalLB node pool. 
+Anthos on bare metal standalone cluster network configuration. 
+Populate one of the network configs. 
+Island mode CIDR network configuration. 
+`--island-mode-service-address-cidr-blocks`=`SERVICE_ADDRESS`,[…]
+     IPv4 address range for all services in the cluster. 
+Anthos on bare metal standalone cluster SR-IOV configuration. 
+At most one of these can be specified: 
+
+`--disable-sr-iov-config`
+     If set, the SR-IOV operator won't be installed. 
+`--enable-sr-iov-config`
+     If set, install the SR-IOV operator. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. 
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

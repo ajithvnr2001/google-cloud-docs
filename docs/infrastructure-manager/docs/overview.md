@@ -1,0 +1,115 @@
+---
+url: https://docs.cloud.google.com/infrastructure-manager/docs/overview/
+title: Infrastructure Manager overview \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T10:29:31.290629+00:00
+---
+
+# Infrastructure Manager overview  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/infrastructure-manager/docs/overview/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Infrastructure as code ](https://docs.cloud.google.com/docs/iac)
+  * [ Infrastructure Manager ](https://docs.cloud.google.com/infrastructure-manager/docs)
+  * [ Guides ](https://docs.cloud.google.com/infrastructure-manager/docs/overview)
+
+
+
+Send feedback 
+
+#  Infrastructure Manager overview Stay organized with collections  Save and categorize content based on your preferences. 
+
+Infrastructure Manager (Infra Manager) is a managed service that simplifies and automates the deployment and management of your Google Cloud infrastructure resources. By using Terraform configurations (also called blueprints), Infra Manager provides a managed Google Cloud toolchain to implement Infrastructure as Code (IaC) workflows.
+
+With Infra Manager, you can:
+
+  * Define your infrastructure declaratively using Terraform.
+  * Deploy Terraform configurations stored in Cloud Storage buckets, Git repositories, or your local directories.
+  * Manage your infrastructure lifecycle through deployments and revisions.
+  * Create preview deployments to see how changes affect your infrastructure before applying them.
+  * Use integrations with Cloud Build for automated workflows.
+
+
+
+Infra Manager doesn't manage the deployment of applications onto your resources. For application deployment, consider using Google Cloud products like [App Lifecycle Manager](https://docs.cloud.google.com/saas-runtime/docs), [Cloud Build](https://docs.cloud.google.com/build/docs) and [Cloud Deploy](https://docs.cloud.google.com/deploy/docs), or third-party tools.
+
+To work with Infra Manager, you should be familiar with Terraform. To learn more about Terraform with Google Cloud, see [Terraform on Google Cloud](https://docs.cloud.google.com/docs/terraform).
+
+To learn more about what Terraform is and how it works, see HashiCorp's [What is Terraform?](https://developer.hashicorp.com/terraform/intro).
+
+## Infra Manager and Infrastructure as Code
+
+Infra Manager lets you use IaC to manage the lifecycle of Google Cloud resources:
+
+  * Terraform is defined declaratively in a [Terraform configuration](https://docs.cloud.google.com/infrastructure-manager/docs/infra-manager-terraform). This means that the configuration describes the end state of your infrastructure.
+  * You can version the Terraform configuration either in a Git repository, or in a [Cloud Storage bucket](https://docs.cloud.google.com/infrastructure-manager/docs/upload-terraform-configuration). Use [Object Versioning](https://docs.cloud.google.com/storage/docs/object-versioning) to version configurations in a storage bucket.
+  * Use Infra Manager to update your infrastructure deployment with [revisions](https://docs.cloud.google.com/infrastructure-manager/docs/deployments-revisions#revisions). For each revision, Infra Manager stores the following: 
+    * Logs
+    * The configuration used to do the revision
+    * The list of Google Cloud resources created by the revision
+    * The state file created as part of each deployment and revision
+
+
+
+See [Infrastructure as Code on Google Cloud](https://docs.cloud.google.com/docs/terraform/iac-overview) for more information about IaC.
+
+## How Infra Manager works
+
+The following is a description of what happens in a scenario when you use Infra Manager to deploy infrastructure:
+
+  1. The infrastructure resources to deploy onto Google Cloud are defined in a Terraform configuration. 
+     * You can create this file yourself, or use a configuration that is already written for Google Cloud. See [Terraform and Infrastructure Manager](https://docs.cloud.google.com/infrastructure-manager/docs/infra-manager-terraform) for details.
+     * You can store the Terraform configuration in a Cloud Storage bucket, a Git repository, or on your local machine.
+  2. When you use Infra Manager to deploy resources from a Terraform configuration, you create a deployment. To create a deployment, Infra Manager: 
+     1. Validates the request. For example, it ensures that in your command you specified the location of the Terraform configuration.
+     2. Creates a Cloud Build job using a container image. This image is owned and maintained by Google Cloud. See Runtime environment for details about the Cloud Build environment. The Cloud Build job automates the following tasks: 
+        1. Downloads the Terraform module from the storage bucket or Git repository.
+        2. Initializes Terraform (`terraform init`)
+        3. Validates the Terraform configuration (`terraform validate`)
+        4. Actuates the configuration (`terraform apply`, or `terraform destroy` if you are deleting a deployment)
+        5. Streams Cloud Build logs into a storage bucket created by Infra Manager.
+        6. If the deployment fails, Infra Manager automatically retries the `terraform init` or `terraform apply` operations in certain scenarios, such as if it failed with intermittent network outages. These retries are performed a limited number of times.
+     3. Creates a Cloud Storage bucket and stores metadata about the deployment. For more information about the deployment and metadata, see [Deployment and revision overview](https://docs.cloud.google.com/infrastructure-manager/docs/deployments-revisions).
+  3. When the deployment is complete, the Google Cloud resources are provisioned as the configuration described them.
+
+You can query Infra Manager deployment for:
+
+     * The status of the deployment.
+     * The list of resources that are deployed as part of the deployment.
+     * Details about individual resources that are part of a deployment.
+
+
+
+## Runtime environment
+
+The runtime environment of Infra Manager is an [ephemeral Cloud Build environment](https://docs.cloud.google.com/build/docs/overview#ephemeral-build-environment). Infra Manager executes Terraform commands in this Cloud Build environment, and then the environment is discarded.
+
+The specific operating system, available software, and other configuration details of the Cloud Build environment are internal implementation details of Infra Manager, and can change at any time.
+
+You can specify which [supported version of Terraform](https://docs.cloud.google.com/infrastructure-manager/docs/infra-manager-terraform#terraform_versions) to use for each deployment.
+
+## Don't include personal or sensitive information
+
+Don't include personal or sensitive information in Terraform configuration values.
+
+For additional information about Terraform configurations and sensitive data, see [Terraform configuration values and sensitive data](https://docs.cloud.google.com/infrastructure-manager/docs/infra-manager-terraform#config-values-data).
+
+## What's next
+
+  * Learn more about [Terraform with Google Cloud](https://docs.cloud.google.com/docs/terraform).
+  * [Create a deployment](https://docs.cloud.google.com/infrastructure-manager/docs/deploy-resources).
+  * [Update a deployment](https://docs.cloud.google.com/infrastructure-manager/docs/update-deployment).
+  * [Automate deployments](https://docs.cloud.google.com/infrastructure-manager/docs/automate-git).
+  * [Delete a deployment](https://docs.cloud.google.com/infrastructure-manager/docs/delete-deployments).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

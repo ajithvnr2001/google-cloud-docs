@@ -1,0 +1,401 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/database-migration/migration-jobs/create/
+title: gcloud database-migration migration-jobs create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T10:19:16.811274+00:00
+---
+
+# gcloud database-migration migration-jobs create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/database-migration/migration-jobs/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud database-migration migration-jobs create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud database-migration migration-jobs create - create a Database Migration Service migration job 
+SYNOPSIS
+    
+
+`gcloud database-migration migration-jobs create` (`MIGRATION_JOB` : `--region`=`REGION`) `--destination`=`DESTINATION` `--source`=`SOURCE` `--type`=`TYPE` [`--no-async`] [`--commit-id`=`COMMIT_ID`] [`--conversion-workspace`=`CONVERSION_WORKSPACE`] [`--display-name`=`DISPLAY_NAME`] [`--dump-parallel-level`=`DUMP_PARALLEL_LEVEL`] [`--dump-type`=`DUMP_TYPE`] [`--endpoint-mode`=`ENDPOINT_MODE`] [`--filter`=`FILTER`] [`--labels`=[`KEY`=`VALUE`,…]] [`--load-parallel-level`=`LOAD_PARALLEL_LEVEL`] [`--mysql-is-primary-destination`] [`--original-migration-name`=`ORIGINAL_MIGRATION_NAME`] [`--postgres-max-additional-subscriptions`=`POSTGRES_MAX_ADDITIONAL_SUBSCRIPTIONS`] [`--use-postgres-native`] [`--all-databases` | `--databases-filter`=`databaseName`,[…]] [`--cmek-key`=`CMEK_KEY` : `--cmek-keyring`=`CMEK_KEYRING` `--cmek-project`=`CMEK_PROJECT`] [`--dump-flags`=[`KEY`=`VALUE`,…] | `--dump-path`=`DUMP_PATH`] [`--max-concurrent-cdc-connections`=`MAX_CONCURRENT_CDC_CONNECTIONS` `--max-concurrent-full-dump-connections`=`MAX_CONCURRENT_FULL_DUMP_CONNECTIONS` `--skip-full-dump` `--oracle-cdc-start-position`=`ORACLE_CDC_START_POSITION` | `--sqlserver-cdc-start-position`=`SQLSERVER_CDC_START_POSITION` `--max-concurrent-destination-connections`=`MAX_CONCURRENT_DESTINATION_CONNECTIONS` `--transaction-timeout`=`TRANSACTION_TIMEOUT`] [`--peer-vpc`=`PEER_VPC` | `--static-ip` | [`--vm-ip`=`VM_IP` `--vm-port`=`VM_PORT` `--vpc`=`VPC` : `--vm`=`VM`]] [`--sqlserver-dag-linked-server`=`SQLSERVER_DAG_LINKED_SERVER` `--sqlserver-dag-source-ag`=`SQLSERVER_DAG_SOURCE_AG` | [`--sqlserver-databases`=`databaseName`,[…] : `--sqlserver-diff-backup` `--sqlserver-encrypted-databases`=`SQLSERVER_ENCRYPTED_DATABASES` `--sqlserver-promote-when-ready`]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     Create a Database Migration Service migration job. Recommended steps before creating the migration job: 
+
+  * Create a source connection profile. See prerequisites [here](https://cloud.google.com/database-migration/docs/mysql/configure-source-database). 
+  * Create a destination connection profile. For migrating to Cloud SQL for MySQL or Cloud SQL for PostgreSQL, use the cloudsql connection profile for DMS to create the CloudSQL replica for you. 
+  * Configure the connectivity method. See prerequisites [here](https://cloud.google.com/database-migration/docs/mysql/configure-connectivity). 
+  * [Heterogeneous migrations only] Create a conversion workspace. 
+
+
+EXAMPLES
+     To create a continuous migration job with IP allowlist connectivity: 
+    
+    
+    gcloud database-migration migration-jobs create my-migration-job --region=us-central1 --type=CONTINUOUS --source=cp1 --destination=cp2
+
+To create a continuous migration job with VPC peering connectivity: 
+    
+    
+    gcloud database-migration migration-jobs create my-migration-job --region=us-central1 --type=CONTINUOUS --source=cp1 --destination=cp2 --peer-vpc=projects/my-project/global/networks/my-network
+
+To create a one-time migration job with reverse-SSH tunnel connectivity: 
+    
+    
+    gcloud database-migration migration-jobs create my-migration-job --region=us-central1 --type=ONE_TIME --source=cp1 --destination=cp2 --vm=vm1 --vm-ip=1.1.1.1 --vm-port=1111 --vpc=projects/my-project/global/networks/my-network
+
+To create a heterogeneous continuous migration job: 
+    
+    
+    gcloud database-migration migration-jobs create my-migration-job --region=us-central1 --type=CONTINUOUS --source=cp1 --destination=cp2 --conversion-workspace=cw
+
+To create a continuous SQL Server to SQL Server homogeneous migration job with differential backup enabled:
+    
+    
+    gcloud database-migration migration-jobs create my-migration-job --region=us-central1 --type=CONTINUOUS --source=cp1 --destination=cp2 --sqlserver-diff-backup --sqlserver-databases=db1,db2,db3
+
+To create a continuous SQL Server to SQL Server homogeneous migration job with encrypted databases:
+    
+    
+    gcloud database-migration migration-jobs create my-migration-job --region=us-central1 --type=CONTINUOUS --source=cp1 --destination=cp2 --sqlserver-databases=db1,db2,db3 --sqlserver-encrypted-databases=PATH/TO/ENCRYPTION/SETTINGS
+
+POSITIONAL ARGUMENTS
+    
+
+Migration job resource - The migration job to create. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `migration_job` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`MIGRATION_JOB`
+     ID of the migration_job or fully qualified identifier for the migration_job. 
+
+To set the `migration_job` attribute: 
+
+  * provide the argument `migration_job` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--region`=`REGION`
+     The Cloud region for the migration_job. 
+
+To set the `region` attribute: 
+
+  * provide the argument `migration_job` on the command line with a fully specified name; 
+  * provide the argument `--region` on the command line. 
+
+
+REQUIRED FLAGS
+    
+
+Connection profile resource - ID of the destination connection profile, representing the destination database. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--destination` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `region` attribute: 
+
+  * provide the argument `--destination` on the command line with a fully specified name; 
+  * provide the argument `--region` on the command line. 
+
+
+
+This must be specified. 
+
+`--destination`=`DESTINATION`
+     ID of the connection_profile or fully qualified identifier for the connection_profile. 
+
+To set the `connection_profile` attribute: 
+
+  * provide the argument `--destination` on the command line. 
+
+
+Connection profile resource - ID of the source connection profile, representing the source database. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--source` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `region` attribute: 
+
+  * provide the argument `--source` on the command line with a fully specified name; 
+  * provide the argument `--region` on the command line. 
+
+
+
+This must be specified. 
+
+`--source`=`SOURCE`
+     ID of the connection_profile or fully qualified identifier for the connection_profile. 
+
+To set the `connection_profile` attribute: 
+
+  * provide the argument `--source` on the command line. 
+
+
+`--type`=`TYPE`
+     Type of the migration job. `TYPE` must be one of: `ONE_TIME`, `CONTINUOUS`. 
+OPTIONAL FLAGS
+    
+
+`--no-async`
+     Waits for the operation in progress to complete before returning. 
+`--commit-id`=`COMMIT_ID`
+     Commit id for the conversion workspace to use for creating the migration job. If not specified, the latest commit id will be used by default. 
+Conversion workspace resource - Name of the conversion workspaces to be used for the migration job This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--conversion-workspace` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `region` attribute: 
+
+  * provide the argument `--conversion-workspace` on the command line with a fully specified name; 
+  * provide the argument `--region` on the command line. 
+
+
+`--conversion-workspace`=`CONVERSION_WORKSPACE`
+     ID of the conversion_workspace or fully qualified identifier for the conversion_workspace. 
+
+To set the `conversion_workspace` attribute: 
+
+  * provide the argument `--conversion-workspace` on the command line. 
+
+
+`--display-name`=`DISPLAY_NAME`
+     A user-friendly name for the migration job. The display name can include letters, numbers, spaces, and hyphens, and must start with a letter. 
+`--dump-parallel-level`=`DUMP_PARALLEL_LEVEL`
+     Parallelization level during initial dump of the migration job. If not specified, will be defaulted to OPTIMAL. `DUMP_PARALLEL_LEVEL` must be one of: `MIN`, `OPTIMAL`, `MAX`. 
+`--dump-type`=`DUMP_TYPE`
+     The type of the data dump. Currently applicable for MySQL to MySQL migrations only. `DUMP_TYPE` must be one of: `LOGICAL`, `PHYSICAL`. 
+`--endpoint-mode`=`ENDPOINT_MODE`
+     Specifies endpoint mode for a given command. Regional endpoints provide enhanced data residency and reliability by ensuring your request is handled entirely within the specified Google Cloud region. This differs from global endpoints, which may process parts of the request outside the target region. Overrides the default `regional/endpoint_mode` property value for this command invocation. `ENDPOINT_MODE` must be one of: 
+
+`global`
+     (Default) Use global rather than regional endpoints. 
+`regional`
+     Only use regional endpoints. An error will be raised if a regional endpoint is not available for a given command. 
+`regional-preferred`
+     Use regional endpoints when available, otherwise use global endpoints. Recommended for most users. 
+`--filter`=`FILTER`
+     Filter the entities based on [AIP-160](https://google.aip.dev/160) standard. Example: to filter all tables whose name start with "Employee" and are present under schema "Company", use filter as "Company.Employee`*` AND type=TABLE" 
+`--labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to add. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+`--load-parallel-level`=`LOAD_PARALLEL_LEVEL`
+     Parallelization level during initial load of the migration job. If not specified, will be defaulted to OPTIMAL. Only applicable for MySQL to MySQL migrations. `LOAD_PARALLEL_LEVEL` must be one of: `MIN`, `OPTIMAL`, `MAX`. 
+`--mysql-is-primary-destination`
+     Whether the destination for the migration job is a primary instance. 
+Migration job resource - Name of the original migration job to be used for the failback migration job This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--original-migration-name` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `region` attribute: 
+
+  * provide the argument `--original-migration-name` on the command line with a fully specified name; 
+  * provide the argument `--region` on the command line. 
+
+
+`--original-migration-name`=`ORIGINAL_MIGRATION_NAME`
+     ID of the migration_job or fully qualified identifier for the migration_job. 
+
+To set the `migration_job` attribute: 
+
+  * provide the argument `--original-migration-name` on the command line. 
+
+
+`--postgres-max-additional-subscriptions`=`POSTGRES_MAX_ADDITIONAL_SUBSCRIPTIONS`
+     Maximum number of additional subscriptions to use for the PostgreSQL migration job. 
+`--use-postgres-native`
+     Use native logical replication for PostgreSQL migration. 
+The migration job objects config. 
+The migration job objects config for databases. 
+
+At most one of these can be specified: 
+
+`--all-databases`
+     Migrate all databases for the migration job. This flag is used only for Postgres to AlloyDB, and Postgres to Cloud SQL Postgres and MySQL to Cloud SQL MySQL migrations. 
+`--databases-filter`=`databaseName`,[…]
+     A list of databases to be migrated to the destination instance. Provide databases as a comma separated list. This flag is used only for Postgres to AlloyDB, and Postgres to Cloud SQL Postgres and MySQL to Cloud SQL MySQL migrations. 
+Cmek key resource - Name of the CMEK (customer-managed encryption key) used for the migration job The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `region` attribute: 
+
+  * provide the argument `--cmek-key` on the command line with a fully specified name; 
+  * provide the argument `--region` on the command line. 
+
+
+`--cmek-key`=`CMEK_KEY`
+     ID of the cmek-key or fully qualified identifier for the cmek-key. 
+
+To set the `cmek-key` attribute: 
+
+  * provide the argument `--cmek-key` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--cmek-keyring`=`CMEK_KEYRING`
+     The CMEK keyring id of the cmek-key. 
+
+To set the `cmek-keyring` attribute: 
+
+  * provide the argument `--cmek-key` on the command line with a fully specified name; 
+  * provide the argument `--cmek-keyring` on the command line. 
+
+
+`--cmek-project`=`CMEK_PROJECT`
+     The Cloud project id for the cmek-key. 
+
+To set the `cmek-project` attribute: 
+
+  * provide the argument `--cmek-key` on the command line with a fully specified name; 
+  * provide the argument `--cmek-project` on the command line. 
+
+
+At most one of these can be specified: 
+
+`--dump-flags`=[`KEY`=`VALUE`,…]
+     A list of dump flags. An object containing a list of "key": "value" pairs. 
+`--dump-path`=`DUMP_PATH`
+     Path to the dump file in Google Cloud Storage, in the format: `gs://[BUCKET_NAME]/[OBJECT_NAME]`. 
+The heterogeneous migration config. This is used only for Oracle to Cloud SQL for PostgreSQL and SQL Server to Cloud SQL for PostgreSQL migrations. 
+Configuration for Oracle or SQL Server as a source in a heterogeneous migration. 
+`--max-concurrent-cdc-connections`=`MAX_CONCURRENT_CDC_CONNECTIONS`
+     Maximum number of connections Database Migration Service will open to the source for CDC phase. 
+`--max-concurrent-full-dump-connections`=`MAX_CONCURRENT_FULL_DUMP_CONNECTIONS`
+     Maximum number of connections Database Migration Service will open to the source for full dump phase. 
+Configuration for skipping full dump. 
+`--skip-full-dump`
+     Whether to skip full dump or not. 
+Configuration for CDC start position. 
+
+At most one of these can be specified: 
+
+`--oracle-cdc-start-position`=`ORACLE_CDC_START_POSITION`
+     Oracle schema change number (SCN) to start CDC data migration from. 
+`--sqlserver-cdc-start-position`=`SQLSERVER_CDC_START_POSITION`
+     Sqlserver log squence number (LSN) to start CDC data migration from. 
+Configuration for Postgres as a destination in a heterogeneous migration. 
+`--max-concurrent-destination-connections`=`MAX_CONCURRENT_DESTINATION_CONNECTIONS`
+     Maximum number of concurrent connections Database Migration Service will open to the destination for data migration. 
+`--transaction-timeout`=`TRANSACTION_TIMEOUT`
+     Timeout for data migration transactions. 
+The connectivity method used by the migration job. If a connectivity method isn't specified, then it isn't added to the migration job. 
+
+At most one of these can be specified: 
+
+`--peer-vpc`=`PEER_VPC`
+     Name of the VPC network to peer with the Cloud SQL private network. 
+`--static-ip`
+     Use the default IP allowlist method. This method creates a public IP that will be used with the destination Cloud SQL database. The method works by configuring the source database server to accept connections from the outgoing IP of the Cloud SQL instance. 
+Or at least one of these can be specified: 
+
+Parameters for the reverse-SSH tunnel connectivity method. 
+`--vm-ip`=`VM_IP`
+     Bastion Virtual Machine IP. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--vm-port`=`VM_PORT`
+     Forwarding port for the SSH tunnel. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--vpc`=`VPC`
+     Name of the VPC network where the VM is hosted. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--vm`=`VM`
+     Name of VM that will host the SSH tunnel bastion. 
+At most one of these can be specified: 
+
+The SQL Server homogeneous DAG migration config. This is used only for SQL Server to CloudSQL SQL for SQL Server migrations. 
+`--sqlserver-dag-linked-server`=`SQLSERVER_DAG_LINKED_SERVER`
+     The name of the linked server that points to the source SQL Server instance. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--sqlserver-dag-source-ag`=`SQLSERVER_DAG_SOURCE_AG`
+     The name of the source availability group. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+The SQL Server homogeneous migration config. This is used only for SQL Server to CloudSQL SQL Server migrations. 
+`--sqlserver-databases`=`databaseName`,[…]
+     A list of databases to be migrated to the destination Cloud SQL instance. Provide databases as a comma separated list. This list should contain all encrypted and non-encrypted database names. This flag is used only for SQL Server to Cloud SQL migrations. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--sqlserver-diff-backup`
+     Enable differential backups. If not specified, differential backups are disabled by default. Use --sqlserver-diff-backup to enable and --no-sqlserver-diff-backup to disable. This flag is used only for homogeneous SQL Server to Cloud SQL for SQL Server migrations. 
+`--sqlserver-encrypted-databases`=`SQLSERVER_ENCRYPTED_DATABASES`
+     A JSON/YAML file describing the encryption settings per database for all encrytped databases. Note: Path to the Certificate (.cer) and Private Key (.pvk) in Cloud Storage, should be in the form of `gs://bucketName/fileName`. The instance must have write permissions to the bucket and read access to the file. An example of a JSON request: [{ "database": "db1", "encryptionOptions": { "certPath": "Path to certificate 1", "pvkPath": "Path to certificate private key 1", "pvkPassword": "Private key password 1" } }, { "database": "db2", "encryptionOptions": { "certPath": "Path to certificate 2", "pvkPath": "Path to certificate private key 2", "pvkPassword": "Private key password 2" } }] 
+    
+    
+    This flag accepts "-" for stdin. This flag is used only for SQL Server to Cloud SQL migrations.
+
+`--sqlserver-promote-when-ready`
+     Promote the database when it is ready. Use --sqlserver-promote-when-ready to enable and --no-sqlserver-promote-when-ready to disable. This flag is used only for homogeneous SQL Server to Cloud SQL for SQL Server migrations. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+REGIONAL ENDPOINTS
+     This command supports regional endpoints. To use regional endpoints for this command, use the `--endpoint-mode=regional-preferred` flag. To use regional endpoints by default, run `$ [gcloud config set](https://docs.cloud.google.com/sdk/gcloud/reference/config/set) regional/endpoint_mode regional-preferred`. 
+NOTES
+     This variant is also available: 
+    
+    
+    [gcloud alpha database-migration migration-jobs create](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/database-migration/migration-jobs/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

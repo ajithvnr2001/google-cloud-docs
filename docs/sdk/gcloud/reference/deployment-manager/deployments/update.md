@@ -1,0 +1,136 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/deployment-manager/deployments/update/
+title: gcloud deployment-manager deployments update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T12:33:11.108030+00:00
+---
+
+# gcloud deployment-manager deployments update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/deployment-manager/deployments/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud deployment-manager deployments update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud deployment-manager deployments update - update a deployment based on a provided config file 
+SYNOPSIS
+    
+
+`gcloud deployment-manager deployments update` `DEPLOYMENT_NAME` [`--async`] [`--create-policy`=`CREATE_POLICY`; default="create-or-acquire"] [`--delete-policy`=`DELETE_POLICY`; default="delete"] [`--description`=`DESCRIPTION`] [`--fingerprint`=`FINGERPRINT`] [`--preview`] [`--properties`=[`PROPERTIES`,…]] [`--remove-labels`=[`KEY`,…]] [`--update-labels`=[`KEY`=`VALUE`,…]] [`--composite-type`=`COMPOSITE_TYPE` | `--config`=`CONFIG` | `--template`=`TEMPLATE`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     This command will update a deployment with the new config file provided. Different policies for create, update, and delete policies can be specified. 
+EXAMPLES
+     To update an existing deployment with a new config YAML file, run: 
+    
+    
+    gcloud deployment-manager deployments update my-deployment --config=new_config.yaml
+
+To update an existing deployment with a new config template file, run: 
+    
+    
+    gcloud deployment-manager deployments update my-deployment --template=new_config.{jinja|py}
+
+To update an existing deployment with a composite type as a new config, run: 
+    
+    
+    gcloud deployment-manager deployments update my-deployment --composite-type=<project-id>/composite:<new-config>
+
+To preview an update to an existing deployment without actually modifying the resources, run: 
+    
+    
+    gcloud deployment-manager deployments update my-deployment --config=new_config.yaml --preview
+
+To apply an update that has been previewed, provide the name of the previewed deployment, and no config file: 
+    
+    
+    gcloud deployment-manager deployments update my-deployment
+
+To specify different create, update, or delete policies, include any subset of the following flags: 
+    
+    
+    gcloud deployment-manager deployments update my-deployment --config=new_config.yaml --create-policy=acquire --delete-policy=abandon
+
+To perform an update without waiting for the operation to complete, run: 
+    
+    
+    gcloud deployment-manager deployments update my-deployment --config=new_config.yaml --async
+
+To update an existing deployment with a new config file and a fingerprint, run: 
+    
+    
+    gcloud deployment-manager deployments update my-deployment --config=new_config.yaml --fingerprint=deployment-fingerprint
+
+Either the `--config`, `--template`, or `--composite-type` flag is required unless launching an already-previewed update to a deployment. If you want to update a deployment's metadata, such as the labels or description, you must run a separate command with `--update-labels`, `--remove-labels`, or `--description`, as applicable. 
+
+More information is available at <https://cloud.google.com/deployment-manager/docs/deployments/updating-deployments>. 
+
+POSITIONAL ARGUMENTS
+    
+
+`DEPLOYMENT_NAME`
+     Deployment name. 
+FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--create-policy`=`CREATE_POLICY`; default="create-or-acquire"
+     Create policy for resources that have changed in the update. `CREATE_POLICY` must be one of: `acquire`, `create-or-acquire`. 
+`--delete-policy`=`DELETE_POLICY`; default="delete"
+     Delete policy for resources that will change as part of an update or delete. `delete` deletes the resource while `abandon` just removes the resource reference from the deployment. `DELETE_POLICY` must be one of: `abandon`, `delete`. 
+`--description`=`DESCRIPTION`
+     The new description of the deployment. 
+`--fingerprint`=`FINGERPRINT`
+     The fingerprint to use in requests to modify a deployment. If not specified, a get deployment request will be made to fetch the latest fingerprint. A fingerprint is a randomly generated value that is part of the update, stop, and cancel-preview request to perform optimistic locking. It is initially generated by Deployment Manager and changes after every request to modify data. The latest fingerprint is printed when deployment data is modified. 
+`--preview`
+     Preview the requested update without making any changes to the underlying resources. (default=False) 
+`--properties`=[`PROPERTIES`,…]
+     A comma separated, key:value, map to be used when deploying a template file or composite type directly. 
+`--remove-labels`=[`KEY`,…]
+     List of label keys to remove. If a label does not exist it is silently ignored. If `--update-labels` is also specified then `--update-labels` is applied first. 
+`--update-labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to update. If a label exists, its value is modified. Otherwise, a new label is created. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+At most one of these can be specified: 
+
+`--composite-type`=`COMPOSITE_TYPE`
+     Name of a composite type to deploy. For an example of creating and deploying a composite type, see: <https://cloud.google.com/deployment-manager/docs/configuration/templates/create-composite-types#examplecompositetype>
+`--config`=`CONFIG`
+     Filename of a top-level yaml config that specifies resources to deploy. For a guide to creating a configuration, refer to <https://cloud.google.com/deployment-manager/docs/configuration/create-basic-configuration>
+`--template`=`TEMPLATE`
+     Filename of a top-level jinja or python config template. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     These variants are also available: 
+    
+    
+    [gcloud alpha deployment-manager deployments update](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/deployment-manager/deployments/update)
+    
+    
+    [gcloud beta deployment-manager deployments update](https://docs.cloud.google.com/sdk/gcloud/reference/beta/deployment-manager/deployments/update)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

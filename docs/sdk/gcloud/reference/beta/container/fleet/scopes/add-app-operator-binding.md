@@ -1,0 +1,171 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/container/fleet/scopes/add-app-operator-binding/
+title: gcloud beta container fleet scopes add-app-operator-binding \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-16T09:38:33.524168+00:00
+---
+
+# gcloud beta container fleet scopes add-app-operator-binding  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/container/fleet/scopes/add-app-operator-binding/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta container fleet scopes add-app-operator-binding Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta container fleet scopes add-app-operator-binding - add project-level and fleet scope-level IAM bindings and create a fleet scope RBAC role binding for an app operator principal 
+SYNOPSIS
+    
+
+`gcloud beta container fleet scopes add-app-operator-binding` `SCOPE` (`--custom-role`=`CUSTOM_ROLE` | `--role`=`ROLE`) (`--group`=`GROUP` | `--user`=`USER`) [`--labels`=[`KEY`=`VALUE`,…]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` One binding consists of an app operator principal (user/group) and a role (view/edit/admin or a custom role). 
+
+This command sets up the different permissions required for an app operator, including usage of fleet scopes, connect gateway, logging, and metrics. The authoritative list for adding the permissions is the existing RBAC role bindings under the specified scope. 
+
+This command can fail for the following reasons: 
+
+  * The scope specified does not exist. 
+  * The user does not have access to the specified scope. 
+  * The principal specified already has another binding for the scope. 
+
+
+EXAMPLES
+     The following command: 
+    
+    
+    gcloud beta container fleet scopes add-app-operator-binding SCOPE --role=view --group=people@google.com --project=PROJECT_ID
+
+  * adds IAM policy binding: roles/gkehub.scopeViewer on `SCOPE`
+  * adds IAM policy binding: roles/gkehub.scopeViewerProjectLevel on `PROJECT_ID`
+  * adds IAM policy binding: roles/logging.viewAccessor on `PROJECT_ID` with condition where bucket corresponds to `SCOPE`
+  * creates fleet scope RBAC role binding: role `view` with a random ID for group `people@google.com`. 
+
+
+
+\--- 
+
+The following command: 
+    
+    
+    gcloud beta container fleet scopes add-app-operator-binding SCOPE --role=edit --user=person@google.com --project=PROJECT_ID
+
+  * adds IAM policy binding: roles/gkehub.scopeEditor on `SCOPE`
+  * adds IAM policy binding: roles/gkehub.scopeEditorProjectLevel on `PROJECT_ID`
+  * adds IAM policy binding: roles/logging.viewAccessor on `PROJECT_ID` with condition where bucket corresponds to `SCOPE`
+  * creates fleet scope RBAC role binding: role `edit` with a random ID for user `person@google.com`. 
+
+
+
+\--- 
+
+The following command: 
+    
+    
+    gcloud beta container fleet scopes add-app-operator-binding SCOPE --role=admin --user=person@google.com --project=PROJECT_ID
+
+  * adds IAM policy binding: roles/gkehub.scopeAdmin on `SCOPE`
+  * adds IAM policy binding: roles/gkehub.scopeEditorProjectLevel on `PROJECT_ID`
+  * adds IAM policy binding: roles/logging.viewAccessor on `PROJECT_ID` with condition where bucket corresponds to `SCOPE`
+  * creates fleet scope RBAC role binding: role `admin` with a random ID for user `person@google.com`. 
+
+
+
+\--- 
+
+The following command: 
+    
+    
+    gcloud beta container fleet scopes add-app-operator-binding SCOPE --custom-role=my-custom-role --user=person@google.com --project=PROJECT_ID
+
+  * adds IAM policy binding: roles/gkehub.scopeViewer on `SCOPE`
+  * adds IAM policy binding: roles/gkehub.scopeEditorProjectLevel on `PROJECT_ID`
+  * adds IAM policy binding: roles/logging.viewAccessor on `PROJECT_ID` with condition where bucket corresponds to `SCOPE`
+  * creates fleet scope RBAC role binding: role `my-custom-role` with a random ID for user `person@google.com`. 
+
+
+
+For any tailored IAM permissions required when using a custom role, the user or group can separately be granted additional IAM permissions on the project. 
+
+POSITIONAL ARGUMENTS
+    
+
+Scope resource - The group of arguments defining the Fleet Scope. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `SCOPE` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `location` attribute: 
+
+  * provide the argument `SCOPE` on the command line with a fully specified name; 
+  * global is the only supported location. 
+
+
+
+This must be specified. 
+
+`SCOPE`
+     ID of the scope or fully qualified identifier for the scope. 
+
+To set the `scope` attribute: 
+
+  * provide the argument `SCOPE` on the command line. 
+
+
+REQUIRED FLAGS
+    
+
+Exactly one of these must be specified: 
+
+`--custom-role`=`CUSTOM_ROLE`
+     Custom role to assign to principal. 
+`--role`=`ROLE`
+     Predefined role to assign to principal (admin, edit, view). `ROLE` must be one of: `admin`, `edit`, `view`. 
+Exactly one of these must be specified: 
+
+`--group`=`GROUP`
+     Group for the role binding. 
+`--user`=`USER`
+     User for the role binding. 
+OPTIONAL FLAGS
+    
+
+`--labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to add. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in beta and might change without notice. This variant is also available: 
+    
+    
+    [gcloud alpha container fleet scopes add-app-operator-binding](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/container/fleet/scopes/add-app-operator-binding)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

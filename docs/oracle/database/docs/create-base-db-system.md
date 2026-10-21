@@ -1,0 +1,291 @@
+---
+url: https://docs.cloud.google.com/oracle/database/docs/create-base-db-system/
+title: Create DB systems \u00a0|\u00a0 Oracle Database at Google Cloud \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T03:26:14.477892+00:00
+---
+
+# Create DB systems  |  Oracle Database at Google Cloud  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/oracle/database/docs/create-base-db-system/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Oracle Database at Google Cloud ](https://docs.cloud.google.com/oracle/database/docs)
+  * [ Guides ](https://docs.cloud.google.com/oracle/database/docs/overview)
+
+
+
+Send feedback 
+
+#  Create DB systems Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page describes how to create Base Database Service resources, that is, DB systems in Google Cloud.
+
+Oracle Database@Google Cloud lets you create an DB systems in the Google Cloud using Google Cloud console and Oracle Database@Google Cloud API.
+
+You must create your DB system in the same region and zone as your ODB Network. This ensures optimal performance and seamless communication.
+
+For a list of regions and zones in which you can create DB systems, see [Supported regions and zones](https://docs.cloud.google.com/oracle/database/docs/regions-and-zones).
+
+## Before you begin
+
+  * [Set up the gcloud CLI and enable the API](https://docs.cloud.google.com/oracle/database/docs/set-up).
+
+  * Confirm you have an active marketplace order for Oracle Database@Google Cloud.
+
+  * Enable the Oracle Database@Google Cloud API for the project.
+
+[Enable the Oracle Database@Google Cloud API ](https://console.cloud.google.com/apis/enableflow?apiid=oracledatabase.googleapis.com)
+
+  * [Create an ODB Network and ODB Subnets](https://docs.cloud.google.com/oracle/database/docs/create-odb-network). A DB system requires one client subnet.
+
+  * Confirm that you have the required Identity and Access Management (IAM) roles and permissions to create a Base DB system:
+
+    * `roles/oracledatabase.dbSystemAdmin`
+
+For information on how to assign roles, see [Apply IAM roles](https://docs.cloud.google.com/oracle/database/docs/iam-roles).
+
+
+
+
+## Create a Base DB system
+
+The DB system provisioning workflow creates the following three resources:
+
+  * A DB system
+  * A container database (CDB)
+  * A pluggable database (PDB)
+
+
+
+To create a DB system, do the following:
+
+### Console
+
+  1. Go to the **Base Database Service** page.
+
+[Go to Base Database Service](https://console.cloud.google.com/oracle/basedb/)
+
+  2. Click **Create**.
+
+  3. Enter a **Display name** for your DB system. This name appears in the Google Cloud console. The display name must be unique within your Google Cloud project.
+
+**Note:** The **Display name** field corresponds to the **dbName** field in the OCI console. While choosing a display name, make sure to follow the [Oracle naming conventions](https://docs.oracle.com/en-us/iaas/api/#/en/database/20160918/datatypes/CreateDatabaseDetails).
+  4. For **System ID** , enter a unique identifier for your DB system. The DB system ID can't be changed later.
+
+  5. Select a **Region** and a **GCP Oracle zone**. The region and zone choice is permanent and can't be changed later.
+
+  6. In the **Configure Shape** section, enter the **Number of ECPUs** for `Standard.x86` shape.
+
+The ECPU count can range from 4 to 256, in increments of 4. The value of **Memory** is automatically updated based on the number of ECPUs.
+
+  7. From the **Available data storage** menu, select a storage size.
+
+The value of **Recovery area storage** is updated automatically based on the storage size you select.
+
+  8. Select an **Oracle Database software edition**. The following editions are available:
+
+     * Standard Edition
+     * Enterprise Edition
+     * Enterprise Edition high performance
+
+For information about these editions, refer to the Oracle documentation.
+
+  9. Select your **License type**. The available options are `License included` and `Bring Your Own License`.
+
+  10. In the **SSH keys** section, add the SSH keys you'd like to use for the DB system. To add a key, enter the SSH key name in the **SSH Key 1** field. For each additional key, click **ADD ITEM**.
+
+For more information on how to generate SSH keys, see [Generate SSH keys](https://docs.cloud.google.com/oracle/database/docs/generate-ssh-keys).
+
+  11. In the **Networking** section, define the network configuration for the DB system:
+
+     1. From the **Network project** list, select the project that contains your ODB Network.
+
+     2. Select the **ODB Network**.
+
+     3. Select a **Client subnet**.
+
+     4. Enter a **Hostname prefix**. This prefix can only contain letters, numbers, or hyphens, and must start with a letter. The maximum allowed length is 12 characters.
+
+     5. (Optional) In the **Advanced network settings** section, you can provide a **Private IP address**. This must be an available IP address within the subnet's CIDR.
+
+If you don't specify an IP address, a private IP address is automatically assigned from the subnet.
+
+  12. In the **Diagnostics collection** section, configure monitoring for your DB system:
+
+     1. Select the **Enable diagnostic events** checkbox to track all DB system diagnostic events.
+
+     2. Select the **Enable incident logs and trace collection** checkbox to enable incident logging for your DB system.
+
+  13. In the **Advanced fields** section, select a **Timezone** which you'd like to use for diagnostic collection. This timezone is used for event timestamps.
+
+  14. In the **Database information** section, do the following to configure your database:
+
+     1. Enter a unique display name.
+     2. Enter a database ID as a unique identifier for your database.
+     3. Enter a suffix for generating unique database names. Database names are generated by combining the database name with this suffix.
+     4. Select a database version.
+     5. Use the following naming convention to enter a display name for your pluggable database:
+
+        * Starts with a letter.
+        * Contains only letters, numbers, or underscores.
+        * Contains maximum 30 characters.
+
+If you don't enter a display name, then Oracle Database@Google Cloud generates the name automatically.
+
+     6. Use the following naming convention to enter a unique ID for your pluggable database:
+
+        * Starts with a lowercase letter.
+        * Contains lowercase letters, numbers, and hyphens.
+        * Ends with a lowercase letter or a number.
+        * Contains maximum 63 characters.
+
+If you don't enter a unique ID, then Oracle Database@Google Cloud generates the ID automatically. It can't be changed later.
+
+  15. In the **Administrator credentials** section, do the following:
+
+     1. Confirm the **Administrator username**.
+     2. Enter your password in the **Password** field.
+     3. Re-enter your password in the **Confirm password** field to confirm.
+     4. If you want to **Use the administrator password for the TDE wallet** , then select the checkbox, and enter the **TDE wallet password**. 
+
+Re-enter the TDE wallet password to confirm.
+
+  16. Review the **Database backups** settings. You can change these settings through the OCI console after the DB system has been provisioned.
+
+  17. In the **Advanced settings** section, you can optionally modify the following settings:
+
+     1. **Unified auditing** : if you've selected database version `19c`, you can choose to enable or disable this setting. However, for database version `23ai`, this setting is enabled by default and you can't disable it.
+
+     2. **Character set** : the default and the recommended setting is `AL32UTF8`.
+
+     3. **National character set** : the default is `AL16UTF16`.
+
+  18. Click **Create**.
+
+
+
+
+###  API 
+
+To create a DB system, run the following `curl` command:
+    
+    
+    curl -X POST \
+    -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+    -H "Content-Type: application/json" \
+    "https://oracledatabase.googleapis.com/v1/projects/PROJECT_ID/locations/REGION/dbSystems/DB_SYSTEM_ID"
+    -d \
+    '{
+      "display_name": "DB_SYSTEM_DISPLAY_NAME",
+      "gcp_oracle_zone": "GCP_ORACLE_ZONE",
+      "name": "projects/PROJECT_ID/locations/REGION/dbSystems/DB_SYSTEM_NAME",
+      "entitlement_id": "ENTITLEMENT_ID",
+      "odb_subnet": "projects/ODB_NETWORK_PROJECT_ID/locations/REGION/odbNetworks/ODB_NETWORK_ID/odbSubnets/ODB_SUBNET_ID",
+      "properties": {
+        "shape": "VM.Standard.X86",
+        "computeCount": COMPUTE_COUNT,
+        "node_count": NODE_COUNT,
+        "initial_data_storage_size_gb": INITIAL_STORAGE_SIZE,
+        "database_edition": "DATABASE_EDITION",
+        "license_model": "LICENSE_TYPE",
+        "hostname_prefix": "HOSTNAME_PREFIX",
+        "db_home": {
+          "display_name": "DB_DISPLAY_NAME",
+          "db_version": "DB_VERSION",
+          "database": {
+            "db_name": "DB_NAME",
+            "admin_password": "PASSWORD",
+            "character_set": "CHARACTER_SET",
+            "database_id": "DB_ID",
+           },
+         },
+        "ssh_public_keys": ["SSH_PUBLIC_KEY"],
+        "data_collection_options": {
+          "is_diagnostics_events_enabled": EVENTS_ENABLED,
+          "is_incident_logs_enabled": INCIDENT_LOGS_ENABLE
+         },
+        "time_zone": {
+          "id": "TIMEZONE"
+         },
+       }
+    }'
+    
+
+Replace the following:
+
+  * PROJECT_ID: the ID of your Google Cloud project in which to create the DB system.
+  * REGION: the region in which to create the DB system.
+  * DB_SYSTEM_ID: a unique identifier for your DB system.
+  * DB_SYSTEM_DISPLAY_NAME: a name for your DB system that appears in the Google Cloud console.
+
+**Note:** **DB_SYSTEM_DISPLAY_NAME** corresponds to the **dbName** field in the OCI console. While choosing a display name, make sure to follow the [Oracle naming conventions](https://docs.oracle.com/en-us/iaas/api/#/en/database/20160918/datatypes/CreateDatabaseDetails).
+  * GCP_ORACLE_ZONE: the GCP Oracle zone for your DB system. For the list of available regions and zones, see [Available configurations](https://docs.cloud.google.com/oracle/database/docs/available-configurations).
+
+  * DB_SYSTEM_NAME: a name for your DB system.
+
+  * ENTITLEMENT_ID: your Oracle entitlement ID.
+
+  * For `odbSubnet` property, replace the following:
+
+    * ODB_NETWORK_PROJECT_ID: the ID of your Google Cloud project which contains your ODB Network. If you're using a Shared VPC, then this is the ID of your host project.
+    * REGION: the region of your ODB Network.
+    * ODB_NETWORK_ID: the ID of your ODB Network.
+    * ODB_SUBNET_ID: the ID of your ODB Subnet.
+  * COMPUTE_COUNT: the compute capacity for your database.
+
+  * NODE_COUNT: the number of nodes for your DB system. You can have either `1` or `2` nodes.
+
+  * INITIAL_STORAGE_SIZE: the size (in GiB) of the initial storage for your DB system. You can scale up storage after provisioning, as required.
+
+  * DATABASE_EDITION: the Oracle Database software edition. Following are the acceptable values:
+
+    * `STANDARD_EDITION`
+    * `ENTERPRISE_EDITION`
+    * `ENTERPRISE_EDITION_HIGH_PERFORMANCE`
+  * LICENSE_TYPE: the license type associated with your Oracle Database@Google Cloud order. The only accepted values are `bring-your-own-license` or `license-included`.
+
+  * HOSTNAME_PREFIX: a hostname prefix. This prefix can only contain letters, numbers, or hyphens, and must start with a letter. The maximum allowed length is 12 characters.
+
+  * DB_DISPLAY_NAME: a name for your database that appears in the Google Cloud console.
+
+  * DB_VERSION: the Oracle database version for your database.
+
+  * DB_NAME: a name for your database.
+
+  * PASSWORD: the password for the default administrator user for your database.
+
+  * CHARACTER_SET: the setting for the character set management. The default and the recommended setting is `AL32UTF8`.
+
+  * DB_ID: a unique identifier for your database.
+
+  * SSH_PUBLIC_KEY: the SSH public keys for your DB system. You can enter a single value for a single key, or an array of values for multiple keys.
+
+  * EVENTS_ENABLED: set to `true` to track all DB system diagnostic events.
+
+  * INCIDENT_LOGS_ENABLE: set to `true` to enable incident logging for your DB system.
+
+  * TIMEZONE: the timezone you'd like to use for diagnostic collection. This timezone is used for event timestamps.
+
+
+
+
+The provisioning workflow creates only one pluggable database for the DB system. After the DB system is created, you can create additional pluggable databases through the OCI console. For instructions, refer to the Oracle documentation.
+
+## What's next
+
+  * Learn how to [manage your DB systems](https://docs.cloud.google.com/oracle/database/docs/manage-base-db-system).
+  * Learn how to [delete a DB system](https://docs.cloud.google.com/oracle/database/docs/delete-base-db-system).
+  * Learn how to [view details of a DB system and its databases](https://docs.cloud.google.com/oracle/database/docs/view-base-db-system-information).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-09 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 

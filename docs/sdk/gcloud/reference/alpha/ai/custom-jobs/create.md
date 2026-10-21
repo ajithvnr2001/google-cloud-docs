@@ -1,0 +1,229 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/ai/custom-jobs/create/
+title: gcloud alpha ai custom-jobs create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T09:22:18.883422+00:00
+---
+
+# gcloud alpha ai custom-jobs create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/ai/custom-jobs/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha ai custom-jobs create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha ai custom-jobs create - create a new custom job 
+SYNOPSIS
+    
+
+`gcloud alpha ai custom-jobs create` `--display-name`=`DISPLAY_NAME` (`--config`=`CONFIG` `--worker-pool-spec`=[`WORKER_POOL_SPEC`,…]) [`--args`=[`ARG`,…]] [`--command`=[`COMMAND`,…]] [`--enable-dashboard-access`] [`--enable-web-access`] [`--labels`=[`KEY`=`VALUE`,…]] [`--network`=`NETWORK`] [`--persistent-resource-id`=`PERSISTENT_RESOURCE_ID`] [`--python-package-uris`=[`PYTHON_PACKAGE_URIS`,…]] [`--region`=`REGION`] [`--service-account`=`SERVICE_ACCOUNT`] [`--kms-key`=`KMS_KEY` : `--kms-keyring`=`KMS_KEYRING` `--kms-location`=`KMS_LOCATION` `--kms-project`=`KMS_PROJECT`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` This command will attempt to run the custom job immediately upon creation. 
+EXAMPLES
+     To create a job under project ``example`` in region ``us-central1``, run: 
+    
+    
+    gcloud alpha ai custom-jobs create --region=us-central1 --project=example --worker-pool-spec=replica-count=1,machine-type='n1-highmem-2',container-image-uri='gcr.io/ucaip-test/ucaip-training-test' --display-name=test
+
+REQUIRED FLAGS
+    
+
+`--display-name`=`DISPLAY_NAME`
+     Display name of the custom job to create. 
+Worker pool specification. 
+
+At least one of these must be specified: 
+
+`--config`=`CONFIG`
+     Path to the job configuration file. This file should be a YAML document containing a [`CustomJobSpec`](https://cloud.google.com/vertex-ai/docs/reference/rest/v1/CustomJobSpec). If an option is specified both in the configuration file **and** via command-line arguments, the command-line arguments override the configuration file. Note that keys with underscore are invalid. 
+
+Example(YAML): 
+    
+    
+    workerPoolSpecs:
+      machineSpec:
+        machineType: n1-highmem-2
+      replicaCount: 1
+      containerSpec:
+        imageUri: gcr.io/ucaip-test/ucaip-training-test
+        args:
+        - port=8500
+        command:
+        - start
+
+`--worker-pool-spec`=[`WORKER_POOL_SPEC`,…]
+     Define the worker pool configuration used by the custom job. You can specify multiple worker pool specs in order to create a custom job with multiple worker pools. 
+
+The spec can contain the following fields: 
+
+`machine-type`
+     (Required): The type of the machine. see <https://cloud.google.com/vertex-ai/docs/training/configure-compute#machine-types> for supported types. This is corresponding to the `machineSpec.machineType` field in `WorkerPoolSpec` API message. 
+`replica-count`
+     The number of worker replicas to use for this worker pool, by default the value is 1. This is corresponding to the `replicaCount` field in `WorkerPoolSpec` API message. 
+`accelerator-type`
+     The type of GPUs. see <https://cloud.google.com/vertex-ai/docs/training/configure-compute#specifying_gpus> for more requirements. This is corresponding to the `machineSpec.acceleratorType` field in `WorkerPoolSpec` API message. 
+`accelerator-count`
+     The number of GPUs for each VM in the worker pool to use, by default the value if 1. This is corresponding to the `machineSpec.acceleratorCount` field in `WorkerPoolSpec` API message. 
+`container-image-uri`
+     The URI of a container image to be directly run on each worker replica. This is corresponding to the `containerSpec.imageUri` field in `WorkerPoolSpec` API message. 
+`executor-image-uri`
+     The URI of a container image that will run the provided package. 
+`output-image-uri`
+     The URI of a custom container image to be built for autopackaged custom jobs. 
+`python-module`
+     The Python module name to run within the provided package. 
+`local-package-path`
+     The local path of a folder that contains training code. 
+`script`
+     The relative path under the `local-package-path` to a file to execute. It can be a Python file or an arbitrary bash script. 
+`requirements`
+     Python dependencies to be installed from PyPI, separated by ";". This is supposed to be used when some public packages are required by your training application but not in the base images. It has the same effect as editing a "requirements.txt" file under `local-package-path`. 
+`extra-packages`
+     Relative paths of local Python archives to be installed, separated by ";". This is supposed to be used when some custom packages are required by your training application but not in the base images. Every path should be relative to the `local-package-path`. 
+`extra-dirs`
+     Relative paths of the folders under `local-package-path` to be copied into the container, separated by ";". If not specified, only the parent directory that contains the main executable (`script` or `python-module`) will be copied. 
+Note that some of these fields are used for different job creation methods and are categorized as mutually exclusive groups listed below. Exactly one of these groups of fields must be specified: 
+
+`container-image-uri`
+     Specify this field to use a custom container image for training. Together with the `--command` and `--args` flags, this field represents a [`WorkerPoolSpec.ContainerSpec`](https://cloud.google.com/vertex-ai/docs/reference/rest/v1/CustomJobSpec#containerspec) message. In this case, the `--python-package-uris` flag is disallowed. 
+
+Example: \--worker-pool-spec=replica-count=1,machine-type=n1-highmem-2,container-image-uri=gcr.io/ucaip-test/ucaip-training-test 
+
+`executor-image-uri, python-module`
+     Specify these fields to train using a pre-built container and Python packages that are already in Cloud Storage. Together with the `--python-package-uris` and `--args` flags, these fields represent a [`WorkerPoolSpec.PythonPackageSpec`](https://cloud.google.com/vertex-ai/docs/reference/rest/v1/CustomJobSpec#pythonpackagespec) message . 
+
+Example: \--worker-pool-spec=machine-type=e2-standard-4,executor-image-uri=us-docker.pkg.dev/vertex-ai/training/tf-cpu.2-4:latest,python-module=trainer.task 
+
+`output-image-uri`
+     Specify this field to push the output custom container training image to a specific path in Container Registry or Artifact Registry for an autopackaged custom job. 
+
+Example: \--worker-pool-spec=machine-type=e2-standard-4,executor-image-uri=us-docker.pkg.dev/vertex-ai/training/tf-cpu.2-4:latest,output-image-uri='eu.gcr.io/projectName/imageName',python-module=trainer.task 
+
+`local-package-path, executor-image-uri, output-image-uri, python-module|script`
+     Specify these fields, optionally with `requirements`, `extra-packages`, or `extra-dirs`, to train using a pre-built container and Python code from a local path. In this case, the `--python-package-uris` flag is disallowed. 
+
+Example using `python-module`: \--worker-pool-spec=machine-type=e2-standard-4,replica-count=1,executor-image-uri=us-docker.pkg.dev/vertex-ai/training/tf-cpu.2-4:latest,python-module=trainer.task,local-package-path=/usr/page/application 
+
+Example using `script`: \--worker-pool-spec=machine-type=e2-standard-4,replica-count=1,executor-image-uri=us-docker.pkg.dev/vertex-ai/training/tf-cpu.2-4:latest,script=my_run.sh,local-package-path=/usr/jeff/application 
+
+OPTIONAL FLAGS
+    
+
+`--args`=[`ARG`,…]
+     Comma-separated arguments passed to containers or python tasks. 
+`--command`=[`COMMAND`,…]
+     Command to be invoked when containers are started. It overrides the entrypoint instruction in Dockerfile when provided. 
+`--enable-dashboard-access`
+     Whether you want Vertex AI to enable dashboard built on the training containers. If set to ``true``, you can access the dashboard at the URIs given by CustomJob.web_access_uris or Trial.web_access_uris (within HyperparameterTuningJob.trials). 
+`--enable-web-access`
+     Whether you want Vertex AI to enable [interactive shell access](https://cloud.google.com/vertex-ai/docs/training/monitor-debug-interactive-shell) to training containers. If set to ``true``, you can access interactive shells at the URIs given by CustomJob.web_access_uris or Trial.web_access_uris (within HyperparameterTuningJob.trials). 
+`--labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to add. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+`--network`=`NETWORK`
+     Full name of the Google Compute Engine network to which the Job is peered with. Private services access must already have been configured. If unspecified, the Job is not peered with any network. 
+`--persistent-resource-id`=`PERSISTENT_RESOURCE_ID`
+     The name of the persistent resource from the same project and region on which to run this custom job. 
+
+If this is specified, the job will be run on existing machines held by the PersistentResource instead of on-demand short-lived machines. The network and CMEK configs on the job should be consistent with those on the PersistentResource, otherwise, the job will be rejected. 
+
+`--python-package-uris`=[`PYTHON_PACKAGE_URIS`,…]
+     The common Python package URIs to be used for training with a pre-built container image. e.g. `--python-package-uri=path1,path2` If you are using multiple worker pools and want to specify a different Python packag fo reach pool, use `--config` instead. 
+Region resource - Cloud region to create a custom job. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--region` on the command line with a fully specified name; 
+  * set the property `ai/region` with a fully specified name; 
+  * choose one from the prompted list of available regions with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+`--region`=`REGION`
+     ID of the region or fully qualified identifier for the region. 
+
+To set the `region` attribute: 
+
+  * provide the argument `--region` on the command line; 
+  * set the property `ai/region`; 
+  * choose one from the prompted list of available regions. 
+
+
+`--service-account`=`SERVICE_ACCOUNT`
+     The email address of a service account to use when running the training appplication. You must have the `iam.serviceAccounts.actAs` permission for the specified service account. 
+Key resource - The Cloud KMS (Key Management Service) cryptokey that will be used to protect the custom job. The 'Vertex AI Service Agent' service account must hold permission 'Cloud KMS CryptoKey Encrypter/Decrypter'. The arguments in this group can be used to specify the attributes of this resource. 
+`--kms-key`=`KMS_KEY`
+     ID of the key or fully qualified identifier for the key. 
+
+To set the `kms-key` attribute: 
+
+  * provide the argument `--kms-key` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--kms-keyring`=`KMS_KEYRING`
+     The KMS keyring of the key. 
+
+To set the `kms-keyring` attribute: 
+
+  * provide the argument `--kms-key` on the command line with a fully specified name; 
+  * provide the argument `--kms-keyring` on the command line. 
+
+
+`--kms-location`=`KMS_LOCATION`
+     The Google Cloud location for the key. 
+
+To set the `kms-location` attribute: 
+
+  * provide the argument `--kms-key` on the command line with a fully specified name; 
+  * provide the argument `--kms-location` on the command line. 
+
+
+`--kms-project`=`KMS_PROJECT`
+     The Google Cloud project for the key. 
+
+To set the `kms-project` attribute: 
+
+  * provide the argument `--kms-key` on the command line with a fully specified name; 
+  * provide the argument `--kms-project` on the command line; 
+  * set the property `core/project`. 
+
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. These variants are also available: 
+    
+    
+    [gcloud ai custom-jobs create](https://docs.cloud.google.com/sdk/gcloud/reference/ai/custom-jobs/create)
+    
+    
+    [gcloud beta ai custom-jobs create](https://docs.cloud.google.com/sdk/gcloud/reference/beta/ai/custom-jobs/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

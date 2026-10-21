@@ -1,0 +1,164 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/dataflow/flex-template/build/
+title: gcloud beta dataflow flex-template build \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T09:57:04.038667+00:00
+---
+
+# gcloud beta dataflow flex-template build  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/dataflow/flex-template/build/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta dataflow flex-template build Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta dataflow flex-template build - builds a flex template file from the specified parameters 
+SYNOPSIS
+    
+
+`gcloud beta dataflow flex-template build` `TEMPLATE_FILE_GCS_PATH` `--sdk-language`=`SDK_LANGUAGE` (`--image`=`IMAGE` | `--env`=[`ENV`,…] `--flex-template-base-image`=`FLEX_TEMPLATE_BASE_IMAGE` `--image-gcr-path`=`IMAGE_GCR_PATH` (`--go-binary-path`=`GO_BINARY_PATH` | `--jar`=[`JAR`,…] | `--py-path`=[`PY_PATH`,…]) | [`--yaml-pipeline-path`=`YAML_PIPELINE_PATH` : `--yaml-image`=`YAML_IMAGE`]) [`--additional-experiments`=[`ADDITIONAL_EXPERIMENTS`,…]] [`--additional-user-labels`=[`ADDITIONAL_USER_LABELS`,…]] [`--cloud-build-service-account`=`CLOUD_BUILD_SERVICE_ACCOUNT`] [`--dataflow-kms-key`=`DATAFLOW_KMS_KEY`] [`--disable-public-ips`] [`--enable-streaming-engine`] [`--gcs-log-dir`=`GCS_LOG_DIR`] [`--image-repository-cert-path`=`IMAGE_REPOSITORY_CERT_PATH`] [`--image-repository-password-secret-id`=`IMAGE_REPOSITORY_PASSWORD_SECRET_ID`] [`--image-repository-username-secret-id`=`IMAGE_REPOSITORY_USERNAME_SECRET_ID`] [`--max-workers`=`MAX_WORKERS`] [`--metadata-file`=`PATH_TO_FILE`] [`--network`=`NETWORK`] [`--num-workers`=`NUM_WORKERS`] [`--print-only`] [`--service-account-email`=`SERVICE_ACCOUNT_EMAIL`] [`--staging-location`=`STAGING_LOCATION`] [`--subnetwork`=`SUBNETWORK`] [`--temp-location`=`TEMP_LOCATION`] [`--worker-machine-type`=`WORKER_MACHINE_TYPE`] [`--worker-region`=`WORKER_REGION` | `--worker-zone`=`WORKER_ZONE`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` Builds a flex template file from the specified parameters. 
+EXAMPLES
+     To build and store a flex template JSON file, run: 
+    
+    
+    gcloud beta dataflow flex-template build gs://template-file-gcs-path --image=gcr://image-path --metadata-file=/local/path/to/metadata.json --sdk-language=JAVA
+
+If using prebuilt template image from private registry, run: 
+    
+    
+    gcloud beta dataflow flex-template build gs://template-file-gcs-path --image=private.registry.com:3000/image-path --image-repository-username-secret-id="projects/test-project/secrets/username-secret" --image-repository-password-secret-id="projects/test-project/secrets/password-secret/versions/latest" --metadata-file=metadata.json --sdk-language=JAVA
+
+To build the template image and flex template JSON file, run: 
+    
+    
+    gcloud beta dataflow flex-template build gs://template-file-gcs-path --image-gcr-path=gcr://path-to-store-image --jar=path/to/pipeline.jar --jar=path/to/dependency.jar --env=FLEX_TEMPLATE_JAVA_MAIN_CLASS=classpath --flex-template-base-image=JAVA11 --metadata-file=/local/path/to/metadata.json --sdk-language=JAVA
+
+POSITIONAL ARGUMENTS
+    
+
+`TEMPLATE_FILE_GCS_PATH`
+     The Google Cloud Storage location of the flex template file.Overrides if file already exists. 
+REQUIRED FLAGS
+    
+
+`--sdk-language`=`SDK_LANGUAGE`
+     SDK language of the flex template job. `SDK_LANGUAGE` must be one of: `JAVA`, `PYTHON`, `GO`, `YAML`. 
+Exactly one of these must be specified: 
+
+`--image`=`IMAGE`
+     Path to the any image registry location of the prebuilt flex template image. 
+Or at least one of these can be specified: 
+
+`--env`=[`ENV`,…]
+     Environment variables to create for the Dockerfile. You can pass them as a comma separated list or repeat individually with --env flag. Ex: --env="A=B,C=D" or \--env A=B, --env C=D.When you reference files/dir in env variables, please specify relative path to the paths passed via --py-path.Ex: if you pass. \--py-path="path/pipleline/" then set FLEX_TEMPLATE_PYTHON_PY_FILE="pipeline/pipeline.py" You can find the list of supported environment variables in this link. <https://cloud.google.com/dataflow/docs/guides/templates/configuring-flex-templates#setting_required_dockerfile_environment_variables>. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--flex-template-base-image`=`FLEX_TEMPLATE_BASE_IMAGE`
+     Flex template base image to be used while building the container image. Allowed choices are allowed labels (JAVA11/17/21/25, PYTHON3, GO), supported distroless images (JAVA11/17/21/25_DISTROLESS, GO_DISTROLESS), or full gcr.io path of the specific version of the base image. For labels, we use the latest base image version to build the container. You can also provide a specific version from this link <https://gcr.io/dataflow-templates-base/>
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--image-gcr-path`=`IMAGE_GCR_PATH`
+     The Google Container Registry or Google Artifact Registry location to store the flex template image to be built. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+Exactly one of these must be specified: 
+
+`--go-binary-path`=`GO_BINARY_PATH`
+     Local path to your compiled dataflow pipeline Go binary. The binary should be compiled to run on the target worker architecture (usually linux-amd64). See <https://beam.apache.org/documentation/sdks/go-cross-compilation/> for more information. 
+`--jar`=[`JAR`,…]
+     Local path to your dataflow pipeline jar file and all their dependent jar files required for the flex template classpath. You can pass them as a comma separated list or repeat individually with --jar flag. Ex: --jar="code.jar,dep.jar" or \--jar code.jar, --jar dep.jar. 
+`--py-path`=[`PY_PATH`,…]
+     Local path to your dataflow pipeline python files and all their dependent files required for the flex template classpath. You can pass them as a comma separated list or repeat individually with --py-path flag. Ex: \--py-path="path/pipleline/,path/dependency/" or --py-path path/pipleline/, \--py-path path/dependency/. 
+Or at least one of these can be specified: 
+
+`--yaml-pipeline-path`=`YAML_PIPELINE_PATH`
+     Local path to your YAML pipeline file. Use a full or relative path to a local file containing the value of yaml_pipeline_path. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--yaml-image`=`YAML_IMAGE`
+     Path to the any image registry location of the prebuilt yaml template image. 
+OPTIONAL FLAGS
+    
+
+`--additional-experiments`=[`ADDITIONAL_EXPERIMENTS`,…]
+     Default experiments to pass to the job. 
+`--additional-user-labels`=[`ADDITIONAL_USER_LABELS`,…]
+     Default user labels to pass to the job. Example: \--additional-user-labels='{"key1":"value1"}' 
+`--cloud-build-service-account`=`CLOUD_BUILD_SERVICE_ACCOUNT`
+     Service account to run the Cloud Build in the format projects/{project}/serviceAccounts/{service_account}. Ensure that the account you are using to run 'gcloud dataflow flex-template build' has 'ServiceAccountUser' role on the specified Cloud Build service account you provide with the --cloud-build-service-account flag. The specified service account must have required permissions to build the image. If the specified service account is in a project that is different from the project where you are starting builds, see <https://cloud.google.com/build/docs/securing-builds/configure-user-specified-service-accounts#cross-project_set_up> to grant the necessary access. 
+`--dataflow-kms-key`=`DATAFLOW_KMS_KEY`
+     Default Cloud KMS key to protect the job resources. 
+`--disable-public-ips`
+     Cloud Dataflow workers must not use public IP addresses. Overrides the default `dataflow/disable_public_ips` property value for this command invocation. 
+`--enable-streaming-engine`
+     Enable Streaming Engine for the streaming job by default. Overrides the default `dataflow/enable_streaming_engine` property value for this command invocation. 
+`--gcs-log-dir`=`GCS_LOG_DIR`
+     Google Cloud Storage directory to save build logs.(Must be a URL beginning with 'gs://'.) 
+`--image-repository-cert-path`=`IMAGE_REPOSITORY_CERT_PATH`
+     The full URL to self-signed certificate of private registry in Cloud Storage. For example, gs://mybucket/mycerts/selfsigned.crt. The certificate provided in Cloud Storage must be DER-encoded and may be supplied in binary or printable (Base64) encoding. If the certificate is provided in Base64 encoding, it must be bounded at the beginning by -----BEGIN CERTIFICATE-----, and must be bounded at the end by -----END CERTIFICATE-----. If this parameter is provided, the docker daemon in the template launcher will be instructed to trust that certificate. 
+`--image-repository-password-secret-id`=`IMAGE_REPOSITORY_PASSWORD_SECRET_ID`
+     Secret Manager secret id for the password to authenticate to private registry. Should be in the format projects/{project}/secrets/{secret}/versions/{secret_version} or projects/{project}/secrets/{secret}. If the version is not provided latest version will be used. 
+`--image-repository-username-secret-id`=`IMAGE_REPOSITORY_USERNAME_SECRET_ID`
+     Secret Manager secret id for the username to authenticate to private registry. Should be in the format projects/{project}/secrets/{secret}/versions/{secret_version} or projects/{project}/secrets/{secret}. If the version is not provided latest version will be used. 
+`--max-workers`=`MAX_WORKERS`
+     Default maximum number of workers to run. 
+`--metadata-file`=`PATH_TO_FILE`
+     Local path to the metadata json file for the flex template. Use a full or relative path to a local file containing the value of metadata_file. 
+`--network`=`NETWORK`
+     Default Compute Engine network for launching instances to run your pipeline. 
+`--num-workers`=`NUM_WORKERS`
+     Initial number of workers to use by default. 
+`--print-only`
+     Prints the container spec to stdout. Does not save in Google Cloud Storage. Overrides the default `dataflow/print_only` property value for this command invocation. 
+`--service-account-email`=`SERVICE_ACCOUNT_EMAIL`
+     Default service account to run the workers as. 
+`--staging-location`=`STAGING_LOCATION`
+     Default Google Cloud Storage location to stage local files.(Must be a URL beginning with 'gs://'.) 
+`--subnetwork`=`SUBNETWORK`
+     Default Compute Engine subnetwork for launching instances to run your pipeline. 
+`--temp-location`=`TEMP_LOCATION`
+     Default Google Cloud Storage location to stage temporary files. If not set, defaults to the value for --staging-location.(Must be a URL beginning with 'gs://'.) 
+`--worker-machine-type`=`WORKER_MACHINE_TYPE`
+     Default type of machine to use for workers. Defaults to server-specified. 
+At most one of these can be specified: 
+
+`--worker-region`=`WORKER_REGION`
+     Default region to run the workers in. 
+`--worker-zone`=`WORKER_ZONE`
+     Default zone to run the workers in. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in beta and might change without notice. This variant is also available: 
+    
+    
+    [gcloud dataflow flex-template build](https://docs.cloud.google.com/sdk/gcloud/reference/dataflow/flex-template/build)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

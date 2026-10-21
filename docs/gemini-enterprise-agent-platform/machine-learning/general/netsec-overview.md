@@ -1,0 +1,123 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/netsec-overview/
+title: Gemini Enterprise Agent Platform networking access overview \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T02:49:58.040960+00:00
+---
+
+# Gemini Enterprise Agent Platform networking access overview  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/netsec-overview/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Gemini Enterprise Agent Platform networking access overview Stay organized with collections  Save and categorize content based on your preferences. 
+
+Gemini Enterprise Agent Platform supports enterprise networking options for accessing Gemini Enterprise Agent Platform endpoints and services that help you:
+
+  * Safely access your Gemini Enterprise Agent Platform resources from an on-premises or multi cloud environment.
+  * Protect your Gemini Enterprise Agent Platform artifacts from exfiltration.
+  * Configure network traffic for your Gemini Enterprise Agent Platform resources.
+
+
+
+This page is intended for enterprise networking architects and administrators who are already familiar with Google Cloud networking concepts.
+
+## Public access for Gemini Enterprise Agent Platform
+
+Gemini Enterprise Agent Platform services that are accessible from the internet have a checkmark  in the **Public internet** column of the [Accessing Gemini Enterprise Agent Platform from on-premises and multi cloud](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/netsec-overview#access-methods) table. The APIs for these services resolve to the fully qualified domain name `REGION-aiplatform.googleapis.com`, which returns publicly routable IP addresses.
+
+## Private access options for Gemini Enterprise Agent Platform
+
+Gemini Enterprise Agent Platform supports the following options for accessing Gemini Enterprise Agent Platform endpoints and services privately, without assigning external IP addresses to your Google Cloud resources:
+
+  * [Gemini Enterprise Agent Platform deployed with Private Service Connect (PSC)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/psc-endpoints) enables secure, private, and explicit access to Gemini Enterprise Agent Platform services, eliminating the need for complex configurations like VPC peering that result in peered network route table exchange and IP address allocation. This makes it easier to connect to services. It's a key solution for both service consumers and producers, simplifying network management and enhancing security. Private Service Connect offers the following features: 
+    * **PSC Endpoints** : A consumer can create a forwarding rule in their VPC that references the service attachment. This creates a private IP address within their network, allowing internal resources (like VMs) and cross-cloud clients over hybrid networking to access Gemini Enterprise Agent Platform.
+    * **PSC Backends** : A consumer can use a PSC network endpoint group (NEG) as a backend for an internal or external regional load balancer. This unlocks load balancer features such as: 
+      * Logging and monitoring of ingress traffic
+      * Traffic management
+      * Google Cloud Armor integration
+      * Transitivity over VPC peering
+  * [Private Service Connect endpoints for Google APIs](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/googleapi-access-methods#psc) let your Google Cloud resources or on-premises systems connect to an endpoint in your VPC network, which forwards requests to Google APIs and services.
+  * [Private Google Access](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/googleapi-access-methods#enable-pga): 
+    * Lets your Google Cloud resources connect to the [standard external IP addresses or Private Google Access domains and virtual IP (VIP) addresses](https://docs.cloud.google.com/vpc/docs/configure-private-google-access#config) for Google APIs and services through the VPC network's default internet gateway.
+    * Lets your on-premises hosts connect to Google APIs and services through a Cloud VPN tunnel or VLAN attachment by using one of the [Private Google Access-specific domains and VIPs](https://docs.cloud.google.com/vpc/docs/private-google-access-hybrid#private-vips).
+  * [Gemini Enterprise Agent Platform deployed with private services access (PSA)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/private-services-access) enables a private connection between your Virtual Private Cloud (VPC) network and service producer's (Gemini Enterprise Agent Platform) VPC network. The underlying infrastructure of private services access is VPC peering between the consumer and producer network, allowing route exchange between the networks. Following are features and limitations of private services access (PSA): 
+    * PSA is built on top of VPC Network Peering. When you set up PSA, Google Cloud establishes a peering connection between your VPC network and the service producer's VPC network.
+    * A key requirement of PSA is that you, the service consumer, must allocate a dedicated internal IP address range for the service producer's use. This range is reserved and cannot be used in your own VPC, which helps prevent IP address conflicts.
+    * Once the connection is established, the service producer provisions your requested resources within their own VPC network, using an IP address from the address range you allocated. These resources are isolated to your project.
+    * VPC peering is not transitive.
+    * Private Service Connect, through endpoints, backends, or an interface, provides significant enhancements compared to private services access, including network transitivity and lower consumption of IP addresses. Therefore, Private Service Connect is the recommended solution.
+  * [Gemini Enterprise Agent Platform deployed with PSC interface](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/psc-interfaces) enables traffic flows from the service producer's (Gemini Enterprise Agent Platform) network out to the consumer's network. This is useful for scenarios where a managed service needs to interact with resources in the customer's VPC, on-premises, or multicloud networks.
+
+
+
+## Gemini Enterprise Agent Platform access methods
+
+The following table shows the supported access methods for connecting from on-premises and multi cloud environments to Gemini Enterprise Agent Platform services. In this table, a checkmark  indicates that an access method is supported. For more information about using an access method with a specific Gemini Enterprise Agent Platform service, click the _Learn more_ link.
+
+Gemini Enterprise Agent Platform product | Public internet | Private Service Connect for Google APIs | Private Google Access | Private services access | Private Service Connect endpoint | Private Service Connect interface  
+---|---|---|---|---|---|---  
+Batch inferences |  |  |  |  |  |   
+Datasets |  |  |  |  |  |   
+Vertex AI Feature Store (Bigtable online serving) |  |  |  |  |  |   
+Vertex AI Feature Store (optimized online serving) ([Deprecated](https://docs.cloud.google.com/vertex-ai/docs/deprecations))  |  |  |  |  |   
+[Learn more](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/featurestore/latest/online-serving-types#optimized_private) |   
+Claude / Anthropic on Agent Platform |  |  |  |  |  |   
+Generative AI on Gemini Enterprise Agent Platform (Gemini) |  |  |  |  |  |   
+Model Registry |  |  |  |  |  |   
+Online inference - dedicated public endpoint |  |  |  |  |  |   
+Online inference - shared public endpoint |  |  |  |  |  |   
+Online inference - dedicated private endpoint |  |  |  |  |   
+[Learn more](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/private-service-connect) |   
+Online inference - private endpoint |  |  |  |   
+[Learn more](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/using-private-endpoints) |  |   
+Vector Search (index creation) |  |  |  |  |  |   
+Vector Search (index query) |  |  |  |  |   
+[Learn more](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/vector-search/private-service-connect) |   
+Ray on Agent Platform (data plane) |  |  |  |  |  |   
+[Learn more](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/open-source/ray/create-cluster#use-psc-i-egress)  
+Agent Platform Pipelines, custom training, Ray on Agent Platform (control plane) |  |  |  |  |  |   
+Custom training (data plane) |  |  |  |   
+[Learn more](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/using-private-ip) |  |   
+[Learn more](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/psc-i-egress)  
+Agent Platform Pipelines |  |  |  |  |  |   
+[Learn more](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/configure-private-service-connect)  
+Agent Runtime |  |  |  |  |  |   
+[Learn more](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/deploy#psc-i)  
+  
+## Securing your Gemini Enterprise Agent Platform resources
+
+To reduce the risk of data exfiltration for your Gemini Enterprise Agent Platform resources, you can place them within a service perimeter using VPC Service Controls.
+
+  * To understand VPC Service Controls, see [Overview of VPC Service Controls](https://docs.cloud.google.com/vpc-service-controls/docs/overview).
+  * For detailed guidance, see [VPC Service Controls with Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/vpc-service-controls).
+  * To understand costs, review [pricing](https://cloud.google.com/vpc-service-controls/pricing).
+
+
+
+## What's next
+
+  * Learn how to [Set up VPC Network Peering](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/vpc-peering) for Gemini Enterprise Agent Platform.
+  * Learn how to [Set up connectivity from Gemini Enterprise Agent Platform to Other Networks](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/hybrid-connectivity).
+  * For general guidance and best practices for configuring your VPC networks, see [Connecting multiple VPC networks](https://cloud.google.com/architecture/best-practices-vpc-design#connecting_multiple_networks).
+  * Learn more about using [Google Cloud Network Connectivity products](https://docs.cloud.google.com/network-connectivity/docs/how-to/choose-product#google-cloud) such as Cloud VPN, Cloud Interconnect, and Cloud Router to connect your non-Google Cloud (on-premises or multi cloud) network to a Google Cloud Virtual Private Cloud (VPC) host network.
+
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

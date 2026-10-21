@@ -1,0 +1,317 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/privateca/subordinates/create/
+title: gcloud privateca subordinates create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T06:40:18.357625+00:00
+---
+
+# gcloud privateca subordinates create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/privateca/subordinates/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud privateca subordinates create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud privateca subordinates create - create a new subordinate certificate authority 
+SYNOPSIS
+    
+
+`gcloud privateca subordinates create` (`CERTIFICATE_AUTHORITY` : `--location`=`LOCATION` `--pool`=`POOL`) (`--create-csr` `--csr-output-file`=`CSR_OUTPUT_FILE` | [`--issuer-pool`=`ISSUER_POOL` : `--issuer-location`=`ISSUER_LOCATION`]) [`--auto-enable`] [`--bucket`=`BUCKET`] [`--custom-aia-urls`=[`CUSTOM_AIA_URLS`,…]] [`--custom-cdp-urls`=[`CUSTOM_CDP_URLS`,…]] [`--dns-san`=[`DNS_SAN`,…]] [`--email-san`=[`EMAIL_SAN`,…]] [`--from-ca`=`FROM_CA`] [`--ip-san`=[`IP_SAN`,…]] [`--issuer-ca`=`ISSUER_CA`] [`--labels`=[`KEY`=`VALUE`,…]] [`--subject`=[`SUBJECT`,…]] [`--subject-key-id`=`SUBJECT_KEY_ID`] [`--uri-san`=[`URI_SAN`,…]] [`--validity`=`VALIDITY`; default="P3Y"] [`--key-algorithm`=`KEY_ALGORITHM`; default="rsa-pkcs1-2048-sha256" | [`--kms-key-version`=`KMS_KEY_VERSION` : `--kms-key`=`KMS_KEY` `--kms-keyring`=`KMS_KEYRING` `--kms-location`=`KMS_LOCATION` `--kms-project`=`KMS_PROJECT`]] [`--use-preset-profile`=`USE_PRESET_PROFILE` | `--extended-key-usages`=[`EXTENDED_KEY_USAGES`,…] `--key-usages`=[`KEY_USAGES`,…] `--max-chain-length`=`MAX_CHAIN_LENGTH` | `--unconstrained-chain-length` `--no-name-constraints-critical` `--name-excluded-dns`=[`NAME_EXCLUDED_DNS`,…] `--name-excluded-email`=[`NAME_EXCLUDED_EMAIL`,…] `--name-excluded-ip`=[`NAME_EXCLUDED_IP`,…] `--name-excluded-uri`=[`NAME_EXCLUDED_URI`,…] `--name-permitted-dns`=[`NAME_PERMITTED_DNS`,…] `--name-permitted-email`=[`NAME_PERMITTED_EMAIL`,…] `--name-permitted-ip`=[`NAME_PERMITTED_IP`,…] `--name-permitted-uri`=[`NAME_PERMITTED_URI`,…]] [`GCLOUD_WIDE_FLAG …`]
+EXAMPLES
+     To create a subordinate CA named 'server-tls-1' whose issuer is on Certificate Authority Service: 
+    
+    
+    gcloud privateca subordinates create server-tls-1 --location=us-west1 --pool=my-pool --subject="CN=Example TLS CA, O=Google" --issuer-pool=other-pool --issuer-location=us-west1 --kms-key-version="projects/my-project-pki/locations/us-west1/keyRings/kr1/cryptoKeys/key2/cryptoKeyVersions/1"
+
+To create a subordinate CA named 'server-tls-1' whose issuer is located elsewhere: 
+    
+    
+    gcloud privateca subordinates create server-tls-1 --location=us-west1 --pool=my-pool --subject="CN=Example TLS CA, O=Google" --create-csr --csr-output-file=./csr.pem --kms-key-version="projects/my-project-pki/locations/us-west1/keyRings/kr1/cryptoKeys/key2/cryptoKeyVersions/1"
+
+To create a subordinate CA named 'server-tls-1' chaining up to a root CA named 'prod-root' based on an existing CA: 
+    
+    
+    gcloud privateca subordinates create server-tls-1 --location=us-west1 --pool=my-pool --issuer-pool=other-pool --issuer-location=us-west1 --from-ca=source-ca --kms-key-version="projects/my-project-pki/locations/us-west1/keyRings/kr1/cryptoKeys/key2/cryptoKeyVersions/1"
+
+POSITIONAL ARGUMENTS
+    
+
+Certificate Authority resource - The name of the subordinate CA to create. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `CERTIFICATE_AUTHORITY` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`CERTIFICATE_AUTHORITY`
+     ID of the Certificate Authority or fully qualified identifier for the Certificate Authority. 
+
+To set the `certificate_authority` attribute: 
+
+  * provide the argument `CERTIFICATE_AUTHORITY` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     The location of the Certificate Authority. 
+
+To set the `location` attribute: 
+
+  * provide the argument `CERTIFICATE_AUTHORITY` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `privateca/location`. 
+
+
+`--pool`=`POOL`
+     The parent CA Pool of the Certificate Authority. 
+
+To set the `pool` attribute: 
+
+  * provide the argument `CERTIFICATE_AUTHORITY` on the command line with a fully specified name; 
+  * provide the argument `--pool` on the command line. 
+
+
+REQUIRED FLAGS
+    
+
+The issuer configuration used for this CA certificate. 
+
+Exactly one of these must be specified: 
+
+If the issuing CA is not hosted on Certificate Authority Service, you must provide these settings: 
+`--create-csr`
+     Indicates that a CSR should be generated which can be signed by the issuing CA. This must be set if --issuer is not provided. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--csr-output-file`=`CSR_OUTPUT_FILE`
+     The path where the resulting PEM-encoded CSR file should be written. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+The issuing resource used for this CA certificate. 
+Issuer resource - The issuing CA Pool to use, if it is on Certificate Authority Service. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--issuer-pool` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+`--issuer-pool`=`ISSUER_POOL`
+     ID of the Issuer or fully qualified identifier for the Issuer. 
+
+To set the `pool` attribute: 
+
+  * provide the argument `--issuer-pool` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--issuer-location`=`ISSUER_LOCATION`
+     The location of the Issuer. 
+
+To set the `location` attribute: 
+
+  * provide the argument `--issuer-pool` on the command line with a fully specified name; 
+  * provide the argument `--issuer-location` on the command line; 
+  * set the property `privateca/location`. 
+
+
+OPTIONAL FLAGS
+    
+
+`--auto-enable`
+     If this flag is set, the Certificate Authority will be automatically enabled upon creation. 
+`--bucket`=`BUCKET`
+     The name of an existing storage bucket to use for storing the CA certificates and CRLs for CAs in this pool. If omitted, a new bucket will be created and managed by the service on your behalf. 
+`--custom-aia-urls`=[`CUSTOM_AIA_URLS`,…]
+     One or more comma-separated URLs that will be added to the Authority Information Access extension in the issued certificate. These URLs are where the issuer CA certificate is located. 
+`--custom-cdp-urls`=[`CUSTOM_CDP_URLS`,…]
+     One or more comma-separated URLs that will be added to the CRL Distribution Points (CDP) extension in the issued certificate. These URLs are where CRL information is located. 
+`--dns-san`=[`DNS_SAN`,…]
+     One or more comma-separated DNS Subject Alternative Names. 
+`--email-san`=[`EMAIL_SAN`,…]
+     One or more comma-separated email Subject Alternative Names. 
+Source CA resource - An existing CA from which to copy configuration values for the new CA. You can still override any of those values by explicitly providing the appropriate flags. The specified existing CA must be part of the same pool as the one being created. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--from-ca` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `location` attribute: 
+
+  * provide the argument `--from-ca` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `privateca/location`. 
+
+
+
+To set the `pool` attribute: 
+
+  * provide the argument `--from-ca` on the command line with a fully specified name; 
+  * provide the argument `--pool` on the command line. 
+
+
+`--from-ca`=`FROM_CA`
+     ID of the source CA or fully qualified identifier for the source CA. 
+
+To set the `certificate_authority` attribute: 
+
+  * provide the argument `--from-ca` on the command line. 
+
+
+`--ip-san`=[`IP_SAN`,…]
+     One or more comma-separated IP Subject Alternative Names. 
+`--issuer-ca`=`ISSUER_CA`
+     The Certificate Authority ID of the CA to issue the subordinate CA certificate from. This ID is optional. If ommitted, any available ENABLED CA in the issuing CA pool will be chosen. 
+`--labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to add. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+`--subject`=[`SUBJECT`,…]
+     X.501 name of the certificate subject. Example: --subject "C=US,ST=California,L=Mountain View,O=Google LLC,CN=google.com" 
+`--subject-key-id`=`SUBJECT_KEY_ID`
+     Optional field to specify subject key ID for certificate. DO NOT USE except to maintain a previously established identifier for a public key, whose SKI was not generated using method (1) described in RFC 5280 section 4.2.1.2. 
+`--uri-san`=[`URI_SAN`,…]
+     One or more comma-separated URI Subject Alternative Names. 
+`--validity`=`VALIDITY`; default="P3Y"
+     The validity of this CA, as an ISO8601 duration. Defaults to 3 years. 
+The key configuration used for the CA certificate. Defaults to a managed key if not specified. 
+
+At most one of these can be specified: 
+
+`--key-algorithm`=`KEY_ALGORITHM`; default="rsa-pkcs1-2048-sha256"
+     The crypto algorithm to use for creating a managed KMS key for the Certificate Authority. The default is `rsa-pkcs1-2048-sha256`. `KEY_ALGORITHM` must be one of: `ec-p256-sha256`, `ec-p384-sha384`, `rsa-pkcs1-2048-sha256`, `rsa-pkcs1-3072-sha256`, `rsa-pkcs1-4096-sha256`, `rsa-pss-2048-sha256`, `rsa-pss-3072-sha256`, `rsa-pss-4096-sha256`. 
+Or at least one of these can be specified: 
+
+Key version resource - The KMS key version backing this CA. The arguments in this group can be used to specify the attributes of this resource. 
+`--kms-key-version`=`KMS_KEY_VERSION`
+     ID of the key version or fully qualified identifier for the key version. 
+
+To set the `kms-key-version` attribute: 
+
+  * provide the argument `--kms-key-version` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--kms-key`=`KMS_KEY`
+     The KMS key of the key version. 
+
+To set the `kms-key` attribute: 
+
+  * provide the argument `--kms-key-version` on the command line with a fully specified name; 
+  * provide the argument `--kms-key` on the command line. 
+
+
+`--kms-keyring`=`KMS_KEYRING`
+     The KMS keyring of the key version. 
+
+To set the `kms-keyring` attribute: 
+
+  * provide the argument `--kms-key-version` on the command line with a fully specified name; 
+  * provide the argument `--kms-keyring` on the command line. 
+
+
+`--kms-location`=`KMS_LOCATION`
+     The location of the key version. 
+
+To set the `kms-location` attribute: 
+
+  * provide the argument `--kms-key-version` on the command line with a fully specified name; 
+  * provide the argument `--kms-location` on the command line; 
+  * provide the argument `location` on the command line; 
+  * set the property `privateca/location`. 
+
+
+`--kms-project`=`KMS_PROJECT`
+     The project containing the key version. 
+
+To set the `kms-project` attribute: 
+
+  * provide the argument `--kms-key-version` on the command line with a fully specified name; 
+  * provide the argument `--kms-project` on the command line; 
+  * provide the argument `project` on the command line; 
+  * set the property `core/project`. 
+
+
+The X.509 configuration used for the CA certificate. 
+
+At most one of these can be specified: 
+
+`--use-preset-profile`=`USE_PRESET_PROFILE`
+     The name of an existing preset profile used to encapsulate X.509 parameter values. USE_PRESET_PROFILE must be one of: leaf_client_tls, leaf_code_signing, leaf_mtls, leaf_server_tls, leaf_smime, root_unconstrained, subordinate_client_tls_pathlen_0, subordinate_code_signing_pathlen_0, subordinate_mtls_pathlen_0, subordinate_server_tls_pathlen_0, subordinate_smime_pathlen_0, subordinate_unconstrained_pathlen_0. 
+
+For more information, see <https://cloud.google.com/certificate-authority-service/docs/certificate-profile>. 
+
+Or at least one of these can be specified: 
+
+`--extended-key-usages`=[`EXTENDED_KEY_USAGES`,…]
+     The list of extended key usages for this CA. This can only be provided if `--use-preset-profile` is not provided. `EXTENDED_KEY_USAGES` must be one of: `server_auth`, `client_auth`, `code_signing`, `email_protection`, `time_stamping`, `ocsp_signing`. 
+`--key-usages`=[`KEY_USAGES`,…]
+     The list of key usages for this CA. This can only be provided if `--use-preset-profile` is not provided. `KEY_USAGES` must be one of: `digital_signature`, `content_commitment`, `key_encipherment`, `data_encipherment`, `key_agreement`, `cert_sign`, `crl_sign`, `encipher_only`, `decipher_only`. 
+At most one of these can be specified: 
+
+`--max-chain-length`=`MAX_CHAIN_LENGTH`
+     Maximum depth of subordinate CAs allowed under this CA for a CA certificate. This can only be provided if neither `--use-preset-profile` nor `--unconstrained-chain-length` are provided. 
+`--unconstrained-chain-length`
+     If set, allows an unbounded number of subordinate CAs under this newly issued CA certificate. This can only be provided if neither `--use-preset-profile` nor `--max-chain-length` are provided. 
+The x509 name constraints configurations 
+`--name-constraints-critical`
+     Indicates whether or not name constraints are marked as critical. Name constraints are considered critical unless explicitly set to false. Enabled by default, use `--no-name-constraints-critical` to disable. 
+`--name-excluded-dns`=[`NAME_EXCLUDED_DNS`,…]
+     One or more comma-separated DNS names which are excluded from being issued certificates. Any DNS name that can be constructed by simply adding zero or more labels to the left-hand side of the name satisfies the name constraint. For example, `example.com`, `www.example.com`, `www.sub.example.com` would satisfy `example.com`, while `example1.com` does not. 
+`--name-excluded-email`=[`NAME_EXCLUDED_EMAIL`,…]
+     One or more comma-separated emails which are excluded from being issued certificates. The value can be a particular email address, a hostname to indicate all email addresses on that host or a domain with a leading period (e.g. `.example.com`) to indicate all email addresses in that domain. 
+`--name-excluded-ip`=[`NAME_EXCLUDED_IP`,…]
+     One or more comma-separated IP ranges which are excluded from being issued certificates. For IPv4 addresses, the ranges are expressed using CIDR notation as specified in RFC 4632. For IPv6 addresses, the ranges are expressed in similar encoding as IPv4 
+`--name-excluded-uri`=[`NAME_EXCLUDED_URI`,…]
+     One or more comma-separated URIs which are excluded from being issued certificates. The value can be a hostname or a domain with a leading period (like `.example.com`) 
+`--name-permitted-dns`=[`NAME_PERMITTED_DNS`,…]
+     One or more comma-separated DNS names which are permitted to be issued certificates. Any DNS name that can be constructed by simply adding zero or more labels to the left-hand side of the name satisfies the name constraint. For example, `example.com`, `www.example.com`, `www.sub.example.com` would satisfy `example.com`, while `example1.com` does not. 
+`--name-permitted-email`=[`NAME_PERMITTED_EMAIL`,…]
+     One or more comma-separated email addresses which are permitted to be issued certificates. The value can be a particular email address, a hostname to indicate all email addresses on that host or a domain with a leading period (e.g. `.example.com`) to indicate all email addresses in that domain. 
+`--name-permitted-ip`=[`NAME_PERMITTED_IP`,…]
+     One or more comma-separated IP ranges which are permitted to be issued certificates. For IPv4 addresses, the ranges are expressed using CIDR notation as specified in RFC 4632. For IPv6 addresses, the ranges are expressed in similar encoding as IPv4 
+`--name-permitted-uri`=[`NAME_PERMITTED_URI`,…]
+     One or more comma-separated URIs which are permitted to be issued certificates. The value can be a hostname or a domain with a leading period (like `.example.com`) 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-08-11 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-11 UTC."],[],[]] 

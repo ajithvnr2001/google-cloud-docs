@@ -1,0 +1,194 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/vpn-tunnels/create/
+title: gcloud alpha compute vpn-tunnels create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-15T17:49:54.504582+00:00
+---
+
+# gcloud alpha compute vpn-tunnels create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/vpn-tunnels/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha compute vpn-tunnels create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha compute vpn-tunnels create - create a VPN tunnel 
+SYNOPSIS
+    
+
+`gcloud alpha compute vpn-tunnels create` `NAME` `--shared-secret`=`SHARED_SECRET` (`--peer-address`=`PEER_ADDRESS` | `--peer-external-gateway`=`PEER_EXTERNAL_GATEWAY` | `--peer-gcp-gateway`=`PEER_GCP_GATEWAY` | `--peer-gcp-gateway-region`=`PEER_GCP_GATEWAY_REGION`) (`--target-vpn-gateway`=`TARGET_VPN_GATEWAY` | `--target-vpn-gateway-region`=`TARGET_VPN_GATEWAY_REGION` | `--vpn-gateway`=`VPN_GATEWAY` | `--vpn-gateway-region`=`VPN_GATEWAY_REGION`) [`--capacity-tier`=`CAPACITY_TIER`] [`--description`=`DESCRIPTION`] [`--ike-version`=`IKE_VERSION`] [`--interface`=`INTERFACE`] [`--local-traffic-selector`=`CIDR`,[`CIDR`,…]] [`--peer-external-gateway-interface`=`PEER_EXTERNAL_GATEWAY_INTERFACE`] [`--phase1-dh`=`GROUPS`,[`GROUPS`,…]] [`--phase1-encryption`=`ALGORITHMS`,[`ALGORITHMS`,…]] [`--phase1-integrity`=`ALGORITHMS`,[`ALGORITHMS`,…]] [`--phase1-prf`=`PSEUDORANDOM` `FUNCTIONS`,[…]] [`--phase2-encryption`=`ALGORITHMS`,[`ALGORITHMS`,…]] [`--phase2-integrity`=`ALGORITHMS`,[`ALGORITHMS`,…]] [`--phase2-pfs`=`ALGORITHMS`,[`ALGORITHMS`,…]] [`--pqc-phase1-key-exchanges`=[`KEY_EXCHANGES`;…]] [`--pqc-phase1-mode`=`PQC_PHASE1_MODE`] [`--pqc-phase2-key-exchanges`=[`KEY_EXCHANGES`;…]] [`--pqc-phase2-mode`=`PQC_PHASE2_MODE`] [`--region`=`REGION`] [`--remote-traffic-selector`=`CIDR`,[`CIDR`,…]] [`--resource-manager-tags`=[`KEY`=`VALUE`,…]] [`--router`=`ROUTER`] [`--router-region`=`ROUTER_REGION`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` `gcloud alpha compute vpn-tunnels create` is used to create a Classic VPN tunnel between a target VPN gateway in Google Cloud Platform and a peer address; or create Highly Available VPN tunnel between HA VPN gateway and another HA VPN gateway, or Highly Available VPN tunnel between HA VPN gateway and an external VPN gateway. 
+POSITIONAL ARGUMENTS
+    
+
+`NAME`
+     Name of the VPN Tunnel to create. 
+REQUIRED FLAGS
+    
+
+`--shared-secret`=`SHARED_SECRET`
+     Shared secret consisting of printable characters. Valid arguments match the regular expression [ -~]+ 
+Exactly one of these must be specified: 
+
+`--peer-address`=`PEER_ADDRESS`
+     Valid IPV4 address representing the remote tunnel endpoint, the peer address must be specified when creating Classic VPN tunnels from Classic Target VPN gateway 
+`--peer-external-gateway`=`PEER_EXTERNAL_GATEWAY`
+     Peer side external VPN gateway representing the remote tunnel endpoint, this flag is used when creating HA VPN tunnels from Google Cloud to your external VPN gateway.Either --peer-external-gateway or --peer-gcp-gateway must be specified when creating VPN tunnels from High Available VPN gateway. 
+`--peer-gcp-gateway`=`PEER_GCP_GATEWAY`
+     Reference to the peer side Highly Available VPN gateway. 
+`--peer-gcp-gateway-region`=`PEER_GCP_GATEWAY_REGION`
+     Region of the VPN Gateway to operate on. Should be the same as region, if not specified, it will be automatically set. Overrides the default `compute/region` property value for this command invocation. 
+Exactly one of these must be specified: 
+
+`--target-vpn-gateway`=`TARGET_VPN_GATEWAY`
+     A reference to a Cloud VPN Classic Target VPN Gateway. 
+`--target-vpn-gateway-region`=`TARGET_VPN_GATEWAY_REGION`
+     Region of the Target VPN Gateway to operate on. Should be the same as region, if not specified, it will be automatically set. Overrides the default `compute/region` property value for this command invocation. 
+`--vpn-gateway`=`VPN_GATEWAY`
+     Reference to a Highly Available VPN gateway. 
+`--vpn-gateway-region`=`VPN_GATEWAY_REGION`
+     Region of the VPN Gateway to operate on. Should be the same as region, if not specified, it will be automatically set. Overrides the default `compute/region` property value for this command invocation. 
+OPTIONAL FLAGS
+    
+
+`--capacity-tier`=`CAPACITY_TIER`
+     The capacity tier of the VPN tunnel. This is used for IPsec over Interconnect tunnels to indicate different bandwidth limits. CAPACITY_TIER must be one of: `DEFAULT`, `HIGH`. `CAPACITY_TIER` must be one of: `DEFAULT`, `HIGH`. 
+`--description`=`DESCRIPTION`
+     An optional, textual description for the VPN tunnel. 
+`--ike-version`=`IKE_VERSION`
+     Internet Key Exchange protocol version number. Default is 2. `IKE_VERSION` must be one of: `1`, `2`. 
+`--interface`=`INTERFACE`
+     Numeric interface ID of the VPN gateway with which this VPN tunnel is associated. This flag is required if the tunnel is being attached to a Highly Available VPN gateway. This option is only available for use with Highly Available VPN gateway and must be omitted if the tunnel is going to be connected to a Classic VPN gateway. `INTERFACE` must be one of: `0`, `1`. 
+`--local-traffic-selector`=`CIDR`,[`CIDR`,…]
+     Traffic selector is an agreement between IKE peers to permit traffic through a tunnel if the traffic matches a specified pair of local and remote addresses. 
+
+\--local-traffic-selector allows to configure the local addresses that are permitted. The value should be a comma separated list of CIDR formatted strings. Example: 192.168.0.0/16,10.0.0.0/24. 
+
+Local traffic selector must be specified only for VPN tunnels that do not use dynamic routing with a Cloud Router. Omit this flag when creating a tunnel using dynamic routing, including a tunnel for a Highly Available VPN gateway. 
+
+`--peer-external-gateway-interface`=`PEER_EXTERNAL_GATEWAY_INTERFACE`
+     Interface ID of the external VPN gateway to which this VPN tunnel is connected to. This flag is required if the tunnel is being created from a Highly Available VPN gateway to an External Vpn Gateway. `PEER_EXTERNAL_GATEWAY_INTERFACE` must be one of: `0`, `1`, `2`, `3`. 
+`--phase1-dh`=`GROUPS`,[`GROUPS`,…]
+     Phase 1 Diffie-Hellman groups. 
+`--phase1-encryption`=`ALGORITHMS`,[`ALGORITHMS`,…]
+     Phase 1 encryption algorithms. 
+`--phase1-integrity`=`ALGORITHMS`,[`ALGORITHMS`,…]
+     Phase 1 integrity algorithms. 
+`--phase1-prf`=`PSEUDORANDOM` `FUNCTIONS`,[…]
+     Phase 1 pseudorandom functions. 
+`--phase2-encryption`=`ALGORITHMS`,[`ALGORITHMS`,…]
+     Phase 2 encryption algorithms. 
+`--phase2-integrity`=`ALGORITHMS`,[`ALGORITHMS`,…]
+     Phase 2 integrity algorithms. 
+`--phase2-pfs`=`ALGORITHMS`,[`ALGORITHMS`,…]
+     Phase 2 perfect forward secrecy algorithms. 
+`--pqc-phase1-key-exchanges`=[`KEY_EXCHANGES`;…]
+     Post-Quantum Cryptography (PQC) key exchange mechanisms for Phase 1. 
+
+The value is a semicolon-separated list of key-value pairs (ke1 to ke7), where each key corresponds to an additional key exchange slot and maps to a comma-separated list of key exchange mechanisms. Valid mechanisms are KE_NONE, ML_KEM_768, and ML_KEM_1024. 
+
+If this flag is specified, `--pqc-phase1-mode` should be set to `ENABLED`. 
+
+Example: --pqc-phase1-key-exchanges="ke1=ML_KEM_768,ML_KEM_1024;ke2=ML_KEM_1024" 
+
+`--pqc-phase1-mode`=`PQC_PHASE1_MODE`
+     Mode of Post-Quantum Cryptography (PQC) for Phase 1. Must be one of: `DISABLED`, `ENABLED`. `PQC_PHASE1_MODE` must be one of: `DISABLED`, `ENABLED`. 
+`--pqc-phase2-key-exchanges`=[`KEY_EXCHANGES`;…]
+     Post-Quantum Cryptography (PQC) key exchange mechanisms for Phase 2. 
+
+The value is a semicolon-separated list of key-value pairs (ke1 to ke7), where each key corresponds to an additional key exchange slot and maps to a comma-separated list of key exchange mechanisms. Valid mechanisms are KE_NONE, ML_KEM_768, and ML_KEM_1024. 
+
+If this flag is specified, `--pqc-phase2-mode` should be set to `ENABLED`. 
+
+Example: --pqc-phase2-key-exchanges="ke1=ML_KEM_768,ML_KEM_1024;ke2=ML_KEM_1024" 
+
+`--pqc-phase2-mode`=`PQC_PHASE2_MODE`
+     Mode of Post-Quantum Cryptography (PQC) for Phase 2. Must be one of: `DISABLED`, `ENABLED`. `PQC_PHASE2_MODE` must be one of: `DISABLED`, `ENABLED`. 
+`--region`=`REGION`
+     Region of the VPN Tunnel to create. If not specified, you might be prompted to select a region (interactive mode only). 
+
+To avoid prompting when this flag is omitted, you can set the ``compute/region`` property: 
+    
+    
+    [gcloud config set](https://docs.cloud.google.com/sdk/gcloud/reference/config/set) compute/region REGION
+
+A list of regions can be fetched by running: 
+    
+    
+    [gcloud compute regions list](https://docs.cloud.google.com/sdk/gcloud/reference/compute/regions/list)
+
+To unset the property, run: 
+    
+    
+    [gcloud config unset](https://docs.cloud.google.com/sdk/gcloud/reference/config/unset) compute/region
+
+Alternatively, the region can be stored in the environment variable ``CLOUDSDK_COMPUTE_REGION``. 
+
+`--remote-traffic-selector`=`CIDR`,[`CIDR`,…]
+     Traffic selector is an agreement between IKE peers to permit traffic through a tunnel if the traffic matches a specified pair of local and remote addresses. 
+
+\--remote-traffic-selector allows to configure the remote addresses that are permitted. The value should be a comma separated list of CIDR formatted strings. Example: 192.168.0.0/16,10.0.0.0/24. 
+
+Remote traffic selector must be specified for VPN tunnels that do not use dynamic routing with a Cloud Router. Omit this flag when creating a tunnel using dynamic routing, including a tunnel for a Highly Available VPN gateway. 
+
+`--resource-manager-tags`=[`KEY`=`VALUE`,…]
+     A comma-separated list of Resource Manager tags to apply to the VPN tunnel. 
+`--router`=`ROUTER`
+     Router to use for dynamic routing. 
+`--router-region`=`ROUTER_REGION`
+     Region of the router to operate on. If not specified, you might be prompted to select a region (interactive mode only). 
+
+To avoid prompting when this flag is omitted, you can set the ``compute/region`` property: 
+    
+    
+    [gcloud config set](https://docs.cloud.google.com/sdk/gcloud/reference/config/set) compute/region REGION
+
+A list of regions can be fetched by running: 
+    
+    
+    [gcloud compute regions list](https://docs.cloud.google.com/sdk/gcloud/reference/compute/regions/list)
+
+To unset the property, run: 
+    
+    
+    [gcloud config unset](https://docs.cloud.google.com/sdk/gcloud/reference/config/unset) compute/region
+
+Alternatively, the region can be stored in the environment variable ``CLOUDSDK_COMPUTE_REGION``. 
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. These variants are also available: 
+    
+    
+    [gcloud compute vpn-tunnels create](https://docs.cloud.google.com/sdk/gcloud/reference/compute/vpn-tunnels/create)
+    
+    
+    [gcloud beta compute vpn-tunnels create](https://docs.cloud.google.com/sdk/gcloud/reference/beta/compute/vpn-tunnels/create)
+    
+    
+    [gcloud preview compute vpn-tunnels create](https://docs.cloud.google.com/sdk/gcloud/reference/preview/compute/vpn-tunnels/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-09-22 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-09-22 UTC."],[],[]] 

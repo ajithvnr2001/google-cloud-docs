@@ -1,0 +1,168 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api/troubleshooting/
+title: Troubleshooting Gemini Live API \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T06:46:29.574036+00:00
+---
+
+# Troubleshooting Gemini Live API  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api/troubleshooting/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Troubleshooting Gemini Live API Stay organized with collections  Save and categorize content based on your preferences. 
+
+This document provides troubleshooting steps for issues that you might encounter when using Gemini Live API.
+
+## Connection drops unexpectedly
+
+If your session connection drops unexpectedly, it might be due to token limits, session connection timeouts, or network issues.
+
+### Behavior
+
+Session disconnected with error code `1000` or `1006`.
+
+### Possible reasons
+
+  * Context window compression isn't enabled and context token exceeds the session's context token limit (up to 128k).
+  * No session resumption logic is implemented or resumption logic isn't correctly implemented.
+  * Unstable internet connection.
+
+
+
+### Reasons and solutions
+
+  * **Tokens exceed the session's context token limit:** To prevent exceeding the session's context token limit, activate context compression. This might impact the quality of the conversation, as the model will intermittently discard earlier parts of the chat history.
+
+  * **Session connection expires after 10 minutes:** Manage session resumption to allow for longer interactions. For further details, consult the best practices for session resumption.
+
+  * **Unstable internet connection:** Verify the condition of your internet connection, as fluctuations in stability may result in connectivity problems.
+
+
+
+
+## Model failed to understand the user
+
+If the model doesn't seem to understand your input, ensure your audio is formatted correctly and consider your microphone quality and background noise.
+
+### Behavior
+
+The model responds with irrelevant information, responds with incorrect information, or asks the user to repeat.
+
+### Possible reasons
+
+  * Input audio format isn't correct.
+  * Microphone quality isn't good.
+  * The background noise is too high.
+
+
+
+### Reasons and solutions
+
+  * **Input audio format isn't correct:** Verify that the input audio uses a little-endian, 16-bit PCM format with a 16 kHz sampling rate and a single mono channel.
+
+  * **Microphone quality isn't good:** Test the microphone quality by recording a short audio and playing it back. If the microphone quality isn't good, try to use a microphone with better quality.
+
+  * **Background noise is too high:** Test the background noise level by recording a short audio and playing it back. If the background noise level is too high, try to move the microphone closer to the user or use a microphone with better noise cancellation.
+
+
+
+
+## Model isn't responding
+
+If you aren't receiving a response from the model, check your voice activity detection options and WebSocket connection.
+
+### Behavior
+
+No response from the model.
+
+### Possible reasons
+
+  * VAD settings aren't correctly set.
+  * WebSocket connection got interrupted.
+
+
+
+### Reasons and solutions
+
+  * **VAD set incorrectly:** VAD is disabled by the user. In this case, the model will keep waiting for the user's speech and won't respond to the user. Make sure to send `ActivityStart` and `ActivityEnd` events to the model if the VAD is disabled.
+
+  * **WebSocket connection got interrupted:** If the WebSocket connection is interrupted, there will be no communication between the client and the server. Check the WebSocket connection status and make sure it is properly established.
+
+
+
+
+## Cannot interrupt the model
+
+If you're unable to interrupt the model while it's speaking, ensure you're handling the playback buffer and streaming audio correctly.
+
+### Behavior
+
+The model continues to speak without interruption from the user.
+
+### Possible reasons
+
+  * Failed to flush playback buffer.
+  * Failed to stream audio to Gemini Live API.
+  * Customized VAD isn't correctly implemented.
+
+
+
+### Reasons and solutions
+
+  * **Failed to flush playback buffer:** The client should flush the playback buffer immediately when receiving an interrupt signal from the model. Otherwise, the model will keep talking.
+
+  * **Failed to stream audio to Gemini Live API:** The client should stream audio to Gemini Live API in chunks between 20 ms and 40 ms to minimize latency. If the client fails to stream audio to Gemini Live API, the model won't send an interrupt signal to the client.
+
+  * **Customized VAD isn't correctly implemented:** If the customized VAD fails to recognize the start of speech or the client fails to send `ActivityStart` signal to the model, the model won't send an interrupt signal to the client.
+
+
+
+
+## Known limitations
+
+The following limitations apply to Gemini Live API. Each item includes a mitigation where one is available.
+
+### Priority pay-as-you-go isn't supported
+
+Gemini Live API doesn't support [Priority pay-as-you-go](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/priority-paygo) as a consumption option.
+
+### The voice can change for a single turn
+
+In rare cases, the model responds in a voice other than the one that you set in the `voice_name` field. The change is limited to a single turn, and following turns use the configured voice again. No configuration change is needed.
+
+### The speech rate can accelerate during long turns
+
+When the model generates an extended, uninterrupted spoken response, its speaking cadence can gradually accelerate. This behavior is most noticeable in single turns that exceed 60 seconds. To keep the pacing steady, use the following approaches:
+
+  * **Segment long outputs:** Avoid prompting the model to read long blocks of text in a single turn. Break extensive responses into chunks of fewer than 100 words, or under 50 seconds of spoken audio.
+
+  * **Use conversational turn-taking:** Adopt an interactive dialogue pattern that returns control to the user between segments.
+
+
+
+
+### The model can switch languages unexpectedly
+
+If the model determines that a user is speaking a language other than the configured one, it can respond in that language. To reduce the chance of an unintended switch, provide a language hint by setting the `language_code` field and by stating the expected language in the system instruction. For more information, see [Set the language and voice](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api/configure-language-voice#set-language-voice).
+
+### Digit sequences can be repeated back inconsistently
+
+When a user speaks a sequence of individual digits, such as a phone number, credit card number, or account number, the model can repeat the sequence back with incorrect or missing digits. To reduce these errors, add a system instruction that directs the model to read the sequence back one digit at a time and to ask the user to repeat the sequence slowly when the digits aren't clear.
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

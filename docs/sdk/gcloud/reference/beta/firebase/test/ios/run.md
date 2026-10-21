@@ -1,0 +1,229 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/firebase/test/ios/run/
+title: gcloud beta firebase test ios run \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T12:34:31.301214+00:00
+---
+
+# gcloud beta firebase test ios run  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/firebase/test/ios/run/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta firebase test ios run Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta firebase test ios run - invoke a test in Firebase Test Lab for iOS and view test results 
+SYNOPSIS
+    
+
+`gcloud beta firebase test ios run` [`ARGSPEC`] [`--device`=`DIMENSION`=`VALUE`,[…]] [`--test`=`XCTEST_ZIP`] [`--timeout`=`TIMEOUT`] [`--type`=`TYPE`] [`--xcode-version`=`XCODE_VERSION`] [`--xctestrun-file`=`XCTESTRUN_FILE`] [`--additional-ipas`=`IPA`,[`IPA`,…]] [`--app`=`APP`] [`--async`] [`--client-details`=[`KEY`=`VALUE`,…]] [`--directories-to-pull`=[`DIR_TO_PULL`,…]] [`--num-flaky-test-attempts`=`int`] [`--other-files`=`DEVICE_PATH`=`FILE_PATH`,[…]] [`--record-video`] [`--results-bucket`=`RESULTS_BUCKET`] [`--results-dir`=`RESULTS_DIR`] [`--results-history-name`=`RESULTS_HISTORY_NAME`] [`--robo-script`=`ROBO_SCRIPT`] [`--scenario-numbers`=`int`,[`int`,…]] [`--test-special-entitlements`] [`--filter`=`EXPRESSION`] [`--limit`=`LIMIT`] [`--page-size`=`PAGE_SIZE`] [`--sort-by`=[`FIELD`,…]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` `gcloud beta firebase test ios run` invokes and monitors tests in Firebase Test Lab for iOS. 
+
+Two types of iOS tests are currently supported: 
+
+  * `xctest`: corresponds to the XCTest and XCUITest frameworks. Other iOS testing frameworks which are built upon XCTest and XCUITest should also work. The XCTEST_ZIP test package is a zip file built using Apple's Xcode and supporting tools. For a detailed description of the process to create your XCTEST_ZIP file, see <https://firebase.google.com/docs/test-lab/ios/command-line>. 
+  * `game-loop`: launches the game app through a custom URL scheme to execute a "demo mode" built into the game app that simulates actions of a real player. This test type can include multiple game loops (also called "scenarios") indicated by positive numbers. 
+
+
+
+The type of test to run can be specified with the `--type` flag, which defaults to `xctest`. 
+
+All arguments for `gcloud beta firebase test ios run` may be specified on the command line and/or within an argument file. Run `$ [gcloud topic arg-files](https://docs.cloud.google.com/sdk/gcloud/reference/topic/arg-files)` for more information about argument files. 
+
+EXAMPLES
+     To help you identify and locate your test matrix in the Firebase console, run: 
+    
+    
+    gcloud beta firebase test ios run --test=XCTEST_ZIP --client-details=matrixLabel="Example matrix label"
+
+To invoke an XCTest lasting up to five minutes against the default device environment, run: 
+    
+    
+    gcloud beta firebase test ios run --test=XCTEST_ZIP --timeout=5m
+
+To invoke an XCTest against an iPad 5 running iOS 11.2, run: 
+    
+    
+    gcloud beta firebase test ios run --test=XCTEST_ZIP --device=model=ipad5,version=11.2
+
+To run your tests against multiple iOS devices simultaneously, specify the `--device` flag more than once: 
+    
+    
+    gcloud beta firebase test ios run --test=XCTEST_ZIP --device=model=iphone7 --device=model=ipadmini4,version=11.2 --device=model=iphonese
+
+To run your XCTest using a specific version of Xcode, say 9.4.1, run: 
+    
+    
+    gcloud beta firebase test ios run --test=XCTEST_ZIP --xcode-version=9.4.1
+
+To help you identify and locate your test matrix in the Firebase console, run: 
+    
+    
+    gcloud beta firebase test ios run --test=XCTEST_ZIP --client-details=matrixLabel="Example matrix label"
+
+To run an iOS game loop, specify the `--type` and `--app` flags: 
+    
+    
+    gcloud beta firebase test ios run --type=game-loop --app=app.ipa
+
+To run an iOS game loop with specific scenario(s), use the `--scenario-numbers` flag: 
+    
+    
+    gcloud beta firebase test ios run --type=game-loop --app=app.ipa --scenario-numbers=1,2,3
+
+To run a test that pushes a local file onto the device before testing, use the `--other-files` flag: 
+    
+    
+    gcloud beta firebase test ios run --type=game-loop --app=app.ipa --scenario-numbers=1 --other-files=/private/var/mobile/Media/file.txt=/path/to/file.txt
+
+All test arguments for a given test may alternatively be stored in an argument group within a YAML-formatted argument file. The `ARG_FILE` may contain one or more named argument groups, and argument groups may be combined using the `include:` attribute (Run `$ [gcloud topic](https://docs.cloud.google.com/sdk/gcloud/reference/topic) arg-files` for more information). The ARG_FILE can easily be shared with colleagues or placed under source control to ensure consistent test executions. 
+
+To run a test using arguments loaded from an ARG_FILE named `excelsior_app_args`, which contains an argument group named `ios-args:`, use the following syntax: 
+    
+    
+    gcloud beta firebase test ios run path/to/excelsior_app_args:ios-args
+
+POSITIONAL ARGUMENTS
+    
+
+[`ARGSPEC`]
+     An ARG_FILE:ARG_GROUP_NAME pair, where ARG_FILE is the path to a file containing groups of test arguments in yaml format, and ARG_GROUP_NAME is the particular yaml object holding a group of arg:value pairs to use. Run `$ [gcloud topic arg-files](https://docs.cloud.google.com/sdk/gcloud/reference/topic/arg-files)` for more information and examples. 
+COMMONLY USED FLAGS
+    
+
+`--device`=`DIMENSION`=`VALUE`,[…]
+     A list of ``DIMENSION=VALUE`` pairs which specify a target device to test against. This flag may be repeated to specify multiple devices. The device dimensions are: `model`, `version`, `locale`, and `orientation`. If any dimensions are omitted, they will use a default value. The default value, and all possible values, for each dimension can be found with the ``list`` command for that dimension, such as `$ [gcloud beta firebase test ios models](https://docs.cloud.google.com/sdk/gcloud/reference/beta/firebase/test/ios/models) list`. Omitting this flag entirely will run tests against a single device using defaults for every dimension. 
+
+Examples: 
+    
+    
+    --device model=iphone8plus
+    --device version=11.2
+    --device model=ipadmini4,version=11.2,locale=zh_CN,orientation=landscape
+
+`--test`=`XCTEST_ZIP`
+     The path to the test package (a zip file containing the iOS app and XCTest files). The given path may be in the local filesystem or in Google Cloud Storage using a URL beginning with `gs://`. Note: any .xctestrun file in this zip file will be ignored if `--xctestrun-file` is specified. 
+`--timeout`=`TIMEOUT`
+     The max time this test execution can run before it is cancelled (default: 15m). It does not include any time necessary to prepare and clean up the target device. The maximum possible testing time is 45m on physical devices and 60m on virtual devices. The `TIMEOUT` units can be h, m, or s. If no unit is given, seconds are assumed. Examples: 
+
+  * `--timeout 1h` is 1 hour 
+  * `--timeout 5m` is 5 minutes 
+  * `--timeout 200s` is 200 seconds 
+  * `--timeout 100` is 100 seconds 
+
+
+`--type`=`TYPE`
+     The type of iOS test to run. `TYPE` must be one of: `xctest`, `game-loop`, `robo`. 
+`--xcode-version`=`XCODE_VERSION`
+     The version of Xcode that should be used to run an XCTest. Defaults to the latest Xcode version supported in Firebase Test Lab. This Xcode version must be supported by all iOS versions selected in the test matrix. The list of Xcode versions supported by each version of iOS can be viewed by running `$ [gcloud beta firebase test ios versions list](https://docs.cloud.google.com/sdk/gcloud/reference/beta/firebase/test/ios/versions/list)`. 
+`--xctestrun-file`=`XCTESTRUN_FILE`
+     The path to an .xctestrun file that will override any .xctestrun file contained in the `--test` package. Because the .xctestrun file contains environment variables along with test methods to run and/or ignore, this can be useful for customizing or sharding test suites. The given path may be in the local filesystem or in Google Cloud Storage using a URL beginning with `gs://`. 
+FLAGS
+    
+
+`--additional-ipas`=`IPA`,[`IPA`,…]
+     List of up to 100 additional IPAs to install, in addition to the one being directly tested. The path may be in the local filesystem or in Google Cloud Storage using gs:// notation. 
+`--app`=`APP`
+     The path to the application archive (.ipa file) for game-loop testing. The path may be in the local filesystem or in Google Cloud Storage using gs:// notation. This flag is only valid when `--type` is `game-loop` or `robo`. 
+`--async`
+     Invoke a test asynchronously without waiting for test results. 
+`--client-details`=[`KEY`=`VALUE`,…]
+     Comma-separated, KEY=VALUE map of additional details to attach to the test matrix. Arbitrary KEY=VALUE pairs may be attached to a test matrix to provide additional context about the tests being run. When consuming the test results, such as in Cloud Functions or a CI system, these details can add additional context such as a link to the corresponding pull request. 
+
+Example: 
+    
+    
+    --client-details=buildNumber=1234,pullRequest=https://example.com/link/to/pull-request
+
+To help you identify and locate your test matrix in the Firebase console, use the matrixLabel key. 
+
+Example: 
+    
+    
+    --client-details=matrixLabel="Example matrix label"
+
+`--directories-to-pull`=[`DIR_TO_PULL`,…]
+     A list of paths that will be copied from the device's storage to the designated results bucket after the test is complete. These must be absolute paths under `/private/var/mobile/Media` or `/Documents` of the app under test. If the path is under an app's `/Documents`, it must be prefixed with the app's bundle id and a colon. 
+
+Example: 
+    
+    
+    --directories-to-pull=com.my.app:/Documents/output,/private/var/mobile/Media/output
+
+`--num-flaky-test-attempts`=`int`
+     Specifies the number of times a test execution should be reattempted if one or more of its test cases fail for any reason. An execution that initially fails but succeeds on any reattempt is reported as FLAKY. 
+
+The maximum number of reruns allowed is 10. (Default: 0, which implies no reruns.) All additional attempts are executed in parallel. 
+
+`--other-files`=`DEVICE_PATH`=`FILE_PATH`,[…]
+     A list of device-path=file-path pairs that specify the paths of the test device and the files you want pushed to the device prior to testing. 
+
+Device paths should either be under the Media shared folder (e.g. prefixed with /private/var/mobile/Media) or within the documents directory of the filesystem of an app under test (e.g. /Documents). Device paths to app filesystems should be prefixed by the bundle ID and a colon. Source file paths may be in the local filesystem or in Google Cloud Storage (gs://…). 
+
+Examples: 
+    
+    
+    --other-files com.my.app:/Documents/file.txt=local/file.txt,/private/var/mobile/Media/file.jpg=gs://bucket/file.jpg
+
+`--record-video`
+     Enable video recording during the test. Enabled by default, use \--no-record-video to disable. 
+`--results-bucket`=`RESULTS_BUCKET`
+     The name of a Google Cloud Storage bucket where raw test results will be stored (default: "test-lab-<random-UUID>"). Note that the bucket must be owned by a billing-enabled project, and that using a non-default bucket will result in billing charges for the storage used. 
+`--results-dir`=`RESULTS_DIR`
+     The name of a `unique` Google Cloud Storage object within the results bucket where raw test results will be stored (default: a timestamp with a random suffix). Caution: if specified, this argument `must be unique` for each test matrix you create, otherwise results from multiple test matrices will be overwritten or intermingled. 
+`--results-history-name`=`RESULTS_HISTORY_NAME`
+     The history name for your test results (an arbitrary string label; default: the bundle ID for the iOS application). All tests which use the same history name will have their results grouped together in the Firebase console in a time-ordered test history list. 
+`--robo-script`=`ROBO_SCRIPT`
+     The path to a Robo Script JSON file. The path may be in the local filesystem or in Google Cloud Storage using gs:// notation. You can guide the Robo test to perform specific actions by specifying a Robo Script with this argument. Learn more at <https://firebase.google.com/docs/test-lab/robo-ux-test#scripting>. This flag is only valid when `--type=robo` is also set. 
+`--scenario-numbers`=`int`,[`int`,…]
+     A list of game-loop scenario numbers which will be run as part of the test (default: scenario 1). A maximum of 1024 scenarios may be specified in one test matrix, but the maximum number may also be limited by the overall test `--timeout` setting. This flag is only valid when `--type=game-loop` is also set. 
+`--test-special-entitlements`
+     Enables testing special app entitlements. Re-signs an app having special entitlements with a new application-identifier. This currently supports testing Push Notifications (aps-environment) entitlement for up to one app in a project. 
+
+Note: Because this changes the app's identifier, make sure none of the resources in your zip file contain direct references to the test app's bundle id. 
+
+LIST COMMAND FLAGS
+    
+
+`--filter`=`EXPRESSION`
+     Apply a Boolean filter `EXPRESSION` to each resource item to be listed. If the expression evaluates `True`, then that item is listed. For more details and examples of filter expressions, run $ [gcloud topic filters](https://docs.cloud.google.com/sdk/gcloud/reference/topic/filters). This flag interacts with other flags that are applied in this order: `--flatten`, `--sort-by`, `--filter`, `--limit`. 
+`--limit`=`LIMIT`
+     Maximum number of resources to list. The default is `unlimited`. This flag interacts with other flags that are applied in this order: `--flatten`, `--sort-by`, `--filter`, `--limit`. 
+`--page-size`=`PAGE_SIZE`
+     Some services group resource list output into pages. This flag specifies the maximum number of resources per page. The default is determined by the service if it supports paging, otherwise it is `unlimited` (no paging). Paging may be applied before or after `--filter` and `--limit` depending on the service. 
+`--sort-by`=[`FIELD`,…]
+     Comma-separated list of resource field key names to sort by. The default order is ascending. Prefix a field with ``~´´ for descending order on that field. This flag interacts with other flags that are applied in this order: `--flatten`, `--sort-by`, `--filter`, `--limit`. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in beta and might change without notice. These variants are also available: 
+    
+    
+    [gcloud firebase test ios run](https://docs.cloud.google.com/sdk/gcloud/reference/firebase/test/ios/run)
+    
+    
+    [gcloud alpha firebase test ios run](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/firebase/test/ios/run)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

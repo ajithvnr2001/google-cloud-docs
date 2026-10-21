@@ -1,0 +1,196 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/preview/compute/network-endpoint-groups/create/
+title: gcloud preview compute network-endpoint-groups create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-15T14:17:17.988287+00:00
+---
+
+# gcloud preview compute network-endpoint-groups create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/preview/compute/network-endpoint-groups/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud preview compute network-endpoint-groups create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud preview compute network-endpoint-groups create - create a Compute Engine network endpoint group 
+SYNOPSIS
+    
+
+`gcloud preview compute network-endpoint-groups create` `NAME` [`--default-port`=`DEFAULT_PORT`] [`--network`=`NETWORK`] [`--network-endpoint-type`=`NETWORK_ENDPOINT_TYPE`; default="gce-vm-ip-port"] [`--producer-port`=`PRODUCER_PORT`] [`--psc-target-service`=`PSC_TARGET_SERVICE`] [`--subnet`=`SUBNET`] [`--cloud-function-name`=`CLOUD_FUNCTION_NAME` `--cloud-function-url-mask`=`CLOUD_FUNCTION_URL_MASK` | `--cloud-run-service`=`CLOUD_RUN_SERVICE` `--cloud-run-tag`=`CLOUD_RUN_TAG` `--cloud-run-url-mask`=`CLOUD_RUN_URL_MASK` | `--[no-]app-engine-app` `--app-engine-service`=`APP_ENGINE_SERVICE` `--app-engine-url-mask`=`APP_ENGINE_URL_MASK` `--app-engine-version`=`APP_ENGINE_VERSION`] [`--global` | `--region`=`REGION` | `--zone`=`ZONE`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(PREVIEW)` Create a Compute Engine network endpoint group. 
+EXAMPLES
+     To create a network endpoint group: 
+    
+    
+    gcloud preview compute network-endpoint-groups create my-neg --zone=us-central1-a --network=my-network --subnet=my-subnetwork
+
+POSITIONAL ARGUMENTS
+    
+
+`NAME`
+     Name of the network endpoint group to operate on. 
+FLAGS
+    
+
+`--default-port`=`DEFAULT_PORT`
+     The default port to use if the port number is not specified in the network endpoint. 
+
+If this flag isn't specified for a NEG with endpoint type `gce-vm-ip-port`, `gce-vm-ip-portmap` or `non-gcp-private-ip-port`, then every network endpoint in the network endpoint group must have a port specified. For a global NEG with endpoint type `internet-ip-port` and `internet-fqdn-port` if the default port is not specified, the well-known port for your backend protocol is used (80 for HTTP, 443 for HTTPS). 
+
+This flag is not supported for NEGs with endpoint type `serverless`. 
+
+This flag is not supported for NEGs with endpoint type `private-service-connect`. 
+
+`--network`=`NETWORK`
+     Name of the network in which the NEG is created. For networkEndpointType `GCE_VM_IP_PORT`, `GCE_VM_IP_PORTMAP` or `NON_GCP_PRIVATE_IP_PORT`, if this field is not specified, a default network will be used. This field cannot be set for NEGs with networkEndpointType set to `SERVERLESS` or `PRIVATE_SERVICE_CONNECT` and for global NEGs. 
+    
+    
+    For all other network endpoint types, this field is required.
+
+This is only supported for NEGs with endpoint type `gce-vm-ip-port`, `non-gcp-private-ip-port`, `gce-vm-ip`, `private-service-connect`, `internet-ip-port`, `internet-fqdn-port`, or `gce-vm-ip-portmap`. 
+
+For Private Service Connect NEGs, you can optionally specify --network and \--subnet if --psc-target-service points to a published service. If \--psc-target-service points to the regional service endpoint of a Google API, do not specify --network or --subnet. 
+
+`--network-endpoint-type`=`NETWORK_ENDPOINT_TYPE`; default="gce-vm-ip-port"
+     Determines the spec of endpoints attached to this group. 
+
+`gce-vm-ip-port`
+     Endpoint IP address must belong to a VM in Compute Engine (either the primary IP or as part of an aliased IP range). The `--default-port` must be specified or every network endpoint in the network endpoint group must have a port specified. 
+`internet-ip-port`
+     Endpoint IP address must be a publicly routable address. If specified, the default port is used. If unspecified, the well-known port for your backend protocol is used as the default port (80 for HTTP, 443 for HTTPS). 
+`internet-fqdn-port`
+     Endpoint FQDN must be resolvable to a public IP address via public DNS. The default port is used, if specified. If the default port is not specified, the well-known port for your backend protocol is used as the default port (80 for HTTP, 443 for HTTPS). 
+
+After creating a NEG of this type, you can use the `gcloud compute network-endpoint-groups update` command with the `--add-endpoint` flag. Example: `--add-endpoint="fqdn=backend.example.com,port=443"`
+
+`non-gcp-private-ip-port`
+     Endpoint IP address must belong to a VM not in Compute Engine and must be routable using a Cloud Router over VPN or an Interconnect connection. In this case, the NEG must be zonal. The `--default-port` must be specified or every network endpoint in the network endpoint group must have a port specified. 
+`serverless`
+     The network endpoint is handled by specified serverless infrastructure, such as Cloud Run, App Engine, or Cloud Function. Default port, network, and subnet are not effective for serverless endpoints. 
+`private-service-connect`
+     The network endpoint corresponds to a service outside the VPC, accessed via Private Service Connect. 
+`gce-vm-ip`
+     Endpoint must be the IP address of a VM's network interface in Compute Engine. Instance reference is required. The IP address is optional. If unspecified, the primary NIC address is used. A port must not be specified. 
+`gce-vm-ip-portmap`
+     Endpoint IP address must be a primary IP of a VM's network interface in Compute Engine. The `--default-port` must be specified or every network endpoint in the network endpoint group must have a port specified. 
+
+`NETWORK_ENDPOINT_TYPE` must be one of: `gce-vm-ip-port`, `internet-ip-port`, `internet-fqdn-port`, `non-gcp-private-ip-port`, `serverless`, `gce-vm-ip`, `private-service-connect`, `gce-vm-ip-portmap`. 
+
+`--producer-port`=`PRODUCER_PORT`
+     The producer port to use when a consumer PSC NEG connects to a producer's internal network load balancer. If this flag isn't specified for a NEG with endpoint type `private-service-connect`, the PSC NEG will connect to port 443 or the first available port in the PSC producer port range, or to port 1 if the PSC producer's forwarding rule ports flag is set to all-ports. 
+
+This flag is not supported for NEGs with endpoint type other than `private-service-connect`. 
+
+`--psc-target-service`=`PSC_TARGET_SERVICE`
+     PSC target service name to add to the private service connect network endpoint groups (NEG). 
+`--subnet`=`SUBNET`
+     Name of the subnet to which all network endpoints belong. 
+
+If not specified, network endpoints may belong to any subnetwork in the region where the network endpoint group is created. 
+
+This is only supported for NEGs with endpoint type `gce-vm-ip-port`, `gce-vm-ip`, `private-service-connect`, or `gce-vm-ip-portmap`. For Private Service Connect NEGs, you can optionally specify --network and --subnet if --psc-target-service points to a published service. If --psc-target-service points to the regional service endpoint of a Google API, do not specify --network or --subnet. 
+
+The serverless routing configurations are only valid when endpoint type of the network endpoint group is `serverless`. At most one of these can be specified: 
+
+Configuration for a Cloud Function network endpoint group. Cloud Function name must be provided explicitly or in the URL mask. 
+`--cloud-function-name`=`CLOUD_FUNCTION_NAME`
+     Cloud Function name to add to the Serverless NEG. The function must be in the same project and the same region as the Serverless network endpoint groups (NEG). 
+`--cloud-function-url-mask`=`CLOUD_FUNCTION_URL_MASK`
+     A template to parse function field from a request URL. URL mask allows for routing to multiple Cloud Functions without having to create multiple network endpoint groups and backend services. 
+Configuration for a Cloud Run network endpoint group. Cloud Run service must be provided explicitly or in the URL mask. Cloud Run tag is optional, and may be provided explicitly or in the URL mask. 
+`--cloud-run-service`=`CLOUD_RUN_SERVICE`
+     Cloud Run service name to add to the Serverless network endpoint groups (NEG). The service must be in the same project and the same region as the Serverless NEG. 
+`--cloud-run-tag`=`CLOUD_RUN_TAG`
+     Cloud Run tag represents the "named revision" to provide additional fine-grained traffic routing configuration. 
+`--cloud-run-url-mask`=`CLOUD_RUN_URL_MASK`
+     A template to parse service and tag fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services. 
+Configuration for an App Engine network endpoint group. Both App Engine service and version are optional, and may be provided explicitly or in the URL mask. The `app-engine-app` flag is only used for default routing. The App Engine app must be in the same project as the Serverless network endpoint groups (NEG). 
+`--[no-]app-engine-app`
+     If set, the default routing is used. Use `--app-engine-app` to enable and `--no-app-engine-app` to disable. 
+`--app-engine-service`=`APP_ENGINE_SERVICE`
+     Optional serving service to add to the Serverless NEG. 
+`--app-engine-url-mask`=`APP_ENGINE_URL_MASK`
+     A template to parse service and version fields from a request URL. URL mask allows for routing to multiple App Engine services without having to create multiple network endpoint groups and backend services. 
+`--app-engine-version`=`APP_ENGINE_VERSION`
+     Optional serving version to add to the Serverless NEG. 
+At most one of these can be specified: 
+
+`--global`
+     If set, the network endpoint group is global. 
+`--region`=`REGION`
+     Region of the network endpoint group to operate on. If not specified, you might be prompted to select a region (interactive mode only). 
+
+To avoid prompting when this flag is omitted, you can set the ``compute/region`` property: 
+    
+    
+    [gcloud config set](https://docs.cloud.google.com/sdk/gcloud/reference/config/set) compute/region REGION
+
+A list of regions can be fetched by running: 
+    
+    
+    [gcloud compute regions list](https://docs.cloud.google.com/sdk/gcloud/reference/compute/regions/list)
+
+To unset the property, run: 
+    
+    
+    [gcloud config unset](https://docs.cloud.google.com/sdk/gcloud/reference/config/unset) compute/region
+
+Alternatively, the region can be stored in the environment variable ``CLOUDSDK_COMPUTE_REGION``. 
+
+`--zone`=`ZONE`
+     Zone of the network endpoint group to operate on. If not specified and the ``compute/zone`` property isn't set, you might be prompted to select a zone (interactive mode only). 
+
+To avoid prompting when this flag is omitted, you can set the ``compute/zone`` property: 
+    
+    
+    [gcloud config set](https://docs.cloud.google.com/sdk/gcloud/reference/config/set) compute/zone ZONE
+
+A list of zones can be fetched by running: 
+    
+    
+    [gcloud compute zones list](https://docs.cloud.google.com/sdk/gcloud/reference/compute/zones/list)
+
+To unset the property, run: 
+    
+    
+    [gcloud config unset](https://docs.cloud.google.com/sdk/gcloud/reference/config/unset) compute/zone
+
+Alternatively, the zone can be stored in the environment variable ``CLOUDSDK_COMPUTE_ZONE``. 
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in DEVELOPER PREVIEW and may change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. These variants are also available: 
+    
+    
+    [gcloud compute network-endpoint-groups create](https://docs.cloud.google.com/sdk/gcloud/reference/compute/network-endpoint-groups/create)
+    
+    
+    [gcloud alpha compute network-endpoint-groups create](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/network-endpoint-groups/create)
+    
+    
+    [gcloud beta compute network-endpoint-groups create](https://docs.cloud.google.com/sdk/gcloud/reference/beta/compute/network-endpoint-groups/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

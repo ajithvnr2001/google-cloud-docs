@@ -1,0 +1,133 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/app/deploy/
+title: gcloud beta app deploy \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T09:13:55.458184+00:00
+---
+
+# gcloud beta app deploy  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/app/deploy/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta app deploy Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta app deploy - deploy the local code and/or configuration of your app to App Engine 
+SYNOPSIS
+    
+
+`gcloud beta app deploy` [`DEPLOYABLES` …] [`--appyaml`=`APPYAML`] [`--bucket`=`BUCKET`] [`--no-cache`] [`--ignore-file`=`IGNORE_FILE`] [`--image-url`=`IMAGE_URL`] [`--no-promote`] [`--service-account`=`SERVICE_ACCOUNT`] [`--no-stop-previous-version`] [`--version`=`VERSION`, `-v` `VERSION`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` This command is used to deploy both code and configuration to the App Engine server. As an input it takes one or more DEPLOYABLES that should be uploaded. A DEPLOYABLE can be a service's .yaml file or a configuration's .yaml file (for more information about configuration files specific to your App Engine environment, refer to <https://cloud.google.com/appengine/docs/standard/configuration-files> or https://cloud.google.com/appengine/docs/flexible/configuration-files). Note, for Java 8 Standard apps or Java 11/17/21 Standard apps using bundled services, you must add the path to the appengine-web.xml file inside the WEB-INF directory. gcloud app deploy skips files specified in the .gcloudignore file (see gcloud topic gcloudignore for more information). For Java 11 Standard, you can either use the yaml file, a Maven pom.xml, or a Gradle build.gradle. Alternatively, if the application is a single self-contained jar, you can give the path to the jar and a simple service configuration will be generated. You can deploy Java 11 Maven source projects by specifying the location of your project's pom.xml file, and it will be built and deployed using App Engine Buildpacks. 
+EXAMPLES
+     To deploy a single service, run: 
+    
+    
+    gcloud beta app deploy ~/my_app/app.yaml
+
+To deploy an App Engine Standard Java8 service or a Java11 service using bundled services, run: 
+    
+    
+    gcloud beta app deploy ~/my_app/WEB-INF/appengine-web.xml
+
+To deploy an App Engine Standard Java11 single jar, run: 
+    
+    
+    gcloud beta app deploy ~/my_app/my_jar.jar
+
+To deploy an App Engine Standard Java11 Maven source project, run: 
+    
+    
+    gcloud beta app deploy ~/my_app/pom.xml
+
+To deploy an App Engine Standard Java11 Gradle source project, run: 
+    
+    
+    gcloud beta app deploy ~/my_app/build.gradle
+
+By default, the service is deployed to the current project configured via: 
+    
+    
+    [gcloud config set](https://docs.cloud.google.com/sdk/gcloud/reference/config/set) core/project PROJECT
+
+To override this value for a single deployment, use the ``\--project`` flag: 
+    
+    
+    gcloud beta app deploy ~/my_app/app.yaml --project=PROJECT
+
+To deploy multiple services, run: 
+    
+    
+    gcloud beta app deploy ~/my_app/app.yaml ~/my_app/another_service.yaml
+
+To change the default --promote behavior for your current environment, run: 
+    
+    
+    [gcloud config set](https://docs.cloud.google.com/sdk/gcloud/reference/config/set) app/promote_by_default false
+
+To deploy a service that will run as a service account, run: 
+    
+    
+    gcloud beta app deploy ~/my_app/app.yaml --service-account=SERVICE_ACCOUNT
+
+POSITIONAL ARGUMENTS
+    
+
+[`DEPLOYABLES` …]
+     The yaml files for the services or configurations you want to deploy. If not given, defaults to `app.yaml` in the current directory. If that is not found, attempts to automatically generate necessary configuration files (such as app.yaml) in the current directory. 
+FLAGS
+    
+
+`--appyaml`=`APPYAML`
+     Deploy with a specific app.yaml that will replace the one defined in the DEPLOYABLE. 
+`--bucket`=`BUCKET`
+     The Google Cloud Storage bucket used to stage files associated with the deployment. If this argument is not specified, the application's default code bucket is used. 
+`--cache`
+     Enable caching mechanisms involved in the deployment process, particularly in the build step. Enabled by default, use `--no-cache` to disable. 
+`--ignore-file`=`IGNORE_FILE`
+     Override the .gcloudignore file and use the specified file instead. 
+`--image-url`=`IMAGE_URL`
+     (App Engine flexible environment only.) Deploy with a specific Docker image. Docker url must be from one of the valid Artifact Registry hostnames. 
+`--promote`
+     Promote the deployed version to receive all traffic. Overrides the default `app/promote_by_default` property value for this command invocation. Use `--no-promote` to disable. 
+`--service-account`=`SERVICE_ACCOUNT`
+     The service account that this deployed version will run as. If this argument is not specified, the App Engine default service account will be used for your current deployed version. 
+`--stop-previous-version`
+     Stop the previously running version when deploying a new version that receives all traffic. 
+
+Note that if the version is running on an instance of an auto-scaled service in the App Engine Standard environment, using `--stop-previous-version` will not work and the previous version will continue to run because auto-scaled service instances are always running. 
+
+Overrides the default `app/stop_previous_version` property value for this command invocation. Use `--no-stop-previous-version` to disable. 
+
+`--version`=`VERSION`, `-v` `VERSION`
+     The version of the app that will be created or replaced by this deployment. If you do not specify a version, one will be generated for you. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in beta and might change without notice. This variant is also available: 
+    
+    
+    [gcloud app deploy](https://docs.cloud.google.com/sdk/gcloud/reference/app/deploy)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

@@ -1,0 +1,121 @@
+---
+url: https://docs.cloud.google.com/bigquery/docs/dts-introduction/
+title: Introduction to the BigQuery Data Transfer Service \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T03:37:08.191660+00:00
+---
+
+# Introduction to the BigQuery Data Transfer Service  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/bigquery/docs/dts-introduction/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Data analytics ](https://docs.cloud.google.com/docs/data)
+  * [ BigQuery ](https://docs.cloud.google.com/bigquery/docs)
+  * [ Guides ](https://docs.cloud.google.com/bigquery/docs/introduction)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Introduction to the BigQuery Data Transfer Service
+
+The BigQuery Data Transfer Service lets you automate scheduled, managed data transfers into [BigQuery](https://docs.cloud.google.com/bigquery/docs/introduction). After you configure a data transfer, the BigQuery Data Transfer Service automatically loads data into BigQuery on a regular basis. You can also initiate data backfills to recover from outages or gaps, perform [dataset copies](https://docs.cloud.google.com/bigquery/docs/copying-datasets), and run [scheduled queries](https://docs.cloud.google.com/bigquery/docs/scheduling-queries). You can't use BigQuery Data Transfer Service to transfer data out of BigQuery.
+
+To configure and manage transfers, you can use the [Google Cloud console](https://docs.cloud.google.com/bigquery/docs/bigquery-web-ui), the [bq command-line tool](https://docs.cloud.google.com/bigquery/docs/reference/bq-cli-reference), or the [BigQuery Data Transfer Service API](https://docs.cloud.google.com/bigquery/docs/reference/datatransfer/rest). The **Pipelines & Connections** page also provides a [streamlined workflow](https://docs.cloud.google.com/bigquery/docs/pipeline-connection-page) ([preview](https://cloud.google.com/products/#product-launch-stages)) for creating transfers. To receive service updates, subscribe to the [BigQuery DTS announcements group](https://groups.google.com/g/bigquery-dts-announcements).
+
+## Supported data sources
+
+The BigQuery Data Transfer Service supports loading data from the following data sources:
+
+  * SaaS platforms:
+    * [Salesforce](https://docs.cloud.google.com/bigquery/docs/salesforce-transfer)
+    * [Salesforce Marketing Cloud](https://docs.cloud.google.com/bigquery/docs/sfmc-transfer)
+    * [ServiceNow](https://docs.cloud.google.com/bigquery/docs/servicenow-transfer)
+  * Marketing platforms:
+    * [Facebook Ads](https://docs.cloud.google.com/bigquery/docs/facebook-ads-transfer-intro)
+    * [HubSpot](https://docs.cloud.google.com/bigquery/docs/hubspot-transfer) ([Preview](https://cloud.google.com/products/#product-launch-stages))
+    * [Klaviyo](https://docs.cloud.google.com/bigquery/docs/klaviyo-transfer-intro) ([Preview](https://cloud.google.com/products/#product-launch-stages))
+    * [Mailchimp](https://docs.cloud.google.com/bigquery/docs/mailchimp-transfer) ([Preview](https://cloud.google.com/products/#product-launch-stages))
+  * Payment platforms:
+    * [PayPal](https://docs.cloud.google.com/bigquery/docs/paypal-transfer) ([Preview](https://cloud.google.com/products/#product-launch-stages))
+    * [Stripe](https://docs.cloud.google.com/bigquery/docs/stripe-transfer) ([Preview](https://cloud.google.com/products/#product-launch-stages))
+    * [Shopify](https://docs.cloud.google.com/bigquery/docs/shopify-transfer) ([Preview](https://cloud.google.com/products/#product-launch-stages))
+  * Databases and data warehouses:
+    * [Amazon Redshift](https://docs.cloud.google.com/bigquery/docs/migration/redshift)
+    * [Apache Hive Metastore](https://docs.cloud.google.com/bigquery/docs/hdfs-data-lake-transfer)
+    * [Microsoft SQL Server](https://docs.cloud.google.com/bigquery/docs/sqlserver-transfer) ([Preview](https://cloud.google.com/products/#product-launch-stages))
+    * [MySQL](https://docs.cloud.google.com/bigquery/docs/mysql-transfer)
+    * [Oracle](https://docs.cloud.google.com/bigquery/docs/oracle-transfer)
+    * [PostgreSQL](https://docs.cloud.google.com/bigquery/docs/postgresql-transfer)
+    * [Snowflake](https://docs.cloud.google.com/bigquery/docs/migration/snowflake-transfer)
+    * [Teradata](https://docs.cloud.google.com/bigquery/docs/migration/teradata)
+  * Cloud storage:
+    * [Cloud Storage](https://docs.cloud.google.com/bigquery/docs/cloud-storage-transfer)
+    * [Amazon Simple Storage Service (Amazon S3)](https://docs.cloud.google.com/bigquery/docs/s3-transfer)
+    * [Azure Blob Storage](https://docs.cloud.google.com/bigquery/docs/blob-storage-transfer)
+  * Google Services:
+    * [Campaign Manager](https://docs.cloud.google.com/bigquery/docs/doubleclick-campaign-transfer)
+    * [Comparison Shopping Service (CSS) Center](https://docs.cloud.google.com/bigquery/docs/css-center-transfer-schedule-transfers) ([Preview](https://cloud.google.com/products/#product-launch-stages))
+    * [Display & Video 360](https://docs.cloud.google.com/bigquery/docs/display-video-transfer)
+    * [Google Ads](https://docs.cloud.google.com/bigquery/docs/google-ads-transfer)
+    * [Google Ad Manager](https://docs.cloud.google.com/bigquery/docs/doubleclick-publisher-transfer)
+    * [Google Analytics 4](https://docs.cloud.google.com/bigquery/docs/google-analytics-4-transfer)
+    * [Google Merchant Center](https://docs.cloud.google.com/bigquery/docs/merchant-center-transfer) ([Preview](https://cloud.google.com/products/#product-launch-stages))
+    * [Search Ads 360](https://docs.cloud.google.com/bigquery/docs/search-ads-transfer)
+    * [Google Play](https://docs.cloud.google.com/bigquery/docs/play-transfer)
+    * [YouTube Channel](https://docs.cloud.google.com/bigquery/docs/youtube-channel-transfer)
+    * [YouTube Content Owner](https://docs.cloud.google.com/bigquery/docs/youtube-content-owner-transfer)
+
+### Data delivery SLO considerations
+
+The [Data Delivery SLO](https://cloud.google.com/bigquery/sla?e=48754805) applies to automatically scheduled data transfers using the BigQuery Data Transfer Service from sources within Google Cloud.
+
+For data transfers involving third-party or non-Google Cloud sources, service outages with these sources can impact performance with the BigQuery Data Transfer Service. As such, the Data Delivery SLO does not apply to BigQuery Data Transfer Service data transfers from non-Google Cloud sources.
+
+## Supported regions
+
+Like BigQuery, the BigQuery Data Transfer Service is a [multi-regional resource](https://docs.cloud.google.com/docs/geography-and-regions#regional_resources), with many additional single regions available.
+
+A BigQuery dataset's locality is specified when you [create a destination dataset](https://docs.cloud.google.com/bigquery/docs/datasets) to store the data transferred by the BigQuery Data Transfer Service. When you set up a transfer, the transfer configuration itself is set to the same location as the destination dataset. The BigQuery Data Transfer Service processes and stages data in the same location as the destination dataset.
+
+The BigQuery Data Transfer Service supports data transfers from any region where your data is stored to any location where your destination dataset is located.
+
+For detailed information about transfers and region compatibility for BigQuery Data Transfer Service, see [Dataset locations and transfers](https://docs.cloud.google.com/bigquery/docs/dts-locations). For supported regions for BigQuery, see [Dataset locations](https://docs.cloud.google.com/bigquery/docs/locations#supported_locations).
+
+## Using reservation slots with data transfers
+
+Jobs triggered by the BigQuery Data Transfer Service only use reservation slots if the project, folder, or organization is assigned to a reservation with any of the following [job types](https://docs.cloud.google.com/bigquery/docs/reservations-workload-management#assignments):
+
+    * Query jobs using `QUERY`
+    * Load jobs using `PIPELINE`
+Jobs that [copy datasets](https://docs.cloud.google.com/bigquery/docs/managing-datasets#copy-datasets) don't use reservation slots. 
+
+## Pricing
+
+For information on BigQuery Data Transfer Service pricing, see the [Pricing](https://cloud.google.com/bigquery/pricing) page.
+
+Once data is transferred to BigQuery, standard BigQuery [storage](https://cloud.google.com/bigquery/pricing#storage) and [query](https://cloud.google.com/bigquery/pricing#queries) pricing applies.
+
+## Quotas
+
+For information on BigQuery Data Transfer Service quotas, see the [Quotas and limits](https://docs.cloud.google.com/bigquery/quotas) page.
+
+## Troubleshoot transfer configurations
+
+For information about resolving issues with BigQuery Data Transfer Service, see [Troubleshoot transfer configurations](https://docs.cloud.google.com/bigquery/docs/transfer-troubleshooting).
+
+## What's next
+
+    * To learn how to create a transfer, see the documentation for your data source.
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

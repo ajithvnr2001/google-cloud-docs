@@ -1,0 +1,144 @@
+---
+url: https://docs.cloud.google.com/spanner/docs/ml/
+title: Spanner Agent Platform integration overview \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T04:49:41.361023+00:00
+---
+
+# Spanner Agent Platform integration overview  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/docs/ml/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Guides ](https://docs.cloud.google.com/spanner/docs/create-query-database-console)
+
+
+
+Send feedback 
+
+#  Spanner Agent Platform integration overview Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page provides an overview of Spanner Agent Platform integration. Spanner Agent Platform integration works with both GoogleSQL and PostgreSQL databases.
+
+Spanner Agent Platform integration helps you to access classifier and regression ML models hosted on [Gemini Enterprise Agent Platform](https://docs.cloud.google.com/products/gemini-enterprise-agent-platform) through the GoogleSQL and PostgreSQL interface. This helps to seamlessly integrate ML predictions serving functionality with general Spanner data access operations performed using DQL/DML queries.
+
+## Benefits of Spanner Agent Platform integration
+
+Generating ML predictions using Spanner Agent Platform integration provides multiple benefits compared to the approach where Spanner data access and access to the Agent Platform prediction endpoint are performed separately:
+
+  * Performance: 
+    * Better latency: Spanner Agent Platform integration talking to the Agent Platform service directly eliminates additional round-trips between a compute node running a Spanner client and the Agent Platform service.
+    * Better throughput/parallelism: Spanner Agent Platform integration runs on top of Spanner's distributed query processing infrastructure, which supports highly parallelizable query execution.
+  * User experience: 
+    * Ability to use a single, simple, coherent, and familiar SQL interface to facilitate both data transformation and ML serving scenarios on Spanner level of scale lowers the ML entry barrier and allows for a much smoother user experience.
+  * Costs: 
+    * Spanner Agent Platform integration uses Spanner [compute capacity](https://docs.cloud.google.com/spanner/docs/compute-capacity) to merge the results of ML computations and SQL query execution, which eliminates the need to provision an additional compute (for example, in Compute Engine or Google Kubernetes Engine) for that.
+
+
+
+## How does Spanner Agent Platform integration work?
+
+Spanner Agent Platform integration doesn't host ML models, but relies on the Agent Platform service infrastructure instead. You don't need to train a model using Agent Platform to use it with Spanner Agent Platform integration, but you must deploy it to an Agent Platform endpoint.
+
+To train models on data stored in Spanner, you can use the following:
+
+  * [BigQuery Federated queries](https://docs.cloud.google.com/bigquery/docs/spanner-federated-queries) together with [BigQuery ML](https://docs.cloud.google.com/bigquery/docs/bqml-introduction).
+
+  * [Dataflow](https://docs.cloud.google.com/dataflow) to export data from Spanner into CSV format and import the [CSV data source](https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview#csv) into Agent Platform.
+
+
+
+
+Spanner Agent Platform integration extends the following functions for using ML models:
+
+  * **Generate ML predictions** by calling a model using SQL on your Spanner data. You can use a model from [Model Garden](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-garden/explore-models) or a model deployed to your [Agent Platform endpoint](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/deployment).
+
+  * **Generate text embeddings** to have an LLM translate text prompts into numbers. To learn more about embeddings, see [Get text embeddings](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/embeddings/get-text-embeddings).
+
+
+
+
+## Using Spanner Agent Platform integration functions
+
+A model in Spanner Agent Platform integration can be used to generate predictions or text embeddings in your SQL code using the ML Predict functions. These functions are as follows:
+
+### GoogleSQL
+
+You can use the following ML predict function for GoogleSQL:
+
+[`ML.PREDICT`](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/ml-functions#mlpredict)
+
+You need to register your model using the [`CREATE MODEL`](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/data-definition-language#create_model) DDL statement before using it with the `ML.PREDICT` function.
+
+You can also use `SAFE.ML.PREDICT` to return `null` instead of an error in your predictions. This is helpful in cases when running large queries where some failed predictions are tolerable.
+
+### PostgreSQL
+
+You can use the following ML predict function for PostgreSQL:
+
+[`spanner.ML_PREDICT_ROW`](https://docs.cloud.google.com/spanner/docs/reference/postgresql/functions-and-operators#ml)
+
+To use the functions, you can select a model from [Model Garden](https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview) or use a model that you've deployed to Agent Platform.
+
+For more information on how to deploy a model to an endpoint in Agent Platform, see [Deploy a model to an endpoint](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/deployment).
+
+For more information on how to use these functions to generate an ML prediction, see [Generate ML predictions using SQL](https://docs.cloud.google.com/spanner/docs/ml-tutorial).
+
+For more information on how to use these functions to generate text embeddings, see [Get text embeddings](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/embeddings/get-text-embeddings).
+
+## Pricing
+
+There are no additional charges from Spanner when you use it with Spanner Agent Platform integration. However, there are other potential charges associated with this feature:
+
+  * You pay the [standard rates](https://docs.cloud.google.com/products/gemini-enterprise-agent-platform/pricing) for Agent Platform online prediction. The total charge depends on the model type you use. Some model types have a flat per hour rate, depending on the machine type and number of nodes that you use. Some model types have per call rates. We recommend you deploy the latter in a dedicated project where you have set explicit prediction quotas.
+
+  * You pay the [standard rates](https://docs.cloud.google.com/spanner/pricing#network) for data transfer between Spanner and Agent Platform. The total charge depends on the region hosting the server that executes the query and the region hosting the called endpoint. To minimize charges, deploy your Agent Platform endpoints in the same region as your Spanner instance. When using multi-regional instance configurations or multiple Agent Platform endpoints, deploy your endpoints on the same continent.
+
+
+
+
+## SLA
+
+Due to [Agent Platform online prediction availability](https://docs.cloud.google.com/vertex-ai/sla) being lower, you must properly configure Spanner ML models to maintain [Spanner's high availability](https://docs.cloud.google.com/spanner/sla) while using Spanner Agent Platform integration:
+
+  1. Spanner ML models must use multiple Agent Platform endpoints on the backend to enable failover.
+  2. Agent Platform endpoints must conform to the [Agent Platform SLA](https://docs.cloud.google.com/vertex-ai/sla).
+  3. Agent Platform endpoints must provision enough capacity to handle incoming traffic.
+  4. Agent Platform endpoints must use separate regions close to the Spanner database to avoid regional outages.
+  5. Agent Platform endpoints should use separate projects to avoid issues with per-project prediction quotas.
+
+
+
+The number of redundant Agent Platform endpoints depends on their SLA, and the number of rows in Spanner queries:
+
+Spanner SLA | Agent Platform SLA | 1 row | 10 rows | 100 rows | 1000 rows  
+---|---|---|---|---|---  
+99.99% | 99.9% | 2 | 2 | 2 | 3  
+99.99% | 99.5% | 2 | 3 | 3 | 4  
+99.999% | 99.9% | 2 | 2 | 3 | 3  
+99.999% | 99.5% | 3 | 3 | 4 | 4  
+  
+Agent Platform endpoints don't need to host exactly the same model. We recommend that you configure the Spanner ML model to have a primary, complex and compute intensive model as its first endpoint. Subsequent failover endpoints can point to simplified models that are less compute intensive, scale better and can absorb traffic spikes.
+
+## Limitations
+
+  * Model input and output must be a JSON object.
+
+
+
+## Compliance
+
+[Assured Workloads](https://docs.cloud.google.com/assured-workloads/docs/overview) don't support the Agent Platform Prediction API. Enabling a [restrict resource usage constraint](https://docs.cloud.google.com/assured-workloads/docs/restrict-resource-usage) disables the Agent Platform API and effectively the Spanner Agent Platform integration feature.
+
+Additionally, we recommend that you create a [VPC Service Controls perimeter](https://docs.cloud.google.com/assured-workloads/docs/configure-vpc-sc) to ensure your production databases cannot connect to Agent Platform endpoints in your non-production projects that might not have the proper compliance configuration.
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

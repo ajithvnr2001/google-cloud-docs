@@ -1,0 +1,308 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/notebooks/instances/create/
+title: gcloud beta notebooks instances create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T05:42:08.519881+00:00
+---
+
+# gcloud beta notebooks instances create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/notebooks/instances/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta notebooks instances create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta notebooks instances create - request for creating an instance 
+SYNOPSIS
+    
+
+`gcloud beta notebooks instances create` (`INSTANCE` : `--location`=`LOCATION`) [`--async`] [`--instance-owners`=`INSTANCE_OWNERS`] [`--labels`=[`KEY`=`VALUE`,…]] [`--machine-type`=`MACHINE_TYPE`; default="n1-standard-1"] [`--metadata`=[`KEY`=`VALUE`,…]] [`--post-startup-script`=`POST_STARTUP_SCRIPT`] [`--service-account`=`SERVICE_ACCOUNT`] [`--no-shielded-integrity-monitoring`] [`--shielded-secure-boot`] [`--no-shielded-vtpm`] [`--tags`=[`TAGS`,…]] [`--accelerator-core-count`=`ACCELERATOR_CORE_COUNT` `--accelerator-type`=`ACCELERATOR_TYPE`] [`--boot-disk-size`=`BOOT_DISK_SIZE` `--boot-disk-type`=`BOOT_DISK_TYPE`] [[`--container-repository`=`CONTAINER_REPOSITORY` : `--container-tag`=`CONTAINER_TAG`] | [`--environment`=`ENVIRONMENT` : `--environment-location`=`ENVIRONMENT_LOCATION`] | `--vm-image-project`=`VM_IMAGE_PROJECT`; default="deeplearning-platform-release" `--vm-image-family`=`VM_IMAGE_FAMILY`; default="common-cpu" | `--vm-image-name`=`VM_IMAGE_NAME`] [`--custom-gpu-driver-path`=`CUSTOM_GPU_DRIVER_PATH` `--install-gpu-driver`] [`--data-disk-size`=`DATA_DISK_SIZE` `--data-disk-type`=`DATA_DISK_TYPE` `--no-remove-data-disk`] [`--disk-encryption`=`DISK_ENCRYPTION` [`--kms-key`=`KMS_KEY` : `--kms-keyring`=`KMS_KEYRING` `--kms-location`=`KMS_LOCATION` `--kms-project`=`KMS_PROJECT`]] [`--network`=`NETWORK` `--no-proxy-access` `--no-public-ip` [`--subnet`=`SUBNET` : `--subnet-region`=`SUBNET_REGION`]] [`--reservation`=`RESERVATION` `--reservation-affinity`=`RESERVATION_AFFINITY`; default=`"TYPE_UNSPECIFIED"`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` `(DEPRECATED)` This command is deprecated. Please use `[gcloud notebooks](https://docs.cloud.google.com/sdk/gcloud/reference/notebooks)` instead. Request for creating notebook instances. 
+EXAMPLES
+     To create an instance from an environment, run: 
+    
+    
+    gcloud beta notebooks instances create example-instance --environment=example-env --environment-location=us-central1-a --machine-type=n1-standard-4 --location=us-central1-b
+
+To create an instance from a VmImage family, run: 
+    
+    
+    gcloud beta notebooks instances create example-instance --vm-image-project=deeplearning-platform-release --vm-image-family=caffe1-latest-cpu-experimental --machine-type=n1-standard-4 --location=us-central1-b
+
+To create an instance from a VmImage name, run: 
+    
+    
+    gcloud beta notebooks instances create example-instance --vm-image-project=deeplearning-platform-release --vm-image-name=tf2-2-1-cu101-notebooks-20200110 --machine-type=n1-standard-4 --location=us-central1-b
+
+To create an instance from a Container Repository, run: 
+    
+    
+    gcloud beta notebooks instances create example-instance --container-repository=gcr.io/deeplearning-platform-release/base-cpu --container-tag=test-tag --machine-type=n1-standard-4 --location=us-central1-b
+
+POSITIONAL ARGUMENTS
+    
+
+Instance resource - User-defined unique name of this instance. The instance name must be 1 to 63 characters long and contain only lowercase letters, numeric characters, and dashes. The first character must be a lowercase letter and the last character cannot be a dash. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `instance` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`INSTANCE`
+     ID of the instance or fully qualified identifier for the instance. 
+
+To set the `instance` attribute: 
+
+  * provide the argument `instance` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     Google Cloud location of this environment <https://cloud.google.com/compute/docs/regions-zones/#locations>. 
+
+To set the `location` attribute: 
+
+  * provide the argument `instance` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `notebooks/location`. 
+
+
+FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--instance-owners`=`INSTANCE_OWNERS`
+     The owners of this instance after creation. Format:`alias@example.com`. Currently supports one owner only.If not specified, all of the service account users of the VM instance's service account can use the instance. 
+`--labels`=[`KEY`=`VALUE`,…]
+     Labels to apply to this instance. These can be later modified by the setLabels method. 
+`--machine-type`=`MACHINE_TYPE`; default="n1-standard-1"
+     The [Compute Engine machine type](https://cloud.google.com/sdk/gcloud/reference/compute/machine-types) of this instance. 
+`--metadata`=[`KEY`=`VALUE`,…]
+     Custom metadata to apply to this instance. 
+
+For example, to specify a Cloud Storage bucket for automatic backup, you can use the `gcs-data-bucket` metadata tag. Format: `"--metadata=gcs-data-bucket=``BUCKET``"`. 
+
+`--post-startup-script`=`POST_STARTUP_SCRIPT`
+     Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (gs://`path-to-file`/`file-name`). 
+`--service-account`=`SERVICE_ACCOUNT`
+     The service account on this instance, giving access to other Google Cloud services. You can use any service account within the same project, but you must have the service account user permission to use the instance. If not specified, the [Compute Engine default service account](https://docs.cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used. 
+`--shielded-integrity-monitoring`
+     Enable monitoring of the boot integrity of the instance. Enabled by default, use `--no-shielded-integrity-monitoring` to disable. 
+`--shielded-secure-boot`
+     Boot instance with secure boot enabled. Disabled by default. 
+`--shielded-vtpm`
+     Boot instance with TPM (Trusted Platform Module) enabled. Enabled by default, use `--no-shielded-vtpm` to disable. 
+`--tags`=[`TAGS`,…]
+     Tags to apply to this instance. 
+The hardware accelerator used on this instance. If you use accelerators, make sure that your configuration has [enough vCPUs and memory to support the `machine_type` you have selected](https://docs.cloud.google.com/compute/docs/gpus#gpus-list). 
+`--accelerator-core-count`=`ACCELERATOR_CORE_COUNT`
+     Count of cores of this accelerator. 
+`--accelerator-type`=`ACCELERATOR_TYPE`
+     Type of this accelerator. `ACCELERATOR_TYPE` must be one of: `NVIDIA_TESLA_A100`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `TPU_V2`, `TPU_V3`, `NVIDIA_L4`, `NVIDIA_H100_80GB`, `NVIDIA_H100_MEGA_80GB`. 
+Boot disk configurations. 
+`--boot-disk-size`=`BOOT_DISK_SIZE`
+     Size of boot disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB. If not specified, this defaults to 100. 
+`--boot-disk-type`=`BOOT_DISK_TYPE`
+     Type of boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`). `BOOT_DISK_TYPE` must be one of: `PD_STANDARD`, `PD_SSD`, `PD_BALANCED`, `PD_EXTREME`. 
+At most one of these can be specified: 
+
+`--container-repository`=`CONTAINER_REPOSITORY`
+     The path to the container image repository. For example: gcr.io/`{project_id}`/`{image_name}`. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--container-tag`=`CONTAINER_TAG`
+     The tag of the container image. If not specified, this defaults to the latest tag. 
+Environment resource - User-defined unique name of this environment. The environment name must be 1 to 63 characters long and contain only lowercase letters, numeric characters, and dashes. The first character must be a lowercase letter and the last character cannot be a dash. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--environment` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+`--environment`=`ENVIRONMENT`
+     ID of the environment or fully qualified identifier for the environment. 
+
+To set the `environment` attribute: 
+
+  * provide the argument `--environment` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--environment-location`=`ENVIRONMENT_LOCATION`
+     Google Cloud location of this environment <https://cloud.google.com/compute/docs/regions-zones/#locations>. 
+
+To set the `environment-location` attribute: 
+
+  * provide the argument `--environment` on the command line with a fully specified name; 
+  * provide the argument `--environment-location` on the command line; 
+  * provide the argument `--location` on the command line; 
+  * set the property `notebooks/location`. 
+
+
+`--vm-image-project`=`VM_IMAGE_PROJECT`; default="deeplearning-platform-release"
+     The ID of the Google Cloud project that this VM image belongs to. Format: projects/`{project_id}`. 
+At most one of these can be specified: 
+
+`--vm-image-family`=`VM_IMAGE_FAMILY`; default="common-cpu"
+     Use this VM image family to find the image; the newest image in this family will be used. 
+`--vm-image-name`=`VM_IMAGE_NAME`
+     Use this VM image name to find the image. 
+GPU driver configurations. 
+`--custom-gpu-driver-path`=`CUSTOM_GPU_DRIVER_PATH`
+     Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers. 
+`--install-gpu-driver`
+     Whether the end user authorizes Google Cloud to install a GPU driver on this instance. If this field is empty or set to false, the GPU driver won't be installed. Only applicable to instances with GPUs. 
+Data disk configurations. 
+`--data-disk-size`=`DATA_DISK_SIZE`
+     Size of data disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB. If not specified, this defaults to 100. 
+`--data-disk-type`=`DATA_DISK_TYPE`
+     Type of data disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`). `DATA_DISK_TYPE` must be one of: `PD_STANDARD`, `PD_SSD`, `PD_BALANCED`, `PD_EXTREME`. 
+`--no-remove-data-disk`
+     If true, the data disk will not be auto deleted when deleting the instance. 
+Disk encryption configurations. 
+`--disk-encryption`=`DISK_ENCRYPTION`
+     Disk encryption method used on the boot disk, defaults to GMEK. `DISK_ENCRYPTION` must be one of: `GMEK`, `CMEK`. 
+Key resource - The Cloud KMS (Key Management Service) cryptokey that will be used to protect the instance. The 'Compute Engine Service Agent' service account must hold permission 'Cloud KMS CryptoKey Encrypter/Decrypter'. The arguments in this group can be used to specify the attributes of this resource. 
+`--kms-key`=`KMS_KEY`
+     ID of the key or fully qualified identifier for the key. 
+
+To set the `kms-key` attribute: 
+
+  * provide the argument `--kms-key` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--kms-keyring`=`KMS_KEYRING`
+     The KMS keyring of the key. 
+
+To set the `kms-keyring` attribute: 
+
+  * provide the argument `--kms-key` on the command line with a fully specified name; 
+  * provide the argument `--kms-keyring` on the command line. 
+
+
+`--kms-location`=`KMS_LOCATION`
+     The Google Cloud location for the key. 
+
+To set the `kms-location` attribute: 
+
+  * provide the argument `--kms-key` on the command line with a fully specified name; 
+  * provide the argument `--kms-location` on the command line. 
+
+
+`--kms-project`=`KMS_PROJECT`
+     The Google Cloud project for the key. 
+
+To set the `kms-project` attribute: 
+
+  * provide the argument `--kms-key` on the command line with a fully specified name; 
+  * provide the argument `--kms-project` on the command line; 
+  * set the property `core/project`. 
+
+
+Network configs. 
+Network resource - The name of the VPC that this instance is in. Format: projects/`{project_id}`/global/networks/`{network_id}`. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--network` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+`--network`=`NETWORK`
+     ID of the network or fully qualified identifier for the network. 
+
+To set the `network` attribute: 
+
+  * provide the argument `--network` on the command line. 
+
+
+`--no-proxy-access`
+     If true, the notebook instance will not register with the proxy. 
+`--no-public-ip`
+     If specified, no public IP will be assigned to this instance. 
+Subnetwork resource - The name of the subnet that this instance is in. Format: projects/`{project_id}`/regions/`{region}`/subnetworks/`{subnetwork_id}`. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--subnet` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+`--subnet`=`SUBNET`
+     ID of the subnetwork or fully qualified identifier for the subnetwork. 
+
+To set the `subnet` attribute: 
+
+  * provide the argument `--subnet` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--subnet-region`=`SUBNET_REGION`
+     Google Cloud region of this subnetwork <https://cloud.google.com/compute/docs/regions-zones/#locations>. 
+
+To set the `subnet-region` attribute: 
+
+  * provide the argument `--subnet` on the command line with a fully specified name; 
+  * provide the argument `--subnet-region` on the command line. 
+
+
+Specifies the reservation for the instance. 
+`--reservation`=`RESERVATION`
+     The name of the reservation, required when `--reservation-affinity=SPECIFIC_RESERVATION`. 
+`--reservation-affinity`=`RESERVATION_AFFINITY`; default=`"TYPE_UNSPECIFIED"`
+     The type of reservation for the instance. `RESERVATION_AFFINITY` must be one of: `TYPE_UNSPECIFIED`, `NO_RESERVATION`, `ANY_RESERVATION`, `SPECIFIC_RESERVATION`. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in beta and might change without notice. These variants are also available: 
+    
+    
+    [gcloud notebooks instances create](https://docs.cloud.google.com/sdk/gcloud/reference/notebooks/instances/create)
+    
+    
+    [gcloud alpha notebooks instances create](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/notebooks/instances/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

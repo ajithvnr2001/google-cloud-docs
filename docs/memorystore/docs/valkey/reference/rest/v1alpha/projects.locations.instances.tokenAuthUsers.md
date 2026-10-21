@@ -1,0 +1,88 @@
+---
+url: https://docs.cloud.google.com/memorystore/docs/valkey/reference/rest/v1alpha/projects.locations.instances.tokenAuthUsers
+title: REST Resource: projects.locations.instances.tokenAuthUsers \u00a0|\u00a0 Memorystore for Valkey \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T02:04:37.184192+00:00
+---
+
+# REST Resource: projects.locations.instances.tokenAuthUsers  |  Memorystore for Valkey  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/memorystore/docs/valkey/reference/rest/v1alpha/projects.locations.instances.tokenAuthUsers
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Memorystore ](https://docs.cloud.google.com/memorystore/docs)
+  * [ Memorystore for Valkey ](https://docs.cloud.google.com/memorystore/docs/valkey)
+  * [ Reference ](https://docs.cloud.google.com/memorystore/docs/valkey/apis)
+
+
+
+Send feedback 
+
+#  REST Resource: projects.locations.instances.tokenAuthUsers Stay organized with collections  Save and categorize content based on your preferences. 
+
+  * Resource: TokenAuthUser
+    * JSON representation
+  * State
+  * Methods
+
+
+
+## Resource: TokenAuthUser
+
+Token based auth user for the instance.
+
+JSON representation  
+---  
+      
+    
+    {
+      "name": string,
+      "state": enum ([State](https://docs.cloud.google.com/memorystore/docs/valkey/reference/rest/v1alpha/projects.locations.instances.tokenAuthUsers#State))
+    }  
+  
+Fields  
+---  
+`name` |  `string` Identifier. Token based auth user name.  
+`state` |  `enum (`[State](https://docs.cloud.google.com/memorystore/docs/valkey/reference/rest/v1alpha/projects.locations.instances.tokenAuthUsers#State)`)` Output only. The state of the token based auth user.  
+  
+## State
+
+Represents the different states of a token based auth user. New values may be added in the future.
+
+Enums  
+---  
+`STATE_UNSPECIFIED` | Not set.  
+`ACTIVE` | The auth user is active.  
+`CREATING` | The auth user is being created.  
+`UPDATING` | The auth user is being updated.  
+`DELETING` | The auth user is being deleted.  
+  
+## Methods  
+  
+---  
+  
+### `[addAuthToken](https://docs.cloud.google.com/memorystore/docs/valkey/reference/rest/v1alpha/projects.locations.instances.tokenAuthUsers/addAuthToken)`
+
+|  Adds a token for a user of a token based auth enabled instance.  
+  
+### `[delete](https://docs.cloud.google.com/memorystore/docs/valkey/reference/rest/v1alpha/projects.locations.instances.tokenAuthUsers/delete)`
+
+|  Deletes a token auth user for a token based auth enabled instance.  
+  
+### `[get](https://docs.cloud.google.com/memorystore/docs/valkey/reference/rest/v1alpha/projects.locations.instances.tokenAuthUsers/get)`
+
+|  Gets a specific token auth user for a token based auth enabled instance.  
+  
+### `[list](https://docs.cloud.google.com/memorystore/docs/valkey/reference/rest/v1alpha/projects.locations.instances.tokenAuthUsers/list)`
+
+|  Lists all the token auth users for a token based auth enabled instance.  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-09-28 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-09-28 UTC."],[],[]] 

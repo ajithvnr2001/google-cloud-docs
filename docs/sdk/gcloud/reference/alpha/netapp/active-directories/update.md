@@ -1,0 +1,160 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/netapp/active-directories/update/
+title: gcloud alpha netapp active-directories update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T12:32:53.121503+00:00
+---
+
+# gcloud alpha netapp active-directories update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/netapp/active-directories/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha netapp active-directories update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha netapp active-directories update - update a Cloud NetApp Active Directory 
+SYNOPSIS
+    
+
+`gcloud alpha netapp active-directories update` (`ACTIVE_DIRECTORY` : `--location`=`LOCATION`) `--dns`=`DNS` `--domain`=`DOMAIN` `--net-bios-prefix`=`NET_BIOS_PREFIX` `--password`=`PASSWORD` `--username`=`USERNAME` [`--administrators`=[`ADMINISTRATOR`,…]] [`--async`] [`--backup-operators`=[`BACKUP_OPERATOR`,…]] [`--description`=`DESCRIPTION`] [`--enable-aes`=`ENABLE_AES`] [`--enable-ldap-signing`=`ENABLE_LDAP_SIGNING`] [`--encrypt-dc-connections`=`ENCRYPT_DC_CONNECTIONS`] [`--kdc-hostname`=`KDC_HOSTNAME`] [`--kdc-ip`=`KDC_IP`] [`--nfs-users-with-ldap`=`NFS_USERS_WITH_LDAP`] [`--organizational-unit`=`ORGANIZATIONAL_UNIT`] [`--security-operators`=[`SECURITY_OPERATOR`,…]] [`--site`=`SITE`] [`--update-labels`=[`KEY`=`VALUE`,…]] [`--clear-labels` | `--remove-labels`=[`KEY`,…]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` Updates AD (Active Directory) configs for Cloud NetApp Volumes. 
+EXAMPLES
+     The following command updates an AD config in the given project and location with specified arguments: 
+    
+    
+    gcloud alpha netapp active-directories update AD_NAME --location=us-central1 --domain=new-domain.com --dns=1.1.1.1 --site=new_site --net-bios-prefix=new_prefix --organizational-unit=ou2 --enable-aes=true --username=user2 --password="secure2" --backup-operators=backup_op1,backup_op2 --security-operators=secure_op1,secure_op2 --administrators=admin_op1,admin_op2 --enable-ldap-signing=true --encrypt-dc-connections=yes --kdc-hostname=kdc-host1
+
+POSITIONAL ARGUMENTS
+    
+
+Active directory resource - The Active Directory to update. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `active_directory` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`ACTIVE_DIRECTORY`
+     ID of the active_directory or fully qualified identifier for the active_directory. 
+
+To set the `active_directory` attribute: 
+
+  * provide the argument `active_directory` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     The location of the active_directory. 
+
+To set the `location` attribute: 
+
+  * provide the argument `active_directory` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `netapp/location`. 
+
+
+REQUIRED FLAGS
+    
+
+`--dns`=`DNS`
+     A comma separated list of DNS server IP addresses for the Active Directory domain. 
+`--domain`=`DOMAIN`
+     The Active Directory domain. 
+`--net-bios-prefix`=`NET_BIOS_PREFIX`
+     NetBIOS prefix name of the server. 
+`--password`=`PASSWORD`
+     Password of the Active Directory domain administrator. 
+`--username`=`USERNAME`
+     Username of the Active Directory domain administrator. 
+OPTIONAL FLAGS
+    
+
+`--administrators`=[`ADMINISTRATOR`,…]
+     Members of the Active Directory built-in Administrators group. 
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--backup-operators`=[`BACKUP_OPERATOR`,…]
+     Users to be added to the Built-in Backup Operator Active Directory group. 
+`--description`=`DESCRIPTION`
+     A description of the Cloud NetApp Active Directory 
+`--enable-aes`=`ENABLE_AES`
+     The Boolean value indiciating whether AES encryption will be enabled for SMB communication. 
+`--enable-ldap-signing`=`ENABLE_LDAP_SIGNING`
+     Boolean flag that specifies whether or not LDAP traffic needs to be signed. 
+`--encrypt-dc-connections`=`ENCRYPT_DC_CONNECTIONS`
+     Boolean flag that specifies whether traffic between SMB server to Domain Controller (DC) will be encrypted. 
+`--kdc-hostname`=`KDC_HOSTNAME`
+     Name of the Active Directory machine. 
+`--kdc-ip`=`KDC_IP`
+     KDC server IP address for the Active Directory machine. 
+`--nfs-users-with-ldap`=`NFS_USERS_WITH_LDAP`
+     Boolean flag that allows access to local users and LDAP users. If access is needed only for LDAP users, it has to be disabled. 
+`--organizational-unit`=`ORGANIZATIONAL_UNIT`
+     The Organizational Unit (OU) within the Windows Active Directory the user belongs to. 
+`--security-operators`=[`SECURITY_OPERATOR`,…]
+     Domain users to be given the Security privilege. 
+`--site`=`SITE`
+     The Active Directory site the service will limit Domain Controller discovery to. 
+`--update-labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to update. If a label exists, its value is modified. Otherwise, a new label is created. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+At most one of these can be specified: 
+
+`--clear-labels`
+     Remove all labels. If `--update-labels` is also specified then `--clear-labels` is applied first. 
+
+For example, to remove all labels: 
+    
+    
+    gcloud alpha netapp active-directories update --clear-labels
+
+To remove all existing labels and create two new labels, ``foo`` and ``baz``: 
+    
+    
+    gcloud alpha netapp active-directories update --clear-labels --update-labels foo=bar,baz=qux
+
+`--remove-labels`=[`KEY`,…]
+     List of label keys to remove. If a label does not exist it is silently ignored. If `--update-labels` is also specified then `--update-labels` is applied first. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. These variants are also available: 
+    
+    
+    [gcloud netapp active-directories update](https://docs.cloud.google.com/sdk/gcloud/reference/netapp/active-directories/update)
+    
+    
+    [gcloud beta netapp active-directories update](https://docs.cloud.google.com/sdk/gcloud/reference/beta/netapp/active-directories/update)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

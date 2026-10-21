@@ -1,0 +1,193 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/container/backup-restore/restore-plans/update/
+title: gcloud beta container backup-restore restore-plans update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T20:38:16.712937+00:00
+---
+
+# gcloud beta container backup-restore restore-plans update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/container/backup-restore/restore-plans/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta container backup-restore restore-plans update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta container backup-restore restore-plans update - update a restore plan 
+SYNOPSIS
+    
+
+`gcloud beta container backup-restore restore-plans update` (`RESTORE_PLAN` : `--location`=`LOCATION`) [`--async`] [`--cluster-resource-conflict-policy`=`CLUSTER_RESOURCE_CONFLICT_POLICY`] [`--description`=`DESCRIPTION`] [`--etag`=`ETAG`] [`--namespaced-resource-restore-mode`=`NAMESPACED_RESOURCE_RESTORE_MODE`] [`--restore-order-file`=`RESTORE_ORDER_FILE`] [`--update-labels`=[`KEY`=`VALUE`,…]] [`--volume-data-restore-policy`=`VOLUME_DATA_RESTORE_POLICY`; default="no-volume-data-restoration"] [`--volume-data-restore-policy-bindings`=[`VOLUME_TYPE`=`POLICY`,…]] [`--all-namespaces` | `--excluded-namespaces`=[`EXCLUDED_NAMESPACES`,…] | `--no-namespaces` | `--selected-applications`=`SELECTED_APPLICATIONS` | `--selected-namespaces`=[`SELECTED_NAMESPACES`,…]] [`--clear-labels` | `--remove-labels`=[`KEY`,…]] [`--cluster-resource-scope-all-group-kinds` | `--cluster-resource-scope-excluded-group-kinds`=[`CLUSTER_RESOURCE_SCOPE_EXCLUDED_GROUP_KINDS`,…] | `--cluster-resource-scope-no-group-kinds` | `--cluster-resource-scope-selected-group-kinds`=[`CLUSTER_RESOURCE_SCOPE_SELECTED_GROUP_KINDS`,…]] [`--substitution-rules-file`=`SUBSTITUTION_RULES_FILE` | `--transformation-rules-file`=`TRANSFORMATION_RULES_FILE`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` Update a Backup for GKE restore plan. 
+EXAMPLES
+     To update a restore plan ``my-restore-plan`` in project ``my-project`` in location ``us-central1`` to add new description, run: 
+    
+    
+    gcloud beta container backup-restore restore-plans update my-restore-plan --project=my-project --location=us-central1 --description="New description"
+
+POSITIONAL ARGUMENTS
+    
+
+Restore plan resource - Name of the restore plan to update. The name may be provided either as a relative name, e.g. `projects/<project>/locations/<location>/restorePlans/<restorePlan>` or as a single ID name (with the parent resources provided via options or through properties), e.g. `RESTORE_PLAN --project=<project> --location=<location>`. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `restore_plan` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`RESTORE_PLAN`
+     ID of the restore plan or fully qualified identifier for the restore plan. 
+
+To set the `restore_plan` attribute: 
+
+  * provide the argument `restore_plan` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     Google Cloud location. 
+
+To set the `location` attribute: 
+
+  * provide the argument `restore_plan` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `gkebackup/location`. 
+
+
+FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--cluster-resource-conflict-policy`=`CLUSTER_RESOURCE_CONFLICT_POLICY`
+     Define how to handle restore-time conflicts for cluster-scoped resources. `CLUSTER_RESOURCE_CONFLICT_POLICY` must be one of: 
+
+`use-backup-version`
+     Selecting 'use-backup-version' means deleting the existing version of the conflicting resources before re-creating them from the Backup. 
+
+Note that this is a dangerous option which could cause unintentional data loss if used inappropriately. For example, deleting a CRD will cause Kubernetes to delete all CRs of that type. 
+
+`use-existing-version`
+     Selecting 'use-existing-version' means no conflicting resources will be restored. 
+`--description`=`DESCRIPTION`
+     The description of the restore plan. 
+`--etag`=`ETAG`
+     The etag is used for optimistic concurrency control as a way to help prevent simultaneous updates or deletes of a resource from overwriting each other. 
+`--namespaced-resource-restore-mode`=`NAMESPACED_RESOURCE_RESTORE_MODE`
+     Define how to handle restore-time conflicts for namespaced resources. `NAMESPACED_RESOURCE_RESTORE_MODE` must be one of: 
+
+`delete-and-restore`
+     When conflicting top-level resources (either Namespaces or ProtectedApplications, depending upon the scope) are encountered, this will first trigger a delete of the conflicting resource AND ALL OF ITS REFERENCED RESOURCES (e.g., all resources in the Namespace or all resources referenced by the ProtectedApplication) before restoring the resources from the Backup. This mode should only be used when you are intending to revert some portion of a cluster to an earlier state. 
+`fail-on-conflict`
+     If conflicting top-level resources (either Namespaces or ProtectedApplications, depending upon the scope) are encountered at the beginning of a restore process, the Restore will fail. If a conflict occurs during the restore process itself (e.g., because an out of band process creates conflicting resources), a conflict will be reported. 
+`merge-replace-on-conflict`
+     This mode merges the backup and the target cluster and replaces the conflicting resources with the ones in the backup. If a single resource to restore exists in the cluster before restoration, the resource will be replaced with the one from the backup. To replace an existing resource, the first attempt is to update the resource to match the one from the backup; if the update fails, the second attempt is to delete the resource and restore it from the backup. Note that this mode could cause data loss as it replaces the existing resources in the target cluster, and the original PV can be retained or deleted depending on its reclaim policy. 
+`merge-replace-volume-on-conflict`
+     This mode merges the backup and the target cluster and skips the conflicting resources except volume data. If a PVC to restore already exists, this mode will restore/reconnect the volume without overwriting the PVC. It is similar to MERGE_SKIP_ON_CONFLICT except that it will apply the volume data policy for the conflicting PVCs "RESTORE_VOLUME_DATA_FROM_BACKUP:" restore data only and respect the reclaim policy of the original PV; "REUSE_VOLUME_HANDLE_FROM_BACKUP:" reconnect and respect the reclaim policy of the original PV; "NO_VOLUME_DATA_RESTORATION:" new provision and respect the reclaim policy of the original PV. Note that this mode could cause data loss as the original PV can be retained or deleted depending on its reclaim policy. 
+`merge-skip-on-conflict`
+     This mode merges the backup and the target cluster and skips the conflicting resources. If a single resource to restore exists in the cluster before restoration, the resource will be skipped, otherwise it will be restored. 
+`--restore-order-file`=`RESTORE_ORDER_FILE`
+     If provided, defines a custom order that can be used in a restore, which includes dependencies between two group kinds that must be honored during a restore, a satisfying group kind and a requiring group kind. The satisfying group kind must be restored before the requiring group kind. 
+`--update-labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to update. If a label exists, its value is modified. Otherwise, a new label is created. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+`--volume-data-restore-policy`=`VOLUME_DATA_RESTORE_POLICY`; default="no-volume-data-restoration"
+     Define how data is populated for restored volumes. If this flag is not specified, 'no-volume-data-restoration' will be used. `VOLUME_DATA_RESTORE_POLICY` must be one of: 
+
+`no-volume-data-restoration`
+     Selecting 'no-volume-data-restoration' means PV will not be restored. The restoration will ONLY restore selected PVCs and expects corresponding Kubernetes controllers to either dynamically provision blank PVs or bind them to pre-provisioned PVs created out-of-band. 
+`restore-volume-data-from-backup`
+     Selecting 'restore-volume-data-from-backup' means a new PV will be restored using the corresponding volume backup data in the Backup. 
+`reuse-volume-handle-from-backup`
+     Selecting 'reuse-volume-handle-from-backup' means a PV will be pre-provisioned using the volume handle of the original PV in the Backup. 
+`--volume-data-restore-policy-bindings`=[`VOLUME_TYPE`=`POLICY`,…]
+     Dict that binds a supported volume type to a volume data restore policy. e.g. `gce-persistent-disk=restore-volume-data-from-backup` for a binding that results in Persistent Disk volumes being restored using the "restore volume data from backup" policy. 
+The scope of namespaced resources to restore. At most one of these can be specified: 
+
+`--all-namespaces`
+     If true, restore all namespaced resources in the backup. 
+`--excluded-namespaces`=[`EXCLUDED_NAMESPACES`,…]
+     List of selected namespaces to skip. All namespaced resources in all namespaces excluding selected namespaces are restored. 
+`--no-namespaces`
+     If true, do not restore any namespaced resources in the backup. 
+`--selected-applications`=`SELECTED_APPLICATIONS`
+     List of selected applications to restore. Only those namespaced resources which belong to one of the selected applications are restored. 
+`--selected-namespaces`=[`SELECTED_NAMESPACES`,…]
+     List of selected namespaces to restore. Only those namespaced resources belonging to a selected namespace are restored. 
+At most one of these can be specified: 
+
+`--clear-labels`
+     Remove all labels. If `--update-labels` is also specified then `--clear-labels` is applied first. 
+
+For example, to remove all labels: 
+    
+    
+    gcloud beta container backup-restore restore-plans update --clear-labels
+
+To remove all existing labels and create two new labels, ``foo`` and ``baz``: 
+    
+    
+    gcloud beta container backup-restore restore-plans update --clear-labels --update-labels foo=bar,baz=qux
+
+`--remove-labels`=[`KEY`,…]
+     List of label keys to remove. If a label does not exist it is silently ignored. If `--update-labels` is also specified then `--update-labels` is applied first. 
+The scope of cluster-scoped resources to restore. At most one of these can be specified: 
+
+`--cluster-resource-scope-all-group-kinds`
+     If true, all valid cluster-scoped resources will be restored. 
+`--cluster-resource-scope-excluded-group-kinds`=[`CLUSTER_RESOURCE_SCOPE_EXCLUDED_GROUP_KINDS`,…]
+     List of cluster-scoped resource group kinds to NOT restore from the backup. If specified, all valid cluster-scoped resources will be restored except for those specified in the list. The format of a resource is "<group>/<kind>", e.g. `storage.k8s.io/StorageClass` for StorageClass. Use an empty string for core API group. 
+`--cluster-resource-scope-no-group-kinds`
+     If true, no cluster-scoped resources will be restored. 
+`--cluster-resource-scope-selected-group-kinds`=[`CLUSTER_RESOURCE_SCOPE_SELECTED_GROUP_KINDS`,…]
+     List of cluster-scoped resource group kinds to restore from the backup. If specified, only the selected resources will be restored. The format of a resource is "<group>/<kind>", e.g. `storage.k8s.io/StorageClass` for StorageClass. Use an empty string for core API group. 
+At most one of these can be specified: 
+
+`--substitution-rules-file`=`SUBSTITUTION_RULES_FILE`
+     (DEPRECATED) If provided, defines a set of resource transformations that will be applied to resources from the source backup before they are created in the target cluster. 
+
+Flag substitution-rules-file is deprecated. Please use \--transformation-rules-file instead. 
+
+`--transformation-rules-file`=`TRANSFORMATION_RULES_FILE`
+     If provided, defines a set of resource transformations that will be applied to resources from the source backup before they are created in the target cluster. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `gkebackup/v1` API. The full documentation for this API can be found at: <https://cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke>
+NOTES
+     This command is currently in beta and might change without notice. This variant is also available: 
+    
+    
+    [gcloud alpha container backup-restore restore-plans update](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/container/backup-restore/restore-plans/update)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-06-23 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-06-23 UTC."],[],[]] 

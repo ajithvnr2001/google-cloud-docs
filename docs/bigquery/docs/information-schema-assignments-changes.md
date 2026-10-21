@@ -1,0 +1,185 @@
+---
+url: https://docs.cloud.google.com/bigquery/docs/information-schema-assignments-changes/
+title: ASSIGNMENT_CHANGES view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T19:43:59.445184+00:00
+---
+
+# ASSIGNMENT_CHANGES view  |  BigQuery  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/bigquery/docs/information-schema-assignments-changes/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Data analytics ](https://docs.cloud.google.com/docs/data)
+  * [ BigQuery ](https://docs.cloud.google.com/bigquery/docs)
+  * [ Reference ](https://docs.cloud.google.com/bigquery/quotas)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# ASSIGNMENT_CHANGES view
+
+The `INFORMATION_SCHEMA.ASSIGNMENT_CHANGES` view contains a near real-time list of all changes to assignments within the administration project. Each row represents a single change to a single assignment. For more information about reservation, see [Introduction to Reservations](https://docs.cloud.google.com/bigquery/docs/reservations-intro).
+
+**Note:** The view names `INFORMATION_SCHEMA.ASSIGNMENT_CHANGES` and `INFORMATION_SCHEMA.ASSIGNMENT_CHANGES_BY_PROJECT` are synonymous and can be used interchangeably.
+
+## Required permission
+
+To query the `INFORMATION_SCHEMA.ASSIGNMENT_CHANGES` view, you need the `bigquery.reservationAssignments.list` Identity and Access Management (IAM) permission for the project. Each of the following predefined IAM roles includes the required permission:
+
+  * `roles/bigquery.resourceAdmin`
+  * `roles/bigquery.resourceEditor`
+  * `roles/bigquery.resourceViewer`
+  * `roles/bigquery.user`
+  * `roles/bigquery.admin`
+
+
+
+For more information about BigQuery permissions, see [Access control with IAM](https://docs.cloud.google.com/bigquery/docs/access-control).
+
+## Schema
+
+The `INFORMATION_SCHEMA.ASSIGNMENT_CHANGES` view has the following schema:
+
+Column name | Data type | Value  
+---|---|---  
+`change_timestamp` | `TIMESTAMP` | Time when the change occurred.  
+`project_id` | `STRING` | ID of the administration project.  
+`project_number` | `INTEGER` | Number of the administration project.  
+`assignment_id` | `STRING` | ID that uniquely identifies the assignment.  
+`reservation_name` | `STRING` | Name of the reservation that the assignment uses.  
+`job_type` | `STRING` | The type of job that can use the reservation. Can be `PIPELINE` or `QUERY`.  
+`assignee_id` | `STRING` | ID that uniquely identifies the assignee resource.  
+`assignee_number` | `INTEGER` | Number that uniquely identifies the assignee resource.  
+`assignee_type` | `STRING` | Type of assignee resource. Can be `organization`, `folder` or `project`.  
+`action` | `STRING` | Type of event that occurred with the assignment. Can be `CREATE`, `UPDATE`, or `DELETE`.  
+`user_email` | `STRING` | Email address of the user or subject of the [workforce identity federation](https://docs.cloud.google.com/iam/docs/workforce-identity-federation) that made the change. `google` for changes made by Google. `NULL` if the email address is unknown.   
+`state` | `STRING` | State of the assignment. Can be `PENDING` or `ACTIVE`.  
+  
+For stability, we recommend that you explicitly list columns in your information schema queries instead of using a wildcard (`SELECT *`). Explicitly listing columns prevents queries from breaking if the underlying schema changes.
+
+## Data retention
+
+This view contains current assignments and deleted assignments that are kept for a maximum of 41 days after which they are removed from the view.
+
+## Scope and syntax
+
+Queries against this view must include a [region qualifier](https://docs.cloud.google.com/bigquery/docs/information-schema-intro#syntax). If you don't specify a regional qualifier, metadata is retrieved from all regions. The following table explains the region scope for this view:
+
+View name | Resource scope | Region scope  
+---|---|---  
+`[PROJECT_ID.]`region-REGION`.INFORMATION_SCHEMA.ASSIGNMENT_CHANGES[_BY_PROJECT]` | Project level | `REGION`  
+Replace the following: 
+
+  * Optional: `PROJECT_ID`: the ID of your Google Cloud project. If not specified, the default project is used. 
+  * `REGION`: any [dataset region name](https://docs.cloud.google.com/bigquery/docs/locations). For example, ``region-us``. 
+
+**Note:** You must use [a region qualifier](https://docs.cloud.google.com/bigquery/docs/information-schema-intro#region_qualifier) to query `INFORMATION_SCHEMA` views. The location of the query execution must match the region of the `INFORMATION_SCHEMA` view. 
+
+
+
+
+## Examples
+
+### Find the latest changes to an assignment
+
+The following example displays the user who has made the latest assignment update to a particular assignment within a specified date.
+    
+    
+    SELECT
+      user_email,
+      change_timestamp,
+      reservation_name,
+      assignment_id
+    FROM
+      `region-us`.INFORMATION_SCHEMA.ASSIGNMENT_CHANGES
+    WHERE
+      change_timestamp BETWEEN '2021-09-30' AND '2021-10-01'
+      AND assignment_id = 'assignment_01'
+    ORDER BY
+      change_timestamp DESC
+    LIMIT 1;
+
+The result is similar to the following:
+    
+    
+    +--------------------------------+-----------------------+--------------------+-----------------+
+    |           user_email           |    change_timestamp   |  reservation_name  |  assignment_id  |
+    +--------------------------------+-----------------------+--------------------+-----------------+
+    |  cloudysanfrancisco@gmail.com  |2021-09-30 09:30:00 UTC|   my_reservation   |  assignment_01  |
+    +--------------------------------+-----------------------+--------------------+-----------------+
+    
+
+### Identify the assignment status of a reservation at a specific point in time
+
+The following example displays all of the active assignments of a reservation at a certain point in time.
+    
+    
+    SELECT
+        reservation_name,
+        assignee_id,
+        assignee_type,
+        job_type
+    FROM
+        `region-REGION`.INFORMATION_SCHEMA.ASSIGNMENT_CHANGES
+    WHERE
+        reservation_name = RESERVATION_NAME
+        AND change_timestamp < TIMESTAMP
+    QUALIFY ROW_NUMBER() OVER(PARTITION BY assignee_id, job_type ORDER BY change_timestamp DESC) = 1
+    AND action != 'DELETE';
+
+Replace the following:
+
+  * `REGION`: the region where your reservation is located
+  * `RESERVATION_NAME`: the name of the reservation that the assignment uses
+  * `TIMESTAMP`: the timestamp representing the specific point in time at which the list of assignments is checked
+
+
+
+The result is similar to the following:
+    
+    
+    +-------------------------+---------------------------+---------------+----------+
+    |    reservation_name     |        assignee_id        | assignee_type | job_type |
+    +-------------------------+---------------------------+---------------+----------+
+    | test-reservation        | project_1                 | PROJECT       | QUERY    |
+    | test-reservation        | project_2                 | PROJECT       | QUERY    |
+    +-------------------------+---------------------------+---------------+----------+
+    
+
+### Identify the assignment status of a reservation when a particular job was executed
+
+To display the assignments that were active when a certain job was executed, use the following example.
+    
+    
+    SELECT
+        reservation_name,
+        assignee_id,
+        assignee_type,
+        job_type
+    FROM
+        `region-REGION`.INFORMATION_SCHEMA.ASSIGNMENT_CHANGES
+    WHERE
+        reservation_name = RESERVATION_NAME
+        AND change_timestamp < (SELECT creation_time FROM PROJECT_ID.`region-REGION`.INFORMATION_SCHEMA.JOBS WHERE job_id = JOB_ID)
+    QUALIFY ROW_NUMBER() OVER(PARTITION BY assignee_id, job_type ORDER BY change_timestamp DESC) = 1
+    AND action != 'DELETE';
+
+Replace the following:
+
+  * `REGION`: the region where your reservation is located
+  * `RESERVATION_NAME`: the name of the reservation that the assignment uses
+  * `PROJECT_ID`: the ID of your Google Cloud project where the job was executed
+  * `JOB_ID`: the job ID against which the assignment status was checked
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

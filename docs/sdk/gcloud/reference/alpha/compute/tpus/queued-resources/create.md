@@ -1,0 +1,264 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/tpus/queued-resources/create/
+title: gcloud alpha compute tpus queued-resources create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T02:15:51.604350+00:00
+---
+
+# gcloud alpha compute tpus queued-resources create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/tpus/queued-resources/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha compute tpus queued-resources create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha compute tpus queued-resources create - create a Queued Resource 
+SYNOPSIS
+    
+
+`gcloud alpha compute tpus queued-resources create` (`QUEUED_RESOURCE` : `--zone`=`ZONE`) `--runtime-version`=`RUNTIME_VERSION` (`--accelerator-type`=`ACCELERATOR_TYPE` | `--topology`=`TOPOLOGY` `--type`=`TYPE`) (`--node-id`=`NODE_ID` | [`--node-count`=`NODE_COUNT` : `--node-prefix`=`NODE_PREFIX` `--workload-type`=`WORKLOAD_TYPE`]) [`--async`] [`--autocheckpoint-enabled`] [`--best-effort`] [`--boot-disk`=[`KEY`=`VALUE`,…]] [`--data-disk`=[`mode`=`MODE`],[`source`=`SOURCE`]] [`--description`=`DESCRIPTION`] [`--guaranteed`] [`--labels`=[`KEY`=`VALUE`,…]] [`--max-run-duration`=`MAX_RUN_DURATION`] [`--metadata`=[`KEY`=`VALUE`,…]] [`--metadata-from-file`=[`KEY`=`VALUE`,…]] [`--provisioning-model`=`PROVISIONING_MODEL`] [`--range`=`RANGE`] [`--reserved`] [`--scopes`=[`SCOPES`,…]] [`--service-account`=`SERVICE_ACCOUNT`] [`--shielded-secure-boot`] [`--spot`] [`--tags`=[`TAGS`,…]] [`--valid-after-duration`=`VALID_AFTER_DURATION`] [`--valid-after-time`=`VALID_AFTER_TIME`] [`--valid-until-duration`=`VALID_UNTIL_DURATION`] [`--valid-until-time`=`VALID_UNTIL_TIME`] [`--network-config`=[`external-ips`=`EXTERNAL-IPS`],[`network`=`NETWORK`],[`subnetwork`=`SUBNETWORK`] | `--internal-ips` `--network`=`NETWORK`; default="default" `--subnetwork`=`SUBNETWORK`] [`--reservation`=`RESERVATION` | `--reservation-host-folder`=`RESERVATION_HOST_FOLDER` `--reservation-host-organization`=`RESERVATION_HOST_ORGANIZATION` `--reservation-host-project`=`RESERVATION_HOST_PROJECT`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` Create a new Queued Resource with the specified attributes. 
+EXAMPLES
+     To create a Queued Resource with ID `my-queued-resource` in zone `us-central2-b` and project `my-project`, run: 
+    
+    
+    gcloud alpha compute tpus queued-resources create my-queued-resource --accelerator-type=v4-8 --runtime-version=v2-alpha-tpuv4 --node-id=my-node-001 --zone=us-central2-b --project=my-project
+
+To create a Queued Resource with multiple nodes, run: 
+    
+    
+    gcloud alpha compute tpus queued-resources create my-queued-resource --accelerator-type=v4-8 --runtime-version=v2-alpha-tpuv4 --node-count=2 --zone=us-central2-b --project=my-project
+
+POSITIONAL ARGUMENTS
+    
+
+Queued resource resource - The Queued Resource you want to create. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `queued_resource` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`QUEUED_RESOURCE`
+     ID of the queued_resource or fully qualified identifier for the queued_resource. 
+
+To set the `queued_resource` attribute: 
+
+  * provide the argument `queued_resource` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--zone`=`ZONE`
+     The compute/zone of the Cloud TPU. 
+
+If not specified, will use `default` compute/zone. To set the `zone` attribute: 
+
+  * provide the argument `queued_resource` on the command line with a fully specified name; 
+  * provide the argument `--zone` on the command line; 
+  * set the property `compute/zone`. 
+
+
+REQUIRED FLAGS
+    
+
+`--runtime-version`=`RUNTIME_VERSION`
+     Runtime version for the TPU, such as `tpu-ubuntu2204-base`. 
+Specify a chip-based or core-based TPU node. 
+
+Exactly one of these must be specified: 
+
+Core-based TPU configuration 
+`--accelerator-type`=`ACCELERATOR_TYPE`
+     Accelerator type for the TPU. 
+Chip-based TPU configuration 
+`--topology`=`TOPOLOGY`
+     Chip topology for TPU. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--type`=`TYPE`
+     Type of TPU. `TYPE` must be one of: `v2`, `v3`, `v4`, `v5litepod`, `v5p`, `v6e`. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+Specify TPU node(s) with either a single node id or a node count and an optional node prefix 
+
+Exactly one of these must be specified: 
+
+Single node creation 
+`--node-id`=`NODE_ID`
+     Unqualified node identifier used to identify the node in the project once provisioned. 
+
+To request a resource with multiple nodes, in place of `--node-id`, use `--node-count` to specify the number of nodes and optionally use `--node-prefix` to specify the prefix for each node. 
+
+Multinode creation 
+`--node-count`=`NODE_COUNT`
+     The number of nodes in a multislice provision, also used to generate the qualified name for nodes in the provision. Value must be greater than 1. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--node-prefix`=`NODE_PREFIX`
+     Node prefix used to generate the qualified name of each node the multislice node provision. If not supplied, the queued resource id will be used as the prefix. 
+
+Must also specify `--node-count`. 
+
+`--workload-type`=`WORKLOAD_TYPE`
+     Specifies the workload type for the multi-node TPUs. 
+OPTIONAL FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--autocheckpoint-enabled`
+     Specifies that the TPU node(s) are created with the Autocheckpoint feature enabled. 
+`--best-effort`
+     If provided, the Node requested here may be scheduled at the 'best effort' tier. 
+`--boot-disk`=[`KEY`=`VALUE`,…]
+     Specifies the boot disk configuration. 
+    
+    
+    gcloud alpha compute tpus queued-resources create --boot-disk confidential-compute=True,kms-key=<full_kms_key_name_here>
+
+The following keys are allowed: 
+
+`confidential-compute`
+     Create the boot disk in confidential compute mode. CMEK layer is required. 
+`kms-key`
+     Specifies the fully qualified Cloud KMS cryptokey name which will be used to protect the disk. KMS cryptokey name format: projects/<kms-project>/locations/<kms-location>/keyRings/<kms-keyring>/cryptoKeys/<key-name>
+`--data-disk`=[`mode`=`MODE`],[`source`=`SOURCE`]
+     Additional data disks for the TPU VM. 
+
+This flag must be repeated to provide multiple data disks. For example: 
+    
+    
+    gcloud alpha compute tpus queued-resources create --data-disk source=projects/my-project/zones/us-central1-c/disks/my-disk,mode=read-only
+
+The following keys are allowed: 
+
+`source`
+     Specifies the full path to an existing disk. Required. The disk must be in the same zone. 
+`mode`
+     Specifies the mode in which to attach this disk. Valid options are 'read-write', 'read-only'. If not specified, the default is 'read-write'. 
+`--description`=`DESCRIPTION`
+     Text description of the TPU. 
+`--guaranteed`
+     If provided, the Node requested here will only be scheduled at the 'guaranteed' tier. 
+`--labels`=[`KEY`=`VALUE`,…]
+     Resource labels to represent user-provided metadata. See <https://cloud.google.com/compute/docs/labeling-resources> for details. 
+`--max-run-duration`=`MAX_RUN_DURATION`
+     A duration after which the resource will be terminated. Used with flex-start. See $ [gcloud topic datetimes](https://docs.cloud.google.com/sdk/gcloud/reference/topic/datetimes) for information on duration formats. 
+`--metadata`=[`KEY`=`VALUE`,…]
+     List of comma-separated metadata key-value pairs for the Cloud TPU VM node. Example: `--metadata='key1=value1,key2=value2'`
+`--metadata-from-file`=[`KEY`=`VALUE`,…]
+     Same as `--metadata` except the value for the entry will be read from a local file. Example: `--metadata-from-file='key1=value1.txt'`
+`--provisioning-model`=`PROVISIONING_MODEL`
+     If provided, the resource will be provisioned with the specified provisioning model. 
+`--range`=`RANGE`
+     CIDR range for the TPU. 
+
+The IP range that the TPU will select an IP address from. Must be in CIDR notation and a `/29` range, for example `192.168.0.0/29`. Errors will occur if the CIDR range has already been used for a currently existing TPU, the CIDR range conflicts with any networks in the user's provided network, or the provided network is peered with another network that is using that CIDR range. 
+
+`--reserved`
+     Specifies the request should be scheduled on reserved capacity. 
+
+If `--reservation-host-project`, `--reservation-host-folder`, or `--reservation-host-organization` are present then this flag has no effect. 
+
+`--scopes`=[`SCOPES`,…]
+     List of comma-separated scopes to be made available for the service account. 
+`--service-account`=`SERVICE_ACCOUNT`
+     Email address of the service account. If empty, default Google Compute Engine service account will be used. 
+`--shielded-secure-boot`
+     Specifies that the TPU instances are created with secure boot enabled. This implicitly makes them Shielded VM instances. 
+`--spot`
+     If provided, the Node requested here will be created as Spot VMs. 
+`--tags`=[`TAGS`,…]
+     Tags to apply to the TPU Node. Tags are used to identify valid sources or targets for network firewalls. See <https://cloud.google.com/vpc/docs/add-remove-network-tags> for more details. 
+`--valid-after-duration`=`VALID_AFTER_DURATION`
+     A duration before which the TPU must not be provisioned, relative to the current time. See $ [gcloud topic datetimes](https://docs.cloud.google.com/sdk/gcloud/reference/topic/datetimes) for information on duration formats. 
+`--valid-after-time`=`VALID_AFTER_TIME`
+     An absolute time before which the TPU must not be provisioned. See $ [gcloud topic datetimes](https://docs.cloud.google.com/sdk/gcloud/reference/topic/datetimes) for information on duration formats. 
+`--valid-until-duration`=`VALID_UNTIL_DURATION`
+     A duration after which the TPU must not be provisioned, relative to the current time. See $ [gcloud topic datetimes](https://docs.cloud.google.com/sdk/gcloud/reference/topic/datetimes) for information on duration formats. 
+`--valid-until-time`=`VALID_UNTIL_TIME`
+     An absolute time after which resources must not be created. See $ [gcloud topic datetimes](https://docs.cloud.google.com/sdk/gcloud/reference/topic/datetimes) for information on duration formats. 
+At most one of these can be specified: 
+
+`--network-config`=[`external-ips`=`EXTERNAL-IPS`],[`network`=`NETWORK`],[`subnetwork`=`SUBNETWORK`]
+     Specify a full network_config for the TPU. network or subnetwork must be specified. 
+
+This flag may be repeated to provide multiple networks. For example: 
+    
+    
+    gcloud alpha compute tpus queued-resources create --network-config network=example_network,internal-ips=true
+
+The following keys are allowed: 
+
+`network`
+     Specify the network to be used by this TPU. 
+`subnetwork`
+     Specify the network to be used by this TPU. If not specified, this defaults to the subnetwork by the same name as the network. 
+`external-ips`
+     Indicate that the IP addresses for the node should be exteranl. The default will be only internal IP addresses. 
+`--internal-ips`
+     Indicates that the IP addresses for the node should be internal. The default is that external IP addresses will be associated with the TPU workers. 
+`--network`=`NETWORK`; default="default"
+     Network that this TPU will be a part of. 
+`--subnetwork`=`SUBNETWORK`
+     Subnetwork that this TPU will be a part of. 
+At most one of these can be specified: 
+
+`--reservation`=`RESERVATION`
+     The name of the reservation. This can either be the full name or just the name. 
+
+However, a full name is required if the reservation is not in the default project. 
+
+Full reservation name format is: projects/<project>/locations/<location>/reservations/<reservation-name>, projects/<project>/zones/<zone>/reservations/<reservation-name>. 
+
+Or at least one of these can be specified: 
+
+`--reservation-host-folder`=`RESERVATION_HOST_FOLDER`
+     The folder hosting the reservation that the TPU should use. Only one reservation host entity may be specified. 
+`--reservation-host-organization`=`RESERVATION_HOST_ORGANIZATION`
+     The organization hosting the reservation that the TPU should use. Only one reservation host entity may be specified. 
+`--reservation-host-project`=`RESERVATION_HOST_PROJECT`
+     The project hosting the reservation that the TPU should use. Only one reservation host entity may be specified. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `tpu/v2alpha1` API. The full documentation for this API can be found at: <https://cloud.google.com/tpu/>
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. This variant is also available: 
+    
+    
+    [gcloud compute tpus queued-resources create](https://docs.cloud.google.com/sdk/gcloud/reference/compute/tpus/queued-resources/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

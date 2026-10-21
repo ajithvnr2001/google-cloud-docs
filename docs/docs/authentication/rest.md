@@ -1,0 +1,348 @@
+---
+url: https://docs.cloud.google.com/docs/authentication/rest/
+title: Authenticate with REST \u00a0|\u00a0 Authentication \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T20:53:01.784113+00:00
+---
+
+# Authenticate with REST  |  Authentication  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/docs/authentication/rest/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Authentication ](https://docs.cloud.google.com/docs/authentication)
+  * [ Guides ](https://docs.cloud.google.com/sdk/docs/overview)
+
+
+
+Send feedback 
+
+#  Authenticate with REST Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page describes how to authenticate when you make a REST request to a Google API. 
+
+For information about how to authenticate when you use Google client libraries, see [Authenticate using client libraries](https://docs.cloud.google.com/docs/authentication/client-libraries).
+
+## Before you begin
+
+To run the samples on this page, complete the following steps:
+
+  1. [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. 
+
+  2. If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). 
+
+  3. To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: 
+         
+         gcloud init
+
+  4. Enable the Cloud Resource Manager and Identity and Access Management (IAM) APIs, if any are not already enabled: 
+
+**Roles required to enable APIs**
+
+To enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+         
+         gcloud services enable cloudresourcemanager.googleapis.com iam.googleapis.com
+
+
+
+
+If you don't want to use the gcloud CLI, you can skip these steps and use service account impersonation or the metadata server to generate a token.
+
+## Types of credentials
+
+You can use the following types of credentials to authenticate a REST call:
+
+  * Your gcloud CLI credentials.
+
+This approach is the easiest and most secure way to provide credentials to a REST method in a local development environment. If your user account has the necessary Identity and Access Management (IAM) permissions for the method you want to call, this is the preferred approach.
+
+Your gcloud credentials are not the same as the credentials you provide to ADC using the gcloud CLI. For more information, see [ gcloud CLI authentication configuration and ADC configuration](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#gcloud-credentials). 
+
+  * The credentials provided to Application Default Credentials (ADC).
+
+This method is the preferred option for authenticating a REST call in a production environment, because ADC finds credentials from the resource where your code is running (such as a Compute Engine virtual machine). You can also use ADC to authenticate in a local development environment. In this scenario, the gcloud CLI creates a file that contains your credentials in your local file system.
+
+  * The credentials provided by impersonating a service account.
+
+This method requires more setup. If you want to use your existing credentials to obtain short-lived credentials for another service account, such as testing with a service account locally or requesting temporary elevated privileges, use this approach.
+
+  * The credentials returned by the metadata server.
+
+This method works only in environments with access to a metadata server. The credentials returned by the metadata server are the same as the credentials that would be found by [Application Default Credentials](https://docs.cloud.google.com/docs/authentication/application-default-credentials) using the attached service account, but you explicitly request the access token from the metadata server and then provide it with the REST request. Querying the metadata server for credentials requires an HTTP GET request; this method does not rely on the Google Cloud CLI.
+
+  * API keys
+
+You can use an API key with a REST request only for APIs that accepts API keys. In addition, the API key must not be restricted to prevent it from being used with the API.
+
+
+
+
+### gcloud CLI credentials
+
+To run the following example, you need the `resourcemanager.projects.get` permission on the project. The `resourcemanager.projects.get` permission is included in a variety of roles—for example, the [Browser role](https://docs.cloud.google.com/iam/docs/roles-permissions/browser) (`roles/browser`).
+
+  1. Use the [`gcloud auth print-access-token` command](https://docs.cloud.google.com/sdk/gcloud/reference/auth/print-access-token) to insert an access token generated from your user credentials.
+
+The following example gets details for the specified project. You can use the same pattern for any REST request.
+
+Before using any of the request data, make the following replacements: 
+
+     * `PROJECT_ID`: Your Google Cloud project ID or name.
+
+To send your request, choose one of these options:
+
+#### curl
+
+Execute the following command: 
+    
+    curl -X GET \  
+         -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
+         "https://cloudresourcemanager.googleapis.com/v3/projects/PROJECT_ID"
+
+#### PowerShell
+
+Execute the following command: 
+    
+    $cred = gcloud auth print-access-token  
+    $headers = @{ "Authorization" = "Bearer $cred" }  
+      
+    Invoke-WebRequest `  
+        -Method GET `  
+        -Headers $headers `  
+        -Uri "https://cloudresourcemanager.googleapis.com/v3/projects/PROJECT_ID" | Select-Object -Expand Content
+
+The details for your project are returned.
+
+
+
+
+For APIs that require a quota project, you must set one explicitly for the request. For more information, see Set the quota project with a REST request on this page.
+
+### Application Default Credentials
+
+To run the following example, the principal associated with the credentials you provide to ADC needs the `resourcemanager.projects.get` permission on the project. The `resourcemanager.projects.get` permission is included in a variety of roles—for example, the [Browser role](https://docs.cloud.google.com/iam/docs/roles-permissions/browser) (`roles/browser`).
+
+  1. [Provide credentials to ADC](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc).
+
+If you are running on a Google Cloud compute resource, you shouldn't provide your user credentials to ADC. Instead, use the attached service account to provide credentials. For more information, see [Set up ADC for a resource with an attached service account](https://docs.cloud.google.com/docs/authentication/set-up-adc-attached-service-account).
+
+  2. Use the [`gcloud auth application-default print-access-token` command](https://docs.cloud.google.com/sdk/gcloud/reference/auth/application-default/print-access-token) to insert the access token returned by ADC into your REST request.
+
+The following example gets details for the specified project. You can use the same pattern for any REST request.
+
+Before using any of the request data, make the following replacements: 
+
+     * `PROJECT_ID`: Your Google Cloud project ID or name.
+
+To send your request, choose one of these options:
+
+#### curl
+
+Execute the following command: 
+    
+    curl -X GET \  
+         -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" \  
+         "https://cloudresourcemanager.googleapis.com/v3/projects/PROJECT_ID"
+
+#### PowerShell
+
+Execute the following command: 
+    
+    $cred = gcloud auth application-default print-access-token  
+    $headers = @{ "Authorization" = "Bearer $cred" }  
+      
+    Invoke-WebRequest `  
+        -Method GET `  
+        -Headers $headers `  
+        -Uri "https://cloudresourcemanager.googleapis.com/v3/projects/PROJECT_ID" | Select-Object -Expand Content
+
+The details for your project are returned.
+
+If your request returns an error message about end-user credentials not being supported by this API, see Set the quota project with a REST request on this page. 
+
+
+
+
+### Impersonated service account
+
+The simplest way to impersonate a service account to generate an access token is by using the gcloud CLI. However, if you need to generate the token programmatically, or you don't want to use the gcloud CLI, you can use impersonation to generate a short-lived token.
+
+For more information about impersonating a service account, see [Use service account impersonation](https://docs.cloud.google.com/docs/authentication/use-service-account-impersonation).
+
+  1. Review the required permissions.
+
+     * The prinicipal you want to use to perform the impersonation must have the `iam.serviceAccounts.getAccessToken` permission on the impersonated service account (also called the _privilege-bearing service account_). The `iam.serviceAccounts.getAccessToken` permission is included in the Service Account Token Creator role (`roles/iam.serviceAccountTokenCreator`). If you are using your user account, you need to add this permission even if you have the Owner role (`roles/owner`) on the project. For more information, see [Setting required permissions](https://docs.cloud.google.com/iam/docs/create-short-lived-credentials-direct#sa-credentials-permissions).
+  2. Identify or create the privilege-bearing service account—the service account you will impersonate.
+
+The privilege-bearing service account must have the permissions required to make the API method call.
+
+
+
+
+###  gcloud 
+
+  1. Use the [`gcloud auth print-access-token` command](https://docs.cloud.google.com/sdk/gcloud/reference/auth/print-access-token) with the [`--impersonate-service-account` flag](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account) to insert an access token for the privilege-bearing service account into your REST request.
+
+
+
+The following example gets details for the specified project. You can use the same pattern for any REST request.
+
+To run this example, the service account you impersonate needs the `resourcemanager.projects.get` permission. The `resourcemanager.projects.get` permission is included in a variety of roles—for example, the [Browser role](https://docs.cloud.google.com/iam/docs/roles-permissions/browser) (`roles/browser`).
+
+Make the following replacements:
+
+  * `PRIV_SA`: The email address of the privilege-bearing service account. For example, `my-sa@my-project.iam.gserviceaccount.com`.
+
+  * `PROJECT_ID`: Your Google Cloud project ID or name.
+
+
+
+    
+    
+    curl -X GET \
+        -H "Authorization: Bearer $(gcloud auth print-access-token --impersonate-service-account=PRIV_SA)" \
+        "https://cloudresourcemanager.googleapis.com/v3/projects/PROJECT_ID"
+    
+
+###  Short-lived token 
+
+To generate a short-lived token by using service account impersonation, follow the instructions provided in [Create a short-lived access token](https://docs.cloud.google.com/iam/docs/create-short-lived-credentials-direct#sa-credentials-oauth).
+
+### Metadata server
+
+To get an access token from the metadata server, you must make the REST call using one of the services that has access to a metadata server:
+
+  * [ Compute Engine](https://docs.cloud.google.com/compute/docs/instances/verifying-instance-identity#request_signature)
+  * [ App Engine standard environment](https://docs.cloud.google.com/appengine/docs/standard/python3/runtime#metadata_server)
+  * [ App Engine flexible environment](https://docs.cloud.google.com/appengine/docs/flexible/python/runtime#metadata_server)
+  * [ Cloud Run functions](https://docs.cloud.google.com/functions/docs/securing/function-identity#metadata-server)
+  * [Cloud Run](https://docs.cloud.google.com/run/docs/container-contract#metadata-server)
+  * [ Google Kubernetes Engine](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/workload-identity#instance_metadata)
+  * [ Cloud Build](https://docs.cloud.google.com/build/docs/securing-builds/authorize-service-to-service-access)
+
+
+
+You use a command-line tool such as `curl` to get an access token, and then insert it into your REST request.
+
+  1. Query the metadata server for an access token:
+         
+         curl "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token" \
+             -H "Metadata-Flavor: Google"
+         
+
+The request returns a response similar to the following example:
+         
+         {
+               "access_token":"ya29.AHES6ZRN3-HlhAPya30GnW_bHSb_QtAi85nHq39HE3C2LTrCARA",
+               "expires_in":3599,
+               "token_type":"Bearer"
+          }
+         
+
+  2. Insert the access token into your REST request, making the following replacements:
+
+     * `ACCESS_TOKEN`: The access token returned in the previous step.
+     * `PROJECT_ID`: Your Google Cloud project ID or name.
+    
+    curl -X GET \
+        -H "Authorization: Bearer ACCESS_TOKEN" \
+        "https://cloudresourcemanager.googleapis.com/v3/projects/PROJECT_ID"
+    
+
+
+
+
+### API keys
+
+To include an API key with a REST API call, use the `x-goog-api-key` HTTP header, as shown in the following example:
+    
+    
+    curl -X POST \
+        -H "X-goog-api-key: API_KEY" \
+        -H "Content-Type: application/json; charset=utf-8" \
+        -d @request.json \
+        "https://translation.googleapis.com/language/translate/v2"
+    
+
+If you can't use the HTTP header, you can use the `key` query parameter. However, this method includes your API key in the URL, exposing your key to theft through URL scans.
+
+The following example shows how to use the `key` query parameter with a Cloud Natural Language API request for [`documents.analyzeEntities`](https://docs.cloud.google.com/natural-language/docs/reference/rest/v1/documents/analyzeEntities). Replace `API_KEY` with the key string of your API key.
+    
+    
+    POST https://language.googleapis.com/v1/documents:analyzeEntities?key=API_KEY
+
+## Set the quota project with a REST request
+
+To call some APIs with user credentials, you must also set the project that is billed for your usage and used to track quota. If your API call returns an error message saying that user credentials are not supported, or that the quota project is not set, you must explicitly set the quota project for the request. To set the quota project, include the `x-goog-user-project` header with your request.
+
+For more information about when you might encounter this issue, see [User credentials not working](https://docs.cloud.google.com/docs/authentication/troubleshoot-adc#user-creds-client-based).
+
+You must have the `serviceusage.services.use` IAM permission for a project to be able to designate it as your billing project. The `serviceusage.services.use` permission is included in the Service Usage Consumer IAM role. If you don't have the `serviceusage.services.use` permission for any project, contact your security administrator or a project owner who can give you the Service Usage Consumer role in the project. 
+
+The following example uses the Cloud Translation API to translate the word "hello" into Spanish. The Cloud Translation API is an API that needs a quota project to be specified. To run the sample, create a file named `request.json` with the request body content.
+
+Before using any of the request data, make the following replacements: 
+
+  * PROJECT_ID: The ID or name of the Google Cloud project to use as a billing project. 
+
+
+
+Request JSON body: 
+    
+    
+    {
+      "q": "hello",
+      "source": "en",
+      "target": "es"
+    }
+    
+
+To send your request, choose one of these options:
+
+#### curl
+
+Save the request body in a file named `request.json`, and execute the following command: 
+    
+    
+    curl -X POST \  
+         -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
+         -H "x-goog-user-project: PROJECT_ID" \  
+         -H "Content-Type: application/json; charset=utf-8" \  
+         -d @request.json \  
+         "https://translation.googleapis.com/language/translate/v2"
+
+#### PowerShell
+
+Save the request body in a file named `request.json`, and execute the following command: 
+    
+    
+    $cred = gcloud auth print-access-token  
+    $headers = @{ "Authorization" = "Bearer $cred"; "x-goog-user-project" = "PROJECT_ID" }  
+      
+    Invoke-WebRequest `  
+        -Method POST `  
+        -Headers $headers `  
+        -ContentType: "application/json; charset=utf-8" `  
+        -InFile request.json `  
+        -Uri "https://translation.googleapis.com/language/translate/v2" | Select-Object -Expand Content
+
+The translation request succeeds. You can try the command without the `x-goog-user-project` HTTP header to see what happens when you do not specify the billing project. 
+
+## What's next
+
+  * See an overview of [authentication](https://docs.cloud.google.com/docs/authentication).
+  * Learn how to authenticate with [client libraries](https://docs.cloud.google.com/docs/authentication/client-libraries).
+  * Understand [gcloud CLI authentication configuration and ADC configuration ](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc#gcloud-credentials).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

@@ -1,0 +1,196 @@
+---
+url: https://docs.cloud.google.com/kubernetes-engine/enterprise/knative-serving/docs/install/permissions/
+title: Knative serving component permissions \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T07:15:33.362270+00:00
+---
+
+# Knative serving component permissions  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/kubernetes-engine/enterprise/knative-serving/docs/install/permissions/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Google Kubernetes Engine (GKE) ](https://docs.cloud.google.com/kubernetes-engine)
+  * [ GKE Enterprise ](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs)
+  * [ Knative serving ](https://docs.cloud.google.com/kubernetes-engine/enterprise/knative-serving)
+  * [ Documentation ](https://docs.cloud.google.com/kubernetes-engine/enterprise/knative-serving/docs)
+  * [ Guides ](https://docs.cloud.google.com/kubernetes-engine/enterprise/knative-serving/docs/architecture-overview)
+
+
+
+Send feedback 
+
+#  Knative serving component permissions Stay organized with collections  Save and categorize content based on your preferences. 
+
+Use this page to understand the [RBAC permissions](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/access-control) that the components of Knative serving hold to maintain access to the cluster. These permissions are required and enabled by default in Knative serving; do not attempt to disable them.
+
+**Components** | **Namespace** | **Service Account**  
+---|---|---  
+`activator` | knative-serving | controller  
+`autoscaler` | knative-serving | controller  
+`controller` | knative-serving | controller  
+`webhook` | knative-serving | controller  
+`storage-version-migration-serving` | knative-serving | controller  
+`webhook` | knative-serving | controller  
+`cloud-run-operator` | cloud-run-system | cloud-run-operator  
+  
+Note that the `cloud-run-operator` service account has the same set of permissions as `controller`. The operator is what deploys all Knative serving components, including custom resource definitions and controllers.
+
+### RBAC for Knative serving service accounts
+
+Use the following `apiGroup` definitions to understand which access control permissions each resource has in Knative serving for both the `controller` and `cloud-run-operator` service accounts.
+    
+    
+    - apiGroups:
+      - ""
+      resources:
+      - pods
+      - secrets
+      verbs:
+      - deletecollection
+    - apiGroups:
+      - ""
+      resources:
+      - nodes
+      verbs:
+      - get
+      - watch
+      - list
+    - apiGroups:
+      - ""
+      resources:
+      - pods
+      - namespaces
+      - secrets
+      - configmaps
+      - endpoints
+      - services
+      - events
+      - serviceaccounts
+      verbs:
+      - get
+      - list
+      - create
+      - update
+      - delete
+      - patch
+      - watch
+    - apiGroups:
+      - ""
+      resources:
+      - endpoints/restricted
+      verbs:
+      - create
+    - apiGroups:
+      - ""
+      resources:
+      - namespaces/finalizers
+      verbs:
+      - update
+    - apiGroups:
+      - **apps**
+      resources:
+      - deployments
+      - deployments/finalizers
+      verbs:
+      - get
+      - list
+      - create
+      - update
+      - delete
+      - patch
+      - watch
+    - apiGroups:
+      - **admissionregistration.k8s.io**
+      resources:
+      - mutatingwebhookconfigurations
+      - validatingwebhookconfigurations
+      verbs:
+      - get
+      - list
+      - create
+      - update
+      - delete
+      - patch
+      - watch
+    - apiGroups:
+      - **apiextensions.k8s.io**
+      resources:
+      - customresourcedefinitions
+      - customresourcedefinitions/status
+      verbs:
+      - get
+      - list
+      - create
+      - update
+      - delete
+      - patch
+      - watch
+    - apiGroups:
+      - **autoscaling**
+      resources:
+      - horizontalpodautoscalers
+      verbs:
+      - get
+      - list
+      - create
+      - update
+      - delete
+      - patch
+      - watch
+    - apiGroups:
+      - **coordination.k8s.io**
+      resources:
+      - leases
+      verbs:
+      - get
+      - list
+      - create
+      - update
+      - delete
+      - patch
+      - watch
+    - apiGroups:
+      - **admissionregistration.k8s.io**
+      resources:
+      - validatingwebhookconfigurations
+      verbs:
+      - get
+      - list
+      - create
+      - update
+      - delete
+      - patch
+      - watch
+    
+
+The following table lists how the RBAC permissions are used in Knative serving, where:
+
+  * **view** includes the verbs: get, list, watch
+  * **modify** includes the verbs: create, update, delete, patch
+
+**Permissions** | **Reasons**  
+---|---  
+Can view all `secrets` | Webhook needs to read the secret from the `knative-serving` namespace. Domainmapping controller needs to read the certificate secret generated by the auto TLS feature and then copy them to the `gke-system` namespace.  
+Can modify `pods` | DomainMapping controller needs to create a Pod which is used to serve requests for the fulfilling HTTP01 challenge.  
+Can modify `secrets` | Domainmapping controller needs to create or update the certificate secret. Webhook needs to read the secret from `knative-serving` namespace.  
+Can modify `configmaps` | Used in the default URL feature. The controller needs to update the "config-domain" configmap within the "knative-serving" namespace to add the `nip.io` URL.  
+Can modify `endpoints` | Serverlessservice controller needs to create, update, or delete the endpoints. Route controller needs to create, update, or delete the endpoints.  
+Can modify `services` | Route controller needs to create, update, or delete a service. Serverless controller needs to create, update, or delete a service. Domainmapping controller needs to create a service for serving HTTP01 challenge requests.  
+Can modify `events` | Knative serving controller creates and emits events for the resources managed by Knative.  
+Can modify `serviceaccounts` | Knative serving needs to read a service account indirectly.  
+Can modify `endpoints/restricted` | Knative serving needs to create endpoints when RestrictedEndpointsAdmission is enabled.  
+Can modify `deployments` | Revision controller needs to create or update a deployment for the Knative service.  
+Can modify `mutatingwebhookconfiguration` | Knative webhook adds caBundle to the mutatingwebhookconfigurations owned by Knative.  
+Can modify `validatingwebhookconfiguration` | Knative webhook adds caBundle to the validatingwebhookconfigurations owned by Knative.  
+Can modify `customresourcedifinitions customresourcedefinitions/status` | Knative post-install job needs to upgrade Knative related CRDs to v1 version.  
+Can modify `horizontalpodautoscalers` | Knative supports autoscaling based on HPA.  
+Can modify `namespace/finalizer` | Knative serving needs to set ownerreference to Knative-serving namespace.  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-09 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 

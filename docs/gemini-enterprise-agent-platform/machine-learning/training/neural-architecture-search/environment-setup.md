@@ -1,0 +1,302 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/neural-architecture-search/environment-setup/
+title: Set up your environment \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T06:46:35.108581+00:00
+---
+
+# Set up your environment  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/neural-architecture-search/environment-setup/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Set up your environment Stay organized with collections  Save and categorize content based on your preferences. 
+
+Set up an environment before you launch a Agent Platform Neural Architecture Search experiment.
+
+## Before you begin
+
+  1. Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. 
+  2. In the Google Cloud console, on the project selector page, select or create a Google Cloud project.
+
+**Roles required to select or create a project**
+
+     * **Select a project** : Selecting a project doesn't require a specific IAM role—you can select any project that you've been granted a role on. 
+     * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.
+
+[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)
+
+  3. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). 
+
+  4. Enable the Agent Platform API, if it is not already enabled. 
+
+**Roles required to enable APIs**
+
+To enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=aiplatform.googleapis.com)
+
+  5. [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. 
+
+  6. If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). 
+
+  7. To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: 
+         
+         gcloud init
+
+  8. After initializing the gcloud CLI, update it and install the required components: 
+         
+         gcloud components update
+         gcloud components install beta
+
+  9. In the Google Cloud console, on the project selector page, select or create a Google Cloud project.
+
+**Roles required to select or create a project**
+
+     * **Select a project** : Selecting a project doesn't require a specific IAM role—you can select any project that you've been granted a role on. 
+     * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.
+
+[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)
+
+  10. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). 
+
+  11. Enable the Agent Platform API, if it is not already enabled. 
+
+**Roles required to enable APIs**
+
+To enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=aiplatform.googleapis.com)
+
+  12. [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. 
+
+  13. If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). 
+
+  14. To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: 
+         
+         gcloud init
+
+  15. After initializing the gcloud CLI, update it and install the required components: 
+         
+         gcloud components update
+         gcloud components install beta
+
+  16. To grant all Agent Platform Neural Architecture Search Neural Architecture Search users the [Agent Platform User](https://docs.cloud.google.com/iam/docs/roles-permissions/aiplatform) role (`roles/aiplatform.user`), contact your project administrator. 
+
+  17. [Install Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/). 
+
+If you're using a Linux-based operating system, such as Ubuntu or Debian, add your username to the `docker` group so that you can run Docker without using `sudo`:
+         
+         sudo usermod -a -G docker ${USER}
+         
+
+**Caution** : The `docker` group is equivalent to the `root` user. For information about how this affects the security of your system, see [Docker's documentation](https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface).
+
+You might need to restart your system after adding yourself to the `docker` group.
+
+  18. Open Docker. To ensure that Docker is running, run the following Docker command, which returns the current time and date: 
+         
+         docker run busybox date
+
+  19. Use `gcloud` as the credential helper for Docker: 
+         
+         gcloud auth configure-docker
+
+  20. (Optional) If you want to run the container using GPU locally, install [`nvidia-docker`](https://github.com/NVIDIA/nvidia-docker#quickstart). 
+
+
+
+### Set up your Cloud Storage bucket
+
+This section demonstrates how to create a new bucket. You can use an existing bucket, but it must be in the same region where you are running AI Platform jobs. Additionally, if it isn't part of the project you are using to run Agent Platform Neural Architecture Search, you must explicitly grant access to the Agent Platform Neural Architecture Search service accounts.
+
+  1. Specify a name for your new bucket. The name must be unique across all buckets in Cloud Storage.
+         
+         BUCKET_NAME="YOUR_BUCKET_NAME"
+
+To ensure a unique and unpredictable bucket name, use a randomly generated Universally Unique Identifier (UUID) in your bucket name, as shown in the following example. This practice helps prevent bucket squatting.
+         
+         PROJECT_ID="YOUR_PROJECT_ID"
+         BUCKET_NAME="${PROJECT_ID}-vertexai-nas-$(uuidgen)"
+
+  2. Check the bucket name that you created.
+         
+         echo $BUCKET_NAME
+
+  3. Select a region for your bucket and set a `REGION` environment variable.
+
+Use the same region where you plan on running Agent Platform Neural Architecture Search jobs.
+
+For example, the following code creates `REGION` and sets it to `us-central1`: 
+         
+         REGION=us-central1
+
+  4. Create the new bucket:
+         
+         gcloud storage buckets create gs://$BUCKET_NAME --location=$REGION
+
+
+
+
+## Request additional device quota for the project
+
+The [tutorials](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/neural-architecture-search/nas-tutorials) use approximately five CPU machines and don't require any additional quota. After running the tutorials, run your Agent Platform Neural Architecture Search job.
+
+The Agent Platform Neural Architecture Search job trains a batch of models in parallel. Each trained model corresponds to a _trial_. Read the section on [setting the `number-of-parallel-trials`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/neural-architecture-search/suggested-workflow#parallel_trials) to estimate the amount of CPUs and GPUs needed for a search job. For example, if each trial uses 2 T4 GPUs and you set `number-of-parallel-trials` to 20, then you need a total quota of 40 T4 GPUs for a search job. In addition, if each trial is using a `highmem-16` CPU, then you need 16 CPU units per trial, which is 320 CPU units for 20 parallel trials. _However we ask for a minimum of 10 parallel trial quota (or 20 GPU quota)._ The default initial quota for GPUs _varies by region and GPU type_ and is usually found to be 0, 6, or 12 for Tesla_T4 and 0 or 6 for Tesla_V100. The default initial quota for CPUs varies by region and is usually found to be 20, 450, or 2,200.
+
+**Note:** Agent Platform Neural Architecture Search currently doesn't support TPUs.
+
+Optional: if you plan to run multiple search jobs in parallel, then scale the quota requirement. Requesting a quota doesn't charge you immediately. You are charged once you run a job.
+
+**Note:** The quota is requested per region. For example, you can't use `us-central1` quota for running jobs in `europe-west4` region.
+
+If you don't have enough quota and try to launch a job which needs more resources than your quota, then the job won't launch giving an error which looks like:
+    
+    
+    Exception: Starting job failed: {'code': 429, 'message': 'The following quota metrics exceed quota limits: aiplatform.googleapis.com/custom_model_training_cpus,aiplatform.googleapis.com/custom_model_training_nvidia_v100_gpus,aiplatform.googleapis.com/custom_model_training_pd_ssd', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.DebugInfo', 'detail': '[ORIGINAL ERROR] generic::resource_exhausted: com.google.cloud.ai.platform.common.errors.AiPlatformException: code=RESOURCE_EXHAUSTED, message=The following quota metrics exceed quota limits: aiplatform.googleapis.com/custom_model_training_cpus,aiplatform.googleapis.com/custom_model_training_nvidia_v100_gpus,aiplatform.googleapis.com/custom_model_training_pd_ssd, cause=null [google.rpc.error_details_ext] { code: 8 message: "The following quota metrics exceed quota limits: aiplatform.googleapis.com/custom_model_training_cpus,aiplatform.googleapis.com/custom_model_training_nvidia_v100_gpus,aiplatform.googleapis.com/custom_model_training_pd_ssd" }'}]}
+    
+
+In some cases, if multiple jobs for the same project were started at the same time and the quota isn't sufficient for all of them, then one of the jobs remain in queued state and won't start training. In this case, cancel the queued job and either request more quota or wait until the previous job finishes.
+
+You can request the additional device quota from the **Quotas** page. You can apply filters to find the desired quota to edit: ![Filter Quota](https://docs.cloud.google.com/static/gemini-enterprise-agent-platform/machine-learning/training/neural-architecture-search/images/filter_quota.png)
+
+  1. For **Service** , select **Agent Platform API**.
+  2. For **region** , select the region you want to filter on.
+  3. For **Quota** , select an accelerator name whose prefix is **Custom model training**. 
+     * For V100 GPUs, the value is **Custom model training Nvidia V100 GPUs per region**.
+     * For CPUs, the value can be **Custom model training CPUs for N1/E2 machine types per region**. The number for the CPU represents the unit of CPUs. If you want 8 `highmem-16` CPUs, then make your quota request for 8 * 16 = 128 CPU units. Also enter the desired value for **region**.
+
+
+
+Once you create a quota request, you receive a `Case number` and follow up emails about the status of your request. A GPU quota approval might take approximately two to five business days to get approved. In general, getting a quota of approximately 20-30 GPUs should be faster to get approved in approximately two to three days and getting approval for approximately 100 GPUs might take five business days. A CPU quota approval might take up to two business days to get approved. However, if a region is experiencing a big shortage of a GPU type, then there is no guarantee even with a small quota ask. In this case, you might be asked to go for a different region or a different GPU type. In general, T4 GPUs are easier to get than V100s. T4 GPUs take more wall-clock time but are more cost effective.
+
+For more information, see [Request a quota adjustment](https://docs.cloud.google.com/docs/quotas/help/request_increase).
+
+## Set up artifact registry for your project
+
+You must set up an [artifact registry](https://cloud.google.com/artifact-registry/docs/overview#introduction) for your project and region where you push your docker images.
+
+Go to the **Artifact Registry** page for your project. If not already enabled, enable the artifact registry API for your project first:
+
+![Enable artifact registry](https://docs.cloud.google.com/static/gemini-enterprise-agent-platform/machine-learning/training/neural-architecture-search/images/enable_artifact_registry.png)
+
+Once enabled, start creating a new repository by clicking **CREATE REPOSITORY** :
+
+![Create artifact registry](https://docs.cloud.google.com/static/gemini-enterprise-agent-platform/machine-learning/training/neural-architecture-search/images/create_artifact_registry.png)
+
+Choose **Name** as **nas** , **Format** as **Docker** , and **Location type** as **Region**. For **Region** , select the location where you run your jobs and then click **CREATE**.
+
+![Artifact registry setting](https://docs.cloud.google.com/static/gemini-enterprise-agent-platform/machine-learning/training/neural-architecture-search/images/artifact_registry_setting.png)
+
+This should create your desired docker repository as shown below:
+
+![Artifact registry created](https://docs.cloud.google.com/static/gemini-enterprise-agent-platform/machine-learning/training/neural-architecture-search/images/artifact_registry_created.png)
+
+You also need to set up authentication to push dockers to this repository. The local environment set up section below contains this step.
+
+## Set up your local environment
+
+You can run these steps using the Bash shell in your local environment, or run them from a notebook in a Gemini Enterprise Agent Platform Workbench instance.
+
+  1. Set up basic environment variables:
+         
+         gcloud config set project PROJECT_ID
+         gcloud auth login
+         gcloud auth application-default login
+         
+
+  2. Set up [docker authentication](https://docs.cloud.google.com/artifact-registry/docs/docker/authentication#gcloud-helper) for your artifact registry:
+         
+         # example: REGION=europe-west4
+         gcloud auth configure-docker REGION-docker.pkg.dev
+         
+
+  3. (Optional) Configure a Python 3 virtual environment. Python 3 usage is recommended but not required:
+         
+         sudo apt install python3-pip && \
+         pip3 install virtualenv && \
+         python3 -m venv --system-site-packages ~/./nas_venv && \
+         source ~/./nas_venv/bin/activate
+         
+
+  4. Install additional libraries:
+         
+         pip install google-cloud-storage==2.6.0
+         pip install pyglove==0.1.0
+         
+
+
+
+
+## Set up a service account
+
+You must set up a [service account](https://docs.cloud.google.com/iam/docs/service-accounts) before running NAS jobs. You can run these steps using the Bash shell in your local environment, or run them from a notebook in a Gemini Enterprise Agent Platform Workbench instance.
+
+  1. Create a service account:
+         
+         gcloud iam service-accounts create NAME \
+             --description=DESCRIPTION \
+             --display-name=DISPLAY_NAME
+         
+
+  2. Grant the `aiplatform.user` and `storage.objectAdmin` role to the service account:
+         
+         gcloud projects add-iam-policy-binding PROJECT_ID \
+             --member=serviceAccount:NAME@PROJECT_ID.iam.gserviceaccount.com \
+             --role=roles/aiplatform.user
+         gcloud projects add-iam-policy-binding PROJECT_ID \
+             --member=serviceAccount:NAME@PROJECT_ID.iam.gserviceaccount.com \
+             --role=roles/storage.objectAdmin
+         
+
+
+
+
+For example, the following commands create a service account named `my-nas-sa` under the project `my-nas-project` with the `aiplatform.user` and `storage.objectAdmin` role:
+    
+    
+      gcloud iam service-accounts create my-nas-sa \
+          --description="Service account for NAS" \
+          --display-name="NAS service account"
+      gcloud projects add-iam-policy-binding my-nas-project \
+          --member=serviceAccount:my-nas-sa@my-nas-project.iam.gserviceaccount.com \
+          --role=roles/aiplatform.user
+      gcloud projects add-iam-policy-binding my-nas-project \
+          --member=serviceAccount:my-nas-sa@my-nas-project.iam.gserviceaccount.com \
+          --role=roles/storage.objectAdmin
+    
+
+## Download code
+
+To start an Agent Platform Neural Architecture Search experiment, you need to download the sample Python code, which includes prebuilt trainers, search space definitions, and associated client libraries.
+
+Run the following steps to download the source code.
+
+  1. Open a new Shell Terminal.
+
+  2. Run the Git clone command:
+         
+         git clone https://github.com/google/vertex-ai-nas.git
+         
+
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

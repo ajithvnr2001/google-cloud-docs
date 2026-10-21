@@ -1,0 +1,157 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/alloydb/clusters/restore/
+title: gcloud beta alloydb clusters restore \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T09:21:35.054672+00:00
+---
+
+# gcloud beta alloydb clusters restore  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/alloydb/clusters/restore/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta alloydb clusters restore Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta alloydb clusters restore - restore an AlloyDB cluster from a given backup or a source cluster and a timestamp 
+SYNOPSIS
+    
+
+`gcloud beta alloydb clusters restore` `CLUSTER` `--region`=`REGION` (`--backup`=`BACKUP` | `--backupdr-backup`=`BACKUPDR_BACKUP` | `--point-in-time`=`POINT_IN_TIME` (`--backupdr-data-source`=`BACKUPDR_DATA_SOURCE` | `--source-cluster`=`SOURCE_CLUSTER`)) [`--allocated-ip-range-name`=`ALLOCATED_IP_RANGE_NAME`] [`--async`] [`--[no-]enable-dataplex-integration`] [`--enable-private-service-connect`] [`--network`=`NETWORK`] [`--tags`=[`KEY`=`VALUE`,…]] [`--kms-key`=`KMS_KEY` : `--kms-keyring`=`KMS_KEYRING` `--kms-location`=`KMS_LOCATION` `--kms-project`=`KMS_PROJECT`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` Restore an AlloyDB cluster from a given backup or a source cluster and a timestamp. 
+EXAMPLES
+     To restore a cluster from a backup, run: 
+    
+    
+    gcloud beta alloydb clusters restore my-cluster --region=us-central1 --backup=my-backup
+
+To restore a cluster from a source cluster and a timestamp, run: 
+    
+    
+    gcloud beta alloydb clusters restore my-cluster --region=us-central1 --source-cluster=old-cluster --point-in-time=2012-11-15T16:19:00.094Z
+
+POSITIONAL ARGUMENTS
+    
+
+`CLUSTER`
+     AlloyDB cluster ID 
+REQUIRED FLAGS
+    
+
+`--region`=`REGION`
+     Regional location (e.g. `asia-east1`, `us-east1`). See the full list of regions at <https://cloud.google.com/sql/docs/instance-locations>. 
+RestoreCluster source types. 
+
+Exactly one of these must be specified: 
+
+`--backup`=`BACKUP`
+     AlloyDB backup to restore from. This must either be the full backup name (projects/myProject/locations/us-central1/backups/myBackup) or the backup ID (myBackup). In the second case, the project and location are assumed to be the same as the restored cluster that is being created. 
+`--backupdr-backup`=`BACKUPDR_BACKUP`
+     Backup DR backup to restore from. This is a resource path of the form projects/myProject/locations/us-central1/backupVaults/myBackupVault/dataSources/myDataSource/backups/myBackup. 
+Or at least one of these can be specified: 
+
+Restore a cluster from a source cluster at a given point in time. 
+`--point-in-time`=`POINT_IN_TIME`
+     Point in time to restore to, in RFC 3339 format. For example, 2012-11-15T16:19:00.094Z. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+Source for a point in time restore operation. 
+
+Exactly one of these must be specified: 
+
+`--backupdr-data-source`=`BACKUPDR_DATA_SOURCE`
+     Backup DR data source to restore from. This is a resource path of the form projects/myProject/locations/us-central1/backupVaults/myBackupVault/dataSources/myDataSource. 
+`--source-cluster`=`SOURCE_CLUSTER`
+     AlloyDB source cluster to restore from. This must either be the full cluster name (projects/myProject/locations/us-central1/backups/myCluster) or the cluster ID (myCluster). In the second case, the project and location are assumed to be the same as the restored cluster that is being created. 
+OPTIONAL FLAGS
+    
+
+`--allocated-ip-range-name`=`ALLOCATED_IP_RANGE_NAME`
+     Name of the allocated IP range for the private IP AlloyDB cluster, for example: "google-managed-services-default". If set, the instance IPs for this cluster will be created in the allocated range. The range name must comply with RFC 1035\. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. 
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--[no-]enable-dataplex-integration`
+     Enable or disable Dataplex integration for this cluster (Enabled by default). Use `--enable-dataplex-integration` to enable and `--no-enable-dataplex-integration` to disable. 
+`--enable-private-service-connect`
+     Enable Private Service Connect (PSC) connectivity for the cluster. 
+`--network`=`NETWORK`
+     Network in the current project that the instance will be part of. To specify using a network with a shared VPC, use the full URL of the network. For an example host project, `testproject`, and shared network, `testsharednetwork`, this would be of the form:`--network=projects/testproject/global/networks/testsharednetwork`
+`--tags`=[`KEY`=`VALUE`,…]
+     List of tags KEY=VALUE pairs to bind. Each item must be expressed as `<tag-key-namespaced-name>=<tag-value-short-name>`. 
+
+Example: `123/environment=production,123/costCenter=marketing`
+
+Key resource - The Cloud KMS (Key Management Service) cryptokey that will be used to protect the cluster. The 'AlloyDB Service Agent' service account must hold permission 'Cloud KMS CryptoKey Encrypter/Decrypter'. The arguments in this group can be used to specify the attributes of this resource. 
+`--kms-key`=`KMS_KEY`
+     ID of the key or fully qualified identifier for the key. 
+
+To set the `kms-key` attribute: 
+
+  * provide the argument `--kms-key` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--kms-keyring`=`KMS_KEYRING`
+     The KMS keyring of the key. 
+
+To set the `kms-keyring` attribute: 
+
+  * provide the argument `--kms-key` on the command line with a fully specified name; 
+  * provide the argument `--kms-keyring` on the command line. 
+
+
+`--kms-location`=`KMS_LOCATION`
+     The Google Cloud location for the key. 
+
+To set the `kms-location` attribute: 
+
+  * provide the argument `--kms-key` on the command line with a fully specified name; 
+  * provide the argument `--kms-location` on the command line. 
+
+
+`--kms-project`=`KMS_PROJECT`
+     The Google Cloud project for the key. 
+
+To set the `kms-project` attribute: 
+
+  * provide the argument `--kms-key` on the command line with a fully specified name; 
+  * provide the argument `--kms-project` on the command line; 
+  * set the property `core/project`. 
+
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in beta and might change without notice. These variants are also available: 
+    
+    
+    [gcloud alloydb clusters restore](https://docs.cloud.google.com/sdk/gcloud/reference/alloydb/clusters/restore)
+    
+    
+    [gcloud alpha alloydb clusters restore](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/alloydb/clusters/restore)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

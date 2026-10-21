@@ -1,0 +1,112 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/request-gcp-machine-resources/
+title: Learn how to request Google Cloud machine resources in Gemini Enterprise Agent Platform Pipelines \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T06:46:48.685304+00:00
+---
+
+# Learn how to request Google Cloud machine resources in Gemini Enterprise Agent Platform Pipelines  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/request-gcp-machine-resources/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Learn how to request Google Cloud machine resources in Gemini Enterprise Agent Platform Pipelines Stay organized with collections  Save and categorize content based on your preferences. 
+
+You can run your Python component on Gemini Enterprise Agent Platform Pipelines by using Google Cloud-specific machine resources offered by Gemini Enterprise Agent Platform custom training.
+
+You can use the [`create_custom_training_job_from_component`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/custom_job.html#v1.custom_job.create_custom_training_job_from_component) method from the [Google Cloud Pipeline Components](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/gcpc-list) to transform a Python component into a Gemini Enterprise Agent Platform custom training job. [Learn how to create a custom job](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/create-custom-job).
+
+## Create a custom training job from a component using Gemini Enterprise Agent Platform Pipelines
+
+The following sample shows how to use the [`create_custom_training_job_from_component`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/custom_job.html#v1.custom_job.create_custom_training_job_from_component) method to transform a Python component into a custom training job with user-defined Google Cloud machine resources, and then run the compiled pipeline on Gemini Enterprise Agent Platform Pipelines:
+    
+    
+    import kfp
+    from kfp import dsl
+    from google_cloud_pipeline_components.v1.custom_job import create_custom_training_job_from_component
+    
+    # Create a Python component
+    @dsl.component
+    def my_python_component():
+      import time
+      time.sleep(1)
+    
+    # Convert the above component into a custom training job
+    custom_training_job = create_custom_training_job_from_component(
+        my_python_component,
+        display_name = 'DISPLAY_NAME',
+        machine_type = 'MACHINE_TYPE',
+        accelerator_type='ACCELERATOR_TYPE',
+        accelerator_count='ACCELERATOR_COUNT',
+        boot_disk_type: 'BOOT_DISK_TYPE',
+        boot_disk_size_gb: 'BOOT_DISK_SIZE',
+        network: 'NETWORK',
+        reserved_ip_ranges: 'RESERVED_IP_RANGES',
+        nfs_mounts: 'NFS_MOUNTS'
+        persistent_resource_id: 'PERSISTENT_RESOURCE_ID'
+    )
+    
+    # Define a pipeline that runs the custom training job
+    @dsl.pipeline(
+      name="resource-spec-request",
+      description="A simple pipeline that requests a Google Cloud machine resource",
+      pipeline_root='PIPELINE_ROOT',
+    )
+    def pipeline():
+      training_job_task = custom_training_job(
+          project='PROJECT_ID',
+          location='LOCATION',
+      ).set_display_name('training-job-task')
+    
+
+Replace the following:
+
+  * DISPLAY_NAME: The name of the custom job. If you don't specify the name, the component name is used, by default.
+
+  * MACHINE_TYPE: The type of the machine for running the custom job—for example, `e2-standard-4`. For more information about machine types, see [Machine types](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/configure-compute#machine-types). If you specified a TPU as the `accelerator_type`, set this to `cloud-tpu`. For more information, see the [`machine_type` parameter reference](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/custom_job.html#v1.custom_job.create_custom_training_job_from_component.machine_type).
+
+  * ACCELERATOR_TYPE: The type of accelerator attached to the machine. For more information about the available GPUs and how to configure them, see [GPUs](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/configure-compute#specifying_gpus). For more information about the available TPU types and how to configure them, see [TPUs](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/configure-compute#tpu). For more information, see the [`accelerator_type` parameter reference](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/custom_job.html#v1.custom_job.create_custom_training_job_from_component.accelerator_type).
+
+  * ACCELERATOR_COUNT: The number of accelerators attached to the machine running the custom job. If you specify the accelerator type, the accelerator count is set to `1`, by default.
+
+  * BOOT_DISK_TYPE: The type of boot disk. For more information, see the [`boot_disk_type` parameter reference](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/custom_job.html#v1.custom_job.create_custom_training_job_from_component.boot_disk_type).
+
+  * BOOT_DISK_SIZE: The size of the boot disk in GB. For more information, see the [`boot_disk_size_gb` parameter reference](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/custom_job.html#v1.custom_job.create_custom_training_job_from_component.boot_disk_size_gb).
+
+  * NETWORK: If the custom job is peered to a Compute Engine network that has private services access configured, specify the full name of the network. For more information, see the [`network` parameter reference](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/custom_job.html#v1.custom_job.create_custom_training_job_from_component.network).
+
+  * RESERVED_IP_RANGES: A list of names for the reserved IP ranges under the VPC network used to deploy the custom job. For more information, see the [`reserved_ip_ranges` parameter reference](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/custom_job.html#v1.custom_job.create_custom_training_job_from_component.reserved_ip_ranges).
+
+  * NFS_MOUNTS: A list of NFS mount resources in JSON dict format. For more information, see the [`nfs_mounts` parameter reference](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/custom_job.html#v1.custom_job.create_custom_training_job_from_component.nfs_mounts).
+
+  * PERSISTENT_RESOURCE_ID (preview): The ID of the persistent resource to run the pipeline. If you specify a persistent resource, the pipeline runs on existing machines associated to the persistent resource, instead of on-demand and short-lived machine resources. Note that the network and CMEK configuration for the pipeline must match the configuration specified for the persistent resource. For more information about persistent resources and how to create them, see [Create a persistent resource](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/persistent-resource-create#create-persistent-resource-gcloud).
+
+  * PIPELINE_ROOT: Specify a Cloud Storage URI that your pipelines service account can access. The artifacts of your pipeline runs are stored within the pipeline root.
+
+  * PROJECT_ID: The Google Cloud project that this pipeline runs in.
+
+  * LOCATION: The location or region that this pipeline runs in.
+
+
+
+
+## API Reference
+
+For a complete list of arguments supported by the [`create_custom_training_job_from_component`](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/custom_job.html#v1.custom_job.create_custom_training_job_from_component) method, see the [Google Cloud Pipeline Components SDK Reference](https://google-cloud-pipeline-components.readthedocs.io/en/google-cloud-pipeline-components-2.22.0/api/v1/index.html).
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

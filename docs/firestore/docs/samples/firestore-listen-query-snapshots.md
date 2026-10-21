@@ -1,0 +1,195 @@
+---
+url: https://docs.cloud.google.com/firestore/docs/samples/firestore-listen-query-snapshots/
+title: Monitor query result changes with Firestore Watch \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-17T10:25:31.673804+00:00
+---
+
+# Monitor query result changes with Firestore Watch  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/firestore/docs/samples/firestore-listen-query-snapshots/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Firestore ](https://docs.cloud.google.com/firestore/docs)
+  * [ Samples ](https://docs.cloud.google.com/firestore/docs/samples)
+
+
+
+#  Monitor query result changes with Firestore Watch Stay organized with collections  Save and categorize content based on your preferences. 
+
+Monitor query result changes with Firestore Watch
+
+## Explore further
+
+For detailed documentation that includes this code sample, see the following: 
+
+  * [Get real-time updates](https://docs.cloud.google.com/firestore/native/docs/query-data/listen)
+
+
+
+## Code sample
+
+### C#
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    CollectionReference citiesRef = db.Collection("cities");
+    Query query = db.Collection("cities").WhereEqualTo("State", "CA");
+    
+    FirestoreChangeListener listener = query.Listen(snapshot =>
+    {
+        Console.WriteLine("Callback received query snapshot.");
+        Console.WriteLine("Current cities in California:");
+        foreach (DocumentSnapshot documentSnapshot in snapshot.Documents)
+        {
+            Console.WriteLine(documentSnapshot.Id);
+        }
+    });
+
+### Go
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import (
+    	"context"
+    	"fmt"
+    	"io"
+    	"time"
+    
+    	"cloud.google.com/go/firestore"
+    	"google.golang.org/api/iterator"
+    	"google.golang.org/grpc/codes"
+    	"google.golang.org/grpc/status"
+    )
+    
+    // listenMultiple listens to a query, returning the names of all cities
+    // for a state.
+    func listenMultiple(ctx context.Context, w io.Writer, projectID, collection string) error {
+    	// projectID := "project-id"
+    	ctx, cancel := context.WithTimeout(ctx, 30*time.Second)
+    	defer cancel()
+    
+    	client, err := firestore.NewClient(ctx, projectID)
+    	if err != nil {
+    		return fmt.Errorf("firestore.NewClient: %w", err)
+    	}
+    	defer client.Close()
+    
+    	it := client.Collection(collection).Where("state", "==", "CA").Snapshots(ctx)
+    	for {
+    		snap, err := it.Next()
+    		// DeadlineExceeded will be returned when ctx is cancelled.
+    		if status.Code(err) == codes.DeadlineExceeded {
+    			return nil
+    		}
+    		if err != nil {
+    			return fmt.Errorf("Snapshots.Next: %w", err)
+    		}
+    		if snap != nil {
+    			for {
+    				doc, err := snap.Documents.Next()
+    				if err == iterator.Done {
+    					break
+    				}
+    				if err != nil {
+    					return fmt.Errorf("Documents.Next: %w", err)
+    				}
+    				fmt.Fprintf(w, "Current cities in California: %v\n", doc.[Ref](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/firestore/latest/index.html#cloud_google_com_go_firestore_PipelineResult_Ref).ID)
+    			}
+    		}
+    	}
+    }
+    
+
+### Java
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    db.collection("cities")
+        .whereEqualTo("state", "CA")
+        .addSnapshotListener(
+            new EventListener<QuerySnapshot>() {
+              @Override
+              public void onEvent(
+                  @Nullable QuerySnapshot snapshots, @Nullable FirestoreException e) {
+                if (e != null) {
+                  System.err.println("Listen failed:" + e);
+                  return;
+                }
+    
+                List<String> cities = new ArrayList<>();
+                for (DocumentSnapshot doc : snapshots) {
+                  if (doc.get("name") != null) {
+                    cities.add(doc.getString("name"));
+                  }
+                }
+                System.out.println("Current cites in CA: " + cities);
+              }
+            });
+
+### Node.js
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    const query = db.collection('cities').where('state', '==', 'CA');
+    
+    const observer = query.onSnapshot(querySnapshot => {
+      console.log(`Received query snapshot of size ${querySnapshot.size}`);
+      // ...
+    }, err => {
+      console.log(`Encountered error: ${err}`);
+    });
+
+### Python
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    # Create an Event for notifying main thread.
+    callback_done = threading.Event()
+    
+    # Create a callback on_snapshot function to capture changes
+    def on_snapshot(col_snapshot, changes, read_time):
+        print("Callback received query snapshot.")
+        print("Current cities in California:")
+        for doc in col_snapshot:
+            print(f"{doc.id}")
+        callback_done.set()
+    
+    col_query = db.collection("cities").where(filter=FieldFilter("state", "==", "CA"))
+    
+    # Watch the collection query
+    query_watch = col_query.on_snapshot(on_snapshot)
+    
+
+### Ruby
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    query = firestore.col(collection_path).where :state, :==, "CA"
+    docs = []
+    
+    # Watch the collection query.
+    listener = query.listen do |snapshot|
+      puts "Callback received query snapshot."
+      puts "Current cities in California:"
+      snapshot.docs.each do |doc|
+        puts doc.document_id
+        docs << doc
+      end
+    end
+
+## What's next
+
+To search and filter code samples for other Google Cloud products, see the [Google Cloud sample browser](https://docs.cloud.google.com/docs/samples?product=firestore). 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],[],[],[]] 

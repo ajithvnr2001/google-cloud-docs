@@ -1,0 +1,79 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/run/worker-pools/logs/tail/
+title: gcloud beta run worker-pools logs tail \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T10:20:04.666509+00:00
+---
+
+# gcloud beta run worker-pools logs tail  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/run/worker-pools/logs/tail/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta run worker-pools logs tail Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta run worker-pools logs tail - tail logs for a Cloud Run worker pool 
+SYNOPSIS
+    
+
+`gcloud beta run worker-pools logs tail` `WORKER_POOL` [`--log-filter`=`LOG_FILTER`] [`--region`=`REGION`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` gcloud beta run worker-pools logs tail tails log-entries for a particular Cloud Run worker pool in real time. The log entries are formatted for consumption in a terminal. 
+EXAMPLES
+     To tail log entries for a Cloud Run Worker Pool, run: 
+    
+    
+    gcloud beta run worker-pools logs tail my-worker-pool
+
+To tail log entries with severity ERROR or higher, run: 
+    
+    
+    gcloud beta run worker-pools logs tail my-worker-pool --log-filter="severity>=ERROR"
+
+Detailed information about filters can be found at: <https://cloud.google.com/logging/docs/view/advanced_filters>
+
+POSITIONAL ARGUMENTS
+    
+
+`WORKER_POOL`
+     Name for a Cloud Run worker pool. 
+FLAGS
+    
+
+`--log-filter`=`LOG_FILTER`
+     Filter expression that specifies the log entries to return. Detailed information about filters can be found at: <https://cloud.google.com/logging/docs/view/logging-query-language>
+`--region`=`REGION`
+     Region in which the resource can be found. Alternatively, set the property [run/region]. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in beta and might change without notice. These variants are also available: 
+    
+    
+    [gcloud run worker-pools logs tail](https://docs.cloud.google.com/sdk/gcloud/reference/run/worker-pools/logs/tail)
+    
+    
+    [gcloud alpha run worker-pools logs tail](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/run/worker-pools/logs/tail)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

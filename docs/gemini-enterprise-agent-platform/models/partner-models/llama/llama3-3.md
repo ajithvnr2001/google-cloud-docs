@@ -1,0 +1,99 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/llama/llama3-3/
+title: Llama 3.3 70B \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T21:00:55.612919+00:00
+---
+
+# Llama 3.3 70B  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/llama/llama3-3/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Llama 3.3 70B Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Caution:** As of July 21, 2026, the `llama-3.3-70b-instruct-maas` endpoint is deprecated and will be retired on October 21, 2026. For more information, see [Open model deprecations](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models). 
+
+Llama 3.3 70B is a text-only 70B instruction-tuned model that provides enhanced performance relative to Llama 3.1 70B and to Llama 3.2 90B when used for text-only applications.
+
+## Managed API (MaaS) specifications
+
+[View model card in Model Garden](https://console.cloud.google.com/agent-platform/publishers/meta/model-garden/llama-3.3-70b-instruct-maas)
+
+Model ID | `llama-3.3-70b-instruct-maas`  
+---|---  
+Launch stage | GA  
+Supported inputs & outputs | 
+
+  * Inputs: Text, Code
+  * Outputs: Text
+
+  
+Capabilities | 
+
+  * Supported
+    * [Batch predictions](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/maas/capabilities/batch-prediction)
+    * [Llama Guard](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/llama)
+    * [Function calling](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/maas/capabilities/function-calling)
+    * [Structured output](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/maas/capabilities/structured-output)
+  * Not supported
+
+  
+Usage types | 
+
+  * Supported
+    * [Standard pay-as-you-go](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/standard-paygo)
+    * [Provisioned Throughput](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/provisioned-throughput)
+  * Not supported
+    * [Fixed quota](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/quotas)
+
+  
+Knowledge cutoff date | December 2023  
+Versions | 
+
+  * `llama-3.3-70b-instruct-maas`
+    * **Launch stage:** GA
+    * **Release date:** April 29, 2025
+
+  
+Supported regions  
+Model availability | 
+
+  * United States
+    * `us-central1`
+
+  
+ML processing | 
+
+  * United States
+    * `Multi-region`
+
+  
+Quota limits |  us-central1: 
+
+  * Max output: 8,192
+  * Context length: 128,000
+
+  
+Pricing | See [Pricing](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing).  
+  
+## Deploy as a self-deployed model
+
+To self-deploy the model, navigate to the [Llama 3.3 70B model card](https://console.cloud.google.com/agent-platform/publishers/meta/model-garden/llama3-3) in the Model Garden console and click **Deploy model**. For more information about deploying and using partner models, see [Deploy a partner model and make prediction requests](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-garden/use-models#deploy_a_partner_model_and_make_prediction_requests).
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

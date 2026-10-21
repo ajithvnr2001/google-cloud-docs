@@ -1,0 +1,1156 @@
+---
+url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/config-prop-ref/
+title: Configuration property reference \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-15T14:34:41.309024+00:00
+---
+
+# Configuration property reference  |  Apigee  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/config-prop-ref/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Application development ](https://docs.cloud.google.com/docs/application-development)
+  * [ Apigee ](https://docs.cloud.google.com/apigee/docs)
+  * [ Guides ](https://docs.cloud.google.com/apigee/docs/api-platform/get-started/what-apigee)
+
+
+
+Send feedback 
+
+#  Configuration property reference Stay organized with collections  Save and categorize content based on your preferences. 
+
+You are currently viewing version 1.9 of the Apigee hybrid documentation. **This version is end of life.** You should upgrade to a newer version. For more information, see [Supported versions](https://docs.cloud.google.com/apigee/docs/hybrid/supported-platforms#supported-versions).
+
+Version 1.9 (unsupported)keyboard_arrow_down
+
+Supported versions:
+
+  * [ v1.17 (latest) ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/config-prop-ref.html)
+  * [ v1.16 ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/config-prop-ref.html)
+  * [ v1.15 ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.15/config-prop-ref.html)
+  * [ v1.14 ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.14/config-prop-ref.html)
+  * [ List of supported versions ](https://docs.cloud.google.com/apigee/docs/hybrid/supported-platforms#supported-versions)
+
+Unsupported versions:
+
+  * [ v1.13 ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.13/config-prop-ref.html)
+  * [ v1.12 ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.12/config-prop-ref.html)
+  * [ v1.11 ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.11/config-prop-ref.html)
+  * [ v1.10 ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.10/config-prop-ref.html)
+  * [ v1.9 ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/config-prop-ref.html)
+  * [ v1.8 ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.8/config-prop-ref.html)
+  * [ v1.7 ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.7/config-prop-ref.html)
+  * [ v1.6 ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.6/config-prop-ref.html)
+  * [ v1.5 ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.5/config-prop-ref.html)
+  * [ v1.4 ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.4/config-prop-ref.html)
+  * [ v1.3 ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.3/config-prop-ref.html)
+  * [ v1.2 ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.2/config-prop-ref.html)
+  * [ v1.1 ](https://docs.cloud.google.com/apigee/docs/hybrid/v1.1/config-prop-ref.html)
+
+
+
+This section lists all of the configuration properties that you can use to customize the runtime plane of your Apigee hybrid deployment.
+
+**Note:** For instructions on how to add custom annotations, which are key/value maps used to attach metadata to Apigee hybrid Kubernetes pods, see [Custom annotations](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/customize-services#custom-annotations). 
+
+#### About configuration properties
+
+You can override many configuration properties, if needed, by adding them to `HYBRID_ROOT_DIR/overrides.yaml`.
+
+**Tip:** Apigee provides a small set of sample configurations that you can use for further guidance. See [Sample overrides file](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/customize-services#sample-override-configurations).
+
+For example, to change the replica count minimum and maximum for the MART service, you could add this stanza to `overrides.yaml`: 
+    
+    
+    mart:
+        replicaCountMin: 3
+        replicaCountMax: 6
+
+You can also find these config properties and their default settings in `HYBRID_ROOT_INSTALL/1.0.0/values.yaml`
+
+For more information, see [`Manage runtime plane components`](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/customize-services).
+
+Additionally, if you are configuring an Anthos-based deployment see [ Step 6: Configure the cluster](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/install-configure-cluster) for information on setting these properties for Anthos.
+
+## Filter this page
+
+To filter the properties displayed on this page, select **Basic** (most common properties) or **Advanced** (properties that rarely need changing): 
+
+filter_list_alt**Display** AllBasicAdvanced **configuration properties on this page.** **Caution:** Do not change advanced properties without first testing them in lower environments and verifying them in the specific operating environment. 
+
+## Top-level properties
+
+The following table describes the top-level properties in the `overrides.yaml` file. These are properties that do not belong to another object, and apply at the org or environment level:
+
+Property | Type | Description  
+---|---|---  
+`axHashSalt` | Advanced | **Introduced in version:** 1.3.0 **Default value:** Your organization name **Optional** The name of a [Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/) that contains a salt used when computing hashes to [obfuscate user data](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/obfuscate-userdata-for-analytics) before it is sent to Apigee analytics. If you do not specify a salt value, `iloveapis123` is used by default. [Create the secret](https://kubernetes.io/docs/concepts/configuration/secret/#creating-a-secret-using-kubectl) with the salt value as its input. You can use the same salt across multiple clusters to ensure consistent hashing results between the clusters. Apigee uses SHA512 to hash the original value before sending data from the runtime plane to the control plane. See: [Obfuscate user data for analytics](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/obfuscate-userdata-for-analytics).  
+`contractProvider` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `https://apigee.googleapis.com` Defines the API path for all APIs in your installation.  
+`gcpProjectID` | Advanced | Deprecated: For v1.2.0 and later, use `gcp.projectID` instead. **Introduced in version:** 1.0.0 **Default value:** none **Required** ID of your Google Cloud project. Works with `k8sClusterName` (deprecated) and `gcpRegion` (deprecated) to identify the project and determine where the `apigee-logger` and the `apigee-metrics` push their data.  
+`gcpRegion` | Advanced | Deprecated: For v1.2.0 and later, use `gcp.region` instead. **Introduced in version:** 1.0.0 **Default value:** `us-central1` **Required** The closet Google Cloud region or zone of your Kubernetes cluster. Works with `gcpProjectID` (deprecated) and `k8sClusterName` (deprecated) to identify the project and determine where the `apigee-logger` and the `apigee-metrics` push their data.  
+`imagePullSecrets.name` | Advanced | **Introduced in version:** 1.0.0 **Default value:** None Kubernetes secret name configured as docker-registry type; used to pull images from private repo.  
+`instanceID` | Basic | **Introduced in version:** 1.3.0 **Default value:** None **Required** A unique identifier for this installation. A unique string to identify this instance. This can be any combination of letters and numbers up to 63 characters in length. You can create multiple organizations in the same cluster, but the `instanceID` must be the same for all orgs in the same Kubernetes cluster. For multi-region installations, each region requires its own cluster (individual clusters do not span regions).   
+`k8sClusterName` | Advanced | Deprecated: For v1.2.0 and later, use `k8sCluster.name` and `k8sCluster.region` instead. **Introduced in version:** 1.0.0 **Default value:** None Name of the Kubernetes (K8S) procluster where your hybrid project is running. Works with `gcpProjectID` (deprecated) and `gcpRegion` (deprecated) to identify the project and determine where the `apigee-logger` and the `apigee-metrics` push their data.  
+`kmsEncryptionKey` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `defaults.org.kmsEncryptionKey` **Optional.** Use only one of **kmsEncryptionKey** or **kmsEncryptionPath** or **kmsEncryptionSecret**. Local file system path for the Apigee KMS data's encryption key.  
+`kmsEncryptionPath` | Advanced | **Introduced in version:** 1.2.0 **Default value:** None **Optional.** Use only one of **kmsEncryptionKey** or **kmsEncryptionPath** or **kmsEncryptionSecret**. The path to a file containing a base64-encoded encryption key. See [Data encryption](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/key-encryption).  
+`kmsEncryptionSecret.key` | Advanced | **Introduced in version:** 1.2.0 **Default value:** None **Optional.** Use only one of **kmsEncryptionKey** or **kmsEncryptionPath** or **kmsEncryptionSecret**. The key of a [Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/) containing a base64-encoded encryption key. See [Data encryption](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/key-encryption).  
+`kmsEncryptionSecret.name` | Advanced | **Introduced in version:** 1.2.0 **Default value:** None **Optional.** Use only one of **kmsEncryptionKey** or **kmsEncryptionPath** or **kmsEncryptionSecret**. The name of a [Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/) containing a base64-encoded encryption key. See [Data encryption](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/key-encryption).  
+`kvmEncryptionKey` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `defaults.org.kmsEncryptionKey` **Optional.** Use only one of **kvmEncryptionKey** or **kvmEncryptionPath** or **kvmEncryptionSecret**. Local file system path for the Apigee KVM data's encryption key.  
+`kvmEncryptionPath` | Advanced | **Introduced in version:** 1.2.0 **Default value:** None **Optional.** Use only one of **kvmEncryptionKey** or **kvmEncryptionPath** or **kvmEncryptionSecret**. The path to a file containing a base64-encoded encryption key. See [Data encryption](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/key-encryption).  
+`kvmEncryptionSecret.key` | Advanced | **Introduced in version:** 1.2.0 **Default value:** None **Optional.** Use only one of **kvmEncryptionKey** or **kvmEncryptionPath** or **kvmEncryptionSecret**. The key of a [Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/) containing a base64-encoded encryption key. See [Data encryption](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/key-encryption).  
+`kvmEncryptionSecret.name` | Advanced | **Introduced in version:** 1.2.0 **Default value:** None **Optional.** Use only one of **kvmEncryptionKey** or **kvmEncryptionPath** or **kvmEncryptionSecret**. The name of a [Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/) containing a base64-encoded encryption key. See [Data encryption](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/key-encryption).  
+`namespace` | Basic | **Introduced in version:** 1.0.0 **Default value:** `apigee` The namespace of your Kubernetes cluster where the Apigee components will be installed.  
+`org` | Basic |  **Introduced in version:** 1.0.0 **Default value:** None **Required** The hybrid-enabled organization that was provisioned for you by Apigee during the hybrid installation. An organization is the top-level container in Apigee. It contains all your API proxies and related resources. If the value is empty, you must update it with your org name once you have created it.  
+`orgScopedUDCA` | Advanced | **Introduced in version:** 1.8.0 **Default value:** `true` Enables the Universal Data Collection Agent service (UDCA) at the org level, that extracts analytics, monetization and debug (trace) and sends it to the Unified Analytics Platform (UAP) which resides in the Control Plane. The Org-scoped UDCA uses a single service account for all the Apigee Environments. The service account needs to be set through `udca:serviceAccountPath` property in the `overrides.yaml` configuration (the property should set the path to Google Service Account key file with `Apigee Analytics Agent` role). If you prefer to use a separate UDCA agent for each environment, set `orgScopedUDCA: false` and set the values for `envs[].serviceAccountPaths.udca` and `envs[].serviceAccountSecretRefs.udca`.  See also: udca.   
+`revision` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `"194"` (Your Apigee hybrid version without periods. For example for version 1.9.0, the default value is `"190"`.) Apigee hybrid supports rolling Kubernetes updates, which allow deployment updates to take place with zero downtime by incrementally updating Pod instances with new ones.  When updating certain YAML overrides that result in underlying Kubernetes `PodTemplateSpec` change, the `revision` override property must also be changed in the customer's `override.yaml`. This is required for the underlying Kubernetes _ApigeeDeployment_ (AD) controller to conduct a safe rolling update of from the previous version to the new version. You can use any lowercase text value, eg: `blue`, `a`, `1.0.0` **Note:**`revision` can accept only lowercase alpha characters, numbers, and punctuation. When the `revision` property is changed and applied, a rolling update will occur for all components  Changes to properties of the following objects require an update to `revision`: 
+
+  * nodeSelector
+  * envs
+  * imagePullSecrets
+  * gcpProjectID
+  * k8sClusterName
+  * contractProvider
+  * org
+
+For more information, see [Rolling updates](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/revision).  
+`validateOrg` | Advanced | **Introduced in version:** 1.8.0 **Default value:** `true` Enables strict validation of the link between the Apigee Org and GCP project and checks for the existence of environment groups. See also `org`  
+`validateServiceAccounts` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `true` Enables strict validation of service account permissions. This uses Cloud Resource Manager API method `testIamPermissions` to verify that the provided service account has the required permissions. In the case of service accounts for an Apigee Org, the project ID check is the one mapped to the Organization. For Metrics and Logger, the project checked is based on the `gcpProjectID` `overrides.yaml` configuration. See also `gcpProjectID`  
+  
+## `ao`
+
+_Apigee Operators_ (AO) creates and updates low level Kubernetes and Istio resources that are required to deploy and maintain a component. For example, the controller carries out the release of message processors.
+
+**Note:** In version 1.2.0, Apigee Operators replaces Apigee Deployment Admissionhook (ADAH) and Apigee Deployment Controller (ADC).
+
+The following table describes the properties of the apigee-operators `ao` object:
+
+Property | Type | Description  
+---|---|---  
+`ao.args.disableIstioConfigInAPIServer` | Advanced | **Introduced in version:** 1.8.0 **Default value:** `false` Stops Apigee from supplying configuration to customer-installed ASM. 
+
+  * Set to `true` for hybrid installations using Apigee ingress gateway.
+  * Set to `false` for hybrid installations using Anthos Service Mesh (Apigee hybrid versions 1.8 and earlier).
+
+  
+`ao.image.pullPolicy` | Advanced | **Introduced in version:** 1.2.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`ao.image.tag` | Advanced | **Introduced in version:** 1.2.0 **Default value:** `1.9.4` The version label for this service's Docker image.  
+`ao.image.url` | Advanced | **Introduced in version:** 1.2.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-operators` The location of the Docker image for this service.  
+`ao.installer.pullPolicy` | Advanced | **Introduced in version:** 1.3.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`ao.installer.tag` | Advanced | **Introduced in version:** 1.3.0 **Default value:** `1.9.4` The version label for this service's Docker image.  
+`ao.installer.url` | Advanced | **Introduced in version:** 1.3.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-installer` The location of the Docker image for this service.  
+`ao.resources.limits.cpu` | Advanced | **Introduced in version:** 1.2.0 **Default value:** `250m` The CPU limit for the resource in a Kubernetes container, in millicores.  
+`ao.resources.limits.memory` | Advanced | **Introduced in version:** 1.2.0 **Default value:** `256Mi` The memory limit for the resource in a Kubernetes container, in mebibytes.  
+`ao.resources.requests.cpu` | Advanced | **Introduced in version:** 1.2.0 **Default value:** `250m` The CPU needed for normal operation of the resource in a Kubernetes container, in millicores.  
+`ao.resources.requests.memory` | Advanced | **Introduced in version:** 1.2.0 **Default value:** `256Mi` The memory needed for normal operation of the resource in a Kubernetes container, in mebibytes.  
+  
+## `cassandra`
+
+Defines the hybrid service that manages the runtime data repository. This repository stores application configurations, distributed quota counters, API keys, and OAuth tokens for applications running on the gateway.
+
+For more information, see [StorageClass configuration](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/cassandra-config).
+
+The following table describes the properties of the `cassandra` object:
+
+Property | Type | Description  
+---|---|---  
+`cassandra.annotations` | Advanced | **Introduced in version:** 1.5.0 **Default value:** None Optional key/value map used to annotate pods. For more information, see [Custom annotations](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/customize-services#custom-annotations).  
+`cassandra.auth.admin.password` | Basic | **Introduced in version:** 1.0.0 **Default value:** `iloveapis123` **Required** Password for the Cassandra administrator. The admin user is used for any administrative activities performed on the Cassandra cluster.  
+`cassandra.auth.ddl.password` | Basic | **Introduced in version:** 1.0.0 **Default value:** `iloveapis123` **Required** Password for the Cassandra Data Definition Language (DDL) user. Used by MART for any of the data definition tasks like keyspace creation, update, and deletion.  
+`cassandra.auth.default.password` | Basic | **Introduced in version:** 1.0.0 **Default value:** `iloveapis123` **Required** The password for the default Cassandra user created when Authentication is enabled. This password must be reset when configuring Cassandra authentication. See [Configuring TLS for Cassandra](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/cassandra-tls).  
+`cassandra.auth.dml.password` | Basic | **Introduced in version:** 1.0.0 **Default value:** `iloveapis123` **Required** Password for the Cassandra Data Manipulation Language (DML) user. The DML user is used by the client communication to read and write data to Cassandra.  
+`cassandra.auth.image.pullPolicy` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`cassandra.auth.image.tag` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1.9.4` The version label for this service's Docker image.  
+`cassandra.auth.image.url` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-hybrid-cassandra-client` The location of the Docker image for this service.  
+`cassandra.auth.jmx.password` | Basic | **Introduced in version:** 1.4.0 **Default value:** `iloveapis123` **Required** Password for the Cassandra JMX operations user. Used to authenticate and communicate with the Cassandra JMX interface.  
+`cassandra.auth.jmx.username` | Basic | **Introduced in version:** 1.4.0 **Default value:** `jmxuser` **Required** Username for the Cassandra JMX operations user. Used to authenticate and communicate with the Cassandra JMX interface.  
+`cassandra.auth.jolokia.password` | Basic | **Introduced in version:** 1.4.0 **Default value:** `iloveapis123` **Required** Password for the Cassandra Jolokia JMX operations user. Used to authenticate and communicate with the Cassandra JMX API.  
+`cassandra.auth.jolokia.username` | Basic | **Introduced in version:** 1.4.0 **Default value:** `apigee` **Required** Username for the Cassandra Jolokia JMX operations user. Used to authenticate and communicate with the Cassandra JMX API.  
+`cassandra.auth.secret` | Basic | **Introduced in version:** 1.3.3 **Default value:** None The name of the file stored in a Kubernetes secret that contains the Cassandra users and passwords. You can create the secret using following the following instructions: [Create the Secret](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/cassandra-tls#create-the-secret).  See also:
+
+  * [Storing data in a Kubernetes secret](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/k8s-secrets)
+  * [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) in the Kubernetes documentation
+  * [ Creating a Secret Using kubectl](https://kubernetes.io/docs/concepts/configuration/secret/#creating-a-secret) in the Kubernetes documentation
+
+  
+`cassandra.backup.cloudProvider` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `GCP` **Required if backup is enabled.** Cloud provider for backup storage. You can set the value to either `GCP` or `HYBRID`. Set the value to `GCP` if you want to store the backup on Google Cloud Storage, and `HYBRID` if you want to store the backup on a remote server. For information on CSI backup and restore for cloud platforms such as Google Cloud, AWS, and Azure, see [CSI backup and restore](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/cassandra-csi-backup-restore).  
+`cassandra.backup.dbStorageBucket` | Advanced | **Introduced in version:** 1.0.0 **Default value:** None **Required if backup is enabled.** Cloud storage bucket for the backup data.  
+`cassandra.backup.enabled` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `false` Data backup is not enabled by default. To enable, set to `true`. See [Cassandra backup and recovery](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/backup-recovery).  
+`cassandra.backup.image.pullPolicy` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`cassandra.backup.image.tag` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1.9.4` The version label for this service's Docker image.  
+`cassandra.backup.image.url` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-cassandra-backup-utility` The location of the Docker image for this service.  
+`cassandra.backup.schedule` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `0 2 * * *` The schedule for the cron job. See [Cassandra backup and recovery](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/backup-recovery).  
+`cassandra.backup.serviceAccountPath` | Advanced | **Introduced in version:** 1.0.0 **Default value:** None One of either `backup.serviceAccountPath` or `backup.serviceAccountRef` is required if backup is enabled. Path to Google Service Account key file with **Storage Object Admin** role.   
+`cassandra.backup.serviceAccountRef` | Advanced | **Introduced in version:** 1.2.0 **Default value:** None One of either `backup.serviceAccountPath` or `backup.serviceAccountRef` is required if backup is enabled.  
+`cassandra.clusterName` | Basic | **Introduced in version:** 1.0.0 **Default value:** `apigeecluster` Specifies the name of the Cassandra cluster. **Note:** For multi-region installs the value of `clusterName` needs to match for all regions.  
+`cassandra.datacenter` | Basic | **Introduced in version:** 1.0.0 **Default value:** `dc-1` Specifies the datacenter of the Cassandra node.  
+`cassandra.dnsPolicy` | Basic | **Introduced in version:** 1.1.1 **Default value:** None **Note:** In Apigee hybrid v1.3, this property is no longer supported. When you set `hostNetwork` to true, the DNS policy is set to `ClusterFirstWithHostNet` for you.   
+`cassandra.externalSeedHost` | Basic | **Introduced in version:** 1.0.0 **Default value:** None Hostname or IP of a Cassandra cluster node. If not set, the Kubernetes local service is used.  
+`cassandra.heapNewSize` | Basic | **Introduced in version:** 1.0.0 **Default value:** `100M` The amount of JVM system memory allocated to newer objects, in megabytes.   
+`cassandra.hostNetwork` | Basic | **Introduced in version:** 1.1.1 **Default value:** `false` Enables the Kubernetes [`hostNetwork`](https://kubernetes.io/docs/concepts/policy/pod-security-policy/#host-namespaces) feature. Apigee uses this feature in multi-region installations to communicate between pods if the pod network namespace does not have connectivity between clusters (the clusters are running in "island network mode"), which is the default case in non-GKE installations, including GKE on-prem, GKE on AWS, Anthos on bare metal, AKS, EKS, and OpenShift. Set `cassandra.hostNetwork` to `false` for single region installations and multi-region installations with connectivity between pods in different clusters, for example GKE installations. Set `cassandra.hostNetwork` to `true` for multi-region installations with no communication between between pods in different clusters, for example GKE On-prem, GKE on AWS, Anthos on bare metal, AKS, EKS, and OpenShift installations. See [Multi-region deployment: Prerequisites](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/multi-region#prerequisites). When `true`, [DNS policy](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy) is automatically set to `ClusterFirstWithHostNet`.  
+`cassandra.image.pullPolicy` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`cassandra.image.tag` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1.9.4` The version label for this service's Docker image.  
+`cassandra.image.url` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-hybrid-cassandra` The location of the Docker image for this service.  
+`cassandra.maxHeapSize` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `512M` The upper limit of JVM system memory available for Cassandra operations, in megabytes.   
+`cassandra.multiRegionSeedHost` | Basic | **Introduced in version:** 1.0.0 **Default value:** None IP address of an existing Cassandra cluster used to expand the existing cluster to a new region. See [Configure the multi-region seed host](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/multi-region#configure-the-multi-region-seed-host).   
+`cassandra.nodeSelector.key` | Advanced | **Introduced in version:** 1.0.0 **Default value:** None **Required** Node selector label key used to target dedicated Kubernetes nodes for `cassandra` data services. See [ Configuring dedicated node pools](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/configure-dedicated-nodes).  
+`cassandra.nodeSelector.value` | Advanced | **Introduced in version:** 1.0.0 **Default value:** None Optional node selector label value used to target dedicated Kubernetes nodes for `cassandra` data services and override the `nodeSelector.apigeeData` settings. See nodeSelector.  
+`cassandra.port` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `9042` Port number used to connect to cassandra.  
+`cassandra.rack` | Basic | **Introduced in version:** 1.0.0 **Default value:** `ra-1` Specifies the rack of the Cassandra node.  
+`cassandra.readinessProbe.failureThreshold` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `2` The number of times Kubernetes will verify that readiness probes have failed before marking the pod _unready_. The minimum value is 1.  
+`cassandra.readinessProbe.initialDelaySeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `0` The number of seconds after a container is started before a readiness probe is initiated.  
+`cassandra.readinessProbe.periodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `10` Determines how often to perform a readiness probe, in seconds. The minimum value is 1.  
+`cassandra.readinessProbe.successThreshold` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1` The minimum consecutive successes needed for a readiness probe to be considered successful after a failure. The minimum value is 1.  
+`cassandra.readinessProbe.timeoutSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `5` The number of seconds after which a liveness probe times out. The minimum value is 1.  
+`cassandra.replicaCount` | Basic | **Introduced in version:** 1.0.0 **Default value:** `1` Cassandra is a replicated database. This property specifies the number of Cassandra nodes employed as a [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). **Note:** The default value of `1` is only acceptable for demo or test installations. For production installations, the value of `replicaCount` must be a multiple of `3`. To determine your desired `replicaCount` value, consider the following: 
+
+  * Estimate the traffic demands for your proxies.
+  * Load test and make reasonable predictions of your CPU utilization.
+  * You can specify different `replicaCount` values in different regions.
+  * You can expand the `replicaCount` in the future in your overrides file.
+
+  
+`cassandra.resources.requests.cpu` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `500m` The CPU needed for normal operation of the resource in a Kubernetes container, in millicores.  
+`cassandra.resources.requests.memory` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1Gi` The memory needed for normal operation of the resource in a Kubernetes container, in gibibytes.  
+`cassandra.restore.cloudProvider` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `GCP` **Required if restore is enabled.** Cloud provider for backup storage. For information on CSI backup and restore for cloud platforms such as Google Cloud, AWS, and Azure, see [CSI backup and restore](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/cassandra-csi-backup-restore).  
+`cassandra.restore.dbStorageBucket` | Advanced | **Introduced in version:** 1.0.0 **Default value:** None **Required if restore is enabled.** Cloud storage bucket for the backup data to restore.  
+`cassandra.restore.enabled` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `false`  
+`cassandra.restore.image.pullPolicy` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`cassandra.restore.image.tag` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1.9.4` The version label for this service's Docker image.  
+`cassandra.restore.image.url` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-cassandra-backup-utility` The location of the Docker image for this service.  
+`cassandra.restore.serviceAccountPath` | Advanced | **Introduced in version:** 1.0.0 **Default value:** None One of either `restore.serviceAccountPath` or `restore.serviceAccountRef` is required if restore is enabled. Path to Google Service Account key file with **Storage Object Admin** role.   
+`cassandra.restore.serviceAccountRef` | Advanced | **Introduced in version:** 1.2.0 **Default value:** None One of either `restore.serviceAccountPath` or `restore.serviceAccountRef` is required if restore is enabled.  
+`cassandra.restore.snapshotTimestamp` | Advanced | **Introduced in version:** 1.0.0 **Default value:** None **Required if restore is enabled.** Timestamp of the backup that should be restored.  
+`cassandra.restore.user` | Advanced | **Introduced in version:** 1.0.0 **Default value:** _admin account_ Cassandra username used for schema backup restoration. If not specified, the admin user will be used.  
+`cassandra.sslCertPath` | Basic | **Introduced in version:** 1.2.0 **Default value:** None The path on your system to a TLS certificate file. **Note:** For each configured environment, the Common Name (CN) in the cert must match the domain in the `hostAliases[]` property. For example, if the CN is `*.example.com`, the `hostAliases[]` could be `foo.example.com` or `bar.example.com`.   
+`cassandra.sslKeyPath` | Basic | **Introduced in version:** 1.2.0 **Default value:** None The path on your system to the TLS private key file.  
+`cassandra.sslRootCAPath` | Basic | **Introduced in version:** 1.2.0 **Default value:** None The certificate chain to the root CA (certificate authority).  
+`cassandra.storage.capacity` | Basic | **Introduced in version:** 1.0.0 **Default value:** `10Gi` **Required if`storage.storageclass` is specified** Specifies the disk size required, in mebibytes (Mi) or gibibytes (Gi).  
+`cassandra.storage.storageclass` | Basic | **Introduced in version:** 1.0.0 **Default value:** None  Specifies the class of on-prem storage being used.  
+`cassandra.terminationGracePeriodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `300` The time between a request for pod deletion and when the pod is killed, in seconds. During this period, any prestop hooks will be executed and any running process should terminate gracefully.  
+  
+## `certManager`
+
+Apigee uses [cert-manager](https://cert-manager.io/) for certificate validation. 
+
+The following table describes the properties of the `certManager` object:
+
+Property | Type | Description  
+---|---|---  
+`certManager.namespace` | Advanced | **Introduced in version:** 1.9.0 **Default value:** `cert-manager` The namespace for [cert-manager](https://cert-manager.io/). See [Running cert-manager in a custom namespace](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/cert-manager-custom-namespace).  
+  
+## `connectAgent`
+
+Apigee Connect allows the Apigee hybrid management plane to connect securely to the MART service in the runtime plane without requiring you to expose the MART endpoint on the internet.
+
+See [Apigee Connect](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/apigee-connect).
+
+The following table describes the properties of the `connectAgent` object:
+
+Property | Type | Description  
+---|---|---  
+`connectAgent.annotations` | Advanced | **Introduced in version:** 1.5.0 **Default value:** None Optional key/value map used to annotate pods. For more information, see [Custom annotations](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/customize-services#custom-annotations).  
+`connectAgent.server` | Advanced | **Introduced in version:** 1.2.0 **Default value:** `apigeeconnect.googleapis.com:443` The location of the server and port for this service.  
+`connectAgent.logLevel` | Advanced | **Introduced in version:** 1.2.0 **Default value:** `INFO` The level of log reporting. Values can be:
+
+  * `INFO`: Informational messages in addition to warning, error, and fatal messages. Most useful for debugging.
+  * `WARNING`: Non-fatal warnings in addition to error and fatal messages.
+  * `ERROR`: Internal errors and errors that are not returned to the user in addition to fatal messages.
+  * `FATAL`: Unrecoverable errors and events that cause Apigee Connect to crash.
+
+  
+`connectAgent.image.pullPolicy` | Advanced | **Introduced in version:** 1.2.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`connectAgent.image.tag` | Advanced | **Introduced in version:** 1.2.0 **Default value:** `1.9.4` The version label for this service's Docker image.  
+`connectAgent.image.url` | Advanced | **Introduced in version:** 1.2.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-connect-agent` The location of the Docker image for this service. Check the `values.yaml` file for the specific URL.  
+`connectAgent.replicaCountMax` | Basic | **Introduced in version:** 1.2.0 **Default value:** `5` Maximum number of replicas available for autoscaling.  
+`connectAgent.replicaCountMin` | Basic | **Introduced in version:** 1.2.0 **Default value:** `1` Minimum number of replicas available for autoscaling. In production, you may want to increase `replicaCountMin` to 3, to have a greater number of connections to the control plane for reliability and scalability.  
+`connectAgent.resources.requests.cpu` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `100m` The CPU needed for normal operation of the resource in a Kubernetes container, in millicores.  
+`connectAgent.resources.requests.memory` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `30Mi` The memory needed for normal operation of the resource in a Kubernetes container, in mebibytes.  
+`connectAgent.serviceAccountPath` | Basic | **Introduced in version:** 1.1.1 **Default value:** None One of either `serviceAccountPath` or `serviceAccountRef` is required. Path to Google Service Account key file for the `apigee-mart` service account.  In most installations, the value of `connectAgent.serviceAccountPath` must match the value of `mart.serviceAccountPath`.   
+`connectAgent.serviceAccountRef` | Basic | **Introduced in version:** 1.2.0 **Default value:** None One of either `serviceAccountPath` or `serviceAccountRef` is required. In most installations, the value of `connectAgent.serviceAccountRef` must match the value of `mart.serviceAccountRef`.   
+`connectAgent.targetCPUUtilizationPercentage` | Advanced | **Introduced in version:** 1.2.0 **Default value:** `75` Target CPU utilization for the Apigee Connect agent on the pod. The value of this field enables Apigee Connect to auto-scale when CPU utilization reaches this value, up to `replicaCountMax`.  
+`connectAgent.terminationGracePeriodSeconds` | Advanced | **Introduced in version:** 1.2.0 **Default value:** `600` The time between a request for pod deletion and when the pod is killed, in seconds. During this period, any prestop hooks will be executed and any running process should terminate gracefully.  
+  
+## `defaults`
+
+The Default encryption keys for the Apigee hybrid installation.
+
+**Note:** You need to update these for your installation.
+
+The following table describes the properties of the `defaults` object:
+
+Property | Type | Description  
+---|---|---  
+`defaults.org.kmsEncryptionKey` | Basic | **Introduced in version:** 1.0.0 **Default value:** `aWxvdmVhcGlzMTIzNDU2Nw==` Default encryption key for the org in KMS.   
+`defaults.org.kvmEncryptionKey` | Basic | **Introduced in version:** 1.0.0 **Default value:** `aWxvdmVhcGlzMTIzNDU2Nw==` Default encryption key for the org in KVM.   
+`defaults.env.kmsEncryptionKey` | Basic | **Introduced in version:** 1.0.0 **Default value:** `aWxvdmVhcGlzMTIzNDU2Nw==` Default encryption key for the environment (env) in KMS.   
+`defaults.env.kvmEncryptionKey` | Basic | **Introduced in version:** 1.0.0 **Default value:** `aWxvdmVhcGlzMTIzNDU2Nw==` Default encryption key for the environment (env) in KVM.   
+`defaults.env.cacheEncryptionKey` | Basic | **Introduced in version:** 1.0.0 **Default value:** `aWxvdmVhcGlzMTIzNDU2Nw==` Default cache encryption key for the environment (env).   
+  
+## `diagnostic`
+
+The settings for the Diagnostic collector tool.
+
+See [Using the Diagnostic collector](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/diagnostic-collector)
+
+The following table describes the properties of the `diagnostic` object:
+
+Property | Type | Description  
+---|---|---  
+`diagnostic.bucket` | Basic | **Introduced in version:** 1.6.0 **Default value:** None **Required** The name of the Google Cloud storage bucket where your diagnostic data will be deposited. See [Creating storage buckets](https://docs.cloud.google.com/storage/docs/creating-buckets).  
+`diagnostic.container` | Basic | **Introduced in version:** 1.6.0 **Default value:** None **Required** This specifies which type of pod you are capturing data from. The values can be one of:
+
+  * `"apigee-cassandra"` captures data about the Cassandra databgase. The istio-cassandra pods runs in the apigee namespace.
+  * `"apigee-mart-server"` captures data about MART. The apigee-mart-server pods runs in the apigee namespace.
+  * `"apigee-runtime"` captures data about the Message Processor. The apigee-runtime pods runs in the apigee namespace.
+  * `"apigee-synchronizer"` captures data about the Synchronizer. The apigee-synchronizer pods runs in the apigee namespace.
+  * `"apigee-udca"` captures data about UDCA. The apigee-udca pods runs in the apigee namespace.
+  * `"apigee-watcher"` captures data about Watcher. The apigee-watcher pods runs in the apigee namespace.
+  * `"istio-proxy"` captures data about the Istio ingress gateway. The istio-proxy pods runs in the istio-system namespace.
+
+  
+`diagnostic.loggingDetails.logDuration` | Basic | **Introduced in version:** 1.6.0 **Default value:** None **Required** if the diagnostic collection operation is "LOGGING" (set with `operation: "LOGGING"`) The duration in milliseconds of the log data collected. A typical value is `30000`. See `diagnostic.operation`  
+`diagnostic.loggingDetails.loggerNames[]` | Basic | **Introduced in version:** 1.6.0 **Default value:** None **Required** if the diagnostic collection operation is "LOGGING" (set with `operation: "LOGGING"`) Specifies by name which loggers to collect data from. For Apigee hybrid version 1.6.0, the only value supported is `ALL`, meaning all loggers. For example: 
+    
+    
+    diagnostic:
+     loggingDetails:
+       loggerNames:
+       - ALL  
+  
+`diagnostic.loggingDetails.logLevel` | Basic | **Introduced in version:** 1.6.0 **Default value:** None **Required** if the diagnostic collection operation is "LOGGING" (set with `operation: "LOGGING"`) Specifies the granularity of the logging data to collect. In Apigee hybrid 1.6, Only `FINE` is supported.  
+`diagnostic.namespace` | Basic | **Introduced in version:** 1.6.0 **Default value:** None **Required** The Kubernetes namespace in which the pods you are collecting data on reside. The namespace must be the correct one for the container you specify with `diagnostic.container`: **`apigee`** for
+
+  * `apigee-runtime`
+  * `apigee-synchronizer`
+  * `apigee-udca`
+  * `apigee-watcher`
+  * `apigee-cassandra`
+  * `apigee-mart-server`
+
+**`istio-system`** for
+
+  * `istio-proxy`
+
+  
+`diagnostic.operation` | Basic | **Introduced in version:** 1.6.0 **Default value:** None **Required** Specifies whether to collect all statistics or just logs. Values are:
+
+  * `"ALL"`
+  * `"LOGGING"` If you set `diagnostic.operation` to `"LOGGING"`, the following properties are required:
+    * `diagnostic.loggingDetails.logDuration`
+    * `diagnostic.loggingDetails.loggerNames`
+    * `diagnostic.loggingDetails.logLevel`
+
+  
+`diagnostic.podNames[]` | Basic | **Introduced in version:** 1.6.0 **Default value:** None **Required** The names of the Kubernetes pods for which you are collecting data. For example:
+    
+    
+    diagnostic:
+     podNames:
+     - apigee-runtime-eng-hybrid-example-3b2ebf3-150-8vfoj-2wcjn
+     - apigee-runtime-eng-hybrid-example-3b2ebf3-150-8vfoj-6xzn2  
+  
+`diagnostic.serviceAccountPath` | Basic | **Introduced in version:** 1.6.0 **Default value:** None **Required** The path to a service account key file (`.json`) for the service account with the Storage Admin role (`roles/storage.admin`). In most Apigee hybrid installations, this is the `apigee-cassandra` service account. See [About service accounts](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/sa-about).  
+`diagnostic.tcpDumpDetails.maxMsgs` | Basic | **Introduced in version:** 1.6.0 **Default value:** None One of either **`diagnostic.tcpDumpDetails.maxMsgs`** or **`diagnostic.tcpDumpDetails.timeoutInSeconds`** is **Required** if you are using `diagnostic.tcpDumpDetails`. Sets the maximum number of `tcpDump` messages to collect. Apigee recommends a maximum value no greater than `1000`.  
+`diagnostic.tcpDumpDetails.timeoutInSeconds` | Basic | **Introduced in version:** 1.6.0 **Default value:** None One of either **`diagnostic.tcpDumpDetails.maxMsgs`** or **`diagnostic.tcpDumpDetails.timeoutInSeconds`** is **Required** if you are using `diagnostic.tcpDumpDetails`. Sets the amount of time in seconds to wait for `tcpDump` to return messages.  
+`diagnostic.threadDumpDetails.delayInSeconds` | Basic | **Introduced in version:** 1.6.0 **Default value:** None Both **`diagnostic.threadDumpDetails.delayInSeconds`** and **`diagnostic.threadDumpDetails.iterations`** are **Required** if you are using `diagnostic.threadDumpDetails`. The delay in seconds between collecting each thread dump.  
+`diagnostic.threadDumpDetails.iterations` | Basic | **Introduced in version:** 1.6.0 **Default value:** None Both **`diagnostic.threadDumpDetails.delayInSeconds`** and **`diagnostic.threadDumpDetails.iterations`** are **Required** if you are using `diagnostic.threadDumpDetails`. The number of jstack thread dump iterations to collect.  
+  
+## `envs`
+
+Defines an array of environments to which you can deploy your API proxies. Each environment provides an isolated context or _sandbox_ for running API proxies.
+
+Your hybrid-enabled organization must have at least one environment.
+
+For more information, see [About environments](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/environments-about).
+
+The following table describes the properties of the `envs` object:
+
+Property | Type | Description  
+---|---|---  
+`envs[].cacheEncryptionKey` | Basic | **Introduced in version:** 1.0.0 **Default value:** None One of either `cacheEncryptionKey`, `cacheEncryptionPath`, or `cacheEncryptionSecret` is required. A base64-encoded encryption key. See [Data encryption](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/key-encryption).  
+`envs[].cacheEncryptionPath` | Basic | **Introduced in version:** 1.2.0 **Default value:** None One of either `cacheEncryptionKey`, `cacheEncryptionPath`, or `cacheEncryptionSecret` is required. The path to a file containing a base64-encoded encryption key. See [Data encryption](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/key-encryption).  
+`envs[].cacheEncryptionSecret.key` | Basic | **Introduced in version:** 1.2.0 **Default value:** None One of either `cacheEncryptionKey`, `cacheEncryptionPath`, or `cacheEncryptionSecret` is required. The key of a [Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/) containing a base64-encoded encryption key. See [Data encryption](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/key-encryption).  
+`envs[].cacheEncryptionSecret.name` | Basic | **Introduced in version:** 1.2.0 **Default value:** None One of either `cacheEncryptionKey`, or `cacheEncryptionPath`, or `cacheEncryptionSecret` is required. The name of a [Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/) containing a base64-encoded encryption key. See [Data encryption](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/key-encryption).  
+`envs[].components.runtime.replicaCountMax` | Basic | **Introduced in version:** 1.9.3 **Default value:** 4 Maximum number of replicas for autoscaling. Overrides `runtime.replicaCountMax` if specified.  
+`envs[].components.runtime.replicaCountMin` | Basic | **Introduced in version:** 1.9.3 **Default value:** 1 Minimum number of replicas for autoscaling. Overrides `runtime.replicaCountMin` if specified.  
+`envs[].components.synchronizer.replicaCountMax` | Basic | **Introduced in version:** 1.9.3 **Default value:** 4 Maximum number of replicas for autoscaling. Overrides `synchronizer.replicaCountMax` if specified.  
+`envs[].components.synchronizer.replicaCountMin` | Basic | **Introduced in version:** 1.9.3 **Default value:** 1 Minimum number of replicas for autoscaling. Overrides `synchronizer.replicaCountMin` if specified.  
+`envs[].components.udca.replicaCountMax` | Basic | **Introduced in version:** 1.9.3 **Default value:** 4 Maximum number of replicas for autoscaling. Overrides `udca.replicaCountMax` if specified.  
+`envs[].components.udca.replicaCountMin` | Basic | **Introduced in version:** 1.9.3 **Default value:** 1 Minimum number of replicas for autoscaling. Overrides `udca.replicaCountMin` if specified.  
+`envs[].hostAliases[]` | Basic | **Introduced in version:** 1.2.0 **Default value:** None Deprecated: Starting in Hybrid version 1.4 the runtime plane receives this information from the management plane. See [About environments and environment groups](https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/environments-overview).  
+`envs[].httpProxy.host` | Basic | **Introduced in version:** 1.2.0 **Default value:** None Specifies the host name or IP address where the HTTP proxy is running. List `httpProxy` properties in the order `scheme`, `host`, `port`. For example:
+    
+    
+    envs:
+      - name: test
+        httpProxy:
+          scheme: HTTP
+          host: 10.12.0.47
+          port: 3128
+          ...
+
+See also: [Configure forward proxying for API proxies](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/forward-proxy).  
+`envs[].httpProxy.port` | Basic | **Introduced in version:** 1.2.0 **Default value:** None Specifies the port on which the HTTP proxy is running. If this property is omitted, by default it uses port `80` for HTTP and port `443` for HTTPS.  
+`envs[].httpProxy.scheme` | Basic | **Introduced in version:** 1.2.0 **Default value:** None Specifies the type of the HTTP proxy as HTTP or HTTPS. By default, it uses "HTTP".  
+`envs[].httpProxy.username` | Basic | **Introduced in version:** 1.2.0 **Default value:** None If the HTTP proxy requires basic authentication, then use this property to provide a username.  
+`envs[].httpProxy.password` | Basic | **Introduced in version:** 1.2.0 **Default value:** None If the HTTP proxy requires basic authentication, then use this property to provide a password.  
+`envs[].name` | Basic | **Introduced in version:** 1.0.0 **Default value:** None **Required** Apigee environment name to be synchronized.  
+`envs[].pollInterval` | Advanced | **Introduced in version:** 1.0.0 **Default value:** None Interval used for polling organization and environment synchronization changes, in seconds.  
+`envs[].port` | Advanced | **Introduced in version:** 1.0.0 **Default value:** None TCP port number for HTTPS traffic.  
+`envs[].serviceAccountPaths.runtime` | Basic | **Introduced in version:** 1.4.0 **Default value:** None Path to file on local system to a Google Service Account key with the **Cloud Trace Agent** role, usually the `apigee-runtime` service account. See the [About service accounts](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/config-prop-ref/) for the default names of the service accounts and their assigned roles.  
+`envs[].serviceAccountPaths.synchronizer` | Basic | **Introduced in version:** 1.0 **Default value:** None Path to file on local system to a Google Service Account key with the **Apigee Synchronizer Manager** role.  
+`envs[].serviceAccountPaths.udca` | Basic | **Introduced in version:** 1.0 **Default value:** None Path to file on local system to a Google Service Account key with the **Apigee Analytic Agent** role. Only set this property if `orgScopedUDCA` is set to `false`.   
+`envs[].serviceAccountSecretRefs.runtime` | Basic | **Introduced in version:** 1.4.0 **Default value:** None The name of a [Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/). You must [create the secret](https://kubernetes.io/docs/concepts/configuration/secret/#creating-a-secret-using-kubectl) using a Google Service Account key with the **Cloud Trace Agent** role as its input.   
+`envs[].serviceAccountSecretRefs.synchronizer` | Basic | **Introduced in version:** 1.2.0 **Default value:** None The name of a [Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/). You must [create the secret](https://kubernetes.io/docs/concepts/configuration/secret/#creating-a-secret-using-kubectl) using a Google Service Account key with the **Apigee Synchronizer Manager** role as its input.   
+`envs[].serviceAccountSecretRefs.udca` | Basic | **Introduced in version:** 1.2.0 **Default value:** None The name of a [Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/). You must [create the secret](https://kubernetes.io/docs/concepts/configuration/secret/#creating-a-secret-using-kubectl) using a Google Service Account key with the **Apigee Analytic Agent** role as its input.  Only set this property if `orgScopedUDCA` is set to `false`.   
+`envs[].sslCertPath` | Basic | **Introduced in version:** 1.2.0 **Default value:** None **Either`sslCertPath`/`sslKeyPath` or `sslSecret` is required**. The path on your system to a TLS certificate file. **Note:** For each configured environment, the Common Name (CN) in the cert must match the domain in the `hostAliases[]` property. For example, if the CN is `*.example.com`, the `hostAliases[]` could be `foo.example.com` or `bar.example.com`.   
+`envs[].sslKeyPath` | Basic | **Introduced in version:** 1.2.0 **Default value:** None Either `sslCertPath`/`sslKeyPath` or `sslSecret` is required. The path on your system to the TLS private key file.  
+`envs[].sslSecret` | Basic | **Introduced in version:** 1.2.0 **Default value:** None **Either`sslCertPath`/`sslKeyPath` or `sslSecret` is required**. The name of a file stored in a Kubernetes secret that contains the TLS certificate and private key. You must create the secret using the TLS certificate and key data as its input. See also:
+
+  * [Storing data in a Kubernetes secret](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/k8s-secrets)
+  * [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) in the Kubernetes documentation
+  * [ Creating a Secret Using kubectl](https://kubernetes.io/docs/concepts/configuration/secret/#creating-a-secret-using-kubectl) in the Kubernetes documentation
+
+  
+  
+## `gcp`
+
+Identifies the Google Cloud project ID and region where the `apigee-logger` and the `apigee-metrics` push their data.
+
+The following table describes the properties of the `gcp` object:
+
+Property | Type | Description  
+---|---|---  
+`gcp.region` | Basic | **Introduced in version:** 1.2.0 **Default value:** `us-central1` **Required** Identifies the Google Cloud [region](https://cloud.google.com/compute/docs/regions-zones#available) where the `apigee-logger` and the `apigee-metrics` push their data.  
+`gcp.projectID` | Basic | **Introduced in version:** 1.2.0 **Default value:** None **Required** Identifies the Google Cloud project where `apigee-logger` and the `apigee-metrics` push their data.  
+`gcp.projectIDRuntime` | Basic | **Introduced in version:** 1.2.0 **Default value:** None Identifies the runtime Kubernetes cluster project. The `projectIDRuntime` property is optional. If not used, it is assumed that the `projectID` value is used for both the Apigee organization's Google Cloud project and the runtime K8S cluster's project.  
+`gcp.workloadIdentityEnabled` | Basic | **Introduced in version:** 1.4.0 **Default value:**`false` Enables using Workload Identity. Workload Identity allows workloads in your GKE clusters to impersonate Identity and Access Management (IAM) service accounts to access Google Cloud services. When `workloadIdentityEnabled` is `false`, the default, Apigee uses the IAM service accounts for each Apigee hybrid component. See [About service accounts](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/sa-about). When `workloadIdentityEnabled` is `true`, Apigee uses Kubernetes service accounts instead of IAM service accounts and will ignore the following configuration properties:
+
+  * `validateServiceAccounts`
+  * `cassandra.backup.serviceAccountPath`
+  * `cassandra.backup.serviceAccountRef`
+  * `cassandra.restore.serviceAccountPath`
+  * `cassandra.restore.serviceAccountRef`
+  * `envs[].serviceAccountPaths.*`
+  * `logger.serviceAccountPath`
+  * `logger.serviceAccountRef`
+  * `mart.serviceAccountPath`
+  * `mart.serviceAccountRef`
+  * `metrics.serviceAccountPath`
+  * `metrics.serviceAccountRef`
+  * `synchronizer.serviceAccountPath`
+  * `synchronizer.serviceAccountRef`
+  * `udca.serviceAccountPath`
+  * `udca.serviceAccountRef`
+  * `watcher.serviceAccountPath`
+  * `watcher.serviceAccountRef`
+
+  
+  
+## `httpProxy`
+
+`httpProxy` provides configuration parameters for an HTTP forward proxy server. When configured in `overrides.yaml`, all internet communication for the MART, Synchronizer, and UDCA components pass through the proxy server. 
+
+**Note:** You can also configure environment-scoped HTTP proxy forwarding for API proxies. See [Configure proxy forwarding for API proxies](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/forward-proxy).
+
+See also: logger, mart, metrics, synchronizer, and udca. 
+
+The following table describes the properties of the `httpProxy` object:
+
+Property | Type | Description  
+---|---|---  
+`httpProxy.host` | Basic | **Introduced in version:** 1.1.1 **Default value:** None The hostname of the HTTP Proxy.  
+`httpProxy.port` | Basic | **Introduced in version:** 1.1.1 **Default value:** None The port of the HTTP Proxy.  
+`httpProxy.scheme` | Basic | **Introduced in version:** 1.1.1 **Default value:** `HTTPS` The scheme used by the proxy. Values can be **`HTTP`** or **`HTTPS`**. Values must be uppercase only.  
+`httpProxy.username` | Basic | **Introduced in version:** 1.1.1 **Default value:** None If the HTTP proxy requires basic authentication, then use this property to provide a username.  
+`httpProxy.password` | Basic | **Introduced in version:** 1.1.1 **Default value:** None If the HTTP proxy requires basic authentication, then use this property to provide a password.  
+  
+## `ingressGateways`
+
+Configures the Apigee ingress gateway for Apigee Hybrid.
+
+The following table describes the properties of the `ingressGateways` object:
+
+Property | Type | Description  
+---|---|---  
+`ingressGateways[].image.pullPolicy` | Advanced | **Introduced in version:** 1.8.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`ingressGateways[].image.tag` | Advanced | **Introduced in version:** 1.8.0 **Default value:** `1.17.2-asm.8-distroless` The version label for this service's Docker image.  
+`ingressGateways[].image.url` | Advanced | **Introduced in version:** 1.8.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-asm-ingress` The location of the Docker image for this service.  
+`ingressGateways[].name` | Basic | **Introduced in version:** 1.8.0 **Default value:** None **Required** The name of ingress gateway. Other services will use this name to address traffic to the gateway. The name must meet the following requirements:
+
+  * have a maximum length of 17 characters
+  * contain only lowercase alphanumeric characters, '-' or '.'
+  * start with an alphanumeric character
+  * end with an alphanumeric character
+
+For more information, see [DNS Subdomain Names](https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-subdomain-names) in the Kubernetes documentation.   
+`ingressGateways[].resources.limits.cpu` | Advanced | **Introduced in version:** 1.8.0 **Default value:** `2000m` The CPU limit for the resource, in millicores.  
+`ingressGateways[].resources.limits.memory` | Advanced | **Introduced in version:** 1.8.0 **Default value:** `1Gi` The memory limit for the resource, in gibibytes.  
+`ingressGateways[].resources.requests.cpu` | Advanced | **Introduced in version:** 1.8.0 **Default value:** `300m` The CPU needed for normal operation of the resource, in millicores.  
+`ingressGateways[].resources.requests.memory` | Advanced | **Introduced in version:** 1.8.0 **Default value:** `128Mi` The memory needed for normal operation of the resource, in mebibytes.  
+`ingressGateways[].replicaCountMax` | Basic | **Introduced in version:** 1.8.0 **Default value:** `10` The maximum number of pods that hybrid can automatically add for the ingress gateway available for autoscaling.  
+`ingressGateways[].replicaCountMin` | Basic | **Introduced in version:** 1.8.0 **Default value:** `2` The minimum number of pods for the ingress gateway available for autoscaling.  
+`ingressGateways[].svcAnnotations` | Basic | **Introduced in version:** 1.8.0 **Default value:** None Optional key/value map used to annotate the ingress gateway on platforms that support annotation. For example:
+    
+    
+    ingressGateways:
+      svcAnnotations:
+        networking.gke.io/load-balancer-type: "Internal"  
+  
+`ingressGateways[].svcLoadBalancerIP` | Basic | **Introduced in version:** 1.8.0 **Default value:** None On platforms that support specifying the load balancer IP address, the load balancer will be created with this IP address. On platforms that do not allow you to specify the load balancer IP address, this property is ignored.  
+`ingressGateways[].svcType` | Basic | **Introduced in version:** 1.8.1 **Default value:** LoadBalancer Used to change the type of the default k8s service for ingress deployment. Set the value to `ClusterIP` if you want to disable creation of default load balancer. Possible values:
+
+  * `ClusterIP`
+  * `LoadBalancer`
+
+  
+  
+## `istiod`
+
+Configures the Apigee ingress.
+
+The following table describes the properties of the `istiod` object:
+
+Property | Type | Description  
+---|---|---  
+`istiod.accessLogFile` | Advanced | **Introduced in version:** 1.8.0 **Default value:** `/dev/stdout` The file address for the ingress access log, for example `/dev/stdout`. Leaving this value undefined disables access logging.  
+`istiod.accessLogFormat` | Advanced | **Introduced in version:** 1.8.0 The format for the ingress access log.  Leaving this value undefined results in using the proxy's default access log format. **Default access log format:**
+    
+    
+    '{"start_time":"%START_TIME%","remote_address":"%DOWNSTREAM_DIRECT_REMOTE_ADDRESS%","user_agent":"%REQ(USER-AGENT)%","host":"%REQ(:AUTHORITY)%","request":"%REQ(:METHOD)% %REQ(X-ENVOY-ORIGINAL-PATH?:PATH)% %PROTOCOL%","request_time":"%DURATION%","status":"%RESPONSE_CODE%","status_details":"%RESPONSE_CODE_DETAILS%","bytes_received":"%BYTES_RECEIVED%","bytes_sent":"%BYTES_SENT%","upstream_address":"%UPSTREAM_HOST%","upstream_response_flags":"%RESPONSE_FLAGS%","upstream_response_time":"%RESPONSE_DURATION%","upstream_service_time":"%RESP(X-ENVOY-UPSTREAM-SERVICE-TIME)%","upstream_cluster":"%UPSTREAM_CLUSTER%","x_forwarded_for":"%REQ(X-FORWARDED-FOR)%","request_method":"%REQ(:METHOD)%","request_path":"%REQ(X-ENVOY-ORIGINAL-PATH?:PATH)%","request_protocol":"%PROTOCOL%","tls_protocol":"%DOWNSTREAM_TLS_VERSION%","request_id":"%REQ(X-REQUEST-ID)%","sni_host":"%REQUESTED_SERVER_NAME%","apigee_dynamic_data":"%DYNAMIC_METADATA(envoy.lua)%"}'
+
+The following is a copy of the default access log format with line breaks added for readability. 
+    
+    
+    '{"start_time":"%START_TIME%",
+      "remote_address":"%DOWNSTREAM_DIRECT_REMOTE_ADDRESS%",
+      "user_agent":"%REQ(USER-AGENT)%",
+      "host":"%REQ(:AUTHORITY)%",
+      "request":"%REQ(:METHOD)% %REQ(X-ENVOY-ORIGINAL-PATH?:PATH)% %PROTOCOL%",
+      "request_time":"%DURATION%",
+      "status":"%RESPONSE_CODE%",
+      "status_details":"%RESPONSE_CODE_DETAILS%",
+      "bytes_received":"%BYTES_RECEIVED%",
+      "bytes_sent":"%BYTES_SENT%",
+      "upstream_address":"%UPSTREAM_HOST%",
+      "upstream_response_flags":"%RESPONSE_FLAGS%",
+      "upstream_response_time":"%RESPONSE_DURATION%",
+      "upstream_service_time":"%RESP(X-ENVOY-UPSTREAM-SERVICE-TIME)%",
+      "upstream_cluster":"%UPSTREAM_CLUSTER%",
+      "x_forwarded_for":"%REQ(X-FORWARDED-FOR)%",
+      "request_method":"%REQ(:METHOD)%",
+      "request_path":"%REQ(X-ENVOY-ORIGINAL-PATH?:PATH)%",
+      "request_protocol":"%PROTOCOL%",
+      "tls_protocol":"%DOWNSTREAM_TLS_VERSION%",
+      "request_id":"%REQ(X-REQUEST-ID)%",
+      "sni_host":"%REQUESTED_SERVER_NAME%",
+      "apigee_dynamic_data":"%DYNAMIC_METADATA(envoy.lua)%"}'  
+  
+`istiod.annotations` | Basic | **Introduced in version:** 1.9.4 **Default value:** None Optional key/value map used to annotate the `istiod` pods on platforms that support annotation. For example:
+    
+    
+    istiod:
+      annotations:
+        key1: "value1"
+        key2: "value2"  
+  
+`istiod.forwardClientCertDetails` | Advanced | **Introduced in version:** 1.9.2 **Default value:** `SANITIZE_SET` Determines how the Envoy proxy (for the Apigee ingress gateway) handles the `x-forwarded-client-cert` (XFCC) HTTP header.  Possible values are:
+
+  * `SANITIZE_SET` (default) When the client connection is mTLS, reset the XFCC header with the client certificate information and send it to the next hop.
+  * `FORWARD_ONLY` When the client connection is mTLS (Mutual TLS), forward the XFCC header in the request only.
+  * `APPEND_FORWARD` When the client connection is mTLS, append the client certificate information to the request's XFCC header and forward it.
+  * `SANITIZE` Do not forward the XFCC header.
+  * `ALWAYS_FORWARD_ONLY` Always forward the XFCC header in the request, regardless of whether the client connection is mTLS.
+
+For more information on these values, see the Envoy documentation for [Enum extensions.filters.network.http_connection_manager.v3.HttpConnectionManager.ForwardClientCertDetails](https://www.envoyproxy.io/docs/envoy/v1.26.1/api-v3/extensions/filters/network/http_connection_manager/v3/http_connection_manager.proto.html#enum-extensions-filters-network-http-connection-manager-v3-httpconnectionmanager-forwardclientcertdetails). If you change this setting after installing Hybrid, apply it with `apigeectl init` and then restart your Apigee ingress gateway pods.  
+`istiod.image.pullPolicy` | Advanced | **Introduced in version:** 1.8.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`istiod.image.tag` | Advanced | **Introduced in version:** 1.8.0 **Default value:** `1.17.2-asm.8-distroless` The version label for this service's Docker image.  
+`istiod.image.url` | Advanced | **Introduced in version:** 1.8.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-asm-istiod` The location of the Docker image for this service.  
+  
+## `k8sCluster`
+
+Identifies Kubernetes cluster where the hybrid runtime is installed.
+
+The following table describes the properties of the `k8sCluster` object:
+
+Property | Type | Description  
+---|---|---  
+`k8sCluster.name` | Basic | **Introduced in version:** 1.2.0 **Default value:** None The name of the Kubernetes cluster where the hybrid runtime is installed.  
+`k8sCluster.region` | Basic | **Introduced in version:** 1.2.0 **Default value:** None Identifies the Google Cloud [region](https://cloud.google.com/compute/docs/regions-zones#available) in which your Kubernetes cluster was created.  
+  
+## `kubeRBACProxy`
+
+Identifies where Apigee should look for Kubernetes role-based access controls.
+
+The following table describes the properties of the `kubeRBACProxy` object:
+
+Property | Type | Description  
+---|---|---  
+`kubeRBACProxy.image.pullPolicy` | Advanced | **Introduced in version:** 1.2.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`kubeRBACProxy.image.tag` | Advanced | **Introduced in version:** `1.2.0` **Default value:** `v0.14.0` The version label for this service's Docker image.  
+`kubeRBACProxy.image.url` | Advanced | **Introduced in version:** 1.2.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-kube-rbac-proxy` The location of the Docker image for this service. If you do not want to use the Google Docker Hub, download the images and use the address where your docker images are hosted internally.  
+  
+## `logger`
+
+Defines the service that manages operational logs. All of the Apigee hybrid services that run in your Kubernetes cluster output this information.
+
+For more information, see [Logging overview](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/logging).
+
+The following table describes the properties of the `logger` object:
+
+Property | Type | Description  
+---|---|---  
+`logger.annotations` | Advanced | **Introduced in version:** 1.5.0 **Default value:** None Optional key/value map used to annotate pods. For more information, see [Custom annotations](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/customize-services#custom-annotations).  
+`logger.enabled` | Basic | **Introduced in version:** 1.0.0 **Default value:** `false` Enables or disables logging on the cluster. For non-GKE set to `true`, for Anthos or GKE set to `false`.  
+`logger.envVars` | Basic | **Introduced in version:** 1.8.5 **Default value:** None Allows you to include the `NO_PROXY` Fluent Bit environment variable, which specifies URLs for which traffic is not routed through the HTTP proxy. The `NO_PROXY` variable should be defined as a comma-separated string of host names, in the format:
+    
+    
+    logger:
+      ...
+      envVars:
+        NO_PROXY: '_< comma-separated-values>_'
+
+for example: 
+    
+    
+      envVars:
+        NO_PROXY: 'kubernetes.default.svc,oauth2.googleapis.com,logging.googleapis.com'
+
+Use `envVars: NO_PROXY` optionally when you have HTTP forward proxy enabled. See [NO_PROXY](https://docs.fluentbit.io/manual/administration/http-proxy#no_proxy) in the Fluent Bit documentation.  
+`logger.fluentd.buffer_chunk_limit` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `512k` The maximum size of a buffer chunk allowed, in kilobytes. Chunks exceeding the limit will be flushed to the output queue automatically.  
+`logger.fluentd.buffer_queue_limit` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `6` The maximum length of the output queue. The default limit is 256 chunks.  
+`logger.fluentd.flush_interval` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `5s` The interval to wait before invoking the next buffer flush, in seconds.  
+`logger.fluentd.max_retry_wait` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `30` The maximum interval between write retries, in seconds.  
+`logger.fluentd.num_threads` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `2` The number of threads used to flush the buffer. The default is 1.  
+`logger.image.pullPolicy` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`logger.image.tag` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `2.1.3` The version label for this service's Docker image.  
+`logger.image.url` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-fluent-bit` The location of the Docker image for this service.  
+`logger.livenessProbe.failureThreshold` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `3` The number of times Kubernetes will verify that liveness probes have failed before restarting the container. The minimum value is 1.  
+`logger.livenessProbe.initialDelaySeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `0` The number of seconds after a container is started before a liveness probe is initiated.  
+`logger.livenessProbe.periodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `60` Determines how often to perform a liveness probe, in seconds. The minimum value is 1.  
+`logger.livenessProbe.successThreshold` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1` The minimum consecutive successes needed for a liveness probe to be considered successful after a failure. The minimum value is 1.  
+`logger.livenessProbe.timeoutSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1` The number of seconds after which a liveness probe times out. The minimum value is 1.  
+`logger.nodeSelector.key` | Basic | **Introduced in version:** 1.0.0 **Default value:** `apigee.com/apigee-logger-enabled` **Required** Node selector label key used to target dedicated Kubernetes nodes for `logger` runtime services. See [ Configuring dedicated node pools](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/configure-dedicated-nodes).  
+`logger.nodeSelector.value` | Basic | **Introduced in version:** 1.0.0 **Default value:** `true` **Required** Node selector label value used to target dedicated Kubernetes nodes for `logger` runtime services. See [ Configuring dedicated node pools](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/configure-dedicated-nodes).  
+`logger.proxyURL` | Basic | **Introduced in version:** 1.0.0 **Default value:** None URL of the customer's proxy server.  
+`logger.resources.limits.cpu` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `200m` The CPU limit for the resource in a Kubernetes container, in millicores.  
+`logger.resources.limits.memory` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `500Mi` The memory limit for the resource in a Kubernetes container, in mebibytes.  
+`logger.resources.requests.cpu` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `100m` The CPU needed for normal operation of the resource in a Kubernetes container, in millicores.  
+`logger.resources.requests.memory` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `250Mi` The memory needed for normal operation of the resource in a Kubernetes container, in mebibytes.  
+`logger.serviceAccountPath` | Basic | **Introduced in version:** 1.0.0 **Default value:** None One of either `serviceAccountPath` or `serviceAccountRef` is required. Path to Google Service Account key file with **Logs Writer** role.   
+`logger.serviceAccountRef` | Basic | **Introduced in version:** 1.2.0 **Default value:** None One of either `serviceAccountPath` or `serviceAccountRef` is required.  
+`logger.terminationGracePeriodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `30` The time between a request for pod deletion and when the pod is killed, in seconds. During this period, any prestop hooks will be executed and any running process should terminate gracefully.  
+  
+## `mart`
+
+Defines the MART (Management API for RunTime data) service, which acts as an API provider for public Apigee APIs so that you can access and manage runtime data entities such as KMS (API Keys and OAuth tokens), KVM, Quota, and API products.
+
+The following table describes the properties of the `mart` object:
+
+Property | Type | Description  
+---|---|---  
+`mart.annotations` | Advanced | **Introduced in version:** 1.5.0 **Default value:** None Optional key/value map used to annotate pods. For more information, see [Custom annotations](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/customize-services#custom-annotations).  
+`mart.hostAlias` | Basic | **Introduced in version:** 1.0.0 **Default value:** None The host alias pointing to the MART object. You can set this property to `*` or a fully-qualified domain name.  
+`mart.image.pullPolicy` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`mart.image.tag` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1.9.4` The version label for this service's Docker image.  
+`mart.image.url` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-mart-server` The location of the Docker image for this service. Check the `values.yaml` file for the specific URL.You can override this.  
+`mart.initCheckCF.resources.requests.cpu` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `10m` The amount of CPU resources allocated to the initialization check of the Cloud Foundry process.  
+`mart.livenessProbe.failureThreshold` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `12` The number of times Kubernetes will verify that liveness probes have failed before restarting the container. The minimum value is 1.  
+`mart.livenessProbe.initialDelaySeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `15` The number of seconds after a container is started before a liveness probe is initiated.  
+`mart.livenessProbe.periodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `5` Determines how often to perform a liveness probe, in seconds. The minimum value is 1.  
+`mart.livenessProbe.timeoutSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1` The number of seconds after which a liveness probe times out. The minimum value is 1.  
+`mart.metricsURL` | Basic | **Introduced in version:** 1.0.0 **Default value:** `/v1/server/metrics`  
+`mart.nodeSelector.key` | Basic | **Introduced in version:** 1.0.0 **Default value:** None Optional node selector label key for targeting Kubernetes nodes for `mart` runtime services. If you do not specify a key for mart.nodeselector, then your runtime uses the node specified in the nodeSelector object. See [ Configuring dedicated node pools](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/configure-dedicated-nodes).  
+`mart.nodeSelector.value` | Basic | **Introduced in version:** 1.0.0 **Default value:** None Optional node selector label value for targeting Kubernetes nodes for `mart` runtime services. See also the nodeSelector object. See [ Configuring dedicated node pools](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/configure-dedicated-nodes).  
+`mart.readinessProbe.failureThreshold` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `2` The number of times Kubernetes will verify that readiness probes have failed before marking the pod _unready_. The minimum value is 1.  
+`mart.readinessProbe.initialDelaySeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `15` The number of seconds after a container is started before a readiness probe is initiated.  
+`mart.readinessProbe.periodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `5` Determines how often to perform a readiness probe, in seconds. The minimum value is 1.  
+`mart.readinessProbe.successThreshold` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1` The minimum consecutive successes needed for a readiness probe to be considered successful after a failure. The minimum value is 1.  
+`mart.readinessProbe.timeoutSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1` The number of seconds after which a liveness probe times out. The minimum value is 1.  
+`mart.replicaCountMax` | Basic | **Introduced in version:** 1.0.0 **Default value:** `5` Maximum number of replicas available for autoscaling.  
+`mart.replicaCountMin` | Basic | **Introduced in version:** 1.0.0 **Default value:** `1` Minimum number of replicas available for autoscaling.  
+`mart.resources.requests.cpu` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `500m` The CPU needed for normal operation of the resource in a Kubernetes container, in millicores.  
+`mart.resources.requests.memory` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `512Mi` The memory needed for normal operation of the resource in a Kubernetes container, in mebibytes.  
+`mart.serviceAccountPath` | Basic | **Introduced in version:** 1.1.1 **Default value:** None One of either `serviceAccountPath` or `serviceAccountRef` is required. Path to Google Service Account key file with **no role**.   
+`mart.serviceAccountRef` | Basic | **Introduced in version:** 1.2.0 **Default value:** None One of either `serviceAccountPath` or `serviceAccountRef` is required.  
+`mart.sslCertPath` | Basic | **Introduced in version:** 1.0.0 **Default value:** None Either `sslCertPath`/`sslKeyPath` or `sslSecret` is required. Local file system path for loading and encoding the SSL cert to a Secret.  
+`mart.sslKeyPath` | Basic | **Introduced in version:** 1.0.0 **Default value:** None **Either`sslCertPath`/`sslKeyPath` or `sslSecret` is required**. Local file system path for loading and encoding the SSL key to a Secret.  
+`mart.sslSecret` | Basic | **Introduced in version:** 1.2.0 **Default value:** None Either `sslCertPath`/`sslKeyPath` or `sslSecret` is required. The name of a file stored in a Kubernetes secret that contains the TLS certificate and private key. You must create the secret using the TLS certificate and key data as its input. See also:
+
+  * [Storing data in a Kubernetes secret](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/k8s-secrets)
+  * [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) in the Kubernetes documentation
+  * [ Creating a Secret Using kubectl](https://kubernetes.io/docs/concepts/configuration/secret/#creating-a-secret-using-kubectl) in the Kubernetes documentation
+
+  
+`mart.targetCPUUtilizationPercentage` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `75` Target CPU utilization for the MART process on the pod. The value of this field enables MART to auto-scale when CPU utilization reaches this value, up to `replicaCountMax`.  
+`mart.terminationGracePeriodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `30` The time between a request for pod deletion and when the pod is killed, in seconds. During this period, any prestop hooks will be executed and any running process should terminate gracefully.  
+  
+## `metrics`
+
+Defines the service that collects operations metrics. You can use metrics data to monitor the health of Hybrid services, to set up alerts, and so on.
+
+For more information, see [Metrics collection overview](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/metrics-collection).
+
+The following table describes the properties of the `metrics` object:
+
+Property | Type | Description  
+---|---|---  
+`metrics.adapter.image.pullPolicy` | Advanced | **Introduced in version:** 1.8.1 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`metrics.adapter.image.tag` | Advanced | **Introduced in version:** 1.8.1 **Default value:** `v0.10.0` The version label for this service's Docker image.  
+`metrics.adapter.image.url` | Advanced | **Introduced in version:** 1.8.1 **Default value:** `gcr.io/apigee-release/hybrid/apigee-prometheus-adapter` The location of the Docker image for this service.  
+`metrics.aggregator.resources.requests.cpu` | Advanced | **Introduced in version:** 1.4.0 **Default value:** `500m` The CPU needed for normal operation of the aggregator in a Kubernetes container, in millicores.   
+`metrics.aggregator.resources.requests.memory` | Advanced | **Introduced in version:** 1.4.0 **Default value:** `512Mi` The memory needed for normal operation of the aggregator in a Kubernetes container, in mebibytes.   
+`metrics.aggregator.resources.limits.cpu` | Advanced | **Introduced in version:** 1.4.0 **Default value:** `500m` The CPU limit for the aggregator resource in a Kubernetes container, in millicores.   
+`metrics.aggregator.resources.limits.memory` | Advanced | **Introduced in version:** 1.4.0 **Default value:** `3Gi` The memory limit for the aggregator resource in a Kubernetes container, in gibibytes.   
+`metrics.annotations` | Advanced | **Introduced in version:** 1.5.0 **Default value:** None Optional key/value map used to annotate pods. For more information, see [Custom annotations](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/customize-services#custom-annotations).  
+`metrics.app.resources.requests.cpu` | Advanced | **Introduced in version:** 1.4.0 **Default value:** `500m` The CPU needed for normal operation of the app in a Kubernetes container, in millicores.   
+`metrics.app.resources.requests.memory` | Advanced | **Introduced in version:** 1.4.0 **Default value:** `512Mi` The memory needed for normal operation of the app in a Kubernetes container, in mebibytes.   
+`metrics.app.resources.limits.cpu` | Advanced | **Introduced in version:** 1.4.0 **Default value:** `500m` The CPU limit for the app resource in a Kubernetes container, in millicores.   
+`metrics.app.resources.limits.memory` | Advanced | **Introduced in version:** 1.4.0 **Default value:** `1Gi` The memory limit for the app resource in a Kubernetes container, in gibibytes.   
+`metrics.appStackdriverExporter.resources.requests.cpu` | Advanced | **Introduced in version:** 1.7.0 **Default value:** `128m` The CPU needed for normal operation of the stackdriverExporter in a Kubernetes container, in millicores.   
+`metrics.appStackdriverExporter.resources.requests.memory` | Advanced | **Introduced in version:** 1.7.0 **Default value:** `512Mi` The memory needed for normal operation of the stackdriverExporter in a Kubernetes container, in mebibytes.   
+`metrics.appStackdriverExporter.resources.limits.cpu` | Advanced | **Introduced in version:** 1.7.0 **Default value:** `500m` The CPU limit for the stackdriverExporter resource in a Kubernetes container, in millicores.   
+`metrics.appStackdriverExporter.resources.limits.memory` | Advanced | **Introduced in version:** 1.7.0 **Default value:** `1Gi` The memory limit for the stackdriverExporter resource in a Kubernetes container, in gibibytes.   
+`metrics.enabled` | Basic | **Introduced in version:** 1.0.0 **Default value:** `true` Enables Apigee metrics. Set to `true` to enable metrics. Set to `false` to disable metrics.   
+`metrics.nodeSelector.key` | Basic | **Introduced in version:** 1.0.0 **Default value:** None **Required** Node selector label key used to target dedicated Kubernetes nodes for `metrics` runtime services. See [ Configuring dedicated node pools](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/configure-dedicated-nodes).  
+`metrics.nodeSelector.value` | Basic | **Introduced in version:** 1.0.0 **Default value:** None **Required** Node selector label value used to target dedicated Kubernetes nodes for `metrics` runtime services. See [ Configuring dedicated node pools](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/configure-dedicated-nodes).  
+`metrics.prometheus.args.storage_tsdb_retention` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `48h` The amount of time Prometheus waits before removing old data from local storage, in hours.  
+`metrics.prometheus.containerPort` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `9090` The port to connect to the Prometheus metrics service.  
+`metrics.prometheus.image.pullPolicy` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`metrics.prometheus.image.tag` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `v2.39.1` The version label for this service's Docker image.  
+`metrics.prometheus.image.url` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-prom-prometheus` The location of the Docker image for this service.  
+`metrics.prometheus.livenessProbe.failureThreshold` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `6` The number of times Kubernetes will verify that liveness probes have failed before restarting the container. The minimum value is 1.  
+`metrics.prometheus.livenessProbe.periodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `5` Determines how often to perform a liveness probe, in seconds. The minimum value is 1.  
+`metrics.prometheus.livenessProbe.timeoutSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `3` The number of seconds after which a liveness probe times out. The minimum value is 1.  
+`metrics.prometheus.readinessProbe.failureThreshold` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `120` The number of times Kubernetes will verify that readiness probes have failed before marking the pod _unready_. The minimum value is 1.  
+`metrics.prometheus.readinessProbe.periodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `5` Determines how often to perform a readiness probe, in seconds. The minimum value is 1.  
+`metrics.prometheus.readinessProbe.timeoutSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `3` The number of seconds after which a liveness probe times out. The minimum value is 1.  
+`metrics.prometheus.sslCertPath` | Basic | **Introduced in version:** 1.0.0 **Default value:** None **Required** Path to the SSL cert for the Prometheus metrics collection process. Prometheus is a tool Apigee can use for collecting and processing metrics. See: 
+
+  * metrics
+  * For background information, the [Prometheus website](https://prometheus.io/)
+
+  
+`metrics.prometheus.sslKeyPath` | Basic | **Introduced in version:** 1.0.0 **Default value:** None **Required** Path to the SSL Key for the Prometheus metrics collection process. Prometheus is a tool Apigee can use for collecting and processing metrics. See: 
+
+  * metrics
+  * For background information, the [Prometheus website](https://prometheus.io/)
+
+  
+`metrics.proxy.resources.requests.cpu` | Advanced | **Introduced in version:** 1.4.0 **Default value:** `500m` The CPU needed for normal operation of the proxy in a Kubernetes container, in millicores.   
+`metrics.proxy.resources.requests.memory` | Advanced | **Introduced in version:** 1.4.0 **Default value:** `512Mi` The memory needed for normal operation of the proxy in a Kubernetes container, in mebibytes.   
+`metrics.proxy.resources.limits.cpu` | Advanced | **Introduced in version:** 1.4.0 **Default value:** `500m` The CPU limit for the proxy resource in a Kubernetes container, in millicores.   
+`metrics.proxy.resources.limits.memory` | Advanced | **Introduced in version:** 1.4.0 **Default value:** `1Gi` The memory limit for the proxy resource in a Kubernetes container, in gibibytes.   
+`metrics.proxyStackdriverExporter.resources.requests.cpu` | Advanced | **Introduced in version:** 1.7.0 **Default value:** `128m` The CPU needed for normal operation of the stackdriverExporter in a Kubernetes container, in millicores.   
+`metrics.proxyStackdriverExporter.resources.requests.memory` | Advanced | **Introduced in version:** 1.7.0 **Default value:** `512Mi` The memory needed for normal operation of the stackdriverExporter in a Kubernetes container, in mebibytes.   
+`metrics.proxyStackdriverExporter.resources.limits.cpu` | Advanced | **Introduced in version:** 1.7.0 **Default value:** `500m` The CPU limit for the stackdriverExporter resource in a Kubernetes container, in millicores.   
+`metrics.proxyStackdriverExporter.resources.limits.memory` | Advanced | **Introduced in version:** 1.7.0 **Default value:** `1Gi` The memory limit for the stackdriverExporter resource in a Kubernetes container, in gibibytes.   
+`metrics.proxyURL` | Basic | **Introduced in version:** 1.0.0 **Default value:** None URL for the metrics process sidecar proxy in the Kubernetes cluster.   
+`metrics.sdSidecar.containerPort` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `9091` The port for connecting to the Cloud Monitoring metrics service.  
+`metrics.sdSidecar.image.pullPolicy` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `IfNotPresent` Determines when Kubelet pulls this service's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists
+  * `Always`: Always pull the policy, even if it already exists For more information, see [ Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).
+
+  
+`metrics.sdSidecar.image.tag` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `0.9.0` The version label for this service's Docker image.  
+`metrics.sdSidecar.image.url` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-stackdriver-prometheus-sidecar` The location of the Docker image for this service.  
+`metrics.serviceAccountPath` | Basic | **Introduced in version:** 1.0.0 **Default value:** None One of either `serviceAccountPath` or `serviceAccountRef` is required. Path to Google Service Account key file with **Monitoring Metric Writer** role.   
+`metrics.serviceAccountRef` | Basic | **Introduced in version:** 1.2.0 **Default value:** None One of either `serviceAccountPath` or `serviceAccountRef` is required.  
+`metrics.stackdriverExporter.resources.requests.cpu` | Advanced | **Introduced in version:** 1.4.0 Deprecated: Starting in Hybrid version 1.8, `metrics:stackdriverExporter` has been replaced with `metrics:appStackdriverExporter` and `metrics:proxyStackdriverExporter`. See: 
+
+  * metrics.appStackdriverExporter.resources.requests.cpu
+  * metrics.proxyStackdriverExporter.resources.requests.cpu
+
+  
+`metrics.stackdriverExporter.resources.requests.memory` | Advanced | _Introduced in version:_ 1.4.0 Deprecated: Starting in Hybrid version 1.8, `metrics:stackdriverExporter` has been replaced with `metrics:appStackdriverExporter` and `metrics:proxyStackdriverExporter`. See: 
+
+  * metrics.appStackdriverExporter.resources.requests.memory
+  * metrics.proxyStackdriverExporter.resources.requests.memory
+
+  
+`metrics.stackdriverExporter.resources.limits.cpu` | Advanced | **Introduced in version:** 1.4.0 Deprecated: Starting in Hybrid version 1.8, `metrics:stackdriverExporter` has been replaced with `metrics:appStackdriverExporter` and `metrics:proxyStackdriverExporter`. See: 
+
+  * metrics.appStackdriverExporter.resources.limits.cpu
+  * metrics.proxyStackdriverExporter.resources.limits.cpu
+
+  
+`metrics.stackdriverExporter.resources.limits.memory` | Advanced | **Introduced in version:** 1.4.0 Deprecated: Starting in Hybrid version 1.8, `metrics:stackdriverExporter` has been replaced with `metrics:appStackdriverExporter` and `metrics:proxyStackdriverExporter`. See: 
+
+  * metrics.appStackdriverExporter.resources.limits.memory
+  * metrics.proxyStackdriverExporter.resources.limits.memory
+
+  
+`metrics.terminationGracePeriodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `300` The time between a request for pod deletion and when the pod is killed, in seconds. During this period, any prestop hooks will be executed and any running process should terminate gracefully.  
+  
+## `mintTaskScheduler`
+
+`mintTaskScheduler` is the cron job to schedule monetization tasks, like recurring fee calculation on a periodic basis.
+
+The following table describes the properties of the `mintTaskScheduler` object:
+
+Property | Type | Description  
+---|---|---  
+`mintTaskScheduler.image.pullPolicy` | Advanced | **Introduced in version:** 1.7.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`mintTaskScheduler.image.tag` | Advanced | **Introduced in version:** 1.7.0 **Default value:** `1.9.4` The version label for this service's Docker image.  
+`mintTaskScheduler.image.url` | Advanced | **Introduced in version:** 1.7.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-mint-task-scheduler` The location of the Docker image for this service.  
+`mintTaskScheduler.resources.requests.cpu` | Advanced | **Introduced in version:** 1.7.0 **Default value:** `500m` The CPU needed for normal operation of the resource in a Kubernetes container, in millicores.  
+`mintTaskScheduler.resources.requests.memory` | Advanced | **Introduced in version:** 1.7.0 **Default value:** `512Mi` The memory needed for normal operation of the resource in a Kubernetes container, in mebibytes.  
+  
+## `nodeSelector`
+
+The `nodeSelector` object defines the node for your Apigee instance. Behind the scenes when `apigeectl` runs, it is taking care to map the label key/value for `apigeeRuntime` and `apigeeData` to the individual Istio and MART components. You can override this for individual objects in the mart:nodeSelector property. 
+
+The following table describes the properties of the `nodeSelector` object:
+
+Property | Type | Description  
+---|---|---  
+`nodeSelector.apigeeData.key` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `cloud.google.com/gke-nodepool` ApigeeData is the node for the Cassandra database. Node selector label key for targeting Kubernetes nodes for working with Apigee services data. See [Configure dedicated node pools](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/configure-dedicated-nodes).  
+`nodeSelector.apigeeData.value` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `apigee-data` apigee-data is the node for the Cassandra database. Node selector label value for targeting Kubernetes nodes for working with Apigee services data. See [Configure dedicated node pools](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/configure-dedicated-nodes).  
+`nodeSelector.apigeeRuntime.key` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `cloud.google.com/gke-nodepool` Apigee Runtime is the node for the runtime environment for the project. Node selector label key for targeting Kubernetes nodes for Apigee runtime services. See [Configure dedicated node pools](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/configure-dedicated-nodes).  
+`nodeSelector.apigeeRuntime.value` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `apigee-runtime` `apigee-runtime` is the node for the runtime environment for the project. Node selector label value for targeting Kubernetes nodes for Apigee runtime services. See [Configure dedicated node pools](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/configure-dedicated-nodes).  
+`nodeSelector.requiredForScheduling` | Advanced | **Introduced in version:** 1.0.0 **Default value:** false The `requiredForScheduling` property defaults to `false`. If this value is overridden to `true`, it means that if Kubernetes cannot find nodes with the label key/value that is configured then the underlying Pods will not get scheduled on VM worker nodes. For production, `nodeSelector.requiredForScheduling` should be set to true.  See [Configure dedicated node pools](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/configure-dedicated-nodes).  
+  
+## `redis`
+
+The following table describes the properties of the `redis` object:
+
+Property | Type | Description  
+---|---|---  
+`redis.auth.password` | Basic | **Introduced in version:** 1.6.0 **Default value:** `iloveapis123` **Required** Password for the Redis administrator. The admin user is used for any administrative activities performed on the Redis cluster.  
+`redis.auth.secret` | Basic | **Introduced in version:** 1.9.1 **Default value:** None The name of the file stored in a Kubernetes secret that contains the password for the Redis administrator. The secret file should contain the key: 
+    
+    
+    data:
+      redis.auth.password: encoded_value
+
+See also:
+
+  * `redis.auth.password`
+  * [Storing data in a Kubernetes secret](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/k8s-secrets)
+  * [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) in the Kubernetes documentation
+  * [ Creating a Secret Using kubectl](https://kubernetes.io/docs/concepts/configuration/secret/#creating-a-secret) in the Kubernetes documentation
+
+  
+`redis.envoy.image.pullPolicy` | Advanced | **Introduced in version:** 1.6.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`redis.envoy.image.tag` | Advanced | **Introduced in version:** 1.6.0 **Default value:** `v1.25.1` The version label for this service's Docker image.  
+`redis.envoy.image.url` | Advanced | **Introduced in version:** 1.6.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-envoy` The location of the Docker image for this service.  
+`redis.image.pullPolicy` | Advanced | **Introduced in version:** 1.6.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`redis.image.tag` | Advanced | **Introduced in version:** 1.6.0 **Default value:** `1.9.4` The version label for this service's Docker image.  
+`redis.image.url` | Advanced | **Introduced in version:** 1.6.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-redis` The location of the Docker image for this service.  
+`redis.replicaCount` | Basic | **Introduced in version:** 1.6.0 **Default value:** `2` Redis is a replicated storage. This property specifies the number of Redis nodes employed as a [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/).  
+`redis.resources.requests.cpu` | Advanced | **Introduced in version:** 1.6.0 **Default value:** `500m` The CPU needed for normal operation of the resource in a Kubernetes container, in millicores. Apigee recommends a value from `500m` to `1000m`. With 0.5 cores, a Redis node can typically handle 10K QPS. With 1.0 core, it can typically handle 20K QPS. CPU request resources above 1000m are not helpful in most cases.  
+  
+## `runtime`
+
+The following table describes the properties of the `runtime` object:
+
+Property | Type | Description  
+---|---|---  
+`runtime.annotations` | Advanced | **Introduced in version:** 1.5.0 **Default value:** None Optional key/value map used to annotate pods. For more information, see [Custom annotations](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/customize-services#custom-annotations).  
+`runtime.image.pullPolicy` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`runtime.image.tag` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1.9.4` The version label for this service's Docker image.  
+`runtime.image.url` | Advanced | **Introduced in version:** 1.0.0 **Default value:** _URL to your installation's image resource, for example:_`gcr.io/apigee-release/hybrid/apigee-runtime` The location of the Docker image for this service.  
+`runtime.livenessProbe.failureThreshold` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `12` The number of times Kubernetes will verify that liveness probes have failed before restarting the container. The minimum value is 1.  
+`runtime.livenessProbe.initialDelaySeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `60` The number of seconds after a container is started before a liveness probe is initiated.  
+`runtime.livenessProbe.periodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `5` Determines how often to perform a liveness probe, in seconds. The minimum value is 1.  
+`runtime.livenessProbe.timeoutSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1` The number of seconds after which a liveness probe times out. The minimum value is 1.  
+`runtime.nodeSelector.key` | Basic | **Introduced in version:** 1.0.0 **Default value:** None Optional Node selector label key for targeting Kubernetes nodes for `runtime` services. See nodeSelector property.  
+`runtime.nodeSelector.value` | Basic | **Introduced in version:** 1.0.0 **Default value:** None Node selector label value for targeting Kubernetes nodes for `runtime` services. See [ Configuring dedicated node pools](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/configure-dedicated-nodes).  
+`runtime.readinessProbe.failureThreshold` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `2` The number of times Kubernetes will verify that readiness probes have failed before marking the pod _unready_. The minimum value is 1.  
+`runtime.readinessProbe.initialDelaySeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `60` The number of seconds after a container is started before a readiness probe is initiated.  
+`runtime.readinessProbe.periodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `5` Determines how often to perform a readiness probe, in seconds. The minimum value is 1.  
+`runtime.readinessProbe.successThreshold` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1` The minimum consecutive successes needed for a readiness probe to be considered successful after a failure. The minimum value is 1.  
+`runtime.readinessProbe.timeoutSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1` The number of seconds after which a liveness probe times out. The minimum value is 1.  
+`runtime.replicaCountMax` | Basic | **Introduced in version:** 1.0.0 **Default value:** `4` Maximum number of replicas available for autoscaling.  
+`runtime.replicaCountMin` | Basic | **Introduced in version:** 1.0.0 **Default value:** `1` Minimum number of replicas available for autoscaling.  
+`runtime.resources.requests.cpu` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `500m` The CPU needed for normal operation of the resource in a Kubernetes container, in millicores. **Note:** To achieve smooth autoscaling of the message processors to accommodate traffic increases, we recommend that you do not exceed two cores (2000 millicores) if you decide to override the default.  Apigee runtime components are bounded by I/O, and adding more CPU capacity does not always help with traffic increases. When there are high CPU requests, message processors may not autoscale and liveliness probes may fail with high traffic.   
+`runtime.resources.requests.memory` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `512Mi` (see note below) The memory needed for normal operation of the resource in a Kubernetes container, in mebibytes (`Mi`) or Gibibytes (`Gi`). **Note:** Reset the value of `runtime.resources.requests.memory` to at least `1Gi` in your `overrides.yaml`. The default of `512Mi` is enough for initial operation and configuration, but should be raised for production. To achieve smooth autoscaling of the message processors to accommodate traffic increases, we recommend that you do not exceed 2.5Gi (2560Mi) if you decide to override the default.  
+`runtime.service.type` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `ClusterIP` The type of service. You can set this to a service other than ClusterIP; for example, `LoadBalancer`.  
+`runtime.targetCPUUtilizationPercentage` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `75` Target CPU utilization for the runtime process on the pod. The value of this field enables the runtime to auto-scale when CPU utilization reaches this value, up to `replicaCountMax`.  
+`runtime.terminationGracePeriodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `180` The time between a request for pod deletion and when the pod is killed, in seconds. During this period, any prestop hooks will be executed and any running process should terminate gracefully.  
+  
+## `synchronizer`
+
+Ensures that the Message Processors are kept up to date with the latest deployed API proxy bundles. To do this, the Synchronizer polls the management plane; when a new contract is detected, the Synchronizer sends it to the runtime plane. By default, Synchronizer stores environment configuration data in Cassandra.
+
+For more information, see [Configure the Synchronizer](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/synchronizer-access).
+
+The following table describes the properties of the `synchronizer` object:
+
+Property | Type | Description  
+---|---|---  
+`synchronizer.annotations` | Advanced | **Introduced in version:** 1.5.0 **Default value:** None Optional key/value map used to annotate pods. For more information, see [Custom annotations](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/customize-services#custom-annotations).  
+`synchronizer.image.pullPolicy` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`synchronizer.image.tag` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1.9.4` The version label for this service's Docker image.  
+`synchronizer.image.url` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-synchronizer` The location of the Docker image for this service.  
+`synchronizer.livenessProbe.failureThreshold` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `2` The number of times Kubernetes will verify that liveness probes have failed before restarting the container. The minimum value is 1.  
+`synchronizer.livenessProbe.initialDelaySeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `0` The number of seconds after a container is started before a liveness probe is initiated.  
+`synchronizer.livenessProbe.periodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `5` Determines how often to perform a liveness probe, in seconds. The minimum value is 1.  
+`synchronizer.livenessProbe.timeoutSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1` The number of seconds after which a liveness probe times out. The minimum value is 1.  
+`synchronizer.nodeSelector.key` | Basic | **Introduced in version:** 1.0.0 **Default value:** None **Required** Optional node selector label key for targeting Kubernetes nodes for `synchronizer` runtime services. See nodeSelector.  
+`synchronizer.nodeSelector.value` | Basic | **Introduced in version:** 1.0.0 **Default value:** None Optional node selector label value used for targeting Kubernetes nodes for `synchronizer` runtime services. See nodeSelector.  
+`synchronizer.pollInterval` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `60` The length of time that Synchronizer waits between polling operations. Synchronizer polls Apigee control plane services to detect and pull new runtime contracts.  
+`synchronizer.readinessProbe.failureThreshold` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `2` The number of times Kubernetes will verify that readiness probes have failed before marking the pod _unready_. The minimum value is 1.  
+`synchronizer.readinessProbe.initialDelaySeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `0` The number of seconds after a container is started before a readiness probe is initiated.  
+`synchronizer.readinessProbe.periodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `5` Determines how often to perform a readiness probe, in seconds. The minimum value is 1.  
+`synchronizer.readinessProbe.successThreshold` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1` The minimum consecutive successes needed for a readiness probe to be considered successful after a failure. The minimum value is 1.  
+`synchronizer.readinessProbe.timeoutSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1` The number of seconds after which a liveness probe times out. The minimum value is 1.  
+`synchronizer.replicaCount` | Basic | **Introduced in version:** 1.0.0 Deprecated: Starting in Hybrid version 1.2, manage the Synchronizer replica count with: `synchronizer.replicaCountMax` and `synchronizer.replicaCountMin`  
+`synchronizer.replicaCountMax` | Basic | **Introduced in version:** 1.2.0 **Default value:** `4` Maximum number of replicas for autoscaling.  
+`synchronizer.replicaCountMin` | Basic | **Introduced in version:** 1.2.0 **Default value:** `1` Minimum number of replicas for autoscaling.  
+`synchronizer.resources.requests.cpu` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `100m` The CPU needed for normal operation of the resource in a Kubernetes container, in millicores.  
+`synchronizer.resources.requests.memory` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1Gi` The memory needed for normal operation of the resource in a Kubernetes container, in gigabytes.  
+`synchronizer.serviceAccountPath` | Basic | **Introduced in version:** 1.0.0 **Default value:** None One of either `serviceAccountPath` or `serviceAccountRef` is required. Path to Google Service Account key file with **Apigee Synchronizer Manager** role.   
+`synchronizer.serviceAccountRef` | Basic | **Introduced in version:** 1.2.0 **Default value:** None One of either `serviceAccountPath` or `serviceAccountRef` is required.  
+`synchronizer.targetCPUUtilizationPercentage` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `75` Target CPU utilization for the Synchronizer process on the pod. The value of this field enables Synchronizer to auto-scale when CPU utilization reaches this value, up to `replicaCountMax`.   
+`synchronizer.terminationGracePeriodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `30` The time between a request for pod deletion and when the pod is killed, in seconds. During this period, any prestop hooks will be executed and any running process should terminate gracefully.  
+  
+## `udca`
+
+(Universal Data Collection Agent) Defines the service that runs within the data collection pod in the runtime plane. This service extracts analytics and deployment status data and sends it to the Unified Analytics Platform (UAP).
+
+For more information, see [Analytics and deployment status data collection](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/other-data-collection).
+
+The following table describes the properties of the `udca` object:
+
+Property | Type | Description  
+---|---|---  
+`udca.annotations` | Advanced | **Introduced in version:** 1.5.0 **Default value:** None Optional key/value map used to annotate pods. For more information, see [Custom annotations](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/customize-services#custom-annotations).  
+`udca.fluentd.image.pullPolicy` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`udca.fluentd.image.tag` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1.9.12-2` The version label for this service's Docker image.  
+`udca.fluentd.image.url` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-stackdriver-logging-agent` The location of the Docker image for this service.  
+`udca.fluentd.resources.limits.cpu` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `500m` The memory limit for the resource in a Kubernetes container, in mebibytes.  
+`udca.fluentd.resources.limits.memory` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `500Mi` The memory limit for the resource in a Kubernetes container, in mebibytes.  
+`udca.fluentd.resources.requests.cpu` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `500m` The CPU needed for normal operation of the resource in a Kubernetes container, in millicores.  
+`udca.fluentd.resources.requests.memory` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `250Mi` The memory needed for normal operation of the resource in a Kubernetes container, in mebibytes.  
+`udca.image.pullPolicy` | Advanced | **Introduced in version:** 1.0.0 **Default value:** IfNotPresent Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`udca.image.tag` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1.9.4` The version label for this service's Docker image.  
+`udca.image.url` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-udca` The location of the Docker image for this service.  
+`udca.jvmXms` | Advanced | **Introduced in version:** 1.0.0 Deprecated: Starting in Hybrid version 1.8, `udca.jvmXms` is no longer used.   
+`udca.jvmXmx` | Advanced | **Introduced in version:** 1.0.0 Deprecated: Starting in Hybrid version 1.8, `udca.jvmXmx` is no longer used.   
+`udca.livenessProbe.failureThreshold` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `2` The number of times Kubernetes will verify that liveness probes have failed before restarting the container. The minimum value is 1.  
+`udca.livenessProbe.initialDelaySeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `0` The number of seconds after a container is started before a liveness probe is initiated.  
+`udca.livenessProbe.periodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `5` Determines how often to perform a liveness probe, in seconds. The minimum value is 1.  
+`udca.livenessProbe.timeoutSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1` The number of seconds after which a liveness probe times out. The minimum value is 1.  
+`udca.nodeSelector.key` | Basic | **Introduced in version:** 1.0.0 **Default value:** None **Required** Node selector label key used to target dedicated Kubernetes nodes for `udca` runtime services. See [ Configuring dedicated node pools](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/configure-dedicated-nodes).  
+`udca.nodeSelector.value` | Basic | **Introduced in version:** 1.0.0 **Default value:** None **Required** Node selector label value used to target dedicated Kubernetes nodes for `udca` runtime services. See [ Configuring dedicated node pools](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/configure-dedicated-nodes).  
+`udca.pollingIntervalInSec` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `1` The length of time, in seconds, that UDCA waits between polling operations. UDCA polls the data directory on the data collection pod's file system to detect new files to be uploaded.  
+`udca.replicaCountMax` | Basic | **Introduced in version:** 1.0.0 **Default value:** `4` The maximum number of pods that hybrid can automatically add for the UDCA deployment. Because UDCA is implemented as a ReplicaSet, the pods are replicas. It is recommended to set `udca.replicaCountMax` to a maximum number of replicas per environment times the number of environments in your Apigee org. For example, if you want to allow at most 4 replicas per environment and you have 3 environments, set `udca.replicaCountMax: 12`.  If you are using environment-scoped UDCA, set `udca.replicaCountMax` to the maximum number of replicas for a single environment. See orgScopedUDCA.  
+`udca.replicaCountMin` | Basic | **Introduced in version:** 1.0.0 **Default value:** `1` The minimum number of pods for the UDCA deployment. Because UDCA is implemented as a ReplicaSet, the pods are replicas. If the CPU usage goes above `udca.targetCPUUtilizationPercentage`, then hybrid will gradually increase the number of pods, up to `udca.replicaCountMax`.  
+`udca.resources.limits.cpu` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `500m` The memory limit for the resource in a Kubernetes container, in mebibytes.  
+`udca.resources.limits.memory` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `500Mi` The memory limit for the resource in a Kubernetes container, in mebibytes.  
+`udca.resources.requests.cpu` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `250m` The CPU needed for normal operation of the resource in a Kubernetes container, in millicores.  
+`udca.resources.requests.memory` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `250Mi` The memory needed for normal operation of the resource in a Kubernetes container, in mebibytes.  
+`udca.revision` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `v1` A static value that is populated in a label to enable canary deployments.  
+`udca.serviceAccountPath` | Basic | **Introduced in version:** 1.0.0 **Default value:** None **One of either`serviceAccountPath` or `serviceAccountRef` is required.** Path to Google Service Account key file with **Apigee Analytics Agent** role.   
+`udca.serviceAccountRef` | Basic | **Introduced in version:** 1.2.0 **Default value:** None **One of either`serviceAccountPath` or `serviceAccountRef` is required.**  
+`udca.targetCPUUtilizationPercentage` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `75` The threshold of CPU usage for scaling the number of pods in the ReplicaSet, as a percentage of total available CPU resources. Hybrid uses the combined utilization of all containers in the data collection pod (both fluentd and UDCA) to calculate the current utilization. When CPU usage goes above this value, then hybrid will gradually increase the number of pods in the ReplicaSet, up to `udca.replicaCountMax`.  
+`udca.terminationGracePeriodSeconds` | Advanced | **Introduced in version:** 1.0.0 **Default value:** `600` The time between a request for pod deletion and when the pod is killed, in seconds. During this period, any prestop hooks will be executed and any running process should terminate gracefully.  
+  
+## `virtualhosts`
+
+The `virtualhosts` property is a required configuration property. Virtual hosts allow Apigee hybrid to handle API requests to a specified environment group.. 
+
+For more information, see [Configure virtual hosts](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/base-path-routing).
+
+The following table describes the properties of the `virtualhosts` object:
+
+Property | Type | Description  
+---|---|---  
+`virtualhosts[].additionalGateways` | Basic | **Introduced in version:** 1.2.0 **Default value:** None A list of Istio Gateways to route traffic to.  
+`virtualhosts[].cipherSuites[]` | Advanced | **Introduced in version:** 1.9.2 **Default value:** None The list of TLS ciphers. You can find the full list of supported ciphers in the documentation for the [Boring FIPS build of Envoy](https://www.envoyproxy.io/docs/envoy/latest/api-v3/extensions/transport_sockets/tls/v3/common.proto.html). A blank value defaults to the cipher suites supported by the Boring FIPS build of Envoy. For example, to support TLS v.1.1:
+    
+    
+    virtualhosts:
+    - name: ENV_GROUP_NAME
+      minTLSProtocolVersion: "1.1"
+      cipherSuites:
+      - "ECDHE-ECDSA-AES128-GCM-SHA256"
+      - "ECDHE-RSA-AES128-GCM-SHA256"
+      - "ECDHE-ECDSA-AES256-GCM-SHA384"
+      - "ECDHE-RSA-AES256-GCM-SHA384"
+      - "ECDHE-ECDSA-CHACHA20-POLY1305"
+      - "ECDHE-RSA-CHACHA20-POLY1305"
+      - "ECDHE-ECDSA-AES128-SHA"
+      - "ECDHE-RSA-AES128-SHA"
+      - "ECDHE-ECDSA-AES256-SHA"
+      - "ECDHE-RSA-AES256-SHA"
+      ...
+          
+
+**Note:** This property overrides the list of cipher suites supported by Envoy, and does not append to it.  
+`virtualhosts[].name` | Basic | **Introduced in version:** 1.2.0 **Default value:** None **Required** The name of the virtual host.  
+`virtualhosts[].maxTLSProtocolVersion` | Basic | **Introduced in version:** 1.3.0 **Default value:** None The maximum version of the TLS protocol Envoy can select. Envoy automatically uses the optimal TLS protocol version between `virtualhosts[].minTLSProtocolVersion` and `virtualhosts[].maxTLSProtocolVersion`. The value must be in the form of a number. For example: 
+    
+    
+    virtualhosts:
+      - name: default
+        maxTLSProtocolVersion: "1.3"
+
+Where the number represents the TLS version number in the form `#.#`. In the example above, `"1.3"` represents the Istio TLS version `TLSV1_3`.  See also [ `ServerTLSSettings.TLSProtocol`](https://istio.io/latest/docs/reference/config/networking/gateway/#ServerTLSSettings-TLSProtocol) in the Istio documentation.  
+`virtualhosts[].minTLSProtocolVersion` | Basic | **Introduced in version:** 1.3.0 **Default value:** None The minimum version of the TLS protocol Envoy can select. Envoy automatically uses the optimal TLS protocol version between `virtualhosts[].minTLSProtocolVersion` and `virtualhosts[].maxTLSProtocolVersion`. The value must be in the form of a number. For example: 
+    
+    
+    virtualhosts:
+      - name: default
+        minTLSProtocolVersion: "1.2"
+
+Where the number represents the TLS version number in the form `#.#`. In the example above, `1.2` represents the Istio TLS version `TLSV1_2`.  See also [ `ServerTLSSettings.TLSProtocol`](https://istio.io/latest/docs/reference/config/networking/gateway/#ServerTLSSettings-TLSProtocol) in the Istio documentation.  
+`virtualhosts[].selector` | Basic | **Introduced in version:** 1.2.0 **Default value:** `app: apigee-ingressgateway` **Required** A key-value selector-value pair for pointing to different ingress selectors.
+
+  * `apigee-ingressgateway`: for Apigee hybrid installations using Apigee ingress gateway.
+  * `istio-ingressgateway`: for Apigee hybrid installations using Anthos Service Mesh (Apigee hybrid versions 1.8 and earlier).
+
+If no selector label is supplied, the configuration is supplied to Apigee ingress gateway.   
+`virtualhosts[].sslCertPath` | Basic | **Introduced in version:** 1.2.0 **Default value:** None Either `sslCertPath`/`sslKeyPath` or `sslSecret` is required. The path on your system to a TLS certificate file. **Note:** For each configured environment, the Common Name (CN) in the cert must match the domain in the `hostAliases[]` property. For example, if the CN is `*.example.com`, the `hostAliases[]` could be `foo.example.com` or `bar.example.com`.   
+`virtualhosts[].sslKeyPath` | Basic | **Introduced in version:** 1.2.0 **Default value:** None Either `sslCertPath`/`sslKeyPath` or `sslSecret` is required. The path on your system to the TLS private key file.  
+`virtualhosts[].sslSecret` | Basic | **Introduced in version:** 1.2.0 **Default value:** None **Either`sslCertPath`/`sslKeyPath` or `sslSecret` is required**. The name of a file stored in a Kubernetes secret that contains the TLS certificate and private key. You must create the secret using the TLS certificate and key data as its input. See also:
+
+  * [Storing data in a Kubernetes secret](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/k8s-secrets)
+  * [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) in the Kubernetes documentation
+  * [ Creating a Secret Using kubectl](https://kubernetes.io/docs/concepts/configuration/secret/#creating-a-secret-using-kubectl) in the Kubernetes documentation
+
+  
+  
+## `watcher`
+
+The `watcher` property is a required configuration property. The watcher is a process that watches for configuration changes and triggers their application to the runtime plane.. 
+
+The following table describes the properties of the `watcher` object:
+
+Property | Type | Description  
+---|---|---  
+`watcher.annotations` | Advanced | **Introduced in version:** 1.5.0 **Default value:** None Optional key/value map used to annotate pods. For more information, see [Custom annotations](https://docs.cloud.google.com/apigee/docs/hybrid/v1.9/customize-services#custom-annotations).  
+`watcher.image.pullPolicy` | Advanced | **Introduced in version:** 1.4.0 **Default value:** `IfNotPresent` Determines when [ kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/#kubelet) pulls the pod's Docker image. Possible values include:
+
+  * `IfNotPresent`: Do not pull a new image if it already exists.
+  * `Always`: Always pull the image, regardless of whether it exists already.
+
+For more information, see [Updating images](https://kubernetes.io/docs/concepts/containers/images/#updating-images).  
+`watcher.image.tag` | Advanced | **Introduced in version:** 1.4.0 **Default value:** `1.9.4` The version label for this service's Docker image.  
+`watcher.image.url` | Advanced | **Introduced in version:** 1.4.0 **Default value:** `gcr.io/apigee-release/hybrid/apigee-watcher` he location of the Docker image for this service.  
+`watcher.replicaCountMax` | Basic | **Introduced in version:** 1.3.0 **Default value:** `1` The maximum number of watcher replicas. This should be kept at **`1`** to avoid conflicts.  
+`watcher.replicaCountMin` | Basic | **Introduced in version:** 1.3.0 **Default value:** `1` The minimum number of watcher replicas.  
+`watcher.serviceAccountPath` | Basic | **Introduced in version:** 1.3.0 **Default value:** None **Required.** Path to Google Service Account key file with **Apigee Runtime Agent** role.   
+`watcher.serviceAccountRef` | Advanced | **Introduced in version:** 1.3.0 **Default value:** None **One of either serviceAccountPath or serviceAccountRef is required.**  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+  *[KMS]: Key Management Service
+  *[KVM]: Key Value Map
+  *[JVM]: Java Virtual Machine
+  *[GKE]: Google Kubernetes Engine
+  *[MART]: Management API for Runtime data

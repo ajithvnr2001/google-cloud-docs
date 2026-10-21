@@ -1,0 +1,71 @@
+---
+url: https://docs.cloud.google.com/workflows/docs/samples/workflows-connector-workflows/
+title: Connector for Workflows definitions \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T02:28:55.322394+00:00
+---
+
+# Connector for Workflows definitions  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/workflows/docs/samples/workflows-connector-workflows/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Application development ](https://docs.cloud.google.com/docs/application-development)
+  * [ Workflows ](https://docs.cloud.google.com/workflows/docs)
+  * [ Samples ](https://docs.cloud.google.com/workflows/docs/samples)
+
+
+
+#  Connector for Workflows definitions Stay organized with collections  Save and categorize content based on your preferences. 
+
+Workflows connector that defines the built-in function used to access Workflows definitions.
+
+## Explore further
+
+For detailed documentation that includes this code sample, see the following: 
+
+  * [Workflows API Connector Overview](https://docs.cloud.google.com/workflows/docs/reference/googleapis/workflows/Overview)
+
+
+
+## Code sample
+
+### YAML
+    
+    
+    # This workflow demonstrates how to use the Workflows connector:
+    # Create, get, and then delete a workflow
+    # Expected output: "SUCCESS"
+    - init:
+        assign:
+          - project: ${sys.get_env("GOOGLE_CLOUD_PROJECT_ID")}
+          - location: "us-central1"
+          - workflow: "example-workflow"
+    - create_workflow:
+        call: googleapis.workflows.v1.projects.locations.workflows.create
+        args:
+          parent: ${"projects/" + project + "/locations/" + location}
+          workflowId: ${workflow}
+          body:
+            name: ${"projects/" + project + "/locations/" + location + "/workflows/" + workflow}
+            description: "An example workflow to create and delete using the Workflows connector"
+            sourceContents: "- step:\n    next: end"
+    - get_workflow:
+        call: googleapis.workflows.v1.projects.locations.workflows.get
+        args:
+          name: ${"projects/" + project + "/locations/" + location + "/workflows/" + workflow}
+    - delete_workflow:
+        call: googleapis.workflows.v1.projects.locations.workflows.delete
+        args:
+          name: ${"projects/" + project + "/locations/" + location + "/workflows/" + workflow}
+    - the_end:
+        return: "SUCCESS"
+
+## What's next
+
+To search and filter code samples for other Google Cloud products, see the [Google Cloud sample browser](https://docs.cloud.google.com/docs/samples?product=workflows). 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],[],[],[]] 

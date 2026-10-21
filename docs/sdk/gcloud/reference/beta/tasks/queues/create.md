@@ -1,0 +1,128 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/tasks/queues/create/
+title: gcloud beta tasks queues create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T13:27:04.704967+00:00
+---
+
+# gcloud beta tasks queues create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/tasks/queues/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta tasks queues create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta tasks queues create - create a Cloud Tasks queue 
+SYNOPSIS
+    
+
+`gcloud beta tasks queues create` `QUEUE` [`--http-header-override`=`HEADER_FIELD`: `HEADER_VALUE`] [`--http-method-override`=`HTTP_METHOD_OVERRIDE`] [`--http-uri-override`=`KEY`:`VALUE`,[`KEY`:`VALUE`,…]] [`--location`=`LOCATION`] [`--log-sampling-ratio`=`LOG_SAMPLING_RATIO`] [`--max-attempts`=`MAX_ATTEMPTS`] [`--max-backoff`=`MAX_BACKOFF`] [`--max-concurrent-dispatches`=`MAX_CONCURRENT_DISPATCHES`] [`--max-dispatches-per-second`=`MAX_DISPATCHES_PER_SECOND`] [`--max-doublings`=`MAX_DOUBLINGS`] [`--max-retry-duration`=`MAX_RETRY_DURATION`] [`--min-backoff`=`MIN_BACKOFF`] [`--routing-override`=`KEY`:`VALUE`,[…]] [`--type`=`TYPE`; default="push"] [[`--http-oauth-service-account-email-override`=`HTTP_OAUTH_SERVICE_ACCOUNT_EMAIL_OVERRIDE` : `--http-oauth-token-scope-override`=`HTTP_OAUTH_TOKEN_SCOPE_OVERRIDE`] | [`--http-oidc-service-account-email-override`=`HTTP_OIDC_SERVICE_ACCOUNT_EMAIL_OVERRIDE` : `--http-oidc-token-audience-override`=`HTTP_OIDC_TOKEN_AUDIENCE_OVERRIDE`]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` The flags available to this command represent the fields of a queue that are mutable. 
+EXAMPLES
+     To create a Cloud Tasks queue: 
+    
+    
+    gcloud beta tasks queues create my-queue --max-attempts=10 --max-retry-duration=5s --max-doublings=4 --min-backoff=1s --max-backoff=10s --max-dispatches-per-second=100 --max-concurrent-dispatches=10 --routing-override=service:abc
+
+POSITIONAL ARGUMENTS
+    
+
+`QUEUE`
+     The queue to create. 
+FLAGS
+    
+
+`--http-header-override`=`HEADER_FIELD`: `HEADER_VALUE`
+     If provided, the specified HTTP headers override the existing headers for all tasks in the queue. If a task has a header with the same Key as a queue-level header override, then the value of the task header will be overriden with the value of the queue-level header. Otherwise, the queue-level header will be added to the task headers. Header values can contain commas. This flag can be repeated. Repeated header fields will have their values overridden. 
+`--http-method-override`=`HTTP_METHOD_OVERRIDE`
+     If provided, the specified HTTP method type override is used for all tasks in the queue, no matter what is set at the task-level. 
+`--http-uri-override`=`KEY`:`VALUE`,[`KEY`:`VALUE`,…]
+     If provided, the specified HTTP target URI override is used for all tasks in the queue depending on what is set as the mode. Allowed values for mode are: ALWAYS, IF_NOT_EXISTS. If not set, mode defaults to ALWAYS. 
+
+KEY must be at least one of: [scheme, host, port, path, query, mode]. Any missing keys will use the default. 
+
+`--location`=`LOCATION`
+     The location where we want to manage the queue or task. If not specified, uses the location of the current project's App Engine app if there is an associated app. 
+`--log-sampling-ratio`=`LOG_SAMPLING_RATIO`
+     Specifies the fraction of operations to write to Cloud Logging. This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the default and means that no operations are logged. 
+`--max-attempts`=`MAX_ATTEMPTS`
+     The maximum number of attempts per task in the queue. 
+`--max-backoff`=`MAX_BACKOFF`
+     The maximum amount of time to wait before retrying a task after it fails. Must be a string that ends in 's', such as "5s". 
+`--max-concurrent-dispatches`=`MAX_CONCURRENT_DISPATCHES`
+     The maximum number of concurrent tasks that Cloud Tasks allows to be dispatched for this queue. After this threshold has been reached, Cloud Tasks stops dispatching tasks until the number of outstanding requests decreases. 
+`--max-dispatches-per-second`=`MAX_DISPATCHES_PER_SECOND`
+     The maximum rate at which tasks are dispatched from this queue. 
+`--max-doublings`=`MAX_DOUBLINGS`
+     The time between retries will double maxDoublings times. 
+
+A tasks retry interval starts at minBackoff, then doubles maxDoublings times, then increases linearly, and finally retries retries at intervals of maxBackoff up to maxAttempts times. 
+
+For example, if minBackoff is 10s, maxBackoff is 300s, and maxDoublings is 3, then the a task will first be retried in 10s. The retry interval will double three times, and then increase linearly by 2^3 * 10s. Finally, the task will retry at intervals of maxBackoff until the task has been attempted maxAttempts times. Thus, the requests will retry at 10s, 20s, 40s, 80s, 160s, 240s, 300s, 300s. 
+
+`--max-retry-duration`=`MAX_RETRY_DURATION`
+     The time limit for retrying a failed task, measured from when the task was first run. Once the `--max-retry-duration` time has passed and the task has been attempted --max-attempts times, no further attempts will be made and the task will be deleted. 
+
+Must be a string that ends in 's', such as "5s". 
+
+`--min-backoff`=`MIN_BACKOFF`
+     The minimum amount of time to wait before retrying a task after it fails. Must be a string that ends in 's', such as "5s". 
+`--routing-override`=`KEY`:`VALUE`,[…]
+     If provided, the specified App Engine route is used for all tasks in the queue, no matter what is set is at the task-level. 
+
+KEY must be at least one of: [service, version, instance]. Any missing keys will use the default. 
+
+`--type`=`TYPE`; default="push"
+     Specifies the type of queue. Only available options are 'push' and 'pull'. The default option is 'push'. 
+If specified, all `Authorization` headers in the HttpRequest.headers field will be overridden for any tasks executed on this queue. At most one of these can be specified: 
+
+OAuth2 
+`--http-oauth-service-account-email-override`=`HTTP_OAUTH_SERVICE_ACCOUNT_EMAIL_OVERRIDE`
+     The service account email to be used for generating an OAuth2 access token to be included in the request sent to the target when executing the task. The service account must be within the same project as the queue. The caller must have 'iam.serviceAccounts.actAs' permission for the service account. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--http-oauth-token-scope-override`=`HTTP_OAUTH_TOKEN_SCOPE_OVERRIDE`
+     The scope to be used when generating an OAuth2 access token to be included in the request sent to the target when executing the task. If not specified, 'https://www.googleapis.com/auth/cloud-platform' will be used. 
+OpenId Connect 
+`--http-oidc-service-account-email-override`=`HTTP_OIDC_SERVICE_ACCOUNT_EMAIL_OVERRIDE`
+     The service account email to be used for generating an OpenID Connect token to be included in the request sent to the target when executing the task. The service account must be within the same project as the queue. The caller must have 'iam.serviceAccounts.actAs' permission for the service account. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--http-oidc-token-audience-override`=`HTTP_OIDC_TOKEN_AUDIENCE_OVERRIDE`
+     The audience to be used when generating an OpenID Connect token to be included in the request sent to the target when executing the task. If not specified, the URI specified in the target will be used. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in beta and might change without notice. These variants are also available: 
+    
+    
+    [gcloud tasks queues create](https://docs.cloud.google.com/sdk/gcloud/reference/tasks/queues/create)
+    
+    
+    [gcloud alpha tasks queues create](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/tasks/queues/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

@@ -1,0 +1,231 @@
+---
+url: https://docs.cloud.google.com/firestore/docs/samples/firestore-listen-query-changes/
+title: Observe change types with Firestore watch listeners \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-17T10:25:12.824803+00:00
+---
+
+# Observe change types with Firestore watch listeners  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/firestore/docs/samples/firestore-listen-query-changes/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Firestore ](https://docs.cloud.google.com/firestore/docs)
+  * [ Samples ](https://docs.cloud.google.com/firestore/docs/samples)
+
+
+
+#  Observe change types with Firestore watch listeners Stay organized with collections  Save and categorize content based on your preferences. 
+
+Observe change types with Firestore watch listeners
+
+## Explore further
+
+For detailed documentation that includes this code sample, see the following: 
+
+  * [Get real-time updates](https://docs.cloud.google.com/firestore/native/docs/query-data/listen)
+
+
+
+## Code sample
+
+### C#
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    CollectionReference citiesRef = db.Collection("cities");
+    Query query = db.Collection("cities").WhereEqualTo("State", "CA");
+    
+    FirestoreChangeListener listener = query.Listen(snapshot =>
+    {
+        foreach (DocumentChange change in snapshot.Changes)
+        {
+            if (change.ChangeType.ToString() == "Added")
+            {
+                Console.WriteLine("New city: {0}", change.Document.Id);
+            }
+            else if (change.ChangeType.ToString() == "Modified")
+            {
+                Console.WriteLine("Modified city: {0}", change.Document.Id);
+            }
+            else if (change.ChangeType.ToString() == "Removed")
+            {
+                Console.WriteLine("Removed city: {0}", change.Document.Id);
+            }
+        }
+    });
+
+### Go
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import (
+    	"context"
+    	"fmt"
+    	"io"
+    	"time"
+    
+    	"cloud.google.com/go/firestore"
+    	"google.golang.org/grpc/codes"
+    	"google.golang.org/grpc/status"
+    )
+    
+    // listenChanges listens to a query, returning the list of document changes.
+    func listenChanges(ctx context.Context, w io.Writer, projectID, collection string) error {
+    	// projectID := "project-id"
+    	ctx, cancel := context.WithTimeout(ctx, 30*time.Second)
+    	defer cancel()
+    
+    	client, err := firestore.NewClient(ctx, projectID)
+    	if err != nil {
+    		return fmt.Errorf("firestore.NewClient: %w", err)
+    	}
+    	defer client.Close()
+    
+    	it := client.Collection(collection).Where("state", "==", "CA").Snapshots(ctx)
+    	for {
+    		snap, err := it.Next()
+    		// DeadlineExceeded will be returned when ctx is cancelled.
+    		if status.Code(err) == codes.DeadlineExceeded {
+    			return nil
+    		}
+    		if err != nil {
+    			return fmt.Errorf("Snapshots.Next: %w", err)
+    		}
+    		if snap != nil {
+    			for _, change := range snap.Changes {
+    				switch change.Kind {
+    				case firestore.[DocumentAdded](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/firestore/latest/index.html#cloud_google_com_go_firestore_DocumentAdded_DocumentRemoved_DocumentModified):
+    					fmt.Fprintf(w, "New city: %v\n", change.Doc.Data())
+    				case firestore.[DocumentModified](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/firestore/latest/index.html#cloud_google_com_go_firestore_DocumentAdded_DocumentRemoved_DocumentModified):
+    					fmt.Fprintf(w, "Modified city: %v\n", change.Doc.Data())
+    				case firestore.[DocumentRemoved](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/firestore/latest/index.html#cloud_google_com_go_firestore_DocumentAdded_DocumentRemoved_DocumentModified):
+    					fmt.Fprintf(w, "Removed city: %v\n", change.Doc.Data())
+    				}
+    			}
+    		}
+    	}
+    }
+    
+
+### Java
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    db.collection("cities")
+        .whereEqualTo("state", "CA")
+        .addSnapshotListener(
+            new EventListener<QuerySnapshot>() {
+              @Override
+              public void onEvent(
+                  @Nullable QuerySnapshot snapshots, @Nullable FirestoreException e) {
+                if (e != null) {
+                  System.err.println("Listen failed: " + e);
+                  return;
+                }
+    
+                for (DocumentChange dc : snapshots.getDocumentChanges()) {
+                  switch (dc.getType()) {
+                    case ADDED:
+                      System.out.println("New city: " + dc.getDocument().getData());
+                      break;
+                    case MODIFIED:
+                      System.out.println("Modified city: " + dc.getDocument().getData());
+                      break;
+                    case REMOVED:
+                      System.out.println("Removed city: " + dc.getDocument().getData());
+                      break;
+                    default:
+                      break;
+                  }
+                }
+              }
+            });
+
+### Node.js
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    const observer = db.collection('cities').where('state', '==', 'CA')
+      .onSnapshot(querySnapshot => {
+        querySnapshot.docChanges().forEach(change => {
+          if (change.type === 'added') {
+            console.log('New city: ', change.doc.data());
+          }
+          if (change.type === 'modified') {
+            console.log('Modified city: ', change.doc.data());
+          }
+          if (change.type === 'removed') {
+            console.log('Removed city: ', change.doc.data());
+          }
+        });
+      });
+
+### Python
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    # Create an Event for notifying main thread.
+    delete_done = threading.Event()
+    
+    # Create a callback on_snapshot function to capture changes
+    def on_snapshot(col_snapshot, changes, read_time):
+        print("Callback received query snapshot.")
+        print("Current cities in California: ")
+        for change in changes:
+            if change.type.name == "ADDED":
+                print(f"New city: {change.document.id}")
+            elif change.type.name == "MODIFIED":
+                print(f"Modified city: {change.document.id}")
+            elif change.type.name == "REMOVED":
+                print(f"Removed city: {change.document.id}")
+                delete_done.set()
+    
+    col_query = db.collection("cities").where(filter=FieldFilter("state", "==", "CA"))
+    
+    # Watch the collection query
+    query_watch = col_query.on_snapshot(on_snapshot)
+    
+
+### Ruby
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    query = firestore.col(collection_path).where :state, :==, "CA"
+    added = []
+    modified = []
+    removed = []
+    
+    # Watch the collection query.
+    listener = query.listen do |snapshot|
+      puts "Callback received query snapshot."
+      puts "Current cities in California:"
+      snapshot.changes.each do |change|
+        if change.added?
+          puts "New city: #{change.doc.document_id}"
+          added << snapshot
+        elsif change.modified?
+          puts "Modified city: #{change.doc.document_id}"
+          modified << snapshot
+        elsif change.removed?
+          puts "Removed city: #{change.doc.document_id}"
+          removed << snapshot
+        end
+      end
+    end
+
+## What's next
+
+To search and filter code samples for other Google Cloud products, see the [Google Cloud sample browser](https://docs.cloud.google.com/docs/samples?product=firestore). 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],[],[],[]] 

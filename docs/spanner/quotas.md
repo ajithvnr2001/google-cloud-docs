@@ -1,0 +1,338 @@
+---
+url: https://docs.cloud.google.com/spanner/quotas/
+title: Quotas & limits \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T04:50:13.956987+00:00
+---
+
+# Quotas & limits  |  Spanner  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/quotas/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Resources ](https://docs.cloud.google.com/spanner/docs/resources)
+
+
+
+Send feedback 
+
+#  Quotas & limits Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page describes production quotas and limits for Spanner. Quota and limit might be used interchangeably in the Google Cloud console.
+
+The quota and limit values are subject to change.
+
+## Permissions to check and edit quotas
+
+To view your quotas, you must have the [`serviceusage.quotas.get`](https://docs.cloud.google.com/iam/docs/roles-permissions/serviceusage#serviceusage.quotas.get) Identity and Access Management (IAM) permission.
+
+To change your quotas, you must have the [`serviceusage.quotas.update`](https://docs.cloud.google.com/iam/docs/roles-permissions/serviceusage#serviceusage.quotas.update) IAM permission. This permission is included by default for the following [predefined roles](https://docs.cloud.google.com/iam/docs/understanding-roles): Owner, Editor, and Quota Administrator.
+
+These permissions are included by default in the [basic IAM roles](https://docs.cloud.google.com/iam/docs/roles-overview#basic) Owner and Editor, and in the predefined [Quota Administrator role](https://docs.cloud.google.com/iam/docs/roles-permissions/servicemanagement).
+
+## Check your quotas
+
+To check the current quotas for resources in your project, use the Google Cloud console:
+
+[Go to Quotas](https://console.cloud.google.com/iam-admin/quotas)
+
+To check the node limit for a [custom instance configuration](https://docs.cloud.google.com/spanner/docs/instance-configurations#configuration), check the node limit of the base instance configuration. To get the base configuration of your custom instance configuration, see [Show instance configurations detail](https://docs.cloud.google.com/spanner/docs/create-manage-configurations#show-details).
+
+## Increase your quotas
+
+As your use of Spanner expands over time, your quotas can increase accordingly. If you expect a notable upcoming increase in usage, you should make your request a few days in advance to verify that your quotas are adequately sized.
+
+To request a quota increase (including your node limit), see [Manage your quotas using the Google Cloud console](https://docs.cloud.google.com/docs/quotas/view-manage#managing_your_quota_console).
+
+If you have a custom instance configuration, and you require a node limit higher than 85, then fill out the [Request a Quota Increase for your Spanner Nodes](https://docs.google.com/forms/d/e/1FAIpQLSczQOE6S_1MUTf4KBpF_i-cJVMQloUEZQ71KcNQzbAkWDDuVw/viewform) form. Specify the ID of your _custom instance configuration_ in the form.
+
+## Node limits
+
+Value | Limit  
+---|---  
+Nodes per instance configuration |  Default limits vary by project and instance configuration. To change project quota limits or request a limit increase, see [Increase your quotas](https://docs.cloud.google.com/spanner/quotas#increase-quotas).   
+  
+## Instance limits
+
+Value | Limit  
+---|---  
+Instance ID length | 2 to 64 characters  
+  
+### Free trial instance limits
+
+A [Spanner free trial instance](https://docs.cloud.google.com/spanner/docs/free-trial-instance) has the following additional limits. To raise or remove these limits, upgrade your free trial instance to a paid instance.
+
+Value | Limit  
+---|---  
+Storage capacity | 10 GiB  
+Database limit | Create up to five databases  
+Unsupported features | [Backup and restore](https://docs.cloud.google.com/spanner/docs/backup)  
+SLA | No SLA  
+Trial duration | 90-day free trial period  
+  
+### Geo-partitioning limits
+
+**Preview —[Geo-partitioning](https://docs.cloud.google.com/spanner/docs/geo-partitioning) **
+
+This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+
+Value | Limit  
+---|---  
+Maximum number of partitions per instance | 20  
+Maximum number of placements per database | 50  
+Maximum number of placement rows per node in your partition | 100 million  
+  
+### Saved queries limits
+
+**Preview —[Saved queries](https://docs.cloud.google.com/spanner/docs/saved-queries) **
+
+This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+
+Value | Limit  
+---|---  
+Maximum number of saved queries per project (including saved queries for other Google Cloud products) | 10,000  
+Maximum size for each query | 1 MiB  
+  
+## Instance configuration limits
+
+Value | Limit  
+---|---  
+Maximum custom instance configurations per project | 100  
+Custom instance configuration ID length | 8 to 64 charactersA custom instance configuration ID must start with `custom-`  
+  
+## Database limits
+
+Value | Limit  
+---|---  
+Databases per instance | 
+
+  * For instances of 1 node (1000 processing units) and larger: 100 databases
+  * For instances smaller than 1 node: 10 databases per 100 processing units
+
+  
+Roles per database | 100  
+Database ID length | 2 to 30 characters  
+Storage size1 | 
+
+  * For instances of 1 node (1000 processing units) and larger: 10 TiB per node
+  * For instances smaller than 1 node: 1024.0 GiB per 100 processing units
+
+Increased storage capacity of 10 TiB per node is available in most regional, dual-region, and multi-region Spanner instance configurations. For more information, see [Performance and storage improvements](https://docs.cloud.google.com/spanner/docs/performance#improved-performance). If you use [tiered storage](https://docs.cloud.google.com/spanner/docs/tiered-storage), then you can use a combined storage (SSD and HDD) up to 10 TiB per node. [Backups](https://docs.cloud.google.com/spanner/docs/backup) are stored separately and don't count towards this limit. For more information, see [Storage utilization metrics](https://docs.cloud.google.com/spanner/docs/storage-utilization). Note that Spanner bills for actual storage utilized within an instance, and not its total available storage.   
+  
+## Backup and restore limits
+
+Value | Limit  
+---|---  
+Number of ongoing create backup operations per database | 1 (applies to on-demand backups only). [Backup schedules](https://docs.cloud.google.com/spanner/docs/backup#backup-schedules) have their own frequency constraints and aren't subject to this limit.   
+Number of ongoing restore database operations per instance for the restored database, not the backup. | 10  
+Maximum retention time of backup | 1 year, including the extra day in a leap year.  
+  
+## Schema limits
+
+### Schema objects
+
+Value | Limit  
+---|---  
+The total number of schema objects within all databases in the same instance | Default limits vary by the instance configuration2  
+  
+### DDL statements
+
+Value | Limit  
+---|---  
+[DDL](https://docs.cloud.google.com/spanner/docs/data-definition-language) statement size for a single schema change | 10 MiB  
+DDL statement size for a database's entire schema, as returned by [`GetDatabaseDdl`](https://docs.cloud.google.com/spanner/docs/reference/rpc/google.spanner.admin.database.v1#google.spanner.admin.database.v1.DatabaseAdmin.GetDatabaseDdl) | 10 MiB  
+  
+### Graphs
+
+Value | Limit  
+---|---  
+Property graphs per database | 250  
+Property graph name length | 1 to 128 characters  
+  
+### Tables
+
+Value | Limit  
+---|---  
+Tables per database | 5,000  
+Table name length | 1 to 128 characters  
+Columns per table | 1,024  
+Column name length | 1 to 128 characters  
+Maximum size of data per cell | 10 MiB  
+Size of a [`STRING`](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/data-types#string_type) cell | 2,621,440 Unicode characters  
+Number of columns in a table key | 16Includes key columns shared with any parent table  
+Table interleaving depth | 7A top-level table with child table(s) has depth 1.A top-level table with grandchild tables has depth 2, and subsequent nested tables increase the depth accordingly.  
+Maximum size of a primary key or index key per row | 8 KiBIncludes the size of all columns that make up the key  
+Total size of non-key columns per row | 1600 MiBIncludes the size of all non-key columns per row for a table  
+  
+### Indexes
+
+Value | Limit  
+---|---  
+Indexes per database | 10,000  
+Indexes per table | 128  
+Index name length | 1 to 128 characters  
+Number of columns in an index key | 16The number of indexed columns (except for STORING columns) plus the number of primary key columns in the base table  
+  
+### Views
+
+Value | Limit  
+---|---  
+Views per database | 5,000  
+View name length | 1 to 128 characters  
+Nesting depth | 10A view that refers to another view has nesting depth 1. A view that refers to another view that refers to yet another view has nesting depth 2, and so on.  
+  
+### Locality groups
+
+Value | Limit  
+---|---  
+Maximum number of [locality groups](https://docs.cloud.google.com/spanner/docs/create-manage-locality-groups) per database | 16 (1 default locality group and 15 optional additional locality groups)  
+Minimum amount of time required in the `ssd_to_hdd_spill_timespan` option | 1 hour  
+Maximum amount of time allowed in the `ssd_to_hdd_spill_timespan` option | 365 days  
+  
+## Query limits
+
+Value | Limit  
+---|---  
+Columns in a `GROUP BY` clause | 1,000  
+Values in an `IN` operator | 10,000  
+Function calls | 1,000  
+Joins | 20  
+Nested function calls | 75  
+Nested `GROUP BY` clauses | 35  
+Nested subquery expressions | 25  
+Nested subselect statements | 60  
+Joins produced by a graph query | 100  
+Parameters | 950  
+Query statement length | 1 million characters  
+`STRUCT` fields | 1,000  
+Subquery expression children | 50  
+Unions in a query | 200  
+Depth of graph [quantified path](https://docs.cloud.google.com/spanner/docs/graph/queries-overview#quantified-path-patterns) traversal | 100  
+  
+## Limits for creating, reading, updating, and deleting data
+
+Value | Limit  
+---|---  
+Commit size (including indexes and change streams) | 100 MiB  
+Concurrent reads per session | 100  
+Mutations per commit (for Mutation API) (including indexes)3,10 | 80,000  
+Mutations per DML statement (including indexes)3,10 | 80,000  
+Mutations per mutation group in a [batch write](https://docs.cloud.google.com/spanner/docs/batch-write) request | 80,000  
+Concurrent [partitioned DML](https://docs.cloud.google.com/spanner/docs/dml-partitioned) statements per database | 20,000  
+  
+## Administrative limits
+
+Value | Limit  
+---|---  
+Administrative actions request size4 | 1 MiB  
+Rate limit for administrative actions5 | 5 per second per project per user(averaged over 100 seconds)  
+  
+## Request limits
+
+Value | Limit  
+---|---  
+Request size other than for commits6 | 10 MiB  
+  
+## Change stream limits
+
+Value | Limit  
+---|---  
+[Change streams](https://docs.cloud.google.com/spanner/docs/change-streams) per database | 10  
+Change streams watching any given non-key column7 | 3  
+Concurrent readers per change stream data partition8 | 20  
+  
+## Data Boost limits
+
+Value | Limit  
+---|---  
+Concurrent Data Boost requests per project in us-central1 | 1000 9  
+Concurrent Data Boost requests per project per region in other regions | 400 9  
+Concurrent Data Boost requests in milli-operations per project per region | 1000000 9  
+  
+## Queue limits
+
+Value | Limit  
+---|---  
+Queues per instance | 10 queues per 100 processing units, up to 100 queues  
+Concurrent [queue](https://docs.cloud.google.com/spanner/docs/queues/queues-overview) receiver TVFs per project per region | 2,000  
+  
+## Pre-splitting API limits
+
+Value | Limit  
+---|---  
+Split points added per API request | 100  
+Split point API request size | 1 MiB  
+Split points added per node for all the databases in the instance | 50  
+Split points added or updated per minute per node | 10  
+Split points added or updated per day per node | 200  
+  
+## Notes
+
+1\. To provide high availability and low latency for accessing a database, Spanner defines storage limits based on the compute capacity of the instance: 
+
+  * For instances smaller than 1 node (1000 processing units), Spanner allots 1024.0 GiB of data for every 100 processing units in the database.
+  * For instances of 1 node and larger, Spanner allots 10 TiB of data for each node.
+
+
+
+For example, to create an instance for a 1500 GiB database, you need to set its compute capacity to 200 processing units. This amount of compute capacity will keep the instance below the limit until the database grows to more than 2048.0 GiB. After the database reaches this size, you need to add another 100 processing units to allow the database to grow. Otherwise, writes to the database may be rejected. For more information, see [Recommendations for database storage utilization](https://docs.cloud.google.com/spanner/docs/storage-utilization#recommended-max). 
+
+For a smooth growth experience, add compute capacity before the limit is reached for your database. 
+
+2\. The accounted schema objects include all the object types described in [DDL](https://docs.cloud.google.com/spanner/docs/data-definition-language) such as tables, columns, indexes, sequences, etc. The schema object limit is enforced at the instance level and is dependent on the processing units available to your instance. 
+
+  * For instances of one node or larger, the default limit is one million objects.
+  * For instances smaller than one node (1000 processing units), the limit decreases proportionally to the size of the instance. For example, the limit is 100,000 schema objects for instances with 100 processing units.
+
+
+
+To check the schema object count for your databases and the object limit for your instance, look for metrics `spanner.googleapis.com/instance/schema_objects` and `spanner.googleapis.com/instance/schema_object_count_limit` in **Metrics Explorer**. For more information about monitoring, see [Monitor instances with Cloud Monitoring](https://docs.cloud.google.com/spanner/docs/monitoring-cloud). 
+
+If you reach the limit, Spanner prevents you from performing operations that put you over the limit, such as: 
+
+  * Modifying the database's schema (for example, adding an index).
+  * Creating a new database in the instance.
+  * Restoring a database from a backup into the same instance. In this case, you can [restore the backup](https://docs.cloud.google.com/spanner/docs/backup/restore-backups) in a different instance in the same configuration or [create a new instance](https://docs.cloud.google.com/spanner/docs/create-manage-instances) with the same configuration and restore the backup in the new instance. 
+
+
+
+3\. Insert and update operations count with the multiplicity of the number of columns they affect, and primary key columns are always affected. For example, inserting a new record may count as five mutations, if values are inserted into five columns. Updating three columns in a record may also count as five mutations if the record has two primary key columns. Delete and delete range operations count as one mutation regardless of the number of columns affected. Deleting a row from a parent table that has the [`ON DELETE CASCADE`](https://docs.cloud.google.com/spanner/docs/data-definition-language#create_table) annotation is also counted as one mutation regardless of the number of interleaved child rows present. The exception to this is if there are secondary indexes defined on rows being deleted, then the changes to the secondary indexes will be counted individually. For example, if a table has 2 secondary indexes, deleting a range of rows in the table will count as 1 mutation for the table, plus 2 mutations for each row that is deleted because the rows in the secondary index might be scattered over the key-space, making it impossible for Spanner to call a single delete range operation on the secondary indexes. Secondary indexes include the [foreign keys backing indexes](https://docs.cloud.google.com/spanner/docs/foreign-keys/overview#backing-indexes). 
+
+To find the mutation count for a transaction, see [ Retrieving commit statistics for a transaction](https://docs.cloud.google.com/spanner/docs/commit-statistics). 
+
+Change streams don't add any mutations that count towards this limit.
+
+4\. The limit for an administrative action request excludes commits, requests listed in note 9, and schema changes. 
+
+5\. This rate limit includes all calls to the admin API, which includes calls to poll long-running operations on an instance, database, or backup. 
+
+6\. This limit includes requests for creating a database, updating a database, reading, streaming reads, executing SQL queries, and executing streaming SQL queries. 
+
+7\. A change stream that watches an entire table or database implicitly watches every column in that table or database, and therefore counts towards this limit. 
+
+8\. This limit applies to concurrent readers of the same change streams partition, whether the readers are Dataflow pipelines or direct API queries. 
+
+9\. Default limits vary by project and regions. For more information, see [Monitor and manage Data Boost quota usage](https://docs.cloud.google.com/spanner/docs/databoost/databoost-quotas). 
+
+10\. When you write to a table that has [generated columns](https://docs.cloud.google.com/spanner/docs/generated-column/how-to) or [columns with default values](https://docs.cloud.google.com/spanner/docs/primary-key-default-value#methods), the number of mutations for the write is calculated as follows for each row: 
+
+  * Total mutations = (Number of columns explicitly written) + (Number of generated columns or columns with default values) + (Number of primary key columns) 
+
+
+
+For example, if you have a table with 2 primary key columns and 1 generated column, inserting a single row (by providing values for the 2 primary key columns) counts as 5 mutations: 
+
+  * 2 (for the explicitly written columns) + 1 (for the generated column) + 2 (for the primary keys). 
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

@@ -1,0 +1,148 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/run/services/update-traffic/
+title: gcloud beta run services update-traffic \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T10:20:04.001940+00:00
+---
+
+# gcloud beta run services update-traffic  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/run/services/update-traffic/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta run services update-traffic Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta run services update-traffic - adjust the traffic assignments for a Cloud Run service 
+SYNOPSIS
+    
+
+`gcloud beta run services update-traffic` [[`SERVICE`] `--namespace`=`NAMESPACE`] [`--async`] [`--endpoint-mode`=`ENDPOINT_MODE`] [`--region`=`REGION`] [`--clear-tags` | `--set-tags`=[`TAG`=`REVISION`,…] | `--remove-tags`=[`TAG`,…] `--update-tags`=[`TAG`=`REVISION`,…]] [`--to-latest` | `--to-revisions`=[`REVISION-NAME`=`PERCENTAGE`,…] | `--to-tags`=[`TAG`=`PERCENTAGE`,…]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` Adjust the traffic assignments for a Cloud Run service. 
+EXAMPLES
+     To assign 10% of traffic to revision myservice-s5sxn and 90% of traffic to revision myservice-cp9kw run: 
+    
+    
+    gcloud beta run services update-traffic myservice --to-revisions=myservice-s5sxn=10,myservice-cp9kw=90
+
+To increase the traffic to revision myservice-s5sxn to 20% and by reducing the traffic to revision myservice-cp9kw to 80% run: 
+    
+    
+    gcloud beta run services update-traffic myservice --to-revisions=myservice-s5sxn=20
+
+To rollback to revision myservice-cp9kw run: 
+    
+    
+    gcloud beta run services update-traffic myservice --to-revisions=myservice-cp9kw=100
+
+To assign 100% of traffic to the current or future LATEST revision run: 
+    
+    
+    gcloud beta run services update-traffic myservice --to-latest
+
+You can also refer to the current or future LATEST revision in --to-revisions by the string "LATEST". For example, to set 10% of traffic to always float to the latest revision: 
+    
+    
+    gcloud beta run services update-traffic myservice --to-revisions=LATEST=10
+
+POSITIONAL ARGUMENTS
+    
+
+Service resource - Service to update the configuration of. The arguments in this group can be used to specify the attributes of this resource. 
+[`SERVICE`]
+     ID of the service or fully qualified identifier for the service. 
+
+To set the `service` attribute: 
+
+  * provide the argument `SERVICE` on the command line; 
+  * specify the service name from an interactive prompt. 
+
+
+`--namespace`=`NAMESPACE`
+     Specific to Cloud Run for Anthos: Kubernetes namespace for the service. 
+
+To set the `namespace` attribute: 
+
+  * provide the argument `SERVICE` on the command line with a fully specified name; 
+  * specify the service name from an interactive prompt with a fully specified name; 
+  * provide the argument `--namespace` on the command line; 
+  * set the property `run/namespace`; 
+  * For Cloud Run on Kubernetes Engine, defaults to "default". Otherwise, defaults to project ID.; 
+  * provide the argument `project` on the command line; 
+  * set the property `core/project`. 
+
+
+FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--endpoint-mode`=`ENDPOINT_MODE`
+     Specifies endpoint mode for a given command. Regional endpoints provide enhanced data residency and reliability by ensuring your request is handled entirely within the specified Google Cloud region. This differs from global endpoints, which may process parts of the request outside the target region. Overrides the default `regional/endpoint_mode` property value for this command invocation. `ENDPOINT_MODE` must be one of: 
+
+`global`
+     (Default) Use global rather than regional endpoints. 
+`regional`
+     Only use regional endpoints. An error will be raised if a regional endpoint is not available for a given command. 
+`regional-preferred`
+     Use regional endpoints when available, otherwise use global endpoints. Recommended for most users. 
+`--region`=`REGION`
+     Region in which the resource can be found. Alternatively, set the property [run/region]. 
+Specify traffic tags. Traffic tags can be assigned to a revision by name or to the latest ready revision. Assigning a tag to a revision generates a URL prefixed with the tag that allows addressing that revision directly, regardless of the percent traffic specified. Keys are tags. Values are revision names or "LATEST" for the latest ready revision. For example, \--set-tags=candidate=LATEST,current=myservice-v1 assigns the tag "candidate" to the latest ready revision and the tag "current" to the revision with name "myservice-v1" and clears any existing tags. Changing tags does not affect the traffic percentage assigned to revisions. When using a tags flag and one or more of --to-latest and --to-revisions in the same command, the tags change occurs first then the traffic percentage change occurs. 
+
+At most one of these can be specified: 
+
+`--clear-tags`
+     Remove all tags. 
+`--set-tags`=[`TAG`=`REVISION`,…]
+     List of key-value pairs to set as tags. All existing tags will be removed first. 
+Or at least one of these can be specified: 
+
+Only --update-tags and --remove-tags can be used together. If both are specified, --remove-tags will be applied first. 
+`--remove-tags`=[`TAG`,…]
+     List of tags to be removed. 
+`--update-tags`=[`TAG`=`REVISION`,…]
+     List of key-value pairs to set as tags. 
+At most one of these can be specified: 
+
+`--to-latest`
+     True to assign 100 percent of traffic to the 'latest' revision of this service. Note that when a new revision is created, it will become the 'latest' and traffic will be directed to it. Defaults to False. Synonymous with '--to-revisions=LATEST=100'. 
+`--to-revisions`=[`REVISION-NAME`=`PERCENTAGE`,…]
+     Comma separated list of traffic assignments in the form REVISION-NAME=PERCENTAGE. REVISION-NAME must be the name for a revision for the service as returned by 'gcloud beta run list revisions'. PERCENTAGE must be an integer percentage between 0 and 100 inclusive. Ex service-nw9hs=10,service-nw9hs=20 Up to 100 percent of traffic may be assigned. If 100 percent of traffic is assigned, the Service traffic is updated as specified. If under 100 percent of traffic is assigned, the Service traffic is updated as specified for revisions with assignments and traffic is scaled up or down down proportionally as needed for revision that are currently serving traffic but that do not have new assignments. For example assume revision-1 is serving 40 percent of traffic and revision-2 is serving 60 percent. If revision-1 is assigned 45 percent of traffic and no assignment is made for revision-2, the service is updated with revsion-1 assigned 45 percent of traffic and revision-2 scaled down to 55 percent. You can use "LATEST" as a special revision name to always put the given percentage of traffic on the latest ready revision. 
+`--to-tags`=[`TAG`=`PERCENTAGE`,…]
+     Comma separated list of traffic assignments in the form TAG=PERCENTAGE. TAG must match a traffic tag on a revision of the service. It may match a previously-set tag, or one assigned using the `--set-tags` or `--update-tags` flags on this command. PERCENTAGE must be an integer percentage between 0 and 100 inclusive. Up to 100 percent of traffic may be assigned. If 100 percent of traffic is assigned, the service traffic is updated as specified. If under 100 percent of traffic is assigned, the service traffic is updated as specified to the given tags, and other traffic is scaled up or down proportionally. For example, assume the revision tagged `next` is serving 40 percent of traffic and the revision tagged `current` is serving 60 percent. If `next` is assigned 45 percent of traffic and no assignment is made for `current`, the service is updated with `next` assigned 45 percent of traffic and `current` scaled down to 55 percent. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+REGIONAL ENDPOINTS
+     This command supports regional endpoints. To use regional endpoints for this command, use the `--endpoint-mode=regional-preferred` flag. To use regional endpoints by default, run `$ [gcloud config set](https://docs.cloud.google.com/sdk/gcloud/reference/config/set) regional/endpoint_mode regional-preferred`. 
+NOTES
+     This command is currently in beta and might change without notice. These variants are also available: 
+    
+    
+    [gcloud run services update-traffic](https://docs.cloud.google.com/sdk/gcloud/reference/run/services/update-traffic)
+    
+    
+    [gcloud alpha run services update-traffic](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/run/services/update-traffic)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

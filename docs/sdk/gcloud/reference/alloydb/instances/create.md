@@ -1,0 +1,223 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alloydb/instances/create/
+title: gcloud alloydb instances create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T00:45:31.477488+00:00
+---
+
+# gcloud alloydb instances create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alloydb/instances/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alloydb instances create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alloydb instances create - creates a new AlloyDB instance within a given cluster 
+SYNOPSIS
+    
+
+`gcloud alloydb instances create` `INSTANCE` `--cluster`=`CLUSTER` `--instance-type`=`INSTANCE_TYPE` `--region`=`REGION` [`--allocated-ip-range-override`=`ALLOCATED_IP_RANGE_OVERRIDE`] [`--allowed-psc-projects`=[`ALLOWED_PSC_PROJECTS`,…]] [`--assign-inbound-public-ip`=`ASSIGN_INBOUND_PUBLIC_IP`] [`--async`] [`--authorized-external-networks`=[`AUTHORIZED_NETWORK`,…]] [`--availability-type`=`AVAILABILITY_TYPE`] [`--connection-pooling-client-connection-idle-timeout`=`CONNECTION_POOLING_CLIENT_CONNECTION_IDLE_TIMEOUT`] [`--connection-pooling-ignore-startup-parameters`=[`STARTUP_PARAMETERS`,…]] [`--connection-pooling-max-client-connections`=`CONNECTION_POOLING_MAX_CLIENT_CONNECTIONS`] [`--connection-pooling-max-pool-size`=`CONNECTION_POOLING_MAX_POOL_SIZE`] [`--connection-pooling-max-prepared-statements`=`CONNECTION_POOLING_MAX_PREPARED_STATEMENTS`] [`--connection-pooling-min-pool-size`=`CONNECTION_POOLING_MIN_POOL_SIZE`] [`--connection-pooling-pool-mode`=`CONNECTION_POOLING_POOL_MODE`] [`--connection-pooling-query-wait-timeout`=`CONNECTION_POOLING_QUERY_WAIT_TIMEOUT`] [`--connection-pooling-server-idle-timeout`=`CONNECTION_POOLING_SERVER_IDLE_TIMEOUT`] [`--connection-pooling-server-lifetime`=`CONNECTION_POOLING_SERVER_LIFETIME`] [`--connection-pooling-stats-users`=[`STATS_USERS`,…]] [`--cpu-count`=`CPU_COUNT`] [`--database-flags`=`FLAG`=`VALUE`,[`FLAG`=`VALUE`,…]] [`--[no-]enable-connection-pooling`] [`--insights-config-query-plans-per-minute`=`INSIGHTS_CONFIG_QUERY_PLANS_PER_MINUTE`] [`--insights-config-query-string-length`=`INSIGHTS_CONFIG_QUERY_STRING_LENGTH`] [`--[no-]insights-config-record-application-tags`] [`--[no-]insights-config-record-client-address`] [`--labels`=[`KEY`=`VALUE`,…]] [`--machine-type`=`MACHINE_TYPE`] [`--[no-]observability-config-enabled`] [`--observability-config-max-query-string-length`=`OBSERVABILITY_CONFIG_MAX_QUERY_STRING_LENGTH`] [`--[no-]observability-config-preserve-comments`] [`--observability-config-query-plans-per-minute`=`OBSERVABILITY_CONFIG_QUERY_PLANS_PER_MINUTE`] [`--[no-]observability-config-record-application-tags`] [`--[no-]observability-config-track-active-queries`] [`--observability-config-track-wait-events`] [`--[no-]outbound-public-ip`] [`--psc-auto-connections`=[`network`=`NETWORK`],[`project`=`PROJECT`]] [`--psc-network-attachment-uri`=`PSC_NETWORK_ATTACHMENT_URI`] [`--read-pool-node-count`=`READ_POOL_NODE_COUNT`] [`--[no-]require-connectors`] [`--ssl-mode`=`SSL_MODE`; default=`"ENCRYPTED_ONLY"`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     Creates a new AlloyDB instance within a given cluster. 
+EXAMPLES
+     To create a new primary instance, run: 
+    
+    
+    gcloud alloydb instances create my-instance --cluster=my-cluster --region=us-central1 --instance-type=PRIMARY --cpu-count=4
+
+To create a new read pool instance, run: 
+    
+    
+    gcloud alloydb instances create my-instance --cluster=my-cluster --region=us-central1 --instance-type=READ_POOL --read-pool-node-count=1 --cpu-count=4
+
+POSITIONAL ARGUMENTS
+    
+
+`INSTANCE`
+     AlloyDB instance ID 
+REQUIRED FLAGS
+    
+
+`--cluster`=`CLUSTER`
+     AlloyDB cluster ID 
+`--instance-type`=`INSTANCE_TYPE`
+     Specifies instance type. `INSTANCE_TYPE` must be one of: 
+
+`PRIMARY`
+     PRIMARY instances support read and write operations. 
+`READ_POOL`
+     READ_POOL instances support read operations only. Each read pool instance consists of one or more homogeneous nodes. * Read pool of size 1 can only have zonal availability. * Read pools with node count of 2 or more can have regional availability (nodes are present in 2 or more zones in a region). 
+`--region`=`REGION`
+     Regional location (e.g. `asia-east1`, `us-east1`). See the full list of regions at <https://cloud.google.com/sql/docs/instance-locations>. 
+OPTIONAL FLAGS
+    
+
+`--allocated-ip-range-override`=`ALLOCATED_IP_RANGE_OVERRIDE`
+     Name of the allocated IP range for the private IP AlloyDB instance, for example: "google-managed-services-default". If set, the instance IPs will be created from this allocated range and will override the IP range used by the parent cluster. The range name must comply with RFC 1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. 
+`--allowed-psc-projects`=[`ALLOWED_PSC_PROJECTS`,…]
+     Comma-separated list of allowed consumer projects to create endpoints for Private Service Connect (PSC) connectivity for the instance. Only instances in PSC-enabled clusters are allowed to set this field.(e.g., `--allowed-psc-projects=project1,12345678,project2) `
+`--assign-inbound-public-ip`=`ASSIGN_INBOUND_PUBLIC_IP`
+     Specify to enable or disable public IP on an instance. ASSIGN_INBOUND_PUBLIC_IP must be one of: 
+
+  * `NO_PUBLIC_IP`
+    * This disables public IP on the instance. Updating an instance to disable public IP will clear the list of authorized networks. 
+  * `ASSIGN_IPV4`
+    * Assign an inbound public IPv4 address for the instance. Public IP is enabled. 
+
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--authorized-external-networks`=[`AUTHORIZED_NETWORK`,…]
+     Comma-separated list of authorized external networks to set on the instance. Authorized networks should use CIDR notation (e.g. 1.2.3.4/30). This flag is only allowed to be set for instances with public IP enabled. 
+`--availability-type`=`AVAILABILITY_TYPE`
+     Specifies level of availability. `AVAILABILITY_TYPE` must be one of: 
+
+`REGIONAL`
+     Provide high availability instances. Recommended for production instances; instances automatically fail over to another zone within your selected region. 
+`ZONAL`
+     Provide zonal availability instances. Not recommended for production instances; instance does not automatically fail over to another zone. 
+`--connection-pooling-client-connection-idle-timeout`=`CONNECTION_POOLING_CLIENT_CONNECTION_IDLE_TIMEOUT`
+     The maximum number of seconds a client is allowed to be idle before it is disconnected. 
+`--connection-pooling-ignore-startup-parameters`=[`STARTUP_PARAMETERS`,…]
+     Comma-separated list of startup parameters that should be ignored by the connection pool. 
+`--connection-pooling-max-client-connections`=`CONNECTION_POOLING_MAX_CLIENT_CONNECTIONS`
+     The max client connections for managed connection pooling. 
+`--connection-pooling-max-pool-size`=`CONNECTION_POOLING_MAX_POOL_SIZE`
+     The max pool size for managed connection pooling. 
+`--connection-pooling-max-prepared-statements`=`CONNECTION_POOLING_MAX_PREPARED_STATEMENTS`
+     The maximum number of prepared statements allowed. 
+`--connection-pooling-min-pool-size`=`CONNECTION_POOLING_MIN_POOL_SIZE`
+     The min pool size for managed connection pooling. 
+`--connection-pooling-pool-mode`=`CONNECTION_POOLING_POOL_MODE`
+     The pool mode for managed connection pooling. `CONNECTION_POOLING_POOL_MODE` must be one of: 
+
+`SESSION`
+     Session mode for managed connection pooling. 
+`TRANSACTION`
+     Transaction mode for managed connection pooling. 
+`--connection-pooling-query-wait-timeout`=`CONNECTION_POOLING_QUERY_WAIT_TIMEOUT`
+     The query wait timeout for managed connection pooling. 
+`--connection-pooling-server-idle-timeout`=`CONNECTION_POOLING_SERVER_IDLE_TIMEOUT`
+     The server idle timeout for managed connection pooling. 
+`--connection-pooling-server-lifetime`=`CONNECTION_POOLING_SERVER_LIFETIME`
+     The lifetime of a server connection in seconds. The pooler will close an unused (not currently linked to any client connection) server connection that has been connected longer than this. Setting it to 0 means the connection is to be used only once, then closed. 
+`--connection-pooling-stats-users`=[`STATS_USERS`,…]
+     Comma-separated list of database users to access connection pooling stats. 
+`--cpu-count`=`CPU_COUNT`
+     Whole number value indicating how many vCPUs the machine should contain. If the instance does not have a machine-type, the vCPU count will be used to determine the machine type where each vCPU corresponds to an N2 high-mem machine: (https://cloud.google.com/compute/docs/general-purpose-machines#n2_machine_types). where CPU_COUNT can be one of: 2, 4, 8, 16, 32, 64, 96, 128. If the instance has a machine-type, cpu-count must have the same value as the vCPU count in the machine-type. Eg: if machine-type is c4a-highmem-4-lssd, cpu-count must be 4. `CPU_COUNT` must be one of: `1`, `2`, `4`, `8`, `14`, `16`, `22`, `32`, `44`, `48`, `64`, `72`, `88`, `96`, `128`, `144`, `192`, `288`. 
+`--database-flags`=`FLAG`=`VALUE`,[`FLAG`=`VALUE`,…]
+     Comma-separated list of database flags to set on the instance. Use an equals sign to separate flag name and value. Flags without values, like skip_grant_tables, can be written out without a value after, e.g., skip_grant_tables=`. Use on/off for booleans. View the Instance Resource API for allowed flags. (e.g., `\--database-flags max_allowed_packet=55555,skip_grant_tables=,log_output=1`) `
+`--[no-]enable-connection-pooling`
+     Enable connection pooling for the instance. Use `--enable-connection-pooling` to enable and `--no-enable-connection-pooling` to disable. 
+`--insights-config-query-plans-per-minute`=`INSIGHTS_CONFIG_QUERY_PLANS_PER_MINUTE`
+     Number of query plans to sample every minute. Default value is 5. Allowed range: 0 to 20. 
+`--insights-config-query-string-length`=`INSIGHTS_CONFIG_QUERY_STRING_LENGTH`
+     Query string length in bytes to be stored by the query insights feature. Default length is 1024 bytes. Allowed range: 256 to 4500 bytes. 
+`--[no-]insights-config-record-application-tags`
+     Allow application tags to be recorded by the query insights feature. 
+
+Use `--insights-config-record-application-tags` to enable and `--no-insights-config-record-application-tags` to disable. 
+
+`--[no-]insights-config-record-client-address`
+     Allow the client address to be recorded by the query insights feature. 
+
+Use `--insights-config-record-client-address` to enable and `--no-insights-config-record-client-address` to disable. 
+
+`--labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to add. 
+
+Keys must start with a lowercase character and contain only hyphens (-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. `
+
+`--machine-type`=`MACHINE_TYPE`
+     Specifies machine type for the instance. `MACHINE_TYPE` must be one of: `n2-highmem-2`, `n2-highmem-4`, `n2-highmem-8`, `n2-highmem-16`, `n2-highmem-32`, `n2-highmem-64`, `n2-highmem-96`, `n2-highmem-128`, `c4a-highmem-1`, `c4a-highmem-2-lssd`, `c4a-highmem-4-lssd`, `c4a-highmem-8-lssd`, `c4a-highmem-16-lssd`, `c4a-highmem-32-lssd`, `c4a-highmem-48-lssd`, `c4a-highmem-64-lssd`, `c4a-highmem-72-lssd`, `c4-highmem-4-lssd`, `c4-highmem-8-lssd`, `c4-highmem-16-lssd`, `c4-highmem-24-lssd`, `c4-highmem-32-lssd`, `c4-highmem-48-lssd`, `c4-highmem-96-lssd`, `c4-highmem-144-lssd`, `c4-highmem-192-lssd`, `c4-highmem-288-lssd`, `z3-highmem-14-standardlssd`, `z3-highmem-22-standardlssd`, `z3-highmem-44-standardlssd`, `z3-highmem-88-standardlssd`, `z3-highmem-8-highlssd`, `z3-highmem-16-highlssd`, `z3-highmem-22-highlssd`, `z3-highmem-32-highlssd`, `z3-highmem-44-highlssd`. 
+`--[no-]observability-config-enabled`
+     Enable enhanced query insights feature. Use `--observability-config-enabled` to enable and `--no-observability-config-enabled` to disable. 
+`--observability-config-max-query-string-length`=`OBSERVABILITY_CONFIG_MAX_QUERY_STRING_LENGTH`
+     Query string length in bytes to be stored by the enhanced query insights feature. Default length is 10k bytes. 
+`--[no-]observability-config-preserve-comments`
+     Allow preservation of comments in query string recorded by the enhanced query insights feature. 
+
+Use `--observability-config-preserve-comments` to enable and `--no-observability-config-preserve-comments` to disable. 
+
+`--observability-config-query-plans-per-minute`=`OBSERVABILITY_CONFIG_QUERY_PLANS_PER_MINUTE`
+     Number of query plans to sample every minute. Default value is 20. Allowed range: 0 to 200. 
+`--[no-]observability-config-record-application-tags`
+     Allow application tags to be recorded by the enhanced query insights feature. 
+
+Use `--observability-config-record-application-tags` to enable and `--no-observability-config-record-application-tags` to disable. 
+
+`--[no-]observability-config-track-active-queries`
+     Track actively running queries. Use `--observability-config-track-active-queries` to enable and `--no-observability-config-track-active-queries` to disable. 
+`--observability-config-track-wait-events`
+     Track wait events during query execution. 
+`--[no-]outbound-public-ip`
+     Add outbound Public IP connectivity to an AlloyDB instance. Use `--outbound-public-ip` to enable and `--no-outbound-public-ip` to disable. 
+`--psc-auto-connections`=[`network`=`NETWORK`],[`project`=`PROJECT`]
+     Comma-separated list of consumer project and consumer network pairs to create endpoints for Private Service Connect (PSC) connectivity for the instance. Only instances in PSC-enabled clusters are allowed to set this field. Both project and network must be specified. (e.g., \--psc-auto-connections=project=project1,network=projects/vpc-host-project1/global/networks/network1` `\--psc-auto-connections=project=project2,network=projects/vpc-host-project2/global/networks/network2`). Sets `psc_auto_connections` value. 
+
+`network`
+     Required, sets 
+`network` value. `
+`project`
+     Required, sets project` value. `
+`Shorthand Example:`
+    
+    
+    --psc-auto-connections=network=string,project=string
+
+`JSON Example:`
+    
+    
+    --psc-auto-connections='{"network": "string", "project": "string"}'
+
+`File Example:`
+    
+    
+    --psc-auto-connections=path_to_file.(yaml|json)
+
+`--psc-network-attachment-uri`=`PSC_NETWORK_ATTACHMENT_URI`
+     Full URI of the network attachment that is configured to support outbound connectivity from an AlloyDB instance which uses Private Service Connect (PSC). For example, this would be of the form:psc-network-attachment-uri=projects/test-project/regions/us-central1/networkAttachments/my-na` `
+`--read-pool-node-count`=`READ_POOL_NODE_COUNT`
+     Read capacity, i.e. number of nodes in a read pool instance. 
+`--[no-]require-connectors`
+     Enable or disable enforcing connectors only (ex: AuthProxy) connections to the database. Use `--require-connectors` to enable and `--no-require-connectors` to disable. 
+`--ssl-mode`=`SSL_MODE`; default="ENCRYPTED_ONLY"``
+     Specify the SSL mode to use when the instance connects to the database. Default SSL mode is ENCRYPTED_ONLY. `SSL_MODE` must be one of: 
+
+`ALLOW_UNENCRYPTED_AND_ENCRYPTED`
+     SSL connections are optional. CA verification is not enforced. 
+`ENCRYPTED_ONLY`
+     SSL connections are required. CA verification is not enforced. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     These variants are also available: 
+    
+    
+    [gcloud alpha alloydb instances create](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/alloydb/instances/create)
+    
+    
+    [gcloud beta alloydb instances create](https://docs.cloud.google.com/sdk/gcloud/reference/beta/alloydb/instances/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-06-02 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-06-02 UTC."],[],[]] 

@@ -1,0 +1,49 @@
+---
+url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/error-codes/gpce/
+title: GPCE error reference \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T20:49:28.598672+00:00
+---
+
+# GPCE error reference  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/error-codes/gpce/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Distributed, hybrid, and multicloud ](https://docs.cloud.google.com/docs/dhm-cloud)
+  * [ Google Distributed Cloud ](https://docs.cloud.google.com/distributed-cloud/docs)
+  * [ Air-gapped ](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdch)
+  * [ 1.16.2 (Latest) ](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag)
+
+
+
+Send feedback 
+
+#  GPCE error reference Stay organized with collections  Save and categorize content based on your preferences. 
+
+General GDC error messages consist of an error ID in the format `GPCE1234` where `1234` is a unique number, followed by a description of the problem and a suggestion for how to fix it. This topic documents each of those error messages.
+
+## GPCE5710: RequiredExecutableMissing
+
+The command-line you are trying to run requires certain executables to be available on your `$PATH` environmental variable. The error message includes the specific executable that couldn't be found. If the executable isn't available on your system, download and install it. If the executable is on your system, update the `$PATH` environmental variable to include the directory path where the executable resides. For example, if the executable was in the `/opt/package/bin` directory, you can update your `$PATH` environment variable with the following command:
+    
+    
+    export PATH=$PATH:/opt/package/bin
+    
+
+## GPCE5800: GDCHRestrictedService
+
+The GDC resources being accessed are restricted by the Org Policy. Contact your Platform Admin for further assistance.
+
+## GPCE5801: InvalidGDCHRestrictedService
+
+The GDCHRestrictedService constraint contains invalid inputs. Please see the error message and update the required fields.
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

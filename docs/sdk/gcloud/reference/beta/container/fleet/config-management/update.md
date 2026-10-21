@@ -1,0 +1,177 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/container/fleet/config-management/update/
+title: gcloud beta container fleet config-management update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T20:38:34.699654+00:00
+---
+
+# gcloud beta container fleet config-management update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/container/fleet/config-management/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta container fleet config-management update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta container fleet config-management update - update the Config Management feature 
+SYNOPSIS
+    
+
+`gcloud beta container fleet config-management update` (`--fleet-default-member-config`=`FLEET_DEFAULT_MEMBER_CONFIG` | [(`--config`=`CONFIG` | `--origin`=`ORIGIN` | `--version`=`VERSION`) : `--all-memberships` | [`--memberships`=[`MEMBERSHIPS`,…] : `--location`=`LOCATION`]]) [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` Update the Config Management feature. 
+
+`gcloud beta container fleet config-management update` replaces the `apply` and `upgrade` commands for feature updates. The `update` command streamlines partial configuration changes by accepting the `describe` command output as input. In addition to the plural `--memberships` and `--all-memberships` flags, the command also supports a `--version` flag dedicated to upgrades that operates independently of the `--config` flag. This command errors if the feature does not exist. 
+
+EXAMPLES
+     To update only the Config Sync sync directory on an existing membership configuration, run: 
+    
+    
+    [gcloud beta container fleet config-management describe](https://docs.cloud.google.com/sdk/gcloud/reference/beta/container/fleet/config-management/describe) --view=config --memberships=example-membership-1 > config.yaml
+    
+    
+    sed -i "s/policyDir: foo/policyDir: bar/g" config.yaml
+    
+    
+    gcloud beta container fleet config-management update --config=config.yaml --memberships=example-membership-1
+
+To update the Config Sync version for all memberships to ``${VERSION}``, run: 
+    
+    
+    gcloud beta container fleet config-management update --version="${VERSION}" --all-memberships
+
+To update the [fleet-default membership configuration](https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/manage-features) and sync select membership configurations to it, run: 
+    
+    
+    gcloud beta container fleet config-management update --fleet-default-member-config=config.yaml
+    
+    
+    gcloud beta container fleet config-management update --origin=fleet --memberships=example-membership-1,example-membership-2
+
+REQUIRED FLAGS
+    
+
+Exactly one of these must be specified: 
+
+`--fleet-default-member-config`=`FLEET_DEFAULT_MEMBER_CONFIG`
+     Path to YAML file, or `-` to read from stdin, that specifies the [fleet-default membership configuration](https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/manage-features) to update the feature to. Accepts the same schema as the `MembershipSpec` [API field](https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/reference/rpc/google.cloud.gkehub.configmanagement.v1beta#google.cloud.gkehub.configmanagement.v1beta.MembershipSpec). Provides the additional field-handling documented at <https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/reference/gcloud-configuration-field-behavior>. 
+
+To update only the Config Sync sync directory on the existing fleet-default membership configuration, run: 
+    
+    
+    [gcloud beta container fleet config-management describe](https://docs.cloud.google.com/sdk/gcloud/reference/beta/container/fleet/config-management/describe) --view=fleet-default-member-config > config.yaml
+    
+    
+    sed -i "s/policyDir: foo/policyDir: bar/g" config.yaml
+    
+    
+    gcloud beta container fleet config-management update --fleet-default-member-config=config.yaml
+
+To achieve the same result in a single invocation, run: 
+    
+    
+    [gcloud beta container fleet config-management describe](https://docs.cloud.google.com/sdk/gcloud/reference/beta/container/fleet/config-management/describe) --view=fleet-default-member-config | sed "s/policyDir: foo/policyDir: bar/g" | gcloud beta container fleet config-management update --fleet-default-member-config="-"
+
+Or at least one of these can be specified: 
+
+`MEMBERSHIP CONFIGURATION FLAGS`. Updates membership configuration(s), but does not wait for the resulting on-cluster changes to complete. 
+
+Exactly one of these must be specified: 
+
+`--config`=`CONFIG`
+     Path to YAML file, or `-` to read from stdin, that specifies the configuration to update the target membership(s) to. Accepts the same schema as the `Spec` [API field](https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/reference/rpc/google.cloud.gkehub.configmanagement.v2beta#google.cloud.gkehub.configmanagement.v2beta.Spec). Provides the additional field-handling documented at <https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/reference/gcloud-configuration-field-behavior>. 
+
+To update the entire configuration for select memberships to that specified in a `config.yaml`, run: 
+    
+    
+    gcloud beta container fleet config-management update --config=path/to/config.yaml --memberships=example-membership-1,example-membership-2
+
+To update only the Config Sync sync directory on an existing membership configuration in a single invocation, making sure to first inspect the existing membership configuration, run: 
+    
+    
+    [gcloud beta container fleet config-management describe](https://docs.cloud.google.com/sdk/gcloud/reference/beta/container/fleet/config-management/describe) --view=config --memberships=example-membership-1
+    
+    
+    [gcloud beta container fleet config-management describe](https://docs.cloud.google.com/sdk/gcloud/reference/beta/container/fleet/config-management/describe) --view=config --memberships=example-membership-1 | sed "s/policyDir: foo/policyDir: bar/g" | gcloud beta container fleet config-management update --config="-" --memberships=example-membership-1
+
+`--origin`=`ORIGIN`
+     Update the configuration of the target membership(s) to the [fleet-default membership configuration](https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/manage-features). Errors if the fleet-default membership configuration is not set; see the `--fleet-default-member-config` flag. `ORIGIN` must be (only one value is supported): `fleet`. 
+Or at least one of these can be specified: 
+
+`PER-FIELD FLAGS`. Updates a single field and preserves all other existing configuration fields for target membership(s). Use the `--config` flag to update other configuration fields. 
+
+Warns if the `configSync` field is not enabled. Only if the `configSync` field is enabled according to the `configSync.enabled` [field description](https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/reference/rpc/google.cloud.gkehub.configmanagement.v2beta#google.cloud.gkehub.configmanagement.v2beta.ConfigSync) does the feature install and manage Config Sync based on the membership configuration field values. Use `--verbosity=error` to suppress the warning. 
+
+`--version`=`VERSION`
+     Version of Config Sync to update the target membership configuration(s) to. Upgrades Config Sync if the `configSync` field is enabled, and logs a warning otherwise. See the `PER-FIELD FLAGS` section above for details. To bypass the upgrade confirmation prompt, use `--quiet`. Find supported versions and the default version behavior in the `version` [field description](https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/reference/rpc/google.cloud.gkehub.configmanagement.v2beta#spec). 
+
+To upgrade all memberships to the latest version, unless the `configSync` field is not enabled for any membership, for which the flag will log a warning, run: 
+    
+    
+    gcloud beta container fleet config-management update --version="" --all-memberships
+
+At most one of these can be specified: 
+
+`--all-memberships`
+     All memberships in the fleet. 
+Or at least one of these can be specified: 
+
+Membership resource - The group of arguments defining one or more memberships. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--memberships` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+`--memberships`=[`MEMBERSHIPS`,…]
+     IDs of the memberships or fully qualified identifiers for the memberships. 
+
+To set the `memberships` attribute: 
+
+  * provide the argument `--memberships` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     Location for the memberships. 
+
+To set the `location` attribute: 
+
+  * provide the argument `--memberships` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `gkehub/location`. 
+
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in beta and might change without notice. This variant is also available: 
+    
+    
+    [gcloud alpha container fleet config-management update](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/container/fleet/config-management/update)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-08-04 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-04 UTC."],[],[]] 

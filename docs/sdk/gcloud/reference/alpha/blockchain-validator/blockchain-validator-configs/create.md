@@ -1,0 +1,255 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/blockchain-validator/blockchain-validator-configs/create/
+title: gcloud alpha blockchain-validator blockchain-validator-configs create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T15:58:24.458134+00:00
+---
+
+# gcloud alpha blockchain-validator blockchain-validator-configs create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/blockchain-validator/blockchain-validator-configs/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha blockchain-validator blockchain-validator-configs create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha blockchain-validator blockchain-validator-configs create - create a blockchain validator configuration 
+SYNOPSIS
+    
+
+`gcloud alpha blockchain-validator blockchain-validator-configs create` `BLOCKCHAIN_VALIDATOR_CONFIG` `--blockchain-type`=`BLOCKCHAIN_TYPE` `--key-source`=`KEY_SOURCE` `--[no-]validation-work-enabled` [`--async`] [`--blockchain-node-id`=`BLOCKCHAIN_NODE_ID`] [`--labels`=[`LABELS`,…]] [`--location`=`LOCATION`] [`--request-id`=`REQUEST_ID`] [`--ethereum-protocol-details-suggested-fee-recipient`=`ETHEREUM_PROTOCOL_DETAILS_SUGGESTED_FEE_RECIPIENT` : `--ethereum-protocol-details-deposit-gwei`=`ETHEREUM_PROTOCOL_DETAILS_DEPOSIT_GWEI` `--ethereum-protocol-details-eth1-withdrawal-address`=`ETHEREUM_PROTOCOL_DETAILS_ETH1_WITHDRAWAL_ADDRESS` `--ethereum-protocol-details-gas-limit`=`ETHEREUM_PROTOCOL_DETAILS_GAS_LIMIT` `--ethereum-protocol-details-graffiti`=`ETHEREUM_PROTOCOL_DETAILS_GRAFFITI` `--ethereum-protocol-details-use-block-builder-proposals`] [[`--existing-seed-phrase-reference-secret`=`EXISTING_SEED_PHRASE_REFERENCE_SECRET` : `--existing-seed-phrase-reference-derivation-index`=`EXISTING_SEED_PHRASE_REFERENCE_DERIVATION_INDEX`] | [`--remote-web3-signer-voting-public-key`=`REMOTE_WEB3_SIGNER_VOTING_PUBLIC_KEY` `--remote-web3-signer-web3signer-uri`=`REMOTE_WEB3_SIGNER_WEB3SIGNER_URI` : `--remote-web3-signer-timeout-duration`=`REMOTE_WEB3_SIGNER_TIMEOUT_DURATION`] | [`--seed-phrase-reference-secret`=`SEED_PHRASE_REFERENCE_SECRET` : `--seed-phrase-reference-export`]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` `(DEPRECATED)` The `gcloud blockchain-validator` command group is deprecated and will be removed in a future release. 
+
+Create a blockchain validator configuration on a blockchain node managed by Blockchain Node Engine. 
+
+EXAMPLES
+     To create an Ethereum validator configuration `my-validator` in the project `my-project` and location `us-central1`, using a new seed phrase which is exported to Secret Manager, and deploy it to the blockchain node `my-node`, run: 
+
+$ [gcloud alpha blockchain-validator blockchain-validator-configs](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/blockchain-validator/blockchain-validator-configs) \
+    
+    
+    create my-validator --location=us-central1 \
+    --project=my-project --validation-work-enabled=false \
+    --blockchain-type=ETHEREUM --key-source=SEED_PHRASE_REFERENCE \
+    --seed-phrase-reference-secret=projects/my-project/secrets/\
+    my-seed-phrase --seed-phrase-reference-export=true \
+        --blockchain-node-id=projects/my-project/locations/us-central1/\
+    blockchainNodes/my-node
+
+POSITIONAL ARGUMENTS
+    
+
+BlockchainValidatorConfig resource - Identifier. The name of the validator. It must have the format `"projects/{project}/locations/{location}/blockchainValidatorConfigs/{validator}"`. `{validator}` must contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (```), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start with `"goog"`. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `blockchain_validator_config` on the command line with a fully specified name; 
+  * provide the argument `\--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `location` attribute: 
+
+  * provide the argument `blockchain_validator_config` on the command line with a fully specified name; 
+  * provide the argument `\--location` on the command line. 
+
+
+
+This must be specified. 
+
+`BLOCKCHAIN_VALIDATOR_CONFIG``
+     ID of the blockchainValidatorConfig or fully qualified identifier for the blockchainValidatorConfig. 
+
+To set the `blockchain_validator_config` attribute: 
+
+  * provide the argument `blockchain_validator_config` on the command line. 
+
+
+REQUIRED FLAGS
+    
+
+`--blockchain-type`=`BLOCKCHAIN_TYPE`
+     The blockchain type of the validator. `BLOCKCHAIN_TYPE` must be (only one value is supported): 
+
+`ethereum`
+     The blockchain type is Ethereum. 
+`--key-source`=`KEY_SOURCE`
+     The source of the voting key for the blockchain validator. `KEY_SOURCE` must be one of: 
+
+`existing-seed-phrase-reference`
+     Derive voting keys from existing seed material. 
+`remote-web3-signer`
+     The voting key is stored in a remote signing service (Web3Signer) and signing requests are delegated. 
+`seed-phrase-reference`
+     Derive voting keys from new seed material. 
+`--[no-]validation-work-enabled`
+     True if the blockchain node requests and signs attestations and blocks on behalf of this validator, false if not. This does NOT define whether the blockchain expects work to occur, only whether the blockchain node specified above is carrying out validation tasks. This should be enabled under normal conditions, but may be useful when migrating validators to/from Blockchain Node Engine, where the validator may be paused during the migration. Use `--validation-work-enabled` to enable and `--no-validation-work-enabled` to disable. 
+OPTIONAL FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+Arguments for the blockchain node. 
+`--blockchain-node-id`=`BLOCKCHAIN_NODE_ID`
+     The fully qualified name of the blockchain node which carries out work on behalf of the validator. If not set, the validator must either be operated outside of Blockchain Validator Manager, or it will be offline (no attestations or blocks will be produced). If this node is offline or deleted, the validator will be offline. 
+`--labels`=[`LABELS`,…]
+     Labels as key value pairs. 
+
+`KEY`
+     Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+`VALUE`
+     Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+`Shorthand Example:`
+    
+    
+    --labels=string=string
+
+`JSON Example:`
+    
+    
+    --labels='{"string": "string"}'
+
+`File Example:`
+    
+    
+    --labels=path_to_file.(yaml|json)
+
+`--location`=`LOCATION`
+     For resources [blockchain_validator_config, existing-seed-phrase-reference-secret, seed-phrase-reference-secret], provides fallback value for resource location attribute. When the resource's full URI path is not provided, location will fallback to this flag value. 
+`--request-id`=`REQUEST_ID`
+     An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. 
+
+For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. 
+
+The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000). 
+
+Arguments for the blockchain type details. 
+Blockchain validator configuration unique to Ethereum blockchains. 
+`--ethereum-protocol-details-suggested-fee-recipient`=`ETHEREUM_PROTOCOL_DETAILS_SUGGESTED_FEE_RECIPIENT`
+     The Ethereum address to which fee rewards should be sent. This can only be set when creating the validator. If no blockchain node is specified for the validator, this has no effect as no validator client is run. See also <https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html> for more context. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+Arguments for the deposit gwei. 
+`--ethereum-protocol-details-deposit-gwei`=`ETHEREUM_PROTOCOL_DETAILS_DEPOSIT_GWEI`
+     The number of Gwei (Ethereum currency unit) initially deposited for the validator. This is set when the deposit is made and cannot be changed. 
+Arguments for the eth1 withdrawal address. 
+`--ethereum-protocol-details-eth1-withdrawal-address`=`ETHEREUM_PROTOCOL_DETAILS_ETH1_WITHDRAWAL_ADDRESS`
+     The Ethereum wallet address to which withdrawals are sent. Once set this cannot be changed. 
+Arguments for the gas limit. 
+`--ethereum-protocol-details-gas-limit`=`ETHEREUM_PROTOCOL_DETAILS_GAS_LIMIT`
+     Optionally requested (not enforced) maximum gas per block. This is sent to the block builder service, however whether it is followed depends on the service. This field is only read if the field use_block_builder_proposals is set to true. If not specified, the validator client will use a default value. 
+Arguments for the graffiti. 
+`--ethereum-protocol-details-graffiti`=`ETHEREUM_PROTOCOL_DETAILS_GRAFFITI`
+     Graffiti is a custom string published in blocks proposed by the validator. This can only be written, as the current value cannot be read back from the validator client API. See <https://lighthouse-book.sigmaprime.io/graffiti.html> for an example of how this is used. If not set, the validator client's default is used. If no blockchain node is specified, this has no effect as no validator client is run. 
+Arguments for the use block builder proposals. 
+`--ethereum-protocol-details-use-block-builder-proposals`
+     Enable use of the external block building services (MEV). 
+Arguments for the key source config. 
+
+At most one of these can be specified: 
+
+Location of existing seed material, and derivation path used to generate the voting key. 
+Secret resource - Reference into Secret Manager for where the seed phrase is stored. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--existing-seed-phrase-reference-secret` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `location` attribute: 
+
+  * provide the argument `--existing-seed-phrase-reference-secret` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line. This resource can be one of the following types: [blockchainvalidatormanager.projects.locations.secrets, blockchainvalidatormanager.projects.secrets]. 
+
+
+
+This must be specified. 
+
+`--existing-seed-phrase-reference-secret`=`EXISTING_SEED_PHRASE_REFERENCE_SECRET`
+     ID of the secret or fully qualified identifier for the secret. 
+
+To set the `secret` attribute: 
+
+  * provide the argument `--existing-seed-phrase-reference-secret` on the command line. 
+
+
+`--existing-seed-phrase-reference-derivation-index`=`EXISTING_SEED_PHRASE_REFERENCE_DERIVATION_INDEX`
+     The index to derive the voting key at, used as part of a derivation path. The derivation path is built from this as "m/12381/3600/<derivation_index>/0/0" See also <https://eips.ethereum.org/EIPS/eip-2334#eth2-specific-parameters>
+Configuration to use an external key signing service, such as the service endpoint. The external key signer is expected to be managed entirely by the customer. For reference see <https://docs.web3signer.consensys.net/> for details on Web3Signer and <https://docs.web3signer.consensys.net/reference/api/json-rpc> for the API exposed by the external service. 
+`--remote-web3-signer-voting-public-key`=`REMOTE_WEB3_SIGNER_VOTING_PUBLIC_KEY`
+     The public key of the validator, as a hexadecimal string prefixed with "0x". This is used as the identifier for the key when sending requests to the Web3Signer service. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--remote-web3-signer-web3signer-uri`=`REMOTE_WEB3_SIGNER_WEB3SIGNER_URI`
+     URI of the Web3Signer service the validator client connects to, to request signing of attestations, blocks, etc. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+Arguments for the timeout duration. 
+`--remote-web3-signer-timeout-duration`=`REMOTE_WEB3_SIGNER_TIMEOUT_DURATION`
+     Timeout for requests to the Web3Signer service. If not set, a default timeout of 12 seconds is used. 
+Derivation path used to generate the voting key, and optionally Secret Manager secret to backup the seed phrase to. 
+Secret resource - Reference into Secret Manager for where the seed phrase is stored. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--seed-phrase-reference-secret` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `location` attribute: 
+
+  * provide the argument `--seed-phrase-reference-secret` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line. This resource can be one of the following types: [blockchainvalidatormanager.projects.locations.secrets, blockchainvalidatormanager.projects.secrets]. 
+
+
+
+This must be specified. 
+
+`--seed-phrase-reference-secret`=`SEED_PHRASE_REFERENCE_SECRET`
+     ID of the secret or fully qualified identifier for the secret. 
+
+To set the `secret` attribute: 
+
+  * provide the argument `--seed-phrase-reference-secret` on the command line. 
+
+
+`--seed-phrase-reference-export`
+     True to export the seed phrase to Secret Manager. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `blockchainvalidatormanager/v1` API. The full documentation for this API can be found at: <https://cloud.google.com/blockchain-node-engine/docs/create-node-ethereum#validator_configuration>
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. 
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-06 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-06 UTC."],[],[]] 

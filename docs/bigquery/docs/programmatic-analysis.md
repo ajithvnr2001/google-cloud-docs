@@ -1,0 +1,138 @@
+---
+url: https://docs.cloud.google.com/bigquery/docs/programmatic-analysis/
+title: Notebooks and programmatic analysis tools \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T03:21:19.925467+00:00
+---
+
+# Notebooks and programmatic analysis tools  |  BigQuery  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/bigquery/docs/programmatic-analysis/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Data analytics ](https://docs.cloud.google.com/docs/data)
+  * [ BigQuery ](https://docs.cloud.google.com/bigquery/docs)
+  * [ Guides ](https://docs.cloud.google.com/bigquery/docs/introduction)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Notebooks and programmatic analysis tools
+
+While SQL is a powerful query language, programming languages like Python, Java, or R provide syntaxes and statistical functions that can be more expressive for data analysis tasks. Notebook environments offer a highly flexible alternative to spreadsheets for complex data exploration and machine learning (ML) workflows.
+
+BigQuery provides built-in notebook integration as well as support for several other programmatic analysis solutions.
+
+## Colab Enterprise notebooks
+
+You can use Colab Enterprise notebooks in BigQuery to perform end-to-end data science and ML workflows in a single, integrated interface. Unlike standard SQL editors, notebooks let you combine SQL queries with Python code, rich text, and visualizations to tell a comprehensive story with your data. Colab Enterprise notebooks are ideal for the following use cases:
+
+  * **End-to-end ML workflows:** build, evaluate, and deploy BigQuery ML models within a single interface.
+  * **Data exploration:** clean and analyze large datasets using [BigQuery DataFrames](https://docs.cloud.google.com/bigquery/docs/bigquery-dataframes-introduction).
+  * **Collaborative research:** track version history and share notebooks with colleagues using Identity and Access Management (IAM).
+
+
+
+Colab Enterprise notebooks offer the following benefits:
+
+  * **AI-powered development:** leverage Gemini Enterprise Agent Platform for assistive code development.
+  * **Seamless Python integration:** use the BigQuery DataFrames API without any additional setup.
+  * **Familiar editor features:** benefit from SQL auto-completion similar to the BigQuery SQL editor.
+  * **Integrated visualizations:** use interactive DataFrame visualizations or libraries like `matplotlib` and `seaborn` directly in your workflow.
+  * **SQL-Python interoperability:** execute SQL in cells that reference Python variables.
+
+
+
+### Data Science Agent
+
+The [Colab Enterprise Data Science Agent (DSA)](https://docs.cloud.google.com/bigquery/docs/colab-data-science-agent) lets you automate exploratory data analysis, perform machine learning tasks, and deliver insights all within a Colab Enterprise notebook. You can use the DSA for:
+
+  * **Machine learning workflows:** engineer new features, split data into training, validation, and testing datasets, and handle the full lifecycle of model training, optimization, evaluation, and inference.
+  * **Large-scale data processing:** use BigQuery ML, BigQuery DataFrames, or Managed Service for Apache Spark to perform distributed data processing on large datasets.
+  * **Generating a plan:** generate and modify a plan to complete a particular task using common tools such as Python, SQL, Managed Service for Apache Spark, and BigQuery DataFrames.
+  * **Data exploration, cleaning, and wrangling:** explore a dataset to understand its structure, identify potential issues like missing values and outliers, and examine the distribution of key variables. You can also convert categorical features into numerical representations using techniques like one-hot encoding.
+  * **Data analysis and visualization:** analyze the relationships between different variables, calculate correlations, and create visualizations such as histograms, box plots, scatter plots, and bar charts.
+
+
+
+### Understand cells
+
+A notebook is made up of cells that you can edit. The following types of cells are supported in Colab Enterprise notebooks:
+
+  * **Text cell** : use a text cell to add explanations and images to your notebook in Markdown.
+
+  * **Code cell** : use a code cell to add Python to your notebook. You can run each code cell individually. A code cell can reference any variables created in another cell that you've already run.
+
+  * **SQL cell** : use a [SQL cell](https://docs.cloud.google.com/colab/docs/sql-cells) to run GoogleSQL queries. The output of the query is automatically saved as a DataFrame with the same name as the title of the cell. You can run multiple SQL statements in a single SQL cell, but only the results of the last statement are saved to a DataFrame.
+
+You can refer to Python variables in expressions or use BigQuery DataFrames as tables in your query by enclosing the variable name in braces (`{ }`):
+        
+        # Refer to the Python variable my_threshold in a SQL expression.
+        SELECT * FROM my_dataset.my_table WHERE x > {my_threshold};
+        
+        # Reference previous query results to iterate on your queries.
+        SELECT * FROM {df};
+        
+
+  * **Visualization cell** : use a [visualization cell](https://docs.cloud.google.com/colab/docs/visualization-cells) to automatically generate a visualization of any DataFrame in your notebook. You can modify which columns are displayed and select from various chart types and aggregations. You can also choose custom colors, data labels, and titles.
+
+
+
+
+### Notebook gallery
+
+The notebook gallery is a central hub for discovering and using prebuilt notebook templates. It includes fundamental templates for SQL, Python, Apache Spark, and DataFrames to help you perform common tasks like data preparation, analysis, and visualization.
+
+### Runtime management and security
+
+Notebooks use Colab Enterprise runtimes, which are Compute Engine virtual machines allocated to a specific user to enable code execution. Access to notebooks is controlled using IAM roles. To detect vulnerabilities in the Python packages used in your notebooks, you can install and use the [Notebook Security Scanner](https://docs.cloud.google.com/security-command-center/docs/enable-notebook-security-scanner).
+
+### Monitoring and regions
+
+All code assets in BigQuery Studio are stored in a default region, and updating this setting changes the region for any newly created code assets. Colab Enterprise notebooks are available in all regions where BigQuery Studio is available.
+
+To monitor notebook slot usage, you can view your Cloud Billing report and apply a filter for the `goog-bq-feature-type` label with the value `BQ_STUDIO_NOTEBOOK`.
+
+Notebook capabilities are available only in the Google Cloud console.
+
+### Pricing
+
+For pricing information about Colab Enterprise notebooks, see [Notebook runtime pricing](https://docs.cloud.google.com/bigquery/pricing#external_services).
+
+## BigQuery DataFrames
+
+[BigQuery DataFrames](https://docs.cloud.google.com/bigquery/docs/bigquery-dataframes-introduction) is a set of open source Python libraries that let you take advantage of BigQuery data processing by using familiar Python APIs. BigQuery DataFrames implements the pandas and scikit-learn APIs by pushing the processing down to BigQuery through SQL conversion. This design lets you use BigQuery to explore and process terabytes of data and train ML models, all with Python APIs.
+
+BigQuery DataFrames offers the following benefits:
+
+  * More than 750 pandas and scikit-learn APIs implemented through transparent SQL conversion to BigQuery and BigQuery ML APIs.
+  * Deferred execution of queries for enhanced performance.
+  * Extending data transformations with user-defined Python functions to let you process data in the cloud. These functions are automatically deployed as BigQuery [remote functions](https://docs.cloud.google.com/bigquery/docs/remote-functions).
+  * Integration with Gemini Enterprise Agent Platform to let you use Gemini models for text generation.
+
+
+
+## Other programmatic analysis solutions
+
+In addition to Colab Enterprise and BigQuery DataFrames, BigQuery integrates with several other programmatic solutions:
+
+  * **Jupyter Notebooks and JupyterLab:** you can interact with BigQuery directly from Jupyter Notebooks using [IPython Magics for BigQuery](https://docs.cloud.google.com/python/docs/reference/bigquery/latest/magics) or [BigQuery client libraries](https://docs.cloud.google.com/bigquery/docs/reference/libraries). You can deploy your environments on Google Cloud using [Vertex AI Workbench instances](https://docs.cloud.google.com/gemini-enterprise-agent-platform/notebooks/workbench/introduction) or [Managed Service for Apache Spark](https://cloud.google.com/products/managed-service-for-apache-spark).
+  * **Apache Zeppelin:** you can deploy web-based Apache Zeppelin notebooks for data analytics by installing the [Zeppelin optional component](https://docs.cloud.google.com/dataproc/docs/concepts/components/zeppelin) on Managed Service for Apache Spark.
+  * **Apache Hadoop, Spark, and Hive:** [Managed Service for Apache Spark](https://cloud.google.com/products/managed-service-for-apache-spark) integrates with open source BigQuery connectors. These connectors use the [BigQuery Storage API](https://docs.cloud.google.com/bigquery/docs/reference/storage) to stream data in parallel directly from BigQuery through gRPC.
+  * **Apache Beam & Dataflow:** Apache Beam is an open source framework that provides a rich set of windowing and session analysis primitives, as well as an ecosystem of connectors, including one for BigQuery. [Dataflow](https://docs.cloud.google.com/dataflow/docs/overview) is a fully managed service that lets you run these Apache Beam jobs at scale.
+
+
+
+### Other resources
+
+BigQuery offers several [client libraries](https://docs.cloud.google.com/bigquery/docs/reference/libraries) in languages such as Java, Go, Python, JavaScript, PHP, and Ruby. Certain data analysis frameworks like [pandas](https://pandas.pydata.org/) provide [plugins](https://pandas-gbq.readthedocs.io/en/latest/) to interact directly with BigQuery, and for those who prefer shell environments, the [bq command-line tool](https://docs.cloud.google.com/bigquery/docs/bq-command-line-tool) is available.
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

@@ -1,0 +1,64 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/publicca/external-account-keys/
+title: gcloud beta publicca external-account-keys \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T01:12:13.316706+00:00
+---
+
+# gcloud beta publicca external-account-keys  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/publicca/external-account-keys/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta publicca external-account-keys Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta publicca external-account-keys - create ACME external account binding keys 
+SYNOPSIS
+    
+
+`gcloud beta publicca external-account-keys` `COMMAND` [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` gcloud beta publicca external-account-keys lets you create an external account key associated with Google Trust Services' publicly trusted certificate authority. 
+
+The external account key will be associated with the Cloud project and it may be bound to an Automatic Certificate Management Environment (ACME) account following RFC 8555. 
+
+See <https://tools.ietf.org/html/rfc8555#section-7.3.4> for more details. 
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+COMMANDS
+     ``COMMAND`` is one of the following: 
+
+`[create](https://docs.cloud.google.com/sdk/gcloud/reference/beta/publicca/external-account-keys/create)`
+     `(BETA)` Create a new external account key. 
+NOTES
+     This command is currently in beta and might change without notice. These variants are also available: 
+    
+    
+    [gcloud publicca external-account-keys](https://docs.cloud.google.com/sdk/gcloud/reference/publicca/external-account-keys)
+    
+    
+    [gcloud alpha publicca external-account-keys](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/publicca/external-account-keys)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

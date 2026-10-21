@@ -1,0 +1,235 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/container/aws/node-pools/create/
+title: gcloud alpha container aws node-pools create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T21:59:17.999752+00:00
+---
+
+# gcloud alpha container aws node-pools create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/container/aws/node-pools/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha container aws node-pools create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha container aws node-pools create - create a node pool in an Anthos cluster on AWS 
+SYNOPSIS
+    
+
+`gcloud alpha container aws node-pools create` (`NODE_POOL` : `--cluster`=`CLUSTER` `--location`=`LOCATION`) `--config-encryption-kms-key-arn`=`CONFIG_ENCRYPTION_KMS_KEY_ARN` `--iam-instance-profile`=`IAM_INSTANCE_PROFILE` `--max-pods-per-node`=`MAX_PODS_PER_NODE` `--node-version`=`NODE_VERSION` `--subnet-id`=`SUBNET_ID` (`--max-nodes`=`MAX_NODES` `--min-nodes`=`MIN_NODES`) [`--annotations`=`ANNOTATION`,[`ANNOTATION`,…]] [`--async`] [`--enable-autorepair`] [`--image-type`=`IMAGE_TYPE`] [`--instance-placement`=`INSTANCE_PLACEMENT`] [`--kubelet-config-cpu-cfs-quota`=`KUBELET_CONFIG_CPU_CFS_QUOTA`] [`--kubelet-config-cpu-cfs-quota-period`=`KUBELET_CONFIG_CPU_CFS_QUOTA_PERIOD`] [`--kubelet-config-cpu-manager-policy`=`KUBELET_CONFIG_CPU_MANAGER_POLICY`] [`--kubelet-config-pod-pids-limit`=`KUBELET_CONFIG_POD_PIDS_LIMIT`] [`--max-surge-update`=`MAX_SURGE_UPDATE`] [`--max-unavailable-update`=`MAX_UNAVAILABLE_UPDATE`] [`--node-labels`=`NODE_LABEL`,[`NODE_LABEL`,…]] [`--node-taints`=`NODE_TAINT`,[`NODE_TAINT`,…]] [`--root-volume-iops`=`ROOT_VOLUME_IOPS`] [`--root-volume-kms-key-arn`=`ROOT_VOLUME_KMS_KEY_ARN`] [`--root-volume-size`=`ROOT_VOLUME_SIZE`] [`--root-volume-throughput`=`ROOT_VOLUME_THROUGHPUT`] [`--root-volume-type`=`ROOT_VOLUME_TYPE`] [`--security-group-ids`=[`SECURITY_GROUP_ID`,…]] [`--ssh-ec2-key-pair`=`SSH_EC2_KEY_PAIR`] [`--tags`=`TAG`,[`TAG`,…]] [`--validate-only`] [`--autoscaling-metrics-granularity`=`AUTOSCALING_METRICS_GRANULARITY` : `--autoscaling-metrics`=[`AUTOSCALING_METRIC`,…]] [`--instance-type`=`INSTANCE_TYPE` | `--spot-instance-types`=[`INSTANCE_TYPE`,…]] [`--proxy-secret-arn`=`PROXY_SECRET_ARN` `--proxy-secret-version-id`=`PROXY_SECRET_VERSION_ID`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` `(DEPRECATED)` Create a node pool in an Anthos cluster on AWS. 
+
+This command is deprecated. See <https://cloud.google.com/kubernetes-engine/multi-cloud/docs/aws/deprecations/deprecation-announcement> for more details. 
+
+EXAMPLES
+     To create a node pool named ``my-node-pool`` in a cluster named ``my-cluster`` managed in location ``us-west1``, run: 
+    
+    
+    gcloud alpha container aws node-pools create my-node-pool --cluster=my-cluster --location=us-west1 --iam-instance-profile=IAM_INSTANCE_PROFILE --node-version=NODE_VERSION --subnet-id=SUBNET_ID
+
+POSITIONAL ARGUMENTS
+    
+
+Node pool resource - node pool to create. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `node_pool` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`NODE_POOL`
+     ID of the node_pool or fully qualified identifier for the node_pool. 
+
+To set the `node_pool` attribute: 
+
+  * provide the argument `node_pool` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--cluster`=`CLUSTER`
+     cluster of the node_pool. 
+
+To set the `cluster` attribute: 
+
+  * provide the argument `node_pool` on the command line with a fully specified name; 
+  * provide the argument `--cluster` on the command line. 
+
+
+`--location`=`LOCATION`
+     Google Cloud location for the node_pool. 
+
+To set the `location` attribute: 
+
+  * provide the argument `node_pool` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `container_aws/location`. 
+
+
+REQUIRED FLAGS
+    
+
+`--config-encryption-kms-key-arn`=`CONFIG_ENCRYPTION_KMS_KEY_ARN`
+     Amazon Resource Name (ARN) of the AWS KMS key to encrypt the user data. 
+`--iam-instance-profile`=`IAM_INSTANCE_PROFILE`
+     Name or ARN of the IAM instance profile associated with the node pool. 
+`--max-pods-per-node`=`MAX_PODS_PER_NODE`
+     Maximum number of pods per node. 
+`--node-version`=`NODE_VERSION`
+     Kubernetes version to use for the node pool. 
+`--subnet-id`=`SUBNET_ID`
+     Subnet ID of an existing VNET to use for the node pool. 
+Node pool autoscaling 
+
+This must be specified. 
+
+`--max-nodes`=`MAX_NODES`
+     Maximum number of nodes in the node pool. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--min-nodes`=`MIN_NODES`
+     Minimum number of nodes in the node pool. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+OPTIONAL FLAGS
+    
+
+`--annotations`=`ANNOTATION`,[`ANNOTATION`,…]
+     Annotations for the node pool. 
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--enable-autorepair`
+     Enable node autorepair feature for a node pool. Use --no-enable-autorepair to disable. 
+    
+    
+    gcloud alpha container aws node-pools create --enable-autorepair
+
+Node autorepair is disabled by default. 
+
+`--image-type`=`IMAGE_TYPE`
+     Set the OS image type to use on node pool instances. 
+
+Examples: 
+    
+    
+    gcloud alpha container aws node-pools create --image-type=windows
+    gcloud alpha container aws node-pools create --image-type=ubuntu
+
+`--instance-placement`=`INSTANCE_PLACEMENT`
+     Type of the tenancy. `INSTANCE_PLACEMENT` must be one of: `dedicated`, `default`, `host`. 
+`--kubelet-config-cpu-cfs-quota`=`KUBELET_CONFIG_CPU_CFS_QUOTA`
+     Enforce a Kubelet CPU CFS quota. 
+`--kubelet-config-cpu-cfs-quota-period`=`KUBELET_CONFIG_CPU_CFS_QUOTA_PERIOD`
+     Kubelet CPU CFS quota period, within the range "1ms" to "1s". 
+`--kubelet-config-cpu-manager-policy`=`KUBELET_CONFIG_CPU_MANAGER_POLICY`
+     Kubelet CPU manager policy. `KUBELET_CONFIG_CPU_MANAGER_POLICY` must be one of: `none`, `static`. 
+`--kubelet-config-pod-pids-limit`=`KUBELET_CONFIG_POD_PIDS_LIMIT`
+     Kubelet maximum number of PIDS in any pod, within the range 1024 to 4194304. 
+`--max-surge-update`=`MAX_SURGE_UPDATE`
+     Maximum number of extra (surge) nodes to be created beyond the current size of the node pool during its update process. Use --max-unavailable-update as well, if needed, to control the overall surge settings. 
+
+To create an extra node each time the node pool is rolling updated, run: 
+    
+    
+    gcloud alpha container aws node-pools create --max-surge-update=1 --max-unavailable-update=0
+
+`--max-unavailable-update`=`MAX_UNAVAILABLE_UPDATE`
+     Maximum number of nodes that can be simultaneously unavailable during this node pool's update process. Use --max-surge-update as well, if needed, to control the overall surge settings. 
+
+To update 3 nodes in parallel (1 + 2), but keep at least 4 nodes (6 - 2) available each time the node pool is rolling updated, run: 
+    
+    
+    gcloud alpha container aws node-pools create --min-nodes=6 --max-surge-update=1 --max-unavailable-update=2
+
+`--node-labels`=`NODE_LABEL`,[`NODE_LABEL`,…]
+     Labels assigned to the node pool's nodes. 
+`--node-taints`=`NODE_TAINT`,[`NODE_TAINT`,…]
+     Taints assigned to nodes of the node pool. Node taint is of format key=value:effect. Effect must be one of: NoExecute, NoSchedule, PreferNoSchedule. 
+`--root-volume-iops`=`ROOT_VOLUME_IOPS`
+     Number of I/O operations per second (IOPS) to provision for the root volume. 
+`--root-volume-kms-key-arn`=`ROOT_VOLUME_KMS_KEY_ARN`
+     Amazon Resource Name (ARN) of the AWS KMS key to encrypt the root volume. 
+`--root-volume-size`=`ROOT_VOLUME_SIZE`
+     Size of the root volume. The value must be a whole number followed by a size unit of `GB` for gigabyte, or `TB` for terabyte. If no size unit is specified, GB is assumed. 
+`--root-volume-throughput`=`ROOT_VOLUME_THROUGHPUT`
+     Throughput to provision for the root volume, in MiB/s. Only valid if the volume type is GP3. If volume type is GP3 and throughput is not provided, it defaults to 125. 
+`--root-volume-type`=`ROOT_VOLUME_TYPE`
+     Type of the root volume. `ROOT_VOLUME_TYPE` must be one of: `gp2`, `gp3`. 
+`--security-group-ids`=[`SECURITY_GROUP_ID`,…]
+     IDs of additional security groups to add to the node pool's nodes. 
+`--ssh-ec2-key-pair`=`SSH_EC2_KEY_PAIR`
+     Name of the EC2 key pair authorized to login to the node pool's nodes. 
+`--tags`=`TAG`,[`TAG`,…]
+     Applies the given tags (comma separated) on the node pool. Example: 
+    
+    
+    gcloud alpha container aws node-pools create EXAMPLE_NODE_POOL --tags=tag1=one,tag2=two
+
+`--validate-only`
+     Validate the node pool to create, but don't actually perform it. 
+Node pool autoscaling metrics collection 
+`--autoscaling-metrics-granularity`=`AUTOSCALING_METRICS_GRANULARITY`
+     Frequency at which EC2 Auto Scaling sends aggregated data to AWS CloudWatch. The only valid value is "1Minute". 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--autoscaling-metrics`=[`AUTOSCALING_METRIC`,…]
+     Autoscaling metrics to enable. For a list of valid metrics, refer to <https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_EnableMetricsCollection.html>. If granularity is specified but not any metrics, all metrics are enabled. 
+Node pool instance configuration 
+
+At most one of these can be specified: 
+
+`--instance-type`=`INSTANCE_TYPE`
+     AWS EC2 instance type for the node pool's nodes. 
+`--spot-instance-types`=[`INSTANCE_TYPE`,…]
+     List of AWS EC2 instance types for creating a spot node pool's nodes. The specified instance types must have the same CPU architecture, the same number of CPUs and memory. You can use the Amazon EC2 Instance Selector tool (https://github.com/aws/amazon-ec2-instance-selector) to choose instance types with matching CPU and memory configurations. 
+Proxy config 
+`--proxy-secret-arn`=`PROXY_SECRET_ARN`
+     ARN of the AWS Secrets Manager secret that contains a proxy configuration. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--proxy-secret-version-id`=`PROXY_SECRET_VERSION_ID`
+     Version ID string of the AWS Secrets Manager secret that contains a proxy configuration. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. This variant is also available: 
+    
+    
+    [gcloud container aws node-pools create](https://docs.cloud.google.com/sdk/gcloud/reference/container/aws/node-pools/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

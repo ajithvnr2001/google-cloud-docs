@@ -1,0 +1,376 @@
+---
+url: https://docs.cloud.google.com/compute/docs/samples/compute-disk-autodelete-change/
+title: Change the auto-delete setting of a disk \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T10:14:08.313911+00:00
+---
+
+# Change the auto-delete setting of a disk  |  Compute Engine  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/compute/docs/samples/compute-disk-autodelete-change/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Compute ](https://docs.cloud.google.com/docs/compute-area)
+  * [ Compute Engine ](https://docs.cloud.google.com/compute/docs)
+  * [ Samples ](https://docs.cloud.google.com/compute/docs/samples)
+
+
+
+#  Change the auto-delete setting of a disk Stay organized with collections  Save and categorize content based on your preferences. 
+
+Change the value of the auto-delete flag, which determines whether the disk attached to a VM is automatically deleted or not when you delete the VM.
+
+## Explore further
+
+For detailed documentation that includes this code sample, see the following: 
+
+  * [Create custom images](https://docs.cloud.google.com/compute/docs/images/create-custom)
+  * [Modify a Persistent Disk or Google Cloud Hyperdisk's settings](https://docs.cloud.google.com/compute/docs/disks/modify-persistent-disk)
+  * [Move a VM instance between zones or regions](https://docs.cloud.google.com/compute/docs/instances/moving-instance-across-zones)
+
+
+
+## Code sample
+
+### Go
+
+Before trying this sample, follow the Go setup instructions in the [Compute Engine quickstart using client libraries](https://docs.cloud.google.com/compute/docs/api/using-libraries). For more information, see the [Compute Engine Go API reference documentation](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1). 
+
+To authenticate to Compute Engine, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import (
+    	"context"
+    	"fmt"
+    	"io"
+    
+    	compute "cloud.google.com/go/compute/apiv1"
+    	computepb "cloud.google.com/go/compute/apiv1/computepb"
+    )
+    
+    // setDiskAutodelete sets the autodelete flag of a disk to given value.
+    func setDiskAutoDelete(
+    	w io.Writer,
+    	projectID, zone, instanceName, diskName string, autoDelete bool,
+    ) error {
+    	// projectID := "your_project_id"
+    	// zone := "us-west3-b"
+    	// instanceName := "your_instance_name"
+    	// diskName := "your_disk_name"
+    	// autoDelete := true
+    
+    	ctx := context.Background()
+    	instancesClient, err := compute.[NewInstancesRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_InstancesClient_NewInstancesRESTClient)(ctx)
+    	if err != nil {
+    		return fmt.Errorf("NewInstancesRESTClient: %w", err)
+    	}
+    	defer instancesClient.Close()
+    
+    	getInstanceReq := &computepb.GetInstanceRequest{
+    		Project:  projectID,
+    		Zone:     zone,
+    		Instance: instanceName,
+    	}
+    
+    	instance, err := instancesClient.Get(ctx, getInstanceReq)
+    	if err != nil {
+    		return fmt.Errorf("unable to get instance: %w", err)
+    	}
+    
+    	diskExists := false
+    
+    	for _, disk := range instance.GetDisks() {
+    		if disk.GetDeviceName() == diskName {
+    			diskExists = true
+    			break
+    		}
+    	}
+    
+    	if !diskExists {
+    		return fmt.Errorf(
+    			"instance %s doesn't have a disk named %s attached",
+    			instanceName,
+    			diskName,
+    		)
+    	}
+    
+    	req := &computepb.SetDiskAutoDeleteInstanceRequest{
+    		Project:    projectID,
+    		Zone:       zone,
+    		Instance:   instanceName,
+    		DeviceName: diskName,
+    		AutoDelete: autoDelete,
+    	}
+    
+    	op, err := instancesClient.SetDiskAutoDelete(ctx, req)
+    	if err != nil {
+    		return fmt.Errorf("unable to set disk autodelete field: %w", err)
+    	}
+    
+    	if err = op.Wait(ctx); err != nil {
+    		return fmt.Errorf("unable to wait for the operation: %w", err)
+    	}
+    
+    	fmt.Fprintf(w, "disk autoDelete field updated.\n")
+    
+    	return nil
+    }
+    
+
+### Java
+
+Before trying this sample, follow the Java setup instructions in the [Compute Engine quickstart using client libraries](https://docs.cloud.google.com/compute/docs/api/using-libraries). For more information, see the [Compute Engine Java API reference documentation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/overview). 
+
+To authenticate to Compute Engine, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import com.google.cloud.compute.v1.[Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html);
+    import com.google.cloud.compute.v1.[InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html);
+    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html);
+    import com.google.cloud.compute.v1.[SetDiskAutoDeleteInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.SetDiskAutoDeleteInstanceRequest.html);
+    import java.io.IOException;
+    import java.util.concurrent.ExecutionException;
+    import java.util.concurrent.TimeUnit;
+    import java.util.concurrent.TimeoutException;
+    
+    public class SetDiskAutodelete {
+    
+      public static void main(String[] args)
+          throws IOException, ExecutionException, InterruptedException, TimeoutException {
+        // TODO(developer): Replace these variables before running the sample.
+    
+        // Project ID or project number of the Cloud project you want to use.
+        String projectId = "YOUR_PROJECT_ID";
+    
+        // The zone of the disk that you want to modify.
+        String zone = "europe-central2-b";
+    
+        // Name of the instance the disk is attached to.
+        String instanceName = "YOUR_INSTANCE_NAME";
+    
+        // The name of the disk for which you want to modify the autodelete flag.
+        String diskName = "YOUR_DISK_NAME";
+    
+        // The new value of the autodelete flag.
+        boolean autoDelete = true;
+    
+        setDiskAutodelete(projectId, zone, instanceName, diskName, autoDelete);
+      }
+    
+      // Sets the autodelete flag of a disk to given value.
+      public static void setDiskAutodelete(String projectId, String zone, String instanceName,
+          String diskName, boolean autoDelete)
+          throws IOException, ExecutionException, InterruptedException, TimeoutException {
+    
+        // Initialize client that will be used to send requests. This client only needs to be created
+        // once, and can be reused for multiple requests. After completing all of your requests, call
+        // the `instancesClient.close()` method on the client to safely
+        // clean up any remaining background resources.
+        try ([InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html) instancesClient = [InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html).create()) {
+    
+          // Retrieve the instance given by the instanceName.
+          [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html) instance = instancesClient.get(projectId, zone, instanceName);
+    
+          // Check if the instance contains a disk that matches the given diskName.
+          boolean diskNameMatch = instance.[getDisksList](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html#com_google_cloud_compute_v1_Instance_getDisksList__)()
+              .stream()
+              .anyMatch(disk -> disk.getDeviceName().equals(diskName));
+    
+          if (!diskNameMatch) {
+            throw new [Error](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Error.html)(
+                String.format("Instance %s doesn't have a disk named %s attached", instanceName,
+                    diskName));
+          }
+    
+          // Create the request object.
+          [SetDiskAutoDeleteInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.SetDiskAutoDeleteInstanceRequest.html) request = [SetDiskAutoDeleteInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.SetDiskAutoDeleteInstanceRequest.html).newBuilder()
+              .setProject(projectId)
+              .setZone(zone)
+              .setInstance(instanceName)
+              .setDeviceName(diskName)
+              // Update the autodelete property.
+              .setAutoDelete(autoDelete)
+              .build();
+    
+          // Wait for the update instance operation to complete.
+          [Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html) response = instancesClient.[setDiskAutoDeleteAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html#com_google_cloud_compute_v1_InstancesClient_setDiskAutoDeleteAsync_com_google_cloud_compute_v1_SetDiskAutoDeleteInstanceRequest_)(request)
+              .get(3, TimeUnit.MINUTES);
+    
+          if (response.[hasError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_hasError__)()) {
+            System.out.println("Failed to update Disk autodelete field!" + response);
+            return;
+          }
+          System.out.println(
+              "Disk autodelete field updated. Operation Status: " + response.[getStatus](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_getStatus__)());
+        }
+      }
+    }
+
+### Node.js
+
+Before trying this sample, follow the Node.js setup instructions in the [Compute Engine quickstart using client libraries](https://docs.cloud.google.com/compute/docs/api/using-libraries). For more information, see the [Compute Engine Node.js API reference documentation](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest). 
+
+To authenticate to Compute Engine, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    /**
+     * TODO(developer): Uncomment and replace these variables before running the sample.
+     */
+    // const projectId = 'YOUR_PROJECT_ID';
+    // const zone = 'europe-central2-b';
+    // const instanceName = 'YOUR_INSTANCE_NAME';
+    // const diskName = 'YOUR_DISK_NAME';
+    // const autoDelete = true;
+    
+    const compute = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)');
+    
+    async function setDiskAutodelete() {
+      const instancesClient = new compute.[InstancesClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+    
+      const [instance] = await instancesClient.get({
+        project: projectId,
+        zone,
+        instance: instanceName,
+      });
+    
+      if (!instance.disks.some(disk => disk.deviceName === diskName)) {
+        throw new Error(
+          `Instance ${instanceName} doesn't have a disk named ${diskName} attached.`
+        );
+      }
+    
+      const [response] = await instancesClient.setDiskAutoDelete({
+        project: projectId,
+        zone,
+        instance: instanceName,
+        deviceName: diskName,
+        autoDelete,
+      });
+      let operation = response.latestResponse;
+      const operationsClient = new compute.[ZoneOperationsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+    
+      // Wait for the update instance operation to complete.
+      while (operation.status !== 'DONE') {
+        [operation] = await operationsClient.wait({
+          operation: operation.name,
+          project: projectId,
+          zone: operation.zone.split('/').pop(),
+        });
+      }
+    
+      console.log('Disk autoDelete field updated.');
+    }
+    
+    setDiskAutodelete();
+
+### Python
+
+Before trying this sample, follow the Python setup instructions in the [Compute Engine quickstart using client libraries](https://docs.cloud.google.com/compute/docs/api/using-libraries). For more information, see the [Compute Engine Python API reference documentation](https://docs.cloud.google.com/python/docs/reference/compute/latest). 
+
+To authenticate to Compute Engine, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    from __future__ import annotations
+    
+    import sys
+    from typing import Any
+    
+    from google.api_core.extended_operation import ExtendedOperation
+    from google.cloud import [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest)
+    
+    
+    def wait_for_extended_operation(
+        operation: ExtendedOperation, verbose_name: str = "operation", timeout: int = 300
+    ) -> Any:
+        """
+        Waits for the extended (long-running) operation to complete.
+    
+        If the operation is successful, it will return its result.
+        If the operation ends with an error, an exception will be raised.
+        If there were any warnings during the execution of the operation
+        they will be printed to sys.stderr.
+    
+        Args:
+            operation: a long-running operation you want to wait on.
+            verbose_name: (optional) a more verbose name of the operation,
+                used only during error and warning reporting.
+            timeout: how long (in seconds) to wait for operation to finish.
+                If None, wait indefinitely.
+    
+        Returns:
+            Whatever the operation.result() returns.
+    
+        Raises:
+            This method will raise the exception received from `operation.exception()`
+            or RuntimeError if there is no exception set, but there is an `error_code`
+            set for the `operation`.
+    
+            In case of an operation taking longer than `timeout` seconds to complete,
+            a `concurrent.futures.TimeoutError` will be raised.
+        """
+        result = operation.result(timeout=timeout)
+    
+        if operation.error_code:
+            print(
+                f"Error during {verbose_name}: [Code: {operation.error_code}]: {operation.error_message}",
+                file=sys.stderr,
+                flush=True,
+            )
+            print(f"Operation ID: {operation.name}", file=sys.stderr, flush=True)
+            raise operation.exception() or RuntimeError(operation.error_message)
+    
+        if operation.warnings:
+            print(f"Warnings during {verbose_name}:\n", file=sys.stderr, flush=True)
+            for warning in operation.warnings:
+                print(f" - {warning.code}: {warning.message}", file=sys.stderr, flush=True)
+    
+        return result
+    
+    
+    def set_disk_autodelete(
+        project_id: str, zone: str, instance_name: str, disk_name: str, autodelete: bool
+    ) -> None:
+        """
+        Set the autodelete flag of a disk to given value.
+    
+        Args:
+            project_id: project ID or project number of the Cloud project you want to use.
+            zone: name of the zone in which is the disk you want to modify.
+            instance_name: name of the instance the disk is attached to.
+            disk_name: the name of the disk which flag you want to modify.
+            autodelete: the new value of the autodelete flag.
+        """
+        instance_client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[InstancesClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html)()
+        instance = instance_client.[get](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html#google_cloud_compute_v1_services_instances_InstancesClient_get)(
+            project=project_id, zone=zone, instance=instance_name
+        )
+    
+        for disk in instance.[disks](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.disks.html):
+            if disk.device_name == disk_name:
+                break
+        else:
+            raise RuntimeError(
+                f"Instance {instance_name} doesn't have a disk named {disk_name} attached."
+            )
+    
+        disk.auto_delete = autodelete
+    
+        operation = instance_client.[update](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html#google_cloud_compute_v1_services_instances_InstancesClient_update)(
+            project=project_id,
+            zone=zone,
+            instance=instance_name,
+            instance_resource=instance,
+        )
+    
+        wait_for_extended_operation(operation, "disk update")
+    
+    
+
+## What's next
+
+To search and filter code samples for other Google Cloud products, see the [Google Cloud sample browser](https://docs.cloud.google.com/docs/samples?product=computeengine). 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],[],[],[]] 

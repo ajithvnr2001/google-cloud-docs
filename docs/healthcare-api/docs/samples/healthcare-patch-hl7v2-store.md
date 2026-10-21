@@ -1,0 +1,262 @@
+---
+url: https://docs.cloud.google.com/healthcare-api/docs/samples/healthcare-patch-hl7v2-store/
+title: Patch HL7v2 store \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T09:26:01.055613+00:00
+---
+
+# Patch HL7v2 store  |  Cloud Healthcare API  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/healthcare-api/docs/samples/healthcare-patch-hl7v2-store/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Industry solutions ](https://docs.cloud.google.com/docs/industry)
+  * [ Cloud Healthcare API ](https://docs.cloud.google.com/healthcare-api/docs)
+  * [ Samples ](https://docs.cloud.google.com/healthcare-api/docs/samples)
+
+
+
+#  Patch HL7v2 store Stay organized with collections  Save and categorize content based on your preferences. 
+
+Patch an HL7v2 store.
+
+## Explore further
+
+For detailed documentation that includes this code sample, see the following: 
+
+  * [Creating and managing HL7v2 stores](https://docs.cloud.google.com/healthcare-api/docs/how-tos/hl7v2)
+
+
+
+## Code sample
+
+### Go
+
+Before trying this sample, follow the Go setup instructions in the [Cloud Healthcare API quickstart using client libraries](https://cloud.google.com/healthcare-api/docs/store-healthcare-data-client-library). For more information, see the [Cloud Healthcare API Go API reference documentation](https://pkg.go.dev/google.golang.org/api/healthcare/v1). 
+
+To authenticate to Cloud Healthcare API, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import (
+    	"context"
+    	"fmt"
+    	"io"
+    
+    	healthcare "google.golang.org/api/healthcare/v1"
+    )
+    
+    // patchHL7V2Store updates (patches) a HL7V2 store by updating its Pub/sub topic name.
+    func patchHL7V2Store(w io.Writer, projectID, location, datasetID, hl7v2StoreID, topicName string) error {
+    	ctx := context.Background()
+    
+    	healthcareService, err := healthcare.NewService(ctx)
+    	if err != nil {
+    		return fmt.Errorf("healthcare.NewService: %w", err)
+    	}
+    
+    	storesService := healthcareService.Projects.Locations.Datasets.Hl7V2Stores
+    
+    	name := fmt.Sprintf("projects/%s/locations/%s/datasets/%s/hl7V2Stores/%s", projectID, location, datasetID, hl7v2StoreID)
+    
+    	if _, err := storesService.Patch(name, &healthcare.Hl7V2Store{
+    		NotificationConfigs: []*healthcare.Hl7V2NotificationConfig{
+    			{
+    				PubsubTopic: topicName, // format is "projects/*/locations/*/topics/*"
+    			},
+    		},
+    	}).UpdateMask("notificationConfigs").Do(); err != nil {
+    		return fmt.Errorf("Patch: %w", err)
+    	}
+    
+    	fmt.Fprintf(w, "Patched HL7V2 store %s with Pub/sub topic %s\n", datasetID, topicName)
+    
+    	return nil
+    }
+    
+
+### Java
+
+Before trying this sample, follow the Java setup instructions in the [Cloud Healthcare API quickstart using client libraries](https://cloud.google.com/healthcare-api/docs/store-healthcare-data-client-library). For more information, see the [Cloud Healthcare API Java API reference documentation](https://googleapis.dev/java/google-api-services-healthcare/latest/index.html). 
+
+To authenticate to Cloud Healthcare API, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import com.google.api.client.http.[HttpRequestInitializer](https://docs.cloud.google.com/java/docs/reference/google-http-client/latest/com.google.api.client.http.HttpRequestInitializer.html);
+    import com.google.api.client.http.javanet.[NetHttpTransport](https://docs.cloud.google.com/java/docs/reference/google-http-client/latest/com.google.api.client.http.javanet.NetHttpTransport.html);
+    import com.google.api.client.json.[JsonFactory](https://docs.cloud.google.com/java/docs/reference/google-http-client/latest/com.google.api.client.json.JsonFactory.html);
+    import com.google.api.client.json.gson.[GsonFactory](https://docs.cloud.google.com/java/docs/reference/google-http-client/latest/com.google.api.client.json.gson.GsonFactory.html);
+    import com.google.api.services.healthcare.v1.CloudHealthcare;
+    import com.google.api.services.healthcare.v1.CloudHealthcare.Projects.Locations.Datasets.Hl7V2Stores;
+    import com.google.api.services.healthcare.v1.CloudHealthcareScopes;
+    import com.google.api.services.healthcare.v1.model.Hl7V2NotificationConfig;
+    import com.google.api.services.healthcare.v1.model.Hl7V2Store;
+    import com.google.auth.http.[HttpCredentialsAdapter](https://docs.cloud.google.com/java/docs/reference/google-auth-library/latest/com.google.auth.http.HttpCredentialsAdapter.html);
+    import com.google.auth.oauth2.[GoogleCredentials](https://docs.cloud.google.com/java/docs/reference/google-auth-library/latest/com.google.auth.oauth2.GoogleCredentials.html);
+    import java.io.IOException;
+    import java.util.ArrayList;
+    import java.util.Collections;
+    import java.util.List;
+    
+    public class Hl7v2StorePatch {
+      private static final String HL7v2_NAME = "projects/%s/locations/%s/datasets/%s/hl7V2Stores/%s";
+      private static final JsonFactory JSON_FACTORY = new GsonFactory();
+      private static final NetHttpTransport HTTP_TRANSPORT = new NetHttpTransport();
+    
+      public static void patchHl7v2Store(String hl7v2StoreName, String pubsubTopic) throws IOException {
+        // String hl7v2StoreName =
+        //    String.format(
+        //        HL7v2_NAME, "your-project-id", "your-region-id", "your-dataset-id", "your-hl7v2-id");
+        // String pubsubTopic = "projects/your-project-id/topics/your-pubsub-topic";
+    
+        // Initialize the client, which will be used to interact with the service.
+        CloudHealthcare client = createClient();
+    
+        // Fetch the initial state of the HL7v2 store.
+        Hl7V2Stores.Get getRequest =
+            client.projects().locations().datasets().hl7V2Stores().get(hl7v2StoreName);
+        Hl7V2Store store = getRequest.execute();
+    
+        Hl7V2NotificationConfig notificationConfig = new Hl7V2NotificationConfig();
+        notificationConfig.setPubsubTopic(pubsubTopic);
+        List<Hl7V2NotificationConfig> notificationConfigs = new ArrayList<Hl7V2NotificationConfig>();
+        notificationConfigs.add(notificationConfig);
+        // Update the Hl7v2Store fields as needed as needed. For a full list of Hl7v2Store fields, see:
+        // https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets.hl7V2Store#Hl7v2Store
+        store.setNotificationConfigs(notificationConfigs);
+    
+        // Create request and configure any parameters.
+        Hl7V2Stores.Patch request =
+            client
+                .projects()
+                .locations()
+                .datasets()
+                .hl7V2Stores()
+                .patch(hl7v2StoreName, store)
+                .setUpdateMask("notificationConfigs");
+    
+        // Execute the request and process the results.
+        store = request.execute();
+        System.out.println("HL7v2 store patched: \n" + store.toPrettyString());
+      }
+    
+      private static CloudHealthcare createClient() throws IOException {
+        // Use Application Default Credentials (ADC) to authenticate the requests
+        // For more information see https://cloud.google.com/docs/authentication/production
+        GoogleCredentials credential =
+            GoogleCredentials.getApplicationDefault()
+                .createScoped(Collections.singleton(CloudHealthcareScopes.CLOUD_PLATFORM));
+    
+        // Create a HttpRequestInitializer, which will provide a baseline configuration to all requests.
+        HttpRequestInitializer requestInitializer =
+            request -> {
+              new HttpCredentialsAdapter(credential).initialize(request);
+              request.setConnectTimeout(60000); // 1 minute connect timeout
+              request.setReadTimeout(60000); // 1 minute read timeout
+            };
+    
+        // Build the client for interacting with the service.
+        return new CloudHealthcare.Builder(HTTP_TRANSPORT, JSON_FACTORY, requestInitializer)
+            .setApplicationName("your-application-name")
+            .build();
+      }
+    }
+
+### Node.js
+
+Before trying this sample, follow the Node.js setup instructions in the [Cloud Healthcare API quickstart using client libraries](https://cloud.google.com/healthcare-api/docs/store-healthcare-data-client-library). For more information, see the [Cloud Healthcare API Node.js API reference documentation](https://github.com/googleapis/google-api-nodejs-client/blob/main/src/apis/healthcare/README.md). 
+
+To authenticate to Cloud Healthcare API, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    const google = require('@googleapis/healthcare');
+    const healthcare = google.healthcare({
+      version: 'v1',
+      auth: new google.auth.GoogleAuth({
+        scopes: ['https://www.googleapis.com/auth/cloud-platform'],
+      }),
+    });
+    
+    const patchHl7v2Store = async () => {
+      // TODO(developer): uncomment these lines before running the sample
+      // const cloudRegion = 'us-central1';
+      // const projectId = 'adjective-noun-123';
+      // const datasetId = 'my-dataset';
+      // const hl7v2StoreId = 'my-hl7v2-store';
+      // const pubsubTopic = 'my-topic'
+      const name = `projects/${projectId}/locations/${cloudRegion}/datasets/${datasetId}/hl7V2Stores/${hl7v2StoreId}`;
+      const request = {
+        name,
+        updateMask: 'notificationConfigs',
+        resource: {
+          notificationConfigs: [
+            {
+              pubsubTopic: `projects/${projectId}/topics/${pubsubTopic}`,
+            },
+          ],
+        },
+      };
+    
+      await healthcare.projects.locations.datasets.hl7V2Stores.patch(request);
+      console.log(
+        `Patched HL7v2 store ${hl7v2StoreId} with Cloud Pub/Sub topic ${pubsubTopic}`
+      );
+    };
+    
+    patchHl7v2Store();
+
+### Python
+
+Before trying this sample, follow the Python setup instructions in the [Cloud Healthcare API quickstart using client libraries](https://cloud.google.com/healthcare-api/docs/store-healthcare-data-client-library). For more information, see the [Cloud Healthcare API Python API reference documentation](https://googleapis.github.io/google-api-python-client/docs/dyn/healthcare_v1). 
+
+To authenticate to Cloud Healthcare API, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    def patch_hl7v2_store(project_id, location, dataset_id, hl7v2_store_id):
+        """Updates the HL7v2 store.
+    
+        See https://github.com/GoogleCloudPlatform/python-docs-samples/tree/main/healthcare/api-client/v1/hl7v2
+        before running the sample."""
+        # Imports the Google API Discovery Service.
+        from googleapiclient import discovery
+    
+        api_version = "v1"
+        service_name = "healthcare"
+        # Returns an authorized API client by discovering the Healthcare API
+        # and using GOOGLE_APPLICATION_CREDENTIALS environment variable.
+        client = discovery.build(service_name, api_version)
+    
+        # TODO(developer): Uncomment these lines and replace with your values.
+        # project_id = 'my-project'  # replace with your GCP project ID
+        # location = 'us-central1'  # replace with the parent dataset's location
+        # dataset_id = 'my-dataset'  # replace with the HL7v2 store's parent dataset
+        # hl7v2_store_id = 'my-hl7v2-store'  # replace with the HL7v2 store's ID
+        hl7v2_store_parent = "projects/{}/locations/{}/datasets/{}".format(
+            project_id, location, dataset_id
+        )
+        hl7v2_store_name = f"{hl7v2_store_parent}/hl7V2Stores/{hl7v2_store_id}"
+    
+        # TODO(developer): Replace with the full URI of an existing Pub/Sub topic
+        patch = {"notificationConfigs": None}
+    
+        request = (
+            client.projects()
+            .locations()
+            .datasets()
+            .hl7V2Stores()
+            .patch(name=hl7v2_store_name, updateMask="notificationConfigs", body=patch)
+        )
+    
+        response = request.execute()
+        print(f"Patched HL7v2 store {hl7v2_store_id} with Cloud Pub/Sub topic: None")
+        return response
+    
+    
+
+## What's next
+
+To search and filter code samples for other Google Cloud products, see the [Google Cloud sample browser](https://docs.cloud.google.com/docs/samples?product=healthcare). 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],[],[],[]] 

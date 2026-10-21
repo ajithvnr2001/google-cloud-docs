@@ -1,0 +1,113 @@
+---
+url: https://docs.cloud.google.com/spanner/docs/storage-utilization/
+title: Storage utilization metrics \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T03:54:12.069645+00:00
+---
+
+# Storage utilization metrics  |  Spanner  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/docs/storage-utilization/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Guides ](https://docs.cloud.google.com/spanner/docs/create-query-database-console)
+
+
+
+Send feedback 
+
+#  Storage utilization metrics Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page describes the storage utilization metrics that Spanner provides.
+
+By default, your data is stored on solid-state drives (SSD) storage. You can choose whether to store your data on SSD or hard disk drives (HDD) by using tiered storage. For more information, see [Tiered storage overview](https://docs.cloud.google.com/spanner/docs/tiered-storage).
+
+## Storage metrics
+
+Spanner provides the following storage metrics:
+
+  * **Total database storage** : The amount of data that is stored in the database or the databases in the instance. This is subject to the [storage limit](https://docs.cloud.google.com/spanner/quotas#database_limits).
+  * **Total backup storage** : The amount of data that is stored by the backups associated with the instance or database. Backup storage is stored and billed separately and there is no limit on the amount you can store.
+
+
+
+You can view charts for these metrics [in the Google Cloud console](https://docs.cloud.google.com/spanner/docs/monitoring-console) or [in the Cloud Monitoring console](https://docs.cloud.google.com/spanner/docs/monitoring-cloud).
+
+Also, database storage utilization is shown in the **Instances** and **Instance details** pages in the Google Cloud console.
+
+[Go to the instances page](https://console.cloud.google.com/spanner/instances)
+
+### Multi-version storage
+
+If you use the previous storage metrics to check the size of your data frequently, you might occasionally encounter results contrary to your expectations. For example, you might see the reported total storage of your database decrease by a noticeable amount, even though you hadn't recently removed any data. Conversely, you might see its size remain relatively unchanged right after performing a significant deletion.
+
+These effects stem from Spanner's support for _multi-version storage_. Multi-version storage keeps all deleted or overwritten data in-storage and available for a limited time to enable features that let you read previous data values, such as [stale reads](https://docs.cloud.google.com/spanner/docs/reads#read_types) and [point-in-time recovery](https://docs.cloud.google.com/spanner/docs/pitr). Performing a large data deletion doesn't immediately get reflected in your database's storage metrics. Similarly, an apparently unprompted drop in a database's total size likely means that Spanner's regular data-compaction process recently cleaned up a large set of data that was deleted or overwritten as far back as several days ago.
+
+Spanner guarantees the continued availability of deleted or overwritten data for the interval defined by the [`version_retention_period`](https://docs.cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases#Database.FIELDS.version_retention_period) option (one hour, by default). It automatically runs a background process every several days that permanently removes all obsolete data older than this version-retention interval. To permanently remove obsolete data faster, you can [manually trigger a major compaction](https://docs.cloud.google.com/spanner/docs/manual-data-compaction).
+
+### Effects of splitting and merging
+
+During periods of high load or hotspots, Spanner uses splitting and merging to distribute your CPU utilization across your provisioned compute resources. These background data movement operations can happen even if you aren't inserting or modifying data.
+
+One side effect of this optimization is a temporary increase in storage utilization. For data being moved, there might be up to two copies of the original data retained at a given time. This overhead doesn't grow indefinitely. Over the course of the compaction cycle, Spanner shrinks down the splits and discards the extra copies of data. You can expect this storage overhead to stabilize, typically within two weeks. You can also [manually trigger a major compaction](https://docs.cloud.google.com/spanner/docs/manual-data-compaction) to discard extra copies immediately.
+
+### Storage statistics
+
+All data ingested into Spanner typically shows up in storage statistics within a matter of minutes. However, in certain cases, even though the data will be both accessible for reading (and durable through techniques like write-ahead logging), it will take longer to show up in storage utilization statistics, up to several days.
+
+This happens because all ingested data (aside from a copy logged during commit for durability and recovery purposes) resides temporarily in memory before being written out to physical storage in the background. The amount of data that can and will reside in memory and the amount of time it will live in memory before being written to physical storage depends on the size of your compute and the size and performance of your workload.
+
+## Create storage alerts
+
+You can [create storage alerts](https://docs.cloud.google.com/spanner/docs/monitoring-cloud#create-alert) in the Cloud Monitoring console. We also provide a straightforward way to create a database storage alert directly from the [Google Cloud console](https://docs.cloud.google.com/spanner/docs/monitoring-console). The **Create alerting policy** link in the chart (see screenshot) takes you to the create alert page in Cloud Monitoring console and automatically prefills the relevant fields.
+
+![Spanner metrics screen in the console with a button labeled Create alerting policy.](https://docs.cloud.google.com/static/spanner/docs/images/console-create-alert.png)
+
+## Recommendations for database storage utilization
+
+We recommend keeping your total database storage below the [storage limit](https://docs.cloud.google.com/spanner/quotas#database_limits). This ensures that Spanner has enough headroom to operate normally and perform routine maintenance on the data.
+
+If you are approaching the limit, Spanner may prevent you from performing operations that put you over the limit, such as:
+
+  * Restoring a database from a backup.
+  * Modifying the database's schema (for example, adding an index).
+  * Reducing the [compute capacity](https://docs.cloud.google.com/spanner/docs/compute-capacity) of your instance.
+
+
+
+If you are over the storage limit, Spanner will attempt to operate normally, but you may experience degraded performance or failure due to resource pressure. If you do approach or exceed the recommended maximum, Google Cloud console displays a warning reading "**The instance has reached its maximum storage capacity and may experience degraded activity** " when displaying the affected instance.
+
+You can also [create alerts in Cloud Monitoring](https://docs.cloud.google.com/spanner/docs/monitoring-cloud#create-alert) to notify you.
+
+## Reduce database storage utilization
+
+To reduce an instance's database storage utilization, you can:
+
+  * [Add more compute capacity](https://docs.cloud.google.com/spanner/docs/create-manage-instances#change-compute-capacity).
+  * [Delete unused databases](https://docs.cloud.google.com/spanner/docs/create-manage-databases#delete-database).
+  * [Delete data](https://docs.cloud.google.com/spanner/docs/dml-tasks) from a database. Even though data deletion takes effect immediately from a data-visibility perspective, it might not affect the storage utilization metric until Spanner compacts the data, which usually happens within 12 hours for significant data deletions or within a week otherwise. Therefore, you might notice a delay between when data is deleted and when the changes appear in the metric. To reclaim storage faster, you can [manually trigger a major compaction](https://docs.cloud.google.com/spanner/docs/manual-data-compaction).
+
+
+
+In general, we recommend that you add [compute capacity](https://docs.cloud.google.com/spanner/docs/compute-capacity) to your instance as a starting point. After you add compute capacity, you can investigate and address the root causes of high storage utilization.
+
+If you want to automate this process, you can create an application that monitors database storage utilization, then adds and removes compute capacity as needed, using the [`UpdateInstance`](https://docs.cloud.google.com/spanner/docs/reference/rpc/google.spanner.admin.instance.v1#google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstance) method.
+
+## What's next
+
+  * Monitor your instance with the [Google Cloud console](https://docs.cloud.google.com/spanner/docs/monitoring-console) or the [Cloud Monitoring console](https://docs.cloud.google.com/spanner/docs/monitoring-cloud).
+  * [Create alerts for Spanner](https://docs.cloud.google.com/spanner/docs/monitoring-cloud#create-alert).
+  * Find out how to [change the compute capacity](https://docs.cloud.google.com/spanner/docs/create-manage-instances#change-compute-capacity) of a Spanner instance.
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

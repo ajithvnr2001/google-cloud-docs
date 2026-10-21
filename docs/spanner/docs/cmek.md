@@ -1,0 +1,292 @@
+---
+url: https://docs.cloud.google.com/spanner/docs/cmek/
+title: Customer-managed encryption keys (CMEK) overview \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T04:30:57.739051+00:00
+---
+
+# Customer-managed encryption keys (CMEK) overview  |  Spanner  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/docs/cmek/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Guides ](https://docs.cloud.google.com/spanner/docs/create-query-database-console)
+
+
+
+Send feedback 
+
+#  Customer-managed encryption keys (CMEK) overview Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page describes customer-managed encryption keys (CMEK) for Spanner. For more information about CMEK in general, including when and why to enable it, see the [Cloud Key Management Service documentation](https://docs.cloud.google.com/kms/docs/cmek).
+
+By default, Spanner encrypts customer content at rest. Spanner handles encryption for you without any additional actions on your part. This option is called _Google default encryption_. 
+
+If you want to control your encryption keys, then you can use customer-managed encryption keys (CMEKs) in [Cloud KMS](https://docs.cloud.google.com/kms/docs) with CMEK-integrated services including Spanner. Using Cloud KMS keys gives you control over their protection level, location, rotation schedule, usage and access permissions, and cryptographic boundaries. Using Cloud KMS also lets you [track key usage](https://docs.cloud.google.com/kms/docs/view-key-usage), view audit logs, and control key lifecycles. Instead of Google owning and managing the symmetric [key encryption keys (KEKs)](https://docs.cloud.google.com/kms/docs/envelope-encryption#key_encryption_keys) that protect your data, you control and manage these keys in Cloud KMS.
+
+After you set up your resources with CMEKs, the experience of accessing your Spanner resources is similar to using Google default encryption. For more information about your encryption options, see [Customer-managed encryption keys (CMEK)](https://docs.cloud.google.com/kms/docs/cmek).
+
+To learn how to use manually-created CMEKs to protect your Spanner resources, see [Secure a database with CMEK](https://docs.cloud.google.com/spanner/docs/use-cmek).
+
+## CMEK with Cloud KMS Autokey
+
+You can either create CMEKs manually to protect your Spanner resources or use Cloud KMS Autokey. With Autokey, key rings and keys are generated on demand to support resource creation in Spanner. Service agents that use the keys for encrypt and decrypt operations are created if they don't already exist and are granted the required Identity and Access Management (IAM) roles. For more information, see [Autokey overview](https://docs.cloud.google.com/kms/docs/autokey-overview).
+
+Spanner is only compatible with Cloud KMS Autokey when creating resources using Terraform or the REST API. You can't use Cloud KMS Autokey to create multiple regional (single-region) Cloud KMS keys for a Spanner database.
+
+To use CMEKs created by Cloud KMS Autokey to protect your Spanner resources, use the steps provided for Secret Manager at [Using Autokey with Secret Manager resources](https://docs.cloud.google.com/kms/docs/create-resource-with-autokey#secret-manager-autokey) as an example.
+
+## Features
+
+  * **Data access control:** administrators can rotate, manage access to, and disable or destroy the key used to protect data at rest in Spanner.
+  * **Auditability:** if you [enable audit logging](https://docs.cloud.google.com/logging/docs/audit/configure-data-access#config-console-enable) for the Cloud KMS API in your project, all actions on the key, including those performed by Spanner, are logged and viewable in [Cloud Logging](https://docs.cloud.google.com/logging/docs/view/logs-explorer-summary). Cloud EKM keys support [Key Access Justification](https://docs.cloud.google.com/assured-workloads/key-access-justifications/docs/overview), which adds a justification field to all key requests. With select external key management partners, you can automatically approve or deny these requests, based on the justification.
+  * **Performance:** there are no changes to Spanner [performance](https://docs.cloud.google.com/spanner/docs/performance) or the [service level agreement](https://cloud.google.com/spanner/sla) by using CMEK.
+  * **Multiple regional keys support:** you can create multiple regional (single-region) Cloud KMS keys to protect a database in a Spanner [custom, dual-region, or multi-region instance configuration](https://docs.cloud.google.com/spanner/docs/instance-configurations#configuration).
+
+
+
+## Pricing
+
+Spanner bills CMEK-enabled databases just like any other database. There are no additional Spanner costs for enabling CMEK. For more information, see [Spanner pricing](https://cloud.google.com/spanner/pricing).
+
+You are billed by Cloud KMS for both the cost of the key and any cryptographic operations on that key (whenever Spanner uses the key for encryption/decryption). We expect those costs to be minimal based on the expected number of cryptographic operations generated by Spanner. For more information, see [Cloud KMS pricing](https://cloud.google.com/kms/pricing).
+
+## What is protected with CMEK
+
+In a CMEK-enabled database, Spanner uses your Cloud KMS keys to protect _data at rest_. This includes data in a database that is stored on disk or flash.
+
+Some exceptions apply. The following types of data are protected by Google default encryption at rest and not by the CMEK key:
+
+  * A subset of row keys that mark range boundaries
+  * Debugging data including core dumps and operational logs
+  * Data in transit or in memory
+  * Database metadata
+
+
+
+In Spanner, there are three layers of encryption. Data at rest is broken into subfile chunks for storage, and each chunk is encrypted at the storage level with an individual encryption key. The key used to encrypt the data in a chunk is called a data encryption key (DEK). Because of the high volume of keys at Google, and the need for low latency and high availability, these keys are stored near the data that they encrypt. The DEKs are encrypted with (or wrapped by) a key encryption key (KEK). Finally, each KEK is encrypted with your CMEK.
+
+When you [rotate the CMEK key](https://docs.cloud.google.com/kms/docs/key-rotation), Spanner re-encrypts only the intermediate KEKs with the latest primary version of the CMEK key. After the re-encryption finishes, disabling or deleting the earlier versions of the CMEK key won't disable access to the database. You can also [view the key versions](https://docs.cloud.google.com/spanner/docs/use-cmek#versions) that are being used to protect a database.
+
+### With CMEK
+
+![Diagram illustrating encryption with a customer-managed encryption key](https://docs.cloud.google.com/static/spanner/docs/images/cmek-with.png)
+
+### Without CMEK
+
+![Diagram illustrating encryption with a Google-owned and Google-managed encryption key](https://docs.cloud.google.com/static/spanner/docs/images/cmek-without.png)
+
+## Enable CMEK
+
+To use CMEK for Spanner databases, you must create a new database and specify the Cloud KMS key at the time of [database creation](https://docs.cloud.google.com/spanner/docs/use-cmek#create-db). Spanner is able to access the key on your behalf after you grant the [Cloud KMS CryptoKey Encrypter/Decrypter](https://docs.cloud.google.com/kms/docs/reference/permissions-and-roles#predefined) (`roles/cloudkms.cryptoKeyEncrypterDecrypter`) role to a Google-managed [Spanner service account](https://docs.cloud.google.com/iam/docs/service-account-types#google-managed). For detailed instructions, see [Secure a database with CMEK](https://docs.cloud.google.com/spanner/docs/use-cmek).
+
+Spanner's [data access APIs](https://docs.cloud.google.com/spanner/docs/reference/rpc/google.spanner.v1), such as those that are used to manage sessions and execute transactions on data, are exactly the same for both CMEK and Google-owned and Google-managed encryption keys. Applications don't need to specify keys or encryption configurations when reading or writing data. All encryption is handled by the service.
+
+**Note:** After you enable CMEK in your Spanner database, you can't change its encryption configuration unless you back up and restore the database, or [export then import](https://docs.cloud.google.com/spanner/docs/import-export-overview) the database back to Spanner.
+
+## Manage keys
+
+Key management operations are performed using Cloud KMS. Spanner can't detect or act upon any key changes until they are propagated by Cloud KMS. Some operations, such as disabling or destroying a key, can take [up to three hours to propagate](https://docs.cloud.google.com/kms/docs/consistency); changes to permissions usually propagate much faster.
+
+After the database is created, Spanner calls Cloud KMS about every five minutes to make sure that the key is still valid.
+
+If Spanner detects that your Cloud KMS key has been disabled or destroyed, an operation to make your database inaccessible begins immediately. Any subsequent calls to the database, including sessions, reads, and writes, return a `FAILED_PRECONDITION` error: `KMS key required by the Spanner resource is not accessible.` If Spanner's calls to Cloud KMS detect that a formerly disabled key has been re-enabled, Cloud KMS restores access to the Spanner database automatically.
+
+In addition, if a database is protected by multiple regional keys and all keys are disabled or destroyed, then Spanner immediately starts to make your database inaccessible. If Spanner detects that only a subset of the database's keys are disabled or destroyed, then it disables the database over a period of time within 12 hours. Disabling or destroying only a subset of keys in a CMEK-enabled database is strongly discouraged and might result in uncertain behavior. To prevent this from happening, you can use the [Spanner CMEK Keys metric](https://docs.cloud.google.com/monitoring/api/metrics_gcp_p_z#gcp-spanner) (`instance/replica/cmek/total_keys`) to trigger an alert if a subset of keys are disabled or destroyed. For more information, see Create alert for disabling a subset of CMEK.
+
+**Warning:** If a database remains disabled for more than seven consecutive days, Spanner automatically deletes it. To avoid permanent data loss, don't leave CMEK keys in an inaccessible state for an extended time.
+
+If a Cloud KMS key is deleted and can't be recovered, any Spanner database encrypted with that key becomes permanently inaccessible.
+
+We strongly recommend against disabling or destroying only a subset of keys in a CMEK database that uses multiple keys. You must disable all keys in the database.
+
+### Create alert for disabling a subset of CMEK
+
+You can use the [Spanner CMEK Keys](https://docs.cloud.google.com/monitoring/api/metrics_gcp_p_z#gcp-spanner) (`/instance/replica/cmek/total_keys`) metric to trigger an alert if a subset of CMEK are disabled or destroyed. To create this alerting policy, expand the following steps and settings:
+
+#### Steps to create an [alerting policy](https://docs.cloud.google.com/monitoring/alerts/using-alerting-ui#create-policy).
+
+To create an alerting policy, do the following:
+
+  1. In the Google Cloud console, go to the _notifications_ **Alerting** page: 
+
+[Go to **Alerting**](https://console.cloud.google.com/monitoring/alerting)
+
+
+
+
+If you use the search bar to find this page, then select the result whose subheading is **Monitoring**.
+
+* If you haven't created your notification channels and if you want to be notified, then click **Edit Notification Channels** and add your notification channels. Return to the **Alerting** page after you add your channels. 
+* From the **Alerting** page, select **Create policy**.
+* To select the resource, metric, and filters, expand the **Select a metric** menu and then use the values in the **New condition** table: 
+
+  1. Optional: To limit the menu to relevant entries, enter the resource or metric name in the filter bar. 
+  2. Select a **Resource type**. For example, select **VM instance**.
+  3. Select a **Metric category**. For example, select **instance**.
+  4. Select a **Metric**. For example, select **CPU Utilization**.
+  5. Select **Apply**.
+
+
+* Click **Next** and then configure the alerting policy trigger. To complete these fields, use the values in the **Configure alert trigger** table. 
+* Click **Next**.
+* Optional: To add notifications to your alerting policy, click **Notification channels**. In the dialog, select one or more notification channels from the menu, and then click **OK**.
+
+To be notified when alerts are opened and closed, check **Notify on alert closure**. By default, notifications are sent only when alerts are opened.
+
+* Optional: Update the **Alert autoclose duration**. This field determines when Monitoring closes alerts in the absence of metric data.
+* Optional: Click **Documentation** , and then add any information that you want included in a notification message.
+* Click **Alert name** and enter a name for the alerting policy.
+* Click **Create Policy**.
+
+#### Settings for CMEK alerting policy.
+
+**New condition**  
+Field |   
+Value  
+---|---  
+**Resource and Metric** | In the **Resources** menu, select **Spanner Instance**.  
+In the **Metric categories** menu, select **Instance**.  
+In the **Metrics** menu, select **CMEK Keys**.  
+  
+(The metric.type is `spanner.googleapis.com/instance/replica/cmek/total_keys`).   
+**Filter** | `instance_id = INSTANCE_ID`  
+`is_key_revoked = TRUE`  
+**Across time series  
+Time series group by** | `database`  
+  
+**Across time series  
+Time series aggregation** | `sum`  
+  
+**Rolling window** | `10 m`  
+  
+**Rolling window function** | `mean`  
+**Configure alert trigger**  
+Field |   
+Value  
+---|---  
+**Condition type** | `Threshold`  
+**Alert trigger** | `Any time series violates`  
+**Threshold position** | `Above threshold`  
+**Threshold** | `0`  
+**Retest window** | `1 hr`  
+**New condition**  
+Field |   
+Value  
+---|---  
+**Resource and Metric** | In the **Resources** menu, select **Spanner Instance**.  
+In the **Metric categories** menu, select **Instance**.  
+In the **Metrics** menu, select **CMEK Keys**.  
+  
+(The metric.type is `spanner.googleapis.com/instance/replica/cmek/total_keys`).   
+**Filter** | `instance_id = INSTANCE_ID`  
+`is_key_revoked = FALSE`  
+**Across time series  
+Time series group by** | `database`  
+  
+**Across time series  
+Time series aggregation** | `sum`  
+  
+**Rolling window** | `10 m`  
+  
+**Rolling window function** | `mean`  
+**Configure alert trigger**  
+Field |   
+Value  
+---|---  
+**Condition type** | `Threshold`  
+**Alert trigger** | `Any time series violates`  
+**Threshold position** | `Above threshold`  
+**Threshold** | `0`  
+**Retest window** | `1 hr`  
+**Configure alert trigger**  
+Field |   
+Value  
+---|---  
+**Multi-condition trigger** | `All conditions are met`  
+  
+After you create the alert, if Spanner detects that a subset of CMEK has been disabled, an incident summary item appears under the **Incidents** table on the alert's **Policy details** page. You can also set up optional notification channels. For more information, see [Create and manage notification channels](https://docs.cloud.google.com/monitoring/support/notification-options).
+
+## How an unavailable key status is handled
+
+In rare scenarios, such as during periods when Cloud KMS is unavailable, Spanner might be unable to retrieve the status of your key from Cloud KMS.
+
+If your Spanner database is protected by a key that is enabled at the time at which Spanner is first unable to communicate with Cloud KMS, Spanner continues to support full database operations on a best-effort basis for a period of up to one hour, to minimize the impact of any such incident on your workload. After one hour, if Spanner is still unable to connect with Cloud KMS, Spanner begins taking the database offline as a protective measure. The data in your Spanner database remains inaccessible until your database can reconnect with Cloud KMS and Cloud KMS responds that the key is active.
+
+Conversely, if your Spanner database is protected by a key that is disabled at the time at which Spanner is first unable to communicate with Cloud KMS, your database remains inaccessible until it is able to reconnect to Cloud KMS and you have re-enabled your key.
+
+If you're using multiple regional keys to protect a Spanner database, only those replicas that are protected by a key residing in the unavailable regional Cloud KMS are affected by the unavailability.
+
+## External key considerations
+
+When you use a Cloud EKM key, Google has no control over the availability of your externally-managed key in the external key management partner system.
+
+If an externally-managed key is unavailable, Spanner continues to support full database operations on a best-effort basis for up to one hour. After one hour, if Spanner is still unable to connect with Cloud KMS, then Spanner begins taking the database offline as a protective measure. Calls to the database will fail with a `FAILED_PRECONDITION` error: `External key error: Could not find a key resource at the key URI.`
+
+If you're using multiple Cloud EKM keys to protect your Spanner database, only those replicas that are protected by the unavailable key are affected by the unavailability.
+
+For more considerations when using external keys, see the [Cloud External Key Manager documentation](https://docs.cloud.google.com/kms/docs/ekm#considerations).
+
+**Warning:** If a database remains disabled for more than seven consecutive days, Spanner automatically deletes it. To avoid permanent data loss, don't leave external keys in an inaccessible state for an extended time. 
+
+If an external key is deleted and can't be recovered, any Spanner database encrypted with that key becomes permanently inaccessible.
+
+## Back up and restore
+
+You can use CMEK or Google-owned and Google-managed encryption keys to protect Spanner [backups](https://docs.cloud.google.com/spanner/docs/backup). By default, a backup uses the same [encryption configuration](https://docs.cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.backups/create#CreateBackupEncryptionConfig) as its database, but you can override this behavior by specifying a different encryption configuration when creating the backup. If the backup is CMEK-enabled, it is encrypted using the primary version of the KMS key at the time of backup creation. Once the backup is created, its key and key version can't be modified, even if the KMS key is rotated. For more information, see [Back up a database](https://docs.cloud.google.com/spanner/docs/use-cmek#backup).
+
+When you [restore](https://docs.cloud.google.com/spanner/docs/backup/restore-backup-overview) a database from a backup, by default, the restored database uses the same [encryption configuration](https://docs.cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases/restore#RestoreDatabaseEncryptionConfig) as the backup. You can override this behavior by specifying a different encryption configuration when restoring the database. To restore a CMEK-enabled backup, both the key and key version that was used to encrypt the backup must be available. For more information, see [Restore from a backup](https://docs.cloud.google.com/spanner/docs/use-cmek#restore).
+
+You can perform backup operations such as create, copy, and restore on a database encrypted with multiple regional keys.
+
+All backups created by [backup schedules](https://docs.cloud.google.com/spanner/docs/backup/create-manage-backup-schedules) can be protected by CMEK or Google-owned and Google-managed encryption keys.
+
+## Geo-partitioning
+
+You can use CMEK or Google-owned and Google-managed encryption keys to protect Spanner databases that use [geo-partitioning](https://docs.cloud.google.com/spanner/docs/geo-partitioning). When using geo-partitioning, you must use a regional Cloud KMS key for each instance replica location, including those in the instance partition configuration. Multi-region keys aren't supported. Each regional Cloud KMS key must be located in the same region as the corresponding Spanner instance replica or instance partition location.
+
+For example, if your Spanner database is in the multi-region instance configuration `nam3`, with instance partitions located in `europe-west1` and `europe-west2`, then you must create Cloud KMS keys in the following regions:
+
+  * `us-east4` (part of `nam3`)
+  * `us-east1` (part of `nam3`)
+  * `us-central1` (part of `nam3`)
+  * `europe-west1` (location of instance partition)
+  * `europe-west2` (location of instance partition)
+
+
+
+For more information, see [Secure a database with CMEK](https://docs.cloud.google.com/spanner/docs/use-cmek#create-db).
+
+## Logging
+
+You can audit the requests that Spanner sends t Cloud KMS on your behalf in Logging, if you have [enabled audit logging](https://docs.cloud.google.com/logging/docs/audit/configure-data-access#config-console-enable) for the Cloud KMS API in your project. These [Cloud KMS log entries](https://docs.cloud.google.com/kms/docs/audit-logging) are visible in [Logging](https://docs.cloud.google.com/logging/docs/view/logs-explorer-summary).
+
+## Require or limit CMEK within your organization
+
+You can set organization-wide policies regarding the use of CMEK protection across various Google Cloud products, including Spanner. With these policies, you can:
+
+  * Require that new Spanner databases created by your organization use CMEK protection.
+
+  * Limit which of your organization's Cloud KMS keys are available for CMEK protection.
+
+
+
+
+For more information, see [CMEK organization policies](https://docs.cloud.google.com/kms/docs/cmek-org-policy).
+
+## What's next
+
+  * Learn how to [secure a database with CMEK](https://docs.cloud.google.com/spanner/docs/use-cmek).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

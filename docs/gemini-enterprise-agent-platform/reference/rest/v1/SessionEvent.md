@@ -1,0 +1,132 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/SessionEvent/
+title: SessionEvent \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-15T10:31:02.761169+00:00
+---
+
+# SessionEvent  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/SessionEvent/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ API reference ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/apis)
+
+
+
+Send feedback 
+
+#  SessionEvent Stay organized with collections  Save and categorize content based on your preferences. 
+
+An event represents a message from either the user or agent.
+
+Fields  
+  
+`name` `string` Identifier. The resource name of the event. Format:`projects/{project}/locations/{location}/reasoningEngines/{reasoningEngine}/sessions/{session}/events/{event}`. | `author` `string` Required. The name of the agent that sent the event, or user. | `content` `object (`[Content](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/Content)`)` Optional. Content of the event provided by the author. | `invocationId` `string` Required. The invocation id of the event, multiple events can have the same invocation id. | `actions` `object (`[EventActions](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/SessionEvent#EventActions)`)` Optional. Actions executed by the agent. | `timestamp` `string (`[Timestamp](https://protobuf.dev/reference/protobuf/google.protobuf/#timestamp)` format)` Required. timestamp when the event was created on client side.Uses RFC 3339, where generated output will always be Z-normalized and use 0, 3, 6 or 9 fractional digits. Offsets other than "Z" are also accepted. Examples: `"2014-10-02T15:01:23Z"`, `"2014-10-02T15:01:23.045123456Z"` or `"2014-10-02T15:01:23+05:30"`. | `errorCode` `string` Optional. Error code if the response is an error. code varies by model. | `errorMessage` `string` Optional. Error message if the response is an error. | `eventMetadata` `object (`[EventMetadata](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/SessionEvent#EventMetadata)`)` Optional. metadata relating to this event. | `rawEvent` `object (`[Struct](https://protobuf.dev/reference/protobuf/google.protobuf/#struct)` format)` Optional. Weakly typed raw event data in proto struct format. | JSON representation  
+---  
+      
+    
+    {
+      "name": string,
+      "author": string,
+      "content": {
+        object ([Content](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/Content))
+      },
+      "invocationId": string,
+      "actions": {
+        object ([EventActions](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/SessionEvent#EventActions))
+      },
+      "timestamp": string,
+      "errorCode": string,
+      "errorMessage": string,
+      "eventMetadata": {
+        object ([EventMetadata](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/SessionEvent#EventMetadata))
+      },
+      "rawEvent": {
+        object
+      }
+    }  
+  
+## EventActions
+
+Actions are parts of events that are executed by the agent.
+
+Fields  
+  
+`skipSummarization` `boolean` Optional. If true, it won't call model to summarize function response. Only used for functionResponse event. | `stateDelta` `object (`[Struct](https://protobuf.dev/reference/protobuf/google.protobuf/#struct)` format)` Optional. Indicates that the event is updating the state with the given delta. | `artifactDelta` `map (key: string, value: integer)` Optional. Indicates that the event is updating an artifact. key is the filename, value is the version. | `escalate` `boolean` Optional. The agent is escalating to a higher level agent. | `requestedAuthConfigs` `object (`[Struct](https://protobuf.dev/reference/protobuf/google.protobuf/#struct)` format)` Optional. Will only be set by a tool response indicating tool request euc. Struct key is the function call id since one function call response (from model) could correspond to multiple function calls. Struct value is the required auth config, which can be another struct. | `transferAgent` `string` Optional. If set, the event transfers to the specified agent. | JSON representation  
+---  
+      
+    
+    {
+      "skipSummarization": boolean,
+      "stateDelta": {
+        object
+      },
+      "artifactDelta": {
+        string: integer,
+        ...
+      },
+      "escalate": boolean,
+      "requestedAuthConfigs": {
+        object
+      },
+      "transferAgent": string
+    }  
+  
+## EventMetadata
+
+metadata relating to a LLM response event.
+
+Fields  
+  
+`groundingMetadata` `object (`[GroundingMetadata](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata)`)` Optional. metadata returned to client when grounding is enabled. | `partial` `boolean` Optional. Indicates whether the text content is part of a unfinished text stream. Only used for streaming mode and when the content is plain text. | `turnComplete` `boolean` Optional. Indicates whether the response from the model is complete. Only used for streaming mode. | `interrupted` `boolean` Optional. Flag indicating that LLM was interrupted when generating the content. Usually it's due to user interruption during a bidi streaming. | `longRunningToolIds[]` `string` Optional. Set of ids of the long running function calls. Agent client will know from this field about which function call is long running. Only valid for function call event. | `branch` `string` Optional. The branch of the event. The format is like agent_1.agent_2.agent_3, where agent_1 is the parent of agent_2, and agent_2 is the parent of agent_3. Branch is used when multiple child agents shouldn't see their siblings' conversation history. | `customMetadata` `object (`[Struct](https://protobuf.dev/reference/protobuf/google.protobuf/#struct)` format)` The custom metadata of the LlmResponse. | `inputTranscription` `object (`[Transcription](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/SessionEvent#Transcription)`)` Optional. Audio transcription of user input. | `outputTranscription` `object (`[Transcription](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/SessionEvent#Transcription)`)` Optional. Audio transcription of model output. | JSON representation  
+---  
+      
+    
+    {
+      "groundingMetadata": {
+        object ([GroundingMetadata](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata))
+      },
+      "partial": boolean,
+      "turnComplete": boolean,
+      "interrupted": boolean,
+      "longRunningToolIds": [
+        string
+      ],
+      "branch": string,
+      "customMetadata": {
+        object
+      },
+      "inputTranscription": {
+        object ([Transcription](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/SessionEvent#Transcription))
+      },
+      "outputTranscription": {
+        object ([Transcription](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/SessionEvent#Transcription))
+      }
+    }  
+  
+## Transcription
+
+Audio transcription in Server Content.
+
+Fields  
+  
+`text` `string` Optional. Transcription text. | `finished` `boolean` Optional. The bool indicates the end of the transcription. | JSON representation  
+---  
+      
+    
+    {
+      "text": string,
+      "finished": boolean
+    }  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-06-03 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-06-03 UTC."],[],[]] 

@@ -1,0 +1,42 @@
+---
+url: https://docs.cloud.google.com/alloydb/docs/ai/scann-vector-query-perf-overview/
+title: ScaNN vector query performance overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-20T20:46:35.758983+00:00
+---
+
+# ScaNN vector query performance overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/alloydb/docs/ai/scann-vector-query-perf-overview/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ AlloyDB for PostgreSQL ](https://docs.cloud.google.com/alloydb/docs)
+  * [ Guides ](https://docs.cloud.google.com/alloydb/docs/overview)
+
+
+
+Send feedback 
+
+#  ScaNN vector query performance overview Stay organized with collections  Save and categorize content based on your preferences. 
+
+The Scalable Nearest Neighbors (ScaNN) index in AlloyDB for PostgreSQL accelerates vector similarity queries while reducing memory usage through tree-quantization indexing. In tree-quantization techniques, indexes learn a search tree together with a quantization (or hashing) function. When you run a query, the search tree prunes the search space while quantization compresses the index size, speeding up similarity scoring between the query vector and your database vectors.
+
+To achieve both a high query-per-second rate (QPS) and a high recall with your nearest-neighbor queries, you must partition the tree of your `ScaNN` index in a way that is most appropriate to your data and your queries.
+
+A common characteristic of the current generation of high-dimensional embedding models is they can still retain much of the information at much lower dimensionality, for example 90% of the information can be retained with only 20% of the embedding's dimensions. To help speed up such datasets, AlloyDB ScaNN will automatically perform dimension reduction using Principal Component Analysis (see `scann.enable_pca` below) on the indexed vectors which further reduces cpu & memory usage for the vector search. Because dimension reduction still causes minor recall loss in the index, AlloyDB ScaNN compensates through an initial ranking step with a larger number of PCA'ed vector candidates from the index then re-ranking them by the original vectors (see `scann.pre_reordering_num_neighbors`).
+
+## What's next
+
+  * [Get started with vector embeddings using AlloyDB AI](https://codelabs.developers.google.com/alloydb-ai-embedding#0).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

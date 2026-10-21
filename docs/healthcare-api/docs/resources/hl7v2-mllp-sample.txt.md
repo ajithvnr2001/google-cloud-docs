@@ -1,0 +1,12 @@
+---
+url: https://docs.cloud.google.com/healthcare-api/docs/resources/hl7v2-mllp-sample.txt
+title: hl7v2 mllp sample
+method: httpx-raw-text
+fetched_at: 2026-10-17T08:52:03.756774+00:00
+---
+
+# hl7v2 mllp sample
+
+> Source: https://docs.cloud.google.com/healthcare-api/docs/resources/hl7v2-mllp-sample.txt
+
+MSH|^~\\&|FROM_APP|FROM_FACILITY|TO_APP|TO_FACILITY|20150503223000||ADT^A01|20150503223000|P|2.5|\rEVN|A01|20110613083617|\rPID|1||21004053^^^^MRN||SULLY^BRIAN||19611209|M|||123 MAIN ST^^MOUNTAIN SPRINGS^CO^80439|\rPV1||I|H73 RM1^1^^HIGHWAY 73 CLINIC||||5148^MARY QUINN|||||||||Y||||||||||||||||||||||||||||20150503223000|\r

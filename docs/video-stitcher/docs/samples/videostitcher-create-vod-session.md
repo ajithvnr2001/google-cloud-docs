@@ -1,0 +1,355 @@
+---
+url: https://docs.cloud.google.com/video-stitcher/docs/samples/videostitcher-create-vod-session/
+title: Create a VOD session \u00a0|\u00a0 Video Stitcher API \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T01:01:24.671495+00:00
+---
+
+# Create a VOD session  |  Video Stitcher API  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/video-stitcher/docs/samples/videostitcher-create-vod-session/
+
+To enable the Video Stitcher API for your project, please reach out to your Account Representative or contact [Sales](https://cloud.google.com/contact) to learn more. 
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Video Stitcher API ](https://docs.cloud.google.com/video-stitcher/docs)
+  * [ Samples ](https://docs.cloud.google.com/video-stitcher/docs/samples)
+
+
+
+#  Create a VOD session Stay organized with collections  Save and categorize content based on your preferences. 
+
+Create a video on demand session in which ads are dynamically stitched prior to delivery to client devices.
+
+## Explore further
+
+For detailed documentation that includes this code sample, see the following: 
+
+  * [Insert ads into VOD assets](https://docs.cloud.google.com/video-stitcher/docs/quickstarts/inserting-ads-into-vod)
+  * [Manage a VOD session](https://docs.cloud.google.com/video-stitcher/docs/how-to/managing-vod-sessions)
+  * [Manage a VOD session enabled by Google Ad Manager](https://docs.cloud.google.com/video-stitcher/docs/how-to/managing-vod-sessions-gam)
+
+
+
+## Code sample
+
+### C#
+
+Before trying this sample, follow the C# setup instructions in the [Video Stitcher API quickstart using client libraries](https://docs.cloud.google.com/video-stitcher/docs/reference/libraries). For more information, see the [Video Stitcher API C# API reference documentation](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Stitcher.V1/latest). 
+
+To authenticate to Video Stitcher API, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    using [Google.Api.Gax.ResourceNames](https://docs.cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.ResourceNames.html);
+    using [Google.Cloud.Video.Stitcher.V1](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Stitcher.V1/latest/Google.Cloud.Video.Stitcher.V1.html);
+    
+    public class CreateVodSessionSample
+    {
+        public VodSession CreateVodSession(
+            string projectId, string location, string vodConfigId)
+        {
+            // Create the client.
+            [VideoStitcherServiceClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Stitcher.V1/latest/Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.html) client = [VideoStitcherServiceClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Stitcher.V1/latest/Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.html).[Create](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Stitcher.V1/latest/Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.html#Google_Cloud_Video_Stitcher_V1_VideoStitcherServiceClient_Create)();
+    
+            [CreateVodSessionRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Stitcher.V1/latest/Google.Cloud.Video.Stitcher.V1.CreateVodSessionRequest.html) request = new [CreateVodSessionRequest](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Stitcher.V1/latest/Google.Cloud.Video.Stitcher.V1.CreateVodSessionRequest.html)
+            {
+                ParentAsLocationName = [LocationName](https://docs.cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.ResourceNames.LocationName.html).[FromProjectLocation](https://docs.cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.ResourceNames.LocationName.html#Google_Api_Gax_ResourceNames_LocationName_FromProjectLocation_System_String_System_String_)(projectId, location),
+                VodSession = new [VodSession](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Stitcher.V1/latest/Google.Cloud.Video.Stitcher.V1.VodSession.html)
+                {
+                    VodConfig = [VodConfigName](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Stitcher.V1/latest/Google.Cloud.Video.Stitcher.V1.VodConfigName.html).[FormatProjectLocationVodConfig](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Stitcher.V1/latest/Google.Cloud.Video.Stitcher.V1.VodConfigName.html#Google_Cloud_Video_Stitcher_V1_VodConfigName_FormatProjectLocationVodConfig_System_String_System_String_System_String_)(projectId, location, vodConfigId),
+                    AdTracking = [AdTracking](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Stitcher.V1/latest/Google.Cloud.Video.Stitcher.V1.AdTracking.html).[Server](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Stitcher.V1/latest/Google.Cloud.Video.Stitcher.V1.AdTracking.html#Google_Cloud_Video_Stitcher_V1_AdTracking_Server)
+                }
+            };
+    
+            // Call the API.
+            [VodSession](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Stitcher.V1/latest/Google.Cloud.Video.Stitcher.V1.VodSession.html) session = client.[CreateVodSession](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Stitcher.V1/latest/Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.html#Google_Cloud_Video_Stitcher_V1_VideoStitcherServiceClient_CreateVodSession_Google_Api_Gax_ResourceNames_LocationName_Google_Cloud_Video_Stitcher_V1_VodSession_Google_Api_Gax_Grpc_CallSettings_)(request);
+    
+            // Return the result.
+            return session;
+        }
+    }
+    
+
+### Go
+
+Before trying this sample, follow the Go setup instructions in the [Video Stitcher API quickstart using client libraries](https://docs.cloud.google.com/video-stitcher/docs/reference/libraries). For more information, see the [Video Stitcher API Go API reference documentation](https://pkg.go.dev/cloud.google.com/go/video/stitcher). 
+
+To authenticate to Video Stitcher API, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import (
+    	"context"
+    	"fmt"
+    	"io"
+    
+    	stitcher "cloud.google.com/go/video/stitcher/apiv1"
+    	stitcherstreampb "cloud.google.com/go/video/stitcher/apiv1/stitcherpb"
+    )
+    
+    // createVodSession creates a video on demand (VOD) session in which to insert ads.
+    // VOD sessions are ephemeral resources that expire after a few hours.
+    func createVodSession(w io.Writer, projectID, vodConfigID string) error {
+    	// projectID := "my-project-id"
+    	// vodConfigID := "my-vod-config-id"
+    	location := "us-central1"
+    	ctx := context.Background()
+    	client, err := stitcher.[NewVideoStitcherClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/video/latest/stitcher/apiv1.html#cloud_google_com_go_video_stitcher_apiv1_VideoStitcherClient_NewVideoStitcherClient)(ctx)
+    	if err != nil {
+    		return fmt.Errorf("stitcher.NewVideoStitcherClient: %w", err)
+    	}
+    	defer client.[Close](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/video/latest/stitcher/apiv1.html#cloud_google_com_go_video_stitcher_apiv1_VideoStitcherClient_Close)()
+    
+    	req := &stitcherstreampb.CreateVodSessionRequest{
+    		Parent: fmt.Sprintf("projects/%s/locations/%s", projectID, location),
+    		VodSession: &stitcherstreampb.VodSession{
+    			VodConfig:  fmt.Sprintf("projects/%s/locations/%s/vodConfigs/%s", projectID, location, vodConfigID),
+    			AdTracking: stitcherstreampb.AdTracking_SERVER,
+    		},
+    	}
+    	// Creates the VOD session.
+    	response, err := client.CreateVodSession(ctx, req)
+    	if err != nil {
+    		return fmt.Errorf("client.CreateVodSession: %w", err)
+    	}
+    
+    	fmt.Fprintf(w, "VOD session: %v", response.GetName())
+    	return nil
+    }
+    
+
+### Java
+
+Before trying this sample, follow the Java setup instructions in the [Video Stitcher API quickstart using client libraries](https://docs.cloud.google.com/video-stitcher/docs/reference/libraries). For more information, see the [Video Stitcher API Java API reference documentation](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/overview). 
+
+To authenticate to Video Stitcher API, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import com.google.cloud.video.stitcher.v1.[AdTracking](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.AdTracking.html);
+    import com.google.cloud.video.stitcher.v1.[CreateVodSessionRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.CreateVodSessionRequest.html);
+    import com.google.cloud.video.stitcher.v1.[LocationName](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.LocationName.html);
+    import com.google.cloud.video.stitcher.v1.[VideoStitcherServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.VideoStitcherServiceClient.html);
+    import com.google.cloud.video.stitcher.v1.[VodConfigName](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.VodConfigName.html);
+    import com.google.cloud.video.stitcher.v1.[VodSession](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.VodSession.html);
+    import java.io.IOException;
+    
+    public class CreateVodSession {
+    
+      public static void main(String[] args) throws Exception {
+        // TODO(developer): Replace these variables before running the sample.
+        String projectId = "my-project-id";
+        String location = "us-central1";
+        String vodConfigId = "my-vod-config-id";
+    
+        createVodSession(projectId, location, vodConfigId);
+      }
+    
+      // Creates a video on demand (VOD) session using the parameters in the designated VOD config.
+      // For more information, see
+      // https://cloud.google.com/video-stitcher/docs/how-to/creating-vod-sessions.
+      public static [VodSession](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.VodSession.html) createVodSession(String projectId, String location, String vodConfigId)
+          throws IOException {
+        // Initialize client that will be used to send requests. This client only needs to be created
+        // once, and can be reused for multiple requests.
+        try ([VideoStitcherServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.VideoStitcherServiceClient.html) videoStitcherServiceClient =
+            [VideoStitcherServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.VideoStitcherServiceClient.html).create()) {
+          [CreateVodSessionRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.CreateVodSessionRequest.html) createVodSessionRequest =
+              [CreateVodSessionRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.CreateVodSessionRequest.html).newBuilder()
+                  .setParent([LocationName](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.LocationName.html).of(projectId, location).toString())
+                  .setVodSession(
+                      [VodSession](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.VodSession.html).newBuilder()
+                          .setVodConfig([VodConfigName](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.VodConfigName.html).format(projectId, location, vodConfigId))
+                          .setAdTracking([AdTracking](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.AdTracking.html).SERVER)
+                          .build())
+                  .build();
+    
+          [VodSession](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.VodSession.html) response = videoStitcherServiceClient.createVodSession(createVodSessionRequest);
+          System.out.println("Created VOD session: " + response.[getName](https://docs.cloud.google.com/java/docs/reference/google-cloud-video-stitcher/latest/com.google.cloud.video.stitcher.v1.VodSession.html#com_google_cloud_video_stitcher_v1_VodSession_getName__)());
+          return response;
+        }
+      }
+    }
+
+### Node.js
+
+Before trying this sample, follow the Node.js setup instructions in the [Video Stitcher API quickstart using client libraries](https://docs.cloud.google.com/video-stitcher/docs/reference/libraries). For more information, see the [Video Stitcher API Node.js API reference documentation](https://cloud.google.com/nodejs/docs/reference/video-stitcher/latest). 
+
+To authenticate to Video Stitcher API, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    /**
+     * TODO(developer): Uncomment these variables before running the sample.
+     */
+    // projectId = 'my-project-id';
+    // location = 'us-central1';
+    // vodConfigId = 'my-vod-config-id';
+    
+    // Imports the Video Stitcher library
+    const {VideoStitcherServiceClient} =
+      require('[@google-cloud/video-stitcher](https://docs.cloud.google.com/nodejs/docs/reference/video-stitcher/latest/overview.html)').v1;
+    // Instantiates a client
+    const stitcherClient = new [VideoStitcherServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/video-stitcher/latest/overview.html)();
+    
+    async function createVodSession() {
+      // Construct request
+      const request = {
+        parent: stitcherClient.[locationPath](https://docs.cloud.google.com/nodejs/docs/reference/video-stitcher/latest/video-stitcher/v1.videostitcherserviceclient.html)(projectId, location),
+        vodSession: {
+          vodConfig: stitcherClient.[vodConfigPath](https://docs.cloud.google.com/nodejs/docs/reference/video-stitcher/latest/video-stitcher/v1.videostitcherserviceclient.html)(
+            projectId,
+            location,
+            vodConfigId
+          ),
+          adTracking: '[SERVER](https://docs.cloud.google.com/nodejs/docs/reference/video-stitcher/latest/video-stitcher/protos.google.cloud.video.stitcher.v1.adtracking.html)',
+        },
+      };
+      const [session] = await stitcherClient.createVodSession(request);
+      console.log(`VOD session: ${session.name}`);
+    }
+    
+    createVodSession().catch(err => {
+      console.error(err.message);
+      process.exitCode = 1;
+    });
+
+### PHP
+
+Before trying this sample, follow the PHP setup instructions in the [Video Stitcher API quickstart using client libraries](https://docs.cloud.google.com/video-stitcher/docs/reference/libraries). For more information, see the [Video Stitcher API PHP API reference documentation](https://googleapis.github.io/google-cloud-php/#/docs/google-cloud/latest/videostitcher/readme). 
+
+To authenticate to Video Stitcher API, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    use Google\Cloud\Video\Stitcher\V1\AdTracking;
+    use Google\Cloud\Video\Stitcher\V1\Client\VideoStitcherServiceClient;
+    use Google\Cloud\Video\Stitcher\V1\CreateVodSessionRequest;
+    use Google\Cloud\Video\Stitcher\V1\VodSession;
+    
+    /**
+     * Creates a VOD session. VOD sessions are ephemeral resources that expire
+     * after a few hours.
+     *
+     * @param string $callingProjectId     The project ID to run the API call under
+     * @param string $location             The location of the session
+     * @param string $vodConfigId          The name of the VOD config to use for the session
+     */
+    function create_vod_session(
+        string $callingProjectId,
+        string $location,
+        string $vodConfigId
+    ): void {
+        // Instantiate a client.
+        $stitcherClient = new VideoStitcherServiceClient();
+    
+        $parent = $stitcherClient->locationName($callingProjectId, $location);
+        $vodConfig = $stitcherClient->vodConfigName($callingProjectId, $location, $vodConfigId);
+        $vodSession = new VodSession();
+        $vodSession->setVodConfig($vodConfig);
+        $vodSession->setAdTracking(AdTracking::SERVER);
+    
+        // Run VOD session creation request
+        $request = (new CreateVodSessionRequest())
+            ->setParent($parent)
+            ->setVodSession($vodSession);
+        $response = $stitcherClient->createVodSession($request);
+    
+        // Print results
+        printf('VOD session: %s' . PHP_EOL, $response->getName());
+    }
+
+### Python
+
+Before trying this sample, follow the Python setup instructions in the [Video Stitcher API quickstart using client libraries](https://docs.cloud.google.com/video-stitcher/docs/reference/libraries). For more information, see the [Video Stitcher API Python API reference documentation](https://docs.cloud.google.com/python/docs/reference/videostitcher/latest). 
+
+To authenticate to Video Stitcher API, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import argparse
+    
+    from google.cloud.video import stitcher_v1
+    from google.cloud.video.stitcher_v1.services.video_stitcher_service import (
+        VideoStitcherServiceClient,
+    )
+    
+    
+    def create_vod_session(
+        project_id: str, location: str, vod_config_id: str
+    ) -> stitcher_v1.types.VodSession:
+        """Creates a VOD session. VOD sessions are ephemeral resources that expire
+        after a few hours.
+        Args:
+            project_id: The GCP project ID.
+            location: The location in which to create the session.
+            vod_config_id: The user-defined VOD config ID to use to create the
+                            session.
+    
+        Returns:
+            The VOD session resource.
+        """
+    
+        client = VideoStitcherServiceClient()
+    
+        parent = f"projects/{project_id}/locations/{location}"
+        vod_config_name = (
+            f"projects/{project_id}/locations/{location}/vodConfigs/{vod_config_id}"
+        )
+    
+        vod_session = stitcher_v1.types.VodSession(
+            vod_config=vod_config_name, ad_tracking="SERVER"
+        )
+    
+        response = client.create_vod_session(parent=parent, vod_session=vod_session)
+        print(f"VOD session: {response.name}")
+        return response
+    
+    
+
+### Ruby
+
+Before trying this sample, follow the Ruby setup instructions in the [Video Stitcher API quickstart using client libraries](https://docs.cloud.google.com/video-stitcher/docs/reference/libraries). For more information, see the [Video Stitcher API Ruby API reference documentation](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-video-stitcher/latest). 
+
+To authenticate to Video Stitcher API, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    require "google/cloud/video/stitcher"
+    
+    ##
+    # Create a video on demand (VOD) session. VOD sessions are ephemeral resources
+    # that expire after a few hours.
+    #
+    # @param project_id [String] Your Google Cloud project (e.g. `my-project`)
+    # @param location [String] The location (e.g. `us-central1`)
+    # @param vod_config_id [String] The VOD config ID (e.g. `my-vod-config`) to use
+    #
+    def create_vod_session project_id:, location:, vod_config_id:
+      # Create a Video Stitcher client.
+      client = Google::Cloud::Video::Stitcher.video_stitcher_service
+    
+      # Build the resource name of the parent.
+      parent = client.location_path project: project_id, location: location
+    
+      # Build the resource name of the VOD config.
+      vod_config_name = client.vod_config_path project: project_id,
+                                               location: location,
+                                               vod_config: vod_config_id
+    
+      # Set the session fields.
+      new_vod_session = {
+        vod_config: vod_config_name,
+        ad_tracking: Google::Cloud::Video::Stitcher::V1::AdTracking::SERVER
+      }
+    
+      response = client.create_vod_session parent: parent,
+                                           vod_session: new_vod_session
+    
+      # Print the VOD session name.
+      puts "VOD session: #{response.name}"
+    end
+
+## What's next
+
+To search and filter code samples for other Google Cloud products, see the [Google Cloud sample browser](https://docs.cloud.google.com/docs/samples?product=videostitcherapi). 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],[],[],[]] 

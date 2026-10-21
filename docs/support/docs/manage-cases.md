@@ -1,0 +1,438 @@
+---
+url: https://docs.cloud.google.com/support/docs/manage-cases/
+title: Create and manage support cases \u00a0|\u00a0 Cloud Customer Care \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T11:42:26.982548+00:00
+---
+
+# Create and manage support cases  |  Cloud Customer Care  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/support/docs/manage-cases/
+
+When creating a case, **Live chat** is your quickest connection to a support representative. For more information, see [Create a support case](https://docs.cloud.google.com/support/docs/customer-care-procedures#create_a_support_case). 
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Cloud Customer Care ](https://docs.cloud.google.com/support/docs)
+  * [ Guides ](https://docs.cloud.google.com/support/docs/overview)
+
+
+
+Send feedback 
+
+#  Create and manage support cases Stay organized with collections  Save and categorize content based on your preferences. 
+
+A support case is a request for technical assistance or help with a Google Cloud account, project, or billing issue. For more information, see the [Technical Support Services Guidelines](https://cloud.google.com/terms/tssg/).
+
+This document explains how to complete the following tasks:
+
+  * Create a support case
+  * Manage support cases
+  * Enable case sharing
+  * View known issues
+  * Contact Customer Care
+  * Access additional services
+
+
+
+To learn about the availability of Customer Care, see [Language support and working hours](https://docs.cloud.google.com/support/docs/language-working-hours).
+
+## Required roles
+
+To get the permissions that you need to manage support cases, including viewing, creating, updating, escalating, and closing cases, ask your administrator to grant you the following IAM roles on the project, folder, or organization where the support case is managed : 
+
+  * To view support cases: [Tech Support Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/cloudsupport#cloudsupport.techSupportViewer) (`roles/cloudsupport.techSupportViewer`) 
+  * To manage support cases: [Tech Support Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/cloudsupport#cloudsupport.techSupportEditor) (`roles/cloudsupport.techSupportEditor`) 
+
+
+
+For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+You might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
+
+For more information, see [Access control with IAM](https://docs.cloud.google.com/support/docs/access-control).
+
+## Get support using Gemini Cloud Assist
+
+**Note:** Use of this Preview offering of Gemini Cloud Assist is subject to the Google Cloud Agreement, including the Pre-GA Offering Terms of the [Google Cloud Specific Service Terms](https://cloud.google.com/terms/service-terms), as supplemented by the terms for the [Gemini for Google Cloud Trusted Tester Program](https://cloud.google.com/trusted-tester/gemini-for-google-cloud-preview).
+
+[Gemini Cloud Assist](https://docs.cloud.google.com/cloud-assist/overview) provides AI-powered assistance that can help you troubleshoot an issue or create a support case. You can choose to share your conversation details and diagnostic data with a support representative at any time. By summarizing environment states and logs, Gemini Cloud Assist can help you diagnose and resolve your case faster.
+
+Before you can use Gemini Cloud Assist, your administrator must complete the following steps:
+
+  1. [Set up Gemini Cloud Assist for your folder or project](https://docs.cloud.google.com/cloud-assist/set-up-gemini).
+
+Although support cases can only be created for Google Cloud organizations and projects, Gemini Cloud Assist is supported for folders as well as projects.
+
+  2. [Make sure that you have the appropriate permissions](https://docs.cloud.google.com/cloud-assist/iam-requirements).
+
+To support questions and requests about your Google Cloud resources, Gemini Cloud Assist needs the appropriate Identity and Access Management (IAM) permissions for those resources. Since Gemini Cloud Assist inherits your permissions when you prompt it, in many cases, the necessary IAM permissions are already granted.
+
+
+
+
+### Create a support case using Gemini Cloud Assist
+
+  1. In the Google Cloud console, go to the **Support** > **Cases** page.
+
+[Go to Cases](https://console.cloud.google.com/support/cases)
+
+  2. Using the resource selector on the console toolbar, select the folder or project for which you'd like to create a support case.
+
+  3. Click chat_spark **Create case with Gemini**.
+
+The **Cloud Assist** panel opens.
+
+Gemini Cloud Assist can access information inside your cloud environment and provide the investigation results as context for a support case. You might be able to resolve your issue before escalating it to a human agent.
+
+For more information, see [Use Gemini Cloud Assist in the Google Cloud console](https://docs.cloud.google.com/cloud-assist/chat-panel).
+
+  4. In the **Cloud Assist** panel, in the **Enter a prompt** field, describe your issue or ask your question, and then  
+click send **Send prompt**.
+
+  5. If you have a support package, you can request the creation of a support case at any point or, if you have Premium Support, you can click **Contact support team**.
+
+The **Create case** form opens and any applicable fields are automatically pre-filled with information from your chat conversation.
+
+If you prefer to manually create a case, click more_vert **More actions** > **Create support case manually**.
+
+  6. If you haven't purchased a support package, the Basic Support package is provided to all Google Cloud customers and includes free billing and payments support. In the **Enter a prompt** field, you can ask a question related to billing. For more information, see [Get Cloud Billing support](https://docs.cloud.google.com/support/docs/get-billing-support).
+
+
+
+
+If Gemini Cloud Assist is not enabled or is unavailable, you can still create a support case as described in the following section. Or, you can contact Cloud Customer Care. In this document, see [Contact Customer Care](https://docs.cloud.google.com/support/docs/customer-care-procedures#contact_customer_care).
+
+## Create a support case
+
+Writing a detailed support case makes it easier for the Customer Care team to respond to you quickly and efficiently. The best support cases are both detailed and specific. For more information, see [Best practices for working with Customer Care](https://docs.cloud.google.com/support/docs/best-practices).
+
+Before creating a support case, review known issues, and make sure that a case has not already been filed. In this document, see View known issues.
+
+  1. In the Google Cloud console, go to the **Support** > **Cases** page.
+
+[Go to Cases](https://console.cloud.google.com/support/cases)
+
+  2. Using the resource selector on the console toolbar, select the resource for which you'd like to create a support case. Support cases can only be created for organizations or projects.
+
+  3. Click _add_box_ **Get help**.
+
+  4. In the **Select your product** list, select a product.
+
+  5. In the **Describe your issue** field, enter a description of your issue. You can edit this description and provide more details in a subsequent step.
+
+  6. In the **Observed error message** field, enter any error message details.
+
+  7. In the **Priority selection** list, select a priority, and click **Next**.
+
+For more information, in this document, see [Support case priority](https://docs.cloud.google.com/support/docs/customer-care-procedures#support_case_priority).
+
+  8. Explore the resources that are listed and that might help you resolve your issue. If you still need to proceed, click **Next**.
+
+  9. In the **Select a category** list, select a sub-category that best describes your issue.
+
+This ensures that your case is forwarded to the correct team.
+
+  10. Choose a support channel: **Live chat** or **Email**.
+
+Live chat is available only in English. The transcript of your chat will be made available to you through email and can be viewed in the console by those who have the appropriate permission.
+
+If you select email, you can also specify a supported language.
+
+  11. Answer the remaining questions and provide as many details as possible. If you chose email as your support channel, you can also add attachments such as screenshots and log files. You can optionally provide [browser trace information](https://docs.cloud.google.com/support/docs/capture-browser-trace).
+
+**Note:** We recommend uploading file attachments in formats that are widely supported and non-proprietary, such as PNG, TXT, or PDF.
+  12. If you chose chat as your support channel, click **Start chat**.
+
+Your chat session opens in a new window and a chat specialist will assist you.
+
+  13. If you chose email as your support channel, click **Submit**.
+
+After clicking **Submit** , you're redirected to the **Cases** page where you can comment on the case, upload file attachments, or modify other case attributes.
+
+The Customer Care team responds to the case based on its priority and the support service that applies.
+
+
+
+
+### Support case status
+
+After a support case is created, you can view its status in the Google Cloud console. The following table provides a description of the different statuses:
+
+Status  | Description   
+---|---  
+New  | The case is not assigned yet.   
+Assigned  | The case is assigned to one of our specialists. You'll see a response within the target response time mentioned in the priorities table.   
+In progress Cloud Customer Care  | Customer Care specialists are working on the case.   
+In progress Google engineering  | Google product engineers are investigating the case. Turnaround times vary, depending on the issue complexity and product component in question.   
+In progress Google other  | Another Google team is investigating the case. Turnaround times can vary, depending on the issue complexity and product component in question.   
+Waiting on customer response  | We need more information from you before we can proceed.   
+Waiting on customer action  | We need you to do something before we can proceed.   
+Solution offered  | A solution for the issue or request in the case has been offered. The customer can reopen the case if the offered solution is insufficient.   
+Closed  | The case is resolved and closed by the Customer Care specialist. If the issue is still ongoing, you can reopen it within 15 days by replying to the last communication. After 15 days, you need to create a new case.   
+  
+### Support case priority
+
+When creating a support case, it's important to assign it the correct priority. Per the Google Cloud [Technical Support Services Guidelines](https://cloud.google.com/terms/tssg/), response times vary by issue priority and which support service applies.
+
+The following table defines support case priorities. For more information, in this document, see Change case priority.
+
+Priority definition  | Example situations   
+---|---  
+**P1: Critical Impact—Service Unusable in Production** | The application or infrastructure is unusable in production, having a significant rate of user-facing errors.  
+Business impact is critical (for example, revenue loss or potential data integrity issue). No workaround is available that can be quickly implemented (less than 30 minutes).  Affected Google Cloud component or feature is marked as [General Availability](https://cloud.google.com/terms/launch-stages). Immediate attention from Google is required to resolve the problem.  
+**P2: High Impact—Service Use Severely Impaired** | The infrastructure is degraded in production, having a noticeable rate of user-facing errors or difficulties in spinning up a new production system.  
+Business impact is moderate (for example, danger of revenue loss or productivity decrease). A workaround to mitigate critical business impact is available and can be quickly implemented. Affected Google Cloud component or feature is marked as [General Availability](https://cloud.google.com/terms/launch-stages). Fast response from Google is required.  
+**P3: Medium Impact—Service Use Partially Impaired** | The issue is limited in scope and/or severity. The issue has no user-visible impact.  
+Business impact is low (for example, inconvenience or minor business processes affected). Case requires more in-depth investigation and troubleshooting and less frequent interactions.  
+**P4: Low Impact—Service Fully Usable** | Little to no business or technical impact.  
+Recommended for consultative tickets where in-depth analysis, troubleshooting or consultancy are preferred to more frequent communications.  
+  
+## Manage support cases
+
+If you have the required roles, you can update, reopen, and close a support case for an associated resource (organization, project, folder), even if you didn't create the case.
+
+### Update a support case
+
+You can only update an open support case.
+
+To update a support case, do the following:
+
+  1. In the Google Cloud console, go to the **Support** > **Cases** page.
+
+[Go to Cases](https://console.cloud.google.com/support/cases)
+
+  2. Using the resource selector on the console toolbar, select the resource for which you'd like to list support cases. For example, if you select an organization, all cases for the organization are displayed. If you select a project, only the cases associated with that project are listed.
+
+  3. Optional. In the filter_list **Filter** list, select a property to filter support cases by.
+
+  4. Click the name of the support case that you want to update.
+
+
+
+
+You can add comments, upload file attachments, edit attributes, or escalate the case.
+
+### Reopen a support case
+
+You can reopen the case if the offered solution is insufficient.
+
+You can only reopen a case that has been closed in the last 15 days. For a case that has been closed for more than 15 days, you can't reopen it and must [create a new support case](https://docs.cloud.google.com/support/docs/create_a_support_case).
+
+By default, a reopened case is assigned to the last working Customer Care specialist who had closed the case earlier to make sure that the context of the case is preserved.
+
+**Important:** The [initial response times](https://cloud.google.com/support#compare-features) are not applicable to the reopened cases. If your support case requires urgent attention, set the case priority to `P1`. This assigns the case to the next available Customer Care specialist.
+
+  1. In the Google Cloud console, go to the **Support** > **Cases** page.
+
+[Go to Cases](https://console.cloud.google.com/support/cases)
+
+  2. Using the resource selector on the console toolbar, select the resource for which you'd like to list support cases. For example, if you select an organization, all cases for the organization are displayed. If you select a project, only the cases associated with that project are listed.
+
+  3. Optional. In the filter_list **Filter** list, select a property to filter support cases by.
+
+  4. Click the name of the support case that you want to reopen.
+
+  5. Click **Reopen case**.
+
+  6. Enter a reason for reopening the case.
+
+  7. Click **Reopen** to confirm.
+
+
+
+
+### Close a support case
+
+  1. In the Google Cloud console, go to the **Support** > **Cases** page.
+
+[Go to Cases](https://console.cloud.google.com/support/cases)
+
+  2. Using the resource selector on the console toolbar, select the resource for which you'd like to list support cases. For example, if you select an organization, all cases for the organization are displayed. If you select a project, only the cases associated with that project are listed.
+
+  3. Optional. In the filter_list **Filter** list, select a property to filter support cases by.
+
+  4. Click the name of the support case that you want to close.
+
+  5. In the **General Information** section, click **Close case**.
+
+  6. Click **Yes** to confirm.
+
+
+
+
+### Create a linked support case
+
+To automatically receive updates for a known issue, you can link a support case to it.
+
+  1. In the Google Cloud console, go to the **Support** > **Cases** page.
+
+[Go to Cases](https://console.cloud.google.com/support/cases)
+
+  2. Using the resource selector on the console toolbar, select the resource for which you'd like to list known issues.
+
+  3. Click the **Known issues** tab.
+
+  4. Click an issue to expand it.
+
+  5. To create a linked support case, click **Create linked case**.
+
+
+
+
+## Enable case sharing
+
+Case sharing lets users in your organization, and outside of it, track support cases through email. They are able to comment by replying to messages without needing to access the Google Cloud console.
+
+**Caution:** When case sharing is enabled, users can share cases with external email addresses outside of your Google Cloud organization.
+
+Note the following:
+
+  * Case sharing is disabled by default and the setting doesn't retroactively apply to existing cases. It only affects cases that are opened after modifying the setting.
+  * Case sharing must be enabled by a [Support Account Administrator](https://docs.cloud.google.com/support/docs/access-control#support_account_admin).
+  * When case sharing is enabled, any user with the `cloudsupport.techCases.update` permission (available through the [Tech Support Editor](https://docs.cloud.google.com/support/docs/access-control#tech_support_editor) role) can add recipients by their email addresses.
+
+
+
+### Required roles
+
+To get the permissions that you need to enable case sharing, ask your administrator to grant you the following IAM roles on the organization where the support account is managed : 
+
+  * To manage a support account and enable case sharing: [Support Account Administrator ](https://docs.cloud.google.com/iam/docs/roles-permissions/cloudsupport#cloudsupport.admin) (`roles/cloudsupport.admin`) 
+
+
+
+For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+You might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
+
+### Allow email addresses to track a case
+
+  1. In the Google Cloud console, go to the **Support** > **Overview** page.
+
+[Go to Overview](https://console.cloud.google.com/support/overview)
+
+  2. Using the resource selector on the console toolbar, select the organization for which you'd like to enable case sharing.
+
+  3. In the navigation menu, click **Settings**.
+
+  4. To turn on the setting, click the **Enable case sharing** toggle.
+
+  5. To turn off the setting, click the **Enable case sharing** toggle again.
+
+
+
+
+## View known issues
+
+The Google Cloud Support team publishes information about known issues affecting Google Cloud services as they arise. You can view these issues by visiting the public status dashboard, [Google Cloud Service Health](https://status.cloud.google.com/), or by using the Google Cloud console.
+
+  1. In the Google Cloud console, go to the **Support** > **Cases** page.
+
+[Go to Cases](https://console.cloud.google.com/support/cases)
+
+  2. Using the resource selector on the console toolbar, select the resource for which you'd like to list known issues.
+
+  3. Click the **Known issues** tab. You can link a support case to a known issue. In this document, see [Create a linked support case](https://docs.cloud.google.com/support/docs/customer-care-procedures#link-cases).
+
+
+
+
+If there are any open known issues that might be affecting your Google Cloud services, you will also see a notification on the case creation page. For more information, see the FAQ in [Monitor Google Cloud Service Health incidents](https://docs.cloud.google.com/support/docs/dashboard#faq).
+
+## Contact Customer Care
+
+All users can contact Customer Care with questions about Cloud Billing. You can also request support for technical questions about projects within your organization.
+
+  1. In the Google Cloud console, go to the **Support** > **Overview** page. 
+
+[Go to Overview](https://console.cloud.google.com/support/overview)
+
+  2. Using the resource selector on the console toolbar, select the project for which you'd like support.
+  3. In the navigation menu, select your preferred communication channel: 
+     * **Billing support** : gives you access to a live chat for billing support
+     * **Phone support** : provides a phone number that you can call to receive assistance in supported languages
+     * **Community support** : provides links to community discussion groups and mailing lists that can help you find answers or troubleshoot problems
+
+
+
+## Access additional services
+
+If your support service is Enhanced or Premium, you have access to the following additional services:
+
+  * Change case priority
+  * Escalate a case
+  * Request follow-the-sun service
+
+
+
+Depending on your support service and language, you might also be eligible to receive 24/7 support. For information on availability, see [Language support and working hours](https://docs.cloud.google.com/support/docs/language-working-hours).
+
+### Change case priority
+
+If the service impact of a support case changes, you can change the priority of your case based on the urgency and the business impact. When you change the priority, Customer Care is notified and attends to your case based on the new priority. For more information, in this document, see Support case priority.
+
+You can change the case priority in the Google Cloud console. In this document, see [Manage support cases](https://docs.cloud.google.com/support/docs/customer-care-procedures#manage_a_support_case).
+
+You can also change the case priority through the [Google Cloud Support Portal](https://enterprise.google.com/supportcenter/).
+
+When changing the case priority, be sure to provide information about the reason for the change, and specifically, how the business impact has changed.
+
+### Escalate a case
+
+You can escalate your case when the support process is not working as you expected or if you're not getting the help you need.
+
+**Note:** Escalation is meant for flagging process breaks. When you are experiencing high-impact issues, escalation doesn't generally make the case proceed faster. The best solution is to ensure that the case is set to the appropriate priority for an adequate amount of time. Escalating shortly after a priority change might even cause the case resolution to be **slower**.
+
+When a support case is escalated, it is immediately assigned to an Escalation Manager and you are notified within an hour. The Escalation Manager owns the escalation until its closure. They identify and address the escalation root cause, and report preventative actions to avoid similar escalations in the future.
+
+When you're experiencing a high-impact issue, the best solution might be to set the case to the appropriate priority for an adequate amount of time, rather than escalating. For example, if the issue is severely impacting your production environment, you can increase the priority of your case to P1. For a detailed explanation, see the [When should you escalate](https://youtu.be/tUBHqx7F2U0?t=117) video.
+
+Your Technical Account Manager (TAM) can advise you on whether to change your case priority or escalate the case. Regardless, after [creating a support case](https://docs.cloud.google.com/support/docs/customer-care-procedures#create_a_support_case), you should update it with any relevant information. This ensures that whoever works on your case has a holistic understanding, and doesn't have to piece together information from a variety of sources and communication channels.
+
+#### Reasons for escalating
+
+An escalation is meant to flag issues that have resulted in increased business impact, or a breakdown of the resolution process. The following are possible reasons for escalating a case:
+
+  * To request a timezone change to align working hours (specify the exact timezone)
+  * To request an update (within an hour)
+  * To request a Google Meet video call (specify your availability)
+  * The recommended fix doesn't resolve your issue
+  * The response time is too slow
+  * The issue is not being handled according to your expectations in alignment with the business impact
+  * Other (specify the details)
+
+
+
+#### Request an escalation
+
+When requesting an escalation, quote the case number, and provide a reason for the escalation. You can make the request in the following ways:
+
+  * In the Google Cloud console, open your support case, and click **Escalate**. In this document, see [Manage support cases](https://docs.cloud.google.com/support/docs/customer-care-procedures#manage_a_support_case).
+  * Go to the [Google Cloud Support Portal](https://enterprise.google.com/supportcenter/), open your support case, and click the **Escalate case** button, which appears 30 minutes after a case is created.
+  * Contact Customer Care. In this document, see [Contact Customer Care](https://docs.cloud.google.com/support/docs/customer-care-procedures#contact_customer_care).
+  * If you have Premium Support, you can also request an escalation by contacting your TAM during [local business hours](https://docs.cloud.google.com/support/docs/language-working-hours).
+
+
+
+### Request follow-the-sun service
+
+Normally, a case is handled within one time zone by a single Customer Care specialist. Doing so allows Customer Care to offer personalized service in the time zone closest to you.
+
+Due to the high impact of Priority 1 (P1) cases, they are defaulted to _follow the sun_ , which means that the case is handed off between global teams to provide 24-hour support coverage. If you have Premium Support, you can also request this service for Priority 2 (P2) cases.
+
+**Note:** Since follow-the-sun cases have continuous support attention, you might need to provide information at all hours of the day. Ensure that you have colleagues that are available after-hours or in a different location to continue engaging with Customer Care specialists.
+
+To request follow-the-sun service for a P2 support case, contact the specialist working on your case during [local business hours](https://docs.cloud.google.com/support/docs/language-working-hours).
+
+## What's next
+
+Understand how to [configure user access](https://docs.cloud.google.com/support/docs/access-control) to manage support cases.
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-09 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 

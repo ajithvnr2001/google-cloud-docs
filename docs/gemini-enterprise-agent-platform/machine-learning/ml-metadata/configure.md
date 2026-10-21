@@ -1,0 +1,131 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/ml-metadata/configure/
+title: Configure your project's metadata store \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T06:47:11.214270+00:00
+---
+
+# Configure your project's metadata store  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/ml-metadata/configure/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Configure your project's metadata store Stay organized with collections  Save and categorize content based on your preferences. 
+
+Vertex ML Metadata lets you track and analyze the metadata produced by your machine learning (ML) workflows. The first time you run a PipelineJob or create an experiment in the Vertex SDK, Gemini Enterprise Agent Platform creates your project's MetadataStore.
+
+If you want your metadata encrypted using a [customer-managed encryption key (CMEK)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/cmek), you must create your metadata store using a CMEK _before_ you use Vertex ML Metadata to track or analyze metadata.
+
+After the metadata store has been created, the CMEK key that the metadata store uses is independent of the CMEK key used by processes that log metadata, for example, a pipeline run.
+
+## Create a metadata store that uses a CMEK
+
+Use the following instructions to create a CMEK and set up a Vertex ML Metadata metadata store that uses this CMEK.
+
+  1. [Use Cloud Key Management Service to configure a customer-managed encryption key.](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/cmek#configure-cmek)
+
+  2. Use the following REST call to create your project's default metadata store using your CMEK.
+
+Before using any of the request data, make the following replacements: 
+
+     * LOCATION_ID: Your region.
+     * PROJECT_ID: Your [project ID](https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects#identifiers). .
+     * KEY_RING: The name of the Cloud Key Management Service key ring that your encryption key is on. 
+     * KEY_NAME: The name of the encryption key that you want to use for this metadata store.
+
+HTTP method and URL: 
+    
+    POST https://LOCATION_ID-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION_ID/metadataStores?metadata_store_id=default
+
+Request JSON body: 
+    
+    {
+      "encryption_spec": {
+        "kms_key_name": "projects/PROJECT_ID/locations/LOCATION_ID/keyRings/KEY_RING/cryptoKeys/KEY_NAME"
+      },
+    }
+    
+
+To send your request, expand one of these options:
+
+#### curl (Linux, macOS, or Cloud Shell)
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) , or by using [Cloud Shell](https://docs.cloud.google.com/shell/docs), which automatically logs you into the `gcloud` CLI . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Save the request body in a file named `request.json`. Run the following command in the terminal to create or overwrite this file in the current directory: 
+    
+    cat > request.json << 'EOF'
+    {
+      "encryption_spec": {
+        "kms_key_name": "projects/PROJECT_ID/locations/LOCATION_ID/keyRings/KEY_RING/cryptoKeys/KEY_NAME"
+      },
+    }
+    EOF
+
+Then execute the following command to send your REST request: 
+    
+    curl -X POST \  
+         -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
+         -H "Content-Type: application/json; charset=utf-8" \  
+         -d @request.json \  
+         "https://LOCATION_ID-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION_ID/metadataStores?metadata_store_id=default"
+
+#### PowerShell (Windows)
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Save the request body in a file named `request.json`. Run the following command in the terminal to create or overwrite this file in the current directory: 
+    
+    @'
+    {
+      "encryption_spec": {
+        "kms_key_name": "projects/PROJECT_ID/locations/LOCATION_ID/keyRings/KEY_RING/cryptoKeys/KEY_NAME"
+      },
+    }
+    '@  | Out-File -FilePath request.json -Encoding utf8
+
+Then execute the following command to send your REST request: 
+    
+    $cred = gcloud auth print-access-token  
+    $headers = @{ "Authorization" = "Bearer $cred" }  
+      
+    Invoke-WebRequest `  
+        -Method POST `  
+        -Headers $headers `  
+        -ContentType: "application/json; charset=utf-8" `  
+        -InFile request.json `  
+        -Uri "https://LOCATION_ID-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION_ID/metadataStores?metadata_store_id=default" | Select-Object -Expand Content
+
+You should receive a JSON response similar to the following:
+    
+    {
+      "name": "projects/PROJECT_ID/locations/LOCATION_ID/operations/OPERATIONS_ID",
+      "metadata": {
+        "@type": "type.googleapis.com/google.cloud.aiplatform.v1.CreateMetadataStoreOperationMetadata",
+        "genericMetadata": {
+          "createTime": "2021-05-18T18:47:14.494997Z",
+          "updateTime": "2021-05-18T18:47:14.494997Z"
+        }
+      }
+    }
+    
+
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

@@ -1,0 +1,608 @@
+---
+url: https://docs.cloud.google.com/monitoring/mql/query-language/
+title: About the MQL language \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T09:18:37.974513+00:00
+---
+
+# About the MQL language  |  Cloud Monitoring  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/monitoring/mql/query-language/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Observability ](https://docs.cloud.google.com/docs/observability)
+  * [ Cloud Monitoring ](https://docs.cloud.google.com/monitoring/docs)
+  * [ Guides ](https://docs.cloud.google.com/monitoring/docs/monitoring-overview)
+
+
+
+Send feedback 
+
+#  About the MQL language Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Announcement:** On July 22, 2025, Google Cloud customer support for MQL ended, and MQL is no longer available in the Google Cloud console when you create charts, dashboards, and alerting policies. Existing MQL charts, dashboards, and alerting policies continue to work, and you can still create them by using the Cloud Monitoring API. For more information, see the [deprecation notice for MQL](https://docs.cloud.google.com/stackdriver/docs/deprecations/mql). 
+
+This page provides general information about Monitoring Query Language (MQL), including the following topics:
+
+  * Query shortcuts for table operations and functions.
+  * Variations on MQL `fetch` operations.
+  * Strict-form queries.
+  * Rules for matching the `resource.project_id` column.
+  * How the “edge effect” can affect ratios computed across metric types.
+  * Date formats supported by MQL.
+  * Limits on query length and complexity.
+  * Macros in MQL.
+
+
+
+For information about the structure of MQL queries, see [Examples](https://docs.cloud.google.com/monitoring/mql/examples).
+
+## Shortcuts for table operations and functions
+
+Queries usually consist of connected chains of table operations connected by pipes (`|`), each of which starts with the name of the table operation followed by a list of expressions. Expressions can contain function calls that list all of their arguments explicitly. But Monitoring Query Language allows queries to be expressed with a number of shortcuts.
+
+This section describes shortcuts for table operations, using functions as table operations, and a shortcut for value columns as arguments to functions.
+
+For a full list, see [Table operation shortcuts](https://docs.cloud.google.com/monitoring/mql/reference#shortcuts).
+
+### Shortcuts for table operations
+
+When using the `fetch`, `group_by`, and `filter` operations, you can omit the explicit table operation when the arguments are sufficient to determine the intended operation. For example, the following query:
+    
+    
+    gce_instance::compute.googleapis.com/instance/cpu/utilization
+    
+
+is equivalent to:
+    
+    
+    fetch gce_instance::compute.googleapis.com/instance/cpu/utilization
+    
+
+The following `group_by` operations are equivalent:
+    
+    
+             [zone], mean(val())
+    group_by [zone], mean(val())
+    
+
+You can omit the word `filter` if you parenthesize the filter test. For example, the following two `filter` operations are the equivalent:
+    
+    
+           (instance_name =~ 'apache.*')
+    filter instance_name =~ 'apache.*'
+    
+
+You can combine these shortcut forms in your queries. For example, the following query:
+    
+    
+    gce_instance::compute.googleapis.com/instance/cpu/utilization
+    | (instance_name =~ 'apache.*')
+    |  [zone], mean(val())
+    
+
+is equivalent to this more explicit form:
+    
+    
+    fetch gce_instance::compute.googleapis.com/instance/cpu/utilization
+    | filter instance_name =~ 'apache.*'
+    | group_by [zone], mean(val())
+    
+
+For more information on shortcuts for table operations, see [Table operation shortcuts](https://docs.cloud.google.com/monitoring/mql/reference#shortcuts) in the MQL reference.
+
+### Using a function as a table operation
+
+A table operation usually starts with the name of a table operation. But MQL allows a table operation to start with a function name instead.
+
+You can use a function name when the named function is to perform some transformation of the value columns of the input table. This replacement is a shortcut for the `group_by`, `align`, or `value` table operations, depending on the kind of function whose name is given.
+
+The general form is:
+    
+    
+    |  FUNCTION_NAME ARG, ARG ... 
+
+In the table operation, the function takes the value columns of the input table as arguments, arguments followed by any arguments for the function itself. When using a function as a table operation, you specify the arguments in the table-operation form, as a comma-separated list, rather than with the surrounding parentheses (`()`) ordinarily used with functions.
+
+The full table operation generated by expanding the shortcut depends on the kind of function:
+
+  * **`group_by`** : If you are using an [aggregating function](https://docs.cloud.google.com/monitoring/mql/reference#aggr-function-group) with a [`group_by`](https://docs.cloud.google.com/monitoring/mql/reference#group_by-tabop) operation that aggregates away all the time-series identifier columns (that is, it uses `[]` for grouping), then you can use the function as a shortcut. For example,
+        
+        | distribution powers_of(1.1)
+
+is a shortcut for
+        
+        | group_by [], distribution(val(0), powers_of(1.1))
+
+  * **`align`** : If you are using an [aligning function](https://docs.cloud.google.com/monitoring/mql/reference#aligner-group) as an argument to the [`align`](https://docs.cloud.google.com/monitoring/mql/reference#align-tabop) operation, you can use the function as a shortcut. For example,
+        
+        | delta
+
+is a shortcut for
+        
+        | align delta()
+
+Similarly,
+        
+        | rate 10m
+
+is a shortcut for
+        
+        | align rate(10m)
+
+Note that aligner functions take the input time series as an implicit argument, so the value columns are not given explicitly here.
+
+  * **`value`** : All other functions can act as shortcuts for the [`value`](https://docs.cloud.google.com/monitoring/mql/reference#value-tabop) table operation. For example,
+        
+        | mul 3.3
+
+is a shortcut for
+        
+        | value mul(val(0), 3.3)
+
+Similarly,
+        
+        | div
+
+is a shortcut for
+        
+        | value div(val(0), val(1))
+
+Note that the `div` shortcut an input table operation with two value columns and produces a table operation with one value column that is the ratio.
+
+
+
+
+### Shortcut for value-column functions
+
+You can use `.function` as a shortcut for `function(val())` if there is a single value column in the input, or as a shortcut for `function(val(0), val(1))` if there there are two value columns, and so forth.
+
+The leading dot means, “Call the following function, supplying the input-point value column (or columns) as the argument(s) to the function.”
+
+For example, `.mean` is a shortcut for `mean(val())`. The following are equivalent:
+    
+    
+    group_by [zone], .mean
+    group_by [zone], mean(val())
+    
+
+If the input table has multiple value columns, each column becomes an argument to the function in this shortcut. For example, if the input table has two value columns, then
+    
+    
+    .div
+
+is a shortcut for
+    
+    
+    div(val(0), val(1))
+
+With this shortcut, you can supply arguments that do not refer to value columns. The additional arguments are supplied after the value-column arguments. For example, if the input table has one value column, then
+    
+    
+    .div(3)
+
+is equivalent to
+    
+    
+    div(val(0), 3)
+
+## Variations on a `fetch`
+
+The `fetch` operation usually returns a time-series table named by a pair of monitored-resource and metric types. For example:
+    
+    
+    fetch gce_instance :: compute.googleapis.com/instance/cpu/utilization
+    
+
+If the metric applies only to one monitored-resource type, then you can omit the monitored resource from the query. The following query is equivalent to the previous query, because the CPU-utilization metric applies only to `gce_instance` monitored resources:
+    
+    
+    fetch compute.googleapis.com/instance/cpu/utilization
+    
+
+The `fetch` operation can specify only a monitored-resource type, with the metric specified in a subsequent [`metric`](https://docs.cloud.google.com/monitoring/mql/reference#metric-tabop) operations. For example, this example is equivalent to the previous `fetch` examples:
+    
+    
+    fetch gce_instance
+    | metric metric compute.googleapis.com/instance/cpu/utilization
+    
+
+Splitting the `fetch` this way can be useful when you want to fetch two different metrics for the same monitored resource. For example, the following query computes the number of packets per CPU-second consumed:
+    
+    
+    fetch gce_instance
+    | {
+        metric compute.googleapis.com/instance/network/received_packets_count ;
+        metric compute.googleapis.com/instance/cpu/usage_time
+      }
+    | ratio
+    
+
+Splitting the `fetch` also lets you apply filtering only to the labels of the monitored resource:
+    
+    
+    fetch gce_instance
+    | filter resource.zone =~ "asia.*"
+    | {
+        metric compute.googleapis.com/instance/network/received_packets_count ;
+        metric compute.googleapis.com/instance/cpu/usage_time
+      }
+    | ratio
+    
+
+A `fetch` that names only a monitored-resource type must be followed by a `metric` operation, perhaps with intervening `filter` operations.
+
+## Strict-form queries
+
+A strict query is one with none of the shortcuts or implicit values used in concise queries. Strict queries have the following characteristics:
+
+  * All shortcuts are replaced.
+  * All implicit arguments are made explicit.
+  * Columns are referred to by full names.
+  * New columns are explicitly given names.
+  * Any implicitly supplied alignment operations are given explicitly.
+
+
+
+Using the strict form makes the query more resilient to changes in the structure of input tables, and it can make it clearer what the query is doing. Putting a query in strict form does not make the query any more efficient.
+
+When you save a query for a chart, it is converted to strict form. The confirmation dialog for the save operation displays the strict form.
+
+Concise queries for alerting policies are not converted to strict form. Queries for alerting policies are stored as you provide them; you can use either concise or strict form.
+
+With both shortcuts and strict forms available, you might encounter equivalent MQL queries that look very different from each other. For example, the following query, which computes the number of received packets per consumed CPU second, uses many shortcuts:
+    
+    
+    gce_instance
+    | (zone =~ ".*-a")
+    | {
+        compute.googleapis.com/instance/network/received_packets_count ;
+        compute.googleapis.com/instance/cpu/usage_time
+      }
+    | join
+    | div
+    
+
+When you save this query for a chart or as part of an alerting policy, the resulting strict form query does exactly the same thing. However, the strict form might look quite different, as shown in the following example:
+    
+    
+    fetch gce_instance
+    | filter (resource.zone =~ '.*-a')
+    | { t_0:
+          metric 'compute.googleapis.com/instance/network/received_packets_count'
+          | align delta() ;
+        t_1:
+          metric 'compute.googleapis.com/instance/cpu/usage_time'
+          | align delta() }
+    | join
+    | value [v_0: div(t_0.value.received_packets_count, t_1.value.usage_time)]
+    
+
+When you edit the saved definition of the chart, the code editor displays the strict form.
+
+## Matching the `resource.project_id` column
+
+Google Cloud projects have a display name, which appears in menus but does not uniquely identify the project. A project display name might be "Monitoring demo".
+
+Projects also have two fields that act as identifiers:
+
+  * Project ID: a unique string identifier. This is often based on the display name. Project IDs are set when the project is created, usually by concatenating the elements of the project name and possibly adding digits to the end, if needed for uniqueness. A project ID might have the form "monitoring-demo" or "monitoring-demo-2349". The project ID is sometimes casually called the project name.
+  * Project number: a unique numeric identifier.
+
+
+
+Every monitored-resource type includes a `project_id` label, with a string representation of the project number of the project that owns the resource and the data about that resource.
+
+In MQL queries, you refer to this label as `resource.project_id`. The `resource.project_id` label has the project number in text form as its value, but MQL converts that value to the project ID in certain situations.
+
+In the following cases, MQL treats the value of the `resource.project_id` label as the project ID rather than the project number:
+
+  * The legend for a chart displays the project ID rather than the project number for the value of the `resource.project_id` label.
+
+  * Equality comparisons of the value of the `resource.project_id` to a string literal recognize both the project number and the project ID. For example, both the following returns true for resources owned by this project:
+
+    * `resource.project_id == "monitoring-demo"`
+    * `resource.project_id == "530310927541"`
+
+This case applies for the `==` and `!=` operators and for their function forms, `eq()` and `ne()`.
+
+  * A regular-expression match on the `resource.project_id` label work properly against either the project number or project ID. For example, both of the following expressions return `true` for resources owned by this project:
+
+    * `resource.project_id =~ "monitoring-.*"`
+    * `resource.project_id =~ ".*27541"`
+
+This case applies for the `=~` and `!~` operators and for the function form, `re_full_match`.
+
+
+
+
+For all other cases, the actual value of the `resource.project_id` label is used. For example, `concatenate("project-", resource.project_id)` results in the value `project-530310927541` and not `project-monitoring-demo`.
+
+## Ratios and the “edge effect”
+
+In general, it is best to compute ratios based on time series collected for a single metric type, by using label values. A ratio computed over two different metric types is subject to anomalies due to different sampling periods and alignment windows.
+
+For example, suppose that you have two different metric types, an RPC total count and an RPC error count, and you want to compute the ratio of error-count RPCs over total RPCs. The unsuccessful RPCs are counted in the time series of both metric types. Therefore, there is a chance that, when you align the time series, an unsuccessful RPC doesn't appear in the same alignment interval for both time series. This difference can happen for several reasons, including the following:
+
+  * Because there are two different time series recording the same event, there are two underlying counter values implementing the collection, and they aren't updated atomically.
+  * The sampling rates might differ. When the time series are aligned to a common period, the counts for a single event might appear in adjacent alignment intervals in the time series for the different metrics.
+
+
+
+The difference in the number of values in corresponding alignment intervals can lead to nonsensical `error/total` ratio values like 1/0 or 2/1.
+
+Ratios of larger numbers are less likely to result in nonsensical values. You can get larger numbers by aggregation, either by using an alignment window that is longer than the sampling period, or by grouping data for certain labels. These techniques minimize the effect of small differences in the number of points in a given interval. That is, a two-point disparity is more significant when the expected number of points in an interval is 3 than when the expected number is 300.
+
+If you are using built-in metric types, then you might have no choice but to compute ratios across metric types to get the value you need.
+
+If you are designing custom metrics that might count the same thing—like RPCs returning error status—in two different metrics, consider instead a single metric, which includes each count only once. For example, suppose that you are counting RPCs and you want to track the ratio of unsuccessful RPCs to all RPCs. To solve this problem, create a single metric type to count RPCs, and use a label to record the status of the invocation, including the "OK" status. Then each status value, error or "OK", is recorded by updating a single counter for that case.
+
+## MQL date formats
+
+MQL supports a limited number of date formats. In MQL queries, dates are expressed as one of the following:
+
+  * `d'BASE_STRING'`
+  * `D'BASE_STRING'`
+
+
+
+The BASE_STRING is a string of the form `2010/06/23-19:32:15-07:00`. The first dash (`-`), separating the date and time, can be replaced by a space. In the time component, parts of the clock time (`19:32:15`) or the timezone specifier (`-07:00`) can be dropped.
+
+The following examples are valid dates in MQL queries:
+
+  * `d'2010/06/23-19:32:15-07:00'`
+  * `d'2010/06/23 19:32:15-07:00'`
+  * `d'2010/06/23 19:32:15'`
+  * `D'2010/06/23 19:32'`
+  * `d'2010/06/23-19'`
+  * `D'2010/06/23 -07:00'`
+
+
+
+The following table lists the grammar for the BASE_STRING:
+
+Structure | Meaning  
+---|---  
+`%Y/%m/%d` | Date  
+`%Y/%m/%d %H`  
+`%Y/%m/%d-%H` | Date, hour  
+`%Y/%m/%d %H:%M`  
+`%Y/%m/%d-%H:%M` | Date, hour, minute  
+`%Y/%m/%d %H:%M:%S`  
+`%Y/%m/%d-%H:%M:%S` | Date, hour, minute, second  
+`%Y/%m/%d %H:%M:%E*S`  
+`%Y/%m/%d-%H:%M:%E*S` | Date, hour, minute, fractional second  
+`%Y/%m/%d %Ez` | Date with timezone  
+`%Y/%m/%d %H%Ez`  
+`%Y/%m/%d-%H%Ez` | Date, hour, with timezone  
+`%Y/%m/%d %H:%M%Ez`  
+`%Y/%m/%d-%H:%M%Ez` | Date, hour, minute, with timezone  
+`%Y/%m/%d %H:%M:%S%Ez`  
+`%Y/%m/%d-%H:%M:%S%Ez` | Date, hour, minute, second, with timezone  
+`%Y/%m/%d %H:%M:%E*S%Ez`  
+`%Y/%m/%d-%H:%M:%E*S%Ez` | Date, hour, minute, fractional second, with timezone  
+  
+## Length and complexity of queries
+
+Monitoring Query Language queries can be long and complex, but not without limits.
+
+  * A query text, encoded as UTF-8, is limited to 10,000 bytes.
+  * A query is limited to 2,000 language constructs; that is, the AST† complexity is limited to 2,000 nodes.
+
+
+
+† An [abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree), or AST, is a representation of source code—in this case, the MQL query string—in which nodes in the tree map to syntactic structures in the code.
+
+## MQL macros
+
+**Preview**
+
+This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+
+MQL includes a macro-definition utility. You can use the MQL macros to replace repeated operations, make complex queries more readable, and make query development easier. You can define macros for table operations and for functions.
+
+Macro definitions start with the keyword `def`.
+
+When you convert a query to [strict form](https://docs.cloud.google.com/monitoring/mql/query-language#strict-form), macro invocations are replaced with their corresponding text and the macro definitions are removed.
+
+When you save a chart query that includes macros, the query is converted to strict form, so any macros are not preserved. When you save a query for a condition in an alerting policy, the query is not converted to strict form, so macros are preserved.
+
+### Macros for table operations
+
+You can write macros to make new table operations. The general syntax looks like the following:
+    
+    
+    def MACRO_NAME [MACRO_PARAMETER[, MACRO_PARAMETER]] = MACRO_BODY ;
+    
+
+To invoke the macro, use the following syntax:
+    
+    
+    @MACRO_NAME [MACRO_ARG [, MACRO_ARG]]
+
+For example, suppose you are using the following query to fetch CPU utilization data:
+    
+    
+    fetch gce_instance::compute.googleapis.com/instance/cpu/utilization
+    | every 1m
+    | group_by [zone], mean(val())
+    
+
+The first line can be replaced with the following macro:
+    
+    
+    def my_fetch = fetch gce_instance::compute.googleapis.com/instance/cpu/utilization ;
+    
+
+To invoke the macro in the query, replace the original `fetch` as follows:
+    
+    
+    def my_fetch = fetch gce_instance::compute.googleapis.com/instance/cpu/utilization ;
+    
+    **@my_fetch**
+    | every 1m
+    | group_by [zone], mean(val())
+    
+
+You can replace the second and third lines with macros that take arguments. The macro definition lists the parameters to the macro, and in the macro body, refer to the parameters to the macro as `$MACRO_PARAMETER`. For example, you can define the following macros:
+    
+    
+    def my_every time_arg = every $time_arg ;
+    
+    def my_group label, aggr = group_by [$label], $aggr ;
+    
+
+To invoke these macros and provide the arguments, specify the arguments in a comma-delimited list in the macro invocations. The following shows the query with all the defined macros and their invocations:
+    
+    
+    def my_fetch = fetch gce_instance::compute.googleapis.com/instance/cpu/utilization ;
+    def my_every time_arg = every $time_arg ;
+    def my_group label, aggr = group_by [$label], $aggr ;
+    
+    {@my_fetch}
+    | **@my_every 1m**
+    | **@my_group zone, mean(val())**
+    
+
+Macros are not preserved when the query is converted to [strict-form](https://docs.cloud.google.com/monitoring/mql/query-language#strict-form). For example, the strict form of the previous query looks like the following:
+    
+    
+    fetch gce_instance::compute.googleapis.com/instance/cpu/utilization
+    | align mean_aligner()
+    | every 1m
+    | group_by [resource.zone],
+               [value_utilization_mean: mean(value.utilization)]
+    
+
+### Macros for functions
+
+For MQL functions, you specify any parameters in a comma-delimited list in parentheses. The parentheses distinguish a function macro from a table-operation macro. The parenthese must appear in the invocation, even if there are no arguments. Macros are not preserved when the query is converted to [strict-form](https://docs.cloud.google.com/monitoring/mql/query-language#strict-form).
+    
+    
+    def MACRO_NAME([MACRO_PARAMETER [, MACRO_PARAMETER]]) = MACRO_BODY ;
+    
+
+For example, the following query retrieves tables for two metrics, combines the two tables into one with two value columns, and computes the ratio of received bytes to total bytes for a column called `received_percent`:
+    
+    
+    {
+      fetch k8s_pod :: kubernetes.io/pod/network/received_bytes_count ;
+      fetch k8s_pod :: kubernetes.io/pod/network/sent_bytes_count
+    }
+    | join
+    | value [received_percent: **val(0) * 100 / (val(0) + val(1))**]
+    
+
+You can replace the `received_percent` computation with a macro like the following example:
+    
+    
+    def recd_percent(recd, sent) = $recd * 100 / ($recd + $sent) ;
+
+To invoke a function macro, use the following syntax:
+    
+    
+    @MACRO_NAME([MACRO_ARG[, MACRO_ARG]])
+
+When invoking a function macro with no arguments, you must specify the empty parentheses to distinguish the invocation from the invocation of a table-operation macro.
+
+The following example shows the previous query with a macro for the ratio computation:
+    
+    
+    def recd_percent(recd, sent) = $recd * 100 / ($recd + $sent) ;
+    
+    {
+      fetch k8s_pod :: kubernetes.io/pod/network/received_bytes_count ;
+      fetch k8s_pod :: kubernetes.io/pod/network/sent_bytes_count
+    }
+    | join
+    | value [received_percent: **@recd_percent(val(0), val(1))**]
+    
+
+### Macro capabilities
+
+MQL macros are _syntactic_ elements, as opposed to _textual_ elements like the macros used in the C preprocessor. This distinction means that an MQL macro body must always be a syntactically valid expression. It might not be semantically valid, which also depends on the macro arguments and on the location where the macro is expanded.
+
+Because MQL macros are syntactic, there are very few restrictions on the kind of expression they can expand to. Syntactic macros are just another way to manipulate the [abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree). The following examples show some of the things you can do with syntactic macros:
+    
+    
+    # Abbreviating a column name.
+    def my_col() = instance_name;
+    
+    # Map-valued macro.
+    def my_map(c) = [$c, @my_col()];
+    
+    # Abbreviating a string.
+    def my_zone() = 'us-central.*';
+    
+    # Abbreviating a filter expression.
+    def my_filter(f) = zone =~ @my_zone() && $f;
+    
+
+MQL also supports implicit string-literal concatenation. This feature can be very useful when writing queries that include long metric names. When a string literal and a macro argument, which also has to be a string literal, appear next to each other in the macro body, macro expansion concatenates them into a single string literal.
+
+In the following example, `gce_instance` is a [`BARE_NAME` lexical element](https://docs.cloud.google.com/monitoring/mql/reference#lexical-elements). It is automatically promoted to a string literal, which is useful in building table names:
+    
+    
+    # Builds a table name in domain 'd' with the suffix 'm'.
+    def my_table(d, m) = gce_instance::$d '/instance/' $m;
+    
+    # Table name under the given domain.
+    def my_compute_table(m) = @my_table('compute.googleapis.com', $m);
+    
+
+Putting it all together, the following query uses all of the previously defined macros:
+    
+    
+    fetch @my_compute_table('cpu/utilization')
+    | filter @my_filter(instance_name =~ 'gke.*')
+    | group_by @my_map(zone)
+    
+
+Note that macro arguments can also be arbitrary expressions, as long as they are syntactically correct. For example, the macro `my_filter` can take a Boolean expression like `instance_name =~ 'gke.*'` as its first argument.
+
+Abbreviating table operations can be very useful as well, as the following query demonstrates:
+    
+    
+    # Calculate the ratio between compute metrics 'm1' and 'm2'.
+    def my_compute_ratio m1, m2 =
+      { fetch @my_compute_table($m1); fetch @my_compute_table($m2) }
+      | join | div;
+    
+    # Use the table op macro to calculate the ratio between CPU utilization and
+    # the number of reserved cores per zone.
+    @my_compute_ratio 'cpu/utilization', 'cpu/reserved_cores' | group_by [zone]
+    
+
+Finally, function macros can behave just like regular functions; that is, they allow for function promotion where the value column or columns of the input table become the first arguments to the macro. The following example shows a variant of the previous query that uses a function macro:
+    
+    
+    # Simple arithmetic macro.
+    def my_add_two(x) = $x + 2;
+    
+    # Similar to previous query, but now using the new arithmetic macro with
+    # function argument promotion.
+    fetch @my_compute_table('cpu/utilization')
+    | filter @my_filter(instance_name =~ 'gke.*')
+    | group_by @my_map(zone), [.sum.@my_add_two]
+    
+
+### Limitations
+
+The MQL macro feature does not support the following:
+
+  * Nesting of macro definitions: you can't define a macro in the body of another macro.
+  * Recursively defined macros. No macro body can reference any macro, including itself, that is not yet fully defined.
+  * Use of macro-defined functions as table operations.
+  * Use of macro arguments as names of functions or table operations.
+  * Preservation of macros when the query is converted to [strict form](https://docs.cloud.google.com/monitoring/mql/query-language#strict-form). The macro invocations are replaced with the corresponding expressions, and the macro definitions are removed.
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-09 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 

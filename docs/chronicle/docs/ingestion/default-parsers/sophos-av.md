@@ -1,0 +1,346 @@
+---
+url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/sophos-av/
+title: Collect Sophos Endpoint logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T20:35:41.061292+00:00
+---
+
+# Collect Sophos Endpoint logs  |  Google Security Operations  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/sophos-av/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Security ](https://docs.cloud.google.com/docs/security)
+  * [ Google Security Operations ](https://docs.cloud.google.com/chronicle/docs)
+  * [ Guides ](https://docs.cloud.google.com/chronicle/docs/secops/secops-overview)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Collect Sophos Endpoint logs
+
+Supported in:
+
+Google SecOps  [ SIEM ](https://docs.cloud.google.com/chronicle/docs/secops/google-secops-siem-toc)
+
+This document explains how to collect Sophos Endpoint (formerly Sophos AV/Intercept X) logs by using the Bindplane agent. The parser transforms JSON logs into a unified data model (UDM). It extracts fields from nested JSON structures, maps them to UDM fields, and performs event categorization based on the type field, enriching the data with specific details and actions for different Sophos AV event types.
+
+## Before you begin
+
+Make sure you have the following prerequisites:
+
+  * A Google SecOps instance
+  * Windows 2016 or later, or a Linux host with `systemd`
+  * An additional Windows or Linux machine, capable of continuously running Python
+  * If running behind a proxy, ensure firewall ports are open per the Bindplane agent requirements
+  * Privileged access to Sophos Central Admin console
+
+
+
+## Get Google SecOps Ingestion Authentication File
+
+  1. Sign in to the Google SecOps console.
+  2. Go to **SIEM Settings > Collection Agents**.
+  3. Download the **Ingestion Authentication File**.
+  4. Save the file securely on the system where Bindplane will be installed.
+
+
+
+## Get Google SecOps customer ID
+
+  1. Sign in to the Google SecOps console.
+  2. Go to **SIEM Settings > Profile**.
+  3. Copy and save the **Customer ID** from the **Organization Details** section.
+
+
+
+## Install the Bindplane Agent
+
+Install the Bindplane agent on your Windows or Linux operating system according to the following instructions.
+
+### Windows Installation
+
+  1. Open the **Command Prompt** or **PowerShell** as an administrator.
+  2. Run the following command:
+         
+         msiexec /i "https://github.com/observIQ/bindplane-agent/releases/latest/download/observiq-otel-collector.msi" /quiet
+         
+
+
+
+
+### Linux Installation
+
+  1. Open a terminal with root or sudo privileges.
+  2. Run the following command:
+         
+         sudo sh -c "$(curl -fsSlL https://github.com/observiq/bindplane-agent/releases/latest/download/install_unix.sh)" install_unix.sh
+         
+
+
+
+
+### Additional Installation Resources
+
+For additional installation options, consult this [installation guide](https://docs.cloud.google.com/chronicle/docs/ingestion/use-bindplane-agent#install_the_bindplane_agent).
+
+## Configure the Bindplane Agent to ingest Syslog and send to Google SecOps
+
+  1. Access the Configuration File: 
+     * Locate the `config.yaml` file. Typically, it's in the `/etc/bindplane-agent/` directory on Linux or in the installation directory on Windows.
+     * Open the file using a text editor (for example, `nano`, `vi`, or Notepad).
+  2. Edit the `config.yaml` file as follows:
+         
+         receivers:
+           udplog:
+             # Replace the port and IP address as required
+             listen_address: "0.0.0.0:514"
+         
+         exporters:
+           chronicle/chronicle_w_labels:
+             compression: gzip
+             # Adjust the path to the credentials file you downloaded in Step 1
+             creds_file_path: '/path/to/ingestion-authentication-file.json'
+             # Replace with your actual customer ID from Step 2
+             customer_id: <customer_id>
+             endpoint: malachiteingestion-pa.googleapis.com
+             # Add optional ingestion labels for better organization
+             log_type: 'SOPHOS_AV'
+             raw_log_field: body
+             ingestion_labels:
+         
+         service:
+           pipelines:
+             logs/source0__chronicle_w_labels-0:
+               receivers:
+                 - udplog
+               exporters:
+                 - chronicle/chronicle_w_labels
+         
+
+  3. Replace the port and IP address as required in your infrastructure.
+
+  4. Replace `<customer_id>` with the actual Customer ID.
+
+  5. Update `/path/to/ingestion-authentication-file.json` to the file path where the authentication file was saved in Step 1.
+
+
+
+
+## Restart Bindplane Agent to apply the changes
+
+  1. To restart the Bindplane agent in **Linux** , run the following command:
+         
+         sudo systemctl restart bindplane-agent
+         
+
+  2. To restart the Bindplane agent in **Windows** , you can either use the **Services** console or enter the following command:
+         
+         net stop BindPlaneAgent && net start BindPlaneAgent
+         
+
+
+
+
+## Configure Sophos Central API access
+
+  1. Sign in to **Sophos Central Admin**.
+  2. Select **Global Settings > API Token Management**.
+  3. Click **Add Token** to create a new token.
+  4. Enter a token name and click **Save**. The **API Token Summary** for the provided token is displayed.
+  5. In the **API Token Summary** section, click **Copy** to copy the API access URL and headers.
+
+
+
+## Install Python on the additional machine
+
+  1. Open the web browser and go to the [Python website](https://www.python.org).
+  2. Click **Download Python** for your operating system (Windows or Mac).
+  3. Install Python.
+
+     * On Windows: 
+       1. Run the installer.
+       2. Check the box that says **Add Python to PATH**.
+       3. Click **Install Now**.
+     * On Mac:
+
+       1. Python may already be installed, if not you can install the latest version using the terminal.
+       2. Open **Terminal** and type the following command:
+    
+    python --version
+    
+
+
+
+
+## Download the Sophos integration script
+
+  1. Go to the GitHub page for [Sophos Central SIEM Integration GitHub Repository](https://github.com/sophos/Sophos-Central-SIEM-Integration).
+  2. Click the green **Code button > Download ZIP**.
+  3. Extract the ZIP file.
+
+
+
+### Set up the script configuration
+
+  1. Find and open the `config.ini` file with a text editor.
+  2. Edit the configuration file: 
+     * **API Token** : Enter the API Key copied earlier from Sophos Central.
+     * **Syslog Server Details** : Enter the details of your syslog server.
+     * **Host** : Enter the Bindplane IP address.
+     * **Port** : Enter the Bindplane port number.
+     * **Protocol** : Enter UDP (you can also use **TCP** or **TLS** depending on your setup).
+  3. Save the file.
+
+
+
+### Run the script
+
+  1. Go to the script folder.
+
+     * On Windows:
+
+       1. Press the **Windows** key and type `cmd`.
+       2. Click **Command Prompt**.
+       3. Go to the script folder:
+    
+    cd C:UsersYourNameDownloadsSophos-Central-SIEM-Integration
+    
+
+     * On macOS:
+
+       1. Go to **Applications > Utilities**.
+       2. Open **Terminal**.
+       3. Go to the script folder:
+    
+    cd /Users/YourName/Downloads/Sophos-Central-SIEM-Integration
+    
+
+  2. **Run the script:**
+
+     * Type the following command to start the script:
+           
+           python siem.py
+           
+
+**Note:** The script will start fetching logs from Sophos Central and forwarding them to your syslog server in JSON format.
+
+
+
+### Automate the script to run continuously on Windows (using Task Scheduler):
+
+  1. Open the Task Scheduler by typing **Task Scheduler** in the Start menu.
+  2. Click **Create Task**.
+  3. In the **General** tab: 
+     * Name your task; for example, `Sophos AV Log Export`.
+  4. In the **Triggers** tab: 
+     * Click **New** and set the task to run **Daily** or **At startup** (depending on your preference).
+  5. In the **Actions** tab: 
+     * Click **New** and select **Start a program**.
+     * Browse for the `python.exe` executable (usually found at `C:PythonXXpython.exe`).
+     * In the **Add arguments** field, type the path to the script; for example, `C:UsersYourNameDownloadsSophos-Central-SIEM-Integrationsiem.py`.
+  6. Click **OK** to save the task.
+
+
+
+### Automate the script to run continuously on Mac (using Cron Jobs):
+
+  1. Open the Terminal.
+  2. Type `crontab -e` and press `Enter`.
+  3. Add a new line at the end of the file:
+         
+         * * * * * /usr/bin/python /Users/YourName/Downloads/Sophos-Central-SIEM-Integration/siem.py
+         
+
+**Note:** This will run the script every minute. Adjust the time based on your needs.
+  4. Save and exit the editor.
+
+
+
+
+## UDM Mapping table
+
+Log Field | UDM Mapping | Logic  
+---|---|---  
+`s_ip` | `intermediary.ip` | Merged  
+`description` | `metadata.description` | Directly mapped  
+`name` | `metadata.description` | Directly mapped  
+`security_result.description` | `metadata.description` | Renamed/mapped  
+`end` | `metadata.event_timestamp` | Parsed as `RFC 3339`  
+`ts` | `metadata.event_timestamp` | Parsed as `RFC 3339`  
+`action` | `metadata.event_type` | Mapped: `unknown` → `NETWORK_CONNECTION`, `allowed` → `SCAN_PROCESS`, `blocked` → `SCAN_PROC...  
+`e_type` | `metadata.event_type` | Mapped values (11 total, e.g. `NonCompliant` → `SCAN_HOST`, `SavDisabled` → `SETTING_MODIFIC...  
+`type` | `metadata.event_type` | Mapped values (13 total, e.g. `Event::Endpoint::NonCompliant` → `SCAN_HOST`, `Event::Endpoin...  
+`e_type` | `metadata.product_event_type` | Directly mapped  
+`type` | `metadata.product_event_type` | Directly mapped  
+`action` | `network.direction` | Mapped: `warned` → `OUTBOUND`, `unknown` → `OUTBOUND`  
+`e_type` | `network.direction` | Mapped: `WindowsFirewall::Blocked` → `OUTBOUND`  
+`type` | `network.direction` | Mapped: `Event::Endpoint::WindowsFirewall::Blocked` → `OUTBOUND`  
+`action` | `network.ip_protocol` | Mapped: `warned` → `TCP`, `unknown` → `TCP`  
+`appSha256` | `principal.file.sha256` | Directly mapped  
+`dhost` | `principal.hostname` | Directly mapped  
+`host` | `principal.hostname` | Directly mapped  
+`source_info.ip` | `principal.ip` | Merged  
+`src_ip` | `principal.ip` | Merged  
+`id` | `principal.resource.id` | Directly mapped  
+`suser` | `principal.user.user_display_name` | Directly mapped  
+`suser` | `principal.user.userid` | Directly mapped  
+`user` | `principal.user.userid` | Directly mapped  
+`user_id` | `principal.user.userid` | Directly mapped  
+`endpoint_id_label` | `security_result.about.labels` | Merged  
+`endpoint_type_label` | `security_result.about.labels` | Merged  
+`action` | `security_result.action` | Mapped values (5 total, e.g. `allow` → `sec_action`, `unknown` → `sec_action`, `allowed` → `...  
+`sec_action` | `security_result.action` | Merged  
+`group` | `security_result.category_details` | Merged  
+`sub_cat` | `security_result.category_details` | Merged  
+`desc` | `security_result.description` | Directly mapped  
+`e_type` | `security_result.description` | Mapped: `(UpdateRebootRequired/ServiceNotRunning/NonCompliant/OutOfDate)` → `security_result...  
+`type` | `security_result.description` | Mapped: `Event::Endpoint::(UpdateRebootRequired/ServiceNotRunning/NonCompliant/OutOfDate)` →...  
+`rule` | `security_result.rule_name` | Directly mapped  
+`rules` | `security_result.rule_name` | Directly mapped  
+`severity` | `security_result.severity` | Mapped values (6 total, e.g. `low` → `LOW`, `low` → `MEDIUM`, `low` → `HIGH`)  
+`security_result.description` | `security_result.summary` | Renamed/mapped  
+`application` | `target.application` | Directly mapped  
+`endpoint_id` | `target.asset_id` | Directly mapped  
+`f_path` | `target.file.full_path` | Directly mapped  
+`f_size` | `target.file.size` | Renamed/mapped  
+`dhost` | `target.hostname` | Directly mapped  
+`host` | `target.hostname` | Directly mapped  
+`application` | `target.process.file.full_path` | Directly mapped  
+`customer_id` | `target.resource.id` | Directly mapped  
+`e_type` | `target.resource.name` | Mapped: `SavDisabled` → `Real time protection`, `OutOfDate` → `Device Registration`, `Regist...  
+`p_device` | `target.resource.name` | Directly mapped  
+`scan_name` | `target.resource.name` | Directly mapped  
+`type` | `target.resource.name` | Mapped: `Event::Endpoint::SavDisabled` → `Real time protection`, `Event::Endpoint::OutOfDate...  
+`action` | `target.resource.type` | Mapped: `blocked` → `Device`, `restricted to read-only` → `Device`  
+`e_type` | `target.resource.type` | Mapped values (5 total, e.g. `SavDisabled` → `SETTING`, `OutOfDate` → `SETTING`, `Registered...  
+`type` | `target.resource.type` | Mapped values (5 total, e.g. `Event::Endpoint::SavDisabled` → `SETTING`, `Event::Endpoint::O...  
+`url` | `target.url` | Directly mapped  
+`duid` | `target.user.userid` | Directly mapped  
+`suser` | `target.user.userid` | Directly mapped  
+`user` | `target.user.userid` | Directly mapped  
+N/A | `metadata.event_type` | Constant: `GENERIC_EVENT`  
+N/A | `metadata.product_name` | Constant: `Sophos Anti-Virus`  
+N/A | `metadata.vendor_name` | Constant: `Sophos`  
+N/A | `network.direction` | Constant: `OUTBOUND`  
+N/A | `network.ip_protocol` | Constant: `TCP`  
+N/A | `security_result.description` | Constant: `security_result.summary`  
+N/A | `security_result.severity` | Constant: `LOW`  
+N/A | `target.resource.name` | Constant: `Real time protection`  
+N/A | `target.resource.type` | Constant: `SETTING`  
+  
+## Change Log
+
+[View the Change Log for this parser](https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/sophos-av-changelog)
+
+**Need more help?** [Get answers from Community members and Google SecOps professionals.](https://security.googlecloudcommunity.com/)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

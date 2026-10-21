@@ -1,0 +1,201 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/eventarc/triggers/create/
+title: gcloud eventarc triggers create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T09:20:46.343011+00:00
+---
+
+# gcloud eventarc triggers create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/eventarc/triggers/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud eventarc triggers create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud eventarc triggers create - create an Eventarc trigger 
+SYNOPSIS
+    
+
+`gcloud eventarc triggers create` (`TRIGGER` : `--location`=`LOCATION`) `--event-filters`=[`ATTRIBUTE`=`VALUE`,…] ([`--destination-gke-cluster`=`DESTINATION_GKE_CLUSTER` `--destination-gke-service`=`DESTINATION_GKE_SERVICE` : `--destination-gke-location`=`DESTINATION_GKE_LOCATION` `--destination-gke-namespace`=`DESTINATION_GKE_NAMESPACE` `--destination-gke-path`=`DESTINATION_GKE_PATH`] | [`--destination-http-endpoint-uri`=`DESTINATION_HTTP_ENDPOINT_URI` : `--network-attachment`=`NETWORK_ATTACHMENT`] | [`--destination-run-service`=`DESTINATION_RUN_SERVICE` : `--destination-run-path`=`DESTINATION_RUN_PATH` `--destination-run-region`=`DESTINATION_RUN_REGION`] | [`--destination-workflow`=`DESTINATION_WORKFLOW` : `--destination-workflow-location`=`DESTINATION_WORKFLOW_LOCATION`]) [`--async`] [`--channel`=`CHANNEL`] [`--event-data-content-type`=`EVENT_DATA_CONTENT_TYPE`] [`--event-filters-path-pattern`=[`ATTRIBUTE`=`PATH_PATTERN`,…]] [`--labels`=[`KEY`=`VALUE`,…]] [`--max-retry-attempts`=`MAX_RETRY_ATTEMPTS`] [`--service-account`=`SERVICE_ACCOUNT`] [`--transport-topic`=`TRANSPORT_TOPIC`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     Create an Eventarc trigger. 
+EXAMPLES
+     To create a new trigger ``my-trigger`` for events of type ``google.cloud.pubsub.topic.v1.messagePublished`` with destination Cloud Run service ``my-service``, run: 
+    
+    
+    gcloud eventarc triggers create my-trigger --event-filters="type=google.cloud.pubsub.topic.v1.messagePublished" --destination-run-service=my-service
+
+POSITIONAL ARGUMENTS
+    
+
+Trigger resource - The trigger to create. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `trigger` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`TRIGGER`
+     ID of the trigger or fully qualified identifier for the trigger. 
+
+To set the `trigger` attribute: 
+
+  * provide the argument `trigger` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     The location for the Eventarc trigger, which should be either ``global`` or one of the supported regions. Alternatively, set the [eventarc/location] property. 
+
+To set the `location` attribute: 
+
+  * provide the argument `trigger` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `eventarc/location`. 
+
+
+REQUIRED FLAGS
+    
+
+`--event-filters`=[`ATTRIBUTE`=`VALUE`,…]
+     The trigger's list of filters that apply to CloudEvents attributes. This flag can be repeated to add more filters to the list. Only events that match all these filters will be sent to the destination. The filters must include the ``type`` attribute, as well as any other attributes that are expected for the chosen type. 
+Flags for specifying the destination to which events should be sent. 
+
+Exactly one of these must be specified: 
+
+Flags for specifying a GKE service destination. 
+`--destination-gke-cluster`=`DESTINATION_GKE_CLUSTER`
+     Name of the GKE cluster that the destination GKE service is running in. The cluster must be in the same project as the trigger. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--destination-gke-service`=`DESTINATION_GKE_SERVICE`
+     Name of the destination GKE service that receives the events for the trigger. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--destination-gke-location`=`DESTINATION_GKE_LOCATION`
+     Location of the GKE cluster that the destination GKE service is running in. If not specified, it is assumed that the cluster is a regional cluster and is in the same region as the trigger. 
+`--destination-gke-namespace`=`DESTINATION_GKE_NAMESPACE`
+     Namespace that the destination GKE service is running in. If not specified, the ``default`` namespace is used. 
+`--destination-gke-path`=`DESTINATION_GKE_PATH`
+     Relative path on the destination GKE service to which the events for the trigger should be sent. Examples: ``/route``, ``route``, ``route/subroute``. 
+Flags for specifying a HTTP Endpoint destination. 
+`--destination-http-endpoint-uri`=`DESTINATION_HTTP_ENDPOINT_URI`
+     URI that the destination HTTP Endpoint is connecting to. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+Flags for specifying a Network Config for the destination. 
+`--network-attachment`=`NETWORK_ATTACHMENT`
+     The network attachment associated with the trigger that allows access to the destination VPC. 
+Flags for specifying a Cloud Run fully-managed resource destination. 
+`--destination-run-service`=`DESTINATION_RUN_SERVICE`
+     Name of the Cloud Run fully-managed service that receives the events for the trigger. The service must be in the same project as the trigger. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--destination-run-path`=`DESTINATION_RUN_PATH`
+     Relative path on the destination Cloud Run service to which the events for the trigger should be sent. Examples: ``/route``, ``route``, ``route/subroute``. 
+`--destination-run-region`=`DESTINATION_RUN_REGION`
+     Region in which the destination Cloud Run service can be found. If not specified, it is assumed that the service is in the same region as the trigger. 
+Flags for specifying a Cloud Workflows destination. 
+`--destination-workflow`=`DESTINATION_WORKFLOW`
+     ID of the workflow that receives the events for the trigger. The workflow must be in the same project as the trigger. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--destination-workflow-location`=`DESTINATION_WORKFLOW_LOCATION`
+     Location that the destination workflow is running in. If not specified, it is assumed that the workflow is in the same location as the trigger. 
+OPTIONAL FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+Channel resource - The channel to use in the trigger. The channel is needed only if trigger is created for a third-party provider. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--channel` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `location` attribute: 
+
+  * provide the argument `--channel` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `eventarc/location`. 
+
+
+`--channel`=`CHANNEL`
+     ID of the channel or fully qualified identifier for the channel. 
+
+To set the `channel` attribute: 
+
+  * provide the argument `--channel` on the command line. 
+
+
+`--event-data-content-type`=`EVENT_DATA_CONTENT_TYPE`
+     Depending on the event provider, you can specify the encoding of the event data payload that will be delivered to your destination, to either be encoded in ``application/json`` or ``application/protobuf``. The default encoding is ``application/json``. Note that for custom sources or third-party providers, or for direct events from Cloud Pub/Sub, this formatting option is not supported. 
+`--event-filters-path-pattern`=[`ATTRIBUTE`=`PATH_PATTERN`,…]
+     The trigger's list of filters in path pattern format that apply to CloudEvent attributes. This flag can be repeated to add more filters to the list. Only events that match all these filters will be sent to the destination. Currently, path pattern format is only available for the resourceName attribute for Cloud Audit Log events. 
+`--labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to add. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+The retry policy configuration for the trigger. Can only be set for Cloud Run destinations. 
+`--max-retry-attempts`=`MAX_RETRY_ATTEMPTS`
+     The maximum number of delivery attempts. The only valid value is 1. 
+`--service-account`=`SERVICE_ACCOUNT`
+     The IAM service account email associated with the trigger. 
+Pub/Sub topic resource - The Cloud Pub/Sub topic to use for the trigger's transport intermediary. This feature is currently only available for triggers of event type ``google.cloud.pubsub.topic.v1.messagePublished``. The topic must be in the same project as the trigger. If not specified, a transport topic will be created. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--transport-topic` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+`--transport-topic`=`TRANSPORT_TOPIC`
+     ID of the Pub/Sub topic or fully qualified identifier for the Pub/Sub topic. 
+
+To set the `transport-topic` attribute: 
+
+  * provide the argument `--transport-topic` on the command line. 
+
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

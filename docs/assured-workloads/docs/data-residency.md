@@ -1,0 +1,58 @@
+---
+url: https://docs.cloud.google.com/assured-workloads/docs/data-residency/
+title: Data residency \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T23:34:42.161151+00:00
+---
+
+# Data residency  |  Assured Workloads  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/assured-workloads/docs/data-residency/
+
+The names for some Assured Workloads control packages have changed. For information about the name change, see [Control package renaming notice](https://docs.cloud.google.com/assured-workloads/docs/overview#name-change). 
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Security ](https://docs.cloud.google.com/docs/security)
+  * [ Assured Workloads ](https://docs.cloud.google.com/assured-workloads/docs)
+  * [ Guides ](https://docs.cloud.google.com/assured-workloads/docs/overview)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Data residency
+
+This page provides information about data residency and Assured Workloads. _Data residency_ describes where your data is stored at rest. To help comply with data residency requirements, Google Cloud gives you the ability to control where that data is stored.
+
+## Assured Workloads and data residency
+
+Organizations with data residency requirements can set up a [Resource Locations](https://docs.cloud.google.com/resource-manager/docs/organization-policy/defining-locations) organization policy constraint that restricts the location of new [in-scope resources](https://cloud.google.com/terms/data-residency) at the organization, project, or folder level of their resource hierarchy.
+
+During Assured Workloads setup, you create an Assured Workloads folder and select a control package. Later, when you create resources in the folder, Assured Workloads restricts the regions you can select for those resources based on the control package you selected earlier. See [Resource locations supported services](https://docs.cloud.google.com/resource-manager/docs/organization-policy/defining-locations-supported-services) for a list of resources that can be restricted by the Resource Locations constraint, as some resources may be out of scope and unrestrictable.
+
+To learn how to set up a new Assured Workloads folder, see [create an Assured Workloads folder](https://docs.cloud.google.com/assured-workloads/docs/create-folder).
+
+### Note on Customer Data and Service Data
+
+As noted in [Service Specific Terms](https://cloud.google.com/terms/service-terms), our data residency commitments apply to Customer Data at rest for [services](https://cloud.google.com/terms/data-residency) that can be configured for data location. As noted there, "Customer Data does not include resource identifiers, attributes, or other data labels."
+
+In addition, Google will process Customer Data in use by the configured Service (not including in any user interface) only within the country of the selected Region or within the country or countries of the selected Multi-Region (as applicable). If the selected Region or Multi-Region is located in the European Union, Google will process Customer Data in use by the configured Service only within the European Union (but not necessarily in the same country).
+
+"Service Data," also called metadata, refers to the personal data Google collects or generates during the administration of the Cloud Services. Service Data, such as billing data, is stored as noted in our [Geography and regions](https://docs.cloud.google.com/docs/geography-and-regions#internal_services) documentation.
+
+## What's next
+
+  * For more information about Google Cloud's data location commitments, see the Google Cloud [Service Specific Terms](https://cloud.google.com/terms/service-terms).
+  * To learn more about data residency in Google Cloud, see the following Identity and Security blog post: [Understanding your options for data residency, operational transparency, and privacy controls on Google Cloud](https://cloud.google.com/blog/products/identity-security/meet-data-residency-requirements-with-google-cloud).
+  * To learn more about how Google Cloud protects customer data throughout its lifecycle, and how Google Cloud provides customers with transparency and control over their data, see the following whitepaper: [Trusting your data with Google Cloud](https://services.google.com/fh/files/misc/072022_google_cloud_trust_whitepaper.pdf).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

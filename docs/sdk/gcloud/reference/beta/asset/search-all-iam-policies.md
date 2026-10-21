@@ -1,0 +1,103 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/asset/search-all-iam-policies/
+title: gcloud beta asset search-all-iam-policies \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T08:02:44.027694+00:00
+---
+
+# gcloud beta asset search-all-iam-policies  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/asset/search-all-iam-policies/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta asset search-all-iam-policies Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta asset search-all-iam-policies - searches all IAM policies within the specified accessible scope, such as a project, folder or organization 
+SYNOPSIS
+    
+
+`gcloud beta asset search-all-iam-policies` [`--query`=`QUERY`] [`--scope`=`SCOPE`] [`--filter`=`EXPRESSION`] [`--limit`=`LIMIT`] [`--page-size`=`PAGE_SIZE`] [`--sort-by`=[`FIELD`,…]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` Searches all IAM policies within the specified scope, such as a project, folder or organization. The caller must be granted the ``cloudasset.assets.searchAllIamPolicies`` permission on the desired scope. 
+
+Note: The query is compared against each IAM policy binding, including its principals, roles and conditions. The returned IAM policies, will only contain the bindings that match your query. To learn more about the IAM policy structure, see the [IAM policy documentation](https://cloud.google.com/iam/help/allow-policies/structure). 
+
+EXAMPLES
+     To search all the IAM policies that specify ``amy@mycompany.com`` within ``organizations/123456``, ensure the caller has been granted the ``cloudasset.assets.searchAllIamPolicies`` permission on the organization and run: 
+    
+    
+    gcloud beta asset search-all-iam-policies --scope='organizations/123456' --query='policy:amy@mycompany.com'
+
+FLAGS
+    
+
+`--query`=`QUERY`
+     Query statement. See [how to construct a query](https://cloud.google.com/asset-inventory/docs/searching-iam-policies#how_to_construct_a_query) for more information. If not specified or empty, it will search all the IAM policies within the specified `scope`. Note that the query string is compared against each Cloud IAM policy binding, including its principals, roles, and Cloud IAM conditions. The returned Cloud IAM policies will only contain the bindings that match your query. To learn more about the IAM policy structure, see the [IAM policy documentation](https://cloud.google.com/iam/help/allow-policies/structure). 
+
+Examples: 
+
+  * `policy:amy@gmail.com` to find IAM policy bindings that specify user ``amy@gmail.com``. 
+  * `policy:roles/compute.admin` to find IAM policy bindings that specify the Compute Admin role. 
+  * `policy:comp*` to find IAM policy bindings that contain ``comp`` as a prefix of any word in the binding. 
+  * `policy.role.permissions:storage.buckets.update` to find IAM policy bindings that specify a role containing the ``storage.buckets.update`` permission. Note that if callers haven't been granted the ``iam.roles.get`` permission for a role's included permissions, policy bindings that specify this role will be dropped from the search results. 
+  * `policy.role.permissions:upd*` to find IAM policy bindings that specify a role containing ``upd`` as a prefix of any word in the role permission. Note that if callers haven't been granted the ``iam.roles.get`` permission for a role's included permissions, policy bindings that specify this role will be dropped from the search results. 
+  * `resource:organizations/123456` to find IAM policy bindings that are set on ``organizations/123456``. 
+  * `resource=//cloudresourcemanager.googleapis.com/projects/myproject` to find IAM policy bindings that are set on the project named ``myproject``. 
+  * `Important` to find IAM policy bindings that contain ``Important`` as a word in any of the searchable fields (except for the included permissions). 
+  * `resource:(instance1 OR instance2) policy:amy` to find IAM policy bindings that are set on resources ``instance1`` or ``instance2`` and also specify user ``amy``. 
+  * `roles:roles/compute.admin` to find IAM policy bindings that specify the Compute Admin role. 
+  * `memberTypes:user` to find IAM policy bindings that contain the ``user`` principal type. 
+
+
+`--scope`=`SCOPE`
+     Scope can be a project, a folder, or an organization. The search is limited to the IAM policies within this scope. The caller must be granted the ``cloudasset.assets.searchAllIamPolicies`` permission on the desired scope. If not specified, the [configured project property](https://cloud.google.com//sdk/docs/configurations#setting_configuration_properties) will be used. To find the configured project, run: `gcloud config get project`. To change the setting, run: `gcloud config set project PROJECT_ID`. 
+
+The allowed values are: 
+
+  * `projects/{PROJECT_ID}` (e.g. ``projects/foo-bar``) 
+  * `projects/{PROJECT_NUMBER}` (e.g. ``projects/12345678``) 
+  * `folders/{FOLDER_NUMBER}` (e.g. ``folders/1234567``) 
+  * `organizations/{ORGANIZATION_NUMBER}` (e.g. ``organizations/123456``) 
+
+
+LIST COMMAND FLAGS
+    
+
+`--filter`=`EXPRESSION`
+     Apply a Boolean filter `EXPRESSION` to each resource item to be listed. If the expression evaluates `True`, then that item is listed. For more details and examples of filter expressions, run $ [gcloud topic filters](https://docs.cloud.google.com/sdk/gcloud/reference/topic/filters). This flag interacts with other flags that are applied in this order: `--flatten`, `--sort-by`, `--filter`, `--limit`. 
+`--limit`=`LIMIT`
+     Maximum number of resources to list. The default is `unlimited`. This flag interacts with other flags that are applied in this order: `--flatten`, `--sort-by`, `--filter`, `--limit`. 
+`--page-size`=`PAGE_SIZE`
+     Some services group resource list output into pages. This flag specifies the maximum number of resources per page. The default is determined by the service if it supports paging, otherwise it is `unlimited` (no paging). Paging may be applied before or after `--filter` and `--limit` depending on the service. 
+`--sort-by`=[`FIELD`,…]
+     Comma-separated list of resource field key names to sort by. The default order is ascending. Prefix a field with ``~´´ for descending order on that field. This flag interacts with other flags that are applied in this order: `--flatten`, `--sort-by`, `--filter`, `--limit`. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in beta and might change without notice. This variant is also available: 
+    
+    
+    [gcloud asset search-all-iam-policies](https://docs.cloud.google.com/sdk/gcloud/reference/asset/search-all-iam-policies)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

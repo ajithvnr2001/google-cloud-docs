@@ -1,0 +1,426 @@
+---
+url: https://docs.cloud.google.com/spanner/docs/samples/spanner-create-instance/
+title: Create instance \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T04:49:33.026538+00:00
+---
+
+# Create instance  |  Spanner  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/docs/samples/spanner-create-instance/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Samples ](https://docs.cloud.google.com/spanner/docs/samples)
+
+
+
+#  Create instance Stay organized with collections  Save and categorize content based on your preferences. 
+
+Create an instance.
+
+## Explore further
+
+For detailed documentation that includes this code sample, see the following: 
+
+  * [Create and manage instances](https://docs.cloud.google.com/spanner/docs/create-manage-instances)
+
+
+
+## Code sample
+
+### C++
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    void CreateInstance(google::cloud::spanner_admin::InstanceAdminClient client,
+                        std::string const& project_id,
+                        std::string const& instance_id,
+                        std::string const& display_name,
+                        std::string const& config_id) {
+      namespace spanner = ::google::cloud::spanner;
+      spanner::Instance in(project_id, instance_id);
+    
+      auto project = google::cloud::Project(project_id);
+      std::string config_name =
+          project.FullName() + "/instanceConfigs/" + config_id;
+      auto instance =
+          client
+              .CreateInstance(spanner::CreateInstanceRequestBuilder(in, config_name)
+                                  .SetDisplayName(display_name)
+                                  .SetNodeCount(1)
+                                  .SetLabels({{"cloud_spanner_samples", "true"}})
+                                  .Build())
+              .get();
+      if (!instance) throw std::move(instance).status();
+      std::cout << "Created instance [" << in << "]:\n" << instance->DebugString();
+    }
+
+### C#
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    using [Google.Api.Gax.ResourceNames](https://docs.cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.ResourceNames.html);
+    using [Google.Cloud.Spanner.Admin.Instance.V1](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Admin.Instance.V1/latest/Google.Cloud.Spanner.Admin.Instance.V1.html);
+    using [Google.Cloud.Spanner.Common.V1](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Common.V1/latest/Google.Cloud.Spanner.Common.V1.html);
+    using [Google.LongRunning](https://docs.cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest/Google.LongRunning.html);
+    using System;
+    using System.Threading.Tasks;
+    
+    public class CreateInstanceAsyncSample
+    {
+        public async Task<Instance> CreateInstanceAsync(
+            string projectId,
+            string instanceId,
+            Instance.Types.Edition edition = Instance.[Types](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Admin.Instance.V1/latest/Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.html).[Edition](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Admin.Instance.V1/latest/Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.Edition.html).[Standard](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Admin.Instance.V1/latest/Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.Edition.html#Google_Cloud_Spanner_Admin_Instance_V1_Instance_Types_Edition_Standard))
+        {
+            // Create the InstanceAdminClient instance.
+            [InstanceAdminClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Admin.Instance.V1/latest/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html) instanceAdminClient = await [InstanceAdminClient](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Admin.Instance.V1/latest/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html).[CreateAsync](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Admin.Instance.V1/latest/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_CreateAsync_System_Threading_CancellationToken_)();
+    
+            // Initialize request parameters.
+            Instance instance = new Instance
+            {
+                InstanceName = [InstanceName](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Common.V1/latest/Google.Cloud.Spanner.Common.V1.InstanceName.html).[FromProjectInstance](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Common.V1/latest/Google.Cloud.Spanner.Common.V1.InstanceName.html#Google_Cloud_Spanner_Common_V1_InstanceName_FromProjectInstance_System_String_System_String_)(projectId, instanceId),
+                ConfigAsInstanceConfigName = [InstanceConfigName](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Admin.Instance.V1/latest/Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfigName.html).[FromProjectInstanceConfig](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Admin.Instance.V1/latest/Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfigName.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceConfigName_FromProjectInstanceConfig_System_String_System_String_)(projectId, "regional-us-central1"),
+                DisplayName = "This is a display name.",
+                NodeCount = 1,
+                Labels =
+                {
+                    { "cloud_spanner_samples", "true" },
+                },
+                Edition = edition,
+            };
+            [ProjectName](https://docs.cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.ResourceNames.ProjectName.html) projectName = [ProjectName](https://docs.cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.ResourceNames.ProjectName.html).[FromProject](https://docs.cloud.google.com/dotnet/docs/reference/Google.Api.Gax/latest/Google.Api.Gax.ResourceNames.ProjectName.html#Google_Api_Gax_ResourceNames_ProjectName_FromProject_System_String_)(projectId);
+    
+            // Make the CreateInstance request.
+            Operation<Instance, CreateInstanceMetadata> response = await instanceAdminClient.[CreateInstanceAsync](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Admin.Instance.V1/latest/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_CreateInstanceAsync_Google_Api_Gax_ResourceNames_ProjectName_System_String_Google_Cloud_Spanner_Admin_Instance_V1_Instance_Google_Api_Gax_Grpc_CallSettings_)(projectName, instanceId, instance);
+    
+            Console.WriteLine("Waiting for the operation to finish.");
+    
+            // Poll until the returned long-running operation is complete.
+            Operation<Instance, CreateInstanceMetadata> completedResponse = await response.PollUntilCompletedAsync();
+    
+            if (completedResponse.IsFaulted)
+            {
+                Console.WriteLine($"Error while creating instance: {completedResponse.Exception}");
+                throw completedResponse.Exception;
+            }
+    
+            Console.WriteLine($"Instance created successfully.");
+    
+            return completedResponse.Result;
+        }
+    }
+
+### Go
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import (
+    	"context"
+    	"fmt"
+    	"io"
+    
+    	instance "cloud.google.com/go/spanner/admin/instance/apiv1"
+    	"cloud.google.com/go/spanner/admin/instance/apiv1/instancepb"
+    )
+    
+    func createInstance(w io.Writer, projectID, instanceID string) error {
+    	// projectID := "my-project-id"
+    	// instanceID := "my-instance"
+    	ctx := context.Background()
+    	instanceAdmin, err := instance.NewInstanceAdminClient(ctx)
+    	if err != nil {
+    		return err
+    	}
+    	defer instanceAdmin.[Close](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/spanner/latest/admin/instance/apiv1.html#cloud_google_com_go_spanner_admin_instance_apiv1_InstanceAdminClient_Close)()
+    
+    	op, err := instanceAdmin.CreateInstance(ctx, &instancepb.CreateInstanceRequest{
+    		Parent:     fmt.Sprintf("projects/%s", projectID),
+    		InstanceId: instanceID,
+    		Instance: &instancepb.Instance{
+    			Config:      fmt.Sprintf("projects/%s/instanceConfigs/%s", projectID, "regional-us-central1"),
+    			DisplayName: instanceID,
+    			NodeCount:   1,
+    			Labels:      map[string]string{"cloud_spanner_samples": "true"},
+    			Edition:     instancepb.[Instance_STANDARD](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/spanner/latest/admin/instance/apiv1/instancepb.html#cloud_google_com_go_spanner_admin_instance_apiv1_instancepb_Instance_EDITION_UNSPECIFIED_Instance_STANDARD_Instance_ENTERPRISE_Instance_ENTERPRISE_PLUS),
+    		},
+    	})
+    	if err != nil {
+    		return fmt.Errorf("could not create instance %s: %w", fmt.Sprintf("projects/%s/instances/%s", projectID, instanceID), err)
+    	}
+    	// Wait for the instance creation to finish.
+    	i, err := op.Wait(ctx)
+    	if err != nil {
+    		return fmt.Errorf("waiting for instance creation to finish failed: %w", err)
+    	}
+    	// The instance may not be ready to serve yet.
+    	if i.State != instancepb.[Instance_READY](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/spanner/latest/admin/instance/apiv1/instancepb.html#cloud_google_com_go_spanner_admin_instance_apiv1_instancepb_Instance_STATE_UNSPECIFIED_Instance_CREATING_Instance_READY) {
+    		fmt.Fprintf(w, "instance state is not READY yet. Got state %v\n", i.State)
+    	}
+    	fmt.Fprintf(w, "Created instance [%s]\n", instanceID)
+    	return nil
+    }
+    
+
+### Java
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import com.google.cloud.spanner.[Spanner](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.Spanner.html);
+    import com.google.cloud.spanner.[SpannerOptions](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.SpannerOptions.html);
+    import com.google.cloud.spanner.admin.instance.v1.[InstanceAdminClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.admin.instance.v1.InstanceAdminClient.html);
+    import com.google.spanner.admin.instance.v1.[CreateInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.instance.v1.CreateInstanceRequest.html);
+    import com.google.spanner.admin.instance.v1.[Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.instance.v1.Instance.html);
+    import com.google.spanner.admin.instance.v1.[InstanceConfigName](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.instance.v1.InstanceConfigName.html);
+    import com.google.spanner.admin.instance.v1.[ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.instance.v1.ProjectName.html);
+    import java.util.concurrent.ExecutionException;
+    
+    class CreateInstanceExample {
+    
+      static void createInstance() {
+        // TODO(developer): Replace these variables before running the sample.
+        String projectId = "my-project";
+        String instanceId = "my-instance";
+        createInstance(projectId, instanceId);
+      }
+    
+      static void createInstance(String projectId, String instanceId) {
+        // Set Instance configuration.
+        int nodeCount = 2;
+        String displayName = "Descriptive name";
+    
+        // Create an Instance object that will be used to create the instance.
+        [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.instance.v1.Instance.html) instance =
+            [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.instance.v1.Instance.html).newBuilder()
+                .setDisplayName(displayName)
+                .setEdition([Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.instance.v1.Instance.html).Edition.STANDARD)
+                .setNodeCount(nodeCount)
+                .setConfig([InstanceConfigName](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.instance.v1.InstanceConfigName.html).of(projectId, "regional-us-east4").toString())
+                .build();
+    
+        try ([Spanner](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.Spanner.html) spanner =
+                [SpannerOptions](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.SpannerOptions.html).newBuilder().setProjectId(projectId).build().getService();
+            [InstanceAdminClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.admin.instance.v1.InstanceAdminClient.html) instanceAdminClient = spanner.[createInstanceAdminClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.Spanner.html#com_google_cloud_spanner_Spanner_createInstanceAdminClient__)()) {
+    
+          // Wait for the createInstance operation to finish.
+          [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.instance.v1.Instance.html) createdInstance =
+              instanceAdminClient
+                  .createInstanceAsync(
+                      [CreateInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.instance.v1.CreateInstanceRequest.html).newBuilder()
+                          .setParent([ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.instance.v1.ProjectName.html).of(projectId).toString())
+                          .[setInstanceId](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.instance.v1.CreateInstanceRequest.Builder.html#com_google_spanner_admin_instance_v1_CreateInstanceRequest_Builder_setInstanceId_java_lang_String_)(instanceId)
+                          .setInstance(instance)
+                          .build())
+                  .get();
+          System.out.printf("Instance %s was successfully created%n", createdInstance.[getName](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.instance.v1.Instance.html#com_google_spanner_admin_instance_v1_Instance_getName__)());
+        } catch (ExecutionException e) {
+          System.out.printf(
+              "Error: Creating instance %s failed with error message %s%n",
+              instance.[getName](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.instance.v1.Instance.html#com_google_spanner_admin_instance_v1_Instance_getName__)(), e.getMessage());
+        } catch (InterruptedException e) {
+          System.out.println("Error: Waiting for createInstance operation to finish was interrupted");
+        }
+      }
+    }
+
+### Node.js
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    // Imports the Google Cloud client library
+    const {Spanner, protos} = require('[@google-cloud/spanner](https://docs.cloud.google.com/nodejs/docs/reference/spanner/latest/overview.html)');
+    
+    // Creates a client
+    const spanner = new [Spanner](https://docs.cloud.google.com/nodejs/docs/reference/spanner/latest/spanner/spanner.html)({
+      projectId: projectId,
+    });
+    
+    const instanceAdminClient = spanner.[getInstanceAdminClient](https://docs.cloud.google.com/nodejs/docs/reference/spanner/latest/spanner/spanner.html)();
+    /**
+     * TODO(developer): Uncomment the following lines before running the sample.
+     **/
+    // const projectId = 'my-project-id';
+    // const instanceId = 'my-instance';
+    
+    // Creates a new instance
+    try {
+      const instancePath = instanceAdminClient.instancePath(
+        projectId,
+        instanceId
+      );
+      console.log(`Creating instance ${instancePath}.`);
+    
+      const [operation] = await instanceAdminClient.createInstance({
+        instanceId: instanceId,
+        parent: instanceAdminClient.projectPath(projectId),
+        instance: {
+          config: instanceAdminClient.instanceConfigPath(
+            projectId,
+            'regional-us-central1'
+          ),
+          nodeCount: 1,
+          displayName: 'Display name for the instance.',
+          labels: {
+            cloud_spanner_samples: 'true',
+            created: Math.round(Date.now() / 1000).toString(), // current time
+          },
+          edition:
+            protos.google.spanner.admin.instance.v1.[Instance](https://docs.cloud.google.com/nodejs/docs/reference/spanner-api/latest/spanner-api/protos.google.spanner.admin.instance.v1.instance-class.html).[Edition](https://docs.cloud.google.com/nodejs/docs/reference/spanner-api/latest/spanner-api/protos.google.spanner.admin.instance.v1.instance.edition.html).[STANDARD](https://docs.cloud.google.com/nodejs/docs/reference/spanner-api/latest/spanner-api/protos.google.spanner.admin.instance.v1.instance.edition.html), //optional
+        },
+      });
+    
+      console.log(`Waiting for operation on ${instanceId} to complete...`);
+      await operation.promise();
+    
+      console.log(`Created instance ${instanceId}.`);
+    } catch (err) {
+      console.error('ERROR:', err);
+    } finally {
+      spanner.close();
+    }
+
+### PHP
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    use Google\Cloud\Spanner\Admin\Instance\V1\Client\InstanceAdminClient;
+    use Google\Cloud\Spanner\Admin\Instance\V1\CreateInstanceRequest;
+    use Google\Cloud\Spanner\Admin\Instance\V1\Instance;
+    
+    /**
+     * Creates an instance.
+     * Example:
+     * ```
+     * create_instance($projectId, $instanceId);
+     * ```
+     *
+     * @param string $projectId  The Spanner project ID.
+     * @param string $instanceId The Spanner instance ID.
+     */
+    function create_instance(string $projectId, string $instanceId): void
+    {
+        $instanceAdminClient = new InstanceAdminClient();
+        $parent = InstanceAdminClient::projectName($projectId);
+        $instanceName = InstanceAdminClient::instanceName($projectId, $instanceId);
+        $configName = $instanceAdminClient->instanceConfigName($projectId, 'regional-us-central1');
+        $instance = (new Instance())
+            ->setName($instanceName)
+            ->setConfig($configName)
+            ->setDisplayName('dispName')
+            ->setNodeCount(1);
+    
+        $operation = $instanceAdminClient->createInstance(
+            (new CreateInstanceRequest())
+            ->setParent($parent)
+            ->setInstanceId($instanceId)
+            ->setInstance($instance)
+        );
+    
+        print('Waiting for operation to complete...' . PHP_EOL);
+        $operation->pollUntilComplete();
+    
+        printf('Created instance %s' . PHP_EOL, $instanceId);
+    }
+
+### Python
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    def create_instance(instance_id):
+        """Creates an instance."""
+        spanner_client = spanner.Client()
+    
+        config_name = "{}/instanceConfigs/regional-us-central1".format(
+            spanner_client.project_name
+        )
+    
+        instance = spanner_client.instance(
+            instance_id,
+            configuration_name=config_name,
+            display_name="This is a display name.",
+            node_count=1,
+            labels={
+                "cloud_spanner_samples": "true",
+                "sample_name": "snippets-create_instance-explicit",
+                "created": str(int(time.time())),
+            },
+        )
+    
+        operation = instance.create()
+    
+        print("Waiting for operation to complete...")
+        operation.result(OPERATION_TIMEOUT_SECONDS)
+    
+        print("Created instance {}".format(instance_id))
+    
+    
+
+### Ruby
+
+To learn how to install and use the client library for Spanner, see [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries). 
+
+To authenticate to Spanner, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    # project_id  = "Your Google Cloud project ID"
+    # instance_id = "Your Spanner instance ID"
+    # instance_config_id = "Your Spanner InstanceConfig ID"
+    
+    require "google/cloud/spanner"
+    require "google/cloud/spanner/admin/instance"
+    
+    instance_admin_client = Google::Cloud::Spanner::Admin::Instance.instance_admin
+    
+    project_path = instance_admin_client.project_path project: project_id
+    instance_path = instance_admin_client.instance_path project: project_id, instance: instance_id
+    instance_config_path = instance_admin_client.instance_config_path project: project_id, instance_config: instance_config_id
+    
+    job = instance_admin_client.create_instance parent: project_path,
+                                                instance_id: instance_id,
+                                                instance: { name: instance_path,
+                                                            config: instance_config_path,
+                                                            display_name: instance_id,
+                                                            node_count: 2,
+                                                            labels: { cloud_spanner_samples: "true" } }
+    
+    puts "Waiting for create instance operation to complete"
+    
+    job.wait_until_done!
+    
+    if job.error?
+      puts job.error
+    else
+      puts "Created instance #{instance_id}"
+    end
+
+## What's next
+
+To search and filter code samples for other Google Cloud products, see the [Google Cloud sample browser](https://docs.cloud.google.com/docs/samples?product=cloudspanner). 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],[],[],[]] 

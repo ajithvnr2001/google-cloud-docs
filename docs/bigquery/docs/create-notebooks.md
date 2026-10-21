@@ -1,0 +1,420 @@
+---
+url: https://docs.cloud.google.com/bigquery/docs/create-notebooks/
+title: Create notebooks \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T07:12:02.012874+00:00
+---
+
+# Create notebooks  |  BigQuery  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/bigquery/docs/create-notebooks/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Data analytics ](https://docs.cloud.google.com/docs/data)
+  * [ BigQuery ](https://docs.cloud.google.com/bigquery/docs)
+  * [ Guides ](https://docs.cloud.google.com/bigquery/docs/introduction)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Create notebooks
+
+This document describes how to create [Colab Enterprise notebooks in BigQuery](https://docs.cloud.google.com/bigquery/docs/programmatic-analysis). Notebooks are [BigQuery Studio](https://docs.cloud.google.com/bigquery/docs/query-overview#bigquery-studio) code assets powered by [Dataform](https://docs.cloud.google.com/dataform/docs/overview).
+
+## Before you begin
+
+  1. Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. 
+  2. In the Google Cloud console, on the project selector page, select or create a Google Cloud project.
+
+**Roles required to select or create a project**
+
+     * **Select a project** : Selecting a project doesn't require a specific IAM role—you can select any project that you've been granted a role on. 
+     * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.
+
+[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)
+
+  3. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). 
+
+  4. Enable the BigQuery, Dataform, and Compute Engine APIs, if any are not already enabled. 
+
+**Roles required to enable APIs**
+
+To enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+[Enable the APIs](https://console.cloud.google.com/apis/enableflow?apiid=bigquery.googleapis.com,dataform.googleapis.com,compute.googleapis.com)
+
+  5. In the Google Cloud console, on the project selector page, select or create a Google Cloud project.
+
+**Roles required to select or create a project**
+
+     * **Select a project** : Selecting a project doesn't require a specific IAM role—you can select any project that you've been granted a role on. 
+     * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.
+
+[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)
+
+  6. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). 
+
+  7. Enable the BigQuery, Dataform, and Compute Engine APIs, if any are not already enabled. 
+
+**Roles required to enable APIs**
+
+To enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+[Enable the APIs](https://console.cloud.google.com/apis/enableflow?apiid=bigquery.googleapis.com,dataform.googleapis.com,compute.googleapis.com)
+
+
+
+
+### Required permissions
+
+Set the appropriate permissions to create, edit, or view notebooks.
+
+All users with the [Dataform Admin role](https://docs.cloud.google.com/dataform/docs/access-control#dataform.admin) (`roles/dataform.admin`) have owner access to all notebooks created in the project.
+
+For more information about BigQuery Identity and Access Management (IAM), see [Access control with IAM](https://docs.cloud.google.com/bigquery/docs/access-control).
+
+#### Permissions to create notebooks
+
+To get the permissions that you need to create and run notebooks, ask your administrator to grant you the [BigQuery Studio User ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.studioUser) (`roles/bigquery.studioUser`) IAM role on the project. For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+You might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
+
+**Note:** Users assigned the Code Creator role in a project can list the names of code assets in that project by using the Dataform API or the Dataform command-line interface (CLI).
+
+You might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). To see the exact permissions that are required to create and run notebooks, expand the **Required permissions** section:
+
+#### Required permissions
+
+  * `bigquery.config.get`
+  * `bigquery.jobs.create`
+  * `bigquery.readsessions.create`
+  * `bigquery.readsessions.getData`
+  * `bigquery.readsessions.update`
+  * `resourcemanager.projects.get`
+  * `resourcemanager.projects.list`
+  * `dataform.locations.get`
+  * `dataform.locations.list`
+  * `dataform.repositories.create`
+  * `dataform.repositories.list`
+  * `dataform.collections.create`
+  * `dataform.collections.list`
+  * `aiplatform.notebookRuntimeTemplates.apply`
+  * `aiplatform.notebookRuntimeTemplates.get`
+  * `aiplatform.notebookRuntimeTemplates.list`
+  * `aiplatform.notebookRuntimeTemplates.getIamPolicy`
+  * `aiplatform.notebookRuntimes.assign`
+  * `aiplatform.notebookRuntimes.get`
+  * `aiplatform.notebookRuntimes.list`
+  * `aiplatform.operations.list`
+
+
+
+**Note:** When you create a notebook, BigQuery grants you the [Dataform Admin role](https://docs.cloud.google.com/iam/docs/roles-permissions/dataform#dataform.admin) (`roles/dataform.admin`) on that notebook. All users with the Dataform Admin role granted on the Google Cloud project have owner access to all the notebooks created in the project. To override this behavior, see [Grant a specific role upon resource creation](https://docs.cloud.google.com/dataform/docs/access-control#grant-specific-role).
+
+#### Roles to edit notebooks
+
+To edit and run notebooks, you need the following IAM roles:
+
+  * [BigQuery Job User](https://docs.cloud.google.com/bigquery/docs/access-control#bigquery.jobUser) (`roles/bigquery.jobUser`)
+  * [BigQuery Read Session User](https://docs.cloud.google.com/bigquery/docs/access-control#bigquery.readSessionUser) (`roles/bigquery.readSessionUser`)
+  * [Notebook Runtime User](https://docs.cloud.google.com/vertex-ai/docs/general/access-control#aiplatform.notebookRuntimeUser) (`roles/aiplatform.notebookRuntimeUser`)
+  * [Code Editor](https://docs.cloud.google.com/dataform/docs/access-control#dataform.codeEditor) (`roles/dataform.codeEditor`)
+
+
+
+#### Roles to view notebooks
+
+To view and run notebooks, you need the following IAM roles:
+
+  * [BigQuery Job User](https://docs.cloud.google.com/bigquery/docs/access-control#bigquery.jobUser) (`roles/bigquery.jobUser`)
+  * [BigQuery Read Session User](https://docs.cloud.google.com/bigquery/docs/access-control#bigquery.readSessionUser) (`roles/bigquery.readSessionUser`)
+  * [Notebook Runtime User](https://docs.cloud.google.com/vertex-ai/docs/general/access-control#aiplatform.notebookRuntimeUser) (`roles/aiplatform.notebookRuntimeUser`)
+  * [Code Viewer](https://docs.cloud.google.com/dataform/docs/access-control#dataform.codeViewer) (`roles/dataform.codeViewer`)
+
+
+
+#### Security considerations for notebooks
+
+Because code assets in BigQuery are powered by Dataform, you should consider the following security implications for users with access to these assets:
+
+  * Visibility for code assets is governed by project-level Dataform permissions. Users with the `dataform.repositories.list` permission—which is included in standard BigQuery roles such as [BigQuery Job User](https://docs.cloud.google.com/bigquery/docs/access-control#bigquery.jobUser), [BigQuery Studio User](https://docs.cloud.google.com/bigquery/docs/access-control#bigquery.studioUser), and [BigQuery User](https://docs.cloud.google.com/bigquery/docs/access-control#bigquery.user)—can see all code assets in the **Explorer** panel of the Google Cloud project, regardless of whether they created these assets or these assets were shared with them. To restrict visibility, you can create [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) that exclude the `dataform.repositories.list` permission.
+  * Any secrets shared with the Dataform service agent can potentially be accessed by users who can edit these assets. To secure your credentials, restrict creation and edit access to trusted users, and limit the secrets accessible to the Dataform service agent. For more information, see [Secrets access during package installation](https://docs.cloud.google.com/dataform/docs/access-control#secret-access-risk).
+
+
+
+For more information, see [Security considerations for Dataform permissions](https://docs.cloud.google.com/dataform/docs/access-control#security-considerations-permissions).
+
+## Create notebooks
+
+Use the following sections to learn how to create a notebook.
+
+### Set the default region for code assets
+
+All new code assets in your Google Cloud project use a default region. After the asset is created, you can't change its region.
+
+**Important:** If you change the region while creating a code asset, that region becomes the default for all subsequent code assets. Existing code assets are not affected.
+
+To set the default region for new code assets, do the following:
+
+  1. Go to the **BigQuery** page.
+
+[Go to BigQuery](https://console.cloud.google.com/bigquery)
+
+  2. In the left pane, click folder **Files** to open the file browser:
+
+![Click **Files** to open the file browser.](https://docs.cloud.google.com/static/bigquery/images/select-file-browser.png)
+
+  3. Next to the project name, click more_vert **View files panel actions** > **Switch code region**.
+
+  4. Select the code region that you want to use as a default.
+
+  5. Click **Save**.
+
+
+
+
+For a list of supported regions, see [BigQuery Studio locations](https://docs.cloud.google.com/bigquery/docs/locations#bqstudio-loc).
+
+### Create a notebook using the notebook gallery
+
+The notebook gallery in the Google Cloud console for BigQuery is your central hub for discovering and using prebuilt notebook templates.
+
+To create a notebook from a template in the notebook gallery, follow these steps:
+
+  1. In the Google Cloud console, go to **BigQuery Studio**.
+
+[Go to BigQuery Studio](https://console.cloud.google.com/bigquery)
+
+  2. To open the gallery, in the tab bar of the editor pane, click the arrow_drop_down arrow next to add_box **SQL query** , and then click **Notebook > All templates**.
+
+  3. In the notebook gallery, select a template. For example, you can select **Getting started with BigQuery DataFrames**.
+
+The new notebook opens, containing cells that show example queries against the `bigquery-public-data.ml_datasets.penguins` public dataset.
+
+  4. Alternatively, you can click the arrow_drop_down arrow next to add_box **SQL query** , and then click **Notebook > Empty notebook**, **Notebook > BigQuery template**, or **Notebook > Spark template** to open these specific templates.
+
+  5. To create a runnable notebook from the template, click **Use this template**.
+
+  6. Optional: To view notebook details or the version history, add new comments, or reply to or get a link to an existing comment, use the following toolbar:
+
+![Toolbar adjacent to the notebook.](https://docs.cloud.google.com/static/bigquery/images/editor-toolbar.png)
+
+The **Comments** toolbar feature is in [Preview](https://cloud.google.com/products#product-launch-stages). To provide feedback or request support for this feature, send an email to [bqui-workspace-pod@google.com](mailto:bqui-workspace-pod@google.com).
+
+  7. Optional: In the **Comments** toolbar, you can use the **Reference** panel to preview the schema details of tables, snapshots, views, or materialized views, or open them in a new tab. The panel also has a list of recent and starred resources.
+
+
+
+
+### Create a notebook from a table
+
+To create a notebook containing a default query for a specific table, follow these steps:
+
+  1. In the Google Cloud console, go to the **BigQuery** page.
+
+[Go to BigQuery](https://console.cloud.google.com/bigquery)
+
+  2. In the left pane, click explore **Explorer** :
+
+![Highlighted button for the Explorer pane.](https://docs.cloud.google.com/static/bigquery/images/explorer-tab.png)
+
+If you don't see the left pane, click last_page **Expand left pane** to open the pane.
+
+  3. In the **Explorer** pane, expand your project, click **Datasets** , and then click your dataset.
+
+  4. Click **Overview > Tables**, and find the table that you want to query.
+
+  5. Next to the table, click more_vert **Actions** , and then click **Open in > Python notebook**.
+
+The new notebook opens, containing cells that show example queries against the selected table.
+
+
+
+
+### Create a notebook to explore the result set of a query
+
+To create a notebook to explore the result set of a query, follow these steps:
+
+  1. In the Google Cloud console, go to the **BigQuery** page.
+
+[Go to BigQuery](https://console.cloud.google.com/bigquery)
+
+  2. In the editor pane, run a query that generates a query result.
+
+  3. In the **Query results** pane, click **Open in > Notebook**.
+
+The new notebook opens, containing cells with code to return the query SQL and the query results.
+
+
+
+
+### Create a notebook from an existing notebook
+
+To open any version of an existing notebook as a new notebook, follow these steps:
+
+  1. In the Google Cloud console, go to the **BigQuery** page.
+
+[Go to BigQuery](https://console.cloud.google.com/bigquery)
+
+  2. In the left pane, click explore **Explorer** :
+
+![Highlighted button for the Explorer pane.](https://docs.cloud.google.com/static/bigquery/images/explorer-tab.png)
+
+  3. In the **Explorer** pane, expand your project and click **Notebooks**.
+
+  4. Select a notebook.
+
+  5. Click schedule **Version history**.
+
+  6. Click more_vert **View actions** next to a notebook version and then click **Open as new Python notebook**.
+
+A copy of the notebook is opened as a new notebook.
+
+
+
+
+## Upload notebooks
+
+You can upload a local notebook to use it in BigQuery Studio. The uploaded notebook is then visible in the BigQuery page of the Google Cloud console.
+
+To upload a notebook, follow these steps:
+
+  1. In the Google Cloud console, go to the **BigQuery** page.
+
+[Go to BigQuery](https://console.cloud.google.com/bigquery)
+
+  2. In the left pane, click explore **Explorer** :
+
+![Highlighted button for the Explorer pane.](https://docs.cloud.google.com/static/bigquery/images/explorer-tab.png)
+
+  3. In the **Explorer** pane, expand your project, and then do one of the following:
+
+     * Next to **Notebooks** , click more_vert **View actions** > **Upload notebook**.
+     * Next to the Google Cloud project name, click more_vert **View actions** > **Upload to project** > **Notebook**.
+  4. In the **Upload Notebook** dialog, in the **Notebook** field, click **Browse** , and then select the notebook that you want to upload.
+
+  5. Optional: In the **Notebook name** field, edit the name of the notebook.
+
+  6. In the **Region** field, select the region where you want to upload your notebook.
+
+  7. Click **Upload**.
+
+
+
+
+Your notebook can be accessed through the **Explorer** pane.
+
+## Connect to a runtime
+
+Use the following sections to learn how to connect a notebook to an [Gemini Enterprise Agent Platform runtime](https://docs.cloud.google.com/colab/docs/create-runtime). A runtime is a compute resource that runs the code in your notebook. The runtime must be in the same region as your notebook.
+
+For more information about runtimes, see [Runtimes and runtime templates](https://docs.cloud.google.com/colab/docs/runtimes).
+
+**Note:** If you use [VPC Service Controls](https://docs.cloud.google.com/vpc-service-controls/docs/overview), make sure you have configured [Private Google Access with VPC Service Controls](https://docs.cloud.google.com/vpc-service-controls/docs/private-connectivity) before connecting to a runtime. Otherwise, the service returns the error `Failed to connect to Runtime Network projects/_projectid_ /global/networks/default' was not found.`
+
+### Connect to the default runtime
+
+The default runtime is a preset runtime that requires minimal setup.
+
+To connect to the default runtime, follow these steps:
+
+  1. In the Google Cloud console, go to the **BigQuery** page.
+
+[Go to BigQuery](https://console.cloud.google.com/bigquery)
+
+  2. In the left pane, click explore **Explorer** :
+
+![Highlighted button for the Explorer pane.](https://docs.cloud.google.com/static/bigquery/images/explorer-tab.png)
+
+  3. In the **Explorer** pane, expand your project and click **Notebooks**.
+
+  4. Click the name of a notebook to open it.
+
+  5. In the notebook, click **Connect** , or run any cell in the notebook.
+
+It might take several minutes to connect to the default runtime if you don't already have an active runtime.
+
+
+
+
+### Connect to a non-default runtime
+
+If you want to use a runtime other than the default runtime, you must first [create that additional runtime in Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/notebooks/colab/create-runtime).
+
+To connect to non-default runtime, follow these steps:
+
+  1. In the Google Cloud console, go to the **BigQuery** page.
+
+[Go to BigQuery](https://console.cloud.google.com/bigquery)
+
+  2. In the left pane, click explore **Explorer** :
+
+![Highlighted button for the Explorer pane.](https://docs.cloud.google.com/static/bigquery/images/explorer-tab.png)
+
+  3. In the **Explorer** pane, expand your project and click **Notebooks**.
+
+  4. Click the name of a notebook to open it.
+
+  5. In the notebook, click the arrow_drop_down drop-down next to **Connect** and then click **Connect to a runtime**.
+
+  6. Click **Connect to an existing runtime**.
+
+  7. In **Runtimes** , select the runtime to use. The runtime must be in the same location as the notebook.
+
+  8. Click **Connect**.
+
+
+
+
+### Connect to a new runtime
+
+To connect to a new runtime, follow these steps:
+
+  1. In the Google Cloud console, go to the **BigQuery** page.
+
+[Go to BigQuery](https://console.cloud.google.com/bigquery)
+
+  2. In the left pane, click explore **Explorer** :
+
+![Highlighted button for the Explorer pane.](https://docs.cloud.google.com/static/bigquery/images/explorer-tab.png)
+
+  3. In the **Explorer** pane, expand your project and click **Notebooks**.
+
+  4. Click the name of a notebook to open it.
+
+  5. In the notebook, click the arrow_drop_down drop-down next to **Connect** and then click **Connect to a runtime**.
+
+  6. Click **Create new runtime**.
+
+  7. In **Runtime Template** , select the [Agent Platform runtime template](https://docs.cloud.google.com/colab/docs/create-runtime-template) to use.
+
+  8. In **Runtime name** , type a name for the runtime.
+
+  9. Click **Connect**.
+
+
+
+
+## Troubleshooting
+
+For more information, see [Troubleshoot Colab Enterprise](https://docs.cloud.google.com/colab/docs/troubleshooting).
+
+## What's next
+
+  * Learn how to [manage notebooks](https://docs.cloud.google.com/bigquery/docs/manage-notebooks).
+  * Learn how to [schedule notebooks](https://docs.cloud.google.com/bigquery/docs/orchestrate-notebooks).
+  * Learn how to [access notebook files in a BigQuery Studio Git repository mount](https://docs.cloud.google.com/bigquery/docs/git-repositories#notebook-mount).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

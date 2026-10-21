@@ -1,0 +1,124 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/resource-config/bulk-export/
+title: gcloud alpha resource-config bulk-export \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T22:07:45.175063+00:00
+---
+
+# gcloud alpha resource-config bulk-export  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/resource-config/bulk-export/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha resource-config bulk-export Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha resource-config bulk-export - export configurations for all assets within the specified project, organization, or folder 
+SYNOPSIS
+    
+
+`gcloud alpha resource-config bulk-export` [`--on-error`=`ON_ERROR`; default="ignore"] [`--path`=`PATH`; default="-"] [`--resource-format`=`RESOURCE_FORMAT`] [`--folder`=`FOLDER` | `--organization`=`ORGANIZATION` | `--project`=`PROJECT`] [`--storage-path`=`STORAGE_PATH` | `--resource-types`=[`RESOURCE_TYPE`,…] | `--resource-types-file`=`RESOURCE_TYPE_FILE`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` Export configurations for all assets within the specified project, organization, or folder. 
+EXAMPLES
+     To export all resources in a project to a local directory, run: 
+    
+    
+    gcloud alpha resource-config bulk-export --path=/path/to/dir/
+
+To export all resources in a organization to stdout, run: 
+    
+    
+    gcloud alpha resource-config bulk-export --organization=12345 --path=-
+
+To export all resources in a folder to stdout in Terraform format, run: 
+    
+    
+    gcloud alpha resource-config bulk-export --folder=12345 --resource-format=terraform
+
+To export all resources in a project to stdout, using a custom Google Storage bucket for interim results, run: 
+    
+    
+    gcloud alpha resource-config bulk-export --project=my-project --storage-path='gs://your-bucket-name/your/prefix/path'
+
+To export all Storage Bucket and Compute Instances resources in project my-project to stdout, run: 
+    
+    
+    gcloud alpha resource-config bulk-export --project=my-project --resource-types=storage.cnrm.cloud.google.com/StorageBucket,ComputeInstance
+
+To export all resource types in file 'types-file.txt' in project my-project to stdout, run: 
+    
+    
+    gcloud alpha resource-config bulk-export --project=my-project --resource-types-file=types-file.txt
+
+FLAGS
+    
+
+`--on-error`=`ON_ERROR`; default="ignore"
+     Determines behavior when a recoverable error is encountered while exporting a resource. To stop execution when encountering an error, specify "halt". To log errors when encountered and continue the export, specify "continue". To continue when errors are encountered without logging, specify "ignore". `ON_ERROR` must be one of: `continue`, `halt`, `ignore`. 
+`--path`=`PATH`; default="-"
+     Path of the directory or file to output configuration(s). To output configurations to stdout, specify "--path=-". 
+`--resource-format`=`RESOURCE_FORMAT`
+     Format of the configuration to export. Available configuration formats are Kubernetes Resource Model YAML (krm) or Terraform HCL (terraform). Command defaults to "krm". `RESOURCE_FORMAT` must be one of: `krm`, `terraform`. 
+`RESOURCE PARENT FLAG` \- specify one of the following to determine the scope of exported resources. 
+
+At most one of these can be specified: 
+
+`--folder`=`FOLDER`
+     Folder ID 
+`--organization`=`ORGANIZATION`
+     Organization ID 
+`--project`=`PROJECT`
+     Project ID 
+Select `storage-path` if you want to specify the Google Cloud Storage bucket bulk-export should use for Cloud Asset Inventory Export. Alternatively, you can provide a `RESOURCE TYPE FILTER` to filter resources. Filtering resources `does not` use Google Cloud Storage to export resources. 
+
+At most one of these can be specified: 
+
+`--storage-path`=`STORAGE_PATH`
+     Google Cloud Storage path where a Cloud Asset Inventory export will be stored, example: `gs://your-bucket-name/your/prefix/path`
+Or at most one of these can be specified: 
+
+`RESOURCE TYPE FILTERS` \- specify resource types to export. 
+`--resource-types`=[`RESOURCE_TYPE`,…]
+     List of Config Connector KRM Kinds to export. For a full list of supported resource types for a given parent scope run: 
+    
+    
+    [gcloud alpha resource-config list-resource-types](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/resource-config/list-resource-types) --[project|organization|folder]=<PARENT>
+
+`--resource-types-file`=`RESOURCE_TYPE_FILE`
+     A comma (',') or newline ('\n') separated file containing the list of Config Connector KRM Kinds to export. For a full list of supported resource types for a given parent scope run: 
+    
+    
+    [gcloud alpha resource-config list-resource-types](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/resource-config/list-resource-types) --[project|organization|folder]=<PARENT>
+
+Use a full or relative path to a local file containing the value of resource_types_file. 
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. This variant is also available: 
+    
+    
+    [gcloud beta resource-config bulk-export](https://docs.cloud.google.com/sdk/gcloud/reference/beta/resource-config/bulk-export)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

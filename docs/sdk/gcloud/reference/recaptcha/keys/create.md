@@ -1,0 +1,228 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/recaptcha/keys/create/
+title: gcloud recaptcha keys create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T04:04:57.770071+00:00
+---
+
+# gcloud recaptcha keys create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/recaptcha/keys/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud recaptcha keys create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud recaptcha keys create - create a Key 
+SYNOPSIS
+    
+
+`gcloud recaptcha keys create` `--display-name`=`DISPLAY_NAME` (`--express` | `--universal` | [`--android` (`--allow-all-package-names` | `--package-names`=[`PACKAGE_NAMES`,…]) : `--support-non-google-app-store-distribution`] | [`--ios` (`--allow-all-bundle-ids` | `--bundle-ids`=[`BUNDLE_IDS`,…]) : `--key-id`=`KEY_ID` `--private-key-file`=`PATH_TO_FILE` `--team-id`=`TEAM_ID`] | [`--web` (`--allow-all-domains` | `--domains`=[`DOMAINS`,…]) : `--allow-amp-traffic` `--integration-type`=`INTEGRATION_TYPE` `--security-preference`=`SECURITY_PREFERENCE` `--testing-challenge`=`TESTING_CHALLENGE` [`--default-score-threshold`=`DEFAULT_SCORE_THRESHOLD` : `--action-score-thresholds`=[`ACTION_SCORE_THRESHOLDS`,…]]]) [`--labels`=[`KEY`=`VALUE`,…]] [`--testing-score`=`TESTING_SCORE`] [`--waf-service`=`WAF_SERVICE` : `--waf-feature`=`WAF_FEATURE`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     Create a reCAPTCHA Key. 
+EXAMPLES
+     To create a new reCAPTCHA key for websites showing no CAPTCHA challenge, run: 
+    
+    
+    gcloud recaptcha keys create --display-name=test-key-name --web --allow-all-domains --integration-type=score
+
+REQUIRED FLAGS
+    
+
+`--display-name`=`DISPLAY_NAME`
+     A human-readable name for the key. Typically a site or app name. 
+Exactly one of these must be specified: 
+
+Options for the creation of a site key for Express. 
+`--express`
+     Creates a Key configured for Express assessments. 
+Options for the creation of a Universal site key. 
+`--universal`
+     Creates a Universal site key. 
+Options for the creation of a site key for Android. 
+`--android`
+     Creates a Key configured for Android devices. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--support-non-google-app-store-distribution`
+     If set, this key can be used in an Android application that is available for download in app stores other than the Google Play Store. 
+
+This setting allows your key to accept traffic from devices without Google Mobile Services (GMS) installed. 
+
+Exactly one of these must be specified: 
+
+`--allow-all-package-names`
+     If set, package name enforcement will NOT be enabled on this key. 
+`--package-names`=[`PACKAGE_NAMES`,…]
+     Android package names of apps allowed to use the key. 
+
+Example of a valid package name: 'com.companyname.appname' 
+
+Options for the creation of a site key for iOS. 
+`--ios`
+     Creates a Key configured for iOS devices. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+Exactly one of these must be specified: 
+
+`--allow-all-bundle-ids`
+     If set, bundle id enforcement will NOT be enabled on this key. 
+`--bundle-ids`=[`BUNDLE_IDS`,…]
+     iOS bundle ids of apps allowed to use the key. 
+
+Example of a valid bundle id: 'com.companyname.productname.appname' 
+
+Fields that are required to perform Apple-specific integrity checks (recommended for iOS keys). 
+`--key-id`=`KEY_ID`
+     The Apple developer key ID (10-character string). 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--private-key-file`=`PATH_TO_FILE`
+     File path to a private key (downloaded as a text file with a .p8 file extension) generated for your Apple Developer account. Ensure that DeviceCheck is enabled for the private key. Use a full or relative path to a local file containing the value of private_key_file. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--team-id`=`TEAM_ID`
+     The Apple team ID (10-character string) owning the provisioning profile used to build your application. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+Options for the creation of a site key for web. 
+`--web`
+     Creates a Key configured for websites. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--allow-amp-traffic`
+     Whether this key can be used on AMP (Accelerated Mobile Pages) websites. 
+`--integration-type`=`INTEGRATION_TYPE`
+     Configures how reCAPTCHA will operate on your site. This only applies to 'web' platform. `INTEGRATION_TYPE` must be one of: 
+
+`checkbox`
+     Renders the classic "I'm not a robot" checkbox, and a captcha challenge for low scoring events 
+`invisible`
+     Does not display the "I'm not a robot" checkbox, but may show CAPTCHA challenges after risk analysis 
+`policy-based-challenge`
+     Conditionally displays a challenge based on the score 
+`score`
+     Shows no CAPTCHA challenge on the page 
+`--security-preference`=`SECURITY_PREFERENCE`
+     Represents the possible challenge frequency and difficulty configurations for a web key. usability: show fewer and easier challenges. balance: show balanced (in amount and difficulty) challenges. security: show more and harder challenges. 
+
+`SECURITY_PREFERENCE` must be one of: `balance`, `challenge-security-preference-unspecified`, `security`, `usability`. 
+
+`--testing-challenge`=`TESTING_CHALLENGE`
+     For CHECKBOX and INVISIBLE Keys only, this option configures whether challenges will be issued for execute requests. `TESTING_CHALLENGE` must be one of: 
+
+`challenge`
+     Execute requests for this key will always return an unsolvable challenge consisting of a message about this testing key. 
+`nocaptcha`
+     Execute requests for this key will always return nocaptcha. 
+Exactly one of these must be specified: 
+
+`--allow-all-domains`
+     If set, domain name enforcement will NOT be enabled on this key. 
+`--domains`=[`DOMAINS`,…]
+     Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain are automatically allowed. A valid domain requires a host and must not include any path, port, query or fragment. 
+
+Examples of valid domains: 'example.com' 'subdomain.example.com' 
+
+Configure if you want to use the POLICY_BASED_CHALLENGE option. 
+`--default-score-threshold`=`DEFAULT_SCORE_THRESHOLD`
+     The global threshold to be used for POLICY_BASED_CHALLENGE if no action specific one exists. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--action-score-thresholds`=[`ACTION_SCORE_THRESHOLDS`,…]
+     The action to score threshold used for POLICY_BASED_CHALLENGE. For example: \--action-score-thresholds=login='{"scoreThreshold": "0.3"}',signup='{"scoreThreshold": "0.1"}' or \--action-score-thresholds=file_path.(json|yaml). 
+
+`KEY`
+     Sets `KEY` value. 
+`VALUE`
+     Sets `VALUE` value. 
+
+`scoreThreshold`
+     Sets `scoreThreshold` value. 
+`Shorthand Example:`
+    
+    
+    --action-score-thresholds=string={scoreThreshold=float}
+
+`JSON Example:`
+    
+    
+    --action-score-thresholds='{"string": {"scoreThreshold": float}}'
+
+`File Example:`
+    
+    
+    --action-score-thresholds=path_to_file.(yaml|json)
+
+OPTIONAL FLAGS
+    
+
+`--labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to add. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+`--testing-score`=`TESTING_SCORE`
+     If set, all assessments for this key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive. 
+Options for the creation of a WAF-enabled key. For more information, please refer to <https://cloud.google.com/recaptcha-enterprise/docs/integration-overview>. 
+`--waf-service`=`WAF_SERVICE`
+     The WAF service provider to use. `WAF_SERVICE` must be one of: 
+
+`akamai`
+     Akamai 
+`ca`
+     Cloud Armor 
+`cloudflare`
+     Cloudflare 
+`fastly`
+     Fastly 
+This flag argument must be specified if any of the other arguments in this group are specified. 
+`--waf-feature`=`WAF_FEATURE`
+     The WAF feature to use. For more information, see <https://cloud.google.com/recaptcha-enterprise/docs/usecase#comparison_of_features>. `WAF_FEATURE` must be one of: 
+
+`action-token`
+     Use reCAPTCHA action-tokens to protect user actions. 
+`challenge-page`
+     Redirects suspicious traffic to reCAPTCHA challenge page. 
+`express`
+     Assesses requests without tokens or frontend integration. This option is deprecated, use --express instead. 
+`session-token`
+     Use reCAPTCHA session-tokens to protect the whole user session on the site's domain. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `recaptchaenterprise/v1` API. The full documentation for this API can be found at: <https://cloud.google.com/recaptcha-enterprise/>
+NOTES
+     This variant is also available: 
+    
+    
+    [gcloud alpha recaptcha keys create](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/recaptcha/keys/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-07-21 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-07-21 UTC."],[],[]] 

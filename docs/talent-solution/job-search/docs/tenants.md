@@ -1,0 +1,388 @@
+---
+url: https://docs.cloud.google.com/talent-solution/job-search/docs/tenants/
+title: Tenant basics \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T01:01:12.592320+00:00
+---
+
+# Tenant basics  |  Job Search  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/talent-solution/job-search/docs/tenants/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Industry solutions ](https://docs.cloud.google.com/docs/industry)
+  * [ Cloud Talent Solution ](https://docs.cloud.google.com/talent-solution/docs)
+  * [ Job Search ](https://docs.cloud.google.com/talent-solution/job-search/docs)
+  * [ Guides ](https://docs.cloud.google.com/talent-solution/job-search/docs/basics)
+
+
+
+Send feedback 
+
+#  Tenant basics Stay organized with collections  Save and categorize content based on your preferences. 
+
+[Tenants](https://docs.cloud.google.com/talent-solution/job-search/docs/reference/rest/v4/projects.tenants) are entities that own any jobs and companies objects assigned to them. They create a middle layer of organization between a Google Cloud project and your uploaded data. Tenants allow you to isolate different groupings of your data without the need for multiple projects by preventing any data from being shared across tenancy barriers. Multi-tenancy is useful in situations where you may have more than one customer and don't want to share data between them, but would like to maintain a single Google Cloud project for internal billing and reporting. For example:
+
+  * Job site providers building job sites for organizations with multiple subsidiary companies.
+  * Hiring agencies building applicant tracking systems for multiple businesses.
+
+
+
+Each Google Cloud project is assigned a `tenant_id` for a single default tenant. Optionally, you can change the default by creating more than one tenant within a given project.
+
+Tenants are fully isolated from one another. All APIs ask for only a single tenant to prevent data being queried across multiple tenants in a single API call. Machine learning (ML) similarly treats tenants as discrete units and does not cross tenancy barriers. A project can support as many tenants as required.
+
+## Default tenants
+
+In Job Search v4 and newer, a Tenant entity is required. All projects are assigned a `tenant_id` for a single default tenant. If you don't want to use multiple tenants, you can either:
+
+  1. **Use your project's default tenant (Recommended)**. You don't need to reference the tenant specifically in order to do this. You can use the format `projects/{project_id}/jobs/{job_id}` and the Cloud Talent Solution backend will assume that you're using the default tenant.
+
+  2. **[Create a single tenant](https://docs.cloud.google.com/talent-solution/job-search/docs/tenants#create_a_tenant) and use it in place of the default tenant**. If you create your own tenant, you need to reference it: `projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}`.
+
+
+
+
+The default `tenant_id` is unique to each project and is never overwritten or replaced if you create additional tenants. You cannot call CRUD methods on the default tenant.
+
+**Note:** If you choose to use the default tenant, the CTS backend uses your assigned `tenant_id` value automatically without you needing to enter it (Option 1, above). If you would like to find your default `tenant_id` value, [create a company](https://docs.cloud.google.com/talent-solution/job-search/docs/companies#create_a_company) without a tenant. The default `tenant_id` appears in the company resource name in the response.
+
+## Created tenants (optional)
+
+Creating your own tenants is optional. Each Job Search project is assigned a default tenant by the CTS backend. If you do not want to use multi-tenancy to separate subdivisions of your data, we recommend that you use the default tenant.
+
+### Create a tenant
+
+You are required to create a unique `externalId` value and assign it to the new tenant. The call then returns a unique `name` assigned by our backend system, also assigned to that tenant. Be sure to record and store both the `name` and `externalId` values, as they are used to update/delete/reference.
+
+The code sample below creates a new tenant:
+
+### Java
+
+To learn how to install and use the client library for CTS, see [CTS client libraries](https://docs.cloud.google.com/talent-solution/job-search/docs/libraries). For more information, see the [CTS Java API reference documentation](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/overview). 
+
+To authenticate to CTS, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import com.google.cloud.talent.v4.[CreateTenantRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.CreateTenantRequest.html);
+    import com.google.cloud.talent.v4.[ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.ProjectName.html);
+    import com.google.cloud.talent.v4.[Tenant](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.Tenant.html);
+    import com.google.cloud.talent.v4.[TenantServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantServiceClient.html);
+    import java.io.IOException;
+    
+    public class JobSearchCreateTenant {
+    
+      public static void createTenant() throws IOException {
+        // TODO(developer): Replace these variables before running the sample.
+        String projectId = "your-project-id";
+        String externalId = "your-external-id";
+        createTenant(projectId, externalId);
+      }
+    
+      // Create Tenant for scoping resources, e.g. companies and jobs.
+      public static void createTenant(String projectId, String externalId) throws IOException {
+        // Initialize client that will be used to send requests. This client only needs to be created
+        // once, and can be reused for multiple requests. After completing all of your requests, call
+        // the "close" method on the client to safely clean up any remaining background resources.
+        try ([TenantServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantServiceClient.html) tenantServiceClient = [TenantServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantServiceClient.html).create()) {
+          [ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.ProjectName.html) parent = [ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.ProjectName.html).of(projectId);
+          [Tenant](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.Tenant.html) tenant = [Tenant](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.Tenant.html).newBuilder().setExternalId(externalId).build();
+    
+          [CreateTenantRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.CreateTenantRequest.html) request =
+              [CreateTenantRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.CreateTenantRequest.html).newBuilder().setParent(parent.[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.ProjectName.html#com_google_cloud_talent_v4_ProjectName_toString__)()).setTenant(tenant).build();
+    
+          [Tenant](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.Tenant.html) response = tenantServiceClient.createTenant(request);
+          System.out.println("Created Tenant");
+          System.out.format("Name: %s%n", response.[getName](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.Tenant.html#com_google_cloud_talent_v4_Tenant_getName__)());
+          System.out.format("External ID: %s%n", response.[getExternalId](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.Tenant.html#com_google_cloud_talent_v4_Tenant_getExternalId__)());
+        }
+      }
+    }
+
+### Node.js
+
+To learn how to install and use the client library for CTS, see [CTS client libraries](https://docs.cloud.google.com/talent-solution/job-search/docs/libraries). For more information, see the [CTS Node.js API reference documentation](https://docs.cloud.google.com/nodejs/docs/reference/talent/latest). 
+
+To authenticate to CTS, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    const talent = require('[@google-cloud/talent](https://docs.cloud.google.com/nodejs/docs/reference/talent/latest/overview.html)').v4;
+    
+    /** Create Tenant for scoping resources, e.g. companies and jobs */
+    function sampleCreateTenant(projectId, externalId) {
+      const client = new talent.[TenantServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/talent/latest/overview.html)();
+      // const projectId = 'Your Google Cloud Project ID';
+      // const externalId = 'Your Unique Identifier for Tenant';
+      const formattedParent = client.projectPath(projectId);
+      const tenant = {
+        externalId: externalId,
+      };
+      const request = {
+        parent: formattedParent,
+        tenant: tenant,
+      };
+      client
+        .createTenant(request)
+        .then(responses => {
+          const response = responses[0];
+          console.log('Created Tenant');
+          console.log(`Name: ${response.name}`);
+          console.log(`External ID: ${response.externalId}`);
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    }
+    
+
+### Python
+
+To learn how to install and use the client library for CTS, see [CTS client libraries](https://docs.cloud.google.com/talent-solution/job-search/docs/libraries). For more information, see the [CTS Python API reference documentation](https://docs.cloud.google.com/python/docs/reference/talent/latest). 
+
+To authenticate to CTS, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    from google.cloud import talent
+    
+    
+    def create_tenant(project_id, external_id):
+        """Create Tenant for scoping resources, e.g. companies and jobs"""
+    
+        client = talent.[TenantServiceClient](https://docs.cloud.google.com/python/docs/reference/talent/latest/google.cloud.talent_v4.services.tenant_service.TenantServiceClient.html)()
+    
+        # project_id = 'Your Google Cloud Project ID'
+        # external_id = 'Your Unique Identifier for Tenant'
+    
+        if isinstance(project_id, bytes):
+            project_id = project_id.decode("utf-8")
+        if isinstance(external_id, bytes):
+            external_id = external_id.decode("utf-8")
+        parent = f"projects/{project_id}"
+        tenant = talent.[Tenant](https://docs.cloud.google.com/python/docs/reference/talent/latest/google.cloud.talent_v4.types.Tenant.html)(external_id=external_id)
+    
+        response = client.[create_tenant](https://docs.cloud.google.com/python/docs/reference/talent/latest/google.cloud.talent_v4.services.tenant_service.TenantServiceClient.html#google_cloud_talent_v4_services_tenant_service_TenantServiceClient_create_tenant)(parent=parent, tenant=tenant)
+        print("Created Tenant")
+        print(f"Name: {response.name}")
+        print(f"External ID: {response.external_id}")
+        return response.name
+    
+    
+
+### Retrieve a tenant
+
+### Java
+
+To learn how to install and use the client library for CTS, see [CTS client libraries](https://docs.cloud.google.com/talent-solution/job-search/docs/libraries). For more information, see the [CTS Java API reference documentation](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/overview). 
+
+To authenticate to CTS, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import com.google.cloud.talent.v4.[GetTenantRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.GetTenantRequest.html);
+    import com.google.cloud.talent.v4.[Tenant](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.Tenant.html);
+    import com.google.cloud.talent.v4.[TenantName](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantName.html);
+    import com.google.cloud.talent.v4.[TenantServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantServiceClient.html);
+    import java.io.IOException;
+    
+    public class JobSearchGetTenant {
+    
+      public static void getTenant() throws IOException {
+        // TODO(developer): Replace these variables before running the sample.
+        String projectId = "your-project-id";
+        String tenantId = "your-tenant-id";
+        getTenant(projectId, tenantId);
+      }
+    
+      // Get Tenant by name.
+      public static void getTenant(String projectId, String tenantId) throws IOException {
+        // Initialize client that will be used to send requests. This client only needs to be created
+        // once, and can be reused for multiple requests. After completing all of your requests, call
+        // the "close" method on the client to safely clean up any remaining background resources.
+        try ([TenantServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantServiceClient.html) tenantServiceClient = [TenantServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantServiceClient.html).create()) {
+          [TenantName](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantName.html) name = [TenantName](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantName.html).of(projectId, tenantId);
+    
+          [GetTenantRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.GetTenantRequest.html) request = [GetTenantRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.GetTenantRequest.html).newBuilder().setName(name.[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantName.html#com_google_cloud_talent_v4_TenantName_toString__)()).build();
+    
+          [Tenant](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.Tenant.html) response = tenantServiceClient.getTenant(request);
+          System.out.format("Name: %s%n", response.[getName](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.Tenant.html#com_google_cloud_talent_v4_Tenant_getName__)());
+          System.out.format("External ID: %s%n", response.[getExternalId](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.Tenant.html#com_google_cloud_talent_v4_Tenant_getExternalId__)());
+        }
+      }
+    }
+
+### Python
+
+To learn how to install and use the client library for CTS, see [CTS client libraries](https://docs.cloud.google.com/talent-solution/job-search/docs/libraries). For more information, see the [CTS Python API reference documentation](https://docs.cloud.google.com/python/docs/reference/talent/latest). 
+
+To authenticate to CTS, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    from google.cloud import talent
+    
+    
+    def get_tenant(project_id, tenant_id):
+        """Get Tenant by name"""
+    
+        client = talent.[TenantServiceClient](https://docs.cloud.google.com/python/docs/reference/talent/latest/google.cloud.talent_v4.services.tenant_service.TenantServiceClient.html)()
+    
+        # project_id = 'Your Google Cloud Project ID'
+        # tenant_id = 'Your Tenant ID'
+    
+        if isinstance(project_id, bytes):
+            project_id = project_id.decode("utf-8")
+        if isinstance(tenant_id, bytes):
+            tenant_id = tenant_id.decode("utf-8")
+        name = client.[tenant_path](https://docs.cloud.google.com/python/docs/reference/talent/latest/google.cloud.talent_v4.services.tenant_service.TenantServiceClient.html#google_cloud_talent_v4_services_tenant_service_TenantServiceClient_tenant_path)(project_id, tenant_id)
+    
+        response = client.[get_tenant](https://docs.cloud.google.com/python/docs/reference/talent/latest/google.cloud.talent_v4.services.tenant_service.TenantServiceClient.html#google_cloud_talent_v4_services_tenant_service_TenantServiceClient_get_tenant)(name=name)
+        print(f"Name: {response.name}")
+        print(f"External ID: {response.external_id}")
+    
+    
+
+### List tenants
+
+### Java
+
+To learn how to install and use the client library for CTS, see [CTS client libraries](https://docs.cloud.google.com/talent-solution/job-search/docs/libraries). For more information, see the [CTS Java API reference documentation](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/overview). 
+
+To authenticate to CTS, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import com.google.cloud.talent.v4.[ListTenantsRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.ListTenantsRequest.html);
+    import com.google.cloud.talent.v4.[ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.ProjectName.html);
+    import com.google.cloud.talent.v4.[Tenant](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.Tenant.html);
+    import com.google.cloud.talent.v4.[TenantServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantServiceClient.html);
+    import java.io.IOException;
+    
+    public class JobSearchListTenants {
+    
+      public static void listTenants() throws IOException {
+        // TODO(developer): Replace these variables before running the sample.
+        String projectId = "your-project-id";
+        listTenants(projectId);
+      }
+    
+      // List Tenants.
+      public static void listTenants(String projectId) throws IOException {
+        // Initialize client that will be used to send requests. This client only needs to be created
+        // once, and can be reused for multiple requests. After completing all of your requests, call
+        // the "close" method on the client to safely clean up any remaining background resources.
+        try ([TenantServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantServiceClient.html) tenantServiceClient = [TenantServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantServiceClient.html).create()) {
+          [ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.ProjectName.html) parent = [ProjectName](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.ProjectName.html).of(projectId);
+    
+          [ListTenantsRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.ListTenantsRequest.html) request =
+              [ListTenantsRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.ListTenantsRequest.html).newBuilder().setParent(parent.[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.ProjectName.html#com_google_cloud_talent_v4_ProjectName_toString__)()).build();
+    
+          for ([Tenant](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.Tenant.html) responseItem : tenantServiceClient.listTenants(request).iterateAll()) {
+            System.out.format("Tenant Name: %s%n", responseItem.getName());
+            System.out.format("External ID: %s%n", responseItem.getExternalId());
+          }
+        }
+      }
+    }
+
+### Python
+
+To learn how to install and use the client library for CTS, see [CTS client libraries](https://docs.cloud.google.com/talent-solution/job-search/docs/libraries). For more information, see the [CTS Python API reference documentation](https://docs.cloud.google.com/python/docs/reference/talent/latest). 
+
+To authenticate to CTS, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    from google.cloud import talent
+    
+    
+    def list_tenants(project_id):
+        """List Tenants"""
+    
+        client = talent.[TenantServiceClient](https://docs.cloud.google.com/python/docs/reference/talent/latest/google.cloud.talent_v4.services.tenant_service.TenantServiceClient.html)()
+    
+        # project_id = 'Your Google Cloud Project ID'
+    
+        if isinstance(project_id, bytes):
+            project_id = project_id.decode("utf-8")
+        parent = f"projects/{project_id}"
+    
+        # Iterate over all results
+        for response_item in client.[list_tenants](https://docs.cloud.google.com/python/docs/reference/talent/latest/google.cloud.talent_v4.services.tenant_service.TenantServiceClient.html#google_cloud_talent_v4_services_tenant_service_TenantServiceClient_list_tenants)(parent=parent):
+            print(f"Tenant Name: {response_item.name}")
+            print(f"External ID: {response_item.external_id}")
+    
+    
+
+### Delete a tenant
+
+### Java
+
+To learn how to install and use the client library for CTS, see [CTS client libraries](https://docs.cloud.google.com/talent-solution/job-search/docs/libraries). For more information, see the [CTS Java API reference documentation](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/overview). 
+
+To authenticate to CTS, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import com.google.cloud.talent.v4.[DeleteTenantRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.DeleteTenantRequest.html);
+    import com.google.cloud.talent.v4.[TenantName](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantName.html);
+    import com.google.cloud.talent.v4.[TenantServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantServiceClient.html);
+    import java.io.IOException;
+    
+    public class JobSearchDeleteTenant {
+    
+      public static void deleteTenant() throws IOException {
+        // TODO(developer): Replace these variables before running the sample.
+        String projectId = "your-project-id";
+        String tenantId = "your-tenant-id";
+        deleteTenant(projectId, tenantId);
+      }
+    
+      // Delete Tenant.
+      public static void deleteTenant(String projectId, String tenantId) throws IOException {
+        // Initialize client that will be used to send requests. This client only needs to be created
+        // once, and can be reused for multiple requests. After completing all of your requests, call
+        // the "close" method on the client to safely clean up any remaining background resources.
+        try ([TenantServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantServiceClient.html) tenantServiceClient = [TenantServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantServiceClient.html).create()) {
+          [TenantName](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantName.html) name = [TenantName](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantName.html).of(projectId, tenantId);
+    
+          [DeleteTenantRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.DeleteTenantRequest.html) request =
+              [DeleteTenantRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.DeleteTenantRequest.html).newBuilder().setName(name.[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-talent/latest/com.google.cloud.talent.v4.TenantName.html#com_google_cloud_talent_v4_TenantName_toString__)()).build();
+    
+          tenantServiceClient.deleteTenant(request);
+          System.out.println("Deleted Tenant.");
+        }
+      }
+    }
+
+### Python
+
+To learn how to install and use the client library for CTS, see [CTS client libraries](https://docs.cloud.google.com/talent-solution/job-search/docs/libraries). For more information, see the [CTS Python API reference documentation](https://docs.cloud.google.com/python/docs/reference/talent/latest). 
+
+To authenticate to CTS, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    from google.cloud import talent
+    
+    
+    def delete_tenant(project_id, tenant_id):
+        """Delete Tenant"""
+    
+        client = talent.[TenantServiceClient](https://docs.cloud.google.com/python/docs/reference/talent/latest/google.cloud.talent_v4.services.tenant_service.TenantServiceClient.html)()
+    
+        # project_id = 'Your Google Cloud Project ID'
+        # tenant_id = 'Your Tenant ID)'
+    
+        if isinstance(project_id, bytes):
+            project_id = project_id.decode("utf-8")
+        if isinstance(tenant_id, bytes):
+            tenant_id = tenant_id.decode("utf-8")
+        name = client.[tenant_path](https://docs.cloud.google.com/python/docs/reference/talent/latest/google.cloud.talent_v4.services.tenant_service.TenantServiceClient.html#google_cloud_talent_v4_services_tenant_service_TenantServiceClient_tenant_path)(project_id, tenant_id)
+    
+        client.[delete_tenant](https://docs.cloud.google.com/python/docs/reference/talent/latest/google.cloud.talent_v4.services.tenant_service.TenantServiceClient.html#google_cloud_talent_v4_services_tenant_service_TenantServiceClient_delete_tenant)(name=name)
+        print("Deleted Tenant.")
+    
+    
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

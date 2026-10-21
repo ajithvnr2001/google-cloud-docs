@@ -1,0 +1,176 @@
+---
+url: https://docs.cloud.google.com/agent-registry/identity-and-identifiers/
+title: Identity and identifiers \u00a0|\u00a0 Agent Registry \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T00:37:00.609406+00:00
+---
+
+# Identity and identifiers  |  Agent Registry  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/agent-registry/identity-and-identifiers/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Agent Registry ](https://docs.cloud.google.com/agent-registry)
+  * [ Guides ](https://docs.cloud.google.com/agent-registry/overview)
+
+
+
+Send feedback 
+
+#  Identity and identifiers Stay organized with collections  Save and categorize content based on your preferences. 
+
+To [register](https://docs.cloud.google.com/agent-registry/register-agents) and [manage agents](https://docs.cloud.google.com/agent-registry/manage-agents) in Agent Registry, you work across four architectural layers. Each layer uses a specific naming, identity, or routing mechanism:
+
+  * **Registry identifiers** (agent identifiers, MCP server identifiers, and endpoint identifiers): Logical, immutable Uniform Resource Names (URNs) used for inventory tracking, registry discovery, and filtering. These URNs aren't used for runtime governance.
+  * **Resource names** : Standard globally unique Google Cloud [resource names](https://docs.cloud.google.com/apis/design/resource_names) (`registryResource` or `name`) generated upon registration and used by Agent Gateway route rules, Identity-Aware Proxy (IAP) egress policies, and Identity and Access Management (IAM) policy bindings.
+  * **Agent principals** : Verifiable IAM identities, such as [SPIFFE IDs](https://spiffe.io/) for agents running on Google Cloud or service accounts for external agents, used for caller authentication, authorization, and audit logging.
+  * **Runtime references** : Compute or infrastructure paths (`RuntimeReference`) used for topology queries and egress traffic matching.
+
+
+
+The following table compares each layer, its primary purpose, downstream governance role, and syntax:
+
+Layer | Primary purpose | Governance role | Syntax  
+---|---|---|---  
+**Registry identifiers**  
+(Agent, MCP server, or endpoint identifiers) | Stable registry discovery, metadata tagging, and search. | Immutable and not used for governance. | 
+
+  * `urn:agent:IDENTIFIER`
+  * `urn:mcp:IDENTIFIER`
+  * `urn:endpoint:IDENTIFIER`
+
+  
+**Resource name** | Target resource identification for policy enforcement. | Required by policies and used by Agent Gateway routes and IAP bindings. | 
+
+  * `projects/PROJECT_NUMBER/locations/LOCATION/agents/agentregistry-ID`
+  * `projects/PROJECT_NUMBER/locations/LOCATION/mcpServers/agentregistry-ID`
+  * `projects/PROJECT_NUMBER/locations/LOCATION/endpoints/agentregistry-ID`
+
+  
+**Agent principal** | Caller authentication, authorization, and audit logging. | Enforced by IAM. | 
+
+  * `principal://PRINCIPAL_PATH`
+  * `principalSet://PRINCIPAL_SET_PATH`
+
+  
+**Runtime reference** | Physical compute routing and outbound traffic matching. | Evaluated in topology queries and in Agent Gateway to match network traffic. |  `agentregistry.googleapis.com/system/RuntimeReference` containing the compute or infrastructure path as `uri: "RUNTIME_URI"`  
+  
+## Registry identifiers
+
+A registry identifier is a globally unique, immutable Uniform Resource Name (URN) that Agent Registry assigns to a registered component. This URN provides a stable reference for consumers and orchestrator agents to discover, filter, and search components in Agent Registry, remaining constant regardless of underlying infrastructure migrations or code updates.
+
+Registry identifiers are logical URNs used exclusively for registry discovery and metadata annotation. They differ from runtime security identities and resource names, and can't be used in IAM policy bindings, authorization headers, or Agent Gateway route rules.
+
+Agent Registry uses three types of registry identifiers:
+
+  * Agent identifiers (`agentId`)
+  * MCP server identifiers (`mcpServerId`)
+  * Endpoint identifiers (`endpointId`)
+
+
+
+### Agent identifiers
+
+Agent Registry assigns an agent identifier (`agentId`) to all registered agents, including Google-managed agents and external or custom agents. To manage secure, policy-governed communication for an agent, use its agent principal rather than its agent identifier.
+
+Agent Registry automatically generates agent identifiers during ingestion. The exact URN structure depends on the compute environment where the agent is deployed:
+
+  * **Agent Runtime on Gemini Enterprise Agent Platform** : `urn:agent:projects-PROJECT_NUMBER:projects:PROJECT_NUMBER:locations:REGION:aiplatform:reasoningEngines:AGENT_ID`
+  * **Cloud Run services** : `urn:agent:projects-PROJECT_NUMBER:projects:PROJECT_NUMBER:locations:REGION:run:services:SERVICE_NAME`
+  * **Cloud Run jobs** : `urn:agent:projects-PROJECT_NUMBER:projects:PROJECT_NUMBER:locations:REGION:run:jobs:JOB_NAME`
+  * **GKE deployments** : `urn:agent:projects-PROJECT_NUMBER:projects:PROJECT_NUMBER:locations:REGION:container:clusters:CLUSTER_NAME:k8s:namespaces:NAMESPACE:apps:deployments:DEPLOYMENT_NAME`
+  * **Gemini Enterprise** : `urn:agent:projects-PROJECT_NUMBER:projects:PROJECT_NUMBER:locations:global:discoveryengine:collections:default_collection:engines:ENGINE_ID:assistants:default_assistant:agents:AGENT_ID`
+  * **Google Workspace** : `urn:agent:googleapis.com:locations:global:workspaceagent:workspaceagent--a2a`
+  * **Manually registered agents** : `urn:agent:projects-PROJECT_NUMBER:projects:PROJECT_NUMBER:locations:LOCATION:agentregistry:services:AGENT_ID`
+
+
+
+### MCP server identifiers
+
+An MCP server identifier (`mcpServerId`) is a registry identifier used to discover an MCP server and its tools in Agent Registry.
+
+MCP servers only respond to requests and don't have an IAM principal. When an agent invokes tools on an MCP server, access is authorized using the calling agent principal.
+
+The URN format depends on whether the server is a Google-managed service or an external registered server:
+
+  * **Google and Google Cloud remote MCP servers** : `urn:mcp:googleapis.com:projects:PROJECT_NUMBER:locations:global:SERVER_ID`
+  * **Manually registered MCP servers** : `urn:mcp:projects-PROJECT_NUMBER:projects:PROJECT_NUMBER:locations:LOCATION:agentregistry:services:SERVER_ID`
+
+
+
+### Endpoint identifiers
+
+An endpoint identifier (`endpointId`) is a registry identifier assigned to a [registered endpoint](https://docs.cloud.google.com/agent-registry/register-endpoints) for discovering target API destinations.
+
+The URN format for manually registered endpoints is `urn:endpoint:projects-PROJECT_NUMBER:projects:PROJECT_NUMBER:locations:LOCATION:agentregistry:services:ENDPOINT_ID`.
+
+## Resource names
+
+When you register an agent, an MCP server, or an endpoint in Agent Registry, the registration process generates a standard Google Cloud [resource name](https://docs.cloud.google.com/apis/design/resource_names) formatted as a hierarchical URI path:
+
+  * **Agents** : `projects/PROJECT_NUMBER/locations/LOCATION/agents/agentregistry-ID`
+  * **MCP servers** : `projects/PROJECT_NUMBER/locations/LOCATION/mcpServers/agentregistry-ID`
+  * **Endpoints** : `projects/PROJECT_NUMBER/locations/LOCATION/endpoints/agentregistry-ID`
+
+
+
+When you create or inspect a writable `Service` resource, for example, by running `gcloud agent-registry services describe`, this resource name is returned in the output-only `registryResource` field. When you query or inspect the resulting read-only `Agent`, `McpServer`, or `Endpoint` resource directly, for example, by using the `gcloud agent-registry agents describe` command, this resource name is returned in the standard `name` field.
+
+Resource names can be used to bind policies, route network traffic, and configure access controls. Downstream governance surfaces, including Agent Gateway route rules, IAP egress policies, and IAM resource policies, evaluate against this resource name. They don't accept URNs from registry identifiers, such as agent identifiers, MCP server identifiers, or endpoint identifiers.
+
+If you use a registry identifier URN in a policy binding or route rule instead of the resource name, the API returns a `NOT_FOUND: Requested entity was not found.` error. If you encounter this error when configuring governance policies, verify the following:
+
+  * **Registration status** : Confirm that the target agent, MCP server, or endpoint is registered in Agent Registry in the expected location.
+  * **Identifier format** : Confirm that your policy binding or route rule specifies the standard resource name (`projects/PROJECT_NUMBER/locations/LOCATION/.../agentregistry-ID`) rather than the registry identifier URN.
+
+
+
+## Agent principals
+
+An agent principal is an agent's security identity in IAM. Just like a user or service account, an agent uses its principal to hold permissions and call downstream services. When configuring IAM policies, you use the agent's principal string to grant or restrict access.
+
+In Agent Registry, how an agent is identified as a principal depends on where it runs:
+
+  * **Agents running on Google Cloud infrastructure** : For managed runtimes such as Agent Runtime on Gemini Enterprise Agent Platform, Google Cloud automatically provisions a managed workload identity formatted as a [SPIFFE ID](https://spiffe.io/), which is bound directly to the agent's compute runtime. When referencing this identity in IAM allow policies and bindings, you must use the IAM principal or principal set string format rather than the SPIFFE URI scheme. Using a SPIFFE string for an IAM policy binding returns an `INVALID_ARGUMENT` error.
+  * **Agents running outside Google Cloud** : External or on-premises agents must federate their external identity through [Workload Identity Federation](https://docs.cloud.google.com/iam/docs/workload-identity-federation) or use a standard service account to interact with Google Cloud resources. Once authenticated, that federated workload identity string or service account email acts as the agent principal in IAM policies.
+
+
+
+For agents running on Google Cloud, because the managed agent principal is bound directly to the compute resource of the agent's runtime, the principal string incorporates the full path to that underlying compute resource.
+
+IAM supports governing agent access across the following scopes:
+
+  * **Single engine instance** : Grants permissions to a specific agent deployment. For example, an individual Agent Runtime instance is represented through a single principal string: `principal://agents.global.org-ORGANIZATION_ID.system.id.goog/resources/aiplatform/projects/PROJECT_NUMBER/locations/REGION/reasoningEngines/REASONING_ENGINE_ID`
+  * **Project scope** : Grants permissions to all reasoning engines running inside a specific project through a principal set: `principalSet://agents.global.org-ORGANIZATION_ID.system.id.goog/attribute.platformContainer/aiplatform/projects/PROJECT_NUMBER`
+  * **Organization-wide scope** : Grants permissions to all agents across the entire organization through a principal set wildcard: `principalSet://agents.global.org-ORGANIZATION_ID.system.id.goog/*`
+
+
+
+Agent Registry displays the individual agent principal as an output-only attribute when you [view the details of an agent](https://docs.cloud.google.com/agent-registry/manage-agents#view-details).
+
+## Runtime references
+
+A runtime reference points to the underlying compute infrastructure where the code for an agent, MCP server, or endpoint runs. For example, a runtime reference can point to a Agent Runtime reasoning engine, a GKE deployment, or a Cloud Run service.
+
+An agent's principal string includes its runtime reference path, which ties IAM permissions directly to where the agent runs. If you register an agent in a different project from where it is deployed, the runtime reference points to the project hosting the underlying workload.
+
+In the Agent Registry API, the runtime reference is represented by the `agentregistry.googleapis.com/system/RuntimeReference` attribute, which contains the compute or infrastructure path in its `uri` field. You can view this output-only attribute as part of the agent details or use it to query traffic flows and relationships in the [topology graph](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/topology#registered-agent).
+
+## What's next
+
+  * Learn about [Roles and permissions](https://docs.cloud.google.com/agent-registry/roles-permissions).
+  * [Manage and inspect agents](https://docs.cloud.google.com/agent-registry/manage-agents).
+  * Understand the [Agent Registry data model](https://docs.cloud.google.com/agent-registry/data-model).
+  * Explore general [Key concepts](https://docs.cloud.google.com/agent-registry/concepts).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

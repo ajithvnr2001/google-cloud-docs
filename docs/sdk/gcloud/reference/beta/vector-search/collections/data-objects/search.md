@@ -1,0 +1,217 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/vector-search/collections/data-objects/search/
+title: gcloud beta vector-search collections data-objects search \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T02:16:04.258634+00:00
+---
+
+# gcloud beta vector-search collections data-objects search  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/vector-search/collections/data-objects/search/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta vector-search collections data-objects search Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta vector-search collections data-objects search - search data objects from a Vector Search collection 
+SYNOPSIS
+    
+
+`gcloud beta vector-search collections data-objects search` `--collection`=`COLLECTION` `--location`=`LOCATION` (`--semantic-search-field`=`SEMANTIC_SEARCH_FIELD` `--semantic-search-text`=`SEMANTIC_SEARCH_TEXT` `--semantic-task-type`=`SEMANTIC_TASK_TYPE` | `--text-search-data-fields`=[`DATA_FIELD_NAME`,…] `--text-search-text`=`TEXT_SEARCH_TEXT` | [`--vector-from-file`=`VECTOR_FROM_FILE` `--vector-search-field`=`VECTOR_SEARCH_FIELD` : `--distance-metric`=`DISTANCE_METRIC`]) [`--json-filter`=`JSON_FILTER`] [`--top-k`=`TOP_K`] [`--output-data-fields`=[`DATA_OUTPUT_FIELD`,…] `--output-metadata-fields`=[`METADATA_OUTPUT_FIELD`,…] `--output-vector-fields`=[`VECTOR_OUTPUT_FIELD`,…]] [`--use-knn` | [`--use-index`=`INDEX` : `--dense-scann-target-recall`=`TARGET_RECALL` | `--dense-scann-initial-candidate-count`=`CANDIDATE_COUNT` `--dense-scann-search-leaves-pct`=`PERCENTAGE`]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` Search data objects from a Vector Search collection. 
+EXAMPLES
+     To search data objects from collection `my-collection` in location `us-central1` using text search and return 10 results, run: 
+    
+    
+    gcloud beta vector-search collections data-objects search --collection=my-collection --location=us-central1 --text-search-text="test" --text-search-data-fields="text_field" --top-k=10
+
+To search data objects from collection `my-collection` in location `us-central1` using semantic search and return 5 results, run: 
+    
+    
+    gcloud beta vector-search collections data-objects search --collection=my-collection --location=us-central1 --semantic-search-text="sci-fi" --semantic-search-field="plot_embedding" --semantic-task-type="retrieval-query" --top-k=5
+
+To search data objects from collection `my-collection` in location `us-central1` using vector search with an index hint and return 7 results, run: 
+    
+    
+    gcloud beta vector-search collections data-objects search --collection=my-collection --location=us-central1 --vector-search-field="genre_embedding" --vector-from-file="vector.json" --use-index="my-index" --top-k=7
+
+To search data objects from collection `my-collection` in location `us-central1` using vector search with KNN for exact results, run: 
+    
+    
+    gcloud beta vector-search collections data-objects search --collection=my-collection --location=us-central1 --vector-search-field="genre_embedding" --vector-from-file="vector.json" --use-knn --top-k=7
+
+To search data objects from collection `my-collection` in location `us-central1` using vector search with an index hint and a target recall of 0.95, run: 
+    
+    
+    gcloud beta vector-search collections data-objects search --collection=my-collection --location=us-central1 --vector-search-field="genre_embedding" --vector-from-file="vector.json" --use-index="my-index" --dense-scann-target-recall=0.95
+
+REQUIRED FLAGS
+    
+
+`--collection`=`COLLECTION`
+     The collection to search data objects from. 
+`--location`=`LOCATION`
+     Location of the collection. 
+Search type 
+
+Exactly one of these must be specified: 
+
+Semantic Search 
+`--semantic-search-field`=`SEMANTIC_SEARCH_FIELD`
+     The vector field to search. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--semantic-search-text`=`SEMANTIC_SEARCH_TEXT`
+     The query text for semantic search. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--semantic-task-type`=`SEMANTIC_TASK_TYPE`
+     The task type of the query embedding for semantic search. `SEMANTIC_TASK_TYPE` must be one of: 
+
+`classification`
+     Specifies that the given text will be classified. 
+`clustering`
+     Specifies that the embeddings will be used for clustering. 
+`code-retrieval-query`
+     Specifies that the embeddings will be used for code retrieval. 
+`fact-verification`
+     Specifies that the embeddings will be used for fact verification. 
+`question-answering`
+     Specifies that the embeddings will be used for question answering. 
+`retrieval-document`
+     Specifies the given text is a document from the corpus being searched. 
+`retrieval-query`
+     Specifies the given text is a query in a search/retrieval setting. 
+`semantic-similarity`
+     Specifies the given text will be used for STS. 
+This flag argument must be specified if any of the other arguments in this group are specified. 
+Text Search 
+`--text-search-data-fields`=[`DATA_FIELD_NAME`,…]
+     The data field names to search. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--text-search-text`=`TEXT_SEARCH_TEXT`
+     The query text for text search. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+Vector Search 
+`--vector-from-file`=`VECTOR_FROM_FILE`
+     Path to a JSON file containing dense or sparse vector to search with. 
+
+  * Example file content for dense vector: 
+
+
+    
+    
+    {
+      "dense": {
+        "values": [
+          0.7,
+          0.6,
+          0.5,
+          0.4
+        ]
+      }
+    }
+
+  * Example file content for sparse vector: 
+
+
+    
+    
+    {
+      "sparse": {
+        "indices": [1, 5, 10],
+        "values": [0.1, 0.5, 0.21]
+      }
+    }
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--vector-search-field`=`VECTOR_SEARCH_FIELD`
+     The vector field to search. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--distance-metric`=`DISTANCE_METRIC`
+     The distance metric to use for the KNN search. If not specified, dot-product will be used as the default. `DISTANCE_METRIC` must be one of: 
+
+`cosine-distance`
+     Cosine distance metric. 
+`dot-product`
+     Dot product distance metric. 
+OPTIONAL FLAGS
+    
+
+`--json-filter`=`JSON_FILTER`
+     A filter expression in JSON format to apply to the search, e.g. `'{"genre": {"$eq": "sci-fi"}}'`. 
+`--top-k`=`TOP_K`
+     The number of nearest neighbors to return. Default is 10. 
+Output fields 
+`--output-data-fields`=[`DATA_OUTPUT_FIELD`,…]
+     List of data fields to include in the output. Use `*` to include all data fields. 
+`--output-metadata-fields`=[`METADATA_OUTPUT_FIELD`,…]
+     List of metadata fields to include in the output. Use `*` to include all metadata fields. 
+`--output-vector-fields`=[`VECTOR_OUTPUT_FIELD`,…]
+     List of vector fields to include in the output. Use `*` to include all vector fields. 
+Search Hint 
+
+At most one of these can be specified: 
+
+`--use-knn`
+     If set to true, the search will use the system's default K-Nearest Neighbor (KNN) index engine. This flag is compatible only with Semantic Search and Vector Search. 
+Or at least one of these can be specified: 
+
+Use Index Options 
+`--use-index`=`INDEX`
+     Full resource name or ID of the index to use for the search. This flag is compatible only with Semantic Search and Vector Search. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+Dense ScaNN Tuning 
+
+At most one of these can be specified: 
+
+`--dense-scann-target-recall`=`TARGET_RECALL`
+     Optional advanced tuning parameter: the query-time target recall for dense ScaNN search, a value in [0, 1]. Cannot be combined with \--dense-scann-search-leaves-pct or --dense-scann-initial-candidate-count. 
+Or at least one of these can be specified: 
+
+Low-level Dense ScaNN Overrides 
+`--dense-scann-initial-candidate-count`=`CANDIDATE_COUNT`
+     The number of initial candidates for dense ScaNN. 
+`--dense-scann-search-leaves-pct`=`PERCENTAGE`
+     The percentage of leaves to search for dense ScaNN, in the range [0, 100]. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in beta and might change without notice. This variant is also available: 
+    
+    
+    [gcloud vector-search collections data-objects search](https://docs.cloud.google.com/sdk/gcloud/reference/vector-search/collections/data-objects/search)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-09-29 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-09-29 UTC."],[],[]] 

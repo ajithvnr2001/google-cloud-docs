@@ -1,0 +1,345 @@
+---
+url: https://docs.cloud.google.com/composer/docs/composer-2/set-up-highly-resilient-environments/
+title: Set up highly resilient environments \u00a0|\u00a0 Managed Service for Apache Airflow \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-17T10:27:40.769435+00:00
+---
+
+# Set up highly resilient environments  |  Managed Service for Apache Airflow  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/composer/docs/composer-2/set-up-highly-resilient-environments/
+
+To more strongly embrace the success and growing customer preference for OSS solutions, Cloud Composer is evolving to become **Managed Service for Apache Airflow**. This name change provides improved customer understanding of our portfolio while reinforcing our commitment to being the most open cloud ecosystem. 
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Data analytics ](https://docs.cloud.google.com/docs/data)
+  * [ Managed Service for Apache Airflow ](https://docs.cloud.google.com/composer/docs)
+  * [ Gen 2 Guides ](https://docs.cloud.google.com/composer/docs/composer-2/composer-overview)
+
+
+
+Send feedback 
+
+#  Set up highly resilient environments Stay organized with collections  Save and categorize content based on your preferences. 
+
+[Managed Airflow (Gen 3)](https://docs.cloud.google.com/composer/docs/composer-3/set-up-highly-resilient-environments "View this page for Managed Airflow \(Gen 3\)") | **Managed Airflow (Gen 2)** | Managed Airflow (Legacy Gen 1)
+
+This page describes how to set up highly resilient (Highly Available) Managed Airflow environments.
+
+**Important:** **We strongly recommend to use highly resilient environments for production use cases**. Highly resilient Managed Airflow environments use built-in redundancy and failover mechanisms that reduce the environment's susceptibility to zonal failures and single point of failure outages.
+
+## About highly resilient (Highly Available) environments
+
+A highly resilient environment is multi-zonal and runs across at least two zones of a selected region. Managed Airflow automatically distributes the components of your environment between zones.
+
+**Caution:** During a zonal outage, **Airflow tasks that are executed in the affected zone are still interrupted** and marked as failed by Airflow. The difference between a regular and a highly resilient environment is in how the environment recovers from a zonal outage.
+
+For example, a zonal outage interrupts Airflow tasks that run in a specific zone. Afterwards, a highly resilient environment recovers, restarts its affected components in a different zone, and switches its database to a secondary zone. Thus, the failed Airflow tasks can be rescheduled and restarted by Airflow, while at the same time preserving the history of DAG runs and other settings.
+
+### About highly available database of your environment
+
+In highly available Managed Airflow environments, the Cloud SQL component that stores the database of your environment runs in the [high availability mode](https://docs.cloud.google.com/sql/docs/postgres/high-availability). A primary instance and a standby instance of Cloud SQL are distributed between zones.
+
+In case of an outage, the Cloud SQL instance of your environment performs the automatic database failover to the standby Cloud SQL instance. You do not need to perform any additional actions in your Managed Airflow environment. Once the primary zone is operational again, the environment switches back to having two zones (primary and secondary). Primary and secondary zones can be swapped in some cases. The Cloud SQL instance in high availability mode uses the same IP address after a failover.
+
+### About highly available Airflow components
+
+A highly resilient environment is multi-zonal and runs across at least two zones of a selected region. The following components run in separate zones:
+
+  * Exactly two Airflow schedulers
+
+  * At least two triggerers (if the number of triggerers isn't set to zero)
+
+  * Two web servers
+
+
+
+
+The minimum number of workers is set to two, and your environment's cluster distributes worker instances between zones. In case of a zonal outage, affected worker instances are rescheduled in a different zone.
+
+For more information about the architecture of highly resilient environments, see [Highly resilient environment architecture](https://docs.cloud.google.com/composer/docs/composer-2/environment-architecture#private-ip-high-resilience).
+
+## Before you begin
+
+  * In Managed Airflow (Gen 2), high resilience is available **only in Private IP environments**.
+
+  * Highly resilient environments are offered [at an incremental charge](https://docs.cloud.google.com/composer/pricing#sku-composer-2) when compared to regular environments.
+
+  * Highly resilient environments are available in Managed Airflow version 2.2.0 and later versions.
+
+  * If you want to update a standard environment to a highly resilient one, make sure that it meets the following configuration requirements. If your environment doesn't meet these requirements, you can [update its scale and performance parameters](https://docs.cloud.google.com/composer/docs/composer-2/scale-environments).
+
+    * The minimum number of Airflow workers is two or more.
+    * The number of Airflow schedulers is exactly two.
+
+    * If you use [deferrable operators in your DAGs](https://docs.cloud.google.com/composer/docs/composer-2/use-deferrable-operators), then at least two triggerers.
+
+
+
+
+## Create a highly resilient environment
+
+To create a highly resilient environment, [enable the high resilience mode](https://docs.cloud.google.com/composer/docs/composer-2/create-environments#enable-high-resilience) when you create an environment.
+
+## Update a standard environment to high resilience mode
+
+**Important:** Make sure that your environment meets the configuration requirements for high resilience.
+
+###  Console 
+
+  1. In Google Cloud console, go to the **Environments** page.
+
+[Go to Environments](https://console.cloud.google.com/composer/environments)
+
+  2. In the list of environments, click the name of your environment. The **Environment details** page opens.
+
+  3. Select the **Environment configuration** tab.
+
+  4. In the **Resilience mode** section, click **Edit**.
+
+  5. Select **High resilience** and click **Save**.
+
+
+
+
+###  gcloud 
+    
+    
+      gcloud composer environments update ENVIRONMENT_NAME \
+        --location LOCATION \
+        --enable-high-resilience
+    
+
+Replace the following:
+
+  * `ENVIRONMENT_NAME`: the name of your environment.
+  * `LOCATION`: the region where the environment is located.
+
+
+
+###  API 
+
+  1. Construct an [`environments.patch`](https://docs.cloud.google.com/composer/docs/reference/rest/v1/projects.locations.environments/patch) API request.
+
+  2. In this request:
+
+     1. In the `updateMask` parameter, specify the `config.resilienceMode` mask.
+
+     2. In the request body, specify, `HIGH_RESILIENCE` to switch to the high resilience mode.
+
+
+
+
+Example:
+    
+    
+    // PATCH https://composer.googleapis.com/v1/projects/example-project/
+    // locations/us-central1/environments/example-environment?updateMask=
+    // config.resilienceMode
+    
+    {
+     "config": {
+       "resilience_mode": { "HIGH_RESILIENCE" }
+       }
+     }
+    
+
+###  Terraform 
+
+The `resilience_mode` field in the `config` block specifies the resilience mode. To use the high resilience mode, set this value to `HIGH_RESILIENCE`.
+    
+    
+    resource "google_composer_environment" "example" {
+      provider = google-beta
+      name = "ENVIRONMENT_NAME"
+      region = "LOCATION"
+    
+      config {
+    
+        resilience_mode = "HIGH_RESILIENCE"
+    
+      }
+    }
+    
+
+Replace the following:
+
+  * `ENVIRONMENT_NAME`: the name of your environment.
+  * `LOCATION`: the region where the environment is located.
+
+
+
+Example:
+    
+    
+    resource "google_composer_environment" "example" {
+      provider = google-beta
+      name = "example-environment"
+      region = "us-central1"
+    
+      config {
+    
+        resilience_mode = "HIGH_RESILIENCE"
+    
+    }
+    
+
+## Change a highly resilient environment to standard resilience mode
+
+You can change your environment to standard resilience mode at any time. This operation:
+
+  * Reduces the number of web servers in your environment to one.
+  * Switches off the high availability mode of your environment's Airflow database.
+  * Doesn't change the settings for minimum number of Airflow workers, schedulers, or triggerers.
+
+
+
+
+###  Console 
+
+  1. In Google Cloud console, go to the **Environments** page.
+
+[Go to Environments](https://console.cloud.google.com/composer/environments)
+
+  2. In the list of environments, click the name of your environment. The **Environment details** page opens.
+
+  3. Select the **Environment configuration** tab.
+
+  4. In the **Resilience mode** section, click **Edit**.
+
+  5. Select **Standard resilience (default)** and click **Save**.
+
+
+
+
+###  gcloud 
+    
+    
+      gcloud composer environments update ENVIRONMENT_NAME \
+        --location LOCATION \
+        --disable-high-resilience
+    
+
+Replace the following:
+
+  * `ENVIRONMENT_NAME`: the name of your Cloud Composer environment
+  * `LOCATION`: the region where the environment is located.
+
+
+
+###  API 
+
+  1. Construct an [`environments.patch`](https://docs.cloud.google.com/composer/docs/reference/rest/v1/projects.locations.environments/patch) API request.
+
+  2. In this request:
+
+     1. In the `updateMask` parameter, specify the `config.resilienceMode` mask.
+
+     2. In the request body, specify, `RESILIENCE_MODE_UNSPECIFIED` to switch to the standard resilience mode. 
+
+
+
+
+Example:
+    
+    
+    // PATCH https://composer.googleapis.com/v1/projects/example-project/
+    // locations/us-central1/environments/example-environment?updateMask=
+    // config.resilienceMode
+    
+    {
+     "config": {
+       "resilience_mode": { "RESILIENCE_MODE_UNSPECIFIED" }
+       }
+     }
+    
+
+###  Terraform 
+
+The `resilience_mode` field in the `config` block specifies the resilience mode. To use the standard resilience mode, set this value to `STANDARD_RESILIENCE`.
+    
+    
+    resource "google_composer_environment" "example" {
+      provider = google-beta
+      name = "ENVIRONMENT_NAME"
+      region = "LOCATION"
+    
+      config {
+    
+        resilience_mode = "STANDARD_RESILIENCE"
+    
+      }
+    }
+    
+
+Replace the following:
+
+  * `ENVIRONMENT_NAME`: the name of your environment.
+  * `LOCATION`: the region where the environment is located.
+
+
+
+Example:
+    
+    
+    resource "google_composer_environment" "example" {
+      provider = google-beta
+      name = "example-environment"
+      region = "us-central1"
+    
+      config {
+    
+        resilience_mode = "STANDARD_RESILIENCE"
+    
+    }
+    
+
+## Check if your environment runs in the high resilience mode
+
+###  Console 
+
+  1. In Google Cloud console, go to the **Environments** page.
+
+[Go to Environments](https://console.cloud.google.com/composer/environments)
+
+  2. In the list of environments, click the name of your environment. The **Environment details** page opens.
+
+  3. Select the **Environment configuration** tab.
+
+  4. In the **Resilience mode** section, view the resilience mode of your environment.
+
+
+
+
+###  gcloud 
+
+To check if the high resilience mode is enabled in your environment, run the following Google Cloud CLI command. The value of `True` means that high resilience mode is enabled in your environment.
+    
+    
+    gcloud composer environments describe ENVIRONMENT_NAME \
+      --location LOCATION \
+      --format="value(config.resilienceMode)"
+    
+
+Replace the following:
+
+  * `ENVIRONMENT_NAME`: the name of your Cloud Composer environment
+  * `LOCATION`: the region where the environment is located.
+
+**Important:** You can monitor that your highly resilient environment is available for failover with the `composer.googleapis.com/environment/database/available_for_failover` [metric](https://docs.cloud.google.com/composer/docs/composer-2/monitor-environments).
+
+## What's next
+
+  * [Perform failover tests](https://docs.cloud.google.com/composer/docs/composer-2/perform-failover-tests) for your highly resilient environment.
+  * [Disaster recovery with environment snapshots](https://docs.cloud.google.com/composer/docs/composer-2/disaster-recovery-with-snapshots)
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-16 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

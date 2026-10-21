@@ -1,0 +1,117 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/abuse-monitoring/
+title: Abuse monitoring \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-20T23:39:28.478995+00:00
+---
+
+# Abuse monitoring  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/abuse-monitoring/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Abuse monitoring Stay organized with collections  Save and categorize content based on your preferences. 
+
+## Google models not designated as "Google Frontier Models" or "Advanced AI"
+
+As outlined in Section 4.3 "Generative AI Safety and Abuse" of [Google Cloud Platform Terms of Service](https://cloud.google.com/terms/), Google uses the following process to detect potential abuse and violations of its [Acceptable Use Policy](https://cloud.google.com/terms/aup) and [Prohibited Use Policy](https://policies.google.com/terms/generative-ai/use-policy) as part of providing Generative AI Services to customers.
+
+  * **Automated detection** : Google uses automated safety classifiers to detect potential abuse and violations.
+
+  * **Prompt logging and human review** : If automated safety classifiers detect suspicious activity that requires further investigation into whether a customer has violated our policies, then Google may log customer prompts solely for the purpose of examining whether a violation of the AUP or Prohibited Use Policy has occurred. This data won't be used to train or fine-tune any AI/ML models. This data is stored securely for up to 90 days in the same region or multi-region selected by the customer for their project and adheres to Google Cloud assurances, such as Data Residency, Access Transparency and VPC Service Controls. Prompt logs for the purposes of abuse monitoring are not encrypted by Customer-managed encryption keys (CMEK).
+
+    * **Action** : Authorized Google employees may assess the flagged prompts and may reach out to the customer for clarification. Failure to address the behavior—or recurring or severe abuse—may result in suspension or termination of the customer's access to Gemini Enterprise Agent Platform or Google Cloud services.
+
+    * **Services in scope** : Google's Generative AI Services.
+
+    * **Customers in scope** : Only customers whose use of Google Cloud is governed by the [Google Cloud Platform Terms of Service](https://cloud.google.com/terms/). This means that customers with a Google Cloud Master Agreement are exempt from prompt logging for this abuse monitoring by default.
+
+
+
+
+## Google Frontier Models
+
+As outlined in Section 34 of the [Service Specific Terms](https://cloud.google.com/terms/service-terms), "Google Frontier Models," Google uses the following process to detect potential abuse and violations of its agreements, including the [Acceptable Use Policy](https://cloud.google.com/terms/aup) and [Prohibited Use Policy](https://policies.google.com/terms/generative-ai/use-policy), as part of providing Generative AI Services to customers.
+
+  * **Prompt and response logging for abuse monitoring** : Google may log customer prompts and responses solely for ensuring safe use of the Google Frontier Models and compliance with customer's Google agreement ("Purpose" set forth in the [Service Specific Terms](https://cloud.google.com/terms/service-terms)). This includes automated processing to create anonymized shingles and analyze usage patterns solely for the purpose described above. This data won't be used to train or fine-tune any AI/ML models. These logs are stored securely inside the customer's environment for up to 30 days. Prompt logs for the purposes of abuse monitoring are not encrypted by Customer-managed encryption keys (CMEK). Customers are not charged for this logging.
+
+  * **ZDR-aligned abuse logging for customers with Cloud Master Agreements** : Section 34 "Google Frontier Models" of [Service Specific Terms](https://cloud.google.com/terms/service-terms) does not give Google the right to conduct human review. Consequently, these logs adhere to ZDR standards for customers with Cloud Master Agreements, as they are stored inside the customer's environment and exempt from human review.
+
+  * **Human review of abuse logs for customers covered under Google Cloud online terms** : As outlined in Section 4.3 "Generative AI Safety and Abuse" of [Google Cloud Platform Terms of Service](https://cloud.google.com/terms/), Google may additionally conduct human review of prompts flagged by our abuse classifiers, solely for the purpose of determining whether a violation of the AUP or Prohibited Use Policy has occurred. This data won't be used to train or fine-tune any AI/ML models. Only customers whose use of Google Cloud is governed by the [Google Cloud Platform Terms of Service](https://cloud.google.com/terms/) are in scope for human review. This means that customers with a Google Cloud Master Agreement are exempt from human review for this abuse monitoring by default.
+
+  * **Models in scope** : [Gemini 4 Argon (Cyber Permissive)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon#cyber)
+
+  * **Services in scope** : Google's Generative AI Services.
+
+
+
+
+## Non-Google Advanced AI models
+
+As outlined in the [Advanced AI Safety Addendum](https://cloud.google.com/terms/advanced-ai-safety-addendum), Google Cloud has implemented a more rigorous abuse monitoring system for models designated as "Advanced AI".
+
+  * **Prompt and response logging** : All prompts and responses will be logged and securely stored for up to 30 days for the sole purpose of monitoring for abuse. This data won't be used to train or fine-tune any AI/ML models. This data is stored in the same region or multi-region selected by the customer for their project and adheres to Google Cloud assurances, such as Data Residency, Access Transparency and VPC Service Controls. Prompt and response logs for the purposes of abuse monitoring are not encrypted by Customer-managed encryption keys (CMEK). It may not be possible to opt-out of prompt-response logging when using some Advanced AI features. Please contact your account team for clarification.
+
+  * **Automated investigation** : Google deploys automated investigative tools, including safety classifiers, to analyze logged data and detect potential abuse and violations.
+
+  * **Action** : Authorized Google employees may assess the flagged prompts and may reach out to the customer for clarification. Failure to address the behavior—or recurring or severe abuse—may result in suspension or termination of the customer's access to Gemini Enterprise Agent Platform or Google Cloud services.
+
+  * **Services in scope** : Models and features designated as "Advanced AI", including:
+
+    * Claude Mythos (all versions)
+    * Claude Fable (all versions)
+    * Claude Opus >=4.7 and Sonnet >=5 when `advanced_ai_enabled` is set to `true` for use within Anthropic's [Cyber Verification Program](https://support.claude.com/en/articles/14604842-real-time-cyber-safeguards-on-claude) (CVP). All other usage of these models is out of scope of the Advanced AI Safety Addendum. To enroll and enable CVP for Claude models, see [Cyber Verification Program for Claude](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/cyber-verification-program).
+  * **Customer opt-out** : Zero data retention may not be possible when using some Advanced AI features. Please contact your account team for clarification. See the following section on how to govern acceptance of the addendum.
+
+
+
+
+### Consent to the Advanced AI Safety Addendum
+
+Consent to the Advanced AI Safety Addendum is required once per project before Advanced AI models can be enabled in that project. Consent is performed in Model Garden through the Google Cloud console before enabling any Advanced AI model.
+
+Consenting users must acknowledge that they are acting on behalf of their organization and possess the requisite authority to bind the customer to the obligations of the addendum. In order to consent, a user must have the `aiplatform.consents.update` permission which is included in the `aiplatform.admin` role.
+
+### Govern the Advanced AI Safety Addendum
+
+To prevent your users from consenting to this addendum admins can:
+
+  * Enforce least privileges in [IAM](https://docs.cloud.google.com/iam/docs/roles-overview) for the `aiplatform.consents.update` permission.
+  * [Disable access to Model Garden models](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/control-model-access) included in the Advanced AI Safety Addendum scope.
+
+
+
+## Partner-specific terms
+
+Use of partner models on Gemini Enterprise Agent Platform is subject to partner-specific terms.
+
+### Anthropic
+
+Use of Anthropic models on Gemini Enterprise Agent Platform is governed by Anthropic's [Commercial Terms of Service](https://www.anthropic.com/legal/commercial-terms) or other applicable agreement with Anthropic, with use of Anthropic Advanced AI governed by Section F of Anthropic's [Service Specific Terms](https://www.anthropic.com/legal/service-specific-terms). The abuse monitoring systems described on this page are used to ensure adherence to these terms.
+
+#### Data retention
+
+For Anthropic Anthropic's Claude Fable 5 on Google Cloud and Mythos 5, prompts and responses are retained for up to 30 days. To use Anthropic's Claude Fable 5 on Google Cloud and Mythos 5, as required by Anthropic, you must enable sharing this data with Anthropic for abuse monitoring.
+
+## What's next
+
+  * Learn about [Responsible AI](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/responsible-ai).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

@@ -1,0 +1,77 @@
+---
+url: https://docs.cloud.google.com/memorystore/docs/valkey/reference/rest/v1beta/projects.locations.aclPolicies.revisions
+title: REST Resource: projects.locations.aclPolicies.revisions \u00a0|\u00a0 Memorystore for Valkey \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T01:29:13.589423+00:00
+---
+
+# REST Resource: projects.locations.aclPolicies.revisions  |  Memorystore for Valkey  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/memorystore/docs/valkey/reference/rest/v1beta/projects.locations.aclPolicies.revisions
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Memorystore ](https://docs.cloud.google.com/memorystore/docs)
+  * [ Memorystore for Valkey ](https://docs.cloud.google.com/memorystore/docs/valkey)
+  * [ Reference ](https://docs.cloud.google.com/memorystore/docs/valkey/apis)
+
+
+
+Send feedback 
+
+#  REST Resource: projects.locations.aclPolicies.revisions Stay organized with collections  Save and categorize content based on your preferences. 
+
+  * Resource: AclPolicyRevision
+    * JSON representation
+  * Methods
+
+
+
+## Resource: AclPolicyRevision
+
+The ACL policy revision resource.
+
+JSON representation  
+---  
+      
+    
+    {
+      "name": string,
+      "revisionNumber": string,
+      "snapshot": {
+        object ([AclPolicy](https://docs.cloud.google.com/memorystore/docs/valkey/reference/rest/v1beta/projects.locations.aclPolicies#AclPolicy))
+      },
+      "createTime": string,
+      "attachedInstances": [
+        string
+      ]
+    }  
+  
+Fields  
+---  
+`name` |  `string` Identifier. The name of the ACL policy revision. Format: "projects/{project}/locations/{location}/aclPolicies/{aclPolicy}/revisions/{revision}"  
+`revisionNumber` |  `string ([int64](https://developers.google.com/discovery/v1/type-format) format)` Output only. The revision number of the ACL policy revision.  
+`snapshot` |  `object (`[AclPolicy](https://docs.cloud.google.com/memorystore/docs/valkey/reference/rest/v1beta/projects.locations.aclPolicies#AclPolicy)`)` Output only. The snapshot of the ACL policy at the time of revision creation.  
+`createTime` |  `string (`[Timestamp](https://protobuf.dev/reference/protobuf/google.protobuf/#timestamp)` format)` Output only. The timestamp that the revision was created.Uses RFC 3339, where generated output will always be Z-normalized and use 0, 3, 6 or 9 fractional digits. Offsets other than "Z" are also accepted. Examples: `"2014-10-02T15:01:23Z"`, `"2014-10-02T15:01:23.045123456Z"` or `"2014-10-02T15:01:23+05:30"`.  
+`attachedInstances[]` |  `string` Output only. A list of instances that are attached to this ACL policy revision.  
+  
+## Methods  
+  
+---  
+  
+### `[get](https://docs.cloud.google.com/memorystore/docs/valkey/reference/rest/v1beta/projects.locations.aclPolicies.revisions/get)`
+
+|  Gets details of a specific ACL policy revision.  
+  
+### `[list](https://docs.cloud.google.com/memorystore/docs/valkey/reference/rest/v1beta/projects.locations.aclPolicies.revisions/list)`
+
+|  Lists all ACL policy revisions in a given ACL policy.  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-09-28 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-09-28 UTC."],[],[]] 

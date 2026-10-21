@@ -1,0 +1,238 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/container/bare-metal/admin-clusters/create/
+title: gcloud beta container bare-metal admin-clusters create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T20:38:19.733670+00:00
+---
+
+# gcloud beta container bare-metal admin-clusters create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/container/bare-metal/admin-clusters/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta container bare-metal admin-clusters create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta container bare-metal admin-clusters create - create an Anthos on bare metal admin cluster 
+SYNOPSIS
+    
+
+`gcloud beta container bare-metal admin-clusters create` (`ADMIN_CLUSTER` : `--location`=`LOCATION`) `--version`=`VERSION` (`--control-plane-load-balancer-port`=`CONTROL_PLANE_LOAD_BALANCER_PORT` `--control-plane-vip`=`CONTROL_PLANE_VIP` : `--enable-manual-lb`) ((((`--control-plane-node-configs`=[`labels`=`LABELS`],[`node-ip`=`NODE-IP`] : `--control-plane-node-labels`=[`KEY`=`VALUE`,…] `--control-plane-node-taints`=[`KEY`=`VALUE`:`EFFECT`,…]))) : `--api-server-args`=[`KEY`=`VALUE`,…]) (`--island-mode-pod-address-cidr-blocks`=`POD_ADDRESS`,[`POD_ADDRESS`,…] `--island-mode-service-address-cidr-blocks`=`SERVICE_ADDRESS`,[…]) ((`--lvp-node-mounts-config-path`=`LVP_NODE_MOUNTS_CONFIG_PATH` `--lvp-node-mounts-config-storage-class`=`LVP_NODE_MOUNTS_CONFIG_STORAGE_CLASS`) ((`--lvp-share-path`=`LVP_SHARE_PATH` `--lvp-share-storage-class`=`LVP_SHARE_STORAGE_CLASS`) : `--shared-path-pv-count`=`SHARED_PATH_PV_COUNT`)) [`--admin-users`=`ADMIN_USERS`] [`--annotations`=[`KEY`=`VALUE`,…]] [`--async`] [`--binauthz-evaluation-mode`=`BINAUTHZ_EVALUATION_MODE`] [`--description`=`DESCRIPTION`] [`--enable-application-logs`] [`--login-user`=`LOGIN_USER`] [`--maintenance-address-cidr-blocks`=[`MAINTENANCE_ADDRESS_CIDR_BLOCKS`,…]] [`--max-pods-per-node`=`MAX_PODS_PER_NODE`] [`--validate-only`] [`--uri`=`URI` : `--no-proxy`=[`NO_PROXY`,…]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` Create an Anthos on bare metal admin cluster. 
+EXAMPLES
+     To create a cluster named ``my-cluster`` managed in location ``us-west1``, run: 
+    
+    
+    gcloud beta container bare-metal admin-clusters create my-cluster --location=us-west1
+
+POSITIONAL ARGUMENTS
+    
+
+Admin cluster resource - admin cluster to create The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `admin_cluster` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`ADMIN_CLUSTER`
+     ID of the admin_cluster or fully qualified identifier for the admin_cluster. 
+
+To set the `admin_cluster` attribute: 
+
+  * provide the argument `admin_cluster` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     Google Cloud location for the admin_cluster. 
+
+To set the `location` attribute: 
+
+  * provide the argument `admin_cluster` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `container_bare_metal/location`. 
+
+
+REQUIRED FLAGS
+    
+
+`--version`=`VERSION`
+     Anthos cluster on bare metal version for the admin cluster resource. 
+Anthos on bare metal admin cluster load balancer configuration. 
+
+This must be specified. 
+
+Control plane load balancer port configuration. 
+
+This must be specified. 
+
+`--control-plane-load-balancer-port`=`CONTROL_PLANE_LOAD_BALANCER_PORT`
+     Control plane load balancer port configuration. 
+VIPs used by the load balancer. 
+
+This must be specified. 
+
+`--control-plane-vip`=`CONTROL_PLANE_VIP`
+     VIP for the Kubernetes API of this cluster. 
+Manual load balancer configuration. 
+`--enable-manual-lb`
+     ManualLB typed load balancers configuration. 
+Anthos on bare metal cluster control plane configuration. 
+
+At least one of these must be specified: 
+
+`--api-server-args`=[`KEY`=`VALUE`,…]
+     API Server argument configuration. 
+Anthos on bare metal cluster control plane node pool configuration. 
+
+This must be specified. 
+
+Anthos on bare metal node pool configuration for control plane nodes. 
+
+This must be specified. 
+
+Anthos on bare metal node configuration for control plane nodes. 
+
+This must be specified. 
+
+Populate control plane node config. 
+
+Exactly one of these must be specified: 
+
+`--control-plane-node-configs`=[`labels`=`LABELS`],[`node-ip`=`NODE-IP`]
+     Control plane node configuration. 
+`--control-plane-node-labels`=[`KEY`=`VALUE`,…]
+     Labels assigned to nodes of a node pool. 
+`--control-plane-node-taints`=[`KEY`=`VALUE`:`EFFECT`,…]
+     Node taint applied to every Kubernetes node in a node pool. 
+Populate one of the network configs. 
+
+This must be specified. 
+
+Island mode CIDR network configuration. 
+`--island-mode-pod-address-cidr-blocks`=`POD_ADDRESS`,[`POD_ADDRESS`,…]
+     IPv4 address range for all pods in the cluster. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--island-mode-service-address-cidr-blocks`=`SERVICE_ADDRESS`,[…]
+     IPv4 address range for all services in the cluster. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+Anthos on bare metal cluster storage configuration. 
+
+This must be specified. 
+
+LVP node mounts class and path used by the storage. 
+
+This must be specified. 
+
+`--lvp-node-mounts-config-path`=`LVP_NODE_MOUNTS_CONFIG_PATH`
+     Path for the LVP node mounts class. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--lvp-node-mounts-config-storage-class`=`LVP_NODE_MOUNTS_CONFIG_STORAGE_CLASS`
+     Storage class for LVP node mounts. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+LVP share configuration. 
+
+At least one of these must be specified: 
+
+`--shared-path-pv-count`=`SHARED_PATH_PV_COUNT`
+     Number of subdirectories to create under path. 
+LVP share class and path used by the storage. 
+
+This must be specified. 
+
+`--lvp-share-path`=`LVP_SHARE_PATH`
+     Path for the LVP share class. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--lvp-share-storage-class`=`LVP_SHARE_STORAGE_CLASS`
+     Storage class for LVP share. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+OPTIONAL FLAGS
+    
+
+Anthos on bare metal admin cluster security configuration. 
+Admin cluster authorization configurations 
+`--admin-users`=`ADMIN_USERS`
+     Users that will be granted the view role on the admin cluster, providing view only access to the cluster. 
+`--annotations`=[`KEY`=`VALUE`,…]
+     Annotations on the Anthos on bare metal resource. 
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--binauthz-evaluation-mode`=`BINAUTHZ_EVALUATION_MODE`
+     Set Binary Authorization evaluation mode for this cluster. `BINAUTHZ_EVALUATION_MODE` must be one of: `DISABLED`, `PROJECT_SINGLETON_POLICY_ENFORCE`. 
+`--description`=`DESCRIPTION`
+     Description for the resource. 
+Anthos on bare metal cluster operations configuration. 
+`--enable-application-logs`
+     Whether collection of application logs/metrics should be enabled (in addition to system logs/metrics). 
+Anthos on bare metal node access related settings for the admin cluster. 
+`--login-user`=`LOGIN_USER`
+     User name used to access node machines. 
+Anthos on bare metal cluster maintenance configuration. 
+`--maintenance-address-cidr-blocks`=[`MAINTENANCE_ADDRESS_CIDR_BLOCKS`,…]
+     IPv4 addresses to be placed into maintenance mode. 
+Anthos on bare metal admin cluster workload node configuration. 
+`--max-pods-per-node`=`MAX_PODS_PER_NODE`
+     Maximum number of pods a node can run. 
+`--validate-only`
+     If set, only validate the request, but do not actually perform the operation. 
+Anthos on bare metal cluster proxy configuration. 
+`--uri`=`URI`
+     Address of the proxy server. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--no-proxy`=[`NO_PROXY`,…]
+     List of IPs, hostnames, and domains that should skip the proxy. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in beta and might change without notice. These variants are also available: 
+    
+    
+    [gcloud container bare-metal admin-clusters create](https://docs.cloud.google.com/sdk/gcloud/reference/container/bare-metal/admin-clusters/create)
+    
+    
+    [gcloud alpha container bare-metal admin-clusters create](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/container/bare-metal/admin-clusters/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

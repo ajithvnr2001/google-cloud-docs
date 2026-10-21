@@ -1,0 +1,112 @@
+---
+url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/create-a-vm/supported-vm-images/
+title: GDC-supported VM images \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T16:13:34.523063+00:00
+---
+
+# GDC-supported VM images  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/create-a-vm/supported-vm-images/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Distributed, hybrid, and multicloud ](https://docs.cloud.google.com/docs/dhm-cloud)
+  * [ Google Distributed Cloud ](https://docs.cloud.google.com/distributed-cloud/docs)
+  * [ Air-gapped ](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdch)
+  * [ 1.16.2 (Latest) ](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag)
+
+
+
+Send feedback 
+
+#  GDC-supported VM images Stay organized with collections  Save and categorize content based on your preferences. 
+
+This document provides information on GDC-provided and GDC-supported VM images, as well as instructions to view images in your Distributed Cloud deployment.
+
+You can [create a virtual machine (VM)](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/create-a-vm/create-and-start) using one of the Google Distributed Cloud (GDC) air-gapped-provided images, also referred to as _golden images_. You can also use a bring-your-own (BYO) custom VM image for instances where you must meet specific software requirements.
+
+This document is for developers in platform administrator or application operator groups that create VMs and manage VM images in a Google Distributed Cloud (GDC) air-gapped environment. For more information, see [Audiences for GDC air-gapped documentation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/audiences).
+
+## Before you begin
+
+### Request IAM roles
+
+Contact your Project IAM Admin to request the following roles on your project:
+
+  * **Virtual Machine Project Admin** (`project-vm-admin`): create, modify, list, and delete VMs in the project namespace.
+
+  * **Virtual Machine Image Project Admin** (`project-vm-image-admin`): create, list, and delete custom VM images in the project namespace.
+
+
+
+
+All VM roles must bind to the namespace of the project where the VM resides. Follow the steps to [verify](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/preparation#verify-user-access) your access.
+
+## GDC VM images
+
+This section provides information about GDC-supported operating systems.
+
+### GDC-provided golden images
+
+Before you create a VM using a GDC-provided golden image, review the list of available images. Refer to the instructions in [View a list of available GDC-provided images](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/create-a-vm/create-and-start#view-list-images-available).
+
+### BYO images
+
+You can also use your own custom images to create VM instances. This is useful when you have specific operating system or software configurations that aren't compatible with GDC-provided golden images. Follow the steps in [Create custom images](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/create-custom-images/create-custom-images) to create and list BYO images.
+
+## GDC-supported operating systems
+
+This section details the operating systems available for use with Distributed Cloud VM instances.
+
+### Linux OS
+
+Distributed Cloud supports the following Linux OS images:
+
+OS | Golden Image | Importable  
+---|---|---  
+Ubuntu 20.04 | Yes | Yes  
+Ubuntu 22.04 | Yes | Yes  
+Ubuntu 24.04 | Yes | Yes  
+RHEL 8 | No | Yes  
+Rocky 8 | Yes | No  
+SUSE CHost 15.5 | No | Yes  
+  
+Distributed Cloud supports importing an image from a bootable virtual disk or an existing VM disk only for Linux operating systems, because VM disk-based image import doesn't support image translation. To boot your Linux virtual disks in Distributed Cloud, the disks must run one of the GDC-supported Linux operating systems. Distributed Cloud doesn't support importing a Windows image from a VM disk; instead, you must import Windows images from ISO installation media that you upload to object storage.
+
+### Windows OS
+
+Distributed Cloud supports the following Windows OS images:
+
+OS | Golden Image | Importable  
+---|---|---  
+Windows Server 2019 Data center edition | No | Yes  
+Windows 10 | No | Yes  
+Windows Server 2022 Data center edition | No | Yes  
+  
+You can import Windows images from ISO installation media. Distributed Cloud installs Windows and creates a bootable image from the resulting disk.
+
+Image import requires that the ISO doesn't prompt for input when booted with Unified Extensible Firmware Interface (UEFI). To create a no-prompt ISO, start from an existing ISO file:
+
+  1. Extract the ISO contents using the 7Zip archive management tool:
+         
+         7z x windows-installation.iso -oiso-unpack
+         
+
+  2. Create a new ISO from your extracted ISO using `mkisofs`, substituting in the EFI noprompt binary:
+         
+         mkisofs -b boot/etfsboot.com -no-emul-boot -c BOOT.CAT -iso-level 4 -J -l -D -N -joliet-long -relaxed-filenames -v -V "Custom" -udf -boot-info-table -eltorito-alt-boot -eltorito-boot efi/microsoft/boot/efisys_noprompt.bin -no-emul-boot -o ISO_NAME.iso -allow-limited-size iso-unpack
+         
+
+Replace ISO_NAME with a name for the no-prompt ISO. For example, `noprompt-install`.
+
+
+**Note:** Image import is only verified on official Microsoft installation media. Other installation ISO files might work if they contain a GDC-provided Windows OS.
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

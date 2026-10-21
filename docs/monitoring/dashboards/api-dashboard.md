@@ -1,0 +1,1143 @@
+---
+url: https://docs.cloud.google.com/monitoring/dashboards/api-dashboard/
+title: Create and manage dashboards by API \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-20T20:44:59.269326+00:00
+---
+
+# Create and manage dashboards by API  |  Cloud Monitoring  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/monitoring/dashboards/api-dashboard/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Observability ](https://docs.cloud.google.com/docs/observability)
+  * [ Cloud Monitoring ](https://docs.cloud.google.com/monitoring/docs)
+  * [ Guides ](https://docs.cloud.google.com/monitoring/docs/monitoring-overview)
+
+
+
+Send feedback 
+
+#  Create and manage dashboards by API Stay organized with collections  Save and categorize content based on your preferences. 
+
+The [`Dashboard`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards) resource in the Cloud Monitoring API lets you programmatically create and manage custom dashboards and their widgets at scale. You can manage custom dashboards by using the Google Cloud CLI, Terraform, or REST calls to the [`create`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/create), [`list`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/list), [`get`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/get), [`patch`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/patch), and [`delete`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/delete) methods.
+
+You can't retrieve, edit, or delete [predefined dashboards](https://docs.cloud.google.com/monitoring/charts/predefined-dashboards) by using the API. For information about how to create and manage custom dashboards by using the Google Cloud console, see [Create and manage custom dashboards](https://docs.cloud.google.com/monitoring/charts/dashboards).
+
+## About dashboards
+
+When creating a dashboard, you must specify which components, or _widgets_ , you want to display, and the _layout_ for those widgets. You can also add labels and filters to your dashboard. Labels can help you find a dashboard or indicate the type of content on the dashboard.
+
+### Dashboard layouts
+
+Layouts define how the components of a dashboard are ordered. The API provides the following layouts:
+
+  * [`GridLayout`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#GridLayout): divides the available space into vertical columns of equal width and arranges a set of widgets using a row-first strategy.
+
+  * [`MosaicLayout`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#MosaicLayout): divides the available space into a grid. Each widget can occupy one or more grid blocks.
+
+  * [`RowLayout`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#RowLayout): divides the available space into rows and arranges a set of widgets horizontally in each row.
+
+  * [`ColumnLayout`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#ColumnLayout): divides the available space into vertical columns and arranges a set of widgets vertically in each column.
+
+
+
+
+For example, the following shows the JSON representation of a dashboard in [`RowLayout`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#RowLayout) with three [`Text`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#Text) widgets:
+    
+    
+    {
+      "displayName": "Row-layout example",
+      "rowLayout": {
+        "rows": [
+          {
+            "widgets": [
+              {
+                "text": {
+                  "content": "Text Widget 1",
+                  "format": "RAW"
+                }
+              },
+              {
+                "text": {
+                  "content": "**Text Widget 2**",
+                  "format": "MARKDOWN"
+                }
+              },
+              {
+                "text": {
+                  "content": "_Text Widget 3_",
+                  "format": "MARKDOWN"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+    
+
+### Dashboard widgets
+
+A widget contains a single dashboard component and the configuration of how to present the component in the dashboard. A dashboard can have more than one widget. There are multiple types of [`Widget` objects](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#Widget):
+
+  * [`XyChart`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#XyChart) widget: Displays data over the X and Y axes.
+
+This widget displays a dataset that can be time-series data or generated by a SQL query. This widget lets you associate the charted data with either the left or right Y-axis. When multiple metric types are charted, you can use both Y-axes. The `XyChart` widget supports the following display styles:
+
+    * Line charts
+    * Bar charts
+    * Stacked area charts
+    * Heatmaps
+
+You can specify the time range for `XyChart` widgets. This setting overrides the dashboard-level setting. Configure a chart's time-range override when you want that chart to show data over a longer or shorter time range than is appropriate for other dashboard widgets. For an example, see [Dashboard with an `XyChart` widget that sets a time-range override](https://docs.cloud.google.com/monitoring/dashboards/api-examples#dashboard_with_a_time_range).
+
+  * Widgets that display from one dimension, such as the latest value:
+
+    * [`PieChart`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#PieChart): Displays the latest values of a collection of time series, where each time series contributes one slice to the pie.
+
+    * [`Scorecard`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#Scorecard): Displays the latest value of one time series, and how this value relates to one or more thresholds.
+
+    * [`TimeSeriesTable`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#TimeSeriesTable): Displays the latest value, or an aggregated value, for each time series. Tables support customization. For example, you can color-code cells and configure column names and data alignment.
+
+  * Widgets that display alerting policy or alert information:
+
+    * [`AlertChart`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#AlertChart): Displays a summary of a single-condition alerting policy. This widget displays data as a line chart, shows the threshold, and lists the number of open alerts.
+
+    * [`IncidentList`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#IncidentList): Displays a list of alerts. You can configure the widget to show alerts for specific alerting policies or for specific resource types.
+
+  * Widgets that display log entries and errors:
+
+    * [`ErrorReportingPanel`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#ErrorReportingPanel): Displays [error groups](https://docs.cloud.google.com/error-reporting/docs/grouping-errors) that are stored in the selected Google Cloud project.
+
+    * [`LogsPanel`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#LogsPanel): Displays [project-scoped log entries](https://docs.cloud.google.com/logging/docs/view/logs-explorer-interface#refine_scope) that are stored in the current Google Cloud project. You can configure the widget to show log entries stored in Google Cloud projects accessible through the current [metrics scope](https://docs.cloud.google.com/monitoring/settings).
+
+  * Widgets that display trace data:
+
+    * [`XyChart`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#XyChart) widget: Displays data over the X and Y axes.
+
+    * [`TimeSeriesTable`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#TimeSeriesTable): Displays the latest value, or an aggregated value. Tables support customization.
+
+  * Text and organization widgets:
+
+    * [`CollapsibleGroup`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#CollapsibleGroup): Displays a collection of widgets. You can collapse the view of a group.
+
+    * [`SingleViewGroup`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#SingleViewGroup): Displays one widget in a collection of widgets. You can select which widget to display.
+
+    * [`SectionHeader`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#SectionHeader): Creates a horizontal divider in your dashboard, and it creates an entry in the dashboard's table of contents.
+
+    * [`Text`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#Text): Displays textual content, either as raw text or a Markdown string.
+
+To include the text and organization widgets on a dashboard, the dashboard must have a [`MosaicLayout`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#MosaicLayout).
+
+
+
+
+In addition to these objects, you can also add a [blank](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#Widget) placeholder to a dashboard.
+
+For example, the following shows the JSON representation of an [`XyChart`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#XyChart) widget whose right Y-axis is configured:
+    
+    
+    {
+      "displayName": "Demo dashboard",
+      "gridLayout": {
+        "widgets": [
+          {
+            "title": "Sample line chart",
+            "xyChart": {
+              "dataSets": [
+                {
+                  "timeSeriesQuery": {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"compute.googleapis.com/instance/cpu/utilization\" resource.type=\"gce_instance\"",
+                      "aggregation": {
+                        "perSeriesAligner": "ALIGN_MEAN",
+                        "crossSeriesReducer": "REDUCE_MAX",
+                        "groupByFields": [
+                          "resource.label.zone"
+                        ]
+                      }
+                    },
+                    "unitOverride": "1"
+                  },
+                  "plotType": "LINE"
+                }
+              ],
+              "timeshiftDuration": "0s",
+              "yAxis": {
+                "label": "y1Axis",
+                "scale": "LINEAR"
+              },
+              "chartOptions": {
+                "mode": "COLOR"
+              }
+            }
+          }
+        ]
+      }
+    }
+    
+
+### Dashboard labels
+
+Labels can help you manage and organize your dashboards. For example, you might add a label named `prod` to indicate that the dashboard displays time-series data and log data for your production resources. Alternatively, you might add the label `playbook` to indicate that the dashboard contains information to help you troubleshoot failures.
+
+Adding labels to a dashboard is optional.
+
+For example, the following shows a `Dashboard` object that specifies the label named `playbook`.
+    
+    
+    {
+      "displayName": "Example",
+      "mosaicLayout": {
+        "columns": 12,
+        "tiles": [
+          ...
+        ]
+      },
+      "dashboardFilters": [],
+      "labels": {
+        "playbook": ""
+      }
+    }
+    
+
+As the previous sample illustrates, the `labels` field is implemented as a `map`, where the `key` and `value` fields are both strings. When you add a label to a dashboard, set the `key` to the name of the label, and set the `value` field to an empty string.
+
+**Note:** In `Dashboard.labels` objects, only the `key` fields are processed. The `value` fields are ignored.
+
+### Dashboard filters and variables
+
+When you design a dashboard, you might identify multiple ways to view the data the dashboard displays. For example, suppose a dashboard displays time-series data for your virtual machine (VM) instances. You might want to view the time-series data for all VMs, and you might want to view only the data that is in a specific zone. In this situation, we recommend that you create a pinned filter or a variable and then set the default value of that filter to the most commonly viewed zone.
+
+_Pinned filters_ apply to all dashboard widgets that support the label specified in the filter, unless the widget contains a filter with that same label key. For example, when a chart includes the filter `zone = us-central1-a`, that chart ignores a pinned filter whose label key is `zone`. Similarly, this filter is ignored by charts that don't have a label with a key of `zone`.
+
+_Variables_ are like pinned filters, but they only apply to specific widgets. Variables can be based on labels, or they can have a value only. Value-only variables contain one or more default values and a list of all possible values. If you don't specify a default value, then the default is set to the wildcard operator `(*)`. To define the set of all possible values, you either provide an array of values or you write a SQL query.
+
+If you create a pinned filter or variable, then Monitoring updates the toolbar of your custom dashboard to display a filter. For pinned filters, the name of the toolbar filter is the name of the pinned filter. For variables, the name of the toolbar filter is a dollar sign `$` followed by the name of the variable. Each toolbar filter contains a menu that lets you change the value of the associated pinned filter or variable. For variables, you can replace the toolbar filter with a dashboard widget. To learn more, see [Dashboard with a `FilterControl` widget](https://docs.cloud.google.com/monitoring/dashboards/api-examples#dashboard_with_filter_control).
+
+For widgets that query data, you can include a variable in the widget's query, and you can use a variable to control the visibility of the widget. When the query depends on a variable, the data the widget requests changes when you change the value of the variable. As a result, the displayed data also changes. When you use a variable to control the visibility of a widget, a _visibility_ **Visible** icon is shown in the toolbar. For restrictions related to visibility, see [Set the visibility of a widget](https://docs.cloud.google.com/monitoring/dashboards/filter-permanent#set-visibility).
+
+The same data structure is used to represent pinned filters and variables. For more information, see [`DashboardFilter`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#DashboardFilter).
+
+For an example that shows how you can control the visibility of a widget by using a variable, see [Dashboard with widget-visibility configured](https://docs.cloud.google.com/monitoring/dashboards/api-examples#widget_visibility).
+
+To learn how to update the query of a widget with a label-based variable or value-only variable, see the following sections:
+
+  * General syntax to dereference a variable
+  * Logs panel widgets
+  * Charts with PromQL queries
+  * Charts with SQL queries
+  * Charts with Monitoring filter queries
+
+When you use the menu-driven interface to create a chart that displays time-series data, your selections are converted into a [Monitoring filter](https://docs.cloud.google.com/monitoring/api/v3/filters).
+
+
+
+
+#### Create filters and variables
+
+###  Console 
+
+For information about how to use the Google Cloud console to create pinned filters and variables, see the following documents:
+
+  * [Create and pin a filter](https://docs.cloud.google.com/monitoring/dashboards/filter-permanent#create-permanent-filter)
+  * [Create a variable](https://docs.cloud.google.com/monitoring/dashboards/filter-permanent#create-variable)
+
+
+
+###  REST 
+
+To define pinned filters and variables, use the [`dashboardFilters`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#DashboardFilter) data structure.
+
+  * To create a variable, set the value of the `templateVariable` field to the name of the variable. Omit this field or set the value to an empty string when you want to create a pinned filter.
+  * To create a pinned filter or a label-based variable, you must specify the `labelKey` field. Omit this field when you want a value-only variable.
+  * Set the default value for the filter or variable. The configuration of this field determines whether a user can select exactly one option from the menu of value, or whether they can select multiple values.
+
+  * To set a single default value and to restrict users to selecting exactly one option in the values menu, set the `valueType` field as `STRING` and also set the `stringValue` field:
+        
+        "valueType": "STRING",
+        "stringValue": "my-default-value",
+        
+
+  * To set at least one default value and to let users select multiple options in the values menu, set the `valueType` field as `STRING_ARRAY` and also set the `stringArrayValue` field. In the following example, there are three default values.
+        
+        "valueType": "STRING_ARRAY",
+        "stringArrayValue": {
+          "values": [ "a", "b", "c" ]
+        },
+        
+
+**Note:** If you don't specify a default value, then the wildcard operator, `(*)`, is selected automatically. If you plan to use the variable in a logs panel, then you must use the regular expression as a comparator. For SQL queries, you must use an `IF` statement. For more information, see Charts with SQL queries.
+  * Optional: To specify the list of all possible values for a value-only variable, set either the `stringArray` field or the `timeSeriesQuery` field. If you specify a query, it must be an analytics query.
+
+**Note:** Don't set the `timeSeriesQuery` or `stringArray` fields when you create a pinned filter or a label-based variable. The set of all possible values is dynamically determined.
+
+
+
+For example, consider the following `dashboardFilters` object:
+    
+    
+    {
+      "dashboardFilters": [
+          {
+            "labelKey": "zone"
+            "stringValue": "us-central1-c",
+            "valueType": "STRING",
+            "filterType": "RESOURCE_LABEL"
+          },
+          {
+            "labelKey": "instance_id",
+            "stringValue": "3133577226154888113",
+            "valueType": "STRING",
+            "filterType": "RESOURCE_LABEL",
+            **"templateVariable": "my_label_based_variable"**
+          },
+          {
+            "filterType": "VALUE_ONLY",
+            **"templateVariable": "my_value_only_variable"** ,
+            timeSeriesQuery: {
+              opsAnalyticsQuery: {
+                **sql: "
+                  SELECT log_name
+                  FROM `MY_TABLE`
+                  GROUP BY log_name**
+                ",
+              }
+            }
+          }
+        ],
+      "displayName": "Illustrate Variables",
+      ...
+    }
+    
+
+The previous JSON defines one pinned filter and two variables:
+
+  * The pinned filter has the label key of `zone`, which is is displayed on the toolbar. The `valueType` and `stringValue` fields specify the single default value. For more information, see the API references page for the [`dashboardFilters`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards#DashboardFilter) data structure.
+
+  * The label-based variable has the name `my_label_based_variable`, and its label key is `instance_id`. The default value for this variable is set to a specific instance ID. You can also configure the default value by using an array. On the toolbar, the filter is displayed with the name `my_label_based_variable`.
+
+  * The value-only variable is named `my_value_only_variable`. This entry doesn't specify a default value, so the wildcard operator, `(*)`, is automatically applied. Additionally, this variable uses a SQL query to generate the list of possible values for the variable.
+
+
+
+
+Note that the `dashboardFilters` object doesn't list the widgets to which the variable applies. Instead, you update the query of a widget to depend on a variable.
+
+#### General syntax to dereference a variable
+
+For all widgets, except those that are defined by SQL, use the following syntax to apply a variable to a query:
+
+  * To apply a label-based variable and have the label key and the label value resolved into a valid filter expression for the query language, use `${my_label_based_variable}`.
+
+  * To apply only the value of a label-based variable, use `${my_label_based_variable.value}`. The comparison must use a regular expression.
+
+  * To apply only the value of a value-only variable, use `${my_value_only_variable}`. For value-only variables, don't include a `.value` clause. The comparison must use a regular expression.
+
+
+
+
+#### Logs panel widgets
+
+To apply a variable to a logs panel widget, update the queries pane. The syntax for these widgets follows that specified under General syntax.
+
+###  Console 
+
+For example, the following query uses a regular expression to compare the value of the `jsonPayload.message` field with a string value that includes the value of a label-based variable:
+    
+    
+    jsonPayload.message=~"Connected to instance: **${my_label_based_variable.value}** "
+    
+
+As another example, consider a value-only variable, `value_only_severity_variable`, and assume that in the menu of values, three values are selected: `ERROR`, `INFO`, and `NOTICE`. Next, you add the following to the query pane of your logs panel widget:
+    
+    
+    severity =~ "${value_only_severity_variable}"
+    
+
+The following illustrates the rendered form:
+    
+    
+    severity =~ "^(ERROR|INFO|NOTICE)$"
+    
+
+###  REST 
+
+For example, the following JSON illustrates how to update the query of a logs panel widget with a label-based variable:
+    
+    
+    "logsPanel": {
+      "filter": "**${my_label_based_variable}** ",
+      "resourceNames": [
+        "projects/1234512345"
+      ]
+    },
+    
+
+For example, the following query uses a regular expression to compare the value of the `jsonPayload.message` field with a string value that includes the value of a label-based variable:
+    
+    
+    "logsPanel": {
+      "filter": "resource.type=\"gce_instance\"\n
+                resource.labels.project_id**=~\"${my_label_based_variable.value}\"** \n",
+      "resourceNames": [
+        "projects/012345"
+      ]
+    }
+    
+
+As another example, consider a value-only variable, `value_only_severity_variable`, and assume that three values are selected in the menu: `ERROR`, `INFO`, and `NOTICE`. Next, you add the following to the query pane of your logs panel widget:
+    
+    
+    "logsPanel": {
+      "filter": "severity =~ \"${value_only_severity_variable}\"\n",
+      ...
+    }
+    
+
+The following illustrates the query as executed by the logs panel widget:
+    
+    
+    severity =~ "^(ERROR|INFO|NOTICE)$"
+    
+
+If you've configured a query for the logs panel and then select the button to open the Logs Explorer, the variables are resolved before the Logs Explorer is opened.
+
+The following table illustrates how the example variables are are resolved by the logs panel. As previously mentioned, when only the value of a variable is used, you must use a regular expression as the comparison operator:
+
+Syntax | Selected  
+Value | Resolved logs panel expression  
+---|---|---  
+`${my_label_based_variable}` | `12345` | `resource.labels."instance_id"="12345"` The example variable is based on the resource label `instance_id`.  
+`${my_label_based_variable}` | `*` | `""`  
+`${my_label_based_variable.value}`  
+`${my_value_based_variable}` | `12345` | `12345`  
+`${my_label_based_variable.value}`  
+`${my_value_based_variable}` | `*` | `.*`  
+  
+#### Charts with PromQL queries
+
+To update a chart that has a PromQL query to depend on a label-based variable, follow the guidance listed in General syntax.
+
+###  Console 
+
+For example, the following query relies on the label-based variable, `my_label_based_variable`, being resolved into a filter expression:
+    
+    
+    compute_googleapis_com:instance_cpu_utilization{
+        monitored_resource="gce_instance", **${my_label_based_variable}** }
+    
+
+You can also modify query to resolve only the value of a variable. The following example uses a regular expression to compare the value of a label-based query to the `instance_id`:
+    
+    
+    compute_googleapis_com:instance_cpu_utilization{
+        instance_id**=~"${my_label_based_variable.value}"**
+    }
+    
+
+If you have a value-only variable, then omit the `.value` clause. For example, to filter by zone using a value-only variable, the query would include something like the following:
+    
+    
+    zone**=~"${my_value_only_variable}"**
+    
+
+###  REST 
+
+For example, the following JSON illustrates a query that relies on the label-based variable, `my_label_based_variable`, being resolved into a filter expression:
+    
+    
+    "timeSeriesQuery": {
+      "prometheusQuery": "avg_over_time(
+        compute_googleapis_com:instance_cpu_utilization{
+          monitored_resource=\"gce_instance\",
+          **${my_label_based_variable}**
+          }[${__interval}])",
+      "unitOverride": "",
+      "outputFullDuration": false
+    },
+    
+
+You can also modify query to resolve only the value of a variable. The following example uses a regular expression to compare the value of a label-based query to the `instance_id`:
+    
+    
+    "timeSeriesQuery": {
+      "prometheusQuery": "avg_over_time(
+        compute_googleapis_com:instance_cpu_utilization{
+        monitored_resource=\"gce_instance\",
+        instance_id**=~\"${my_label_based_variable.value}\"**
+        }[${__interval}])",
+      "unitOverride": "",
+      "outputFullDuration": false
+    },
+    
+
+If you have a value-only variable, then omit the `.value` clause. For example, to filter by zone using a value-only variable, the query would include something like the following:
+    
+    
+    zone**=~\"${my_value_only_variable}\"**
+    
+
+The following table illustrates how the example variables are are resolved by the PromQL. As previously mentioned, when only the value of a variable is used, you must use a regular expression as the comparison operator:
+
+Syntax | Selected  
+Value | Resolved PromQL expression  
+---|---|---  
+`${my_label_based_variable}` | `12345` | `instance_id == '12345'` The example variable is based on the resource label `instance_id`.  
+`${my_label_based_variable}` | `*` | `noop_filter=~".*"`  
+`${my_label_based_variable.value}`  
+`${my_value_based_variable}` | `12345` | `12345`  
+`${my_label_based_variable.value}`  
+`${my_value_based_variable}` | `*` | `.+`  
+  
+#### Charts with SQL queries
+
+There are two places where you can use variables in your SQL queries:
+
+  * The `FROM` clause can depend on the system-defined variable named `@__project_id`, which resolves to the value of your selected project.
+
+  * The `WHERE` clause can depend on user-defined variables.
+
+
+
+
+**Update the`FROM` clause to depend on a system-defined variable**
+
+If you create dashboard templates and these templates chart the results of SQL queries, then replace the project ID in your query with the variable `@__project_id`. When you install the template in a project, the variable automatically resolves to the project ID. You don't need to manually edit the widget and update the `FROM` clause.
+
+The following illustrates a `FROM` clause that depends on the system-defined variable:
+    
+    
+    FROM `@__project_id.global._Default._Default`
+    
+
+The `FROM` clause can't depend on user-defined variables.
+
+**Update the`WHERE` clause to depend on a user-defined variable**
+
+This section describes how you can update the `WHERE` clause of a SQL-defined widget to depend on a user-defined variable. For all variables, prefix the variable name with the "at" sign, for example: `@variable_name`. For label-based variables, append `.value` to the variable name, `@my_label_based_variabe.value`.
+
+For SQL queries, the variable substitution relies on BigQuery, and is SQL-injection safe. For more information, see [Running parameterized queries](https://docs.cloud.google.com/bigquery/docs/parameterized-queries).
+
+###  Console 
+
+Because SQL doesn't interpret the wildcard operator to mean "any value", we recommend that you always use an `IF` statement when using variables in a SQL query. The following example illustrates usage for a value-only variable whose data type is a string:
+    
+    
+    WHERE **IF(@my_value_only_variable = "*", TRUE, log_name = @my_value_only_variable)**
+    
+
+When the menu option for the variable lets users select multiple values, you must cast the value of the variable to a GoogleSQL data type by using the [`CAST` function](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/functions-and-operators#cast). The following query illustrates this syntax:
+    
+    
+    IF(ARRAY_LENGTH(CAST(@my_value_only_variable)) = 0, TRUE,
+       severity IN UNNEST(@my_value_only_variable))
+    
+
+The `IF` statement shown in the previous examples is recommended because SQL doesn't interpret the wildcard operator to mean "any value". Therefore, if you omit the `IF` statement and if you select the wildcard operator, then the result of the query is an empty table. In the second example, the [`UNNEST` function](https://docs.cloud.google.com/bigquery/docs/arrays#flattening_arrays) converts the array to a table.
+
+To add a properly-formatted `WHERE` clause, do the following:
+
+  1. Edit the widget.
+  2. In the toolbar, select **Insert variable filter** , and then select the variable whose `WHERE` clause you want to update.
+  3. In the dialog that opens, review the generated code and then click **Copy and close**.
+  4. Paste the copied code into the **Query** pane and make any necessary edits.
+
+For example, suppose you create a variable named `LogName` that generates a list of log names and outputs the result in a table with a single column named `log_name`. Next, you create a chart, select **Insert variable filter** , and then select the variable `LogName`. The following code is generated:
+         
+         WHERE IF(@LogName = '*', TRUE, LogName = @LogName)
+         
+
+In this example, you need to edit the generated code and replace `LogName =` with `log_name =`, so that the table join can occur:
+         
+         WHERE IF(@LogName = '*', TRUE, log_name = @LogName)
+         
+
+  5. Click **Run** and then **Apply**.
+
+  6. To save your modified dashboard, in the toolbar, click **Save**.
+
+
+
+
+###  REST 
+
+Because SQL doesn't interpret the wildcard operator to mean "any value", we recommend that you always use an `IF` statement when using variables in a SQL query. The following example illustrates usage for a value-only variable whose data type is a string:
+    
+    
+    WHERE **IF(@my_value_only_variable = "*", TRUE, log_name = @my_value_only_variable)**
+    
+
+For example, the following shows a partial JSON representation of a chart that displays the results of a SQL query. To support filtering the results by the name of a log, a `WHERE` clause was added that references the variable named `LogName`:
+    
+    
+    "plotType": "STACKED_BAR",
+    "targetAxis": "Y1",
+    "timeSeriesQuery": {
+      "opsAnalyticsQuery": {
+        "queryExecutionRules": {},
+        "queryHandle": "",
+        "sql": "SELECT\n timestamp, severity, resource.type, log_name, text_payload, proto_payload, json_payload\n
+                FROM\n `my-project.global._Default._Default`\n
+                WHERE \n **IF (@LogName = \"*\", TRUE, log_name=@LogName)** \nLIMIT 10000"
+      }
+    }
+    
+
+The variable `LogName` also issues a query to determine the list of possible log names:
+    
+    
+    "dashboardFilters": [
+      {
+        "filterType": "VALUE_ONLY",
+        "templateVariable": "LogName",
+        "valueType": "STRING",
+        "timeSeriesQuery": {
+          "opsAnalyticsQuery": {
+            "savedQueryId": "",
+            "sql": "SELECT log_name FROM `my-project.global._Default._Default` GROUP BY log_name LIMIT 1000",
+            "queryHandle": ""
+          },
+          "unitOverride": "",
+          "outputFullDuration": false
+        }
+      }
+    ],
+    
+
+When the menu option for the variable lets users select multiple values, you must cast the value of the variable to a GoogleSQL data type by using the [`CAST` function](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/functions-and-operators#cast). The following query illustrates this syntax:
+    
+    
+    IF(ARRAY_LENGTH(CAST(@my_value_only_variable)) = 0, TRUE,
+       severity IN UNNEST(@my_value_only_variable))
+    
+
+The `IF` statement shown in the previous examples is recommended because SQL doesn't interpret the wildcard operator to mean "any value". Therefore, if you omit the `IF` statement and if you select the wildcard operator, then the result of the query is an empty table. In the second example, the [`UNNEST` function](https://docs.cloud.google.com/bigquery/docs/arrays#flattening_arrays) converts the array to a table.
+
+#### Charts with Monitoring filter queries
+
+To update a chart that has a query in the form of a Monitoring filter to depend on a label-based variable, follow the guidance listed in General syntax.
+
+###  Console 
+
+If you use the Google Cloud console to create your charts, and if you use the menu-driven interface, then you can update the chart's query by using the variable's **Apply to charts** field or by editing the widget and selecting label-based variable from the **Filter** menu. The **Filter** menu lists all label-based variables and all label keys.
+
+To update the query of a chart to depend on a value-based variable, do the following:
+
+  1. Edit the chart.
+  2. In the query pane, click **Add filter** and select a label key. For example, you might select **zone**.
+  3. In the **Value** menu, select your value-only variable.
+  4. Click **Apply**.
+  5. To save your modified dashboard, in the toolbar, click **Save**.
+
+
+
+For example, the following JSON illustrates a query that relies on a label-based variable, `my_label_based_variable`, being resolved into a filter expression:
+    
+    
+    metric.type="compute.googleapis.com/instance/cpu/utilization"
+    resource.type="gce_instance" **${my_label_based_variable}** "
+    
+
+Widgets that use a query in the form of a Monitoring filter can't filter the time series by the value in a label-based variables; however, you can filter by value-only variables. For example, the following query shows the value of the **Filters** field of a query that filters by `zone`, based on the value of a value-only variable:
+    
+    
+    metric.type="compute.googleapis.com/instance/cpu/utilization"
+    resource.type="gce_instance"
+    resource.label."zone"=**monitoring.regex.full_match(${my_value_only_variable})**
+    
+
+###  REST 
+
+For example, the following JSON illustrates a query that relies on a label-based variable, `my_label_based_variable`, being resolved into a filter expression:
+    
+    
+    "timeSeriesQuery": {
+      "timeSeriesFilter": {
+        "filter": "metric.type=\"compute.googleapis.com/instance/cpu/utilization\"
+                  resource.type=\"gce_instance\"
+                  **${my_label_based_variable}** ",
+        "aggregation": {
+          "alignmentPeriod": "60s",
+          "perSeriesAligner": "ALIGN_MEAN",
+          "groupByFields": []
+        }
+      },
+      "unitOverride": "",
+      "outputFullDuration": false
+    },
+    
+
+Widgets that use a query in the form of a Monitoring filter can't filter the time series by the value in a label-based variables; however, you can filter by value-only variables. For example, the following query shows the `"filter"` field of a query that filters by `zone`, based on the value of a value-only variable:
+    
+    
+    "filter": "metric.type=\"compute.googleapis.com/instance/cpu/utilization\"
+              resource.type=\"gce_instance\"
+              resource.labels.\"zone\"**=monitoring.regex.full_match(${my_value_only_variable})** "
+    
+
+The following table illustrates how the example variables are are resolved by the Monitoring filter. As previously mentioned, when only the value of a variable is used, you must use a regular expression as the comparison operator:
+
+Syntax | Selected  
+Value | Resolved filter expression  
+---|---|---  
+`${my_label_based_variable}` | `12345` | `resource.instance_id == "12345"` The example variable is based on the resource label `instance_id`.  
+`${my_label_based_variable}` | `*` | Omitted  
+`${my_label_based_variable.value}` | `12345` | Not supported  
+`${my_label_based_variable.value}` | `*` | Not supported  
+`${my_value_based_variable}` | `12345` | `"12345"`  
+`${my_value_based_variable}` | `*` | `".*"`  
+  
+## Before you begin
+
+Complete the following in the Google Cloud project where you want to create or manage dashboards:
+
+### gcloud
+
+In the Google Cloud console, activate Cloud Shell.
+
+[Activate Cloud Shell](https://console.cloud.google.com/?cloudshell=true)
+
+At the bottom of the Google Cloud console, a [Cloud Shell](https://docs.cloud.google.com/shell/docs/how-cloud-shell-works) session starts and displays a command-line prompt. Cloud Shell is a shell environment with the Google Cloud CLI already installed and with values already set for your current project. It can take a few seconds for the session to initialize. 
+
+### Terraform
+
+To use the Terraform samples on this page in a local development environment, install and initialize the gcloud CLI, and then set up Application Default Credentials with your user credentials. 
+
+  1. [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. 
+
+  2. If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). 
+
+  3. If you're using a local shell, then create local authentication credentials for your user account: 
+         
+         gcloud auth application-default login
+
+You don't need to do this if you're using Cloud Shell.
+
+If an authentication error is returned, and you are using an external identity provider (IdP), confirm that you have [ signed in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). 
+
+
+
+
+For more information, see [ Set up ADC for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment) in the Google Cloud authentication documentation. 
+
+### REST
+
+To use the REST API samples on this page in a local development environment, you use the credentials you provide to the gcloud CLI. 
+
+[Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. 
+
+If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). 
+
+
+
+
+For more information, see [Authenticate for using REST](https://docs.cloud.google.com/docs/authentication/rest) in the Google Cloud authentication documentation. 
+
+## Create a dashboard
+
+To create a new custom dashboard, invoke the [`dashboards.create`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/create) method and provide it with the layout and the widgets to display in the dashboard.
+
+The `name` field is optional. The value of the `name` field has the following structure:
+    
+    
+    "name": "projects/PROJECT_ID_OR_NUMBER/dashboards/DASHBOARD_ID"
+    
+
+When you create a dashboard, the API automatically generates the DASHBOARD_ID component. If you want to specify a custom DASHBOARD_ID, then you can specify the `name` field of the `Dashboard` object.
+
+**Note:** The value of the `name` field must be globally unique, as this field serves as the unique name for a dashboard. If you specify this field in a YAML or JSON file that you use to create dashboards, then ensure that you use a unique value for DASHBOARD_ID for each run. If you attempt to create a dashboard in the same project and the ID you specify is in use, then an error occurs. For more information, see [Dashboard create fails](https://docs.cloud.google.com/monitoring/charts/troubleshooting-charts#fail-create). The display name doesn't have to be unique.
+
+###  gcloud 
+
+To create a dashboard in a project, use the [`gcloud monitoring dashboards create`](https://docs.cloud.google.com/sdk/gcloud/reference/monitoring/dashboards/create) command.
+    
+    
+    gcloud monitoring dashboards create --config-from-file=my-dashboard.json --project=PROJECT_ID
+    
+
+Before you run the previous command, replace the following:
+
+  * PROJECT_ID: The identifier of the project. For [App Hub](https://docs.cloud.google.com/app-hub/docs/overview) configurations, select the App Hub host project or management project.
+
+
+
+For example, if you want to duplicate a dashboard, do the following:
+
+  1. Complete the steps in Get dashboard to download the definition of the original dashboard.
+  2. Edit the returned JSON to remove the `etag` and `name` fields, and change the value of the `displayName` field.
+  3. Run the command to create the dashboard.
+
+
+
+For more information, see the [`gcloud monitoring dashboards create`](https://docs.cloud.google.com/sdk/gcloud/reference/monitoring/dashboards/create) reference.
+
+###  Terraform 
+
+To learn how to apply or remove a Terraform configuration, see [Basic Terraform commands](https://docs.cloud.google.com/docs/terraform/basic-commands). For more information, see the [Terraform provider reference documentation](https://registry.terraform.io/providers/hashicorp/google/latest/docs).
+
+**Note:** If you create a dashboard by using Terraform, then you can view the dashboard with the Google Cloud console. However, don't edit the dashboard in the Google Cloud console. Editing causes the dashboard to be rescaled. For more information, see [Troubleshoot: Terraform-created dashboard is rescaled](https://docs.cloud.google.com/monitoring/charts/troubleshooting-charts#dashboard-rescaled).
+
+To create a dashboard by using Terraform, do the following:
+
+  1. [Install and configure Terraform](https://docs.cloud.google.com/docs/terraform/install-configure-terraform) for you project. For [App Hub](https://docs.cloud.google.com/app-hub/docs/overview) configurations, select the App Hub host project or management project.
+  2. Use the Terraform resource [`google_monitoring_dashboard`](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/monitoring_dashboard).
+
+In the command, set the following fields:
+
+     * `dashboard_json`: The JSON representation of the dashboard, using the [`Dashboard`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards) format.
+
+For examples of this format, you can either list your dashboards by using the [APIs Explorer](https://docs.cloud.google.com/monitoring/api/apis-explorer), or you can open a dashboard in the Google Cloud console and view the JSON representation.
+
+     * `parent`: The fully qualified name of your project. For example, you might set this field to `"projects/PROJECT_ID"`, where PROJECT_ID is the ID of your Google Cloud project. For [App Hub](https://docs.cloud.google.com/app-hub/docs/overview) configurations, select the App Hub host project or management project.
+
+
+
+
+###  REST 
+
+To create a new dashboard, send a `POST` request to the [`Dashboard`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards) endpoint.
+    
+    
+    curl -d @my-dashboard.json -H "Authorization: Bearer $ACCESS_TOKEN" -H 'Content-Type: application/json' -X POST https://monitoring.googleapis.com/v1/projects/${PROJECT_ID}/dashboards
+    
+
+Before you run the previous command, configure the following:
+
+  * `${PROJECT_ID}`: An environment variable that stores the project ID in which to create the dashboard. For [App Hub](https://docs.cloud.google.com/app-hub/docs/overview) configurations, select the App Hub host project or management project.
+
+
+
+The examples create a sample dashboard by using the `my-dashboard.json` file. You can [manage your dashboard through the Google Cloud console](https://docs.cloud.google.com/monitoring/charts/dashboards).
+
+For additional dashboard configurations, see [Example dashboards and layouts](https://docs.cloud.google.com/monitoring/dashboards/api-examples).
+
+## Delete dashboards
+
+To delete a custom dashboard, invoke the [`dashboards.delete`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/delete) method and specify the dashboard you want to delete.
+
+###  gcloud 
+
+To delete a custom dashboard, use [`gcloud monitoring dashboards delete`](https://docs.cloud.google.com/sdk/gcloud/reference/monitoring/dashboards/delete), and specify the fully qualified ID of the dashboard to delete:
+    
+    
+    gcloud monitoring dashboards delete DASHBOARD_ID --project=PROJECT_ID
+    
+
+Before you run the previous command, replace the following:
+
+  * PROJECT_ID: The identifier of the project. For [App Hub](https://docs.cloud.google.com/app-hub/docs/overview) configurations, select the App Hub host project or management project.
+  * DASHBOARD_ID: The ID of the dashboard.
+
+
+
+For more information, see the [`gcloud monitoring dashboards delete`](https://docs.cloud.google.com/sdk/gcloud/reference/monitoring/dashboards/delete) reference.
+
+###  Terraform 
+
+You can delete resources by using Terraform. For information about deleting resources, see the Terraform command [destroy](https://developer.hashicorp.com/terraform/cli/commands/destroy).
+
+###  REST 
+
+To delete a custom dashboard, send a `DELETE` request to the [`Dashboard`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards) endpoint, qualified with the ID of the dashboard to delete.
+    
+    
+    curl -H "Authorization: Bearer $ACCESS_TOKEN" -X DELETE https://monitoring.googleapis.com/v1/projects/${PROJECT_ID}/dashboards/${DASHBOARD_ID}
+    
+
+Before you run the previous command, configure the following:
+
+  * `${PROJECT_ID}`: An environment variable that stores the project ID in which to create the dashboard. For [App Hub](https://docs.cloud.google.com/app-hub/docs/overview) configurations, select the App Hub host project or management project.
+  * `${DASHBOARD_ID}`: An environment variable that stores the ID of the dashboard.
+
+
+
+If successful, the method returns an empty response. Otherwise, it returns an error.
+
+## List dashboards
+
+To list all custom dashboards that belong to a project, invoke the [`dashboards.list`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/list) method and specify the project ID.
+
+###  gcloud 
+
+To list all of a project's custom dashboards, use the [`gcloud monitoring dashboards list`](https://docs.cloud.google.com/sdk/gcloud/reference/monitoring/dashboards/list) command:
+    
+    
+    gcloud monitoring dashboards list --project=PROJECT_ID
+    
+
+Before you run the previous command, replace the following:
+
+  * PROJECT_ID: The identifier of the project. For [App Hub](https://docs.cloud.google.com/app-hub/docs/overview) configurations, select the App Hub host project or management project.
+
+
+
+For more information, see the [`gcloud monitoring dashboards list`](https://docs.cloud.google.com/sdk/gcloud/reference/monitoring/dashboards/list) reference.
+
+###  Terraform 
+
+You can't use Terraform to send a query to your project with the response being a list of dashboards. However, you can view these dashboards by using the Google Cloud console.
+
+###  REST 
+
+To list all of a project's custom dashboards, send the project ID to the [`Dashboard`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards) endpoint.
+    
+    
+    curl -H "Authorization: Bearer $ACCESS_TOKEN" https://monitoring.googleapis.com/v1/projects/${PROJECT_ID}/dashboards
+    
+
+Before you run the previous command, configure the following:
+
+  * `${PROJECT_ID}`: An environment variable that stores the project ID in which to create the dashboard. For [App Hub](https://docs.cloud.google.com/app-hub/docs/overview) configurations, select the App Hub host project or management project.
+
+
+
+The examples return the custom dashboards associated with your project.
+
+### Paginate the list response
+
+The [`dashboards.list`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/list) method supports pagination, which lets you take the results one page at a time instead of all at once.
+
+###  gcloud 
+
+To specify the number of resources per page, pass the `--page-size` flag with the command. For example:
+    
+    
+    gcloud monitoring dashboards list --page-size=1 --project=PROJECT_ID
+    
+
+Before you run the previous command, replace the following:
+
+  * PROJECT_ID: The identifier of the project. For [App Hub](https://docs.cloud.google.com/app-hub/docs/overview) configurations, select the App Hub host project or management project.
+
+
+
+###  Terraform 
+
+You can't use Terraform to send a query to your project with the response being a paginated list of dashboards. However, you can view these dashboards by using the Google Cloud console.
+
+###  REST 
+
+For the initial page of the results list, specify the `pageSize` query parameter with the request:
+    
+    
+    curl -H "Authorization: Bearer $ACCESS_TOKEN" https://monitoring.googleapis.com/v1/projects/${PROJECT_ID}/dashboards?page_size=1
+    
+
+Before you run the previous command, configure the following:
+
+  * `${PROJECT_ID}`: An environment variable that stores the project ID in which to create the dashboard. For [App Hub](https://docs.cloud.google.com/app-hub/docs/overview) configurations, select the App Hub host project or management project.
+
+
+
+The method returns the first page of the list and the `nextPageToken`. For example:
+    
+    
+    {
+      "dashboards" : [
+        {
+          "displayName" : "Grid Layout Example",
+          "gridLayout" : {
+            "widgets" : [
+                { ... },
+                { ... },
+                { ... },
+              ]
+          }
+        }
+      ]
+    },
+    "nextPageToken": "ChYqFDEyMzkzMzUwNzg0OTE1MDI4MjM3"
+    
+
+For each remaining page, you must include the corresponding `nextPageToken` in the request.
+
+## Get dashboard
+
+To get a specific custom dashboard for a project, invoke the [`dashboards.get`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/get) method, qualified with the dashboard ID.
+
+###  gcloud 
+
+To get a specific custom dashboard, use the [`gcloud monitoring dashboards describe`](https://docs.cloud.google.com/sdk/gcloud/reference/monitoring/dashboards/describe) command and specify the dashboard ID:
+    
+    
+    gcloud monitoring dashboards describe DASHBOARD_ID --format=json --project=PROJECT_ID
+    
+
+Before you run the previous command, replace the following:
+
+  * PROJECT_ID: The identifier of the project. For [App Hub](https://docs.cloud.google.com/app-hub/docs/overview) configurations, select the App Hub host project or management project.
+  * DASHBOARD_ID: The ID of the dashboard.
+
+
+
+The command returns the requested dashboard:
+    
+    
+    {
+      "columnLayout": {
+        "columns": [
+          {
+            "widgets": [
+              {
+                "text": {
+                  "content": "Text Widget 1",
+                  "format": "RAW"
+                }
+              },
+              {
+                "text": {
+                  "content": "**Text Widget 2**",
+                  "format": "MARKDOWN"
+                }
+              },
+              {
+                "text": {
+                  "content": "_Text Widget 3_",
+                  "format": "MARKDOWN"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "displayName": "Column-layout example",
+      "etag": "cb3070baf15de7c79d78761baac3a386",
+      "name": "projects/730041941835/dashboards/e4cd063e-5414-4e07-9e1e-450d6d3a531d"
+    }
+    
+
+For more information, see the [`gcloud monitoring dashboards describe`](https://docs.cloud.google.com/sdk/gcloud/reference/monitoring/dashboards/describe) reference.
+
+###  Terraform 
+
+You can't use Terraform to send a query to your project with the response being an individual dashboard. However, you can view these dashboards by using the Google Cloud console.
+
+###  REST 
+
+To get a specific custom dashboard, send the dashboard ID to the [`Dashboard`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards) endpoint.
+    
+    
+    curl -H "Authorization: Bearer $ACCESS_TOKEN" https://monitoring.googleapis.com/v1/projects/${PROJECT_ID}/dashboards/${DASHBOARD_ID}
+    
+
+Before you run the previous command, configure the following:
+
+  * `${PROJECT_ID}`: An environment variable that stores the project ID in which to create the dashboard. For [App Hub](https://docs.cloud.google.com/app-hub/docs/overview) configurations, select the App Hub host project or management project.
+  * `${DASHBOARD_ID}`: An environment variable that stores the ID of the dashboard.
+
+
+
+In the previous expression, `${DASHBOARD_ID}` is an environment variable that stores the fully qualified name of the dashboard.
+
+The method returns a response similar to the following example:
+    
+    
+    {
+      "columnLayout": {
+        "columns": [
+          {
+            "widgets": [
+              {
+                "text": {
+                  "content": "Text Widget 1",
+                  "format": "RAW"
+                }
+              },
+              {
+                "text": {
+                  "content": "**Text Widget 2**",
+                  "format": "MARKDOWN"
+                }
+              },
+              {
+                "text": {
+                  "content": "_Text Widget 3_",
+                  "format": "MARKDOWN"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "displayName": "Column-layout example",
+      "etag": "cb3070baf15de7c79d78761baac3a386",
+      "name": "projects/730041941835/dashboards/e4cd063e-5414-4e07-9e1e-450d6d3a531d"
+    }
+    
+
+## Update dashboard
+
+To update an existing custom dashboard, invoke the [`dashboards.patch`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/patch) method. To get the current `etag` value, you can invoke the [`dashboards.get`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/get) method and find it in the response.
+
+###  gcloud 
+
+To update a custom dashboard, use [`gcloud monitoring dashboards update`](https://docs.cloud.google.com/sdk/gcloud/reference/monitoring/dashboards/update), specify the ID of the dashboard to update, and provide the changes to the dashboard.
+    
+    
+    gcloud monitoring dashboards update DASHBOARD_ID --config-from-file=my-updated-dashboard.json --project=PROJECT_ID
+    
+
+Before you run the previous command, replace the following:
+
+  * PROJECT_ID: The identifier of the project. For [App Hub](https://docs.cloud.google.com/app-hub/docs/overview) configurations, select the App Hub host project or management project.
+  * DASHBOARD_ID: The ID of the dashboard.
+
+
+
+For more information, see the [`gcloud monitoring dashboards update`](https://docs.cloud.google.com/sdk/gcloud/reference/monitoring/dashboards/update) reference.
+
+The previous example updates an existing custom dashboard using the `my-updated-dashboard.json` file. The response, which includes a new `etag` value, is a copy of the updated dashboard listing.
+
+###  Terraform 
+
+To learn how to apply or remove a Terraform configuration, see [Basic Terraform commands](https://docs.cloud.google.com/docs/terraform/basic-commands). For more information, see the [Terraform provider reference documentation](https://registry.terraform.io/providers/hashicorp/google/latest/docs).
+
+To update a dashboard by using Terraform, do the following:
+
+  1. [Install and configure Terraform](https://docs.cloud.google.com/docs/terraform/install-configure-terraform) for you project. For [App Hub](https://docs.cloud.google.com/app-hub/docs/overview) configurations, select the App Hub host project or management project.
+  2. Use the Terraform resource [`google_monitoring_dashboard`](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/monitoring_dashboard).
+
+In the command, set the following fields:
+
+     * `dashboard_json`: The JSON representation of the dashboard, using the [`Dashboard`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards) format.
+
+     * `parent`: The fully qualified name of your project. For example, you might set this field to `"projects/PROJECT_ID"`, where PROJECT_ID is the ID of your Google Cloud project. For [App Hub](https://docs.cloud.google.com/app-hub/docs/overview) configurations, select the App Hub host project or management project.
+
+
+
+
+###  REST 
+
+To update a custom dashboard, send a `PATCH` request to the [`Dashboard`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards) endpoint and supply the revised `Dashboard` object and the `etag` value from the most recent [`dashboards.get`](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/get) response.
+    
+    
+    curl -d @my-updated-dashboard.json -H "Authorization: Bearer $ACCESS_TOKEN" -H 'Content-Type: application/json' -X PATCH https://monitoring.googleapis.com/v1/projects/${PROJECT_ID}/dashboards/${DASHBOARD_ID}
+    
+
+Before you run the previous command, configure the following:
+
+  * `${PROJECT_ID}`: An environment variable that stores the project ID in which to create the dashboard. For [App Hub](https://docs.cloud.google.com/app-hub/docs/overview) configurations, select the App Hub host project or management project.
+  * `${DASHBOARD_ID}`: An environment variable that stores the ID of the dashboard.
+
+
+
+The previous example updates an existing custom dashboard using the `my-updated-dashboard.json` file. The response, which includes a new `etag` value, is a copy of the updated dashboard listing.
+
+## What's next
+
+  * [Example dashboards and layouts](https://docs.cloud.google.com/monitoring/dashboards/api-examples)
+  * [Create and manage custom dashboards with the Google Cloud console](https://docs.cloud.google.com/monitoring/charts/dashboards)
+  * [Use Tags to control access to dashboards](https://docs.cloud.google.com/monitoring/docs/access-control-with-tags)
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

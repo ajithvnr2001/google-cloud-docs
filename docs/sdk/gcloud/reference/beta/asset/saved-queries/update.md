@@ -1,0 +1,110 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/asset/saved-queries/update/
+title: gcloud beta asset saved-queries update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T08:02:43.959749+00:00
+---
+
+# gcloud beta asset saved-queries update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/asset/saved-queries/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta asset saved-queries update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta asset saved-queries update - update an existing Cloud Asset Inventory saved query 
+SYNOPSIS
+    
+
+`gcloud beta asset saved-queries update` `QUERY_ID` (`--folder`=`FOLDER_ID` | `--organization`=`ORGANIZATION_ID` | `--project`=`PROJECT_ID`) [`--description`=`DESCRIPTION`] [`--query-file-path`=`QUERY_FILE_PATH`] [`--update-labels`=[`KEY`=`VALUE`,…]] [`--clear-labels` | `--remove-labels`=[`KEY`,…]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` Update an existing Cloud Asset Inventory saved query. 
+EXAMPLES
+     To update the content of an existing saved query, run: 
+    
+    
+    gcloud beta asset saved-queries update query-id-1 --project=p1 --query-file-path=./query-content.json --description="updating a query with query id query-id-1" --update-labels="key1=val1"
+
+POSITIONAL ARGUMENTS
+    
+
+`QUERY_ID`
+     Saved query identifier being updated. It must be unique under the specified parent resource project/folder/organization. 
+REQUIRED FLAGS
+    
+
+Exactly one of these must be specified: 
+
+`--folder`=`FOLDER_ID`
+     Folder of the saved query. 
+`--organization`=`ORGANIZATION_ID`
+     Organization of the saved query. 
+`--project`=`PROJECT_ID`
+     Project of the saved query. 
+
+The Google Cloud project ID to use for this invocation. If omitted, then the current project is assumed; the current project can be listed using `gcloud config list --format='text(core.project)'` and can be set using `gcloud config set project PROJECTID`. 
+
+`--project` and its fallback `core/project` property play two roles in the invocation: they specify both the project of the resource to operate on, and the project for API enablement checks, quota, and billing. To specify a different project for quota and billing, use the `--billing-project` flag or the `billing/quota_project` property. 
+
+OPTIONAL FLAGS
+    
+
+`--description`=`DESCRIPTION`
+     A string describing the query. 
+`--query-file-path`=`QUERY_FILE_PATH`
+     Path to JSON or YAML file that contains the query. 
+`--update-labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to update. If a label exists, its value is modified. Otherwise, a new label is created. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+At most one of these can be specified: 
+
+`--clear-labels`
+     Remove all labels. If `--update-labels` is also specified then `--clear-labels` is applied first. 
+
+For example, to remove all labels: 
+    
+    
+    gcloud beta asset saved-queries update --clear-labels
+
+To remove all existing labels and create two new labels, ``foo`` and ``baz``: 
+    
+    
+    gcloud beta asset saved-queries update --clear-labels --update-labels foo=bar,baz=qux
+
+`--remove-labels`=[`KEY`,…]
+     List of label keys to remove. If a label does not exist it is silently ignored. If `--update-labels` is also specified then `--update-labels` is applied first. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in beta and might change without notice. These variants are also available: 
+    
+    
+    [gcloud asset saved-queries update](https://docs.cloud.google.com/sdk/gcloud/reference/asset/saved-queries/update)
+    
+    
+    [gcloud alpha asset saved-queries update](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/asset/saved-queries/update)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-09-15 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-09-15 UTC."],[],[]] 

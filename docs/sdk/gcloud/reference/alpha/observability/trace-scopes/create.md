@@ -1,0 +1,122 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/observability/trace-scopes/create/
+title: gcloud alpha observability trace-scopes create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T06:36:59.119080+00:00
+---
+
+# gcloud alpha observability trace-scopes create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/observability/trace-scopes/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha observability trace-scopes create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha observability trace-scopes create - create traceScopes 
+SYNOPSIS
+    
+
+`gcloud alpha observability trace-scopes create` (`TRACE_SCOPE` : `--location`=`LOCATION`) `--resource-names`=[`RESOURCE_NAMES`,…] [`--description`=`DESCRIPTION`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` Create a traceScope 
+EXAMPLES
+     To create the traceScope, run: 
+    
+    
+    gcloud alpha observability trace-scopes create
+
+POSITIONAL ARGUMENTS
+    
+
+TraceScope resource - Identifier. The resource name of the trace scope. 
+
+For example: 
+    
+    
+    projects/my-project/locations/global/traceScopes/my-trace-scope The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways.
+
+To set the `project` attribute: 
+
+  * provide the argument `trace_scope` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`TRACE_SCOPE`
+     ID of the traceScope or fully qualified identifier for the traceScope. 
+
+To set the `trace_scope` attribute: 
+
+  * provide the argument `trace_scope` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     The location id of the traceScope resource. 
+
+To set the `location` attribute: 
+
+  * provide the argument `trace_scope` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line. 
+
+
+REQUIRED FLAGS
+    
+
+`--resource-names`=[`RESOURCE_NAMES`,…]
+     Names of the projects that are included in this trace scope. 
+
+  * `projects/[PROJECT_ID]`
+
+
+
+A trace scope can include a maximum of 20 projects. 
+
+OPTIONAL FLAGS
+    
+
+`--description`=`DESCRIPTION`
+     Describes this trace scope. 
+
+The maximum length of the description is 8000 characters. 
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `observability/v1` API. The full documentation for this API can be found at: <https://cloud.google.com/stackdriver/docs/>
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. These variants are also available: 
+    
+    
+    [gcloud observability trace-scopes create](https://docs.cloud.google.com/sdk/gcloud/reference/observability/trace-scopes/create)
+    
+    
+    [gcloud beta observability trace-scopes create](https://docs.cloud.google.com/sdk/gcloud/reference/beta/observability/trace-scopes/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

@@ -1,0 +1,232 @@
+---
+url: https://docs.cloud.google.com/service-extensions/docs/configure-extensions-for-swp/
+title: Configure an extension for Secure Web Proxy \u00a0|\u00a0 Service Extensions \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T04:49:14.407245+00:00
+---
+
+# Configure an extension for Secure Web Proxy  |  Service Extensions  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/service-extensions/docs/configure-extensions-for-swp/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Networking ](https://docs.cloud.google.com/docs/networking)
+  * [ Service Extensions ](https://docs.cloud.google.com/service-extensions/docs)
+  * [ Guides ](https://docs.cloud.google.com/service-extensions/docs/overview)
+
+
+
+Send feedback 
+
+#  Configure an extension for Secure Web Proxy Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Preview**
+
+This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+
+Service Extensions enables Secure Web Proxy extensions to send callouts to authorization services to insert custom processing in the traffic processing path. This page describes how to configure Secure Web Proxy extensions with [authorization policies](https://docs.cloud.google.com/load-balancing/docs/auth-policy/auth-policy-overview).
+
+Secure Web Proxy extensions are configured with request and content authorization policies as [authorization extensions](https://docs.cloud.google.com/service-extensions/docs/lb-extensions-overview#authorization-extensions). Extensions that are based on request authorization policies are configured to run before those based on content authorization policies.
+
+For information about how Secure Web Proxy extensions work, see [Secure Web Proxy extensions overview](https://docs.cloud.google.com/service-extensions/docs/swp-extensions-overview).
+
+For information about the limits related to authorization extensions, see the [Quotas and limits](https://docs.cloud.google.com/service-extensions/docs/quotas#for_callouts) page.
+
+## Before you begin
+
+  1. [Create, set up, and deploy a Secure Web Proxy instance](https://docs.cloud.google.com/secure-web-proxy/docs/quickstart) named `swp-instance1` in a location that you want to use for the extension—for example, `us-west1`.
+
+The proxy must be deployed with a Gateway security policy with [Transport Layer Security (TLS) inspection enabled](https://docs.cloud.google.com/secure-web-proxy/docs/enable-tls-inspection).
+
+  2. Configure the following sample services:
+
+     * An authorization service to be used to [configure an extension for a request authorization policy](https://docs.cloud.google.com/service-extensions/docs/configure-extensions-for-swp#configure-swp-request). For this example, assume that the FQDN is `request-authz.com`.
+
+     * A sanitization service to be used to [configure an extension for a content authorization policy](https://docs.cloud.google.com/service-extensions/docs/configure-extensions-for-swp#configure-swp-content). For this example, assume that the FQDN is `content-sdp.com`.
+
+Secure Web Proxy extensions can target only fully qualified domain names (FQDNs). When you use FQDN targets for extensions, the dataplane uses the HTTP2 protocol with TLS encryption to communicate to the endpoints on port 443. However, the dataplane doesn't validate the server certificate. For security reasons, ensure that the resolved endpoints are within the VPC.
+
+
+
+
+## Configure an extension for a request authorization policy
+
+The following example shows how to configure an authorization extension that applies a request authorization policy to the Secure Web Proxy instance in `us-west1`. The policy requires traffic to pass mutual TLS authentication from a specific principal before being allowed to reach the destination, `example.com/mcp`.
+
+### gcloud
+
+  1. Configure the authorization extension.
+
+     1. Define the extension in a YAML file that associates the extension with `request-authz.com`. Use the sample values provided.
+            
+            cat >swp-request-authz-extension.yaml <<EOF
+            name: my-swp-request-authz-ext
+            authority: ext11.com
+            loadBalancingScheme: INTERNAL_MANAGED
+            service: "request-authz.com"
+            forwardHeaders:
+              - Authorization
+            failOpen: false
+            timeout: "0.1s"
+            wireFormat: EXT_AUTHZ_GRPC
+            EOF
+            
+
+Secure Web Proxy extensions are regional resources and must be in the same region as your Secure Web Proxy instance.
+
+For request authorization policies, the `wireFormat` value can be `EXT_AUTHZ_GRPC` so that the callout uses the `ext_authz` protocol although the `ext_proc` protocol is also supported.
+
+By default, `failOpen` is set to `false`. If the extension times out or fails, request processing stops. This default option is preferred when prioritizing security or integrity over availability.
+
+     2. Import the authorization extension. Use the [`gcloud beta service-extensions authz-extensions import` command](https://docs.cloud.google.com/sdk/gcloud/reference/beta/service-extensions/authz-extensions/import) with the following sample values.
+            
+            gcloud beta service-extensions authz-extensions import my-swp-request-authz-ext \
+                --source=swp-request-authz-extension.yaml \
+                --location=us-west1
+            
+
+  2. In the same project, configure an authorization policy with the extension.
+
+For any request to `example.com/mcp`, the policy requires mutual TLS authentication from a specific principal and further delegates the authorization decision to the authorization extension, `my-swp-authz-request-ext`.
+
+     1. Define an authorization policy that associates the `my-swp-authz-request-ext` extension with the Secure Web Proxy proxy, `swp-instance1`. Use the sample values provided.
+            
+            cat >swp-request-authz-policy.yaml <<EOF
+            name: my-swp-request-authz-policy
+            target:
+              resources:
+                - "projects/PROJECT_ID/locations/us-west1/gateways/swp-instance1"
+            policyProfile: REQUEST_AUTHZ
+            httpRules:
+            - to:
+                operations:
+                - hosts:
+                  - exact: "example.com"
+                - paths:
+                  - prefix: "/mcp"
+              from:
+                sources:
+                - principals:
+                  - principal_selector: CLIENT_CERT_DNS_NAME_SANS
+                    principal:
+                      exact: "spiffe://p.global.123.workload.id.goog/ns/ns1/sa/hellomcp"
+            action: CUSTOM
+            customProvider:
+              authzExtension:
+                resources:
+                  - "projects/PROJECT_ID/locations/us-west1/authzExtensions/my-swp-request-authz-ext"
+            EOF
+            
+
+Replace `PROJECT_ID` with the [project ID](https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects).
+
+For request authorization policies, the value of `policyProfile` must be `REQUEST_AUTHZ`.
+
+The `CUSTOM` action indicates that an extension is associated with the proxy.
+
+For more information about an authorization policy resource, see the [`authzPolicy` reference documentation](https://docs.cloud.google.com/load-balancing/docs/reference/network-security/rest/v1beta1/projects.locations.authzPolicies#AuthzAction).
+
+     2. Import the authorization policy to the project. Use the [`gcloud beta network-security authz-policies import` command](https://docs.cloud.google.com/sdk/gcloud/reference/beta/network-security/authorization-policies/import) with the following sample values.
+            
+            gcloud beta network-security authz-policies import my-swp-request-authz-policy \
+                --source=swp-request-authz-policy.yaml \
+                --location=us-west1
+            
+
+
+
+
+## Configure an extension for a content authorization policy
+
+The following example shows how to configure an authorization extension that applies a content authorization policy to the Secure Web Proxy instance in `us-west1`. The policy requires a content sanitization service to perform deep inspection of your application payloads to allow or deny requests or mutate the requests and responses, as required.
+
+### gcloud
+
+  1. Configure the authorization extension.
+
+     1. Define the extension in a YAML file that associates the extension with `content-sdp.com`. Use the sample values provided.
+            
+            cat >swp-authz-content-extension.yaml <<EOF
+            name: my-swp-content-authz-ext
+            authority: ext11.com
+            loadBalancingScheme: INTERNAL_MANAGED
+            service: "content-sdp.com"
+            failOpen: false
+            timeout: "0.1s"
+            EOF
+            
+
+For content authorization policies, the value of `policyProfile` must be `CONTENT_AUTHZ`.
+
+For `CONTENT_AUTHZ` policies, the `wireFormat` value doesn't need to be set explicitly as `EXT_PROC_GRPC`. By default, the callout uses the `ext_proc` protocol.
+
+     2. Import the authorization extension. Use the [`gcloud beta service-extensions authz-extensions import` command](https://docs.cloud.google.com/sdk/gcloud/reference/beta/service-extensions/authz-extensions/import) with the following sample values.
+            
+            gcloud beta service-extensions authz-extensions import my-swp-content-authz-ext \
+                --source=swp-content-authz-extension.yaml \
+                --location=us-west1
+            
+
+  2. Configure an authorization policy with the extension.
+
+     1. Define an authorization policy that associates the extension `my-swp-content-authz-ext` with the Secure Web Proxy proxy, `swp-instance1`. Use the sample values provided.
+            
+            cat >swp-content-authz-policy.yaml <<EOF
+            name: my-swp-content-authz-policy
+            target:
+              resources:
+                - "projects/PROJECT_ID/locations/us-west1/gateways/swp-instance1"
+            policyProfile: CONTENT_AUTHZ
+            httpRules:
+            - to:
+                operations:
+                - hosts:
+                  - exact: "example.com"
+                - paths:
+                  - prefix: "/sensitive-stuff"
+            action: CUSTOM
+            customProvider:
+              authzExtension:
+                resources:
+                  - "projects/PROJECT_ID/locations/us-west1/authzExtensions/my-swp-content-authz-ext"
+            EOF
+            
+
+For content authorization policies, the value of `policyProfile` is set as `CONTENT_AUTHZ`. This value indicates that the custom policy provider processes request and response traffic including body processing.
+
+     2. Import the authorization policy to the project. Use the [`gcloud beta network-security authz-policies import` command](https://docs.cloud.google.com/sdk/gcloud/reference/beta/network-security/authorization-policies/import) with the following sample values.
+            
+            gcloud beta network-security authz-policies import my-swp-content-authz-policy \
+                --source=swp-content-authz-policy.yaml \
+                --location=us-west1
+            
+
+
+
+
+## Limitations of Secure Web Proxy extensions
+
+See the following sections for information about the limitations of Secure Web Proxy extensions:
+
+  * For limitations that are applicable to all extensions, see [Limitations of extensions](https://docs.cloud.google.com/service-extensions/docs/lb-extensions-overview#limitations).
+
+  * For limitations that are applicable to callouts, see [Limitations of callouts](https://docs.cloud.google.com/service-extensions/docs/callouts-overview#limitations).
+
+
+
+
+## What's next
+
+  * View Python and Go samples of `ext_proc` servers in the [Service Extensions GitHub repository](https://github.com/GoogleCloudPlatform/service-extensions-samples/tree/main/callouts).
+  * [Manage extensions](https://docs.cloud.google.com/service-extensions/docs/manage-extensions)
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

@@ -1,0 +1,94 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/reference/rest/v1/projects.locations.apps.message/stream/
+title: Method: projects.locations.apps.message.stream \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T16:47:42.675279+00:00
+---
+
+# Method: projects.locations.apps.message.stream  |  CX Agent Studio  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/reference/rest/v1/projects.locations.apps.message/stream/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise for Customer Experience ](https://docs.cloud.google.com/gemini-enterprise-cx)
+  * [ CX Agent Studio ](https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio)
+
+
+
+Send feedback 
+
+#  Method: projects.locations.apps.message.stream Stay organized with collections  Save and categorize content based on your preferences. 
+
+  * HTTP request
+  * Path parameters
+  * Request body
+    * JSON representation
+  * Response body
+  * Authorization scopes
+
+
+
+Sends a streaming message to an agent, allowing for real-time interaction and status updates. Streaming version of `message.send`
+
+### HTTP request
+
+`POST https://ces.googleapis.com/v1/{tenant=projects/*/locations/*/apps/*}/message:stream`
+
+The URL uses [gRPC Transcoding](https://google.aip.dev/127) syntax.
+
+### Path parameters
+
+Parameters  
+---  
+`tenant` |  `string` Optional. Opaque routing identifier. Must match the `tenant` value from the selected `AgentInterface` in the Agent Card when that field is set.  
+  
+### Request body
+
+The request body contains data with the following structure:
+
+JSON representation  
+---  
+      
+    
+    {
+      "message": {
+        object ([Message](https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/reference/rest/v1/tasks#Message))
+      },
+      "configuration": {
+        object ([SendMessageConfiguration](https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/reference/rest/v1/SendMessageConfiguration))
+      },
+      "metadata": {
+        object
+      }
+    }  
+  
+Fields  
+---  
+`message` |  `object (`[Message](https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/reference/rest/v1/tasks#Message)`)` Required. The message to send to the agent.  
+`configuration` |  `object (`[SendMessageConfiguration](https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/reference/rest/v1/SendMessageConfiguration)`)` Configuration for the send request.  
+`metadata` |  `object (`[Struct](https://protobuf.dev/reference/protobuf/google.protobuf/#struct)` format)` A flexible key-value map for passing additional context or parameters.  
+  
+### Response body
+
+If successful, the response body contains a stream of `[StreamResponse](https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/reference/rest/v1/StreamResponse)` instances.
+
+### Authorization scopes
+
+Requires one of the following OAuth scopes:
+
+  * `https://www.googleapis.com/auth/cloud-platform`
+  * ` https://www.googleapis.com/auth/ces`
+
+
+
+For more information, see the [Authentication Overview](https://docs.cloud.google.com/docs/authentication#authorization-gcp).
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-08-25 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-25 UTC."],[],[]] 

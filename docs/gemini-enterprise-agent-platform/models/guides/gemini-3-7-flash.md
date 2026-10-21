@@ -1,0 +1,187 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-3-7-flash/
+title: Developer's guide to Gemini 3.7 Flash \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T06:46:01.460412+00:00
+---
+
+# Developer's guide to Gemini 3.7 Flash  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-3-7-flash/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Developer's guide to Gemini 3.7 Flash Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Gemini 3.7 Flash** is our intelligent everyday driver for developers, and delivers a step forward in software engineering, feeling distinctly better to build with. This model brings better intelligence for complex tasks, instruction following, and tool calling into your daily workflows.
+
+This document covers what's new with 3.7 Flash, how it fits within the Gemini model family, how to migrate to 3.7 Flash, and provides a quickstart for using 3.7 Flash.
+
+## How does it fit in the Gemini family?
+
+Gemini 3.7 Flash is the primary agentic workhorse in the Gemini 3 family, bridging the gap between deep-reasoning Pro models and high-throughput Gemini Flash-Lite models while delivering high token efficiency and multi-step multimodal processing.
+
+### Model specifications and comparisons
+
+The following table is a comparison covering some of the specifications between 3.7 Flash, 3.6 Flash, and 3.1 Pro:
+
+| [Gemini 3.7 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-7-flash) | [Gemini 3.6 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-6-flash) | [Gemini 3.1 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-pro)  
+---|---|---|---  
+Model ID | `gemini-3.7-flash` | `gemini-3.6-flash` | `gemini-3.1-pro-preview`  
+Launch stage | GA | GA | Preview  
+Input types | Text, Image, Audio, Video | Text, Image, Audio, Video | Text, Image, Audio, Video  
+Output type(s) | Text | Text | Text  
+Context window | 1,048,576 | 1,048,576 | 1,048,576  
+Maximum output token length | 65,536 | 65,536 | 65,536  
+Supported regions |  Global, Multi-region  |  Global, Multi-region  |  Global   
+Supported thinking levels |  `LOW`, `MEDIUM`, `HIGH`  
+(Default: `MEDIUM`)  |  `MINIMAL`, `LOW`, `MEDIUM`, `HIGH`  
+(Default: `MEDIUM`)  |  `LOW`, `MEDIUM`, `HIGH`  
+(Default: `HIGH`)   
+Primary focus | Agentic workflows, coding, interactive video understanding | General agentic workflows, multi-step orchestration | Deep reasoning, high-complexity tasks  
+  
+See the [3.7 Flash model page](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-7-flash) for the full list of supported capabilities, tools, and consumption options.
+
+## What's new in Gemini 3.7 Flash?
+
+The following table compares standard developer evaluation benchmarks between Gemini 3.7 Flash and 3.6 Flash:
+
+Evaluation benchmark | 3.7 Flash | 3.6 Flash  
+---|---|---  
+Terminal-bench 2.1 | 85.1% | 73.0%  
+DeepSWE | 63.7% | 49.0%  
+Humanity's Last Exam (HLE) | 45.7% | 37.4%  
+LMArena WebDev | 1592 | 1532  
+  
+## Quickstart
+
+Before you begin, you must authenticate to Agent Platform using Application Default Credentials (ADC) or an API key. See [Get started with Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/start) for more information.
+
+In the following code blocks, replace PROJECT_ID with your project ID.
+
+### Installation
+
+Ensure you are using the latest `google-genai` SDK:
+    
+    
+    pip install --upgrade google-genai
+    
+
+### Basic request
+
+### Python
+    
+    
+    from google import genai
+    
+    client = genai.Client(enterprise=True, project="PROJECT_ID", location="global")
+    
+    response = client.models.generate_content(
+      model="gemini-3.7-flash",
+      contents="How does AI work?",
+    )
+    print(response.text)
+    
+
+### REST
+    
+    
+    curl -X POST \
+    -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+    -H "Content-Type: application/json" \
+    https://aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/global/publishers/google/models/gemini-3.7-flash:generateContent \
+    -d '{
+      "contents": {
+        "role": "USER",
+        "parts": { "text": "Why is the sky blue?" },
+      },
+    }'
+    
+
+## Mandatory API rules and behavioral conventions
+
+**Important:** `thinking_level="MINIMAL"` is not available for 3.7 Flash. Explicitly setting `thinking_level` to `MINIMAL` will return an API validation error. Valid configurations are `LOW`, `MEDIUM` (default), and `HIGH`.
+
+Gemini 3.7 Flash strictly enforces the following standard Gemini 3 family API conventions:
+
+  * **Deprecated sampling parameters (`temperature`, `top_k`, `top_p`)**: These parameters are ignored by the backend. Instead, you can control determinism using `thinking_level` (`LOW`, `MEDIUM`, `HIGH`) and `response_schema` or `json_schema`.
+  * **Unsupported parameters (`frequency_penalty`, `presence_penalty`, `candidate_count`)**: Passing `frequency_penalty`, `presence_penalty` or `candidate_count` will throw an active API error. Remove them from legacy client code.
+  * **Strict function calling rules** : A `FunctionResponse` turn must strictly match the `id`, `name`, and execution count of the preceding `FunctionCall`.
+
+    * **Multimodal assets** : Always place multimodal assets inside the response payload.
+    * **Formatting and pre-tool text** : Format inline instructions using `\n\n`. If you encounter `Malformed_Function_Call` errors tied to pre-tool text, clean up leading commentary prior to tool calls.
+    * To pass intermediate working notes or status updates prior to a tool call, wrap them in a dedicated `update()` function call rather than emitting raw XML or text:
+          
+          {
+            "name": "update",
+            "description": "Update working notes before tool execution",
+            "parameters": {
+              "type": "OBJECT",
+              "properties": {
+                "previous_step": {"type": "STRING"},
+                "plan": {"type": "STRING"},
+                "next_step": {"type": "STRING"}
+              },
+              "required": ["previous_step", "plan", "next_step"]
+            }
+          }
+          
+
+  * **Chat sequence validation** :
+
+    * History payloads cannot end with a "`model`" role turn.
+    * Prefilled model turns are unsupported and must be removed when upgrading.
+    * Empty turns in conversation history are automatically dropped or will produce validation errors.
+
+
+
+## Migrate to 3.7 Flash from 3.5 Flash or 3.6 Flash
+
+To migrate to 3.7 Flash from 3.5 Flash or 3.6 Flash, do the following steps:
+
+  1. **Update the model ID** : Change model string in your API calls to `gemini-3.7-flash`.
+  2. **Replace the reasoning budget parameter** : Replace integer `thinking_budget` configurations with the string enum `thinking_level` set to one of the following values: 
+     * `HIGH`: Recommended for dense visual QA, split-second movement detection (sports, editing), or multi-step reasoning across 60+ minute videos.
+     * `MEDIUM`: The default thinking level. This level provides optimal balance for general video Q&A, lecture summarization, and clip retrieval.
+     * `LOW`: Recommended for tasks like fast transcript-focused searches or basic metadata extraction.
+  3. **Strip deprecated and unsupported parameters** : 
+     * Remove `temperature`, `top_p`, and `top_k`.
+     * Remove `candidate_count`, `frequency_penalty`, and `presence_penalty`.
+     * Remove any prefilled model turns from conversation histories.
+
+
+
+## Summary checklist for developers
+
+Target model ID: `gemini-3.7-flash`
+
+Use `thinking_level` (`MEDIUM` by default; valid values: `LOW`, `MEDIUM`, `HIGH`) instead of the deprecated `thinking_budget` or `temperature` fields. `MINIMAL` is unsupported for this model. 
+
+Remove the following unsupported parameters: `frequency_penalty`, `presence_penalty`, `candidate_count`, `temperature`, `top_p`, and `top_k`. 
+
+Remove any prefilled model turns from multi-turn chat request histories. 
+
+Ensure strict `FunctionResponse` matching (`id` or `call_id` and `name`) and format pre-tool instructions with `\n\n`. 
+
+## Additional resources
+
+  * [Gemini 3.7 Flash model page](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-7-flash)
+  * [Introductory notebook](https://github.com/GoogleCloudPlatform/generative-ai/blob/main/gemini/getting-started/intro_gemini_3_7_flash.ipynb)
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

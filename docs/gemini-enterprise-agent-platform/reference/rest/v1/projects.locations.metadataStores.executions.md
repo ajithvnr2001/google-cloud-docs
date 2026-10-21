@@ -1,0 +1,109 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.metadataStores.executions
+title: REST Resource: projects.locations.metadataStores.executions \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T23:40:43.892131+00:00
+---
+
+# REST Resource: projects.locations.metadataStores.executions  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.metadataStores.executions
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ API reference ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/apis)
+
+
+
+Send feedback 
+
+#  REST Resource: projects.locations.metadataStores.executions Stay organized with collections  Save and categorize content based on your preferences. 
+
+## Resource: Execution
+
+Instance of a general execution.
+
+Fields  
+  
+`name` `string` Output only. The resource name of the Execution. | `displayName` `string` user provided display name of the Execution. May be up to 128 Unicode characters. | `state` `enum (`[State](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.metadataStores.executions#Execution.State)`)` The state of this Execution. This is a property of the Execution, and does not imply or capture any ongoing process. This property is managed by clients (such as Agent Platform Pipelines) and the system does not prescribe or check the validity of state transitions. | `etag` `string` An eTag used to perform consistent read-modify-write updates. If not set, a blind "overwrite" update happens. | `labels` `map (key: string, value: string)` The labels with user-defined metadata to organize your Executions.label keys and values can be no longer than 64 characters (Unicode codepoints), can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. No more than 64 user labels can be associated with one Execution (System labels are excluded). | `createTime` `string (`[Timestamp](https://protobuf.dev/reference/protobuf/google.protobuf/#timestamp)` format)` Output only. timestamp when this Execution was created.Uses RFC 3339, where generated output will always be Z-normalized and use 0, 3, 6 or 9 fractional digits. Offsets other than "Z" are also accepted. Examples: `"2014-10-02T15:01:23Z"`, `"2014-10-02T15:01:23.045123456Z"` or `"2014-10-02T15:01:23+05:30"`. | `updateTime` `string (`[Timestamp](https://protobuf.dev/reference/protobuf/google.protobuf/#timestamp)` format)` Output only. timestamp when this Execution was last updated.Uses RFC 3339, where generated output will always be Z-normalized and use 0, 3, 6 or 9 fractional digits. Offsets other than "Z" are also accepted. Examples: `"2014-10-02T15:01:23Z"`, `"2014-10-02T15:01:23.045123456Z"` or `"2014-10-02T15:01:23+05:30"`. | `schemaTitle` `string` The title of the schema describing the metadata.Schema title and version is expected to be registered in earlier Create Schema calls. And both are used together as unique identifiers to identify schemas within the local metadata store. | `schemaVersion` `string` The version of the schema in `schemaTitle` to use.Schema title and version is expected to be registered in earlier Create Schema calls. And both are used together as unique identifiers to identify schemas within the local metadata store. | `metadata` `object (`[Struct](https://protobuf.dev/reference/protobuf/google.protobuf/#struct)` format)` Properties of the Execution. top level metadata keys' heading and trailing spaces will be trimmed. The size of this field should not exceed 200KB. | `description` `string` description of the Execution | JSON representation  
+---  
+      
+    
+    {
+      "name": string,
+      "displayName": string,
+      "state": enum ([State](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.metadataStores.executions#Execution.State)),
+      "etag": string,
+      "labels": {
+        string: string,
+        ...
+      },
+      "createTime": string,
+      "updateTime": string,
+      "schemaTitle": string,
+      "schemaVersion": string,
+      "metadata": {
+        object
+      },
+      "description": string
+    }  
+  
+### State
+
+Describes the state of the Execution.
+
+Enums  
+---  
+`STATE_UNSPECIFIED` | Unspecified Execution state  
+`NEW` | The Execution is new  
+`RUNNING` | The Execution is running  
+`COMPLETE` | The Execution has finished running  
+`FAILED` | The Execution has failed  
+`CACHED` | The Execution completed through Cache hit.  
+`CANCELLED` | The Execution was cancelled.  
+  
+## Methods  
+  
+---  
+  
+### `[addExecutionEvents](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.metadataStores.executions/addExecutionEvents)`
+
+|  Adds Events to the specified Execution.  
+  
+### `[create](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.metadataStores.executions/create)`
+
+|  Creates an Execution associated with a MetadataStore.  
+  
+### `[delete](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.metadataStores.executions/delete)`
+
+|  Deletes an Execution.  
+  
+### `[get](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.metadataStores.executions/get)`
+
+|  Retrieves a specific Execution.  
+  
+### `[list](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.metadataStores.executions/list)`
+
+|  Lists Executions in the MetadataStore.  
+  
+### `[patch](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.metadataStores.executions/patch)`
+
+|  Updates a stored Execution.  
+  
+### `[purge](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.metadataStores.executions/purge)`
+
+|  Purges Executions.  
+  
+### `[queryExecutionInputsAndOutputs](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.metadataStores.executions/queryExecutionInputsAndOutputs)`
+
+|  Obtains the set of input and output Artifacts for this Execution, in the form of LineageSubgraph that also contains the Execution and connecting Events.  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-04-22 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-04-22 UTC."],[],[]] 

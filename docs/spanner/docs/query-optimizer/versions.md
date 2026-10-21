@@ -1,0 +1,320 @@
+---
+url: https://docs.cloud.google.com/spanner/docs/query-optimizer/versions/
+title: Spanner query optimizer versions \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T03:26:42.927645+00:00
+---
+
+# Spanner query optimizer versions  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/docs/query-optimizer/versions/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Guides ](https://docs.cloud.google.com/spanner/docs/create-query-database-console)
+
+
+
+Send feedback 
+
+#  Spanner query optimizer versions Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page describes and provides a history of the various Spanner query optimizer versions. The current default version is 8. To learn more about the query optimizer, see [Query optimizer overview](https://docs.cloud.google.com/spanner/docs/query-optimizer/overview).
+
+Spanner rolls out query optimizer updates as new query optimizer versions. By default, each database starts using the latest version of the optimizer no sooner than 30 days after that version has been released.
+
+You can manage the query optimizer version that your queries use for GoogleSQL-dialect and PostgreSQL-dialect databases. Before committing to the latest version, you can compare query performance profiles between earlier versions and the latest version. To learn more, see [Manage the query optimizer](https://docs.cloud.google.com/spanner/docs/query-optimizer/manage-query-optimizer).
+
+## Query optimizer version history
+
+The following is a summary of the updates made to the query optimizer in each release.
+
+### Version 9: July 21st, 2026 (latest)
+
+  * Improves the efficiency of [distributed apply](https://docs.cloud.google.com/spanner/docs/query-operators-distributed#distributed-apply) (DA) joins by only sending required columns from the input to the map side of the join.
+
+  * Automatically selects the indexes on computed columns, when the same computed expression is a filter or join condition in a query.
+
+Example, enables selection of the index on `Singers((LOWER(FirstName)))` if present for the following query:
+
+###  GoogleSQL 
+        
+        SELECT s.SingerId, s.FirstName, s.LastName
+        FROM Singers s
+        WHERE LOWER(s.FirstName) > 'k'
+        LIMIT 10;
+        
+
+###  PostgreSQL 
+        
+        SELECT s.singerid, s.firstname, s.lastname
+        FROM singers s
+        WHERE LOWER(s.firstname) > 'k'
+        LIMIT 10;
+        
+
+  * Improves interleaved index lookup performance by batching and sorting keys for efficient sequential seeks into storage.
+
+  * Minor improvements to cardinality estimation.
+
+  * Heuristically prefer plans with [distributed apply](https://docs.cloud.google.com/spanner/docs/query-operators-distributed#distributed-apply) over [apply](https://docs.cloud.google.com/spanner/docs/query-operators-binary#apply-join) with [distributed union](https://docs.cloud.google.com/spanner/docs/query-operators-distributed#distributed-union) on the map side if there is no `LIMIT` above the apply.
+
+  * Chooses index union plans more aggressively.
+
+  * Improves `GROUP BY` performance by expanding scan-based aggregation to support filter predicates where the aggregation key is compared to functions involving constants and parameters.
+
+  * Enables cost-based plan optimization for queries involving tables with named schemas.
+
+
+
+
+### Version 8: October 28th, 2024 (default)
+
+  * `WITH` clauses are considered when making cost-based plan choices.
+
+  * Improved performance of distributed cross apply and indexed lookup queries.
+
+  * Improved `JOIN` reordering.
+
+  * Improved performance of queries with large `IN (...)` clauses.
+
+  * Improved `GROUP BY` performance in certain cases.
+
+  * Other improvements including more efficient handling of queries with `LIMIT`, foreign keys, and index selection.
+
+
+
+
+### Version 7: May 22nd, 2024
+
+  * Added support for cost-based selection of index union plans.
+
+  * Added support for the smart selection of seek versus scan plans based on statistics for queries that don't have seekable predicates for all key parts.
+
+  * Added support for cost-based selection of hash joins.
+
+
+
+
+### Version 6: September 11th, 2023
+
+  * Improved limit pushing and predicate pushing through full outer joins.
+
+  * Improved cardinality estimation and cost model.
+
+  * Enabled cost-based optimization for DML queries.
+
+
+
+
+### Version 5: July 15th, 2022
+
+  * Improved cost model for index selection, distribution management, sort placement and `GROUP BY` selection.
+
+  * Added support for cost-based join algorithm selection that chooses between hash and apply join. Merge join still requires using a query hint.
+
+  * Added support for cost-based join commutativity.
+
+
+
+
+### Version 4: March 1st, 2022
+
+  * Improvements to secondary index selection.
+
+    * Improved secondary index usage under a join between interleaved tables.
+    * Improved covering secondary index usage.
+    * Improved index selection when optimizer statistics are outdated.
+    * Prefer secondary indexes with predicates on leading indexed columns even if the optimizer statistics are not available or report the base table is small.
+  * Introduces single pass hash join, enabled by the new hint `hash_join_execution`.
+
+Join Hint:
+
+###  GoogleSQL 
+        
+        SELECT ...
+        FROM (...)
+        JOIN@{join_method=hash_join, hash_join_execution=one_pass} (...)
+        
+
+###  PostgreSQL 
+        
+        SELECT ...
+        FROM (...)
+        JOIN/*@ join_method=hash_join, hash_join_execution=one_pass */ (...)
+        
+
+The new mode is beneficial when the [build side input of the hash join](https://docs.cloud.google.com/spanner/docs/query-execution-operators#hash-join) is large. One pass hash join is expected to have better performance when you observe the following in the [query execution profile](https://docs.cloud.google.com/spanner/docs/tune-query-with-visualizer):
+
+    * The number of executions on the right child of the hash join is larger than the number of executions on the hash join operator.
+    * The latency on the right child of the hash join operator is also high.
+
+By default (`hash_join_execution=multi_pass`), if the build side input of the hash join is too large to fit in memory, the build side is split into multiple batches and we might scan the probe side multiple times. With the new mode (`hash_join_execution=one_pass`), a hash join will spill to disk if its build side input cannot fit in memory and will always scan the probe side only once.
+
+  * An improvement in selecting how many keys are used for seeking.
+
+
+
+
+### Version 3: August 1st, 2021
+
+  * Adds a new join algorithm, merge join, enabled using a new [JOIN METHOD](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/query-syntax#join-methods) query hint value.
+
+Statement hint:
+
+###  GoogleSQL 
+        
+        @{join_method=merge_join}
+        SELECT ...
+        
+
+###  PostgreSQL 
+        
+        /*@ join_method=merge_join */
+        SELECT ...
+        
+
+Join hint:
+
+###  GoogleSQL 
+        
+        SELECT ...
+        FROM (...)
+        JOIN@{join_method=merge_join} (...)
+        
+
+###  PostgreSQL 
+        
+        SELECT ...
+        FROM (...)
+        JOIN/*@ join_method=merge_join */ (...)
+        
+
+  * Adds a new join algorithm, push broadcast hash join, enabled using a new [JOIN METHOD](https://docs.cloud.google.com/spanner/docs/reference/standard-sql/query-syntax#join-methods) query hint value.
+
+Join hint:
+
+###  GoogleSQL 
+        
+        SELECT ...
+        FROM (...)
+        JOIN@{join_method=push_broadcast_hash_join} (...)
+        
+
+###  PostgreSQL 
+        
+        SELECT ...
+        FROM (...)
+        JOIN/*@ join_method=push_broadcast_hash_join} */ (...)
+        
+
+  * Introduces the [distributed merge union](https://docs.cloud.google.com/spanner/docs/query-execution-operators#distributed-merge-union) operator, which is enabled by default when applicable. This operation improves the performance of queries.
+
+  * A small improvement to the performance of a scan under a `GROUP BY` when there is no MAX or MIN aggregate (or HAVING MAX/MAX) in the SELECT list. Prior to this change, Spanner loaded the extra non-grouped column even if it was not required by the query.
+
+For example, consider the following table:
+
+###  GoogleSQL 
+        
+        CREATE TABLE myTable(
+          a INT64,
+          b INT64,
+          c INT64,
+          d INT64)
+        PRIMARY KEY (a, b, c);
+        
+
+###  PostgreSQL 
+        
+        CREATE TABLE myTable(
+          a bigint,
+          b bigint,
+          c bigint,
+          d bigint,
+          PRIMARY KEY(a, b, c)
+        );
+        
+
+Prior to this change, the following query would have loaded column `c` even though it is not required by the query.
+        
+        SELECT a, b
+        FROM myTable
+        GROUP BY a, b
+        
+
+  * Improves the performance of some queries with `LIMIT` when there is a cross apply operator introduced by joins and the query asks for sorted results with LIMIT. After this change, the optimizer applies the sorting with the limit on the input side of cross apply first.
+
+Example:
+
+###  GoogleSQL 
+        
+        SELECT a2.*
+        FROM Albums@{FORCE_INDEX=_BASE_TABLE} a1
+        JOIN Albums@{FORCE_INDEX=_BASE_TABLE} a2 USING(SingerId)
+        ORDER BY a1.AlbumId
+        LIMIT 2;
+        
+
+###  PostgreSQL 
+        
+        SELECT a2.*
+        FROM albums/*@ force_index=_base_table */ a1
+        JOIN albums/*@ force_index=_base_table */ a2 USING(singerid)
+        ORDER BY a1.albumid
+        LIMIT 2;
+        
+
+  * Improves query performance by pushing more computations through `JOIN`.
+
+Pushes more computations which may include a subquery or struct construction through join. That improves the query performance in a few ways such as: More computations can be done in a distributed fashion and more operations that depend on the pushed computations can be pushed down as well. For example, the query has a limit and the sort order depends on those computations, then the limit can be pushed through join as well.
+
+Example:
+        
+        SELECT
+          t.ConcertDate,
+          (
+            SELECT COUNT(*) FROM UNNEST(t.TicketPrices) p WHERE p > 10
+          ) AS expensive_tickets,
+          u.VenueName
+        FROM Concerts t
+        JOIN Venues u ON t.VenueId = u.VenueId
+        ORDER BY expensive_tickets
+        LIMIT 2;
+        
+
+
+
+
+### Version 2: March 1st, 2020
+
+  * Adds optimizations in index selection.
+  * Improves the performance of `REGEXP_CONTAINS` and `LIKE` predicates under certain circumstances.
+  * Improves the performance of a scan under a `GROUP BY` in certain situations.
+
+
+
+### Version 1: June 18th, 2019
+
+  * Includes many rule based optimizations such as predicate pushdown, limit pushdown, redundant join and redundant expression removal, to name a few.
+
+  * Uses statistics on user data to select which index to use to access each table.
+
+
+
+
+## What's next
+
+  * To learn more about the query optimizer, see [About query optimizer](https://docs.cloud.google.com/spanner/docs/query-optimizer/overview).
+  * To manage both the optimizer version and statistics package for your scenario, see [Manage the query optimizer](https://docs.cloud.google.com/spanner/docs/query-optimizer/manage-query-optimizer).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

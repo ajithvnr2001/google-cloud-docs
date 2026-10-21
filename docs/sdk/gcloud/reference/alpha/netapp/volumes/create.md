@@ -1,0 +1,293 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/netapp/volumes/create/
+title: gcloud alpha netapp volumes create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T12:32:55.071648+00:00
+---
+
+# gcloud alpha netapp volumes create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/netapp/volumes/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha netapp volumes create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha netapp volumes create - create a Cloud NetApp Volume 
+SYNOPSIS
+    
+
+`gcloud alpha netapp volumes create` (`VOLUME` : `--location`=`LOCATION`) `--capacity`=`CAPACITY` `--protocols`=`PROTOCOL`,[`PROTOCOL`,…] `--storage-pool`=`STORAGE_POOL` [`--async`] [`--block-devices`=[`host-groups`=`HOST-GROUPS`],[`name`=`NAME`],[`os-type`=`OS-TYPE`],[`size-gib`=`SIZE-GIB`]] [`--cache-parameters`=[`cache-config`=`CACHE-CONFIG`],[`enable-global-file-lock`=`ENABLE-GLOBAL-FILE-LOCK`],[`peer-cluster-name`=`PEER-CLUSTER-NAME`],[`peer-ip-addresses`=`PEER-IP-ADDRESSES`],[`peer-svm-name`=`PEER-SVM-NAME`],[`peer-volume-name`=`PEER-VOLUME-NAME`]] [`--cache-pre-populate`=[`exclude-path-list`=`EXCLUDE-PATH-LIST`],[`path-list`=`PATH-LIST`],[`recursion`=`RECURSION`]] [`--description`=`DESCRIPTION`] [`--enable-kerberos`=`ENABLE_KERBEROS`] [`--export-policy`=[`access-type`=`ACCESS-TYPE`],[`allowed-clients`=`ALLOWED-CLIENTS`],[`anon-uid`=`ANON-UID`],[`has-root-access`=`HAS-ROOT-ACCESS`],[`kerberos-5-read-only`=`KERBEROS-5-READ-ONLY`],[`kerberos-5-read-write`=`KERBEROS-5-READ-WRITE`],[`kerberos-5i-read-only`=`KERBEROS-5I-READ-ONLY`],[`kerberos-5i-read-write`=`KERBEROS-5I-READ-WRITE`],[`kerberos-5p-read-only`=`KERBEROS-5P-READ-ONLY`],[`kerberos-5p-read-write`=`KERBEROS-5P-READ-WRITE`],[`nfsv3`=`NFSV3`],[`nfsv4`=`NFSV4`],[`squash-mode`=`SQUASH-MODE`]] [`--hybrid-replication-parameters`=[`cluster-location`=`CLUSTER-LOCATION`],[`description`=`DESCRIPTION`],[`hybrid-replication-type`=`HYBRID-REPLICATION-TYPE`],[`labels`=`LABELS`],[`large-volume-constituent-count`=`LARGE-VOLUME-CONSTITUENT-COUNT`],[`peer-cluster-name`=`PEER-CLUSTER-NAME`],[`peer-ip-addresses`=`PEER-IP-ADDRESSES`],[`peer-svm-name`=`PEER-SVM-NAME`],[`peer-volume-name`=`PEER-VOLUME-NAME`],[`replication`=`REPLICATION`],[`replication-schedule`=`REPLICATION-SCHEDULE`]] [`--labels`=[`KEY`=`VALUE`,…]] [`--large-capacity`=`LARGE_CAPACITY`] [`--large-capacity-config`[=[`constituent-count`=`CONSTITUENT-COUNT`]]] [`--multiple-endpoints`=`MULTIPLE_ENDPOINTS`] [`--restricted-actions`=`RESTRICTED_ACTION`,[…]] [`--security-style`=`SECURITY_STYLE`; default=`"SECURITY_STYLE_UNSPECIFIED"`] [`--share-name`=`SHARE_NAME`] [`--smb-settings`=`SMB_SETTING`,[`SMB_SETTING`,…]] [`--snap-reserve`=`SNAP_RESERVE`] [`--snapshot-daily`=[`hour`=`HOUR`],[`minute`=`MINUTE`],[`snapshots-to-keep`=`SNAPSHOTS-TO-KEEP`]] [`--snapshot-directory`=`SNAPSHOT_DIRECTORY`; default="true"] [`--snapshot-hourly`=[`minute`=`MINUTE`],[`snapshots-to-keep`=`SNAPSHOTS-TO-KEEP`]] [`--snapshot-monthly`=[`day`=`DAY`],[`hour`=`HOUR`],[`minute`=`MINUTE`],[`snapshots-to-keep`=`SNAPSHOTS-TO-KEEP`]] [`--snapshot-weekly`=[`day`=`DAY`],[`hour`=`HOUR`],[`minute`=`MINUTE`],[`snapshots-to-keep`=`SNAPSHOTS-TO-KEEP`]] [`--source-snapshot`=`SOURCE_SNAPSHOT`] [`--throughput-mibps`=`THROUGHPUT_MIBPS`] [`--tiering-policy`=[`tier-action`=`ENABLED`|`PAUSED`,…]] [`--unix-permissions`=`UNIX_PERMISSIONS`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` Create a Cloud NetApp Volume 
+EXAMPLES
+     The following command creates a NFS Volume named NAME asynchronously using the specified arguments 
+    
+    
+    gcloud alpha netapp volumes create NAME --capacity=1024 --protocols=nfsv3,nfsv4 --share-name=share1 --storage-pool=sp1 --description="test description" --enable-kerberos=true --unix-permissions=0755 --async
+
+The following command creates a SMB Volume named NAME asynchronously using the specified arguments 
+    
+    
+    gcloud alpha netapp volumes create NAME --capacity=1024 --protocols=smb --share-name=share2 --storage-pool=sp2 --description="test smb" --security-style=ntfs --smb-settings=SHOW_SNAPSHOT,SHOW_PREVIOUS_VERSIONS,ACCESS_BASED_ENUMERATION --snap-reserve=0.1 --async
+
+POSITIONAL ARGUMENTS
+    
+
+Volume resource - The Volume to create. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `volume` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`VOLUME`
+     ID of the volume or fully qualified identifier for the volume. 
+
+To set the `volume` attribute: 
+
+  * provide the argument `volume` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     The location of the volume. 
+
+To set the `location` attribute: 
+
+  * provide the argument `volume` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `netapp/location`. 
+
+
+REQUIRED FLAGS
+    
+
+`--capacity`=`CAPACITY`
+     The desired capacity of the Volume in GiB or TiB units.If no capacity unit is specified, GiB is assumed. 
+`--protocols`=`PROTOCOL`,[`PROTOCOL`,…]
+     Type of File System protocols for the Cloud NetApp Volume. Valid component values are: `NFSV3`, `NFSV4`, `SMB`, `ISCSI`. 
+Storage pool resource - The Storage Pool to associate with Volume. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--storage-pool` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `location` attribute: 
+
+  * provide the argument `--storage-pool` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `netapp/location`. 
+
+
+
+This must be specified. 
+
+`--storage-pool`=`STORAGE_POOL`
+     ID of the storage_pool or fully qualified identifier for the storage_pool. 
+
+To set the `storage_pool` attribute: 
+
+  * provide the argument `--storage-pool` on the command line. 
+
+
+OPTIONAL FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--block-devices`=[`host-groups`=`HOST-GROUPS`],[`name`=`NAME`],[`os-type`=`OS-TYPE`],[`size-gib`=`SIZE-GIB`]
+     A block device to be created with the volume. 
+
+This flag can be repeated to specify multiple block devices. 
+
+The following keys are available: 
+
+`name`
+     A user-defined name for the block device. 
+`host-groups`
+     A comma-separated list of host groups that can mount the block volume. 
+`os-type`
+     The OS type of the volume. Allowed values are `OS_TYPE_UNSPECIFIED`, `LINUX`, `WINDOWS`. 
+`size-gib`
+     The size of the block device in GiB. Note that this value is ignored during volume creation and is system-managed. 
+`--cache-parameters`=[`cache-config`=`CACHE-CONFIG`],[`enable-global-file-lock`=`ENABLE-GLOBAL-FILE-LOCK`],[`peer-cluster-name`=`PEER-CLUSTER-NAME`],[`peer-ip-addresses`=`PEER-IP-ADDRESSES`],[`peer-svm-name`=`PEER-SVM-NAME`],[`peer-volume-name`=`PEER-VOLUME-NAME`]
+     Cache Parameters contains cache parameters of a volume. 
+    
+    
+    Cache Parameters will have the following format:
+    `--cache-parameters=peer-volume-name=PEER_VOLUME_NAME,peer-cluster-name=PEER_CLUSTER_NAME,peer-svm-name=PEER_SVM_NAME,peer-ip-addresses=[PEER-IP-ADDRESS1#PEER-IP-ADDRESS2#…],enable-global-file-lock=ENABLE_GLOBAL_FILE_LOCK,cache-config=CACHE_CONFIG`
+    
+    
+    *peer-volume-name*::: Name of the user's local source volume
+    *peer-cluster-name*::: Name of the user's local source cluster
+    *peer-svm-name*::: Name of the user's local source vserver svm
+    *peer-ip-addresses*::: Hashtag-separated(#) list of IP addresses
+    *enable-global-file-lock*::: If true, enable global file lock
+    *cache-config*::: Cache-config as a hashtag-separated(#) list of key-value pairs
+
+`--cache-pre-populate`=[`exclude-path-list`=`EXCLUDE-PATH-LIST`],[`path-list`=`PATH-LIST`],[`recursion`=`RECURSION`]
+     Cache Pre-populate contains cache pre-populate parameters of a volume. 
+
+Cache Pre-populate will have the following format: `--cache-pre-populate=path-list=PATH_LIST1#PATH_LIST2,exclude-path-list=EXCLUDE_PATH_LIST1#EXCLUDE_PATH_LIST2,recursion=RECURSION`
+
+`path-list`
+     Hashtag-separated(#) list of paths to be pre-populated 
+`exclude-path-list`
+     Hashtag-separated(#) list of paths to be excluded from pre-population 
+`recursion`
+     Boolean value indicating pre-populate recursion. 
+`--description`=`DESCRIPTION`
+     A description of the Cloud NetApp Volume 
+`--enable-kerberos`=`ENABLE_KERBEROS`
+     Boolean flag indicating whether Volume is a kerberos Volume or not 
+`--export-policy`=[`access-type`=`ACCESS-TYPE`],[`allowed-clients`=`ALLOWED-CLIENTS`],[`anon-uid`=`ANON-UID`],[`has-root-access`=`HAS-ROOT-ACCESS`],[`kerberos-5-read-only`=`KERBEROS-5-READ-ONLY`],[`kerberos-5-read-write`=`KERBEROS-5-READ-WRITE`],[`kerberos-5i-read-only`=`KERBEROS-5I-READ-ONLY`],[`kerberos-5i-read-write`=`KERBEROS-5I-READ-WRITE`],[`kerberos-5p-read-only`=`KERBEROS-5P-READ-ONLY`],[`kerberos-5p-read-write`=`KERBEROS-5P-READ-WRITE`],[`nfsv3`=`NFSV3`],[`nfsv4`=`NFSV4`],[`squash-mode`=`SQUASH-MODE`]
+     Export Policy of a Cloud NetApp Files Volume. This will be a field similar to network in which export policy fields can be specified as such: `--export-policy=allowed-clients=ALLOWED_CLIENTS_IP_ADDRESSES,has-root-access=HAS_ROOT_ACCESS_BOOL,access-type=ACCESS_TYPE,nfsv3=NFSV3,nfsv4=NFSV4,kerberos-5-read-only=KERBEROS_5_READ_ONLY,kerberos-5-read-write=KERBEROS_5_READ_WRITE,kerberos-5i-read-only=KERBEROS_5I_READ_ONLY,kerberos-5i-read-write=KERBEROS_5I_READ_WRITE,kerberos-5p-read-only=KERBEROS_5P_READ_ONLY,kerberos-5p-read-write=KERBEROS_5P_READ_WRITE,squash-mode=SQUASH_MODE,anon-uid=ANON_UID`
+`--hybrid-replication-parameters`=[`cluster-location`=`CLUSTER-LOCATION`],[`description`=`DESCRIPTION`],[`hybrid-replication-type`=`HYBRID-REPLICATION-TYPE`],[`labels`=`LABELS`],[`large-volume-constituent-count`=`LARGE-VOLUME-CONSTITUENT-COUNT`],[`peer-cluster-name`=`PEER-CLUSTER-NAME`],[`peer-ip-addresses`=`PEER-IP-ADDRESSES`],[`peer-svm-name`=`PEER-SVM-NAME`],[`peer-volume-name`=`PEER-VOLUME-NAME`],[`replication`=`REPLICATION`],[`replication-schedule`=`REPLICATION-SCHEDULE`]
+     Hybrid Replication Parameters contains hybrid replication parameters on a volume. 
+    
+    
+    Hybrid Replication Parameters will have the following format:
+    `--hybrid-replication-parameters=replication=REPLICATION,peer-volume-name=PEER_VOLUME_NAME,peer-cluster-name=PEER_CLUSTER_NAME,peer-svm-name=PEER_SVM_NAME,peer-ip-addresses=[PEER-IP-ADDRESS1#PEER-IP-ADDRESS2#…],cluster-location=CLUSTER_LOCATION,description=DESCRIPTION,replication-schedule=REPLICATION_SCHEDULE,hybrid-replication-type=HYBRID_REPLICATION_TYPE,large-volume-constituent-count=LARGE_VOLUME_CONSTITUENT_COUNT,labels=[KEY1:VALUE1#KEY2:VALUE2#…]`
+
+replication is the desired name for the replication of the volume, peer-volume-name is the name of the user's local source volume, peer-cluster-name is the name of the user's local source cluster, peer-svm-name is the name of the user's local source vserver svm, peer-ip-addresses is a ampersand-separated(#) list of ip addresses, cluster-location is the name of the source cluster location, description is the description of the replication, replication-schedule is the schedule of corresponding hybrid replication created, hybrid-replication-type is the hybrid replication type of the corresponding hybrid replication created, large-volume-constituent-count is the number of constituent volumes in the large volume, and labels is an hashtag-separated(#) key value pair of labels with key and value separated by colon(:) for the replication. 
+
+`--labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to add. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+`--large-capacity`=`LARGE_CAPACITY`
+     Boolean flag indicating whether Volume is a large capacity Volume or not 
+`--large-capacity-config`[=[`constituent-count`=`CONSTITUENT-COUNT`]]
+     Large Capacity Config contains configuration for large capacity volumes. 
+
+Large Capacity Config has the following format: `--large-capacity-config=constituent-count=CONSTITUENT_COUNT` `--large-capacity-config`
+
+`constituent-count`
+     (optional) The number of constituents for a large capacity volume. 
+`--multiple-endpoints`=`MULTIPLE_ENDPOINTS`
+     Boolean flag indicating whether Volume is a multiple endpoints Volume or not 
+`--restricted-actions`=`RESTRICTED_ACTION`,[…]
+     Actions to be restricted for a volume. Valid restricted action options are: 'DELETE'. 
+`--security-style`=`SECURITY_STYLE`; default=`"SECURITY_STYLE_UNSPECIFIED"`
+     The security style of the Volume. This can either be UNIX or NTFS. 
+
+`SECURITY_STYLE` must be one of: 
+
+`ntfs`
+     NTFS security style for Volume. 
+`unix`
+     UNIX security style for Volume 
+`--share-name`=`SHARE_NAME`
+     Share name of the Mount path clients will use. 
+`--smb-settings`=`SMB_SETTING`,[`SMB_SETTING`,…]
+     List of settings specific to SMB protocol for a Cloud NetApp Files Volume. Valid component values are: `ENCRYPT_DATA`, `BROWSABLE`, `CHANGE_NOTIFY`, `NON_BROWSABLE`, `OPLOCKS`, `SHOW_SNAPSHOT`, `SHOW_PREVIOUS_VERSIONS`, `ACCESS_BASED_ENUMERATION`, `CONTINUOUSLY_AVAILABLE`. 
+`--snap-reserve`=`SNAP_RESERVE`
+     (DEPRECATED) The percentage of volume storage reserved for snapshot storage. The default value for this is 0 percent 
+
+The snap-reserve option is deprecated 
+
+`--snapshot-daily`=[`hour`=`HOUR`],[`minute`=`MINUTE`],[`snapshots-to-keep`=`SNAPSHOTS-TO-KEEP`]
+     Make a snapshot every day e.g. at 06:00, 05:20, 23:50 
+`--snapshot-directory`=`SNAPSHOT_DIRECTORY`; default="true"
+     Snapshot Directory if enabled (true) makes the Volume contain a read-only .snapshot directory which provides access to each of the volume's snapshots 
+`--snapshot-hourly`=[`minute`=`MINUTE`],[`snapshots-to-keep`=`SNAPSHOTS-TO-KEEP`]
+     Make a snapshot every hour e.g. at 04:00, 05:20, 06:00 
+`--snapshot-monthly`=[`day`=`DAY`],[`hour`=`HOUR`],[`minute`=`MINUTE`],[`snapshots-to-keep`=`SNAPSHOTS-TO-KEEP`]
+     Make a snapshot once a month e.g. at 2nd 04:00, 7th 05:20, 24th 23:50 
+`--snapshot-weekly`=[`day`=`DAY`],[`hour`=`HOUR`],[`minute`=`MINUTE`],[`snapshots-to-keep`=`SNAPSHOTS-TO-KEEP`]
+     Make a snapshot every week e.g. at Monday 04:00, Wednesday 05:20, Sunday 23:50 
+Snapshot resource - The source Snapshot to create the Volume from. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--source-snapshot` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `location` attribute: 
+
+  * provide the argument `--source-snapshot` on the command line with a fully specified name; 
+  * set the property `netapp/location`. 
+
+
+
+To set the `volume` attribute: 
+
+  * provide the argument `--source-snapshot` on the command line with a fully specified name. 
+
+
+`--source-snapshot`=`SOURCE_SNAPSHOT`
+     ID of the snapshot or fully qualified identifier for the snapshot. 
+
+To set the `snapshot` attribute: 
+
+  * provide the argument `--source-snapshot` on the command line. 
+
+
+`--throughput-mibps`=`THROUGHPUT_MIBPS`
+     The desired throughput of the volume in MiB/s. 
+`--tiering-policy`=[`tier-action`=`ENABLED`|`PAUSED`,…]
+     Tiering Policy contains auto tiering policy on a volume. 
+    
+    
+    Tiering Policy will have the following format:
+    `--tiering-policy=tier-action=TIER_ACTION,cooling-threshold-days=COOLING_THRESHOLD_DAYS`
+    
+    
+    tier-action is an enum, supported values are ENABLED or PAUSED,
+    
+    
+    
+     cooling-threshold-days is an integer represents time in days to mark the
+    volume's data block as cold and make it eligible for tiering, can be range from
+    7-183. Default is 31.
+
+`--unix-permissions`=`UNIX_PERMISSIONS`
+     Unix permissions the mount point will be created with. Unix permissions are only applicable with NFS protocol only 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. These variants are also available: 
+    
+    
+    [gcloud netapp volumes create](https://docs.cloud.google.com/sdk/gcloud/reference/netapp/volumes/create)
+    
+    
+    [gcloud beta netapp volumes create](https://docs.cloud.google.com/sdk/gcloud/reference/beta/netapp/volumes/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-08-04 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-04 UTC."],[],[]] 

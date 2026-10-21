@@ -1,0 +1,124 @@
+---
+url: https://docs.cloud.google.com/spanner/docs/introspection/vector-index-statistics/
+title: Vector index statistics \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T03:26:35.886353+00:00
+---
+
+# Vector index statistics  |  Spanner  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/docs/introspection/vector-index-statistics/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Guides ](https://docs.cloud.google.com/spanner/docs/create-query-database-console)
+
+
+
+Send feedback 
+
+#  Vector index statistics Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Note:** This feature is available with the Spanner Enterprise edition and Enterprise Plus edition. For more information, see the [Spanner editions overview](https://docs.cloud.google.com/spanner/docs/editions-overview). 
+
+This page describes the built-in Spanner table that stores statistics about your vector indexes. You can use vector index statistics to review the performance of your vector index, identify areas for improvement, and tune your index based on the metrics.
+
+You can retrieve statistics from the `SPANNER_SYS.VECTOR_INDEX_STATS` table using SQL statements.
+
+Spanner provides the vector index statistics in the `SPANNER_SYS` schema. You can use the following ways to access `SPANNER_SYS` data:
+
+  * A database's Spanner Studio page in the Google Cloud console.
+
+  * The [`gcloud spanner databases execute-sql`](https://docs.cloud.google.com/sdk/gcloud/reference/spanner/databases/execute-sql) command.
+
+  * The [`executeSql`](https://docs.cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases.sessions/executeSql) or the [`executeStreamingSql`](https://docs.cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases.sessions/executeStreamingSql) method.
+
+
+
+
+## Vector index statistics
+
+`SPANNER_SYS.VECTOR_INDEX_STATS` contains the statistics about each vector index in your database, sorted by `STATISTICS_COLLECTION_TIMESTAMP`. Spanner collects data about each vector index every three days. Shortly after data is collected, Spanner makes the data available in the `VECTOR_INDEX_STATS` table. The information found in this table provides insights into your index, allowing you to tune and apply recommendations for faster vector search performance.
+
+Column name | Description | Tuning guidance  
+---|---|---  
+`START_TIME` | The time at which Spanner collected the index metric. | Not applicable  
+`VECTOR_INDEX_NAME` | The name of the vector index, as given in the `CREATE VECTOR INDEX` statement. | Not applicable  
+`NUM_LEAVES` | The total number of leaves (also known as clusters) used in this vector index. This number is determined at the time of vector index creation. It might change over time as Spanner adaptively reshapes the vector index. | If many rows are added to the indexed table after creation, it's possible that some clusters might become quite large, which can impact query latency. We recommend rebuilding the index with more clusters if the number of clusters in the index is equal to or more than the square root of the number of rows in the table.  
+`NUM_ZERO_SIZE_CLUSTERS_SAMPLED` | The sampled number of empty clusters in the vector index. Empty clusters don't have any rows assigned to them. | As rows are added and deleted from a table over time, some clusters might become empty. If there are many empty clusters, the vector index is likely stale. If 10% or more of the clusters are empty, consider rebuilding the index with fewer clusters. For the larger vector indexes, Spanner uses random sampling to bound the cost of measurements. Therefore, this metric represents the number of sampled size-zero clusters. To convert this to the estimated number of size-zero clusters, you can use the following query: `SELECT NUM_ZERO_SIZE_CLUSTERS_SAMPLED / NUM_CLUSTERS_SAMPLED AS ESTIMATED_PERCENT_OF_CLUSTERS_WITH_SIZE_ZERO`  
+`CLUSTER_SIZE_PERCENTILES` | A vector index divides the indexed embeddings into clusters of nearby vectors. This distribution column gives some percentile values of the sizes of these clusters. | The K-means clustering process, which powers vector indexing, typically produces clusters of varying size. As a result, some imbalance is expected. If there are severe deviations in cluster size, query performance becomes slower when searching the larger clusters. Deviations are severe if the 99th percentile cluster size is at least 8 times larger than the 50th percentile cluster size. See example query 1.  
+`CLUSTER_AVERAGE_DISTANCE_TO_CENTROID_PERCENTILES` | Each cluster has a center point, or _centroid_. To achieve good recall, vectors are generally assigned to a nearby centroid, according to the configuration you chose during index creation. For each cluster, Spanner computes the estimated average distance from the centroid to all assigned vectors. Due to natural variance among clusters, Spanner reports this metric as a distribution, given as a list of percentile values. | This metric is not comparable between vector indexes (in particular, Euclidean indexes and cosine indexes are scaled differently). Track this metric over time for each vector index individually. If the 99th percentile value doubles from its historical low, consider rebuilding the index to bring it back down. See example query 2.  
+  
+### Example query 1
+
+The following query reports the 99th percentile cluster size divided by the median cluster size for a specific vector index, over time. If the 99th percentile cluster size is at least 8 times larger than the 50th percentile cluster size, consider rebuilding your index."
+    
+    
+     SELECT VECTOR_INDEX_NAME,
+            START_TIME,
+            SUM(CASE WHEN percentile = 99 THEN value_at_percentile ELSE 0 END)
+            / SUM(CASE WHEN percentile = 50 THEN value_at_percentile ELSE 0 END) as cluster_size_imbalance
+    FROM (
+      SELECT v.VECTOR_INDEX_NAME,
+             v.START_TIME, d.percentile,
+             d.value_at_percentile
+      FROM SPANNER_SYS.VECTOR_INDEX_METRICS_HISTORY AS v,
+      UNNEST(v.CLUSTER_AVERAGE_DISTANCE_TO_CENTROID_PERCENTILES)
+    AS d)
+    WHERE VECTOR_INDEX_NAME = "VecIndex2"
+    GROUP BY 1, 2;
+    
+
+**Query output**
+
+VECTOR_INDEX_NAME | START_TIME | cluster_size_imbalance  
+---|---|---  
+VecIndex2 | 2025-12-10 10:09:55.322415+00:00 | 3.288  
+VecIndex2 | 2025-12-07 10:10:02.362223+00:00 | 3.11  
+VecIndex2 | 2025-12-04 10:09:55.180895+00:00 | 2.98  
+VecIndex2 | 2025-12-01 10:10:01.680543+00:00 | 3.01  
+VecIndex2 | 2025-11-28 10:10:02.130079+00:00 | 2.99  
+  
+### Example query 2
+
+The following query reports the 99th percentile distance to centroid for each vector index, over time. This metric is an indirect indication of recall performance. The exact meaning of the values depends on your embeddings. Track each vector index individually, and as a time series. If the 99th percentile value doubles from its historical low for a given index, consider rebuilding the index.
+    
+    
+    SELECT v.VECTOR_INDEX_NAME,
+           v.START_TIME,
+           d.value_at_percentile AS distance_to_centroid_99p
+    FROM SPANNER_SYS.VECTOR_INDEX_METRICS_HISTORY AS v,
+    UNNEST(v.CLUSTER_AVERAGE_DISTANCE_TO_CENTROID_PERCENTILES) AS d
+    WHERE d.percentile=99
+    ORDER BY VECTOR_INDEX_NAME, START_TIME DESC;
+    
+
+**Query output**
+
+VECTOR_INDEX_NAME | START_TIME | distance_to_centroid_99p  
+---|---|---  
+ANNVectorBase_VI | 2025-12-10 10:09:55.322415+00:00 | 1.109  
+ANNVectorBase_VI | 2025-12-07 10:10:02.362223+00:00 | 1.11  
+ANNVectorBase_VI | 2025-12-04 10:09:55.180895+00:00 | 1.18  
+ANNVectorBase_VI | 2025-12-01 10:10:01.680543+00:00 | 1.11  
+ANNVectorBase_VI | 2025-11-28 10:10:02.130079+00:00 | 1.04  
+  
+## Data retention
+
+The `SPANNER_SYS.VECTOR_INDEX_METRICS_HISTORY` system table retains data covering the previous 30 days.
+
+## What's next
+
+  * Learn how to [rebuild a vector index](https://docs.cloud.google.com/spanner/docs/find-approximate-nearest-neighbors#rebuild).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

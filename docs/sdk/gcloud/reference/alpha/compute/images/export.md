@@ -1,0 +1,142 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/images/export/
+title: gcloud alpha compute images export \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-15T14:07:30.824127+00:00
+---
+
+# gcloud alpha compute images export  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/images/export/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha compute images export Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha compute images export - export a Compute Engine image 
+SYNOPSIS
+    
+
+`gcloud alpha compute images export` `--destination-uri`=`DESTINATION_URI` (`--image`=`IMAGE` | `--image-family`=`IMAGE_FAMILY`) [`--async`] [`--cloudbuild-service-account`=`CLOUDBUILD_SERVICE_ACCOUNT`] [`--compute-service-account`=`COMPUTE_SERVICE_ACCOUNT`] [`--export-format`=`EXPORT_FORMAT`] [`--image-project`=`IMAGE_PROJECT`] [`--log-location`=`LOG_LOCATION`] [`--network`=`NETWORK`] [`--subnet`=`SUBNET`] [`--timeout`=`TIMEOUT`; default="2h"] [`--zone`=`ZONE`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` `gcloud alpha compute images export` exports virtual disk images from Compute Engine. 
+
+By default, images are exported in the Compute Engine format, which is a `disk.raw` file that is tarred and gzipped. 
+
+The `--export-format` flag exports the image to a format supported by QEMU using qemu-img. Valid formats include `vmdk`, `vhdx`, `vpc`, `vdi`, and `qcow2`. 
+
+Before exporting an image, set up access to Cloud Storage and grant required roles to the user accounts and service accounts. For more information, see <https://cloud.google.com/compute/docs/import/requirements-export-import-images>. 
+
+EXAMPLES
+     To export a VMDK file ``my-image`` from a project ``my-project`` to a Cloud Storage bucket ``my-bucket``, run: 
+    
+    
+    gcloud alpha compute images export --image=my-image --destination-uri=gs://my-bucket/my-image.vmdk --export-format=vmdk --project=my-project
+
+REQUIRED FLAGS
+    
+
+`--destination-uri`=`DESTINATION_URI`
+     The Cloud Storage URI destination for the exported virtual disk file. 
+Exactly one of these must be specified: 
+
+`--image`=`IMAGE`
+     The name of the disk image to export. 
+`--image-family`=`IMAGE_FAMILY`
+     The family of the disk image to be exported. When a family is used instead of an image, the latest non-deprecated image associated with that family is used. 
+OPTIONAL FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--cloudbuild-service-account`=`CLOUDBUILD_SERVICE_ACCOUNT`
+     Image import and export tools use Cloud Build to import and export images to and from your project. Cloud Build uses a specific service account to execute builds on your behalf. The Cloud Build service account generates an access token for other service accounts and it is also used for authentication when building the artifacts for the image import tool. 
+
+Use this flag to to specify a user-managed service account for image import and export. If you don't specify this flag, Cloud Build runs using your project's default Cloud Build service account. To set this option, specify the email address of the desired user-managed service account. Note: You must specify the `--logs-location` flag when you set a user-managed service account. 
+
+At minimum, the specified user-managed service account needs to have the following roles assigned: 
+
+  * roles/compute.admin 
+  * roles/iam.serviceAccountTokenCreator 
+  * roles/iam.serviceAccountUser 
+
+
+`--compute-service-account`=`COMPUTE_SERVICE_ACCOUNT`
+     A temporary virtual machine instance is created in your project during image export. Image export tooling on this temporary instance must be authenticated. 
+
+A Compute Engine service account is an identity attached to an instance. Its access tokens can be accessed through the instance metadata server and can be used to authenticate image export tooling on the instance. 
+
+To set this option, specify the email address corresponding to the required Compute Engine service account. If not provided, the image export on the temporary instance uses the project's default Compute Engine service account. 
+
+At a minimum, you need to grant the following roles to the specified Cloud Build service account: 
+
+  * roles/compute.storageAdmin 
+  * roles/storage.objectAdmin 
+
+
+`--export-format`=`EXPORT_FORMAT`
+     Specify the format to export to, such as `vmdk`, `vhdx`, `vpc`, or `qcow2`. 
+`--image-project`=`IMAGE_PROJECT`
+     The Google Cloud project against which all image and image family references will be resolved. It is best practice to define image-project. A full list of available projects can be generated by running `[gcloud projects list](https://docs.cloud.google.com/sdk/gcloud/reference/projects/list)`. 
+
+  * If specifying one of our public images, image-project must be provided. 
+  * If there are several of the same image-family value in multiple projects, image-project must be specified to clarify the image to be used. 
+  * If not specified and either image or image-family is provided, the current default project is used. 
+
+
+`--log-location`=`LOG_LOCATION`
+     Directory in Cloud Storage to hold build logs. If not set, `gs://<project num>.cloudbuild-logs.googleusercontent.com/` is created and used. 
+`--network`=`NETWORK`
+     The name of the network in your project to use for the image export. When you export an image, the export tool creates and uses temporary VMs in your project for the export process. Use this flag to specify the network to use for these temporary VMs. 
+`--subnet`=`SUBNET`
+     Name of the subnetwork in your project to use for the image export. When you export an image, the export tool creates and uses temporary VMs in your project for the export process. Use this flag to specify the subnetwork to use for these temporary VMs. 
+
+  * If the network resource is in legacy mode, do not provide this property. 
+  * If the network is in auto subnet mode, specifying the subnetwork is optional. 
+  * If the network is in custom subnet mode, then this field must be specified. 
+
+
+`--timeout`=`TIMEOUT`; default="2h"
+     Maximum time an export can last before it fails as "TIMEOUT". For example, if you specify `2h`, the process fails after 2 hours. See $ [gcloud topic datetimes](https://docs.cloud.google.com/sdk/gcloud/reference/topic/datetimes) for information about duration formats. 
+
+This timeout option has a maximum value of 24 hours. 
+
+If you are exporting a large image that takes longer than 24 hours to export, either use the RAW disk format to reduce the time needed for converting the image, or split the data into several smaller images. 
+
+`--zone`=`ZONE`
+     The zone to use when exporting the image. When you export an image, the export tool creates and uses temporary VMs in your project for the export process. Use this flag to specify the zone to use for these temporary VMs. Overrides the default `compute/zone` property value for this command invocation. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. These variants are also available: 
+    
+    
+    [gcloud compute images export](https://docs.cloud.google.com/sdk/gcloud/reference/compute/images/export)
+    
+    
+    [gcloud beta compute images export](https://docs.cloud.google.com/sdk/gcloud/reference/beta/compute/images/export)
+    
+    
+    [gcloud preview compute images export](https://docs.cloud.google.com/sdk/gcloud/reference/preview/compute/images/export)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

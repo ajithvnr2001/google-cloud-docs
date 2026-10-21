@@ -1,0 +1,179 @@
+---
+url: https://docs.cloud.google.com/firestore/docs/samples/firestore-listen-document/
+title: Create a Firestore watch listener \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-17T10:25:28.440739+00:00
+---
+
+# Create a Firestore watch listener  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/firestore/docs/samples/firestore-listen-document/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Firestore ](https://docs.cloud.google.com/firestore/docs)
+  * [ Samples ](https://docs.cloud.google.com/firestore/docs/samples)
+
+
+
+#  Create a Firestore watch listener Stay organized with collections  Save and categorize content based on your preferences. 
+
+Create a Firestore watch listener
+
+## Explore further
+
+For detailed documentation that includes this code sample, see the following: 
+
+  * [Get real-time updates](https://docs.cloud.google.com/firestore/native/docs/query-data/listen)
+
+
+
+## Code sample
+
+### C#
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    DocumentReference docRef = db.Collection("cities").Document("SF");
+    FirestoreChangeListener listener = docRef.Listen(snapshot =>
+    {
+        Console.WriteLine("Callback received document snapshot.");
+        Console.WriteLine("Document exists? {0}", snapshot.Exists);
+        if (snapshot.Exists)
+        {
+            Console.WriteLine("Document data for {0} document:", snapshot.Id);
+            Dictionary<string, object> city = snapshot.ToDictionary();
+            foreach (KeyValuePair<string, object> pair in city)
+            {
+                Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
+            }
+        }
+    });
+
+### Go
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import (
+    	"context"
+    	"fmt"
+    	"io"
+    	"time"
+    
+    	"cloud.google.com/go/firestore"
+    	"google.golang.org/grpc/codes"
+    	"google.golang.org/grpc/status"
+    )
+    
+    // listenDocument listens to a single document.
+    func listenDocument(ctx context.Context, w io.Writer, projectID, collection string) error {
+    	// projectID := "project-id"
+    	// Сontext with timeout stops listening to changes.
+    	ctx, cancel := context.WithTimeout(ctx, 30*time.Second)
+    	defer cancel()
+    
+    	client, err := firestore.NewClient(ctx, projectID)
+    	if err != nil {
+    		return fmt.Errorf("firestore.NewClient: %w", err)
+    	}
+    	defer client.Close()
+    
+    	it := client.Collection(collection).Doc("SF").Snapshots(ctx)
+    	for {
+    		snap, err := it.Next()
+    		// DeadlineExceeded will be returned when ctx is cancelled.
+    		if status.Code(err) == codes.DeadlineExceeded {
+    			return nil
+    		}
+    		if err != nil {
+    			return fmt.Errorf("Snapshots.Next: %w", err)
+    		}
+    		if !snap.Exists() {
+    			fmt.Fprintf(w, "Document no longer exists\n")
+    			return nil
+    		}
+    		fmt.Fprintf(w, "Received document snapshot: %v\n", snap.Data())
+    	}
+    }
+    
+
+### Java
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    DocumentReference docRef = db.collection("cities").document("SF");
+    docRef.addSnapshotListener(
+        new EventListener<DocumentSnapshot>() {
+          @Override
+          public void onEvent(@Nullable DocumentSnapshot snapshot, @Nullable FirestoreException e) {
+            if (e != null) {
+              System.err.println("Listen failed: " + e);
+              return;
+            }
+    
+            if (snapshot != null && snapshot.exists()) {
+              System.out.println("Current data: " + snapshot.getData());
+            } else {
+              System.out.print("Current data: null");
+            }
+          }
+        });
+
+### Node.js
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    const doc = db.collection('cities').doc('SF');
+    
+    const observer = doc.onSnapshot(docSnapshot => {
+      console.log(`Received doc snapshot: ${docSnapshot}`);
+      // ...
+    }, err => {
+      console.log(`Encountered error: ${err}`);
+    });
+
+### Python
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    # Create an Event for notifying main thread.
+    callback_done = threading.Event()
+    
+    # Create a callback on_snapshot function to capture changes
+    def on_snapshot(doc_snapshot, changes, read_time):
+        for doc in doc_snapshot:
+            print(f"Received document snapshot: {doc.id}")
+        callback_done.set()
+    
+    doc_ref = db.collection("cities").document("SF")
+    
+    # Watch the document
+    doc_watch = doc_ref.on_snapshot(on_snapshot)
+
+### Ruby
+
+To authenticate to Firestore, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    doc_ref = firestore.col(collection_path).doc document_path
+    snapshots = []
+    
+    # Watch the document.
+    listener = doc_ref.listen do |snapshot|
+      puts "Received document snapshot: #{snapshot.document_id}"
+      snapshots << snapshot
+    end
+
+## What's next
+
+To search and filter code samples for other Google Cloud products, see the [Google Cloud sample browser](https://docs.cloud.google.com/docs/samples?product=firestore). 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],[],[],[]] 

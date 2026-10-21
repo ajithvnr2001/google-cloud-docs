@@ -1,0 +1,422 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/maas/capabilities/batch-prediction/
+title: Batch predictions \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T06:46:37.802742+00:00
+---
+
+# Batch predictions  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/maas/capabilities/batch-prediction/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Batch predictions Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Note:** Billing for batch prediction for OpenMaaS embedding models is enabled on October 3, 2025. 
+
+Batch predictions lets you efficiently send multiple text-only prompts that aren't latency sensitive to a model. Compared to online predictions, where you send one input prompt for each request, you can batch a large number of input prompts in a single request.
+
+## Supported models
+
+Gemini Enterprise Agent Platform supports batch predictions for the following models.
+
+**Llama:**
+
+  * [Llama 4 Maverick 17B-128E](https://console.cloud.google.com/agent-platform/publishers/meta/model-garden/llama-4-maverick-17b-128e-instruct-maas)
+  * [Llama 4 Scout 17B-16E](https://console.cloud.google.com/agent-platform/publishers/meta/model-garden/llama-4-maverick-17b-128e-instruct-maas)
+  * [Llama 3.3 70B](https://console.cloud.google.com/agent-platform/publishers/meta/model-garden/llama-3.3-70b-instruct-maas)
+
+
+
+**OpenAI gpt-oss:**
+
+
+
+
+**Qwen:**
+
+
+
+
+**DeepSeek:**
+
+
+
+
+**Embedding models:**
+
+  * [Multilingual E5 (small)](https://console.cloud.google.com/agent-platform/publishers/intfloat/model-garden/multilingual-e5-large-instruct-maas)
+  * [Multilingual E5 (large)](https://console.cloud.google.com/agent-platform/publishers/intfloat/model-garden/multilingual-e5-large-instruct-maas)
+
+
+
+## Prepare input
+
+Before you begin, prepare your inputs in a BigQuery table or as a JSONL file in Cloud Storage. The input for both sources must follow the [OpenAI API schema](https://platform.openai.com/docs/api-reference/fine-tuning/chat-input) JSONL format, as shown in the following examples.
+
+Large language models:
+    
+    
+    {"custom_id": "test-request-0", "method": "POST", "url": "/v1/chat/completions", "body": {"model": "MODEL_ID", "messages": [{"role": "user", "content": "Give me a recipe for banana bread"}], "max_tokens": 1000}}
+    
+
+Embedding models:
+    
+    
+    {"custom_id": "test-request-0", "method": "POST", "url": "/v1/embeddings", "body": {"model": "MODEL_ID", "input": "Hello World"}}
+    
+
+**Note:** Gemini Enterprise Agent Platform doesn't use the `custom_id`, `method`, `url`, and `model` fields. You can include them but they are ignored by the batch prediction job.
+
+###  BigQuery 
+
+Your BigQuery input table must adhere to the following schema:
+
+Column name | Description  
+---|---  
+custom_id | An ID for each request to match the input with the output.  
+method | The request method.  
+url | The request endpoint.  
+body(JSON) | Your input prompt.  
+  
+  * Your input table can have other columns, which are ignored by the batch job and passed directly to the output table.
+  * Batch prediction jobs reserve two column names for the batch prediction output: **response(JSON)** and **id**. Don't use these columns in the input table.
+  * The **method** and **url** columns are dropped and not included in the output table.
+
+
+
+###  Cloud Storage 
+
+For Cloud Storage, the input file must be a JSONL file that is located in a Cloud Storage bucket.
+
+The global endpoint for open models isn't supported. 
+
+## Request a batch prediction
+
+Make a batch prediction against a model by using input from  BigQuery or Cloud Storage. You can independently choose to output predictions to either a BigQuery table or a JSONL file in a Cloud Storage bucket.
+
+### BigQuery
+
+Specify your BigQuery input table, model, and output location. The batch prediction job and your table must be in the same region.
+
+### REST
+
+Before using any of the request data, make the following replacements: 
+
+  * LOCATION: A region that supports the model.
+  * PROJECT_ID: Your [project ID](https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects#identifiers). .
+  * MODEL: The name of the model to tune.
+  * INPUT_URI: The BigQuery table where your batch prediction input is located such as `myproject.mydataset.input_table`.
+  * OUTPUT_FORMAT: To output to a BigQuery table, specify `bigquery`. To output to a Cloud Storage bucket, specify `jsonl`. 
+  * DESTINATION: For BigQuery, specify `bigqueryDestination`. For Cloud Storage, specify `gcsDestination`. 
+  * OUTPUT_URI_FIELD_NAME: For BigQuery, specify `outputUri`. For Cloud Storage, specify `outputUriPrefix`. 
+  * OUTPUT_URI: For BigQuery, specify the table location such as `myproject.mydataset.output_result`. For Cloud Storage, specify the bucket and folder location such as `gs://mybucket/path/to/outputfile`. 
+
+
+
+HTTP method and URL: 
+    
+    
+    POST https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/batchPredictionJobs
+
+Request JSON body: 
+    
+    
+    '{
+      "displayName": "JOB_NAME",
+      "model": "publishers/PUBLISHER/models/MODEL_ID",
+      "inputConfig": {
+        "instancesFormat":"bigquery",
+        "bigquerySource":{
+          "inputUri" : "INPUT_URI"
+        }
+      },
+      "outputConfig": {
+        "predictionsFormat":"OUTPUT_FORMAT",
+        "DESTINATION":{
+          "OUTPUT_URI_FIELD_NAME": "OUTPUT_URI"
+        }
+      }
+    }'
+    
+
+To send your request, choose one of these options:
+
+#### curl
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) , or by using [Cloud Shell](https://docs.cloud.google.com/shell/docs), which automatically logs you into the `gcloud` CLI . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Save the request body in a file named `request.json`, and execute the following command: 
+    
+    
+    curl -X POST \  
+         -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
+         -H "Content-Type: application/json; charset=utf-8" \  
+         -d @request.json \  
+         "https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/batchPredictionJobs"
+
+#### PowerShell
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Save the request body in a file named `request.json`, and execute the following command: 
+    
+    
+    $cred = gcloud auth print-access-token  
+    $headers = @{ "Authorization" = "Bearer $cred" }  
+      
+    Invoke-WebRequest `  
+        -Method POST `  
+        -Headers $headers `  
+        -ContentType: "application/json; charset=utf-8" `  
+        -InFile request.json `  
+        -Uri "https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/batchPredictionJobs" | Select-Object -Expand Content
+
+You should receive a JSON response similar to the following.
+
+#### Response
+    
+    
+    {
+    "name":
+      "projects/PROJECT_ID/locations/LOCATION/batchPredictionJobs/BATCH_JOB_ID",
+      "displayName": "JOB_NAME",
+      "model": "publishers/PUBLISHER/models/MODEL_ID",
+      "inputConfig": {
+        "instancesFormat":"bigquery",
+        "bigquerySource":{
+          "inputUri" : "INPUT_URI"
+        }
+      },
+      "outputConfig": {
+        "predictionsFormat":"OUTPUT_FORMAT",
+        "DESTINATION":{
+          "OUTPUT_URI_FIELD_NAME": "OUTPUT_URI"
+        }
+      },
+      "state": "JOB_STATE_PENDING",
+      "createTime": "2024-10-16T19:33:59.153782Z", 
+      "updateTime": "2024-10-16T19:33:59.153782Z", 
+      "labels": {
+        "purpose": "testing"
+      },
+      "modelVersionId": "1"
+    }
+    
+
+### Cloud Storage
+
+Specify your JSONL file's Cloud Storage location, model, and output location.
+
+### REST
+
+Before using any of the request data, make the following replacements: 
+
+  * LOCATION: A region that supports the model.
+  * PROJECT_ID: Your [project ID](https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects#identifiers). .
+  * MODEL: The name of the model to tune.
+  * INPUT_URI: The Cloud Storage location of your JSONL batch prediction input such as `gs://bucketname/path/to/jsonl`.
+  * OUTPUT_FORMAT: To output to a BigQuery table, specify `bigquery`. To output to a Cloud Storage bucket, specify `jsonl`. 
+  * DESTINATION: For BigQuery, specify `bigqueryDestination`. For Cloud Storage, specify `gcsDestination`. 
+  * OUTPUT_URI_FIELD_NAME: For BigQuery, specify `outputUri`. For Cloud Storage, specify `outputUriPrefix`. 
+  * OUTPUT_URI: For BigQuery, specify the table location such as `myproject.mydataset.output_result`. For Cloud Storage, specify the bucket and folder location such as `gs://mybucket/path/to/outputfile`. 
+
+
+
+HTTP method and URL: 
+    
+    
+    POST https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/batchPredictionJobs
+
+Request JSON body: 
+    
+    
+    '{
+      "displayName": "JOB_NAME",
+      "model": "publishers/PUBLISHER/models/MODEL_ID",
+      "inputConfig": {
+        "instancesFormat":"jsonl",
+        "gcsSource":{
+          "uris" : "INPUT_URI"
+        }
+      },
+      "outputConfig": {
+        "predictionsFormat":"OUTPUT_FORMAT",
+        "DESTINATION":{
+          "OUTPUT_URI_FIELD_NAME": "OUTPUT_URI"
+        }
+      }
+    }'
+    
+
+To send your request, choose one of these options:
+
+#### curl
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) , or by using [Cloud Shell](https://docs.cloud.google.com/shell/docs), which automatically logs you into the `gcloud` CLI . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Save the request body in a file named `request.json`, and execute the following command: 
+    
+    
+    curl -X POST \  
+         -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
+         -H "Content-Type: application/json; charset=utf-8" \  
+         -d @request.json \  
+         "https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/batchPredictionJobs"
+
+#### PowerShell
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Save the request body in a file named `request.json`, and execute the following command: 
+    
+    
+    $cred = gcloud auth print-access-token  
+    $headers = @{ "Authorization" = "Bearer $cred" }  
+      
+    Invoke-WebRequest `  
+        -Method POST `  
+        -Headers $headers `  
+        -ContentType: "application/json; charset=utf-8" `  
+        -InFile request.json `  
+        -Uri "https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/batchPredictionJobs" | Select-Object -Expand Content
+
+You should receive a JSON response similar to the following.
+
+#### Response
+    
+    
+    {
+    "name":
+      "projects/PROJECT_ID/locations/LOCATION/batchPredictionJobs/BATCH_JOB_ID",
+      "displayName": "JOB_NAME",
+      "model": "publishers/PUBLISHER/models/MODEL_ID",
+      "inputConfig": {
+        "instancesFormat": "jsonl",
+        "gcsSource": {
+          "uris": [
+            "INPUT_URI"
+          ]
+        }
+      },
+      "outputConfig": {
+        "predictionsFormat":"OUTPUT_FORMAT",
+        "DESTINATION":{
+          "OUTPUT_URI_FIELD_NAME": "OUTPUT_URI"
+        }
+      },
+      "state": "JOB_STATE_PENDING",
+      "createTime": "2024-10-16T19:33:59.153782Z", 
+      "updateTime": "2024-10-16T19:33:59.153782Z", 
+      "labels": {
+        "purpose": "testing"
+      },
+      "modelVersionId": "1"
+    }
+    
+
+## Get the status of a batch prediction job
+
+Get the state of your batch prediction job to check whether it has completed successfully. The job length depends on the number input items that you submitted.
+
+### REST
+
+Before using any of the request data, make the following replacements: 
+
+  * PROJECT_ID: Your [project ID](https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects#identifiers). .
+  * LOCATION: The region where your batch job is located.
+  * JOB_ID: The batch job ID that was returned when you created the job.
+
+
+
+HTTP method and URL: 
+    
+    
+    GET https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/batchPredictionJobs/JOB_ID
+
+To send your request, choose one of these options:
+
+#### curl
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) , or by using [Cloud Shell](https://docs.cloud.google.com/shell/docs), which automatically logs you into the `gcloud` CLI . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Execute the following command: 
+    
+    
+    curl -X GET \  
+         -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
+         "https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/batchPredictionJobs/JOB_ID"
+
+#### PowerShell
+
+**Note:** The following command assumes that you have logged in to the `gcloud` CLI with your user account by running [`gcloud init`](https://docs.cloud.google.com/sdk/gcloud/reference/init) or [`gcloud auth login`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/login) . You can check the currently active account by running [`gcloud auth list`](https://docs.cloud.google.com/sdk/gcloud/reference/auth/list). 
+
+Execute the following command: 
+    
+    
+    $cred = gcloud auth print-access-token  
+    $headers = @{ "Authorization" = "Bearer $cred" }  
+      
+    Invoke-WebRequest `  
+        -Method GET `  
+        -Headers $headers `  
+        -Uri "https://LOCATION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/batchPredictionJobs/JOB_ID" | Select-Object -Expand Content
+
+You should receive a JSON response similar to the following.
+
+#### Response
+    
+    
+    {
+    "name":
+      "projects/PROJECT_ID/locations/LOCATION/batchPredictionJobs/BATCH_JOB_ID",
+      "displayName": "JOB_NAME",
+      "model": "publishers/PUBLISHER/models/MODEL_ID",
+      "inputConfig": {
+        "instancesFormat":"bigquery",
+        "bigquerySource":{
+          "inputUri" : "INPUT_URI"
+        }
+      },
+      "outputConfig": {
+        "predictionsFormat":"OUTPUT_FORMAT",
+        "DESTINATION":{
+          "OUTPUT_URI_FIELD_NAME": "OUTPUT_URI"
+        }
+      },
+      "state": "JOB_STATE_SUCCEEDED",
+      "createTime": "2024-10-16T19:33:59.153782Z", 
+      "updateTime": "2024-10-16T19:33:59.153782Z", 
+      "labels": {
+        "purpose": "testing"
+      },
+      "modelVersionId": "1"
+    }
+    
+
+## Retrieve output
+
+When a batch prediction job completes, retrieve the output from the location that you specified. For BigQuery, the output is in the **response(JSON)** column of your destination BigQuery table. For Cloud Storage, the output is saved as a JSONL file in the output Cloud Storage location.
+
+## What's next
+
+  * Learn how to [Call MaaS APIs for open models](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/maas/call-open-model-apis) for streaming and non-streaming use cases.
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

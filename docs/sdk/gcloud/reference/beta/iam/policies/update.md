@@ -1,0 +1,79 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/iam/policies/update/
+title: gcloud beta iam policies update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T18:52:40.573091+00:00
+---
+
+# gcloud beta iam policies update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/iam/policies/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta iam policies update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta iam policies update - update the policy on the given attachment point with the given name 
+SYNOPSIS
+    
+
+`gcloud beta iam policies update` `POLICY_ID` `--attachment-point`=`ATTACHMENT_POINT` `--kind`=`KIND` `--policy-file`=`POLICY_FILE` [`--etag`=`ETAG`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` Update the policy on the given attachment point with the given name. 
+EXAMPLES
+     The following command updates the IAM policy ``my-deny-policy``, which is attached to the resource project ``123`` and has the etag ``abc``: 
+    
+    
+    gcloud beta iam policies update my-deny-policy --attachment-point=cloudresourcemanager.googleapis.com/projects/123 --kind=denypolicies --policy-file=policy.json --etag=abc
+
+POSITIONAL ARGUMENTS
+    
+
+`POLICY_ID`
+     Policy ID that is unique for the resource to which the policy is attached. 
+REQUIRED FLAGS
+    
+
+`--attachment-point`=`ATTACHMENT_POINT`
+     Resource to which the policy is attached. For valid formats, see <https://cloud.google.com/iam/help/deny/attachment-point>. 
+`--kind`=`KIND`
+     Policy type. Use `denypolicies` for deny policies. 
+`--policy-file`=`POLICY_FILE`
+     Path to the file that contains the policy, in JSON or YAML format. For valid syntax, see <https://cloud.google.com/iam/help/deny/policy-syntax>. 
+OPTIONAL FLAGS
+    
+
+`--etag`=`ETAG`
+     Etag that identifies the version of the existing policy. It can be obtained by running `[gcloud iam policies get](https://docs.cloud.google.com/sdk/gcloud/reference/iam/policies/get)`. When deleting a policy, if the etag is omitted, the policy is deleted regardless of its current etag. When updating a policy, if the etag is omitted, the update uses the etag provided in the policy file. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in beta and might change without notice. These variants are also available: 
+    
+    
+    [gcloud iam policies update](https://docs.cloud.google.com/sdk/gcloud/reference/iam/policies/update)
+    
+    
+    [gcloud alpha iam policies update](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/iam/policies/update)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

@@ -1,0 +1,233 @@
+---
+url: https://docs.cloud.google.com/vertex-ai/docs/generative-ai/start/quickstarts/quickstart/
+title: Quickstart: Send text prompts to Gemini using Agent Studio \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-15T06:11:13.198564+00:00
+---
+
+# Quickstart: Send text prompts to Gemini using Agent Studio  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/vertex-ai/docs/generative-ai/start/quickstarts/quickstart/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Studio ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agent-studio)
+
+
+
+Send feedback 
+
+#  Quickstart: Send text prompts to Gemini using Agent Studio Stay organized with collections  Save and categorize content based on your preferences. 
+
+You can use [Agent Studio](https://console.cloud.google.com/agent-platform/studio/) to design, test, and manage prompts for Google's [Gemini](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/google-models) large language models (LLMs) and partner and open models. Agent Studio supports certain partner and open models that are offered on Agent Platform as [models as a service (MaaS)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/use-partner-models), such as Anthropic Claude models and Meta's Llama models.
+
+**Note:** On your initial use of partner and open models, Agent Platform prompts you to accept the provider's terms and conditions. You must do this once for each partner and open model provider to start using their models.
+
+In this quickstart, you do the following:
+
+  * Send these prompts to the Agent Platform API using samples from the generative AI prompt gallery, including the following: 
+    * A summarization text prompt
+    * A code generation prompt
+  * View the code used to generate the responses
+
+
+
+## Sample prompts in Agent Studio
+
+A prompt is a natural language request submitted to a language model that generates a response. Prompts can contain questions, instructions, contextual information, [few-shot examples](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/prompts/introduction-prompt-design#few_shot_examples), and partial input for the model to complete. After the model receives a prompt, depending on the type of model used, it can generate text, embeddings, code, images, videos, music, and more.
+
+The sample prompts in [Agent Studio](https://console.cloud.google.com/agent-platform/studio/) [Prompt Gallery](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/prompt-gallery) are predesigned to help demonstrate model capabilities. Each prompt is preconfigured with specified model and parameter values so you can open the sample prompt and click **Submit** send to generate a response.
+
+## Test the Gemini model using a summarization text prompt
+
+Send a summarization text prompt to the Agent Platform API. A summarization task extracts the most important information from text. You can provide information in the prompt to help the model create a summary, or ask the model to create a summary on its own.
+
+  1. Go to the **Prompt Gallery** page from the Agent Platform section in the Google Cloud console.  
+[Go to Prompt Gallery](https://console.cloud.google.com/agent-platform/studio/prompt-gallery)
+
+  2. In the **Tasks** drop-down menu, select **Summarize**.
+
+  3. Open the **Audio Summarization** card.
+
+This sample prompt includes an audio file and requests a summary of the file contents in a bulleted list.
+
+  4. Notice that in the settings panel, the model's default value is set to **gemini-3.7-flash**. You can choose a different Gemini model in the **Model settings** panel.
+
+  5. Click **Submit** send to generate the summary.
+
+The output is displayed in the response.
+
+  6. To view the Gemini Enterprise Agent Platform code used to generate the transcript summary, click **Code**.
+
+In the **Get code** panel, you can choose your preferred language to get the sample code for the prompt, or you can open the Python code in a Colab Enterprise notebook.
+
+
+
+
+## Test the Gemini model using a code generation prompt
+
+Send a code generation prompt to the Agent Platform API. A code generation task generates code using a natural language description.
+
+  1. Go to the **Prompt Gallery** page from the Agent Platform section in the Google Cloud console.  
+[Go to Prompt Gallery](https://console.cloud.google.com/agent-platform/studio/prompt-gallery)
+
+  2. In the **Tasks** drop-down menu, select **Code**.
+
+  3. Open the **Generate code from comments** card.
+
+This sample prompt includes a [system instruction](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/prompts/system-instruction-introduction) that tells the model how to respond and some incomplete Java methods.
+
+  4. Notice that in the settings panel, the model's default value is set to **gemini-3.7-flash**. You can choose a different Gemini model in the **Model settings** panel.
+
+  5. To complete each method by generating code in the areas marked `<WRITE CODE HERE>`, click **Submit** send.
+
+The output is displayed in the response.
+
+  6. To view the Gemini Enterprise Agent Platform code used to generate the code, click **Code**.
+
+In the **Get code** panel, you can choose your preferred language to get the sample code for the prompt, or you can open the Python code in a Colab Enterprise notebook.
+
+
+
+
+## Automatic intent detection in the prompt workspace
+
+When chatting or testing prompts in Agent Studio, background intent detection automatically evaluates each submitted message to identify whether you intend to build an autonomous agent or an application. If an intent is detected, a contextual banner appears with a one-click action to transition your request to the appropriate builder.
+
+### How intent detection works
+
+Each time you submit a message in the chat prompt workspace, a background evaluation processes your input:
+
+  * Agent intent detected: A banner appears with a **Create agent** action.
+
+    * If the detection engine has enough context to determine what kind of agent you want to build, it directs you to Agent Designer and automatically submits your seed prompt to initiate building the agent immediately.
+
+    * The canvas opens with generated instructions, system configurations, and pre-attached tools ready for further editing.
+
+  * App intent detected: A banner appears with a **Create app** action.
+
+    * Clicking the action button navigates to the App Builder interface.
+
+    * The prompt field is pre-populated with your prompt details if context is available.
+
+    * Unlike the agent flow, App Builder never automatically submits the build; it stops on the page so you can review and manually submit the prompt.
+
+
+
+
+### Billing and pricing
+
+Each background intent detection evaluation is charged to your Google Cloud account:
+
+  * Model used: Intent detection is powered by Gemini 3.5 Flash Lite, an optimized lightweight model.
+
+  * Cost: Because the model is lightweight, the charge per detection is minimal. Approximately $0.002 per message evaluation.
+
+  * Standard inference charges apply separately to your primary prompt and response.
+
+
+
+
+### Create an agent using intent detection
+
+To create an agent from a chat session using automatic intent detection:
+
+  1. In the Google Cloud console,  
+[Go to Agent Platform](https://console.cloud.google.com/agent-platform/agent-platform/studio/)
+
+  2. In the navigation menu, click **Studio** > **\+ New** > **Chat** > **New chat**.
+
+  3. In the prompt field at the bottom of the workspace, enter a prompt that clearly states your intent to build an agent, along with a description of the agent's purpose and tasks.
+
+**Note:** The banner only appears when you express a clear intent to build an agent.
+  4. Click **Submit** send.
+
+  5. When the response begins, locate the intent detection banner above the prompt field.
+
+  6. In the banner, click **Create agent**.
+
+  7. In the confirmation dialog, click to continue. Agent Studio opens the visual canvas in **Agent Designer** and initializes your agent flow.
+
+  8. In the side panel, review and configure the populated settings:
+
+     * **Details** : Edit the agent name and description.
+
+     * **Instructions** : Review and adjust the system instructions.
+
+     * **Tools** : Verify and configure attached tools (such as Google Search).
+
+
+
+
+### Create an app using intent detection
+
+To create an application from a chat session using automatic intent detection:
+
+  1. In the Google Cloud console,  
+[Go to Agent Platform](https://console.cloud.google.com/agent-platform/agent-platform/studio/)
+
+  2. In the navigation menu, click **Studio** > **\+ New** > **Chat** > **New chat**.
+
+  3. In the prompt field at the bottom of the workspace, enter a prompt that clearly states your intent to build an application, along with a description of the application.
+
+**Note:** The banner only appears when you express a clear intent to build an app.
+  4. Click **Submit** send.
+
+  5. When the intent detection banner appears above the prompt field, click **Create app**. Agent Studio opens the **App Builder** workspace with your prompt pre-populated in the input field.
+
+  6. Review and edit the prompt text as needed.
+
+  7. Inside the prompt field, click **Submit** send to start the application build process.
+
+
+
+
+### Disable intent detection
+
+If you want to prevent background evaluations and avoid per-message detection charges while chatting:
+
+  1. In the Google Cloud console,  
+[Go to Agent Platform](https://console.cloud.google.com/agent-platform/agent-platform/studio/)
+
+  2. In the navigation menu, click **Studio** > **\+ New** > **Chat** > **New chat**.
+
+  3. In the workspace header, click **Settings** (gear icon).
+
+  4. In the settings menu, locate the **Detect build intent** setting.
+
+  5. Click the toggle switch to the off position.
+
+
+
+
+When disabled, no background detection runs, suggestion banners don't appear, and no detection fees are charged.
+
+## What's next
+
+Overview 
+
+###  [ Build overview ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build)
+
+Learn how to build agents in Google Agent Platform. 
+
+Guide 
+
+###  [ Agent Studio capabilities ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agent-studio/agent-studio-capabilities)
+
+Learn about the capabilities of Agent Studio. 
+
+Guide 
+
+###  [ Deploy your prompt as a web application ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agent-studio/deploy-vais-prompt)
+
+Follow the guide to deploy your prompt as a web application from Agent Studio. 
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

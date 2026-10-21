@@ -1,0 +1,230 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities/
+title: Method: featureViews.searchNearestEntities \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T17:20:33.769057+00:00
+---
+
+# Method: featureViews.searchNearestEntities  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ API reference ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/apis)
+
+
+
+Send feedback 
+
+#  Method: featureViews.searchNearestEntities Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Full name** : projects.locations.featureOnlineStores.featureViews.searchNearestEntities
+
+Search the nearest entities under a FeatureView. Search only works for indexable feature view; if a feature view isn't indexable, returns Invalid argument response.
+
+### Endpoint
+
+post  `https://{service-endpoint}/v1/{featureView}:searchNearestEntities`   
+
+
+Where `{service-endpoint}` is one of the [supported service endpoints](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest#rest_endpoints).
+
+### Path parameters
+
+`featureView` `string` Required. FeatureView resource format `projects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}/featureViews/{featureView}`
+
+### Request body
+
+The request body contains data with the following structure: | Fields  
+  
+`query` `object (`[NearestNeighborQuery](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities#NearestNeighborQuery)`)` Required. The query. | `returnFullEntity` `boolean` Optional. If set to true, the full entities (including all vector values and metadata) of the nearest neighbors are returned; otherwise only entity id of the nearest neighbors will be returned. Note that returning full entities will significantly increase the latency and cost of the query.
+
+### Response body
+
+Response message for `[FeatureOnlineStoreService.SearchNearestEntities](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities#google.cloud.aiplatform.v1.FeatureOnlineStoreService.SearchNearestEntities)` If successful, the response body contains data with the following structure: | Fields  
+  
+`nearestNeighbors` `object (`[NearestNeighbors](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities#NearestNeighbors)`)` The nearest neighbors of the query entity. | JSON representation  
+---  
+      
+    
+    {
+      "nearestNeighbors": {
+        object ([NearestNeighbors](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities#NearestNeighbors))
+      }
+    }  
+  
+## NearestNeighborQuery
+
+A query to find a number of similar entities.
+
+Fields  
+  
+`neighborCount` `integer` Optional. The number of similar entities to be retrieved from feature view for each query. | `stringFilters[]` `object (`[StringFilter](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities#StringFilter)`)` Optional. The list of string filters. | `numericFilters[]` `object (`[NumericFilter](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities#NumericFilter)`)` Optional. The list of numeric filters. | `perCrowdingAttributeNeighborCount` `integer` Optional. Crowding is a constraint on a neighbor list produced by nearest neighbor search requiring that no more than sper_crowding_attribute_neighbor_count of the k neighbors returned have the same value of crowdingAttribute. It's used for improving result diversity. | `parameters` `object (`[Parameters](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities#Parameters)`)` Optional. Parameters that can be set to tune query on the fly. | `instance` `Union type`  
+  
+The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:
+
+`entityId` `string` Optional. The entity id whose similar entities should be searched for. If embedding is set, search will use embedding instead of entityId. | `embedding` `object (`[Embedding](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities#Embedding)`)` Optional. The embedding vector that be used for similar search. End of mutually exclusive fields. | JSON representation  
+---  
+      
+    
+    {
+      "neighborCount": integer,
+      "stringFilters": [
+        {
+          object ([StringFilter](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities#StringFilter))
+        }
+      ],
+      "numericFilters": [
+        {
+          object ([NumericFilter](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities#NumericFilter))
+        }
+      ],
+      "perCrowdingAttributeNeighborCount": integer,
+      "parameters": {
+        object ([Parameters](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities#Parameters))
+      },
+    
+      // instance
+      "entityId": string,
+      "embedding": {
+        object ([Embedding](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities#Embedding))
+      }
+      // Union type
+    }  
+  
+## Embedding
+
+The embedding vector.
+
+Fields  
+  
+`value[]` `number` Optional. Individual value in the embedding. | JSON representation  
+---  
+      
+    
+    {
+      "value": [
+        number
+      ]
+    }  
+  
+## StringFilter
+
+String filter is used to search a subset of the entities by using boolean rules on string columns. For example: if a query specifies string filter with 'name = color, allowTokens = {red, blue}, denyTokens = {purple}',' then that query will match entities that are red or blue, but if those points are also purple, then they will be excluded even if they are red/blue. Only string filter is supported for now, numeric filter will be supported in the near future.
+
+Fields  
+  
+`name` `string` Required. column names in BigQuery that used as filters. | `allowTokens[]` `string` Optional. The allowed tokens. | `denyTokens[]` `string` Optional. The denied tokens. | JSON representation  
+---  
+      
+    
+    {
+      "name": string,
+      "allowTokens": [
+        string
+      ],
+      "denyTokens": [
+        string
+      ]
+    }  
+  
+## NumericFilter
+
+Numeric filter is used to search a subset of the entities by using boolean rules on numeric columns. For example: Database Point 0: {name: "a" valueInt: 42} {name: "b" valueFloat: 1.0} Database Point 1: {name: "a" valueInt: 10} {name: "b" valueFloat: 2.0} Database Point 2: {name: "a" valueInt: -1} {name: "b" valueFloat: 3.0} Query: {name: "a" valueInt: 12 operator: LESS} // Matches Point 1, 2 {name: "b" valueFloat: 2.0 operator: EQUAL} // Matches Point 1
+
+Fields  
+  
+`name` `string` Required. column name in BigQuery that used as filters. | `Value` `Union type`  
+  
+The type of Value must be consistent for all datapoints with a given name. This is verified at runtime. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:
+
+`valueInt` `string ([int64](https://developers.google.com/discovery/v1/type-format) format)` int value type. | `valueFloat` `number` float value type. | `valueDouble` `number` double value type. End of mutually exclusive fields. | `op` `enum (`[Operator](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities#Operator)`)` Optional. This MUST be specified for queries and must NOT be specified for database points. | JSON representation  
+---  
+      
+    
+    {
+      "name": string,
+    
+      // Value
+      "valueInt": string,
+      "valueFloat": number,
+      "valueDouble": number
+      // Union type
+      "op": enum ([Operator](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities#Operator))
+    }  
+  
+## Operator
+
+Datapoints for which Operator is true relative to the query's value field will be allowlisted.
+
+Enums  
+---  
+`OPERATOR_UNSPECIFIED` | Unspecified operator.  
+`LESS` | Entities are eligible if their value is < the query's.  
+`LESS_EQUAL` | Entities are eligible if their value is <= the query's.  
+`EQUAL` | Entities are eligible if their value is == the query's.  
+`GREATER_EQUAL` | Entities are eligible if their value is >= the query's.  
+`GREATER` | Entities are eligible if their value is > the query's.  
+`NOT_EQUAL` | Entities are eligible if their value is != the query's.  
+  
+## Parameters
+
+Parameters that can be overrided in each query to tune query latency and recall.
+
+Fields  
+  
+`approximateNeighborCandidates` `integer` Optional. The number of neighbors to find via approximate search before exact reordering is performed; if set, this value must be > neighborCount. | `leafNodesSearchFraction` `number` Optional. The fraction of the number of leaves to search, set at query time allows user to tune search performance. This value increase result in both search accuracy and latency increase. The value should be between 0.0 and 1.0. | JSON representation  
+---  
+      
+    
+    {
+      "approximateNeighborCandidates": integer,
+      "leafNodesSearchFraction": number
+    }  
+  
+## NearestNeighbors
+
+Nearest neighbors for one query.
+
+Fields  
+  
+`neighbors[]` `object (`[Neighbor](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities#Neighbor)`)` All its neighbors. | JSON representation  
+---  
+      
+    
+    {
+      "neighbors": [
+        {
+          object ([Neighbor](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.featureOnlineStores.featureViews/searchNearestEntities#Neighbor))
+        }
+      ]
+    }  
+  
+## Neighbor
+
+A neighbor of the query vector.
+
+Fields  
+  
+`entityId` `string` The id of the similar entity. | `distance` `number` The distance between the neighbor and the query vector. | `entityKeyValues` `object (`[FetchFeatureValuesResponse](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/FetchFeatureValuesResponse)`)` The attributes of the neighbor, e.g. filters, crowding and metadata Note that full entities are returned only when "returnFullEntity" is set to true. Otherwise, only the "entityId" and "distance" fields are populated. | JSON representation  
+---  
+      
+    
+    {
+      "entityId": string,
+      "distance": number,
+      "entityKeyValues": {
+        object ([FetchFeatureValuesResponse](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/FetchFeatureValuesResponse))
+      }
+    }  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-09-01 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-09-01 UTC."],[],[]] 

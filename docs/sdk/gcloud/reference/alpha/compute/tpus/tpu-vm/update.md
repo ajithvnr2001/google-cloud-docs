@@ -1,0 +1,227 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/tpus/tpu-vm/update/
+title: gcloud alpha compute tpus tpu-vm update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-15T09:59:45.779298+00:00
+---
+
+# gcloud alpha compute tpus tpu-vm update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/tpus/tpu-vm/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha compute tpus tpu-vm update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha compute tpus tpu-vm update - update a Cloud TPU VM node 
+SYNOPSIS
+    
+
+`gcloud alpha compute tpus tpu-vm update` (`TPU` : `--zone`=`ZONE`) [`--add-tags`=[`TAGS`,…]] [`--async`] [`--description`=`DESCRIPTION`] [`--internal-ips`] [`--update-labels`=[`KEY`=`VALUE`,…]] [`--clear-labels` | `--remove-labels`=[`KEY`,…]] [`--clear-tags` | `--remove-tags`=[`TAG`,…]] [`--metadata-from-file`=[`KEY`=`VALUE`,…] | `--update-metadata`=[`KEY`=`VALUE`,…] `--clear-metadata` | `--remove-metadata`=[`KEY`,…]] [`--worker`=[`WORKER`,…] `--attach-disk`=[`SOURCE`=`DATA_DISK`,…] | `--detach-disk`=`DATA_DISK`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` Update a Cloud TPU VM node. 
+EXAMPLES
+     To modify a TPU VM node with ID `my-tpu` in the default user project and compute/zone by updating the description to "A new description", run: 
+    
+    
+    gcloud alpha compute tpus tpu-vm update my-tpu --description="A new description"
+
+To modify a TPU VM node with ID `my-tpu` in the default user project, network and compute/zone (with other defaults supplied by API) by adding labels `k0`, with value `value0` and label `k1` with value `value1` and removing labels with key `k2`, run: 
+    
+    
+    gcloud alpha compute tpus tpu-vm update my-tpu --update-labels=k0=value0,k1=value1 --remove-labels=k2
+
+Labels can be used to identify the TPU VM node. To list TPU VM nodes with the `k1:value1` label, run: 
+    
+    
+    [gcloud alpha compute tpus tpu-vm list](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/tpus/tpu-vm/list) --filter='labels.k1=value1'
+
+To list only the labels when describing a resource, use `--format` to filter the result: 
+    
+    
+    [gcloud alpha compute tpus tpu-vm describe](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/tpus/tpu-vm/describe) my-tpu --format="default(labels)"
+
+POSITIONAL ARGUMENTS
+    
+
+Tpu resource - Name of the Cloud TPU VM node to update. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `tpu` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`TPU`
+     ID of the tpu or fully qualified identifier for the tpu. 
+
+To set the `tpu` attribute: 
+
+  * provide the argument `tpu` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--zone`=`ZONE`
+     Zone of the Cloud TPU. 
+
+If not specified, will use `default` compute/zone. To set the `zone` attribute: 
+
+  * provide the argument `tpu` on the command line with a fully specified name; 
+  * provide the argument `--zone` on the command line; 
+  * set the property `compute/zone`. 
+
+
+FLAGS
+    
+
+`--add-tags`=[`TAGS`,…]
+     Tags to add to the TPU Node. Tags are used to identify valid sources or targets for network firewalls. See <https://cloud.google.com/vpc/docs/add-remove-network-tags> for more details. 
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--description`=`DESCRIPTION`
+     Text description of the TPU. 
+`--internal-ips`
+     Indicate that the IP addresses for the node should be internal. The default is that external IP addresses will be associated with the TPU workers. 
+`--update-labels`=[`KEY`=`VALUE`,…]
+     Resource labels to update that represent user-provided metadata. If a label exists, its value is modified. Otherwise, a new label is created. See <https://cloud.google.com/compute/docs/labeling-resources> for details. 
+At most one of these can be specified: 
+
+`--clear-labels`
+     Remove all labels. If `--update-labels` is also specified then `--clear-labels` is applied first. 
+
+For example, to remove all labels: 
+    
+    
+    gcloud alpha compute tpus tpu-vm update --clear-labels
+
+To remove all existing labels and create two new labels, 'foo' and 'baz': 
+    
+    
+    gcloud alpha compute tpus tpu-vm update --clear-labels --update-labels foo=bar,baz=qux
+
+`--remove-labels`=[`KEY`,…]
+     List of label keys to remove. If a label does not exist it is silently ignored. If `--update-labels` is also specified then `--update-labels` is applied first. 
+At most one of these can be specified: 
+
+`--clear-tags`
+     Remove all tags. If `--add-tags` is also specified then `--clear-tags` is applied first. 
+
+For example, to remove all tags: 
+    
+    
+    gcloud alpha compute tpus tpu-vm update --clear-tags
+
+To remove all existing tags and create two new tags, 'foo' and 'bar': 
+    
+    
+    gcloud alpha compute tpus tpu-vm update --clear-tags --add-tags foo,bar
+
+`--remove-tags`=[`TAG`,…]
+     List of tags to remove. If a tag does not exist it is silently ignored. If `--add-tags` is also specified then `--add-tags` is applied first. 
+At most one of these can be specified: 
+
+`--metadata-from-file`=[`KEY`=`VALUE`,…]
+     Same as `--metadata` except the value for the entry will be read from a local file. Example: `--metadata-from-file='key1=value1.txt'`
+Or at least one of these can be specified: 
+
+`--update-metadata`=[`KEY`=`VALUE`,…]
+     List of comma-separated metadata key-value pairs for the Cloud TPU VM node. If a key exists, its value is modified. Otherwise, a new key-value pair is created. 
+At most one of these can be specified: 
+
+`--clear-metadata`
+     Remove all metadata. If `--update-metadata` is also specified then `--clear-metadata` is applied first. 
+
+For example, to remove all metadata: 
+    
+    
+    gcloud alpha compute tpus tpu-vm update --clear-metadata
+
+To remove all existing metadata and create two new metadata key-value pairs, 'foo=bar' and 'baz=qux': 
+    
+    
+    gcloud alpha compute tpus tpu-vm update --clear-metadata --update-metadata foo=bar,baz=qux
+
+`--remove-metadata`=[`KEY`,…]
+     List of comma-separated metadata keys to remove. If a key does not exist it is silently ignored. If `--update-metadata` is also specified then `--update-metadata` is applied first. 
+`--worker`=[`WORKER`,…]
+     List of worker IDs to apply attach/detach disk to. If not specified, the update is applied to all workers. Only numeric values are allowed. The only exception is 'all'. 
+
+`--attach-disk` and `--worker` can be used to specify which workers to attach the disk to. For example: 
+    
+    
+    gcloud alpha compute tpus tpu-vm update example-tpu --attach-disk source=projects/my-project/zones/us-central1-c/disks/my-disk,mode=read-only --zone=us-central1-c
+          --worker=0,1
+
+attaches the disk named 'projects/my-project/zones/us-central1-c/disks/my-disk' to worker 0 and 1 of a TPU VM named 'example-tpu' in read-only mode in zone `us-central1-c`. if `--worker` is not specified or `--worker=all` is specified, the disk is attached to all workers. 
+
+`--detach-disk` and `--worker` can be used to specify which workers to detach the disk from. For example: 
+    
+    
+    gcloud alpha compute tpus tpu-vm update example-tpu --detach-disk=projects/my-project/zones/us-central1-c/disks/my-disk --zone=us-central1-c
+          --worker=0,1
+
+detaches the disk named 'projects/my-project/zones/us-central1-c/disks/my-disk' from worker 0 and 1 of a TPU VM named 'example-tpu' in zone `us-central1-c`. if `--worker` is not specified or `--worker=all` is specified, the disk is attached to all workers. 
+
+At most one of these can be specified: 
+
+`--attach-disk`=[`SOURCE`=`DATA_DISK`,…]
+     Attach a data disk to the TPU VM. For example, 
+    
+    
+    gcloud alpha compute tpus tpu-vm update example-tpu --attach-disk source=projects/my-project/zones/us-central1-c/disks/my-disk,mode=read-only --zone=us-central1-c
+
+attaches the disk named 'projects/my-project/zones/us-central1-c/disks/my-disk' to a TPU VM named 'example-tpu' in read-only mode in zone `us-central1-c`. 
+
+The following keys are allowed: 
+
+`source`
+     Specify the full path to an existing disk. Required. The disk must be in the same zone. 
+`mode`
+     Specify the mode in which to attach this disk. Valid options are 'read-write', 'read-only'. If not specified, the default is 'read-write'. 
+`--detach-disk`=`DATA_DISK`
+     Detach a data disk from the TPU VM. For example, 
+
+This flag must be repeated to provide multiple data disks. For example: 
+    
+    
+    gcloud alpha compute tpus tpu-vm update example-tpu --detach-disk=projects/my-project/zones/us-central1-c/disks/my-disk --zone=us-central1-c
+
+detaches the disk named 'projects/my-project/zones/us-central1-c/disks/my-disk' from a TPU VM named 'example-tpu' in zone `us-central1-c`. 
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `tpu/v2alpha1` API. The full documentation for this API can be found at: <https://cloud.google.com/tpu/>
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. This variant is also available: 
+    
+    
+    [gcloud compute tpus tpu-vm update](https://docs.cloud.google.com/sdk/gcloud/reference/compute/tpus/tpu-vm/update)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

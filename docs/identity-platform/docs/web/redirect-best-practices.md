@@ -1,0 +1,190 @@
+---
+url: https://docs.cloud.google.com/identity-platform/docs/web/redirect-best-practices/
+title: Best practices for using signInWithRedirect on browsers that block third-party storage access \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T01:49:18.944282+00:00
+---
+
+# Best practices for using signInWithRedirect on browsers that block third-party storage access  |  Identity Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/identity-platform/docs/web/redirect-best-practices/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Access and resource management ](https://docs.cloud.google.com/docs/access-resources)
+  * [ Identity Platform ](https://docs.cloud.google.com/identity-platform/docs)
+  * [ Guides ](https://docs.cloud.google.com/identity-platform/docs/how-to)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Best practices for using signInWithRedirect on browsers that block third-party storage access
+
+This document describes the best practices for using redirect sign-ins on browsers that block third-party cookies. You must follow one of the options listed here for [`signInWithRedirect()`](https://firebase.google.com/docs/reference/js/auth.md#signinwithredirect) to function as intended in production environments, across all browsers.
+
+**Note:** Starting June 24 2024, implementing one of the options will be required for redirect sign-in to work on Google Chrome M115+. This is already required on Firefox 109+ and Safari 16.1+.
+
+## Overview
+
+To make the [`signInWithRedirect()`](https://firebase.google.com/docs/reference/js/auth.md#signinwithredirect) flow seamless for you and your users, the Firebase Authentication JavaScript SDK uses a cross-origin iframe that connects to your app's Firebase Hosting domain. However, this mechanism doesn't work with browsers that block third-party storage access.
+
+Because asking your users to disable storage partitioning features on the browser is rarely an option, you should instead apply one of the following setup options to your app, depending on the specifics of your use case.
+
+  * If you host your app with Firebase Hosting on a subdomain of `firebaseapp.com`, you are not affected by this issue and no action is needed.
+  * If you host your app with Firebase Hosting on a custom domain or a subdomain of `web.app`, use Option 1.
+  * If you host your app with a service other than Firebase, use Option 2, Option 3, Option 4, or Option 5.
+
+
+
+## Option 1: Update your Firebase config to use your custom domain as your `authDomain`
+
+If you're hosting your app with Firebase Hosting using a custom domain, you can configure the Firebase SDK to use your custom domain as the `authDomain`. This ensures that your app and the auth iframe use the same domain, which prevents the sign-in issue. (If you don't use Firebase Hosting, you need to use a different option.). Make sure you've set up the custom domain on the same project you are using for authentication.
+
+To update your Firebase config to use your custom domain as your auth domain, do the following:
+
+  1. Configure the Firebase JS SDK to use your custom domain as the `authDomain`:
+         
+         const firebaseConfig = {
+           apiKey: "<api-key>",
+           authDomain: "<the-domain-that-serves-your-app>",
+           databaseURL: "<database-url>",
+           projectId: "<project-id>",
+           appId: "<app-id>"
+         };
+         
+
+
+**Important:** Normally, you should not modify any other field in the Firebase config object. [Learn about the Firebase config object](https://docs.cloud.google.com/docs/web/learn-more#config-object).
+
+  1. Add the new `authDomain` to your OAuth provider's list of authorized redirect URIs. How you do this will depend on the provider, but in general you can follow the "Before you begin" section in any provider for exact instructions (for example, the [Facebook provider](https://firebase.google.com/docs/auth/web/facebook-login)). The updated URI to authorize looks like `https://<the-domain-that-serves-your-app>/__/auth/handler` — the trailing `/__/auth/handler` is important.
+
+Similarly, if you're using a SAML provider, add the new `authDomain` to the SAML Assertion Consumer Service (ACS) URL.
+
+  2. Make sure your `continue_uri` is in the list of [authorized domains](https://console.firebase.google.com/project/_/authentication/settings).
+
+  3. Re-deploy with Firebase Hosting if needed to fetch the most up-to-date Firebase configuration file hosted at `/__/firebase/init.json`.
+
+
+
+
+## Option 2: Switch to signInWithPopup()
+
+Use [`signInWithPopup()`](https://firebase.google.com/docs/reference/js/auth.md#signinwithpopup) instead of [`signInWithRedirect()`](https://firebase.google.com/docs/reference/js/auth.md#signinwithredirect). The rest of your app's code remains the same, but the UserCredential object is retrieved differently.
+
+###  Web version 9
+    
+    
+      // Before
+      // ==============
+      signInWithRedirect(auth, new GoogleAuthProvider());
+      // After the page redirects back
+      const userCred = await getRedirectResult(auth);
+    
+      // After
+      // ==============
+      const userCred = await signInWithPopup(auth, new GoogleAuthProvider());
+    
+
+###  Web version 8
+    
+    
+      // Before
+      // ==============
+      firebase.auth().signInWithRedirect(new firebase.auth.GoogleAuthProvider());
+      // After the page redirects back
+      var userCred = await firebase.auth().getRedirectResult();
+    
+      // After
+      // ==============
+      var userCred = await firebase.auth().signInWithPopup(
+          new firebase.auth.GoogleAuthProvider());
+    ```
+    
+
+Popup sign-in isn't always ideal for users—popups are occasionally blocked by the device or platform, and the flow is less smooth for mobile users. If using popups is an issue for your app, you'll need to follow one of the other options.
+
+## Option 3: Proxy auth requests to firebaseapp.com
+
+The `signInWithRedirect` flow starts by redirecting from your app domain to the domain specified in the `authDomain` parameter in firebase config (".firebaseapp.com" by default). `authDomain` hosts the sign-in helper code that redirects to the Identity Provider, which, on success, redirects back to the app domain.
+
+When the authentication flow returns to your app domain, the browser storage of the sign-in helper domain is accessed. This option and the following one (to self-host the code) eliminates the cross-origin storage access, which otherwise gets blocked by browsers.
+
+  1. Set up a reverse proxy on your app server so that GET/POST requests to `https://<app domain>/__/auth/` are forwarded to `https://<project>.firebaseapp.com/__/auth/`. Ensure that this forwarding is transparent to the browser; this cannot be done via a 302 Redirect.
+
+If you are using nginx to serve your custom domain, the reverse-proxy config will look like this:
+         
+         # reverse proxy for signin-helpers for popup/redirect sign in.
+         location /__/auth {
+           proxy_pass https://<project>.firebaseapp.com;
+         }
+         
+
+  2. Follow the steps in Option 1 to update authorized `redirect_uri`, ACS URL and your `authDomain`. Once you re-deploy your app, the cross-origin storage access should no longer happen.
+
+
+
+
+## Option 4: Self-host the sign-in helper code in your domain
+
+Another way to eliminate the cross-origin storage access is to self-host the Firebase sign-in helper code. However, this approach doesn't work for Apple sign-in or SAML. Use this option only if the reverse-proxy setup in option 3 is infeasible.
+
+Hosting the helper code has the following steps:
+
+  1. Download the files to host from the `<project>.firebaseapp.com` location by executing the following commands:
+         
+         mkdir signin_helpers/ && cd signin_helpers
+         wget https://<project>.firebaseapp.com/__/auth/handler
+         wget https://<project>.firebaseapp.com/__/auth/handler.js
+         wget https://<project>.firebaseapp.com/__/auth/experiments.js
+         wget https://<project>.firebaseapp.com/__/auth/iframe
+         wget https://<project>.firebaseapp.com/__/auth/iframe.js
+         wget https://<project>.firebaseapp.com/__/auth/links
+         wget https://<project>.firebaseapp.com/__/auth/links.js
+         wget https://<project>.firebaseapp.com/__/firebase/init.json
+         
+
+  2. Host the above files under your app domain. Ensure that your web server can respond to `https://<app domain>/__/auth/<filename>` and `https://<app domain>/__/firebase/init.json`.
+
+Here is a [sample server implementation](https://go.dev/play/p/yvHmY9Bd50N) that downloads and hosts the files. We recommend downloading and syncing the files periodically to ensure that the latest bug fixes and features are picked up.
+
+  3. Follow the steps in Option 1 to update authorized `redirect_uri` and your `authDomain`. Once you re-deploy your app, the cross-origin storage access should no longer happen.
+
+
+
+
+## Option 5: Handle provider sign-in independently
+
+**Important:** This is a complex approach that uses additional SDKs, and potentially can be very involved for SAML providers.
+
+The Firebase Authentication SDK provides [`signInWithPopup()`](https://firebase.google.com/docs/reference/js/auth.md#signinwithpopup) and [`signInWithRedirect()`](https://firebase.google.com/docs/reference/js/auth.md#signinwithredirect) as convenience methods to wrap complicated logic and avoid the need to involve another SDK. You can avoid using either method entirely by independently signing in to your provider, then using [`signInWithCredential()`](https://firebase.google.com/docs/reference/js/auth.md#signinwithcredential) to exchange the provider's credentials for a Firebase Authentication credential. For example, you can use the [Google Sign In SDK](https://developers.google.com/identity/gsi/web/guides/overview), [sample code](https://github.com/google/google-api-javascript-client/blob/master/samples/authSample.html) to obtain a Google account credential, then instantiate a new Google credential, by running the following code:
+
+###  Web version 9
+    
+    
+      // `googleUser` from the onsuccess Google Sign In callback.
+      //  googUser = gapi.auth2.getAuthInstance().currentUser.get();
+      const credential = GoogleAuthProvider.credential(googleUser.getAuthResponse().id_token);
+      const result = await signInWithCredential(auth, credential);
+    
+
+###  Web version 8
+    
+    
+      // `googleUser` from the onsuccess Google Sign In callback.
+      const credential = firebase.auth.GoogleAuthProvider.credential(
+          googleUser.getAuthResponse().id_token);
+      const result = await firebase.auth().signInWithCredential(credential);
+    
+
+After you've called `signInWithCredential()`, the rest of your app functions the same as it did before.
+
+Instructions for obtaining an Apple credential are [here](https://developer.apple.com/documentation/sign_in_with_apple/sign_in_with_apple_js/configuring_your_webpage_for_sign_in_with_apple).
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

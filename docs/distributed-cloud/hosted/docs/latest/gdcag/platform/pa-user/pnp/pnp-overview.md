@@ -1,0 +1,143 @@
+---
+url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/pnp-overview/
+title: Overview \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T23:43:47.724958+00:00
+---
+
+# Overview  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/pnp-overview/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Distributed, hybrid, and multicloud ](https://docs.cloud.google.com/docs/dhm-cloud)
+  * [ Google Distributed Cloud ](https://docs.cloud.google.com/distributed-cloud/docs)
+  * [ Air-gapped ](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdch)
+  * [ 1.16.2 (Latest) ](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag)
+
+
+
+Send feedback 
+
+#  Overview Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page provides an overview of project network policies in Google Distributed Cloud (GDC) air-gapped.
+
+Project network policies define either ingress or egress rules. Unlike Kubernetes network policies, you can only specify one policy type for a policy. Each rule in a policy can be configured with an action of either Allow (the default) or Deny.
+
+For traffic within a project, GDC applies a predefined project network policy, the intra-project policy, to each project by default.
+
+Services and workloads in a project are isolated from external services and workloads by default. However, services and workloads from different project namespaces and within the same organization can communicate with each other by applying cross-project traffic network policies.
+
+Similarly, connecting services and workloads to a destination outside of your project in a different organization requires explicit approval. You must disable data exfiltration protection to allow organization-external traffic.
+
+Ingress and egress firewall rules are the main components of project network policies and determine which types of traffic are allowed or denied in and out of your network. To set firewall rules for your project namespace in GDC, use the GDC console.
+
+## Security and connectivity
+
+By default, services and workloads in a project are isolated within that project. They cannot communicate with external services and workloads without configuring a network policy.
+
+To set a network policy for your project namespace in GDC, use the `ProjectNetworkPolicy` resource. This resource lets you define policies, which allow communication within projects, between projects, to external IP addresses, and from external IP addresses. Also, you can transfer workloads out from a project only if you [disable data exfiltration protection for the project](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/data-exfiltration#prevent-data-exfiltration).
+
+GDC project network policies are additive. The resulting enforcement for a workload is an _any_ match for the traffic flow against the union of all policies applied to that workload. When multiple policies are present, the rules for each policy are additively combined, allowing traffic if it matches at least one of the rules.
+
+Explicit `Deny` rules take absolute precedence over `Allow` rules. If a traffic flow matches a `Deny` rule, it is dropped, even if it is allowed by another rule or default platform policies.
+
+Furthermore, after you apply a single policy that selects a workload, all traffic you don't specify is denied (default-deny mode). Therefore, when you apply one or more policies that select a workload as the subject, only the traffic that is explicitly allowed (and not explicitly denied) is permitted.
+
+When you use a well-known IP address you allocate for the project, it performs a source network address translation (NAT) on the outbound traffic from the organization.
+
+## Global project network policies
+
+You can create global project network policies. The scope of global project network policies span across a GDC universe. Each GDC universe can consist of multiple GDC zones organized into regions that are interconnected and share a control plane. For example, a universe consisting two regions with three zones each might look like: `us-virginia1-a`, `us-virginia1-b`, `us-virginia1-c` and `eu-ams1-a`, `eu-ams1-b`, `eu-ams1-c`.
+
+The scope of zonal project network policies is limited to the zones specified at the time of creation. Each zone is an independent disaster domain. A zone manages infrastructure, services, APIs, and tooling that use a local control plane.
+
+For more information on global resources in a GDC universe, see [Multi-zone overview](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/multi-zone/mz-overview).
+
+You can create global project network policies using the [Networking Kubernetes Resource Model (KRM) API](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/networking/v1/networking-v1). Use the API version `networking.global.gdc.goog` to create global resources.
+
+You can create zonal project network policies using the KRM API or the GDC console. Use the API version `networking.gdc.goog` to create zonal resources.
+
+## Allow-all network policies
+
+You can create allow-all network policies to establish broad, default access rules for a project.
+
+You can configure the following types of allow-all network policies:
+
+  * Allow-all Network Policy: Allows traffic to and from any source, which includes other projects and external IPs.
+  * Allow-all-external Network Policy: Allows traffic to and from IP addresses external to the organization.
+  * Allow-all-projects Network Policy: Allows traffic to and from all projects within the organization.
+
+
+
+For more information, see [Create allow-all traffic network policies](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/allow-all-traffic).
+
+## Explicit deny network policies
+
+**Preview:** Configuring explicit deny project network policies is a Preview feature that is available as-is and is not recommended for production environments. Google provides no Service Level Agreements (SLA) or technical support commitments for Preview features. For more information, see [feature stages](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/feature-stages#preview).
+
+You can configure explicit deny rules in project network policies to restrict connectivity between specified projects or CIDR blocks.
+
+Key features and constraints of deny rules:
+
+  * **Precedence** : Deny rules take absolute precedence over allow rules (including base platform policies).
+  * **Egress safety rules** : To prevent accidentally blocking critical infrastructure traffic, egress deny rules automatically exclude system and non-project namespaces.
+  * **Peer restriction** : To ensure safe configuration, ingress deny rules must explicitly specify a source peer in the `from` field, and egress deny rules must explicitly specify a destination peer in the `to` field. You cannot select all sources or destinations by leaving the peer field empty. Leaving the peer field empty is disallowed, and the policy will be rejected.
+  * **No egress deny with DEP** : You cannot configure egress deny rules when data exfiltration protection (DEP) is enabled for the project.
+
+
+
+For more information, see [Create explicit deny network policies](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/deny-traffic).
+
+## Workload-level network policies
+
+You can create workload-level network policies to define fine-grained access control for individual VMs and pods within a project. These policies act like firewalls for your workloads, controlling traffic flow based on labels to enhance security and isolate applications. This granularity allows stricter control over which workloads can communicate with each other within and across projects.
+
+Workload-level network policies also provide the capability to enforce PNP along a single zone.
+
+For more information, see [Create a workload-level intra-project policy](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/intra-project-traffic#create-workload-level-intra) and [Create a workload-level cross-project policy](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/cross-project-traffic#create-workload-level-cross).
+
+## Prepare predefined roles and access
+
+To configure project network policies, you must have the necessary identity and access roles:
+
+  * Project Network Policy Admin: has write permissions on all multi-zone PNP resources in the global project namespace. Ask your Organization IAM Admin to grant you the `global-project-networkpolicy-admin` role. For more information, see [Predefined role descriptions](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/role-descriptions).
+
+
+
+## Target cluster nodes using IP blocks
+
+**Preview:** Targeting specific cluster nodes using the `ipBlocks` field is a Preview feature that is available as-is and is not recommended for production environments. Google provides no Service Level Agreements (SLA) or technical support commitments for Preview features. For more information, see [feature stages](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/feature-stages#preview).
+
+You can use the `ipBlocks` field in a `ProjectNetworkPolicy` resource to specify individual node IP addresses or node CIDR ranges and control traffic between pods and specific cluster nodes (for example, allowing ingress from control plane nodes to a custom webhook pod, or restricting pod egress to control plane nodes). For instructions, see [Create an intra-project policy for standard clusters](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/intra-project-traffic#create-standard-cluster-intra).
+
+### Scale considerations
+
+When configuring project network policies to target specific nodes or using broad CIDR ranges, your policy configuration choices might affect scalability and performance:
+
+  * **Behavior of`0.0.0.0/0`**: Using a broad CIDR range such as `0.0.0.0/0` in an `ipBlocks` rule matches all nodes in the cluster, in addition to external IP addresses.
+  * **Scale** : Each node in the cluster is assigned a unique CIDR identity. Each workload endpoint (VM or pod) has an internal policy table that stores its network rules. In large clusters, broad `ipBlocks` rules such as `0.0.0.0/0` increase policy table usage in proportion to the number of nodes because the system must create entries for every unique node CIDR identity.
+  * **Warning** : Avoid using overly broad CIDR ranges in `ipBlocks` rules if you have a high node count or many complex policies, because you risk hitting the policy table limit for an endpoint. If an endpoint hits this limit, new network policies fail to apply, which can disrupt network connectivity or prevent policy enforcement for that workload.
+
+
+
+## What's next
+
+  * [Create intra-project network policies](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/intra-project-traffic)
+  * [Create cross-project network policies](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/cross-project-traffic)
+  * [Create organization-external network policies](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/organization-external-traffic)
+  * [Create allow-all network policies](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/allow-all-traffic)
+  * [Create explicit deny network policies](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/deny-traffic)
+  * [Create network policies for managed services](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/policy-managed-service)
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

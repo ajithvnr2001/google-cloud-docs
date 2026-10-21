@@ -1,0 +1,133 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/preview/compute/networks/vpc-access/connectors/create/
+title: gcloud preview compute networks vpc-access connectors create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T07:18:03.814555+00:00
+---
+
+# gcloud preview compute networks vpc-access connectors create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/preview/compute/networks/vpc-access/connectors/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud preview compute networks vpc-access connectors create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud preview compute networks vpc-access connectors create - create a VPC Access connector 
+SYNOPSIS
+    
+
+`gcloud preview compute networks vpc-access connectors create` (`CONNECTOR` : `--region`=`REGION`) [`--async`] [`--machine-type`=`MACHINE_TYPE`] [`--max-instances`=`MAX_INSTANCES`; default=10 `--min-instances`=`MIN_INSTANCES`; default=2 | `--max-throughput`=`MAX_THROUGHPUT` `--min-throughput`=`MIN_THROUGHPUT`] [`--network`=`NETWORK`; default="default" `--range`=`RANGE` | `--subnet`=`SUBNET` `--subnet-project`=`SUBNET_PROJECT`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(PREVIEW)` Create a new VPC Access connector with the given name. 
+
+This command can fail for the following reasons: 
+
+  * An instance with the same name already exists. 
+  * The active account does not have permission to create instances. 
+
+
+EXAMPLES
+     The following command creates a VPC Access connector with name 'my-vpc-connector' in region 'us-central1' in network 'my-network' with IP CIDR range of '10.132.0.0/28'. 
+    
+    
+    gcloud preview compute networks vpc-access connectors create my-vpc-connector --region=us-central1 --network=my-network --range=10.132.0.0/28
+
+POSITIONAL ARGUMENTS
+    
+
+Connector resource - Arguments and flags that specify the VPC Access connector you want to create. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `connector` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`CONNECTOR`
+     ID of the connector or fully qualified identifier for the connector. 
+
+To set the `connector` attribute: 
+
+  * provide the argument `connector` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--region`=`REGION`
+     Compute region (e.g. us-central1) for the connector. To set the `region` attribute: 
+
+  * provide the argument `connector` on the command line with a fully specified name; 
+  * provide the argument `--region` on the command line. 
+
+
+FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--machine-type`=`MACHINE_TYPE`
+     Machine type of VMs underlying the VPC Access connector. Accepted values are ``e2-micro``, ``f1-micro``, and ``e2-standard-4``. If left unspecified, the ``e2-micro`` machine type is used. 
+At most one of these can be specified: 
+
+Scaling settings of a VPC Access Connector can be specified in terms of number of Google Compute Engine VM instances underlying the connector autoscaling group. 
+`--max-instances`=`MAX_INSTANCES`; default=10
+     Maximum number of instances within an autoscaling group underlying the connector. Value must be between 3 and 10, inclusive. Must be higher than the value specified by `--min-instances`. 
+`--min-instances`=`MIN_INSTANCES`; default=2
+     Minimum number of instances within an autoscaling group underlying the connector. Value must be between 2 and 9, inclusive. Must be lower than the value specified by `--max-instances`. 
+Scaling settings of a VPC Access Connector can be specified in terms of throughput. 
+`--max-throughput`=`MAX_THROUGHPUT`
+     Maximum throughput of the connector in Mbps. Refers to the expected throughput when using an `e2-micro` machine type. Value must be a multiple of 100 from 300 through 1000. Must be higher than the value specified by `--min-throughput`. If both max-throughput and max-instances are provided, max-instances takes precedence over max-throughput. The use of `max-throughput` is discouraged in favor of `max-instances`. 
+`--min-throughput`=`MIN_THROUGHPUT`
+     Minimum throughput of the connector in Mbps. Refers to the expected throughput when using an `e2-micro` machine type. Value must be a multiple of 100 from 200 through 900. Must be lower than the value specified by `--max-throughput`. If both min-throughput and min-instances are provided, min-instances takes precedence over min-throughput. The use of `min-throughput` is discouraged in favor of `min-instances`. 
+At most one of these can be specified: 
+
+The Serverless VPC Access API can internally manage the creation of a subnet to house the VPC connector. To create this subnet, the network ID (--network) and an IP CIDR range (--range) for the subnet must be provided. 
+`--network`=`NETWORK`; default="default"
+     Name of the Compute Engine network to which the connector will be connected. If left unspecified, the default network will be used. 
+`--range`=`RANGE`
+     CIDR range of internal addresses that are reserved for this connector. For example, 10.132.0.0/28. Range must be unique and non-overlapping with existing ranges in the network. 
+You can specify a subnet in which to place the connector rather than using an internally managed subnet. If you wish to use this connector to attach your Serverless application to a Shared VPC, first share a subnet to the project to which you are deploying your connector. Then, supply the name of the subnet (--subnet) and the project ID (--subnet-project) from which the subnet is hosted to connect to this VPC. 
+`--subnet`=`SUBNET`
+     User-provided subnet to house the connector. This field can be used in favor of specifying the `network` and `range` fields. e.g. "my-subnet" 
+`--subnet-project`=`SUBNET_PROJECT`
+     Project ID of the provided subnet. The default is the project of the connector. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `vpcaccess/v1` API. The full documentation for this API can be found at: <https://cloud.google.com/vpc/docs/configure-serverless-vpc-access>
+NOTES
+     This command is currently in DEVELOPER PREVIEW and may change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. These variants are also available: 
+    
+    
+    [gcloud compute networks vpc-access connectors create](https://docs.cloud.google.com/sdk/gcloud/reference/compute/networks/vpc-access/connectors/create)
+    
+    
+    [gcloud beta compute networks vpc-access connectors create](https://docs.cloud.google.com/sdk/gcloud/reference/beta/compute/networks/vpc-access/connectors/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

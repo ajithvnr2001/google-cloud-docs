@@ -1,0 +1,90 @@
+---
+url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/optimize-query-performance/
+title: Optimize query performance \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T10:44:27.321259+00:00
+---
+
+# Optimize query performance  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/optimize-query-performance/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Firestore with MongoDB compatibility ](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs)
+  * [ Guides ](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/overview)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Optimize query performance
+
+To troubleshoot slow queries, use [Query Explain](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/query-explain) to obtain the query execution plan and the runtime execution profile. The following section describe steps you can take to optimize query performance depending on the execution profile:
+
+## Limit the number of results
+
+Use the records returned field in the execution tree to identify if the query is returning many documents. Consider limiting the number of documents returned by using the `$limit`clause. This reduces the serialized byte size of the results when returned to the clients over the network. In cases where the `Limit` node is preceded by a `MajorSort` node, the query engine can coalesce the `Limit` and the `MajorSort` nodes and replaces a full in-memory materialization and sort with a TopN sort, reducing the memory requirement for the query.
+
+## Limit the Result Document Size
+
+Consider limiting the size of the document returned by using the `$project` clause to avoid fetching unnecessary fields. This helps reduce the compute and memory cost of processing intermediate results and the serialized byte size of the results when returned to the clients over the network. In cases where all fields referenced in the query are covered by a regular index (not multikey), this also allows the query to be fully covered by the index scan, avoiding the need to fetch documents from the primary storage.
+
+## Use indexes
+
+Use the following instructions to set up and optimize indexes.
+
+### Identify if the query is using an index
+
+You can identify if the query is using an index by checking the leaf nodes in the execution tree. If the leaf node of the execution tree is a [TableScan node](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/query-explain#tablescan), that means the query is not using an index and is scanning documents from primary storage. If an index is being used, the leaf node of the execution tree will display the index ID and index fields of the index.
+
+### Identify if the index used can be optimized
+
+An index is useful for a query if it can reduce the number of documents that the query engine needs to fetch from primary storage or if its field ordering can deliver the Sort requirement of the query.
+
+If an index is used for a query, but the query engine is still fetching and discarding many documents, as identified by a Scan node that returns many records followed by a [Filter node](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/query-explain-reference#filter) that returns few records, this is a sign that the query predicate satisfied using the index is not selective. To create a more suitable index, see Create indexes.
+
+If a non-multikey index is used for a query, but the query engine is still performing an in-memory reordering of the result set, as identified by a [MajorSort node](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/query-explain-reference#majorsort) in the query execution tree, this is a sign that the index used can't be used to deliver the Sort requirement of the query. To create a more suitable index, see the next section.
+
+### Optimizing `$lookup` queries
+
+You can optimize `$lookup` queries by adding indexes to the `from` collection which lets the operation efficiently find matching documents without scanning the entire collection.
+
+#### `$lookup` with `localField` and `foreignField`
+
+If you are using the `localField` and `foreignField` options in the `$lookup` stage, create an index on the `foreignField` in the `from` collection.
+
+#### `$lookup` with nested pipelines
+
+If you are using the `pipeline` option in the `$lookup` stage with `$match` stages, create an index on the fields involved in the foreign collection to avoid a full collection scan:
+
+  * For `$match` stages with filter semantics (for example `{$match: {a: true}}`), create an index on the fields involved in the foreign collection (`a`).
+  * For `$match` stages with aggregation semantics that compares a field with a constant value (for example `{$match: {$expr: {$gt: [a, 10]}}}`) or with equality comparisons (`eq` or `in`) between fields and variables defined in `let` (for example `{$match: {$expr: {$eq: [a, "$$a"]}}}`), create an index on the fields involved in the foreign collection. Note that multikey index won't be used in the planning.
+
+
+
+### Create Indexes
+
+Follow the index management documentation to [create indexes](https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/indexing). To ensure your query can use indexes, create regular (not Multikey) indexes with fields in the following order:
+
+  1. All fields that will be used in equality operators. To maximize chance of reuse across queries, order fields in decreasing order of occurrence of the fields in equality operators among queries.
+  2. All fields that will be sorted on (in the same order).
+  3. Fields that will be used in range or inequality operators in decreasing order of query constraint selectivity.
+  4. Fields that will be returned as part of a query in the index: including such fields in the index allows the index to cover the query and avoid having to fetch document from the primary storage.
+
+
+
+For queries that involve filtering and sorting array fields, consider creating Multikey indexes.
+
+### Use query hint
+
+If you have created a more suitable index for the query but the query engine is not using that index, you can override the query engine's index preference by using a query hint. 
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

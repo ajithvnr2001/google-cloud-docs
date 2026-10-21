@@ -1,0 +1,72 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/redis/acl-policies/
+title: gcloud redis acl-policies \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T10:17:55.808296+00:00
+---
+
+# gcloud redis acl-policies  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/redis/acl-policies/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud redis acl-policies Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud redis acl-policies - manage ACL policies of Memorystore for Redis Cluster instances 
+SYNOPSIS
+    
+
+`gcloud redis acl-policies` `GROUP` | `COMMAND` [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     Manage ACL policies of Memorystore for Redis Cluster instances. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+GROUPS
+     ``GROUP`` is one of the following: 
+
+`[revisions](https://docs.cloud.google.com/sdk/gcloud/reference/redis/acl-policies/revisions)`
+     Manage ACL policies revisions of Memorystore for Redis Cluster instances. 
+COMMANDS
+     ``COMMAND`` is one of the following: 
+
+`[create](https://docs.cloud.google.com/sdk/gcloud/reference/redis/acl-policies/create)`
+     Create a Redis ACL Policy. 
+`[delete](https://docs.cloud.google.com/sdk/gcloud/reference/redis/acl-policies/delete)`
+     Delete a Redis ACL Policy. 
+`[describe](https://docs.cloud.google.com/sdk/gcloud/reference/redis/acl-policies/describe)`
+     Show metadata for a Memorystore for Redis Cluster ACL policy. 
+`[list](https://docs.cloud.google.com/sdk/gcloud/reference/redis/acl-policies/list)`
+     List Redis ACL Policies. 
+`[update](https://docs.cloud.google.com/sdk/gcloud/reference/redis/acl-policies/update)`
+     Update aclPolicies. 
+NOTES
+     These variants are also available: 
+    
+    
+    [gcloud alpha redis acl-policies](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/redis/acl-policies)
+    
+    
+    [gcloud beta redis acl-policies](https://docs.cloud.google.com/sdk/gcloud/reference/beta/redis/acl-policies)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-08-26 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-26 UTC."],[],[]] 

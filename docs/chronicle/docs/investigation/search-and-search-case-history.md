@@ -1,0 +1,193 @@
+---
+url: https://docs.cloud.google.com/chronicle/docs/investigation/search-and-search-case-history/
+title: Search cases overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T13:29:21.543313+00:00
+---
+
+# Search cases overview  |  Google Security Operations  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/chronicle/docs/investigation/search-and-search-case-history/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Security ](https://docs.cloud.google.com/docs/security)
+  * [ Google Security Operations ](https://docs.cloud.google.com/chronicle/docs)
+  * [ Guides ](https://docs.cloud.google.com/chronicle/docs/secops/secops-overview)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Search cases overview
+
+Supported in:
+
+Google SecOps 
+
+This guide is for security analysts who want to analyze security telemetry, including Unified Data Model (UDM) events, entities, cases, and case history. It explains how to leverage SIEM Search within Google Security Operations to seamlessly correlate case details with other security data. By following this method, workflows are streamlined, reducing context switching between different interfaces. Successful completion **accelerates incident response**.
+
+## Key terminology
+
+  * **SIEM** : Security Information and Event Management. Refers to tools and processes for collecting and analyzing security data from various sources to detect threats.
+  * **SOAR** : Security Orchestration, Automation, and Response. Refers to technologies that help security teams automate, consolidate, and streamline security operations.
+  * **UDM (Unified Data Model)** : A standardized data format used within Google SecOps to represent security events from various sources consistently.
+  * **Case Viewer** : A feature within SIEM Search results that allows opening a detailed view of a selected case.
+  * **Column Manager** : A tool to customize the columns displayed in the search results table.
+  * **Aggregation Panel** : Provides summaries and distributions of field values from the search results.
+
+
+
+## Common use cases
+
+This section lists common use cases of SIEM Search.
+
+### Triage and case prioritization
+
+Efficiently identify and prioritize security cases based on status, activity, or associated alerts. Value: Enables security teams to focus on the most critical incidents quickly, improving response efficiency.
+
+### Investigate an entity's timeline
+
+Correlate case data with other security telemetry like UDM events and entities to build a comprehensive timeline of an incident. Value: Provides deeper insights into security events, facilitating thorough investigations and better-informed decisions.
+
+## Case access
+
+Cases and case history search in SIEM Search don't support SOAR Access mechanisms (like environments and SOC Roles) and Data RBAC scopes. A user with permissions to access SIEM Search can search for cases across all data scopes, environments, and SOC roles.
+
+## Query cases and case history
+
+This section provides examples of how to construct queries for cases and case history in SIEM Search.
+
+For detailed schema definitions, see the [Cases and alerts schema](https://docs.cloud.google.com/chronicle/docs/reference/soar-data-dashboard#cases-and-alerts) and [Case history schema](https://docs.cloud.google.com/chronicle/docs/reference/soar-data-dashboard#case-history) references.
+
+### Formulate basic case queries
+
+  * **Action/Goal:** Find all open cases.
+  * **Query:** `case.status = "OPENED"`
+  * **Anticipated failure:** Incorrect syntax or no matching open cases.
+  * **Corrective step:** Double-check the query syntax and ensure there are indeed open cases in the system.
+
+
+
+### Search by specific activity type
+
+  * **Action/Goal:** Find cases that include a "CASE_ALERT_DATA" wall activity.
+  * **Query:** `case.wall_activities.activity_type = "CASE_ALERT_DATA"`
+  * **Anticipated failure:** No results if no cases have this activity type, or if the field name is incorrect.
+  * **Corrective step:** Verify the activity type and field name against case documentation.
+
+
+
+### Correlate cases with alert and entity data
+
+  * **Action/Goal:** Identify cases linked to alerts that have both metadata IDs and associated entity names.
+  * **Query:** `case.alerts.metadata.id != "" AND case.alerts.entities.name != ""`
+  * **Anticipated failure:** The query might be too restrictive, yielding no results.
+  * **Corrective step:** Test parts of the query separately (for example, `case.alerts.metadata.id != ""`) to isolate the issue.
+
+
+
+### Query case history for priority changes
+
+  * **Action/Goal:** Find historical entries showing a priority change for a case where an assignee is recorded.
+  * **Query:** `case_history.case_activity = "PRIORITY_CHANGE" AND case_history.assignee.name != ""`
+  * **Anticipated failure:** No matching history entries or incorrect field usage.
+  * **Corrective step:** Confirm the exact field names and activity types used in case history.
+
+
+
+## Examples information
+
+The following examples demonstrate various search possibilities, including additional queries, statistical analysis, and exporting data to data tables.
+
+### Additional example queries
+
+  * Find cases based on assignee login time: `case.assignee.last_login_time.seconds = 1778696064 AND case.assignee.last_login_time.nanos = 732156760 AND case.assignee.deleted = false`
+  * Find case history entries with informational priority: `case_history.priority = "PRIORITY_INFO"`
+  * Find case history events that are not incidents and occurred at a specific time: `case_history.incident = false AND case_history.event_time.seconds = 1778749665 AND case_history.event_time.nanos = 664842769`
+  * Find cases where a string custom field is not empty: `case.custom_fields["soma_case_custom_field"].string_seq.string_vals!=""`
+  * Find cases with a specific owner custom field: `case.custom_fields["owner"].string_seq.string_vals!=""`
+  * Find cases with an SLA deadline after a specific timestamp: `case.custom_fields["sla deadline"].time_val.seconds >= 1775726849`
+
+
+
+### Statistical queries
+
+  * **Case count:**
+    * Query: `case.display_name != ""`
+    * Outcome: `$case_count = count(case.display_name)`
+  * **Case history count:**
+    * Query: `case_history.name != ""`
+    * Outcome: `$case_count = count(case_history.name)`
+  * **Custom fields count:**
+    * Query: `case.custom_fields["reporter"].string_seq.string_vals = "" nocase or case.custom_fields["reporter"].string_seq.string_vals = "" or case.custom_fields["reporter"].string_seq.string_vals = ""`
+    * Outcome: `$case_count = count(case.name)`
+
+
+
+### Export to DT queries
+
+You can export search results from cases and case history to data tables for further analysis.
+
+  * **Exporting case data:**
+    * Query: `case.name != ""`
+    * Outcome & Export: `none outcome: $x = case.name export: %new_case_table.write_row( testing: $x )`
+  * **Exporting case history data:**
+    * Query: `case_history.name != ""`
+    * Outcome & Export: `none outcome: $x = case_history.name export: %new_case_history_table.write_row( testing: $x )`
+  * **Exporting custom fields case data:**
+    * Query: `$impact = case.custom_fields["business impact"].string_seq.string_vals AND ($impact = "high" OR $impact = "critical")`
+    * Outcome & Export: `none match: case.response_platform_info.response_platform_id, case.display_name, case.environment, case.priority outcome: $Case_Count = count(case.name) export: %new_case_table123.write_row( testing: $Case_Count )`
+
+
+
+### Limitations
+
+The following limitations apply to searching cases and case history within the Google SecOps Search interface:
+
+  * **Alerts, Wall Activities, and Tasks** are visible only _after_ pivoting to the case page from case search results and are not available directly in the search view.
+  * **Active management tasks** (for example, modifying case attributes like stage, priority, importance, incident status; editing assignees; adding tasks; or closing cases) are **not supported** within the Search interface.
+  * Case and case history data is **read-only** within Search. Creation and editing of cases remain in the case module.
+  * **Cross-resource joins** (for example, joining case and case history to show a historical snapshot of a case) or joins within the same resource type (for example, multiple case records) are **not supported**.
+  * **Prevalence and activity heatmaps** are not available for case or case history searches.
+  * No direct **Case Lookup functionality** is provided.
+
+
+
+### Programmatic API support
+
+The Programmatic API for Search on cases and case history aligns with the structure and workflow of the existing Asynchronous Search API. Refer to the [Search API documentation](https://docs.cloud.google.com/chronicle/docs/reference/search-api) for details on using the API.
+
+## Troubleshooting
+
+This section outlines performance expectations and provides self-service fixes for common issues encountered when searching cases and case history.
+
+### Error remediation
+
+Specific error codes related to cases and case history searches are not detailed in the provided text. If you encounter errors, ensure your queries adhere to the supported syntax and limitations outlined previously.
+
+Issue Description | Fix  
+---|---  
+Query returns no results | Double-check query syntax, field names, and filters. Verify data exists matching your criteria.  
+Attempting to modify case data | Case and case history searches are read-only. Use the dedicated Case module for making modifications.  
+Attempting to join different resources | Cross-resource joins are not supported. Query `case` and `case_history` separately.  
+  
+### Validation and testing
+
+To validate the success of your queries:
+
+  * **Review Search Results:** Examine the table of results to ensure they match your expectations based on the query.
+  * **Use Built-in Features:** Utilize features like **Column Manager** to display relevant fields and the **Aggregation Panel** to understand data distributions, helping confirm the query's accuracy.
+  * **Export and Verify:** Use the **CSV Download** to export results and perform external validation or analysis if needed.
+
+
+
+**Need more help?** [Get answers from Community members and Google SecOps professionals.](https://security.googlecloudcommunity.com/)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

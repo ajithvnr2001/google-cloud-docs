@@ -1,0 +1,234 @@
+---
+url: https://docs.cloud.google.com/identity-platform/docs/admin/manage-mfa-users/
+title: Managing multi-factor users programmatically \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T01:49:20.177919+00:00
+---
+
+# Managing multi-factor users programmatically  |  Identity Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/identity-platform/docs/admin/manage-mfa-users/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Access and resource management ](https://docs.cloud.google.com/docs/access-resources)
+  * [ Identity Platform ](https://docs.cloud.google.com/identity-platform/docs)
+  * [ Guides ](https://docs.cloud.google.com/identity-platform/docs/how-to)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+#  Managing multi-factor users programmatically 
+
+This document shows you how to use the Identity Platform Admin SDK to manage your multi-factor users programmatically. When managing multi-factor users, you have access to an increased range of user properties compared to [single-factor users](https://docs.cloud.google.com/identity-platform/docs/admin/manage-users).
+
+## Before you begin
+
+  * [Install the Node.js Admin SDK](https://docs.cloud.google.com/identity-platform/docs/install-admin-sdk). Other Admin SDK languages are not currently supported.
+
+
+
+## Getting users
+
+You can retrieve user multi-factor related data, such as a list of enrolled second factors, from the `UserRecord` object. To get a user record, call `getUser()` or `getUserByEmail()`.
+
+The example below shows a multi-factor enrolled user:
+    
+    
+    // console.log(userRecord.toJSON());
+    {
+      uid: 'some-uid',
+      displayName: 'John Doe',
+      email: 'johndoe@gmail.com',
+      photoURL: 'http://www.example.com/12345678/photo.png',
+      emailVerified: true,
+      phoneNumber: '+11234567890',
+      // Set this user as admin.
+      customClaims: {admin: true},
+      // User with Google provider.
+      providerData: [{
+        uid: 'google-uid',
+        email: 'johndoe@gmail.com',
+        displayName: 'John Doe',
+        photoURL: 'http://www.example.com/12345678/photo.png',
+        providerId: 'google.com'
+      }],
+      multiFactor: {
+        enrolledFactors: [
+          // 2FA with SMS as 2nd factor.
+          {
+            uid: '53HG4HG45HG8G04GJ40J4G3J',
+            phoneNumber: '+16505551234',
+            displayName: 'Work phone',
+            enrollmentTime: 'Fri, 22 Sep 2017 01:49:58 GMT',
+            factorId: 'phone',
+          },
+        ],
+      },
+    };
+    
+
+## Listing users
+
+The code below shows how to list all users and check if they have a secondary factor enrolled:
+    
+    
+    admin.auth().listUsers(1000, nextPageToken)
+      .then((listUsersResult) => {
+        listUsersResult.users.forEach((userRecord) => {
+          // Multi-factor enrolled users second factors can be retrieved via:
+          if (userRecord.multiFactor) {
+            userRecord.multiFactor.enrolledFactors.forEach((enrolledFactor) => {
+              console.log(userRecord.uid, enrolledFactor.toJSON());
+            });
+          }
+        });
+      })
+      .catch((error) => {
+        console.log('Error listing users:', error);
+      });
+    
+
+Users are returned in batches, ordered by their `uid`. Each batch of results contains a list of users, and a next page token used to fetch the next batch. When all users have been listed, no `pageToken` is returned.
+
+The `maxResult` field specifies the maximum batch size. The default and maximum value is 1000.
+
+## Creating a user
+
+Call `createUser()` to create a new user. New users with secondary factors must have a verified email address (set `emailVerified` to `true`) and use a supported first factor to sign in. Up to 5 secondary factors are allowed per user.
+
+The example shows how to create a new user with 2 secondary factors:
+    
+    
+    admin.auth().createUser({
+      uid: '123456789',
+      email: 'user@example.com',
+      emailVerified: true,
+      password: 'password',
+      multiFactor: {
+        enrolledFactors: [
+          // When creating users with phone second factors, the uid and
+          // enrollmentTime should not be specified. These will be provisioned by
+          // the Auth server.
+          // Primary second factor.
+          {
+            phoneNumber: '+16505550001',
+            displayName: 'Corp phone',
+            factorId: 'phone',
+          },
+          // Backup second factor.
+          {
+            phoneNumber: '+16505550002',
+            displayName: 'Personal phone',
+            factorId: 'phone'
+          },
+        ],
+      },
+    })
+    .then((userRecord) => {
+      console.log(userRecord.multiFactor.enrolledFactors);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+    
+
+## Updating a user
+
+To update an existing user, call `updateUser()`:
+    
+    
+    admin.auth().updateUser(uid: '123456789', {
+      multiFactor: {
+        enrolledFactors: [
+          {
+            // uid will be auto-generated.
+            phoneNumber: '+16505550003',
+            displayName: 'Spouse\'s phone',
+            factorId: 'phone',
+          },
+          {
+            // uid can also be specified. This is useful if a new second factor is added and an
+            // existing enrolled second factor is kept unmodified.
+            uid: 'existing-enrolled-mfa-uid',
+            phoneNumber: '+16505550004',
+            displayName: 'Personal phone',
+            factorId: 'phone',
+          },
+          {
+            phoneNumber: '+16505550005',
+            displayName: 'Backup phone',
+            factorId: 'phone',
+            // Enrollment time can also be explicitly specified.
+            enrollmentTime: new Date().toUTCString(),
+          },
+        ],
+      },
+    })
+    .then((userRecord) => {
+      console.log(userRecord.multiFactor.enrolledFactors);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+    
+
+### Adding a new secondary factor
+
+Calling `updateUser()` with a list of `enrolledFactors` will erase any of the user's current secondary factors. To add a new secondary factor while preserving the existing ones, look up the user first, then add the new factor to the list:
+    
+    
+    function enrollSecondFactor(userId, secondFactorPhoneNumber, secondFactorDisplayName) {
+      return admin.auth().getUser(userId)
+        .then((userRecord) => {
+          const updatedList = (userRecord.multiFactor &&
+            userRecord.multiFactor.toJSON().enrolledFactors) || [];
+          updatedList.push({
+            phoneNumber: secondFactorPhoneNumber,
+            displayName: secondFactorDisplayName,
+            factorId: 'phone',
+          });
+          return admin.auth().updateUser(userRecord.uid, {
+            multiFactor: {
+              enrolledFactors: updatedList,
+            },
+          });
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+    
+
+### Removing a secondary factor
+
+To completely unenroll a user from multi-factor authentication, set `enrolledFactors` to `null` or an empty array:
+    
+    
+    admin.auth().updateUser(uid: '123456789', {
+      multiFactor: {
+        enrolledFactors: null,
+      },
+    })
+    .then((userRecord) => {
+      console.log(userRecord.multiFactor);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+    
+
+## What's next
+
+  * [Migrate users from an existing app to Identity Platform](https://docs.cloud.google.com/identity-platform/docs/migrating-users)
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

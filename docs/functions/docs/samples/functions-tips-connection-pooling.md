@@ -1,0 +1,200 @@
+---
+url: https://docs.cloud.google.com/functions/docs/samples/functions-tips-connection-pooling/
+title: Use HTTP connection pooling \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T09:03:39.580799+00:00
+---
+
+# Use HTTP connection pooling  |  Cloud Run functions  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/functions/docs/samples/functions-tips-connection-pooling/
+
+If you are creating a new function, see the [Console Quickstart](https://docs.cloud.google.com/run/docs/quickstarts/functions/deploy-functions-console) on Cloud Run. 
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Application hosting ](https://docs.cloud.google.com/docs/application-hosting)
+  * [ Cloud Run ](https://docs.cloud.google.com/run/docs)
+  * [ Cloud Run functions ](https://docs.cloud.google.com/functions/docs)
+  * [ Samples ](https://docs.cloud.google.com/functions/docs/samples)
+
+
+
+#  Use HTTP connection pooling Stay organized with collections  Save and categorize content based on your preferences. 
+
+Shows how to recycle HTTP connections using HTTP connection pools.
+
+## Explore further
+
+For detailed documentation that includes this code sample, see the following: 
+
+  * [Optimize networking (1st gen)](https://docs.cloud.google.com/functions/1stgendocs/bestpractices/networking)
+
+
+
+## Code sample
+
+### Go
+
+To authenticate to Cloud Run functions, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    // Package http provides a set of HTTP Cloud Functions samples.
+    package http
+    
+    import (
+    	"fmt"
+    	"net/http"
+    	"time"
+    
+    	"github.com/GoogleCloudPlatform/functions-framework-go/functions"
+    )
+    
+    var urlString = "https://example.com"
+    
+    // client is used to make HTTP requests with a 10 second timeout.
+    // http.Clients should be reused instead of created as needed.
+    var client = &http.Client{
+    	Timeout: 10 * time.Second,
+    }
+    
+    func init() {
+    	functions.HTTP("MakeRequest", MakeRequest)
+    }
+    
+    // MakeRequest is an example of making an HTTP request. MakeRequest uses a
+    // single http.Client for all requests to take advantage of connection
+    // pooling and caching. See https://godoc.org/net/http#Client.
+    func MakeRequest(w http.ResponseWriter, r *http.Request) {
+    	resp, err := client.Get(urlString)
+    	if err != nil {
+    		http.Error(w, "Error making request", http.StatusInternalServerError)
+    		return
+    	}
+    	if resp.StatusCode != http.StatusOK {
+    		msg := fmt.Sprintf("Bad StatusCode: %d", resp.StatusCode)
+    		http.Error(w, msg, http.StatusInternalServerError)
+    		return
+    	}
+    	fmt.Fprintf(w, "ok")
+    }
+    
+
+### Java
+
+To authenticate to Cloud Run functions, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import com.google.cloud.functions.HttpFunction;
+    import com.google.cloud.functions.HttpRequest;
+    import com.google.cloud.functions.HttpResponse;
+    import java.io.IOException;
+    import java.io.PrintWriter;
+    import java.net.URI;
+    import java.net.http.HttpClient;
+    import java.net.http.HttpResponse.BodyHandlers;
+    import java.time.Duration;
+    
+    public class SendHttpRequest implements HttpFunction {
+    
+      // Create a client with some reasonable defaults. This client can be reused for multiple requests.
+      // (java.net.httpClient also pools connections automatically by default.)
+      private static HttpClient client =
+          HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(10)).build();
+    
+      @Override
+      public void service(HttpRequest request, HttpResponse response)
+          throws IOException, InterruptedException {
+        // Create a GET sendHttpRequest to "http://example.com"
+        String url = "http://example.com";
+        var getRequest = java.net.http.HttpRequest.newBuilder().uri(URI.create(url)).GET().build();
+    
+        // Send the sendHttpRequest using the client
+        var getResponse = client.send(getRequest, BodyHandlers.ofString());
+    
+        // Write the results to the output:
+        var writer = new PrintWriter(response.getWriter());
+        writer.printf("Received code '%s' from url '%s'.", getResponse.statusCode(), url);
+      }
+    }
+
+### Node.js
+
+To authenticate to Cloud Run functions, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    const fetch = require('node-fetch');
+    
+    const http = require('http');
+    const https = require('https');
+    
+    const functions = require('@google-cloud/functions-framework');
+    
+    const httpAgent = new http.Agent({keepAlive: true});
+    const httpsAgent = new https.Agent({keepAlive: true});
+    
+    /**
+     * HTTP Cloud Function that caches an HTTP agent to pool HTTP connections.
+     *
+     * @param {Object} req Cloud Function request context.
+     * @param {Object} res Cloud Function response context.
+     */
+    functions.http('connectionPooling', async (req, res) => {
+      try {
+        // TODO(optional): replace this with your own URL.
+        const url = 'https://www.example.com/';
+    
+        // Select the appropriate agent to use based on the URL.
+        const agent = url.includes('https') ? httpsAgent : httpAgent;
+    
+        const fetchResponse = await fetch(url, {agent});
+        const text = await fetchResponse.text();
+    
+        res.status(200).send(`Data: ${text}`);
+      } catch (err) {
+        res.status(500).send(`Error: ${err.message}`);
+      }
+    });
+
+### Python
+
+To authenticate to Cloud Run functions, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
+    
+    
+    import functions_framework
+    import requests
+    
+    # Create a global HTTP session (which provides connection pooling)
+    session = requests.Session()
+    
+    
+    @functions_framework.http
+    def connection_pooling(request):
+        """
+        HTTP Cloud Function that uses a connection pool to make HTTP requests.
+        Args:
+            request (flask.Request): The request object.
+            <http://flask.pocoo.org/docs/1.0/api/#flask.Request>
+        Returns:
+            The response text, or any set of values that can be turned into a
+            Response object using `make_response`
+            <http://flask.pocoo.org/docs/1.0/api/#flask.Flask.make_response>.
+        """
+    
+        # The URL to send the request to
+        url = "http://example.com"
+    
+        # Process the request
+        response = session.get(url)
+        response.raise_for_status()
+        return "Success!"
+    
+    
+
+## What's next
+
+To search and filter code samples for other Google Cloud products, see the [Google Cloud sample browser](https://docs.cloud.google.com/docs/samples?product=cloudfunctions). 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],[],[],[]] 

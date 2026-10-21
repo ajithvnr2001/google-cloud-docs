@@ -1,0 +1,156 @@
+---
+url: https://docs.cloud.google.com/docs/get-started/learn-about-billing/
+title: Learn about Cloud Billing \u00a0|\u00a0 Get started \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T21:36:14.266418+00:00
+---
+
+# Learn about Cloud Billing  |  Get started  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/docs/get-started/learn-about-billing/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Get started ](https://docs.cloud.google.com/docs/get-started)
+  * [ Guides ](https://docs.cloud.google.com/docs/overview)
+
+
+
+Send feedback 
+
+#  Learn about Cloud Billing Stay organized with collections  Save and categorize content based on your preferences. 
+
+Cloud Billing is a collection of services and tools that helps you track, understand, pay for, and optimize your costs on Google Cloud and Google Maps Platform.
+
+  * **Required for all services** : You must have an active Cloud Billing account linked to your Google Cloud projects to use any Google Cloud or Google Maps Platform service, including services within the [Free Tier](https://docs.cloud.google.com/free/docs/free-cloud-features#free-tier).
+
+**Note:** Some cloud-adjacent products (such as Firebase and Gemini API in AI Studio) offer free usage for a limited set of Google Cloud services without requiring a Cloud Billing account. For more information, see [Google AI Studio pricing](https://ai.google.dev/gemini-api/docs/pricing) and [Firebase pricing](https://firebase.google.com/pricing).
+  * **Cost visibility** : Gain insight into how your usage translates to costs.
+
+  * **Cost control** : Implement controls to prevent unexpected expenses.
+
+  * **Cost optimization** : Find opportunities to reduce your cloud spend.
+
+
+
+
+## Key components and relationships
+
+  * Cloud Billing account: This defines who pays for a given set of Google Cloud resources. It's linked to a Google Payments profile. You might have one or multiple billing accounts depending on your needs.
+  * Google Payments profile: This is managed in the Google Payments Center and includes your payment methods (like credit cards or bank accounts), address, and tax information.
+  * Google Cloud projects: Your resources (like virtual machines, storage, databases) are organized within projects. Each project must be linked to a Cloud Billing account to function. A single billing account can pay for many projects.
+
+
+
+[Learn more about resource organization and access management](https://docs.cloud.google.com/billing/docs/onboarding-checklist).
+
+## Types of Cloud Billing accounts
+
+There are two main types of billing accounts:
+
+  * **_Self-serve_** (online): Costs are automatically charged to your linked payment method. This can happen when your costs reach a certain threshold or on a regular monthly cycle. Most new users start with this type.
+  * **_Invoiced_** (offline): You receive a monthly invoice for your accrued costs and pay by using check or bank transfer. This option typically requires meeting certain eligibility criteria.
+
+
+
+[Find out your Cloud Billing account type and charging cycle](https://docs.cloud.google.com/billing/docs/how-to/billing-cycle).
+
+## Manage your account and find out your costs
+
+Once you have a Cloud Billing account, you'll need to manage it and understand how to track your spend.
+
+### Basic account management
+
+Common tasks include:
+
+  * [Create a new self-serve Cloud Billing account](https://docs.cloud.google.com/billing/docs/how-to/create-billing-account)
+  * [View projects linked to your billing account](https://docs.cloud.google.com/billing/docs/how-to/view-linked)
+  * [Enable, disable, or change billing for a project](https://docs.cloud.google.com/billing/docs/how-to/modify-project)
+  * [Add, remove, or update payment methods](https://docs.cloud.google.com/billing/docs/how-to/payment-methods)
+  * [Get your invoice, statement, or payment receipt](https://docs.cloud.google.com/billing/docs/how-to/get-invoice)
+  * [Close or reopen a Cloud Billing account](https://docs.cloud.google.com/billing/docs/how-to/close-or-reopen-billing-account)
+
+
+
+### Control who can access billing
+
+Google Cloud uses Identity and Access Management (IAM) to control access to Cloud Billing. The creator of the billing account is automatically granted the Billing Account Administrator role. A Billing Account Administrator can grant different roles to users or groups, such as:
+
+  * **Billing Account Administrator:** Full control over the billing account.
+  * **Billing Account Viewer:** Can view costs and transactions.
+  * **Billing Account User:** Can link projects to the billing account.
+
+
+
+It's important to set these permissions carefully to ensure the right people have the right level of access.
+
+[Learn about Cloud Billing access control and permissions](https://cloud.google.com/billing/docs/how-to/billing-access). You can also [Create custom roles for Cloud Billing](https://cloud.google.com/billing/docs/how-to/custom-roles).
+
+### View your costs
+
+The Google Cloud console provides [several tools](https://docs.cloud.google.com/billing/docs/reports) to help you understand your spend:
+
+  * **Billing reports** : See your cost trends, filter by project, service, SKU, and labels, and see the impact of credits. This is the primary tool for understanding what drives your costs. [Learn to use Billing Reports](https://docs.cloud.google.com/billing/docs/how-to/reports).
+  * **Cost Table** : Get a detailed, tabular view of your costs for an invoice or statement. This is useful for reconciliation. [View the cost details of your invoice](https://docs.cloud.google.com/billing/docs/how-to/cost-table).
+  * **Cost Breakdown** : See an at-a-glance view of your costs after savings, helping you understand the net effect of credits and discounts. [Understand your savings with cost breakdown reports](https://docs.cloud.google.com/billing/docs/how-to/cost-breakdown).
+
+
+
+## Monitor and optimize your cloud spend
+
+Beyond cost visibility, Cloud Billing helps you actively control and reduce your expenses.
+
+### Set budgets and spending alerts
+
+To avoid surprises on your bill, you can create budgets.
+
+  * Track planned versus actual spend: Monitor your charges against a target amount you set.
+  * Scope: Budgets can apply to the entire billing account, specific projects, services, or labels.
+  * Alerts: Set thresholds (for example, at 50%, 90%, and 100% of your budget amount) to trigger email notifications to key stakeholders when costs exceed these points.
+
+
+
+Budgets don't automatically cap your spend, but they provide crucial warnings.
+
+[Learn how to Create, edit, or delete budgets and budget alerts](https://cloud.google.com/billing/docs/how-to/budgets).
+
+### View and manage cost anomalies
+
+Anomaly detection helps you manage unexpected costs across your billing account's projects. Anomalies are spikes or deviations in usage costs that differ from your expected spend.
+
+Access the Anomalies dashboard to do the following:
+
+  * Investigate the root causes of anomalies.
+  * Customize your view by setting thresholds for cost impact amount and percent of deviation.
+  * Manage automated alerts and notifications for detected anomalies.
+
+
+
+[Learn more about anomaly detection for costs](https://docs.cloud.google.com/billing/docs/how-to/manage-anomalies)
+
+### Optimize costs (FinOps)
+
+Cloud Billing tools support your Financial Operations (FinOps) journey, helping you maximize business value from the cloud. Key **optimization** levers include:
+
+  * **FinOps Hub** : Discover personalized recommendations to optimize costs and track your FinOps health. [Explore the FinOps hub](https://docs.cloud.google.com/billing/docs/how-to/finops-hub).
+  * **Committed Use Discounts (CUDs)** : Receive deeply discounted prices in exchange for committing to a consistent amount of usage or spend over one or three years. Ideal for stable workloads. [Analyze your CUD effectiveness](https://docs.cloud.google.com/billing/docs/how-to/cud-analysis).
+
+
+
+## What's next
+
+  * Dive deeper into the fundamental concepts in the [Cloud Billing overview](https://docs.cloud.google.com/billing/docs/concepts).
+  * Try the [Interactive tutorials](https://docs.cloud.google.com/billing/docs/interactive-tutorials) in the Google Cloud console.
+  * [Create a billing account](https://docs.cloud.google.com/billing/docs/how-to/create-billing-account).
+  * [Monitor costs using billing reports](https://docs.cloud.google.com/billing/docs/reports).
+  * [Optimize costs with FinOps hub](https://docs.cloud.google.com/billing/docs/how-to/finops-hub).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

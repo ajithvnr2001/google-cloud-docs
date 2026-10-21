@@ -1,0 +1,65 @@
+---
+url: https://docs.cloud.google.com/spanner/docs/databoost/databoost-applications/
+title: Use Data Boost in your applications \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T01:01:25.212076+00:00
+---
+
+# Use Data Boost in your applications  |  Spanner  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/docs/databoost/databoost-applications/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Guides ](https://docs.cloud.google.com/spanner/docs/create-query-database-console)
+
+
+
+Send feedback 
+
+#  Use Data Boost in your applications Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page lists the Spanner APIs that support Spanner Data Boost and explains how to view sample code that uses Data Boost. With Data Boost, you can run large analytic queries with near-zero impact to existing workloads on the provisioned Spanner instance. 
+
+## Before you begin
+
+Ensure that the principal (for example, the service account) that runs the application has the `spanner.databases.useDataBoost` Identity and Access Management (IAM) permission. For more information, see [Access control with IAM](https://docs.cloud.google.com/spanner/docs/iam).
+
+## APIs
+
+For partitioned reads with Data Boost, the following Spanner APIs have an option to enable Data Boost:
+
+  * `ExecuteSql` [RPC](https://docs.cloud.google.com/spanner/docs/reference/rpc/google.spanner.v1#google.spanner.v1.Spanner.ExecuteSql) | [REST](https://docs.cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases.sessions/executeSql)
+  * `ExecuteStreamingSql` [RPC](https://docs.cloud.google.com/spanner/docs/reference/rpc/google.spanner.v1#google.spanner.v1.Spanner.ExecuteStreamingSql) | [REST](https://docs.cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases.sessions/executeStreamingSql)
+  * `read` [RPC](https://docs.cloud.google.com/spanner/docs/reference/rpc/google.spanner.v1#google.spanner.v1.Spanner.Read) | [REST](https://docs.cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases.sessions/read)
+  * `streamingRead` [RPC](https://docs.cloud.google.com/spanner/docs/reference/rpc/google.spanner.v1#google.spanner.v1.Spanner.StreamingRead) | [REST](https://docs.cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases.sessions/streamingRead)
+
+
+
+We recommend that you use `ExecuteStreamingSql` and `streamingRead` in your applications, because `ExecuteSql` and `read` are limited to 10 MB of data in their responses.
+
+## Sample code
+
+For examples of using Data Boost in your application code, see [Read data in parallel](https://docs.cloud.google.com/spanner/docs/reads#read_data_in_parallel).
+
+## Apache Spark SQL Connect for Google Cloud Spanner
+
+The Apache Spark SQL Connector for Google Cloud Spanner supports reading Google Cloud Spanner tables into Spark's DataFrames using the Spanner Java library. For more information about the Apacha Spark SQL Connector, see [Apache Spark SQL connector for Google Cloud Spanner](https://github.com/GoogleCloudDataproc/spark-spanner-connector).
+
+## What's next
+
+  * Learn about Data Boost in [Data Boost overview](https://docs.cloud.google.com/spanner/docs/databoost/databoost-overview).
+  * [Monitor Data Boost usage](https://docs.cloud.google.com/spanner/docs/databoost/databoost-monitor)
+  * [Monitor and manage Data Boost quota usage](https://docs.cloud.google.com/spanner/docs/databoost/databoost-quotas)
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

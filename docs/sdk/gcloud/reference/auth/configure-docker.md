@@ -1,0 +1,83 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/auth/configure-docker/
+title: gcloud auth configure-docker \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T04:36:59.659203+00:00
+---
+
+# gcloud auth configure-docker  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/auth/configure-docker/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud auth configure-docker Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud auth configure-docker - register `[gcloud](https://docs.cloud.google.com/sdk/gcloud/reference)` as a Docker credential helper 
+SYNOPSIS
+    
+
+`gcloud auth configure-docker` [`REGISTRIES`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     gcloud auth configure-docker adds the Docker `credHelper` entry to Docker's configuration file, or creates the file if it doesn't exist. This will register `[gcloud](https://docs.cloud.google.com/sdk/gcloud/reference)` as the credential helper for all Google-supported Docker registries. If the Docker configuration already contains a `credHelper` entry, it will be overwritten. 
+
+Note: `docker` and `[gcloud](https://docs.cloud.google.com/sdk/gcloud/reference)` need to be on the same system `PATH` to work correctly. 
+
+Note: This command will not work for `docker` installed via Snap, as the `docker` snap package does not currently provide an interface for credential helpers. 
+
+For more details on Docker registries, see <https://docs.docker.com/registry/>. 
+
+For more details on how to authenticate to Google Container Registry using this command, see <https://cloud.google.com/container-registry/docs/advanced-authentication#gcloud-helper>. 
+
+For more details on Google Container Registry's standalone credential helpers, see <https://github.com/GoogleCloudPlatform/docker-credential-gcr>. 
+
+For more details on Docker credential helpers, see <https://docs.docker.com/engine/reference/commandline/login/#credential-helpers>. 
+
+EXAMPLES
+     To configure docker authentication after logging into gcloud, run: 
+    
+    
+    gcloud auth configure-docker
+
+To configure docker authentication with Container Registry, e.g., `gcr.io`, run: 
+    
+    
+    gcloud auth configure-docker gcr.io
+
+POSITIONAL ARGUMENTS
+    
+
+[`REGISTRIES`]
+     The comma-separated list of registries to configure the credential helper for. Container Registry is a service for storing private container images. For available registries, see <https://cloud.google.com/container-registry/docs/pushing-and-pulling#add-registry>. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     These variants are also available: 
+    
+    
+    [gcloud alpha auth configure-docker](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/auth/configure-docker)
+    
+    
+    [gcloud beta auth configure-docker](https://docs.cloud.google.com/sdk/gcloud/reference/beta/auth/configure-docker)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

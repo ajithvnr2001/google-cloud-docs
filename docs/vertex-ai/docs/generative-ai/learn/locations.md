@@ -1,0 +1,1617 @@
+---
+url: https://docs.cloud.google.com/vertex-ai/docs/generative-ai/learn/locations/
+title: Deployments and endpoints \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T17:13:06.921938+00:00
+---
+
+# Deployments and endpoints  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/vertex-ai/docs/generative-ai/learn/locations/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+
+
+
+Send feedback 
+
+#  Deployments and endpoints Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page lists the supported locations for Google and Partner models and generative AI features on Gemini Enterprise Agent Platform. 
+
+To see supported locations for Google agents and agent infrastructure features, see [Supported locations for agents](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/agent-locations).
+
+Google and Partner models and generative AI features on Agent Platform are exposed as specific [regional endpoints](https://cloud.google.com/about/locations) and a global endpoint. Global endpoints cover the entire world and provide higher availability and reliability than single regions.
+
+**Important:** Endpoints don't guarantee data residency or in-region ML processing. For information about data residency, see [Data residency](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/data-residency).
+
+## Specify an endpoint
+
+For standard regional endpoints (such as `us-central`) and the global endpoint:
+
+### Python
+    
+    
+    # google-cloud-aiplatform >= 1.79.0 is required
+    import vertexai
+    from vertexai.generative_models import GenerativeModel
+    
+    vertexai.init(project='GOOGLE_CLOUD_PROJECT', location='GOOGLE_CLOUD_LOCATION')
+
+### Python
+    
+    
+    client = genai.Client(
+        enterprise=True,
+        project='GOOGLE_CLOUD_PROJECT',
+        location='GOOGLE_CLOUD_LOCATION'
+    )
+
+### REST
+    
+    
+    GOOGLE_CLOUD_PROJECT="GOOGLE_CLOUD_PROJECT"
+    GOOGLE_CLOUD_LOCATION="GOOGLE_CLOUD_LOCATION"
+    MODEL_ID="MODEL_ID"
+    
+    curl -X POST \
+      -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+      -H "Content-Type: application/json" \
+      "https://${GOOGLE_CLOUD_LOCATION}-aiplatform.googleapis.com/v1/projects/${GOOGLE_CLOUD_PROJECT}/locations/${GOOGLE_CLOUD_LOCATION}/publishers/google/models/${MODEL_ID}:generateContent" \
+      -d '{
+        "contents": {
+          "role": "user",
+          "parts": {
+            "text": "Explain how AI works in a few words."
+          }
+        }
+      }'
+
+**Note:** When using the global endpoint, use `https://aiplatform.googleapis.com/v1/projects/${GOOGLE_CLOUD_PROJECT}/locations/global/publishers/google/models/${MODEL_ID}:generateContent` instead of a service endpoint prepended with `https://${GOOGLE_CLOUD_LOCATION}-aiplatform.googleapis.com`. 
+
+### Multi-region endpoints
+
+Multi-region endpoints let you ensure that machine learning processing of Customer Data by the service stays within a specific jurisdictional boundary, such as the United States or the European Union.
+
+The following table lists the hostnames for multi-region endpoints:
+
+Multi-region | Location | Hostname  
+---|---|---  
+United States | `us` | `https://aiplatform.us.rep.googleapis.com`  
+European Union | `eu` | `https://aiplatform.eu.rep.googleapis.com`  
+  
+### Python
+
+**Note:** Agent Development Kit (ADK) agents automatically use the location specified when initializing the environment using `vertexai.init()` or by creating a `vertexai.Client()`. 
+    
+    
+    import vertexai
+    from google.adk.agents import Agent
+    
+    # Set the multi-region location on the client
+    client = vertexai.Client(
+        project='GOOGLE_CLOUD_PROJECT',
+        location='GOOGLE_CLOUD_LOCATION'
+    )
+    
+    # The agent will use this configuration
+    agent = Agent(
+        model="gemini-3.5-flash",
+        name='my_agent'
+    )
+
+### Python
+    
+    
+    from google import genai
+    
+    # location must be set to 'us' or 'eu' for multi-region routing
+    client = genai.Client(
+        enterprise=True,
+        project='GOOGLE_CLOUD_PROJECT',
+        location='GOOGLE_CLOUD_LOCATION'
+    )
+
+### REST
+    
+    
+    GOOGLE_CLOUD_PROJECT="GOOGLE_CLOUD_PROJECT"
+    MODEL_ID="gemini-3.5-flash"
+    GOOGLE_CLOUD_LOCATION="GOOGLE_CLOUD_LOCATION" # Must be 'us' or 'eu'
+    # Explicitly use the .rep. hostname for multi-region endpoints
+    API_ENDPOINT="https://aiplatform.${GOOGLE_CLOUD_LOCATION}.rep.googleapis.com"
+    
+    curl -X POST \
+      -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+      -H "Content-Type: application/json" \
+      "${API_ENDPOINT}/v1/projects/${GOOGLE_CLOUD_PROJECT}/locations/${GOOGLE_CLOUD_LOCATION}/publishers/google/models/${MODEL_ID}:generateContent" \
+      -d '{
+        "contents": {
+          "role": "user",
+          "parts": {
+            "text": "Explain how AI works in a few words"
+          }
+        }
+      }'
+
+#### Private connectivity to multi-region endpoints
+
+Private Google Access isn't supported for multi-region endpoints. If you attempt to connect to a multi-region endpoint using Private Google Access, you might experience connectivity issues, SSL/TLS handshake errors, or certificate mismatch warnings.
+
+To establish private connectivity to multi-region endpoints, use [Private Service Connect](https://docs.cloud.google.com/vpc/docs/private-service-connect), a Google Cloud networking capability that lets you access Google-managed services privately from within your Virtual Private Cloud (VPC) network. Depending on your organization's compliance, security, and traffic management requirements, you can choose between a direct endpoint connection or a load balancer architecture:
+
+  * **Private Service Connect endpoints** : provide a direct connection by mapping an internal IP address in your VPC network to the target multi-region endpoint. For configuration instructions, see [Access regional and multi-regional Google APIs through endpoints](https://docs.cloud.google.com/vpc/docs/access-regional-google-apis-endpoints).
+  * **Private Service Connect backends** : use a load balancer with a Private Service Connect network endpoint group (NEG) for advanced traffic management, custom TLS certificates, or policy enforcement. For configuration instructions, see [About Private Service Connect backends](https://docs.cloud.google.com/vpc/docs/private-service-connect-backends#multiregional-google-apis) and [Create a Private Service Connect backend](https://docs.cloud.google.com/vpc/docs/access-apis-managed-services-private-service-connect-backends#neg-multiregional-api).
+
+
+
+For a complete list of supported locations and hostnames, see [Regional and multi-regional service endpoints](https://docs.cloud.google.com/vpc/docs/regional-service-endpoints).
+
+## Global endpoint
+
+Selecting a global endpoint for your requests can improve overall availability and reduce resource exhausted (429) errors. Don't use the global endpoint if you have ML processing requirements, because you can't control or know which region your ML processing requests are sent to when a request is made.
+
+### Supported models
+
+To see which models support the global endpoint, check the **Global** tab in the following tables:
+
+  * Google model endpoint locations
+  * Google Cloud partner model endpoint locations
+  * Google Cloud open model endpoint locations
+
+
+
+### Limitations
+
+The following capabilities are not available when using the global endpoint:
+
+  * Tuning
+  * Batch prediction for Anthropic and OpenMaaS models
+  * Retrieval-augmented generation (RAG) corpus (RAG requests are supported)
+
+
+
+Usage of the global endpoint with Provisioned Throughput is available only for the following models:
+
+#### Click to view supported models for the global endpoint when using Provisioned Throughput
+
+Model | Latest supported model version  
+---|---  
+[Gemini 4 Argon](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon) | `gemini-4-argon`  
+[Gemini 4 Argon Cyber Permissive](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon#cyber) | `gemini-4-argon-cyber-permissive`  
+[Gemini 3.8 Flash Cyber](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-cyber) | `gemini-3.8-flash-cyber`  
+[Gemini 3.8 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash) | `gemini-3.8-flash`  
+[Gemini Omni 1.1 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash) preview | `gemini-omni-1.1-flash-preview`  
+[Gemini 3.7 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-7-flash) | `gemini-3.7-flash`  
+[Gemini 3.6 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-6-flash) | `gemini-3.6-flash`  
+[Gemini 3.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite) | `gemini-3.5-flash-lite`  
+[Gemini 3.1 Flash-Lite Image (Nano Banana 2 Lite)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite-image) | `gemini-3.1-flash-lite-image`  
+[Gemini 3 Pro Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-pro-image) | `gemini-3-pro-image`  
+[Gemini Nano Banana 2.1](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/nano-banana-2-1) | `gemini-nano-banana-2.1`  
+[Gemini 3.1 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-image) | `gemini-3.1-flash-image`  
+[Gemini 3.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash) | `gemini-3.5-flash`  
+[Gemini 3.1 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite) | `gemini-3.1-flash-lite`  
+[Gemini 3.1 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-pro) preview | `gemini-3.1-pro-preview`  
+[Gemini 3 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-flash) preview | `gemini-3-flash-preview`  
+[Gemini 2.5 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-pro) | `gemini-2.5-pro`  
+[Gemini 2.5 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-image) | `gemini-2.5-flash-image`  
+[Gemini 2.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash) | `gemini-2.5-flash`  
+[Gemini 2.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite) | `gemini-2.5-flash-lite`  
+  
+## Google model endpoint locations
+
+Google models in Agent Platform are available for the following endpoints:
+
+### Global
+
+| Global  
+(global)  
+---|---  
+Gemini models   
+[Gemini 4 Argon](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon)   
+`(gemini-4-argon)` |   
+[Gemini 4 Argon Cyber Permissive](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon#cyber)   
+`(gemini-4-argon-cyber-permissive)` |   
+[Gemini 3.8 Live](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-live)   
+`(gemini-3.8-live)` |   
+[Gemini 3.8 Flash Cyber](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-cyber)   
+`(gemini-3.8-flash-cyber)` |   
+[Gemini 3.8 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash)   
+`(gemini-3.8-flash)` |   
+[Gemini Omni 1.1 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash) preview    
+`(gemini-omni-1.1-flash-preview)` |   
+[Gemini 3.7 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-7-flash)   
+`(gemini-3.7-flash)` |   
+[Gemini 3.6 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-6-flash)   
+`(gemini-3.6-flash)` |   
+[Gemini 3.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite)   
+`(gemini-3.5-flash-lite)` |   
+[Gemini Omni Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-flash-preview) preview    
+`(gemini-omni-flash-preview)` |   
+[Gemini 3.1 Flash-Lite Image (Nano Banana 2 Lite)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite-image)   
+`(gemini-3.1-flash-lite-image)` |   
+[Gemini 3 Pro Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-pro-image)   
+`(gemini-3-pro-image)` |   
+[Gemini Nano Banana 2.1](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/nano-banana-2-1)   
+`(gemini-nano-banana-2.1)` |   
+[Gemini 3.1 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-image)   
+`(gemini-3.1-flash-image)` |   
+[Gemini 3.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash)   
+`(gemini-3.5-flash)` |   
+[Gemini 3.1 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite)   
+`(gemini-3.1-flash-lite)` |   
+[Gemini 3.1 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-pro) preview    
+`(gemini-3.1-pro-preview)` |   
+[Gemini 3 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-flash) preview    
+`(gemini-3-flash-preview)` |   
+[Gemini 2.5 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-pro)   
+`(gemini-2.5-pro)` |   
+[Gemini 2.5 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-image)   
+`(gemini-2.5-flash-image)` |   
+[Gemini 2.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash)   
+`(gemini-2.5-flash)` |   
+[Gemini 2.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite)   
+`(gemini-2.5-flash-lite)` |   
+[Gemini 2.5 Flash with Gemini Live API native audio](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-live-api)   
+`(gemini-live-2.5-flash-native-audio)` |   
+[Virtual Try-On](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/vto/virtual-try-on-001)   
+`(virtual-try-on-001)` |   
+[Gemini 3.5 Transcribe](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-transcribe)   
+`(['gemini-3.5-transcribe', 'gemini-3.5-transcribe-live'])` |   
+[Gemini 3.5 Live Translate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-live-translate) preview    
+`(['gemini-3.5-live-translate-preview'])` |   
+[Gemini 3.8 Flash TTS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-tts) preview    
+`(gemini-3.8-flash-tts)` |   
+[Gemini 3.8 Flash-Lite TTS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-lite-tts) preview    
+`(gemini-3.8-flash-lite-tts)` |   
+Embeddings models   
+[Gemini Embedding 2](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/embedding-2)   
+`(gemini-embedding-2)` |   
+Gemini Embedding   
+`(gemini-embedding-001)` |   
+Embeddings for Text  |   
+Embeddings for Multimodal  |   
+Veo on Gemini Enterprise Agent Platform models   
+[Veo 3 Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-generate-001)   
+`(veo-3.0-generate-001)` |   
+[Veo 3 Fast Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-fast-generate-001)   
+`(veo-3.0-fast-generate-001)` |   
+[Veo 3.1 Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-generate-001)   
+`(veo-3.1-generate-001)` |   
+[Veo 3.1 Fast Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-fast-generate-001)   
+`(veo-3.1-fast-generate-001)` |   
+[Veo 3.1 Lite Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-lite-generate-001-preview) preview    
+`(veo-3.1-lite-generate-001)` |   
+Speech-to-Text and Text-to-Speech models   
+[Chirp 3: Transcription](https://docs.cloud.google.com/speech-to-text/docs/models/chirp-3)   
+`(chirp_3)` |   
+[Chirp 3: HD Voices](https://docs.cloud.google.com/text-to-speech/docs/chirp3-hd) |   
+[Chirp 3: Instant Custom Voice](https://docs.cloud.google.com/text-to-speech/docs/chirp3-instant-custom-voice) |   
+[Chirp 2: Transcription](https://docs.cloud.google.com/speech-to-text/docs/models/chirp-2)   
+`(chirp_2)` |   
+Gemini 2.5 Pro TTS   
+`(gemini-2.5-pro-tts)` |   
+Gemini 2.5 Flash TTS   
+`(gemini-2.5-flash-tts)` |   
+Gemini 2.5 Flash Lite Preview TTS  preview    
+`(gemini-2.5-flash-lite-preview-tts)` |   
+  
+### Multi-region
+
+| United States multi-region  
+(us) | European Union multi-region  
+(eu)  
+---|---|---  
+Gemini models   
+[Gemini 4 Argon](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon)   
+`(gemini-4-argon)` |  |   
+[Gemini 4 Argon Cyber Permissive](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon#cyber)   
+`(gemini-4-argon-cyber-permissive)` |  |   
+[Gemini 3.8 Live](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-live)   
+`(gemini-3.8-live)` |  |   
+[Gemini 3.8 Flash Cyber](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-cyber)   
+`(gemini-3.8-flash-cyber)` |  |   
+[Gemini 3.8 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash)   
+`(gemini-3.8-flash)` |  |   
+[Gemini Omni 1.1 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash) preview    
+`(gemini-omni-1.1-flash-preview)` |  |   
+[Gemini 3.7 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-7-flash)   
+`(gemini-3.7-flash)` |  |   
+[Gemini 3.6 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-6-flash)   
+`(gemini-3.6-flash)` |  |   
+[Gemini 3.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite)   
+`(gemini-3.5-flash-lite)` |  |   
+[Gemini Omni Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-flash-preview) preview    
+`(gemini-omni-flash-preview)` |  |   
+[Gemini 3.1 Flash-Lite Image (Nano Banana 2 Lite)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite-image)   
+`(gemini-3.1-flash-lite-image)` |  |   
+[Gemini 3 Pro Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-pro-image)   
+`(gemini-3-pro-image)` |  |   
+[Gemini Nano Banana 2.1](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/nano-banana-2-1)   
+`(gemini-nano-banana-2.1)` |  |   
+[Gemini 3.1 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-image)   
+`(gemini-3.1-flash-image)` |  |   
+[Gemini 3.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash)   
+`(gemini-3.5-flash)` |  |   
+[Gemini 3.1 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite)   
+`(gemini-3.1-flash-lite)` |  |   
+[Gemini 3.1 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-pro) preview    
+`(gemini-3.1-pro-preview)` |  |   
+[Gemini 3 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-flash) preview    
+`(gemini-3-flash-preview)` |  |   
+[Gemini 2.5 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-pro)   
+`(gemini-2.5-pro)` |  |   
+[Gemini 2.5 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-image)   
+`(gemini-2.5-flash-image)` |  |   
+[Gemini 2.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash)   
+`(gemini-2.5-flash)` |  |   
+[Gemini 2.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite)   
+`(gemini-2.5-flash-lite)` |  |   
+[Gemini 2.5 Flash with Gemini Live API native audio](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-live-api)   
+`(gemini-live-2.5-flash-native-audio)` |  |   
+[Virtual Try-On](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/vto/virtual-try-on-001)   
+`(virtual-try-on-001)` |  |   
+[Gemini 3.5 Transcribe](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-transcribe)   
+`(['gemini-3.5-transcribe', 'gemini-3.5-transcribe-live'])` |  |   
+[Gemini 3.5 Live Translate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-live-translate) preview    
+`(['gemini-3.5-live-translate-preview'])` |  |   
+[Gemini 3.8 Flash TTS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-tts) preview    
+`(gemini-3.8-flash-tts)` |  |   
+[Gemini 3.8 Flash-Lite TTS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-lite-tts) preview    
+`(gemini-3.8-flash-lite-tts)` |  |   
+Embeddings models   
+[Gemini Embedding 2](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/embedding-2)   
+`(gemini-embedding-2)` |  |   
+Gemini Embedding   
+`(gemini-embedding-001)` |  |   
+Embeddings for Text  |  |   
+Embeddings for Multimodal  |  |   
+Veo on Gemini Enterprise Agent Platform models   
+[Veo 3 Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-generate-001)   
+`(veo-3.0-generate-001)` |  |   
+[Veo 3 Fast Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-fast-generate-001)   
+`(veo-3.0-fast-generate-001)` |  |   
+[Veo 3.1 Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-generate-001)   
+`(veo-3.1-generate-001)` |  |   
+[Veo 3.1 Fast Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-fast-generate-001)   
+`(veo-3.1-fast-generate-001)` |  |   
+[Veo 3.1 Lite Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-lite-generate-001-preview) preview    
+`(veo-3.1-lite-generate-001)` |  |   
+Speech-to-Text and Text-to-Speech models   
+[Chirp 3: Transcription](https://docs.cloud.google.com/speech-to-text/docs/models/chirp-3)   
+`(chirp_3)` |  |   
+[Chirp 3: HD Voices](https://docs.cloud.google.com/text-to-speech/docs/chirp3-hd) |  |   
+[Chirp 3: Instant Custom Voice](https://docs.cloud.google.com/text-to-speech/docs/chirp3-instant-custom-voice) |  |   
+[Chirp 2: Transcription](https://docs.cloud.google.com/speech-to-text/docs/models/chirp-2)   
+`(chirp_2)` |  |   
+Gemini 2.5 Pro TTS   
+`(gemini-2.5-pro-tts)` |  |   
+Gemini 2.5 Flash TTS   
+`(gemini-2.5-flash-tts)` |  |   
+Gemini 2.5 Flash Lite Preview TTS  preview    
+`(gemini-2.5-flash-lite-preview-tts)` |  |   
+  
+### United States
+
+| Oregon  
+(us-west1) | Las Vegas  
+(us-west4) | Iowa  
+(us-central1) | South Carolina  
+(us-east1) | N. Virginia  
+(us-east4) | Columbus  
+(us-east5) | Dallas  
+(us-south1)  
+---|---|---|---|---|---|---|---  
+Gemini models   
+[Gemini 4 Argon](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon)   
+`(gemini-4-argon)` |  |  |  |  |  |  |   
+[Gemini 4 Argon Cyber Permissive](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon#cyber)   
+`(gemini-4-argon-cyber-permissive)` |  |  |  |  |  |  |   
+[Gemini 3.8 Live](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-live)   
+`(gemini-3.8-live)` |  |  |  |  |  |  |   
+[Gemini 3.8 Flash Cyber](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-cyber)   
+`(gemini-3.8-flash-cyber)` |  |  |  |  |  |  |   
+[Gemini 3.8 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash)   
+`(gemini-3.8-flash)` |  |  |  |  |  |  |   
+[Gemini Omni 1.1 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash) preview    
+`(gemini-omni-1.1-flash-preview)` |  |  |  |  |  |  |   
+[Gemini 3.7 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-7-flash)   
+`(gemini-3.7-flash)` |  |  |  |  |  |  |   
+[Gemini 3.6 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-6-flash)   
+`(gemini-3.6-flash)` |  |  |  |  |  |  |   
+[Gemini 3.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite)   
+`(gemini-3.5-flash-lite)` |  |  |  |  |  |  |   
+[Gemini Omni Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-flash-preview) preview    
+`(gemini-omni-flash-preview)` |  |  |  |  |  |  |   
+[Gemini 3.1 Flash-Lite Image (Nano Banana 2 Lite)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite-image)   
+`(gemini-3.1-flash-lite-image)` |  |  |  |  |  |  |   
+[Gemini 3 Pro Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-pro-image)   
+`(gemini-3-pro-image)` |  |  |  |  |  |  |   
+[Gemini Nano Banana 2.1](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/nano-banana-2-1)   
+`(gemini-nano-banana-2.1)` |  |  |  |  |  |  |   
+[Gemini 3.1 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-image)   
+`(gemini-3.1-flash-image)` |  |  |  |  |  |  |   
+[Gemini 3.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash)   
+`(gemini-3.5-flash)` |  |  |  |  |  |  |   
+[Gemini 3.1 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite)   
+`(gemini-3.1-flash-lite)` |  |  |  |  |  |  |   
+[Gemini 3.1 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-pro) preview    
+`(gemini-3.1-pro-preview)` |  |  |  |  |  |  |   
+[Gemini 3 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-flash) preview    
+`(gemini-3-flash-preview)` |  |  |  |  |  |  |   
+[Gemini 2.5 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-pro)   
+`(gemini-2.5-pro)` |  |  |  |  |  |  |   
+[Gemini 2.5 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-image)   
+`(gemini-2.5-flash-image)` |  |  |  |  |  |  |   
+[Gemini 2.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash)   
+`(gemini-2.5-flash)` |  |  |  |  |  |  |   
+[Gemini 2.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite)   
+`(gemini-2.5-flash-lite)` |  |  |  |  |  |  |   
+[Gemini 2.5 Flash with Gemini Live API native audio](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-live-api)   
+`(gemini-live-2.5-flash-native-audio)` |  |  |  |  |  |  |   
+[Virtual Try-On](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/vto/virtual-try-on-001)   
+`(virtual-try-on-001)` |  |  |  |  |  |  |   
+[Gemini 3.5 Transcribe](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-transcribe)   
+`(['gemini-3.5-transcribe', 'gemini-3.5-transcribe-live'])` |  |  |  |  |  |  |   
+[Gemini 3.5 Live Translate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-live-translate) preview    
+`(['gemini-3.5-live-translate-preview'])` |  |  |  |  |  |  |   
+[Gemini 3.8 Flash TTS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-tts) preview    
+`(gemini-3.8-flash-tts)` |  |  |  |  |  |  |   
+[Gemini 3.8 Flash-Lite TTS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-lite-tts) preview    
+`(gemini-3.8-flash-lite-tts)` |  |  |  |  |  |  |   
+Embeddings models   
+[Gemini Embedding 2](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/embedding-2)   
+`(gemini-embedding-2)` |  |  |  |  |  |  |   
+Gemini Embedding   
+`(gemini-embedding-001)` |  |  |  |  |  |  |   
+Embeddings for Text  |  |  |  |  |  |  |   
+Embeddings for Multimodal  |  |  |  |  |  |  |   
+Veo on Gemini Enterprise Agent Platform models   
+[Veo 3 Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-generate-001)   
+`(veo-3.0-generate-001)` |  |  |  |  |  |  |   
+[Veo 3 Fast Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-fast-generate-001)   
+`(veo-3.0-fast-generate-001)` |  |  |  |  |  |  |   
+[Veo 3.1 Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-generate-001)   
+`(veo-3.1-generate-001)` |  |  |  |  |  |  |   
+[Veo 3.1 Fast Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-fast-generate-001)   
+`(veo-3.1-fast-generate-001)` |  |  |  |  |  |  |   
+[Veo 3.1 Lite Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-lite-generate-001-preview) preview    
+`(veo-3.1-lite-generate-001)` |  |  |  |  |  |  |   
+Speech-to-Text and Text-to-Speech models   
+[Chirp 3: Transcription](https://docs.cloud.google.com/speech-to-text/docs/models/chirp-3)   
+`(chirp_3)` |  |  |  |  |  |  |   
+[Chirp 3: HD Voices](https://docs.cloud.google.com/text-to-speech/docs/chirp3-hd) |  |  |  |  |  |  |   
+[Chirp 3: Instant Custom Voice](https://docs.cloud.google.com/text-to-speech/docs/chirp3-instant-custom-voice) |  |  |  |  |  |  |   
+[Chirp 2: Transcription](https://docs.cloud.google.com/speech-to-text/docs/models/chirp-2)   
+`(chirp_2)` |  |  |  |  |  |  |   
+Gemini 2.5 Pro TTS   
+`(gemini-2.5-pro-tts)` |  |  |  |  |  |  |   
+Gemini 2.5 Flash TTS   
+`(gemini-2.5-flash-tts)` |  |  |  |  |  |  |   
+Gemini 2.5 Flash Lite Preview TTS  preview    
+`(gemini-2.5-flash-lite-preview-tts)` |  |  |  |  |  |  |   
+  
+### Americas
+
+| Montréal  
+(northamerica-northeast1) | São Paulo  
+(southamerica-east1)  
+---|---|---  
+Gemini models   
+[Gemini 4 Argon](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon)   
+`(gemini-4-argon)` |  |   
+[Gemini 4 Argon Cyber Permissive](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon#cyber)   
+`(gemini-4-argon-cyber-permissive)` |  |   
+[Gemini 3.8 Live](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-live)   
+`(gemini-3.8-live)` |  |   
+[Gemini 3.8 Flash Cyber](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-cyber)   
+`(gemini-3.8-flash-cyber)` |  |   
+[Gemini 3.8 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash)   
+`(gemini-3.8-flash)` |  |   
+[Gemini Omni 1.1 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash) preview    
+`(gemini-omni-1.1-flash-preview)` |  |   
+[Gemini 3.7 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-7-flash)   
+`(gemini-3.7-flash)` |  |   
+[Gemini 3.6 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-6-flash)   
+`(gemini-3.6-flash)` |  |   
+[Gemini 3.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite)   
+`(gemini-3.5-flash-lite)` |  |   
+[Gemini Omni Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-flash-preview) preview    
+`(gemini-omni-flash-preview)` |  |   
+[Gemini 3.1 Flash-Lite Image (Nano Banana 2 Lite)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite-image)   
+`(gemini-3.1-flash-lite-image)` |  |   
+[Gemini 3 Pro Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-pro-image)   
+`(gemini-3-pro-image)` |  |   
+[Gemini Nano Banana 2.1](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/nano-banana-2-1)   
+`(gemini-nano-banana-2.1)` |  |   
+[Gemini 3.1 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-image)   
+`(gemini-3.1-flash-image)` |  |   
+[Gemini 3.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash)   
+`(gemini-3.5-flash)` |  |   
+[Gemini 3.1 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite)   
+`(gemini-3.1-flash-lite)` |  |   
+[Gemini 3.1 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-pro) preview    
+`(gemini-3.1-pro-preview)` |  |   
+[Gemini 3 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-flash) preview    
+`(gemini-3-flash-preview)` |  |   
+[Gemini 2.5 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-pro)   
+`(gemini-2.5-pro)` |  |   
+[Gemini 2.5 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-image)   
+`(gemini-2.5-flash-image)` |  |   
+[Gemini 2.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash)   
+`(gemini-2.5-flash)` |  |   
+[Gemini 2.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite)   
+`(gemini-2.5-flash-lite)` |  |   
+[Gemini 2.5 Flash with Gemini Live API native audio](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-live-api)   
+`(gemini-live-2.5-flash-native-audio)` |  |   
+[Virtual Try-On](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/vto/virtual-try-on-001)   
+`(virtual-try-on-001)` |  |   
+[Gemini 3.5 Transcribe](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-transcribe)   
+`(['gemini-3.5-transcribe', 'gemini-3.5-transcribe-live'])` |  |   
+[Gemini 3.5 Live Translate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-live-translate) preview    
+`(['gemini-3.5-live-translate-preview'])` |  |   
+[Gemini 3.8 Flash TTS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-tts) preview    
+`(gemini-3.8-flash-tts)` |  |   
+[Gemini 3.8 Flash-Lite TTS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-lite-tts) preview    
+`(gemini-3.8-flash-lite-tts)` |  |   
+Embeddings models   
+[Gemini Embedding 2](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/embedding-2)   
+`(gemini-embedding-2)` |  |   
+Gemini Embedding   
+`(gemini-embedding-001)` |  |   
+Embeddings for Text  |  |   
+Embeddings for Multimodal  |  |   
+Veo on Gemini Enterprise Agent Platform models   
+[Veo 3 Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-generate-001)   
+`(veo-3.0-generate-001)` |  |   
+[Veo 3 Fast Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-fast-generate-001)   
+`(veo-3.0-fast-generate-001)` |  |   
+[Veo 3.1 Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-generate-001)   
+`(veo-3.1-generate-001)` |  |   
+[Veo 3.1 Fast Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-fast-generate-001)   
+`(veo-3.1-fast-generate-001)` |  |   
+[Veo 3.1 Lite Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-lite-generate-001-preview) preview    
+`(veo-3.1-lite-generate-001)` |  |   
+Speech-to-Text and Text-to-Speech models   
+[Chirp 3: Transcription](https://docs.cloud.google.com/speech-to-text/docs/models/chirp-3)   
+`(chirp_3)` |  |   
+[Chirp 3: HD Voices](https://docs.cloud.google.com/text-to-speech/docs/chirp3-hd) |  |   
+[Chirp 3: Instant Custom Voice](https://docs.cloud.google.com/text-to-speech/docs/chirp3-instant-custom-voice) |  |   
+[Chirp 2: Transcription](https://docs.cloud.google.com/speech-to-text/docs/models/chirp-2)   
+`(chirp_2)` |  |   
+Gemini 2.5 Pro TTS   
+`(gemini-2.5-pro-tts)` |  |   
+Gemini 2.5 Flash TTS   
+`(gemini-2.5-flash-tts)` |  |   
+Gemini 2.5 Flash Lite Preview TTS  preview    
+`(gemini-2.5-flash-lite-preview-tts)` |  |   
+  
+### Europe
+
+| London  
+(europe-west2) | Belgium  
+(europe-west1) | Netherlands  
+(europe-west4) | Zürich  
+(europe-west6) | Frankfurt  
+(europe-west3) | Finland  
+(europe-north1) | Warsaw  
+(europe-central2) | Milan  
+(europe-west8) | Madrid  
+(europe-southwest1) | Paris  
+(europe-west9)  
+---|---|---|---|---|---|---|---|---|---|---  
+Gemini models   
+[Gemini 4 Argon](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon)   
+`(gemini-4-argon)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 4 Argon Cyber Permissive](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon#cyber)   
+`(gemini-4-argon-cyber-permissive)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3.8 Live](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-live)   
+`(gemini-3.8-live)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3.8 Flash Cyber](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-cyber)   
+`(gemini-3.8-flash-cyber)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3.8 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash)   
+`(gemini-3.8-flash)` |  |  |  |  |  |  |  |  |  |   
+[Gemini Omni 1.1 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash) preview    
+`(gemini-omni-1.1-flash-preview)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3.7 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-7-flash)   
+`(gemini-3.7-flash)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3.6 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-6-flash)   
+`(gemini-3.6-flash)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite)   
+`(gemini-3.5-flash-lite)` |  |  |  |  |  |  |  |  |  |   
+[Gemini Omni Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-flash-preview) preview    
+`(gemini-omni-flash-preview)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3.1 Flash-Lite Image (Nano Banana 2 Lite)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite-image)   
+`(gemini-3.1-flash-lite-image)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3 Pro Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-pro-image)   
+`(gemini-3-pro-image)` |  |  |  |  |  |  |  |  |  |   
+[Gemini Nano Banana 2.1](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/nano-banana-2-1)   
+`(gemini-nano-banana-2.1)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3.1 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-image)   
+`(gemini-3.1-flash-image)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash)   
+`(gemini-3.5-flash)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3.1 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite)   
+`(gemini-3.1-flash-lite)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3.1 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-pro) preview    
+`(gemini-3.1-pro-preview)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-flash) preview    
+`(gemini-3-flash-preview)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 2.5 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-pro)   
+`(gemini-2.5-pro)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 2.5 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-image)   
+`(gemini-2.5-flash-image)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 2.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash)   
+`(gemini-2.5-flash)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 2.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite)   
+`(gemini-2.5-flash-lite)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 2.5 Flash with Gemini Live API native audio](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-live-api)   
+`(gemini-live-2.5-flash-native-audio)` |  |  |  |  |  |  |  |  |  |   
+[Virtual Try-On](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/vto/virtual-try-on-001)   
+`(virtual-try-on-001)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3.5 Transcribe](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-transcribe)   
+`(['gemini-3.5-transcribe', 'gemini-3.5-transcribe-live'])` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3.5 Live Translate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-live-translate) preview    
+`(['gemini-3.5-live-translate-preview'])` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3.8 Flash TTS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-tts) preview    
+`(gemini-3.8-flash-tts)` |  |  |  |  |  |  |  |  |  |   
+[Gemini 3.8 Flash-Lite TTS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-lite-tts) preview    
+`(gemini-3.8-flash-lite-tts)` |  |  |  |  |  |  |  |  |  |   
+Embeddings models   
+[Gemini Embedding 2](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/embedding-2)   
+`(gemini-embedding-2)` |  |  |  |  |  |  |  |  |  |   
+Gemini Embedding   
+`(gemini-embedding-001)` |  |  |  |  |  |  |  |  |  |   
+Embeddings for Text  |  |  |  |  |  |  |  |  |  |   
+Embeddings for Multimodal  |  |  |  |  |  |  |  |  |  |   
+Veo on Gemini Enterprise Agent Platform models   
+[Veo 3 Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-generate-001)   
+`(veo-3.0-generate-001)` |  |  |  |  |  |  |  |  |  |   
+[Veo 3 Fast Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-fast-generate-001)   
+`(veo-3.0-fast-generate-001)` |  |  |  |  |  |  |  |  |  |   
+[Veo 3.1 Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-generate-001)   
+`(veo-3.1-generate-001)` |  |  |  |  |  |  |  |  |  |   
+[Veo 3.1 Fast Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-fast-generate-001)   
+`(veo-3.1-fast-generate-001)` |  |  |  |  |  |  |  |  |  |   
+[Veo 3.1 Lite Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-lite-generate-001-preview) preview    
+`(veo-3.1-lite-generate-001)` |  |  |  |  |  |  |  |  |  |   
+Speech-to-Text and Text-to-Speech models   
+[Chirp 3: Transcription](https://docs.cloud.google.com/speech-to-text/docs/models/chirp-3)   
+`(chirp_3)` |  |  |  |  |  |  |  |  |  |   
+[Chirp 3: HD Voices](https://docs.cloud.google.com/text-to-speech/docs/chirp3-hd) |  |  |  |  |  |  |  |  |  |   
+[Chirp 3: Instant Custom Voice](https://docs.cloud.google.com/text-to-speech/docs/chirp3-instant-custom-voice) |  |  |  |  |  |  |  |  |  |   
+[Chirp 2: Transcription](https://docs.cloud.google.com/speech-to-text/docs/models/chirp-2)   
+`(chirp_2)` |  |  |  |  |  |  |  |  |  |   
+Gemini 2.5 Pro TTS   
+`(gemini-2.5-pro-tts)` |  |  |  |  |  |  |  |  |  |   
+Gemini 2.5 Flash TTS   
+`(gemini-2.5-flash-tts)` |  |  |  |  |  |  |  |  |  |   
+Gemini 2.5 Flash Lite Preview TTS  preview    
+`(gemini-2.5-flash-lite-preview-tts)` |  |  |  |  |  |  |  |  |  |   
+  
+### Asia Pacific
+
+| Mumbai  
+(asia-south1) | Singapore  
+(asia-southeast1) | Hong Kong  
+(asia-east2) | Taiwan  
+(asia-east1) | Tokyo  
+(asia-northeast1) | Sydney  
+(australia-southeast1) | Seoul  
+(asia-northeast3)  
+---|---|---|---|---|---|---|---  
+Gemini models   
+[Gemini 4 Argon](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon)   
+`(gemini-4-argon)` |  |  |  |  |  |  |   
+[Gemini 4 Argon Cyber Permissive](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon#cyber)   
+`(gemini-4-argon-cyber-permissive)` |  |  |  |  |  |  |   
+[Gemini 3.8 Live](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-live)   
+`(gemini-3.8-live)` |  |  |  |  |  |  |   
+[Gemini 3.8 Flash Cyber](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-cyber)   
+`(gemini-3.8-flash-cyber)` |  |  |  |  |  |  |   
+[Gemini 3.8 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash)   
+`(gemini-3.8-flash)` |  |  |  |  |  |  |   
+[Gemini Omni 1.1 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash) preview    
+`(gemini-omni-1.1-flash-preview)` |  |  |  |  |  |  |   
+[Gemini 3.7 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-7-flash)   
+`(gemini-3.7-flash)` |  |  |  |  |  |  |   
+[Gemini 3.6 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-6-flash)   
+`(gemini-3.6-flash)` |  |  |  |  |  |  |   
+[Gemini 3.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite)   
+`(gemini-3.5-flash-lite)` |  |  |  |  |  |  |   
+[Gemini Omni Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-flash-preview) preview    
+`(gemini-omni-flash-preview)` |  |  |  |  |  |  |   
+[Gemini 3.1 Flash-Lite Image (Nano Banana 2 Lite)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite-image)   
+`(gemini-3.1-flash-lite-image)` |  |  |  |  |  |  |   
+[Gemini 3 Pro Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-pro-image)   
+`(gemini-3-pro-image)` |  |  |  |  |  |  |   
+[Gemini Nano Banana 2.1](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/nano-banana-2-1)   
+`(gemini-nano-banana-2.1)` |  |  |  |  |  |  |   
+[Gemini 3.1 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-image)   
+`(gemini-3.1-flash-image)` |  |  |  |  |  |  |   
+[Gemini 3.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash)   
+`(gemini-3.5-flash)` |  |  |  |  |  |  |   
+[Gemini 3.1 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite)   
+`(gemini-3.1-flash-lite)` |  |  |  |  |  |  |   
+[Gemini 3.1 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-pro) preview    
+`(gemini-3.1-pro-preview)` |  |  |  |  |  |  |   
+[Gemini 3 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-flash) preview    
+`(gemini-3-flash-preview)` |  |  |  |  |  |  |   
+[Gemini 2.5 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-pro)   
+`(gemini-2.5-pro)` |  |  |  |  |  |  |   
+[Gemini 2.5 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-image)   
+`(gemini-2.5-flash-image)` |  |  |  |  |  |  |   
+[Gemini 2.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash)   
+`(gemini-2.5-flash)` |  |  |  |  |  |  |   
+[Gemini 2.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite)   
+`(gemini-2.5-flash-lite)` |  |  |  |  |  |  |   
+[Gemini 2.5 Flash with Gemini Live API native audio](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-live-api)   
+`(gemini-live-2.5-flash-native-audio)` |  |  |  |  |  |  |   
+[Virtual Try-On](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/vto/virtual-try-on-001)   
+`(virtual-try-on-001)` |  |  |  |  |  |  |   
+[Gemini 3.5 Transcribe](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-transcribe)   
+`(['gemini-3.5-transcribe', 'gemini-3.5-transcribe-live'])` |  |  |  |  |  |  |   
+[Gemini 3.5 Live Translate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-live-translate) preview    
+`(['gemini-3.5-live-translate-preview'])` |  |  |  |  |  |  |   
+[Gemini 3.8 Flash TTS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-tts) preview    
+`(gemini-3.8-flash-tts)` |  |  |  |  |  |  |   
+[Gemini 3.8 Flash-Lite TTS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-lite-tts) preview    
+`(gemini-3.8-flash-lite-tts)` |  |  |  |  |  |  |   
+Embeddings models   
+[Gemini Embedding 2](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/embedding-2)   
+`(gemini-embedding-2)` |  |  |  |  |  |  |   
+Gemini Embedding   
+`(gemini-embedding-001)` |  |  |  |  |  |  |   
+Embeddings for Text  |  |  |  |  |  |  |   
+Embeddings for Multimodal  |  |  |  |  |  |  |   
+Veo on Gemini Enterprise Agent Platform models   
+[Veo 3 Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-generate-001)   
+`(veo-3.0-generate-001)` |  |  |  |  |  |  |   
+[Veo 3 Fast Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-fast-generate-001)   
+`(veo-3.0-fast-generate-001)` |  |  |  |  |  |  |   
+[Veo 3.1 Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-generate-001)   
+`(veo-3.1-generate-001)` |  |  |  |  |  |  |   
+[Veo 3.1 Fast Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-fast-generate-001)   
+`(veo-3.1-fast-generate-001)` |  |  |  |  |  |  |   
+[Veo 3.1 Lite Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-lite-generate-001-preview) preview    
+`(veo-3.1-lite-generate-001)` |  |  |  |  |  |  |   
+Speech-to-Text and Text-to-Speech models   
+[Chirp 3: Transcription](https://docs.cloud.google.com/speech-to-text/docs/models/chirp-3)   
+`(chirp_3)` |  |  |  |  |  |  |   
+[Chirp 3: HD Voices](https://docs.cloud.google.com/text-to-speech/docs/chirp3-hd) |  |  |  |  |  |  |   
+[Chirp 3: Instant Custom Voice](https://docs.cloud.google.com/text-to-speech/docs/chirp3-instant-custom-voice) |  |  |  |  |  |  |   
+[Chirp 2: Transcription](https://docs.cloud.google.com/speech-to-text/docs/models/chirp-2)   
+`(chirp_2)` |  |  |  |  |  |  |   
+Gemini 2.5 Pro TTS   
+`(gemini-2.5-pro-tts)` |  |  |  |  |  |  |   
+Gemini 2.5 Flash TTS   
+`(gemini-2.5-flash-tts)` |  |  |  |  |  |  |   
+Gemini 2.5 Flash Lite Preview TTS  preview    
+`(gemini-2.5-flash-lite-preview-tts)` |  |  |  |  |  |  |   
+  
+### Middle East
+
+| Tel Aviv  
+(me-west1) | Doha  
+(me-central1) | Dammam  
+(me-central2)  
+---|---|---|---  
+Gemini models   
+[Gemini 4 Argon](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon)   
+`(gemini-4-argon)` |  |  |   
+[Gemini 4 Argon Cyber Permissive](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon#cyber)   
+`(gemini-4-argon-cyber-permissive)` |  |  |   
+[Gemini 3.8 Live](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-live)   
+`(gemini-3.8-live)` |  |  |   
+[Gemini 3.8 Flash Cyber](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-cyber)   
+`(gemini-3.8-flash-cyber)` |  |  |   
+[Gemini 3.8 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash)   
+`(gemini-3.8-flash)` |  |  |   
+[Gemini Omni 1.1 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash) preview    
+`(gemini-omni-1.1-flash-preview)` |  |  |   
+[Gemini 3.7 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-7-flash)   
+`(gemini-3.7-flash)` |  |  |   
+[Gemini 3.6 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-6-flash)   
+`(gemini-3.6-flash)` |  |  |   
+[Gemini 3.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite)   
+`(gemini-3.5-flash-lite)` |  |  |   
+[Gemini Omni Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-flash-preview) preview    
+`(gemini-omni-flash-preview)` |  |  |   
+[Gemini 3.1 Flash-Lite Image (Nano Banana 2 Lite)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite-image)   
+`(gemini-3.1-flash-lite-image)` |  |  |   
+[Gemini 3 Pro Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-pro-image)   
+`(gemini-3-pro-image)` |  |  |   
+[Gemini Nano Banana 2.1](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/nano-banana-2-1)   
+`(gemini-nano-banana-2.1)` |  |  |   
+[Gemini 3.1 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-image)   
+`(gemini-3.1-flash-image)` |  |  |   
+[Gemini 3.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash)   
+`(gemini-3.5-flash)` |  |  |   
+[Gemini 3.1 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite)   
+`(gemini-3.1-flash-lite)` |  |  |   
+[Gemini 3.1 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-pro) preview    
+`(gemini-3.1-pro-preview)` |  |  |   
+[Gemini 3 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-flash) preview    
+`(gemini-3-flash-preview)` |  |  |   
+[Gemini 2.5 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-pro)   
+`(gemini-2.5-pro)` |  |  |   
+[Gemini 2.5 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-image)   
+`(gemini-2.5-flash-image)` |  |  |   
+[Gemini 2.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash)   
+`(gemini-2.5-flash)` |  |  |   
+[Gemini 2.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite)   
+`(gemini-2.5-flash-lite)` |  |  |   
+[Gemini 2.5 Flash with Gemini Live API native audio](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-live-api)   
+`(gemini-live-2.5-flash-native-audio)` |  |  |   
+[Virtual Try-On](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/vto/virtual-try-on-001)   
+`(virtual-try-on-001)` |  |  |   
+[Gemini 3.5 Transcribe](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-transcribe)   
+`(['gemini-3.5-transcribe', 'gemini-3.5-transcribe-live'])` |  |  |   
+[Gemini 3.5 Live Translate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-live-translate) preview    
+`(['gemini-3.5-live-translate-preview'])` |  |  |   
+[Gemini 3.8 Flash TTS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-tts) preview    
+`(gemini-3.8-flash-tts)` |  |  |   
+[Gemini 3.8 Flash-Lite TTS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-lite-tts) preview    
+`(gemini-3.8-flash-lite-tts)` |  |  |   
+Embeddings models   
+[Gemini Embedding 2](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/embedding-2)   
+`(gemini-embedding-2)` |  |  |   
+Gemini Embedding   
+`(gemini-embedding-001)` |  |  |   
+Embeddings for Text  |  |  |   
+Embeddings for Multimodal  |  |  |   
+Veo on Gemini Enterprise Agent Platform models   
+[Veo 3 Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-generate-001)   
+`(veo-3.0-generate-001)` |  |  |   
+[Veo 3 Fast Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-fast-generate-001)   
+`(veo-3.0-fast-generate-001)` |  |  |   
+[Veo 3.1 Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-generate-001)   
+`(veo-3.1-generate-001)` |  |  |   
+[Veo 3.1 Fast Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-fast-generate-001)   
+`(veo-3.1-fast-generate-001)` |  |  |   
+[Veo 3.1 Lite Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-lite-generate-001-preview) preview    
+`(veo-3.1-lite-generate-001)` |  |  |   
+Speech-to-Text and Text-to-Speech models   
+[Chirp 3: Transcription](https://docs.cloud.google.com/speech-to-text/docs/models/chirp-3)   
+`(chirp_3)` |  |  |   
+[Chirp 3: HD Voices](https://docs.cloud.google.com/text-to-speech/docs/chirp3-hd) |  |  |   
+[Chirp 3: Instant Custom Voice](https://docs.cloud.google.com/text-to-speech/docs/chirp3-instant-custom-voice) |  |  |   
+[Chirp 2: Transcription](https://docs.cloud.google.com/speech-to-text/docs/models/chirp-2)   
+`(chirp_2)` |  |  |   
+Gemini 2.5 Pro TTS   
+`(gemini-2.5-pro-tts)` |  |  |   
+Gemini 2.5 Flash TTS   
+`(gemini-2.5-flash-tts)` |  |  |   
+Gemini 2.5 Flash Lite Preview TTS  preview    
+`(gemini-2.5-flash-lite-preview-tts)` |  |  |   
+  
+## Google Cloud partner model endpoint locations
+
+Google serves requests from the region that you specified. For some models, Google also offers a global endpoint to improve overall availability and reduce error rates. The global endpoint can have a separate set of quotas from the regional endpoint and doesn't support data residency requirements. For more information, see [Agent Platform partner models for MaaS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/use-partner-models).
+
+Partner model endpoints for Agent Platform are available in the following regions:
+
+### Global
+
+| Global  
+(global)  
+---|---  
+Anthropic models   
+Claude Haiku 5.5 on Google Cloud  |   
+Claude Sonnet 5.5 on Google Cloud  |   
+Claude Sonnet 5 on Google Cloud  |   
+Claude Opus 5.5 on Google Cloud  |   
+Claude Opus 5 on Google Cloud  |   
+Claude Fable 5.1 on Google Cloud  |   
+Claude Fable 5 on Google Cloud  |   
+Claude Opus 4.8 on Google Cloud  |   
+Claude Opus 4.7 on Google Cloud  |   
+Claude Opus 4.6 on Google Cloud  |   
+Claude Opus 4.5 on Google Cloud  |   
+Claude Sonnet 4.6 on Google Cloud  |   
+Claude Sonnet 4.5 on Google Cloud  |   
+Claude Opus 4.1 on Google Cloud  |   
+Claude Haiku 4.5 on Google Cloud  |   
+Claude Opus 4 on Google Cloud  |   
+Claude Sonnet 4 on Google Cloud  |   
+Anthropic's Claude 3.7 Sonnet on Google Cloud  |   
+Anthropic's Claude 3.5 Haiku on Google Cloud  |   
+Anthropic's Claude 3 Haiku on Google Cloud (deprecated)  |   
+Mistral models   
+Mistral Medium 3  |   
+Mistral OCR (25.05)  |   
+Mistral Small 3.1 (25.03)  |   
+Mistral Large (24.07)  |   
+Codestral 2  |   
+Codestral (24.05)  |   
+Grok models   
+Grok 4.6  |   
+Grok 4.20 (Reasoning)  |   
+Grok 4.20 (Non-reasoning)  |   
+Grok 4.1 Fast (Reasoning)  |   
+Grok 4.1 Fast (Non-reasoning)  |   
+  
+### Multi-region
+
+| United States multi-region  
+(us) | European Union multi-region  
+(eu)  
+---|---|---  
+Anthropic models   
+Claude Haiku 5.5 on Google Cloud  |  |   
+Claude Sonnet 5.5 on Google Cloud  |  |   
+Claude Sonnet 5 on Google Cloud  |  |   
+Claude Opus 5.5 on Google Cloud  |  |   
+Claude Opus 5 on Google Cloud  |  |   
+Claude Fable 5.1 on Google Cloud  |  |   
+Claude Fable 5 on Google Cloud  |  |   
+Claude Opus 4.8 on Google Cloud  |  |   
+Claude Opus 4.7 on Google Cloud  |  |   
+Claude Opus 4.6 on Google Cloud  |  |   
+Claude Opus 4.5 on Google Cloud  |  |   
+Claude Sonnet 4.6 on Google Cloud  |  |   
+Claude Sonnet 4.5 on Google Cloud  |  |   
+Claude Opus 4.1 on Google Cloud  |  |   
+Claude Haiku 4.5 on Google Cloud  |  |   
+Claude Opus 4 on Google Cloud  |  |   
+Claude Sonnet 4 on Google Cloud  |  |   
+Anthropic's Claude 3.7 Sonnet on Google Cloud  |  |   
+Anthropic's Claude 3.5 Haiku on Google Cloud  |  |   
+Anthropic's Claude 3 Haiku on Google Cloud (deprecated)  |  |   
+Mistral models   
+Mistral Medium 3  |  |   
+Mistral OCR (25.05)  |  |   
+Mistral Small 3.1 (25.03)  |  |   
+Mistral Large (24.07)  |  |   
+Codestral 2  |  |   
+Codestral (24.05)  |  |   
+Grok models   
+Grok 4.6  |  |   
+Grok 4.20 (Reasoning)  |  |   
+Grok 4.20 (Non-reasoning)  |  |   
+Grok 4.1 Fast (Reasoning)  |  |   
+Grok 4.1 Fast (Non-reasoning)  |  |   
+  
+### United States
+
+| Oregon  
+(us-west1) | Las Vegas  
+(us-west4) | Iowa  
+(us-central1) | South Carolina  
+(us-east1) | N. Virginia  
+(us-east4) | Columbus  
+(us-east5) | Dallas  
+(us-south1)  
+---|---|---|---|---|---|---|---  
+Anthropic models   
+Claude Haiku 5.5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Sonnet 5.5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Sonnet 5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Opus 5.5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Opus 5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Fable 5.1 on Google Cloud  |  |  |  |  |  |  |   
+Claude Fable 5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Opus 4.8 on Google Cloud  |  |  |  |  |  |  |   
+Claude Opus 4.7 on Google Cloud  |  |  |  |  |  |  |   
+Claude Opus 4.6 on Google Cloud  |  |  |  |  |  |  |   
+Claude Opus 4.5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Sonnet 4.6 on Google Cloud  |  |  |  |  |  |  |   
+Claude Sonnet 4.5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Opus 4.1 on Google Cloud  |  |  |  |  |  |  |   
+Claude Haiku 4.5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Opus 4 on Google Cloud  |  |  |  |  |  |  |   
+Claude Sonnet 4 on Google Cloud  |  |  |  |  |  |  |   
+Anthropic's Claude 3.7 Sonnet on Google Cloud  |  |  |  |  |  |  |   
+Anthropic's Claude 3.5 Haiku on Google Cloud  |  |  |  |  |  |  |   
+Anthropic's Claude 3 Haiku on Google Cloud (deprecated)  |  |  |  |  |  |  |   
+Mistral models   
+Mistral Medium 3  |  |  |  |  |  |  |   
+Mistral OCR (25.05)  |  |  |  |  |  |  |   
+Mistral Small 3.1 (25.03)  |  |  |  |  |  |  |   
+Mistral Large (24.07)  |  |  |  |  |  |  |   
+Codestral 2  |  |  |  |  |  |  |   
+Codestral (24.05)  |  |  |  |  |  |  |   
+Grok models   
+Grok 4.6  |  |  |  |  |  |  |   
+Grok 4.20 (Reasoning)  |  |  |  |  |  |  |   
+Grok 4.20 (Non-reasoning)  |  |  |  |  |  |  |   
+Grok 4.1 Fast (Reasoning)  |  |  |  |  |  |  |   
+Grok 4.1 Fast (Non-reasoning)  |  |  |  |  |  |  |   
+  
+### Americas
+
+| Montréal  
+(northamerica-northeast1) | São Paulo  
+(southamerica-east1)  
+---|---|---  
+Anthropic models   
+Claude Haiku 5.5 on Google Cloud  |  |   
+Claude Sonnet 5.5 on Google Cloud  |  |   
+Claude Sonnet 5 on Google Cloud  |  |   
+Claude Opus 5.5 on Google Cloud  |  |   
+Claude Opus 5 on Google Cloud  |  |   
+Claude Fable 5.1 on Google Cloud  |  |   
+Claude Fable 5 on Google Cloud  |  |   
+Claude Opus 4.8 on Google Cloud  |  |   
+Claude Opus 4.7 on Google Cloud  |  |   
+Claude Opus 4.6 on Google Cloud  |  |   
+Claude Opus 4.5 on Google Cloud  |  |   
+Claude Sonnet 4.6 on Google Cloud  |  |   
+Claude Sonnet 4.5 on Google Cloud  |  |   
+Claude Opus 4.1 on Google Cloud  |  |   
+Claude Haiku 4.5 on Google Cloud  |  |   
+Claude Opus 4 on Google Cloud  |  |   
+Claude Sonnet 4 on Google Cloud  |  |   
+Anthropic's Claude 3.7 Sonnet on Google Cloud  |  |   
+Anthropic's Claude 3.5 Haiku on Google Cloud  |  |   
+Anthropic's Claude 3 Haiku on Google Cloud (deprecated)  |  |   
+Mistral models   
+Mistral Medium 3  |  |   
+Mistral OCR (25.05)  |  |   
+Mistral Small 3.1 (25.03)  |  |   
+Mistral Large (24.07)  |  |   
+Codestral 2  |  |   
+Codestral (24.05)  |  |   
+Grok models   
+Grok 4.6  |  |   
+Grok 4.20 (Reasoning)  |  |   
+Grok 4.20 (Non-reasoning)  |  |   
+Grok 4.1 Fast (Reasoning)  |  |   
+Grok 4.1 Fast (Non-reasoning)  |  |   
+  
+### Europe
+
+| London  
+(europe-west2) | Belgium  
+(europe-west1) | Netherlands  
+(europe-west4) | Zürich  
+(europe-west6) | Frankfurt  
+(europe-west3) | Finland  
+(europe-north1) | Warsaw  
+(europe-central2) | Milan  
+(europe-west8) | Madrid  
+(europe-southwest1) | Paris  
+(europe-west9)  
+---|---|---|---|---|---|---|---|---|---|---  
+Anthropic models   
+Claude Haiku 5.5 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Claude Sonnet 5.5 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Claude Sonnet 5 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Claude Opus 5.5 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Claude Opus 5 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Claude Fable 5.1 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Claude Fable 5 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Claude Opus 4.8 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Claude Opus 4.7 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Claude Opus 4.6 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Claude Opus 4.5 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Claude Sonnet 4.6 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Claude Sonnet 4.5 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Claude Opus 4.1 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Claude Haiku 4.5 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Claude Opus 4 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Claude Sonnet 4 on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Anthropic's Claude 3.7 Sonnet on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Anthropic's Claude 3.5 Haiku on Google Cloud  |  |  |  |  |  |  |  |  |  |   
+Anthropic's Claude 3 Haiku on Google Cloud (deprecated)  |  |  |  |  |  |  |  |  |  |   
+Mistral models   
+Mistral Medium 3  |  |  |  |  |  |  |  |  |  |   
+Mistral OCR (25.05)  |  |  |  |  |  |  |  |  |  |   
+Mistral Small 3.1 (25.03)  |  |  |  |  |  |  |  |  |  |   
+Mistral Large (24.07)  |  |  |  |  |  |  |  |  |  |   
+Codestral 2  |  |  |  |  |  |  |  |  |  |   
+Codestral (24.05)  |  |  |  |  |  |  |  |  |  |   
+Grok models   
+Grok 4.6  |  |  |  |  |  |  |  |  |  |   
+Grok 4.20 (Reasoning)  |  |  |  |  |  |  |  |  |  |   
+Grok 4.20 (Non-reasoning)  |  |  |  |  |  |  |  |  |  |   
+Grok 4.1 Fast (Reasoning)  |  |  |  |  |  |  |  |  |  |   
+Grok 4.1 Fast (Non-reasoning)  |  |  |  |  |  |  |  |  |  |   
+  
+### Asia Pacific
+
+| Mumbai  
+(asia-south1) | Singapore  
+(asia-southeast1) | Hong Kong  
+(asia-east2) | Taiwan  
+(asia-east1) | Tokyo  
+(asia-northeast1) | Sydney  
+(australia-southeast1) | Seoul  
+(asia-northeast3)  
+---|---|---|---|---|---|---|---  
+Anthropic models   
+Claude Haiku 5.5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Sonnet 5.5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Sonnet 5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Opus 5.5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Opus 5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Fable 5.1 on Google Cloud  |  |  |  |  |  |  |   
+Claude Fable 5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Opus 4.8 on Google Cloud  |  |  |  |  |  |  |   
+Claude Opus 4.7 on Google Cloud  |  |  |  |  |  |  |   
+Claude Opus 4.6 on Google Cloud  |  |  |  |  |  |  |   
+Claude Opus 4.5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Sonnet 4.6 on Google Cloud  |  |  |  |  |  |  |   
+Claude Sonnet 4.5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Opus 4.1 on Google Cloud  |  |  |  |  |  |  |   
+Claude Haiku 4.5 on Google Cloud  |  |  |  |  |  |  |   
+Claude Opus 4 on Google Cloud  |  |  |  |  |  |  |   
+Claude Sonnet 4 on Google Cloud  |  |  |  |  |  |  |   
+Anthropic's Claude 3.7 Sonnet on Google Cloud  |  |  |  |  |  |  |   
+Anthropic's Claude 3.5 Haiku on Google Cloud  |  |  |  |  |  |  |   
+Anthropic's Claude 3 Haiku on Google Cloud (deprecated)  |  |  |  |  |  |  |   
+Mistral models   
+Mistral Medium 3  |  |  |  |  |  |  |   
+Mistral OCR (25.05)  |  |  |  |  |  |  |   
+Mistral Small 3.1 (25.03)  |  |  |  |  |  |  |   
+Mistral Large (24.07)  |  |  |  |  |  |  |   
+Codestral 2  |  |  |  |  |  |  |   
+Codestral (24.05)  |  |  |  |  |  |  |   
+Grok models   
+Grok 4.6  |  |  |  |  |  |  |   
+Grok 4.20 (Reasoning)  |  |  |  |  |  |  |   
+Grok 4.20 (Non-reasoning)  |  |  |  |  |  |  |   
+Grok 4.1 Fast (Reasoning)  |  |  |  |  |  |  |   
+Grok 4.1 Fast (Non-reasoning)  |  |  |  |  |  |  |   
+  
+### Middle East
+
+| Tel Aviv  
+(me-west1) | Doha  
+(me-central1) | Dammam  
+(me-central2)  
+---|---|---|---  
+Anthropic models   
+Claude Haiku 5.5 on Google Cloud  |  |  |   
+Claude Sonnet 5.5 on Google Cloud  |  |  |   
+Claude Sonnet 5 on Google Cloud  |  |  |   
+Claude Opus 5.5 on Google Cloud  |  |  |   
+Claude Opus 5 on Google Cloud  |  |  |   
+Claude Fable 5.1 on Google Cloud  |  |  |   
+Claude Fable 5 on Google Cloud  |  |  |   
+Claude Opus 4.8 on Google Cloud  |  |  |   
+Claude Opus 4.7 on Google Cloud  |  |  |   
+Claude Opus 4.6 on Google Cloud  |  |  |   
+Claude Opus 4.5 on Google Cloud  |  |  |   
+Claude Sonnet 4.6 on Google Cloud  |  |  |   
+Claude Sonnet 4.5 on Google Cloud  |  |  |   
+Claude Opus 4.1 on Google Cloud  |  |  |   
+Claude Haiku 4.5 on Google Cloud  |  |  |   
+Claude Opus 4 on Google Cloud  |  |  |   
+Claude Sonnet 4 on Google Cloud  |  |  |   
+Anthropic's Claude 3.7 Sonnet on Google Cloud  |  |  |   
+Anthropic's Claude 3.5 Haiku on Google Cloud  |  |  |   
+Anthropic's Claude 3 Haiku on Google Cloud (deprecated)  |  |  |   
+Mistral models   
+Mistral Medium 3  |  |  |   
+Mistral OCR (25.05)  |  |  |   
+Mistral Small 3.1 (25.03)  |  |  |   
+Mistral Large (24.07)  |  |  |   
+Codestral 2  |  |  |   
+Codestral (24.05)  |  |  |   
+Grok models   
+Grok 4.6  |  |  |   
+Grok 4.20 (Reasoning)  |  |  |   
+Grok 4.20 (Non-reasoning)  |  |  |   
+Grok 4.1 Fast (Reasoning)  |  |  |   
+Grok 4.1 Fast (Non-reasoning)  |  |  |   
+  
+## Google Cloud open model endpoint locations
+
+Google serves requests from the region that you specified. For some models, Google also offers a global endpoint to improve overall availability and reduce error rates. The global endpoint can have a separate set of quotas from the regional endpoint and doesn't support data residency requirements. For more information, see [Agent Platform open models for MaaS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/maas/use-open-models).
+
+Open model endpoints for Agent Platform are available in the following regions:
+
+### Global
+
+| Global  
+(global)  
+---|---  
+Deepseek models   
+[DeepSeek-OCR](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-ocr-maas)   
+`(deepseek-ocr-maas)` |   
+[DeepSeek-V3.2](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-v3.2-maas)   
+`(deepseek-v3.2-maas)` |   
+[DeepSeek-V3.1](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-v3.1-maas)   
+`(deepseek-v3.1-maas)` |   
+[DeepSeek R1 (0528)](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-r1-0528-maas)   
+`(deepseek-r1-0528-maas)` |   
+Google models   
+[Gemma 4 26B A4B IT](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/gemma-4-26b-a4b-it-maas) experimental    
+`(gemma-4-26b-a4b-it-maas)` |   
+ZAI.org models   
+[GLM 4.7](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-4.7-maas)   
+`(glm-4.7-maas)` |   
+[GLM 5](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-5-maas)   
+`(glm-5-maas)` |   
+[GLM 5.2](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-5.2-maas) preview    
+`(glm-5.2-maas)` |   
+OpenAI models   
+[gpt-oss 120B](https://console.cloud.google.com/agent-platform/publishers/openai/model-garden/gpt-oss-120b-maas)   
+`(gpt-oss-120b-maas)` |   
+[gpt-oss 20B](https://console.cloud.google.com/agent-platform/publishers/openai/model-garden/gpt-oss-20b-maas)   
+`(gpt-oss-20b-maas)` |   
+Moonshot AI models   
+[Kimi K2 Thinking](https://console.cloud.google.com/agent-platform/publishers/moonshotai/model-garden/kimi-k2-thinking-maas)   
+`(kimi-k2-thinking-maas)` |   
+Llama models   
+Llama 3.3 70B  |   
+Llama 4 Maverick 17B-128E  |   
+Llama 4 Scout 17B-16E  |   
+MiniMax models   
+[MiniMax M2](https://console.cloud.google.com/agent-platform/publishers/minimaxai/model-garden/minimax-m2-maas)   
+`(minimax-m2-maas)` |   
+Qwen models   
+[Qwen3-Next-80B Thinking](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-next-80b-a3b-thinking-maas)   
+`(qwen3-next-80b-a3b-thinking-maas)` |   
+[Qwen3-Next-80B Instruct](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-next-80b-a3b-instruct-maas)   
+`(qwen3-next-80b-a3b-instruct-maas)` |   
+[Qwen3 Coder](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-coder-480b-a35b-instruct-maas)   
+`(qwen3-coder-480b-a35b-instruct-maas)` |   
+[Qwen3 235B](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-235b-a22b-instruct-2507-maas)   
+`(qwen3-235b-a22b-instruct-2507-maas)` |   
+e5 models   
+Multilingual E5 Small   
+`(multilingual-e5-small-maas)` |   
+Multilingual E5 Large   
+`(multilingual-e5-large-instruct-maas)` |   
+  
+### Multi-region
+
+| United States multi-region  
+(us) | European Union multi-region  
+(eu)  
+---|---|---  
+Deepseek models   
+[DeepSeek-OCR](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-ocr-maas)   
+`(deepseek-ocr-maas)` |  |   
+[DeepSeek-V3.2](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-v3.2-maas)   
+`(deepseek-v3.2-maas)` |  |   
+[DeepSeek-V3.1](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-v3.1-maas)   
+`(deepseek-v3.1-maas)` |  |   
+[DeepSeek R1 (0528)](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-r1-0528-maas)   
+`(deepseek-r1-0528-maas)` |  |   
+Google models   
+[Gemma 4 26B A4B IT](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/gemma-4-26b-a4b-it-maas) experimental    
+`(gemma-4-26b-a4b-it-maas)` |  |   
+ZAI.org models   
+[GLM 4.7](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-4.7-maas)   
+`(glm-4.7-maas)` |  |   
+[GLM 5](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-5-maas)   
+`(glm-5-maas)` |  |   
+[GLM 5.2](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-5.2-maas) preview    
+`(glm-5.2-maas)` |  |   
+OpenAI models   
+[gpt-oss 120B](https://console.cloud.google.com/agent-platform/publishers/openai/model-garden/gpt-oss-120b-maas)   
+`(gpt-oss-120b-maas)` |  |   
+[gpt-oss 20B](https://console.cloud.google.com/agent-platform/publishers/openai/model-garden/gpt-oss-20b-maas)   
+`(gpt-oss-20b-maas)` |  |   
+Moonshot AI models   
+[Kimi K2 Thinking](https://console.cloud.google.com/agent-platform/publishers/moonshotai/model-garden/kimi-k2-thinking-maas)   
+`(kimi-k2-thinking-maas)` |  |   
+Llama models   
+Llama 3.3 70B  |  |   
+Llama 4 Maverick 17B-128E  |  |   
+Llama 4 Scout 17B-16E  |  |   
+MiniMax models   
+[MiniMax M2](https://console.cloud.google.com/agent-platform/publishers/minimaxai/model-garden/minimax-m2-maas)   
+`(minimax-m2-maas)` |  |   
+Qwen models   
+[Qwen3-Next-80B Thinking](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-next-80b-a3b-thinking-maas)   
+`(qwen3-next-80b-a3b-thinking-maas)` |  |   
+[Qwen3-Next-80B Instruct](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-next-80b-a3b-instruct-maas)   
+`(qwen3-next-80b-a3b-instruct-maas)` |  |   
+[Qwen3 Coder](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-coder-480b-a35b-instruct-maas)   
+`(qwen3-coder-480b-a35b-instruct-maas)` |  |   
+[Qwen3 235B](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-235b-a22b-instruct-2507-maas)   
+`(qwen3-235b-a22b-instruct-2507-maas)` |  |   
+e5 models   
+Multilingual E5 Small   
+`(multilingual-e5-small-maas)` |  |   
+Multilingual E5 Large   
+`(multilingual-e5-large-instruct-maas)` |  |   
+  
+### United States
+
+| Oregon  
+(us-west1) | Las Vegas  
+(us-west4) | Iowa  
+(us-central1) | South Carolina  
+(us-east1) | N. Virginia  
+(us-east4) | Columbus  
+(us-east5) | Dallas  
+(us-south1)  
+---|---|---|---|---|---|---|---  
+Deepseek models   
+[DeepSeek-OCR](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-ocr-maas)   
+`(deepseek-ocr-maas)` |  |  |  |  |  |  |   
+[DeepSeek-V3.2](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-v3.2-maas)   
+`(deepseek-v3.2-maas)` |  |  |  |  |  |  |   
+[DeepSeek-V3.1](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-v3.1-maas)   
+`(deepseek-v3.1-maas)` |  |  |  |  |  |  |   
+[DeepSeek R1 (0528)](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-r1-0528-maas)   
+`(deepseek-r1-0528-maas)` |  |  |  |  |  |  |   
+Google models   
+[Gemma 4 26B A4B IT](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/gemma-4-26b-a4b-it-maas) experimental    
+`(gemma-4-26b-a4b-it-maas)` |  |  |  |  |  |  |   
+ZAI.org models   
+[GLM 4.7](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-4.7-maas)   
+`(glm-4.7-maas)` |  |  |  |  |  |  |   
+[GLM 5](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-5-maas)   
+`(glm-5-maas)` |  |  |  |  |  |  |   
+[GLM 5.2](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-5.2-maas) preview    
+`(glm-5.2-maas)` |  |  |  |  |  |  |   
+OpenAI models   
+[gpt-oss 120B](https://console.cloud.google.com/agent-platform/publishers/openai/model-garden/gpt-oss-120b-maas)   
+`(gpt-oss-120b-maas)` |  |  |  |  |  |  |   
+[gpt-oss 20B](https://console.cloud.google.com/agent-platform/publishers/openai/model-garden/gpt-oss-20b-maas)   
+`(gpt-oss-20b-maas)` |  |  |  |  |  |  |   
+Moonshot AI models   
+[Kimi K2 Thinking](https://console.cloud.google.com/agent-platform/publishers/moonshotai/model-garden/kimi-k2-thinking-maas)   
+`(kimi-k2-thinking-maas)` |  |  |  |  |  |  |   
+Llama models   
+Llama 3.3 70B  |  |  |  |  |  |  |   
+Llama 4 Maverick 17B-128E  |  |  |  |  |  |  |   
+Llama 4 Scout 17B-16E  |  |  |  |  |  |  |   
+MiniMax models   
+[MiniMax M2](https://console.cloud.google.com/agent-platform/publishers/minimaxai/model-garden/minimax-m2-maas)   
+`(minimax-m2-maas)` |  |  |  |  |  |  |   
+Qwen models   
+[Qwen3-Next-80B Thinking](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-next-80b-a3b-thinking-maas)   
+`(qwen3-next-80b-a3b-thinking-maas)` |  |  |  |  |  |  |   
+[Qwen3-Next-80B Instruct](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-next-80b-a3b-instruct-maas)   
+`(qwen3-next-80b-a3b-instruct-maas)` |  |  |  |  |  |  |   
+[Qwen3 Coder](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-coder-480b-a35b-instruct-maas)   
+`(qwen3-coder-480b-a35b-instruct-maas)` |  |  |  |  |  |  |   
+[Qwen3 235B](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-235b-a22b-instruct-2507-maas)   
+`(qwen3-235b-a22b-instruct-2507-maas)` |  |  |  |  |  |  |   
+e5 models   
+Multilingual E5 Small   
+`(multilingual-e5-small-maas)` |  |  |  |  |  |  |   
+Multilingual E5 Large   
+`(multilingual-e5-large-instruct-maas)` |  |  |  |  |  |  |   
+  
+### Americas
+
+| Montréal  
+(northamerica-northeast1) | São Paulo  
+(southamerica-east1)  
+---|---|---  
+Deepseek models   
+[DeepSeek-OCR](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-ocr-maas)   
+`(deepseek-ocr-maas)` |  |   
+[DeepSeek-V3.2](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-v3.2-maas)   
+`(deepseek-v3.2-maas)` |  |   
+[DeepSeek-V3.1](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-v3.1-maas)   
+`(deepseek-v3.1-maas)` |  |   
+[DeepSeek R1 (0528)](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-r1-0528-maas)   
+`(deepseek-r1-0528-maas)` |  |   
+Google models   
+[Gemma 4 26B A4B IT](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/gemma-4-26b-a4b-it-maas) experimental    
+`(gemma-4-26b-a4b-it-maas)` |  |   
+ZAI.org models   
+[GLM 4.7](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-4.7-maas)   
+`(glm-4.7-maas)` |  |   
+[GLM 5](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-5-maas)   
+`(glm-5-maas)` |  |   
+[GLM 5.2](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-5.2-maas) preview    
+`(glm-5.2-maas)` |  |   
+OpenAI models   
+[gpt-oss 120B](https://console.cloud.google.com/agent-platform/publishers/openai/model-garden/gpt-oss-120b-maas)   
+`(gpt-oss-120b-maas)` |  |   
+[gpt-oss 20B](https://console.cloud.google.com/agent-platform/publishers/openai/model-garden/gpt-oss-20b-maas)   
+`(gpt-oss-20b-maas)` |  |   
+Moonshot AI models   
+[Kimi K2 Thinking](https://console.cloud.google.com/agent-platform/publishers/moonshotai/model-garden/kimi-k2-thinking-maas)   
+`(kimi-k2-thinking-maas)` |  |   
+Llama models   
+Llama 3.3 70B  |  |   
+Llama 4 Maverick 17B-128E  |  |   
+Llama 4 Scout 17B-16E  |  |   
+MiniMax models   
+[MiniMax M2](https://console.cloud.google.com/agent-platform/publishers/minimaxai/model-garden/minimax-m2-maas)   
+`(minimax-m2-maas)` |  |   
+Qwen models   
+[Qwen3-Next-80B Thinking](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-next-80b-a3b-thinking-maas)   
+`(qwen3-next-80b-a3b-thinking-maas)` |  |   
+[Qwen3-Next-80B Instruct](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-next-80b-a3b-instruct-maas)   
+`(qwen3-next-80b-a3b-instruct-maas)` |  |   
+[Qwen3 Coder](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-coder-480b-a35b-instruct-maas)   
+`(qwen3-coder-480b-a35b-instruct-maas)` |  |   
+[Qwen3 235B](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-235b-a22b-instruct-2507-maas)   
+`(qwen3-235b-a22b-instruct-2507-maas)` |  |   
+e5 models   
+Multilingual E5 Small   
+`(multilingual-e5-small-maas)` |  |   
+Multilingual E5 Large   
+`(multilingual-e5-large-instruct-maas)` |  |   
+  
+### Europe
+
+| London  
+(europe-west2) | Belgium  
+(europe-west1) | Netherlands  
+(europe-west4) | Zürich  
+(europe-west6) | Frankfurt  
+(europe-west3) | Finland  
+(europe-north1) | Warsaw  
+(europe-central2) | Milan  
+(europe-west8) | Madrid  
+(europe-southwest1) | Paris  
+(europe-west9)  
+---|---|---|---|---|---|---|---|---|---|---  
+Deepseek models   
+[DeepSeek-OCR](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-ocr-maas)   
+`(deepseek-ocr-maas)` |  |  |  |  |  |  |  |  |  |   
+[DeepSeek-V3.2](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-v3.2-maas)   
+`(deepseek-v3.2-maas)` |  |  |  |  |  |  |  |  |  |   
+[DeepSeek-V3.1](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-v3.1-maas)   
+`(deepseek-v3.1-maas)` |  |  |  |  |  |  |  |  |  |   
+[DeepSeek R1 (0528)](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-r1-0528-maas)   
+`(deepseek-r1-0528-maas)` |  |  |  |  |  |  |  |  |  |   
+Google models   
+[Gemma 4 26B A4B IT](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/gemma-4-26b-a4b-it-maas) experimental    
+`(gemma-4-26b-a4b-it-maas)` |  |  |  |  |  |  |  |  |  |   
+ZAI.org models   
+[GLM 4.7](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-4.7-maas)   
+`(glm-4.7-maas)` |  |  |  |  |  |  |  |  |  |   
+[GLM 5](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-5-maas)   
+`(glm-5-maas)` |  |  |  |  |  |  |  |  |  |   
+[GLM 5.2](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-5.2-maas) preview    
+`(glm-5.2-maas)` |  |  |  |  |  |  |  |  |  |   
+OpenAI models   
+[gpt-oss 120B](https://console.cloud.google.com/agent-platform/publishers/openai/model-garden/gpt-oss-120b-maas)   
+`(gpt-oss-120b-maas)` |  |  |  |  |  |  |  |  |  |   
+[gpt-oss 20B](https://console.cloud.google.com/agent-platform/publishers/openai/model-garden/gpt-oss-20b-maas)   
+`(gpt-oss-20b-maas)` |  |  |  |  |  |  |  |  |  |   
+Moonshot AI models   
+[Kimi K2 Thinking](https://console.cloud.google.com/agent-platform/publishers/moonshotai/model-garden/kimi-k2-thinking-maas)   
+`(kimi-k2-thinking-maas)` |  |  |  |  |  |  |  |  |  |   
+Llama models   
+Llama 3.3 70B  |  |  |  |  |  |  |  |  |  |   
+Llama 4 Maverick 17B-128E  |  |  |  |  |  |  |  |  |  |   
+Llama 4 Scout 17B-16E  |  |  |  |  |  |  |  |  |  |   
+MiniMax models   
+[MiniMax M2](https://console.cloud.google.com/agent-platform/publishers/minimaxai/model-garden/minimax-m2-maas)   
+`(minimax-m2-maas)` |  |  |  |  |  |  |  |  |  |   
+Qwen models   
+[Qwen3-Next-80B Thinking](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-next-80b-a3b-thinking-maas)   
+`(qwen3-next-80b-a3b-thinking-maas)` |  |  |  |  |  |  |  |  |  |   
+[Qwen3-Next-80B Instruct](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-next-80b-a3b-instruct-maas)   
+`(qwen3-next-80b-a3b-instruct-maas)` |  |  |  |  |  |  |  |  |  |   
+[Qwen3 Coder](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-coder-480b-a35b-instruct-maas)   
+`(qwen3-coder-480b-a35b-instruct-maas)` |  |  |  |  |  |  |  |  |  |   
+[Qwen3 235B](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-235b-a22b-instruct-2507-maas)   
+`(qwen3-235b-a22b-instruct-2507-maas)` |  |  |  |  |  |  |  |  |  |   
+e5 models   
+Multilingual E5 Small   
+`(multilingual-e5-small-maas)` |  |  |  |  |  |  |  |  |  |   
+Multilingual E5 Large   
+`(multilingual-e5-large-instruct-maas)` |  |  |  |  |  |  |  |  |  |   
+  
+### Asia Pacific
+
+| Mumbai  
+(asia-south1) | Singapore  
+(asia-southeast1) | Hong Kong  
+(asia-east2) | Taiwan  
+(asia-east1) | Tokyo  
+(asia-northeast1) | Sydney  
+(australia-southeast1) | Seoul  
+(asia-northeast3)  
+---|---|---|---|---|---|---|---  
+Deepseek models   
+[DeepSeek-OCR](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-ocr-maas)   
+`(deepseek-ocr-maas)` |  |  |  |  |  |  |   
+[DeepSeek-V3.2](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-v3.2-maas)   
+`(deepseek-v3.2-maas)` |  |  |  |  |  |  |   
+[DeepSeek-V3.1](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-v3.1-maas)   
+`(deepseek-v3.1-maas)` |  |  |  |  |  |  |   
+[DeepSeek R1 (0528)](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-r1-0528-maas)   
+`(deepseek-r1-0528-maas)` |  |  |  |  |  |  |   
+Google models   
+[Gemma 4 26B A4B IT](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/gemma-4-26b-a4b-it-maas) experimental    
+`(gemma-4-26b-a4b-it-maas)` |  |  |  |  |  |  |   
+ZAI.org models   
+[GLM 4.7](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-4.7-maas)   
+`(glm-4.7-maas)` |  |  |  |  |  |  |   
+[GLM 5](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-5-maas)   
+`(glm-5-maas)` |  |  |  |  |  |  |   
+[GLM 5.2](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-5.2-maas) preview    
+`(glm-5.2-maas)` |  |  |  |  |  |  |   
+OpenAI models   
+[gpt-oss 120B](https://console.cloud.google.com/agent-platform/publishers/openai/model-garden/gpt-oss-120b-maas)   
+`(gpt-oss-120b-maas)` |  |  |  |  |  |  |   
+[gpt-oss 20B](https://console.cloud.google.com/agent-platform/publishers/openai/model-garden/gpt-oss-20b-maas)   
+`(gpt-oss-20b-maas)` |  |  |  |  |  |  |   
+Moonshot AI models   
+[Kimi K2 Thinking](https://console.cloud.google.com/agent-platform/publishers/moonshotai/model-garden/kimi-k2-thinking-maas)   
+`(kimi-k2-thinking-maas)` |  |  |  |  |  |  |   
+Llama models   
+Llama 3.3 70B  |  |  |  |  |  |  |   
+Llama 4 Maverick 17B-128E  |  |  |  |  |  |  |   
+Llama 4 Scout 17B-16E  |  |  |  |  |  |  |   
+MiniMax models   
+[MiniMax M2](https://console.cloud.google.com/agent-platform/publishers/minimaxai/model-garden/minimax-m2-maas)   
+`(minimax-m2-maas)` |  |  |  |  |  |  |   
+Qwen models   
+[Qwen3-Next-80B Thinking](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-next-80b-a3b-thinking-maas)   
+`(qwen3-next-80b-a3b-thinking-maas)` |  |  |  |  |  |  |   
+[Qwen3-Next-80B Instruct](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-next-80b-a3b-instruct-maas)   
+`(qwen3-next-80b-a3b-instruct-maas)` |  |  |  |  |  |  |   
+[Qwen3 Coder](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-coder-480b-a35b-instruct-maas)   
+`(qwen3-coder-480b-a35b-instruct-maas)` |  |  |  |  |  |  |   
+[Qwen3 235B](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-235b-a22b-instruct-2507-maas)   
+`(qwen3-235b-a22b-instruct-2507-maas)` |  |  |  |  |  |  |   
+e5 models   
+Multilingual E5 Small   
+`(multilingual-e5-small-maas)` |  |  |  |  |  |  |   
+Multilingual E5 Large   
+`(multilingual-e5-large-instruct-maas)` |  |  |  |  |  |  |   
+  
+### Middle East
+
+| Tel Aviv  
+(me-west1) | Doha  
+(me-central1) | Dammam  
+(me-central2)  
+---|---|---|---  
+Deepseek models   
+[DeepSeek-OCR](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-ocr-maas)   
+`(deepseek-ocr-maas)` |  |  |   
+[DeepSeek-V3.2](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-v3.2-maas)   
+`(deepseek-v3.2-maas)` |  |  |   
+[DeepSeek-V3.1](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-v3.1-maas)   
+`(deepseek-v3.1-maas)` |  |  |   
+[DeepSeek R1 (0528)](https://console.cloud.google.com/agent-platform/publishers/deepseek-ai/model-garden/deepseek-r1-0528-maas)   
+`(deepseek-r1-0528-maas)` |  |  |   
+Google models   
+[Gemma 4 26B A4B IT](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/gemma-4-26b-a4b-it-maas) experimental    
+`(gemma-4-26b-a4b-it-maas)` |  |  |   
+ZAI.org models   
+[GLM 4.7](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-4.7-maas)   
+`(glm-4.7-maas)` |  |  |   
+[GLM 5](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-5-maas)   
+`(glm-5-maas)` |  |  |   
+[GLM 5.2](https://console.cloud.google.com/agent-platform/publishers/zai-org/model-garden/glm-5.2-maas) preview    
+`(glm-5.2-maas)` |  |  |   
+OpenAI models   
+[gpt-oss 120B](https://console.cloud.google.com/agent-platform/publishers/openai/model-garden/gpt-oss-120b-maas)   
+`(gpt-oss-120b-maas)` |  |  |   
+[gpt-oss 20B](https://console.cloud.google.com/agent-platform/publishers/openai/model-garden/gpt-oss-20b-maas)   
+`(gpt-oss-20b-maas)` |  |  |   
+Moonshot AI models   
+[Kimi K2 Thinking](https://console.cloud.google.com/agent-platform/publishers/moonshotai/model-garden/kimi-k2-thinking-maas)   
+`(kimi-k2-thinking-maas)` |  |  |   
+Llama models   
+Llama 3.3 70B  |  |  |   
+Llama 4 Maverick 17B-128E  |  |  |   
+Llama 4 Scout 17B-16E  |  |  |   
+MiniMax models   
+[MiniMax M2](https://console.cloud.google.com/agent-platform/publishers/minimaxai/model-garden/minimax-m2-maas)   
+`(minimax-m2-maas)` |  |  |   
+Qwen models   
+[Qwen3-Next-80B Thinking](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-next-80b-a3b-thinking-maas)   
+`(qwen3-next-80b-a3b-thinking-maas)` |  |  |   
+[Qwen3-Next-80B Instruct](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-next-80b-a3b-instruct-maas)   
+`(qwen3-next-80b-a3b-instruct-maas)` |  |  |   
+[Qwen3 Coder](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-coder-480b-a35b-instruct-maas)   
+`(qwen3-coder-480b-a35b-instruct-maas)` |  |  |   
+[Qwen3 235B](https://console.cloud.google.com/agent-platform/publishers/qwen/model-garden/qwen3-235b-a22b-instruct-2507-maas)   
+`(qwen3-235b-a22b-instruct-2507-maas)` |  |  |   
+e5 models   
+Multilingual E5 Small   
+`(multilingual-e5-small-maas)` |  |  |   
+Multilingual E5 Large   
+`(multilingual-e5-large-instruct-maas)` |  |  |   
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

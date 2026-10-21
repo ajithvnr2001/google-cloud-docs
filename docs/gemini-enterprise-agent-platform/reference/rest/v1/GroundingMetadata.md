@@ -1,0 +1,291 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata/
+title: GroundingMetadata \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-15T18:02:10.467292+00:00
+---
+
+# GroundingMetadata  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ API reference ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/apis)
+
+
+
+Send feedback 
+
+#  GroundingMetadata Stay organized with collections  Save and categorize content based on your preferences. 
+
+Information about the sources that support the content of a response.
+
+When grounding is enabled, the model returns citations for claims in the response. This object contains the retrieved sources.
+
+Fields  
+  
+`webSearchQueries[]` `string` Optional. The web search queries that were used to generate the content. This field is populated only when the grounding source is Google Search. | `imageSearchQueries[]` `string` Optional. The image search queries that were used to generate the content. This field is populated only when the grounding source is Google Search with the Image Search searchType enabled. | `retrievalQueries[]` `string` Optional. The queries that were executed by the retrieval tools. This field is populated only when the grounding source is a retrieval tool, such as Agent Platform Search. | `groundingChunks[]` `object (`[GroundingChunk](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#GroundingChunk)`)` A list of supporting references retrieved from the grounding source. This field is populated when the grounding source is Google Search, Agent Platform Search, or Google Maps. | `groundingSupports[]` `object (`[GroundingSupport](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#GroundingSupport)`)` Optional. A list of grounding supports that connect the generated content to the grounding chunks. This field is populated when the grounding source is Google Search or Agent Platform Search. | `sourceFlaggingUris[]` `object (`[SourceFlaggingUri](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#SourceFlaggingUri)`)` Optional. Output only. A list of URIs that can be used to flag a place or review for inappropriate content. This field is populated only when the grounding source is Google Maps. | `searchEntryPoint` `object (`[SearchEntryPoint](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#SearchEntryPoint)`)` Optional. A web search entry point that can be used to display search results. This field is populated only when the grounding source is Google Search. | `retrievalMetadata` `object (`[RetrievalMetadata](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#RetrievalMetadata)`)` Optional. Output only. metadata related to the retrieval grounding source. | `googleMapsWidgetContextToken  
+**(deprecated)**` `string` This item is deprecated!Optional. Output only. Deprecated: The Google Maps contextual widget behavior in Grounding with Google Maps is being deprecated; this field is planned for removal and will no longer be populated once removed.A token that can be used to render a Google Maps widget with the contextual data. This field is populated only when the grounding source is Google Maps. | JSON representation  
+---  
+      
+    
+    {
+      "webSearchQueries": [
+        string
+      ],
+      "imageSearchQueries": [
+        string
+      ],
+      "retrievalQueries": [
+        string
+      ],
+      "groundingChunks": [
+        {
+          object ([GroundingChunk](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#GroundingChunk))
+        }
+      ],
+      "groundingSupports": [
+        {
+          object ([GroundingSupport](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#GroundingSupport))
+        }
+      ],
+      "sourceFlaggingUris": [
+        {
+          object ([SourceFlaggingUri](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#SourceFlaggingUri))
+        }
+      ],
+      "searchEntryPoint": {
+        object ([SearchEntryPoint](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#SearchEntryPoint))
+      },
+      "retrievalMetadata": {
+        object ([RetrievalMetadata](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#RetrievalMetadata))
+      },
+      "googleMapsWidgetContextToken": string
+    }  
+  
+## SearchEntryPoint
+
+An entry point for displaying Google Search results.
+
+A `SearchEntryPoint` is populated when the grounding source for a model's response is Google Search. It provides information that you can use to display the search results in your application.
+
+Fields  
+  
+`renderedContent` `string` Optional. An HTML snippet that can be embedded in a web page or an application's webview. This snippet displays a search result, including the title, URL, and a brief description of the search result. | `sdkBlob` `string ([bytes](https://developers.google.com/discovery/v1/type-format) format)` Optional. A base64-encoded JSON object that contains a list of search queries and their corresponding search URLs. This information can be used to build a custom search UI.A base64-encoded string. | JSON representation  
+---  
+      
+    
+    {
+      "renderedContent": string,
+      "sdkBlob": string
+    }  
+  
+## GroundingChunk
+
+A piece of evidence that supports a claim made by the model.
+
+This is used to show a citation for a claim made by the model. When grounding is enabled, the model returns a `GroundingChunk` that contains a reference to the source of the information.
+
+Fields  
+  
+`chunk_type` `Union type`  
+  
+The source of the grounding chunk, which can be from Google Search, Agent Platform Search, or Google Maps. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:
+
+`web` `object (`[Web](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#Web)`)` A grounding chunk from a web page, typically from Google Search. See the `Web` message for details. | `retrievedContext` `object (`[RetrievedContext](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#RetrievedContext)`)` A grounding chunk from a data source retrieved by a retrieval tool, such as Agent Platform Search. See the `RetrievedContext` message for details | `maps` `object (`[Maps](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#Maps)`)` A grounding chunk from Google Maps. See the `Maps` message for details. End of mutually exclusive fields. | JSON representation  
+---  
+      
+    
+    {
+    
+      // chunk_type
+      "web": {
+        object ([Web](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#Web))
+      },
+      "retrievedContext": {
+        object ([RetrievedContext](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#RetrievedContext))
+      },
+      "maps": {
+        object ([Maps](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#Maps))
+      }
+      // Union type
+    }  
+  
+## Web
+
+A `Web` chunk is a piece of evidence that comes from a web page. It contains the URI of the web page, the title of the page, and the domain of the page. This is used to provide the user with a link to the source of the information.
+
+Fields  
+  
+`uri` `string` The URI of the web page that contains the evidence. | `title` `string` The title of the web page that contains the evidence. | `domain` `string` The domain of the web page that contains the evidence. This can be used to filter out low-quality sources. | JSON representation  
+---  
+      
+    
+    {
+      "uri": string,
+      "title": string,
+      "domain": string
+    }  
+  
+## RetrievedContext
+
+Context retrieved from a data source to ground the model's response. This is used when a retrieval tool fetches information from a user-provided corpus or a public dataset.
+
+Fields  
+  
+`context_details` `Union type`  
+  
+Provides tool-specific details about the retrieved context. This allows for different types of retrieval tools to return their own specific metadata. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:
+
+`ragChunk` `object (`[RagChunk](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/RagChunk)`)` Additional context for a Retrieval-Augmented Generation (RAG) retrieval result. This is populated only when the RAG retrieval tool is used. End of mutually exclusive fields. | `uri` `string` The URI of the retrieved data source. | `title` `string` The title of the retrieved data source. | `text` `string` The content of the retrieved data source. | `documentName` `string` Output only. The full resource name of the referenced Agent Platform Search document. This is used to identify the specific document that was retrieved. The format is `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}/branches/{branch}/documents/{document}`. | JSON representation  
+---  
+      
+    
+    {
+    
+      // context_details
+      "ragChunk": {
+        object ([RagChunk](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/RagChunk))
+      }
+      // Union type
+      "uri": string,
+      "title": string,
+      "text": string,
+      "documentName": string
+    }  
+  
+## Maps
+
+A `Maps` chunk is a piece of evidence that comes from Google Maps, containing information about places or routes. This is used to provide the user with rich, location-based information.
+
+Fields  
+  
+`placeAnswerSources` `object (`[PlaceAnswerSources](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#PlaceAnswerSources)`)` The sources that were used to generate the place answer. This includes review snippets and photos that were used to generate the answer, as well as URIs to flag content. | `uri` `string` The URI of the place. | `title` `string` The title of the place. | `text` `string` The text of the place answer. | `placeId` `string` This Place's resource name, in `places/{placeId}` format. This can be used to look up the place in the Google Maps API. | JSON representation  
+---  
+      
+    
+    {
+      "placeAnswerSources": {
+        object ([PlaceAnswerSources](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#PlaceAnswerSources))
+      },
+      "uri": string,
+      "title": string,
+      "text": string,
+      "placeId": string
+    }  
+  
+## PlaceAnswerSources
+
+The sources that were used to generate the place answer. This includes review snippets and photos that were used to generate the answer, as well as URIs to flag content.
+
+Fields  
+  
+`reviewSnippets[]` `object (`[ReviewSnippet](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#ReviewSnippet)`)` Snippets of reviews that were used to generate the answer. | JSON representation  
+---  
+      
+    
+    {
+      "reviewSnippets": [
+        {
+          object ([ReviewSnippet](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#ReviewSnippet))
+        }
+      ]
+    }  
+  
+## ReviewSnippet
+
+A review snippet that is used to generate the answer.
+
+Fields  
+  
+`reviewId` `string` The id of the review that is being referenced. | `googleMapsUri` `string` A link to show the review on Google Maps. | `title` `string` The title of the review. | JSON representation  
+---  
+      
+    
+    {
+      "reviewId": string,
+      "googleMapsUri": string,
+      "title": string
+    }  
+  
+## GroundingSupport
+
+A collection of supporting references for a segment or part of the model's response.
+
+Fields  
+  
+`groundingChunkIndices[]` `integer` A list of indices into the `groundingChunks` field of the `GroundingMetadata` message. These indices specify which grounding chunks support the claim made in the content segment.For example, if this field has the values `[1, 3]`, it means that `groundingChunks[1]` and `groundingChunks[3]` are the sources for the claim in the content segment. | `confidenceScores[]` `number` The confidence scores for the support references. This list is parallel to the `groundingChunkIndices` list. A score is a value between 0.0 and 1.0, with a higher score indicating a higher confidence that the reference supports the claim.For Gemini 2.0 and before, this list has the same size as `groundingChunkIndices`. For Gemini 2.5 and later, this list is empty and should be ignored. | `renderedParts[]` `integer` Indices into the `renderedParts` field of the `GroundingMetadata` message. These indices specify which rendered parts are associated with this support message. | `segment` `object (`[Segment](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#Segment)`)` The content segment that this support message applies to. | JSON representation  
+---  
+      
+    
+    {
+      "groundingChunkIndices": [
+        integer
+      ],
+      "confidenceScores": [
+        number
+      ],
+      "renderedParts": [
+        integer
+      ],
+      "segment": {
+        object ([Segment](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/GroundingMetadata#Segment))
+      }
+    }  
+  
+## Segment
+
+A segment of the content.
+
+Fields  
+  
+`partIndex` `integer` Output only. The index of the `Part` object that this segment belongs to. This is useful for associating the segment with a specific part of the content. | `startIndex` `integer` Output only. The start index of the segment in the `Part`, measured in bytes. This marks the beginning of the segment and is inclusive, meaning the byte at this index is the first byte of the segment. | `endIndex` `integer` Output only. The end index of the segment in the `Part`, measured in bytes. This marks the end of the segment and is exclusive, meaning the segment includes content up to, but not including, the byte at this index. | `text` `string` Output only. The text of the segment. | JSON representation  
+---  
+      
+    
+    {
+      "partIndex": integer,
+      "startIndex": integer,
+      "endIndex": integer,
+      "text": string
+    }  
+  
+## RetrievalMetadata
+
+metadata related to the retrieval grounding source. This is part of the `GroundingMetadata` returned when grounding is enabled.
+
+Fields  
+  
+`googleSearchDynamicRetrievalScore` `number` Optional. A score indicating how likely it is that a Google Search query could help answer the prompt. The score is in the range of `[0, 1]`. A score of 1 means the model is confident that a search will be helpful, and 0 means it is not. This score is populated only when Google Search grounding and dynamic retrieval are enabled. The score is used to determine whether to trigger a search. | JSON representation  
+---  
+      
+    
+    {
+      "googleSearchDynamicRetrievalScore": number
+    }  
+  
+## SourceFlaggingUri
+
+A URI that can be used to flag a place or review for inappropriate content. This is populated only when the grounding source is Google Maps.
+
+Fields  
+  
+`sourceId` `string` The id of the place or review. | `flagContentUri` `string` The URI that can be used to flag the content. | JSON representation  
+---  
+      
+    
+    {
+      "sourceId": string,
+      "flagContentUri": string
+    }  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-09-01 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-09-01 UTC."],[],[]] 

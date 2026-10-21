@@ -1,0 +1,269 @@
+---
+url: https://docs.cloud.google.com/chronicle/docs/investigation/udm-search-best-practices/
+title: Search best practices \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T13:29:13.618789+00:00
+---
+
+# Search best practices  |  Google Security Operations  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/chronicle/docs/investigation/udm-search-best-practices/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Security ](https://docs.cloud.google.com/docs/security)
+  * [ Google Security Operations ](https://docs.cloud.google.com/chronicle/docs)
+  * [ Guides ](https://docs.cloud.google.com/chronicle/docs/secops/secops-overview)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Search best practices
+
+Supported in:
+
+Google SecOps  [ SIEM ](https://docs.cloud.google.com/chronicle/docs/secops/google-secops-siem-toc)
+
+This document describes Google's recommended best practices for using the [**Search**](https://docs.cloud.google.com/chronicle/docs/investigation/udm-search) feature in Google Security Operations. Searches can require substantial computational resources if they're not carefully constructed. Performance also varies depending on the size and complexity of the data in your Google SecOps instance.
+
+**Note:** For raw log searches, the **Search** field is limited to 150 characters.
+
+## Use specific filters in queries for maximum speed and performance
+
+The single most effective way to improve search performance is to build queries using specific, optimized Unified Data Model (UDM) fields. These fields are optimized for fast retrieval, ensuring that your searches run quickly and use fewer computational resources.
+
+The following sections list the high-performance UDM fields to use as filters in your queries.
+
+### Metadata fields
+
+  * `metadata.event_timestamp.seconds`
+  * `metadata.event_type`
+  * `metadata.log_type`
+  * `metadata.product_event_type`
+  * `metadata.product_name`
+  * `metadata.vendor_name`
+
+
+
+### Principal fields
+
+  * `principal.application`
+  * `principal.asset_id`
+  * `principal.file.md5`
+  * `principal.file.sha1`
+  * `principal.file.sha256`
+  * `principal.hostname`
+  * `principal.ip`
+  * `principal.mac`
+  * `principal.process.file.md5`
+  * `principal.process.file.sha1`
+  * `principal.process.file.sha256`
+  * `principal.process.pid`
+  * `principal.user.email_addresses`
+  * `principal.user.userid`
+
+
+
+### Source fields
+
+  * `src.asset_id`
+  * `src.hostname`
+  * `src.ip`
+  * `src.mac`
+  * `src.user.userid`
+
+
+
+### Target fields
+
+  * `target.application`
+  * `target.asset_id`
+  * `target.file.md5`
+  * `target.file.sha1`
+  * `target.file.sha256`
+  * `target.hostname`
+  * `target.ip`
+  * `target.mac`
+  * `target.process.file.md5`
+  * `target.process.file.sha1`
+  * `target.process.file.sha256`
+  * `target.user.email_addresses`
+  * `target.user.employee_id`
+  * `target.user.userid`
+  * `target.user.windows_sid`
+
+
+
+### Network fields
+
+  * `network.dhcp.chaddr`
+  * `network.dhcp.ciaddr`
+  * `network.dhcp.client_hostname`
+  * `network.dhcp.yiaddr`
+  * `network.dns.answers.class`
+  * `network.dns.answers.name`
+  * `network.dns.answers.type`
+  * `network.dns.questions.class`
+  * `network.dns.questions.name`
+  * `network.dns.questions.type`
+  * `network.email.from`
+  * `network.email.to`
+  * `network.http.method`
+
+
+
+### Security result fields
+
+  * `security_result.action`
+  * `security_result.category`
+  * `security_result.rule_name`
+
+
+
+## How to query entity and context data
+
+If you search for entity or context log types (such as `AZURE_AD_CONTEXT` or `WORKSPACE_USERS`) using `metadata.log_type = "<LOG_TYPE>"`, the search returns no results even if raw logs are visible in Raw Log Search. This is because UDM search only queries UDM event records.
+
+To search for entity and context data, use the `graph` syntax:
+
+  * To search for entity or context log type, query the `graph` metadata fields. For example: 
+
+`graph.metadata.event_metadata.log_type = "<LOG_TYPE>"`
+
+  * To search for entity fields, use the prefix `graph.entity.noun.field`. For example: 
+
+`graph.entity.user.email_addresses = "foo_email"`
+
+
+
+
+For more information, see [Conduct a search for entity context data](https://docs.cloud.google.com/chronicle/docs/investigation/entity-context-in-search).
+
+## Construct effective search queries for performance
+
+Writing optimized queries is key to maximize speed and minimize resource consumption across your security data. All query conditions must strictly adhere to this fundamental structure:
+
+`udm-field operator value`
+
+For example: `principal.hostname = "win-server"`
+
+**Note:** The more focused and precise your query, the faster it runs and the less compute resources it requires.
+
+## Narrow the time range for your search
+
+Because Google SecOps can ingest a large amount of data during a search, minimizing the time range and narrowing the scope of your query can improve search performance.
+
+## Use regular expressions in search query
+
+You can use standard logical and comparison operators when constructing your UDM search queries to build complex expressions:
+
+  * **Logical operators** : Use `AND`, `OR`, and `NOT` to combine conditions. `AND` is assumed if you omit an operator between two conditions.
+  * **Operator precedence** : Use parentheses () to override the default order of precedence. There is a maximum limit of 169 logical operators (`OR`, `AND`, `NOT`) that you can use within parentheses.
+  * **Comparison operators** : Depending on the UDM field type (string, integer, timestamp), field operators can include: `=`, `!=`, `>=`, `>`, `<`, `<=`
+
+
+
+Google SecOps uses the RE2 regular expression engine.
+
+**Note:** For predictable performance, the RE2 engine intentionally omits certain advanced features, such as lookahead and lookbehind assertions. For more information, see [RE2 syntax](https://github.com/google/re2/wiki/Syntax).
+
+Alternatively, for efficient searching of a large set of values, you can use the [reference lists](https://docs.cloud.google.com/chronicle/docs/reference/reference-lists).
+
+**Note:** Queries that contain multiple regular expressions may take longer to complete.
+
+## Use `nocase` as a search modifier
+
+You can append the `nocase` modifier to a string comparison condition to make the search case-insensitive, which ignores capitalization.
+
+For example, the following search ignores the case and matches all combinations that contain `tim.smith` regardless of the case:
+
+`target.user.userid = "TIM.SMITH" nocase`
+
+## Avoid using regular expressions in enumerated fields
+
+You can't use regular expressions when searching enumerated fields (fields with a range of predefined values) like `metadata.event_type` or `network.ip_protocol`
+
+The following example is an invalid search: `metadata.event_type = /NETWORK_*/`
+
+Whereas, the following example is a valid search: `(metadata.event_type = "NETWORK_CONNECTION"` or `metadata.event_type = "NETWORK_DHCP")`
+
+**Note:** To search for multiple enumerated values, you must explicitly list each value with the `OR` operator." See the preceding query for example.
+
+## Use any and all operators in the Events field
+
+In **Search** , some UDM fields (like `principal.ip` or `target.file.md5`) are labeled as **repeated** , because they can hold a list of values or message types within a single event. Repeated fields are always treated with the `any` operator by default (there's no option to specify `all`).
+
+When the `any` operator is used, the predicate is evaluated as `true` if any value in the repeated field satisfies the condition. For example, if you search for `principal.ip != "1.2.3.4"` and events in your search include both `principal.ip = "1.2.3.4"` and `principal.ip = "5.6.7.8"`, a match is generated. This expands your search to include results that match any of the operators instead of matching all of them.
+
+Each element in the repeated field is treated individually. If the repeated field is found in events in the search, the events are evaluated for each element in the field. This can cause unexpected behavior, especially when searching using the `!=` operator. 
+
+When using the `any` operator, the predicate is evaluated as `true` if any value in the repeated field satisfies the condition.
+
+## Use Unix epoch time for timestamps or use YARA-L functions for date conversion
+
+Timestamp fields are matched using Unix epoch time (the total number of seconds that have passed since Thursday, 1 January 1970 00:00:00 UTC), or you can use YARA-L functions for date conversion.
+
+When searching for a specific timestamp, the following (in epoch time) is valid:
+
+`metadata.ingested_timestamp.seconds = 1660784400`
+
+The following timestamp is invalid:
+
+`metadata.ingested_timestamp = "2022-08-18T01:00:00Z"`
+
+When searching for a specific timestamp, the following (using a YARA-L function for date conversion) is valid:
+    
+    
+    metadata.event_type = "NETWORK_CONNECTION"
+    timestamp.get_date(metadata.ingested_timestamp.seconds) = "2026-03-15"
+    
+
+The following YARA-L example uses `timestamp` functions to check for ingestion time ranges:
+    
+    
+    metadata.event_type = "NETWORK_CONNECTION"
+    $date = timestamp.get_date(metadata.ingested_timestamp.seconds)
+    $date > "2026-03-15" AND $date < "2026-03-17"
+    
+
+## How to query newly ingested data with older timestamps
+
+You can't search newly ingested events that have an older timestamp unless you specify the event time range to query. This is because the time range is based on the timestamp of the parsed event, as opposed to the ingestion timestamp of the raw log event.
+
+To search UDM events for ingested logs with older event timestamps, you can use [**All time**](https://docs.cloud.google.com/chronicle/docs/investigation/udm-search#perform_all-time_searches) option to search and query over `metadata.ingested_timestamp`. 
+
+**Note:** It's not possible to map the ingestion time with the search time range.
+
+## Excluded fields from filters
+
+The following fields are intentionally excluded from search filters:
+
+  * `metadata.id`
+  * `metadata.product_log_id`
+  * `*.timestamp`
+
+
+
+Although these fields contain important metadata, their unique values introduce high cardinality and variance in the statistics, which negatively impacts search performance.
+
+## Troubleshooting
+
+If you receive a generic error message, such as "Error: Search has encountered an error and couldn't load data", take the following steps to resolve the issue. If the error persists, contact [Customer Support](https://console.cloud.google.com/support).
+
+  * Connect to Google SecOps from a different network. For example, use a cloud VM to help identify any network issues.
+  * Make sure Chronicle API calls are allowed by your organization's firewall or proxy configuration or policy.
+  * Verify that no data limit is configured for Search API calls, as searches can return large datasets.
+  * Search queries can run asynchronously and might require more time to return data. You can view previously run searches in the search history and select them to view the results later.
+
+
+
+**Need more help?** [Get answers from Community members and Google SecOps professionals.](https://security.googlecloudcommunity.com/)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

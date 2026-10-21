@@ -1,0 +1,92 @@
+---
+url: https://docs.cloud.google.com/migrate/containers/docs/deploy-linux-application-container/
+title: Deploy a Linux application container \u00a0|\u00a0 Migrate to Containers \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T07:59:33.479594+00:00
+---
+
+# Deploy a Linux application container  |  Migrate to Containers  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/migrate/containers/docs/deploy-linux-application-container/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Migration ](https://docs.cloud.google.com/docs/migration)
+  * [ Migrate to Containers ](https://docs.cloud.google.com/migrate/containers/docs)
+  * [ Guides ](https://docs.cloud.google.com/migrate/containers/docs/getting-started)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Deploy a Linux application container
+
+This page describes how to prepare your cluster for deployment, and how to deploy your Linux application containers using Skaffold.
+
+**Note:** Using Skaffold is the recommended approach, but is not required. You can also build directly with [`docker build`](https://docs.docker.com/build/) and apply the changes with [`kubectl`](https://kubernetes.io/docs/reference/kubectl/).
+
+Skaffold handles the workflow for building, pushing, and deploying your application. Linux, Tomcat, WebSphere, JBoss, Apache, and WordPress support Skaffold artifact creation by default.
+
+If you use Cloud Shell, Skaffold is already installed. If you need to install Skaffold, see [Installing Skaffold](https://skaffold.dev/docs/install/).
+
+## Before you begin
+
+  * Complete the migration and have the resulting generated artifacts.
+  * Create the cluster where you want to deploy your workload. For more information, see: 
+    * [Creating a zonal cluster](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/creating-a-zonal-cluster)
+    * [Creating a regional cluster](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/creating-a-regional-cluster)
+    * [Creating an Autopilot cluster](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/creating-an-autopilot-cluster)
+  * [Set up `kubectl` and connect to the cluster](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl).
+
+
+
+## Choose and set up your Docker registry
+
+As part of your deployment, you build and upload the Docker image of your container to a Docker registry.
+
+For the Docker registry you can choose to use:
+
+  * Artifact Registry
+
+  * Any Docker registry that supports basic authentication
+
+
+
+
+The recommended solution is to use [Artifact Registry](https://docs.cloud.google.com/artifact-registry) in the same project of the deployment cluster. GKE can access the registry by default. For more information, see the [requirements to integrate with GKE](https://docs.cloud.google.com/artifact-registry/docs/integrate-gke#requirements).
+
+If you want to use you a private Docker registry, learn [how to configure the registry](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).
+
+## Use Skaffold with Linux-based workloads
+
+The `skaffold.yaml` file is at the root folder of the generated artifacts. To learn how to edit the `skaffold.yaml` file, see the [Skaffold file reference](https://skaffold.dev/docs/references/yaml/).
+
+To build and deploy your container, from the root folder of the generated artifacts, run the following command:
+    
+    
+    skaffold run -d REPOSITORY_PATH
+    
+
+Replace REPOSITORY_PATH with the path to your artifact repository. For example, `us-central1-docker.pkg.dev/PROJECT_ID/REPOSITORY_NAME`.
+
+This command builds the image, uploads it to the selected repository, and then deploys it to the default cluster.
+
+To run Skaffold while building using Cloud Build, use the following command:
+    
+    
+    skaffold run -d REPOSITORY_PATH -p cloudbuild
+    
+
+## What's next
+
+  * Learn how to [monitor migrated workloads](https://docs.cloud.google.com/migrate/containers/docs/monitoring-migrated-workloads).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-09 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 

@@ -1,0 +1,160 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/dataplex/assets/update/
+title: gcloud alpha dataplex assets update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T22:17:32.291001+00:00
+---
+
+# gcloud alpha dataplex assets update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/dataplex/assets/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha dataplex assets update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha dataplex assets update - update a Dataplex asset resource 
+SYNOPSIS
+    
+
+`gcloud alpha dataplex assets update` (`ASSET` : `--lake`=`LAKE` `--location`=`LOCATION` `--zone`=`ZONE`) [`--async`] [`--description`=`DESCRIPTION`] [`--display-name`=`DISPLAY_NAME`] [`--labels`=[`KEY`=`VALUE`,…]] [`--resource-read-access-mode`=`RESOURCE_READ_ACCESS_MODE`] [`--validate-only`] [`--[no-]discovery-enabled` `--discovery-exclude-patterns`=[`EXCLUDE_PATTERNS`,…] `--discovery-include-patterns`=[`INCLUDE_PATTERNS`,…] `--discovery-schedule`=`DISCOVERY_SCHEDULE` `--csv-delimiter`=`CSV_DELIMITER` `--[no-]csv-disable-type-inference` `--csv-encoding`=`CSV_ENCODING` `--csv-header-rows`=`CSV_HEADER_ROWS` `--[no-]json-disable-type-inference` `--json-encoding`=`JSON_ENCODING`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` Update a Dataplex asset resource. 
+EXAMPLES
+     To update a Dataplex asset `test-asset` in zone `test-zone` in lake `test-lake` in location `us-central1` to have the display name `first-dataplex-asset` and discovery include patterns `abc`, `def`, run: 
+    
+    
+    gcloud alpha dataplex assets update test-asset --location=us-central1 --lake=test-lake --zone=test-zone --display-name="first-dataplex-asset" --discovery-include-patterns=abc,def
+
+POSITIONAL ARGUMENTS
+    
+
+Assets resource - Arguments and flags that define the Dataplex asset you want to update. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `asset` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`ASSET`
+     ID of the assets or fully qualified identifier for the assets. 
+
+To set the `asset` attribute: 
+
+  * provide the argument `asset` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--lake`=`LAKE`
+     The identifier of the Dataplex lake resource. 
+
+To set the `lake` attribute: 
+
+  * provide the argument `asset` on the command line with a fully specified name; 
+  * provide the argument `--lake` on the command line. 
+
+
+`--location`=`LOCATION`
+     The location of the Dataplex resource. 
+
+To set the `location` attribute: 
+
+  * provide the argument `asset` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `dataplex/location`. 
+
+
+`--zone`=`ZONE`
+     The identifier of the Dataplex zone resource. 
+
+To set the `zone` attribute: 
+
+  * provide the argument `asset` on the command line with a fully specified name; 
+  * provide the argument `--zone` on the command line. 
+
+
+FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--description`=`DESCRIPTION`
+     Description of the asset 
+`--display-name`=`DISPLAY_NAME`
+     Display Name 
+`--labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to add. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+Specification of the resource that is referenced by this asset. 
+`--resource-read-access-mode`=`RESOURCE_READ_ACCESS_MODE`
+     Read access mode. `RESOURCE_READ_ACCESS_MODE` must be one of: 
+
+`DIRECT`
+     Data is accessed directly using storage APIs 
+`MANAGED`
+     Data is accessed through a managed interface using BigQuery APIs. 
+`--validate-only`
+     Validate the update action, but don't actually perform it. 
+Settings to manage the metadata discovery and publishing. 
+`--[no-]discovery-enabled`
+     Whether discovery is enabled. Use `--discovery-enabled` to enable and `--no-discovery-enabled` to disable. 
+`--discovery-exclude-patterns`=[`EXCLUDE_PATTERNS`,…]
+     The list of patterns to apply for selecting data to exclude during discovery. For Cloud Storage bucket assets, these are interpreted as glob patterns used to match object names. For BigQuery dataset assets, these are interpreted as patterns to match table names. 
+`--discovery-include-patterns`=[`INCLUDE_PATTERNS`,…]
+     The list of patterns to apply for selecting data to include during discovery if only a subset of the data should considered. For Cloud Storage bucket assets, these are interpreted as glob patterns used to match object names. For BigQuery dataset assets, these are interpreted as patterns to match table names. 
+Determines when discovery jobs are triggered. 
+`--discovery-schedule`=`DISCOVERY_SCHEDULE`
+     [Cron schedule](https://en.wikipedia.org/wiki/Cron) for running discovery jobs periodically. Discovery jobs must be scheduled at least 30 minutes apart. 
+Describe data formats. 
+Describe CSV and similar semi-structured data formats. 
+`--csv-delimiter`=`CSV_DELIMITER`
+     The delimiter being used to separate values. This defaults to ','. 
+`--[no-]csv-disable-type-inference`
+     Whether to disable the inference of data type for CSV data. If true, all columns will be registered as strings. Use `--csv-disable-type-inference` to enable and `--no-csv-disable-type-inference` to disable. 
+`--csv-encoding`=`CSV_ENCODING`
+     The character encoding of the data. The default is UTF-8. 
+`--csv-header-rows`=`CSV_HEADER_ROWS`
+     The number of rows to interpret as header rows that should be skipped when reading data rows. 
+Describe JSON data format. 
+`--[no-]json-disable-type-inference`
+     Whether to disable the inference of data type for Json data. If true, all columns will be registered as their primitive types (strings, number or boolean). Use `--json-disable-type-inference` to enable and `--no-json-disable-type-inference` to disable. 
+`--json-encoding`=`JSON_ENCODING`
+     The character encoding of the data. The default is UTF-8. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. This variant is also available: 
+    
+    
+    [gcloud dataplex assets update](https://docs.cloud.google.com/sdk/gcloud/reference/dataplex/assets/update)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

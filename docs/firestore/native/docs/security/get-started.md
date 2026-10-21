@@ -1,0 +1,221 @@
+---
+url: https://docs.cloud.google.com/firestore/native/docs/security/get-started/
+title: Getting started with security rules \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-17T10:24:58.144802+00:00
+---
+
+# Getting started with security rules  |  Firestore in Native mode  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/firestore/native/docs/security/get-started/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Firestore in Native mode ](https://docs.cloud.google.com/firestore/native/docs)
+  * [ Guides ](https://docs.cloud.google.com/firestore/native/docs/create-database-server-client-library)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Getting started with security rules
+
+With Firestore Security Rules, you can focus on building a great user experience without having to manage infrastructure or write server-side authentication and authorization code.
+
+Security rules provide access control and data validation in a simple yet expressive format. To build user-based and role-based access systems that keep your users' data safe, you need to use [Firebase Authentication](https://firebase.google.com/docs/auth/) with Firestore Security Rules.
+
+**Note:** The server client libraries bypass all Firestore Security Rules and instead authenticate through [Google Application Default Credentials](https://cloud.google.com/docs/authentication/production). If you're using the server client libraries or the REST or RPC APIs, make sure to set up [Identity and Access Management (IAM) for Firestore](https://cloud.google.com/firestore/docs/security/iam). 
+
+## Security rules version 2
+
+As of May 2019, version 2 of the Firestore security rules is now available. Version 2 of the rules changes the behavior of [recursive wildcards](https://docs.cloud.google.com/firestore/native/docs/security/rules-structure#recursive_wildcards) `{name=**}`. You must use version 2 if you plan to use [collection group queries](https://docs.cloud.google.com/firestore/native/docs/query-data/queries#collection-group-query). You must opt-in to version 2 by making `rules_version = '2';` the first line in your security rules:
+    
+    
+    rules_version = '2';
+    service cloud.firestore {
+      match /databases/{database}/documents {
+    
+
+## Writing rules
+
+You will write and manage Firestore Security Rules tailored to the data model you create for the default database and each additional database in your project.
+
+All Firestore Security Rules consist of `match` statements, which identify documents in your database, and `allow` expressions, which control access to those documents:
+    
+    
+    service cloud.firestore {
+      match /databases/{database}/documents {
+        match /<some_path>/ {
+          allow read, write: if <some_condition>;
+        }
+      }
+    }
+    
+
+Every database request from a Firestore mobile/web client library is evaluated against your security rules before reading or writing any data. If the rules deny access to any of the specified document paths, the entire request fails.
+
+Below are some examples of basic rule sets. While these rules are valid, they are not recommended for production applications:
+
+### Auth required
+    
+    
+    // Allow read/write access on all documents to any user signed in to the application
+    service cloud.firestore {
+      match /databases/{database}/documents {
+        match /{document=**} {
+          allow read, write: if request.auth != null;
+        }
+      }
+    }
+    
+
+### Deny all
+    
+    
+    // Deny read/write access to all users under any conditions
+    service cloud.firestore {
+      match /databases/{database}/documents {
+        match /{document=**} {
+          allow read, write: if false;
+        }
+      }
+    }
+    
+
+### Allow all
+    
+    
+    // Allow read/write access to all users under any conditions
+    // Warning: **NEVER** use this rule set in production; it allows
+    // anyone to overwrite your entire database.
+    service cloud.firestore {
+      match /databases/{database}/documents {
+        match /{document=**} {
+          allow read, write: if true;
+        }
+      }
+    }
+    
+
+The `{document=**}` path used in the examples above matches any document in the entire database. Continue on to the guide for [structuring security rules](https://docs.cloud.google.com/firestore/native/docs/security/rules-structure) to learn how to match specific data paths and work with hierarchical data.
+
+## Testing rules
+
+Firestore provides a rules simulator that you can use to test your ruleset. You can access the simulator in both the Google Cloud console and the Firebase console.
+
+The rules simulator lets you simulate authenticated and unauthenticated reads, writes, and deletes. When you simulate an authenticated request, you can build and preview authentication tokens from various providers. Simulated requests run against the ruleset in your editor, not your deployed ruleset.
+
+**Note:** To fully validate your app's behavior and verify your security rules configurations, use the Local Emulator Suite to run and automate unit tests in a local environment.
+
+### Test rules in the Google Cloud console
+
+The rules simulator in the Google Cloud console is available for Firestore in Native mode in both the Standard and Enterprise editions.
+
+#### Required permissions
+
+To test security rules in the Google Cloud console, you need the following IAM permission:
+
+  * `firebaserules.rulesets.test`
+
+
+
+To simulate a database request in the Google Cloud console:
+
+  1. In the Google Cloud console, go to the **Databases** page.
+  2. Click the ID of the database you want to test.
+  3. In the navigation menu, click **Security**.
+  4. Click the **Simulator** tab.
+  5. In the **Simulation type** drop-down list, select an operation type: **get** , **create** , **update** , or **delete**.
+  6. In the **Location** field, enter the document path you want to test (for example, `users/user_123`).
+  7. (Optional) For **create** and **update** requests, click **Build document** to configure the mock document payload.
+  8. (Optional) To simulate an authenticated request, turn on **Authentication** , select an authentication provider (such as **google.com** or **Anonymous**), and configure the token payload fields.
+  9. Click **Run**.
+
+
+
+The evaluation panel displays whether the request was allowed or denied, detailed report items for each condition evaluated, and line-level highlights in the code editor.
+
+### Test rules in the Firebase console
+
+To test rules in the Firebase console, go to the **Databases & Storage** > **Firestore** > [**Rules** tab](https://console.firebase.google.com/project/_/firestore/rules). Click **Rules Playground** to open the simulator settings, select your simulation options, and then click **Run**.
+
+## Deploying rules
+
+Before you can start using Firestore from your mobile app, you'll need to deploy security rules. You can deploy rules in the Firebase console, in the Google Cloud console, using the Firebase CLI, or with the Firestore management REST API.
+
+Updates to Firestore Security Rules can take up to a minute to affect new queries and listeners. However, it can take up to 10 minutes to fully propagate the changes and affect any active listeners.
+
+**Note:** **When you[deploy security rules using the Firebase CLI](https://firebase.google.com/docs/cli/#deployment), the rules defined in your project directory overwrite any existing rules in the Firebase console.** So, if you choose to define or edit your security rules using the Firebase console, make sure that you also update the rules defined in your project directory.
+
+### Use the Firebase console
+
+To set up and deploy your first set of rules, for the default database in your project, go to the **Databases & Storage** > **Firestore** > [**Rules** tab](https://console.firebase.google.com/project/_/firestore/rules) in the Firebase console.
+
+If you create multiple databases for your project, you can deploy Firestore Security Rules for each database. In the Firebase console, use the database selector to switch between the default database and any additional databases.
+
+Write your rules in the online editor, then click **Publish**.
+
+### Use the Google Cloud console
+
+You can manage and deploy Firestore Security Rules directly in the Google Cloud console. The rules editor is available for Firestore in Native mode in both the Standard and Enterprise editions.
+
+**Note:** The Google Cloud console doesn't support deployment of Firestore Security Rules to the `(default)` database. To manage rules for the `(default)` database, use the Firebase console or the Firebase CLI.
+
+#### Required permissions
+
+To manage and deploy security rules in the Google Cloud console, you need the following IAM permissions:
+
+  * `firebaserules.releases.create`
+  * `firebaserules.releases.delete`
+  * `firebaserules.releases.update`
+  * `firebaserules.rulesets.create`
+  * `firebaserules.rulesets.delete`
+  * `firebaserules.rulesets.list`
+  * `firebaserules.rulesets.test` (required to use the rules simulator)
+
+
+
+To deploy rules in the Google Cloud console:
+
+  1. In the Google Cloud console, go to the **Databases** page.
+  2. Click the ID of the database you want to manage.
+  3. In the navigation menu, click **Security**.
+  4. Click the **Firestore Rules** tab.
+  5. In the rules editor, view your rules. To edit, click **New ruleset** or **Clone ruleset** , and then modify your rules.
+  6. Click **Publish** to deploy your changes.
+
+
+
+You can also view previous rulesets in the timeline and clone or restore them.
+
+### Use the Firebase CLI
+
+You can also deploy rules using the [Firebase CLI](https://firebase.google.com/docs/cli). Using the CLI allows you to keep your rules under version control with your application code and deploy rules as part of your existing deployment process.
+    
+    
+    // Set up Firestore in your project directory, creates a .rules file
+    firebase init firestore
+    
+    // Edit the generated .rules file to your desired security rules
+    // ...
+    
+    // Deploy rules for all configured databases
+    firebase deploy --only firestore
+    
+
+## Next steps
+
+  * Learn how to [structure security rules](https://docs.cloud.google.com/firestore/native/docs/security/rules-structure).
+  * Write [custom security rules conditions](https://docs.cloud.google.com/firestore/native/docs/security/rules-conditions).
+  * Read the [security rules reference](https://firebase.google.com/docs/reference/rules/rules).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-16 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

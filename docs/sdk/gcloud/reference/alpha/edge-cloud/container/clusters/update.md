@@ -1,0 +1,150 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/edge-cloud/container/clusters/update/
+title: gcloud alpha edge-cloud container clusters update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T23:32:14.265477+00:00
+---
+
+# gcloud alpha edge-cloud container clusters update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/edge-cloud/container/clusters/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha edge-cloud container clusters update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha edge-cloud container clusters update - update an Edge Container cluster 
+SYNOPSIS
+    
+
+`gcloud alpha edge-cloud container clusters update` (`CLUSTER` : `--location`=`LOCATION`) [`--async`] [`--container-default-runtime-class`=`CONTAINER_DEFAULT_RUNTIME_CLASS`] [`--enable-cluster-isolation`=`ENABLE_CLUSTER_ISOLATION`] [`--offline-reboot-ttl`=`OFFLINE_REBOOT_TTL`] [`--release-channel`=`RELEASE_CHANNEL`] [`--clear-maintenance-window` | `--remove-maintenance-exclusion-window`=`REMOVE_MAINTENANCE_EXCLUSION_WINDOW` | `--add-maintenance-exclusion-end`=`ADD_MAINTENANCE_EXCLUSION_END` `--add-maintenance-exclusion-name`=`ADD_MAINTENANCE_EXCLUSION_NAME` `--add-maintenance-exclusion-start`=`ADD_MAINTENANCE_EXCLUSION_START` | `--maintenance-window-end`=`MAINTENANCE_WINDOW_END` `--maintenance-window-recurrence`=`MAINTENANCE_WINDOW_RECURRENCE` `--maintenance-window-start`=`MAINTENANCE_WINDOW_START`] [`--clear-max-unavailable-worker-nodes` | `--max-unavailable-worker-nodes`=`MAX_UNAVAILABLE_WORKER_NODES`] [`--control-plane-kms-key`=`CONTROL_PLANE_KMS_KEY` | `--use-google-managed-key`] [`--use-google-managed-zone-key` | `--zone-storage-kms-key`=`ZONE_STORAGE_KMS_KEY`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` Update an Edge Container cluster. 
+EXAMPLES
+     To update the maintenance window recurrence rule of a cluster called 'my-cluster' in region us-central1, run: 
+    
+    
+    gcloud alpha edge-cloud container clusters update my-cluster --location=us-central1 --maintenance-window-recurrence="FREQ=WEEKLY"
+
+POSITIONAL ARGUMENTS
+    
+
+Cluster resource - Edge Container cluster to update. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `cluster` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`CLUSTER`
+     ID of the cluster or fully qualified identifier for the cluster. 
+
+To set the `cluster` attribute: 
+
+  * provide the argument `cluster` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--location`=`LOCATION`
+     The global location name. 
+
+To set the `location` attribute: 
+
+  * provide the argument `cluster` on the command line with a fully specified name; 
+  * provide the argument `--location` on the command line; 
+  * set the property `edge_container/location`. 
+
+
+FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--container-default-runtime-class`=`CONTAINER_DEFAULT_RUNTIME_CLASS`
+     If set, use the specified default container runtime class for the cluster. 
+`--enable-cluster-isolation`=`ENABLE_CLUSTER_ISOLATION`
+     If set to true, the cluster will be created in a secure cluster isolation mode. 
+`--offline-reboot-ttl`=`OFFLINE_REBOOT_TTL`
+     Specifies the maximum duration a node can reboot offline (without connection to Google) and then rejoin its cluster to resume its designated workloads. This duration is relative to the machine's most recent connection to Google. The maximum allowed duration is 7 days. If left unspecified, the default 0 means not allowed. The parameter should be an ISO 8601 duration string, for example, "P1DT1H2M3S". 
+`--release-channel`=`RELEASE_CHANNEL`
+     Release channel a cluster is subscribed to. It supports two values, NONE and REGULAR. NONE is used to opt out of any release channel. Clusters subscribed to the REGULAR channel will be automatically upgraded to versions that are considered GA quality, and cannot be manually upgraded. `RELEASE_CHANNEL` must be one of: `none`, `regular`, `release-channel-unspecified`. 
+At most one of these can be specified: 
+
+`--clear-maintenance-window`
+     If set, removes the maintenance window setting from the cluster. If any exclusion windows exist, they must be removed beforehand as a maintenance policy cannot exist without a maintenance window. 
+`--remove-maintenance-exclusion-window`=`REMOVE_MAINTENANCE_EXCLUSION_WINDOW`
+     Name of the maintenance exclusion to remove. 
+Or at least one of these can be specified: 
+
+Add a maintenance exclusion window (all flags must be specified to add a valid maintenance exclusion window). There can be a maximum of 3 exclusion windows set at a given time. A maintenance exclusion window cannot be added in the absence of a maintenance window. 
+`--add-maintenance-exclusion-end`=`ADD_MAINTENANCE_EXCLUSION_END`
+     End time of the maintenance exclusion window in the RFC 3339 (https://www.rfc-editor.org/rfc/rfc3339.txt) format. E.g. "2021-01-01T00:00:00Z" or "2021-01-01T00:00:00-05:00". 
+`--add-maintenance-exclusion-name`=`ADD_MAINTENANCE_EXCLUSION_NAME`
+     Unique name (per cluster) of the maintenance exclusion window that can be used to remove it. 
+`--add-maintenance-exclusion-start`=`ADD_MAINTENANCE_EXCLUSION_START`
+     Start time of the maintenance exclusion window (can occur in the past) in the RFC 3339 (https://www.rfc-editor.org/rfc/rfc3339.txt) format. E.g. "2021-01-01T00:00:00Z" or "2021-01-01T00:00:00-05:00". 
+Or at least one of these can be specified: 
+
+Updates cluster maintenance window setting (more than one flags can be specified from this group) 
+`--maintenance-window-end`=`MAINTENANCE_WINDOW_END`
+     End time of the recurring cluster maintenance window in the [RFC 3339](https://www.rfc-editor.org/rfc/rfc3339.txt) format. E.g. "2021-01-01T00:00:00Z" or "2021-01-01T00:00:00-05:00" 
+`--maintenance-window-recurrence`=`MAINTENANCE_WINDOW_RECURRENCE`
+     An [RFC 5545](https://tools.ietf.org/html/rfc5545#section-3.8.5.3) recurrence rule for how the cluster maintenance window recurs. They go on for the span of time between the start and the end time. E.g. FREQ=WEEKLY;BYDAY=SU. 
+`--maintenance-window-start`=`MAINTENANCE_WINDOW_START`
+     Start time of the recurring cluster maintenance window in the [RFC 3339](https://www.rfc-editor.org/rfc/rfc3339.txt) format. E.g. "2021-01-01T00:00:00Z" or "2021-01-01T00:00:00-05:00" 
+At most one of these can be specified: 
+
+`--clear-max-unavailable-worker-nodes`
+     Clear the worker node upgrade parallelism, which will default to the upgrade stage size. 
+`--max-unavailable-worker-nodes`=`MAX_UNAVAILABLE_WORKER_NODES`
+     Set the worker node upgrade parallelism. The value must be between 1 and the worker node upgrade stage size, inclusively. If unset, the worker node upgrade parallelism defaults to the upgrade stage size. This value does not affect the control plane node upgrade parallelism. 
+At most one of these can be specified: 
+
+`--control-plane-kms-key`=`CONTROL_PLANE_KMS_KEY`
+     If set, use the specified KMS key for the cluster control plane nodes encryption. 
+`--use-google-managed-key`
+     If set, use Google managed key for the cluster control plane nodes encryption. 
+At most one of these can be specified: 
+
+`--use-google-managed-zone-key`
+     If set, use Google managed key for zone storage encryption. 
+`--zone-storage-kms-key`=`ZONE_STORAGE_KMS_KEY`
+     If set, use the specified KMS key for zone storage encryption. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `edgecontainer/v1alpha` API. The full documentation for this API can be found at: <https://cloud.google.com/edge-cloud>
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. This variant is also available: 
+    
+    
+    [gcloud edge-cloud container clusters update](https://docs.cloud.google.com/sdk/gcloud/reference/edge-cloud/container/clusters/update)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

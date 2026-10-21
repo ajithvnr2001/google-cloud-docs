@@ -1,0 +1,195 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/network-connectivity/internal-ranges/create/
+title: gcloud network-connectivity internal-ranges create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T03:36:21.738820+00:00
+---
+
+# gcloud network-connectivity internal-ranges create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/network-connectivity/internal-ranges/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud network-connectivity internal-ranges create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud network-connectivity internal-ranges create - create a new internal range 
+SYNOPSIS
+    
+
+`gcloud network-connectivity internal-ranges create` (`INTERNAL_RANGE` : `--region`=`REGION`) `--network`=`NETWORK` (`--ip-cidr-range`=`IP_CIDR_RANGE` | [`--prefix-length`=`PREFIX_LENGTH` : `--allocation-strategy`=`ALLOCATION_STRATEGY` `--exclude-cidr-ranges`=[`EXCLUDE_CIDR_RANGES`,…] `--first-available-ranges-lookup-size`=`FIRST_AVAILABLE_RANGES_LOOKUP_SIZE` `--target-cidr-range`=[`TARGET_CIDR_RANGE`,…]]) [`--async`] [`--description`=`DESCRIPTION`] [`--immutable`] [`--labels`=[`KEY`=`VALUE`,…]] [`--overlaps`=[`OVERLAPS`,…]] [`--peering`=`PEERING`; default="for-self"] [`--purpose`=`PURPOSE`] [`--usage`=`USAGE`; default="for-vpc"] [`--migration-source`=`MIGRATION_SOURCE` `--migration-target`=`MIGRATION_TARGET`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     Create a new internal range with the given name. 
+EXAMPLES
+     Create an internal range with name ``my-range`` and ip-cidr-range ``192.168.0.0/25`` in network ``https://www.googleapis.com/compute/v1/projects/my-project/locations/global/networks/my-network``: 
+    
+    
+    gcloud network-connectivity internal-ranges create my-range --ip-cidr-range="192.168.0.0/25" --network="<https://www.googleapis.com/compute/v1/projects/my-pro\>
+    ject/locations/global/networks/my-network" --project=my-project
+
+Create an internal range with name ``my-range`` and auto-allocated /25 block (prefix-length ``25``) in network ``my-network``: 
+    
+    
+    gcloud network-connectivity internal-ranges create my-range --prefix-length=25 --network="my-network" --project=my-project
+
+POSITIONAL ARGUMENTS
+    
+
+Internal range resource - Name of the internal range to be created. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `internal_range` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`INTERNAL_RANGE`
+     ID of the internal range or fully qualified identifier for the internal range. 
+
+To set the `internal_range` attribute: 
+
+  * provide the argument `internal_range` on the command line. 
+
+
+
+This positional argument must be specified if any of the other arguments in this group are specified. 
+
+`--region`=`REGION`
+     The location ID. To set the `region` attribute: 
+
+  * provide the argument `internal_range` on the command line with a fully specified name; 
+  * provide the argument `--region` on the command line; 
+  * use default global location . 
+
+
+REQUIRED FLAGS
+    
+
+`--network`=`NETWORK`
+     The URL or resource ID of the network in which to reserve the internal range. Legacy network is not supported. This can only be specified for a global internal address. 
+
+For example: 
+
+  * <https://www.googleapis.com/compute/v1/projects/my-project/locations/global/networks/my-network>
+  * /projects/my-project/locations/global/networks/my-network 
+  * my-network 
+
+
+Exactly one of these must be specified: 
+
+`--ip-cidr-range`=`IP_CIDR_RANGE`
+     IP range that this internal range defines. 
+Or at least one of these can be specified: 
+
+`--prefix-length`=`PREFIX_LENGTH`
+     An alternative to ip-cidr-range. Can be set when trying to create a reservation that automatically finds a free range of the given size. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+Additional options for the internal range's address auto-allocation (allowed only when prefix-length is set): 
+`--allocation-strategy`=`ALLOCATION_STRATEGY`
+     Allocation strategy to be used when searching for a free range. `ALLOCATION_STRATEGY` must be one of: 
+
+`first-available`
+     Pick the first available address range. This strategy is deterministic and the result is easy to predict. 
+`first-smallest-fitting`
+     Pick the smallest but fitting available range. This deterministic strategy minimizes fragmentation of the address space. 
+`random`
+     Random strategy, the legacy algorithm, used for backwards compatibility. This allocation strategy remains efficient in the case of concurrent allocation requests in the same peered network space and doesn't require providing the level of concurrency in an explicit parameter, but it is prone to fragmenting available address space. 
+`random-first-n-available`
+     Pick an arbitrary range out of the first N available ones. The N will be set in the first_available_ranges_lookup_size flag. This strategy should be used when concurrent allocation requests are made in the same space of peered networks while the fragmentation of the addrress space is reduced. 
+`--exclude-cidr-ranges`=[`EXCLUDE_CIDR_RANGES`,…]
+     A list of CIDR ranges to exclude from the search for a free range. This can be used to exclude specific ranges that are already intended to have some other use. 
+`--first-available-ranges-lookup-size`=`FIRST_AVAILABLE_RANGES_LOOKUP_SIZE`
+     The number of ranges to be considered when using the RANDOM_FIRST_N_AVAILABLE allocation strategy. This is only allowed when allocation-strategy is set to RANDOM_FIRST_N_AVAILABLE. 
+`--target-cidr-range`=[`TARGET_CIDR_RANGE`,…]
+     Can be set to narrow down or pick a different address space while searching for a free range. If not set, defaults to the "10.0.0.0/8" address space. This can be used to search in other rfc-1918 address spaces like "172.16.0.0/12" and "192.168.0.0/16" or non-rfc-1918 address spaces used in the VPC. 
+OPTIONAL FLAGS
+    
+
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--description`=`DESCRIPTION`
+     Description of the internal range to be created. 
+`--immutable`
+     Mark the internal range as immutable. Then only non-semantic fields like description and labels could be modified after creation. 
+`--labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to add. 
+`--overlaps`=[`OVERLAPS`,…]
+     Overlap specifications for the range being created. `OVERLAPS` must be one of: 
+
+`overlap-existing-subnet-range`
+     Allows for creation of internal ranges that overlap with existing subnets. 
+`overlap-route-range`
+     Allows for creation or existence of routes that have a more specific destination than the created range. 
+`--peering`=`PEERING`; default="for-self"
+     The type of peering set for the internal range. `PEERING` must be one of: 
+
+`for-peer`
+     This behavior can be set when the internal range is being reserved for usage by the peers. This means that no resource within the VPC in which it is being created can use this to associate with a cloud resource, but one of the peers can. This represents "donating" a range for peers to use. 
+`for-self`
+     This beharior represents the case that the internal range is intended to be used in the VPC on which it is created and is accessible from its peers. This implies that peers or peer-of-peers cannot use this range. 
+`not-shared`
+     This behavior can be set when the internal range is being reserved for usage by the VPC on which it is created but not shared with the peers. In a sense it is local to the VPC. This can be used to create internal ranges for various purposes like HTTP_INTERNAL_LOAD_BALANCER or for interconnect routes that are not shared with peers. This also implies that peers cannot use this range in a way that is visible to this VPC, but can re-use this range as long as it is NOT_SHARED from the peer VPC too. 
+`--purpose`=`PURPOSE`
+     Purpose of the internal range. Defines the intended use of the range and any restrictions associated with it. If not specified, it defaults to `vpc-subnet`. `PURPOSE` must be one of: 
+
+`internal-address`
+     The internal range is used exclusively for allocating individual IP addresses (for example, for global PSC endpoints). Child ranges or subnetworks cannot be created from a range with this purpose. 
+`vpc-subnet`
+     The internal range is used for VPC subnetworks. 
+`--usage`=`USAGE`; default="for-vpc"
+     The type of usage set for the internal range. `USAGE` must be one of: 
+
+`external-to-vpc`
+     Ranges created with EXTERNAL_TO_VPC cannot be associated with cloud resources and are meant to block out address ranges for various use cases, like for example, usage on-prem, with dynamic route announcements via interconnect. 
+`for-migration`
+     Ranges created with FOR_MIGRATION are used as locks for migrating subnetworks between peered VPC networks. 
+`for-vpc`
+     A cloud resource can use the reserved CIDR block by associating it with the internal range resource if usage is set to FOR_VPC. 
+Endpoints of a for-migration internal range. This is only applicable when \--usage is set to for-migration. Both MIGRATION_SOURCE and MIGRATION_TARGET must either belong to the same VPC or their VPCs must be peered (they may then even belong to different projects). MIGRATION_SOURCE must belong to the VPC network specifed by the --network flag. MIGRATION_TARGET may name a subnetwork which does not exist yet; it must be a valid resource path, and parent resources (network and project) and their locations must exist. 
+`--migration-source`=`MIGRATION_SOURCE`
+     The migration source subnetwork (of a for-migration internal range) resource URI or resource ID. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--migration-target`=`MIGRATION_TARGET`
+     The migration target subnetwork (of a for-migration internal range) resource URI or resource ID. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `networkconnectivity/v1` API. The full documentation for this API can be found at: <https://cloud.google.com/network-connectivity/docs/reference/networkconnectivity/rest>
+NOTES
+     This variant is also available: 
+    
+    
+    [gcloud alpha network-connectivity internal-ranges create](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/network-connectivity/internal-ranges/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

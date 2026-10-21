@@ -1,0 +1,314 @@
+---
+url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/windchill/
+title: Collect PTC Windchill logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-15T08:24:38.005814+00:00
+---
+
+# Collect PTC Windchill logs  |  Google Security Operations  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/windchill/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Security ](https://docs.cloud.google.com/docs/security)
+  * [ Google Security Operations ](https://docs.cloud.google.com/chronicle/docs)
+  * [ Guides ](https://docs.cloud.google.com/chronicle/docs/secops/secops-overview)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Collect PTC Windchill logs
+
+Supported in:
+
+Google SecOps  [ SIEM ](https://docs.cloud.google.com/chronicle/docs/secops/google-secops-siem-toc)
+
+**Note:** This feature is covered by [Pre-GA Offerings Terms](https://chronicle.security/legal/service-terms/) of the Google Security Operations Service Specific Terms. Pre-GA features might have limited support, and changes to pre-GA features might not be compatible with other pre-GA versions. For more information, see the [Google SecOps Technical Support Service guidelines](https://chronicle.security/legal/technical-support-services-guidelines/) and the [Google SecOps Service Specific Terms](https://chronicle.security/legal/service-terms/).  
+If this feature isn't visible in your environment, see [Manage preview features](https://docs.cloud.google.com/chronicle/docs/secops/preview-features-manage) or contact your system administrator.
+
+This document explains how to ingest PTC Windchill logs to Google Security Operations using Bindplane.
+
+PTC Windchill is a product lifecycle management (PLM) platform used for managing product data, processes, and collaboration across engineering and manufacturing teams. The platform generates access, audit, and configuration change logs from on-premise server deployments.
+
+## Before you begin
+
+Make sure you have the following prerequisites:
+
+  * A Google SecOps instance
+  * Windows Server 2016 or later, or Linux host with `systemd`
+  * Network connectivity between the Bindplane agent and the PTC Windchill server
+  * If running behind a proxy, ensure firewall ports are open per the Bindplane agent requirements
+  * Privileged access to the PTC Windchill server with administrator permissions
+
+
+
+## Get Google SecOps ingestion authentication file
+
+  1. Sign in to the Google SecOps console.
+  2. Go to **SIEM Settings > Collection Agents**.
+  3. Download the **Ingestion Authentication File**. Save the file securely on the system where Bindplane will be installed.
+
+**Note:** This JSON file contains credentials for authenticating the Bindplane agent to Google SecOps.
+
+
+
+## Get Google SecOps customer ID
+
+  1. Sign in to the Google SecOps console.
+  2. Go to **SIEM Settings > Profile**.
+  3. Copy and save the **Customer ID** from the **Organization Details** section.
+
+**Note:** The customer ID is required for configuring the Bindplane agent exporter.
+
+
+
+## Install the Bindplane agent
+
+Install the Bindplane agent on your Windows or Linux operating system according to the following instructions.
+
+### Windows installation
+
+  1. Open **Command Prompt** or **PowerShell** as an administrator.
+  2. Run the following command:
+         
+         msiexec /i "https://github.com/observIQ/bindplane-agent/releases/latest/download/observiq-otel-collector.msi" /quiet
+         
+
+  3. Wait for the installation to complete.
+
+  4. Verify the installation by running:
+         
+         sc query observiq-otel-collector
+         
+
+
+
+
+The service should show as **RUNNING**.
+
+### Linux installation
+
+  1. Open a terminal with root or sudo privileges.
+  2. Run the following command:
+         
+         sudo sh -c "$(curl -fsSlL https://github.com/observiq/bindplane-agent/releases/latest/download/install_unix.sh)" install_unix.sh
+         
+
+  3. Wait for the installation to complete.
+
+  4. Verify the installation by running:
+         
+         sudo systemctl status observiq-otel-collector
+         
+
+
+
+
+The service should show as **active (running)**.
+
+### Additional installation resources
+
+For additional installation options and troubleshooting, see [Bindplane agent installation guide](https://docs.cloud.google.com/chronicle/docs/ingestion/use-bindplane-agent#install_the_bindplane_agent).
+
+## Configure Bindplane agent to ingest syslog and send to Google SecOps
+
+### Locate the configuration file
+
+  * **Linux:**
+        
+        sudo nano /etc/bindplane-agent/config.yaml
+        
+
+  * **Windows:**
+        
+        notepad "C:\Program Files\observIQ OpenTelemetry Collector\config.yaml"
+        
+
+
+
+
+### Edit the configuration file
+
+  * Replace the entire contents of `config.yaml` with the following configuration:
+        
+        receivers:
+          tcplog:
+            listen_address: "0.0.0.0:514"
+        
+        exporters:
+          chronicle/windchill:
+            compression: gzip
+            creds_file_path: '/etc/bindplane-agent/ingestion-auth.json'
+            customer_id: '<customer_id>'
+            endpoint: malachiteingestion-pa.googleapis.com
+            log_type: WINDCHILL
+            raw_log_field: body
+        
+        service:
+          pipelines:
+            logs/windchill_to_chronicle:
+              receivers:
+                - tcplog
+              exporters:
+                - chronicle/windchill
+        
+
+
+
+
+### Configuration parameters
+
+Replace the following placeholders:
+
+  * **Receiver configuration:**
+
+    * `listen_address`: IP address and port to listen on: 
+      * `0.0.0.0` to listen on all interfaces (recommended)
+      * Port `514` is the standard syslog port (requires root on Linux; use `1514` for non-root)
+  * **Exporter configuration:**
+
+    * `creds_file_path`: Full path to ingestion authentication file: 
+      * **Linux** : `/etc/bindplane-agent/ingestion-auth.json`
+      * **Windows** : `C:\Program Files\observIQ OpenTelemetry Collector\ingestion-auth.json`
+    * `customer_id`: Customer ID copied from the Google SecOps console
+    * `endpoint`: Regional endpoint URL: 
+      * **US** : `malachiteingestion-pa.googleapis.com`
+      * **Europe** : `europe-malachiteingestion-pa.googleapis.com`
+      * **Asia** : `asia-southeast1-malachiteingestion-pa.googleapis.com`
+      * See [Regional Endpoints](https://docs.cloud.google.com/chronicle/docs/reference/ingestion-api#regional_endpoints) for complete list
+
+
+
+### Save the configuration file
+
+  * After editing, save the file: 
+    * **Linux** : Press `Ctrl+O`, then `Enter`, then `Ctrl+X`
+    * **Windows** : Click **File > Save**
+
+
+
+## Restart the Bindplane agent to apply the changes
+
+To restart the Bindplane agent in Linux: 
+
+  1. Run the following command:
+         
+         sudo systemctl restart observiq-otel-collector
+         
+
+  2. Verify the service is running:
+         
+         sudo systemctl status observiq-otel-collector
+         
+
+  3. Check logs for errors:
+         
+         sudo journalctl -u observiq-otel-collector -f
+         
+
+
+
+
+To restart the Bindplane agent in Windows:
+
+  1. Choose one of the following options:
+
+     * Command Prompt or PowerShell as administrator:
+    
+    net stop observiq-otel-collector && net start observiq-otel-collector
+    
+
+     * Services console: 
+       1. Press `Win+R`, type `services.msc`, and press Enter.
+       2. Locate **observIQ OpenTelemetry Collector**.
+       3. Right-click and select **Restart**.
+  2. Verify the service is running:
+         
+         sc query observiq-otel-collector
+         
+
+  3. Check logs for errors:
+         
+         type "C:\Program Files\observIQ OpenTelemetry Collector\log\collector.log"
+         
+
+
+
+
+## Configure PTC Windchill syslog forwarding
+
+  1. Sign in to the **PTC Windchill** server as an administrator.
+  2. Configure rsyslog or a syslog agent to forward Windchill application logs. Edit the rsyslog configuration:
+         
+         sudo nano /etc/rsyslog.d/windchill.conf
+         
+
+  3. Add the following lines to forward Windchill log files to the Bindplane agent:
+         
+         # Forward PTC Windchill logs to Bindplane agent
+         module(load="imfile")
+         input(type="imfile" File="/path/to/windchill/logs/*.log" Tag="windchill" Severity="info" Facility="local0")
+         if $syslogtag == 'windchill' then @@<bindplane-ip>:514
+         
+
+     * Replace `/path/to/windchill/logs/` with the actual Windchill log directory path.
+     * Replace `<bindplane-ip>` with the IP address of the Bindplane agent host.
+  4. Restart the rsyslog service:
+         
+         sudo systemctl restart rsyslog
+         
+
+  5. Verify that logs are being sent by checking the Bindplane agent logs.
+
+
+
+
+## UDM mapping table
+
+Log Field | UDM Mapping | Logic  
+---|---|---  
+eventlabel | metadata.description | Value copied directly  
+eventtime | metadata.event_timestamp | Converted using date filter with formats SYSLOGTIMESTAMP, ISO8601  
+| metadata.event_type | Set to "USER_LOGIN" if has_principal == "true" and has_principal_user == "true" and has_target == "true"; "USER_RESOURCE_ACCESS" if has_target_resource == "true"; "USER_UNCATEGORIZED" if has_principal == "true" and has_principal_user == "true"; "STATUS_UPDATE" if has_principal == "true"; else "GENERIC_EVENT"  
+dbschema | metadata.ingestion_labels | Merged with db_schema object (key="DBSCHEMA", value=dbschema)  
+dbname | metadata.product_deployment_id | Value copied directly  
+eventlabel, description | metadata.product_event_type | Value from description if not empty, else from eventlabel  
+context | metadata.product_log_id | Value copied directly  
+version | metadata.product_version | Value copied directly  
+ohost | observer.hostname | Value copied directly if ohost is not an IP  
+ohost | observer.ip | Value copied directly if ohost is an IP  
+domainpath | principal.administrative_domain | Value copied directly  
+ipaddress | principal.asset.hostname | Value copied directly if ipaddress is not an IP  
+ipaddress | principal.asset.ip | Value copied directly if ipaddress is an IP  
+ipaddress, phost | principal.hostname | Value from ipaddress if not an IP, else from phost if not an IP  
+ipaddress, phost | principal.ip | Value from ipaddress if IP, else from phost if IP  
+folderpath | principal.process.file.full_path | Value copied directly  
+user_product_object_id | principal.user.product_object_id | Value copied directly  
+user_display_name | principal.user.user_display_name | Value copied directly  
+username, user_userid | principal.user.userid | Value from username if not empty, else from user_userid  
+domain_name | target.domain.name | Value copied directly  
+target_path | target.file.full_path | Value copied directly  
+namespace | target.namespace | Value copied directly  
+lifecyclestate, targetname, targetnumber, targettype | target.resource.attribute.labels | Merged with lifecyclestate_label (key="lifecyclestate", value=lifecyclestate), targetname_label (key="targetname", value=targetname), targetnumber_label (key="targetnumber", value=targetnumber), targettype_label (key="targettype", value=targettype)  
+target_number | target.resource.id | Value copied directly  
+target_name | target.resource.name | Value copied directly  
+target_identity | target.resource.product_object_id | Value copied directly  
+target_subtype | target.resource.resource_subtype | Value copied directly  
+| metadata.product_name | Set to "Windchill"  
+| metadata.vendor_name | Set to "PTC"  
+  
+## Change Log
+
+[View the Change Log for this parser](https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/windchill-changelog)
+
+**Need more help?** [Get answers from Community members and Google SecOps professionals.](https://security.googlecloudcommunity.com/)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

@@ -1,0 +1,226 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-3-6-flash/
+title: Developer's guide to Gemini 3.6 Flash \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T06:46:36.303343+00:00
+---
+
+# Developer's guide to Gemini 3.6 Flash  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-3-6-flash/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Developer's guide to Gemini 3.6 Flash Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Gemini 3.6 Flash** is a high-speed, cost-effective powerhouse model in the Gemini 3 family. Designed to deliver near-Pro agentic capabilities without compromising on performance or value, the model is now generally available (GA) to developers using the [Gemini API](https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash) and for enterprises using [Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-6-flash).
+
+This document covers what's new with 3.6 Flash, how it fits within the Gemini model family, how to migrate to 3.6 Flash, and provides a quickstart for using 3.6 Flash.
+
+## How does it fit in the Gemini family?
+
+Gemini 3.6 Flash is the primary agentic workhorse in the Gemini 3 family. It bridges the gap between deep-reasoning Pro models and high-throughput Flash-Lite models. Compared to Gemini 3.5 Flash, 3.6 Flash delivers significantly higher quality on multi-step tool orchestration, full-stack code refactoring, and visual reasoning while using fewer tokens and reasoning turns. It offers near-Pro level capabilities at Flash speed and pricing.
+
+### Model specifications and comparisons
+
+The following table is a comparison covering some of the specifications between 3.6 Flash, 3.5 Flash, and 3.1 Pro:
+
+| [Gemini 3.6 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-6-flash) | [Gemini 3.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash) | [Gemini 3.1 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-pro)  
+---|---|---|---  
+Model ID | `gemini-3.6-flash` | `gemini-3.5-flash` | `gemini-3.1-pro-preview`  
+Launch stage | GA | GA | Preview  
+Input types | Text, Image, Audio, Video | Text, Image, Audio, Video | Text, Image, Audio, Video  
+Output type(s) | Text | Text | Text  
+Context window | 1,048,576 | 1,048,576 | 1,048,576  
+Maximum output token length | 65,536 | 65,536 | 65,536  
+Supported regions |  Global, Multi-region  |  Global, Multi-region, Americas, Europe, Asia Pacific  |  Global   
+Supported thinking levels |  `MINIMAL`, `LOW`, `MEDIUM`, `HIGH`  
+(Default: `MEDIUM`)  |  `MINIMAL`, `LOW`, `MEDIUM`, `HIGH`  
+(Default: `MEDIUM`)  |  `LOW`, `MEDIUM`, `HIGH`  
+(Default: `HIGH`)   
+Primary focus | High-efficiency agentic workflows, multi-step orchestration, and full-stack coding | Balanced tasks, tool calling, and intermediate reasoning | Deep reasoning, high-complexity tasks  
+  
+See the [3.6 Flash model page](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-6-flash) for the full list of supported capabilities, tools, and consumption options.
+
+## What's new in Gemini 3.6 Flash?
+
+3.6 Flash is optimized for multi-step orchestration, full-stack code refactoring, and general reasoning with significantly better token efficiency than its predecessors.
+
+### Capabilities and performance updates
+
+The following is the list of changes in capabilities and performance for 3.6 Flash from preceding models:
+
+  * **Token and turn reduction** : Consumes fewer tokens and completes multi-step workflows in fewer reasoning steps and conversational turns than 3.5 Flash.
+  * **Improved code generation** : Produces cleaner code with lower compile-failure and revision rates across application building, prototyping, and IDE agent environments.
+  * **Reduced action bias** : Resolves read-only diagnostic tasks without making unsolicited workspace edits or mutating state prematurely.
+  * **Multimodal and spatial reasoning** : Delivers improved performance on chart interpretation, visual blueprint conversion, and multi-element web layout generation.
+  * **Computer use support** : Supported as a built-in tool for agentic UI automation.
+  * **UI styling preference** : Better at creating functional code, though human evaluators noted a preference for previous models for frontend presentation and visual layout. This can be mitigated by providing explicit design guidelines.
+
+
+
+### Behavioral and API parameter changes
+
+The following is the list of behavioral and API parameter changes for 3.6 Flash from preceding models:
+
+  * **Step conciseness** : Uses fewer reasoning steps than 3.5 Flash. While this reduces latency and cost on code refactoring and tool workflows, it can cause early exits on extended multi-turn conversational follow-ups where longer iteration chains are needed.
+  * **Upfront programmatic inspection** : Prefers running diagnostic code scripts (`execute_code`) to inspect problems before mutating state more frequently than 3.5 Flash. While this improves diagnostic accuracy on complex backend refactoring, it can occasionally lead to running extra exploratory inspection steps on simple frontend web and scripting tasks where the previous version would generate code directly.
+  * **Default effort** : Carries forward the medium default effort level introduced in 3.5 Flash.
+  * **No sampling overrides** : Custom values for `temperature`, `top-k`, or `top-p` parameters are no longer supported. Setting custom values will be ignored in the API surface. Use `thinking_level` or structured JSON schemas to control output determinism instead.
+  * **Frequency and presence penalty restrictions** : Custom values for these parameters are no longer supported. Setting them will now throw an active API error.
+  * API requests where the last input turn has a role of "Model" are not supported.
+  * Empty turns in conversation history are dropped.
+  * Invalid thought signatures will now produce errors.
+  * Strict function calling: `FunctionResponse` must strictly match the `id`, `name`, and execution count of the preceding `FunctionCall`. Append inline instructions directly inside the function response text, separated by two newlines (`\n\n`).
+
+
+
+## Quickstart
+
+Before you begin, you must authenticate to Agent Platform using Application Default Credentials (ADC) or an API key. See [Get started with Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/start) for more information.
+
+In the following code blocks, replace PROJECT_ID with your project ID.
+
+### Installation
+
+Ensure you are using the latest `google-genai` SDK:
+    
+    
+    pip install --upgrade google-genai
+    
+
+### Basic request
+
+### Python
+    
+    
+    from google import genai
+    
+    client = genai.Client(enterprise=True, project="PROJECT_ID", location="global")
+    
+    response = client.models.generate_content(
+      model="gemini-3.6-flash",
+      contents="How does AI work?",
+    )
+    print(response.text)
+    
+
+### REST
+    
+    
+    curl -X POST \
+    -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+    -H "Content-Type: application/json" \
+    https://aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/global/publishers/google/models/gemini-3.6-flash:generateContent \
+    -d '{
+      "contents": {
+        "role": "USER",
+        "parts": { "text": "Why is the sky blue?" },
+      },
+    }'
+    
+
+## Migrate to 3.6 Flash from 3.5 Flash or 3.1 Pro
+
+To migrate to 3.6 Flash from 3.5 Flash or 3.1 Pro, do the following steps:
+
+  1. **Update the model ID** : Change model string in your API calls to `gemini-3.6-flash`.
+  2. **Adapt your code to the new Gemini 3 family API rules** : Gemini 3.6 Flash strictly enforces the parameter rules and API conventions established across the Gemini 3 family: 
+     * **Remove temperature, top-K, and top-P** : Remove these custom parameters from your payload. While they won't throw an error, the model will ignore them entirely. Instead, use the `thinking_level` parameter or `json_schema` structured outputs to control output determinism.
+     * **Remove frequency and presence penalties** : Remove any custom configurations for frequency or presence penalties to prevent your API calls from throwing runtime errors.
+     * **Ensure your chat integration does not attempt model prefilling** : Review your message history arrays to ensure that your API payload does not end with an empty user turn or model turn.. If the last object in your history array is a "`model`" role (GenerateContent API) or "`model_output`" type (Interactions API), restructure the sequence to avoid triggering a strict validation error.
+     * **Use`thinking_level`**: Remove instances of the deprecated `thinking_budget` parameter and use `thinking_level` instead.
+     * **Enforce strict function calling conventions** : The `FunctionResponse` must strictly match the `id`, `name`, and execution count of the preceding `FunctionCall`. If you need to append inline instructions, place them directly inside the function response text separated by two newlines (`\n\n`).
+  3. **Account for workflow shifts** : 
+     * If your application relies on multi-turn conversational loops, test your workflows to ensure the model's new step conciseness does not trigger premature exits.
+     * If building frontend or basic scripting agents, monitor for unnecessary exploratory `execute_code` calls due to the model's new bias toward upfront programmatic inspection.
+
+
+
+## Workarounds for pre-tool text requirements
+
+If your prompt requires the model to output structured text (XLM, YAML, Json, etc) (for example, `<UPDATE>...</UPDATE>`) immediately before making a tool call, the tool call may occasionally fail with a `Malformed_Function_Call` error. You can use one of the following workarounds to resolve this issue:
+
+  * (Recommended) Instruct the model to put its pre-tool notes inside a dedicated `update()` function call instead of raw text. See the next section for detailed implementation instructions.
+  * Instruct the model to write notes as Markdown headers (for example, `# UPDATE`, `## PLAN`) instead of structured text.
+  * Don't require the model to output text before tool calls.
+
+
+
+### Recommended solution: Wrap working notes in a dedicated function call
+
+Instead of the original instruction:
+    
+    
+    Before calling a tool, in every response you MUST first output a single
+    `<UPDATE>` part as specified, don't skip this part or any of required sub-tags
+    within `<UPDATE>`.
+    
+
+Use this updated instruction:
+    
+    
+    Before calling any other tool, in every response you MUST first call `update`
+    with all required parameters (previous_step, plan, next_step, external).
+    
+
+Update all references to the old `<UPDATE>` XML format in the customer request. Then add the corresponding function declaration for the update function:
+    
+    
+    {
+      "name": "update",
+      "description": "Update working notes (previous step analysis, plan, next step, external note).",
+      "parameters": {
+        "type": "OBJECT",
+        "properties": {
+          "previous_step": {
+            "type": "STRING",
+            "description": "Key findings and outcomes since the previous step."
+          },
+          "plan": {
+            "type": "STRING",
+            "description": "The current status of the plan."
+          },
+          "next_step": {
+            "type": "STRING",
+            "description": "Brief explanation of the immediate next action according to the plan."
+          },
+          "external": {
+            "type": "STRING",
+            "description": "A short, plain-language note shown to the User about what you are ABOUT TO DO next."
+          }
+        },
+        "required": [
+          "previous_step",
+          "plan",
+          "next_step",
+          "external"
+        ]
+      }
+    }
+    
+
+The model will make two calls in the same step: the `update()` call that replaces the structured XML, and the actual function call it wants to make.
+
+## Additional resources
+
+  * [Gemini 3.6 Flash model page](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-6-flash)
+  * [Introductory notebook](https://github.com/GoogleCloudPlatform/generative-ai/blob/main/gemini/getting-started/intro_gemini_3_6_flash.ipynb)
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

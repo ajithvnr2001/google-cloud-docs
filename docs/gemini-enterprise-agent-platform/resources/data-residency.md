@@ -1,0 +1,214 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/data-residency/
+title: Data residency \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T02:49:55.198449+00:00
+---
+
+# Data residency  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/data-residency/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+
+
+
+Send feedback 
+
+#  Data residency Stay organized with collections  Save and categorize content based on your preferences. 
+
+Data stored at rest in the customer selected location remains at rest in that [location](https://cloud.google.com/about/locations), independent of the Agent Platform endpoint called by that customer's request. 
+
+Global endpoints are listed on the [Deployments and endpoints](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations) page. Requests submitted to a `global` endpoint may be processed in any Google Cloud location around the world, and therefore don't provide any data residency guarantees. See [Cloud locations](https://cloud.google.com/about/locations) for a list of Google Cloud data center locations.
+
+## Where your data lives and is processed
+
+Gemini Enterprise Agent Platform provides transparency on where your data is stored ("at rest") and where the actual model computation ("ML processing") happens.
+
+### 1\. Data-at-rest (storage)
+
+When you store data on Agent Platform (such as custom model weights or metadata), it remains physically stored in the specific Google Cloud location you chose. This residency is maintained regardless of which endpoint you use to call the model.
+
+### 2\. ML processing (in-use)
+
+_ML processing_ is the method by which data is processed such that it produces model weights (tuning & training) or applies the model to the data for model inference. The geographic location of this processing is determined by your choice of endpoint:
+
+  * **Jurisdictional multi-region endpoints** : When you use jurisdictional endpoints, ML processing stays within that specific geographical region (such as the United States or the European Union).
+
+**Note:** The European Union multi-region (`eu`) endpoint strictly covers data residency within EU member states. Geographies outside the European Union political boundary, including the United Kingdom and Switzerland, are excluded from this endpoint.
+    * **Operational efficiency (unified capacity)** : Multi-region endpoints eliminate regional resource siloes. Instead of purchasing and managing separate Provisioned Throughput allocations for individual regions (such as `us-central1` and `us-east4`), you can deploy a single Provisioned Throughput commitment that covers your entire jurisdictional boundary (such as the United States).
+
+    * **Compliance enablement** : Multi-region endpoints provide the data-in-use isolation controls required to help satisfy stringent regulatory frameworks. While multi-region endpoints serve as a foundational technical capability for complying with Department of Defense (DoD) Impact Level 5 (IL5) or International Traffic in Arms Regulations (ITAR) requirements, fully achieving compliance also requires broader customer-managed architecture, identity, and access controls.
+
+**Important:** Models not explicitly listed as supporting US multi-regions don't meet DoD IL5 commitments. IL5 customers are responsible for restricting access to these models on Global endpoints by configuring [organizational policies](https://docs.cloud.google.com/docs/security/compliance/restrict-endpoint-usage) to block global endpoint traffic.
+  * **Locational endpoints** : These endpoints (like `us-central1`, `europe-west1`) ensure that ML processing remains entirely within the broader multi-regional or country jurisdiction associated with that region (for example, requests to us-central1 are processed within the United States).
+
+For European regions, local in-country processing varies by model type (for example, specific models may have local processing in France or Germany, while others are processed within the broader EU multi-region boundary). See the following section for the exact ML processing commitments for each model and location.
+
+    * **Compliance alignment** : While locational endpoints meet standard enterprise data governance and sovereign requirements (such as GDPR and HIPAA), workloads requiring specialized government isolation frameworks like DoD IL5 or ITAR should be deployed on jurisdictional endpoints as part of a broader compliant architecture.
+  * **Global endpoints** : Global endpoints route and process data anywhere globally, without restricting it to a specific geographic region. These endpoints (like `https://aiplatform.googleapis.com`) don't specify a region in the hostname. They are designed to maximize availability and minimize latency by terminating TLS sessions as close to the client as possible, but they don't provide regional isolation or data residency guarantees.
+
+
+
+
+## Supported models
+
+The tables in this section cover the regional support for ML processing at a per-model basis for the following model categories:
+
+  * Google models
+  * Partner models
+  * Open models
+
+
+
+### Google models
+
+To learn what capabilities support data residency, see [Supported capabilities](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/supported-capabilities).
+
+Model | US multi-region | EU multi-region | Brazil  
+(southamerica-east1) | Canada  
+(northamerica-northeast1) | France  
+(europe-west9) | Germany  
+(europe-west3) | Netherlands  
+(europe-west4) | United Kingdom  
+(europe-west2) | Australia  
+(australia-southeast1) | India  
+(asia-south1) | Japan  
+(asia-northeast1) | Singapore  
+(asia-southeast1) | South Korea  
+(asia-northeast3)  
+---|---|---|---|---|---|---|---|---|---|---|---|---|---  
+Gemini 4 Argon  
+(`gemini-4-argon`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini 3.8 Live  
+(`gemini-3.8-live`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini 3.8 Flash  
+(`gemini-3.8-flash`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini 3.7 Flash  
+(`gemini-3.7-flash`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini 3.6 Flash  
+(`gemini-3.6-flash`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini 3.5 Flash-Lite  
+(`gemini-3.5-flash-lite`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini 3.5 Flash  
+(`gemini-3.5-flash`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini 3.1 Flash Image  
+(`gemini-3.1-flash-image`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini 3.1 Flash-Lite  
+(`gemini-3.1-flash-lite`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini 2.5 Flash Live API Native Audio  
+(`gemini-live-2.5-flash-native-audio`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini 2.5 Flash, 128k  
+(`gemini-2.5-flash`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini 2.5 Flash, 1M  
+(`gemini-2.5-flash`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini 2.5 Flash Image  
+(`gemini-2.5-flash-image`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini 2.5 Flash-Lite  
+(`gemini-2.5-flash-lite`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini 2.5 Pro, 1M  
+(`gemini-2.5-pro`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini 2.5 Pro, 64k  
+(`gemini-2.5-pro`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Tuning for Gemini 2.5 Flash  
+(`gemini-2.5-flash`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Tuning for Gemini 2.5 Flash-Lite  
+(`gemini-2.5-flash-lite`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Tuning for Gemini 2.5 Pro  
+(`gemini-2.5-pro`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini Embeddings  
+(`gemini-embedding-001`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Gemini Embedding 2  
+(`gemini-embedding-2`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Chirp 2: Transcription  
+(`chirp_2`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Chirp 3: Transcription  
+(`chirp_3`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Chirp 3: HD Voices  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Chirp 3: Instant Custom Voice  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Embeddings for Multimodal  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Embeddings for Text  
+(`text-embedding-004`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Embeddings for Text  
+(`text-embedding-005`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+Embeddings for Text  
+(`text-multilingual-embedding-002`)  |  |  |  |  |  |  |  |  |  |  |  |  |   
+  
+### Google Cloud partner model support
+
+Model | US multi-region | EU multi-region | Belgium  
+(europe-west1) | Netherlands  
+(europe-west4) | Singapore  
+(asia-southeast1) | Taiwan  
+(asia-east1)  
+---|---|---|---|---|---|---  
+Anthropic's Anthropic's Claude Haiku 5.5 on Google Cloud  |  |  |  |  |  |   
+Anthropic's Anthropic's Claude Opus 5.5 on Google Cloud  |  |  |  |  |  |   
+Anthropic's Anthropic's Claude Sonnet 5.5 on Google Cloud  |  |  |  |  |  |   
+Anthropic's Anthropic's Claude Sonnet 5 on Google Cloud  |  |  |  |  |  |   
+Anthropic's Anthropic's Claude Opus 5 on Google Cloud  |  |  |  |  |  |   
+Anthropic's Anthropic's Claude Fable 5.1 on Google Cloud  |  |  |  |  |  |   
+Anthropic's Anthropic's Claude Fable 5 on Google Cloud  |  |  |  |  |  |   
+Anthropic's Anthropic's Claude Haiku 4.5 on Google Cloud  |  |  |  |  |  |   
+Anthropic's Anthropic's Claude Opus 4.5 on Google Cloud  |  |  |  |  |  |   
+Anthropic's Anthropic's Claude Opus 4.8 on Google Cloud  |  |  |  |  |  |   
+Anthropic's Anthropic's Claude Opus 4.7 on Google Cloud  |  |  |  |  |  |   
+Anthropic's Anthropic's Claude Opus 4.6 on Google Cloud  |  |  |  |  |  |   
+Anthropic's Anthropic's Claude Sonnet 4.5 on Google Cloud  |  |  |  |  |  |   
+Anthropic's Anthropic's Claude Sonnet 4.6 on Google Cloud  |  |  |  |  |  |   
+Anthropic's Claude 3.5 Haiku on Google Cloud (deprecated)  |  |  |  |  |  |   
+Anthropic's Claude 3 Haiku on Google Cloud (deprecated)  |  |  |  |  |  |   
+Anthropic's Claude 3.7 Sonnet on Google Cloud (deprecated)  |  |  |  |  |  |   
+Codestral 2  |  |  |  |  |  |   
+Mistral Medium 3  |  |  |  |  |  |   
+Mistral OCR (25.05)  |  |  |  |  |  |   
+Mistral Small 3.1 (25.03)  |  |  |  |  |  |   
+  
+### Google Cloud open model support
+
+Model | US multi-region | EU multi-region | Singapore  
+(asia-southeast1)  
+---|---|---|---  
+DeepSeek-OCR  |  |  |   
+DeepSeek R1 (0528)  |  |  |   
+DeepSeek-V3.1  |  |  |   
+DeepSeek-V3.2  |  |  |   
+DeepSeek-V4.1-Flash  |  |  |   
+Gemma 4 26B A4B IT  |  |  |   
+GLM 4.7  |  |  |   
+GLM 5  |  |  |   
+GLM 5.2  |  |  |   
+gpt-oss 120B  |  |  |   
+gpt-oss 20B  |  |  |   
+Kimi K2 Thinking  |  |  |   
+Llama 3.3 70B (Preview)  |  |  |   
+Llama 4 Maverick 17B-128E (Preview)  |  |  |   
+Llama 4 Scout 17B-16E (Preview)  |  |  |   
+MiniMax M2  |  |  |   
+Multilingual E5 Large  |  |  |   
+Multilingual E5 Small  |  |  |   
+Qwen3 235B  |  |  |   
+Qwen3 Coder  |  |  |   
+Qwen3-Next-80B Instruct  |  |  |   
+Qwen3-Next-80B Thinking  |  |  |   
+  
+## What's next
+
+  * Learn about [Google Cloud regions](https://docs.cloud.google.com/docs/geography-and-regions).
+  * Learn more about [security controls by feature](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/security-controls).
+
+  * Learn about [Gemini Enterprise Agent Platform locations](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations). 
+
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

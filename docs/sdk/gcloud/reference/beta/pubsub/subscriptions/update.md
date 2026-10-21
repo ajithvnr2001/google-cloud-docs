@@ -1,0 +1,292 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/pubsub/subscriptions/update/
+title: gcloud beta pubsub subscriptions update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T02:42:19.565111+00:00
+---
+
+# gcloud beta pubsub subscriptions update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/beta/pubsub/subscriptions/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud beta pubsub subscriptions update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud beta pubsub subscriptions update - updates an existing Cloud Pub/Sub subscription 
+SYNOPSIS
+    
+
+`gcloud beta pubsub subscriptions update` `SUBSCRIPTION` [`--ack-deadline`=`ACK_DEADLINE`] [`--enable-exactly-once-delivery`] [`--expiration-period`=`EXPIRATION_PERIOD`] [`--message-retention-duration`=`MESSAGE_RETENTION_DURATION`] [`--retain-acked-messages`] [`--update-labels`=[`KEY`=`VALUE`,…]] [`--clear-bigquery-config` | [`--bigquery-table`=`BIGQUERY_TABLE` : `--bigquery-service-account-email`=`BIGQUERY_SERVICE_ACCOUNT_EMAIL` `--drop-unknown-fields` `--write-metadata` `--use-table-schema` | `--use-topic-schema`] | `--clear-bigtable-config` | [`--bigtable-table`=`BIGTABLE_TABLE` : `--bigtable-app-profile-id`=`BIGTABLE_APP_PROFILE_ID` `--bigtable-service-account-email`=`BIGTABLE_SERVICE_ACCOUNT_EMAIL` `--bigtable-write-metadata` `--bigtable-use-row-key-schema` | [`--bigtable-key-fields`=[`KEY_FIELD`,…] : `--bigtable-delimiter`=`BIGTABLE_DELIMITER`]] | `--clear-cloud-storage-config` | [`--cloud-storage-bucket`=`CLOUD_STORAGE_BUCKET` : `--cloud-storage-file-datetime-format`=`CLOUD_STORAGE_FILE_DATETIME_FORMAT` `--cloud-storage-file-prefix`=`CLOUD_STORAGE_FILE_PREFIX` `--cloud-storage-file-suffix`=`CLOUD_STORAGE_FILE_SUFFIX` `--cloud-storage-max-bytes`=`CLOUD_STORAGE_MAX_BYTES` `--cloud-storage-max-duration`=`CLOUD_STORAGE_MAX_DURATION` `--cloud-storage-max-messages`=`CLOUD_STORAGE_MAX_MESSAGES` `--cloud-storage-output-format`=`OUTPUT_FORMAT`; default="text" `--cloud-storage-service-account-email`=`CLOUD_STORAGE_SERVICE_ACCOUNT_EMAIL` `--cloud-storage-use-topic-schema` `--cloud-storage-write-metadata`]] [`--clear-dead-letter-policy` | `--max-delivery-attempts`=`MAX_DELIVERY_ATTEMPTS` [`--dead-letter-topic`=`DEAD_LETTER_TOPIC` : `--dead-letter-topic-project`=`DEAD_LETTER_TOPIC_PROJECT`]] [`--clear-labels` | `--remove-labels`=[`KEY`,…]] [`--clear-message-transforms` | `--message-transforms-file`=`MESSAGE_TRANSFORMS_FILE`] [`--clear-retry-policy` | `--max-retry-delay`=`MAX_RETRY_DELAY` `--min-retry-delay`=`MIN_RETRY_DELAY`] [`--push-auth-service-account`=`SERVICE_ACCOUNT_EMAIL` `--push-auth-token-audience`=`OPTIONAL_AUDIENCE_OVERRIDE` `--push-endpoint`=`PUSH_ENDPOINT` `--clear-push-no-wrapper-config` | [`--push-no-wrapper` : `--push-no-wrapper-write-metadata`]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(BETA)` Updates an existing Cloud Pub/Sub subscription. 
+POSITIONAL ARGUMENTS
+    
+
+Subscription resource - Name of the subscription to update. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `subscription` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`SUBSCRIPTION`
+     ID of the subscription or fully qualified identifier for the subscription. 
+
+To set the `subscription` attribute: 
+
+  * provide the argument `subscription` on the command line. 
+
+
+FLAGS
+    
+
+`--ack-deadline`=`ACK_DEADLINE`
+     The number of seconds the system will wait for a subscriber to acknowledge receiving a message before re-attempting delivery. 
+`--enable-exactly-once-delivery`
+     Whether or not to enable exactly-once delivery on the subscription. If true, Pub/Sub provides the following guarantees for the delivery of a message with a given value of `message_id` on this subscription: The message sent to a subscriber is guaranteed not to be resent before the message's acknowledgment deadline expires. An acknowledged message will not be resent to a subscriber. Use --no-enable-exactly-once-delivery to disable this flag. 
+`--expiration-period`=`EXPIRATION_PERIOD`
+     The subscription will expire if it is inactive for the given period. Valid values are strings of the form INTEGER[UNIT], where UNIT is one of "s", "m", "h", and "d" for seconds, minutes, hours, and days, respectively. If the unit is omitted, seconds is assumed. This flag additionally accepts the special value "never" to indicate that the subscription will never expire. 
+`--message-retention-duration`=`MESSAGE_RETENTION_DURATION`
+     How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If --retain-acked-messages is true, this also configures the retention of acknowledged messages. Specify "default" to use the default value of 7 days. The minimum is 10 minutes, and the maximum is 31 days. Valid values are strings of the form INTEGER[UNIT], where UNIT is one of "s", "m", "h", and "d" for seconds, minutes, hours, and days, respectively. If the unit is omitted, seconds is assumed. 
+`--retain-acked-messages`
+     Whether or not to retain acknowledged messages. If true, messages are not expunged from the subscription's backlog until they fall out of the \--message-retention-duration window. Acknowledged messages are not retained by default. Use --no-retain-acked-messages to disable this flag. 
+`--update-labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to update. If a label exists, its value is modified. Otherwise, a new label is created. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+At most one of these can be specified: 
+
+At most one of these can be specified: 
+
+`--clear-bigquery-config`
+     If set, clear the BigQuery config from the subscription. Use \--no-clear-bigquery-config to disable this flag. 
+Or at least one of these can be specified: 
+
+BigQuery Config Options. The Cloud Pub/Sub service account associated with the enclosing subscription's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to write to this BigQuery table. 
+
+When updating BigQueryConfig flags, all BigQueryConfig flags must be specified. Otherwise, any omitted BigQueryConfig flags revert to their default value. 
+
+`--bigquery-table`=`BIGQUERY_TABLE`
+     A BigQuery table of the form {project}:{dataset_name}.{table_name} to which to write messages for this subscription. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--bigquery-service-account-email`=`BIGQUERY_SERVICE_ACCOUNT_EMAIL`
+     The service account email to use when writing to BigQuery. If unspecified, uses the Pub/Sub service agent (https://cloud.google.com/iam/docs/service-account-types#service-agents). 
+`--drop-unknown-fields`
+     If either --use-topic-schema or --use-table-schema is set, whether or not to ignore fields in the message that do not appear in the BigQuery table schema. Use --no-drop-unknown-fields to disable this flag. 
+`--write-metadata`
+     Whether or not to write message metadata including message ID, publish timestamp, ordering key, and attributes to BigQuery. The subscription name, message_id, and publish_time fields are put in their own columns while all other message properties other than data (for example, an ordering_key, if present) are written to a JSON object in the attributes column. Use --no-write-metadata to disable this flag. 
+At most one of these can be specified: 
+
+`--use-table-schema`
+     Whether or not to use the BigQuery table schema when writing messages to BigQuery. Use --no-use-table-schema to disable this flag. 
+`--use-topic-schema`
+     Whether or not to use the schema for the subscription's topic (if it exists) when writing messages to BigQuery. If --drop-unknown-fields is not set, then the BigQuery schema must contain all fields that are present in the topic schema. Use --no-use-topic-schema to disable this flag. 
+At most one of these can be specified: 
+
+`--clear-bigtable-config`
+     If set, clear the Bigtable config from the subscription. Use \--no-clear-bigtable-config to disable this flag. 
+Or at least one of these can be specified: 
+
+Bigtable Config Options. The Cloud Pub/Sub service account associated with the enclosing subscription's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to write to this Bigtable table. 
+
+When updating BigtableConfig flags, all BigtableConfig flags must be specified. Otherwise, any omitted BigtableConfig flags revert to their default value. 
+
+`--bigtable-table`=`BIGTABLE_TABLE`
+     A Bigtable table of the form projects/{project}/instances/{instance_name}/tables/{table_name} to which to write messages for this subscription. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--bigtable-app-profile-id`=`BIGTABLE_APP_PROFILE_ID`
+     The app profile to use for the Bigtable writes. 
+`--bigtable-service-account-email`=`BIGTABLE_SERVICE_ACCOUNT_EMAIL`
+     The service account email to use when writing to Bigtable. If unspecified, uses the Pub/Sub service agent (https://cloud.google.com/iam/docs/service-account-types#service-agents). 
+`--bigtable-write-metadata`
+     Whether or not to write the subscription name, message_id, publish_time, attributes, and ordering_key as additional fields in the output. The subscription name, message_id, and publish_time fields are put in their own fields while all other message properties other than data (for example, an ordering_key, if present) are added as entries in the attributes map. 
+At most one of these can be specified: 
+
+`--bigtable-use-row-key-schema`
+     Whether or not to write Bigtable row keys for each message based on the row key schema of the target table. Only one of --bigtable-use-row-key-schema or \--bigtable-key-fields can be specified. 
+Or at least one of these can be specified: 
+
+Bigtable Delimited Key Options. 
+`--bigtable-key-fields`=[`KEY_FIELD`,…]
+     The Pub/Sub message fields that will be joined for the Bigtable row key when writing to Bigtable. Only one of --bigtable-use-row-key-schema or \--bigtable-key-fields can be specified. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--bigtable-delimiter`=`BIGTABLE_DELIMITER`
+     The delimiter to use when joining the Bigtable row key fields. Only allowed if \--bigtable-key-fields is specified. 
+At most one of these can be specified: 
+
+`--clear-cloud-storage-config`
+     If set, clear the Cloud Storage config from the subscription. Use \--no-clear-cloud-storage-config to disable this flag. 
+Or at least one of these can be specified: 
+
+Cloud Storage Config Options. The Cloud Pub/Sub service account associated with the enclosing subscription's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to write to this Cloud Storage bucket and to read this bucket's metadata. 
+
+When updating CloudStorageConfig flags, all CloudStorageConfig flags must be specified. Otherwise, any omitted CloudStorageConfig flags revert to their default value. 
+
+Note that an update to the Cloud Storage config will replace it with a new config containing only the flags that are passed in the `update` CLI. 
+
+`--cloud-storage-bucket`=`CLOUD_STORAGE_BUCKET`
+     A Cloud Storage bucket to which to write messages for this subscription. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--cloud-storage-file-datetime-format`=`CLOUD_STORAGE_FILE_DATETIME_FORMAT`
+     The custom datetime format string for Cloud Storage filename. See the [datetime format guidance](https://cloud.google.com/pubsub/docs/create-cloudstorage-subscription#file_names). 
+`--cloud-storage-file-prefix`=`CLOUD_STORAGE_FILE_PREFIX`
+     The prefix for Cloud Storage filename. 
+`--cloud-storage-file-suffix`=`CLOUD_STORAGE_FILE_SUFFIX`
+     The suffix for Cloud Storage filename. 
+`--cloud-storage-max-bytes`=`CLOUD_STORAGE_MAX_BYTES`
+     The maximum bytes that can be written to a Cloud Storage file before a new file is created. The value must be between 1000B and 10GB. If the unit is omitted, KB is assumed. 
+`--cloud-storage-max-duration`=`CLOUD_STORAGE_MAX_DURATION`
+     The maximum duration that can elapse before a new Cloud Storage file is created. The value must be between 1m and 10m. Valid values are strings of the form INTEGER[UNIT], where UNIT is one of "s", "m", "h", and "d" for seconds, minutes, hours, and days, respectively. If the unit is omitted, seconds is assumed. 
+`--cloud-storage-max-messages`=`CLOUD_STORAGE_MAX_MESSAGES`
+     The maximum number of messages that can be written to a Cloud Storage file before a new file is created. The value must be greater than or equal to 1000. 
+`--cloud-storage-output-format`=`OUTPUT_FORMAT`; default="text"
+     The output format for data written to Cloud Storage. Values: text (messages will be written as raw text, separated by a newline) or avro (messages will be written as an Avro binary). `OUTPUT_FORMAT` must be one of: `text`, `avro`. 
+`--cloud-storage-service-account-email`=`CLOUD_STORAGE_SERVICE_ACCOUNT_EMAIL`
+     The service account email to use when writing to Cloud Storage. If unspecified, uses the Pub/Sub service agent (https://cloud.google.com/iam/docs/service-account-types#service-agents). 
+`--cloud-storage-use-topic-schema`
+     Whether or not to use the schema for the subscription's topic (if it exists) when writing messages to Cloud Storage. This has an effect only for subscriptions with --cloud-storage-output-format=avro. Use \--no-cloud-storage-use-topic-schema to disable this flag. 
+`--cloud-storage-write-metadata`
+     Whether or not to write the subscription name, message_id, publish_time, attributes, and ordering_key as additional fields in the output. The subscription name, message_id, and publish_time fields are put in their own fields while all other message properties other than data (for example, an ordering_key, if present) are added as entries in the attributes map. This has an effect only for subscriptions with --cloud-storage-output-format=avro. Use \--no-cloud-storage-write-metadata to disable this flag. 
+At most one of these can be specified: 
+
+`--clear-dead-letter-policy`
+     If set, clear the dead letter policy from the subscription. Use \--no-clear-dead-letter-policy to disable this flag. 
+Or at least one of these can be specified: 
+
+Dead Letter Queue Options. The Cloud Pub/Sub service account associated with the enclosing subscription's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Publish() to this topic and Acknowledge() messages on this subscription. 
+
+When updating DeadLetterPolicy flags, all DeadLetterPolicy flags must be specified. Otherwise, any omitted DeadLetterPolicy flags revert to their default value. 
+
+`--max-delivery-attempts`=`MAX_DELIVERY_ATTEMPTS`
+     Maximum number of delivery attempts for any message. The value must be between 5 and 100. Defaults to 5. `--dead-letter-topic` must also be specified. 
+Dead letter topic resource - Name of the topic to publish dead letter messages to. The arguments in this group can be used to specify the attributes of this resource. 
+`--dead-letter-topic`=`DEAD_LETTER_TOPIC`
+     ID of the dead-letter-topic or fully qualified identifier for the dead-letter-topic. 
+
+To set the `topic` attribute: 
+
+  * provide the argument `--dead-letter-topic` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--dead-letter-topic-project`=`DEAD_LETTER_TOPIC_PROJECT`
+     Project ID of the Google Cloud project for the dead-letter-topic. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--dead-letter-topic` on the command line with a fully specified name; 
+  * provide the argument `--dead-letter-topic-project` on the command line; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+At most one of these can be specified: 
+
+`--clear-labels`
+     Remove all labels. If `--update-labels` is also specified then `--clear-labels` is applied first. 
+
+For example, to remove all labels: 
+    
+    
+    gcloud beta pubsub subscriptions update --clear-labels
+
+To remove all existing labels and create two new labels, ``foo`` and ``baz``: 
+    
+    
+    gcloud beta pubsub subscriptions update --clear-labels --update-labels foo=bar,baz=qux
+
+`--remove-labels`=[`KEY`,…]
+     List of label keys to remove. If a label does not exist it is silently ignored. If `--update-labels` is also specified then `--update-labels` is applied first. 
+At most one of these can be specified: 
+
+`--clear-message-transforms`
+     If set, clears the message transforms field. Use --no-clear-message-transforms to disable this flag. 
+`--message-transforms-file`=`MESSAGE_TRANSFORMS_FILE`
+     Path to YAML or JSON file containing message transforms. 
+At most one of these can be specified: 
+
+`--clear-retry-policy`
+     If set, clear the retry policy from the subscription. Use \--no-clear-retry-policy to disable this flag. 
+Or at least one of these can be specified: 
+
+Retry Policy Options. Retry policy specifies how Cloud Pub/Sub retries message delivery for this subscription. 
+
+When updating RetryPolicy flags, all RetryPolicy flags must be specified. Otherwise, any omitted RetryPolicy flags revert to their default value. 
+
+`--max-retry-delay`=`MAX_RETRY_DELAY`
+     The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds. Valid values are strings of the form INTEGER[UNIT], where UNIT is one of "s", "m", "h", and "d" for seconds, minutes, hours, and days, respectively. If the unit is omitted, seconds is assumed. 
+`--min-retry-delay`=`MIN_RETRY_DELAY`
+     The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds. Valid values are strings of the form INTEGER[UNIT], where UNIT is one of "s", "m", "h", and "d" for seconds, minutes, hours, and days, respectively. If the unit is omitted, seconds is assumed. 
+Push Config Options. Configuration for a push delivery endpoint. 
+
+When updating PushConfig flags, all PushConfig flags must be specified. Otherwise, any omitted PushConfig flags revert to their default value. 
+
+`--push-auth-service-account`=`SERVICE_ACCOUNT_EMAIL`
+     Service account email used as the identity for the generated Open ID Connect token for authenticated push. 
+`--push-auth-token-audience`=`OPTIONAL_AUDIENCE_OVERRIDE`
+     Audience used in the generated Open ID Connect token for authenticated push. If not specified, it will be set to the push-endpoint. 
+`--push-endpoint`=`PUSH_ENDPOINT`
+     A URL to use as the endpoint for this subscription. This will also automatically set the subscription type to PUSH. 
+At most one of these can be specified: 
+
+`--clear-push-no-wrapper-config`
+     If set, clear the NoWrapper config from the subscription. Use \--no-clear-push-no-wrapper-config to disable this flag. 
+Or at least one of these can be specified: 
+
+NoWrapper Config Options. 
+`--push-no-wrapper`
+     When set, the message data is delivered directly as the HTTP body. Use \--no-push-no-wrapper to disable this flag. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--push-no-wrapper-write-metadata`
+     When true, writes the Pub/Sub message metadata to `x-goog-pubsub-<KEY>:<VAL>` headers of the HTTP request. Writes the Pub/Sub message attributes to `<KEY>:<VAL>` headers of the HTTP request. Use --no-push-no-wrapper-write-metadata to disable this flag. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in beta and might change without notice. These variants are also available: 
+    
+    
+    [gcloud pubsub subscriptions update](https://docs.cloud.google.com/sdk/gcloud/reference/pubsub/subscriptions/update)
+    
+    
+    [gcloud alpha pubsub subscriptions update](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/pubsub/subscriptions/update)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-09-09 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-09-09 UTC."],[],[]] 

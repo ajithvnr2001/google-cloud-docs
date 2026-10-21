@@ -1,0 +1,166 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/scc/findings/group/
+title: gcloud scc findings group \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T10:31:01.054724+00:00
+---
+
+# gcloud scc findings group  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/scc/findings/group/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud scc findings group Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud scc findings group - filter an organization or source's findings and groups them by their specified properties 
+SYNOPSIS
+    
+
+`gcloud scc findings group` [`PARENT`] [`--compare-duration`=`COMPARE_DURATION`] [`--filter`=`FILTER`] [`--group-by`=`GROUP_BY`] [`--location`=`LOCATION`; default="global"] [`--page-size`=`PAGE_SIZE`] [`--page-token`=`PAGE_TOKEN`] [`--read-time`=`READ_TIME`] [`--source`=`SOURCE`; default="-"] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     To group across all sources provide a '-' as the source id. 
+EXAMPLES
+     Group findings under organization `123456` across all sources by their category: 
+    
+    
+    gcloud scc findings group 123456 --group-by="category"
+
+Group findings under project `example-project` across all sources by their category: 
+    
+    
+    gcloud scc findings group projects/example-project --group-by="category"
+
+Group findings under folders `456` across all sources by their category: 
+    
+    
+    gcloud scc findings group folders/456 --group-by="category"
+
+Group findings under organization `123456` and source `5678`, by their category: 
+    
+    
+    gcloud scc findings group 123456 --source=5678 --group-by="category"
+
+Group ACTIVE findings under organization `123456` and source `5678`, by their category: 
+    
+    
+    gcloud scc findings group 123456 --source=5678 --group-by="category" --filter="state=\"ACTIVE\""
+
+Group findings under organization `123456` and `location=eu` across all sources by their category: 
+    
+    
+    gcloud scc findings group 123456 --group-by="category" --location=eu
+
+POSITIONAL ARGUMENTS
+    
+
+Parent resource - parent organization, folder, or project in the Google Cloud resource hierarchy to be used for the `[gcloud scc](https://docs.cloud.google.com/sdk/gcloud/reference/scc)` command. Specify the argument as either [RESOURCE_TYPE/RESOURCE_ID] or [RESOURCE_ID], as shown in the preceding examples. This represents a Cloud resource. 
+[`PARENT`]
+     ID of the parent or fully qualified identifier for the parent. 
+
+To set the `parent` attribute: 
+
+  * provide the argument `parent` on the command line; 
+  * Set the parent property in configuration using `gcloud config set scc/parent` if it is not specified in command line. 
+
+
+FLAGS
+    
+
+`--compare-duration`=`COMPARE_DURATION`
+     (DEPRECATED) When compare_duration is set, the result's "state_change" attribute is updated to indicate whether the finding had its state changed, the finding's state remained unchanged, or if the finding was added during the compare_duration period of time that precedes the read_time. This is the time between (read_time - compare_duration) and read_time. The state_change value is derived based on the presence and state of the finding at the two points in time. Intermediate state changes between the two times don't affect the result. For example, the results aren't affected if the finding is made inactive and then active again. Possible "state_change" values when compare_duration is specified: 
+
+  * 'CHANGED': indicates that the finding was present at the start of compare_duration, but changed its state at read_time. 
+
+
+  * 'UNCHANGED': indicates that the finding was present at the start of compare_duration and did not change state at read_time. 
+
+
+  * 'ADDED': indicates that the finding was not present at the start of compare_duration, but was present at read_time. 
+
+
+  * 'REMOVED': indicates that the finding was present at the start of compare_duration, but was not present at read_time. 
+
+
+    
+    
+    If compare_duration is not specified, then the only possible
+    state_change is 'UNUSED', which will be the state_change set for all
+    findings present at read_time. If this field is set then 'state_change'
+    must be a specified field in 'group_by'. See $ [gcloud topic datetimes](https://docs.cloud.google.com/sdk/gcloud/reference/topic/datetimes)
+    for information on supported duration formats.
+
+The --compare-duration option is deprecated. For more information, [see the deprecation notice](https://cloud.google.com/security-command-center/docs/release-notes#April_15_2024) on the SCC release notes page. 
+
+`--filter`=`FILTER`
+     Expression that defines the filter to apply across findings. The expression is a list of one or more restrictions combined via logical operators 'AND' and 'OR'. Parentheses are supported, and 'OR' has higher precedence than 'AND'. Restrictions have the form '<field> <operator> <value>' and may have a '-' character in front of them to indicate negation. Examples include: name, source_properties.a_property, security_marks.marks.marka. The supported operators are: 
+
+  * '=' for all value types. 
+  * '>', '<', '>=', '<=' for integer values. 
+  * ':', meaning substring matching, for strings. 
+
+
+
+The supported value types are:string literals in quotes, integer literals without quotes, boolean literals 'true' and 'false' without quotes. Some example filters: 'source_properties.size = 100', 'category=\"XSS\" AND event_time > 10' etc. 
+
+`--group-by`=`GROUP_BY`
+     Expression that defines what findings fields to use for grouping (including 'state'). String value should follow SQL syntax: comma separated list of fields. For example: "parent,resource_name". The following fields are supported: 
+
+  * resource_name 
+  * category 
+  * state 
+  * parent 
+
+
+`--location`=`LOCATION`; default="global"
+     When data residency controls are enabled, this attribute specifies the location in which the resource is located and applicable. The `location` attribute can be provided as part of the fully specified resource name or with the `--location` argument on the command line. The default location is `global`. 
+
+NOTE: If you override the endpoint to a [regional endpoint](https://cloud.google.com/security-command-center/docs/reference/rest/index.html?rep_location=global#regional-service-endpoint) you must specify the correct [data location](https://cloud.google.com/security-command-center/docs/data-residency-support#locations) using this flag. The default location on this command is unrelated to the default location that is specified when data residency controls are enabled for Security Command Center. 
+
+NOTE: If no location is specified, the default location is `global` AND the request will be routed to the SCC V1 API. To use the SCC V2 API - please explicitly specify the flag. 
+
+`--page-size`=`PAGE_SIZE`
+     Maximum number of results to return in a single response. Default is 10, minimum is 1, maximum is 1000. 
+`--page-token`=`PAGE_TOKEN`
+     Response objects will return a non-null value for page-token to indicate that there is at least one additional page of data. User can either directly request that page by specifying the page-token explicitly or let gcloud fetch one-page-at-a-time. 
+`--read-time`=`READ_TIME`
+     (DEPRECATED) Time used as a reference point when filtering. Absence of this field will default to the API's version of NOW. See $ [gcloud topic datetimes](https://docs.cloud.google.com/sdk/gcloud/reference/topic/datetimes) for information on supported time formats. 
+
+The --read-time option is deprecated. For more information, [see the deprecation notice](https://cloud.google.com/security-command-center/docs/release-notes#April_15_2024) on the SCC release notes page. 
+
+`--source`=`SOURCE`; default="-"
+     Source id. Defaults to all sources. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the Security Command Center API. For more information, see [Security Command Center API.](https://cloud.google.com/security-command-center/docs/reference/rest)
+NOTES
+     These variants are also available: 
+    
+    
+    [gcloud alpha scc findings group](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/scc/findings/group)
+    
+    
+    [gcloud beta scc findings group](https://docs.cloud.google.com/sdk/gcloud/reference/beta/scc/findings/group)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

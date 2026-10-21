@@ -1,0 +1,57 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/provisioned-throughput/veo-models/
+title: Provisioned Throughput for Veo\u00a03 models \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T06:45:56.748939+00:00
+---
+
+# Provisioned Throughput for Veo 3 models  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/provisioned-throughput/veo-models/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Provisioned Throughput for Veo 3 models Stay organized with collections  Save and categorize content based on your preferences. 
+
+This section explains how Provisioned Throughput works for the Veo 3 and later models, including quota enforcement behavior and minimum GSU purchase increment.
+
+For Veo 3 models, the [quota enforcement period](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/provisioned-throughput/use-provisioned-throughput#pt-quota-enforcement-period) varies based on the number of GSUs you purchase for the model, and is subject to change. The quota enforcement periods for different GSU sizes are as follows:
+
+  * 1-9 GSUs: 2000 seconds
+
+  * 10-19 GSUs: 400 seconds
+
+  * 20-39 GSUs: 200 seconds
+
+  * 40-66 GSUs: 100 seconds
+
+  * 67 or more GSUs: 60 seconds
+
+
+
+
+Note that this isn't connected to the request latency. The time to process your request isn't the same as the quota enforcement period.
+
+For example, if you have a workload that requires generating a four-second video on the Veo 3 model and you purchase 1 GSU, you can generate that video within a few minutes. However, because the enforcement window for 1 GSU is 2000 seconds, you can't generate a video of the same size until the end of that period. Note that this is subject to Gemini Enterprise Agent Platform clock time and doesn't depend on the time of your request. We recommend using the estimation tool on the Provisioned Throughput page to estimate the number of GSUs required for your workload. For more information about using the estimation tool, see [Purchase a Provisioned Throughput order](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/provisioned-throughput/purchase-provisioned-throughput#place-an-order). These large enforcement windows ensure that your request is processed within a specific time. If you need to process outputs on Veo 3 more frequently, you must buy enough GSUs and check the corresponding enforcement window.
+
+## What's next
+
+  * [Purchase standard Provisioned Throughput.](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/provisioned-throughput/purchase-provisioned-throughput)
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

@@ -1,0 +1,162 @@
+---
+url: https://docs.cloud.google.com/spanner/docs/error-codes/
+title: Spanner error codes \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T04:49:23.632144+00:00
+---
+
+# Spanner error codes  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/docs/error-codes/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Guides ](https://docs.cloud.google.com/spanner/docs/create-query-database-console)
+
+
+
+Send feedback 
+
+#  Spanner error codes Stay organized with collections  Save and categorize content based on your preferences. 
+
+This page describes Spanner error codes and recommended actions to handle these errors. Google APIs, including Spanner, use the canonical error codes defined by [`google.rpc.Code`](https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto).
+
+When a Spanner request is successful, the API returns an HTTP `200 OK` status code along with the requested data in the body of the response.
+
+When a request fails, the Spanner API returns an HTTP `4xx` or `5xx` status code that generically identifies the failure as well as a response that provides more specific information about the error(s) that caused the failure.
+
+The response object contains a single field `error` whose value contains the following elements:
+
+Element | Description  
+---|---  
+`code` | An [HTTP status code](https://tools.ietf.org/html/rfc7231#section-6) that generically identifies the request failure.  
+`message` | Specific information about the request failure.  
+`status` | The [canonical error code](https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto) (`google.rpc.Code`) for Google APIs. Codes that may be returned by the Spanner API are listed in Error codes.  
+  
+If a request made with a content type of `application/x-protobuf` results in an error, it will return a serialized [`google.rpc.Status`](https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto) message as the payload.
+
+**Note:** The text provided in the message might change at any time so applications shouldn't depend on the actual text.
+
+## Error codes
+
+The recommended way to classify errors is to inspect the value of the [canonical error code](https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto) (`google.rpc.Code`). In JSON errors, this code appears in the `status` field. In `application/x-protobuf` errors, it's in the `code` field.
+
+Error code | Description | Recommended action  
+---|---|---  
+`ABORTED` | The operation was aborted, typically due to concurrency issue such as a sequencer check failure or [transaction](https://docs.cloud.google.com/spanner/docs/transactions) abort. Indicates that the request conflicted with another request.  
+  
+For more information about `Database schema has changed` errors, see Database schema has changed error. | For a non-transactional commit:  
+Retry the request or structure your entities to reduce contention.  
+  
+For requests that are part of a transactional commit:  
+Retry the entire transaction or structure your entities to reduce contention.  
+`ALREADY_EXISTS` | The entity that a client attempted to create already exists (for example, inserting a row with an existing primary key). | Don't retry without fixing the problem.  
+`CANCELLED` | The operation was cancelled, typically by the caller. | Retry the operation.  
+`DEADLINE_EXCEEDED` | The deadline expired before the operation could complete. | Investigate if the deadline is sufficient. Use a deadline corresponding to the actual time in which a response is useful. Note that for operations that change the state of the system, an error might be returned even if the operation has completed successfully.   
+  
+For tips, see [Troubleshoot deadline exceeded errors](https://docs.cloud.google.com/spanner/docs/deadline-exceeded).  
+`FAILED_PRECONDITION` | The operation was rejected because a precondition for the request was not met. The message field in the error response provides information about the precondition that failed. For example, reading or querying from a timestamp that has exceeded the maximum timestamp staleness. | Don't retry without fixing the problem.  
+`INTERNAL` | The server returned an error. Some invariants expected by the underlying system have been broken. | Don't retry unless you understand the specific circumstance and cause of the error.  
+`INVALID_ARGUMENT` | The client specified an invalid value. The message field in the error response provides information as to which value was invalid. | Don't retry without fixing the problem.  
+`NOT_FOUND` | Indicates that some requested entity, such as updating an entity or querying a table or column, doesn't exist. | Don't retry without fixing the problem.  
+`OUT_OF_RANGE` | The operation was attempted past the valid range. | Don't retry without fixing the problem.  
+`PERMISSION_DENIED` | The user was not authorized to make the request. | Don't retry without fixing the problem.  
+`RESOURCE_EXHAUSTED` | Some resource has been exhausted.  
+  
+For the administrator plane, it's possible that the project exceeded its [quota](https://docs.cloud.google.com/spanner/quotas) or the entire file system is out of space.  
+  
+For the data plane, this can happen if your Spanner nodes are overloaded.  
+  
+For more information, also see Session-related error codes. | For the administrator plane, verify that you didn't exceed your Spanner or project quota. If you've exceeded a quota, request a quota increase or wait for the quota to reset before trying again. Configure your retries to use exponential backoff.  
+  
+For the data plane, verify that your Spanner nodes haven't exceeded their capacity. Spanner retries these errors in the client library. If all retries fail, see Flow control mechanism errors.  
+  
+In general, if your application is experiencing `RESOURCE_EXHAUSTED` errors, treat the situation like an `UNAVAILABLE` error, and retry with exponential backoff.  
+`UNAUTHENTICATED` | The request doesn't have valid authentication credentials for the operation. | Don't retry without fixing the problem.  
+`UNAVAILABLE` | The server is unavailable. | Retry using exponential backoff. Note that it is not always safe to retry non-idempotent operations.  
+`UNIMPLEMENTED` | The operation is not implemented or is not supported/enabled in this service. | Don't retry without fixing the problem.  
+`UNKNOWN` | Server returned an unknown error. Errors raised by APIs that don't return enough error information may be converted to this error. | Check that your request is safe. Then, retry with exponential backoff.  
+  
+### Database schema has changed error
+
+You might see an `ABORTED` error with a message similar to one of the following:
+
+  * `Database schema has changed`
+  * `Transaction aborted. Database schema probably changed during transaction, retry may succeed.`
+
+
+
+These errors typically occur when a schema update aborts the transaction. However, other reasons can also trigger them without an explicit schema update. For example, a temporary internal state, such as a stale client schema during a transaction commit, can trigger this error.
+
+Like other `ABORTED` errors, handle this error by retrying the entire transaction.
+
+### Session errors
+
+Spanner uses [sessions](https://docs.cloud.google.com/spanner/docs/sessions) to manage interactions between your application and the database. Sessions represent a connection to the database and facilitate operations like reads and writes.
+
+Common session-related errors that your application might encounter include:
+
+  * `Session not found`
+  * `RESOURCE_EXHAUSTED`
+
+
+
+#### Session not found
+
+The `Session not found` error occurs when your application attempts to use a session that no longer exists. This can happen for several reasons.
+
+  * Your client application might explicitly delete a session. For example, closing a database client in your code or calling the `deleteSessions` API directly removes the session. If you don't use one of the Spanner client libraries, create a new session when this error occurs. Add the new session to your session pool and remove the deleted session from the pool.
+
+  * Spanner also automatically deletes sessions under certain conditions.
+
+    * It deletes a session if it remains idle for more than one hour. This can occur in data stream jobs where downstream processing takes longer than the session idle timeout. If you're using a Dataflow job, add a `Reshuffle` transform operation after the Spanner read in the Dataflow pipeline. This can help decouple the Spanner read operation from the subsequent long-running processing steps.
+
+    * Spanner also deletes a session if it is older than 28 days. If you're using the client library, it handles these cases automatically. If you don't use one of the Spanner client libraries, create a new session when this error occurs. Add the new session to your session pool and remove the deleted session from the pool.
+
+  * If you use one of the [Spanner client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries), then the library manages sessions automatically. If you encounter this error, verify that your code doesn't explicitly delete sessions, such as by closing the database client. Occasionally, this might also be caused by an issue in the client library's session management.
+
+
+
+
+#### Resource exhausted
+
+The `RESOURCE_EXHAUSTED: No session available in the pool` or `RESOURCE_EXHAUSTED: Timed out after waiting X ms for acquiring session` errors indicate that your application can't acquire a session from the session pool. This happens when no sessions are available to process new read or write requests.
+
+The following table describes some reasons that might cause these errors, and corresponding recommended actions.
+
+Reason | Recommended action  
+---|---  
+**All sessions in the pool are in use.** Your application might receive more concurrent requests than the configured maximum number of sessions. All sessions in the pool are occupied, with no sessions available for new requests. |  [Enable multiplexed sessions](https://docs.cloud.google.com/spanner/docs/sessions#multiplexed_sessions). Multiplexed sessions allow multiple transactions and reads to share a single session, which can reduce the total number of sessions required by your application. You can also increase the `maxSession` or `minSession` configuration in your [session pool settings](https://docs.cloud.google.com/spanner/docs/sessions#configure_the_number_of_sessions_and_grpc_channels_in_the_pools).  
+**Requests take a long time to complete.** Long-running read or write requests can occupy all available sessions for extended periods. If these requests take longer than the session acquire timeout setting, new requests can't obtain a session from the session pool. | Investigate why your requests take a long time to complete. Optimize your queries or application logic to reduce execution time. You can increase the [session acquire timeout setting](https://docs.cloud.google.com/spanner/docs/custom-timeout-and-retry). You can also [enable multiplexed sessions](https://docs.cloud.google.com/spanner/docs/sessions#multiplexed_sessions) for eligible client libraries to improve session utilization.  
+**There are session leaks.** A session leak occurs when your application checks out a session from the pool but doesn't return it after completing the request. This typically happens when iterators or result sets aren't closed properly in your code. If all sessions leak, no sessions are available for new requests. | Debug your application code to identify and fix the session leaks. Ensure that your code properly closes all iterators and result sets. For more information, see [Session leak detection solutions](https://cloud.google.com/blog/products/databases/debug-and-fix-session-leaks-in-spanner). You can also use the [automatic clean up of session leaks](https://docs.cloud.google.com/spanner/docs/sessions#automatic_cleanup_of_session_leaks) feature to set your session pool to automatically resolve inactive transactions.  
+**Session creation is slow.** Session creation is an computationally expensive operation. Client libraries send `BatchCreateSessions` APIs to create initial sessions (based on the `minSession` configuration) and `CreateSessions` APIs for additional sessions (up to the `maxSession`). If session creation takes longer than the session acquire timeout setting, new requests might time out while waiting for sessions. | Verify the latency of `BatchCreateSessions` and `CreateSessions` API calls. Slow session creation might result from resource issues on the Spanner side or a large number of concurrent session creation operations.  
+  
+### Flow control mechanism errors
+
+Spanner might activate its flow control mechanism to protect itself from overload under the following conditions:
+
+  * There is high CPU usage on the Spanner node. If you suspect that your request is causing high CPU usage, then you can use the [CPU utilization metrics](https://docs.cloud.google.com/spanner/docs/cpu-utilization) to investigate the issue.
+  * There might be hotspots, which increase the processing time of the request. If you suspect that your request is causing hotspots, refer to [Find hotspots in your database](https://docs.cloud.google.com/spanner/docs/find-hotspots-in-database) to investigate the issue. For more information, see [Key Visualizer](https://docs.cloud.google.com/spanner/docs/key-visualizer).
+
+
+
+The flow control mechanism is supported by the following client libraries:
+
+  * [Go Client v1.65 or later](https://github.com/googleapis/google-cloud-go/releases/tag/spanner%2Fv1.65.0)
+  * [Java Client v6.72 or later](https://github.com/googleapis/google-cloud-java/releases)
+
+
+
+The overall time for the request to complete won't increase due to the use of the flow control mechanism. Without this mechanism, Spanner waits before processing the request and eventually returns a `DEADLINE_EXCEEDED` error.
+
+When the flow control mechanism is active, Spanner pushes requests back to the client to retry. If the retry consumes the entire user-provided deadline, then the client receives a `RESOURCE_EXHAUSTED` error. This error is returned if Spanner estimates that the processing time of the request is too long. The error propagates flow control and Spanner retries the request to the client, instead of accumulating retries internally. This allows Spanner to avoid accumulating additional resource consumption.
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

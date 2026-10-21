@@ -1,0 +1,72 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1beta1/projects.locations.studies.trials/suggest/
+title: Method: trials.suggest \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-16T10:12:29.501016+00:00
+---
+
+# Method: trials.suggest  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1beta1/projects.locations.studies.trials/suggest/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ API reference ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/apis)
+
+
+
+Send feedback 
+
+#  Method: trials.suggest Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Full name** : projects.locations.studies.trials.suggest
+
+Adds one or more Trials to a Study, with parameter values suggested by Agent Platform Vizier. Returns a long-running operation associated with the generation of Trial suggestions. When this long-running operation succeeds, it will contain a `[SuggestTrialsResponse](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1beta1/SuggestTrialsResponse)`.
+
+### Endpoint
+
+post  `https://{service-endpoint}/v1beta1/{parent}/trials:suggest`   
+
+
+Where `{service-endpoint}` is one of the [supported service endpoints](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest#rest_endpoints).
+
+### Path parameters
+
+`parent` `string` Required. The project and location that the Study belongs to. Format: `projects/{project}/locations/{location}/studies/{study}`
+
+### Request body
+
+The request body contains data with the following structure: | Fields  
+  
+`suggestionCount` `integer` Required. The number of suggestions requested. It must be positive. | `clientId` `string` Required. The identifier of the client that is requesting the suggestion.If multiple SuggestTrialsRequests have the same `clientId`, the service will return the identical suggested Trial if the Trial is pending, and provide a new Trial if the last suggested Trial was completed. | `contexts[]` `object (`[TrialContext](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1beta1/projects.locations.studies.trials/suggest#TrialContext)`)` Optional. This allows you to specify the "context" for a Trial; a context is a slice (a subspace) of the search space.Typical uses for contexts: 1) You are using Vizier to tune a server for best performance, but there's a strong weekly cycle. The context specifies the day-of-week. This allows Tuesday to generalize from Wednesday without assuming that everything is identical. 2) Imagine you're optimizing some medical treatment for people. As they walk in the door, you know certain facts about them (e.g. sex, weight, height, blood-pressure). Put that information in the context, and Vizier will adapt its suggestions to the patient. 3) You want to do a fair A/B test efficiently. Specify the "A" and "B" conditions as contexts, and Vizier will generalize between "A" and "B" conditions. If they are similar, this will allow Vizier to converge to the optimum faster than if "A" and "B" were separate Studies. NOTE: You can also enter contexts as REQUESTED Trials, e.g. via the trials.create() RPC; that's the asynchronous option where you don't need a close association between contexts and suggestions.NOTE: All the Parameters you set in a context MUST be defined in the Study. NOTE: You must supply 0 or $suggestionCount contexts. If you don't supply any contexts, Vizier will make suggestions from the full search space specified in the StudySpec; if you supply a full set of context, each suggestion will match the corresponding context. NOTE: A Context with no features set matches anything, and allows suggestions from the full search space. NOTE: Contexts MUST lie within the search space specified in the StudySpec. It's an error if they don't. NOTE: Contexts preferentially match ACTIVE then REQUESTED trials before new suggestions are generated. NOTE: Generation of suggestions involves a match between a Context and (optionally) a REQUESTED trial; if that match is not fully specified, a suggestion will be geneated in the merged subspace.
+
+### Response body
+
+If successful, the response body contains an instance of `[Operation](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/Shared.Types/ListOperationsResponse#Operation)`.
+
+## TrialContext
+
+| Fields  
+  
+`description` `string` A human-readable field which can store a description of this context. This will become part of the resulting Trial's description field. | `parameters[]` `object (`[Parameter](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1beta1/projects.locations.studies.trials#Trial.Parameter)`)` If/when a Trial is generated or selected from this Context, its Parameters will match any parameters specified here. (I.e. if this context specifies parameter name:'a' intValue:3, then a resulting Trial will have intValue:3 for its parameter named 'a'.) Note that we first attempt to match existing REQUESTED Trials with contexts, and if there are no matches, we generate suggestions in the subspace defined by the parameters specified here. NOTE: a Context without any Parameters matches the entire feasible search space. | JSON representation  
+---  
+      
+    
+    {
+      "description": string,
+      "parameters": [
+        {
+          object ([Parameter](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1beta1/projects.locations.studies.trials#Trial.Parameter))
+        }
+      ]
+    }  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-12 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-12 UTC."],[],[]] 

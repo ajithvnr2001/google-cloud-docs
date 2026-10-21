@@ -1,0 +1,54 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1beta1/projects.locations.metadataStores.artifacts/queryArtifactLineageSubgraph/
+title: Method: artifacts.queryArtifactLineageSubgraph \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-16T14:10:51.692697+00:00
+---
+
+# Method: artifacts.queryArtifactLineageSubgraph  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1beta1/projects.locations.metadataStores.artifacts/queryArtifactLineageSubgraph/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ API reference ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/apis)
+
+
+
+Send feedback 
+
+#  Method: artifacts.queryArtifactLineageSubgraph Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Full name** : projects.locations.metadataStores.artifacts.queryArtifactLineageSubgraph
+
+Retrieves lineage of an Artifact represented through Artifacts and Executions connected by Event edges and returned as a LineageSubgraph.
+
+### Endpoint
+
+get  `https://{service-endpoint}/v1beta1/{artifact}:queryArtifactLineageSubgraph`   
+
+
+Where `{service-endpoint}` is one of the [supported service endpoints](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest#rest_endpoints).
+
+### Path parameters
+
+`artifact` `string` Required. The resource name of the Artifact whose Lineage needs to be retrieved as a LineageSubgraph. Format: `projects/{project}/locations/{location}/metadataStores/{metadatastore}/artifacts/{artifact}`The request may error with FAILED_PRECONDITION if the number of Artifacts, the number of Executions, or the number of events that would be returned for the Context exceeds 1000.
+
+### Query parameters
+
+| `maxHops` `integer` Specifies the size of the lineage graph in terms of number of hops from the specified artifact. Negative value: INVALID_ARGUMENT error is returned 0: Only input artifact is returned. No value: Transitive closure is performed to return the complete graph. | `filter` `string` Filter specifying the boolean condition for the Artifacts to satisfy in order to be part of the Lineage Subgraph. The syntax to define filter query is based on <https://google.aip.dev/160>. The supported set of filters include the following:
+
+  * **attribute filtering** : For example: `display_name = "test"` Supported fields include: `name`, `display_name`, `uri`, `state`, `schema_title`, `create_time`, and `update_time`. time fields, such as `create_time` and `update_time`, require values specified in RFC-3339 format. For example: `create_time = "2020-11-19T11:30:00-04:00"`
+  * **metadata field** : To filter on metadata fields use traversal operation as follows: `metadata.<fieldName>.<typeValue>`. For example: `metadata.field_1.number_value = 10.0` In case the field name contains special characters (such as colon), one can embed it inside double quote. For example: `metadata."field:1".number_value = 10.0`
+
+Each of the above supported filter types can be combined together using logical operators (`AND` & `OR`). Maximum nested expression depth allowed is 5.For example: `display_name = "test" AND metadata.field1.bool_value = true`.
+
+### Request body
+
+The request body must be empty.
+
+### Response body
+
+If successful, the response body contains an instance of `[LineageSubgraph](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1beta1/LineageSubgraph)`. Send feedback  Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates. Last updated 2026-05-04 UTC. Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-04 UTC."],[],[]] 

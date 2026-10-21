@@ -1,0 +1,44 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/qai-overview/
+title: Overview \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T20:45:52.870218+00:00
+---
+
+# Overview  |  Customer Experience Insights  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-cx/insights/qai-overview/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise for Customer Experience ](https://docs.cloud.google.com/gemini-enterprise-cx)
+  * [ Customer Experience Insights ](https://docs.cloud.google.com/gemini-enterprise-cx/insights)
+
+
+
+Send feedback 
+
+#  Overview Stay organized with collections  Save and categorize content based on your preferences. 
+
+Quality AI builds on Customer Experience Insights to enable comprehensive contact center quality evaluations, including individual conversations, live agents, and virtual agents.
+
+Previously, contact center supervisors and quality analysts had to manually review and score conversations between contact center agents and end-users. Manual review often results in less than 1% of the entire volume being evaluated and agents being evaluated based on a small subset of the conversations they handle. This leads to being unable to capture business insights from conversations.
+
+Quality AI automates conversation scoring so that all conversations are taken into account. In this way, Quality AI analyzes large amounts of conversation data to more accurately evaluate agent performance and gain near real time insights from customers' first party data. Some benefits include:
+
+  * Eliminate random sampling and analyze every conversation.
+  * Increase quality evaluation coverage from ~1% to 100%.
+  * Gain almost real-time visibility into live and virtual agent performance.
+  * Determine areas for improvement across channels.
+  * Derive valuable insights from conversational data, such as a topic with lower than average CSAT, trending themes over a period of time, and coaching opportunities.
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-09 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 

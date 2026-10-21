@@ -1,0 +1,1271 @@
+---
+url: https://docs.cloud.google.com/firestore/native/docs/pipeline/overview/
+title: Get started with Pipeline Queries \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-17T10:25:12.518034+00:00
+---
+
+# Get started with Pipeline Queries  |  Firestore in Native mode  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/firestore/native/docs/pipeline/overview/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Firestore in Native mode ](https://docs.cloud.google.com/firestore/native/docs)
+  * [ Guides ](https://docs.cloud.google.com/firestore/native/docs/create-database-server-client-library)
+
+
+
+Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
+
+# Get started with Pipeline Queries
+
+## Background
+
+Pipeline operations provide a new query interface for Firestore that supports advanced query functionality and complex expressions. It introduces many new functions, including `min(...)`, `max(...)`, `substring(...)`, `regex_match(...)`, and `array_contains_all(...)`, and stages to be able to perform complex transformations.
+
+## Getting Started
+
+To install and initialize client SDKs, refer to the instructions in the following guides:
+
+  * [Get started with mobile and web SDKs](https://docs.cloud.google.com/firestore/native/docs/create-database-web-mobile-client-library#initialize).
+  * [Get started with server client libraries](https://docs.cloud.google.com/firestore/native/docs/create-database-server-client-library#add_the_server_client_library_to_your_app).
+
+
+
+## Syntax
+
+The following sections give an overview of the syntax for Pipeline operations.
+
+### Concepts
+
+One notable difference with Pipeline operations is the introduction of explicit "stage" ordering. This makes it possible to express more complex queries. However, it is a notable deviation from the existing query interface using Core operations where the ordering of stages was implied. Consider the following Pipeline operations example:
+
+##### Node.js
+    
+    
+      db.pipeline()
+        .collection() // Step 1 (start a query with 'collection' scope)
+        .where()      // Step 2 (filter collection)
+        .sort()       // Step 3 (order results)
+        .limit()      // Step 4 (limit results)
+    
+      // Note: Applying a limit before a sort can yield unintended
+      // results (as the limit would be applied before sorting).
+        
+
+### Web version 9
+    
+    
+    const pipeline = db.pipeline()
+      // Step 1: Start a query with collection scope
+      .collection("cities")
+      // Step 2: Filter the collection
+      .where(field("population").greaterThan(100000))
+      // Step 3: Sort the remaining documents
+      .sort(field("name").ascending())
+      // Step 4: Return the top 10. Note applying the limit earlier in the
+      // pipeline would have unintentional results.
+      .limit(10);
+    
+    [test.firestore.js](https://github.com/firebase/snippets-web/blob/3999dead1c222ee0870d5f3e011194fa519e9553/firestore-next/test.firestore.js#L2165-L2174)
+
+##### Swift
+    
+    
+    let pipeline = db.pipeline()
+      // Step 1: Start a query with collection scope
+      .collection("cities")
+      // Step 2: Filter the collection
+      .where(Field("population").greaterThan(100000))
+      // Step 3: Sort the remaining documents
+      .sort([Field("name").ascending()])
+      // Step 4: Return the top 10. Note applying the limit earlier in the pipeline would have
+      // unintentional results.
+      .limit(10)
+    
+    [PipelineSnippets.swift](https://github.com/firebase/snippets-ios/blob/a542286ec4de7ab7e90e838485eaa2f3cd92d153/firestore/swift/firestore-smoketest/PipelineSnippets.swift#L67-L76)
+
+##### Kotlin  
+Android
+    
+    
+    val pipeline = db.pipeline()
+        // Step 1: Start a query with collection scope
+        .collection("cities")
+        // Step 2: Filter the collection
+        .where(field("population").greaterThan(100000))
+        // Step 3: Sort the remaining documents
+        .sort(field("name").ascending())
+        // Step 4: Return the top 10. Note applying the limit earlier in the pipeline would have
+        // unintentional results.
+        .limit(10)
+    
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L1368-L1377)
+
+##### Java  
+Android
+    
+    
+    Pipeline pipeline = db.pipeline()
+        // Step 1: Start a query with collection scope
+        .collection("cities")
+        // Step 2: Filter the collection
+        .where(field("population").greaterThan(100000))
+        // Step 3: Sort the remaining documents
+        .sort(field("name").ascending())
+        // Step 4: Return the top 10. Note applying the limit earlier in the pipeline would have
+        // unintentional results.
+        .limit(10);
+    
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1608-L1617)
+
+##### Python
+    
+    
+    from google.cloud.firestore_v1.pipeline_expressions import Field
+    
+    pipeline = (
+        client.pipeline()
+        .collection("cities")
+        .where(Field.of("population").greater_than(100_000))
+        .sort(Field.of("name").ascending())
+        .limit(10)
+    )
+    
+    [firestore_pipelines.py](https://github.com/firebase/firebase-admin-python/blob/c4ba7c06bb0f7082908f16fee6df5d266483101d/snippets/firestore/firestore_pipelines.py#L58-L66)
+
+##### Go
+    
+    
+    pipeline := client.Pipeline().
+    	Collection("cities").
+    	Where(firestore.FieldOf("population").GreaterThan(100000)).
+    	Sort(firestore.Orders(firestore.Ascending(firestore.FieldOf("name")))).
+    	Limit(10)
+    
+    [pipeline_snippets_general.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_general.go#L1709-L1713)
+
+### Initialization
+
+Pipeline operations have a very familiar syntax coming from existing Firestore queries. To get started, you initialize a query by writing the following:
+
+##### Node.js
+    
+    
+      const db = new Firestore({ projectId: '', databaseId: databaseId'})
+      db.pipeline()
+        
+
+##### Java
+    
+    
+      Firestore db = FirestoreOptions.newBuilder().build().getService();
+      db.pipeline()
+        
+
+### Structure
+
+There are a few terms that are important to understand when creating Pipeline operations: stages, expressions, and functions and subquery wrappers.
+
+![Example demonstrating stages and expressions in a query](https://docs.cloud.google.com//firestore/native/docs/images/pipeline-queries/pipeline_query_stage_expression.jpg)
+
+**Stages:** A pipeline may consist of one or more stages. Logically, these represent the series of steps (or stages) taken to execute the query.
+
+**Note:** In practice, stages may be executed out of order to improve performance. However, this does not modify the intent or correctness of the query.
+
+**Expressions:** Stages will often accept an expression allowing you to express more complex queries. Expression may be simple and consist of a single function like `eq("a", 1)`. You can also express more complex expressions by nesting expressions like `and(eq("a", 1), eq("b", 2)).`
+
+**Subquery Wrappers:** Functions like `array()` and `scalar()` allow you to embed a nested pipeline as an expression within a stage.
+
+### Fields / Constants / Variables
+
+Pipeline operations support complex expressions. As such, it is important to differentiate whether a value represents a **field** , a **constant** , or a **variable**.
+
+While **fields** refer to data within documents, and **constants** allow specifying any value as an argument to an expression, **variables** allow defining & using temporary values that are scoped to the query execution rather than the documents being processed. The following provides an overview of these concepts, see the [`let(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/let) stage for more information on how to read & write **variables** during query execution.
+
+| Fields | Constants | Variables  
+---|---|---|---  
+**Purpose** | access or store fields into documents | specify a fixed value | use temporary values during pipeline execution  
+**SDK Usage** | `field("name")` | `constant("val")` | `variable("name")`  
+**Scope** | local to current document | global | global to pipeline and sub-pipelines  
+**Undefined Reference** | evaluates to `absent` | N/A | generates runtime error  
+  
+**Examples:**
+
+##### Node.js
+    
+    
+      // Here the two parameters "name" and "toronto" could represent fields or constants.
+    
+      db.pipeline()
+        .collection("cities")
+        .where(eq("name","toronto"))
+    
+      // In many cases, it's not necessary to differentiate between the two. In the
+      // case of equality, we will implicit treat the first parameter as a field
+      // reference and the second as a constant. However if you need to override you
+      // can always be explicit with the value types
+    
+      db.pipeline()
+        .collection("cities")
+        .where(eq(Field.of("name"), Constant.of("toronto")))
+    
+      // In some cases, being explicit is always required. However, it should be
+      // enough to look at the type signature of the expressions to know what
+      //parameters can be used with implicit types, and what should be explicitly specified.
+        
+
+### Web version 9
+    
+    
+    const pipeline = db.pipeline()
+      .collection("cities")
+      .where(field("name").equal(constant("Toronto")));
+    
+    [test.firestore.js](https://github.com/firebase/snippets-web/blob/3999dead1c222ee0870d5f3e011194fa519e9553/firestore-next/test.firestore.js#L2191-L2193)
+
+##### Swift
+    
+    
+    let pipeline = db.pipeline()
+      .collection("cities")
+      .where(Field("name").equal(Constant("Toronto")))
+    
+    [PipelineSnippets.swift](https://github.com/firebase/snippets-ios/blob/a542286ec4de7ab7e90e838485eaa2f3cd92d153/firestore/swift/firestore-smoketest/PipelineSnippets.swift#L93-L95)
+
+##### Kotlin  
+Android
+    
+    
+    val pipeline = db.pipeline()
+        .collection("cities")
+        .where(field("name").equal(constant("Toronto")))
+    
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L1412-L1414)
+
+##### Java  
+Android
+    
+    
+    Pipeline pipeline = db.pipeline()
+        .collection("cities")
+        .where(field("name").equal(constant("Toronto")));
+    
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1657-L1659)
+
+##### Python
+    
+    
+    from google.cloud.firestore_v1.pipeline_expressions import Field, Constant
+    
+    pipeline = (
+        client.pipeline()
+        .collection("cities")
+        .where(Field.of("name").equal(Constant.of("Toronto")))
+    )
+    
+    [firestore_pipelines.py](https://github.com/firebase/firebase-admin-python/blob/c4ba7c06bb0f7082908f16fee6df5d266483101d/snippets/firestore/firestore_pipelines.py#L89-L95)
+
+##### Go
+    
+    
+    pipeline := client.Pipeline().Collection("cities").
+    	Where(firestore.FieldOf("name").Equal(firestore.ConstantOf("Toronto")))
+    
+    [pipeline_snippets_general.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_general.go#L1766-L1767)
+
+## Stages
+
+### Input Stages
+
+The input stage represents the first stage of a query. It defines the initial set of documents you are querying over. For Pipeline operations, this largely is similar to existing queries, where most queries start with either a [`collection(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/input/collection) or [`collection_group(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/input/collection_group) stage. Two new input stages are [`database()`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/input/database) and [`documents(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/input/documents) where [`database()`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/input/database) allows returning **all** documents in the database, while [`documents(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/input/documents) acts identical to a batch read.
+
+##### Node.js
+    
+    
+      // Return all restaurants in San Francisco
+      const results = await db.pipeline()
+        .collection("cities/sf/restaurants")
+        .execute();
+    
+      // Return all restaurants
+      const results = await db.pipeline()
+        .collectionGroup("restaurants")
+        .execute();
+    
+      // Return all documents across all collections in the database (huge result!)
+      const results = await db.pipeline()
+        .database()
+        .execute();
+    
+      // Batch read of 3 documents
+      const results = await db.pipeline()
+        .documents(
+          db.collection("cities").doc("SF"),
+          db.collection("cities").doc("DC"),
+          db.collection("cities").doc("NY"))
+        .execute();
+        
+
+### Web version 9
+    
+    
+    let results;
+    
+    // Return all restaurants in San Francisco
+    results = await execute(db.pipeline().collection("cities/sf/restaurants"));
+    
+    // Return all restaurants
+    results = await execute(db.pipeline().collectionGroup("restaurants"));
+    
+    // Return all documents across all collections in the database (the entire database)
+    results = await execute(db.pipeline().database());
+    
+    // Batch read of 3 documents
+    results = await execute(db.pipeline().documents([
+      doc(db, "cities", "SF"),
+      doc(db, "cities", "DC"),
+      doc(db, "cities", "NY")
+    ]));
+    
+    [test.firestore.js](https://github.com/firebase/snippets-web/blob/3999dead1c222ee0870d5f3e011194fa519e9553/firestore-next/test.firestore.js#L2200-L2216)
+
+##### Swift
+    
+    
+    var results: Pipeline.Snapshot
+    
+    // Return all restaurants in San Francisco
+    results = try await db.pipeline().collection("cities/sf/restaurants").execute()
+    
+    // Return all restaurants
+    results = try await db.pipeline().collectionGroup("restaurants").execute()
+    
+    // Return all documents across all collections in the database (the entire database)
+    results = try await db.pipeline().database().execute()
+    
+    // Batch read of 3 documents
+    results = try await db.pipeline().documents([
+      db.collection("cities").document("SF"),
+      db.collection("cities").document("DC"),
+      db.collection("cities").document("NY")
+    ]).execute()
+    
+    [PipelineSnippets.swift](https://github.com/firebase/snippets-ios/blob/a542286ec4de7ab7e90e838485eaa2f3cd92d153/firestore/swift/firestore-smoketest/PipelineSnippets.swift#L103-L119)
+
+##### Kotlin  
+Android
+    
+    
+    var results: Task<Pipeline.Snapshot>
+    
+    // Return all restaurants in San Francisco
+    results = db.pipeline().collection("cities/sf/restaurants").execute()
+    
+    // Return all restaurants
+    results = db.pipeline().collectionGroup("restaurants").execute()
+    
+    // Return all documents across all collections in the database (the entire database)
+    results = db.pipeline().database().execute()
+    
+    // Batch read of 3 documents
+    results = db.pipeline().documents(
+        db.collection("cities").document("SF"),
+        db.collection("cities").document("DC"),
+        db.collection("cities").document("NY")
+    ).execute()
+    
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L1422-L1438)
+
+##### Java  
+Android
+    
+    
+    Task<Pipeline.Snapshot> results;
+    
+    // Return all restaurants in San Francisco
+    results = db.pipeline().collection("cities/sf/restaurants").execute();
+    
+    // Return all restaurants
+    results = db.pipeline().collectionGroup("restaurants").execute();
+    
+    // Return all documents across all collections in the database (the entire database)
+    results = db.pipeline().database().execute();
+    
+    // Batch read of 3 documents
+    results = db.pipeline().documents(
+        db.collection("cities").document("SF"),
+        db.collection("cities").document("DC"),
+        db.collection("cities").document("NY")
+    ).execute();
+    
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1667-L1683)
+
+##### Python
+    
+    
+    # Return all restaurants in San Francisco
+    results = client.pipeline().collection("cities/sf/restaurants").execute()
+    
+    # Return all restaurants
+    results = client.pipeline().collection_group("restaurants").execute()
+    
+    # Return all documents across all collections in the database (the entire database)
+    results = client.pipeline().database().execute()
+    
+    # Batch read of 3 documents
+    results = (
+        client.pipeline()
+        .documents(
+            client.collection("cities").document("SF"),
+            client.collection("cities").document("DC"),
+            client.collection("cities").document("NY"),
+        )
+        .execute()
+    )
+    
+    [firestore_pipelines.py](https://github.com/firebase/firebase-admin-python/blob/c4ba7c06bb0f7082908f16fee6df5d266483101d/snippets/firestore/firestore_pipelines.py#L102-L120)
+
+##### Go
+    
+    
+    // Return all restaurants in San Francisco
+    results1, err := client.Pipeline().Collection("cities/sf/restaurants").Execute(ctx).Results().GetAll()
+    if err != nil {
+    	fmt.Fprintf(w, "GetAll failed: %v", err)
+    	return err
+    }
+    
+    // Return all restaurants
+    results2, err := client.Pipeline().CollectionGroup("restaurants").Execute(ctx).Results().GetAll()
+    if err != nil {
+    	fmt.Fprintf(w, "GetAll failed: %v", err)
+    	return err
+    }
+    
+    // Return all documents across all collections in the database (the entire database)
+    results3, err := client.Pipeline().Database().Execute(ctx).Results().GetAll()
+    if err != nil {
+    	fmt.Fprintf(w, "GetAll failed: %v", err)
+    	return err
+    }
+    
+    // Batch read of 3 documents
+    results4, err := client.Pipeline().
+    	Documents([]*firestore.DocumentRef{
+    		client.Collection("cities").Doc("SF"),
+    		client.Collection("cities").Doc("DC"),
+    		client.Collection("cities").Doc("NY"),
+    	}).
+    	Execute(ctx).Results().GetAll()
+    if err != nil {
+    	fmt.Fprintf(w, "GetAll failed: %v", err)
+    	return err
+    }
+    
+    [pipeline_snippets_general.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_general.go#L1776-L1808)
+
+As with all other stages, the order of results from these input stages is not stable. A [`sort(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/sort) operator should always be added if a specific ordering is required.
+
+### Where
+
+The [`where(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/where) stage acts as a standard filter operation over documents generated from the previous stage and mostly mirrors the existing "where" syntax for existing queries. Any document for where a given expression evaluates to a non-`true` value is filtered out from the returned documents.
+
+Multiple [`where(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/where) statements can be chained together, and act as an `and(...)` expression. For example the following two queries are logically equivalent and can be used interchangeably.
+
+##### Node.js
+    
+    
+      const results = await db.pipeline()
+        .collection("books")
+        .where(eq("rating", 5.0))
+        .where(lt('published', 1900))
+        .execute();
+    
+      const results = await db.pipeline()
+        .collection("books")
+        .where(and(
+          eq("rating", 5.0),
+          lt('published', 1900)))
+        .execute();
+        
+
+### Web version 9
+    
+    
+    let results;
+    
+    results = await execute(db.pipeline().collection("books")
+      .where(field("rating").equal(5))
+      .where(field("published").lessThan(1900))
+    );
+    
+    results = await execute(db.pipeline().collection("books")
+      .where(and(field("rating").equal(5), field("published").lessThan(1900)))
+    );
+    
+    [test.firestore.js](https://github.com/firebase/snippets-web/blob/3999dead1c222ee0870d5f3e011194fa519e9553/firestore-next/test.firestore.js#L2223-L2232)
+
+##### Swift
+    
+    
+    var results: Pipeline.Snapshot
+    
+    results = try await db.pipeline().collection("books")
+      .where(Field("rating").equal(5))
+      .where(Field("published").lessThan(1900))
+      .execute()
+    
+    results = try await db.pipeline().collection("books")
+      .where(Field("rating").equal(5) && Field("published").lessThan(1900))
+      .execute()
+    
+    [PipelineSnippets.swift](https://github.com/firebase/snippets-ios/blob/a542286ec4de7ab7e90e838485eaa2f3cd92d153/firestore/swift/firestore-smoketest/PipelineSnippets.swift#L127-L136)
+
+##### Kotlin  
+Android
+    
+    
+    var results: Task<Pipeline.Snapshot>
+    
+    results = db.pipeline().collection("books")
+        .where(field("rating").equal(5))
+        .where(field("published").lessThan(1900))
+        .execute()
+    
+    results = db.pipeline().collection("books")
+        .where(Expression.and(field("rating").equal(5),
+          field("published").lessThan(1900)))
+        .execute()
+    
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L1446-L1456)
+
+##### Java  
+Android
+    
+    
+    Task<Pipeline.Snapshot> results;
+    
+    results = db.pipeline().collection("books")
+        .where(field("rating").equal(5))
+        .where(field("published").lessThan(1900))
+        .execute();
+    
+    results = db.pipeline().collection("books")
+        .where(Expression.and(
+            field("rating").equal(5),
+            field("published").lessThan(1900)
+        ))
+        .execute();
+    
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1691-L1703)
+
+##### Python
+    
+    
+    from google.cloud.firestore_v1.pipeline_expressions import And, Field
+    
+    results = (
+        client.pipeline()
+        .collection("books")
+        .where(Field.of("rating").equal(5))
+        .where(Field.of("published").less_than(1900))
+        .execute()
+    )
+    
+    results = (
+        client.pipeline()
+        .collection("books")
+        .where(And(Field.of("rating").equal(5), Field.of("published").less_than(1900)))
+        .execute()
+    )
+    
+    [firestore_pipelines.py](https://github.com/firebase/firebase-admin-python/blob/c4ba7c06bb0f7082908f16fee6df5d266483101d/snippets/firestore/firestore_pipelines.py#L128-L143)
+
+##### Go
+    
+    
+    results1, err := client.Pipeline().
+    	Collection("books").
+    	Where(firestore.FieldOf("rating").Equal(5)).
+    	Where(firestore.FieldOf("published").LessThan(1900)).
+    	Execute(ctx).Results().GetAll()
+    if err != nil {
+    	fmt.Fprintf(w, "GetAll failed: %v", err)
+    	return err
+    }
+    
+    results2, err := client.Pipeline().
+    	Collection("books").
+    	Where(firestore.And(
+    		firestore.FieldOf("rating").Equal(5),
+    		firestore.FieldOf("published").LessThan(1900),
+    	)).
+    	Execute(ctx).Results().GetAll()
+    if err != nil {
+    	fmt.Fprintf(w, "GetAll failed: %v", err)
+    	return err
+    }
+    
+    [pipeline_snippets_general.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_general.go#L1548-L1568)
+
+### Select / Add & Remove Fields
+
+The [`select(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/select), [`add_fields(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/add_fields), & [`remove_fields(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/remove_fields) all allow you to modify the fields being returned from a previous stage. These three are generally referred to as projection-style stages.
+
+The [`select(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/select) and [`add_fields(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/add_fields) allow you to specify the result of an expression to a user-provided field name. The [`select(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/select) will only return the documents with specified field names while [`add_fields(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/add_fields) extends the schema of the previous stage (potentially overwriting values with identical field names).
+
+The [`remove_fields(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/remove_fields) allows specifying a set of fields to remove from the previous stage. Specifying field names that don't exist is a no-op.
+
+See the Restrict the Fields to Return section below but in general using such a stage to restrict the result to only the fields needed in the client is helpful in reducing the cost and latency for most queries.
+
+### Aggregate / Distinct
+
+The [`aggregate(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/aggregate) stage lets you perform a series of aggregations over the input documents. By default, all documents are aggregated together, but an optional `grouping` argument can be provided, allowing the input documents aggregated into different buckets.
+
+##### Node.js
+    
+    
+      const results = await db.pipeline()
+        .collection("books")
+        .aggregate({
+            accumulators: [avg('rating').as('avg_rating')],
+            groups: ['genre'],
+          })
+        .execute();
+        
+
+### Web version 9
+    
+    
+    const results = await execute(db.pipeline()
+      .collection("books")
+      .aggregate(
+        field("rating").average().as("avg_rating")
+      )
+      .distinct(field("genre"))
+    );
+    
+    [test.firestore.js](https://github.com/firebase/snippets-web/blob/3999dead1c222ee0870d5f3e011194fa519e9553/firestore-next/test.firestore.js#L2239-L2245)
+
+##### Swift
+    
+    
+    let results = try await db.pipeline()
+      .collection("books")
+      .aggregate([
+        Field("rating").average().as("avg_rating")
+      ], groups: [
+        Field("genre")
+      ])
+      .execute()
+    
+    [PipelineSnippets.swift](https://github.com/firebase/snippets-ios/blob/a542286ec4de7ab7e90e838485eaa2f3cd92d153/firestore/swift/firestore-smoketest/PipelineSnippets.swift#L144-L151)
+
+##### Kotlin  
+Android
+    
+    
+    val results = db.pipeline()
+        .collection("books")
+        .aggregate(
+            AggregateStage
+                .withAccumulators(AggregateFunction.average("rating").alias("avg_rating"))
+                .withGroups(field("genre"))
+        )
+        .execute()
+    
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L1464-L1471)
+
+##### Java  
+Android
+    
+    
+    Task<Pipeline.Snapshot> results = db.pipeline()
+        .collection("books")
+        .aggregate(AggregateStage
+            .withAccumulators(
+                AggregateFunction.average("rating").alias("avg_rating"))
+            .withGroups(field("genre")))
+        .execute();
+    
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1711-L1717)
+
+##### Python
+    
+    
+    from google.cloud.firestore_v1.pipeline_expressions import Field
+    
+    results = (
+        client.pipeline()
+        .collection("books")
+        .aggregate(
+            Field.of("rating").average().as_("avg_rating"), groups=[Field.of("genre")]
+        )
+        .execute()
+    )
+    
+    [firestore_pipelines.py](https://github.com/firebase/firebase-admin-python/blob/c4ba7c06bb0f7082908f16fee6df5d266483101d/snippets/firestore/firestore_pipelines.py#L151-L160)
+
+##### Go
+    
+    
+    snapshot := client.Pipeline().
+    	Collection("books").
+    	Aggregate(
+    		firestore.Accumulators(firestore.Average("rating").As("avg_rating")),
+    		firestore.WithAggregateGroups("genre"),
+    	).
+    	Execute(ctx)
+    
+    [pipeline_snippets_general.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_general.go#L206-L212)
+
+When `groupings` is not specified, this stage will produce only a single document, otherwise a document will be generated for each unique combination of `groupings` values.
+
+The [`distinct(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/distinct) stage is a simplified aggregation operator which allows generating just the unique `groupings` without any accumulators. It behaves identically to that of [`aggregate(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/aggregate) in all other regards. The following example shows:
+
+##### Node.js
+    
+    
+      const results = await db.pipeline()
+        .collection("books")
+        .distinct(toUppercase(Field.of("author")).as("author"), Field.of("genre"))
+        .execute();
+        
+
+### Web version 9
+    
+    
+    const results = await execute(db.pipeline()
+      .collection("books")
+      .distinct(
+        field("author").toUpper().as("author"),
+        field("genre")
+      )
+    );
+    
+    [test.firestore.js](https://github.com/firebase/snippets-web/blob/3999dead1c222ee0870d5f3e011194fa519e9553/firestore-next/test.firestore.js#L2252-L2258)
+
+##### Swift
+    
+    
+    let results = try await db.pipeline()
+      .collection("books")
+      .distinct([
+        Field("author").toUpper().as("author"),
+        Field("genre")
+      ])
+      .execute()
+    
+    [PipelineSnippets.swift](https://github.com/firebase/snippets-ios/blob/a542286ec4de7ab7e90e838485eaa2f3cd92d153/firestore/swift/firestore-smoketest/PipelineSnippets.swift#L159-L165)
+
+##### Kotlin  
+Android
+    
+    
+    val results = db.pipeline()
+        .collection("books")
+        .distinct(
+            field("author").toUpper().alias("author"),
+            field("genre")
+        )
+        .execute()
+    
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L1479-L1485)
+
+##### Java  
+Android
+    
+    
+    Task<Pipeline.Snapshot> results = db.pipeline()
+        .collection("books")
+        .distinct(
+            field("author").toUpper().alias("author"),
+            field("genre")
+        )
+        .execute();
+    
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1725-L1731)
+
+##### Python
+    
+    
+    from google.cloud.firestore_v1.pipeline_expressions import Field
+    
+    results = (
+        client.pipeline()
+        .collection("books")
+        .distinct(Field.of("author").to_upper().as_("author"), "genre")
+        .execute()
+    )
+    
+    [firestore_pipelines.py](https://github.com/firebase/firebase-admin-python/blob/c4ba7c06bb0f7082908f16fee6df5d266483101d/snippets/firestore/firestore_pipelines.py#L168-L175)
+
+##### Go
+    
+    
+    snapshot := client.Pipeline().
+    	Collection("books").
+    	Distinct(firestore.Fields(
+    		firestore.ToUpper(firestore.FieldOf("author")).As("author"),
+    		firestore.FieldOf("genre"),
+    	)).
+    	Execute(ctx)
+    
+    [pipeline_snippets_general.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_general.go#L226-L232)
+
+## Functions
+
+Functions are a building block for creating expressions and complex queries. For a complete list of functions with examples, refer to the [Functions reference](https://docs.cloud.google.com/firestore/native/docs/pipeline/functions/all_functions). As a quick reminder, consider the structure of a typical query:
+
+![Example demonstrating stages and functions in a query](https://docs.cloud.google.com/firestore/native/docs/images/pipeline-queries/pipeline_query_stage_expression.jpg)
+
+Many stages accept expressions which contain one or more functions. The most common function usage will be found in the [`where(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/where) and [`select(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/select) stages. There are two main types of functions that you should be familiar with:
+
+##### Node.js
+    
+    
+      // Type 1: Scalar (for use in non-aggregation stages)
+      // Example: Return the min store price for each book.
+    
+      const results = await db.pipeline()
+        .collection("books")
+        .select(logicalMin(Field.of("current"),Field.of("updated")).as("price_min"))
+        .execute();
+    
+      // Type 2: Aggregation (for use in aggregate stages)
+      // Example: Return the min price of all books.
+    
+      const results = await db.pipeline()
+        .collection("books")
+        .aggregate(min(Field.of("price")))
+        .execute();
+        
+
+### Web version 9
+    
+    
+    let results;
+    
+    // Type 1: Scalar (for use in non-aggregation stages)
+    // Example: Return the min store price for each book.
+    results = await execute(db.pipeline().collection("books")
+      .select(field("current").logicalMinimum(field("updated")).as("price_min"))
+    );
+    
+    // Type 2: Aggregation (for use in aggregate stages)
+    // Example: Return the min price of all books.
+    results = await execute(db.pipeline().collection("books")
+      .aggregate(field("price").minimum().as("min_price"))
+    );
+    
+    [test.firestore.js](https://github.com/firebase/snippets-web/blob/3999dead1c222ee0870d5f3e011194fa519e9553/firestore-next/test.firestore.js#L2293-L2305)
+
+##### Swift
+    
+    
+    var results: Pipeline.Snapshot
+    
+    // Type 1: Scalar (for use in non-aggregation stages)
+    // Example: Return the min store price for each book.
+    results = try await db.pipeline().collection("books")
+      .select([
+        Field("current").logicalMinimum(["updated"]).as("price_min")
+      ])
+      .execute()
+    
+    // Type 2: Aggregation (for use in aggregate stages)
+    // Example: Return the min price of all books.
+    results = try await db.pipeline().collection("books")
+      .aggregate([Field("price").minimum().as("min_price")])
+      .execute()
+    
+    [PipelineSnippets.swift](https://github.com/firebase/snippets-ios/blob/a542286ec4de7ab7e90e838485eaa2f3cd92d153/firestore/swift/firestore-smoketest/PipelineSnippets.swift#L203-L217)
+
+##### Kotlin  
+Android
+    
+    
+    var results: Task<Pipeline.Snapshot>
+    
+    // Type 1: Scalar (for use in non-aggregation stages)
+    // Example: Return the min store price for each book.
+    results = db.pipeline().collection("books")
+        .select(
+            field("current").logicalMinimum("updated").alias("price_min")
+        )
+        .execute()
+    
+    // Type 2: Aggregation (for use in aggregate stages)
+    // Example: Return the min price of all books.
+    results = db.pipeline().collection("books")
+        .aggregate(AggregateFunction.minimum("price").alias("min_price"))
+        .execute()
+    
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L1525-L1539)
+
+##### Java  
+Android
+    
+    
+    Task<Pipeline.Snapshot> results;
+    
+    // Type 1: Scalar (for use in non-aggregation stages)
+    // Example: Return the min store price for each book.
+    results = db.pipeline().collection("books")
+        .select(
+            field("current").logicalMinimum("updated").alias("price_min")
+        )
+        .execute();
+    
+    // Type 2: Aggregation (for use in aggregate stages)
+    // Example: Return the min price of all books.
+    results = db.pipeline().collection("books")
+        .aggregate(AggregateFunction.minimum("price").alias("min_price"))
+        .execute();
+    
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1771-L1785)
+
+##### Python
+    
+    
+    from google.cloud.firestore_v1.pipeline_expressions import Field
+    
+    # Type 1: Scalar (for use in non-aggregation stages)
+    # Example: Return the min store price for each book.
+    results = (
+        client.pipeline()
+        .collection("books")
+        .select(
+            Field.of("current").logical_minimum(Field.of("updated")).as_("price_min")
+        )
+        .execute()
+    )
+    
+    # Type 2: Aggregation (for use in aggregate stages)
+    # Example: Return the min price of all books.
+    results = (
+        client.pipeline()
+        .collection("books")
+        .aggregate(Field.of("price").minimum().as_("min_price"))
+        .execute()
+    )
+    
+    [firestore_pipelines.py](https://github.com/firebase/firebase-admin-python/blob/c4ba7c06bb0f7082908f16fee6df5d266483101d/snippets/firestore/firestore_pipelines.py#L219-L239)
+
+##### Go
+    
+    
+    // Type 1: Scalar (for use in non-aggregation stages)
+    // Example: Return the min store price for each book.
+    results1, err := client.Pipeline().
+    	Collection("books").
+    	Select(firestore.Fields(
+    		firestore.LogicalMinimum(firestore.FieldOf("current"), firestore.FieldOf("updated")).As("price_min"),
+    	)).
+    	Execute(ctx).Results().GetAll()
+    if err != nil {
+    	fmt.Fprintf(w, "GetAll failed: %v", err)
+    	return err
+    }
+    
+    // Type 2: Aggregation (for use in aggregate stages)
+    // Example: Return the min price of all books.
+    results2, err := client.Pipeline().
+    	Collection("books").
+    	Aggregate(firestore.Accumulators(
+    		firestore.Minimum("price").As("min_price"),
+    	)).
+    	Execute(ctx).Results().GetAll()
+    if err != nil {
+    	fmt.Fprintf(w, "GetAll failed: %v", err)
+    	return err
+    }
+    
+    [pipeline_snippets_array.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_array.go#L237-L261)
+
+## Limits
+
+For the most part Enterprise edition doesn't impose limits on the shape of the query. In other words, you're not limited to a small number of values in an `IN` or `OR` query. Instead, there are two primary limits you should be aware of:
+
+  * **Deadline:** 60 seconds (identical to Standard edition).
+  * **Memory Usage:** 128 MiB limit on the amount of materialized data during query execution.
+
+
+
+## Errors
+
+You may encounter failed queries for a number of reasons. Here is a link to [common errors](https://docs.cloud.google.com/firestore/docs/understand-error-codes) and the associated action you can take:
+
+**Error Code** | **Action**  
+---|---  
+`DEADLINE_EXCEEDED` | The query you are executing exceeds a 60 second deadline and requires additional optimization. See the performance section for tips. If you are unable to root cause the problem, reach out to the team.   
+`RESOURCE_EXHAUSTED` | The query you are executing exceeds the memory limits and requires additional optimization. See the performance section for tips. If you are unable to root cause the problem, reach out to the team.   
+`INTERNAL` | [Contact](https://docs.cloud.google.com/support/docs/customer-care-procedures#create_a_support_case) the team for support.   
+  
+## Performance
+
+Enterprise edition databases do not require that an index is always present. This means that a query can exhibit higher latency compared to existing queries which would have just failed immediately with a `FAILED_PRECONDITION` missing index error. To improve the performance of Pipeline operations, there are a couple of steps you can take.
+
+### Create Indexes
+
+#### Index Used
+
+Query explain lets you identify if your query is being served by an index or falling back to a less efficient operation like a table scan. If your query is not being fully served from an index, you can create an index by following the instructions.
+
+#### Creating Indexes
+
+You can follow the existing [index management documentation](https://docs.cloud.google.com/firestore/docs/query-data/indexing) to create indexes. Before creating an index, familiarize yourself with [general best practices](https://docs.cloud.google.com/firestore/docs/concepts/index-overview) with indexes in Firestore. To ensure your query can leverage indexes, follow the [best practices](https://docs.cloud.google.com/firestore/docs/concepts/index-overview#index_properties) to create indexes with fields in the following order:
+
+  1. All fields that will be used in equality filters (in any order)
+  2. All fields that will be sorted on (in the same order)
+  3. Fields that will be used in range or inequality filters in decreasing order of query constraint selectivity
+
+
+
+For example, for the following query,
+
+##### Node.js
+    
+    
+    const results = await db.pipeline()
+      .collection('books')
+      .where(lt('published', 1900))
+      .where(eq('genre', 'Science Fiction'))
+      .where(gt('avg_rating', 4.3))
+      .sort(Field.of('published').descending())
+      .execute();
+        
+
+### Web version 9
+    
+    
+    const results = await execute(db.pipeline()
+      .collection("books")
+      .where(field("published").lessThan(1900))
+      .where(field("genre").equal("Science Fiction"))
+      .where(field("rating").greaterThan(4.3))
+      .sort(field("published").descending())
+    );
+    
+    [test.firestore.js](https://github.com/firebase/snippets-web/blob/3999dead1c222ee0870d5f3e011194fa519e9553/firestore-next/test.firestore.js#L2312-L2318)
+
+##### Swift
+    
+    
+    let results = try await db.pipeline()
+      .collection("books")
+      .where(Field("published").lessThan(1900))
+      .where(Field("genre").equal("Science Fiction"))
+      .where(Field("rating").greaterThan(4.3))
+      .sort([Field("published").descending()])
+      .execute()
+    
+    [PipelineSnippets.swift](https://github.com/firebase/snippets-ios/blob/a542286ec4de7ab7e90e838485eaa2f3cd92d153/firestore/swift/firestore-smoketest/PipelineSnippets.swift#L225-L231)
+
+##### Kotlin  
+Android
+    
+    
+    val results = db.pipeline()
+        .collection("books")
+        .where(field("published").lessThan(1900))
+        .where(field("genre").equal("Science Fiction"))
+        .where(field("rating").greaterThan(4.3))
+        .sort(field("published").descending())
+        .execute()
+    
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L1547-L1553)
+
+##### Java  
+Android
+    
+    
+    Task<Pipeline.Snapshot> results = db.pipeline()
+        .collection("books")
+        .where(field("published").lessThan(1900))
+        .where(field("genre").equal("Science Fiction"))
+        .where(field("rating").greaterThan(4.3))
+        .sort(field("published").descending())
+        .execute();
+    
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1793-L1799)
+
+##### Python
+    
+    
+    from google.cloud.firestore_v1.pipeline_expressions import Field
+    
+    results = (
+        client.pipeline()
+        .collection("books")
+        .where(Field.of("published").less_than(1900))
+        .where(Field.of("genre").equal("Science Fiction"))
+        .where(Field.of("rating").greater_than(4.3))
+        .sort(Field.of("published").descending())
+        .execute()
+    )
+    
+    [firestore_pipelines.py](https://github.com/firebase/firebase-admin-python/blob/c4ba7c06bb0f7082908f16fee6df5d266483101d/snippets/firestore/firestore_pipelines.py#L247-L257)
+
+##### Go
+    
+    
+    snapshot := client.Pipeline().
+    	Collection("books").
+    	Where(firestore.FieldOf("published").LessThan(1900)).
+    	Where(firestore.FieldOf("genre").Equal("Science Fiction")).
+    	Where(firestore.FieldOf("rating").GreaterThan(4.3)).
+    	Sort(firestore.Orders(firestore.Descending(firestore.FieldOf("published")))).
+    	Execute(ctx)
+    
+    [pipeline_snippets_general.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_general.go#L788-L794)
+
+The recommended index is a collection scope index on `books` for `(genre [...], published DESC, avg_rating DESC).`
+
+#### Index density
+
+Firestore supports sparse and non-sparse indexes. For more information, see [Index density](https://docs.cloud.google.com/docs/firestore/pipelines/index-overview#index_density).
+
+#### Covered Queries + Secondary Indexes
+
+Firestore can skip fetching the full document and just return results from the index if all fields being returned are present in a secondary index. This normally leads to a significant latency (and cost) improvement. Using the sample query below:
+
+##### Node.js
+    
+    
+    const results = await db.pipeline()
+      .collection("books")
+      .where(like(Field.of("category"), "%fantasy%"))
+      .where(exists("title"))
+      .where(exists("author"))
+      .select("title", "author")
+      .execute();
+        
+
+### Web version 9
+    
+    
+    const results = await execute(db.pipeline()
+      .collection("books")
+      .where(field("category").like("%fantasy%"))
+      .where(field("title").exists())
+      .where(field("author").exists())
+      .select(field("title"), field("author"))
+    );
+    
+    [test.firestore.js](https://github.com/firebase/snippets-web/blob/3999dead1c222ee0870d5f3e011194fa519e9553/firestore-next/test.firestore.js#L2345-L2351)
+
+##### Swift
+    
+    
+    let results = try await db.pipeline()
+      .collection("books")
+      .where(Field("category").like("%fantasy%"))
+      .where(Field("title").exists())
+      .where(Field("author").exists())
+      .select([Field("title"), Field("author")])
+      .execute()
+    
+    [PipelineSnippets.swift](https://github.com/firebase/snippets-ios/blob/a542286ec4de7ab7e90e838485eaa2f3cd92d153/firestore/swift/firestore-smoketest/PipelineSnippets.swift#L260-L266)
+
+##### Kotlin  
+Android
+    
+    
+    val results = db.pipeline()
+        .collection("books")
+        .where(field("category").like("%fantasy%"))
+        .where(field("title").exists())
+        .where(field("author").exists())
+        .select(field("title"), field("author"))
+        .execute()
+    
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L1582-L1588)
+
+##### Java  
+Android
+    
+    
+    Task<Pipeline.Snapshot> results = db.pipeline()
+        .collection("books")
+        .where(field("category").like("%fantasy%"))
+        .where(field("title").exists())
+        .where(field("author").exists())
+        .select(field("title"), field("author"))
+        .execute();
+    
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/bb5b419494a9d94466a5422d49f758f8ef5d81fa/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1828-L1834)
+
+##### Python
+    
+    
+    from google.cloud.firestore_v1.pipeline_expressions import Field
+    
+    results = (
+        client.pipeline()
+        .collection("books")
+        .where(Field.of("category").like("%fantasy%"))
+        .where(Field.of("title").exists())
+        .where(Field.of("author").exists())
+        .select("title", "author")
+        .execute()
+    )
+    
+    [firestore_pipelines.py](https://github.com/firebase/firebase-admin-python/blob/c4ba7c06bb0f7082908f16fee6df5d266483101d/snippets/firestore/firestore_pipelines.py#L295-L305)
+
+##### Go
+    
+    
+    snapshot := client.Pipeline().
+    	Collection("books").
+    	Where(firestore.FieldOf("category").Like("%fantasy%")).
+    	Where(firestore.FieldOf("title").FieldExists()).
+    	Where(firestore.FieldOf("author").FieldExists()).
+    	Select(firestore.Fields("title", "author")).
+    	Execute(ctx)
+    
+    [pipeline_snippets_general.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/pipeline_snippets_general.go#L842-L848)
+
+If the database already has a collection scope index on `books` for `(category [...], title [...], author [...])` then it can avoid fetching anything from the main documents themselves. In this case the order in the index does not matter, `[...]` is used to signify that.
+
+### Restrict the Fields to Return
+
+By default, a Firestore query returns all fields in a document, analogous to a `SELECT *` in relational systems. If however your application only needs a subset of the fields, the [`select(...)`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/transformation/select) or `restrict(...)` stages can be used to push this filtering server-side. This will decrease both the response size (decreasing the network egress cost) as well as improving latency.
+
+## Troubleshooting Tools
+
+### Query Explain
+
+Query Explain lets you bring visibility in execution metrics and details about indexes used.
+
+### Metrics
+
+Pipeline operations if fully integrated with existing [Firestore metrics](https://docs.cloud.google.com/monitoring/api/metrics_gcp_d_h#gcp-firestore).
+
+## Known Issues / Limitations
+
+### Specialized Indexes
+
+Pipeline operations don't yet support existing `array-contains` & `vector` [index types](https://docs.cloud.google.com/firestore/docs/concepts/index-overview#index_modes). Instead of just rejecting such queries, Firestore will attempt to use other existing `ascending` & `descending` indexes. It is expected that with such `array_contains` or `find_nearest` expressions will be slower than their existing equivalents due to this.
+
+### Realtime and Offline Support
+
+Pipeline operations don't have realtime and offline capabilities.
+
+## What's next
+
+  * See the [Functions reference](https://docs.cloud.google.com/firestore/native/docs/pipeline/functions/all_functions).
+  * Learn how to [Perform joins with subqueries](https://docs.cloud.google.com/firestore/native/docs/pipeline/perform-joins-with-sub-pipelines).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-16 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 

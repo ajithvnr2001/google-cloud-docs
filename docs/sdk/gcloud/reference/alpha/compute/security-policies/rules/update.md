@@ -1,0 +1,214 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/security-policies/rules/update/
+title: gcloud alpha compute security-policies rules update \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-15T05:17:46.800234+00:00
+---
+
+# gcloud alpha compute security-policies rules update  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/compute/security-policies/rules/update/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha compute security-policies rules update Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha compute security-policies rules update - update a Compute Engine security policy rule 
+SYNOPSIS
+    
+
+`gcloud alpha compute security-policies rules update` `PRIORITY` [`--action`=`ACTION`] [`--ban-duration-sec`=`BAN_DURATION_SEC`] [`--ban-threshold-count`=`BAN_THRESHOLD_COUNT`] [`--ban-threshold-interval-sec`=`BAN_THRESHOLD_INTERVAL_SEC`] [`--conform-action`=`CONFORM_ACTION`] [`--description`=`DESCRIPTION`] [`--enforce-on-key`=`ENFORCE_ON_KEY`] [`--enforce-on-key-configs`=[[`all`],[`ip`],[`xff-ip`],[`http-cookie`=`HTTP_COOKIE`],[`http-header`=`HTTP_HEADER`],[`http-path`],[`sni`],[`region-code`],[`tls-ja3-fingerprint`],[`user-ip`],[`tls-ja4-fingerprint`],[`asn`]],[…]] [`--enforce-on-key-name`=`ENFORCE_ON_KEY_NAME`] [`--exceed-action`=`EXCEED_ACTION`] [`--exceed-action-rpc-status-code`=`EXCEED_ACTION_RPC_STATUS_CODE`] [`--exceed-action-rpc-status-message`=`EXCEED_ACTION_RPC_STATUS_MESSAGE`] [`--exceed-redirect-target`=`EXCEED_REDIRECT_TARGET`] [`--exceed-redirect-type`=`EXCEED_REDIRECT_TYPE`] [`--[no-]preview`] [`--rate-limit-threshold-count`=`RATE_LIMIT_THRESHOLD_COUNT`] [`--rate-limit-threshold-interval-sec`=`RATE_LIMIT_THRESHOLD_INTERVAL_SEC`] [`--recaptcha-action-site-keys`=[`SITE_KEY`,…]] [`--recaptcha-session-site-keys`=[`SITE_KEY`,…]] [`--redirect-target`=`REDIRECT_TARGET`] [`--redirect-type`=`REDIRECT_TYPE`] [`--region`=`REGION`] [`--request-headers-to-add`=[`REQUEST_HEADERS_TO_ADD`,…]] [`--security-policy`=`SECURITY_POLICY`] [`--expression`=`EXPRESSION` `--network-dest-ip-ranges`=[`DEST_IP_RANGE`,…] `--network-dest-ports`=[`DEST_PORT`,…] `--network-ip-protocols`=[`IP_PROTOCOL`,…] `--network-src-asns`=[`SRC_ASN`,…] `--network-src-ip-ranges`=[`SRC_IP_RANGE`,…] `--network-src-ports`=[`SRC_PORT`,…] `--network-src-region-codes`=[`SRC_REGION_CODE`,…] `--network-user-defined-fields`=[`NAME`;`VALUE`:`VALUE`:…,…] `--src-ip-ranges`=[`SRC_IP_RANGE`,…]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` `gcloud alpha compute security-policies rules update` is used to update security policy rules. 
+EXAMPLES
+     To update the description and IP ranges of a rule at priority 1000, run: 
+    
+    
+    gcloud alpha compute security-policies rules update 1000 --security-policy=my-policy --description="block 1.2.3.4/32" --src-ip-ranges=1.2.3.4/32
+
+POSITIONAL ARGUMENTS
+    
+
+`PRIORITY`
+     The priority of the rule to update. Rules are evaluated in order from highest priority to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority. 
+FLAGS
+    
+
+`--action`=`ACTION`
+     The action to take if the request matches the match condition. `ACTION` must be one of: 
+
+`allow`
+     Allows the request from HTTP(S) Load Balancing. 
+`deny`
+     Denies the request from TCP/SSL Proxy and Network Load Balancing. 
+`deny-403`
+     Denies the request from HTTP(S) Load Balancing, with an HTTP response status code of 403. 
+`deny-404`
+     Denies the request from HTTP(S) Load Balancing, with an HTTP response status code of 404. 
+`deny-502`
+     Denies the request from HTTP(S) Load Balancing, with an HTTP response status code of 502. 
+`fairshare`
+     When traffic reaches the threshold limit, requests from the clients matching this rule begin to be rate-limited using the Fair Share algorithm. 
+`rate-based-ban`
+     Enforces rate-based ban action from HTTP(S) Load Balancing, based on rate limit options. 
+`redirect`
+     Redirects the request from HTTP(S) Load Balancing, based on redirect options. 
+`redirect-to-recaptcha`
+     (DEPRECATED) Redirects the request from HTTP(S) Load Balancing, for reCAPTCHA Enterprise assessment. This flag choice is deprecated. Use --action=redirect and \--redirect-type=google-recaptcha instead. 
+`throttle`
+     Enforces throttle action from HTTP(S) Load Balancing, based on rate limit options. 
+`--ban-duration-sec`=`BAN_DURATION_SEC`
+     Can only be specified if the action for the rule is ``rate-based-ban``. If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold. 
+`--ban-threshold-count`=`BAN_THRESHOLD_COUNT`
+     Number of HTTP(S) requests for calculating the threshold for banning requests. Can only be specified if the action for the rule is ``rate-based-ban``. If specified, the key will be banned for the configured ``BAN_DURATION_SEC`` when the number of requests that exceed the ``RATE_LIMIT_THRESHOLD_COUNT`` also exceed this ``BAN_THRESHOLD_COUNT``. 
+`--ban-threshold-interval-sec`=`BAN_THRESHOLD_INTERVAL_SEC`
+     Interval over which the threshold for banning requests is computed. Can only be specified if the action for the rule is ``rate-based-ban``. If specified, the key will be banned for the configured ``BAN_DURATION_SEC`` when the number of requests that exceed the ``RATE_LIMIT_THRESHOLD_COUNT`` also exceed this ``BAN_THRESHOLD_COUNT``. 
+`--conform-action`=`CONFORM_ACTION`
+     Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. `CONFORM_ACTION` must be (only one value is supported): `allow`. 
+`--description`=`DESCRIPTION`
+     An optional, textual description for the rule. 
+`--enforce-on-key`=`ENFORCE_ON_KEY`
+     Different key types available to enforce the rate limit threshold limit on: 
+
+  * ``ip``: each client IP address has this limit enforced separately 
+  * ``all``: a single limit is applied to all requests matching this rule 
+  * ``http-header``: key type takes the value of the HTTP header configured in enforce-on-key-name as the key value 
+  * ``xff-ip``: takes the original IP address specified in the X-Forwarded-For header as the key 
+  * ``http-cookie``: key type takes the value of the HTTP cookie configured in enforce-on-key-name as the key value 
+  * ``http-path``: key type takes the value of the URL path in the request 
+  * ``sni``: key type takes the value of the server name indication from the TLS session of the HTTPS request 
+  * ``region-code``: key type takes the value of the region code from which the request originates 
+  * ``tls-ja3-fingerprint``: key type takes the value of JA3 TLS/SSL fingerprint if the client connects using HTTPS, HTTP/2 or HTTP/3 
+  * ``user-ip``: key type takes the IP address of the originating client, which is resolved based on user-ip-request-headers configured with the security policy 
+  * ``tls-ja4-fingerprint``: key type takes the value of JA4 TLS/SSL fingerprint if the client connects using HTTPS, HTTP/2 or HTTP/3 
+  * ``asn``: key type takes the value of the Autonomous System Number from which the request originates 
+
+
+
+`ENFORCE_ON_KEY` must be one of: `ip`, `all`, `http-header`, `xff-ip`, `http-cookie`, `http-path`, `sni`, `region-code`, `tls-ja3-fingerprint`, `user-ip`, `tls-ja4-fingerprint`, `asn`. 
+
+`--enforce-on-key-configs`=[[`all`],[`ip`],[`xff-ip`],[`http-cookie`=`HTTP_COOKIE`],[`http-header`=`HTTP_HEADER`],[`http-path`],[`sni`],[`region-code`],[`tls-ja3-fingerprint`],[`user-ip`],[`tls-ja4-fingerprint`],[`asn`]],[…]
+     Specify up to 3 key type/name pairs to rate limit. Valid key types are: 
+
+  * ``ip``: each client IP address has this limit enforced separately 
+  * ``all``: a single limit is applied to all requests matching this rule 
+  * ``http-header``: key type takes the value of the HTTP header configured in enforce-on-key-name as the key value 
+  * ``xff-ip``: takes the original IP address specified in the X-Forwarded-For header as the key 
+  * ``http-cookie``: key type takes the value of the HTTP cookie configured in enforce-on-key-name as the key value 
+  * ``http-path``: key type takes the value of the URL path in the request 
+  * ``sni``: key type takes the value of the server name indication from the TLS session of the HTTPS request 
+  * ``region-code``: key type takes the value of the region code from which the request originates 
+  * ``tls-ja3-fingerprint``: key type takes the value of JA3 TLS/SSL fingerprint if the client connects using HTTPS, HTTP/2 or HTTP/3 
+  * ``user-ip``: key type takes the IP address of the originating client, which is resolved based on user-ip-request-headers configured with the security policy 
+  * ``tls-ja4-fingerprint``: key type takes the value of JA4 TLS/SSL fingerprint if the client connects using HTTPS, HTTP/2 or HTTP/3 
+  * ``asn``: key type takes the value of the Autonomous System Number from which the request originates 
+
+
+
+Key names are only applicable to the following key types: 
+
+  * http-header: The name of the HTTP header whose value is taken as the key value. 
+  * http-cookie: The name of the HTTP cookie whose value is taken as the key value. 
+
+
+`--enforce-on-key-name`=`ENFORCE_ON_KEY_NAME`
+     Determines the key name for the rate limit key. Applicable only for the following rate limit key types: 
+
+  * http-header: The name of the HTTP header whose value is taken as the key value. 
+  * http-cookie: The name of the HTTP cookie whose value is taken as the key value. 
+
+
+`--exceed-action`=`EXCEED_ACTION`
+     Action to take when requests are above the given threshold. When a request is denied, return the specified HTTP response code. When a request is redirected, use the redirect options based on --exceed-redirect-type and \--exceed-redirect-target below. `EXCEED_ACTION` must be one of: `deny-403`, `deny-404`, `deny-429`, `deny-502`, `deny`, `redirect`. 
+`--exceed-action-rpc-status-code`=`EXCEED_ACTION_RPC_STATUS_CODE`
+     Status code, which should be an enum value of [google.rpc.Code] 
+`--exceed-action-rpc-status-message`=`EXCEED_ACTION_RPC_STATUS_MESSAGE`
+     Developer-facing error message, should be in English. 
+`--exceed-redirect-target`=`EXCEED_REDIRECT_TARGET`
+     URL target for the redirect action that is configured as the exceed action when the redirect type is ``external-302``. 
+`--exceed-redirect-type`=`EXCEED_REDIRECT_TYPE`
+     Type for the redirect action that is configured as the exceed action. `EXCEED_REDIRECT_TYPE` must be one of: `google-recaptcha`, `external-302`. 
+`--[no-]preview`
+     If specified, the action will not be enforced. Use `--preview` to enable and `--no-preview` to disable. 
+`--rate-limit-threshold-count`=`RATE_LIMIT_THRESHOLD_COUNT`
+     Number of HTTP(S) requests for calculating the threshold for rate limiting requests. 
+`--rate-limit-threshold-interval-sec`=`RATE_LIMIT_THRESHOLD_INTERVAL_SEC`
+     Interval over which the threshold for rate limiting requests is computed. 
+`--recaptcha-action-site-keys`=[`SITE_KEY`,…]
+     A comma-separated list of site keys to be used during the validation of reCAPTCHA action-tokens. The provided site keys need to be created from the reCAPTCHA API under the same project where the security policy is created. 
+`--recaptcha-session-site-keys`=[`SITE_KEY`,…]
+     A comma-separated list of site keys to be used during the validation of reCAPTCHA session-tokens. The provided site keys need to be created from the reCAPTCHA API under the same project where the security policy is created. 
+`--redirect-target`=`REDIRECT_TARGET`
+     URL target for the redirect action. Must be specified if the redirect type is ``external-302``. Cannot be specified if the redirect type is ``google-recaptcha``. 
+`--redirect-type`=`REDIRECT_TYPE`
+     Type for the redirect action. Default to ``external-302`` if unspecified while \--redirect-target is given. `REDIRECT_TYPE` must be one of: `google-recaptcha`, `external-302`. 
+`--region`=`REGION`
+     Region of the security policy to update. If not specified, you might be prompted to select a region (interactive mode only). 
+
+A list of regions can be fetched by running: 
+    
+    
+    [gcloud compute regions list](https://docs.cloud.google.com/sdk/gcloud/reference/compute/regions/list)
+
+Overrides the default `compute/region` property value for this command invocation. 
+
+`--request-headers-to-add`=[`REQUEST_HEADERS_TO_ADD`,…]
+     A comma-separated list of header names and header values to add to requests that match this rule. 
+`--security-policy`=`SECURITY_POLICY`
+     The security policy that this rule belongs to. 
+Security policy rule matcher. 
+`--expression`=`EXPRESSION`
+     The Cloud Armor rules language expression to match for this rule. 
+`--network-dest-ip-ranges`=[`DEST_IP_RANGE`,…]
+     The destination IPs/IP ranges to match for this rule. To match all IPs specify *. 
+`--network-dest-ports`=[`DEST_PORT`,…]
+     The destination ports to match for this rule. Each element can be an 16-bit unsigned decimal number (e.g. "80") or range (e.g."0-1023"), To match all destination ports specify *. 
+`--network-ip-protocols`=[`IP_PROTOCOL`,…]
+     The IP protocols to match for this rule. Each element can be an 8-bit unsigned decimal number (e.g. "6"), range (e.g."253-254"), or one of the following protocol names: "tcp", "udp", "icmp", "esp", "ah", "ipip", or "sctp". To match all protocols specify *. 
+`--network-src-asns`=[`SRC_ASN`,…]
+     BGP Autonomous System Number associated with the source IP address to match for this rule. 
+`--network-src-ip-ranges`=[`SRC_IP_RANGE`,…]
+     The source IPs/IP ranges to match for this rule. To match all IPs specify *. 
+`--network-src-ports`=[`SRC_PORT`,…]
+     The source ports to match for this rule. Each element can be an 16-bit unsigned decimal number (e.g. "80") or range (e.g."0-1023"), To match all source ports specify *. 
+`--network-src-region-codes`=[`SRC_REGION_CODE`,…]
+     The two letter ISO 3166-1 alpha-2 country code associated with the source IP address to match for this rule. To match all region codes specify *. 
+`--network-user-defined-fields`=[`NAME`;`VALUE`:`VALUE`:…,…]
+     Each element names a defined field and lists the matching values for that field. 
+`--src-ip-ranges`=[`SRC_IP_RANGE`,…]
+     The source IPs/IP ranges to match for this rule. To match all IPs specify *. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. These variants are also available: 
+    
+    
+    [gcloud compute security-policies rules update](https://docs.cloud.google.com/sdk/gcloud/reference/compute/security-policies/rules/update)
+    
+    
+    [gcloud beta compute security-policies rules update](https://docs.cloud.google.com/sdk/gcloud/reference/beta/compute/security-policies/rules/update)
+    
+    
+    [gcloud preview compute security-policies rules update](https://docs.cloud.google.com/sdk/gcloud/reference/preview/compute/security-policies/rules/update)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-08-26 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-26 UTC."],[],[]] 

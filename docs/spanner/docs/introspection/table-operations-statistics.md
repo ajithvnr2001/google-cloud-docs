@@ -1,0 +1,276 @@
+---
+url: https://docs.cloud.google.com/spanner/docs/introspection/table-operations-statistics/
+title: Table operations statistics \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-21T03:26:36.136096+00:00
+---
+
+# Table operations statistics  |  Spanner  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/spanner/docs/introspection/table-operations-statistics/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Spanner ](https://docs.cloud.google.com/spanner/docs)
+  * [ Guides ](https://docs.cloud.google.com/spanner/docs/create-query-database-console)
+
+
+
+Send feedback 
+
+#  Table operations statistics Stay organized with collections  Save and categorize content based on your preferences. 
+
+Spanner provides built-in tables that records the read (or query), write, and delete operations statistics for your tables (including change streams tables) and indexes. With table operations statistics you can do the following:
+
+  * Identify tables with increased write traffic corresponding to storage increase.
+
+  * Identify tables with unexpected read, write, and delete traffic.
+
+  * Identify heavily-used tables.
+
+
+
+
+When you query or write to a table, the corresponding operation count for the table increments by 1, regardless of the number of rows accessed.
+
+Overall operations-per-second metrics of a database can be monitored with `Operations per second`, `Operations per second by API method`, and other related metrics in your [System Insights](https://docs.cloud.google.com/spanner/docs/monitoring-console) charts.
+
+**Note:** The sum of the operation counts on all tables and indexes might not be equal to the total operations on a database. For example, one write to a table increments the `write_count` on the table and on all indexes on the table. However, the write only counts as one operation on the database. The operation counts don't depend on the number of rows read or written to. They track the number of operations only. When the PartitionRead or PartitionQuery API returns multiple partition tokens, each Read or ExecuteSql call with a different token counts as a separate table operation.
+
+## Access table operations statistics
+
+Spanner provides the table operations statistics in the `SPANNER_SYS` schema.You can use the following ways to access `SPANNER_SYS` data:
+
+  * A database's Spanner Studio page in the Google Cloud console.
+
+  * The `gcloud spanner databases execute-sql` command.
+
+  * The [`executeSql`](https://docs.cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases.sessions/executeSql) or the [`executeStreamingSql`](https://docs.cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases.sessions/executeStreamingSql) method.
+
+
+
+
+The following single read methods that Spanner provides don't support `SPANNER_SYS`:
+
+  * Performing a strong read from a single row or multiple rows in a table.
+  * Performing a stale read from a single row or multiple rows in a table.
+  * Reading from a single row or multiple rows in a secondary index.
+
+
+
+## Table operations statistics
+
+The following tables track the read (or query), write, and delete statistics on your tables and indexes during a specific time period:
+
+  * `SPANNER_SYS.TABLE_OPERATIONS_STATS_MINUTE`: Operations during 1 minute intervals
+  * `SPANNER_SYS.TABLE_OPERATIONS_STATS_10MINUTE`: Operations during 10 minute intervals
+  * `SPANNER_SYS.TABLE_OPERATIONS_STATS_HOUR`: Operations during 1 hour intervals
+
+
+
+These tables have the following properties:
+
+  * Each table contains data for non-overlapping time intervals of the length that the table name specifies.
+
+  * Intervals are based on clock times. 1 minute intervals start on the minute, 10 minute intervals start every 10 minutes starting on the hour, and 1 hour intervals start on the hour.
+
+For example, at 11:59:30 AM, the most recent intervals available to SQL queries are:
+
+    * **1 minute** : 11:58:00–11:58:59 AM
+    * **10 minute** : 11:40:00–11:49:59 AM
+    * **1 hour** : 10:00:00–10:59:59 AM
+
+
+
+### Schema for all table operations statistics tables
+
+Column name | Type | Description  
+---|---|---  
+`INTERVAL_END` | `TIMESTAMP` | End of time interval in which the table sizes were collected.   
+`TABLE_NAME` | `STRING` | Name of the table or the index.   
+`READ_QUERY_COUNT` | `INT64` | Number of queries or reads reading from the table.  
+`WRITE_COUNT` | `INT64` | Number of queries writing to the table.  
+`DELETE_COUNT` | `INT64` | Number of queries performing deletes on the table.  
+  
+If you insert data into your database using mutations, the `write_count` increments by 1 for each table accessed by the insert statement. In addition, a query that accesses an index, without scanning the underlying table, only increments the `read_query_count` on the index.
+
+## Data retention
+
+At a minimum, Spanner keeps data for each table for the following time periods:
+
+  * `SPANNER_SYS.TABLE_OPERATIONS_STATS_MINUTE`: Intervals covering the previous 6 hours.
+
+  * `SPANNER_SYS.TABLE_OPERATIONS_STATS_10MINUTE`: Intervals covering the previous 4 days.
+
+  * `SPANNER_SYS.TABLE_OPERATIONS_STATS_HOUR`: Intervals covering the previous 30 days.
+
+
+**Note:** You cannot prevent Spanner from collecting table operations statistics. To delete the data in these tables, you must delete the database associated with the tables or wait until Spanner removes the data automatically.
+
+### Example queries
+
+This section includes several example SQL statements that retrieve aggregate table operations statistics. You can run these SQL statements using the [client libraries](https://docs.cloud.google.com/spanner/docs/reference/libraries), or the [gcloud spanner](https://docs.cloud.google.com/spanner/docs/gcloud-spanner#execute_sql_statements).
+
+#### Query the tables and indexes with the most write operations for the most recent interval
+    
+    
+        SELECT interval_end,
+              table_name,
+              write_count
+        FROM spanner_sys.table_operations_stats_minute
+        WHERE interval_end = (
+              SELECT MAX(interval_end)
+              FROM spanner_sys.table_operations_stats_minute)
+        ORDER BY write_count DESC;
+      
+
+#### Query the tables and indexes with the most delete operations for the most recent interval
+    
+    
+        SELECT interval_end,
+              table_name,
+              delete_count
+        FROM spanner_sys.table_operations_stats_minute
+        WHERE interval_end = (
+              SELECT MAX(interval_end)
+              FROM spanner_sys.table_operations_stats_minute)
+        ORDER BY delete_count DESC;
+      
+
+#### Query the tables and indexes with the most read and query operations for the most recent interval
+    
+    
+        SELECT interval_end,
+              table_name,
+              read_query_count
+        FROM spanner_sys.table_operations_stats_minute
+        WHERE interval_end = (
+              SELECT MAX(interval_end)
+              FROM spanner_sys.table_operations_stats_minute)
+        ORDER BY read_query_count DESC;
+      
+
+#### Query the usage of a table over the last 6 hours
+
+###  GoogleSQL 
+    
+    
+        SELECT interval_end,
+              read_query_count,
+              write_count,
+              delete_count
+        FROM spanner_sys.table_operations_stats_minute
+        WHERE table_name = "table_name"
+        ORDER BY interval_end DESC;
+        
+
+Where:
+
+  * `table_name` must be an existing table or index in the database.
+
+
+
+###  PostgreSQL 
+    
+    
+        SELECT interval_end,
+              read_query_count,
+              write_count,
+              delete_count
+        FROM spanner_sys.table_operations_stats_minute
+        WHERE table_name = 'table_name'
+        ORDER BY interval_end DESC;
+        
+
+Where:
+
+  * `table_name` must be an existing table or index in the database.
+
+
+
+#### Query the usage of a table over the last 14 days
+
+###  GoogleSQL 
+    
+    
+    SELECT interval_end,
+           read_query_count,
+           write_count,
+           delete_count
+    FROM spanner_sys.table_operations_stats_hour
+    WHERE interval_end > TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL -14 DAY)
+          AND table_name = "table_name"
+    ORDER BY interval_end DESC;
+    
+
+Where:
+
+  * `table_name` must be an existing table or index in the database.
+
+
+
+###  PostgreSQL 
+    
+    
+    SELECT interval_end,
+       read_query_count,
+       write_count,
+       delete_count
+    FROM spanner_sys.table_operations_stats_hour
+    WHERE interval_end > spanner.timestamptz_subtract(now(), '14 DAY')
+      AND table_name = 'table_name'
+    ORDER BY interval_end DESC;
+    
+
+Where:
+
+  * `table_name` must be an existing table or index in the database.
+
+
+
+#### Query the tables and indexes with no usage in the last 24 hours
+
+###  GoogleSQL 
+    
+    
+    (SELECT t.table_name
+     FROM  information_schema.tables AS t
+     WHERE t.table_catalog = ""
+       AND t.table_schema = ""
+       AND t.table_type = "BASE TABLE"
+     UNION ALL
+     SELECT cs.change_stream_name
+     FROM information_schema.change_streams cs
+     WHERE cs.change_stream_catalog = ""
+       AND cs.change_stream_schema = ""
+     UNION ALL
+     SELECT idx.index_name
+     FROM information_schema.indexes idx
+     WHERE idx.index_type = "INDEX"
+       AND idx.table_catalog = ""
+       AND idx.table_schema = "")
+     EXCEPT ALL
+    (SELECT  DISTINCT(table_name)
+     FROM spanner_sys.table_operations_stats_hour
+     WHERE interval_end > TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL -24 HOUR));
+    
+
+## What's next
+
+  * Use [Table sizes statistics](https://docs.cloud.google.com/spanner/docs/introspection/table-sizes-statistics) to determine the sizes of your tables and indexes.
+
+  * Learn about other [Introspection tools](https://docs.cloud.google.com/spanner/docs/introspection).
+
+  * Learn more about [SQL best practices](https://docs.cloud.google.com/spanner/docs/sql-best-practices) for Spanner.
+
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-20 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

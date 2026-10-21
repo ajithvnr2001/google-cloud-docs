@@ -1,0 +1,120 @@
+---
+url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/2-0-generate/
+title: Google models \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T21:00:45.182401+00:00
+---
+
+# Google models  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/2-0-generate/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
+  * [ Gemini Enterprise Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
+  * [ Models ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models)
+
+
+
+Send feedback 
+
+#  Google models Stay organized with collections  Save and categorize content based on your preferences. 
+
+## Featured Gemini models
+
+4 Argon 
+
+Google's frontier model that excels at deep work in complex, real-world tasks 
+
+  * Excels across coding, finance, legal, cybersecurity, and science
+  * Deep multi-step reasoning with configurable thinking levels
+  * Long-output generation up to 1 million tokens
+
+[](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon)
+
+3.8 Flash 
+
+Built for long-horizon coding and autonomous agents 
+
+  * Improved response quality
+  * More reliable code generation
+  * Stronger multimodal reasoning
+
+[](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash)
+
+Nano Banana 2.1 
+
+Turn ideas into production-ready assets 
+
+  * Generate high-quality images
+  * Capable of turn-based conversational editing
+  * Capable of multi-image fusion and character consistency for advanced creative workflows
+
+[](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/nano-banana-2-1)
+
+## Generally available Gemini models
+
+spark [Gemini 4 Argon](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon) Google's frontier model that excels at deep work in complex, real-world tasks across domains including coding, finance, legal, cybersecurity, and science. spark [Gemini 4 Argon Cyber Permissive (Gemini Frontier Cyber Model)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon#cyber) A version of Gemini 4 Argon for defensive cybersecurity use cases. Available behind an allowlist. spark [Gemini 3.8 Flash Cyber (Gemini Cyber)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-cyber) Our model optimized for cyber security. audio_spark [Gemini 3.8 Live](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-live) Optimized for live interactions, with improved voice quality, reliability, and real-time agent orchestration.  spark [Gemini 3.8 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash) Our most intelligent workhorse model yet, built for long-horizon coding and autonomous agents. spark [Gemini 3.7 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-7-flash) Our intelligent everyday driver for developers, delivering a step forward in software engineering and feeling distinctly better to build with. spark [Gemini 3.6 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-6-flash) Optimized for complex, multi-step workflows, improved code generation, and improved multimodal reasoning—all while using fewer tokens. performance_auto [Gemini 3.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite) Create lightweight agentic workflows at top speeds and minimal cost. banana_spark [Gemini Nano Banana 2.1](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/nano-banana-2-1) High-fidelity, multimodal image generation and editing. Delivers significantly improved prompt adherence, text rendering, and visual quality. banana_spark [Gemini 3.1 Flash-Lite Image (Nano Banana 2 Lite)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite-image) Turn ideas into production-ready assets. Designed for high-volume and latency-sensitive workloads. banana_spark [Gemini 3.1 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-image) Turn ideas into production-ready assets. Features conversational editing, multi-image fusion, and character consistency for advanced creative workflows. banana_spark [Gemini 3 Pro Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-pro-image) High-fidelity image generation with reasoning-enhanced composition. Supports legible text rendering, complex multi-turn editing, and character consistency using up to 14 reference inputs. spark [Gemini 3.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash) Gemini 3.5 Flash delivers near-Pro intelligence at Flash-tier cost and speed: Pro-level coding proficiency, parallel agentic execution, all at the same price point as a Flash model. performance_auto [Gemini 3.1 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite) Our most cost-efficient model, optimized for low latency use cases for high-volume, cost-sensitive LLM traffic. diamond [Gemini 2.5 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-pro) Our high-capability model for complex reasoning and coding. Features adaptive thinking capabilities to solve complex agentic and multimodal challenges with a 1 million token context. spark [Gemini 2.5 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash) Lightning-fast and highly capable. Delivers a balance of intelligence and latency with controllable thinking budgets for versatile applications. banana_spark [Gemini 2.5 Flash Image](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-image) Turn ideas into production-ready assets. Features conversational editing, multi-image fusion, and character consistency for advanced creative workflows. performance_auto [Gemini 2.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite) Built for massive scale. Balances cost and performance for high-throughput tasks, optimized for efficiency without sacrificing multimodal understanding. audio_spark [ Gemini 2.5 Flash with Gemini Live API](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-live-api) Designed for real-time, bidirectional streaming. Features low-latency built-in audio and affective dialogue capabilities for natural, conversational interactions.
+
+## Preview Gemini models
+
+preview [Gemini 3.8 Flash TTS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-tts) Our flagship text-to-speech model for studio-grade voice fidelity, expressive acting, regional accents, and stable long-form multi-speaker audio. preview [Gemini 3.8 Flash-Lite TTS](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-8-flash-lite-tts) Fast, cost-efficient text-to-speech for high-throughput production workloads and voice agents. preview [Gemini Omni 1.1 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash) Generate video from text or reference assets, or edit existing videos. preview [Gemini Omni Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-flash-preview) Generate video from text or reference assets, or edit existing videos. preview [Gemini 3.1 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-pro) Our reasoning-first model optimized for complex agentic workflows and coding. Features adaptive thinking, a 1 million token context window, and integrated grounding for multimodal problem-solving. preview [Gemini 3 Flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-flash) Our best model for complex multimodal understanding, designed to tackle the most challenging agentic problems with strong coding and state-of-the-art reasoning capabilities.
+
+## Gemma models
+
+![](https://ai.google.dev/gemma/images/gemma_sq.png) [Gemma 4](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/gemma4) An open model well-suited for tasks like text generation, coding, and reasoning, and supporting multimodal input (text and image for all variants, and additionally audio for the E2B and E4B variants). ![](https://ai.google.dev/gemma/images/gemma_sq.png) [Gemma 3n](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/gemma3n) An open model designed for efficient execution on low-resource devices, supporting multimodal input (text, image, video, and audio) and text output in over 140 languages. ![](https://ai.google.dev/gemma/images/gemma_sq.png) [Gemma 3](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/gemma3) An open model featuring text and image input, support for over 140 languages, and a 128K context window. ![](https://ai.google.dev/gemma/images/gemma_sq.png) [Gemma 2](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/gemma2) An open model supporting text generation, summarization, and extraction. ![](https://ai.google.dev/gemma/images/gemma_sq.png) [Gemma](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/335) A small, lightweight open model supporting text generation, summarization, and extraction. ![](https://ai.google.dev/gemma/images/gemma_sq.png) [ShieldGemma 2](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/shieldgemma2) Instruction-tuned models for evaluating text and image safety against defined policies. ![](https://ai.google.dev/gemma/images/gemma_sq.png) [PaliGemma](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/paligemma) An open vision-language model combining SigLIP and Gemma. ![](https://ai.google.dev/gemma/images/gemma_sq.png) [CodeGemma](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/codegemma) A powerful, lightweight open model for coding tasks, including code completion, generation, and understanding. ![](https://ai.google.dev/gemma/images/gemma_sq.png) [TxGemma](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/txgemma) A model that generates predictions, classifications, or text based on therapeutic-related data, for building AI models with less data and compute. ![](https://ai.google.dev/gemma/images/gemma_sq.png) [MedGemma](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/medgemma) A collection of Gemma 3 variants trained for performance on medical text and image comprehension. ![](https://ai.google.dev/gemma/images/gemma_sq.png) [MedSigLIP](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/medsiglip) A SigLIP variant trained to encode medical images and text into a common embedding space. ![](https://ai.google.dev/gemma/images/gemma_sq.png) [T5Gemma](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/T5Gemma) A family of lightweight encoder-decoder research models.
+
+## Embeddings models
+
+width_normal [Embeddings for Text](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/gemini-embedding-001) Converts text data into vector representations for semantic search, classification, and clustering. width_normal [Multimodal Embeddings](https://console.cloud.google.com/agent-platform/publishers/google/model-garden/multimodalembedding) Generates vectors based on images, for tasks such as image classification and search.
+
+## Veo models
+
+movie [Veo 3 Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-generate-001) Generates videos from text prompts and images with high quality. movie [Veo 3 Fast](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-fast-generate-001) Generates videos from text prompts and images with high quality and low latency. movie [Veo 3.1 Generate](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-generate-001) Generates videos from text prompts and images with high quality. movie [Veo 3.1 Fast](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-fast-generate-001) Generates videos from text prompts and images with high quality and low latency.
+
+## Preview Veo models
+
+movie [Veo 3.1 Lite preview](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-lite-generate-001) Generates videos from text prompts and images with high quality and low cost.
+
+## Lyria models
+
+music_note_spark [Lyria 3 Pro](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/lyria/lyria-3#lyria-3-pro-preview) ([Preview](https://cloud.google.com/products#product-launch-stages)) Generates full-length music tracks from text and image prompts. music_note_spark [Lyria 3 Clip](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/lyria/lyria-3#lyria-3-clip-preview) ([Preview](https://cloud.google.com/products#product-launch-stages)) Generates 30s audio clips from text and image prompts. audio_spark [Lyria 2](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/lyria/lyria-002) Generates music from text prompts.
+
+## Language support
+
+### Gemini
+
+All Gemini models can understand the following languages. Gemini models that are capable of text responses can also respond in these languages: 
+
+Afrikaans (`af`), Albanian (`sq`), Amharic (`am`), Arabic (`ar`), Armenian (`hy`), Assamese (`as`), Azerbaijani (`az`), Basque (`eu`), Belarusian (`be`), Bengali (`bn`), Bosnian (`bs`), Bulgarian (`bg`), Catalan (`ca`), Cebuano (`ceb`), Chinese (Simplified and Traditional) (`zh`), Corsican (`co`), Croatian (`hr`), Czech (`cs`), Danish (`da`), Dhivehi (`dv`), Dutch (`nl`), English (`en`), Esperanto (`eo`), Estonian (`et`), Filipino (Tagalog) (`fil`), Finnish (`fi`), French (`fr`), Frisian (`fy`), Galician (`gl`), Georgian (`ka`), German (`de`), Greek (`el`), Gujarati (`gu`), Haitian Creole (`ht`), Hausa (`ha`), Hawaiian (`haw`), Hebrew (`iw`), Hindi (`hi`), Hmong (`hmn`), Hungarian (`hu`), Icelandic (`is`), Igbo (`ig`), Indonesian (`id`), Irish (`ga`), Italian (`it`), Japanese (`ja`), Javanese (`jv`), Kannada (`kn`), Kazakh (`kk`), Khmer (`km`), Korean (`ko`), Krio (`kri`), Kurdish (`ku`), Kyrgyz (`ky`), Lao (`lo`), Latin (`la`), Latvian (`lv`), Lithuanian (`lt`), Luxembourgish (`lb`), Macedonian (`mk`), Malagasy (`mg`), Malay (`ms`), Malayalam (`ml`), Maltese (`mt`), Maori (`mi`), Marathi (`mr`), Meiteilon (Manipuri) (`mni-Mtei`), Mongolian (`mn`), Myanmar (Burmese) (`my`), Nepali (`ne`), Norwegian (`no`), Nyanja (Chichewa) (`ny`), Odia (Oriya) (`or`), Pashto (`ps`), Persian (`fa`), Polish (`pl`), Portuguese (`pt`), Punjabi (`pa`), Romanian (`ro`), Russian (`ru`), Samoan (`sm`), Scots Gaelic (`gd`), Serbian (`sr`), Sesotho (`st`), Shona (`sn`), Sindhi (`sd`), Sinhala (Sinhalese) (`si`), Slovak (`sk`), Slovenian (`sl`), Somali (`so`), Spanish (`es`), Sundanese (`su`), Swahili (`sw`), Swedish (`sv`), Tajik (`tg`), Tamil (`ta`), Telugu (`te`), Thai (`th`), Turkish (`tr`), Ukrainian (`uk`), Urdu (`ur`), Uyghur (`ug`), Uzbek (`uz`), Vietnamese (`vi`), Welsh (`cy`), Xhosa (`xh`), Yiddish (`yi`), Yoruba (`yo`), and Zulu (`zu`). 
+
+### Gemma
+
+Gemma and Gemma 2 support only the English (`en`) language. Gemma 3 and Gemma 3n provide multilingual support in over 140 languages. 
+
+### Embeddings
+
+Multilingual text embedding models support the following languages:
+
+Afrikaans (`af`), Albanian (`sq`), Amharic (`am`), Arabic (`ar`), Armenian (`hy`), Azerbaijani (`az`), Basque (`eu`), Belarusian (`be`), Bengali (`bn`), Bulgarian (`bg`), Catalan (`ca`), Cebuano (`ceb`), Chinese (Simplified and Traditional) (`zh`), Corsican (`co`), Czech (`cs`), Danish (`da`), Dutch (`nl`), English (`en`), Esperanto (`eo`), Estonian (`et`), Filipino (Tagalog) (`fil`), Finnish (`fi`), French (`fr`), Frisian (`fy`), Galician (`gl`), Georgian (`ka`), German (`de`), Greek (`el`), Gujarati (`gu`), Haitian Creole (`ht`), Hausa (`ha`), Hawaiian (`haw`), Hebrew (`iw`), Hindi (`hi`), Hmong (`hmn`), Hungarian (`hu`), Icelandic (`is`), Igbo (`ig`), Indonesian (`id`), Irish (`ga`), Italian (`it`), Japanese (`ja`), Javanese (`jv`), Kannada (`kn`), Kazakh (`kk`), Khmer (`km`), Korean (`ko`), Kurdish (`ku`), Kyrgyz (`ky`), Lao (`lo`), Latin (`la`), Latvian (`lv`), Lithuanian (`lt`), Luxembourgish (`lb`), Macedonian (`mk`), Malagasy (`mg`), Malay (`ms`), Malayalam (`ml`), Maltese (`mt`), Maori (`mi`), Marathi (`mr`), Mongolian (`mn`), Myanmar (Burmese) (`my`), Nepali (`ne`), Nyanja (Chichewa) (`ny`), Norwegian (`no`), Pashto (`ps`), Persian (`fa`), Polish (`pl`), Portuguese (`pt`), Punjabi (`pa`), Romanian (`ro`), Russian (`ru`), Samoan (`sm`), Scots Gaelic (`gd`), Serbian (`sr`), Sesotho (`st`), Shona (`sn`), Sindhi (`sd`), Sinhala (Sinhalese) (`si`), Slovak (`sk`), Slovenian (`sl`), Somali (`so`), Spanish (`es`), Sundanese (`su`), Swahili (`sw`), Swedish (`sv`), Tajik (`tg`), Tamil (`ta`), Telugu (`te`), Thai (`th`), Turkish (`tr`), Ukrainian (`uk`), Urdu (`ur`), Uzbek (`uz`), Vietnamese (`vi`), Welsh (`cy`), Xhosa (`xh`), Yiddish (`yi`), Yoruba (`yo`), and Zulu (`zu`). 
+
+## Explore all models in Model Garden
+
+Model Garden is a platform that helps you discover, test, customize, and deploy Google proprietary and select OSS models and assets. To explore the generative AI models and APIs that are available on Gemini Enterprise Agent Platform, go to Model Garden in the Google Cloud console.
+
+[Go to Model Garden](https://console.cloud.google.com/agent-platform/model-garden)
+
+To learn more about Model Garden, including available models and capabilities, see [Explore AI models in Model Garden](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-garden/explore-models).
+
+## Model versions
+
+To see all model versions, including legacy and retired models, see [Model versions and lifecycle](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions).
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

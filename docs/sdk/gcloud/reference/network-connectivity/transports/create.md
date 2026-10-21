@@ -1,0 +1,208 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/network-connectivity/transports/create/
+title: gcloud network-connectivity transports create \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-13T20:52:34.206830+00:00
+---
+
+# gcloud network-connectivity transports create  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/network-connectivity/transports/create/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud network-connectivity transports create Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud network-connectivity transports create - create a transport 
+SYNOPSIS
+    
+
+`gcloud network-connectivity transports create` `TRANSPORT` (`--activation-key`=`ACTIVATION_KEY` | `--bandwidth`=`BANDWIDTH` `--remote-account-id`=`REMOTE_ACCOUNT_ID` `--remote-profile`=`REMOTE_PROFILE`) (`--network`=`NETWORK` | [`--hub`=`HUB` : `--auto-accept` `--psc-routing-enabled`]) [`--advertised-routes`=[`CIDR_RANGE`,…]] [`--async`] [`--description`=`DESCRIPTION`] [`--labels`=[`KEY`=`VALUE`,…]] [`--region`=`REGION`] [`--stack-type`=`STACK_TYPE`; default="ipv4-only"] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     Create a transport with the given name to a remote provider. 
+EXAMPLES
+     To create a transport that generates a key to ``aws-us-east-1``. 
+    
+    
+    gcloud network-connectivity transports create my-cci-aws --bandwidth 1G --profile aws-us-east-1 --remote-account-id 12345 --network default --advertised-routes '10.128.0.0/9'
+
+To accept a key: 
+    
+    
+    gcloud network-connectivity transports create my-cci-aws --activation-key ABC1234 --network default
+
+To create a transport with an NCC hub: 
+    
+    
+    gcloud network-connectivity transports create my-cci-aws --bandwidth 1G --profile aws-us-east-1 --remote-account-id 12345 --hub projects/12345/locations/us-central1/hubs/my-hub --auto-accept
+
+POSITIONAL ARGUMENTS
+    
+
+Transport resource - Name of the Transport to be created. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `transport` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `region` attribute: 
+
+  * provide the argument `transport` on the command line with a fully specified name; 
+  * provide the argument `--region` on the command line. 
+
+
+
+This must be specified. 
+
+`TRANSPORT`
+     ID of the transport or fully qualified identifier for the transport. 
+
+To set the `transport` attribute: 
+
+  * provide the argument `transport` on the command line. 
+
+
+REQUIRED FLAGS
+    
+
+Exactly one of these must be specified: 
+
+`--activation-key`=`ACTIVATION_KEY`
+     Key from the remote provider to establish a connection over the Transport. 
+Or at least one of these can be specified: 
+
+These values must all be specified if Google is expected to generate the key. 
+`--bandwidth`=`BANDWIDTH`
+     Bandwidth of the transport to create. Must be a supported bandwidth on the remote profile. `BANDWIDTH` must be one of: `100g`, `100m`, `10g`, `1g`, `200m`, `20g`, `2g`, `300m`, `400m`, `500m`, `50g`, `50m`, `5g`. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--remote-account-id`=`REMOTE_ACCOUNT_ID`
+     Account ID in the remote provider to associate with the generated key. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+RemoteTransportProfile resource - Remote transport profile representing the provider and their location. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--remote-profile` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+To set the `region` attribute: 
+
+  * provide the argument `--remote-profile` on the command line with a fully specified name; 
+  * provide the argument `--region` on the command line. 
+
+
+
+This must be specified. 
+
+`--remote-profile`=`REMOTE_PROFILE`
+     ID of the remoteTransportProfile or fully qualified identifier for the remoteTransportProfile. 
+
+To set the `remote_transport_profile` attribute: 
+
+  * provide the argument `--remote-profile` on the command line. 
+
+
+Exactly one of these must be specified: 
+
+Network resource - VPC that will be peered to the provider via the Transport. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--network` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+`--network`=`NETWORK`
+     ID of the network or fully qualified identifier for the network. 
+
+To set the `network` attribute: 
+
+  * provide the argument `--network` on the command line. 
+
+
+Parameters for creating a transport with an NCC hub. 
+Hub resource - Hub that the transport will be attached to. This represents a Cloud resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--hub` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+
+This must be specified. 
+
+`--hub`=`HUB`
+     ID of the hub or fully qualified identifier for the hub. 
+
+To set the `hub` attribute: 
+
+  * provide the argument `--hub` on the command line. 
+
+
+`--auto-accept`
+     Whether to auto-accept spoke proposals for this transport. 
+`--psc-routing-enabled`
+     Whether a VPC spoke is created for PSC routing over the transport. 
+OPTIONAL FLAGS
+    
+
+`--advertised-routes`=[`CIDR_RANGE`,…]
+     List of routes to advertise from the VPC `network` toward the provider. 
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--description`=`DESCRIPTION`
+     Description of the transport. 
+`--labels`=[`KEY`=`VALUE`,…]
+     List of label KEY=VALUE pairs to add. 
+
+Keys must start with a lowercase character and contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. Values must contain only hyphens (`-`), underscores (`_`), lowercase characters, and numbers. 
+
+`--region`=`REGION`
+     Google Cloud region for the transport. Applicable regions are those where Partner Interconnect is available. For a list of supported regions, see <https://docs.cloud.google.com/network-connectivity/docs/interconnect/how-to/partner-cci-for-aws/paired-locations>. 
+`--stack-type`=`STACK_TYPE`; default="ipv4-only"
+     IP version of the routes to be exchanged. `STACK_TYPE` must be one of: `ipv4-ipv6`, `ipv4-only`. 
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+API REFERENCE
+     This command uses the `networkconnectivity/v1` API. The full documentation for this API can be found at: <https://cloud.google.com/network-connectivity/docs/reference/networkconnectivity/rest>
+NOTES
+     This variant is also available: 
+    
+    
+    [gcloud beta network-connectivity transports create](https://docs.cloud.google.com/sdk/gcloud/reference/beta/network-connectivity/transports/create)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-09-22 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-09-22 UTC."],[],[]] 

@@ -1,0 +1,228 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alloydb/clusters/create-secondary/
+title: gcloud alloydb clusters create-secondary \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T00:45:29.943357+00:00
+---
+
+# gcloud alloydb clusters create-secondary  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alloydb/clusters/create-secondary/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alloydb clusters create-secondary Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alloydb clusters create-secondary - create a new AlloyDB SECONDARY cluster within a given project 
+SYNOPSIS
+    
+
+`gcloud alloydb clusters create-secondary` `CLUSTER` `--primary-cluster`=`PRIMARY_CLUSTER` `--region`=`REGION` [`--allocated-ip-range-name`=`ALLOCATED_IP_RANGE_NAME`] [`--async`] [`--[no-]enable-dataplex-integration`] [`--tags`=[`KEY`=`VALUE`,…]] [`--automated-backup-days-of-week`=[`DAYS_OF_WEEK`,…] `--automated-backup-start-times`=[`START_TIMES`,…] `--automated-backup-window`=`TIMEOUT_PERIOD` `--enable-automated-backup` [`--automated-backup-encryption-key`=`AUTOMATED_BACKUP_ENCRYPTION_KEY` : `--automated-backup-encryption-key-keyring`=`AUTOMATED_BACKUP_ENCRYPTION_KEY_KEYRING` `--automated-backup-encryption-key-location`=`AUTOMATED_BACKUP_ENCRYPTION_KEY_LOCATION` `--automated-backup-encryption-key-project`=`AUTOMATED_BACKUP_ENCRYPTION_KEY_PROJECT`] `--automated-backup-retention-count`=`RETENTION_COUNT` | `--automated-backup-retention-period`=`RETENTION_PERIOD`] [`--continuous-backup-recovery-window-days`=`RECOVERY_PERIOD` `--enable-continuous-backup` [`--continuous-backup-encryption-key`=`CONTINUOUS_BACKUP_ENCRYPTION_KEY` : `--continuous-backup-encryption-key-keyring`=`CONTINUOUS_BACKUP_ENCRYPTION_KEY_KEYRING` `--continuous-backup-encryption-key-location`=`CONTINUOUS_BACKUP_ENCRYPTION_KEY_LOCATION` `--continuous-backup-encryption-key-project`=`CONTINUOUS_BACKUP_ENCRYPTION_KEY_PROJECT`]] [`--kms-key`=`KMS_KEY` : `--kms-keyring`=`KMS_KEYRING` `--kms-location`=`KMS_LOCATION` `--kms-project`=`KMS_PROJECT`] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     Create a new AlloyDB SECONDARY cluster within a given project. 
+EXAMPLES
+     To create a new cluster, run: 
+    
+    
+    gcloud alloydb clusters create-secondary my-cluster --region=us-central1 --primary-cluster=projects/12345/locations/us-central1/clusters/cluster1
+
+POSITIONAL ARGUMENTS
+    
+
+`CLUSTER`
+     AlloyDB cluster ID 
+REQUIRED FLAGS
+    
+
+`--primary-cluster`=`PRIMARY_CLUSTER`
+     AlloyDB primary cluster ID 
+`--region`=`REGION`
+     Regional location (e.g. `asia-east1`, `us-east1`). See the full list of regions at <https://cloud.google.com/sql/docs/instance-locations>. 
+OPTIONAL FLAGS
+    
+
+`--allocated-ip-range-name`=`ALLOCATED_IP_RANGE_NAME`
+     Name of the allocated IP range for the private IP AlloyDB cluster, for example: "google-managed-services-default". If set, the instance IPs for this cluster will be created in the allocated range. The range name must comply with RFC 1035\. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. 
+`--async`
+     Return immediately, without waiting for the operation in progress to complete. 
+`--[no-]enable-dataplex-integration`
+     Enable or disable Dataplex integration for this cluster (Enabled by default). Use `--enable-dataplex-integration` to enable and `--no-enable-dataplex-integration` to disable. 
+`--tags`=[`KEY`=`VALUE`,…]
+     List of tags KEY=VALUE pairs to bind. Each item must be expressed as `<tag-key-namespaced-name>=<tag-value-short-name>`. 
+
+Example: `123/environment=production,123/costCenter=marketing`
+
+Automated backup policy. If unspecified, automated backups are copied from the associated primary cluster. 
+`--automated-backup-days-of-week`=[`DAYS_OF_WEEK`,…]
+     Comma-separated list of days of the week to perform a backup. At least one day of the week must be provided. (e.g., \--automated-backup-days-of-week=MONDAY,WEDNESDAY,SUNDAY). `DAYS_OF_WEEK` must be one of: `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, `SUNDAY`. 
+`--automated-backup-start-times`=[`START_TIMES`,…]
+     Comma-separated list of times during the day to start a backup. At least one start time must be provided. The start times are assumed to be in UTC and required to be an exact hour in the format HH:00. (e.g., `--automated-backup-start-times=01:00,13:00`) 
+`--automated-backup-window`=`TIMEOUT_PERIOD`
+     The length of the time window beginning at start time during which a backup can be taken. If a backup does not succeed within this time window, it will be canceled and considered failed. The backup window must be at least 5 minutes long. There is no upper bound on the window. If not set, it will default to 1 hour. 
+`--enable-automated-backup`
+     Enables Automated Backups on the cluster. 
+Key resource - The Cloud KMS (Key Management Service) cryptokey that will be used to protect the automated backups. The 'AlloyDB Service Agent' service account must hold permission 'Cloud KMS CryptoKey Encrypter/Decrypter'. The arguments in this group can be used to specify the attributes of this resource. 
+`--automated-backup-encryption-key`=`AUTOMATED_BACKUP_ENCRYPTION_KEY`
+     ID of the key or fully qualified identifier for the key. 
+
+To set the `kms-key` attribute: 
+
+  * provide the argument `--automated-backup-encryption-key` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--automated-backup-encryption-key-keyring`=`AUTOMATED_BACKUP_ENCRYPTION_KEY_KEYRING`
+     The KMS keyring of the key. 
+
+To set the `kms-keyring` attribute: 
+
+  * provide the argument `--automated-backup-encryption-key` on the command line with a fully specified name; 
+  * provide the argument `--automated-backup-encryption-key-keyring` on the command line. 
+
+
+`--automated-backup-encryption-key-location`=`AUTOMATED_BACKUP_ENCRYPTION_KEY_LOCATION`
+     The Google Cloud location for the key. 
+
+To set the `kms-location` attribute: 
+
+  * provide the argument `--automated-backup-encryption-key` on the command line with a fully specified name; 
+  * provide the argument `--automated-backup-encryption-key-location` on the command line. 
+
+
+`--automated-backup-encryption-key-project`=`AUTOMATED_BACKUP_ENCRYPTION_KEY_PROJECT`
+     The Google Cloud project for the key. 
+
+To set the `kms-project` attribute: 
+
+  * provide the argument `--automated-backup-encryption-key` on the command line with a fully specified name; 
+  * provide the argument `--automated-backup-encryption-key-project` on the command line; 
+  * set the property `core/project`. 
+
+
+Retention policy. If no retention policy is provided, all automated backups will be retained. 
+
+At most one of these can be specified: 
+
+`--automated-backup-retention-count`=`RETENTION_COUNT`
+     Number of most recent successful backups retained. 
+`--automated-backup-retention-period`=`RETENTION_PERIOD`
+     Retention period of the backup relative to creation time. See `$ [gcloud topic datetimes](https://docs.cloud.google.com/sdk/gcloud/reference/topic/datetimes)` for information on duration formats. 
+Continuous Backup configuration. If unspecified, continuous backups are copied from the associated primary cluster. 
+`--continuous-backup-recovery-window-days`=`RECOVERY_PERIOD`
+     Recovery window of the log files and backups saved to support Continuous Backups. 
+`--enable-continuous-backup`
+     Enables Continuous Backups on the cluster. 
+Key resource - The Cloud KMS (Key Management Service) cryptokey that will be used to protect the continuous backup. The 'AlloyDB Service Agent's service account must hold permission 'Cloud KMS CryptoKey Encrypter/Decrypter'. The arguments in this group can be used to specify the attributes of this resource. 
+`--continuous-backup-encryption-key`=`CONTINUOUS_BACKUP_ENCRYPTION_KEY`
+     ID of the key or fully qualified identifier for the key. 
+
+To set the `kms-key` attribute: 
+
+  * provide the argument `--continuous-backup-encryption-key` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--continuous-backup-encryption-key-keyring`=`CONTINUOUS_BACKUP_ENCRYPTION_KEY_KEYRING`
+     The KMS keyring of the key. 
+
+To set the `kms-keyring` attribute: 
+
+  * provide the argument `--continuous-backup-encryption-key` on the command line with a fully specified name; 
+  * provide the argument `--continuous-backup-encryption-key-keyring` on the command line. 
+
+
+`--continuous-backup-encryption-key-location`=`CONTINUOUS_BACKUP_ENCRYPTION_KEY_LOCATION`
+     The Google Cloud location for the key. 
+
+To set the `kms-location` attribute: 
+
+  * provide the argument `--continuous-backup-encryption-key` on the command line with a fully specified name; 
+  * provide the argument `--continuous-backup-encryption-key-location` on the command line. 
+
+
+`--continuous-backup-encryption-key-project`=`CONTINUOUS_BACKUP_ENCRYPTION_KEY_PROJECT`
+     The Google Cloud project for the key. 
+
+To set the `kms-project` attribute: 
+
+  * provide the argument `--continuous-backup-encryption-key` on the command line with a fully specified name; 
+  * provide the argument `--continuous-backup-encryption-key-project` on the command line; 
+  * set the property `core/project`. 
+
+
+Key resource - The Cloud KMS (Key Management Service) cryptokey that will be used to protect the cluster. The 'AlloyDB Service Agent' service account must hold permission 'Cloud KMS CryptoKey Encrypter/Decrypter'. The arguments in this group can be used to specify the attributes of this resource. 
+`--kms-key`=`KMS_KEY`
+     ID of the key or fully qualified identifier for the key. 
+
+To set the `kms-key` attribute: 
+
+  * provide the argument `--kms-key` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--kms-keyring`=`KMS_KEYRING`
+     The KMS keyring of the key. 
+
+To set the `kms-keyring` attribute: 
+
+  * provide the argument `--kms-key` on the command line with a fully specified name; 
+  * provide the argument `--kms-keyring` on the command line. 
+
+
+`--kms-location`=`KMS_LOCATION`
+     The Google Cloud location for the key. 
+
+To set the `kms-location` attribute: 
+
+  * provide the argument `--kms-key` on the command line with a fully specified name; 
+  * provide the argument `--kms-location` on the command line. 
+
+
+`--kms-project`=`KMS_PROJECT`
+     The Google Cloud project for the key. 
+
+To set the `kms-project` attribute: 
+
+  * provide the argument `--kms-key` on the command line with a fully specified name; 
+  * provide the argument `--kms-project` on the command line; 
+  * set the property `core/project`. 
+
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     These variants are also available: 
+    
+    
+    [gcloud alpha alloydb clusters create-secondary](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/alloydb/clusters/create-secondary)
+    
+    
+    [gcloud beta alloydb clusters create-secondary](https://docs.cloud.google.com/sdk/gcloud/reference/beta/alloydb/clusters/create-secondary)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-05-27 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-27 UTC."],[],[]] 

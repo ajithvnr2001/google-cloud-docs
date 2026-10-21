@@ -1,0 +1,153 @@
+---
+url: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/asset/query/
+title: gcloud alpha asset query \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T11:35:48.934368+00:00
+---
+
+# gcloud alpha asset query  |  Google Cloud SDK  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/sdk/gcloud/reference/alpha/asset/query/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Developer tools ](https://docs.cloud.google.com/docs/costs-usage)
+  * [ Google Cloud SDK ](https://docs.cloud.google.com/sdk/docs)
+  * [ Reference ](https://docs.cloud.google.com/sdk/docs/libraries-reference)
+
+
+
+Send feedback 
+
+#  gcloud alpha asset query Stay organized with collections  Save and categorize content based on your preferences. 
+
+NAME
+    
+
+gcloud alpha asset query - query the Cloud assets 
+SYNOPSIS
+    
+
+`gcloud alpha asset query` (`--folder`=`FOLDER_ID` | `--organization`=`ORGANIZATION_ID` | `--project`=`PROJECT_ID`) (`--job-reference`=`JOB_REFERENCE` | `--statement`=`STATEMENT`) [`--page-size`=`PAGE_SIZE`] [`--page-token`=`PAGE_TOKEN`] [`--timeout`=`TIMEOUT`] [`--snapshot-time`=`SNAPSHOT_TIME` | [`--start-time`=`START_TIME` : `--end-time`=`END_TIME`]] [`--write-disposition`=`WRITE_DISPOSITION` [`--bigquery-table`=`BIGQUERY_TABLE` : `--bigquery-dataset`=`BIGQUERY_DATASET`]] [`GCLOUD_WIDE_FLAG …`]
+DESCRIPTION
+     `(ALPHA)` Issue an analytical query on Cloud assets using a BigQuery Standard SQL compatible statement. 
+EXAMPLES
+     To count the number of compute instances, run: 
+    
+    
+    gcloud alpha asset query --project='test-project' --statement='SELECT * FROM compute_googleapis_com_Instance'
+
+To see the query result of the previous job, pass the job-reference from the previous response: 
+    
+    
+    gcloud alpha asset query --project='test-project' --job-reference=<job-reference-from>
+
+REQUIRED FLAGS
+    
+
+Exactly one of these must be specified: 
+
+`--folder`=`FOLDER_ID`
+     The ID of the folder which is the root asset. 
+`--organization`=`ORGANIZATION_ID`
+     The ID of the organization which is the root asset. 
+`--project`=`PROJECT_ID`
+     The project which is the root asset. 
+
+The Google Cloud project ID to use for this invocation. If omitted, then the current project is assumed; the current project can be listed using `gcloud config list --format='text(core.project)'` and can be set using `gcloud config set project PROJECTID`. 
+
+`--project` and its fallback `core/project` property play two roles in the invocation: they specify both the project of the resource to operate on, and the project for API enablement checks, quota, and billing. To specify a different project for quota and billing, use the `--billing-project` flag or the `billing/quota_project` property. 
+
+The query or job reference of the query request. 
+
+Exactly one of these must be specified: 
+
+`--job-reference`=`JOB_REFERENCE`
+     Reference to the query job, which is from the previous call. 
+`--statement`=`STATEMENT`
+     A BigQuery Standard SQL compatible statement. If the query execution finishes within timeout and there is no pagination, the full query results will be returned. Otherwise, pass job_reference from previous call as `--job-reference` to obtain the full results. 
+OPTIONAL FLAGS
+    
+
+`--page-size`=`PAGE_SIZE`
+     The maximum number of rows to return in the results. One page is also limited to 10 MB. 
+`--page-token`=`PAGE_TOKEN`
+     A page token received from previous call. 
+`--timeout`=`TIMEOUT`
+     Maximum amount of time that the client will wait for the query to complete. 
+Specifies what time period or point in time to query asset metadata at. 
+
+At most one of these can be specified: 
+
+`--snapshot-time`=`SNAPSHOT_TIME`
+     Timestamp to take a snapshot on assets. This can only be a current or past time. If not specified, the current time will be used. Due to delays in resource data collection and indexing, there is a volatile window during which running the same query at different times may return different results. See $ [gcloud topic datetimes](https://docs.cloud.google.com/sdk/gcloud/reference/topic/datetimes) for information on time formats. 
+Or at least one of these can be specified: 
+
+Specifies what time period or point in time to query asset metadata at. 
+`--start-time`=`START_TIME`
+     Start time of the time window (inclusive) for the asset history. Must be after the current time minus 35 days. See $ [gcloud topic datetimes](https://docs.cloud.google.com/sdk/gcloud/reference/topic/datetimes) for information on time formats. 
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--end-time`=`END_TIME`
+     End time of the time window (exclusive) for the asset history. Defaults to current time if not specified. See $ [gcloud topic datetimes](https://docs.cloud.google.com/sdk/gcloud/reference/topic/datetimes) for information on time formats. 
+The BigQuery destination for query system. 
+`--write-disposition`=`WRITE_DISPOSITION`
+     Specifies the action that occurs if the destination table or partition already exists. `WRITE_DISPOSITION` must be one of: 
+
+`write-append`
+     If the table or partition already exists, BigQuery appends the data to the table or the latest partition. 
+`write-empty`
+     If the table already exists and contains data, an error is returned. 
+`write-truncate`
+     If the table or partition already exists, BigQuery overwrites the entire table or all the partition's data. 
+Table resource - The bigquery-table for the export. The arguments in this group can be used to specify the attributes of this resource. (NOTE) Some attributes are not given arguments in this group but can be set in other ways. 
+
+To set the `project` attribute: 
+
+  * provide the argument `--bigquery-table` on the command line with a fully specified name; 
+  * provide the argument `--project` on the command line; 
+  * set the property `core/project`. 
+
+
+`--bigquery-table`=`BIGQUERY_TABLE`
+     ID of the table or fully qualified identifier for the table. 
+
+To set the `table` attribute: 
+
+  * provide the argument `--bigquery-table` on the command line. 
+
+
+
+This flag argument must be specified if any of the other arguments in this group are specified. 
+
+`--bigquery-dataset`=`BIGQUERY_DATASET`
+     The id of the BigQuery dataset. 
+
+To set the `bigquery-dataset` attribute: 
+
+  * provide the argument `--bigquery-table` on the command line with a fully specified name; 
+  * provide the argument `--bigquery-dataset` on the command line. 
+
+
+GCLOUD WIDE FLAGS
+     These flags are available to all commands: `[--access-token-file](https://docs.cloud.google.com/sdk/gcloud/reference#--access-token-file)`, `[--account](https://docs.cloud.google.com/sdk/gcloud/reference#--account)`, `[--billing-project](https://docs.cloud.google.com/sdk/gcloud/reference#--billing-project)`, `[--configuration](https://docs.cloud.google.com/sdk/gcloud/reference#--configuration)`, `[--flags-file](https://docs.cloud.google.com/sdk/gcloud/reference#--flags-file)`, `[--flatten](https://docs.cloud.google.com/sdk/gcloud/reference#--flatten)`, `[--format](https://docs.cloud.google.com/sdk/gcloud/reference#--format)`, `[--help](https://docs.cloud.google.com/sdk/gcloud/reference#--help)`, `[--impersonate-service-account](https://docs.cloud.google.com/sdk/gcloud/reference#--impersonate-service-account)`, `[--log-http](https://docs.cloud.google.com/sdk/gcloud/reference#--log-http)`, `[--project](https://docs.cloud.google.com/sdk/gcloud/reference#--project)`, `[--quiet](https://docs.cloud.google.com/sdk/gcloud/reference#--quiet)`, `[--trace-token](https://docs.cloud.google.com/sdk/gcloud/reference#--trace-token)`, `[--user-output-enabled](https://docs.cloud.google.com/sdk/gcloud/reference#--user-output-enabled)`, `[--verbosity](https://docs.cloud.google.com/sdk/gcloud/reference#--verbosity)`. 
+
+Run `$ [gcloud help](https://docs.cloud.google.com/sdk/gcloud/reference)` for details. 
+
+NOTES
+     This command is currently in alpha and might change without notice. If this command fails with API permission errors despite specifying the correct project, you might be trying to access an API with an invitation-only early access allowlist. These variants are also available: 
+    
+    
+    [gcloud asset query](https://docs.cloud.google.com/sdk/gcloud/reference/asset/query)
+    
+    
+    [gcloud beta asset query](https://docs.cloud.google.com/sdk/gcloud/reference/beta/asset/query)
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-09-15 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-09-15 UTC."],[],[]] 

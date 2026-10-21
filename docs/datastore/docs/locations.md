@@ -1,0 +1,147 @@
+---
+url: https://docs.cloud.google.com/datastore/docs/locations/
+title: Firestore in Datastore mode Locations \u00a0|\u00a0 Google Cloud Documentation
+method: scrapling+scrapegraph
+fetched_at: 2026-10-15T02:22:07.305209+00:00
+---
+
+# Firestore in Datastore mode Locations  |  Google Cloud Documentation
+
+> Source: https://docs.cloud.google.com/datastore/docs/locations/
+
+  * [ Home ](https://docs.cloud.google.com/)
+  * [ Documentation ](https://docs.cloud.google.com/docs)
+  * [ Databases ](https://docs.cloud.google.com/docs/databases)
+  * [ Firestore in Datastore mode ](https://docs.cloud.google.com/datastore/docs)
+  * [ Resources ](https://docs.cloud.google.com/datastore/docs/resources)
+
+
+
+Send feedback 
+
+#  Firestore in Datastore mode Locations Stay organized with collections  Save and categorize content based on your preferences. 
+
+Before you use Firestore in Datastore mode, you must choose a _location_ where the project's data is stored. To reduce latency and increase availability, store your data close to the users and services that need it.
+
+**Warning:** Once you select a location for your project, you cannot change it. Your project's location setting applies to more than one product.
+
+## Types of locations
+
+You can store your Datastore mode data in either a _multi-region_ location or a _regional_ location.
+
+Data in a multi-region location operates in a [multi-zone and multi-region replicated configuration](https://docs.cloud.google.com/docs/geography-and-regions#multi-regional_resources). Select a multi-region location if you want to maximize the availability and durability of your database. Multi-region locations can withstand the loss of an entire region and maintain availability without data loss. In the [Datastore Service Level Agreement](https://docs.cloud.google.com/datastore/sla), multi-region locations define a higher monthly uptime percentage than regional locations.
+
+Data in a regional location operates in a [multi-zone replicated configuration](https://docs.cloud.google.com/docs/geography-and-regions#regional_resources). Select a regional location if your application is more sensitive to write latency or if you want [co-location with other Google Cloud resources](https://docs.cloud.google.com/about/locations#products-available-by-region) that your application may use.
+
+### Multi-region locations
+
+A multi-region location consists of a defined set of [regions](https://docs.cloud.google.com/docs/geography-and-regions#regions_and_zones) where multiple replicas of the database are stored. Each replica is either a read-write replica which contains all of the data in the database or a witness replica which does not maintain a full set of data but participates in replication.
+
+By replicating the data between multiple regions, data can continue to be served even with the loss of an entire region. Within a region, data is replicated across [zones](https://docs.cloud.google.com/docs/geography-and-regions#regions_and_zones) so that data can continue to be served within that region even with the loss of a zone.
+
+The following multi-region locations are available:
+
+Multi-Region Name | Multi-Region Description | Read-Write Regions | Witness Region  
+---|---|---|---  
+`eur3` | Europe | `europe-west1` (Belgium), `europe-west4` (Netherlands) | `europe-north1` (Finland)  
+`nam5` | United States (Central) | `us-central1` (Iowa), `us-central2` (Oklahoma—private Google Cloud region) | `us-east1` (South Carolina)  
+`nam7` | United States (Central and East) | `us-central1` (Iowa), `us-east4` (Northern Virginia) | `us-central2` (Oklahoma—private Google Cloud region)  
+**Note:** For Legacy Cloud Datastore databases not yet upgraded to Firestore in Datastore mode, see [Multi-region locations (Legacy Cloud Datastore)](https://docs.cloud.google.com/datastore/docs/pre-migration/multi-r).
+
+### Regional location
+
+A regional location is a specific geographic place, such as South Carolina. The following regional locations are available:
+
+| Region Name | Region Description |   
+---|---|---|---  
+**North America** |  |  |   
+| `us-west1` | Oregon |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+| `us-west2` | Los Angeles |   
+| `us-west3` | Salt Lake City |   
+| `us-west4` | Las Vegas |   
+| `us-central1` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Iowa |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+| `northamerica-northeast1` | Montréal |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+| `northamerica-northeast2` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Toronto |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+| `northamerica-south1` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Queretaro |   
+| `us-east1` | South Carolina |   
+| `us-east4` | Northern Virginia |   
+| `us-east5` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Columbus |   
+| `us-south1` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Dallas |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+**South America** |  |  |   
+| `southamerica-west1` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Santiago |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+| `southamerica-east1` | São Paulo |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+**Europe** |  |  |   
+| `europe-west2` | London |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+| `europe-west1` | Belgium |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+| `europe-west4` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Netherlands |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+| `europe-west3` | Frankfurt |   
+| `europe-west8` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Milan |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+| `europe-southwest1` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Madrid |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+| `europe-west9` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Paris |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+| `europe-west12` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Turin |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+| `europe-west10` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Berlin |   
+| `europe-north1` | Finland |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+| `europe-north2` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Stockholm |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+| `europe-central2` | Warsaw |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+| `europe-west6` | Zürich |  ![leaf icon](https://cloud.google.com/sustainability/region-carbon/gleaf.svg)[Low CO2](https://cloud.google.com/sustainability/region-carbon#region-picker)  
+**Middle East** |  |  |   
+| `me-central1` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Doha |   
+| `me-central2` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Dammam |   
+| `me-west1` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Tel Aviv |   
+**Asia** |  |  |   
+| `asia-south1` | Mumbai |   
+| `asia-south2` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Delhi |   
+| `asia-southeast1` | Singapore |   
+| `asia-southeast2` | Jakarta |   
+| `asia-southeast3` | Bangkok |   
+| `asia-east2` | Hong Kong |   
+| `asia-east1` | Taiwan |   
+| `asia-northeast1` | Tokyo |   
+| `asia-northeast2` | Osaka |   
+| `asia-northeast3` | Seoul |   
+**Australia** |  |  |   
+| `australia-southeast1` | Sydney |   
+| `australia-southeast2` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Melbourne |   
+**Africa** |  |  |   
+| `africa-south1` This location does not support App Engine. If you plan to use App Engine, you should choose a different location. | Johannesburg |   
+  
+## Selecting a location
+
+The location setting for your Google Cloud project applies to both Firestore in Datastore mode and App Engine. When you select a location in either product, you set the location for your entire Google Cloud project.
+
+**Important:** After you select the location of your project, you cannot change it.
+
+If you have not yet selected a location for your project, you will be asked to select the location when you complete any of the following tasks:
+
+  * Creating a new App Engine application.
+  * [Creating your first Datastore mode entity using the Google Cloud console](https://docs.cloud.google.com/datastore/docs/store-query-data).
+
+
+
+### Viewing the location of your project
+
+Use one of the following methods to find out which location you selected for your project:
+
+  * Run the `gcloud app describe` command.
+
+  * If you have at least one version of an App Engine app deployed, open the [App Engine Dashboard](https://console.cloud.google.com/appengine) in the Google Cloud console. The location information in the upper right-hand corner of the dashboard applies to both App Engine and Firestore in Datastore mode.
+
+![Screenshot of the previously chosen location](https://docs.cloud.google.com/static/datastore/docs/images/gae_dashboard_location.png)
+
+
+
+
+## Next steps
+
+  * For more information about building applications to meet your latency, availability and durability requirements, see [Geography and Regions](https://docs.cloud.google.com/docs/geography-and-regions#multi-regional_resources).
+  * For a map of locations, see [Cloud Data Center Locations](https://docs.cloud.google.com/about/datacenters).
+
+
+
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2026-10-13 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
